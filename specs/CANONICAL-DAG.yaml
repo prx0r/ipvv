@@ -1,0 +1,42 @@
+# CANONICAL-DAG — the single source of truth for layer dependencies (A2-ARCH-HARDEN)
+#
+# The ONE canonical dependency manifest. Every consumer (scheduler, rebuild engine, catalog,
+# certificate, tests, object_registry.PREREQS) must derive from THIS — no independent DAG definitions.
+#
+# Derived from the locked scholarly stack (handover/agent-2-integration/CANONICAL-LAYER-STACK.md):
+#   SOURCE → T1 → L0 → [argument map] → L2 → L200 → C1 → THEME → ...
+#
+# Key scholarly facts encoded here:
+#   - T1        derives from SOURCE                    (the transliteral word-gloss)
+#   - L0        derives from T1                        (structured token records from T1)
+#   - ARGMAP    is a LATERAL GUIDE deriving from SOURCE + L0
+#   - L2        derives from L0 + ARGMAP               (readable prose, guided by the argument map)
+#   - L200      derives from L2
+#   - C1        derives from L200
+#
+# 'requires' = every entry must be committed (or, for SOURCE, present) for this layer to be eligible.
+# A layer is ELIGIBLE when all its 'requires' are satisfied AND it has no current committed object.
+version: 1
+dependencies:
+  T1:
+    requires: [SOURCE]
+  L0:
+    requires: [T1]
+  ARGMAP:
+    requires: [SOURCE, L0]      # lateral guide — needs the source AND the token floor
+  L2:
+    requires: [L0, ARGMAP]      # readable prose guided by the argument map, over the token floor
+  L200:
+    requires: [L2]
+  C1:
+    requires: [L200]
+  THEME:
+    requires: [C1]
+  ARGUMENT:
+    requires: [C1]
+  SYNTHESIS:
+    requires: [ARGUMENT, THEME]
+  ESSAY:
+    requires: [SYNTHESIS]
+  EDUCATION:
+    requires: [ESSAY]

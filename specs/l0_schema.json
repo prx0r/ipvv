@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "patala:l0:v1",
+  "title": "Pāṭala L0 — token-level literal substrate record",
+  "description": "One L0 record per token/fragment of an immutable T1 chunk. This is the agnostic, machine-readable contract every L0 layer (IPVV, IPK, Tantrāloka, Kubjikā, any future work) must satisfy. Coordinates are dual: chunk-absolute + line-relative. Never edit an emitted record in place — a fix emits a new version.",
+  "type": "object",
+  "required": [
+    "id", "chunk_id", "line_id", "line_kind",
+    "chunk_char_start", "chunk_char_end",
+    "line_char_start", "line_char_end", "wraps_line",
+    "raw_fragment", "source_text", "lemma_iast", "literal_gloss",
+    "quoted", "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^.+:L\\d+:T\\d+$",
+      "description": "immutable, unique: {chunk_id}:L{line}:T{token}"
+    },
+    "chunk_id": { "type": "string", "description": "the immutable T1 chunk this token came from" },
+    "line_id": { "type": "integer", "minimum": 1, "description": "1-based physical line number in the chunk" },
+    "line_kind": {
+      "type": "string",
+      "enum": ["prose", "verse_blockquote", "heading", "rule", "blank"],
+      "description": "classification of the containing line (agnostic: reuse, do not re-segment)"
+    },
+
+    "chunk_char_start": { "type": "integer", "minimum": 0, "description": "absolute offset into the FULL joined T1 chunk text" },
+    "chunk_char_end": { "type": "integer", "minimum": 0, "description": "exclusive; > chunk_char_start" },
+
+    "line_char_start": {
+      "type": ["integer", "null"],
+      "description": "offset relative to the containing source_line; null when wraps_line"
+    },
+    "line_char_end": {
+      "type": ["integer", "null"],
+      "description": "exclusive, relative to the containing source_line; null when wraps_line"
+    },
+    "wraps_line": {
+      "type": "boolean",
+      "description": "true when this token spans more than one physical line (so no single-line relative coords exist)"
+    },
+
+    "raw_fragment": {
+      "type": "string",
+      "description": "the exact literal slice; MUST equal chunk_text[chunk_char_start:chunk_char_end]"
+    },
+    "source_text": {
+      "type": "string",
+      "description": "the containing source line (for line-relative proof); the immutable T1 line"
+    },
+    "lemma_iast": {
+      "type": "string",
+      "description": "IAST lemma (may be empty only when status = FAILED or AMBIGUOUS-no-lemma)"
+    },
+    "literal_gloss": {
+      "type": "string",
+      "description": "literal meaning (may be empty only when status = FAILED)"
+    },
+
+    "quoted": { "type": "boolean", "description": "token is inside a verbatim quotation span" },
+    "status": {
+      "type": "string",
+      "enum": ["PARSED", "AMBIGUOUS", "FAILED"],
+      "description": "PARSED = gloss+IAST recovered; AMBIGUOUS = recoverable but not clean; FAILED = present but not parseable"
+    }
+  }
+}

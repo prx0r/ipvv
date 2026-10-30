@@ -1,0 +1,6 @@
+sources/*/
+*.tar.gz
+*.jsonl
+*.tsv
+.DS_Store
+__pycache__/
