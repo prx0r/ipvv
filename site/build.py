@@ -184,87 +184,119 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <div class="nav"><a href="/index.html">works</a><a href="/abhinavagupta/index.html">Abhinavagupta</a></div>
 <div class="wrap"><div class="side">{sidenav}</div><div class="main">{body}</div></div></body></html>"""
 
-def sidenav(active=""):
-    works = json.loads((ROOT / "data/works.json").read_text())
-    items = "".join(f'<a href="/abhinavagupta/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
-    return ('<div class="hd">Abhinavagupta</div>'
-        f'<a href="/abhinavagupta/index.html">{"› " if active=="bio" else ""}Bio</a>'
-        f'<a href="/abhinavagupta/works.html">{"› " if active=="works" else ""}Works map</a>'
-        '<div class="hd">Works (chronological)</div><div class="sub">' + items + "</div>")
+STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskrit held · disputed",
+    "SOURCE_PLUS_TRANSLATION": "Sanskrit + English", "SOURCE_PLUS_SCHOLARSHIP": "Sanskrit + scholarship",
+    "SOURCE_CHUNKED": "chunked, awaiting T1", "ESSAY0": "essay-0", "PUBLISHED_49": "full display (49)",
+    "STOCKPILE": "listed", "LOST": "LOST", "REF_ONLY": "ref-only", "FRAGMENT": "fragments",
+    "ATTRIBUTED_DISPUTED": "ascription disputed", "STOCKPILE_UNVERIFIED": "listed · unverified"}
 
-STOTRA = {"bodhapanacadasika": "clean_bodhapanchadashika.txt", "anuttarastika": "clean_anuttarashtika.txt",
-    "bhairavastava": "clean_bhairavastava.txt", "dehastha": "clean_dehastha.txt"}
+def author_paths(aid):
+    a = ROOT / "data/authors" / f"{aid}.json"
+    if not a.exists() and aid == "abhinavagupta":
+        a = ROOT / "data/author.json"
+    w = ROOT / "data" / f"works_{aid}.json"
+    if not w.exists() and aid == "abhinavagupta":
+        w = ROOT / "data/works.json"
+    return a, w
 
-def build_author():
-    out = DIST / "abhinavagupta"; out.mkdir(parents=True, exist_ok=True)
-    author = json.loads((ROOT / "data/author.json").read_text())
-    works = json.loads((ROOT / "data/works.json").read_text())
+def sidenav(aid, active=""):
+    author = json.loads(author_paths(aid)[0].read_text())
+    works = json.loads(author_paths(aid)[1].read_text())
+    items = "".join(f'<a href="/{aid}/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
+    return ('<div class="hd">Masters</div>'
+        + "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(m)}</a>' for m in ["abhinavagupta", "utpaladeva", "ksemaraja"])
+        + f'<div class="hd">{esc(author["name"])}</div>'
+        f'<a href="/{aid}/index.html">{"› " if active=="bio" else ""}Bio</a>'
+        f'<a href="/{aid}/works.html">{"› " if active=="works" else ""}Works map</a>'
+        '<div class="hd">Works (canonical list)</div><div class="sub">' + items + "</div>")
+
+MASTERS = ["abhinavagupta", "utpaladeva", "ksemaraja"]
+
+def build_author(aid="abhinavagupta"):
+    out = DIST / aid; out.mkdir(parents=True, exist_ok=True)
+    apath, wpath = author_paths(aid)
+    author = json.loads(apath.read_text())
+    works = json.loads(wpath.read_text())
     lin = "".join(f'<div class="panel">{esc(l.get("relation",""))} <b>{esc(l.get("who",""))}</b></div>' for l in author.get("lineage", []))
-    (out / "index.html").write_text(ATmpl.format(title="Abhinavagupta", h1=esc(author["name"]),
-        sub=f'{esc(author["dates"]["flourished"])} · {esc(author["place"])}', sidenav=sidenav("bio"),
+    spine = {"abhinavagupta": "Raghavan “Abhinavagupta and His Works” 36 + attested extras",
+             "utpaladeva": "Wikipedia/BnF/kashmirhope + GRETIL/Mukhabodha holdings",
+             "ksemaraja": "Singh/SUNY + Flood 2020 + kashmirhope + ePustakalay/KSTS holdings"}.get(aid, "")
+    (out / "index.html").write_text(ATmpl.format(title=author["name"], h1=esc(author["name"]),
+        sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"),
         body=f'<div class="panel">{esc(author["summary"])}</div><h3>Lineage</h3>{lin}'
-             f'<div class="sub">dates {esc(author["dates"]["note"])} · <a href="/data/author.json">machine-readable JSON</a></div>'))
-    tl = "".join(f'<div class="ev"><span class="dot"></span><b>{esc(w["title"])}</b> — {esc(w["date"])} · {esc(w["status"])}<br/><a href="/abhinavagupta/{w["id"]}.html">open →</a></div>' for w in works)
-    links = "".join(f'<a href="/abhinavagupta/{w["id"]}.html"><b>{esc(w["title"])}</b> — {esc(w["date"])} · {esc(w["status"])}</a>' for w in works)
+             f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a></div>'))
+    cats = {}
+    for w in works:
+        cats.setdefault(w.get("category", "?"), []).append(w)
+    blocks = []
+    for c, ws in cats.items():
+        rows = "".join(
+            f'<div class="ev"><span class="dot" style="{"background:#ccc" if w.get("extant") is False else ""}"></span>'
+            + f'<b>{esc(w["title"])}</b> — {esc(w.get("date",""))} · {esc(STATUS_LABEL.get(w.get("status",""), w.get("status","")))}'
+            + f'<br/><a href="/{aid}/{w["id"]}.html">open →</a></div>' for w in ws)
+        blocks.append(f"<h3>{esc(c)}</h3>" + rows)
+    n_ext = sum(1 for w in works if w.get("extant") is True)
+    n_lost = sum(1 for w in works if w.get("extant") is False)
+    n_unk = len(works) - n_ext - n_lost
     (out / "works.html").write_text(ATmpl.format(title="Works map", h1="Works map",
-        sub="chronological — click any title for the full translation", sidenav=sidenav("works"),
-        body=f'<div class="tl">{tl}</div><h3>List</h3><div class="idx">{links}</div>'
-             f'<div class="sub"><a href="/data/works.json">machine-readable JSON</a></div>'))
+        sub=f"canonical list: {len(works)} works ({n_ext} extant, {n_lost} lost/ref-only, {n_unk} unverified) — click any title", sidenav=sidenav(aid, "works"),
+        body=f'<div class="tl">{"".join(blocks)}</div>'
+             f'<div class="sub">Spine: {spine} · <a href="/data/works_{aid}.json">machine-readable JSON</a></div>'))
     for w in works:
         wid = w["id"]
-        if wid in STOTRA:
-            txt = (Path("/root/deitybody/corpus/stotra") / STOTRA[wid]).read_text()
-            body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', True),
+        label = STATUS_LABEL.get(w.get("status", ""), w.get("status", ""))
+        meta = f'{esc(w.get("date",""))} · {esc(label)}'
+        if w.get("verses") not in (None, ""): meta += f' · {esc(w["verses"])}'
+        tf = w.get("text_file")
+        eds = "".join(f'<div class="sub">▪ {esc(e)}</div>' for e in w.get("editions", []))
+        if tf:
+            p = Path("/root/deitybody/corpus/stotra") / tf
+            txt = p.read_text() if p.exists() else ""
+            body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', bool(txt)),
                 ("READ", None, False), ("GUIDE", None, False),
                 ("STUDY", f'<div class="en">{esc(w["title"])} — full Sanskrit above; English READ next via pipe.</div>', True),
-                ("CRITICAL", f'<div class="en">deitybody corpus/stotra/{STOTRA[wid]} · {esc(w["date"])} · status {esc(w["status"])}</div>', True)])
-        elif wid == "ipvv":
-            body = ('<div class="panel">Full translation: <b><a href="/ipvv/index.html">49 passages, all depths</a></b> (ORIGINAL/READ/ARGMAP/STUDY/CRITICAL).</div>'
-                '<div class="panel">Thesis: recognition — the self re-cognises itself as the Lord; vimarśa = parā-vāc = the throb. Honest limit: universalization is the wager.</div>')
-        elif wid == "tantrasara":
-            body = ('<div class="panel">Full display: <b><a href="/tantrasara/index.html">6 essay-0 units</a></b> (verbatim → plain). Philological T1/L0 next via pipe; start Ahnika 11.</div>')
-        elif wid == "tantraloka":
-            body = ('<div class="panel">37 ahnikas on volume (01+04 1.7MB each) + 6-variant texts-clean + 7 pre-split ahnika-1 chunks. No T1 yet — first SOURCE cut. Run <i>tools/chunker.py</i> on ahnika-1 chunk-1.</div>')
-        elif wid == "kramastotra":
-            body = ('<div class="panel">GRETIL + volume Appendix F (Sanskrit + Dyczkowski English). Next: cut as first T1 pilot for stotra track.</div>')
-        elif wid == "ipv":
-            body = ('<div class="panel">Mukhabodha M00019 + Pandey Bhaskari English (complete). Next: align as parallel for IPVV passages.</div>')
-        elif wid == "ptv":
-            body = ('<div class="panel">Local: <i>deitybody/corpus/primary/paratrisika_jaideva_singh_text.pdf</i> (Singh/Baumer). Madhyama-vac + Malini order, Singh pp.148-156. Next: cut PTv 1-4.</div>')
-        elif wid == "mvv":
-            body = ('<div class="panel">Stockpile pointer. Next: locate critical text (Vasudeva ed.) then cut.</div>')
-        elif wid == "dehastha":
-            dp = Path("/root/deitybody/corpus/stotra") / STOTRA[wid]
-            txt = dp.read_text() if dp.exists() else ""
-            if txt:
-                body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', True),
-                    ("READ", None, False), ("GUIDE", None, False),
-                    ("STUDY", '<div class="en">ATTRIBUTION DISPUTED — listed, flagged, never taught as Abhinavagupta\'s.</div>', True),
-                    ("CRITICAL", f'<div class="en">status {esc(w["status"])}</div>', True)])
-            else:
-                body = f'<div class="panel">status {esc(w["status"])}</div>'
+                ("CRITICAL", f'<div class="en">deitybody corpus/stotra/{tf} · {meta}{eds}</div>', True)])
+        elif w.get("link"):
+            thesis = '<div class="panel">Thesis: recognition — the self re-cognises itself as the Lord.</div>' if wid == "ipvv" else ""
+            body = (f'<div class="panel">Full display: <b><a href="{w["link"]}">open →</a></b></div>'
+                    + (f'<div class="panel">{esc(w["note"])}</div>' if w.get("note") else "")
+                    + thesis
+                    + (eds if w.get("editions") else ""))
         else:
-            body = f'<div class="panel">status {esc(w["status"])}</div>'
+            note = w.get("note", "")
+            if w.get("status") in ("LOST", "REF_ONLY", "FRAGMENT", "ATTRIBUTED_DISPUTED", "SOURCE_ONLY_DISPUTED"):
+                why = {"LOST": "references in the tradition", "REF_ONLY": "references in the tradition", "FRAGMENT": "quotations in the tradition", "ATTRIBUTED_DISPUTED": "a disputed ascription — verify before teaching as his", "SOURCE_ONLY_DISPUTED": "a disputed ascription — listed, flagged, never taught as his"}[w.get("status")]
+                body = (f'<div class="panel missing"><b>{esc(label)}.</b> No text survives; known only from {esc(why)}.</div>'
+                    + (f'<div class="panel">{esc(note)}</div>' if note else "")
+                    + eds)
+            else:
+                body = ((f'<div class="panel">{esc(note)}</div>' if note else "")
+                    + eds
+                    + f'<div class="panel">Status: {esc(label)}. Next via pipe: cut SOURCE → T1 → L0 → argmap → L2 → L200 → C1.</div>')
         (out / f"{wid}.html").write_text(ATmpl.format(title=w["title"], h1=esc(w["title"]),
-            sub=f'{esc(w["date"])} · {esc(w.get("verses",""))} · {esc(w["status"])}', sidenav=sidenav(wid), body=body))
+            sub=meta, sidenav=sidenav(aid, wid), body=body))
     # ship machine-readable data with the site
     (DIST / "data").mkdir(parents=True, exist_ok=True)
-    (DIST / "data" / "author.json").write_text((ROOT / "data/author.json").read_text())
-    (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
+    if aid == "abhinavagupta":
+        (DIST / "data" / "author.json").write_text((ROOT / "data/author.json").read_text())
+        (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
+    (DIST / "data" / f"author_{aid}.json").write_text(json.dumps(author, ensure_ascii=False, indent=1))
+    (DIST / "data" / f"works_{aid}.json").write_text(json.dumps(works, ensure_ascii=False, indent=1))
     return len(works)
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "author"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
     if "tantrasara" in want: done["tantrasara"] = build_tantrasara()
-    if "author" in want: done["abhinavagupta"] = build_author()
-    idx = ('<div class="idx"><a href="/abhinavagupta/index.html"><b>Abhinavagupta</b> — bio · works map · click-in translations</a></div>'
-        + "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w != "abhinavagupta"))
-    (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Abhinavagupta · Translations",
-        sub="display only what is formally done", work="abhinavagupta", body=idx))
+    if "authors" in want:
+        for aid in MASTERS: done[aid] = build_author(aid)
+    masters = "".join(f'<a href="/{m}/index.html"><b>{m}</b> — bio · works map · click-in translations</a>' for m in MASTERS if m in done)
+    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS)
+    (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Trika masters · Translations",
+        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + "</div>"))
     print("built", done)
 
 if __name__ == "__main__":
