@@ -50,19 +50,54 @@ def build_ipvv():
     src = sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json"))
     items = [json.loads(p.read_text()) for p in src]
     out = DIST / "ipvv"; out.mkdir(parents=True, exist_ok=True)
+    argdir = ROOT / "data/ipvv/argmaps"
+    pmap = {"chunkA":"pilot_V1A","chunkB":"pilot_V1B","chunkC":"pilot_V1C","chunkD":"pilot_V1D",
+        "chunkE":"pilot_V1E","chunkF":"pilot_V1F","chunkG":"pilot_V1G","chunkH":"pilot_V1H",
+        "chunkI":"pilot_V1I","chunkJ":"pilot_V1J","chunkK":"pilot_V1K","chunkL":"pilot_V1L",
+        "chunkM":"pilot_V1M","chunkN":"pilot_V1N","chunkV2-A":"pilot_V2A","chunkV2-B":"pilot_V2B",
+        "chunkV2-C":"pilot_V2C","chunkV2-D":"pilot_V2D","chunkV2-E":"pilot_V2E","chunkV2-F":"pilot_V2F",
+        "chunkV2-G":"pilot_V2G","chunkV2-H":"pilot_V2H","chunkV2-I":"pilot_V2I","chunkV2-J":"pilot_V2J",
+        "chunkV2-K":"pilot_V2K","chunkV2-L":"pilot_V2L","chunkV2-M":"pilot_V2M","chunkV2-N":"pilot_V2N",
+        "chunkV2-O":"pilot_V2O","chunkV2-P":"pilot_V2P","chunkV2-Q":"pilot_V2Q","chunkV2-R":"pilot_V2R",
+        "chunkV2-S":"pilot_V2S","chunkV3-A":"pilot_V3A","chunkV3-C":"pilot_V3C","chunkV3-D":"pilot_V3D",
+        "chunkV3-E":"pilot_V3E","chunkV3-F":"pilot_V3F","chunkV3-G":"pilot_V3G","chunkV3-H":"pilot_V3H",
+        "chunkV3-I":"pilot_V3I","chunkV3-J":"pilot_V3J","chunkV3-K":"pilot_V3K","chunkV3-L":"pilot_V3L",
+        "chunkV3-M":"pilot_V3M","chunkV3-N":"pilot_V3N","chunkV3-O":"pilot_V3O","chunkV3-P":"pilot_V3P"}
     links = []
     for d in items:
         pid = d["id"].split(":")[-1].replace(".md", "")
+        chunk = (d.get("chunk") or "").replace(".md", "")
         src_txt = (d.get("source") or {}).get("text", "") if isinstance(d.get("source"), dict) else ""
         l2 = d.get("l2_text") or ""
         c1 = d.get("c1") or {}
         c1b = c1.get("body", "") if isinstance(c1, dict) else str(c1)
+        # argmap + pilot L2 from R2 cache (full, pristine)
+        am, l2p = "", ""
+        pp = pmap.get(chunk)
+        if pp:
+            pa, pl = argdir / f"{pp}_ARGUMENT_MAP.md", argdir / f"{pp}_L2_read.md"
+            if pa.exists(): am = pa.read_text()
+            if pl.exists(): l2p = pl.read_text()
+        if chunk == "chunkV3-B-kriya-dvitiyo-k1-7":
+            v3b_extra = ""
+            for fn, label in [("pilot_V3B_K6_ARGUMENT_MAP.md", "K6 argmap"),
+                              ("pilot_V3B_S7_ARGUMENT_MAP.md", "S7 argmap"),
+                              ("pilot_V3B_S9_ARGUMENT_MAP.md", "S9 argmap"),
+                              ("pilot_V3B_full_L2.md", "full L2"),
+                              ("pilot_V3B_k1_L1_apparatus.md", "k1 L1 apparatus"),
+                              ("pilot_V3B_k2-7_L1_apparatus.md", "k2-7 L1 apparatus")]:
+                p = argdir / fn
+                if p.exists():
+                    v3b_extra += f'<hr/><div class="sub">{label} (full)</div><div class="en">{esc(p.read_text())}</div>'
+            am = (am + v3b_extra) if am else v3b_extra
+        extra_l2 = f'<hr/><div class="sub">Pilot L2 (argument-derived, full)</div><div class="en">{esc(l2p)}</div>' if l2p and l2p.strip() != l2.strip() else ""
         body = tabs([
-            ("ORIGINAL", f'<div class="dev">{esc(src_txt[:2000])}</div>', bool(src_txt)),
-            ("READ", f'<div class="en">{esc(l2[:4000])}</div>', bool(l2)),
+            ("ORIGINAL", f'<div class="dev">{esc(src_txt)}</div><div class="sub">vol {esc(d.get("vol",""))} · {esc(chunk)} · lines via source.start/end</div>', bool(src_txt)),
+            ("READ", f'<div class="en">{esc(l2)}</div>{extra_l2}', bool(l2)),
+            ("ARGMAP", f'<div class="en">{esc(am)}</div>', bool(am)),
+            ("STUDY", f'<div class="en">{esc(c1b)}</div>', bool(c1b)),
             ("GUIDE", None, False),
-            ("STUDY", f'<div class="en">{esc(c1b[:3000])}</div>', bool(c1b)),
-            ("CRITICAL", f'<div class="en">vol {esc(d.get("vol",""))} · {esc(d.get("chunk",""))} · {esc(d.get("immutable_id",""))}</div>', True),
+            ("CRITICAL", f'<div class="en">immutable {esc(d.get("immutable_id",""))} · T1 chunk <i>sanskritree/{esc(chunk)}.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div>', True),
         ])
         (out / f"{pid}.html").write_text(TMPL.format(title=pid, h1=pid, sub="IPVV · " + esc(d.get("vol", "")), work="ipvv", body=body))
         links.append(f'<a href="/ipvv/{pid}.html">{esc(pid)}</a>')
