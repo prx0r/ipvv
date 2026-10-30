@@ -44,7 +44,7 @@ def tabs(panels):
     js = """<script>document.querySelectorAll('.depth button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.depth button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.panel').forEach(p=>p.style.display=p.dataset.p===b.dataset.p?'block':'none')})</script>"""
     return '<div class="depth">' + "".join(btns) + "</div>" + "".join(divs) + js
 
-def esc(s): return html.escape(s or "")
+def esc(s): return html.escape(str(s or ""))
 
 def build_ipvv():
     src = sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json"))
@@ -168,15 +168,103 @@ def build_tantrasara():
         body='<div class="panel">Q→GEM scaffolds next, same pushing.py extractor.</div>'))
     return len(units)
 
+ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title}</title><style>""" + CSS + """.wrap{{display:flex;gap:1.5rem;align-items:flex-start}}
+.side{{min-width:210px;max-width:240px;border-right:1px solid #ddd;padding-right:1rem;font-size:.9rem}}
+.side a{{display:block;padding:.3rem 0;color:#222;text-decoration:none}}
+.side a:hover{{text-decoration:underline}}.side .hd{{color:#888;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin:.8rem 0 .3rem}}
+.side .sub a{{padding-left:.8rem;color:#555}}
+.main{{flex:1;min-width:0}}
+@media(max-width:640px){{.wrap{{flex-direction:column}}.side{{max-width:none;border-right:none;border-bottom:1px solid #ddd;padding-bottom:.6rem}}}}
+.tl{{border-left:2px solid #c9a227;margin:1rem 0 1rem .5rem;padding-left:1rem}}
+.tl .ev{{margin:.5rem 0}}.dot{{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:#c9a227;margin-right:.4em}}
+</style></head><body>
+<header><h1>{h1}</h1><div class="sub">{sub}</div></header>
+<div class="nav"><a href="/index.html">works</a><a href="/abhinavagupta/index.html">Abhinavagupta</a></div>
+<div class="wrap"><div class="side">{sidenav}</div><div class="main">{body}</div></div></body></html>"""
+
+def sidenav(active=""):
+    works = json.loads((ROOT / "data/works.json").read_text())
+    items = "".join(f'<a href="/abhinavagupta/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
+    return ('<div class="hd">Abhinavagupta</div>'
+        f'<a href="/abhinavagupta/index.html">{"› " if active=="bio" else ""}Bio</a>'
+        f'<a href="/abhinavagupta/works.html">{"› " if active=="works" else ""}Works map</a>'
+        '<div class="hd">Works (chronological)</div><div class="sub">' + items + "</div>")
+
+STOTRA = {"bodhapanacadasika": "clean_bodhapanchadashika.txt", "anuttarastika": "clean_anuttarashtika.txt",
+    "bhairavastava": "clean_bhairavastava.txt", "dehastha": "clean_dehastha.txt"}
+
+def build_author():
+    out = DIST / "abhinavagupta"; out.mkdir(parents=True, exist_ok=True)
+    author = json.loads((ROOT / "data/author.json").read_text())
+    works = json.loads((ROOT / "data/works.json").read_text())
+    lin = "".join(f'<div class="panel">{esc(l.get("relation",""))} <b>{esc(l.get("who",""))}</b></div>' for l in author.get("lineage", []))
+    (out / "index.html").write_text(ATmpl.format(title="Abhinavagupta", h1=esc(author["name"]),
+        sub=f'{esc(author["dates"]["flourished"])} · {esc(author["place"])}', sidenav=sidenav("bio"),
+        body=f'<div class="panel">{esc(author["summary"])}</div><h3>Lineage</h3>{lin}'
+             f'<div class="sub">dates {esc(author["dates"]["note"])} · <a href="/data/author.json">machine-readable JSON</a></div>'))
+    tl = "".join(f'<div class="ev"><span class="dot"></span><b>{esc(w["title"])}</b> — {esc(w["date"])} · {esc(w["status"])}<br/><a href="/abhinavagupta/{w["id"]}.html">open →</a></div>' for w in works)
+    links = "".join(f'<a href="/abhinavagupta/{w["id"]}.html"><b>{esc(w["title"])}</b> — {esc(w["date"])} · {esc(w["status"])}</a>' for w in works)
+    (out / "works.html").write_text(ATmpl.format(title="Works map", h1="Works map",
+        sub="chronological — click any title for the full translation", sidenav=sidenav("works"),
+        body=f'<div class="tl">{tl}</div><h3>List</h3><div class="idx">{links}</div>'
+             f'<div class="sub"><a href="/data/works.json">machine-readable JSON</a></div>'))
+    for w in works:
+        wid = w["id"]
+        if wid in STOTRA:
+            txt = (Path("/root/deitybody/corpus/stotra") / STOTRA[wid]).read_text()
+            body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', True),
+                ("READ", None, False), ("GUIDE", None, False),
+                ("STUDY", f'<div class="en">{esc(w["title"])} — full Sanskrit above; English READ next via pipe.</div>', True),
+                ("CRITICAL", f'<div class="en">deitybody corpus/stotra/{STOTRA[wid]} · {esc(w["date"])} · status {esc(w["status"])}</div>', True)])
+        elif wid == "ipvv":
+            body = ('<div class="panel">Full translation: <b><a href="/ipvv/index.html">49 passages, all depths</a></b> (ORIGINAL/READ/ARGMAP/STUDY/CRITICAL).</div>'
+                '<div class="panel">Thesis: recognition — the self re-cognises itself as the Lord; vimarśa = parā-vāc = the throb. Honest limit: universalization is the wager.</div>')
+        elif wid == "tantrasara":
+            body = ('<div class="panel">Full display: <b><a href="/tantrasara/index.html">6 essay-0 units</a></b> (verbatim → plain). Philological T1/L0 next via pipe; start Ahnika 11.</div>')
+        elif wid == "tantraloka":
+            body = ('<div class="panel">37 ahnikas on volume (01+04 1.7MB each) + 6-variant texts-clean + 7 pre-split ahnika-1 chunks. No T1 yet — first SOURCE cut. Run <i>tools/chunker.py</i> on ahnika-1 chunk-1.</div>')
+        elif wid == "kramastotra":
+            body = ('<div class="panel">GRETIL + volume Appendix F (Sanskrit + Dyczkowski English). Next: cut as first T1 pilot for stotra track.</div>')
+        elif wid == "ipv":
+            body = ('<div class="panel">Mukhabodha M00019 + Pandey Bhaskari English (complete). Next: align as parallel for IPVV passages.</div>')
+        elif wid == "ptv":
+            body = ('<div class="panel">Local: <i>deitybody/corpus/primary/paratrisika_jaideva_singh_text.pdf</i> (Singh/Baumer). Madhyama-vac + Malini order, Singh pp.148-156. Next: cut PTv 1-4.</div>')
+        elif wid == "mvv":
+            body = ('<div class="panel">Stockpile pointer. Next: locate critical text (Vasudeva ed.) then cut.</div>')
+        elif wid == "dehastha":
+            dp = Path("/root/deitybody/corpus/stotra") / STOTRA[wid]
+            txt = dp.read_text() if dp.exists() else ""
+            if txt:
+                body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', True),
+                    ("READ", None, False), ("GUIDE", None, False),
+                    ("STUDY", '<div class="en">ATTRIBUTION DISPUTED — listed, flagged, never taught as Abhinavagupta\'s.</div>', True),
+                    ("CRITICAL", f'<div class="en">status {esc(w["status"])}</div>', True)])
+            else:
+                body = f'<div class="panel">status {esc(w["status"])}</div>'
+        else:
+            body = f'<div class="panel">status {esc(w["status"])}</div>'
+        (out / f"{wid}.html").write_text(ATmpl.format(title=w["title"], h1=esc(w["title"]),
+            sub=f'{esc(w["date"])} · {esc(w.get("verses",""))} · {esc(w["status"])}', sidenav=sidenav(wid), body=body))
+    # ship machine-readable data with the site
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    (DIST / "data" / "author.json").write_text((ROOT / "data/author.json").read_text())
+    (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
+    return len(works)
+
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "author"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
     if "tantrasara" in want: done["tantrasara"] = build_tantrasara()
-    idx = '<div class="idx">' + "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items()) + "</div>"
-    (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Translations", sub="display only what is formally done", work="ipvv", body=idx))
+    if "author" in want: done["abhinavagupta"] = build_author()
+    idx = ('<div class="idx"><a href="/abhinavagupta/index.html"><b>Abhinavagupta</b> — bio · works map · click-in translations</a></div>'
+        + "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w != "abhinavagupta"))
+    (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Abhinavagupta · Translations",
+        sub="display only what is formally done", work="abhinavagupta", body=idx))
     print("built", done)
 
 if __name__ == "__main__":
