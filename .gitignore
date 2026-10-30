@@ -4,3 +4,8 @@ sources/*/
 *.tsv
 .DS_Store
 __pycache__/
+
+# ...except small rigid manifests (import contract)
+!works/*/passages.jsonl
+!works/*/pushing.jsonl
+!works/*/c1-source.jsonl
