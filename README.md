@@ -1,5 +1,7 @@
 # IPVV — translate from scratch
 
+Live site: **https://ipvv-a8u.pages.dev** (Cloudflare Pages, `site/dist/`, 208 pages).
+
 Abhinavagupta's **Īśvarapratyabhijñāvivṛtivimarśinī** (IPVV), Vols 1–3 (~34,000 lines). No complete English exists. This repo is the **pure process** to make one: upload Sanskrit → frozen T1 → auditable English.
 
 Bulk bytes live in R2 (`sanskritree/ipvv-translations/`, 229 objects). This repo holds process + specs + skills + logs + samples + manifests. Fetch bytes on demand with `tools/fetch.sh`.
