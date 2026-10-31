@@ -45,6 +45,10 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .side a:hover{background:#f4f1ea}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
 .side .sub a{padding-left:1rem;color:#4a463c}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side .n{color:#8a8474;font-size:.78rem}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -670,8 +674,7 @@ def work_sidenav(work, active=""):
                '<a href="/tools/index.html">Tools</a>')
     elif work in ("scholars", "tools"):
         sec = ""
-    return ('<div class="hd">Masters (chronological)</div><div class="sub">'
-        + "".join(f'<a href="/{m}/index.html">{esc(n)}</a>' for m, n, _ in _masters_chrono()) + "</div>"
+    return (_masters_nav()
         + sec +
         '<div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a>'
         '<div class="hd">Library</div>'
@@ -710,8 +713,22 @@ def author_paths(aid):
     w = ROOT / "data" / f"works_{aid}.json"
     return a, w
 
+def _masters_by_works():
+    """Masters sorted by work count desc, then name. Backend order for nav."""
+    out = []
+    for m in MASTERS:
+        try:
+            a = json.loads((ROOT / "data/authors" / f"{m}.json").read_text())
+            w = json.loads((ROOT / "data" / f"works_{m}.json").read_text())
+            out.append((m, a.get("name", m), len(w) if isinstance(w, list) else 0))
+        except Exception:
+            out.append((m, m, 0))
+    out.sort(key=lambda x: (-x[2], x[1]))
+    return out
+
+
 def _masters_chrono():
-    """Masters sorted by birth year (nulls last), then name. Backend order for nav."""
+    """Masters sorted by birth year (nulls last), then name. Backend order for index data."""
     out = []
     for m in MASTERS:
         try:
@@ -723,12 +740,20 @@ def _masters_chrono():
     out.sort(key=lambda x: (x[2], x[1]))
     return out
 
+
+def _masters_nav(active_mid=""):
+    items = "".join(
+        f'<a href="/{m}/index.html">{"› " if m == active_mid else ""}{esc(n)} <span class="n">({c})</span></a>'
+        for m, n, c in _masters_by_works())
+    return ('<details class="mnav" open><summary class="hd">Masters (by works) ▾</summary>'
+            '<div class="sub">' + items + '</div></details>')
+
 def sidenav(aid, active=""):
     author = json.loads(author_paths(aid)[0].read_text())
     works = json.loads(author_paths(aid)[1].read_text())
     items = "".join(f'<a href="/{aid}/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
-    masters = "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(n)}</a>' for m, n, _ in _masters_chrono())
-    return ('<div class="hd">Masters (chronological)</div>' + masters
+    masters = _masters_nav(aid)
+    return (masters
         + f'<div class="hd">{esc(author["name"])}</div>'
         f'<a href="/{aid}/index.html">{"› " if active=="bio" else ""}Bio</a>'
         f'<a href="/{aid}/works.html">{"› " if active=="works" else ""}Works map</a>'
@@ -963,9 +988,9 @@ def ship_translations():
 def scholar_nav(active=""):
     scholars = sorted(json.loads((ROOT / "data/scholars.json").read_text()), key=lambda s: s.get("name", ""))
     items = "".join(f'<a href="/scholars/{s["id"]}.html">{"› " if s["id"]==active else ""}{esc(s["name"])}</a>' for s in scholars)
-    masters = "".join(f'<a href="/{m}/index.html">{esc(n)}</a>' for m, n, _ in _masters_chrono())
-    return ('<div class="hd">Masters (chronological)</div><div class="sub">' + masters + "</div>"
-        '<div class="hd">Modern — scholars (A–Z)</div>'
+    masters = _masters_nav(active if active in MASTERS else "")
+    return (masters
+        + '<div class="hd">Modern — scholars (A–Z)</div>'
         f'<a href="/scholars/index.html">{"› " if active=="index" else ""}All scholars</a>'
         '<div class="sub">' + items + "</div>"
         + '<div class="hd">Library</div><a href="/concepts/index.html">Concepts</a>'
