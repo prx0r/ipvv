@@ -189,5 +189,28 @@
   "verses": "77 sutras",
   "sanskrit_file": "sivasutra-root.txt",
   "sanskrit_source": "GRETIL Kaul Shastri 1925 · CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "bhairavanukaranastotra",
+  "title": "Bhairavanukaranastotra",
+  "category": "stotra",
+  "date": null,
+  "extant": true,
+  "status": "SOURCE_HELD",
+  "verses": "stotra",
+  "sanskrit_file": "ksemaraja-bhairavanukarana.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0",
+  "note": "Short stotra; newly surfaced via GRETIL mirror (claude-classified 2026)."
+ },
+ {
+  "id": "bodhavilasa",
+  "title": "Bodhavilasa",
+  "category": "prakarana",
+  "date": null,
+  "extant": true,
+  "status": "SOURCE_HELD",
+  "verses": "short work",
+  "sanskrit_file": "ksemaraja-bodhavilasa.txt",
+  "sanskrit_source": "GRETIL (Pensa Rivista di Studi Orientali ed.) · CC BY-NC-SA 4.0"
  }
 ]

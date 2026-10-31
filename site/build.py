@@ -214,7 +214,7 @@ def sidenav(aid, active=""):
 
 MASTERS = ["abhinavagupta", "somananda", "vasugupta", "kallata", "utpaladeva",
            "lakshmanagupta", "sambhunatha", "ksemaraja", "bhutiraja", "jayaratha",
-           "yogaraja", "bhattanarayana", "sivopadhyaya", "lalla"]
+           "yogaraja", "bhattanarayana", "induraja", "sivopadhyaya", "lalla"]
 
 def build_split(aid, wid):
     """Split a big Sanskrit file into per-section pages. Returns section count."""
@@ -354,6 +354,8 @@ def build_author(aid="abhinavagupta"):
     sdir = DIST / "data/sanskrit"; sdir.mkdir(parents=True, exist_ok=True)
     for f in (ROOT / "data/sanskrit").glob("*.txt"):
         shutil.copy(f, sdir / f.name)
+    if (ROOT / "data/roots.json").exists():
+        shutil.copy(ROOT / "data/roots.json", DIST / "data/roots.json")
     return len(works)
 
 def main():
