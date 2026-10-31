@@ -174,6 +174,45 @@ export default {
       return json({ messages: results }, 200, cors);
     }
 
+
+    // POST /api/themes/decide — accept/reject/merge/split a cluster
+    const td = path.match(/^\/api\/themes\/decide$/);
+    if (td && request.method === 'POST') {
+      const { cluster_id, decision, user_id, note } = await request.json();
+      if (!cluster_id || !decision) return json({ error: 'cluster_id and decision required' }, 400, cors);
+      const id = 'td:' + crypto.randomUUID();
+      // store in a simple key-value via D1 (we'll use a decisions table)
+      await env.DB.prepare('CREATE TABLE IF NOT EXISTS theme_decisions (id TEXT PRIMARY KEY, cluster_id TEXT, decision TEXT, user_id TEXT, note TEXT, created_at TEXT)').run();
+      await env.DB.prepare('INSERT INTO theme_decisions (id, cluster_id, decision, user_id, note) VALUES (?, ?, ?, ?, ?)')
+        .bind(id, cluster_id, decision, user_id || null, note || null).run();
+      return json({ id, cluster_id, decision }, 200, cors);
+    }
+
+    // GET /api/themes/decisions — list all decisions
+    if (path === '/api/themes/decisions' && request.method === 'GET') {
+      await env.DB.prepare('CREATE TABLE IF NOT EXISTS theme_decisions (id TEXT PRIMARY KEY, cluster_id TEXT, decision TEXT, user_id TEXT, note TEXT, created_at TEXT)').run();
+      const { results } = await env.DB.prepare('SELECT * FROM theme_decisions ORDER BY created_at DESC').all();
+      return json({ decisions: results }, 200, cors);
+    }
+
+    // POST /api/style/preview — A3S-style instant preview (prompt-based, free-tier)
+    if (path === '/api/style/preview' && request.method === 'POST') {
+      const { exemplars, source, model } = await request.json();
+      if (!exemplars || !source) return json({ error: 'exemplars and source required' }, 400, cors);
+      const ex = Array.isArray(exemplars) ? exemplars.join('\n---\n') : exemplars;
+      const prompt = `You are a style transfer engine. Given these example translations in the target style:\n\n${ex}\n\nRewrite the following Sanskrit passage in the same style. Preserve meaning exactly. Only change register/diction.\n\nSource (Sanskrit): ${source}\n\nStyled translation:`;
+      try {
+        const gen = await env.AI.run(model || '@cf/meta/llama-3.1-8b-instruct-fp8', {
+          messages: [{ role: 'user', content: prompt }],
+          max_tokens: 512,
+        });
+        const styled = gen.response || gen.result?.response || '';
+        return json({ styled, model: model || 'llama-3.1-8b' }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
+    }
+
     return json({ error: 'not found' }, 404, cors);
   }
 };

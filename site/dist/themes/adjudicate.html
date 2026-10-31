@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Theme adjudication · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Adjudicate</div><h1>Theme adjudication</h1><div class="skt"></div><div class="sub">machine-proposed clusters — accept/merge/split/multi-assign; decisions saved to profile</div><div class="panel" data-cluster="CL-3"><b>CL-3</b> · 9 members · coherence 3.5556<br/><span style="font-size:.8rem;color:#76736e">V2L-nonconstructed-I, V2N-inner-appearance, V2O-orderless-support, V2P-pramatr-vyapara, V2Q-omniscient, V2R-mahesvarya, V2S-unity-mahesvarya, V3F-grace</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-3&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-3&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-3&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-3&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-4"><b>CL-4</b> · 9 members · coherence 3.1111<br/><span style="font-size:.8rem;color:#76736e">V2M-descent-states, V3C-one-light, V3D-synthesis, V3E-error, V3I-difference-real, V3J-agama-sivatattva, V3K-kancukas, V3L-knowers-malas</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-4&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-4&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-4&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-4&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-1"><b>CL-1</b> · 5 members · coherence 3.4<br/><span style="font-size:.8rem;color:#76736e">V2D-jnanasakti, V2E-external-inferred, V2F-other-minds, V2G-dream-inversion, V3F-grace</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-1&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-1&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-1&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-1&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-2"><b>CL-2</b> · 4 members · coherence 3.5<br/><span style="font-size:.8rem;color:#76736e">V2H-vimarsa-paravak, V2I-sphuratta, V2J-samskara, V2K-vacakasphota</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-2&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-2&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-2&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-2&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-7"><b>CL-7</b> · 4 members · coherence 3.5<br/><span style="font-size:.8rem;color:#76736e">V3F-grace, V3N-one-lord-many, V3O-bond-liberation, V3P-lover-union</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-7&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-7&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-7&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-7&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-0"><b>CL-0</b> · 3 members · coherence 3.6667<br/><span style="font-size:.8rem;color:#76736e">V2A-memory-lords-power, V2B-pastness-svasamvitti, V2C-ajadapramatr</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-0&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-0&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-0&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-0&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-8"><b>CL-8</b> · 2 members · coherence 1.0<br/><span style="font-size:.8rem;color:#76736e">V3G-causality, V3H-inference-across-knowers</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-8&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-8&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-8&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-8&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-5"><b>CL-5</b> · 1 members · coherence 0.0<br/><span style="font-size:.8rem;color:#76736e">V3A-timeless-order</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-5&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-5&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-5&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-5&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><div class="panel" data-cluster="CL-6"><b>CL-6</b> · 1 members · coherence 0.0<br/><span style="font-size:.8rem;color:#76736e">V3B-bhedabheda</span><br/><div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap"><button onclick="decide(&quot;CL-6&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button><button onclick="decide(&quot;CL-6&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button><button onclick="decide(&quot;CL-6&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button><button onclick="decide(&quot;CL-6&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button></div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div><script>
+    function decide(cid, dec) {
+      var note = prompt('Note (optional):');
+      fetch(window.API+'/api/themes/decide',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cluster_id:cid,decision:dec,note:note})})
+        .then(r=>r.json()).then(d=>{alert(cid+' -> '+dec);loadDecisions()})
+        .catch(e=>alert('Error: '+e.message));
+    }
+    function loadDecisions() {
+      if(!window.API)return;
+      fetch(window.API+'/api/themes/decisions').then(r=>r.json()).then(d=>{
+        (d.decisions||[]).forEach(function(dec){
+          var el=document.querySelector('[data-cluster="'+dec.cluster_id+'"] .decisions');
+          if(el) el.innerHTML='<b>'+dec.decision+'</b> '+dec.created_at+(dec.note?' — '+dec.note:'');
+        });
+      });
+    }
+    if(window.API) loadDecisions();
+    </script><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:#1c1a17;color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:#fff;border:1px solid #e6ddc9;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid #e6ddc9;font-weight:600;font-size:.84rem">Ask '+works.join(', ')+'</div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid #e6ddc9;display:flex;gap:.4rem"><input id="chatin" placeholder="Ask..." style="flex:1;padding:.4rem .6rem;border:1px solid #e6ddc9;border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:#1c1a17;color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply)})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script></body></html>

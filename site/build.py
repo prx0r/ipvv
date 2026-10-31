@@ -373,7 +373,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -519,7 +519,45 @@ def build_ipvv():
         tb += '<div class="sub">Evidence packet (machine-readable): <a href="/data/themes/clusters.json">clusters</a> · <a href="/data/themes/clusters.report.txt">editorial report</a> · <a href="/data/themes/adjudication-cl3.json">CL-3 adjudication</a> · <a href="/data/themes/essay-cl3.md">CL-3 essay</a> · <a href="/data/themes/goldchain-cl3.json">CL-3 gold chain</a> · <a href="/data/themes/theme-map-ipvv-v0.json">v0 theme map (63 segments, candidates)</a></div>'
     except Exception as e:
         tb = f"<i>themes pending: {esc(str(e))}</i>"
-    (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="machine-proposed clusters — overlapping, never partition; zero accepted themes yet", sidenav=work_sidenav("ipvv"), body=tb))
+    (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="machine-proposed clusters — overlapping, never partition; zero accepted themes yet", sidenav=work_sidenav("ipvv"), body=tb
+        + '<div class="sub" style="margin-top:1rem"><a href="/themes/adjudicate.html">Adjudicate clusters →</a> (accept/merge/split — calls Worker API)</div>'))
+    # adjudication page
+    adj_out = DIST / "themes"; adj_out.mkdir(parents=True, exist_ok=True)
+    adj_cards = []
+    for c in cls:
+        cid = c.get("cluster_id", "")
+        members = ", ".join(c.get("member_c1_ids", [])[:8])
+        adj_cards.append(f'<div class="panel" data-cluster="{cid}"><b>{cid}</b> · {c.get("size",0)} members · coherence {c.get("coherence","")}<br/><span style="font-size:.8rem;color:#76736e">{esc(members)}</span><br/>'
+                        + '<div style="margin-top:.5rem;display:flex;gap:.4rem;flex-wrap:wrap">'
+                        + f'<button onclick="decide(&quot;{cid}&quot;,&quot;accept&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Accept</button>'
+                        + f'<button onclick="decide(&quot;{cid}&quot;,&quot;reject&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Reject</button>'
+                        + f'<button onclick="decide(&quot;{cid}&quot;,&quot;merge&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Merge</button>'
+                        + f'<button onclick="decide(&quot;{cid}&quot;,&quot;split&quot;)" style="padding:.3rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Split</button>'
+                        + '</div><div class="decisions" style="margin-top:.4rem;font-size:.8rem"></div></div>')
+    adj_js = """<script>
+    function decide(cid, dec) {
+      var note = prompt('Note (optional):');
+      fetch(window.API+'/api/themes/decide',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cluster_id:cid,decision:dec,note:note})})
+        .then(r=>r.json()).then(d=>{alert(cid+' -> '+dec);loadDecisions()})
+        .catch(e=>alert('Error: '+e.message));
+    }
+    function loadDecisions() {
+      if(!window.API)return;
+      fetch(window.API+'/api/themes/decisions').then(r=>r.json()).then(d=>{
+        (d.decisions||[]).forEach(function(dec){
+          var el=document.querySelector('[data-cluster="'+dec.cluster_id+'"] .decisions');
+          if(el) el.innerHTML='<b>'+dec.decision+'</b> '+dec.created_at+(dec.note?' — '+dec.note:'');
+        });
+      });
+    }
+    if(window.API) loadDecisions();
+    </script>"""
+    adj_body = "".join(adj_cards) + adj_js
+    (adj_out / "adjudicate.html").write_text(TF(TMPL,title="Theme adjudication", h1="Theme adjudication",
+        kicker="Adjudicate", sub="machine-proposed clusters — accept/merge/split/multi-assign; decisions saved to profile",
+        sidenav=work_sidenav("ipvv"), body=adj_body,
+        recitejs="", chatjs="", varjs=""))
+
     # pushing: real Q->GEM probe index (vendored volume prose, fail-closed excerpts)
     pb = ("<h3>IPVV probes</h3>" + "".join(pushing_cards("ipvv"))
           + "<h3>Tantraloka probes</h3><div class='sub'>Abhinavagupta's other magnum opus — same method, different mountain. Full TĀ display section pending; probes live here first.</div>"
@@ -621,7 +659,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1687,6 +1725,38 @@ def build_arguments():
     return len(recs)
 
 
+def build_stylelab():
+    out = DIST / "stylelab"; out.mkdir(parents=True, exist_ok=True)
+    body = """
+    <div class="panel">A3S-style instant preview: paste 3-5 exemplar translations in your target style,
+    then a source passage. The model rewrites in that style in seconds — no training, no adapter.
+    Training-free aspect-aware steering via prompt conditioning (the A3S pattern, Sep 2026).</div>
+    <div class="panel">
+      <b>Exemplars (one per line, or separated by ---)</b>
+      <textarea id="ex" rows="6" style="width:100%;padding:.5rem;border:1px solid var(--line);border-radius:.4rem;font-family:var(--serif);font-size:.9rem" placeholder="Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate."></textarea>
+      <b style="display:block;margin-top:.6rem">Source passage (Sanskrit or English)</b>
+      <textarea id="src" rows="3" style="width:100%;padding:.5rem;border:1px solid var(--line);border-radius:.4rem;font-family:var(--serif);font-size:.9rem" placeholder="tvanmayacittatayā hṛdi vande"></textarea>
+      <button onclick="preview()" style="margin-top:.6rem;padding:.5rem 1rem;background:var(--ink);color:var(--paper);border:0;border-radius:.4rem;cursor:pointer;font-size:.9rem">Preview style →</button>
+      <div id="preview" style="margin-top:.8rem;padding:.8rem;border:1px solid var(--line);border-radius:.4rem;min-height:60px;background:var(--card)"></div>
+    </div>
+    <script>
+    function preview(){
+      var ex=document.getElementById('ex').value.trim();
+      var src=document.getElementById('src').value.trim();
+      if(!ex||!src){alert('Enter exemplars and source');return}
+      var pv=document.getElementById('preview');pv.innerHTML='<i>Generating...</i>';
+      fetch(window.API+'/api/style/preview',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({exemplars:ex.split('---').map(s=>s.trim()).filter(Boolean),source:src})})
+        .then(r=>r.json()).then(d=>{pv.innerHTML=d.styled||d.error||'No output'})
+        .catch(e=>{pv.innerHTML='Error: '+e.message});
+    }
+    </script>
+    """
+    (out / "index.html").write_text(TF(TMPL, title="Style lab", h1="Style lab",
+        kicker="A3S preview", sub="instant style transfer — paste exemplars, see the style in seconds",
+        sidenav=sidenav("abhinavagupta", ""), body=body,
+        recitejs="", chatjs="", varjs=""))
+    return 1
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1868,7 +1938,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1897,6 +1967,7 @@ def main():
     if "torella-volume" in want: done["torella-volume"] = build_torella_volume()
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
     if "arguments" in want: done["arguments"] = build_arguments()
+    if "stylelab" in want: done["stylelab"] = build_stylelab()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
