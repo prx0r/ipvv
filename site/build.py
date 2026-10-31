@@ -372,7 +372,7 @@ def pushing_cards(sub):
     cards = []
     if not src.exists():
         return [f"<div class='panel missing'>probes pending — volume path <i>research-library/recognition/pushing-{sub}/</i> not yet vendored</div>"]
-    for f in sorted(src.glob("*.md")):
+    for f in sorted(src.glob("*.md")) + sorted(src.glob("*.txt")):
         raw = f.read_text(encoding="utf-8", errors="replace")
         shutil.copy(f, dest / f.name)
         lines = [l for l in raw.splitlines() if l.strip()][:28]
@@ -962,6 +962,8 @@ def md_lite(src):
     flush_p(); flush_l()
     return "\n".join(out)
 
+REVIEWED_ESSAYS = {"advaita-ipvv","buddhist-ipvv","epistemology-of-action","exclusion-individuation","felt-to-ground","ipvv-vs-tantraloka","krama-ipvv","nonconstructed-i","rasa-ipvv-abhinavabharati","recognition-and-formal-proofs","recognition-and-nisargadatta","sivasutra-vb-ipvv","soteriology-of-recognition","spanda-ipvv","two-abhinavaguptas-ipvv-tantraloka","ultimate-proof-of-recognition","why-recognition-is-felt"}
+
 def build_essays():
     """Owner's recognition essays (vendored volume prose, displayed as written)."""
     import json as _json
@@ -978,11 +980,12 @@ def build_essays():
         stand = next((l.strip().strip("*").strip() for l in lines if l.strip().startswith("*") and len(l.strip()) > 20), "")
         slug = f.stem.lower().replace("essay-", "")
         words = len(raw.split())
+        badge = '<span class="srcbadge">peer-reviewed Aug 2026</span>' if slug in REVIEWED_ESSAYS else '<span class="rsrc">working paper</span>'
         (out / f"{slug}.html").write_text(TF(ATmpl, title=title, h1=esc(title),
             kicker="Essay", sub=esc(stand[:220]),
-            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>' + md_lite(raw)
+            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>' + md_lite(raw)
             + srclink("site/data/essays/" + f.name, "essay source lives here.")))
-        cards.append(f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])}</a>')
+        cards.append(f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])} {"[reviewed]" if slug in REVIEWED_ESSAYS else "[working]"}</a>')
     (out / "index.html").write_text(TF(ATmpl, title="Essays", h1="Essays",
         kicker="Working papers", sub="the owner\u2019s recognition essays — theses argued from the translations, displayed as written",
         sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>"
