@@ -75,6 +75,7 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
 .en{font-size:15px;max-width:72ch;line-height:1.6}
 .skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
 .stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
 .stats b{color:var(--ink);font-weight:600}
 /* verse grid */
@@ -497,7 +498,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
-<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+{toc}</div>
 <footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
@@ -517,8 +518,12 @@ def tabs(panels):
 
 def esc(s): return html.escape(str(s or ""))
 
+TOC_ASIDE = '<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside>'
+
 def TF(tmpl, **kw):
     """Format a template on EXACT {placeholders} only — CSS/JS/content braces pass through untouched."""
+    if "toc" not in kw:
+        kw["toc"] = TOC_ASIDE
     for k, v in kw.items():
         tmpl = tmpl.replace("{" + k + "}", str(v))
     for k in ("kicker", "subtitle", "recitejs"):
@@ -784,7 +789,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
-<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+{toc}</div>
 <footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
@@ -898,23 +903,21 @@ def author_bio_body(aid, author, lin, spine):
     hero = ""
     if author.get("image"):
         im = author["image"]
-        hero = (f'<div class="panel"><img src="{esc(im["src"])}" alt="{esc(author["name"])} — related imagery" loading="lazy" style="max-width:100%;border-radius:8px"/>'
-                f'<div class="sub">{esc(im["caption"])} Credit: <a href="{esc(im["credit_url"])}">{esc(im["credit"])}</a> · <a href="{esc(im["licence_url"])}">{esc(im["licence"])}</a></div></div>')
-    return (f'<div class="panel">{esc(author["summary"])}</div>' + hero
-            + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
-            + f'<h3>Lineage</h3>{lin}'
-            + read_alongside_html(aid)
-            + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
-            + srclink(f"site/data/authors/{aid}.json", "bio, dates and lineage live here."))
+        hero = (f'<figure style="margin:0 0 1rem"><img src="{esc(im["src"])}" alt="{esc(author["name"])} — related imagery" loading="lazy" style="max-width:100%;border-radius:8px"/>'
+                f'<figcaption class="sub">{esc(im["caption"])} Credit: <a href="{esc(im["credit_url"])}">{esc(im["credit"])}</a> · <a href="{esc(im["licence_url"])}">{esc(im["licence"])}</a></figcaption></figure>')
+    return (f'<p class="lede">{esc(author["summary"])}</p>' + hero
+            + (f'<p>{esc(author["bio"])}</p>' if author.get("bio") else "")
+            + lin
+            + read_alongside_html(aid))
 
 def read_alongside_html(aid):
     """Modern-scholar cross-links for a master (site/data/read_alongside.json)."""
     try:
         ra = json.loads((ROOT / "data/read_alongside.json").read_text()).get(aid, [])
         sch = {s["id"]: s for s in json.loads((ROOT / "data/scholars.json").read_text())}
-        rows = "".join(f'<div class="ev"><a href="/scholars/{r["scholar"]}.html"><b>{esc(sch[r["scholar"]]["name"])}</b></a> — {esc(r["why"])}<br/><span class="sub">{esc(sch[r["scholar"]].get("affiliation",""))}</span></div>'
+        rows = "; ".join(f'<a href="/scholars/{r["scholar"]}.html">{esc(sch[r["scholar"]]["name"])}</a> — {esc(r["why"])}'
                        for r in ra if r["scholar"] in sch)
-        return f"<h3>Read alongside</h3>{rows}" if rows else ""
+        return f"<p>Read alongside {rows}.</p>" if rows else ""
     except Exception:
         return ""
 
@@ -938,12 +941,13 @@ def build_author(aid="abhinavagupta"):
     apath, wpath = author_paths(aid)
     author = json.loads(apath.read_text())
     works = json.loads(wpath.read_text())
-    lin = "".join(f'<div class="panel">{esc(l.get("relation",""))} <b>{esc(l.get("who",""))}</b></div>' for l in author.get("lineage", []))
+    _lin_parts = [f'{esc(l.get("relation","")).rstrip(" :")} {esc(l.get("who",""))}' for l in author.get("lineage", []) if l.get("who")]
+    lin = (f'<p>{" · ".join(_lin_parts)}.</p>' if _lin_parts else "")
     spine = {"abhinavagupta": "Raghavan “Abhinavagupta and His Works” 36 + attested extras",
              "utpaladeva": "Wikipedia/BnF/kashmirhope + GRETIL/Mukhabodha holdings",
              "ksemaraja": "Singh/SUNY + Flood 2020 + kashmirhope + ePustakalay/KSTS holdings"}.get(aid, "")
     (out / "index.html").write_text(TF(ATmpl,title=author["name"], h1=esc(author["name"]),
-        sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"),
+        sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"), toc="",
         body=author_bio_body(aid, author, lin, spine)))
     cats = {}
     for w in works:

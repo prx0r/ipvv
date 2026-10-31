@@ -58,6 +58,7 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
 .en{font-size:15px;max-width:72ch;line-height:1.6}
 .skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
 .stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
 .stats b{color:var(--ink);font-weight:600}
 /* verse grid */
