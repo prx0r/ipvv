@@ -383,7 +383,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -669,7 +669,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1885,6 +1885,56 @@ def build_llms_txt():
     print(f"llms.txt generated: root + {len(works)} per-work")
     return 1
 
+def build_screen():
+    out = DIST / "screen"; out.mkdir(parents=True, exist_ok=True)
+    body = """
+    <div class="panel">Over-the-shoulder screen analysis: capture your screen, ask a question,
+    get a spoken answer. Uses Qwen3.8-Omni-Flash vision (1M context, thinking mode).</div>
+    <div class="panel">
+      <button id="capture" style="padding:.5rem 1rem;background:var(--ink);color:var(--paper);border:0;border-radius:.4rem;cursor:pointer;font-size:.9rem">Capture screen →</button>
+      <button id="speak" style="padding:.5rem 1rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:.4rem;cursor:pointer;font-size:.9rem;margin-left:.5rem">Speak answer</button>
+      <div id="preview" style="margin-top:.8rem;max-width:100%;border:1px solid var(--line);border-radius:.4rem;overflow:hidden"></div>
+      <textarea id="q" rows="2" style="width:100%;padding:.5rem;border:1px solid var(--line);border-radius:.4rem;font-family:var(--serif);font-size:.9rem;margin-top:.6rem" placeholder="What do you see? / What does this error mean? / Where do I click?"></textarea>
+      <button id="analyze" style="margin-top:.5rem;padding:.5rem 1rem;background:var(--ink);color:var(--paper);border:0;border-radius:.4rem;cursor:pointer;font-size:.9rem">Analyze →</button>
+      <div id="result" style="margin-top:.8rem;padding:.8rem;border:1px solid var(--line);border-radius:.4rem;min-height:60px;background:var(--card);white-space:pre-wrap"></div>
+    </div>
+    <script>
+    var imgData=null;
+    document.getElementById('capture').onclick=async function(){
+      try {
+        var stream=await navigator.mediaDevices.getDisplayMedia({video:true});
+        var video=document.createElement('video');
+        video.srcObject=stream;video.play();
+        await new Promise(r=>setTimeout(r,500));
+        var canvas=document.createElement('canvas');
+        canvas.width=video.videoWidth;canvas.height=video.videoHeight;
+        canvas.getContext('2d').drawImage(video,0,0);
+        imgData=canvas.toDataURL('image/jpeg',0.8).split(',')[1];
+        var preview=document.getElementById('preview');
+        preview.innerHTML='<img src="data:image/jpeg;base64,'+imgData+'" style="max-width:100%;display:block"/>';
+        stream.getTracks().forEach(t=>t.stop());
+      } catch(e){alert('Capture failed: '+e.message)}
+    };
+    document.getElementById('analyze').onclick=async function(){
+      if(!imgData){alert('Capture screen first');return}
+      var q=document.getElementById('q').value.trim()||'Describe what you see and explain any errors.';
+      var res=document.getElementById('result');res.innerHTML='<i>Analyzing...</i>';
+      var r=await fetch(window.API+'/api/screen',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({image:imgData,question:q})});
+      var d=await r.json();
+      res.innerHTML=d.reply||d.error||'No output';
+      window._lastReply=d.reply||'';
+    };
+    document.getElementById('speak').onclick=function(){
+      if(window._lastReply){var u=new SpeechSynthesisUtterance(window._lastReply);u.rate=0.95;speechSynthesis.speak(u)}
+    };
+    </script>
+    """
+    (out / "index.html").write_text(TF(TMPL, title="Screen", h1="Screen analysis",
+        kicker="Over-the-shoulder", sub="capture your screen, ask a question, get a spoken answer",
+        sidenav=sidenav("abhinavagupta", ""), body=body,
+        recitejs="", chatjs="", varjs=""))
+    return 1
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -2066,7 +2116,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2096,6 +2146,7 @@ def main():
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
     if "arguments" in want: done["arguments"] = build_arguments()
     if "stylelab" in want: done["stylelab"] = build_stylelab()
+    if "screen" in want: done["screen"] = build_screen()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
 
     ship_translations()

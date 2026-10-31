@@ -1,5 +1,29 @@
 let cachedVectors = null;
 
+async function dashscopeChat(env, messages, maxTokens = 512) {
+  const apiKey = env.DASHSCOPE_API_KEY;
+  if (!apiKey) throw new Error('no dashscope key');
+  const resp = await fetch('https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'qwen3.8-omni-flash',
+      messages,
+      max_tokens: maxTokens,
+      reasoning_effort: 'medium',
+    }),
+  });
+  if (!resp.ok) {
+    const err = await resp.text();
+    throw new Error(`dashscope ${resp.status}: ${err.slice(0, 200)}`);
+  }
+  const data = await resp.json();
+  return data.choices?.[0]?.message?.content || '';
+}
+
 async function getVectors(env) {
   if (cachedVectors) return cachedVectors;
   try {
@@ -184,7 +208,7 @@ export default {
       let suggestion = '';
       try {
         const followup = await dashscopeChat(env, [{ role: 'user', content: `Given this Q&A about ${works.join(', ')}:\nQ: ${message}\nA: ${reply.slice(0,300)}\n\nSuggest one follow-up question a scholar would ask next. Just the question, nothing else.` }], 64);
-        if (followup && followup.length > 10 && followup.length < 200) suggestion = followup.trim();
+        if (followup && followup.length > 5 && followup.length < 300) suggestion = followup.trim();
       } catch (e) { /* proactive is best-effort */ }
       return json({ session_id: sid, reply, suggestion }, 200, cors);
     }
@@ -335,6 +359,38 @@ export default {
       return new Response(JSON.stringify({ jsonrpc: '2.0', id, result }), {
         headers: { ...cors, 'Content-Type': 'application/json' },
       });
+    }
+
+
+    // POST /api/screen — analyze a screenshot (vision via Qwen3.8-Omni-Flash)
+    if (path === '/api/screen' && request.method === 'POST') {
+      const { image, question } = await request.json();
+      if (!image) return json({ error: 'image required (base64)' }, 400, cors);
+      const q = question || 'Describe what you see on this screen. Be concise and helpful.';
+      try {
+        const resp = await fetch('https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${env.DASHSCOPE_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            model: 'qwen3.8-omni-flash',
+            messages: [{ role: 'user', content: [
+              { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${image}` } },
+              { type: 'text', text: q },
+            ]}],
+            max_tokens: 512,
+            reasoning_effort: 'medium',
+          }),
+        });
+        if (!resp.ok) throw new Error(`dashscope ${resp.status}`);
+        const data = await resp.json();
+        const reply = data.choices?.[0]?.message?.content || '';
+        return json({ reply }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
     }
 
     return json({ error: 'not found' }, 404, cors);
