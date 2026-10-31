@@ -1064,6 +1064,11 @@ def build_pushing_hub():
     return 5 + n_ipvv + n_ta
 
 def build_receipts():
+    import hashlib as _h
+    import sys as _sys2
+    _sys2.path.insert(0, str(ROOT.parent / "tools"))
+    from qp_acom import objects as _o
+    from qp_acom import receipts as _r
     """Per-chunk audit trail via the vendored qprivately kernel.
     Claim + evidence + versioned gates -> transition() receipt.
     FAIL receipts are first-class: a BLOCKED chunk's receipt records exactly
@@ -1113,6 +1118,33 @@ def build_receipts():
             "ipvv", d.get("chunk", "?"), "PUBLISHED", [], "editor-pipeline",
             "2026-08-11", "patala:published", 0, "mixed-roots",
             d.get("immutable_id", ""), bool((d.get("l2_text") or "").strip()), {}))
+    # argument packets (one receipt per packet, via kernel transition())
+    for af in sorted((ROOT / "data/arguments").glob("*.json")):
+        pkt = _json.loads(af.read_text())
+        asof = "2026-10-31"
+        src = {"packet": pkt.get("id")}
+        ev = [
+            _o.make_evidence("packet", pkt.get("id", ""), "id", asof, src),
+            _o.make_evidence("work", pkt.get("work_id", ""), "work", asof, src),
+            _o.make_evidence("passage", pkt.get("source_passage", ""), "id", asof, src),
+            _o.make_evidence("strength", pkt.get("strength", ""), "verdict", asof, src),
+            _o.make_evidence("status", pkt.get("status", ""), "verdict", asof, src),
+            _o.make_evidence("tension", pkt.get("tension_id") or "", "id", asof, src),
+            _o.make_evidence("premises", len(pkt.get("premises", [])), "count", asof, src),
+        ]
+        claim = _o.make_claim(f"{pkt.get('id','')}: displays its entitled state",
+                              f"argument-display:{pkt.get('work_id','')}", "UNKNOWN")
+        task = _o.make_task("argument-display", pkt.get("id", ""), {"strength": "decided"})
+        run = _o.make_run(task["id"], "pipeline-batch", "")
+        proposal = {"id": pkt.get("id", ""), "claim": claim,
+                    "target": pkt.get("id", ""), "work": pkt.get("work_id", ""),
+                    "gate": "MACHINE_DRAFT", "blocking": []}
+        receipt = _r.transition({"status": "unreviewed"}, proposal, ev,
+                               ["ipvv/has-immutable-id-v1"], run,
+                               transition_type="ARGUMENT-DISPLAY")
+        # set the id to include arg prefix
+        receipt["id"] = "receipt:arg:" + receipt["id"].split(":")[-1]
+        out.append(receipt)
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     with open(DIST / "data/receipts.jsonl", "w", encoding="utf-8") as fh:
         for r in out:
@@ -1150,6 +1182,16 @@ def build_corpus():
             if f.suffix not in (".md", ".txt"): continue
             recs.append({"id": f"pushing:{sub}/{f.name}", "work": "pushing", "ref": f"{sub}/{f.stem}",
                 "sa": "", "en": f.read_text(encoding="utf-8", errors="replace")[:6000], "en_gate": "OWNER", "kind": "probe"})
+    for af in sorted((ROOT / "data/arguments").glob("*.json")):
+        pkt = _json.loads(af.read_text())
+        recs.append({"id": pkt.get("id", ""), "work": pkt.get("work_id", ""),
+            "ref": pkt.get("source_passage", ""), "sa": pkt.get("sanskrit", ""),
+            "en": pkt.get("conclusion", {}).get("text", "") + "\n" + "\n".join(p.get("text", "") for p in pkt.get("premises", [])),
+            "en_gate": "MACHINE_DRAFT", "kind": "argument",
+            "license": pkt.get("license", ""), "strength": pkt.get("strength", ""),
+            "status": pkt.get("status", ""), "tension_id": pkt.get("tension_id"),
+            "premises": len(pkt.get("premises", [])),
+            "immutable_id": pkt.get("source_passage", "")})
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     with open(DIST / "data/corpus.jsonl", "w", encoding="utf-8") as fh:
         for r in recs:
@@ -1445,6 +1487,7 @@ def build_arguments():
             "argument_text": am["argument"],
             "tension_id": tid or None,
             "strength": "MACHINE_DRAFT",
+            "strength_basis": "extracted from argmap; no human review; premises resolve to passage; no surviving prosecution tested",
             "status": "MACHINE_DRAFT",
             "source_passage": rec.get("immutable_id", ""),
             "sanskrit": (rec.get("source") or {}).get("text", "") if isinstance(rec.get("source"), dict) else "",
@@ -1486,6 +1529,7 @@ def build_arguments():
                 "argument_text": l2,
                 "tension_id": None,
                 "strength": "MACHINE_DRAFT",
+                "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
                 "status": "MACHINE_DRAFT",
                 "source_passage": f"{work}:{chunk}",
                 "sanskrit": sa,
@@ -1522,6 +1566,7 @@ def build_arguments():
                 "argument_text": l2,
                 "tension_id": None,
                 "strength": "MACHINE_DRAFT",
+                "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
                 "status": "MACHINE_DRAFT",
                 "source_passage": f"{work}:{chunk}",
                 "sanskrit": sa,

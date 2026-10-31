@@ -73,8 +73,9 @@ if os.path.exists(_rp):
     _rn = sum(1 for _ in open(_rp, encoding='utf-8'))
     _tn = sum(len(json.load(open(f))) for f in glob.glob(os.path.join(ROOT, 'site/data/translations/*.json')))
     _pn = len(glob.glob('/root/patalacheckpoints/data/published/ipvv/pt-passage-*.json'))
-    if _rn != _tn + _pn:
-        fail(f'receipts.jsonl has {_rn} records, expected {_tn + _pn} (translations + published passages)')
+    _an = len(glob.glob(os.path.join(ROOT, 'site/data/arguments/*.json')))
+    if _rn != _tn + _pn + _an:
+        fail(f'receipts.jsonl has {_rn} records, expected {_tn + _pn + _an} (translations + published + arguments)')
 else:
     fail('receipts.jsonl not built')
 # 6b. kernel verification: gate registry pinned + receipt ids recompute (FAIL)
@@ -97,7 +98,9 @@ try:
     for _ln in open(_rp, encoding='utf-8'):
         _r = json.loads(_ln)
         _body = {k: v for k, v in _r.items() if k not in ("id", "signature", "signer")}
-        _want = "receipt:" + sha256_hex(canonical(_body))[:16]
+        _prefix = "receipt:arg:" if str(_r.get("id","")).startswith("receipt:arg:") else "receipt:"
+        _suffix_len = 16
+        _want = _prefix + sha256_hex(canonical(_body))[:_suffix_len]
         if _r.get("id") != _want:
             _bad += 1
     if _bad:
@@ -120,6 +123,25 @@ for f in glob.glob(os.path.join(ROOT, 'samples/*/C1-*.md')):
         if words and (words < 100 or words > 450):
             warn(f'{os.path.relpath(f, ROOT)} §{m.group(1)[:40]}: {words}w outside 100–450')
 
+# 9a. argument packet integrity (site/data — FAIL)
+for f in glob.glob(os.path.join(ROOT, 'site/data/arguments/*.json')):
+    pkt = json.load(open(f))
+    for req in ('id', 'work_id', 'passage_id', 'title', 'question', 'premises', 'conclusion', 'strength', 'status', 'source_passage'):
+        if req not in pkt:
+            fail(f'argument packet missing {req}: {os.path.basename(f)}')
+    if not pkt.get('premises'):
+        fail(f'argument packet has no premises: {os.path.basename(f)}')
+    if not pkt.get('source_passage'):
+        fail(f'argument packet has no source_passage: {os.path.basename(f)}')
+# 9b. argument receipt coverage (dist — FAIL)
+_rp = os.path.join(ROOT, 'site/dist/data/receipts.jsonl')
+if os.path.exists(_rp):
+    _ids = {json.loads(l).get('id','') for l in open(_rp, encoding='utf-8')}
+    # argument receipts: check count matches packet count
+    _nargs = len(glob.glob(os.path.join(ROOT, 'site/data/arguments/*.json')))
+    _nargr = sum(1 for l in open(_rp, encoding='utf-8') if '"ARGUMENT-DISPLAY"' in l)
+    if _nargr != _nargs:
+        fail(f'argument receipts: {_nargr} found, {_nargs} packets expected')
 # 9. WORK.md DONE-vs-gate (pipeline-owned — WARN only)
 for f in glob.glob(os.path.join(ROOT, 'works/*/WORK.md')):
     head = open(f, encoding='utf-8', errors='replace').readline()
