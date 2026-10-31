@@ -137,6 +137,20 @@
 - Our source (GRETIL KSTS) may have errors.
 - Strategy: note variants, don't try to resolve (out of scope).
 
+
+## Dyczkowski Tantrāloka (DOWNLOADED 2026-10-31)
+
+All 11 volumes downloaded to `/root/tantraloka-resources/dyczkowski/`:
+- tantraloka-vol1-dyczkowski.txt through tantraloka-vol11-dyczkowski.txt (15MB total)
+- Full English translation of both Abhinavagupta's text AND Jayaratha's Viveka commentary
+- Extensive explanatory notes from Kashmiri masters + Swami Lakshmanjoo
+- Worked directly with manuscripts; made improvements to published edition
+- Collected all known unpublished sources Abhinavagupta quotes
+
+**Use as**: THE definitive style reference + verification. Imitate clarity, do not translate those.
+**Coverage**: Vol 1 = Chapter 1 (ahnika 1). Vol 2 = Chapters 2-3. Vol 3 = Chapters 4-5. Etc.
+**Key advantage**: Jayaratha's commentary is included — essential for understanding Abhinava's terse verses.
+
 ## Attack plan (refined)
 
 ### Phase 1: Tiny ahnikas (9 ahnikas, ~200v) — PROVE LOOP
