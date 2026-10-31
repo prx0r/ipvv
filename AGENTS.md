@@ -15,6 +15,10 @@ You are in **ipvv**: the clean IPVV translation machine. No other repo's rules a
 9. **Fail-closed.** Model fail → GENERATION_FAILED, never empty success. Provenance must resolve or the layer is not eligible.
 10. **Bytes in R2, truth in git.** 145MB L0 tarballs never commit. Commit specs/process/skills/logs/samples/manifests. Fetch bytes via `tools/fetch.sh`.
 
+## Collaboration (two agents push here)
+
+Read `OWNERS.md` first, then `process/CLAIMS.md` — check the whiteboard before starting, write your claim before working. Lanes are exclusive: pipeline owns `works/*/ + samples/*`, site owns `site/ + specs/ + tools/ + people data`. `git pull --rebase` before every push; never force-push; never edit the other lane's files (request in CLAIMS instead).
+
 ## Read order
 
 `README.md` → `VISION.md` → `HANDOVER.md` → `process/UPLOAD-RUNBOOK.md` → `process/KNOWLEDGE-CORE.md` → `specs/CANONICAL-DAG.yaml` → `process/IPVV-BUILD.md`.
