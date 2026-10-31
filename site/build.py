@@ -1933,6 +1933,28 @@ def build_stylelab():
         recitejs="", chatjs="", varjs=""))
     return 1
 
+def build_app():
+    """Lab-pattern SPA shell (white, single page, zero reloads) + app-ready JSON indexes."""
+    import json as _j, shutil as _sh
+    src = ROOT / "app"
+    if not src.exists():
+        return 0
+    dest = DIST / "app"; dest.mkdir(parents=True, exist_ok=True)
+    for f in src.glob("*.*"):
+        _sh.copy(f, dest / f.name)
+    works = sorted(f.stem for f in (ROOT / "data/translations").glob("*.json"))
+    (DIST / "data" / "translations.json").write_text(_j.dumps(works, ensure_ascii=False))
+    pract = []
+    for f in sorted((ROOT / "data/practices").glob("*.json")):
+        try:
+            d = _j.loads(f.read_text(encoding="utf-8"))
+            pract.append({"id": d.get("id", f.stem), "title": d.get("name", f.stem),
+                          "kind": d.get("kind", ""), "summary": (d.get("summary", "") or "")[:200]})
+        except Exception:
+            pass
+    (DIST / "data" / "practices.json").write_text(_j.dumps(pract, ensure_ascii=False))
+    return len(works)
+
 def build_llms_txt():
     """Generate llm.txt (agent-native discovery) + per-work llms.txt."""
     import json as _json
@@ -2338,7 +2360,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices", "app"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2373,6 +2395,7 @@ def main():
     if "vbtmap" in want: done["vbtmap"] = build_vbt_map()
     if "practices" in want: done["practices"] = build_practices()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
+    if "app" in want: done["app"] = build_app()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
