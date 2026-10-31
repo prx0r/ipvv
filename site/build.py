@@ -358,19 +358,57 @@ def build_author(aid="abhinavagupta"):
         shutil.copy(ROOT / "data/roots.json", DIST / "data/roots.json")
     return len(works)
 
+def scholar_nav(active=""):
+    scholars = json.loads((ROOT / "data/scholars.json").read_text())
+    items = "".join(f'<a href="/scholars/{s["id"]}.html">{"› " if s["id"]==active else ""}{esc(s["name"])}</a>' for s in scholars)
+    return ('<div class="hd">Masters</div>'
+        + "".join(f'<a href="/{m}/index.html">{esc(m)}</a>' for m in MASTERS)
+        + '<div class="hd">Scholars</div>'
+        f'<a href="/scholars/index.html">{"› " if active=="index" else ""}All scholars</a>'
+        '<div class="hd">People (secondary)</div><div class="sub">' + items + "</div>")
+
+ACC_LABEL = {"open": "open access", "login": "free login wall", "metadata": "metadata only — fetch via academia/DOI",
+             "print": "print/commercial — cite, never host", "study": "in-repo study material"}
+
+def build_scholars():
+    out = DIST / "scholars"; out.mkdir(parents=True, exist_ok=True)
+    scholars = json.loads((ROOT / "data/scholars.json").read_text())
+    links = []
+    for s in scholars:
+        items = ""
+        for it in s.get("items", []):
+            acc = ACC_LABEL.get(it.get("access", ""), it.get("access", ""))
+            link = f'<a href="{it["link"]}">link →</a>' if it.get("link") else "no public link"
+            items += (f'<div class="panel"><b>{esc(it.get("title",""))}</b> {esc(str(it.get("year") or ""))}<br/>'
+                      f'<div class="sub">{esc(acc)} · {link}</div>'
+                      f'<div class="en">Used for: {esc(it.get("used_for",""))}</div></div>')
+        body = (f'<div class="panel">{esc(s.get("summary",""))}</div>'
+                f'<div class="sub">{esc(s.get("affiliation",""))} · status: {esc(s.get("status",""))}</div>'
+                + items)
+        (out / f'{s["id"]}.html').write_text(ATmpl.format(title=s["name"], h1=esc(s["name"]),
+            sub=esc(s.get("affiliation","")), sidenav=scholar_nav(s["id"]), body=body))
+        links.append(f'<a href="/scholars/{s["id"]}.html"><b>{esc(s["name"])}</b> — {esc(s.get("affiliation",""))}</a>')
+    (out / "index.html").write_text(ATmpl.format(title="Scholars", h1="Scholars",
+        sub="secondary witnesses — read and cite, host only what is open", sidenav=scholar_nav("index"),
+        body='<div class="idx">' + "".join(links) + "</div>"
+             '<div class="panel">Rule: GREEN (OA/GRETIL/Mukhabodha) ships on site. YELLOW (academia/login, HAL metadata, IRIS) is read-and-cited with links, never hosted. RED (pirated scans, commercial PDFs) never touches the repo.</div>'))
+    return len(scholars)
+
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
     if "tantrasara" in want: done["tantrasara"] = build_tantrasara()
     if "authors" in want:
         for aid in MASTERS: done[aid] = build_author(aid)
+    if "scholars" in want: done["scholars"] = build_scholars()
     masters = "".join(f'<a href="/{m}/index.html"><b>{m}</b> — bio · works map · click-in translations</a>' for m in MASTERS if m in done)
-    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS)
+    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS and w != "scholars")
+    sch = '<a href="/scholars/index.html"><b>scholars</b> — secondary witnesses, linked bibliography (read/cite, host only what is open)</a>' if "scholars" in done else ""
     (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Trika masters · Translations",
-        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + "</div>"))
+        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + sch + "</div>"))
     print("built", done)
 
 if __name__ == "__main__":
