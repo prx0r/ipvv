@@ -397,7 +397,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -683,7 +683,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1968,6 +1968,34 @@ def build_meditate():
         recitejs="", chatjs="", varjs=""))
     return len(vs)
 
+def build_vbt_map():
+    """Interactive VBT dhāraṇā map — 112 techniques by upāya category."""
+    import json as _json, html as _html
+    esc = _html.escape
+    vm = _json.loads((ROOT / "data/vbt_map.json").read_text())
+    out = DIST / "vbt-map"; out.mkdir(parents=True, exist_ok=True)
+    cards = []
+    for cat in vm["categories"]:
+        cat_name = cat["name"]
+        cat_display = cat_name.split(":", 1)[1].strip() if ":" in cat_name else cat_name
+        cards.append(f'<h3 style="margin-top:1.5rem">{esc(cat_display)}</h3>')
+        for d in cat["dharanas"]:
+            dh = d["dh"]
+            verse = d["verse"]
+            technique = d["technique"]
+            trains = d["trains"]
+            coord = d["coord"]
+            vbt_link = f'/vbt/v{verse}.html' if verse.isdigit() and int(verse) <= 145 else '#'
+            cards.append(f'<div class="panel" style="margin:.3rem 0"><div style="display:flex;justify-content:space-between;align-items:start"><div><b>Dhāraṇā {dh}</b> <span class="sub">verse {verse}</span></div><a href="{vbt_link}" style="font-size:.8rem">VBT {verse} →</a></div><div class="en" style="margin-top:.3rem;font-size:.9rem">{esc(technique)}</div><div class="sub" style="margin-top:.2rem">Trains: {esc(trains)}</div><div class="sub">Tāṇtraloka: {esc(coord)}</div></div>')
+    upaya_rows = "".join(f'<tr><td><b>{esc(u["name"])}</b></td><td>{u["count"]}</td><td>{esc(u["approach"])}</td><td>{esc(u["tattva"])}</td><td>{esc(u["grace"])}</td></tr>' for u in vm["upayas"])
+    upaya_table = f'<table style="width:100%;border-collapse:collapse;font-size:.85rem;margin:1rem 0"><tr style="border-bottom:2px solid var(--ink)"><th style="text-align:left;padding:.4rem">Upāya</th><th style="text-align:left;padding:.4rem">Count</th><th style="text-align:left;padding:.4rem">Approach</th><th style="text-align:left;padding:.4rem">Tattva Range</th><th style="text-align:left;padding:.4rem">Grace</th></tr>{upaya_rows}</table>'
+    body = f'<div class="panel"><b>The path:</b> You don\u2019t do all 112. Find the upāya that matches your grace level, pick 2-3 dharanas, master them. When they stop working (the technique becomes the obstacle), move to a higher upaya. — Swami Lakshmanjoo</div>{upaya_table}<h2>112 Dharanas by Category</h2><div class="idx">{"".join(cards)}</div>'
+    (out / "index.html").write_text(TF(TMPL, title="VBT Dharana Map", h1="VBT Dharana Map",
+        kicker="Interactive", sub="112 techniques by upāya category — each linked to its VBT verse and Tantrāloka coordinate",
+        sidenav=sidenav("abhinavagupta", ""), body=body,
+        recitejs="", chatjs="", varjs=""))
+    return len(vm["categories"])
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -2149,7 +2177,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2181,6 +2209,7 @@ def main():
     if "stylelab" in want: done["stylelab"] = build_stylelab()
     if "screen" in want: done["screen"] = build_screen()
     if "meditate" in want: done["meditate"] = build_meditate()
+    if "vbtmap" in want: done["vbtmap"] = build_vbt_map()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
 
     ship_translations()

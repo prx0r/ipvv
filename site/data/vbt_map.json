@@ -1,0 +1,557 @@
+{
+ "upayas": [
+  {
+   "name": "Āṇavopāya",
+   "count": 40,
+   "approach": "Breath, mantra, object, place",
+   "tattva": "Earth (31) → Viśuddha (29)",
+   "grace": "Mild (manda)"
+  },
+  {
+   "name": "Āṇava-Śākta",
+   "count": 6,
+   "approach": "Mixed — starts with support, ends in thought",
+   "tattva": "Maṇipūra (28) → Ājñā (7)",
+   "grace": "Mild-moderate"
+  },
+  {
+   "name": "Śāktopāya",
+   "count": 50,
+   "approach": "Purified thought, imagination, will/knowledge",
+   "tattva": "Anāhata (27) → Śuddhavidyā (5)",
+   "grace": "Moderate (madhya)"
+  },
+  {
+   "name": "Śākta-Śāmbhava",
+   "count": 15,
+   "approach": "Knowledge-supported recognition",
+   "tattva": "Ājñā (7) → Sadāśiva (3)",
+   "grace": "Moderately intense"
+  },
+  {
+   "name": "Āṇava-Śāmbhava",
+   "count": 10,
+   "approach": "Support-then-leap",
+   "tattva": "Any → direct",
+   "grace": "Variable"
+  },
+  {
+   "name": "Śāmbhavopāya",
+   "count": 20,
+   "approach": "Direct recognition, no support",
+   "tattva": "Śiva (1) — pure",
+   "grace": "Intense (tīvra)"
+  }
+ ],
+ "categories": [
+  {
+   "name": "1: Breath-Based (Āṇavopāya)",
+   "dharanas": [
+    {
+     "dh": 1,
+     "verse": "24",
+     "technique": "Stop breath — feel the unfilled void",
+     "trains": "Prāṇa withdrawal into suṣumṇā",
+     "coord": "Āhnika 7 (Cakrodaya)"
+    },
+    {
+     "dh": 4,
+     "verse": "27",
+     "technique": "Breathe in and out — watch the turn",
+     "trains": "Awareness of the pause between breaths",
+     "coord": "Āhnika 5 (prāṇoccāra)"
+    },
+    {
+     "dh": 7,
+     "verse": "30",
+     "technique": "Prāṇa as string — consciousness as pearl",
+     "trains": "One-pointedness through prāṇa",
+     "coord": "Āhnika 5 (karaṇa)"
+    },
+    {
+     "dh": 13,
+     "verse": "36",
+     "technique": "Suspend breath — feel the movement of Kuṇḍalinī",
+     "trains": "Kuṇḍalinī awakening through kumbhaka",
+     "coord": "Āhnika 5 (SAUḤ)"
+    },
+    {
+     "dh": 14,
+     "verse": "37",
+     "technique": "Watch breath go from heart to 12 fingers above",
+     "trains": "Traversal of dvādaśānta",
+     "coord": "Āhnika 5 (ten voids)"
+    },
+    {
+     "dh": 31,
+     "verse": "54",
+     "technique": "Inhale with 50 phonemes, exhale with reverse",
+     "trains": "Mātṛkā-cakra + prāṇa synchronization",
+     "coord": "Āhnika 5 (varṇa-tattva)"
+    },
+    {
+     "dh": 41,
+     "verse": "64",
+     "technique": "Breathe as mantra without words",
+     "trains": "Mantra-caitanya (living mantra)",
+     "coord": "Āhnika 11 (mantrādhvan)"
+    },
+    {
+     "dh": 56,
+     "verse": "81",
+     "technique": "Stop breath — hear inner sound",
+     "trains": "Anāhata (unstruck sound)",
+     "coord": "Āhnika 5 (anāhata levels)"
+    },
+    {
+     "dh": 68,
+     "verse": "93",
+     "technique": "Breath awareness in daily activity",
+     "trains": "Continuous practice (sahaja)",
+     "coord": "Āhnika 6 (kālopāya)"
+    }
+   ]
+  },
+  {
+   "name": "2: Void / Gap Awareness (Śāktopāya → Śāmbhavopāya)",
+   "dharanas": [
+    {
+     "dh": 3,
+     "verse": "26",
+     "technique": "Rest in the gap between two perceptions",
+     "trains": "Recognition of the interval (avakāśa)",
+     "coord": "Āhnika 3 (pratibimbavāda)"
+    },
+    {
+     "dh": 16,
+     "verse": "39",
+     "technique": "Gap between sleep and waking",
+     "trains": "Turīya (the Fourth)",
+     "coord": "Āhnika 10 (consciousness states)"
+    },
+    {
+     "dh": 35,
+     "verse": "58",
+     "technique": "Gap between seeing and naming",
+     "trains": "Pre-linguistic awareness",
+     "coord": "Āhnika 11 (varṇa as pramā)"
+    },
+    {
+     "dh": 37,
+     "verse": "60",
+     "technique": "Void above, void below — where is the body?",
+     "trains": "Dissolution of body-identification",
+     "coord": "Āhnika 5 (ten voids)"
+    },
+    {
+     "dh": 39,
+     "verse": "62",
+     "technique": "Void in the sky — void in consciousness",
+     "trains": "Śūnya-tattva realization",
+     "coord": "Āhnika 8 (bhuvanādhvan)"
+    },
+    {
+     "dh": 50,
+     "verse": "75",
+     "technique": "Void of ajar door — gaze without blinking",
+     "trains": "Śāmbhavopāya through sensory stilling",
+     "coord": "Āhnika 2 (anupāya)"
+    },
+    {
+     "dh": 67,
+     "verse": "92",
+     "technique": "Void of sleep with awareness",
+     "trains": "Sleep clear light (pra-bhāsvara)",
+     "coord": "Āhnika 10 (suṣupti-turīya)"
+    },
+    {
+     "dh": 82,
+     "verse": "108",
+     "technique": "Void without any support",
+     "trains": "Pure Śāmbhavopāya",
+     "coord": "Āhnika 13 (tīvratīvra śaktipāta)"
+    }
+   ]
+  },
+  {
+   "name": "3: Light and Color (Śāktopāya)",
+   "dharanas": [
+    {
+     "dh": 6,
+     "verse": "29",
+     "technique": "Fix on a point of light in darkness",
+     "trains": "Dhāraṇā on bindu",
+     "coord": "Āhnika 5 (bindu)"
+    },
+    {
+     "dh": 9,
+     "verse": "32",
+     "technique": "See light of consciousness in all things",
+     "trains": "Recognition of prakāśa",
+     "coord": "Āhnika 11 (sarvādhāraśakti)"
+    },
+    {
+     "dh": 33,
+     "verse": "56",
+     "technique": "Contemplate a lamp without the glass",
+     "trains": "Direct perception of light-essence",
+     "coord": "Āhnika 12 (divine body)"
+    },
+    {
+     "dh": 36,
+     "verse": "59",
+     "technique": "Blue light of Bhairava",
+     "trains": "Ājñā-cakra activation",
+     "coord": "Āhnika 11 (kalādhvan)"
+    },
+    {
+     "dh": 38,
+     "verse": "61",
+     "technique": "Light in the heart cakra",
+     "trains": "Anāhata cakra visualization",
+     "coord": "Āhnika 5 (Trika Liṅga)"
+    },
+    {
+     "dh": 42,
+     "verse": "65",
+     "technique": "Light of consciousness reflected in the world",
+     "trains": "Pratibimbavāda (doctrine of reflection)",
+     "coord": "Āhnika 2 (Doctrine of Reflection)"
+    },
+    {
+     "dh": 89,
+     "verse": "115",
+     "technique": "White light at the crown",
+     "trains": "Sahasrāra dissolution",
+     "coord": "Āhnika 5 (Paramānanda)"
+    }
+   ]
+  },
+  {
+   "name": "4: Sound and Mantra (Āṇavopāya → Śāktopāya)",
+   "dharanas": [
+    {
+     "dh": 2,
+     "verse": "25",
+     "technique": "Recite a mantra — feel its meaning dissolve",
+     "trains": "Madhyamā → parā",
+     "coord": "Āhnika 3 (four levels of speech)"
+    },
+    {
+     "dh": 8,
+     "verse": "31",
+     "technique": "Vibrate a phoneme — feel its resonance in the nāḍīs",
+     "trains": "Mātṛkā-cakra activation",
+     "coord": "Āhnika 5 (varṇa as pramā)"
+    },
+    {
+     "dh": 10,
+     "verse": "33",
+     "technique": "Hear the unstruck sound (anāhata)",
+     "trains": "Internal sound perception",
+     "coord": "Āhnika 5 (daśa anāhata)"
+    },
+    {
+     "dh": 11,
+     "verse": "34",
+     "technique": "Listen to a musical instrument — follow the sound into silence",
+     "trains": "Laya through sound",
+     "coord": "Āhnika 4 (Twelve Kālīs)"
+    },
+    {
+     "dh": 22,
+     "verse": "45",
+     "technique": "Chant the 50 phonemes as the body of the goddess",
+     "trains": "Mātṛkā as subtle body",
+     "coord": "Āhnika 11 (varṇādhvan)"
+    },
+    {
+     "dh": 28,
+     "verse": "51",
+     "technique": "Bīja mantra as a seed that grows into the deity",
+     "trains": "Mantra → Iṣṭadevatā",
+     "coord": "Āhnika 5 (SAUḤ/KHPHREṀ)"
+    },
+    {
+     "dh": 44,
+     "verse": "67",
+     "technique": "Sound of the alphabet as the universe itself",
+     "trains": "Varṇa as pramā",
+     "coord": "Āhnika 11 (varṇa-samghāta)"
+    },
+    {
+     "dh": 78,
+     "verse": "103",
+     "technique": "Hūṃ as the weapon that pierces duality",
+     "trains": "Vajra-jāpa (vajra repetition)",
+     "coord": "Āhnika 7 (Cakrodaya)"
+    }
+   ]
+  },
+  {
+   "name": "5: Perception and Senses (Śāktopāya)",
+   "dharanas": [
+    {
+     "dh": 5,
+     "verse": "28",
+     "technique": "Taste without tongue — know the taster",
+     "trains": "Recognition of the witness in sensation",
+     "coord": "Āhnika 10 (pramātṛ)"
+    },
+    {
+     "dh": 12,
+     "verse": "35",
+     "technique": "See without eyes — know the seer",
+     "trains": "Witness consciousness",
+     "coord": "Āhnika 10 (seven perceivers)"
+    },
+    {
+     "dh": 15,
+     "verse": "38",
+     "technique": "Touch without skin — feel the universal touch",
+     "trains": "Śakti-cakra (wheel of senses)",
+     "coord": "Āhnika 12 (divine body)"
+    },
+    {
+     "dh": 18,
+     "verse": "41",
+     "technique": "Smell without nose — know the knower",
+     "trains": "Discrimination of consciousness from its instruments",
+     "coord": "Āhnika 9 (tattvādhvan)"
+    },
+    {
+     "dh": 20,
+     "verse": "43",
+     "technique": "All senses simultaneously active and still",
+     "trains": "Integration of pratyāhāra",
+     "coord": "Āhnika 2 (jīvanmukti)"
+    },
+    {
+     "dh": 23,
+     "verse": "46",
+     "technique": "Knower and known are one",
+     "trains": "Pramāṇa-prameya aikya",
+     "coord": "Āhnika 9 (tattva-bheda)"
+    },
+    {
+     "dh": 25,
+     "verse": "48",
+     "technique": "The world as a painting on consciousness",
+     "trains": "Śuddhavidyā — pure knowledge",
+     "coord": "Āhnika 9 (Śuddhavidyā)"
+    },
+    {
+     "dh": 32,
+     "verse": "55",
+     "technique": "Breath and senses merge into one flow",
+     "trains": "Samāna-vāyu integration",
+     "coord": "Āhnika 6 (samāna)"
+    }
+   ]
+  },
+  {
+   "name": "6: Energy and Kuṇḍalinī (Āṇavopāya)",
+   "dharanas": [
+    {
+     "dh": 17,
+     "verse": "40",
+     "technique": "Kuṇḍalinī as a serpent — feel its movement",
+     "trains": "Kuṇḍalinī awareness",
+     "coord": "Āhnika 5 (six blisses)"
+    },
+    {
+     "dh": 21,
+     "verse": "44",
+     "technique": "Energy rising from mūlādhāra to brahmarandhra",
+     "trains": "Cakra ascent",
+     "coord": "Āhnika 5 (ten voids)"
+    },
+    {
+     "dh": 24,
+     "verse": "47",
+     "technique": "Prāṇa and apāna united in the belly",
+     "trains": "Samāna-prāṇa at navel",
+     "coord": "Āhnika 6 (samāna-vāyu)"
+    },
+    {
+     "dh": 26,
+     "verse": "49",
+     "technique": "The five prāṇas as one",
+     "trains": "Prāṇa aikya",
+     "coord": "Āhnika 6 (five prāṇas)"
+    },
+    {
+     "dh": 27,
+     "verse": "50",
+     "technique": "Heat at the navel — nectar at the crown",
+     "trains": "Tummo / SAUḤ practice",
+     "coord": "Āhnika 5 (SAUḤ)"
+    },
+    {
+     "dh": 29,
+     "verse": "52",
+     "technique": "Kuṇḍalinī as the supreme power (Parā-śakti)",
+     "trains": "Cicchakti recognition",
+     "coord": "Āhnika 3 (three Kuṇḍalinīs)"
+    },
+    {
+     "dh": 30,
+     "verse": "53",
+     "technique": "The inner fire burns the dualities",
+     "trains": "SAUḤ / KHPHREṀ absorption",
+     "coord": "Āhnika 4 (Twelve Kālīs)"
+    }
+   ]
+  },
+  {
+   "name": "7: Sexual Yoga (Kaula — controversial)",
+   "dharanas": [
+    {
+     "dh": 106,
+     "verse": "—",
+     "technique": "Union with consort as Śiva-Śakti",
+     "trains": "Nondual union",
+     "coord": "Āhnika 29 (dūtī, melaka)"
+    }
+   ]
+  },
+  {
+   "name": "8: Direct Recognition — Śāmbhavopāya",
+   "dharanas": [
+    {
+     "dh": 3,
+     "verse": "26",
+     "technique": "Silence between thoughts",
+     "trains": "Recognition of the gap",
+     "coord": "Āhnika 2 (anupāya)"
+    },
+    {
+     "dh": 36,
+     "verse": "59",
+     "technique": "Suddenly turn to the 'I' that is aware",
+     "trains": "Ātma-vyāpti",
+     "coord": "Āhnika 13 (pratibhā)"
+    },
+    {
+     "dh": 40,
+     "verse": "63",
+     "technique": "Rest in awareness without any object",
+     "trains": "Nirvikalpa samādhi",
+     "coord": "Āhnika 1 (Śāmbhavopāya)"
+    },
+    {
+     "dh": 50,
+     "verse": "75",
+     "technique": "Let go of all supports suddenly",
+     "trains": "Lion's leap",
+     "coord": "Āhnika 1 (vv. 171-196)"
+    },
+    {
+     "dh": 55,
+     "verse": "80",
+     "technique": "Intense impulse of will — the 'I' alone",
+     "trains": "Icchā-śakti direct",
+     "coord": "Āhnika 13 (tīvratīvra)"
+    },
+    {
+     "dh": 59,
+     "verse": "84",
+     "technique": "Recognize that consciousness is already free",
+     "trains": "Jīvanmukti recognition",
+     "coord": "Āhnika 2 (jīvanmukti)"
+    },
+    {
+     "dh": 66,
+     "verse": "91",
+     "technique": "Awareness without any content",
+     "trains": "Parā-vāc abiding",
+     "coord": "Āhnika 3 (parā-vāc)"
+    },
+    {
+     "dh": 71,
+     "verse": "96",
+     "technique": "Bhairava's state — neither inside nor outside",
+     "trains": "Mahābhairava",
+     "coord": "Āhnika 4 (12th Kālī)"
+    },
+    {
+     "dh": 76,
+     "verse": "101",
+     "technique": "Intense longing — break through",
+     "trains": "Bhakti as upāya",
+     "coord": "Āhnika 13 (śaktipāta)"
+    },
+    {
+     "dh": 82,
+     "verse": "108",
+     "technique": "Pure recognition without any technique",
+     "trains": "Anupāya exactly",
+     "coord": "Āhnika 2 (anupāya)"
+    },
+    {
+     "dh": 85,
+     "verse": "111",
+     "technique": "Who is the doubter? — see the answer",
+     "trains": "Self-inquiry (ātma-vicāra)",
+     "coord": "Āhnika 13 (viveka)"
+    },
+    {
+     "dh": 88,
+     "verse": "113-114",
+     "technique": "Awareness of awareness itself",
+     "trains": "Vimarśa abiding",
+     "coord": "Āhnika 2 (prakāśa-vimarśa)"
+    },
+    {
+     "dh": 90,
+     "verse": "116",
+     "technique": "Stop — no support — no thought",
+     "trains": "Śāmbhavopāya",
+     "coord": "Āhnika 1 (Śāmbhavopāya)"
+    },
+    {
+     "dh": 92,
+     "verse": "118",
+     "technique": "The knower dissolves into knowing",
+     "trains": "Pramātri → pramāṇa līna",
+     "coord": "Āhnika 10 (turiya)"
+    },
+    {
+     "dh": 95,
+     "verse": "121",
+     "technique": "Merge in the gap between two states",
+     "trains": "Turīyātīta",
+     "coord": "Āhnika 10 (beyond Fourth)"
+    },
+    {
+     "dh": 101,
+     "verse": "127",
+     "technique": "Bhairava's roar — Haṃsa (I am That)",
+     "trains": "Haṃsa-vidyā",
+     "coord": "Āhnika 11 (haṃsoccāra)"
+    },
+    {
+     "dh": 105,
+     "verse": "131",
+     "technique": "Sudden drop of all effort",
+     "trains": "Sahaja samādhi",
+     "coord": "Āhnika 6 (kālopāya)"
+    },
+    {
+     "dh": 107,
+     "verse": "133",
+     "technique": "The sun of consciousness — no object, only light",
+     "trains": "Prakāśa mātra",
+     "coord": "Āhnika 2 (prakāśa)"
+    },
+    {
+     "dh": 108,
+     "verse": "134",
+     "technique": "The state of Bhairava in daily life",
+     "trains": "Sahaja jīvanmukti",
+     "coord": "Āhnika 14 (jñānena paripūrṇatā)"
+    }
+   ]
+  }
+ ]
+}
