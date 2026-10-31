@@ -1,0 +1,676 @@
+[
+ {
+  "chunk": "tal-a36-p01",
+  "verses": "36.1",
+  "sanskrit": "āyātiratha śāstrasya kathyate@vasarāgatā /0b śrīsiddhādivinirdiṣṭā gurubhiśca nirūpitā / bhairavo bhairavī devī svacchando lākulo@ṇurāṭ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "SOURCE_BINDING",
+   "ABSTENTION",
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:42726bff316c",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    false,
+    "candidate 14.2× source — likely hallucinated addition"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śiva' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17338,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 10
+ },
+ {
+  "chunk": "tal-a36-p02",
+  "verses": "36.2",
+  "sanskrit": "gahaneśo@bjajaḥ śakro guruḥ koṭyapakarṣataḥ / navabhiḥ kramaśo@dhītaṃ navakoṭipravistaram",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:583f63c49d70",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17342,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p03",
+  "verses": "36.3",
+  "sanskrit": "etaistato guruḥ koṭimātrāt pādaṃ vitīrṇavān / dakṣādibhya ubhau pādau saṃvartādibhya eva ca",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:6580404511dd",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17345,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p04",
+  "verses": "36.4",
+  "sanskrit": "pādaṃ ca vāmanādibhyaḥ pādārdhaṃ bhārgavāya ca / pādapādaṃ tu balaye pādapādastu yo@paraḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:d8857aa4cee0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17348,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 6
+ },
+ {
+  "chunk": "tal-a36-p05",
+  "verses": "36.5",
+  "sanskrit": "siṃhāyārdhaṃ tataḥ śiṣṭāddvau bhāgau vinatābhuve / pādaṃ vāsukināgāya khaṇḍāḥ saptadaśa tvamī",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:5b51415884a1",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17351,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 6
+ },
+ {
+  "chunk": "tal-a36-p06",
+  "verses": "36.6",
+  "sanskrit": "svargādardhaṃ rāvaṇo@tha jahre rāmo@rdhamapyataḥ / vibhīṣaṇamukhādāpa guruśiṣyavidhikramāt",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:a9ff84012fd9",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17354,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p07",
+  "verses": "36.7",
+  "sanskrit": "khaṇḍairekānnaviṃśatyā vibhaktaṃ tadabhūttataḥ / khaṇḍaṃ khaṇḍaṃ cāṣṭakhaṇḍaṃ proktapādādibhedataḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:b06ce9029428",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17357,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 7
+ },
+ {
+  "chunk": "tal-a36-p08",
+  "verses": "36.8",
+  "sanskrit": "pādo mūloddhārāvuttaravṛhaduttare tathā kalpaḥ / sāṃhitakalpaskandāvanuttaraṃ vyāpakaṃ tridhā tisraḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:0950ae19de0b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17360,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 3
+ },
+ {
+  "chunk": "tal-a36-p09",
+  "verses": "36.9",
+  "sanskrit": "devyo@tra nirūpyante kramaśo vistāriṇaiva rūpeṇa / navame pade tu gaṇanā na kāciduktā vyavacchidāhīne",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:8582d1da5b4b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17363,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 6
+ },
+ {
+  "chunk": "tal-a36-p10",
+  "verses": "36.10",
+  "sanskrit": "rāmācca lakṣmaṇastasmāt siddhāstebhyo@pi dānavāḥ / guhyakāśca tatastebhyo yogino nṛvarāstataḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:8a628b8b98d4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17366,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 7
+ },
+ {
+  "chunk": "tal-a36-p11",
+  "verses": "36.11",
+  "sanskrit": "teṣāṃ krameṇa tanmadhye bhraṣṭaṃ kālāntarādyadā / tadā śrīkaṇṭhanāthājñāvaśāt siddhā avātaram",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:a4db0d544caa",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17369,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p12",
+  "verses": "36.12",
+  "sanskrit": "tryambakāmardakābhikhyaśrīnāthā advaye dvaye / dvayādvaye ca nipuṇāḥ krameṇa śivaśāsane",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:5377eed4ef43",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17372,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p13",
+  "verses": "36.13",
+  "sanskrit": "ādyasya cānvayo jajñe dvitīyo duhitṛkramāt / sa cārdhatryambakābhikhyaḥ saṃtānaḥ supratiṣṭhitaḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:5d8cddb21188",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17375,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 6
+ },
+ {
+  "chunk": "tal-a36-p14",
+  "verses": "36.14",
+  "sanskrit": "ataścārdhacatasro@tra maṭhikāḥ saṃtatikramāt / śiṣyapraśiṣyairvistīrṇāḥ śataśākhaṃ vyavasthitaiḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:606e530c5bfb",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17378,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 6
+ },
+ {
+  "chunk": "tal-a36-p15",
+  "verses": "36.15",
+  "sanskrit": "adhyuṣṭasaṃtatisrotaḥsārabhūtarasāhṛtim / vidhāya tantrāloko@yaṃ syandate sakalānrasān",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:0d3f9dce68fd",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17381,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 5
+ },
+ {
+  "chunk": "tal-a36-p16",
+  "verses": "36.16",
+  "sanskrit": "uktāyātirupādeyabhāvo nirṇīyate@dhunā /",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "36",
+  "immutable_id": "pt:pid:tal:b09adee85ffe",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantraloka.txt",
+  "source_lines": 17384,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 2
+ }
+]

@@ -49,6 +49,11 @@ def ingest(s3, key, work):
             "blocking": blocking,
             "model": r.get("model", ""),
             "date": r.get("date", ""),
+            "work_id": r.get("work_id", ""),
+            "ahnika": r.get("ahnika", ""),
+            "immutable_id": r.get("immutable_id", ""),
+            "status": r.get("status", ""),
+            "checks": g.get("checks", {}) if isinstance(g, dict) else {},
         }
         if passed:
             item["l1"] = r.get("l1_text", "")

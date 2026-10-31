@@ -8,7 +8,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:38289155de79",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 5,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p02",
@@ -19,7 +50,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:cbe8cd32cb1a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'prakṛti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 8,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p03",
@@ -29,8 +91,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:def2e9f505b7",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p03 (3)\nPower too from power-possessor-form difference does not desire; identity of these two is eternal, as fire and burning. // AgBpd_3",
-  "l2": ""
+  "l2": "",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 11,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p04",
@@ -41,7 +134,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:843660de20a7",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source; 'ātman' used in candidate"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 14,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p05",
@@ -52,7 +176,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:72ac6969da2a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'prakṛti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 17,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p06",
@@ -62,8 +217,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:3b131e61cfec",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p06 (6)\nThis god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-pervading. // AgBpd_6",
-  "l2": ""
+  "l2": "",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 20,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p07",
@@ -74,7 +260,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:18c9c56ff414",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 23,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p08",
@@ -84,8 +301,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:ab43f12d96df",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p08 (8)\nLimited-light-ness of inert indeed is mark; from inert different is awareness since not measured. // AgBpd_8",
-  "l2": ""
+  "l2": "",
+  "source_file": "ipvv-vol2.txt",
+  "source_lines": 238,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00021",
+  "match_words": 5
  },
  {
   "chunk": "bod-p09",
@@ -96,7 +344,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:184a1fb43ed9",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source; 'ātman' used in candidate"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 29,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p10",
@@ -106,8 +385,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:03c9569b7c43",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p10 (10)\nIn them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. // AgBpd_10",
-  "l2": "## bod-p10–p11 — variety and non-knowledge\nIn them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. What of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. Extreme variety in worlds, parts, and minds; non-knowledge of this autonomy is saṃsāra — the terrifying state of fools."
+  "l2": "## bod-p10–p11 — variety and non-knowledge\nIn them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. What of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. Extreme variety in worlds, parts, and minds; non-knowledge of this autonomy is saṃsāra — the terrifying state of fools.",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 32,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p11",
@@ -117,8 +427,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:7598c65116cb",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p11 (11)\nWhat of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. // AgBpd_11",
-  "l2": ""
+  "l2": "",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 35,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p12",
@@ -128,8 +469,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:1586e3aa4584",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p12 (12)\nFrom that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached. // AgBpd_12",
-  "l2": "## bod-p12–p14 — attainment, liberation, and non-difference\nFrom that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached. What of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. These two bondage and liberation from supreme-Lord-nature. Not they differ; no difference indeed in truth in supreme Lord. Three paths to the reality (grace, teacher-scripture, Lord's scripture); full knowledge of reality = liberation = living liberation; bondage and liberation are not ultimately different in the Lord."
+  "l2": "## bod-p12–p14 — attainment, liberation, and non-difference\nFrom that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached. What of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. These two bondage and liberation from supreme-Lord-nature. Not they differ; no difference indeed in truth in supreme Lord. Three paths to the reality (grace, teacher-scripture, Lord's scripture); full knowledge of reality = liberation = living liberation; bondage and liberation are not ultimately different in the Lord.",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 38,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p13",
@@ -139,8 +511,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:109b1a144a7a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bod-p13 (13)\nWhat of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. // AgBpd_13",
-  "l2": ""
+  "l2": "",
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 41,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "bod-p14",
@@ -151,7 +554,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:578751d66eab",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'prakṛti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 44,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "bod-p15",
@@ -162,6 +596,37 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhapancadasika",
+  "immutable_id": "pt:pid:bod:c3f178a545ff",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'prakṛti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bodhapaJcadasika.txt",
+  "source_lines": 47,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  }
 ]

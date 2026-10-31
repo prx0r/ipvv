@@ -8,7 +8,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ptvmadhyama",
+  "immutable_id": "pt:pid:ptvm:a49aa9ef4d00",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ptv-madhyama.txt",
+  "source_lines": 45,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00044",
+  "match_words": 12
  },
  {
   "chunk": "ptvm-p02",
@@ -19,7 +50,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ptvmadhyama",
+  "immutable_id": "pt:pid:ptvm:ea82d559f0b8",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ptv-madhyama.txt",
+  "source_lines": 226,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00044",
+  "match_words": 12
  },
  {
   "chunk": "ptvm-p03",
@@ -30,7 +92,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ptvmadhyama",
+  "immutable_id": "pt:pid:ptvm:fc8849598b03",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ptv-madhyama.txt",
+  "source_lines": 314,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00044",
+  "match_words": 12
  },
  {
   "chunk": "ptvm-p04",
@@ -41,6 +134,37 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ptvmadhyama",
+  "immutable_id": "pt:pid:ptvm:4ed3999d2fd8",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ptv-madhyama.txt",
+  "source_lines": 436,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00044",
+  "match_words": 12
  }
 ]

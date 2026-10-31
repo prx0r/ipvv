@@ -7,8 +7,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:65a6297add76",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p01 (1)\nBhairava-Lord, refuge of the helpless, by mind-become-Yours, in heart I venerate. // abhts_1",
-  "l2": "## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge."
+  "l2": "## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 6,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 3
  },
  {
   "chunk": "bh-p02",
@@ -19,7 +50,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:478a3bf66bbf",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 9,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 4
  },
  {
   "chunk": "bh-p03",
@@ -29,8 +91,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:ad4ece1358b3",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p03 (3)\nEven though hard-to-bear suffering, delusion, terror-causing karma-hosts. // abhts_3",
-  "l2": "## bh-p03 — suffering acknowledged\nEven though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied."
+  "l2": "## bh-p03 — suffering acknowledged\nEven though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 12,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p04",
@@ -40,8 +133,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:42ceeffb4f90",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p04 (4)\nBy Śaṅkara-service, contemplation-firm, I am terrifying-Bhairava-power-filled. // abhts_4",
-  "l2": "## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state."
+  "l2": "## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 15,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p05",
@@ -51,8 +175,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:516427fc7cfd",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p05 (5)\nDeath, Yama, ender, karma-ghosts — Lord, salutation; never I fear. // abhts_5",
-  "l2": "## bh-p05 — fearlessness\nDeath, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger."
+  "l2": "## bh-p05 — fearlessness\nDeath, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 18,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p06",
@@ -62,8 +217,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:6865783fe184",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p06 (6)\nIn being-full in You, I, self, bliss I enter. // abhts_6",
-  "l2": "## bh-p06 — bliss\nIn being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord."
+  "l2": "## bh-p06 — bliss\nIn being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 21,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p07",
@@ -73,8 +259,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:b6fd6bd5c487",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p07 (7)\nLord, then alone my with-You-nondifference; hymn-supreme-nectar-rain arises. // abhts_7",
-  "l2": "## bh-p07 — nondifference and hymn-rain\nLord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises."
+  "l2": "## bh-p07 — nondifference and hymn-rain\nLord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 24,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p08",
@@ -84,8 +301,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:2933a74e6cf7",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p08 (8)\nYour-scripture supreme-nectar-contemplation in mind, bliss-stream flows. // abhts_8",
-  "l2": "## bh-p08 — scripture-contemplation\nYour scripture's supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind."
+  "l2": "## bh-p08 — scripture-contemplation\nYour scripture's supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind.",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 27,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 3
  },
  {
   "chunk": "bh-p09",
@@ -96,7 +344,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:0f6e31d3c42d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 30,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match": "spaceless"
  },
  {
   "chunk": "bh-p10",
@@ -106,7 +385,38 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavastava",
+  "immutable_id": "pt:pid:bh:32db605be8aa",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## bh-p10 (10)\nBy whom the Lord becomes, world's great-heat pacifies instantly, compassionate. // abhts_10\n\n*T1 frozen 2026-10-30.*",
-  "l2": "## bh-p10 — the compassionate Lord\nBy whom the Lord becomes, the world's great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world's suffering instantly, compassionately.\n\n*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*"
+  "l2": "## bh-p10 — the compassionate Lord\nBy whom the Lord becomes, the world's great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world's suffering instantly, compassionately.\n\n*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*",
+  "source_file": "abhinavagupta-bhairavastava.txt",
+  "source_lines": 33,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 4
  }
 ]

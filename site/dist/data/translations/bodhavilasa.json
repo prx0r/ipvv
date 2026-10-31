@@ -9,7 +9,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:7e006946c8f5",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 12,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p02",
@@ -21,7 +52,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:6a003fa7ec89",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 27% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 39,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p03",
@@ -33,7 +95,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:02810260f916",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 69,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p04",
@@ -45,7 +138,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:f50ae432da89",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 96,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p05",
@@ -56,6 +180,37 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:751e654a43c8",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 123,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  }
 ]

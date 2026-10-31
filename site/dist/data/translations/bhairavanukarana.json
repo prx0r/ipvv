@@ -9,7 +9,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavanukarana",
+  "immutable_id": "pt:pid:bhair:dea0df8c27ee",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 23% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bhairavanukarana.txt",
+  "source_lines": 10,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "bhair-p02",
@@ -21,7 +52,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavanukarana",
+  "immutable_id": "pt:pid:bhair:5796dc1de47f",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 24% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bhairavanukarana.txt",
+  "source_lines": 46,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "bhair-p03",
@@ -33,7 +95,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavanukarana",
+  "immutable_id": "pt:pid:bhair:2de0d8bcf626",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 20% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bhairavanukarana.txt",
+  "source_lines": 82,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "bhair-p04",
@@ -46,6 +139,37 @@
    "TERM_CONSISTENCY"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bhairavanukarana",
+  "immutable_id": "pt:pid:bhair:b424e3475ac7",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 26% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'māyā': mixed renderings ['Maya', 'Māyā']"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "ksemaraja-bhairavanukarana.txt",
+  "source_lines": 118,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  }
 ]

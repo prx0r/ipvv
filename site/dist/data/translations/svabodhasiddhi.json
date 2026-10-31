@@ -8,7 +8,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "svabodhasiddhi",
+  "immutable_id": "pt:pid:svab:927c43bf944b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "bhutiraja-svabodhasiddhi.txt",
+  "source_lines": 10,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Hanneder ZDMG 2017)",
+  "match_words": 12
  },
  {
   "chunk": "svab-p02",
@@ -19,7 +50,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "svabodhasiddhi",
+  "immutable_id": "pt:pid:svab:ef47a6e6cc26",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "bhutiraja-svabodhasiddhi.txt",
+  "source_lines": 37,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Hanneder ZDMG 2017)",
+  "match_words": 12
  },
  {
   "chunk": "svab-p03",
@@ -31,7 +93,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "svabodhasiddhi",
+  "immutable_id": "pt:pid:svab:94f196cc3d18",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 36% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "bhutiraja-svabodhasiddhi.txt",
+  "source_lines": 64,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Hanneder ZDMG 2017)",
+  "match_words": 12
  },
  {
   "chunk": "svab-p04",
@@ -42,6 +135,37 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "svabodhasiddhi",
+  "immutable_id": "pt:pid:svab:edd5bd5efb1e",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "bhutiraja-svabodhasiddhi.txt",
+  "source_lines": 91,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Hanneder ZDMG 2017)",
+  "match_words": 12
  }
 ]

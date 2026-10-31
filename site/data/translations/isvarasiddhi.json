@@ -8,7 +8,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 41,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 7
  },
  {
   "chunk": "isva-p02",
@@ -19,7 +50,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": null,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 11
  },
  {
   "chunk": "isva-p03",
@@ -30,7 +92,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 387,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 12
  },
  {
   "chunk": "isva-p04",
@@ -41,7 +134,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 469,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 6
  },
  {
   "chunk": "isva-p05",
@@ -52,7 +176,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 595,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 12
  },
  {
   "chunk": "isva-p06",
@@ -63,7 +218,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 624,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 12
  },
  {
   "chunk": "isva-p07",
@@ -73,7 +259,38 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "isvarasiddhi",
+  "immutable_id": "pt:pid:isva:9676e24c6378",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## isva-p07 (55–56)\nPalāyate daivahatasya sanmaṇiḥ. Bhāti vahnir niśīthe. // 55–56\n\n*T1 frozen 2026-10-30. 7 passages.*",
-  "l2": "## isva-p07 — close\n**SUMMARY.** Palāyate daivahatasya sanmaṇiḥ — flees, of god-struck, good gem. Bhāti vahnir niśīthe — shines, fire, at night.\n\n**FUNCTION.** Closes with imagery.\n\n**KEY TERMS.** daivahata (god-struck), sanmaṇi (good gem), vahni (fire), niśītha (night).\n\n**LOCAL CONTEXT.** Closes the text; follows p04–p06.\n\n**EXPLANATION.** The passage moves in one step. Close: flees, of god-struck, good gem; shines, fire, at night.\n\n**BOUNDARY / OPEN.** None major. Verses are terse; L2 expands them.\n\n**RELATED.** A21 (prāmāṇya), spans TS1.55–1.56."
+  "l2": "## isva-p07 — close\n**SUMMARY.** Palāyate daivahatasya sanmaṇiḥ — flees, of god-struck, good gem. Bhāti vahnir niśīthe — shines, fire, at night.\n\n**FUNCTION.** Closes with imagery.\n\n**KEY TERMS.** daivahata (god-struck), sanmaṇi (good gem), vahni (fire), niśītha (night).\n\n**LOCAL CONTEXT.** Closes the text; follows p04–p06.\n\n**EXPLANATION.** The passage moves in one step. Close: flees, of god-struck, good gem; shines, fire, at night.\n\n**BOUNDARY / OPEN.** None major. Verses are terse; L2 expands them.\n\n**RELATED.** A21 (prāmāṇya), spans TS1.55–1.56.",
+  "source_file": "isvarasiddhi.txt",
+  "source_lines": 702,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
  }
 ]

@@ -21,6 +21,13 @@ for f in glob.glob(os.path.join(ROOT, 'site/data/translations/*.json')):
             fail(f'{w}/{it.get("chunk")}: PASS with no English')
         if g != 'PASS' and has_en:
             fail(f'{w}/{it.get("chunk")}: {g} with English present (fail-closed breach)')
+        # traceability: every chunk resolves to a vendored root + license + immutable id
+        if not it.get('source_file'):
+            fail(f'{w}/{it.get("chunk")}: no source_file (untraceable Sanskrit)')
+        if not it.get('source_license'):
+            fail(f'{w}/{it.get("chunk")}: no source_license (unembeddable)')
+        if not it.get('immutable_id'):
+            fail(f'{w}/{it.get("chunk")}: no immutable_id')
 
 # 2. audio manifest vs mp3s (site/data + dist — FAIL)
 for aj in glob.glob(os.path.join(ROOT, 'site/data/audio-*.json')):

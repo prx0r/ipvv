@@ -9,7 +9,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "01",
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'puruṣa' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 5,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa02-p01",
@@ -20,7 +51,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "02",
+  "immutable_id": "pt:pid:ts:a02:28a3ace66e1f",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 40,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa03-p01",
@@ -32,7 +94,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "03",
+  "immutable_id": "pt:pid:ts:a03:ec3a0fb790e3",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source; 'yoga' used in candidate "
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 46,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa03-p02",
@@ -44,7 +137,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "03",
+  "immutable_id": "pt:pid:ts:a03:86e603daa1e4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 60,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa04-p01",
@@ -55,7 +179,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "04",
+  "immutable_id": "pt:pid:ts:a04:65e2e60eaa28",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 82,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa04-p02",
@@ -67,7 +222,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "04",
+  "immutable_id": "pt:pid:ts:a04:319355141314",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source; 'jñāna' used in candidate"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 100,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa04-p03",
@@ -78,7 +264,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "04",
+  "immutable_id": "pt:pid:ts:a04:d38819637e44",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 116,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa05-p01",
@@ -88,8 +305,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "05",
+  "immutable_id": "pt:pid:ts:a05:1543f1598b1c",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa05-p01\nTherein, when thought by itself is able to make refinement in itself with no need of other means at all, then it, fallen from bonded functioning, by pure-knowledge grace, having attained Lord-power-nature, resorted to as means, manifests śākta knowledge. (5.1) And that is decided in the very next ahnika. (5.2) But when thought needs another means for its own refinement, then, taking as means limited-formed intellect, breath, body, pot and the rest, having attained atomhood, it manifests atomic knowledge. Therein, intellect is visualization-natured; breath is gross and subtle; the first is utterance-natured; and utterance means the five breath-and-rest functions; but the subtle, worded by letter-sound, will be taught; body is particular-arrangement-natured, worded by sense; pots and the rest are outer — to be glorified as jar-altar-liṅga-worship-and-rest means. (5.3) Therein, visualization, for now the fitting, we shall teach: that self-shining all-principle-indwelling supreme reality stated — that itself, having visualized in own-heart-awareness, therein one should visualize the collision of the knower-means-known-formed fire-sun-moon-triad — until that great Bhairava-fire, with form kindled by visualization-wind, results. Of it, surrounded by twelve former power-flames, wheel-natured, issued through any eye-and-rest hole, rested outside in graspable self, one should contemplate. And through that rested: first that outer, as moon-natured, in creation-course, filled; then as sun-natured, by maintenance, shone; then too as dissolution-fire-natured, dissolved; then brought to unsurpassed-selfhood, one should visualize. (5.4) Thus that wheel, with all-outer-things-undivided-full, results. (5.5) Then even trace-smelling things, thus made by that wheel, one should visualize. (5.6) Thus of him unceasingly visualizing — ascertaining own-consciousness-only-ultimates, creation-maintenance-dissolution-continuities, and creation-freedom-ultimacy of own consciousness — instantly is Bhairava-becoming. (5.7) Through practice, all-desired-accomplishments and the rest too. (5.8) \"Self-shining, all-self-principle, the measurer-and-rest triad, having made inward, abiding, one should visualize in heart-bliss-abode. (5.9–5.10) That twelve-great-power-ray-wheel-lord, all-pervading, issuing through voids, outside, one should visualize, making creation and the rest. (5.11–5.12) That with-swallowed-all-outer-inner-thing-circle, in self, resting, the yogin should contemplate — thus would be the self's manifestation. (5.13–5.14)\" Thus the summary verses. (5.15) Thus visualization. (5.16) Therein, for one wanting to utter breath: first in heart itself, in void, one rests; then outside, from breath-rise; thence toward outer, by down-breath-moon-filling, one sees all-selfhood; then desireless-of-other one becomes; then from even-breath-rise one experiences collision-rest; then at up-breath-fire-rise one swallows measurer-measured-grasping. (5.17) When that swallowing-fire calms, at pervading-rise, free of all limitation, one flashes. (5.18) Thus from void onward to pervading-end — whatever rests — they alone are self-bliss, blissless, supreme-bliss, brahma-bliss, great-bliss, consciousness-bliss — thus the six bliss-grounds taught; of which one relinker — riseless-setless, inward-rest-ultimate-natured — world-bliss. (5.19)",
-  "l2": "## tsa05-p01 — the atom's toolkit, and how to see fire\nWhen thought can refine itself with no outside help, it has slipped the bondsman's work; graced by bright knowing and wearing the Lord's own power, taken up as a means, it delivers the knowledge of power. (That verdict belongs to the next chapter.) But when thought still needs props, it grabs limited ones — mind, breath, body, pots — and goes atomic: small knower, small knowledge. Mind means seeing; breath is coarse breath-work, and a subtle sound — phoneme (more later); body means posture, called \"sense\"; pots and altars outside (their worship later). The seeing, for now: take the self-shining supreme, home to every principle, and see it in your heart's knowing. Then see the crash of knower, knowing, known as fire, sun, moon — until great Bhairava-fire stands up, fanned by seeing's wind. Ringed in twelve old power-flames, wheeling, out through any sense-door, settled on something graspable outside — hold it there. Then with that settled fire: first fill the outer world as moon, creating; then light it as sun, keeping; then burn it as dissolution-fire; then bring it to the Unsurpassed. The wheel now holds the outer world whole and undivided — and smoke-smelling leftovers too. Who sees without stopping — certain that his own awareness alone is ultimate, certain its creations, keeps, and ends are freedom's ultimates — is Bhairava on the spot. Practice adds the wish-fulfilling extras. (In brief, the charter verses: the shining triad of measurer and the rest, drawn inside, seen in heart's bliss-home; the twelve-rayed wheel-lord, everywhere, pouring through voids, making worlds outside; the yogin who swallows outer and inner circles and rests in himself — that is the self showing.) Then the breath-work for one about to sound breath: rest first in the heart's void; then ride breath outward; then with the down-breath's moon filling the outer, see everything as yourself; want nothing else; from the even breath's rise, feel the crash-rest; at the up-breath's fire-rise, swallow measurer-and-measured both; when that fire dies, at the all-breath's rise, flash with no edges left. Those rests from void to all-breath are the six bliss-grounds taught — own-bliss, blissless, beyond-bliss, god-bliss, great-bliss, awareness-bliss — with one string running through them, never rising or setting, rest inwardly ultimate: world-bliss.\n*Fidelity: preserved (means-ladder, dhyāna rite + charter verses, breath-arc, six grounds + relinker). Added: \"charter verses\" for saṃgrahaślokāḥ. SUPPLIED: none doctrinal. Not-resolved: subtle phoneme/body/outer details deferred (external pointers).*"
+  "l2": "## tsa05-p01 — the atom's toolkit, and how to see fire\nWhen thought can refine itself with no outside help, it has slipped the bondsman's work; graced by bright knowing and wearing the Lord's own power, taken up as a means, it delivers the knowledge of power. (That verdict belongs to the next chapter.) But when thought still needs props, it grabs limited ones — mind, breath, body, pots — and goes atomic: small knower, small knowledge. Mind means seeing; breath is coarse breath-work, and a subtle sound — phoneme (more later); body means posture, called \"sense\"; pots and altars outside (their worship later). The seeing, for now: take the self-shining supreme, home to every principle, and see it in your heart's knowing. Then see the crash of knower, knowing, known as fire, sun, moon — until great Bhairava-fire stands up, fanned by seeing's wind. Ringed in twelve old power-flames, wheeling, out through any sense-door, settled on something graspable outside — hold it there. Then with that settled fire: first fill the outer world as moon, creating; then light it as sun, keeping; then burn it as dissolution-fire; then bring it to the Unsurpassed. The wheel now holds the outer world whole and undivided — and smoke-smelling leftovers too. Who sees without stopping — certain that his own awareness alone is ultimate, certain its creations, keeps, and ends are freedom's ultimates — is Bhairava on the spot. Practice adds the wish-fulfilling extras. (In brief, the charter verses: the shining triad of measurer and the rest, drawn inside, seen in heart's bliss-home; the twelve-rayed wheel-lord, everywhere, pouring through voids, making worlds outside; the yogin who swallows outer and inner circles and rests in himself — that is the self showing.) Then the breath-work for one about to sound breath: rest first in the heart's void; then ride breath outward; then with the down-breath's moon filling the outer, see everything as yourself; want nothing else; from the even breath's rise, feel the crash-rest; at the up-breath's fire-rise, swallow measurer-and-measured both; when that fire dies, at the all-breath's rise, flash with no edges left. Those rests from void to all-breath are the six bliss-grounds taught — own-bliss, blissless, beyond-bliss, god-bliss, great-bliss, awareness-bliss — with one string running through them, never rising or setting, rest inwardly ultimate: world-bliss.\n*Fidelity: preserved (means-ladder, dhyāna rite + charter verses, breath-arc, six grounds + relinker). Added: \"charter verses\" for saṃgrahaślokāḥ. SUPPLIED: none doctrinal. Not-resolved: subtle phoneme/body/outer details deferred (external pointers).*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 130,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa05-p02",
@@ -100,7 +348,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "05",
+  "immutable_id": "pt:pid:ts:a05:4d154eed763c",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 150,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa06-p01",
@@ -112,7 +391,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "06",
+  "immutable_id": "pt:pid:ts:a06:b628e168bf97",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'śakti': mixed renderings ['Śakti', 'power']"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source; 'puruṣa' used in candidate"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 175,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa06-p02",
@@ -124,7 +434,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "06",
+  "immutable_id": "pt:pid:ts:a06:aa56d510a194",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 196,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa06-p03",
@@ -136,7 +477,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "06",
+  "immutable_id": "pt:pid:ts:a06:eeab5d3c2a2b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 222,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa06-p04",
@@ -147,7 +519,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "06",
+  "immutable_id": "pt:pid:ts:a06:4badfdaaefe0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 254,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa07-p01",
@@ -159,7 +562,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "07",
+  "immutable_id": "pt:pid:ts:a07:5452ed74b7a9",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 267,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa08-p01",
@@ -171,7 +605,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "08",
+  "immutable_id": "pt:pid:ts:a08:5baba4be51e6",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 297,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa08-p02",
@@ -183,7 +648,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "08",
+  "immutable_id": "pt:pid:ts:a08:11747ca0f435",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'puruṣa' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 315,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa08-p03",
@@ -195,7 +691,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "08",
+  "immutable_id": "pt:pid:ts:a08:7f9e4b3307f2",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 336,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa08-p04",
@@ -207,7 +734,38 @@
    "TERM_CONSISTENCY"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "08",
+  "immutable_id": "pt:pid:ts:a08:b934ea526829",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'prakṛti': mixed renderings ['Prakṛti', 'nature']"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 362,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa09-p01",
@@ -218,7 +776,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "09",
+  "immutable_id": "pt:pid:ts:a09:2cef78493792",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 392,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa09-p02",
@@ -229,7 +818,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "09",
+  "immutable_id": "pt:pid:ts:a09:e1c807651fd6",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'puruṣa' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 409,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa09-p03",
@@ -239,8 +859,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "09",
+  "immutable_id": "pt:pid:ts:a09:1205d1f54e67",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa09-p03\n\"[One's-own-work-doership is grasper-natured — so stated; it is not counted again — thus discrimination-rich, teacher-dwelling-following, everywhere fifteenfold by division one discriminates. (9.36) But in thought-lessness there is instant-lessness — as in joy-consciousnesses, until thought-free alone. (9.37) But folk, by thought-rest, mistake that I-ness-formed, I-ness-covered-this-ness-spread thought-free grasping-ground unmanifest as suffering-state — as joy-rested mistake; but by thought-waning it shines indeed — thus this carefulness in grasper-grasped relation — so the Abhinavagupta teachers. (9.38) And thus fifteenfold standing: as far as manifest-I-natured difference lessens, pairs wane in twos, until two-instant Śiva-immersion: therein the first instant all-full, the second all-knowledge-sense-entered-practiced, fitting for omniscience-omnipotence — not the first. (9.39) As venerable Kallata said: 'instant-fall' — here fall-word is goddess Kālī herself, Mother-of-Beings, Bhairava, intuitiveness — enough of secret-nonself. (9.40) Thus from mantra-great-lord-instant onward, through practice thereof, thereof siddhis. (9.41) Now herein waking-and-rest-states are described: therein, of knowable and its consciousness, whatever variety mutually dependent — that is state — not of knowable alone, nor of consciousness alone, nor two separate. (9.42) Therein, when shining as to-be-supported, as outer-formed, then waking state — in known, measurer, measure. (9.43) But when therein, as supporting-formed, shining is resolve — then dream state. (9.44) But when therein, as supporter-formed, as seed-natured alone shining — then deep-sleep state. (9.45) These three alone, as known-means-knower-states, each fourfold by waking-and-the-rest, are stated. (9.46) But when therein, in knower-rest-gone, through knower's fullness-facing, shining as fullness-facing — then fourth state. And it is 'form, I see' — thus crossing three parts 'I see' — means-less knowerhood, autonomy-essence, by near-middle-far, conferring knower-means-known baptism, gracing the three states, threefold. (9.47–9.53 per T1.)]\"",
-  "l2": "## tsa09-p03 — fifteen everywhere, the instant, and the four states (CONDENSED companion)\nDoing one's own work is being a grasper — said, not recounted — so the rich-in-discernment, dwelling with teachers, tell fifteen everywhere by dividing. Fewer thoughts, fewer instants — down, in joys and knowings, to thought-free. People rest in thought and mistake the I-shaped, I-covered, this-spreading, thought-free grasping-ground, unshown, for suffering — as the joy-rested mistake pain; but as thought thins it shines — careful, then, with grasper and grasped, say my teachers. Fifteen standing: as I-natured difference thins, pairs thin two by two, till Śiva-immersion of two instants — first all-full, second entering every knowing-sense, practised, fit for all-knowing, all-doing (not the first). Kallata's \"instant-fall\": fall is goddess Kālī herself, the Mother of Beings, Bhairava, intuitiveness — secrets and non-secrets enough. From mantra-lord's instant on, practice brings the wins. Now waking and the rest: knowable and its knowing, whatever variety they hold together — that is a state (not the known alone, not knowing alone, not two apart). Shining as supported, outer-shaped: waking — in known, measurer, measure. Shining as supporting shape: resolve — dream. Shining as supporter, seed-natured alone: deep sleep. These three, as known-means-knower states, each in waking shapes four ways. But shining, in gone-to-knower-rest, as fullness-facing through the knower's facing-fullness: the fourth — \"form — I see\" — crossing \"I see\"'s three parts, knowerhood without means, autonomy-pith, near, middle, far, baptizing knower-means-known, gracing the three states, threefold...\n*Fidelity: summary-faithful; full close pass queued. Not-resolved: tail past cut; Kallata quote (external).*"
+  "l2": "## tsa09-p03 — fifteen everywhere, the instant, and the four states (CONDENSED companion)\nDoing one's own work is being a grasper — said, not recounted — so the rich-in-discernment, dwelling with teachers, tell fifteen everywhere by dividing. Fewer thoughts, fewer instants — down, in joys and knowings, to thought-free. People rest in thought and mistake the I-shaped, I-covered, this-spreading, thought-free grasping-ground, unshown, for suffering — as the joy-rested mistake pain; but as thought thins it shines — careful, then, with grasper and grasped, say my teachers. Fifteen standing: as I-natured difference thins, pairs thin two by two, till Śiva-immersion of two instants — first all-full, second entering every knowing-sense, practised, fit for all-knowing, all-doing (not the first). Kallata's \"instant-fall\": fall is goddess Kālī herself, the Mother of Beings, Bhairava, intuitiveness — secrets and non-secrets enough. From mantra-lord's instant on, practice brings the wins. Now waking and the rest: knowable and its knowing, whatever variety they hold together — that is a state (not the known alone, not knowing alone, not two apart). Shining as supported, outer-shaped: waking — in known, measurer, measure. Shining as supporting shape: resolve — dream. Shining as supporter, seed-natured alone: deep sleep. These three, as known-means-knower states, each in waking shapes four ways. But shining, in gone-to-knower-rest, as fullness-facing through the knower's facing-fullness: the fourth — \"form — I see\" — crossing \"I see\"'s three parts, knowerhood without means, autonomy-pith, near, middle, far, baptizing knower-means-known, gracing the three states, threefold...\n*Fidelity: summary-faithful; full close pass queued. Not-resolved: tail past cut; Kallata quote (external).*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 428,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa10-p01",
@@ -251,7 +902,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "10",
+  "immutable_id": "pt:pid:ts:a10:a7312042ee92",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source; 'puruṣa' used in candidat"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 447,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p01",
@@ -262,7 +944,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:d80b4186da04",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'puruṣa' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 467,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa11-p02",
@@ -272,8 +985,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:69d85b3756cc",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa11-p02\nTherein, some say: \"Since, from absence of knowledge, saṃsāra is ignorance-rooted, on its removal there is the descent of power through the rise of knowledge.\" For them, it must be stated that the very rise of right knowledge is defective. If [descent were] produced by karma, then, like a fruit of karma, there would be contingency of being enjoyed; and if, for the enjoyer, a descent of power is admitted, there is over-extension. But if the rise of knowledge is caused by the Lord's will, there is mutual dependence, and futility, and contingency of passion and the rest in the Lord. (11.3a) \"If it is said: from mutual obstruction of two equal opposed karmas there is equilibrium of karma, thence the descent of power\" — no: where there is succession, opposition is impossible; and even where there is opposition, there is contingency that another unopposed karma gives enjoyment; and if unopposed karma does not proceed, then and there is contingency of the body's fall. If it is said that birth-and-life-span-giving karma is not obstructed but only enjoyment-giving karma is obstructed — whence is that? If that karma exists, and power were to descend, what would it fear from the enjoyment-giver? (11.3b)",
-  "l2": "## tsa11-p02 — the failed explanations\nThree theories are on offer, and Abhinava demolishes each in turn. Some say liberation is a matter\nof knowledge: we suffer from not-knowing, so when knowledge dawns, power descends. But the \"dawn\nof right knowledge\" is itself the thing that needs explaining — the account is circular on arrival.\nSay instead that grace is produced by ritual action, and it inherits action's limits: like any reward,\nit would be something merely enjoyed, and anyone enjoying anything would count as graced — the\nconcept explodes. Say it comes from the Lord's sheer will, and knowledge's dawn either grounds the\nwill (circular again) or floats free of it (pointless) — while saddling the Lord himself with\nmotive and partiality. A subtler version: when two equal and opposite deeds deadlock, their\nequilibrium lets grace through. But deadlock needs simultaneity; deeds ripen in sequence, where\n\"opposition\" has no grip. And even granted the deadlock, some third, unopposed deed would still be\ndelivering its pleasures — or, if no deed is operating at all, the body should drop on the spot.\nPlead that birth-and-lifespan deeds run on while only pleasure-deeds jam: on what ground? If the\ndeed-structure is intact, what exactly would descending power be afraid of in the pleasure-giver?\n*Fidelity: preserved (three theories + replies in order). Added: \"circular on arrival\" unpacks\nanyonyāśraya [SUPPLIED-structural]. Not-resolved: the \"defective\" charge against right knowledge\nis promissory here (iti vācyam).*"
+  "l2": "## tsa11-p02 — the failed explanations\nThree theories are on offer, and Abhinava demolishes each in turn. Some say liberation is a matter\nof knowledge: we suffer from not-knowing, so when knowledge dawns, power descends. But the \"dawn\nof right knowledge\" is itself the thing that needs explaining — the account is circular on arrival.\nSay instead that grace is produced by ritual action, and it inherits action's limits: like any reward,\nit would be something merely enjoyed, and anyone enjoying anything would count as graced — the\nconcept explodes. Say it comes from the Lord's sheer will, and knowledge's dawn either grounds the\nwill (circular again) or floats free of it (pointless) — while saddling the Lord himself with\nmotive and partiality. A subtler version: when two equal and opposite deeds deadlock, their\nequilibrium lets grace through. But deadlock needs simultaneity; deeds ripen in sequence, where\n\"opposition\" has no grip. And even granted the deadlock, some third, unopposed deed would still be\ndelivering its pleasures — or, if no deed is operating at all, the body should drop on the spot.\nPlead that birth-and-lifespan deeds run on while only pleasure-deeds jam: on what ground? If the\ndeed-structure is intact, what exactly would descending power be afraid of in the pleasure-giver?\n*Fidelity: preserved (three theories + replies in order). Added: \"circular on arrival\" unpacks\nanyonyāśraya [SUPPLIED-structural]. Not-resolved: the \"defective\" charge against right knowledge\nis promissory here (iti vācyam).*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 470,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p03",
@@ -283,8 +1027,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:15aaa3c9fa1d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa11-p03\n\"Then, at the maturation of stain there is the descent of power.\" But that too — of what nature is it, and what is its cause? By this [refutation]: dispassion, special dharma, discrimination, service of the good, attainment of the good, worship of gods and the rest as cause — is refuted. Thus, for dualists, everything is incoherent. (11.4)",
-  "l2": "## tsa11-p03 — maturation, and the collapse of dualism\n\"Grace comes when the stain ripens.\" Very well: what is this ripening — what is it, and what causes\nit? No answer comes. And with it fall the whole catalogue of supposed causes — dispassion, merit,\ndiscernment, good company, attainment, worship. For the dualist schools, every option on the table\nis now incoherent.\n*Fidelity: preserved (maturation challenge + hetu-list + verdict). Added: nothing.*"
+  "l2": "## tsa11-p03 — maturation, and the collapse of dualism\n\"Grace comes when the stain ripens.\" Very well: what is this ripening — what is it, and what causes\nit? No answer comes. And with it fall the whole catalogue of supposed causes — dispassion, merit,\ndiscernment, good company, attainment, worship. For the dualist schools, every option on the table\nis now incoherent.\n*Fidelity: preserved (maturation challenge + hetu-list + verdict). Added: nothing.*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 471,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p04",
@@ -297,7 +1072,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:ca6e60e17fb1",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'śakti': mixed renderings ['Śakti', 'power']; 'prakṛti': mixed renderings ['Prak"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source; 'jñāna' used in candidate but not i"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 472,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p05",
@@ -308,7 +1114,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:d0dabd01e185",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 475,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p06",
@@ -318,8 +1155,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:7b7efd5b1e8b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa11-p06\nThus the wisher obtains from the teacher the knowledge-characterized initiation, by which he is liberated instantly, even while alive. Here there are varieties: by glance, by speech, by scriptural instruction, by showing of conduct, by giving of food, and so on. (11.11) Or the practitioner then instantly obtains the life-severing initiation — but that is to be performed only at the moment of death, as will be taught. (11.12) From the utmost three intense [descents] of the intense descent of power, even one who is initiated has no firm conviction of the Śiva-nature of his own self; but by the maturation of conviction, at the end of the body he is Śiva indeed. From the middle moderate, though desiring Śiva-hood he desires enjoyment — he is a fit vessel of knowledge in that same initiation; and he, by the practice of yoga, having enjoyed enjoyment with this very body, at the end of the body is Śiva indeed. (11.13)",
-  "l2": "## tsa11-p06 — how initiation works, and what follows by rank\nSo the seeker receives from the teacher the initiation whose mark is knowledge — and is free at\nonce, while still alive. It comes by a glance, a word, a text taught, a conduct shown, food\nshared, and more. There is also the initiation that severs the life-breath — but that one is for\nthe hour of death, as will be taught. From the highest three intensities of the intense, even the\ninitiated has no steady footing in his own Śiva-nature — but as conviction ripens, at the body's\nend he is Śiva, no qualification. From the middle of the moderate: still hungry for pleasure, yet\na fit vessel for knowledge in that very initiation — he enjoys, with this same body, through yoga\npractice, and at the body's end he is Śiva.\n*Fidelity: preserved (instant + severing initiations, grade-fates). Added: nothing. Not-resolved:\nprāṇaviyojikā rite deferred (iti vakṣyāmaḥ).*"
+  "l2": "## tsa11-p06 — how initiation works, and what follows by rank\nSo the seeker receives from the teacher the initiation whose mark is knowledge — and is free at\nonce, while still alive. It comes by a glance, a word, a text taught, a conduct shown, food\nshared, and more. There is also the initiation that severs the life-breath — but that one is for\nthe hour of death, as will be taught. From the highest three intensities of the intense, even the\ninitiated has no steady footing in his own Śiva-nature — but as conviction ripens, at the body's\nend he is Śiva, no qualification. From the middle of the moderate: still hungry for pleasure, yet\na fit vessel for knowledge in that very initiation — he enjoys, with this same body, through yoga\npractice, and at the body's end he is Śiva.\n*Fidelity: preserved (instant + severing initiations, grade-fates). Added: nothing. Not-resolved:\nprāṇaviyojikā rite deferred (iti vakṣyāmaḥ).*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 478,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p07",
@@ -330,7 +1198,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:bc2ca79ca284",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 481,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 9
  },
  {
   "chunk": "tsa11-p08",
@@ -342,7 +1241,38 @@
    "TERM_CONSISTENCY"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:7302f9581e80",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'śakti': mixed renderings ['Śakti', 'power']"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 484,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 10
  },
  {
   "chunk": "tsa11-p09",
@@ -353,7 +1283,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:c4f607ff6a88",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 487,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa11-p10",
@@ -363,8 +1324,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "11",
+  "immutable_id": "pt:pid:ts:a11:7d37ae2fe6dc",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa11-p10\nThus the descent of power, the cause of grace, is unconditioned indeed, disregarding karma, destiny, and the rest. (11.23) Concealment: concealment has as its fruit the partaking in dense suffering and delusion conditioned by karma and the rest. As by the autonomy of light the awakened one, though behaving like the deluded, inwardly censures deluded conduct, so the deluded one may perform awakened conduct such as worship of mantra and the rest, and censure it. And as his deluded conduct, though performed, perishes for the awakened one, so his awakened conduct — being censured, of the nature of forbidden conduct, apprehensive through itself — drowns him in the mud of suffering and delusion. But for one in whom the descent of power has arisen, there is no concealment. Here too, regard for karma and the rest is to be denied, as before. There too, through diversity of will, there is fruition of suffering to be enjoyed with this body only — as for those given both to service and to censure toward initiation, conduct, teacher, god, fire, and the rest, and as for former dwellers in Śiva's doctrine who abandoned it. (11.2\n...[truncated 911 chars]",
-  "l2": "## tsa11-p10 — grace unconditioned; hiding; the unbroken self\nSo: the descent, which is what makes grace happen, is unconditioned — it does not wait on deeds\nor destinies. Hiding, by contrast, ripens thick suffering and confusion, all of it deed-\nconditioned. Watch the mirror: the awake man playing the fool still inwardly despises folly — and\nthe fool playing awake, mouthing mantras, still despises the part. The awake man's folly, once\nacted, dissolves; but the fool's acted awakeness — performed yet inwardly condemned, forbidden in\nform, making him suspect even to himself — sinks him in the mud. For one in whom the descent has\nrisen, there is no hiding. And here too, stop weighing deeds — as before. Even then, will differs:\none may yet taste suffering with this very body — like those who both serve and revile the\ninitiation, the conduct, the teacher, the god, the fire, or like old Śaivas who walked away. And\neven then, by that same differing will: the hidden one may join the descent himself — or, dead,\nthrough kin or teacher's grace. Holding to this — \"the doings are mine, and I am the Lord\" — never\nsee the self as broken.\n*Fidelity: preserved (unconditioned verdict, mirror simile, recovery paths, close). Added: \"mouthing\nmantras\" for mantrārādhanādikām kuryāt (register choice, flagged). \"I am the Lord\" renders\nparameśvara eva with self-reflexive made explicit [SUPPLIED-minor].*"
+  "l2": "## tsa11-p10 — grace unconditioned; hiding; the unbroken self\nSo: the descent, which is what makes grace happen, is unconditioned — it does not wait on deeds\nor destinies. Hiding, by contrast, ripens thick suffering and confusion, all of it deed-\nconditioned. Watch the mirror: the awake man playing the fool still inwardly despises folly — and\nthe fool playing awake, mouthing mantras, still despises the part. The awake man's folly, once\nacted, dissolves; but the fool's acted awakeness — performed yet inwardly condemned, forbidden in\nform, making him suspect even to himself — sinks him in the mud. For one in whom the descent has\nrisen, there is no hiding. And here too, stop weighing deeds — as before. Even then, will differs:\none may yet taste suffering with this very body — like those who both serve and revile the\ninitiation, the conduct, the teacher, the god, the fire, or like old Śaivas who walked away. And\neven then, by that same differing will: the hidden one may join the descent himself — or, dead,\nthrough kin or teacher's grace. Holding to this — \"the doings are mine, and I am the Lord\" — never\nsee the self as broken.\n*Fidelity: preserved (unconditioned verdict, mirror simile, recovery paths, close). Added: \"mouthing\nmantras\" for mantrārādhanādikām kuryāt (register choice, flagged). \"I am the Lord\" renders\nparameśvara eva with self-reflexive made explicit [SUPPLIED-minor].*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 490,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa12-p01",
@@ -375,7 +1367,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "12",
+  "immutable_id": "pt:pid:ts:a12:1a0912144533",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'prakṛti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 495,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 9
  },
  {
   "chunk": "tsa13-p01",
@@ -387,7 +1410,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "13",
+  "immutable_id": "pt:pid:ts:a13:64f4e4852ada",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 506,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa13-p02",
@@ -399,7 +1453,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "13",
+  "immutable_id": "pt:pid:ts:a13:d2b0b17f0b22",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 526,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa13-p03",
@@ -410,7 +1495,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "13",
+  "immutable_id": "pt:pid:ts:a13:85d2fd4024a1",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 541,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa13-p04",
@@ -422,7 +1538,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "13",
+  "immutable_id": "pt:pid:ts:a13:70b4dfd8db3f",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 40% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 568,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa14-p01",
@@ -431,7 +1578,17 @@
   "gate": "BLOCKED",
   "blocking": [],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "14",
+  "immutable_id": "pt:pid:ts:a14:2aa67e0f9177",
+  "status": "OK",
+  "checks": {},
+  "source_file": "tantrasara.txt",
+  "source_lines": 609,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa15-p01",
@@ -440,7 +1597,17 @@
   "gate": "BLOCKED",
   "blocking": [],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "15",
+  "immutable_id": "pt:pid:ts:a15:627b83567350",
+  "status": "OK",
+  "checks": {},
+  "source_file": "tantrasara.txt",
+  "source_lines": 627,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa16-p01",
@@ -452,7 +1619,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "16",
+  "immutable_id": "pt:pid:ts:a16:b4114057a846",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 649,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa17-p01",
@@ -463,7 +1661,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "17",
+  "immutable_id": "pt:pid:ts:a17:db23385e14b6",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 675,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa18-p01",
@@ -474,7 +1703,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "18",
+  "immutable_id": "pt:pid:ts:a18:d9ffbc899168",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 683,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa19-p01",
@@ -486,7 +1746,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "19",
+  "immutable_id": "pt:pid:ts:a19:500a17cc749d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śiva' used in candidate but not in source; 'māyā' used in candidate b"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 687,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa20-p01",
@@ -497,7 +1788,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "20",
+  "immutable_id": "pt:pid:ts:a20:8d892a4f811e",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source; 'ātman' used in candidate "
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 697,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 10
  },
  {
   "chunk": "tsa20-p02",
@@ -509,7 +1831,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "20",
+  "immutable_id": "pt:pid:ts:a20:edaaa3ccd3bc",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source; 'yoga' used in candidate "
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 717,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa20-p03",
@@ -520,7 +1873,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "20",
+  "immutable_id": "pt:pid:ts:a20:9ba88c8463e6",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 732,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa20-p04",
@@ -532,7 +1916,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "20",
+  "immutable_id": "pt:pid:ts:a20:3f1bb49714d5",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 38% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 749,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa21-p01",
@@ -544,7 +1959,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "21",
+  "immutable_id": "pt:pid:ts:a21:fa93b07da4e5",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'yoga' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 763,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa22-p01",
@@ -556,7 +2002,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "22",
+  "immutable_id": "pt:pid:ts:a22:cc14a8088d13",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 778,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 11
  },
  {
   "chunk": "tsa22-p02",
@@ -566,8 +2043,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "22",
+  "immutable_id": "pt:pid:ts:a22:03b8e922087a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## tsa22-p02\nNow in power: therein mutually of power-and-heroes, of both, through both-naturedness, in rising-beginning-creation-end-Śiva-power-awakening, of each other function, by Lord-destiny, through pure-naturedness, therein preponderance; by this special-circle's power-ness explained. Therein by pervasion-binding worship; three-power-end seat; in three-corners middle emission-power; pervasion special. Thus in self-body therein in circle then Brahma-hole-and-subwheels. Now in couple: of power mark this — like it nondifference, then without regard to age-and-rest non-attachment; of other-than-world couple-born identity. From effect-cause-together-rising threefold directly or otherwise; in imagination mutually worshipped, satiated, ananda-antika. One should worship circle by suitability, subcircle then-following; outside with flower-and-the-rest, inside with scent-enjoyment-sap-and-the-rest. Thus bliss-mass-made; subcircle-host melts by circle-identity. By each-own-enjoyment-non-enjoyment variety, gradually subcircle-goddesses go to consciousness-circle middle. Subcircle-god-essence ray-host full-of-vigor; that power like-it, mutually-facing becomes. That couple upward-abode-entry throb-born-shaking; shakes subcircles too; they then of-it-made, not separate. Thus couple, melted-difference... (22.24–22.33 per T1: lotus-petals, khecarī-mudrā, nāda-bhairava, mantra-vīrya, etc.)",
-  "l2": "## tsa22-p02 — inner power-worship and the couple (CONDENSED)\nPower-worship: mutual function of power-and-heroes, both-natured, in rising-beginning-creation-end-Śiva-power-awakening; Lord-destiny + pure-naturedness → preponderance; by this special-circle's power-ness explained. Therein by pervasion-binding worship; three-power-end seat; in three-corners middle emission-power; pervasion special. Thus in self-body therein in circle then Brahma-hole-and-subwheels. Couple: power's mark — like it nondifference, then without regard to age-and-rest non-attachment; of other-than-world couple-born identity. Effect-cause-together-rising threefold directly or otherwise; in imagination mutually worshipped, satiated, ananda-antika. Worship circle by suitability, subcircle then-following; outside with flower-and-the-rest, inside with scent-enjoyment-sap-and-the-rest. Thus bliss-mass-made; subcircle-host melts by circle-identity. By each-own-enjoyment-non-enjoyment variety, gradually subcircle-goddesses go to consciousness-circle (middle). Subcircle-god-essence ray-host full-of-vigor; that power like-it, mutually-facing becomes. That couple upward-abode-entry throb-born-shaking; shakes subcircles too; they then of-it-made, not separate. Thus couple, melted-difference... (22.24–22.33 per T1: lotus-petals, khecarī-mudrā, nāda-bhairava, mantra-vīrya, etc.)\n*Fidelity: summary-faithful; full close pass queued. Not-resolved: full close pass queued.*"
+  "l2": "## tsa22-p02 — inner power-worship and the couple (CONDENSED)\nPower-worship: mutual function of power-and-heroes, both-natured, in rising-beginning-creation-end-Śiva-power-awakening; Lord-destiny + pure-naturedness → preponderance; by this special-circle's power-ness explained. Therein by pervasion-binding worship; three-power-end seat; in three-corners middle emission-power; pervasion special. Thus in self-body therein in circle then Brahma-hole-and-subwheels. Couple: power's mark — like it nondifference, then without regard to age-and-rest non-attachment; of other-than-world couple-born identity. Effect-cause-together-rising threefold directly or otherwise; in imagination mutually worshipped, satiated, ananda-antika. Worship circle by suitability, subcircle then-following; outside with flower-and-the-rest, inside with scent-enjoyment-sap-and-the-rest. Thus bliss-mass-made; subcircle-host melts by circle-identity. By each-own-enjoyment-non-enjoyment variety, gradually subcircle-goddesses go to consciousness-circle (middle). Subcircle-god-essence ray-host full-of-vigor; that power like-it, mutually-facing becomes. That couple upward-abode-entry throb-born-shaking; shakes subcircles too; they then of-it-made, not separate. Thus couple, melted-difference... (22.24–22.33 per T1: lotus-petals, khecarī-mudrā, nāda-bhairava, mantra-vīrya, etc.)\n*Fidelity: summary-faithful; full close pass queued. Not-resolved: full close pass queued.*",
+  "source_file": "tantrasara.txt",
+  "source_lines": 790,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  },
  {
   "chunk": "tsa22-p03",
@@ -580,6 +2088,37 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "22",
+  "immutable_id": "pt:pid:ts:a22:c16e60dd2453",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 24% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "tantrasara.txt",
+  "source_lines": 847,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
  }
 ]

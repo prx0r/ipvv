@@ -7,8 +7,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:c422d3bceb6d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p01 (1)\nThis hymn is the course of great ease; in the midst of the host of sorrows, the rite of completion, the essence of great bliss flowing, this inauspicious day — constantly, on the worshipper's conduct, reflecting, it reflects back; the mind, fear-gone, in the hymn. // AgKs_1",
-  "l2": "## kram-p01–p05 — the hymn's purpose and the self's nature\nThis hymn is the course of great ease: in the midst of the host of sorrows, the rite of completion, the essence of great bliss flowing, this inauspicious day. Constantly, on the worshipper's conduct, reflecting, it reflects back; the mind, fear-gone, in the hymn. Examining own self, examining again the hymned conduct, the worshipper in hymn-practice without effort; the examined self, in all-knowable-moment, that thus in hymn I, here, always, without effort. Ungrasped, own self is never knower of thing-knowledge; ungrasped, own self indeed is not. Śiva is that self, shining, all-thing-one-sap; hence I in hymn with devoted heart always blissful. By varied birth-etc.-wandering-course-garments, omniscience gained in heart; that inside, teaching-spread-course-become light, clearly in speech obtained, now I hymn without effort. Shaking off bond-abiding-conceit, enjoying varied things, by great fire of hymn-hutāśana, burned difference; varied self-splendor-rush, drinking things, varada, maddened, blissful. The hymn's purpose: by self-examination and hymn-practice, fear is removed, omniscience gained, difference burned, and bliss arises."
+  "l2": "## kram-p01–p05 — the hymn's purpose and the self's nature\nThis hymn is the course of great ease: in the midst of the host of sorrows, the rite of completion, the essence of great bliss flowing, this inauspicious day. Constantly, on the worshipper's conduct, reflecting, it reflects back; the mind, fear-gone, in the hymn. Examining own self, examining again the hymned conduct, the worshipper in hymn-practice without effort; the examined self, in all-knowable-moment, that thus in hymn I, here, always, without effort. Ungrasped, own self is never knower of thing-knowledge; ungrasped, own self indeed is not. Śiva is that self, shining, all-thing-one-sap; hence I in hymn with devoted heart always blissful. By varied birth-etc.-wandering-course-garments, omniscience gained in heart; that inside, teaching-spread-course-become light, clearly in speech obtained, now I hymn without effort. Shaking off bond-abiding-conceit, enjoying varied things, by great fire of hymn-hutāśana, burned difference; varied self-splendor-rush, drinking things, varada, maddened, blissful. The hymn's purpose: by self-examination and hymn-practice, fear is removed, omniscience gained, difference burned, and bliss arises.",
+  "source_file": "kramastotra.txt",
+  "source_lines": 5,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 8
  },
  {
   "chunk": "kram-p02",
@@ -19,7 +50,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:b4a2446be73b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 11,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 11
  },
  {
   "chunk": "kram-p03",
@@ -30,7 +92,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:67f52573f029",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śiva' used in candidate but not in source; 'ātman' used in candidate "
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 14,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p04",
@@ -40,8 +133,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:38467cb4e8d0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p04 (4)\nBy varied birth-etc.-wandering-course-garments, omniscience gained in heart; that inside, teaching-spread-course-become light, clearly in speech obtained, now I hymn without effort. // AgKs_4",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 17,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "kram-p05",
@@ -52,7 +176,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:c2a74010b01d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 20,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p06",
@@ -63,7 +218,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:0bbe4a1a37ea",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śiva' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 23,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p07",
@@ -74,7 +260,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:06470bedcb6e",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 26,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 8
  },
  {
   "chunk": "kram-p08",
@@ -85,7 +302,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:ff19ef8d911a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source; 'ātman' used in candidate "
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 29,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p09",
@@ -95,8 +343,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:69566df3a5eb",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p09 (9)\nBy such forms, varada, varied your body shines; in own-portion this world, difference-gone, Lord's. That same this hymn-to, heart and speech-outer-instrument-bonds would be mine, constant, unabandoned-rush. // AgKs_9",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 32,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 9
  },
  {
   "chunk": "kram-p10",
@@ -107,7 +386,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:8d2f14fe5c4d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source; 'prakṛti' used in candida"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 35,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 7
  },
  {
   "chunk": "kram-p11",
@@ -117,8 +427,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:733c903de164",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p11 (11)\nHence varied-varied-course-station-other-distinction-etc.-standing-thing-enjoying-power, Lord's power, always goes, no difference how. That in this ground (akula), Bhairava, your pada — that one-pointed become my heart-ground, Bhairava Lord. // AgKs_11",
-  "l2": "## kram-p11–p15 — the ground, the course, and the body\nHence varied-varied-course-station-other-distinction-etc.-standing-thing-enjoying-power, Lord's power, always goes, no difference how. That in this ground (akula), Bhairava, your pada — that one-pointed become my heart-ground, Bhairava Lord. In measure, dissolved, Śiva-pada-shining-power-vaibhava-force, body-breath-and-rest limited-made-agentness-standing; when time-condition, dissolution-state approaches you — then goddess, which, shining, my, she be Śiva-made. Course-rush of it, in earth, making difference-grasping, own-powers, Lord, teach always in own-self; then three-formed (knowledge/action/will) standing-maintenance-dissolution-great-creation-power, become-immersed wishful heart. Formerly creation dissolved, fire-formed, which there would shine, beyond-rush-facing, moon-touch-lovely; fire-moon-splendor-both-glory, Bhairava Lord, this creation-named, my mind, always shining."
+  "l2": "## kram-p11–p15 — the ground, the course, and the body\nHence varied-varied-course-station-other-distinction-etc.-standing-thing-enjoying-power, Lord's power, always goes, no difference how. That in this ground (akula), Bhairava, your pada — that one-pointed become my heart-ground, Bhairava Lord. In measure, dissolved, Śiva-pada-shining-power-vaibhava-force, body-breath-and-rest limited-made-agentness-standing; when time-condition, dissolution-state approaches you — then goddess, which, shining, my, she be Śiva-made. Course-rush of it, in earth, making difference-grasping, own-powers, Lord, teach always in own-self; then three-formed (knowledge/action/will) standing-maintenance-dissolution-great-creation-power, become-immersed wishful heart. Formerly creation dissolved, fire-formed, which there would shine, beyond-rush-facing, moon-touch-lovely; fire-moon-splendor-both-glory, Bhairava Lord, this creation-named, my mind, always shining.",
+  "source_file": "kramastotra.txt",
+  "source_lines": 38,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p12",
@@ -129,7 +470,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:b2b53f0bbd80",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śiva' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 41,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p13",
@@ -140,7 +512,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:49b1f401fab4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source; 'jñāna' used in candidate"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 44,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p14",
@@ -150,8 +553,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:df657e254826",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p14 (14)\nFormerly creation dissolved, fire-formed, which there would shine, beyond-rush-facing, moon-touch-lovely; fire-moon-splendor-both-glory, Bhairava Lord, this creation-named, my mind, always shining. // AgKs_14",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 47,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p15",
@@ -162,7 +596,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:8f88c37f17aa",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 50,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 9
  },
  {
   "chunk": "kram-p16",
@@ -172,8 +637,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:b797266d902f",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p16 (16)\nOutside-conduct abandoning, consciousness-ground dwelling, to dwell, when things-difference showing, waveless, stability-lost; of maintenance dissolution, goddess, your, maintenance-of-saṃsāra, my, always dissolve. // AgKs_16",
-  "l2": "## kram-p16–p20 — dissolution and the three powers\nReleased, things-portion, outside extreme tasteless, when there you, by rush, raktimayatā; then red goddess, your all-things, indeed me, by action-raktāpāna-course-made gathering, make red. Outside-conduct abandoning, consciousness-ground dwelling, to dwell, when things-difference showing, waveless, stability-lost; of maintenance dissolution, goddess, your, maintenance-of-saṃsāra, my, always dissolve. World-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. Dissolved doubt-mass, instantly, full, Lord, power, all-knowable-host swallowing, by enjoyment-rush, Bhairava, dissolution-named, my heart, difference-portion, strike. Thus by goddesses, instantly, difference-power melted, thought-life-breath, shining, mother-standing, enough; hence dissolution-portion, own-heart reflected, standing, blissful, she be, goddess, my, death-dissolution-maker."
+  "l2": "## kram-p16–p20 — dissolution and the three powers\nReleased, things-portion, outside extreme tasteless, when there you, by rush, raktimayatā; then red goddess, your all-things, indeed me, by action-raktāpāna-course-made gathering, make red. Outside-conduct abandoning, consciousness-ground dwelling, to dwell, when things-difference showing, waveless, stability-lost; of maintenance dissolution, goddess, your, maintenance-of-saṃsāra, my, always dissolve. World-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. Dissolved doubt-mass, instantly, full, Lord, power, all-knowable-host swallowing, by enjoyment-rush, Bhairava, dissolution-named, my heart, difference-portion, strike. Thus by goddesses, instantly, difference-power melted, thought-life-breath, shining, mother-standing, enough; hence dissolution-portion, own-heart reflected, standing, blissful, she be, goddess, my, death-dissolution-maker.",
+  "source_file": "kramastotra.txt",
+  "source_lines": 53,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 11
  },
  {
   "chunk": "kram-p17",
@@ -183,8 +679,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:463fdaf99c34",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p17 (17)\nWorld-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. // AgKs_17",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 56,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 11
  },
  {
   "chunk": "kram-p18",
@@ -195,7 +722,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:473acfb9305d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 59,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p19",
@@ -206,7 +764,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:1e4f1099c5aa",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 62,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p20",
@@ -216,8 +805,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:81e267e8833d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p20 (20)\nThus these three, by own-power-ray-mass-expansion, obtained, six-wheel-course-made, powers these; gradually by unfolding, varied world-state making; from these, goddesses, devoted heart, I be, fear-gone. // AgKs_20",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 65,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p21",
@@ -228,7 +848,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:9348929f901d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 68,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p22",
@@ -239,7 +890,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:dd355326e751",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 71,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p23",
@@ -249,8 +931,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:6e58529c1b33",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p23 (23)\nWhole, unmeasured, in self, again-and-again, mass-full-mahāraśmi-nivaha; to make parā divine-bliss, by generous, rest, heart-place beautify. // AgKs_23",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 74,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 11
  },
  {
   "chunk": "kram-p24",
@@ -261,7 +974,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:07f713d14ef4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 77,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 9
  },
  {
   "chunk": "kram-p25",
@@ -271,8 +1015,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:6f3aecdd27d9",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p25 (25)\nManifestation-named consciousness, sequenceless, from void absorbed, outside absorbed, extreme covering; thence inside-essence, by melted-rush, sequenceless; great-Time-goddess she, my, all-time making. // AgKs_25",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 80,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "kram-p26",
@@ -283,7 +1058,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:d3fbff1523b0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'śakti' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 83,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 10
  },
  {
   "chunk": "kram-p27",
@@ -294,7 +1100,38 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:14cb0badc433",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'ātman' used in candidate but not in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 86,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 7
  },
  {
   "chunk": "kram-p28",
@@ -304,8 +1141,39 @@
   "blocking": [],
   "model": "manual-muse-spark",
   "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:9f867c77023f",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
   "l1": "## kram-p28 (28)\nThus own-power-ray-mass-succession, having heard, Lord, if you go to grace; by that quickly, all-folk, own-doctrine-ray, all-darkness-mass removed, make. // AgKs_28",
-  "l2": ""
+  "l2": "",
+  "source_file": "kramastotra.txt",
+  "source_lines": 89,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 7
  },
  {
   "chunk": "kram-p29",
@@ -316,7 +1184,38 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:0532b20d8e73",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 92,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 7
  },
  {
   "chunk": "kram-p30",
@@ -327,6 +1226,37 @@
    "COVERAGE"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "kramastotra",
+  "immutable_id": "pt:pid:kram:fc8e6e6fa8ca",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 0% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    true,
+    "no abstention violation"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "source_file": "kramastotra.txt",
+  "source_lines": 92,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 4
  }
 ]

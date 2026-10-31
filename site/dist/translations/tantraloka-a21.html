@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Translation: tantraloka-a21 · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Pipeline translation</div><h1>Translation: tantraloka-a21</h1><div class="skt"></div><div class="sub">0/7 passages passed the gate — only those show English</div><div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="stats"><span><b>7</b> passages</span><span><b>0</b> PASS</span><span><b>7</b> withheld</span></div><h3>tal-a21-p01 · verses 21.1-21.10 · WITHHELD</h3><div class="panel"><div class="dev skt">parokṣasaṃsthitasyātha dīkṣākarma nigadyate bhuktimuktiprasiddhyarthaṃ nīyate sadguruṃ prati / ityasminmālinīvākye pratiḥ sāṃmukhyāvācakaḥ sāṃmukhyaṃ cāsya śiṣyasya tatkṛpāspadatātmakam / tamārādhyeti vacanaṃ kṛpāhetūpalakṣaṇam tatsaṃbandhāttataḥ kaścittatkṣaṇādapavṛjyate / ityasyāyamapi hyartho mālinīvākyasanmaṇeḥ tatkṣaṇāditi nāsyāsti yiyāsādikṣaṇāntaram / kiṃtvevameva karuṇānighnastaṃ gururuddharet gurusevākṣīṇatanordīkṣāmaprāpya pañcatām / gatasyātha svayaṃ mṛtyukṣaṇoditatathāruceḥ athavādharatantrādidīkṣāsaṃskārabhāginaḥ / prāptasāmayikasyātha parāṃ dīkṣāmavindataḥ ḍimbāhatasya yogeśībhakṣitasyābhicārataḥ / mṛtasya guruṇā yantratantrādinihatasya vā bhraṣṭasvasamayasyātha dīkṣāṃ prāptavato@pyalam / bandhubhāryāsuhṛtputragāḍhābhyarthanayogataḥ svayaṃ tadviṣayotpannakaruṇābalato@pi vā / vijñātatanmukhāyātaśaktipātāṃśadharmaṇaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p02 · verses 21.11-21.20 · WITHHELD</h3><div class="panel"><div class="dev skt">gururdīkṣāṃ mṛtoddhārīṃ kurvīta śivadāyinīm / śrīmṛtyuñjayasiddhādau taduktaṃ parameśinā adīkṣite nṛpatyādāvalase patite mṛte / bālāturastrīvṛddhe ca mṛtoddhāraṃ prakalpayet vidhiḥ sarvaḥ pūrvamuktaḥ sa tu saṃkṣipta iṣyate / gurvādipūjārahito bāhye bhogāya sā yataḥ adhivāsacarukṣetraṃ śayyāmaṇḍalakalpane / nopayogyatra tacchiṣyasaṃskriyāsvapnadṛṣṭaye mantrasaṃnidhisaṃtṛptiyogāyātra tu maṇḍalam / bhūyodine ca devārcā sākṣānnāsyopakāri tat kriyopakaraṇasthānamaṇḍalākṛtimantrataḥ / dhyānayogaikatadbhaktijñānatanmayabhāvataḥ tatpraviṣṭasya kasyāpi śiṣyāṇāṃ ca gurostathā / ekādaśaite kathitāḥ saṃnidhānāya hetavaḥ uttarottaramutkṛṣṭāstathā vyāmiśraṇāvaśāt / kriyātibhūyasī puṣpādyuttamaṃ lakṣaṇānvitam ekaliṅgādi ca sthānaṃ yatrātmā saṃprasīdati / maṇḍalaṃ tritriśūlābjacakraṃ yanmantramaṇḍale anāhūte@pi dṛṣṭaṃ satsamayitvaprasādhanam / taduktaṃ mālinītantre siddhaṃ samayamaṇḍalam</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p03 · verses 21.21-21.30 · WITHHELD</h3><div class="panel"><div class="dev skt">yena saṃdṛṣṭamātreti siddhamātrapadadvayāt / ākṛtirdīptarūpā yā mantrastadvatsudīptikaḥ śiṣṭaṃ spaṣṭamato neha kathitaṃ vistarātpunaḥ / kṛtvā maṇḍalamabhyarcya tatra devaṃ kuśairatha gomayenākṛtiṃ kuryācchiṣyavattāṃ nidhāpayet / tatastasyāṃ śodhyamekamadhvānaṃ vyāptibhāvanāt prakṛtyantaṃ vinikṣipya punarenaṃ vidhiṃ caret / mahājālaprayogeṇa sarvasmādadhvamadhyataḥ cittamākṛṣya tatrasthaṃ kuryāttadvidhirucyate / mūlādhārādudetya prasṛtasuvitatānantanāḍyadhvadaṇḍaṃ vīryeṇākramya nāsāgaganaparigataṃ vikṣipan vyāptumīṣṭe / yāvaddhūmābhirāmapracitataraśikhājālakenādhvacakraṃ saṃchādyābhīṣṭajīvānayanamiti mahājālanāmā prayogaḥ etenācchādanīyaṃ vrajati paravaśaṃ saṃmukhīnatvamādau pañcādānīyate cetsakalamatha tato@pyadhvamadhyādyatheṣṭam / ākṛṣṭāvuddhṛtau vā mṛtajanaviṣaye karṣaṇīye@tha jīve yogaḥ śrīśaṃbhunāthāgamaparigamito jālanāmā mayoktaḥ ciravighaṭite senāyugmeyathāmilite punarhayagajanaraṃ svāṃ svāṃ jātiṃ rasādabhidhāvati / karaṇapavanairnāḍīcakraistathaiva samāgatairnijanijarasādekībhāvyaṃ svajālavaśīkṛtaiḥ mahājālasamākṛṣṭo jīvo vijñānaśālinā / svaḥpretatiryaṅnirayāṃstadaivaiṣa vimuñcati tajjñānamantrayogāptaḥ puruṣaścaiṣa kṛtrimam / yogīva sādhyahṛdayāttadā tādātmyamujjhati sthāvarādidaśāścitrāstatsalokasamīpatāḥ / tyajecceti na citraṃ sa evaṃ yaḥ karmaṇāpi vā</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p04 · verses 21.31-21.40 · WITHHELD</h3><div class="panel"><div class="dev skt">adhikāriśarīratvānmānuṣye tu śarīragaḥ / na tadā mucyate dehāddehānte tu śivaṃ vrajet tasmindehe tu kāpyasya jāyate śāṅkarī parā / bhaktirūhācca vijñānādācāryādvāpyasevitāt taddehasaṃsthito@pyeṣa jīvo jālabalādimam / dārbhādidehaṃ vyāpnoti svādhiṣṭhityāpyacetayan yogamantrakriyājñānabhūyobalavaśātpunaḥ / manuṣyadehamapyeṣa tadaivāśu vimuñcati suptakalpo@pyadeho@pi yo jīvaḥ so@pi jālataḥ / ākṛṣṭo dārbhamāyāti dehaṃ phalamayaṃ ca vā jātīphalādi yatkiṃcittena vā dehakalpanā / antarbahirdvayaucityāttadatrotkṛṣṭamucyate tato jālakramānītaḥ sa jīvaḥ suptavatsthitaḥ / manoviśiṣṭadehādisāmagrīprāptyabhāvataḥ na spandate na jānāti na vakti na kilecchati / tādṛśasyaiva saṃskārān sarvān prāgvatprakalpayet nirbījadīkṣāyogena sarvaṃ kṛtvā puroditam / vidhiṃ yojanikāṃ pūrṇāhutyā sākaṃ kṣipecca tam dārbhādidehe mantrāgnāvarpite pūrṇayā saha / muktapāśaḥ śivaṃ yāti punarāvṛttivarjitaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p05 · verses 21.41-21.50 · WITHHELD</h3><div class="panel"><div class="dev skt">sapratyayā tviyaṃ yatra spandate darbhajā tanuḥ / tatra prāṇamanomantrārpaṇayogāttathā bhavet sābhyāsasya tadapyuktaṃ balāśvāsi na tatkṛte / mṛtoddhāroditaireva yathāsaṃbhūti hetubhiḥ jīvatparokṣadīkṣāpi kāryā nirbījikā tu sā / tasyāṃ darbhākṛtiprāyakalpane jālayogataḥ saṃkalpamātreṇākarṣo jīvasya mṛtibhītitaḥ / śiṣṭaṃ prāgvatkuśādyutthākāraviploṣavarjitam pārimityādanaiśvaryātsādhye niyatiyantraṇāt / jālākṛṣṭirvinābhyāsaṃ rāgadveṣānna jāyate parokṣa evātulyābhirdīkṣābhiryadi dīkṣitaḥ / tatrottaraṃ syādbalavatsaṃskārāya tvadhastanam bhuktiyojanikāyāṃ tu bhūyobhirgurubhistathā / kṛtāyāṃ bhogavaicitryaṃ hetuvaicitryayogataḥ parokṣadīkṣaṇe māyottīrṇe bhogāya yojayet / bhogānīpsā durlabhā hi satī vā bhogahānaye uktaṃ hi svānyasaṃvittyoḥ svasaṃvidbalavattarā / bādhakatve bādhikāsau sāmyaudāsīnyayostathā śrīmān dharmaśivo@pyāha pārokṣyāṃ karmapaddhatau / parokṣadīkṣaṇe samyak pūrṇāhutividhau yadi</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p06 · verses 21.51-21.60 · WITHHELD</h3><div class="panel"><div class="dev skt">agniściṭiciṭāśabdaṃ sadhūmaṃ pratimuñcati / dhatte nīlāmbudacchāyāṃ muhurjvalati śāmyati vistaro ghorarūpaśca mahīṃ dhāvati cāpyadhaḥ / dhvāṃkṣādyaśravyaśabdo vā tadā taṃ lakṣayedguruḥ brahmahatyādibhiḥ pāpaistatsaṅgaiścopapātakaiḥ / tadā tasya na kartavyā dīkṣāsminnakṛte vidhau navātmā phaṭpuṭāntaḥsthaḥ punaḥ pañcaphaḍanvitaḥ / amukasyeti pāpāni dahāmyanu phaḍaṣṭakam iti sāhasriko homaḥ kartavyastilataṇḍulaiḥ / ante pūrṇā ca dātavyā tato@smai dīkṣayā guruḥ parayojanaparyantaṃ kuryāttattvaviśodhanam / pratyakṣe@pi sthitasyāṇoḥ pāpino bhagavanmayīm śaktiṃ prāptavato jyeṣṭhāmevameva vidhiṃ caret / yadi vā daiśikaḥ samyaṅ na dīptastasya tatpurā prāyaścittaistathā dānaiḥ prāṇāyāmaiśca śodhanam / kṛtvā vidhimimāṃ cāpi dīkṣāṃ kuryādaśaṅkitaḥ sarvathā vartamāno@pi tattvavinmocayetpaśūn / icchayaiva śivaḥ sākṣāttasmāttaṃ pūjayetsadā śāṭhyaṃ tatra na kāryaṃ ca tatkṛtvādho vrajecchiśuḥ / na punaḥ kīrtayettasya pāpaṃ kīrtayitā vrajet</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>tal-a21-p07 · verses 21.61-21.61 · WITHHELD</h3><div class="panel"><div class="dev skt">nirayaṃ varjayettasmāditi dīkṣottare vidhiḥ / eṣā parokṣadīkṣā dvidhoditā jīvaditarabhedena</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><div data-recite data-id="tantraloka-a21-tal-a21-p01" data-label="tantraloka-a21 · tal-a21-p01" data-sa="परोक्षसंस्थितस्याथ दीक्षाकर्म निगद्यते भुक्तिमुक्तिप्रसिद्ध्यर्थं नीयते सद्गुरुं प्रति / इत्यस्मिन्मालिनीवाक्ये प्रतिः सांमुख्यावाचकः सांमुख्यं चास्य शिष्यस्य तत्कृपास्पदतात्मकम् / तमाराध्येति वचनं कृपाहेतूपलक्षणम् तत्संबन्धात्ततः कश्चित्तत्क्षणादपवृज्यते / इत्यस्यायमपि ह्यर्थो मालिनीवाक्यसन्मणेः तत्क्षणादिति नास्यास्ति यियासादिक्षणान्तरम् / किंत्वेवमेव करुणानिघ्नस्तं गुरुरुद्धरेत् गुरुसेवाक्षीणतनोर्दीक्षामप्राप्य पञ्चताम् / गतस्याथ स्वयं मृत्युक्षणोदिततथारुचेः अथवाधरतन्त्रादिदीक्षासंस्कारभागिनः / प्राप्तसामयिकस्याथ परां दीक्षामविन्दतः डिम्बाहतस्य योगेशीभक्षितस्याभिचारतः / मृतस्य गुरुणा यन्त्रतन्त्रादिनिहतस्य वा भ्रष्टस्वसमयस्याथ दीक्षां प्राप्तवतो@प्यलम् / बन्धुभार्यासुहृत्पुत्रगाढाभ्यर्थनयोगतः स्वयं तद्विषयोत्पन्नकरुणाबलतो@पि वा / विज्ञाततन्मुखायातशक्तिपातांशधर्मणः" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p02" data-label="tantraloka-a21 · tal-a21-p02" data-sa="गुरुर्दीक्षां मृतोद्धारीं कुर्वीत शिवदायिनीम् / श्रीमृत्युञ्जयसिद्धादौ तदुक्तं परमेशिना अदीक्षिते नृपत्यादावलसे पतिते मृते / बालातुरस्त्रीवृद्धे च मृतोद्धारं प्रकल्पयेत् विधिः सर्वः पूर्वमुक्तः स तु संक्षिप्त इष्यते / गुर्वादिपूजारहितो बाह्ये भोगाय सा यतः अधिवासचरुक्षेत्रं शय्यामण्डलकल्पने / नोपयोग्यत्र तच्छिष्यसंस्क्रियास्वप्नदृष्टये मन्त्रसंनिधिसंतृप्तियोगायात्र तु मण्डलम् / भूयोदिने च देवार्चा साक्षान्नास्योपकारि तत् क्रियोपकरणस्थानमण्डलाकृतिमन्त्रतः / ध्यानयोगैकतद्भक्तिज्ञानतन्मयभावतः तत्प्रविष्टस्य कस्यापि शिष्याणां च गुरोस्तथा / एकादशैते कथिताः संनिधानाय हेतवः उत्तरोत्तरमुत्कृष्टास्तथा व्यामिश्रणावशात् / क्रियातिभूयसी पुष्पाद्युत्तमं लक्षणान्वितम् एकलिङ्गादि च स्थानं यत्रात्मा संप्रसीदति / मण्डलं त्रित्रिशूलाब्जचक्रं यन्मन्त्रमण्डले अनाहूते@पि दृष्टं सत्समयित्वप्रसाधनम् / तदुक्तं मालिनीतन्त्रे सिद्धं समयमण्डलम्" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p03" data-label="tantraloka-a21 · tal-a21-p03" data-sa="येन संदृष्टमात्रेति सिद्धमात्रपदद्वयात् / आकृतिर्दीप्तरूपा या मन्त्रस्तद्वत्सुदीप्तिकः शिष्टं स्पष्टमतो नेह कथितं विस्तरात्पुनः / कृत्वा मण्डलमभ्यर्च्य तत्र देवं कुशैरथ गोमयेनाकृतिं कुर्याच्छिष्यवत्तां निधापयेत् / ततस्तस्यां शोध्यमेकमध्वानं व्याप्तिभावनात् प्रकृत्यन्तं विनिक्षिप्य पुनरेनं विधिं चरेत् / महाजालप्रयोगेण सर्वस्मादध्वमध्यतः चित्तमाकृष्य तत्रस्थं कुर्यात्तद्विधिरुच्यते / मूलाधारादुदेत्य प्रसृतसुविततानन्तनाड्यध्वदण्डं वीर्येणाक्रम्य नासागगनपरिगतं विक्षिपन् व्याप्तुमीष्टे / यावद्धूमाभिरामप्रचिततरशिखाजालकेनाध्वचक्रं संछाद्याभीष्टजीवानयनमिति महाजालनामा प्रयोगः एतेनाच्छादनीयं व्रजति परवशं संमुखीनत्वमादौ पञ्चादानीयते चेत्सकलमथ ततो@प्यध्वमध्याद्यथेष्टम् / आकृष्टावुद्धृतौ वा मृतजनविषये कर्षणीये@थ जीवे योगः श्रीशंभुनाथागमपरिगमितो जालनामा मयोक्तः चिरविघटिते सेनायुग्मेयथामिलिते पुनर्हयगजनरं स्वां स्वां जातिं रसादभिधावति / करणपवनैर्नाडीचक्रैस्तथैव समागतैर्निजनिजरसादेकीभाव्यं स्वजालवशीकृतैः महाजालसमाकृष्टो जीवो विज्ञानशालिना / स्वःप्रेततिर्यङ्निरयांस्तदैवैष विमुञ्चति तज्ज्ञानमन्त्रयोगाप्तः पुरुषश्चैष कृत्रिमम् / योगीव साध्यहृदयात्तदा तादात्म्यमुज्झति स्थावरादिदशाश्चित्रास्तत्सलोकसमीपताः / त्यजेच्चेति न चित्रं स एवं यः कर्मणापि वा" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p04" data-label="tantraloka-a21 · tal-a21-p04" data-sa="अधिकारिशरीरत्वान्मानुष्ये तु शरीरगः / न तदा मुच्यते देहाद्देहान्ते तु शिवं व्रजेत् तस्मिन्देहे तु काप्यस्य जायते शाङ्करी परा / भक्तिरूहाच्च विज्ञानादाचार्याद्वाप्यसेवितात् तद्देहसंस्थितो@प्येष जीवो जालबलादिमम् / दार्भादिदेहं व्याप्नोति स्वाधिष्ठित्याप्यचेतयन् योगमन्त्रक्रियाज्ञानभूयोबलवशात्पुनः / मनुष्यदेहमप्येष तदैवाशु विमुञ्चति सुप्तकल्पो@प्यदेहो@पि यो जीवः सो@पि जालतः / आकृष्टो दार्भमायाति देहं फलमयं च वा जातीफलादि यत्किंचित्तेन वा देहकल्पना / अन्तर्बहिर्द्वयौचित्यात्तदत्रोत्कृष्टमुच्यते ततो जालक्रमानीतः स जीवः सुप्तवत्स्थितः / मनोविशिष्टदेहादिसामग्रीप्राप्त्यभावतः न स्पन्दते न जानाति न वक्ति न किलेच्छति / तादृशस्यैव संस्कारान् सर्वान् प्राग्वत्प्रकल्पयेत् निर्बीजदीक्षायोगेन सर्वं कृत्वा पुरोदितम् / विधिं योजनिकां पूर्णाहुत्या साकं क्षिपेच्च तम् दार्भादिदेहे मन्त्राग्नावर्पिते पूर्णया सह / मुक्तपाशः शिवं याति पुनरावृत्तिवर्जितः" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p05" data-label="tantraloka-a21 · tal-a21-p05" data-sa="सप्रत्यया त्वियं यत्र स्पन्दते दर्भजा तनुः / तत्र प्राणमनोमन्त्रार्पणयोगात्तथा भवेत् साभ्यासस्य तदप्युक्तं बलाश्वासि न तत्कृते / मृतोद्धारोदितैरेव यथासंभूति हेतुभिः जीवत्परोक्षदीक्षापि कार्या निर्बीजिका तु सा / तस्यां दर्भाकृतिप्रायकल्पने जालयोगतः संकल्पमात्रेणाकर्षो जीवस्य मृतिभीतितः / शिष्टं प्राग्वत्कुशाद्युत्थाकारविप्लोषवर्जितम् पारिमित्यादनैश्वर्यात्साध्ये नियतियन्त्रणात् / जालाकृष्टिर्विनाभ्यासं रागद्वेषान्न जायते परोक्ष एवातुल्याभिर्दीक्षाभिर्यदि दीक्षितः / तत्रोत्तरं स्याद्बलवत्संस्काराय त्वधस्तनम् भुक्तियोजनिकायां तु भूयोभिर्गुरुभिस्तथा / कृतायां भोगवैचित्र्यं हेतुवैचित्र्ययोगतः परोक्षदीक्षणे मायोत्तीर्णे भोगाय योजयेत् / भोगानीप्सा दुर्लभा हि सती वा भोगहानये उक्तं हि स्वान्यसंवित्त्योः स्वसंविद्बलवत्तरा / बाधकत्वे बाधिकासौ साम्यौदासीन्ययोस्तथा श्रीमान् धर्मशिवो@प्याह पारोक्ष्यां कर्मपद्धतौ / परोक्षदीक्षणे सम्यक् पूर्णाहुतिविधौ यदि" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p06" data-label="tantraloka-a21 · tal-a21-p06" data-sa="अग्निश्चिटिचिटाशब्दं सधूमं प्रतिमुञ्चति / धत्ते नीलाम्बुदच्छायां मुहुर्ज्वलति शाम्यति विस्तरो घोररूपश्च महीं धावति चाप्यधः / ध्वांक्षाद्यश्रव्यशब्दो वा तदा तं लक्षयेद्गुरुः ब्रह्महत्यादिभिः पापैस्तत्सङ्गैश्चोपपातकैः / तदा तस्य न कर्तव्या दीक्षास्मिन्नकृते विधौ नवात्मा फट्पुटान्तःस्थः पुनः पञ्चफडन्वितः / अमुकस्येति पापानि दहाम्यनु फडष्टकम् इति साहस्रिको होमः कर्तव्यस्तिलतण्डुलैः / अन्ते पूर्णा च दातव्या ततो@स्मै दीक्षया गुरुः परयोजनपर्यन्तं कुर्यात्तत्त्वविशोधनम् / प्रत्यक्षे@पि स्थितस्याणोः पापिनो भगवन्मयीम् शक्तिं प्राप्तवतो ज्येष्ठामेवमेव विधिं चरेत् / यदि वा दैशिकः सम्यङ् न दीप्तस्तस्य तत्पुरा प्रायश्चित्तैस्तथा दानैः प्राणायामैश्च शोधनम् / कृत्वा विधिमिमां चापि दीक्षां कुर्यादशङ्कितः सर्वथा वर्तमानो@पि तत्त्वविन्मोचयेत्पशून् / इच्छयैव शिवः साक्षात्तस्मात्तं पूजयेत्सदा शाठ्यं तत्र न कार्यं च तत्कृत्वाधो व्रजेच्छिशुः / न पुनः कीर्तयेत्तस्य पापं कीर्तयिता व्रजेत्" data-en="" style="display:none"></div><div data-recite data-id="tantraloka-a21-tal-a21-p07" data-label="tantraloka-a21 · tal-a21-p07" data-sa="निरयं वर्जयेत्तस्मादिति दीक्षोत्तरे विधिः / एषा परोक्षदीक्षा द्विधोदिता जीवदितरभेदेन" data-en="" style="display:none"></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script></body></html>
