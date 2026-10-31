@@ -668,6 +668,9 @@ function startDharaṇa(dh) {
     +'<button onclick="nextStep()" style="padding:.5rem 1.2rem;background:#fff;color:#17140f;border:0;border-radius:4rem;cursor:pointer;font-size:.9rem">Next</button>'
     +'<button onclick="stopPractice()" style="padding:.5rem 1.2rem;background:transparent;color:#fff;border:1px solid #555;border-radius:4rem;cursor:pointer;font-size:.9rem">End</button></div>';
   // speak intro first, then start timer + sound
+  var SFX_BASE = "/audio/sfx/";
+  function playSfx(name, vol) { try { var a=new Audio(SFX_BASE+name); a.volume=vol||0.5; a.play().catch(function(){}); } catch(e) {} }
+  playSfx("bell_ding.wav", 0.6);
   speak(sd.intro, function(){
     startTimer(300);
     playPattern(sd.pattern, sd.freq, Math.min(sd.dur, 300));
@@ -687,18 +690,18 @@ function startTimer(dur) {
   },1000);
 }
 function showStep(i) {
-  if(i>=_steps.length){var el=document.getElementById('step-text');if(el)el.textContent='All steps complete. Rest a moment.';return}
+  if(i>=_steps.length){var el=document.getElementById('step-text');if(el)el.textContent='All steps complete. Rest a moment.';playSfx('long_break_bell.wav',0.5);return}
   _stepIdx=i;
   var s=_steps[i];
   var el=document.getElementById('step-text');
   var ind=document.getElementById('step-indicator');
   if(el) el.textContent=s.text;
   if(ind) ind.textContent='Step '+(i+1)+' of '+_steps.length+(s.cue==='voice'?' · voice':s.cue==='silent'?' · silent':'');
-  if(s.cue==='voice'){ speak(s.text); }
+  if(s.cue==='voice'){ playSfx('block_tick.wav',0.4); speak(s.text); }
 }
 function nextStep() { showStep(_stepIdx+1) }
 function stopPractice() {
-  clearInterval(_timerId); stopSound();
+  clearInterval(_timerId); stopSound(); playSfx('bell_880.wav',0.5);
   try{speechSynthesis.cancel()}catch(e){}
   var o=document.getElementById('practice-overlay');
   if(o) o.style.display='none';

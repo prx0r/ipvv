@@ -2098,8 +2098,13 @@ def build_recite():
     """Studio-chant recitation pages (kashaudio AI renders) + audio shipping.
     English merges from translations JSON, PASS only — BLOCKED verses chant Sanskrit alone."""
     import json as _json
+    sfx_dest = DIST / "audio" / "sfx"
+    sfx_dest.mkdir(parents=True, exist_ok=True)
+    if (ROOT / "static-audio/sfx").exists():
+        for sf in (ROOT / "static-audio/sfx").glob("*.wav"):
+            shutil.copy(sf, sfx_dest / sf.name)
     for adir in sorted((ROOT / "static-audio").iterdir()):
-        if adir.is_dir():
+        if adir.is_dir() and adir.name != "sfx":
             dest = DIST / "audio" / adir.name
             dest.mkdir(parents=True, exist_ok=True)
             for mp3 in adir.glob("*.mp3"):
