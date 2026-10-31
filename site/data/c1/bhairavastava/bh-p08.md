@@ -19,6 +19,8 @@ adhyayana (study) — the scripture is nectar (āmṛta) to be tasted, not doctr
 analyzed. This aligns with the Trika view that scripture reveals through resonance,
 not inference.
 
+**Dyczkowski lecture.** Dyczkowski clarifies: śāstra-contemplation destroys the suffering CAUSED BY vows/gifts/bathing/austerities — spiritual discipline itself is the suffering scripture replaces.
+
 **BOUNDARY / OPEN.** Not claimed: that all scripture produces bliss, or that this is
 the only instrument. Which scripture "tāvaka" refers to (Āgama? Tantrāloka? the Lord's
 own scripture?) is unspecified. The distinction between cintā and adhyayana matters

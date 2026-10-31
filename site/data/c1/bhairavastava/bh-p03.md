@@ -20,6 +20,8 @@ toward it is unflinching rather than denying. It is not māyā-philosophy (suffe
 illusion) but śūnyatā-adjacent realism (suffering is present, and the response is not
 aversion).
 
+**Dyczkowski lecture.** Dyczkowski reads v3 against the Bṛhadāraṇyaka Upaniṣad: the self alone, afraid, realizes "no second" and fear disappears. The stotra's non-flinching operates on the same insight — fear from duality, dissolved from nonduality.
+
 **BOUNDARY / OPEN.** Not claimed: that suffering ends, that it is illusory, or that the
 devotee is insensitive to it. The three conditions (duḥkha, moha, karmapiśāca) are listed
 without causal connectives — whether they form a sequence or a simultaneous set is

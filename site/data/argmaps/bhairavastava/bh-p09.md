@@ -7,6 +7,8 @@ sudarśanam (beautiful/good to see), ekam (unique), durlabham (hard to obtain), 
 (by others), samayajñam (covenant-knowing). The question: is this praise (stotra register)
 or ontology (claiming real attributes of the Lord)?
 
+Dyczkowski: "This is devotion... very elevated devotion." The colophon names Abhinavagupta as author within the hymn.
+
 ## 2. The argument, reconstructed step by step (from Sanskrit)
 
 1. **Vocative:** tvāṃ priyam api — "You, dear indeed." The api ("indeed") intensifies —
@@ -38,6 +40,8 @@ relationship, not a merit-based one.
 2. "Hard to obtain by others" (durlabham anyajanaiḥ) — is this a factual claim about
    others' inability, or a devotional intensification ("so rare that others cannot")?
    The Sanskrit allows both.
+
+3. Dyczkowski (lecture): the verse describes Abhinavagupta himself — "my consciousness dances, sings, rejoices." Composed c. 997 AD (Vasura-saṃvatsara). The samaya is the guru-lineage covenant: Lakshmanjoo teaching this hymn on Sundays.
 
 ## 4. Decision for L2
 

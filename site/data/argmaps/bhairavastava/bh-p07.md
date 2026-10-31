@@ -8,6 +8,8 @@ stotraparāmṛtavṛṣṭir udeti — "the supreme-nectar rain of the hymn ris
 does the hymn *cause* nondifference, or does nondifference *manifest when* the hymn arises?
 The verse says "tadaiva" — "then alone" — suggesting a condition, not a cause.
 
+Dyczkowski: "When this trouble arises... it brings about in him a rain of nectar, that supreme nectar of consciousness."
+
 ## 2. The argument, reconstructed step by step
 
 1. **Premise (condition):** tadaiva — "then alone" (only when). The nondifference is
@@ -35,6 +37,8 @@ This is bhakti-advaya, not viśiṣṭādvaya.
 
 2. The metaphor — is the hymn-rain a vehicle (it carries nondifference) or a catalyst
    (it enables it)? Both readings fit "udeti arisearises."
+
+3. Dyczkowski (lecture) reveals the MECHANISM: kleśa-dasha (affliction-state) is the TRIGGER, not the obstacle. "The minute he fills this body of troubles, immediately inspires rain of nectar." Trouble springs grace — the affliction and the nectar are one movement.
 
 ## 4. Decision for L2
 

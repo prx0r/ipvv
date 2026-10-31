@@ -18,6 +18,8 @@ mere description. This is bhakti-advaya: nondifference achieved through devotion
 through jñāna or philosophy. The present tense of udeti suggests the rain is continuous
 — the condition is ongoing, not one-time.
 
+**Dyczkowski lecture.** Dyczkowski reveals the mechanism: affliction (kleśa) TRIGGERS grace — "the minute the body of troubles is filled, rain of nectar springs." Trouble and nectar are one movement, not sequential.
+
 **BOUNDARY / OPEN.** Not claimed: universal metaphysical nonduality (advaya in the
 philosophical sense). The nondifference is bhakti's (devotee–Lord), conditional on the
 hymn. Whether it persists beyond the hymn's arising is unresolved by the verse.

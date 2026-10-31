@@ -295,13 +295,19 @@ def main():
         print(f"TOTAL: {total['parsed']}P/{total['ambiguous']}A/{total['failed']}F "
               f"({total['tokens']} tokens across {total['chunks']} chunks)")
         return
+    # single chunk with --outdir override
+    outdir_arg = None
+    if "--outdir" in args:
+        idx = args.index("--outdir")
+        outdir_arg = Path(args[idx + 1])
+        args = args[:idx] + args[idx+2:]
     # single chunk
     if not args or args[0].startswith("-"):
         print(__doc__)
         return
     path = Path(args[0])
-    outdir = Path("translations/_stack/ipvv/l0")
-    outdir.mkdir(exist_ok=True)
+    outdir = outdir_arg or Path("translations/_stack/ipvv/l0")
+    outdir.mkdir(parents=True, exist_ok=True)
     res = process_chunk(path, outdir / path.stem, fmt, all_mode=False)
     print(f"{res['chunk']}: {res['parsed']}P/{res['ambiguous']}A/{res['failed']}F "
           f"({res['tokens']} tokens)")

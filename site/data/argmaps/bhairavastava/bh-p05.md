@@ -7,6 +7,8 @@ ender), and karmapiśāca (karma-ghosts) — and claims: namo'stu na jātu bibhe
 to the Lord, never do I fear"). The question is: how does salutation (namas) produce
 fearlessness? This is a claim about the efficacy of devotion against mortality.
 
+Dyczkowski: "This expanding consciousness free of thought — when thought makes consciousness contract." The practice context: peaceful mind first, then fearlessness.
+
 ## 2. The argument, reconstructed step by step
 
 1. **Premise (the threats):** Four named threats — death, Yama, the ender, karma-ghosts.
@@ -36,6 +38,8 @@ change. The distinction is precise: na bibhemi ≠ ahaṃ na mriye.
 2. "Never at all" (na jātu) — this is strong. Does the devotee not fear death *in this
    moment* (current state) or *ever* (permanent state)? The present tense of the verb
    suggests current, but namas' efficacy implies permanence.
+
+3. Dyczkowski (lecture) cautions: "Bhairava gives freedom from fear, BUT IT TAKES TIME" — the fearlessness is not instant but develops through practice (mind free of thought). This tempers the absolute na jātu: the text claims it, the teacher notes it is a destination, not a starting point.
 
 ## 4. Decision for L2
 

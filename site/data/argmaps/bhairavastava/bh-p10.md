@@ -8,6 +8,8 @@ efficacy claim: the Lord's compassion has immediate (jhaṭiti, "in a flash") ef
 world's suffering (aru-santāpa, "terrible heat"). The question: what makes this pacification
 instant, and what is the "heat" it pacifies?
 
+Dyczkowski: "Abhinavagupta composed this hymn... by whom the Lord swiftly cools the scorching heat." The cave-entry tradition is the hymn's legendary frame.
+
 ## 2. The argument, reconstructed step by step
 
 1. **Premise (the world's condition):** bhavamarusantāpa — "the world's great burning
@@ -45,6 +47,8 @@ Lord is always pacifying, always compassionate.
    contradict the stotra's own acknowledgment of ongoing suffering (v3). Either the verse
    means "instantly available" (a standing offer) or "instantly effective when the devotee
    is in the relationship established by v1-v9."
+
+3. Dyczkowski (lecture) gives the date: Vasura-saṃvatsara year, Pauṣa month, kṛṣṇadaśamī (dark tenth). Padyanavaka = nine verses (the colophon counts 9, not 10 — the opening vyāpta-verse is an invocation). Tradition: Abhinavagupta entered the Bhairava cave with 10,000 disciples, chanting this hymn, and disappeared.
 
 ## 4. Decision for L2
 

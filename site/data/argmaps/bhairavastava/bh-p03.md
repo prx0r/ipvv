@@ -7,6 +7,8 @@ yet suffering is acknowledged as real — durdharaduḥkhavi (hard-to-bear suffe
 (delusion), and bhayanāśa (terror-causing karma-hosts). Does devotion deny suffering? This
 verse says no: suffering is present, and the devotee does not flinch.
 
+Dyczkowski: "When everything has entered into your own nature, then where is there any possible door of fear of this samsaric existence?"
+
 ## 2. The argument, reconstructed step by step
 
 1. **Premise:** The conditions are real — satsvapi ("even though present"): hard suffering,
@@ -34,6 +36,8 @@ it will end. It claims only that the devotee does not flinch.
 2. "Even though present" (satsvapi) — this particle does concessive work: "despite X, not-Y."
    The "not-Y" (non-flinching) is implied rather than stated. What exactly the devotee does
    NOT do is left implicit.
+
+3. Dyczkowski (lecture) reads this against the Bṛhadāraṇyaka Upaniṣad: the self alone, afraid, realizes "there is no second" and the fear disappears. The Upaniṣadic parallel suggests the stotra is operating on the same insight — fear arises from duality, dissolves from nonduality.
 
 ## 4. Decision for L2
 

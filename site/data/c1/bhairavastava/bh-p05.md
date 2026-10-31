@@ -18,6 +18,8 @@ probabilistic. Critically, the verse claims fearlessness (na bibhemi), not immor
 (na mriye). The distinction matters: the devotee will still die, but will not fear dying.
 This is the Trika soteriology of jīvanmukta applied to its most concrete case.
 
+**Dyczkowski lecture.** Dyczkowski cautions: "freedom from fear, BUT IT TAKES TIME" — mind free of thought comes first, fearlessness develops. The verse states the destination, not the starting point.
+
 **BOUNDARY / OPEN.** Not claimed: that the devotee survives death, or that namas produces
 liberation (mokṣa). The four threats may be four names for one thing (death's aspects) or
 four distinct entities — the verse lists them as separate accusatives, but tradition

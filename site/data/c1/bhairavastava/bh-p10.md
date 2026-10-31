@@ -22,6 +22,8 @@ is deliberate and unresolved: the heat is always present AND always being pacifi
 is the perennial-present soteriology: the Lord is always cooling, the devotee is always
 being relieved — and the recognition of both is the stotra's own claim.
 
+**Dyczkowski lecture.** Dyczkowski dates the colophon: Vasura-saṃvatsara, Pauṣa, kṛṣṇadaśamī. Padyanavaka = nine verses (colophon counts 9, the opening vyāpta-verse being invocation). Tradition: cave entry with 10,000 disciples, chanting this hymn, then disappearance.
+
 **BOUNDARY / OPEN.** Not claimed: eschatological final pacification (the world will end),
 nor that suffering is already gone (v3 contradicts). The present tense (śamayati) and
 jhaṭiti suggest a standing offer, not a future event. Whether "world's heat" (arusaṃtāpa)

@@ -7,6 +7,8 @@ of your scripture's supreme nectar causes the bliss-stream to flow in the mind."
 the relationship between scripture (śāstra), contemplation (cintā), and the resulting bliss
 (nirvṛti-dhāra)? Is scripture the *source* of bliss, or the *occasion*?
 
+Dyczkowski: "When you think of scripture, he doesn't feel tired... it flows within the mind like a stream of peace."
+
 ## 2. The argument, reconstructed step by step
 
 1. **Premise (the scripture):** tāvakaśāstra — "Your scripture." The possessive tāvaka
@@ -36,6 +38,8 @@ nor that all scripture produces bliss. It claims contemplation (cintā) of *this
 
 2. cintā (contemplation) vs. adhyayana (study) — the verse uses cintā, not adhyayana.
    The distinction matters: contemplation implies absorption, not intellectual study.
+
+3. Dyczkowski (lecture) clarifies what śāstra-contemplation destroys: "the suffering of vows, gifts, bathing, austerities" — i.e., the suffering CAUSED BY spiritual discipline itself. Scripture replaces effort.
 
 ## 4. Decision for L2
 
