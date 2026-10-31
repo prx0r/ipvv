@@ -58,6 +58,9 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
 .side details.mnav[open] summary::after{transform:rotate(180deg)}
 .side .n{color:var(--faint);font-size:.78rem;font-family:var(--sans)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -393,12 +396,12 @@ var b=document.getElementById('burger');
 if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
 // persist masters collapse + sidebar scroll across navigations
 try{
-var mn=document.querySelector('details.mnav');
-if(mn){
-  var saved=localStorage.getItem('mnav');
-  if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
-  mn.addEventListener('toggle',function(){localStorage.setItem('mnav',mn.open?'1':'0')});
-}
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
 var side=document.getElementById('sidenav');
 if(side){
   var sp=localStorage.getItem('sidenav_scroll');
@@ -834,7 +837,7 @@ def _masters_nav(active_mid=""):
     items = "".join(
         f'<a href="/{m}/index.html">{"› " if m == active_mid else ""}{esc(n)} <span class="n">({c})</span></a>'
         for m, n, c in _masters_by_works())
-    return ('<details class="mnav" open><summary class="hd">Masters (by works)</summary>'
+    return ('<details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary>'
             '<div class="sub">' + items + '</div></details>')
 
 def sidenav(aid, active=""):
@@ -1078,10 +1081,9 @@ def scholar_nav(active=""):
     scholars = sorted(json.loads((ROOT / "data/scholars.json").read_text()), key=lambda s: s.get("name", ""))
     items = "".join(f'<a href="/scholars/{s["id"]}.html">{"› " if s["id"]==active else ""}{esc(s["name"])}</a>' for s in scholars)
     masters = _masters_nav(active if active in MASTERS else "")
-    return (masters
-        + '<div class="hd">Modern — scholars (A–Z)</div>'
-        f'<a href="/scholars/index.html">{"› " if active=="index" else ""}All scholars</a>'
-        '<div class="sub">' + items + "</div>"
+    sch = ('<details class="mnav" data-mnav="scholars"><summary class="hd">Scholars</summary>'
+           '<div class="sub"><a href="/scholars/index.html">All scholars</a>' + items + "</div></details>")
+    return (masters + sch
         + '<div class="hd">Library</div><a href="/concepts/index.html">Concepts</a>'
         + '<a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a>')
 
