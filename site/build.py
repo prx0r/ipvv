@@ -397,7 +397,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -683,7 +683,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1949,6 +1949,25 @@ def build_screen():
         recitejs="", chatjs="", varjs=""))
     return 1
 
+def build_meditate():
+    import json as _json
+    out = DIST / "meditate"; out.mkdir(parents=True, exist_ok=True)
+    vbt = _json.load(open(VOL / "source-library/tantra/lakshmanjoo/vb_lakshmanjoo.json"))
+    vs = vbt.get("verses", [])[:145]
+    cards = []
+    for v in vs:
+        n = v.get("number")
+        skt = (v.get("sanskrit", "") or "")[:120]
+        en = (v.get("english", "") or "")[:200]
+        cards.append(f'<div class="panel"><b>Dharana {n}</b><div class="deva" style="font-size:1.1rem;margin:.4rem 0">{esc(skt)}</div><div class="en" style="font-size:.85rem">{esc(en)}</div><div style="margin-top:.5rem"><button onclick="startMed({n})" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Practice</button></div></div>')
+    med_js = "<script>function startMed(n){alert('Meditation ' + n + ' starting. Close your eyes and breathe.')}function stopMed(){}</script>"
+    (out / "index.html").write_text(TF(TMPL, title="Meditation", h1="Meditation",
+        kicker="Practice", sub="Vijñānabhairava dhāraṇās as guided practices",
+        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>" + med_js
+        + srclink("https://github.com/prx0r/kashaudio", "chants render here as kashaudio reaches each work."),
+        recitejs="", chatjs="", varjs=""))
+    return len(vs)
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -2130,7 +2149,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2161,6 +2180,7 @@ def main():
     if "arguments" in want: done["arguments"] = build_arguments()
     if "stylelab" in want: done["stylelab"] = build_stylelab()
     if "screen" in want: done["screen"] = build_screen()
+    if "meditate" in want: done["meditate"] = build_meditate()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
 
     ship_translations()
