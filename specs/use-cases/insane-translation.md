@@ -38,3 +38,38 @@
   an ugly right one — then gets re-rolled.
 - Accepted English is per-variant (`accepted_by` on the variant, not the chunk).
 - Commercial witnesses never train styles (license firewall).
+
+## Methods (surveyed Oct 2026 — concrete, current)
+Pipeline position first: style applies to finished English (L2 READ), never to
+Sanskrit parsing. Base translation = default weights (our gated pipeline output);
+style = filter/adapter on top. (Not after C1 — C1 is commentary, a separate
+register that keeps its own voice.)
+
+1. **AuthorMix (EMNLP Oct 2026) — the scholar-style engine.** Modular LoRA library
+   from high-resource authors + RL-learned layer-wise mixing for a new target from
+   a handful of examples; <1hr adaptation; no target examples needed at inference.
+   Ranks first on joint style–meaning score (beats GPT-5.1); meaning preservation
+   is the headline metric — exactly the translation constraint. Mapping: base
+   library = our house voices (Dyczkowski-mode L2, plain, gen-z seed); scholar's
+   5–10 own verse translations → mixed adapter = their style.
+2. **Hypernetwork LoRA (arXiv Oct 2026) — cold-start alternative.** Predicts LoRA
+   adapters from author embeddings; best style–quality tradeoff; no per-author
+   training. Use when exemplars <5 or instant onboarding matters.
+3. **A3S aspect-aware steering (Sep 2026) — training-free instant try.** Multi-aspect
+   (tone/perspective/structure/figurative) contrastive directions, interference-aware
+   merge. Zero training: preview any style before committing to an adapter.
+4. **CAUSAL-STEER / StyliTruth (ICLR 2026) — English filters as dials.** LoRA-as-
+   intervention extracts stable style vectors (CAUSAL-STEER: continuous control,
+   no parallel corpora); StyliTruth SVD-disentangles style subspace from truth
+   subspace — stylized YET truthful, i.e. our "punch from diction, not dilution"
+   rule as linear algebra. Filters (formality, second-person, concreteness) ride
+   on top of any style adapter.
+5. **InMyStyle pattern — per-scholar local adapters.** Rank-8 LoRA on small Qwen
+   (0.5–7B), 3 epochs, response-only loss; small models sufficient; privacy-first
+   (scholar's unpublished translations never leave their machine).
+
+## Scholar flow (concrete)
+Scholar translates 5–10 verses → A3S instant preview (seconds) → AuthorMix adapter
+(<1hr) → generate rest in their style → gate battery runs every variant (meaning
+floor) → human picks → `accepted_by` on winners → accepted pairs accumulate to
+SFT/LoRA v2. Style card records method lineage throughout.
