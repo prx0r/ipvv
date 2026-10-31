@@ -1037,41 +1037,61 @@ def build_pushing_hub():
     return 5 + n_ipvv + n_ta
 
 def build_receipts():
-    """Per-chunk audit trail: the machine-readable record of why each chunk
-    displays what it displays. qprivately idiom, no dependency."""
-    import json as _json, hashlib as _h
+    """Per-chunk audit trail via the vendored qprivately kernel.
+    Claim + evidence + versioned gates -> transition() receipt.
+    FAIL receipts are first-class: a BLOCKED chunk's receipt records exactly
+    what did not pass. Unsigned (proof_level 0); grants/signing are next."""
+    import json as _json, sys as _sys
+    _sys.path.insert(0, str(ROOT.parent / "tools"))
+    from qp_acom import objects as _o
+    from qp_acom import receipts as _r
+    import qp_gates as _qg
     out = []
+
+    def chunk_receipt(work, chunk, gate, blocking, model, date, src_file,
+                      src_lines, lic, imm, has_en, checks):
+        asof = date or "2026-10-31"
+        src = {"chunk": chunk}
+        ev = [
+            _o.make_evidence("source_file", src_file or "", "path", asof, src),
+            _o.make_evidence("source_lines", src_lines or 0, "line", asof, src),
+            _o.make_evidence("source_license", lic or "", "spdx", asof, src),
+            _o.make_evidence("immutable_id", imm or "", "id", asof, src),
+            _o.make_evidence("gate", gate or "", "verdict", asof, src),
+            _o.make_evidence("has_english", bool(has_en), "bool", asof, src),
+            _o.make_evidence("gate_checks", checks or {}, "checks", asof, src),
+            _o.make_evidence("model", model or "", "model", asof, src),
+        ]
+        claim = _o.make_claim(f"{work}:{chunk} displays its entitled state",
+                              f"translation-display:{work}", "UNKNOWN")
+        task = _o.make_task("chunk-display", chunk, {"gate": "decided"})
+        run = _o.make_run(task["id"], "pipeline-batch", model or "")
+        proposal = {"id": f"{work}:{chunk}", "claim": claim, "target": chunk,
+                    "work": work, "gate": gate, "blocking": blocking}
+        return _r.transition({"status": "unreviewed"}, proposal, ev,
+                             _qg.GATE_IDS, run,
+                             transition_type="CHUNK-DISPLAY")
+
     for f in sorted((ROOT / "data/translations").glob("*.json")):
         for it in _json.loads(f.read_text()):
-            ev = {"chunk": it.get("chunk"), "sanskrit": it.get("sanskrit"),
-                  "source_file": it.get("source_file"), "source_lines": it.get("source_lines"),
-                  "license": it.get("source_license"), "model": it.get("model"),
-                  "date": it.get("date"), "immutable_id": it.get("immutable_id")}
-            evroot = _h.sha256(_json.dumps(ev, sort_keys=True).encode()).hexdigest()[:16]
-            out.append({"id": f"receipt:{f.stem}:{it.get('chunk')}",
-                "subject": f"{f.stem}:{it.get('chunk')}", "state_before": "unreviewed",
-                "state_after": "PASS-display" if it.get("gate") == "PASS" else "BLOCKED-withheld",
-                "gates": [{"id": k, "result": "PASS" if v[0] else "FAIL", "proof": v[1]}
-                          for k, v in (it.get("checks") or {}).items()],
-                "gate": it.get("gate"), "blocking": it.get("blocking"),
-                "evidence_root": evroot, "evidence": ev,
-                "accepted_by": None, "passed": it.get("gate") == "PASS"})
+            out.append(chunk_receipt(
+                f.stem, it.get("chunk", "?"), it.get("gate", ""),
+                it.get("blocking", []), it.get("model", ""), it.get("date", ""),
+                it.get("source_file", ""), it.get("source_lines"),
+                it.get("source_license", ""), it.get("immutable_id", ""),
+                bool(it.get("l1") or it.get("l2")), it.get("checks", {})))
     for f in sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json")):
         d = _json.loads(f.read_text())
-        src = (d.get("source") or {}).get("text", "") if isinstance(d.get("source"), dict) else ""
-        ev = {"chunk": d.get("chunk"), "sanskrit": src[:500], "vol": d.get("vol"),
-              "immutable_id": d.get("immutable_id")}
-        evroot = _h.sha256(_json.dumps(ev, sort_keys=True).encode()).hexdigest()[:16]
-        out.append({"id": f"receipt:{d.get('chunk')}", "subject": d.get("chunk"),
-            "state_before": "unreviewed", "state_after": "PUBLISHED-display",
-            "gates": [], "gate": "PUBLISHED", "blocking": [],
-            "evidence_root": evroot, "evidence": ev,
-            "accepted_by": None, "passed": True})
+        out.append(chunk_receipt(
+            "ipvv", d.get("chunk", "?"), "PUBLISHED", [], "editor-pipeline",
+            "2026-08-11", "patala:published", 0, "mixed-roots",
+            d.get("immutable_id", ""), bool((d.get("l2_text") or "").strip()), {}))
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     with open(DIST / "data/receipts.jsonl", "w", encoding="utf-8") as fh:
         for r in out:
             fh.write(_json.dumps(r, ensure_ascii=False) + "\n")
     return len(out)
+
 
 def build_corpus():
     """Embeddings-ready corpus: one JSONL, stable ids, gate labels, all layers.

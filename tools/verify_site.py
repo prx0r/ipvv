@@ -77,6 +77,33 @@ if os.path.exists(_rp):
         fail(f'receipts.jsonl has {_rn} records, expected {_tn + _pn} (translations + published passages)')
 else:
     fail('receipts.jsonl not built')
+# 6b. kernel verification: gate registry pinned + receipt ids recompute (FAIL)
+sys.path.insert(0, os.path.join(ROOT, 'tools'))
+try:
+    from qp_acom.canonical import canonical, sha256_hex
+    from qp_acom.gates import program_hash
+    import qp_gates  # noqa: registers ipvv/* gates into the kernel registry
+    _pinned = {
+        "ipvv/has-source-v1": "sha256:ad16330b14e8b585eea1bd630b2d33e30301b146ac3c9e631961461326c129b5",
+        "ipvv/has-license-v1": "sha256:b32a372f4db612425803868f7ef46aec3b069eafb6d0ac6e4e862d066548eced",
+        "ipvv/has-immutable-id-v1": "sha256:cb644734619b646c262d7b8b9b578ab2b2f1188bea72d32cf08a3ddfa6200c42",
+        "ipvv/gate-consistent-v1": "sha256:bdbf5e44faa8159e40179f5a83762b23ba985519b88a49a82c814a368e6f174c",
+        "ipvv/checks-pass-v1": "sha256:dd803a9c03b7bf8243e7817abc34705faeebe48741d78910d0af6968c9a1daef",
+    }
+    for _g, _h in _pinned.items():
+        if program_hash(_g) != _h:
+            fail(f'gate logic changed without new id: {_g} (mint a new gate id)')
+    _bad = 0
+    for _ln in open(_rp, encoding='utf-8'):
+        _r = json.loads(_ln)
+        _body = {k: v for k, v in _r.items() if k not in ("id", "signature", "signer")}
+        _want = "receipt:" + sha256_hex(canonical(_body))[:16]
+        if _r.get("id") != _want:
+            _bad += 1
+    if _bad:
+        fail(f'{_bad} receipts fail id recomputation (tampered or stale kernel)')
+except Exception as e:
+    fail(f'kernel verification error: {e!r}')
 # 7. dist freshness vs build.py (FAIL — rebuild before commit)
 bpy = os.path.join(ROOT, 'site/build.py')
 dix = os.path.join(ROOT, 'site/dist/index.html')
