@@ -314,7 +314,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -562,7 +562,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1342,6 +1342,132 @@ def render_text_assets2(sub, title, kind, filepat="*"):
     return len(cards)
 
 def build_r2_audio_transcripts(): return render_text_assets2("r2-audio-transcripts","R2 audio transcripts","Transcript","*")
+def parse_argmap(path):
+    """Parse an IPVV argmap markdown into structured fields. Returns None if unparseable."""
+    import re as _re
+    raw = open(path, encoding="utf-8", errors="replace").read()
+    # title
+    title = path.stem.replace("pilot_", "").replace("_ARGUMENT_MAP", "").replace("_", " ")
+    m = _re.search(r'^# (.+)$', raw, _re.M)
+    if m: title = m.group(1).strip()
+    # question
+    qm = _re.search(r'\*\*The question:\*\*\s*(.+?)(?=\n\n|\n##|\n\*\*)', raw, _re.S)
+    question = qm.group(1).strip().replace("\n", " ") if qm else ""
+    # what is at issue (thesis)
+    issue = ""
+    im = _re.search(r'## 1\. What is at issue\s*\n(.+?)(?=## 2)', raw, _re.S)
+    if im: issue = im.group(1).strip()[:1500]
+    # argument section
+    argm = _re.search(r'## 2\. The argument.+?\n(.+?)(?=## 3)', raw, _re.S)
+    argument = argm.group(1).strip()[:3000] if argm else ""
+    # unresolved
+    unm = _re.search(r'## 3\. Unresolved.+?\n(.+?)(?=## 4|\Z)', raw, _re.S)
+    unresolved = unm.group(1).strip()[:1000] if unm else ""
+    # premises: bolded sub-headers in the argument section
+    premises = []
+    for pm in _re.finditer(r'\*\*(.+?)(?:\s*\(lines? .+?\))?:\*\*\s*\n(.+?)(?=\n\*\*|\n##|\Z)', argument, _re.S):
+        premises.append({"label": pm.group(1).strip(), "text": pm.group(2).strip()[:800]})
+    if not premises and argument:
+        # fallback: split by double newline
+        for chunk in argument.split("\n\n"):
+            chunk = chunk.strip()
+            if len(chunk) > 80:
+                premises.append({"label": "", "text": chunk[:800]})
+    return {"title": title, "question": question, "issue": issue,
+            "premises": premises, "argument": argument, "unresolved": unresolved}
+
+def build_arguments():
+    """ArgumentTruthPackets from argmaps + pushing cruxes. The unlock layer."""
+    import json as _json
+    src = ROOT / "data/arguments"; src.mkdir(parents=True, exist_ok=True)
+    out = DIST / "arguments"; out.mkdir(parents=True, exist_ok=True)
+    # map chunk prefix -> pushing tension (from pushing-ipvv files)
+    tension_map = {}
+    for pf in (ROOT / "data/pushing/ipvv").glob("*.md"):
+        raw = pf.read_text(encoding="utf-8", errors="replace")
+        for m in __import__("re").finditer(r'V[123][A-Z](?:-[A-Za-z0-9]+)?', raw):
+            key = m.group(0).lower().replace("-", "")
+            tension_map.setdefault(key, pf.stem)
+    recs = []
+    pmap = {"chunkA":"pilot_V1A","chunkB":"pilot_V1B","chunkC":"pilot_V1C","chunkD":"pilot_V1D",
+        "chunkE":"pilot_V1E","chunkF":"pilot_V1F","chunkG":"pilot_V1G","chunkH":"pilot_V1H",
+        "chunkI":"pilot_V1I","chunkJ":"pilot_V1J","chunkK":"pilot_V1K","chunkL":"pilot_V1L",
+        "chunkM":"pilot_V1M","chunkN":"pilot_V1N","chunkV2-A":"pilot_V2A","chunkV2-B":"pilot_V2B",
+        "chunkV2-C":"pilot_V2C","chunkV2-D":"pilot_V2D","chunkV2-E":"pilot_V2E","chunkV2-F":"pilot_V2F",
+        "chunkV2-G":"pilot_V2G","chunkV2-H":"pilot_V2H","chunkV2-I":"pilot_V2I","chunkV2-J":"pilot_V2J",
+        "chunkV2-K":"pilot_V2K","chunkV2-L":"pilot_V2L","chunkV2-M":"pilot_V2M","chunkV2-N":"pilot_V2N",
+        "chunkV2-O":"pilot_V2O","chunkV2-P":"pilot_V2P","chunkV2-Q":"pilot_V2Q","chunkV2-R":"pilot_V2R",
+        "chunkV2-S":"pilot_V2S","chunkV3-A":"pilot_V3A","chunkV3-C":"pilot_V3C","chunkV3-D":"pilot_V3D",
+        "chunkV3-E":"pilot_V3E","chunkV3-F":"pilot_V3F","chunkV3-G":"pilot_V3G","chunkV3-H":"pilot_V3H",
+        "chunkV3-I":"pilot_V3I","chunkV3-J":"pilot_V3J","chunkV3-K":"pilot_V3K","chunkV3-L":"pilot_V3L",
+        "chunkV3-M":"pilot_V3M","chunkV3-N":"pilot_V3N","chunkV3-O":"pilot_V3O","chunkV3-P":"pilot_V3P"}
+    pmap_keys_sorted = sorted(pmap.keys(), key=len, reverse=True)
+    for d in sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json")):
+        rec = _json.loads(d.read_text())
+        chunk = rec.get("chunk", "").replace(".md", "")
+        pp = None
+        for pk in pmap_keys_sorted:
+            if chunk.startswith(pk):
+                pp = pmap[pk]
+                break
+        if chunk.startswith("chunkV3-B"):
+            pp = "pilot_V3B"
+        am_path = ROOT / "data/ipvv/argmaps" / f"{pp}_ARGUMENT_MAP.md"
+        if not am_path.exists():
+            continue
+        am = parse_argmap(am_path)
+        # tension from pushing
+        chunkkey = chunk.lower().replace("-", "").replace("chunk", "")
+        tid = ""
+        for tk, tv in tension_map.items():
+            if tk in chunkkey:
+                tid = tv
+                break
+        # strength: MACHINE_DRAFT (no human review yet)
+        packet = {
+            "id": f"pt:argument:ipvv:{chunk}",
+            "work_id": "isvarapratyabhijnavivrtivimarsini",
+            "passage_id": rec.get("immutable_id", ""),
+            "title": am["title"],
+            "kind": "entailment",
+            "question": am["question"],
+            "issue": am["issue"],
+            "premises": [{"text": p["text"], "label": p["label"], "passage_id": rec.get("immutable_id", "")}
+                         for p in am["premises"]],
+            "inference": "reconstructed from argmap (see argument field)",
+            "conclusion": {"text": am["question"], "passage_id": rec.get("immutable_id", "")},
+            "unresolved": am["unresolved"],
+            "argument_text": am["argument"],
+            "tension_id": tid or None,
+            "strength": "MACHINE_DRAFT",
+            "status": "MACHINE_DRAFT",
+            "source_passage": rec.get("immutable_id", ""),
+            "sanskrit": (rec.get("source") or {}).get("text", "") if isinstance(rec.get("source"), dict) else "",
+        }
+        (src / f"{chunk}.json").write_text(_json.dumps(packet, ensure_ascii=False, indent=1))
+        recs.append(packet)
+    # index
+    (out / "index.html").write_text(TF(TMPL, title="IPVV arguments", h1="Arguments",
+        kicker="Argument truth-packets", sub=f"{len(recs)} packets — conclusion → premises → passage → Sanskrit",
+        sidenav=sidenav("abhinavagupta", ""), body="<div class='idx'>"
+        + "".join(f'<a href="/arguments/{p["id"].split(":")[-1]}.html"><b>{esc(p["title"][:70])}</b> — {esc(p["strength"])}</a>' for p in recs)
+        + "</div>" + srclink("site/data/arguments/", "packets live here.")))
+    # per-packet pages
+    for pkt in recs:
+        pid = pkt["id"].split(":")[-1]
+        prem = "".join(f'<div class="panel"><b>{esc(p["label"])}</b><div class="en">{esc(p["text"][:1200])}</div></div>' for p in pkt["premises"])
+        body = (f'<div class="panel"><b>Question.</b> {esc(pkt["question"])}</div>'
+                + f'<div class="panel"><b>Issue.</b> {esc(pkt["issue"][:1200])}</div>'
+                + f'<h3>Premises</h3>{prem}'
+                + f'<div class="panel"><b>Unresolved.</b> {esc(pkt["unresolved"][:600])}</div>'
+                + (f'<div class="sub">Tension: {esc(pkt["tension_id"])}</div>' if pkt["tension_id"] else "")
+                + f'<div class="sub">Strength: {esc(pkt["strength"])} · Status: {esc(pkt["status"])} · <a href="/data/arguments/{esc(pid)}.json">packet JSON</a></div>'
+                + srclink("site/data/arguments/" + pid + ".json", "packet lives here."))
+        (out / f"{pid}.html").write_text(TF(TMPL, title=pkt["title"], h1=esc(pkt["title"]),
+            kicker="Argument", sub=f'{pkt["strength"]} · {len(pkt["premises"])} premises',
+            sidenav=sidenav("abhinavagupta", ""), body=body))
+    return len(recs)
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1523,7 +1649,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1551,6 +1677,7 @@ def main():
     if "ratier-chapters" in want: done["ratier-chapters"] = build_ratier_chapters()
     if "torella-volume" in want: done["torella-volume"] = build_torella_volume()
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
+    if "arguments" in want: done["arguments"] = build_arguments()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
