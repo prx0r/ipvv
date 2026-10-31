@@ -149,18 +149,38 @@ export default {
           .sort((a, b) => b.score - a.score)
           .slice(0, 20);
 
-        let top = candidates.slice(0, 5);
-        if (candidates.length > 5) {
-          const ctxs = candidates.map(c => ({ text: (c.en || c.sa || '').slice(0, 500) || 'passage' }));
+        // Template match: best pushing probe (chain context for Qwen)
+        let chainCtx = '';
+        try {
+          const probes = vecs.filter(v => v.kind === 'probe');
+          let best = null;
+          for (const p of probes) {
+            const s = cosine(qVec, p.vec);
+            if (!best || s > best.score) best = { ...p, score: s };
+          }
+          if (best && best.score > 0.35) {
+            chainCtx = `\n\nPrior enquiry on this question:\n[${best.id}] ${(best.en || '').slice(0, 800)}`;
+          }
+        } catch (e) { /* template match is best-effort */ }
+
+        // Diverse pick: best 1-2 per work, then rerank
+        const byWork = {};
+        for (const c of candidates) { (byWork[c.work] = byWork[c.work] || []).push(c); }
+        let diverse = [];
+        Object.values(byWork).forEach(arr => { diverse = diverse.concat(arr.slice(0, 2)); });
+        diverse.sort((a, b) => b.score - a.score);
+        let top = diverse.slice(0, 5);
+        if (diverse.length > 5) {
+          const ctxs = diverse.map(c => ({ text: (c.en || c.sa || '').slice(0, 500) || 'passage' }));
           const rerank = await env.AI.run('@cf/baai/bge-reranker-base', {
             query: message,
             contexts: ctxs,
           });
           const scores = rerank.results || rerank.data || [];
-          candidates.forEach((c, i) => {
+          diverse.forEach((c, i) => {
             c.rerank = (scores[i] && (scores[i].score || scores[i])) || c.score;
           });
-          top = candidates.sort((a, b) => b.rerank - a.rerank).slice(0, 5);
+          top = diverse.sort((a, b) => b.rerank - a.rerank).slice(0, 5);
         }
 
         // Graph traversal: follow argument packet edges
@@ -186,12 +206,18 @@ export default {
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
-        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
-        const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
-          messages: [{ role: 'user', content: prompt }],
-          max_tokens: 512,
-        });
-        reply = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || JSON.stringify(gen).slice(0, 500);
+        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as such, never as source text.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}\n\nAnswer in plain speech, one paragraph plus citations. No academic name-dropping, no invented terms.`;
+        // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
+        try {
+          reply = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
+        } catch (qe) {
+          const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 512,
+          });
+          const deep = gen && gen.choices && gen.choices[0] && gen.choices[0].message;
+          reply = (deep && deep.content) || gen.response || (gen.result && gen.result.response) || 'No answer (both models failed).';
+        }
       } catch (e) {
         reply = `RAG error: ${e.message}. Vectors: ${cachedVectors ? cachedVectors.length : 'none'}.`;
       }
@@ -207,7 +233,7 @@ export default {
       // proactive follow-up suggestion
       let suggestion = '';
       try {
-        const followup = await dashscopeChat(env, [{ role: 'user', content: `Given this Q&A about ${works.join(', ')}:\nQ: ${message}\nA: ${reply.slice(0,300)}\n\nSuggest one follow-up question a scholar would ask next. Just the question, nothing else.` }], 64);
+        const followup = await dashscopeChat(env, [{ role: 'user', content: `Given this Q&A about ${works.join(', ')}:\nQ: ${message}\nA: ${reply.slice(0,300)}\n\nSuggest one follow-up question in plain speech that the retrieved passages could answer or that opens their hardest unresolved tension. No scholar names, no academic jargon, just the question. Nothing else.` }], 64);
         if (followup && followup.length > 5 && followup.length < 300) suggestion = followup.trim();
       } catch (e) { /* proactive is best-effort */ }
       return json({ session_id: sid, reply, suggestion }, 200, cors);

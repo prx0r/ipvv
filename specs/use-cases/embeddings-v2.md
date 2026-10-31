@@ -61,8 +61,8 @@ This is already in the data; just needs to be applied at retrieval time.
 ## Free-tier models available (CF Workers AI)
 - bge-m3: 1024-dim, multilingual, 60k context, cheapest (1075 neurons/M tokens)
 - qwen3-embedding-0.6b: 1024-dim, SOTA family, same price
-- bge-reranker-base: cross-encoder reranker
-- llama-3.1-8b: generation (fast, free)
+- bge-reranker-base: cross-encoder reranker (live in Worker)
+- Generation: qwen3.8-omni-flash via DashScope Singapore (live in Worker; deepseek-v4-flash fallback only)
 
 ## What NOT to do
 - Don't chase MTEB top (Qwen3-8B) — our corpus is ~700 items, bottleneck is
@@ -77,7 +77,7 @@ This is already in the data; just needs to be applied at retrieval time.
 4. Add gate-aware weighting: exclude BLOCKED, weight by gate status
 5. Add multi-hop: follow see_also/RELATED edges for complex queries
 6. Rerank with bge-reranker-base (already in Worker)
-7. Generate with llama-3.1-8b (already in Worker)
+7. Generate with qwen3.8-omni-flash via DashScope (live in Worker; stream SSE for realtime feel)
 
 ## What this gives us
 - Better retrieval quality without new models (uses existing structure)

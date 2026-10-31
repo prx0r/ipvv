@@ -63,3 +63,8 @@
   only when the argument validly derives it; "requires unstated premise" when it
   doesn't; "rival unresolved" when there's a live alternative.
 - The user asks the questions. Read their logicvid voice before writing yours.
+
+## Done 2026-10-31 — bodhapancadasika (user's questions)
+
+5-session arc (forget → terror → grace → necessity → dissolution), all PASS-English + Sanskrit, chain shapes labeled, scaffold + table. Comparison doc + transferable arc + 6 chain shapes saved. Graph extractor/verifier/gate live (322 records, 71 sessions). Worker upgraded (Qwen primary, template match, diverse pick, 2 bugs fixed) and tested live on both IPVV + bodha questions — chain context + OWNER labels + grounded follow-ups all working.
+Next: IPVV thematic ROUND 2-3 (shapes #2 + #3), comparative sessions (B13/B14/B15), stavacintamani or spanda when gates pass.

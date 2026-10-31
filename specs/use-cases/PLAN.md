@@ -12,9 +12,8 @@ the previous phase's gate passes.
 - Gate to Phase 1: `bash tools/verify.sh` green (it is).
 
 ## Phase 1 — Re-roll + pick-best UI (site lane, no backend)
-- Variant roll runner: given chunk + style card, produce N candidates via CF
-  Workers AI free-tier models (llama-3.3-70b primary, mistral/qwen rotation for
-  validity), each with run receipt (model, cost, prompt root).
+- Variant roll runner: given chunk + style card, produce N candidates via qwen3.8-omni-flash
+  (DashScope; same model as chat for voice consistency), each with run receipt (model, cost, prompt root).
 - Gate battery on every variant (existing gates + A3S-style meaning check).
 - Display: variant switcher on translation pages (PASS variants only).
 - Owner action needed: NONE (all machine). Human picks land in Phase 2 UI.
