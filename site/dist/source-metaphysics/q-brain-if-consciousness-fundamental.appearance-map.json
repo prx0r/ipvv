@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-appearance-sources-claims",
+  "claim_packet": "content/information-packets/q17-appearance-sources-claims.json",
+  "generated_by": "hermes",
+  "source_role": "appearance_sources_layer",
+  "candidate_under_test": "cand:brain-as-appearance-only",
+  "central_reading": "The appearance-within-consciousness candidate now has real peer-reviewed source material — Bernardo Kastrup's analytic idealism in Disputatio (2017), Philosophies (2017), Journal of Consciousness Studies (2018), and METOD (2020). These papers provide: (1) a direct argument that brain-dependence does not refute idealism, (2) a dissociation model explaining how NCCs can be extrinsic appearances of dissociative processes within universal consciousness, (3) an epistemic argument for the primacy of mind over matter, and (4) a reduction thesis that all physical structure is configuration of consciousness. Miri Albahari's perennial idealism (2019 preprint) provides a complementary cross-tradition framework. This layer fills the gap identified in the original state-of-play: the appearance candidate now has positive doctrinal content from contemporary peer-reviewed philosophy, not merely a transcendental placeholder.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:kastrup-disputatio-idealism-refutes-production",
+      "source_span_id": "doi:10.2478/disp-2017-0025",
+      "quoted_anchor": "all physical structures are circumscribed by consciousness in that they exist solely as phenomenality",
+      "nn_expr": "virodha(brain_produces_consciousness,appearance_within_consciousness)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "brain-dependence objection to idealism",
+        "hetu": "the brain itself is circumscribed by consciousness as phenomenality",
+        "sadhya": "NCCs do not entail that the brain produces consciousness",
+        "vyapti": "If physical structures exist solely as phenomenality within consciousness, then the brain's correlation with experience does not imply production."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "crux:neural-correlation-direction"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the brain produces consciousness in a way that cannot be explained as the extrinsic appearance of dissociative phenomenality."
+    },
+    {
+      "claim_id": "cl:kastrup-philosophies-ontological-primitive",
+      "source_span_id": "doi:10.3390/philosophies2020010",
+      "quoted_anchor": "spatially unbound consciousness is nature's sole ontological primitive",
+      "nn_expr": "sambandha(dissociated_alters,extrinsic_appearance_physical_world)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "living organisms and their brains as dissociated alters",
+        "hetu": "the hard problem and combination problem dissolve under idealism",
+        "sadhya": "analytic idealism has greater explanatory power than physicalism or panpsychism for the brain's role",
+        "vyapti": "If consciousness is ontologically primitive and physical structures are extrinsic appearances of dissociated phenomenality, then the brain is not a producer of consciousness."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "crux:neural-correlation-direction",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the dissociation model cannot account for the fine-grained neural correlates of specific experiential content."
+    },
+    {
+      "claim_id": "cl:kastrup-jcs-matter-within-mind",
+      "source_span_id": "jcs:2018-universe-in-consciousness",
+      "quoted_anchor": "Mind is the given matrix within which we construct the theoretical abstraction we call matter",
+      "nn_expr": "antarvyapti(mind_matrix,matter_abstraction)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "mind-matter dichotomy",
+        "hetu": "we have direct knowledge of mind but only theory-mediated knowledge of matter",
+        "sadhya": "the universe exists within consciousness, not vice versa",
+        "vyapti": "If mind is the matrix within which the concept of matter is constructed, then the brain is an appearance within consciousness."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-interface-generative-model",
+        "crux:neural-correlation-direction"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that we have direct epistemic access to matter that is not theory-mediated, or that epistemic primacy of mind does not entail ontological primacy of consciousness."
+    },
+    {
+      "claim_id": "cl:kastrup-metod-analytic-idealism-summary",
+      "source_span_id": "doi:10.31249/metod/2020.10.06",
+      "quoted_anchor": "the ground of existence is phenomenal consciousness; everything else is reducible to patterns of excitation of consciousness",
+      "nn_expr": "sambandha(consciousness_ground,configurations_excitation)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "ontological ground of existence",
+        "hetu": "all physical structure is reducible to patterns of consciousness excitation",
+        "sadhya": "the brain is a configuration of conscious excitation, not an independent substrate",
+        "vyapti": "If everything is reducible to patterns of excitation of consciousness, then the brain is not an independent substrate that generates consciousness."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-interface-generative-model",
+        "crux:neural-correlation-direction"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that there is something ontologically fundamental about physical structure that cannot be accounted for as a configuration of consciousness excitation."
+    },
+    {
+      "claim_id": "cl:albahari-perennial-idealism-preprint",
+      "source_span_id": "philpapers:ALBPIA-4",
+      "quoted_anchor": "perennial idealism offers a mystical solution to the mind-body problem",
+      "nn_expr": "sambandha(universal_consciousness_ground,appearances_within)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "mind-body problem",
+        "hetu": "both analytic philosophy and contemplative traditions converge on consciousness as fundamental",
+        "sadhya": "perennial idealism resolves the mind-body problem more satisfactorily than physicalism or panpsychism",
+        "vyapti": "If universal consciousness is the ground and individual minds are appearances within it, then the brain is an appearance within consciousness."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The claim declares weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Establish through successful peer-reviewed publication that this argument has survived critical scrutiny; currently the paper exists only as a preprint."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:kastrup-disputatio-supports-appearance-only",
+      "source": "cl:kastrup-disputatio-idealism-refutes-production",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.40,
+      "rationale": "Direct peer-reviewed argument that brain-dependence does not refute idealism — gives the appearance candidate a positive defense against the strongest common objection."
+    },
+    {
+      "edge_id": "edge:kastrup-disputatio-addresses-correlation-crux",
+      "source": "cl:kastrup-disputatio-idealism-refutes-production",
+      "target": "crux:neural-correlation-direction",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "Provides an explicit account of NCCs as dissociative correlates within consciousness, addressing the direction crux."
+    },
+    {
+      "edge_id": "edge:kastrup-philosophies-supports-appearance-only",
+      "source": "cl:kastrup-philosophies-ontological-primitive",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.42,
+      "rationale": "Provides the dissociation model — brains are extrinsic appearances of dissociated alters of universal consciousness — giving the appearance candidate an operational ontology."
+    },
+    {
+      "edge_id": "edge:kastrup-philosophies-pressures-interface",
+      "source": "cl:kastrup-philosophies-ontological-primitive",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.12,
+      "rationale": "The dissociation model challenges the interface account's implicit assumption that there is a real (non-phenomenal) brain doing the interfacing.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:kastrup-jcs-supports-appearance-only-epistemic",
+      "source": "cl:kastrup-jcs-matter-within-mind",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.38,
+      "rationale": "Epistemic argument for the primacy of mind over matter provides the epistemological foundation for the appearance ontology."
+    },
+    {
+      "edge_id": "edge:kastrup-jcs-pressures-interface-epistemic",
+      "source": "cl:kastrup-jcs-matter-within-mind",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.15,
+      "rationale": "If matter is a construct within mind, the interface account's brain-as-generative-model is itself an appearance within mind.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:kastrup-metod-supports-appearance-only",
+      "source": "cl:kastrup-metod-analytic-idealism-summary",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "Summarizes the core thesis: all physical structure is configuration of consciousness excitation."
+    },
+    {
+      "edge_id": "edge:kastrup-metod-pressures-interface-reduction",
+      "source": "cl:kastrup-metod-analytic-idealism-summary",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.15,
+      "rationale": "If everything is reducible to patterns of consciousness excitation, the interface/generative-model ontology collapses into the appearance account.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:albahari-supports-appearance-only",
+      "source": "cl:albahari-perennial-idealism-preprint",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.20,
+      "rationale": "Provides cross-tradition support for universal-consciousness idealism, though currently only preprint status."
+    },
+    {
+      "edge_id": "edge:albahari-pressures-filter",
+      "source": "cl:albahari-perennial-idealism-preprint",
+      "target": "cand:brain-as-filter",
+      "edge_type": "attacks",
+      "strength": 0.10,
+      "rationale": "The perennial idealist framework challenges the filter account's claim that the brain restricts consciousness, by more radically claiming the brain is itself within consciousness.",
+      "targets_core_commitment": false
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:analytic-idealism-trika-appearance",
+      "bridge_probe_id": "bridge:pp-ti-appearance-only",
+      "left_term": "nn:analytic_idealism:consciousness_only_ontology",
+      "left_scope": "analytic_idealism",
+      "right_term": "nn:trika:abhasavada_manifestation_within_consciousness",
+      "right_scope": "trika_perennialism",
+      "shared_structure": "Both assert that consciousness is the sole ontological primitive and that all physical structures are appearances within it.",
+      "important_difference": "Analytic idealism is argued from analytic philosophy of mind and neuroscience; Trika ābhāsa-vāda from tantric metaphysics and contemplative phenomenology. Kastrup's dissociation model is more specific about the mechanics of appearance than Trika's prakāśa doctrine.",
+      "confidence_language": "deep structural convergence with different methodological foundations",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.2478/disp-2017-0025",
+        "text:tantraloka-abhasavada"
+      ],
+      "negative_control_status": "prevents_merging_analytic_idealism_and_trika_as_identical"
+    },
+    {
+      "correspondence_id": "corr:kastrup-filter-interface-pressures",
+      "bridge_probe_id": "bridge:trika-filter-pp-interface",
+      "left_term": "nn:analytic_idealism:dissociative_appearance",
+      "left_scope": "analytic_idealism",
+      "right_term": "nn:trika:kancuka_filter",
+      "right_scope": "trika_perennialism",
+      "shared_structure": "Both reject the view that the brain produces consciousness. Both treat NCCs as correlations within a larger conscious reality, not as evidence of production.",
+      "important_difference": "Analytic idealism uses a dissociation/alter model of individual minds; Trika uses a kañcuka-contraction model. The dissociation model is committed to realism about the 'alters' as genuine dissociative boundaries; the kañcuka model treats individuation as illusory limitation of the one consciousness.",
+      "confidence_language": "convergent rejection of production but different positive ontologies",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.3390/philosophies2020010",
+        "text:tantraloka-kancukas"
+      ],
+      "negative_control_status": "prevents_merging_kastrup_and_trika"
+    }
+  ],
+  "bridge_probe_logic": {
+    "candidate_pair": {
+      "left_term": "nn:analytic_idealism:consciousness_only_ontology",
+      "right_term": "nn:radical_idealism:brain_as_appearance",
+      "surface_similarity": "Both are idealist ontologies that treat the brain as an appearance within consciousness rather than as a producer.",
+      "important_difference": "Analytic idealism provides specific mechanisms (dissociation, extrinsic appearance of alters, configurations of excitation) while the radical idealism in the dossier was so far a transcendental placeholder. The source material gives the appearance candidate doctrinal content."
+    },
+    "formal_tests": [
+      {
+        "test_id": "probe:analytic-idealism-vs-filter-ontological-commitment-01",
+        "probe": "analytic_idealism:dissociative_appearance -> trika_perennialism:kancuka_filter",
+        "required_status_for_merge": "PROVED",
+        "actual_status": "UNPROVED",
+        "rationale": "Although both reject production, their positive ontologies differ — dissociation vs contraction — and should not be merged without resolving whether alters are real dissociative boundaries or illusory limitations."
+      }
+    ]
+  },
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:appearance-sources-to-pp:epistemic-challenge",
+      "critic_lens": "analytic_idealism",
+      "target_lens": "predictive_processing",
+      "reveals_about_target": "Kastrup's epistemic argument challenges the ontological realism of the generative model: if matter is a construction within mind, the brain-as-generative-model is itself an appearance within consciousness. The interface account's claims about neural computation may be descriptions of appearances, not of an external mechanism that causes experience.",
+      "pressure_type": "epistemic_undermining",
+      "target_response_required": "The PP account must specify whether the generative model is an appearance within consciousness (in which case it converges with idealism) or a real non-phenomenal mechanism (in which case it faces the epistemic objection about direct access to matter).",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:kastrup-jcs-matter-within-mind",
+        "cl:kastrup-disputatio-idealism-refutes-production"
+      ],
+      "crux_ids": [
+        "crux:neural-correlation-direction"
+      ]
+    },
+    {
+      "pair_id": "critique:appearance-sources-to-filter:dissociation-vs-contraction",
+      "critic_lens": "analytic_idealism",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "The dissociation model provides a more specific ontology of how brains relate to universal consciousness than the kañcuka-contraction model. Analytic idealism has peer-reviewed philosophical argumentation; Trika kañcukas remain analogical mappings from primary texts.",
+      "pressure_type": "mechanism_specificity",
+      "target_response_required": "The kañcuka model should articulate how its contraction mechanism differs empirically from Kastrup's dissociation mechanism — if both predict the same empirical patterns, the Trika account adds no differential value over analytic idealism.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:kastrup-philosophies-ontological-primitive",
+        "cl:kastrup-metod-analytic-idealism-summary"
+      ],
+      "crux_ids": [
+        "crux:filter-mechanism-requirement"
+      ]
+    },
+    {
+      "pair_id": "critique:clinical-lesion-to-appearance-sources:precision-requirement",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "analytic_idealism",
+      "reveals_about_target": "The appearance account now has source material but still lacks specific predictions about lesion effects. The dissociation model explains NCCs in general but has not addressed the fine-grained precision of the lesion data (e.g., why specific brainstem tegmental lesions produce coma rather than altered presence).",
+      "pressure_type": "predictive_precision_gap",
+      "target_response_required": "The appearance account must explain why specific neural lesions produce specific experiential transformations rather than uniform alterations of presence — or accept that it provides a metaphysical interpretation of neuroscience rather than a competing empirical theory.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:kastrup-disputatio-idealism-refutes-production",
+        "cl:kastrup-philosophies-ontological-primitive"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation",
+        "crux:neural-correlation-direction"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "brain_as_appearance_only": "Significantly strengthened by this layer. Previously a transcendental placeholder with zero source material, the appearance candidate now has five claims from real peer-reviewed publications (four Kastrup, one Albahari preprint). The dissociation model provides an operational ontology — brains as extrinsic appearances of dissociated alters of universal consciousness — addressing the neural-correlation-direction crux with a specific metaphysical mechanism. The appearance candidate now has positive doctrinal content to present to the other candidates.",
+    "brain_as_interface": "Pressured by Kastrup's epistemic argument: if matter is constructed within mind, the generative model is itself an appearance. The PP account must clarify its ontological commitment — is the generative model an appearance within consciousness or a real non-phenomenal mechanism?",
+    "brain_as_filter": "Indirectly pressured: the analytic idealism dissociation mechanism competes with the Trika kañcuka model. Both reject production but differ on the ontology of individuation (real dissociative boundaries vs illusory limitation). This creates a new differential question between the two consciousness-first accounts.",
+    "current_best_answer": "Brain as generative model / interface remains the strongest local candidate by current graph score, but the appearance candidate has closed the gap from 'transcendental placeholder' to 'positive peer-reviewed ontology with testable differential predictions.' Three candidates now have doctrinal content. The debate is narrowing: two consciousness-first accounts (analytic idealism and Trika filter) now compete on the ontology of individuation, while the interface account faces an epistemic challenge about the reality of its generative model.",
+    "open_cruxes": [
+      "crux:neural-correlation-direction",
+      "crux:brain-damage-transformation",
+      "crux:filter-mechanism-requirement"
+    ]
+  },
+  "next_work": [
+    "Design and propose experimental tests distinguishing Kastrup's dissociation model from Trika's kañcuka-contraction model — what differential predictions do they generate?",
+    "Extract full-text passages from Kastrup Disputatio (2017) and JCS (2018) to strengthen source_span precision beyond abstract quotes.",
+    "Consider adding Donald Hoffman's interface theory of perception as a potential fourth candidate or as supplementary to the interface account.",
+    "Formalize the epistemic challenge from analytic idealism into a bridge probe against predictive processing's ontological realism.",
+    "The appearance candidate now has positive content — next loop should test whether it can generate lesion-specific predictions comparable to the filter and interface accounts."
+  ]
+}

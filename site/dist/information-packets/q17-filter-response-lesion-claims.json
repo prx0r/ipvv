@@ -1,0 +1,225 @@
+{
+  "packet_id": "ip:q17-filter-response-lesion-claims",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "web_scholarly:q17-filter-response",
+    "title": "Filter-theory response to Q17 lesion evidence: Trika/idealist operational predictions for content loss, access loss, and arousal loss",
+    "author": "Codex/Hermes autonomous loop",
+    "external_sources": [
+      {
+        "source_id": "text:tantraloka-kancukas",
+        "title": "Tantraloka, Chapters 3-9 on the six kañcukas as orthogonal limitation dimensions",
+        "author": "Abhinavagupta",
+        "url": "sourcematerial/trika/tantraloka/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:tantrasara-saksin",
+        "title": "Tantrasara on sākṣin (witness consciousness) as invariant through all vṛtti modifications",
+        "author": "Abhinavagupta",
+        "url": "sourcematerial/trika/tantrasara/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:pratyabhijna-prakasa",
+        "title": "Īśvara Pratyabhijñā on prakāśa (self-luminous consciousness) independent of content-structuring",
+        "author": "Utpaladeva",
+        "url": "sourcematerial/trika/ipk/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:pratyabhijnahrdayam-sankoca-vikasa",
+        "title": "Pratyabhijñāhṛdayam on recovery as release of contraction (saṃkoca-vikāsa)",
+        "author": "Kṣemarāja",
+        "url": "sourcematerial/trika/pratyabhijnahrdayam/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:tantraloka-maya-primary",
+        "title": "Tantraloka on māyā as mūla-kañcuka establishing the sense of separation",
+        "author": "Abhinavagupta",
+        "url": "sourcematerial/trika/tantraloka/",
+        "source_quality": "primary_text"
+      }
+    ],
+    "tradition_scope": "trika_perennialism"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "hermes_proposed",
+  "claims": [
+    {
+      "claim_id": "cl:kancukas-as-distinct-transformation-dimensions",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-kancukas",
+      "source_span": {
+        "locator": "Tantraloka ch. 3-9 on kañcukas as orthogonal limitation dimensions",
+        "quote": "The six kañcukas — niyati, kāla, rāga, vidyā, kalā, māyā — are distinct restriction axes, not a single parameter"
+      },
+      "claim_text": "If the six kañcukas are distinct limitation dimensions, different lesion types should produce phenomenologically distinguishable signatures in the kind of transformation (not just the amount of loss), and these signatures should cluster by which kañcuka-specific neural scaffolding is damaged — e.g., spatial-framing lesions (parietal) affect the spatial 'where' of experience independently of content-specificity, temporal-framing lesions (temporal) affect the 'when' of experience separately, and agency lesions (prefrontal/medial-frontal) affect the 'who' or 'how' of self-as-cause — in a way that pure information-loss or prediction-error accounts treat as a single factor.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-interface-generative-model", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_perennialism",
+      "paradigm": "trika",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(kancuka_dimensions,lesion_transformation_signatures)",
+      "hetu": "the six kañcukas are described as orthogonal restriction dimensions in Tantraloka",
+      "sadhya": "lesion effects on experience should show qualitative clustering by dimension type, not graded reduction",
+      "vyapti_statement": "If distinct limitation dimensions exist, damage to their neural scaffolding should produce categorically distinct experiential transformations, not merely graded loss.",
+      "vyapti_confidence": 0.45,
+      "log_bayes_factor": 0.22,
+      "w_rel": 0.50,
+      "w_map": 0.40,
+      "w_aux": 0.45,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "All lesion effects on the structure of experience reduce to a single composite factor (processing bandwidth, global workspace integrity, or prediction precision) with no residual variance requiring qualitatively distinct limitation dimensions.",
+        "status": "untested"
+      },
+      "reasoning": "This gives the filter account a formal structure with orthogonal dimensions, responding to the mechanism gap. The weight is conservative because the mapping from kañcukas to specific neural systems is speculative."
+    },
+    {
+      "claim_id": "cl:filter-predicts-preserved-witness-across-content-abolition",
+      "source_type": "primary_text",
+      "source_id": "text:tantrasara-saksin",
+      "source_span": {
+        "locator": "Tantrasara on sākṣin as invariant witness",
+        "quote": "The witness consciousness (sākṣin) persists through all vṛtti modifications as their invariant ground"
+      },
+      "claim_text": "The filter account predicts that where content-generating or content-structuring neural systems are completely eliminated (complete V1 destruction, bilateral hippocampal sclerosis, extensive frontoparietal damage), the minimal experiential field — the sense of being present or being aware even in the absence of differentiated content — should survive in a distinct form that patients can report when appropriate communication channels exist. This is not reduced prediction output; it is bare manifestness dissociated from content-structuring.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-appearance-within-consciousness", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_perennialism",
+      "paradigm": "trika",
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(content_elimination_eliminates_awareness)",
+      "hetu": "the sākṣin is described as invariant through all content modifications",
+      "sadhya": "consciousness as such may survive the destruction of content-structuring neural systems",
+      "vyapti_statement": "If witness consciousness is content-invariant, then complete content-structuring system loss should leave manifestness detectable.",
+      "vyapti_confidence": 0.40,
+      "log_bayes_factor": 0.20,
+      "w_rel": 0.45,
+      "w_map": 0.35,
+      "w_aux": 0.40,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "In patients with complete destruction of content-structuring neural systems, no detectable phenomenology survives by any sensitive measure, or surviving phenomenology is indistinguishable from reduced generative-model output with no qualitative marker of bare witness.",
+        "status": "untested"
+      },
+      "reasoning": "This operationalizes the sākṣin as a testable prediction. The weight is low because detection of 'bare manifestness' in severe brain injury is extremely difficult and the claim is vulnerable to the hard problem of measuring consciousness in others."
+    },
+    {
+      "claim_id": "cl:filter-recovery-decoupling-prediction",
+      "source_type": "primary_text",
+      "source_id": "text:pratyabhijnahrdayam-sankoca-vikasa",
+      "source_span": {
+        "locator": "Pratyabhijñāhṛdayam on recovery as saṃkoca-vikāsa",
+        "quote": "Recovery is the release of contraction (saṃkoca-vikāsa), not the regrowth of a generator"
+      },
+      "claim_text": "The filter account predicts that recovery of consciousness after severe brain injury should show a temporal pattern where the capacity for experience returns before specific content-structuring recovers — a measurable time gap between the return of conscious presence and the return of pre-injury content-processing fidelity. This is because filter release (re-establishing the māyā-kañcuka scaffold) is ontologically prior to fine-grained content filtering (the specific kañcukas). Generative-model accounts predict content fidelity and experience-capacity recover together because the model is the source of both.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-interface-generative-model", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_perennialism",
+      "paradigm": "trika",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(filter_release,presence_before_content_recovery)",
+      "hetu": "māyā-kañcuka (separation scaffolding) is prior to specific content filters in the Trika ontology",
+      "sadhya": "experiential capacity returns before fine-grained content-processing fidelity after severe brain injury",
+      "vyapti_statement": "If experience-capacity is ontologically prior to content-structuring, then recovery should show presence before content fidelity.",
+      "vyapti_confidence": 0.38,
+      "log_bayes_factor": 0.18,
+      "w_rel": 0.40,
+      "w_map": 0.35,
+      "w_aux": 0.35,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Recovery of consciousness after brain injury shows no decoupling: the return of experiential capacity and the return of content-specific processing always occur within the same temporal window, and reported cases of presence before content are explained by response bias or confounded arousal measures.",
+        "status": "untested"
+      },
+      "reasoning": "Specific differential prediction that distinguishes filter from generative-model accounts. The weight is low because existing clinical data has not been analyzed for this pattern."
+    },
+    {
+      "claim_id": "cl:kancuka-to-pp-differential-mapping-hypothesis",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-kancukas",
+      "source_span": {
+        "locator": "Tantraloka kañcuka ontology mapped against PP precision/prior/action parameters",
+        "quote": "kalā maps to action-selection, vidyā to prior structure, rāga to valence-drive — distinct limitation dimensions"
+      },
+      "claim_text": "Filter theory generates a specific mapping hypothesis: kalā-kañcuka (limited agency/creativity) maps to action-selection and precision-weighting parameters; vidyā-kañcuka (limited knowledge) maps to prior structure; rāga-kañcuka (limited desire) maps to valence/prediction-error-drive. Under this mapping, filter theory predicts that manipulations affecting agency beliefs should alter temporal binding and sense-of-causality differently than pure sensory-precision manipulations — because they activate a different limitation dimension rather than different parameter values of the same generative process. PP treats both as precision parameters; filter theory treats agency-limitation as categorically distinct from knowledge-limitation.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-interface-generative-model", "target_type": "candidate_explanation" },
+        { "target_id": "crux:filter-mechanism-requirement", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_perennialism",
+      "paradigm": "trika",
+      "evidence_dimension": "analogical",
+      "pramana": "upamana",
+      "nn_expr": "sambandha(kancuka_ontology,pp_parameterization)",
+      "hetu": "structural correspondence between kañcuka dimensions and PP parameters",
+      "sadhya": "kañcuka-to-PP mapping generates categorically distinct predictions at the agency/knowledge boundary",
+      "vyapti_statement": "If kañcukas are categorically distinct dimensions, they should produce testably different experimental predictions than PP's graded parameter variations.",
+      "vyapti_confidence": 0.35,
+      "log_bayes_factor": 0.16,
+      "w_rel": 0.35,
+      "w_map": 0.30,
+      "w_aux": 0.35,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "All cognitive-phenomenological effects of agency and knowledge manipulations are quantitatively captured by variations in a single precision parameter within standard PP models, with no residual variance requiring a categorical agency-vs-knowledge distinction.",
+        "status": "untested"
+      },
+      "reasoning": "This addresses the mechanism critique by proposing a concrete mapping. The weight is conservative because it is analogical until empirically tested."
+    },
+    {
+      "claim_id": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-maya-primary",
+      "source_span": {
+        "locator": "Tantraloka on māyā as mūla-kañcuka establishing localized perspective",
+        "quote": "māyā is the primary kañcuka that establishes the sense of separation, without which no other kañcuka operates"
+      },
+      "claim_text": "The filter account predicts that brainstem-induced coma is not the destruction of consciousness but the collapse of the māyā-kañcuka scaffolding — the foundational parameterization that allows a localized perspective. Brainstem tegmental lesions do not turn off a consciousness generator; they disrupt the neural substrate that supports the self-other separation necessary for content to localize. This predicts that recovery from coma should be predicted by the re-establishment of specific connectivity patterns (brainstem-medial thalamus-anterior cingulate-medial prefrontal) in advance of content-specific recovery, and that sophisticated measures of residual consciousness in minimally conscious states should detect signatures of deperspectival hallucination rather than simply reduced content.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-interface-generative-model", "target_type": "candidate_explanation" },
+        { "target_id": "crux:filter-mechanism-requirement", "target_type": "crux" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_perennialism",
+      "paradigm": "trika",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(brainstem_tegmental,maya_kancuka_collapse)",
+      "hetu": "māyā is described as the foundational limitation dimension that enables localized perspective",
+      "sadhya": "brainstem coma is the collapse of perspectival scaffolding, not consciousness generation",
+      "vyapti_statement": "If māyā-kañcuka establishes the localized perspective necessary for content, then brainstem lesions that disrupt its neural substrate collapse manifestness without destroying consciousness itself.",
+      "vyapti_confidence": 0.42,
+      "log_bayes_factor": 0.24,
+      "w_rel": 0.50,
+      "w_map": 0.40,
+      "w_aux": 0.45,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Recovery of consciousness from coma is fully predicted by brainstem-reflex scores and metabolic measures alone, with residual connectivity through the proposed māyā-scaffold adding no predictive power; or the phenomenology of near-coma states shows no qualitative distinction from simple graded reduction of content.",
+        "status": "untested"
+      },
+      "reasoning": "Direct response to the strongest lesion pressure (brainstem coma). The mapping from māyā to brainstem-medial thalamocortical connectivity is speculative but testable via DOC recovery prediction studies."
+    }
+  ]
+}

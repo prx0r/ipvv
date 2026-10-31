@@ -1,0 +1,61 @@
+{
+  "packet_id": "ip:abh-accepts-apoha",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-accepts-apoha",
+    "title": "Abhinavagupta accepts apoha as valid but recontextualizes it within Pratyabhij\u00f1\u0101 self-manifestation",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-accepts-apoha-recontextualized",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "locator": "Tantr\u0101loka 1, lines 17060-17100 on Dign\u0101ga's apoha and Pratyabhij\u00f1\u0101 response",
+        "quote": "accepted by various schools of Indian philosophy beginning with its initial major formulation by the Buddhist idealist Di\u1e45n\u0101ga"
+      },
+      "claim_text": "Abhinavagupta explicitly engages Dign\u0101ga's apoha theory and accepts it as a valid cognitive method, but recontextualizes it within the Pratyabhij\u00f1\u0101 framework. He writes that apoha 'is accepted here as a method' but notes that in Pratyabhij\u00f1\u0101, 'the nature of an object is determined by a process of progressive manifestation of its qualities as they come to be known, until they are sufficient for the nature of the object to be known.' The difference is not that apoha is wrong, but that it operates within a broader context: exclusion determines boundaries, but manifestation reveals content. The Buddhist svasa\u1e43vitti (self-awareness of cognition) is similarly recontextualized \u2014 it is not rejected but taken up into the broader framework of consciousness's self-luminous nature.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(abh_accepts_apoha_recontextualized,target)",
+      "hetu": "Abhinavagupta explicitly cites Dign\u0101ga's apoha and accepts it as a method while recontextualizing it",
+      "sadhya": "the Trika and Buddhist positions may be complementary rather than contradictory at the epistemological level",
+      "vyapti_statement": "If Abhinavagupta explicitly accepts apoha as valid while reinterpreting it, then the crystal argument is not a rejection of Buddhist epistemology but a relocation of it within a broader framework.",
+      "vyapti_confidence": 0.75,
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.73,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that Abhinavagupta's 'acceptance' of apoha is merely rhetorical and that he ultimately rejects its validity for determining the nature of consciousness itself \u2014 i.e., that the recontextualization is actually a refutation.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika1."
+    }
+  ]
+}

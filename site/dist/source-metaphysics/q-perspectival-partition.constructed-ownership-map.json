@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:perspectival-partition",
+  "source_packet_id": "ip:constructed-ownership",
+  "claim_packet": "content/information-packets/constructed-ownership-claims.json",
+  "generated_by": "codex",
+  "central_reading": "Ownership may be constructed within manifestation rather than given with it. The decomposition of first-personality into five separable senses and the valuation-appropriation loop both suggest that 'mine-ness' is built from more basic elements. But manifestness itself remains unexplained by construction models.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:first-personality-decomposed-five-senses",
+      "source_span_id": "span:cp4-decomposition",
+      "quoted_anchor": "P_S ≠ P_G ≠ P_A ≠ P_O ≠ P_I",
+      "nn_expr": "virodha(first_personality,simplicity)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "pratyaksa",
+      "argument_role": "constraint",
+      "targets": ["cand:nyaya-plural-substances", "cand:siva-decombination", "cand:buddhist-stream", "crux:first-personality-decomposed"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show a state that inseparably possesses all five aspects."
+    },
+    {
+      "claim_id": "cl:nimana-vedana-constructs-ownership",
+      "source_span_id": "span:cp4-construction",
+      "quoted_anchor": "valuation and appropriation construct ownership",
+      "nn_expr": "vyapti(valuation_loop,ownership)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "argument_role": "constraint",
+      "targets": ["cand:buddhist-stream", "cand:naturalist-emergent", "crux:ownership-constructed-but-manifestness-unexplained"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Derive manifestness from valuation alone."
+    },
+    {
+      "claim_id": "cl:mattering-grounds-locality",
+      "source_span_id": "span:contention-8",
+      "quoted_anchor": "recurrent mattering stabilizes the local subject",
+      "nn_expr": "sambandha(mattering,partition)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "argument_role": "hypothesis",
+      "targets": ["cand:buddhist-stream", "cand:naturalist-emergent", "cand:nyaya-plural-substances", "crux:mattering-grounds-partition"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show identical concern patterns with exclusive domains."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:decomposition-pressures-nyaya-substance",
+      "source": "cl:first-personality-decomposed-five-senses",
+      "target": "cand:nyaya-plural-substances",
+      "edge_type": "attacks",
+      "strength": 0.35,
+      "rationale": "If first-personality decomposes, the simple substance-owner is challenged."
+    },
+    {
+      "edge_id": "edge:construction-loops-pressures-pratyabhijna",
+      "source": "cl:nimana-vedana-constructs-ownership",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.25,
+      "rationale": "If ownership is constructed, the Śaiva claim that the owner (Śiva) is intrinsic to manifestation is weakened."
+    },
+    {
+      "edge_id": "edge:mattering-partition-supports-buddhist",
+      "source": "cl:mattering-grounds-locality",
+      "target": "cand:buddhist-stream",
+      "edge_type": "supports",
+      "strength": 0.3,
+      "rationale": "Divergent concern patterns support conventional stream individuation."
+    }
+  ],
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "constructed_ownership": "The decomposition of first-personality and the valuation-appropriation loop both suggest ownership is constructed. But manifestness remains unexplained by construction models.",
+    "current_best_answer": "Ownership may be constructed within manifestation, but this does not solve the partition problem — it relocates it to the question of why manifestation itself occurs in local fields."
+  },
+  "next_work": [
+    "Connect the P_S-P_G-P_A-P_O-P_I decomposition to the five kañcukas as a cross-traditional constraint",
+    "Test whether the valuation-appropriation loop can be modeled in active inference terms",
+    "Assess whether constructed ownership is compatible with Pratyabhijñā's account or requires revision"
+  ]
+}

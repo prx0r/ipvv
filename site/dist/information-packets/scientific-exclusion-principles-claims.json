@@ -1,0 +1,115 @@
+{
+  "packet_id": "ip:scientific-exclusion-principles",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "truthmap:q17-benchmark+checkpointcharlie",
+    "title": "Scientific Exclusion Principles — from Q17 benchmark and Checkpoint 10",
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:perspectival-partition",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft",
+  "claims": [
+    {
+      "claim_id": "cl:iit-exclusion-closest-approximation",
+      "source_type": "scholarly_secondary",
+      "source_id": "checkpointcharlie:VII",
+      "source_span": {
+        "locator": "Checkpoint 10 §VII — Integrated Information Theory",
+        "quote": "IIT is the scientific theory that comes closest to addressing the exact checkpoint problem"
+      },
+      "claim_text": "IIT's exclusion axiom — 'choose the complex maximal under Φ' — is the closest scientific attempt at a law of perspectival partition. It proposes that one subject corresponds to one maximally irreducible intrinsic causal complex. But three problems remain: (1) the axiom-postulate gap — the mapping from phenomenal claim to physical postulate is theoretically proposed, not deductively forced; (2) the scale-selection problem — different grainings and candidate complexes may compete; (3) the identity problem — even perfect correlation between maximal causal irreducibility and consciousness would not establish that causal irreducibility IS manifestness. IIT addresses the exclusion question but has not closed the explanatory transition. The 2025 adversarial collaboration between IIT and GNWT tested contrasting predictions without a decisive victory for either.",
+      "targets": [
+        {"target_id": "cand:naturalist-emergent", "target_type": "candidate_explanation"},
+        {"target_id": "crux:iit-exclusion-not-derived", "target_type": "crux"}
+      ],
+      "tradition_scope": "western_phi_neuroscience",
+      "paradigm": "integrated_information_theory",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "hetu": "IIT provides an explicit exclusion principle (max Φ)",
+      "sadhya": "but does not derive why maximal causal irreducibility = manifestness",
+      "vyapti_statement": "If a theory proposes a physical correlate of consciousness without explaining why that correlate is intrinsically manifest, the explanatory gap persists.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.5,
+      "w_rel": 0.75,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Derive manifestness from causal irreducibility without appealing to the axioms that already assume the target property.",
+        "status": "untested"
+      },
+      "reasoning": "IIT is the best candidate for Λ among scientific theories, but it hasn't closed the gap. This is a crucial constraint on any naturalist solution."
+    },
+    {
+      "claim_id": "cl:lesion-exclusion-reveals-partition",
+      "source_type": "scholarly_secondary",
+      "source_id": "truthmap:q17-lesion-layer",
+      "source_span": {
+        "locator": "Q17 lesion evidence",
+        "quote": "Dissociations between content, access, and arousal in brain-damage patients"
+      },
+      "claim_text": "Clinical lesion evidence reveals dissociations within phenomenal domains: content loss without arousal loss (blindsight), access loss without content loss (neglect), arousal loss without content loss (some DOC states). These dissociations suggest that phenomenal domains are not monolithic — they can lose dimensions independently. This constrains Λ: the partition law must account for how dimensions like content, access, and arousal can dissociate while the phenomenal domain's unity is partially preserved. The kañcuka model (vidyā = content, kalā = action, rāga = value, kāla = time, niyati = causation) maps suggestively onto these clinical dissociations but has not been experimentally operationalized.",
+      "targets": [
+        {"target_id": "cand:naturalist-emergent", "target_type": "candidate_explanation"},
+        {"target_id": "cand:siva-decombination", "target_type": "candidate_explanation"},
+        {"target_id": "crux:dissociation-constrains-lambda", "target_type": "crux"}
+      ],
+      "tradition_scope": "clinical_neuroscience",
+      "paradigm": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "hetu": "lesion evidence shows selective preservation/abolition of phenomenal dimensions",
+      "sadhya": "Λ must account for dissociable dimensions",
+      "vyapti_statement": "If phenomenal dimensions can dissociate, any complete Λ must explain both their typical unity and their possible dissociation.",
+      "vyapti_confidence": 0.75,
+      "log_bayes_factor": 0.55,
+      "w_rel": 0.8,
+      "w_map": 0.7,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show lesion evidence where all phenomenal dimensions are equally affected, contradicting the dissociability thesis.",
+        "status": "untested"
+      },
+      "reasoning": "This bridges the Q17 clinical data to the partition problem. The kañcuka-lesion correspondence is suggestive but not yet experimentally tested."
+    },
+    {
+      "claim_id": "cl:non-transitive-unity-constrains-lambda",
+      "source_type": "scholarly_secondary",
+      "source_id": "checkpointcharlie:VI",
+      "source_span": {
+        "locator": "Simulated Checkpoint 6 — Unity may not be an equivalence relation",
+        "quote": "phenomenal unity may be non-transitive across local and global experiential layers"
+      },
+      "claim_text": "Split-brain research and layered unity models suggest phenomenal co-consciousness may not be transitive: U(x,y) and U(y,z) does not necessarily entail U(x,z). A layered model permits overlapping phenomenal domains without collapse into one field. This constrains Λ: the partition law must specify whether domains are transitive equivalence classes, overlapping hypergraph edges, or nested hierarchies. If non-transitive, subjecthood is not a conventional partition but may involve graded or layered structure. This pressures both classical Nyāya (simple partition by substance) and simple Pratyabhijñā (one universal field).",
+      "targets": [
+        {"target_id": "cand:naturalist-emergent", "target_type": "candidate_explanation"},
+        {"target_id": "cand:siva-decombination", "target_type": "candidate_explanation"},
+        {"target_id": "cand:nyaya-plural-substances", "target_type": "candidate_explanation"},
+        {"target_id": "crux:transitivity-of-unity-unsettled", "target_type": "crux"}
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "neurophilosophy",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "hetu": "split-brain evidence suggests phenomenal unity may be non-transitive",
+      "sadhya": "Λ must specify the formal structure of phenomenal domains",
+      "vyapti_statement": "If co-consciousness is non-transitive, then phenomenal domains are not equivalence classes and subjecthood may be graded.",
+      "vyapti_confidence": 0.55,
+      "log_bayes_factor": 0.35,
+      "w_rel": 0.65,
+      "w_map": 0.55,
+      "w_aux": 0.6,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show decisive evidence that phenomenal unity IS transitive (all contents of a stream are mutually co-conscious), refuting the non-transitive interpretation of split-brain data.",
+        "status": "untested"
+      },
+      "reasoning": "The non-transitivity question is a critical constraint on Λ. If unity is non-transitive, then every theory that treats domains as clean partitions (including classical Pratyabhijñā and Nyāya) must be revised."
+    }
+  ]
+}

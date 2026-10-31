@@ -1,0 +1,117 @@
+{
+  "eo_id": "eo:reflexivity-original-arguments-v3",
+  "schema_version": 2,
+  "title": "Abhinavagupta makes original arguments for svasaṃvedana in TĀ 4.8-9 and 4.181cd-182ab — the level-distinction finding holds but he is not merely transmitting scripture",
+  "status": "draft",
+  "question": {
+    "question_id": "q:reflexivity-intrinsic-or-constructed",
+    "tension_point": "Does Abhinavagupta have original arguments for svasaṃvedana beyond quoting scripture, and if so, do they refute Dignāga's svasaṃvitti or argue past it?",
+    "why_it_matters": "This determines whether the reflexivity debate is a genuine disagreement (both arguing from reason about the same phenomenon) or a talking-past (different levels, different methods). If both argue from reason, the debate is tractable. If they operate at different levels, it's a domain-mapping problem.",
+    "resolution_level": "local_argument"
+  },
+  "syllogism": {
+    "pratijna": {
+      "proposition": "Abhinavagupta makes original rational arguments for svasaṃvedana in TĀ 4.8-9 and 4.181cd-182ab, establishing that self-awareness is the non-objectifying intrinsic nature of consciousness. These arguments parallel Dignāga's claim that cognition has two appearances but draw a stronger ontological conclusion.",
+      "what_it_claims": "Three findings: (1) The level-distinction finding from EO v2 is refined — Abhinavagupta is not merely transmitting scripture but arguing from reason. (2) His argument that self-awareness is not objectification converges with Dignāga's two-appearance doctrine at the phenomenological level. (3) They diverge on whether this self-awareness is conditioned (Dignāga's phala) or the nature of consciousness itself (Abhinavagupta's svabhāva)."
+    },
+    "hetu": {
+      "evidence": [
+        {
+          "claim": "TĀ 4.8-9 presents an original pūrvapakṣa-siddhānta: the objection that self-awareness would make consciousness an object fails because consciousness is by nature self-aware, not an object.",
+          "pramana": "anumana",
+          "source_id": "text:tantraloka-ahnika4",
+          "target": "cand:abh-vimarsa-intrinsic"
+        },
+        {
+          "claim": "TĀ 4.181cd-182ab: consciousness IS parāmarśa by nature, and its spontaneous resonance is the Great Heart — this is Abhinavagupta's own conclusion from reasoning.",
+          "pramana": "anumana",
+          "source_id": "text:tantraloka-ahnika4",
+          "target": "cand:abh-vimarsa-intrinsic"
+        },
+        {
+          "claim": "Dignāga PS(V) 1.9ab: cognition has two appearances (self + object), and self-awareness is the result. This describes self-awareness as a structural feature of each cognition.",
+          "pramana": "sabda",
+          "source_id": "text:coseru-consciousness-causality",
+          "target": "cand:dharmakirti-conditioned-reflexivity"
+        }
+      ],
+      "source_ids": [
+        "text:tantraloka-ahnika4",
+        "text:coseru-consciousness-causality"
+      ]
+    },
+    "udaharana": {
+      "examples": [
+        {
+          "scenario": "Both Abhinavagupta (TĀ 4.8-9) and Dignāga (PS(V) 1.9ab) agree that self-awareness is not a second act of reflection. For Abhinavagupta, it's the nature of consciousness. For Dignāga, it's the structure of each cognition.",
+          "what_it_shows": "There is genuine convergence at the phenomenological level (how self-awareness operates) and genuine divergence at the ontological level (what it ultimately is)."
+        }
+      ]
+    },
+    "upanaya": {
+      "application": "The debate is now sharply defined: both traditions agree on the phenomenology of self-awareness (it's not a second act, it's co-present with cognition). They disagree on its ontological status. This is a genuine philosophical disagreement, not a talking-past.",
+      "cruxes": [
+        "Does the phenomenological convergence license any ontological conclusion?",
+        "Can the conditioned/unconditioned distinction be decided by argument or only by presupposition?",
+        "Is the difference between 'nature of consciousness' and 'feature of cognition' a real difference or a verbal one?"
+      ]
+    },
+    "nigamana": {
+      "best_current_answer": "Abhinavagupta has original arguments, not just scripture. The convergence at the phenomenological level is real. The divergence at the ontological level is the remaining open question. The reflexivity debate is now: given that we all agree self-awareness is co-present with experience, what follows about the nature of consciousness?",
+      "status": "structurally_suggestive",
+      "scope": "Phenomenological convergence: established. Ontological divergence: underdetermined."
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "cand:original-arguments-support-trika",
+      "name": "Abhinavagupta's original arguments establish svasaṃvedana as the nature of consciousness",
+      "tradition": "trika_pratyabhijna",
+      "position": "TĀ 4.8-9 and 4.181cd-182ab show that self-awareness is the intrinsic, non-objectifying nature of consciousness — argued from reason, not just scripture.",
+      "proponent": "Abhinavagupta",
+      "source_ids": ["text:tantraloka-ahnika4"],
+      "hard_to_vary_core": ["Self-awareness is not objectification", "Consciousness is by nature self-aware"],
+      "current_problems": ["Does not directly address Dignāga's two-appearance doctrine"],
+      "falsifiers": ["A demonstration that TĀ 4.8-9 depends on scripture rather than reason"],
+      "status": "live"
+    },
+    {
+      "candidate_id": "cand:original-arguments-support-buddhist",
+      "name": "The convergence at the phenomenological level does not license ontological conclusions",
+      "tradition": "cross_tradition",
+      "position": "Both traditions agree on how self-awareness operates (co-present, not a second act). The divergence on whether it's conditioned or unconditioned is undecidable by the available evidence.",
+      "proponent": "Hermes/Codex synthesis",
+      "source_ids": ["text:coseru-consciousness-causality", "text:tantraloka-ahnika4"],
+      "hard_to_vary_core": ["Phenomenological convergence is real", "Ontological divergence remains open"],
+      "current_problems": ["May be a stance of indecision rather than a positive position"],
+      "falsifiers": ["New textual evidence showing direct engagement between the traditions"],
+      "status": "live"
+    }
+  ],
+  "state_of_play": {
+    "summary": "After three probes: scores → level distinction → original arguments. The debate has converged on a sharply defined ontological question: does the co-presence of self-awareness with cognition imply that consciousness is intrinsically self-luminous (Abhinavagupta) or only that cognition has a structural feature of self-awareness (Dignāga)?",
+    "what_survives": "Both accounts of self-awareness survive. The phenomenological convergence is robust. Abhinavagupta's original arguments establish that his position is based on reason, not mere authority.",
+    "what_is_weakened": "The view that Abhinavagupta merely transmits scripture is weakened. The view that the two traditions are in direct contradiction with no common ground is weakened.",
+    "what_would_change_our_mind": "A direct engagement in the Tantraloka where Abhinavagupta explicitly addresses Dignāga's two-appearance doctrine would either resolve or sharpen the remaining divergence.",
+    "open_cruxes": [
+      "Does phenomenological convergence license ontological conclusions?",
+      "Is the self-luminosity of consciousness directly evident or a theoretical posit?"
+    ],
+    "next_tests": [
+      "Search Tantraloka for any explicit reference to Dignāga's two-appearance (dvayābhāsa) doctrine",
+      "Check if Abhinavagupta's parāmarśa argument in TĀ 4.181 specifically targets the Buddhist position"
+    ],
+    "implications": [
+      {"condition": "If no direct engagement exists", "consequence": "The two traditions may have developed independently at the philosophical level, making the debate a modern reconstruction rather than a historical dialogue"},
+      {"condition": "If direct engagement is found", "consequence": "The debate has a historical anchor and can be evaluated as a genuine philosophical exchange"}
+    ]
+  },
+  "provenance": {
+    "parent_eo": "eo:reflexivity-levels-distinction-v2",
+    "created_by": "agent/research",
+    "last_updated": "2026-07-26",
+    "supporting_artifacts": [
+      "content/information-packets/abh-original-argument-svasamvedana-claims.json"
+    ]
+  }
+}

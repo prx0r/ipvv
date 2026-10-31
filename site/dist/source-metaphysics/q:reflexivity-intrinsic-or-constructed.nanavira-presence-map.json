@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:nanavira-presence",
+  "claim_packet": "content/information-packets/nanavira-presence-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "nanavira-presence",
+  "candidate_under_test": "all",
+  "central_reading": "Nanavira's account treats consciousness as the presence of a phenomenon, reflexively given. The Trika criticism assumes consciousness is a 'thing' needing an extra property (vimar\u015ba), but for Nanavira reflexivity is structural to presence itself.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:nanavira-presence-is-reflexive",
+      "source_span_id": "span:nanavira-presence-is-reflexive",
+      "quoted_anchor": "eye-consciousness is present reflexively",
+      "nn_expr": "sambandha(nanavira_presence_is_reflexive,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "nanavira_phenomenology",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "reflexivity is structural to Nanavira's ",
+        "hetu": "consciousness is presence of phenomena, not an entity; presence is reflexively given",
+        "sadhya": "reflexivity is structural to Nanavira's account, not an added property",
+        "vyapti": "If consciousness is presence and presence is reflexively given, then reflexivity"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:abh-vimarsa-intrinsic"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Nanavira's 'reflexive presence' is compatible with a purely structural account that lacks sentience \u2014 i.e., that presence could be reflexively given without being experienced."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:nanavira-presence-is-reflexive:support:cand-nanavira-structural-reflexivity",
+      "source_node_id": "cl:nanavira-presence-is-reflexive",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "support",
+      "strength": 0.72,
+      "relation_rationale": "Direct account of reflexive presence from primary text."
+    },
+    {
+      "edge_id": "edge:nanavira-presence-is-reflexive:attack:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:nanavira-presence-is-reflexive",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attack",
+      "strength": 0.48,
+      "relation_rationale": "Shows Trika's framing of the issue may misrepresent the Buddhist position."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "Nanavira's account treats consciousness as the presence of a phenomenon, reflexively given. The Trika criticism assumes consciousness is a 'thing' needing an extra property (vimar\u015ba), but for Nanavira reflexivity is structural to presence itself.",
+    "next_tests": []
+  }
+}

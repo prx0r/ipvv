@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-crystal-refutes",
+  "claim_packet": "content/information-packets/abh-crystal-refutes-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-crystal-refutes",
+  "candidate_under_test": "all",
+  "central_reading": "The crystal argument (without vimar\u015ba, consciousness is insentient like a crystal) applies to any account that treats self-awareness as derivative \u2014 including the Buddhist svasa\u1e43vitti phala-model. If self-awareness is a result of cognition, it can be absent when cognition is absent; but consciousness cannot be absent from itself.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-crystal-applies-to-phala-model",
+      "source_span_id": "span:abh-crystal-applies-to-phala-model",
+      "quoted_anchor": "Without vimar\u015ba, consciousness would be insentient, like a crystal",
+      "nn_expr": "sambandha(abh_crystal_applies_to_phala_model,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "the crystal argument refutes any derivat",
+        "hetu": "if self-awareness is produced by cognition, then before cognition there is no self-awareness",
+        "sadhya": "the crystal argument refutes any derivative account of self-awareness, including svasa\u1e43vitti phala-model",
+        "vyapti": "If consciousness cannot be insentient at any moment, self-awareness must be intr"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the Buddhist phala-model does not imply periods without self-awareness \u2014 i.e., that cognition is continuous and self-awareness is co-extensive with it, making the result-as-nature distinction merely verbal."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-crystal-applies-to-phala-model:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-crystal-applies-to-phala-model",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.72,
+      "relation_rationale": "Extends crystal argument to explicitly cover the Buddhist phala-model."
+    },
+    {
+      "edge_id": "edge:abh-crystal-applies-to-phala-model:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-crystal-applies-to-phala-model",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.58,
+      "relation_rationale": "If crystal argument refutes the phala-model, the Buddhist response needs a different account of self-awareness."
+    },
+    {
+      "edge_id": "edge:abh-crystal-applies-to-phala-model:attack:crux-constructed-reflexivity-presupposes-manifestness",
+      "source_node_id": "cl:abh-crystal-applies-to-phala-model",
+      "target_node_id": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "attack",
+      "strength": 0.5,
+      "relation_rationale": "Narrows the crux: the question becomes whether any derivative account of self-awareness is coherent."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "The crystal argument (without vimar\u015ba, consciousness is insentient like a crystal) applies to any account that treats self-awareness as derivative \u2014 including the Buddhist svasa\u1e43vitti phala-model. If self-awareness is a result of cognition, it can be absent when cognition is absent; but consciousness cannot be absent from itself.",
+    "next_tests": []
+  }
+}

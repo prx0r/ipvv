@@ -1,0 +1,50 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-original-svasamvedana",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "Abhinavagupta makes original philosophical arguments (yukti) for svasaṃvedana as the nature of consciousness in TĀ 3, TĀ 4.8-9, and TĀ 4.181cd-182ab. These are not scripture quotations but rational arguments that self-awareness is intrinsic to consciousness, without which it would be insentient.",
+  "claims": [
+    {
+      "id": "cl:abh-ta4-8-9-original-argument",
+      "text": "In TĀ 4.8-9, Abhinavagupta presents an original pūrvapakṣa-siddhānta argument: the objection that self-awareness would make consciousness an object (and thus insentient) fails because consciousness is by its very nature (svabhāvāt) self-aware (svātmasaṃvitti). Self-awareness is not objectification — it is non-objectifying self-presence. This is presented as Abhinava's own reasoning (yukti), not a scripture quotation.",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": "Tantrāloka 4.8-9, ahnika-04.txt lines 339-411",
+      "evidence": "textual",
+      "pramana": "anumana",
+      "hetu": "the objection that self-awareness would objectify consciousness fails because self-awareness is not objectification",
+      "sadhya": "svasaṃvedana is the intrinsic nature of consciousness, not a second-order reflection",
+      "vyapti": "If consciousness is by nature self-aware, then self-awareness is not a problem but the very condition for sentience.",
+      "vyapti_confidence": 0.82,
+      "falsifier": "Show that Abhinavagupta's argument in TĀ 4.8-9 depends on scriptural authority rather than reason, or that the objection he refutes is a straw man not held by any actual Buddhist opponent.",
+      "weight": 0.44,
+      "w_rel": 0.80,
+      "w_map": 0.75,
+      "w_aux": 0.78,
+      "targets": [
+        {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.80, "rationale": "Original rational argument for svasaṃvedana as svabhāva, not transmitted scripture."},
+        {"id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.55, "rationale": "If svasaṃvedana is argued by reason not authority, the Buddhist objection that it's mere scripture fails."}
+      ]
+    },
+    {
+      "id": "cl:abh-ta4-181-original-heart-argument",
+      "text": "In TĀ 4.181cd-182ab, Abhinavagupta argues in his own voice that consciousness IS reflective awareness (parāmarśa) by nature, and its spontaneous resonance (dhvani) is the supreme Heart (mahā hṛdaya). This is one of his most fundamental philosophical claims: the nature of consciousness is self-awareness, and this self-awareness has a spontaneous, creative dimension (the seed mantra SAUḤ). The argument is presented as a conclusion from reasoning, not an appeal to scripture.",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": "Tantrāloka 4.181cd-182ab, ahnika-04.txt lines 10897-10901",
+      "evidence": "textual",
+      "pramana": "anumana",
+      "hetu": "consciousness is self-aware by nature, and this self-awareness is spontaneously creative",
+      "sadhya": "self-awareness is not static but dynamic — it is the creative Heart of reality",
+      "vyapti": "If self-awareness is the nature of consciousness and is spontaneously creative, then svasaṃvedana is not merely cognitive but generative.",
+      "vyapti_confidence": 0.78,
+      "falsifier": "Show that the mahā hṛdaya argument depends on a specific scriptural tradition that Abhinavagupta is merely transmitting, not extending.",
+      "weight": 0.42,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.74,
+      "targets": [
+        {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.78, "rationale": "Original argument that self-awareness is generative, not merely cognitive."},
+        {"id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.50, "rationale": "The generative dimension of self-awareness cannot be captured by the phala-model."}
+      ]
+    }
+  ]
+}

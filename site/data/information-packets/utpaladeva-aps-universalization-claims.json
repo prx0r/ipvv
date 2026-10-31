@@ -1,0 +1,160 @@
+{
+  "packet_id": "ip:utpaladeva-aps-universalization",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "sanskritree:truth:truthtranslation",
+    "title": "Utpaladeva Ajadapramātṛsiddhi — Provisional Complete Translation and Argument Reconstruction",
+    "author": "Utpaladeva",
+    "source_files": [
+      "/root/projects/sanskritree/truth/truthtranslation"
+    ],
+    "external_sources": [
+      {
+        "source_id": "gretil:ajadapramatrsiddhi",
+        "title": "Ajadapramātṛsiddhi (GRETIL)",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "torella:ipk:critical",
+        "title": "Īśvarapratyabhijñākārikā with Vṛtti — Torella critical edition",
+        "source_quality": "scholarly_primary"
+      }
+    ],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:utpaladeva-universalization-validity",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft_from_manual_translation",
+  "claims": [
+    {
+      "claim_id": "cl:utpaladeva-aps-16-limited-unlimited-same-self",
+      "source_type": "manual_translation",
+      "source_id": "truthtranslation:verses-16",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthtranslation",
+        "locator": "lines 654-712",
+        "quote": "dvidhā sa eṣa evātmā mito 'parimitas tathā / prāṇādinā niruddho 'ṇuḥ paramātmā tv akhaṇḍitaḥ //"
+      },
+      "claim_text": "This very self is twofold: limited and unlimited. Restricted by breath and other limiting conditions, it is the minute individual; as the supreme self, it is undivided. Utpaladeva states that the finite and unlimited self are two modes of one consciousness, but does not independently demonstrate their numerical identity — nothing in verses 9-15 rules out distinct reflexive subjects sharing a common structure.",
+      "targets": [
+        {
+          "target_id": "cand:utpaladeva-universal-subject",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:numerical-identity-of-finite-and-unlimited-self",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "abheda(atmā_mita,atmā_aparimita)",
+      "hetu": "the text declares the finite and unlimited self to be the same self",
+      "sadhya": "the individual subject and universal consciousness are numerically identical",
+      "vyapti_statement": "If the text declares two modes to be the same self, then their identity is textually asserted; but the vyapti from 'asserted' to 'philosophically demonstrated' requires an additional premise establishing that reflexive manifestation cannot be numerically partitioned.",
+      "vyapti_confidence": 0.4,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.6,
+      "w_map": 0.5,
+      "w_aux": 0.6,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the text's assertion of identity is supported by an argument that rules out distinct reflexive subjects sharing a common structure, rather than merely stating the doctrinal conclusion.",
+        "status": "untested"
+      },
+      "reasoning": "Verse 16 is the explicit universalization point in the text. It states the identity of limited and unlimited self, but the preceding verses (9-15) only establish reflexive manifestation and object-determination within a local field — they do not rule out multiple such fields. The missing premise is that reflexive manifestation cannot be partitioned. This claim is textually present but philosophically under-demonstrated."
+    },
+    {
+      "claim_id": "cl:utpaladeva-aps-17-one-synthesizer-all-cognitions",
+      "source_type": "manual_translation",
+      "source_id": "truthtranslation:verses-17",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthtranslation",
+        "locator": "lines 718-792",
+        "quote": "ubhayo 'py eṣa paryantabhūmiḥ sarvārthasaṃvidām / eka evānusandhānād ato 'nyo nopapadyate //"
+      },
+      "claim_text": "In both forms, this self is the ultimate ground of all cognitions of objects. Because it performs connective synthesis (anusandhāna), it is one alone; therefore no other can be coherently established. This is the text's central universalization argument, but 'sarvārthasaṃvidām' is ambiguous: it can mean 'all cognitions within one stream' (strong but local) or 'all cognitions of every subject' (required for the universal conclusion, but unproven). The argument from synthesis is strongest for diachronic unity within one stream; it does not reach transpersonal numerical identity.",
+      "targets": [
+        {
+          "target_id": "cand:utpaladeva-universal-subject",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:ambiguity-of-sarva-in-sarvarthasamvidam",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "bridge:utpaladeva-subject-nyaya-plural-self",
+          "target_type": "bridge"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "vyapti(anusandhana,eka_pramatr)",
+      "hetu": "connective synthesis requires one synthesizer",
+      "sadhya": "there is one knower underlying all cognition",
+      "vyapti_statement": "If synthesis requires one synthesizer, and synthesis is observed within one cognitive stream, then the synthesizer is one within that stream — but this does not entail one synthesizer across all streams unless 'all cognitions' is already interpreted transpersonally.",
+      "vyapti_confidence": 0.35,
+      "log_bayes_factor": 0.2,
+      "w_rel": 0.55,
+      "w_map": 0.45,
+      "w_aux": 0.55,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the Sanskrit compound 'sarvārthasaṃvidām' unambiguously refers to cognitions of every subject, not merely all cognitions within one individual stream, and that no Nyāya plural-self or Buddhist causal-stream ontology can explain the same synthesis data.",
+        "status": "untested"
+      },
+      "reasoning": "This is the razor's edge of the entire text (truthtranslation line 794: 'Strong argument for local diachronic unity; insufficient argument for transpersonal numerical identity'). The Nyāya pluralist accepts one synthesizer per stream — that's exactly their enduring individual self. The move from intra-stream synthesis to trans-stream identity is where the argument breaks."
+    },
+    {
+      "claim_id": "cl:utpaladeva-aps-25-one-power-all-cognitions",
+      "source_type": "manual_translation",
+      "source_id": "truthtranslation:verses-25",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthtranslation",
+        "locator": "lines 1131-1201",
+        "quote": "ekaiva cānusandhānāt sā proktā sarvasaṃvidām / svasaṃvedanaparyāyamātṛtattvam anādi tat //"
+      },
+      "claim_text": "Because it performs the connective synthesis of all cognitions, that power is said to be one. This beginningless principle of the knower is equivalent to self-awareness. Utpaladeva's final universalization argument: all cognitions → one connective synthesis → one power → one knower. But no ordinary finite subject synthesizes another subject's experiences — Tom does not remember another person's childhood as his own. The universalization becomes circular unless supported by an independent argument: 'one universal knower → all cognition is universally synthesized' then 'all cognition is universally synthesized → one universal knower.'",
+      "targets": [
+        {
+          "target_id": "cand:utpaladeva-universal-subject",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:transpersonal-synthesis-unobserved",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "bridge:utpaladeva-subject-nyaya-plural-self",
+          "target_type": "bridge"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "abheda(svasaṃvedana,matrtattva)",
+      "hetu": "one power performs the synthesis of all cognitions",
+      "sadhya": "the beginningless knower is one and equivalent to self-awareness",
+      "vyapti_statement": "If one power synthesized all cognition, that power would be universal — but the only observable synthesis is intra-stream, not transpersonal. The inference from 'observed synthesis requires a synthesizer' to 'all possible synthesis requires one synthesizer' is circular without an independent argument for the unity of all cognitive streams.",
+      "vyapti_confidence": 0.3,
+      "log_bayes_factor": 0.15,
+      "w_rel": 0.5,
+      "w_map": 0.4,
+      "w_aux": 0.5,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Demonstrate an observable case of transpersonal synthesis (one subject directly synthesizing another subject's experience as their own) that cannot be explained by inference, empathy, or shared structure, and that requires numerical identity of subjects.",
+        "status": "untested"
+      },
+      "reasoning": "This is the final universalization claim (truthtranslation line 1201: 'the crucial weak point'). The text slides from 'all cognitions (within a stream) are synthesized' to 'all cognitions (across streams) are synthesized by one power' without proving the quantifier shift. The Vṛtti supports the universal reading, but that is doctrinal commitment, not independent demonstration."
+    }
+  ]
+}

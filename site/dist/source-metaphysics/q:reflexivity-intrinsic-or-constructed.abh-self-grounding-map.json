@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-self-grounding",
+  "claim_packet": "content/information-packets/abh-self-grounding-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-self-grounding",
+  "candidate_under_test": "all",
+  "central_reading": "Abhinavagupta argues the two-aspect structure is self-grounding (T\u0100 4/9, T\u0100 4/185cd-186ab). The Heart/vimar\u015ba is the foundation of consciousness itself \u2014 not a separate prior substrate. Both Dign\u0101ga and Abhinavagupta agree the structure is self-grounding; they disagree on what does the grounding.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-ta4-9-self-grounding",
+      "source_span_id": "span:abh-ta4-9-self-grounding",
+      "quoted_anchor": "T\u0100 4/9: consciousness is by its very nature full (nirbhar\u0101),",
+      "nn_expr": "sambandha(abh_ta4_9_self_grounding,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "the two-aspect structure is self-groundi",
+        "hetu": "consciousness is sv\u0101tmasa\u1e43vitti, full in itself, depending on nothing",
+        "sadhya": "the two-aspect structure is self-grounding through vimar\u015ba, not through a separate prior consciousness",
+        "vyapti": "If consciousness needs nothing outside itself and its foundation is the Heart, t"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Abhinavagupta posits Anuttara as a genuinely separate ontological ground beyond the two-aspect structure, not as the same reality under a different aspect."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-ta4-9-self-grounding:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-ta4-9-self-grounding",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.8,
+      "relation_rationale": "Abhinavagupta's position is self-grounding, not dependent on an external substrate."
+    },
+    {
+      "edge_id": "edge:abh-ta4-9-self-grounding:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-ta4-9-self-grounding",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.45,
+      "relation_rationale": "Both traditions say the structure is self-grounding; the difference is where they locate the self-grounding principle."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "Abhinavagupta argues the two-aspect structure is self-grounding (T\u0100 4/9, T\u0100 4/185cd-186ab). The Heart/vimar\u015ba is the foundation of consciousness itself \u2014 not a separate prior substrate. Both Dign\u0101ga and Abhinavagupta agree the structure is self-grounding; they disagree on what does the grounding.",
+    "next_tests": []
+  }
+}

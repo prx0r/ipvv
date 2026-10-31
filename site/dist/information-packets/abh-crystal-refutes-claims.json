@@ -1,0 +1,61 @@
+{
+  "packet_id": "ip:abh-crystal-refutes",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-crystal-refutes",
+    "title": "Abhinavagupta's crystal argument already addresses Buddhist self-awareness theory",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-crystal-applies-to-phala-model",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantr\u0101loka Ahnika 4, ahnika-04.txt lines 5765, 11133-11139",
+        "quote": "Without vimar\u015ba, consciousness would be insentient, like a crystal"
+      },
+      "claim_text": "Abhinavagupta's crystal argument \u2014 that without vimar\u015ba consciousness would be insentient like a crystal \u2014 applies to any account where self-awareness is derivative rather than intrinsic. The Buddhist phala-model makes self-awareness a result of cognition: if cognition produces self-awareness, then before cognition there is no self-awareness, leaving consciousness insentient. The crystal argument refutes this by showing that consciousness cannot be insentient at any moment, therefore self-awareness must be intrinsic (svabh\u0101va), not produced (phala).",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(abh_crystal_applies_to_phala_model,target)",
+      "hetu": "if self-awareness is produced by cognition, then before cognition there is no self-awareness",
+      "sadhya": "the crystal argument refutes any derivative account of self-awareness, including svasa\u1e43vitti phala-model",
+      "vyapti_statement": "If consciousness cannot be insentient at any moment, self-awareness must be intrinsic, not produced.",
+      "vyapti_confidence": 0.78,
+      "log_bayes_factor": 0.4,
+      "w_rel": 0.76,
+      "w_map": 0.68,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the Buddhist phala-model does not imply periods without self-awareness \u2014 i.e., that cognition is continuous and self-awareness is co-extensive with it, making the result-as-nature distinction merely verbal.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika4."
+    }
+  ]
+}

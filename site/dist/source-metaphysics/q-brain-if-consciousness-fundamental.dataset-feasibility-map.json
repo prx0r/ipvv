@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-dataset-feasibility-finding",
+  "claim_packet": "content/information-packets/q17-dataset-feasibility-finding.json",
+  "generated_by": "hermes_loop_009",
+  "source_role": "recovery_wager_dataset_feasibility",
+  "candidate_under_test": "cand:brain-as-appearance-only",
+  "central_reading": "This layer evaluates the feasibility of the recovery trajectory hierarchy wager protocol (Loop 008) against existing DOC recovery datasets through a systematic literature survey. Four claims document: (1) that no single existing dataset meets the protocol's minimum requirements; (2) that TRACK-TBI offers a feasible coarse-grained path via GOSE-to-hierarchy mapping; (3) that IPD meta-analysis of smaller CRS-R studies offers a complementary path with subscale granularity; (4) that Porta et al.'s N=216 diagnostic-transition cohort provides a supplementary path at the diagnostic-category level. The layer does not defeat the wager — it refines it, showing the protocol must adapt to available data. The wager shifts from 'can we test this now on one ideal dataset' to 'what can we learn from multiple imperfect datasets'. This is a productive constraint: it forces each consciousness-first account to state whether its recovery prediction is robust enough to survive coarse-grained testing (TRACK-TBI GOSE, Porta diagnostic transitions) or requires the ideal CRS-R protocol.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "source_span_id": "synthetic:q17-dataset-feasibility-finding",
+      "quoted_anchor": "No existing single DOC recovery dataset simultaneously satisfies the wager protocol's minimum requirements: N ≥ 50 patients with ≥ 4 CRS-R assessments over ≥ 6 months with subscale data.",
+      "nn_expr": "abhava(existing_dataset_meets_protocol_requirements)",
+      "parse_status": "invalid",
+      "parse_note": "abhava operator not in current NNExpr grammar; expression conveys absence of any dataset meeting protocol requirements",
+      "tradition_scope": "empirical_feasibility",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "actionability of recovery trajectory hierarchy wager",
+        "hetu": "Systematic PubMed search (2018–2026) found no DOC recovery dataset with N ≥ 50, ≥ 4 CRS-R assessments, ≥ 6 months, subscale data",
+        "sadhya": "The wager protocol is not immediately actionable on any single existing dataset as specified",
+        "vyapti": "If a systematic literature search returns no dataset meeting specified requirements, those requirements are not met by any publicly documented dataset"
+      },
+      "argument_role": "pressure",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "cand:brain-as-interface-generative-model",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Identify a single publicly documented DOC recovery dataset satisfying N ≥ 50, ≥ 4 CRS-R assessments, ≥ 6 months, with subscale-level data."
+    },
+    {
+      "claim_id": "cl:recovery-wager-track-tbi-coarse-path",
+      "source_span_id": "synthetic:q17-dataset-feasibility-finding",
+      "quoted_anchor": "Among participants in a vegetative state at 2 weeks, 62 of 79 (78%) regained consciousness and 14 of 56 with available data (25%) regained orientation by 12 months.",
+      "nn_expr": "upaya(track_tbi_cohort,coarse_recovery_hierarchy_test)",
+      "parse_status": "invalid",
+      "parse_note": "upaya operator not in current NNExpr grammar; expression conveys methodological-path relationship",
+      "tradition_scope": "empirical_feasibility",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "actionability of recovery wager via TRACK-TBI",
+        "hetu": "TRACK-TBI msTBI cohort has N=484, 4 timepoints over 12 months, ~79 initial DOC patients; GOSE categories can be mapped to recovery hierarchy proxy",
+        "sadhya": "A coarse-grained version of the recovery hierarchy wager is feasible using existing TRACK-TBI data",
+        "vyapti": "If a dataset has N > 400 and ≥4 timepoints over ≥12 months with an ordinally categorized outcome scale spanning VS to independent function, a coarse-grained hierarchy test is feasible"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that GOSE categories cannot be reliably mapped to the proposed three-stage hierarchy, or that the ~79 DOC patient subsample is insufficient for sequence-alignment analysis after attrition."
+    },
+    {
+      "claim_id": "cl:recovery-wager-ipd-meta-analysis-path",
+      "source_span_id": "synthetic:q17-dataset-feasibility-finding",
+      "quoted_anchor": "Individual patient data (IPD) meta-analysis of 3–5 published CRS-R longitudinal studies could pool sufficient patients to satisfy the wager protocol's minimum requirements.",
+      "nn_expr": "sambandha(ipd_pooling,recovery_wager_actionability)",
+      "parse_status": "parsed",
+      "tradition_scope": "empirical_feasibility",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "actionability of recovery wager via IPD meta-analysis",
+        "hetu": "Multiple small CRS-R longitudinal studies exist with overlapping instruments but N < 50 individually; pooling could reach N ≥ 50",
+        "sadhya": "IPD meta-analysis is a feasible path to making the recovery wager testable",
+        "vyapti": "If 3–5 studies each have CRS-R subscale data with ≥3 timepoints but N < 50, pooling can reach N ≥ 50 provided assessment timing overlaps and authors consent to data sharing"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence (0.45); the reason does not reliably imply the target"
+        }
+      ],
+      "falsifier": "Demonstrate that no 3 CRS-R studies have sufficiently overlapping assessment timing, or that PIs are unwilling to share data, or that combined sample remains below N=50."
+    },
+    {
+      "claim_id": "cl:recovery-wager-porta-diagnostic-transition-path",
+      "source_span_id": "synthetic:q17-dataset-feasibility-finding",
+      "quoted_anchor": "Patients (N = 216) in VS (N = 159) or in MCS (N = 57) consecutively admitted within 1–3 months after severe brain injury.",
+      "nn_expr": "upaya(porta_cohort,diagnostic_transition_hierarchy_test)",
+      "parse_status": "invalid",
+      "parse_note": "upaya operator not in current NNExpr grammar; expression conveys supplementary-path relationship",
+      "tradition_scope": "empirical_feasibility",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "actionability of recovery wager via Porta diagnostic transitions",
+        "hetu": "Porta et al. 2019 has N=216 DOC patients with diagnostic transitions (VS/MCS/EMCS) at 12/24/36 months",
+        "sadhya": "Porta et al. provides a supplementary path to test the recovery wager at diagnostic-transition level",
+        "vyapti": "If a DOC cohort has N > 200 with ≥3 longitudinal diagnostic assessments over ≥12 months, a coarse diagnostic-transition test is feasible"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that the Porta dataset is unavailable for secondary analysis, has only 2 usable timepoints due to attrition, or has too few MCS→EMCS transitions to analyze."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:feasibility-negative-finding-pressures-recovery-protocol",
+      "source": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "target": "cl:recovery-hierarchy-analysis-protocol",
+      "edge_type": "attacks",
+      "strength": 0.55,
+      "rationale": "The negative finding that no single dataset meets the protocol's minimum requirements directly attacks the protocol claim that the wager is operationalizable with existing datasets."
+    },
+    {
+      "edge_id": "edge:feasibility-negative-pressures-wager-framing",
+      "source": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "target": "cl:recovery-hierarchy-test-framing",
+      "edge_type": "attacks",
+      "strength": 0.40,
+      "rationale": "The wager framing claim assumes the test is actionable; the negative finding shows this assumption requires qualification — the wager is actionable only with protocol adaptation."
+    },
+    {
+      "edge_id": "edge:feasibility-negative-pressures-appearance-candidate",
+      "source": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "pressures",
+      "strength": 0.30,
+      "rationale": "The appearance candidate's empirical programme faces a data-availability bottleneck: its most concrete prediction cannot be tested with existing data at the ideal protocol resolution."
+    },
+    {
+      "edge_id": "edge:feasibility-negative-pressures-filter-candidate",
+      "source": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "target": "cand:brain-as-filter",
+      "edge_type": "pressures",
+      "strength": 0.30,
+      "rationale": "The filter candidate's kañcuka model faces the same data-availability bottleneck for its universal-hierarchy prediction."
+    },
+    {
+      "edge_id": "edge:feasibility-negative-pressures-interface-candidate",
+      "source": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "pressures",
+      "strength": 0.15,
+      "rationale": "The interface candidate does not depend on recovery trajectory hierarchy data, so the negative finding affects it only indirectly by delaying the consciousness-first accounts' ability to produce differentiating evidence."
+    },
+    {
+      "edge_id": "edge:track-tbi-path-supports-filter-candidate",
+      "source": "cl:recovery-wager-track-tbi-coarse-path",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "The TRACK-TBI path offers a way to test the kañcuka universal-hierarchy prediction at coarse grain using existing data, keeping the filter candidate's empirical programme alive despite the negative finding."
+    },
+    {
+      "edge_id": "edge:track-tbi-path-supports-appearance-candidate",
+      "source": "cl:recovery-wager-track-tbi-coarse-path",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "The TRACK-TBI path also keeps the dissociation model's patient-specific variation prediction testable at coarse grain, preserving the appearance candidate's empirical programme."
+    },
+    {
+      "edge_id": "edge:track-tbi-mitigates-negative-finding",
+      "source": "cl:recovery-wager-track-tbi-coarse-path",
+      "target": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "edge_type": "mitigates",
+      "strength": 0.40,
+      "rationale": "The TRACK-TBI coarse-grained path partially mitigates the negative finding by providing an alternative test path, albeit at lower resolution than the ideal protocol."
+    },
+    {
+      "edge_id": "edge:ipd-path-supports-appearance-candidate",
+      "source": "cl:recovery-wager-ipd-meta-analysis-path",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "The IPD meta-analysis path offers CRS-R subscale granularity needed for the dissociation model's patient-specific variation prediction, if data-sharing barriers can be overcome."
+    },
+    {
+      "edge_id": "edge:ipd-path-supports-filter-candidate",
+      "source": "cl:recovery-wager-ipd-meta-analysis-path",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "IPD meta-analysis at CRS-R subscale level is the ideal test for the kañcuka model's hierarchy prediction; the path keeps this possibility open."
+    },
+    {
+      "edge_id": "edge:ipd-path-mitigates-negative-finding",
+      "source": "cl:recovery-wager-ipd-meta-analysis-path",
+      "target": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "edge_type": "mitigates",
+      "strength": 0.30,
+      "rationale": "The IPD path offers CRS-R subscale resolution that the TRACK-TBI path cannot provide, partly restoring the wager protocol's ideal requirements through data pooling."
+    },
+    {
+      "edge_id": "edge:porta-path-supports-appearance-candidate",
+      "source": "cl:recovery-wager-porta-diagnostic-transition-path",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.25,
+      "rationale": "The Porta cohort's large N (216) with diagnostic transitions provides supplementary coarse evidence for the dissociation model's prediction, even without CRS-R subscale data."
+    },
+    {
+      "edge_id": "edge:porta-path-supports-filter-candidate",
+      "source": "cl:recovery-wager-porta-diagnostic-transition-path",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.25,
+      "rationale": "The Porta cohort's transition data could provide preliminary evidence for or against the kañcuka model's universal hierarchy, though at diagnostic-category rather than subscale resolution."
+    },
+    {
+      "edge_id": "edge:porta-mitigates-negative-finding",
+      "source": "cl:recovery-wager-porta-diagnostic-transition-path",
+      "target": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "edge_type": "mitigates",
+      "strength": 0.25,
+      "rationale": "The Porta path provides the largest DOC-dedicated sample for preliminary testing, partly mitigating the negative finding even though it lacks CRS-R subscale granularity."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:feasibility-negative-vs-protocol-actionability",
+      "bridge_probe_id": "bridge:recovery-wager-protocol-actionability",
+      "left_term": "nn:recovery_wager:protocol_requires_ideal_data",
+      "left_scope": "recovery_wager",
+      "right_term": "nn:clinical_neuroscience:available_doc_datasets",
+      "right_scope": "clinical_neuroscience",
+      "shared_structure": "Both agree that the recovery hierarchy wager requires longitudinal assessment data from DOC patients. Both agree that N ≥ 50 with multiple timepoints is required for statistical power.",
+      "important_difference": "The wager protocol specifies CRS-R subscale data with ≥4 timepoints over ≥6 months — a requirement no single existing dataset satisfies. Available datasets either lack CRS-R subscale granularity (TRACK-TBI uses GOSE/DRS) or have insufficient N (individual CRS-R trajectory studies). The gap is not in principle — datasets exist that partially satisfy requirements — but in the specific combination of granularity, sample size, and temporal resolution. The protocol requires adaptation to available data — either through coarse-grained proxy mapping (TRACK-TBI GOSE) or IPD meta-analysis of smaller CRS-R studies.",
+      "confidence_language": "verified negative finding — protocol requires adaptation to available data",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.1001/jamaneurol.2021.2043",
+        "doi:10.1080/02699052.2019.1658220",
+        "doi:10.1093/braincomms/fcz017"
+      ],
+      "negative_control_status": "prevents_treating_wager_as_currently_testable_with_ideal_protocol"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:feasibility-clinical-neuroscience-to-wager:data-availability-gap",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "combined_consciousness_first",
+      "reveals_about_target": "The recovery wager protocol specifies ideal data requirements that no single existing DOC recovery dataset meets. TRACK-TBI (N=484 msTBI, 4 timepoints, ~79 DOC) is the closest in scale but lacks CRS-R subscale data. Individual CRS-R studies (N=39, N=55) have the right assessment instrument but insufficient sample size. The consciousness-first accounts are making empirically consequential predictions that currently cannot be tested at the specified resolution with any single dataset. This does not defeat the predictions — they remain testable through coarse-grained analysis (TRACK-TBI GOSE) or through IPD meta-analysis — but it shifts the wager from a 'test now with existing data' frame to an 'adapt protocol to available data' frame.",
+      "pressure_type": "empirical_accessibility",
+      "target_response_required": "Both consciousness-first accounts must state clearly: (a) whether they accept testing via coarse-grained proxies (GOSE recovery stage mapping, diagnostic transition analysis) — if so, testing can begin now on TRACK-TBI and Porta data; (b) whether they require the ideal CRS-R subscale protocol — if so, the test must await IPD meta-analysis or future data collection; (c) whether the wager's value is primarily as a research-design constraint for future studies rather than an immediate discriminator. The answer determines whether the wager is currently active or prospective.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:recovery-wager-no-single-dataset-meets-protocol",
+        "cl:recovery-wager-track-tbi-coarse-path"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation"
+      ]
+    },
+    {
+      "pair_id": "critique:feasibility-track-tbi-to-ipd:resolution-vs-actionability-tradeoff",
+      "critic_lens": "empirical_feasibility",
+      "target_lens": "combined_consciousness_first",
+      "reveals_about_target": "The two feasible paths for testing the recovery wager present a tradeoff. TRACK-TBI offers immediate actionability (data exists, accessible via FITBIR, adequate N and timepoints) but only at coarse GOSE resolution. IPD meta-analysis offers CRS-R subscale granularity but faces significant practical barriers (data-sharing consent, assessment timing heterogeneity, etiological confounds). The consciousness-first accounts must address this tradeoff: which is more valuable — a test now at coarse resolution, or a test later at ideal resolution? A preference for ideal resolution over immediate testing would suggest the predictions are not robust enough to survive coarse testing.",
+      "pressure_type": "resolution_actionability_tradeoff",
+      "target_response_required": "Each account should specify whether its prediction is expected to be detectable at coarse resolution (GOSE stage transitions, diagnostic categories) or requires CRS-R subscale data. If the prediction can only be tested at CRS-R resolution, the account bears the burden of justifying why the hierarchy effect would be invisible at coarser assessment granularity.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:recovery-wager-track-tbi-coarse-path",
+        "cl:recovery-wager-ipd-meta-analysis-path"
+      ],
+      "crux_ids": [
+        "crux:filter-mechanism-requirement"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "summary": "This feasibility layer does not change candidate scores — it constrains the empirical programme by showing that the recovery wager protocol requires adaptation to available data. Four claims document the data landscape: (1) no single dataset meets ideal protocol requirements; (2) TRACK-TBI offers a feasible coarse-grained path; (3) IPD meta-analysis offers a complementary fine-grained path; (4) Porta et al. offers a supplementary diagnostic-transition path. The delta is in the wager's actionability status, not in candidate scores. The wager is now framed as 'testable with adapted protocol' rather than 'testable now with ideal protocol.' The protocol's falsifier (cl:recovery-hierarchy-analysis-protocol) is partially activated: the negative finding pressures the protocol claim but is mitigated by the three feasible alternative paths.",
+    "predictions_made": [
+      "TRACK-TBI GOSE coarse analysis can test universal vs. patient-specific recovery ordering at functional-stage resolution — if significant patient-specific variation persists after GOSE mapping, supports dissociation model at coarse grain",
+      "IPD meta-analysis of CRS-R studies would provide the ideal-resolution test — planning this now would guide future data collection even if data-sharing barriers delay execution",
+      "Porta diagnostic-transition analysis provides an immediate supplementary test — if Porta data shows patient-specific diagnostic transitions after etiology control, supports dissociation model at diagnostic level"
+    ],
+    "required_data": "FITBIR access for TRACK-TBI msTBI data (N=484, 4 timepoints, GOSE subscale); Porta et al. author contact for secondary analysis of diagnostic transition data (N=216, 3 timepoints); Luppi et al. and Edlow/Bodien author contact for IPD meta-analysis planning"
+  }
+}

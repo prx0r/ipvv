@@ -1,0 +1,46 @@
+{
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_role": "coordinate-based-meta-analysis",
+  "title": "Neurosynth meta-analysis: brainstem reticular formation is the largest cluster preferentially associated with 'consciousness' across 74 fMRI studies",
+  "tradition": "cognitive_neuroscience",
+  "central_reading": "The Neurosynth coordinate-based meta-analysis of the term 'consciousness' (74 studies, association test — preferentially reported in studies using the term vs. those that do not) reveals that the brainstem reticular formation/pons (MNI -4, -22, -44) is the single largest cluster of activation: 84 contiguous voxels at a peak z-score of 7.20 (FDR-corrected q<0.01). This brainstem cluster exceeds in volume the medial prefrontal (72 voxels, z=7.77), pre-SMA (65 voxels, z=8.21), and precuneus/posterior cingulate (60 voxels, z=7.40) clusters. The brainstem's role in generating arousal and regulating conscious level via the ascending reticular activating system (ARAS) is well established: stimulation of the reticular formation produces EEG desynchronization and behavioral arousal; its lesion causes coma. Finding the brainstem as the most extensive cluster in a whole-brain meta-analysis — not merely present but dominant — indicates that consciousness research consistently implicates brainstem arousal-generating structures as core, not peripheral, to conscious processing. This supports the interface/generative-model account (brain generates conscious states bottom-up from brainstem arousal scaffolding) and pressures the filter account (which would predict brainstem as diffuse modulator, not focal generator).",
+  "claims": [
+    {
+      "id": "cl:neurosynth-brainstem-largest-consciousness-cluster",
+      "text": "The Neurosynth meta-analysis of 'consciousness' (association test, 74 studies, FDR q<0.01) identifies the brainstem reticular formation/pons (MNI -4, -22, -44, z=7.20) as the single largest cluster of activation: 84 contiguous voxels. This exceeds the medial prefrontal/anterior cingulate (72 voxels, z=7.77), pre-supplementary motor area (65 voxels, z=8.21), and precuneus/posterior cingulate (60 voxels, z=7.40) clusters in extent. The brainstem's preferential and extensive association with the term 'consciousness' across 74 independent fMRI studies — spanning disorders of consciousness, anesthesia, sleep, meditation, and normal conscious perception paradigms — constitutes strong convergent evidence that brainstem arousal-generating circuitry is a core generative substrate of conscious state, not a mere modulatory filter or epiphenomenal correlate.",
+      "source_id": "neurosynth:consciousness",
+      "source_span": "Neurosynth term-based meta-analysis, analysis ID 617; association test (preferential association) z-map; brainstem cluster at MNI -4, -22, -44; 84 voxels at z=7.20, the largest cluster among 111 significant clusters across the whole brain at z>3.0 threshold. Data retrieved from https://neurosynth.org/analyses/terms/consciousness/ and derived NIfTI image downloaded from /api/images/2466/download.nii.gz",
+      "quote": "Brainstem reticular formation cluster: 84 contiguous voxels, peak z=7.20 at MNI (-4, -22, -44); largest cluster in whole-brain association test for 'consciousness' (74 studies). Comparison: medial PFC/ACC cluster 72 voxels (z=7.77), pre-SMA cluster 65 voxels (z=8.21), precuneus/PCC cluster 60 voxels (z=7.40).",
+      "evidence": "empirical",
+      "pramana": "pratyaksa",
+      "hetu": "If the brainstem reticular formation is the single largest and most extensive cluster preferentially associated with the term 'consciousness' in a whole-brain meta-analysis of 74 fMRI studies (FDR-corrected), then brainstem arousal-generating structures are core generative substrates of conscious state — not merely modulatory or peripheral.",
+      "sadhya": "The brain actively generates conscious states from brainstem arousal scaffolding, supporting the interface/generative-model account over the filter account.",
+      "vyapti": "If a specific brainstem structure (reticular formation/pons) is the most extensive cluster across 111 significant clusters in a whole-brain meta-analysis of consciousness — exceeding prefrontal, cingulate, precuneus, and parietal clusters in volume — then the brainstem is not a diffuse modulator but a focal generative substrate of conscious state. This supports the brain-as-interface-generative-model account (brainstem generates the basic arousal field within which conscious content is constructed) and pressures the brain-as-filter account (which predicts brainstem acts as threshold/collapse mechanism rather than active generator, and cannot explain why brainstem is the largest cluster rather than a diffuse system).",
+      "vyapti_confidence": 0.72,
+      "falsifier": "Show that the brainstem cluster is an artefact of specific study inclusion (e.g., imaging studies of coma/VS patients in which brainstem sparing vs. damage is the contrast driving the effect), or that the cluster reflects non-conscious arousal responses (vigilance, startle) rather than conscious state specifically — i.e., that brainstem activation correlates with arousal level but not phenomenal consciousness. Alternatively, demonstrate that the filter account can accommodate a focal brainstem generator by treating brainstem ARAS as the first kañcuka layer whose collapse collapses all higher layers — but this would require specifying why brainstem generates rather than merely removes constraints.",
+      "falsifier_status": "untested",
+      "weight": 0.45,
+      "w_rel": 0.75,
+      "w_map": 0.70,
+      "w_aux": 0.72,
+      "targets": [
+        {
+          "id": "cand:brain-as-interface-generative-model",
+          "type": "candidate_explanation",
+          "role": "support",
+          "strength": 0.78,
+          "rationale": "The brainstem reticular formation is a generative structure: it produces the basic state of arousal/wakefulness via ascending projections to thalamus and cortex. Its status as the largest cluster in a whole-brain consciousness meta-analysis — across 74 studies spanning multiple paradigms — directly supports the view that the brain actively generates conscious states from brainstem scaffolding. The interface/generative-model account predicts that the brainstem, as the core generative mechanism for conscious level, should be strongly and preferentially associated with consciousness. The meta-analysis confirms this with the brainstem being the most extensive cluster in the entire brain."
+        },
+        {
+          "id": "cand:brain-as-filter",
+          "type": "candidate_explanation",
+          "role": "attack",
+          "strength": 0.65,
+          "rationale": "The filter account treats the brain as constraining/limiting a pre-existing conscious field via kañcukas or similar filtering mechanisms. If brainstem were merely a filter or modulator, we would expect it to appear as a diffuse modulatory system, not as the single most extensive focal cluster in a whole-brain meta-analysis. The filter view typically explains brainstem involvement as 'filter collapse' (loss of the waking filter in coma/sleep), but this is a negative explanation (absence of constraint) rather than a positive generative one. The meta-analysis shows brainstem as an active generator — the largest cluster — which pressures the filter account to either (a) treat brainstem as generative and thus concede the core claim to the interface model, or (b) specify how a filtering mechanism produces a focal 84-voxel cluster that is more extensive than any cortical cluster."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": "This contention introduces the Neurosynth coordinate-based meta-analysis of 'consciousness' (analysis ID 617, 74 studies, association test z-map at FDR q<0.01). The brainstem finding is novel to the Q17 truth map: the brainstem reticular formation/pons cluster at MNI -4, -22, -44 (84 voxels, z=7.20) is the largest cluster in the entire meta-analysis. Previous Q17 contentions have drawn on disorders-of-consciousness systematic reviews and phenomenological sources, but none have cited whole-brain coordinate-based meta-analysis data. This provides a different type of evidence: convergent neuroimaging across 74 studies rather than clinical or theoretical sources. The empirical weight (0.45, w_rel=0.75) reflects the meta-analytic methodology (automated coordinate extraction, FDR correction) but also the limitation that Neurosynth term-based meta-analyses reflect the term's use in abstracts and may conflate diverse operationalizations of 'consciousness'. The pramana is pratyaksa (observational/empirical) as the source is direct neuroimaging data. The falsifier status is untested pending verification that the brainstem cluster is specific to conscious state rather than arousal.",
+  "next_action": "Gate this contention through Nyaya, verify the brainstem cluster coordinates against published literature on the ascending reticular activating system (ARAS), and run state-of-play to observe whether the interface candidate's support increases and the filter candidate's support decreases in light of convergent meta-analytic evidence."
+}

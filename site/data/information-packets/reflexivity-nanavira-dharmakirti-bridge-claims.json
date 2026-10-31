@@ -1,0 +1,134 @@
+{
+  "packet_id": "ip:reflexivity-nanavira-dharmakirti-bridge",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:reflexivity-bridge-formal",
+    "title": "Formal correspondence between Nanavira's difference-operation and Dharmakīrti's apoha",
+    "author": "Codex/Hermes autonomous loop",
+    "external_sources": [
+      {
+        "source_id": "text:nanavira-fundamental-structure",
+        "title": "Fundamental Structure of Experience",
+        "author": "Ñāṇavīra Thera",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:dharmakirti-pv3",
+        "title": "Pramāṇavārttika Chapter 3 (Pratyakṣa)",
+        "author": "Dharmakīrti",
+        "source_quality": "primary_text"
+      }
+    ],
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "hermes_proposed",
+  "claims": [
+    {
+      "claim_id": "cl:bridge-structural-mapping-forward",
+      "source_type": "primary_text",
+      "source_id": "text:nanavira-fundamental-structure",
+      "source_span": {
+        "locator": "Fundamental Structure — difference as determination",
+        "quote": "A thing is defined by the difference between two things; identity is structurally dependent on contrast"
+      },
+      "claim_text": "Nanavira's difference-operation — where a thing X is determined by its structural relation to not-X — maps directly onto Dharmakīrti's apoha: the determination of a concept through exclusion of its negation. For any pair (X, not-X) in Nanavira's framework, the content of 'X' is given by the structural contrast with not-X, which is formally identical to saying 'X = apoha(not-X)' — X is what remains when not-X is excluded. The mapping preserves the determination relation in both directions.",
+      "targets": [
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "buddhist_phenomenology",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nn_expr": "sambandha(difference,apoha)",
+      "hetu": "both accounts determine content through structural exclusion of what it is not",
+      "sadhya": "Nanavira's difference and Dharmakīrti's apoha are structurally equivalent as determination-by-exclusion operations",
+      "vyapti_statement": "If determination-by-exclusion is the same operation in both frameworks, then the bridge between them is formal rather than merely analogical.",
+      "vyapti_confidence": 0.55,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.50,
+      "w_map": 0.45,
+      "w_aux": 0.50,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Produce a case where Nanavira's difference-operation determines X without a corresponding apoha-exclusion, or where apoha determines a concept without a corresponding structural difference — with the gap being explanatory, not notational.",
+        "status": "untested"
+      },
+      "reasoning": "This is the forward direction of the formal bridge. If it holds, the joint defense against Trika's manifestness critique is on solid ground."
+    },
+    {
+      "claim_id": "cl:bridge-structural-mapping-reverse",
+      "source_type": "primary_text",
+      "source_id": "text:dharmakirti-pv3",
+      "source_span": {
+        "locator": "Pramāṇavārttika 3 — apoha as exclusion of other",
+        "quote": "A universal is the exclusion of other particulars; conceptual content is determined by what it excludes."
+      },
+      "claim_text": "Dharmakīrti's apoha — where a universal 'cow' is the exclusion of 'non-cow' — entails a structural relation between affirmed and excluded terms. This structural relation is isomorphic to Nanavira's difference: to determine 'cow' via apoha is to establish its identity through contrast with 'non-cow', which is exactly the form of Nanavira's difference-operation. The 'apoha space' of excluded terms defines a structure of contrasts, and that structure IS the difference-relation.",
+      "targets": [
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "buddhist_phenomenology",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nn_expr": "sambandha(apoha,difference)",
+      "hetu": "apoha determines content through exclusion of other, which is a structural contrast relation",
+      "sadhya": "Dharmakīrti's apoha entails a difference-structure isomorphic to Nanavira's",
+      "vyapti_statement": "If apoha operates through exclusion, the excluded term and included term stand in a difference-relation that determines both.",
+      "vyapti_confidence": 0.55,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.50,
+      "w_map": 0.45,
+      "w_aux": 0.50,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that apoha-based determination leaves a structural remainder that difference-operation cannot capture — e.g., apoha's pragmatic dimension (arthakriyā) that has no correlate in Nanavira's purely structural framework.",
+        "status": "untested"
+      },
+      "reasoning": "This is the reverse direction. If both directions hold, the bridge is bidirectional."
+    },
+    {
+      "claim_id": "cl:bridge-formal-equivalence-claim",
+      "source_type": "primary_text",
+      "source_id": "text:reflexivity-bridge-formal",
+      "source_span": {
+        "locator": "Synthesis: formal equivalence",
+        "quote": "If both directions of mapping hold without residue, the bridge is formal equivalence."
+      },
+      "claim_text": "If the forward mapping (difference → apoha) and reverse mapping (apoha → difference) both hold without explanatory residue, then Nanavira's structural reflexivity and Dharmakīrti's apoha-based cognition are formally equivalent at the level of determination-by-exclusion. This would mean: (a) the bridge probe should upgrade from OVERLAPS to BRIDGES, (b) the joint defense against Trika's manifestness critique is on a formally sound foundation, and (c) any remaining disagreement between Nanavira and Dharmakīrti concerns the scope of reflexivity (whether structural determination licenses consciousness-level reflexivity), not the basic mechanism of determination.",
+      "targets": [
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "buddhist_phenomenology",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nn_expr": "abheda(bridge,nanavira_dharmakirti)",
+      "hetu": "bidirectional mapping without residue establishes formal equivalence",
+      "sadhya": "the Nanavira-Dharmakīrti bridge is formal, not merely analogical",
+      "vyapti_statement": "If a mapping between two frameworks preserves all determination relations in both directions, the frameworks are equivalent at that level.",
+      "vyapti_confidence": 0.50,
+      "log_bayes_factor": 0.20,
+      "w_rel": 0.45,
+      "w_map": 0.40,
+      "w_aux": 0.45,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the mapping leaves explanatory residue in either direction — a determination that apoha captures and difference cannot, or vice versa — beyond mere notational differences.",
+        "status": "untested"
+      },
+      "reasoning": "This is the synthetic claim: if both directions pass, the bridge is solid. If either fails, the bridge remains OVERLAPS."
+    }
+  ]
+}

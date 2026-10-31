@@ -1,0 +1,206 @@
+{
+  "packet_id": "ip:abhinavagupta-vimarsa-reflexivity",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "clean:reflexivity-trika-notes",
+    "title": "Current Reflexivity Dossier and Trika Notes",
+    "author": "Codex-curated project notes pending primary RO extraction",
+    "source_files": [
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+      "content/essay-objects/eo-reflexivity-structural-local-v1/eo.json",
+      "tractatus-nanavira-abhinavagupta.md",
+      "content/source-metaphysics/q-prakasa-definition.json"
+    ],
+    "external_sources": [
+      {
+        "source_id": "jstage:kawajiri:2006:self-awareness-pratyabhijna",
+        "title": "A Critique of the Buddhist Doctrine of Self-Awareness in the Pratyabhijna School",
+        "url": "https://www.jstage.jst.go.jp/article/ibk1952/54/2/54_2_923/_article",
+        "doi": "10.4259/ibk.54.923",
+        "source_quality": "scholarly_secondary"
+      },
+      {
+        "source_id": "mdpi:biernacki:2014:abhinavagupta-consciousness",
+        "title": "A Cognitive Science View of Abhinavagupta's Understanding of Consciousness",
+        "url": "https://www.mdpi.com/2077-1444/5/3/767",
+        "doi": "10.3390/rel5030767",
+        "source_quality": "open_access_scholarly_secondary"
+      },
+      {
+        "source_id": "lawrence:scripture-theory:pratyabhijna",
+        "title": "Abhinavagupta, Scripture Theory, and Pratyabhijna",
+        "url": "https://vishvasa.github.io/AgamaH_shaivaH/sampradAyaH/praty-abhijnA/utpaladevaH_Ishvara-pratyabhiJNA-kArikA/vRttiH/abhinava-gupta-vivRti-vimarshinI/meta/lawrence_scripture-theory/",
+        "source_quality": "scholarly_secondary_web_reprint"
+      }
+    ],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-26",
+  "status": "web_scholarly_secondary_reviewed_pending_primary_ro",
+  "review_note": "The named Tantraloka ROs were not present in content/research-objects during this pass. Claims are reconstructed from the current dossier, EO, tractatus note, prakasa question file, and web-accessible scholarship; replace source spans once ro-tantraloka-matter-of-wonder and ro-tantraloka-reflection are available.",
+  "claims": [
+    {
+      "claim_id": "cl:abh-prakasa-manifestness",
+      "source_type": "project_question_note",
+      "source_id": "mdpi:biernacki:2014:abhinavagupta-consciousness",
+      "source_span": {
+        "url": "https://www.mdpi.com/2077-1444/5/3/767",
+        "locator": "section 2",
+        "quote": "prakasa, a kind of shining forth and vimarsa, a kind of self-reflexive, active awareness"
+      },
+      "claim_text": "Prakasa is best treated as manifestness or self-revealing presence, not as ordinary light or generic cognition.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(prakasa,manifestness)",
+      "hetu": "prakasa names the appearing of anything at all",
+      "sadhya": "manifestness is a primitive pressure point for constructed accounts",
+      "vyapti_statement": "If prakasa names manifestness itself, then accounts of reflexivity must explain appearing and not merely model reports or structures.",
+      "vyapti_confidence": 0.58,
+      "log_bayes_factor": 0.24,
+      "w_rel": 0.7,
+      "w_map": 0.52,
+      "w_aux": 0.5,
+      "falsifier": {
+        "type": "textual",
+        "condition": "Primary Trika passages show prakasa is only a metaphor for ordinary cognition and not a technical claim about manifestness.",
+        "status": "untested"
+      },
+      "reasoning": "This is source-backed by the clean question note but still awaits direct primary-source RO spans."
+    },
+    {
+      "claim_id": "cl:abh-vimarsa-intrinsic-self-apprehension",
+      "source_type": "essay_object",
+      "source_id": "jstage:kawajiri:2006:self-awareness-pratyabhijna",
+      "source_span": {
+        "url": "https://www.jstage.jst.go.jp/article/ibk1952/54/2/54_2_923/_article",
+        "locator": "abstract",
+        "quote": "any knowledge is never separated from the self which is self-luminous"
+      },
+      "claim_text": "Vimarsha is intrinsic self-apprehension: manifestation is intelligible only because presence discloses itself.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:recognition-requires-self-manifestation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "vyapti(vimarsa,self_apprehension)",
+      "hetu": "manifest presence would be inert without self-apprehension",
+      "sadhya": "recognition requires intrinsic self-manifestation",
+      "vyapti_statement": "If manifestation is intelligible only as self-disclosing, then reflexivity cannot be wholly explained as a later constructed operation.",
+      "vyapti_confidence": 0.63,
+      "log_bayes_factor": 0.32,
+      "w_rel": 0.78,
+      "w_map": 0.58,
+      "w_aux": 0.5,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Give a complete structural or cognitive account of recognition that explains self-presence without invoking intrinsic manifestness.",
+        "status": "untested"
+      },
+      "reasoning": "This is the central Trika-side claim in the reflexivity dossier. It supports Abhinavagupta but is capped because the primary textual extraction is pending."
+    },
+    {
+      "claim_id": "cl:abh-prakasa-without-vimarsa-inert",
+      "source_type": "argument_dossier",
+      "source_id": "lawrence:scripture-theory:pratyabhijna",
+      "source_span": {
+        "url": "https://vishvasa.github.io/AgamaH_shaivaH/sampradAyaH/praty-abhijnA/utpaladevaH_Ishvara-pratyabhiJNA-kArikA/vRttiH/abhinava-gupta-vivRti-vimarshinI/meta/lawrence_scripture-theory/",
+        "locator": "paragraph 2",
+        "quote": "vimarsa as the essential nature of prakasa"
+      },
+      "claim_text": "Prakasa without vimarsa would be inert shining; intelligible manifestation requires reflexive articulation.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(not_vimarsa,inert_prakasa)",
+      "hetu": "mere shining without self-articulation cannot explain intelligible manifestation",
+      "sadhya": "constructed accounts must explain manifestness without leaving an inert residue",
+      "vyapti_statement": "If removing vimarsa leaves only non-articulating presence, then rivals must explain how manifestness becomes intelligible without self-apprehension.",
+      "vyapti_confidence": 0.6,
+      "log_bayes_factor": 0.26,
+      "w_rel": 0.74,
+      "w_map": 0.55,
+      "w_aux": 0.5,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that manifestness plus non-reflexive structure is sufficient for intelligibility and recognition.",
+        "status": "untested"
+      },
+      "reasoning": "This is a clean pressure claim against structural and higher-order accounts. It does not by itself prove universal consciousness."
+    },
+    {
+      "claim_id": "cl:abh-local-to-universal-step",
+      "source_type": "tractatus_note",
+      "source_id": "tractatus:nanavira-abhinavagupta",
+      "source_span": {
+        "file": "tractatus-nanavira-abhinavagupta.md",
+        "locator": "But Abhinavagupta still owes us the universalisation",
+        "quote": "To reach Siva, Abhinavagupta must add... that the same principle of reflexive manifestation underlies every conscious perspective... and that this principle is numerically one."
+      },
+      "claim_text": "The move from local reflexivity to universal consciousness requires additional metaphysical premises not supplied by Nanavira's structural analysis.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:local-to-universal",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(local_reflexivity,not_universal_consciousness)",
+      "hetu": "local reflexive structure does not entail numerical unity of all consciousness",
+      "sadhya": "universalization remains an open crux",
+      "vyapti_statement": "If local reflexivity can be explained without proving numerical unity, then Abhinavagupta's universalization requires a separate argument.",
+      "vyapti_confidence": 0.72,
+      "log_bayes_factor": -0.18,
+      "w_rel": 0.82,
+      "w_map": 0.64,
+      "w_aux": 0.5,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Prove that intrinsic self-manifestation in any finite experience entails one universal self-manifesting ground.",
+        "status": "untested"
+      },
+      "reasoning": "This is an internal boundary claim: it keeps Abhinavagupta live while blocking overreach."
+    }
+  ]
+}

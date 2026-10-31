@@ -1,0 +1,59 @@
+{
+  "eo_id": "eo:reflexivity-self-grounding-v5",
+  "schema_version": 2,
+  "title": "Both Abhinavagupta and Dignāga agree the two-aspect structure is self-grounding — they disagree on what does the grounding",
+  "status": "draft",
+  "question": {
+    "question_id": "q:reflexivity-intrinsic-or-constructed",
+    "tension_point": "Both traditions agree the two-aspect structure is self-grounding. Dignāga locates the self-grounding in cognition's intrinsic structure. Abhinavagupta locates it in the Heart/vimarśa. Is this a real difference or a verbal one?",
+    "why_it_matters": "The debate has refined to its most precise form: what is the self-grounding principle of cognition? If this difference is verbal, the traditions converge. If real, the fundamental disagreement is identified.",
+    "resolution_level": "local_argument"
+  },
+  "syllogism": {
+    "pratijna": {
+      "proposition": "The reflexivity debate between Abhinavagupta and Dignāga has converged on a single refined question: what is the self-grounding principle of the two-aspect structure of cognition? Both agree the structure is self-grounding. They disagree on whether the self-grounding principle IS the structure (Dignāga) or the awareness within the structure (Abhinavagupta's Heart/vimarśa).",
+      "what_it_claims": "After five probes, the debate is reduced to its essential difference. All other disagreements (scoreboard, level distinction, originality, two-aspect description) have been resolved or shown to be compatible."
+    },
+    "hetu": {
+      "evidence": [
+        {"claim": "TĀ 4/9: consciousness is svātmasaṃvitti, full in itself, needing nothing added or subtracted. The foundation of consciousness is the Heart (vimarśa), which is internal to the structure.", "pramana": "sabda", "source_id": "text:tantraloka-ahnika4", "target": "cand:abh-vimarsa-intrinsic"},
+        {"claim": "PS(V) 1.9ab: cognition arises with two appearances. Self-awareness is the result. No ground beyond cognition is posited.", "pramana": "sabda", "source_id": "text:coseru-consciousness-causality", "target": "cand:dharmakirti-conditioned-reflexivity"}
+      ],
+      "source_ids": ["text:tantraloka-ahnika4", "text:coseru-consciousness-causality"]
+    },
+    "udaharana": {
+      "examples": [
+        {"scenario": "TĀ 4/9: 'nothing to subtract or add' — the ground is internal. Abhinavagupta's answer to 'what grounds the two aspects?' is 'the Heart, which IS the unity of the two aspects.'", "what_it_shows": "The ground is not separate from what it grounds."},
+        {"scenario": "PS(V) 1.9ab: cognition IS two-aspect. No further ground. The question 'what grounds the two aspects?' is answered by 'cognition itself.'", "what_it_shows": "The question is dissolved rather than answered."}
+      ]
+    },
+    "upanaya": {
+      "application": "The five probes have progressively refined the question. Both traditions now agree the structure is self-grounding. The remaining disagreement is whether the self-grounding principle can be identified (Abhinavagupta: the Heart/vimarśa) or whether the question is ill-posed (Dignāga: cognition simply IS two-aspect).",
+      "cruxes": ["Is 'the Heart is the foundation' a substantive answer or a restatement of the phenomenon?"]
+    },
+    "nigamana": {
+      "best_current_answer": "The reflexivity debate has refined to a single question: what is the self-grounding principle of cognition? Both traditions agree the structure is self-grounding. Abhinavagupta identifies the principle as the Heart/vimarśa. Dignāga rejects the question as ill-posed. This difference may not be resolvable by textual analysis.",
+      "status": "structurally_suggestive",
+      "scope": "Convergence on self-grounding: established. Real difference remains but may be irreducible."
+    }
+  },
+  "candidates": [
+    {"candidate_id": "cand:self-grounding-structure", "name": "Structure is self-grounding (Dignāga)", "tradition": "dharmakirti_buddhist", "position": "Cognition is two-aspect. No further ground needed. The question 'what grounds it?' is a category mistake.", "proponent": "Dignāga", "source_ids": ["text:coseru-consciousness-causality"], "hard_to_vary_core": ["Cognition's structure is given"], "falsifiers": ["A demonstration that cognition's two-aspect structure is not self-explanatory"], "status": "live"},
+    {"candidate_id": "cand:self-grounding-heart", "name": "Structure is self-grounding through the Heart/vimarśa (Abhinavagupta)", "tradition": "trika_pratyabhijna", "position": "The two-aspect structure is self-grounding through vimarśa, which IS the Heart — the unity of the two aspects, not a separate principle.", "proponent": "Abhinavagupta", "source_ids": ["text:tantraloka-ahnika4"], "hard_to_vary_core": ["Vimarśa is the foundation of consciousness", "Nothing external is needed"], "falsifiers": ["A demonstration that 'the Heart is the foundation' is a restatement rather than an explanation"], "status": "live"}
+  ],
+  "state_of_play": {
+    "summary": "Five probes have refined the reflexivity debate to its essential difference. Both traditions agree the two-aspect structure is self-grounding. The remaining question is whether the self-grounding principle can be identified with vimarśa or whether the question is ill-posed. This may be irreducible.",
+    "what_survives": "All original candidates survive but are now understood as converging on a common phenomenological description while diverging on its interpretation.",
+    "what_is_weakened": "The framing as a zero-sum competition. The view that one tradition is simply wrong about the phenomenology.",
+    "what_would_change_our_mind": "New textual evidence showing one tradition directly responding to the other's claim about self-grounding.",
+    "open_cruxes": ["Is 'the Heart is the foundation' a substantive answer to the self-grounding question?"],
+    "next_tests": ["This is the irreducible core of the debate. Further textual analysis is unlikely to resolve it. The essay should present the trajectory and the refined question."],
+    "implications": [{"condition": "If the remaining difference is irreducible", "consequence": "The reflexivity essay becomes a case study in how comparative philosophy refines rather than resolves its questions"}]
+  },
+  "provenance": {
+    "parent_eo": "eo:reflexivity-two-aspects-v4",
+    "created_by": "agent/research",
+    "last_updated": "2026-07-26",
+    "supporting_artifacts": ["content/information-packets/abh-self-grounding-claims.json"]
+  }
+}

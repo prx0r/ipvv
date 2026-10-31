@@ -1,0 +1,61 @@
+{
+  "packet_id": "ip:nanavira-groundless",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:nanavira-groundless",
+    "title": "Claims: \u00d1\u0101\u1e47av\u012bra rejects both Dign\u0101ga's 'structure is self-grounding",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "nanavira_phenomenology"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:nanavira-groundless-reflexivity",
+      "source_type": "primary_text",
+      "source_id": "text:nanavira-vinnana",
+      "source_span": {
+        "locator": "\u00d1\u0101\u1e47av\u012bra \u2014 Vi\u00f1\u00f1\u0101\u1e47a note, especially the immediate/reflexive presence distinction and anidassana vi\u00f1\u00f1\u0101\u1e47a",
+        "quote": "\u00d1\u0101\u1e47av\u012bra's position on the self-grounding question: neither Dign\u0101ga's 'structure"
+      },
+      "claim_text": "\u00d1\u0101\u1e47av\u012bra's position on the self-grounding question: neither Dign\u0101ga's 'structure is self-grounding' nor Abhinavagupta's 'vimar\u015ba grounds the structure' is accepted. Consciousness (vi\u00f1\u00f1\u0101\u1e47a) is 'negative as regards essence' \u2014 it has no svabh\u0101va and cannot serve as a ground. The question 'what grounds the structure?' itself presupposes that a ground is needed, which is the conceit 'I am' (asmim\u0101na). With the cessation of asmim\u0101na, consciousness becomes anidassana (non-indicative) \u2014 there is just 'this is present,' without any ground. The arahant's experience is not self-grounding and not other-grounded; it is groundless.",
+      "targets": [
+        {
+          "target_id": "cand:nanavira-structural-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "nanavira_phenomenology",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(nanavira_groundless_reflexivity,target)",
+      "hetu": "vi\u00f1\u00f1\u0101\u1e47a is negative as regards essence; the search for a ground is asmim\u0101na",
+      "sadhya": "the self-grounding question is misposed \u2014 reflexivity is groundless",
+      "vyapti_statement": "If consciousness has no essence and points to no ground, then the question 'what grounds the structure?' is a category mistake.",
+      "vyapti_confidence": 0.8,
+      "log_bayes_factor": 0.44,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that \u00d1\u0101\u1e47av\u012bra's anidassana vi\u00f1\u00f1\u0101\u1e47a still presupposes a ground (e.g., the structure itself or the mere fact of presence), making his position a variant of Dign\u0101ga's self-grounding rather than a distinct third way.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:nanavira-vinnana."
+    }
+  ]
+}

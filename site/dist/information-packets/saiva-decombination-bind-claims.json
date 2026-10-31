@@ -1,0 +1,177 @@
+{
+  "packet_id": "ip:saiva-decombination-bind",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "sanskritree:truth:siddhitrayi+tantraloka",
+    "title": "Śaiva Decombination Problem — from translated Siddhis and Tantrāloka",
+    "author": "Utpaladeva, Abhinavagupta",
+    "source_files": [
+      "/root/projects/sanskritree/truth/truthtranslation",
+      "/root/projects/sanskritree/truth/sambandhasiddhi_translation.md",
+      "/root/projects/sanskritree/truth/isvarasiddhi_translation.md"
+    ],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:perspectival-partition",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft_from_translated_siddhis",
+  "claims": [
+    {
+      "claim_id": "cl:aps-universalization-asserts-not-proves",
+      "source_type": "manual_translation",
+      "source_id": "truthtranslation:verses-16-17-25",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthtranslation",
+        "locator": "lines 654-792, 1131-1201",
+        "quote": "ubhayo 'py eṣa paryantabhūmiḥ sarvārthasaṃvidām / eka evānusandhānād ato 'nyo nopapadyate //"
+      },
+      "claim_text": "Ajadapramātṛsiddhi verses 16-17 and 25 attempt the universalization from local synthesis to one universal subject. Verse 17's 'sarvārthasaṃvidām' is ambiguous between 'all cognitions within one stream' and 'all cognitions of every subject.' The argument from synthesis is strongest within one diachronic stream. The move from intra-stream synthesis to trans-stream identity is where the argument breaks. Tantrāloka 16.242 confirms: 'bhogyajñānaṃ nānyadeheṣv anusandhānam arhati' — knowledge enjoyed in one body cannot perform connective synthesis with other bodies. This supports the LOCAL reading of anusandhāna.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:local-to-global-gluing",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "hetu": "the text claims universal synthesis but the quantifier scope is ambiguous",
+      "sadhya": "transpersonal numerical identity is asserted, not demonstrated",
+      "vyapti_statement": "If the strongest evidence for universal synthesis (anusandhāna) is qualified as local by Abhinavagupta himself, the universalization claim lacks textual support even within the tradition.",
+      "vyapti_confidence": 0.75,
+      "log_bayes_factor": 0.55,
+      "w_rel": 0.8,
+      "w_map": 0.7,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "philological",
+        "condition": "Show a passage in Abhinavagupta's Vivṛtivimarśinī where anusandhāna is explicitly said to operate across cognitive streams, not just within one.",
+        "status": "untested"
+      },
+      "reasoning": "The three Siddhitrayī texts were supposed to supply the nondual proof. None do. APS asserts universalization but Abhinavagupta's own qualification limits anusandhāna to one body. This is key evidence for the decombination bind."
+    },
+    {
+      "claim_id": "cl:sambandhasiddhi-aikatyma-assumes-framework",
+      "source_type": "manual_translation",
+      "source_id": "sambandhasiddhi:verse-8",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/sambandhasiddhi_translation.md",
+        "locator": "Verse 8 commentary",
+        "quote": "evaṃ ca sati vastūnāṃ cinmātravapuṣāṃ satām / māyānirmitabhedānām apy ekatvam adurghaṭam //"
+      },
+      "claim_text": "Sambandhasiddhi verse 8 states that entities whose essence is pure consciousness (cinmātravapus), though differentiated by Māyā, are not impossible to unify. But this assumes the Pratyabhijñā ontology — it does not argue for it. The verse is cited as a demonstration that relation is real, but it presupposes the very metaphysics that needs to be proved. The text's contribution is the theory of relation as consciousness's self-unifying activity (rūpasaṃśleṣa = aikātmya), but this is consistent with a universal subject only if the Pratyabhijñā framework is already accepted.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:cinmatravapus-circularity",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "hetu": "the text assumes entities' essence is consciousness without proving it",
+      "sadhya": "the theory of relation does not independently establish universal consciousness",
+      "vyapti_statement": "If a text assumes what it would need to prove to establish universal consciousness, then that text does not supply the missing nondual proof.",
+      "vyapti_confidence": 0.8,
+      "log_bayes_factor": 0.6,
+      "w_rel": 0.85,
+      "w_map": 0.75,
+      "w_aux": 0.8,
+      "falsifier": {
+        "type": "philological",
+        "condition": "Show an independent argument in Sambandhasiddhi for why entities must be cinmātravapus that does not rely on the already-established ĪPK framework.",
+        "status": "untested"
+      },
+      "reasoning": "This is the circularity risk. Sambandhasiddhi provides a sophisticated theory of relation, but its ontological foundation (cinmātravapus) is taken from ĪPK, not argued here."
+    },
+    {
+      "claim_id": "cl:isvarasiddhi-dualistic-design-not-nondual",
+      "source_type": "manual_translation",
+      "source_id": "isvarasiddhi:provisional-translation",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/isvarasiddhi_translation.md",
+        "locator": "Verdict",
+        "quote": "The Īśvarasiddhi does not attempt to prove the full nondual identity. It attempts to establish a more limited conclusion acceptable within a dualistic framework."
+      },
+      "claim_text": "Īśvarasiddhi is a Nyāya-style design argument that the world requires an intelligent director. It deliberately works within a dualistic framework and explicitly leaves the nondual recognition (verse 56) to the Pratyabhijñā. The text proves at most a cosmic supervisor, not the identity of all subjects with that supervisor. Its final verse says: 'if that highest recognition must be established, its structure has been set out by us elsewhere.' The elsewhere is the ĪPK — not another Siddhi.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:isvarasiddhi-scope-limitation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "hetu": "the text explicitly defers the nondual proof to another work",
+      "sadhya": "the text does not contain the missing universalization premise",
+      "vyapti_statement": "If a text says 'this has been established elsewhere,' then that text does not supply what is missing.",
+      "vyapti_confidence": 0.85,
+      "log_bayes_factor": 0.65,
+      "w_rel": 0.9,
+      "w_map": 0.8,
+      "w_aux": 0.85,
+      "falsifier": {
+        "type": "philological",
+        "condition": "Show that the 'elsewhere' passage nevertheless contains implicit argumentation that can be reconstructed from the Īśvarasiddhi alone.",
+        "status": "untested"
+      },
+      "reasoning": "The user's own analysis confirms this. The Īśvarasiddhi is a dualistic design argument. It does not advance the nondual universalization proof."
+    },
+    {
+      "claim_id": "cl:decombination-bind-maya-not-explained",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:VIII",
+      "source_span": {
+        "locator": "Simulated Checkpoint 8 — Universal consciousness faces decombination",
+        "quote": "Pratyabhijñā solves the emergence of manifestation only by inheriting the decombination of manifestation into private perspectives."
+      },
+      "claim_text": "The Śaiva model C∞ → Lᵢ → Cᵢ (universal consciousness → limitation → local consciousness) faces a trilemma when specifying Lᵢ (the limitation/contraction mechanism): Option 1: Lᵢ is non-conscious — then universal consciousness is limited by something external to it, violating its unrestricted nature. Option 2: Lᵢ is an act of universal consciousness itself — then the account risks circularity (Śiva produces limitation through freedom because freedom is the power to produce limitation). Option 3: Lᵢ is intrinsic to manifestation — then the tradition must explain why manifestation intrinsically possesses a self-partitioning structure. None of these options has been adequately specified. The kañcukas classify the axes of finitude but do not explain what Lᵢ is or how it produces exclusive local fields.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:limitation-mechanism-unexplained",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "formal",
+      "pramana": "tarka",
+      "hetu": "the limitation mechanism faces a trilemma with no satisfactory option",
+      "sadhya": "Pratyabhijñā has not specified how decombination occurs",
+      "vyapti_statement": "If the limitation mechanism has three possible forms and all three are problematic, then the decombination problem remains unsolved within the tradition.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.5,
+      "w_rel": 0.75,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show a text where Utpaladeva or Abhinavagupta specifies the limitation mechanism in a way that avoids all three horns of the trilemma.",
+        "status": "untested"
+      },
+      "reasoning": "This is the exact Śaiva bind from Checkpoint 10. The project spent significant effort translating the three Siddhis, but none of them contains the missing decombination mechanism. The kañcukas classify but do not explain."
+    }
+  ]
+}

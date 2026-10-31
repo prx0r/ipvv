@@ -1,0 +1,29 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-self-grounding",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "Abhinavagupta argues the two-aspect structure is self-grounding (TĀ 4/9, TĀ 4/185cd-186ab). The Heart/vimarśa is the foundation of consciousness itself — not a separate prior substrate. Both Dignāga and Abhinavagupta agree the structure is self-grounding; they disagree on what does the grounding.",
+  "claims": [
+    {
+      "id": "cl:abh-ta4-9-self-grounding",
+      "text": "TĀ 4/9: consciousness is by its very nature full (nirbharā), with nothing to subtract or add. There is nothing separate from it on which it depends. The two-aspect structure does not require an external ground — it is self-grounding through the Heart (vimarśa) which is the foundation (pratiṣṭhā) of consciousness itself.",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": "Tantrāloka 4/9 and 4/185cd-186ab, ahnika-04.txt lines 359-367 and 11146-11165",
+      "evidence": "textual",
+      "pramana": "sabda",
+      "hetu": "consciousness is svātmasaṃvitti, full in itself, depending on nothing",
+      "sadhya": "the two-aspect structure is self-grounding through vimarśa, not through a separate prior consciousness",
+      "vyapti": "If consciousness needs nothing outside itself and its foundation is the Heart, then the ground is internal to the structure.",
+      "vyapti_confidence": 0.82,
+      "falsifier": "Show that Abhinavagupta posits Anuttara as a genuinely separate ontological ground beyond the two-aspect structure, not as the same reality under a different aspect.",
+      "weight": 0.46,
+      "w_rel": 0.80,
+      "w_map": 0.75,
+      "w_aux": 0.78,
+      "targets": [
+        {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.80, "rationale": "Abhinavagupta's position is self-grounding, not dependent on an external substrate."},
+        {"id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.45, "rationale": "Both traditions say the structure is self-grounding; the difference is where they locate the self-grounding principle."}
+      ]
+    }
+  ]
+}

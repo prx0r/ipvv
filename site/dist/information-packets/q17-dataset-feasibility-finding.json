@@ -1,0 +1,191 @@
+{
+  "packet_id": "ip:q17-dataset-feasibility-finding",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "synthetic:q17-dataset-feasibility-finding",
+    "title": "Empirical Feasibility Evaluation: Recovery Trajectory Hierarchy Wager Protocol Against Existing DOC Datasets",
+    "author": "Hermes autonomous loop 009 (dataset feasibility investigation)",
+    "external_sources": [
+      {
+        "source_id": "doi:10.1001/jamaneurol.2021.2043",
+        "title": "Functional Outcomes Over the First Year After Moderate to Severe Traumatic Brain Injury in the Prospective, Longitudinal TRACK-TBI Study",
+        "author": "McCrea MA, Giacino JT, Barber J, et al.",
+        "url": "https://doi.org/10.1001/jamaneurol.2021.2043",
+        "source_quality": "peer_reviewed_clinical"
+      },
+      {
+        "source_id": "doi:10.1080/02699052.2019.1658220",
+        "title": "Demographical and clinical indices for long-term evolution of patients in vegetative or in minimally conscious state",
+        "author": "Porta et al.",
+        "url": "https://doi.org/10.1080/02699052.2019.1658220",
+        "source_quality": "peer_reviewed_clinical"
+      },
+      {
+        "source_id": "doi:10.1093/braincomms/fcz017",
+        "title": "Longitudinal assessments highlight long-term behavioural recovery in disorders of consciousness",
+        "author": "Luppi et al.",
+        "url": "https://doi.org/10.1093/braincomms/fcz017",
+        "source_quality": "peer_reviewed_clinical"
+      },
+      {
+        "source_id": "doi:10.1101/2025.03.02.25322248",
+        "title": "Acute biomarkers of consciousness are associated with recovery after severe traumatic brain injury",
+        "author": "Edlow BL et al.",
+        "url": "https://doi.org/10.1101/2025.03.02.25322248",
+        "source_quality": "preprint_clinical"
+      },
+      {
+        "source_id": "doi:10.1007/s00134-023-07072-1",
+        "title": "Acute traumatic coma awakening by right median nerve electrical stimulation: a randomised controlled trial",
+        "author": "Wu et al.",
+        "url": "https://doi.org/10.1007/s00134-023-07072-1",
+        "source_quality": "peer_reviewed_rmct"
+      }
+    ],
+    "tradition_scope": "empirical_feasibility"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "hermes_loop_009",
+  "extracted_at": "2026-07-27",
+  "status": "hermes_proposed",
+  "claims": [
+    {
+      "claim_id": "cl:recovery-wager-no-single-dataset-meets-protocol",
+      "source_type": "literature_survey",
+      "source_id": "synthetic:q17-dataset-feasibility-finding",
+      "source_span": {
+        "locator": "Systematic PubMed search for DOC recovery longitudinal datasets with CRS-R subscale data (2018-2026)",
+        "quote": "No existing single DOC recovery dataset simultaneously satisfies the wager protocol's minimum requirements: N ≥ 50 patients with ≥ 4 CRS-R assessments over ≥ 6 months with subscale data. The closest candidates (TRACK-TBI msTBI cohort, N=484, 4 timepoints, 12 months) lack CRS-R subscale data, using GOSE/DRS instead. The largest CRS-R DOC cohort identified (Porta et al., N=216) uses diagnostic categories rather than subscale trajectories. Published CRS-R trajectory studies (Luppi et al., N=39; Edlow et al., N=55) fall below the N≥50 threshold with sufficient longitudinal granularity."
+      },
+      "claim_text": "The recovery trajectory hierarchy wager protocol's minimum data requirements (N ≥ 50 patients with ≥ 4 CRS-R subscale assessments over ≥ 6 months) are not satisfied by any single existing publicly documented DOC recovery dataset. The three candidate datasets that most closely approach the requirements are: (1) TRACK-TBI msTBI cohort (N=484, 4 timepoints at 2wk/3mo/6mo/12mo, ~79 initial DOC patients) — meets N and longitudinal structure requirements but uses GOSE/DRS functional scales rather than CRS-R subscale data; (2) Porta et al. 2019 (N=216, follow-up at 12/24/36 months) — meets N but uses clinical VS/MCS/EMCS diagnostic classification rather than CRS-R subscale trajectory data; (3) individual CRS-R trajectory studies (Luppi et al. N=39, Edlow/Bodien et al. acute severe TBI N=55) — meet CRS-R subscale granularity but fall below the N≥50 threshold. The protocol is not currently actionable as specified.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "empirical_feasibility",
+      "paradigm": "literature_survey",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksha",
+      "nn_expr": "abhava(existing_dataset_meets_protocol_requirements)",
+      "hetu": "Systematic search of PubMed (2018–2026) for DOC recovery longitudinal datasets with CRS-R subscale data found no single dataset satisfying N ≥ 50, ≥ 4 CRS-R assessments, ≥ 6 months follow-up, with subscale data.",
+      "sadhya": "The recovery wager protocol is not immediately actionable on any single existing dataset as specified.",
+      "vyapti_statement": "If a systematic literature search of a well-defined clinical domain (DOC recovery, PubMed, 2018–2026) returns no single dataset meeting specified protocol requirements, then those requirements are not met by any publicly documented dataset in that domain.",
+      "vyapti_confidence": 0.85,
+      "log_bayes_factor": 0.50,
+      "w_rel": 0.70,
+      "w_map": 0.65,
+      "w_aux": 0.68,
+      "falsifier": {
+        "type": "discovery",
+        "condition": "Identify a single publicly documented DOC recovery dataset (peer-reviewed publication, clinical trial registry, or data repository) that simultaneously satisfies: N ≥ 50 patients, ≥ 4 CRS-R assessments per patient over ≥ 6 months, with subscale-level data reported. If such a dataset exists and was missed by the search, the finding is incomplete but correctable.",
+        "status": "untested"
+      },
+      "reasoning": "This claim establishes the negative empirical finding that the recovery wager protocol's minimum requirements are unmet by any single known dataset. It does not claim the protocol is impossible — only that no single pre-existing dataset satisfies it as specified. The falsifier leaves open the possibility of undiscovered datasets (e.g., from China-based clinical trial registries not indexed in PubMed, or private clinical databases). The claim's primary function is to force refinement of the protocol to work with available data."
+    },
+    {
+      "claim_id": "cl:recovery-wager-track-tbi-coarse-path",
+      "source_type": "literature_survey",
+      "source_id": "synthetic:q17-dataset-feasibility-finding",
+      "source_span": {
+        "locator": "McCrea et al. 2021, JAMA Neurology — TRACK-TBI msTBI outcomes analysis",
+        "quote": "A total of 484 eligible patients were included from 2679 individuals in the TRACK-TBI study. Among participants in a vegetative state at 2 weeks, 62 of 79 (78%) regained consciousness and 14 of 56 with available data (25%) regained orientation by 12 months."
+      },
+      "claim_text": "The TRACK-TBI msTBI cohort (N=484, 4 timepoints at 2wk/3mo/6mo/12mo, ~79 initial DOC patients) provides a feasible coarse-grained path to partially test the recovery hierarchy wager, using GOSE subscale transitions as a proxy for recovery stages. The GOSE has 8 ordered categories (1=Death, 2=Vegetative State, 3=Lower Severe Disability, 4=Upper Severe Disability, 5=Lower Moderate Disability, 6=Upper Moderate Disability, 7=Lower Good Recovery, 8=Upper Good Recovery) that can be mapped to a three-stage hierarchy: arousal-level recovery (GOSE 2→3 transition: emergence from VS), content-processing recovery (GOSE 3→4→5 transitions: increasing cognitive function), and spatiotemporal reintegration (GOSE 5→6→7→8 transitions: return to independent function). This mapping is coarser than CRS-R subscale analysis but permits testing of a key wager prediction: whether the ordering of GOSE transitions across patients follows a consistent hierarchy (supporting kañcuka model) or shows patient-specific variation after controlling for clinical covariates (supporting dissociation model). The analysis would need sequence alignment on GOSE transition patterns across the 4 timepoints, testing for consistent vs. variable ordering. The TRACK-TBI database is available through FITBIR (Federal Interagency Traumatic Brain Injury Research) for qualified researchers.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" },
+        { "target_id": "crux:filter-mechanism-requirement", "target_type": "crux" }
+      ],
+      "tradition_scope": "empirical_feasibility",
+      "paradigm": "coarse_analysis_proposal",
+      "evidence_dimension": "empirical",
+      "pramana": "yukti",
+      "nn_expr": "upaya(track_tbi_cohort,coarse_recovery_hierarchy_test)",
+      "hetu": "TRACK-TBI msTBI cohort has adequate N (484), sufficient timepoints (4 over 12 months), and ~79 initial DOC patients; GOSE subscale categories can be mapped to a three-stage recovery hierarchy proxy.",
+      "sadhya": "A coarse-grained version of the recovery hierarchy wager is feasible using existing TRACK-TBI data.",
+      "vyapti_statement": "If a dataset has adequate sample size (N > 400), sufficient longitudinal structure (≥4 timepoints over ≥12 months), a functional outcome scale with ordinally ordered categories spanning the relevant recovery stages (VS through independent function), and a mechanism for researcher access (FITBIR), then a coarse-grained recovery hierarchy test is feasible even without CRS-R subscale data, provided the GOSE-to-hierarchy mapping is validated.",
+      "vyapti_confidence": 0.55,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.50,
+      "w_map": 0.45,
+      "w_aux": 0.48,
+      "falsifier": {
+        "type": "practical",
+        "condition": "Demonstrate that GOSE categories cannot be reliably mapped to the proposed three-stage hierarchy (arousal → content → spatiotemporal reintegration) because (a) GOSE subscale transitions are determined by multiple factors simultaneously rather than ordered, (b) the GOSE is a single global scale rather than domain-specific subscales, or (c) the TRACK-TBI FITBIR data use agreement excludes recovery-sequence analysis. Or: show that the ~79 initial DOC patient subsample from TRACK-TBI is insufficient for sequence-alignment or clustering analysis after accounting for missing data and WLST attrition.",
+        "status": "untested"
+      },
+      "reasoning": "This claim identifies a viable coarse-grained path that keeps the recovery wager empirically tractable while acknowledging the gap between ideal protocol requirements and available data. The falsifier catches the most likely practical obstacles: GOSE scale limitations, sample size attrition in the DOC subset, and data access barriers."
+    },
+    {
+      "claim_id": "cl:recovery-wager-ipd-meta-analysis-path",
+      "source_type": "literature_survey",
+      "source_id": "synthetic:q17-dataset-feasibility-finding",
+      "source_span": {
+        "locator": "Synthesis of multiple small CRS-R longitudinal studies",
+        "quote": "Individual patient data (IPD) meta-analysis of 3–5 published CRS-R longitudinal studies (Luppi et al. N=39; Edlow/Bodien N=55; Porta et al. N=216 with diagnostic transitions; plus recent CRS-R trajectory studies from Chinese rehabilitation centers reporting N ≈ 20–50 each) could pool sufficient patients (estimated N ≥ 50–120 with CRS-R subscale data) to satisfy the wager protocol's minimum requirements."
+      },
+      "claim_text": "IPD meta-analysis of published CRS-R longitudinal studies offers a feasible path to meet the wager protocol's minimum requirements when no single dataset does. Pooling individual patient data from 3–5 studies could yield an aggregate N of approximately 50–120 patients with CRS-R subscale trajectory data sufficient for sequence-alignment analysis. Candidate studies for IPD pooling include: (a) Luppi et al. (Brain Communications 2019, N=39) — longitudinal CRS-R assessments with long-term follow-up; (b) Edlow/Bodien acute severe TBI cohort (2025/2026, N=55) — acute phase CRS-R assessments with 6-month outcome; (c) Chinese rehabilitation center CRS-R trajectory studies publishing N ≈ 20–50 each with ≥3 timepoints. The IPD meta-analysis approach faces significant practical barriers: author data-sharing willingness, heterogeneity in assessment timing across studies, differing inclusion criteria (traumatic vs. anoxic vs. vascular etiologies), and lack of uniform premorbid profiling. However, the path is feasible in principle and would produce a combined dataset that approaches or meets the N ≥ 50 requirement.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "empirical_feasibility",
+      "paradigm": "ipd_meta_analysis_proposal",
+      "evidence_dimension": "empirical",
+      "pramana": "yukti",
+      "nn_expr": "sambandha(ipd_pooling,recovery_wager_actionability)",
+      "hetu": "Multiple small CRS-R longitudinal studies exist with overlapping assessment instruments but insufficient individual N; pooling them via IPD meta-analysis could satisfy the wager protocol's minimum N threshold.",
+      "sadhya": "IPD meta-analysis is a feasible path to making the recovery wager testable.",
+      "vyapti_statement": "If 3–5 published DOC recovery studies each have CRS-R subscale data with ≥3 timepoints but individual N < 50, then pooling them through IPD meta-analysis can produce an aggregate dataset meeting N ≥ 50, provided (a) assessment timing overlap is sufficient for alignment, (b) authors consent to data sharing, and (c) etiological heterogeneity is acceptable as a covariate rather than an exclusion criterion.",
+      "vyapti_confidence": 0.45,
+      "log_bayes_factor": 0.20,
+      "w_rel": 0.42,
+      "w_map": 0.38,
+      "w_aux": 0.40,
+      "falsifier": {
+        "type": "practical",
+        "condition": "Demonstrate that (a) no 3 CRS-R longitudinal studies have sufficiently overlapping assessment timing to permit alignment, (b) the principal investigators of candidate IPD studies are unwilling to share patient-level data, (c) the heterogeneity in inclusion criteria (traumatic vs. anoxic vs. vascular) produces confounds that cannot be statistically controlled given the pooled sample size, or (d) the combined DOC patient sample from all willing investigators remains below N=50. If any of these barriers proves insurmountable, the IPD meta-analysis path is not feasible.",
+        "status": "untested"
+      },
+      "reasoning": "This claim identifies a second feasible path — IPD meta-analysis — that addresses the gap left by the no-single-dataset finding. Unlike the TRACK-TBI path (coarse-grained but immediately available), the IPD path offers CRS-R subscale granularity but faces significant practical barriers. The two paths complement each other: TRACK-TBI could answer the hierarchy question at coarse grain now; IPD meta-analysis could refine it later."
+    },
+    {
+      "claim_id": "cl:recovery-wager-porta-diagnostic-transition-path",
+      "source_type": "literature_survey",
+      "source_id": "synthetic:q17-dataset-feasibility-finding",
+      "source_span": {
+        "locator": "Porta et al. 2019, Brain Injury — N=216 DOC diagnostic trajectory analysis",
+        "quote": "Patients (N = 216) in VS (N = 159) or in MCS (N = 57) consecutively admitted to a neurorehabilitation unit within 1–3 months after severe anoxic (n = 71), vascular (n = 96), or traumatic (n = 49) brain injury. Outcome: mortality and improvements in clinical diagnosis at 12, 24, and 36 months after brain injury."
+      },
+      "claim_text": "The Porta et al. 2019 cohort (N=216, follow-up at 12/24/36 months) provides a supplementary path for testing the recovery hierarchy wager at the diagnostic-transition level. While the study does not report CRS-R subscale trajectories, it documents transitions between VS, MCS, and EMCS diagnostic categories at three timepoints over 36 months. These diagnostic transitions can be mapped to the recovery hierarchy's first stage (arousal-level recovery: VS→MCS or VS→EMCS) and subsequent stages (content-processing recovery: MCS→EMCS). The strengths of this path are: (a) largest DOC-dedicated sample (N=216), (b) longest follow-up (36 months), (c) three assessment timepoints providing transition patterns. The limitations are: (a) only 3 timepoints (minimum for transition analysis but below the wager's 4-timepoint requirement), (b) diagnostic categories rather than subscale data, losing granularity within stages, (c) no premorbid experiential profiling. The Porta dataset is most valuable as a preliminary test: if even at this coarse diagnostic level, recovery ordering shows significant patient-specific variation after controlling for etiology, it would suggest the dissociation model's prediction has empirical support worth testing with finer-grained data.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "empirical_feasibility",
+      "paradigm": "supplementary_analysis_proposal",
+      "evidence_dimension": "empirical",
+      "pramana": "yukti",
+      "nn_expr": "upaya(porta_cohort,diagnostic_transition_hierarchy_test)",
+      "hetu": "Porta et al. 2019 has the largest DOC-dedicated sample (N=216) with longitudinal diagnostic transitions at 12/24/36 months, providing a coarse test of recovery ordering at the diagnostic-category level.",
+      "sadhya": "Porta et al. provides a supplementary path to test the recovery wager at diagnostic-transition level, albeit below the wager protocol's ideal granularity.",
+      "vyapti_statement": "If a DOC cohort has adequate sample size (N > 200) with longitudinal diagnostic assessments (VS, MCS, EMCS) at multiple timepoints (≥3 over ≥12 months), then a coarse test of recovery ordering at the diagnostic-category level is feasible, but the results will be weaker than CRS-R subscale analysis because diagnostic categories conflate multiple functional dimensions within a single transition.",
+      "vyapti_confidence": 0.60,
+      "log_bayes_factor": 0.30,
+      "w_rel": 0.48,
+      "w_map": 0.42,
+      "w_aux": 0.45,
+      "falsifier": {
+        "type": "practical",
+        "condition": "Demonstrate that the Porta et al. dataset (a) is not available for secondary analysis (author refusal, data not archived), (b) has only 2 usable timepoints rather than 3 due to attrition (36-month follow-up loss > 50%), or (c) the diagnostic transition analysis cannot distinguish between the kañcuka and dissociation predictions because VS→MCS transitions are universal and MCS→EMCS transitions are too rare to analyze (only 57 initial MCS patients).",
+        "status": "untested"
+      },
+      "reasoning": "This claim identifies a supplementary path using the Porta et al. dataset as a preliminary coarse test. The diagnostic-transition approach is weaker than the ideal protocol but feasible now. It serves as an intermediate step: if even at this coarse level the data support patient-specific variation, it warrants pursuing CRS-R-level data collection; if the data show universal ordering, it provides provisional support for the kañcuka model."
+    }
+  ]
+}

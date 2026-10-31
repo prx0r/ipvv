@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>KAULA-WORKBOOK · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Workbook</div><h1>KAULA-WORKBOOK</h1><div class="skt"></div><div class="sub">1258 words · vendored research asset</div><div class="sub"><a href="/data/workbooks/KAULA-WORKBOOK.md">source markdown →</a></div><ul>
+<li>ULA: THE REFORMULATION</li>
+<li>KULA-FIRST WORKBOOK</li>
+<li>at does it mean to belong to a lineage that is also a body and a totality?</li>
+<li>y does the Yoginī-cult become a path for householders?</li>
+<li>y is initiation (dīkṣā) absolutely required?</li>
+</ul>
+<ul>
+<li>RPOSE</li>
+<li>is workbook gives the Kaula tradition a logical entry point. It does not ask you to</li>
+<li>cept Kashmir Śaiva metaphysics. It reconstructs the questions the system asks, the</li>
+<li>swers it proposes, why each concept is introduced, and where the contested inferences</li>
+<li>main.</li>
+<li>epared as part of the Tantrāloka × Ochema research programme · August 2026</li>
+</ul>
+<hr/>
+<ul>
+<li>W TO USE THIS WORKBOOK</li>
+<li> not read the Kaula texts as practices to memorize. Read it as one escalating problem:</li>
+<li>f the Goddess-cult&#x27;s power is bound to lineage and body, how can it become a path for</li>
+<li>dinary householders?*</li>
+<li> Read one unit at a time. The units are cumulative.</li>
+<li> Keep three columns: what the text claims / what Ochema translates / what remains unproven.</li>
+<li> Do the checkpoints. Conceptual control, not memorization.</li>
+<li> Treat every modern comparison as an analogue, never an identity.</li>
+<li> Return to the text map only after Units 1–6.</li>
+</ul>
+<ul>
+<li>THODOLOGICAL RULE</li>
+<li>ver allow a mathematical theorem, neuroscientific model, or contemplative experience to</li>
+<li>herit the truth of a metaphysical claim merely because their structures resemble one</li>
+<li>other. Translation, analogy, implementation, and identity are four different relations.</li>
+</ul>
+<hr/>
+<ul>
+<li>E ONE PROBLEM</li>
+<li>e Goddess-cult&#x27;s power is bound to lineage and body. The Kaula asks how that power can</li>
+<li>come a path for householders — and answers by showing that lineage IS body IS totality.</li>
+</ul>
+<ul>
+<li>IT 1 — WHAT IS KULA?</li>
+<li>la is the tradition&#x27;s signature and its most slippery term. The dossier records its</li>
+<li>earest documented semantic shift in the whole corpus.</li>
+</ul>
+<ul>
+<li>1 The sense-trajectory</li>
+<li>Early Yoginī/Kaula: family/lineage of Yoginīs or Mothers (a socio-mythic classification).</li>
+<li>Developed Kaula: body; totality of power and phenomena (a deliberate homonym-extension).</li>
+<li>Kubjikā: the mantra-body (mantradeha) — the resulting body is kulātmaka.</li>
+<li>Abhinava/Trika: the manifest pole vs the transcendent akula.</li>
+</ul>
+<ul>
+<li>2 The one term, many senses</li>
+<li>la cannot be flattened to &quot;family.&quot; It is the semantic chameleon of the corpus: lineage,</li>
+<li>dy, totality, the manifest pole. The translation-policy retains &quot;Kula&quot; when the whole</li>
+<li>chnical system is active, and warns: never auto-translate as &quot;family.&quot;</li>
+</ul>
+<ul>
+<li>3 The escalating problem</li>
+<li>e Kaula&#x27;s core move is the extension of the Yoginī-lineage sense of kula toward the body</li>
+<li>d the totality. What does it mean that the lineage IS the body IS the totality?</li>
+</ul>
+<ul>
+<li>ECKPOINT 1</li>
+<li>What are the four senses of kula, and which is the Kaula&#x27;s signature?</li>
+<li>Why must kula never be auto-translated as &quot;family&quot;?</li>
+</ul>
+<ul>
+<li>IT 2 — WHAT IS THE KAULA?</li>
+</ul>
+<ul>
+<li>1 The reformulation</li>
+<li>e Kaula is the reformulation of the Yoginī-cult traditions into a domesticated path for</li>
+<li>useholders. It preserves the lineage-family sense of kula while deliberately extending it</li>
+<li>ward the body, power, and totality.</li>
+</ul>
+<ul>
+<li>2 The bundle</li>
+<li>e Matsyendra-bundle — Kaulajñānanirṇaya (KJN), Akulavīra, Jñānakārikā — is its</li>
+<li>ripture. The KJN gives the lineage-body:</li>
+</ul>
+<blockquote>sarvavyāpī nirañjanaḥ — &quot;the pervasive, the stain-free&quot; — the lotus above the</blockquote>
+<blockquote>cakra-arithmetic, the kula&#x27;s transcendent terminus.</blockquote>
+<blockquote>— Kaulajñānanirṇaya (via the dossier)</blockquote>
+<ul>
+<li>3 Not a rejection, a domestication</li>
+<li>e Kaula does not reject the Yoginī-cult; it makes its power accessible to householders.</li>
+<li>e vāma-mārga is defended, not abolished; the dīkṣā-theology is built.</li>
+</ul>
+<ul>
+<li>ECKPOINT 2</li>
+<li>What does &quot;domestication&quot; mean here — rejection or extension?</li>
+<li>What is the Matsyendra-bundle, and why is it the Kaula&#x27;s scripture?</li>
+</ul>
+<ul>
+<li>IT 3 — WHAT IS THE VĀMA/DAKṢIṆA PATH?</li>
+</ul>
+<ul>
+<li>1 The path-discrimination</li>
+<li>e Kaula distinguishes the vāma-mārga (the &quot;left-hand&quot; path) from the dakṣiṇa (right).</li>
+<li>is is not a ritual preference; it is a theological discrimination about which practices</li>
+<li>d attitudes constitute the path.</li>
+</ul>
+<ul>
+<li>2 The defended left-hand path</li>
+<li>e Kaula defends the vāma-mārga: the use of the very energies (sense, body, desire) that</li>
+<li>dinary paths reject. The power is not in rejecting the body but in transmuting the kula —</li>
+<li>e body/totality — into the path.</li>
+</ul>
+<ul>
+<li>3 The caution</li>
+<li>at the Kaula uses the left-hand register is a datum. What it means metaphysically is the</li>
+<li>adition&#x27;s claim.</li>
+</ul>
+<ul>
+<li>ECKPOINT 3</li>
+<li>What does the vāma/dakṣiṇa distinction mark?</li>
+<li>Why does the Kaula defend the left-hand path rather than abolish it?</li>
+</ul>
+<ul>
+<li>IT 4 — WHY IS DĪKṢĀ REQUIRED?</li>
+</ul>
+<ul>
+<li>1 The ear-to-ear transmission</li>
+</ul>
+<blockquote>sākṣāt paraśivaṃ karṇāt karṇagataṃ kulam —</blockquote>
+<blockquote>&quot;the kula, gone from ear to ear, is directly the supreme Śiva.&quot;</blockquote>
+<blockquote>— Kaularahasya 1.17 (our T1)</blockquote>
+<ul>
+<li>e lineage is not information that can be read from a book. It is a transmission that</li>
+<li>sses from guru to disciple — an initiation.</li>
+</ul>
+<ul>
+<li>2 Dīkṣā as absolutely required</li>
+<li>itiation is not optional. The dīkṣā-theology holds that without transmission the power of</li>
+<li>e kula cannot be activated. This is why the Kaula, unlike a merely philosophical school,</li>
+<li> inseparable from lineage.</li>
+</ul>
+<ul>
+<li>3 The caution</li>
+<li>at lineage confers access is the tradition&#x27;s claim — a claim about transmission, not</li>
+<li>stable by an observer.</li>
+</ul>
+<ul>
+<li>ECKPOINT 4</li>
+<li>What does &quot;gone from ear to ear&quot; reveal about the kula?</li>
+<li>Why is dīkṣā absolutely required?</li>
+</ul>
+<ul>
+<li>IT 5 — WHY IS THE KAULA THE CROWN?</li>
+</ul>
+<ul>
+<li>1 &quot;Nothing beyond the Kaula&quot;</li>
+<li>e Kulapradīpa gives the path-hierarchy ending in the claim:</li>
+</ul>
+<blockquote>kaulāt parataraṃ na hi — &quot;nothing is beyond the Kaula.&quot;</blockquote>
+<blockquote>— Kulapradīpa (via our T1)</blockquote>
+<ul>
+<li>2 The claim&#x27;s meaning</li>
+<li>e Kaula is not one path among many; it is the summit of the paths. The path that uses the</li>
+<li>dy and totality is not lower than the path that rejects them; it is higher, because it</li>
+<li>s integrated them.</li>
+</ul>
+<ul>
+<li>ECKPOINT 5</li>
+<li>What does &quot;kaulāt parataraṃ na hi&quot; claim?</li>
+<li>Why is the integrating path held to be higher than the rejecting path?</li>
+</ul>
+<ul>
+<li>IT 6 — HOW DOES THIS DIFFER FROM THE TRIKA?</li>
+</ul>
+<ul>
+<li>1 A directional āmnāya vs a calibration layer</li>
+<li>e atlas models the Kaula as a directional Kaula āmnāya — a tradition with its own</li>
+<li>neage, ritual, and dīkṣā. The Trika is modeled as the calibration layer, whose Tantrāloka</li>
+<li>pplies the doctrinal vocabulary for the whole corpus.</li>
+</ul>
+<ul>
+<li>2 Kula vs the triad</li>
+<li>e Kaula centers kula (lineage/body/totality); the Trika centers the triad (Parā, Parāparā,</li>
+<li>arā) and the tattvas.</li>
+</ul>
+<ul>
+<li>3 The relation</li>
+<li>ey are not competitors but different registers: the Trika is the conceptual Rosetta</li>
+<li>yer; the Kaula is the lived, transmitted, embodied path.</li>
+</ul>
+<ul>
+<li>ECKPOINT 6</li>
+<li>How is the Kaula a &quot;directional āmnāya&quot; different from the Trika&#x27;s &quot;calibration&quot;?</li>
+<li>What does the Kaula&#x27;s kula add that the Trika&#x27;s triad does not accent?</li>
+</ul>
+<ul>
+<li>IT 7 — WHAT REMAINS UNRESOLVED?</li>
+</ul>
+<ul>
+<li>1 The strongest Kaula chain</li>
+<li>la is lineage/body/totality; the Kaula transmits it; transmission requires dīkṣā; the</li>
+<li>tegrated path is the crown. The chain is coherent and textually anchored (KJN, KRH, KPD).</li>
+</ul>
+<ul>
+<li>2 The contested points</li>
+<li>e obscurity of the bundle (much of the KJN and the Akulavīra remains understudied); the</li>
+<li>lation of the Kaula to the later Trika synthesis; the exact force of the vāma practices.</li>
+</ul>
+<ul>
+<li>3 What Ochema can contribute</li>
+<li>p the kula-concept onto the grid (the lineage/body/totality extension is a clear</li>
+<li>mantic-shift case); compare the embodied-path claim with modern work on embodiment — as</li>
+<li>rrespondence, never identity.</li>
+</ul>
+<ul>
+<li>4 What Ochema must not claim yet</li>
+<li>at modern embodiment-science &quot;proves&quot; the Kaula&#x27;s dīkṣā-theology, or that the Kaula</li>
+<li>roves&quot; a scientific model.</li>
+</ul>
+<ul>
+<li>5 Final synthesis</li>
+<li>e Kaula is the reformulation-node: the Yoginī-cult&#x27;s power made a householder&#x27;s path, the</li>
+<li>ma-mārga defended, the dīkṣā-theology built. Its signature is kula — the insight that</li>
+<li>neage, body, and totality are one, and that the integrated path is the crown.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/workbooks/KAULA-WORKBOOK.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

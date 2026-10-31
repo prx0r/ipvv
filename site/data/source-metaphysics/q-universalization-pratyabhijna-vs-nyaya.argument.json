@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_dossier",
+  "question_id": "q:utpaladeva-universalization-validity",
+  "question": "Does Utpaladeva possess a non-circular argument from local cognitive synthesis to one universal subject?",
+  "why_it_matters": "This is the decisive gap in the Pratyabhijñā argument for universal consciousness. If Utpaladeva cannot validly infer one universal knower from the phenomenology of reflexive manifestation and intra-stream synthesis, then the central metaphysical claim of Pratyabhijñā is an abductive hypothesis rather than a demonstrated conclusion. Nyāya plural selves stand as the strongest countermodel.",
+  "status": "live_crux",
+  "resolution_level": "transition_in_text",
+  "parent_questions": [
+    "q:reflexivity-intrinsic-or-constructed"
+  ],
+  "candidate_explanations": [
+    {
+      "candidate_id": "cand:utpaladeva-universal-subject",
+      "tradition_scope": "trika_pratyabhijna",
+      "name": "One universal knower (Utpaladeva's Pratyabhijñā)",
+      "best_case": "Reflexive manifestation (verses 9-15) establishes that cognition is intrinsically self-manifest and that object-determination occurs within a first-personal field. Cross-temporal synthesis (anusandhāna) requires a single synthesizer. Since all cognition depends on manifestation, and manifestation requires a synthesizer, there is one universal knower.",
+      "hard_to_vary_core": [
+        "Conscious manifestation cannot be reduced to inert presentation.",
+        "Determinate cognition requires reflexive integration.",
+        "Cross-temporal synthesis requires a unifying cognitive organization."
+      ],
+      "current_problems": [
+        "The move from 'synthesis within one stream' to 'one synthesizer across all streams' is an invalid quantifier shift.",
+        "'Sarvārthasaṃvidām' is ambiguous between intra-stream and transpersonal scope.",
+        "Nyāya plural selves explain the same data without universal consciousness."
+      ],
+      "falsifiers": [
+        {
+          "type": "prasanga",
+          "condition": "A complete account of synthesis, memory, and recognition that explains the same phenomena with plural enduring selves (Nyāya) or causal streams (Buddhist) without requiring one universal subject.",
+          "status": "tested_failed"
+        },
+        {
+          "type": "prasanga",
+          "condition": "Show that Udayana's Ātmatattvaviveka provides a complete explanation of memory, recognition, and endurance using only individual selves, removing any necessity for the universal subject.",
+          "status": "untested"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cand:nyaya-plural-selves",
+      "tradition_scope": "nyaya",
+      "name": "Plural enduring selves (Nyāya/Udayana)",
+      "best_case": "Udayana's Ātmatattvaviveka defends plural enduring selves against Buddhist momentariness and Pratyabhijñā monism. Memory, recognition, desire, effort, and cognition belong to individual selves. Other minds are inferred from embodied behaviour. Objects exist independently. Persistence-through-change is required for cognition to be intelligible, but this persistence is sufficiently explained by individual selves — no universal consciousness is required.",
+      "hard_to_vary_core": [
+        "Cognition requires an enduring substrate — momentariness is unintelligible.",
+        "Persistent individual selves explain memory, recognition, and cross-temporal synthesis.",
+        "No transpersonal synthesis is observed, so no universal subject is required."
+      ],
+      "current_problems": [
+        "Must explain why streams are genuinely separate — what individuates subjects if each is a reflexive centre?",
+        "Pays the substance-self cost (commitment to enduring substantial selves).",
+        "The individuation of selves may require a deeper explanation than Nyāya provides."
+      ],
+      "falsifiers": [
+        {
+          "type": "prasanga",
+          "condition": "Show that some cognitive phenomenon (e.g., transpersonal synthesis, shared memory, cross-subject unity of consciousness) requires a specifically universal subject that plural selves cannot explain.",
+          "status": "untested"
+        }
+      ]
+    }
+  ]
+}

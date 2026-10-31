@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-20",
+  "philosophers": {
+    "po:abhinavagupta": {
+      "name": "Abhinavagupta",
+      "era": "950–1020 CE",
+      "tradition": "Kashmir Shaivism",
+      "ros": ["ro:tantraloka-cosmology", "ro:tantraloka-initiation", "ro:tantraloka-sound-metaphysics", "ro:tantraloka-consciousness-states", "ro:tantraloka-ontological-hierarchy", "ro:tantraloka-mantra-breath", "ro:tantraloka-twelve-kalis", "ro:tantraloka-matter-of-wonder", "ro:layayoga-mantra-science"],
+      "art": 7,
+      "quotes": 4,
+      "scenarios": 3,
+      "status": "live",
+      "version": "0.1.0"
+    }
+  }
+}

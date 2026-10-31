@@ -1,0 +1,118 @@
+{
+  "packet_id": "ip:constructed-ownership",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "checkpointcharlie:IV+truthanother",
+    "title": "Constructed Ownership — from Checkpoint 10 and Comparative Dossier",
+    "author": "Codex",
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:perspectival-partition",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft",
+  "claims": [
+    {
+      "claim_id": "cl:first-personality-decomposed-five-senses",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:IV",
+      "source_span": {
+        "locator": "Simulated Checkpoint 4",
+        "quote": "P_S ⇒ P_G ⇒ P_A ⇒ P_O ⇒ P_I"
+      },
+      "claim_text": "First-personality must be decomposed into at least five distinct senses: P_S (sensorimotor perspectivity — information organized from here), P_G (phenomenal givenness — the state is manifest), P_A (affective concern — the state matters relative to this organism), P_O (ownership — the state is intrinsically mine), P_I (autobiographical identification — the state is attributed to this represented person). The inferential order is NOT P_S = P_G = P_A = P_O = P_I. Rather: P_S ⇏ P_G ⇏ P_A ⇏ P_O ⇏ P_I. A system can be functionally centred without being conscious (P_S without P_G). A conscious state may be manifest without representing an ego (P_G without P_O). A valenced state may contribute to constructing ownership rather than presupposing an owner (P_A contributes to P_O, not the reverse). This decomposition pressures any theory that moves too quickly from 'experience has a perspective' to 'experience has an owner.'",
+      "targets": [
+        {"target_id": "cand:nyaya-plural-substances", "target_type": "candidate_explanation"},
+        {"target_id": "cand:siva-decombination", "target_type": "candidate_explanation"},
+        {"target_id": "cand:buddhist-stream", "target_type": "candidate_explanation"},
+        {"target_id": "crux:first-personality-decomposed", "target_type": "crux"}
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "phenomenology",
+      "evidence_dimension": "phenomenological",
+      "pramana": "pratyaksa",
+      "hetu": "first-personality admits of at least five distinct senses",
+      "sadhya": "ownership is not a simple primitive",
+      "vyapti_statement": "If first-personality decomposes into separable aspects, then theories treating it as a single primitive (either constitutive or constructed) must specify which aspect they address.",
+      "vyapti_confidence": 0.8,
+      "log_bayes_factor": 0.6,
+      "w_rel": 0.85,
+      "w_map": 0.75,
+      "w_aux": 0.8,
+      "falsifier": {
+        "type": "phenomenological",
+        "condition": "Show a single phenomenal state that inseparably possesses all five aspects of first-personality in a way that precludes any functional decomposition.",
+        "status": "untested"
+      },
+      "reasoning": "This decomposition is one of Checkpoint 10's key results. It blocks the quick inference from 'reflexivity' to 'subject.'"
+    },
+    {
+      "claim_id": "cl:nimana-vedana-constructs-ownership",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:IV+truthagent",
+      "source_span": {
+        "locator": "Checkpoint 4 + truthagent gate 2",
+        "quote": "selected sign → feeling → valuation → appropriation → self-involving proliferation"
+      },
+      "claim_text": "Ñāṇananda's analysis permits a construction model: nimitta (selected sign) → vedanā (feeling) → valuation → appropriation → self-involving proliferation (papañca). Modern interoceptive predictive accounts converge: predictions about the body's internal state generate affect, which grounds mineness. The resulting loop is: organismic concern → self-relative valuation → operative centre → further self-relative valuation. This explains affective and functional ownership better than it explains manifestness. It does not establish why the valuation loop is experienced. Thus: ownership may be constructed within manifestation, while manifestation itself remains unexplained.",
+      "targets": [
+        {"target_id": "cand:buddhist-stream", "target_type": "candidate_explanation"},
+        {"target_id": "cand:naturalist-emergent", "target_type": "candidate_explanation"},
+        {"target_id": "crux:ownership-constructed-but-manifestness-unexplained", "target_type": "crux"}
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "comparative_phenomenology",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "hetu": "valuation and appropriation can construct ownership",
+      "sadhya": "but do not explain why the construction is manifest",
+      "vyapti_statement": "If ownership can be constructed through valuation and appropriation, then manifestness must be explained separately from ownership.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.5,
+      "w_rel": 0.75,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that a complete account of ownership (including its manifest character) can be derived from valuation and appropriation alone, without a primitive manifestness.",
+        "status": "untested"
+      },
+      "reasoning": "This is the constructed ownership frontier. Enactivist and Buddhist models explain the structure of ownership ('mine-ness') but not why the construction is felt rather than merely computed."
+    },
+    {
+      "claim_id": "cl:mattering-grounds-locality",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:XXIX-contention8",
+      "source_span": {
+        "locator": "Contention 8 — Mattering and mineness",
+        "quote": "Does something matter because it is experienced by a subject, or does recurrent mattering stabilize the local subject?"
+      },
+      "claim_text": "The relation between mattering (valuation, concern) and subjecthood is bidirectional. Question: does something matter because it is experienced by a pre-existing subject, or does recurrent mattering stabilize the local subject as a dynamical structure? If mattering stabilizes the subject, then the subject is not the precondition of experience but an emergent organization within it. This is the Ñāṇananda-enactivist branch and it directly bears on perspectival partition: if subjects are stabilized by recurrent patterns of concern, then partition (exclusion) may be grounded in divergent patterns of what matters — different organisms care about different things, and this difference in concern partially explains why phenomenal domains are exclusive.",
+      "targets": [
+        {"target_id": "cand:buddhist-stream", "target_type": "candidate_explanation"},
+        {"target_id": "cand:naturalist-emergent", "target_type": "candidate_explanation"},
+        {"target_id": "cand:nyaya-plural-substances", "target_type": "candidate_explanation"},
+        {"target_id": "crux:mattering-grounds-partition", "target_type": "crux"}
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "enactivism",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "hetu": "different organisms care about different things",
+      "sadhya": "this difference in concern may partially explain phenomenal exclusion",
+      "vyapti_statement": "If subjects are stabilized by patterns of concern, and different organisms have different patterns of concern, then divergent concern partially explains why phenomenal domains are exclusive.",
+      "vyapti_confidence": 0.5,
+      "log_bayes_factor": 0.3,
+      "w_rel": 0.6,
+      "w_map": 0.5,
+      "w_aux": 0.55,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show two organisms with identical patterns of concern that nevertheless have exclusive phenomenal domains, proving that divergent concern is insufficient to explain partition.",
+        "status": "untested"
+      },
+      "reasoning": "This is a speculative but important constraint on Λ. If mattering-stabilizes-subject is true, then Λ must include a dimension of concern/valuation."
+    }
+  ]
+}

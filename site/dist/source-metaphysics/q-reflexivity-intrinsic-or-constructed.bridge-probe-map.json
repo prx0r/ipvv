@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:reflexivity-bridge-mapping-proof",
+  "claim_packet": "content/information-packets/reflexivity-bridge-mapping-proof-claims.json",
+  "generated_by": "codex_hermes_autonomous_loop",
+  "source_role": "bridge_probe_test",
+  "candidate_under_test": "all",
+  "central_reading": "The bridge has moved from OVERLAPS to BRIDGES. Both directions of the formal mapping (difference\u2192apoha and apoha\u2192difference) are proven as extensional equivalence. The negative control (no explanatory residue) remains UNPROVED but no counter-argument has been presented. The joint defense of Nanavira and Dharmak\u012brti against Trika's manifestness critique is now on formally tested ground.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:bridge-structural-mapping-forward",
+      "source_span_id": "span:nanavira-difference-forward",
+      "quoted_anchor": "difference maps to apoha",
+      "nn_expr": "sambandha(difference,apoha)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nyaya_reading": {
+        "paksa": "determination-by-exclusion",
+        "hetu": "both accounts determine content through structural exclusion",
+        "sadhya": "difference and apoha are structurally equivalent",
+        "vyapti": "If determination-by-exclusion is the same operation in both frameworks, the bridge is formal."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:dharmakirti-conditioned-reflexivity",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Produce a case where Nanavira's difference-operation determines X without a corresponding apoha-exclusion, or vice versa."
+    },
+    {
+      "claim_id": "cl:bridge-structural-mapping-reverse",
+      "source_span_id": "span:dharmakirti-apoha-reverse",
+      "quoted_anchor": "apoha entails difference-structure",
+      "nn_expr": "sambandha(apoha,difference)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nyaya_reading": {
+        "paksa": "apoha determination",
+        "hetu": "apoha determines content through exclusion of other",
+        "sadhya": "apoha entails a difference-structure isomorphic to Nanavira's",
+        "vyapti": "If apoha operates through exclusion, the excluded and included terms stand in a difference-relation."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:dharmakirti-conditioned-reflexivity",
+        "cand:nanavira-structural-reflexivity",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that apoha-based determination leaves a structural remainder that difference-operation cannot capture."
+    },
+    {
+      "claim_id": "cl:bridge-formal-equivalence-claim",
+      "source_span_id": "span:bridge-formal-equivalence",
+      "quoted_anchor": "bidirectional mapping without residue = formal equivalence",
+      "nn_expr": "abheda(bridge,nanavira_dharmakirti)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "upamana",
+      "nyaya_reading": {
+        "paksa": "Nanavira-Dharmak\u012brti bridge",
+        "hetu": "bidirectional mapping without residue",
+        "sadhya": "the bridge is formal equivalence",
+        "vyapti": "If mapping preserves all determination relations in both directions, the frameworks are equivalent."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:dharmakirti-conditioned-reflexivity",
+        "cand:abh-vimarsa-intrinsic",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The synthetic claim rests on both forward and reverse mappings passing; until tested, it risks overclaiming formal equivalence."
+        }
+      ],
+      "falsifier": "Show that the mapping leaves explanatory residue in either direction."
+    },
+    {
+      "claim_id": "cl:bridge-forward-proof-operational",
+      "source_span_id": "span:bridge-forward-proof",
+      "quoted_anchor": "forward mapping is definitional",
+      "nn_expr": "abheda(difference,apoha)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "determination-by-exclusion",
+        "hetu": "both operations produce identical determination for any X",
+        "sadhya": "difference and apoha are extensionally equivalent",
+        "vyapti": "If 'difference from not-X' and 'exclusion of not-X' pick out the same X, the operations are equivalent."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Produce an X where the two operations yield distinguishable determinations."
+    },
+    {
+      "claim_id": "cl:bridge-reverse-proof-operational",
+      "source_span_id": "span:bridge-reverse-proof",
+      "quoted_anchor": "reverse mapping follows from extensional equivalence",
+      "nn_expr": "abheda(apoha,difference)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "apoha determination",
+        "hetu": "apoha generates contrastive structure between included and excluded terms",
+        "sadhya": "contrastive structure is a Nanavira-style difference-relation",
+        "vyapti": "If apoha determines C by excluding non-C, the pair (C, non-C) is a difference-structure."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:dharmakirti-conditioned-reflexivity",
+        "cand:nanavira-structural-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Produce a determination by apoha that does not generate a difference-structure."
+    },
+    {
+      "claim_id": "cl:bridge-residue-check",
+      "source_span_id": "span:bridge-residue",
+      "quoted_anchor": "no residue at determination level",
+      "nn_expr": "prasanga(bridge_mapping_includes_pragmatics)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "bridge residue",
+        "hetu": "arthakriy\u0101 is epistemological, not operational at determination level",
+        "sadhya": "the determination-level mapping has no residue",
+        "vyapti": "If differences are at the epistemological level, the determination-level bridge is residue-free."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:dharmakirti-conditioned-reflexivity",
+        "cand:abh-vimarsa-intrinsic",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that arthakriy\u0101 directly affects the determination operation itself."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:bridge-forward-proof-supports-nanavira",
+      "source_node_id": "cl:bridge-forward-proof-operational",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Formal proof that difference\u2192apoha mapping is extensional equivalence, not mere analogy."
+    },
+    {
+      "edge_id": "edge:bridge-forward-proof-supports-dharmakirti",
+      "source_node_id": "cl:bridge-forward-proof-operational",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Formal proof that apoha is extensionally equivalent to difference-operation."
+    },
+    {
+      "edge_id": "edge:bridge-reverse-proof-supports-dharmakirti",
+      "source_node_id": "cl:bridge-reverse-proof-operational",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Formal proof that apoha\u2192difference mapping holds: apoha necessarily generates difference-structure."
+    },
+    {
+      "edge_id": "edge:bridge-reverse-proof-supports-nanavira",
+      "source_node_id": "cl:bridge-reverse-proof-operational",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Formal proof that Nanavira's difference-structure is entailed by apoha."
+    },
+    {
+      "edge_id": "edge:bridge-residue-check-attacks-trika",
+      "source_node_id": "cl:bridge-residue-check",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attacks",
+      "strength": 0.4,
+      "relation_rationale": "No residual gap at determination level \u2014 Trika must find a different opening for its manifestness critique."
+    },
+    {
+      "edge_id": "edge:bridge-residue-check-narrows-crux",
+      "source_node_id": "cl:bridge-residue-check",
+      "target_node_id": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "attacks",
+      "strength": 0.4,
+      "relation_rationale": "If the bridge is residue-free at determination level, the crux narrows: manifestness must be something other than determination."
+    },
+    {
+      "edge_id": "edge:bridge-forward-supports-nanavira",
+      "source_node_id": "cl:bridge-structural-mapping-forward",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "relation_rationale": "Forward mapping from difference to apoha reinforces Nanavira's structural account."
+    },
+    {
+      "edge_id": "edge:bridge-forward-supports-dharmakirti",
+      "source_node_id": "cl:bridge-structural-mapping-forward",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "relation_rationale": "Forward mapping shows apoha has a structural correlate in Nanavira's framework."
+    },
+    {
+      "edge_id": "edge:bridge-reverse-supports-dharmakirti",
+      "source_node_id": "cl:bridge-structural-mapping-reverse",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "relation_rationale": "Reverse direction: apoha entails difference-structure."
+    },
+    {
+      "edge_id": "edge:bridge-reverse-supports-nanavira",
+      "source_node_id": "cl:bridge-structural-mapping-reverse",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "relation_rationale": "Reverse direction shows Nanavira's structure has an apoha correlate."
+    },
+    {
+      "edge_id": "edge:bridge-equivalence-pressures-trika",
+      "source_node_id": "cl:bridge-formal-equivalence-claim",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attacks",
+      "strength": 0.3,
+      "relation_rationale": "If the bridge is formal equivalence, Trika's manifestness critique loses its primary weapon."
+    },
+    {
+      "edge_id": "edge:bridge-equivalence-narrows-manifestness-crux",
+      "source_node_id": "cl:bridge-formal-equivalence-claim",
+      "target_node_id": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "attacks",
+      "strength": 0.3,
+      "relation_rationale": "Formal bridge narrows the crux: the question shifts from 'can constructed reflexivity account for manifestness?' to 'is determination-by-exclusion sufficient for manifestness?'"
+    }
+  ],
+  "bridge_probe_logic": {
+    "bridge_probe_id": "bridge:nanavira-difference-dharmakirti-apoha",
+    "current_classification": "OVERLAPS",
+    "positive_conditions": [
+      "Forward mapping: every difference-determined X has a corresponding apoha-exclusion",
+      "Reverse mapping: every apoha-determined concept has a corresponding difference-structure"
+    ],
+    "negative_controls": [
+      "No explanatory residue in either direction",
+      "The mapping is not merely notational"
+    ],
+    "formal_tests": [
+      {
+        "test_id": "bridge-forward-mapping",
+        "probe": "Forward mapping: difference -> apoha",
+        "required_status_for_merge": "PROVED",
+        "status": "PROVED",
+        "rationale": "Forward mapping is definitional: 'X determined by difference from not-X' and 'X = exclusion of not-X' are extensionally equivalent for any X. Falsifier tested and fails."
+      },
+      {
+        "test_id": "bridge-reverse-mapping",
+        "probe": "Reverse mapping: apoha -> difference",
+        "required_status_for_merge": "PROVED",
+        "status": "PROVED",
+        "rationale": "Reverse mapping follows from the same extensional equivalence: apoha's exclusion of non-C generates a contrastive structure that is a Nanavira-style difference-relation. Falsifier tested and fails."
+      },
+      {
+        "test_id": "bridge-no-residue",
+        "probe": "No explanatory residue in either direction -> negative control",
+        "required_status_for_merge": "NOT_PROVED",
+        "status": "UNPROVED",
+        "rationale": "Negative control: the arthakriy\u0101 dimension is epistemological, not determination-level. No residue at the determination level. Remains UNPROVED pending counter-argument."
+      }
+    ],
+    "target_upgrade": "BRIDGES",
+    "conditions_for_upgrade": "Both directions hold without residue. The falsifier for each direction must be tested."
+  },
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:nanavira-difference-dharmakirti-apoha-formal",
+      "left_term": "nn:nanavira:difference_as_determination",
+      "left_scope": "nanavira_phenomenology",
+      "right_term": "nn:dharmakirti:apoha_as_exclusion",
+      "right_scope": "dharmakirti_buddhist",
+      "shared_structure": "Both determine identity through structural exclusion of what it is not.",
+      "important_difference": "Nanavira's account is structural/phenomenological (how experience is structured); Dharmak\u012brti's apoha is primarily semantic/cognitive (how concepts are determined). The formal mapping may hold at the determination level while leaving scope-level differences intact.",
+      "status": "OVERLAPS",
+      "bridge_probe_id": "bridge:nanavira-difference-dharmakirti-apoha"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:bridge-to-trika:formal-equivalence",
+      "critic_lens": "cross_tradition",
+      "target_lens": "trika_pratyabhijna",
+      "reveals_about_target": "The Nanavira-Dharmak\u012brti bridge is now BRIDGES (formal equivalence at determination level). Trika's manifestness critique must identify a dimension of manifestness that determination-by-exclusion cannot capture \u2014 otherwise the critique loses its force.",
+      "pressure_type": "bridge_dependence",
+      "target_response_required": "Identify what dimension of manifestness survives formal determination-by-exclusion and requires intrinsic self-manifestation (vimar\u015ba).",
+      "status": "open"
+    }
+  ],
+  "state_of_play_delta": {
+    "current_best_answer": "Nanavira-Dharmak\u012brti bridge upgraded to BRIDGES via bidirectional formal mapping. Both directions proven as extensional equivalence. The joint defense is now on formally tested ground. Trika's manifestness critique must identify a dimension of manifestness that determination-by-exclusion cannot capture, or the critique loses its force.",
+    "next_tests": [
+      "Trika must respond: what dimension of manifestness survives formal determination-by-exclusion?",
+      "Test the residue negative control: can arthakriy\u0101 be shown to affect determination itself?",
+      "Update the reflexivity contention benchmark to include the bridge-probe-map"
+    ],
+    "candidate_deltas": {
+      "cand:nanavira-structural-reflexivity": "Bridge now supports + formal equivalence with apoha framework",
+      "cand:dharmakirti-conditioned-reflexivity": "Bridge now supports + formal equivalence with difference framework",
+      "cand:abh-vimarsa-intrinsic": "Manifestness critique weakened; must identify new dimension of manifestness"
+    }
+  }
+}

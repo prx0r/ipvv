@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:utpaladeva-universalization-validity",
+  "source_packet_id": "ip:utpaladeva-aps-universalization",
+  "claim_packet": "content/information-packets/utpaladeva-aps-universalization-claims.json",
+  "generated_by": "manual_codex_review_from_truthtranslation",
+  "source_role": "candidate_support_and_pressure",
+  "candidate_under_test": "cand:utpaladeva-universal-subject",
+  "central_reading": "Utpaladeva's Ajadapramātṛsiddhi makes a strong case for reflexive manifestation and intra-stream synthesis (verses 9-15), but the universalization from 'all objects are within manifestation' to 'all manifestations are numerically one subject' (verses 16-17, 25) is asserted rather than demonstrated. The critical ambiguity is 'sarvārthasaṃvidām': all cognitions within one stream vs all cognitions of every subject. Nyāya plural selves are the strongest live countermodel.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:utpaladeva-aps-16-limited-unlimited-same-self",
+      "source_span_id": "span:aps-16",
+      "quoted_anchor": "dvidhā sa eṣa evātmā mito 'parimitas tathā",
+      "nn_expr": "abheda(atmā_mita,atmā_aparimita)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "ātman",
+        "hetu": "the text declares limited and unlimited self to be the same",
+        "sadhya": "the individual and universal self are numerically identical",
+        "vyapti": "Where the text declares two modes to be the same self, the identity is textually asserted."
+      },
+      "argument_role": "doctrinal_assertion",
+      "targets": [
+        "cand:utpaladeva-universal-subject",
+        "crux:numerical-identity-of-finite-and-unlimited-self"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The claim declares weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that the text's preceding argument (verses 9-15) rules out distinct reflexive subjects sharing a common structure, rather than merely establishing reflexive manifestation within one field."
+    },
+    {
+      "claim_id": "cl:utpaladeva-aps-17-one-synthesizer-all-cognitions",
+      "source_span_id": "span:aps-17",
+      "quoted_anchor": "ubhayo 'py eṣa paryantabhūmiḥ sarvārthasaṃvidām",
+      "nn_expr": "vyapti(anusandhana,eka_pramatr)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "pramāt",
+        "hetu": "connective synthesis requires one synthesizer",
+        "sadhya": "there is one knower of all cognitions",
+        "vyapti": "Where synthesis is observed, a synthesizer is required."
+      },
+      "argument_role": "central_universalization",
+      "targets": [
+        "cand:utpaladeva-universal-subject",
+        "crux:ambiguity-of-sarva-in-sarvarthasamvidam",
+        "bridge:utpaladeva-subject-nyaya-plural-self"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The claim declares weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that the Sanskrit compound 'sarvārthasaṃvidām' unambiguously refers to cognitions of every subject, not merely all cognitions within one individual stream, and that no Nyāya plural-self ontology can explain the same synthesis data."
+    },
+    {
+      "claim_id": "cl:utpaladeva-aps-25-one-power-all-cognitions",
+      "source_span_id": "span:aps-25",
+      "quoted_anchor": "ekaiva cānusandhānāt sā proktā sarvasaṃvidām",
+      "nn_expr": "abheda(svasaṃvedana,matrtattva)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "mātṛtattva",
+        "hetu": "one power performs the synthesis of all cognitions",
+        "sadhya": "the beginningless knower is one and equivalent to self-awareness",
+        "vyapti": "Where one power performs synthesis, that power is unitary."
+      },
+      "argument_role": "final_universalization",
+      "targets": [
+        "cand:utpaladeva-universal-subject",
+        "crux:transpersonal-synthesis-unobserved",
+        "bridge:utpaladeva-subject-nyaya-plural-self"
+      ],
+      "gate_outcome": "needs_review",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The claim declares weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Demonstrate an observable case of transpersonal synthesis that cannot be explained by inference, empathy, or shared structure, and that requires numerical identity of subjects."
+    },
+    {
+      "claim_id": "cl:nyaya-plural-selves-explain-without-universal",
+      "source_span_id": "span:nyaya-plural-selves",
+      "quoted_anchor": "Memory, recognition, desire, effort and cognition belong to enduring individual selves",
+      "nn_expr": "vyapti(atman_bahutva,sarvartha_samvit_eka_pramatr)",
+      "parse_status": "parsed",
+      "tradition_scope": "nyaya",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "ātman",
+        "hetu": "plural selves explain the same phenomena without requiring universality",
+        "sadhya": "universal consciousness is not uniquely required",
+        "vyapti": "Where a cheaper explanation covers the same data, the more expensive explanation is not proven."
+      },
+      "argument_role": "countermodel",
+      "targets": [
+        "cand:nyaya-plural-selves",
+        "crux:numerical-identity-of-finite-and-unlimited-self",
+        "bridge:utpaladeva-subject-nyaya-plural-self"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that a specifically universal subject is required to explain some cognitive phenomenon that plural selves cannot."
+    },
+    {
+      "claim_id": "cl:nyaya-momentariness-destabilizes-identity",
+      "source_span_id": "span:nyaya-momentariness",
+      "quoted_anchor": "momentariness destabilizes causality, universals, identification, memory",
+      "nn_expr": "virodha(ksanikatva,atma_sthiratva)",
+      "parse_status": "parsed",
+      "tradition_scope": "nyaya",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "ātmā",
+        "hetu": "momentariness undermines the conditions for cognition",
+        "sadhya": "cognition requires an enduring substrate (individual, not necessarily universal)",
+        "vyapti": "Where cognition requires persistence, an enduring substrate is required."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nyaya-plural-selves",
+        "crux:transpersonal-synthesis-unobserved"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the endurance required for cognition is specifically the endurance of one universal consciousness rather than each individual self."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:aps-16-asserts-universal-identity",
+      "source": "cl:utpaladeva-aps-16-limited-unlimited-same-self",
+      "target": "cand:utpaladeva-universal-subject",
+      "edge_type": "supports",
+      "strength": 0.3,
+      "rationale": "Textually asserts identity of limited and unlimited self, but does not demonstrate it."
+    },
+    {
+      "edge_id": "edge:aps-17-central-universalization",
+      "source": "cl:utpaladeva-aps-17-one-synthesizer-all-cognitions",
+      "target": "cand:utpaladeva-universal-subject",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "Central universalization argument, but ambiguous quantifier scope weakens it."
+    },
+    {
+      "edge_id": "edge:aps-25-final-universalization",
+      "source": "cl:utpaladeva-aps-25-one-power-all-cognitions",
+      "target": "cand:utpaladeva-universal-subject",
+      "edge_type": "supports",
+      "strength": 0.25,
+      "rationale": "Final universalization claim, but circular unless transpersonal synthesis is independently established."
+    },
+    {
+      "edge_id": "edge:aps-16-attacks-finite-self-equivalence",
+      "source": "cl:utpaladeva-aps-16-limited-unlimited-same-self",
+      "target": "crux:numerical-identity-of-finite-and-unlimited-self",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "rationale": "Raises but does not resolve the identity crux."
+    },
+    {
+      "edge_id": "edge:aps-17-raises-ambiguity-crux",
+      "source": "cl:utpaladeva-aps-17-one-synthesizer-all-cognitions",
+      "target": "crux:ambiguity-of-sarva-in-sarvarthasamvidam",
+      "edge_type": "supports",
+      "strength": 0.5,
+      "rationale": "The quantifier ambiguity is the central weakness of the universalization."
+    },
+    {
+      "edge_id": "edge:aps-25-raises-transpersonal-crux",
+      "source": "cl:utpaladeva-aps-25-one-power-all-cognitions",
+      "target": "crux:transpersonal-synthesis-unobserved",
+      "edge_type": "supports",
+      "strength": 0.45,
+      "rationale": "No observable transpersonal synthesis makes the universalization circular."
+    },
+    {
+      "edge_id": "edge:nyaya-plural-selves-counterbalance",
+      "source": "cl:nyaya-plural-selves-explain-without-universal",
+      "target": "cand:nyaya-plural-selves",
+      "edge_type": "supports",
+      "strength": 0.6,
+      "rationale": "Nyaya offers a complete alternative explanation without universal consciousness."
+    },
+    {
+      "edge_id": "edge:nyaya-plural-attacks-universal-necessity",
+      "source": "cl:nyaya-plural-selves-explain-without-universal",
+      "target": "cand:utpaladeva-universal-subject",
+      "edge_type": "attacks",
+      "strength": 0.55,
+      "rationale": "If plural selves explain the same data, universal subject is not uniquely required."
+    },
+    {
+      "edge_id": "edge:nyaya-momentariness-supports-endurance",
+      "source": "cl:nyaya-momentariness-destabilizes-identity",
+      "target": "cand:nyaya-plural-selves",
+      "edge_type": "supports",
+      "strength": 0.5,
+      "rationale": "Udayana's anti-momentariness argument supports the need for endurance, which Nyaya supplies via plural selves."
+    },
+    {
+      "edge_id": "edge:utpaladeva-nyaya-bridge-overlaps",
+      "source": "cand:utpaladeva-universal-subject",
+      "target": "bridge:utpaladeva-subject-nyaya-plural-self",
+      "edge_type": "overlaps",
+      "strength": 0.4,
+      "rationale": "Both require an enduring synthesizer; they differ on whether it is one or many."
+    },
+    {
+      "edge_id": "edge:nyaya-utpaladeva-bridge-overlaps",
+      "source": "cand:nyaya-plural-selves",
+      "target": "bridge:utpaladeva-subject-nyaya-plural-self",
+      "edge_type": "overlaps",
+      "strength": 0.4,
+      "rationale": "Both require an enduring synthesizer; they differ on whether it is one or many."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:utpaladeva-subject-nyaya-self",
+      "left_term": "nn:pratyabhijna:eka_pramatr",
+      "left_scope": "trika_pratyabhijna",
+      "right_term": "nn:nyaya:pratyagatman_bahutva",
+      "right_scope": "nyaya",
+      "shared_structure": "Both posit an enduring synthesizer that explains memory, recognition, and cross-temporal synthesis.",
+      "important_difference": "Pratyabhijñā requires numerical identity of all subjects; Nyāya requires only plurality of enduring individual selves.",
+      "important_difference_contains": "numerical identity of all subjects",
+      "status": "OVERLAPS",
+      "bridge_probe_id": "bridge:utpaladeva-subject-nyaya-plural-self"
+    },
+    {
+      "correspondence_id": "corr:utpaladeva-synthesis-nyaya-memory",
+      "left_term": "nn:pratyabhijna:anusandhana",
+      "left_scope": "trika_pratyabhijna",
+      "right_term": "nn:nyaya:smrti_atmaikatva",
+      "right_scope": "nyaya",
+      "shared_structure": "Both explain memory and cross-temporal synthesis through an enduring cognizer.",
+      "important_difference": "Pratyabhijñā infers one cognizer from synthesis; Nyāya infers many cognizers from individuation of memory streams.",
+      "important_difference_contains": "one cognizer from synthesis",
+      "status": "OVERLAPS"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:pratyabhijna-to-nyaya:individuation-challenge",
+      "critic_lens": "trika_pratyabhijna",
+      "target_lens": "nyaya",
+      "reveals_about_target": "Nyāya plural selves must explain why streams are genuinely separate — what principle individuates subjects if each is a reflexive centre? Pratyabhijñā argues that the appearance of separation is māyā (the power of differentiation within one consciousness), whereas Nyāya must treat separation as primitive.",
+      "pressure_type": "individuation_primitive",
+      "target_response_required": "Show that the individuation of selves is not a problem requiring a deeper explanation — or that embodiment and karma provide a sufficient individuation principle.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:utpaladeva-aps-17-one-synthesizer-all-cognitions",
+        "cl:utpaladeva-aps-25-one-power-all-cognitions"
+      ],
+      "crux_ids": [
+        "crux:transpersonal-synthesis-unobserved"
+      ]
+    },
+    {
+      "pair_id": "critique:nyaya-to-pratyabhijna:universalization-gap",
+      "critic_lens": "nyaya",
+      "target_lens": "trika_pratyabhijna",
+      "reveals_about_target": "Pratyabhijña's universalization from local synthesis to one universal subject lacks a valid inference. Nyāya accepts synthesis within a stream but denies that it entails one synthesizer across streams. The move from 'synthesis occurs' to 'one universal synthesizer exists' is an invalid quantifier shift.",
+      "pressure_type": "universalization_inference_gap",
+      "target_response_required": "Provide an argument that reflexive manifestation cannot be numerically partitioned — or accept that the universal subject is an abductive hypothesis, not a deductive conclusion.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:nyaya-plural-selves-explain-without-universal"
+      ],
+      "crux_ids": [
+        "crux:ambiguity-of-sarva-in-sarvarthasamvidam"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "utpaladeva_universal_subject": "Textually asserted but philosophically under-demonstrated. The strong core (reflexive manifestation, verses 9-15) does not entail the universal conclusion (verses 16-17, 25).",
+    "nyaya_plural_selves": "The strongest live countermodel. Explains memory, recognition, endurance, and cross-temporal synthesis with plural individuals — no universal consciousness required.",
+    "current_best_answer": "Utpaladeva's Ajadapramātṛsiddhi establishes reflexive manifestation and intra-stream synthesis, but the universalization from 'all objects are within manifestation' to 'all manifestations are numerically one subject' is an invalid quantifier shift. Nyāya plural selves provide a complete alternative explanation. The bridge between the two traditions is OVERLAPS: both require an enduring synthesizer but differ on numerical identity."
+  },
+  "next_work": [
+    "Translate Sambandhasiddhi — does it supply the missing premise that relation requires one universal relatum?",
+    "Translate Īśvarasiddhi — does it contain an independent argument for Lordship that does not rely on the universalization gap?",
+    "Examine ĪPK 1.7 and 2.4 for additional universalization arguments not in Ajadapramātṛsiddhi",
+    "Run formal bridge probe between Pratyabhijñā eka_pramātṛ and Nyāya pratyagātman once both are formalized in Sanskritree/Lean"
+  ]
+}

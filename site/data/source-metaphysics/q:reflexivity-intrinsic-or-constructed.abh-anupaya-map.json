@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-anupaya",
+  "claim_packet": "content/information-packets/abh-anupaya-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-anupaya",
+  "candidate_under_test": "all",
+  "central_reading": "T\u0100 2 (Anup\u0101ya): from the No Means perspective, the two-aspect structure is seen as never having been separate. The entire reflexivity debate \u2014 whether the structure is self-grounding, grounded in vimar\u015ba, or groundless \u2014 presupposes a separation that doesn't exist from this view.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-anupaya-meta",
+      "source_span_id": "span:abh-anupaya-meta",
+      "quoted_anchor": "T\u0100 2 (Anup\u0101ya/No Means chapter): 'Of what use can any means ",
+      "nn_expr": "sambandha(abh_anupaya_meta,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "the reflexivity debate presupposes a sep",
+        "hetu": "consciousness is self-luminous and requires no means \u2014 the distinction between ground and grounded does not arise at this level",
+        "sadhya": "the reflexivity debate presupposes a separation that Anup\u0101ya reveals as never having been actual",
+        "vyapti": "If consciousness needs no means to itself because it IS self-luminous, then the "
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:self-grounding-structure",
+        "cand:groundless-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the Anup\u0101ya perspective still requires the two-aspect distinction (at least as something to be transcended), making it a position within the debate rather than a dissolution of it."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-anupaya-meta:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-anupaya-meta",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.82,
+      "relation_rationale": "Provides the deepest level of Abhinavagupta's position \u2014 the perspective from which the entire debate dissolves."
+    },
+    {
+      "edge_id": "edge:abh-anupaya-meta:attack:cand-self-grounding-structure",
+      "source_node_id": "cl:abh-anupaya-meta",
+      "target_node_id": "cand:self-grounding-structure",
+      "edge_type": "attack",
+      "strength": 0.6,
+      "relation_rationale": "The self-grounding question only arises within the separation that Anup\u0101ya reveals as illusory."
+    },
+    {
+      "edge_id": "edge:abh-anupaya-meta:attack:cand-groundless-reflexivity",
+      "source_node_id": "cl:abh-anupaya-meta",
+      "target_node_id": "cand:groundless-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.45,
+      "relation_rationale": "Both 'groundless' and 'Anup\u0101ya' reject the question, but differently \u2014 \u00d1\u0101\u1e47av\u012bra via cessation of asmim\u0101na, Abhinavagupta via the realization that separation never occurred."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "T\u0100 2 (Anup\u0101ya): from the No Means perspective, the two-aspect structure is seen as never having been separate. The entire reflexivity debate \u2014 whether the structure is self-grounding, grounded in vimar\u015ba, or groundless \u2014 presupposes a separation that doesn't exist from this view.",
+    "next_tests": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-grahya-grahaka",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "TĀ 1/181-182 distinguishes two aspects of cognition — objective ascertainment (niścaya: 'this has been perceived') and subjective awareness ('I perceive') — and argues the subjective aspect arises from a prior non-dual consciousness, not from cognition's intrinsic structure. This parallels Dignāga's two-appearance doctrine but with a fundamentally different ontology.",
+  "claims": [
+    {
+      "id": "cl:abh-ta1-181-two-aspects",
+      "text": "In TĀ 1/181-182, Abhinavagupta distinguishes two aspects of cognition: the objective ascertainment (niścaya) that 'this has been perceived,' and the subjective awareness (pratipatti) that 'I perceive.' He argues the subjective awareness does not arise from a subsequent mental act (vikalpa) but from 'oneness with thought-free consciousness (avikalpa).' This parallels Dignāga's grāhyākāra/grāhakākāra distinction but grounds the two aspects in a prior non-dual consciousness rather than treating them as intrinsic features of cognition.",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": "Tantrāloka 1/181-182, ahnika-01.txt lines 14740-14777",
+      "evidence": "textual",
+      "pramana": "anumana",
+      "hetu": "the two aspects of cognition (objective ascertainment and subjective awareness) are distinguished but both arise from a pre-conceptual ground",
+      "sadhya": "the two-appearance structure of cognition is not self-grounding but depends on a prior non-dual consciousness",
+      "vyapti": "If the subjective awareness arises from oneness with thought-free consciousness, then the two-aspect structure of cognition is not fundamental but derivative.",
+      "vyapti_confidence": 0.80,
+      "falsifier": "Show that Abhinavagupta's distinction between objective ascertainment and subjective awareness is merely a restatement of Dignāga's two-appearance doctrine with no substantive difference — i.e., that 'avikalpa' is equivalent to the co-arising of two appearances.",
+      "weight": 0.44,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.75,
+      "targets": [
+        {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.78, "rationale": "Shows Abhinavagupta has a positive account of the two-aspect structure of cognition that differs from Dignāga's."},
+        {"id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.55, "rationale": "If the two-aspect structure is grounded in a prior non-dual consciousness, Dignāga's account is incomplete."}
+      ]
+    }
+  ]
+}

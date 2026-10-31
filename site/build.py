@@ -1136,6 +1136,123 @@ def build_corpus():
         shutil.copy(f, DIST / "data/styles" / f.name)
     return len(recs)
 
+def render_asset(sub, title, kind, body_fn, filepat="*.*"):
+    """Generic renderer for vendored research assets under site/data/<sub>/."""
+    import json as _j
+    src = ROOT / "data" / sub
+    out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
+    if not src.exists():
+        (out / "index.html").write_text(TF(TMPL, title=title, h1=title,
+            kicker=kind, sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            body=f"<div class='panel missing'>no {sub} yet</div>"))
+        return 0
+    cards = []
+    for f in sorted(src.glob(filepat)):
+        if f.suffix == ".md":
+            raw = f.read_text(encoding="utf-8", errors="replace")
+            shutil.copy(f, out / f.name)
+            first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
+            cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)} · {len(raw.split())} words</div><div class="sub"><a href="/{sub}/{esc(f.name)}">read →</a></div></div>')
+            (out / f.name).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
+                sub=f"{len(raw.split())} words · vendored research asset",
+                sidenav=sidenav("abhinavagupta", ""),
+                body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source markdown →</a></div>' + md_lite(raw)
+                + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
+        elif f.suffix == ".json":
+            shutil.copy(f, out / f.name)
+            try:
+                obj = _j.loads(f.read_text(encoding="utf-8", errors="replace"))
+            except Exception:
+                obj = None
+            if isinstance(obj, dict):
+                title2 = obj.get("title") or obj.get("question") or obj.get("eo_id") or f.stem
+                body = f'<pre style="white-space:pre-wrap;font-size:.85rem">{esc(_j.dumps(obj, ensure_ascii=False, indent=1)[:4000])}</pre>'
+            elif isinstance(obj, list):
+                title2 = f.stem
+                body = f'<div class="sub">{len(obj)} records</div>'
+                for o in obj[:8]:
+                    if isinstance(o, dict):
+                        t = o.get("title") or o.get("question") or o.get("claim") or o.get("question_id") or o.get("id") or "record"
+                        body += f'<div class="panel"><b>{esc(str(t)[:90])}</b><div class="sub">{esc(str(o.get("status","")))} · {esc(str(o.get("resolution_level","")))} · {esc(str(o.get("falsifier_status","")))}</div></div>'
+                body += f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">full JSON →</a></div>'
+            else:
+                title2 = f.stem
+                body = f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">file →</a></div>'
+            (out / (f.stem + ".html")).write_text(TF(TMPL, title=title2, h1=esc(str(title2)),
+                kicker=kind, sub=f"vendored research asset · {f.name}",
+                sidenav=sidenav("abhinavagupta", ""),
+                body=body + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
+            cards.append(f'<div class="panel"><b>{esc(str(title2)[:90])}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a> · <a href="/data/{sub}/{esc(f.name)}">json →</a></div></div>')
+    (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
+        sub=f"{len(cards)} assets vendored from basecamp",
+        sidenav=sidenav("abhinavagupta", ""),
+        body="".join(cards)))
+    return len(cards)
+
+def build_workbooks(): return render_asset("workbooks","Learning workbooks","Workbook",None,"*.md")
+def build_contentions(): return render_asset("contentions","Contentions","Contention",None,"*.json")
+def build_essay_objects():
+    # eo-*/eo.json layout
+    src = ROOT / "data/essay-objects"
+    out = DIST / "essay-objects"; out.mkdir(parents=True, exist_ok=True)
+    cards = []
+    for d in sorted(src.glob("eo-*")):
+        f = d / "eo.json"
+        if not f.exists():
+            continue
+        obj = json.loads(f.read_text(encoding="utf-8", errors="replace"))
+        title = obj.get("title") or obj.get("eo_id") or d.name
+        body = (f'<div class="panel"><b>{esc(title)}</b></div>'
+                f'<div class="sub">status: {esc(obj.get("status",""))} · question: {esc((obj.get("question") or {}).get("question_id",""))}</div>'
+                f'<pre style="white-space:pre-wrap;font-size:.85rem">{esc(json.dumps(obj, ensure_ascii=False, indent=1)[:6000])}</pre>'
+                f'<div class="sub"><a href="/data/essay-objects/{esc(d.name)}/eo.json">source json →</a></div>'
+                + srclink(f"site/data/essay-objects/{d.name}/eo.json", "source lives here."))
+        (out / (d.name + ".html")).write_text(TF(TMPL, title=title, h1=esc(str(title)),
+            kicker="Enquiry", sub=f"guided enquiry · {d.name}",
+            sidenav=sidenav("abhinavagupta", ""), body=body))
+        cards.append(f'<div class="panel"><b>{esc(str(title)[:90])}</b><div class="sub">{esc(d.name)}</div><div class="sub"><a href="/essay-objects/{esc(d.name)}.html">open →</a></div></div>')
+    (out / "index.html").write_text(TF(TMPL, title="Essay objects", h1="Essay objects", kicker="Enquiry",
+        sub=f"{len(cards)} guided enquiries", sidenav=sidenav("abhinavagupta", ""),
+        body="".join(cards)))
+    return len(cards)
+
+def build_ochema_methods():
+    src = ROOT / "data/ochema-methods"
+    out = DIST / "ochema-methods"; out.mkdir(parents=True, exist_ok=True)
+    cards = []
+    for f in sorted(src.rglob("*")):
+        if not f.is_file():
+            continue
+        if f.suffix == ".md":
+            shutil.copy(f, out / f.name)
+            raw = f.read_text(encoding="utf-8", errors="replace")
+            first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
+            (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker="Method",
+                sub=f"{len(raw.split())} words · vendored method",
+                sidenav=sidenav("abhinavagupta", ""),
+                body=f'<div class="sub"><a href="/data/ochema-methods/{esc(f.name)}">source markdown →</a></div>' + md_lite(raw)
+                + srclink(f"site/data/ochema-methods/{f.name}", "source lives here.")))
+            cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/ochema-methods/{esc(f.stem)}.html">open →</a></div></div>')
+        elif f.suffix in (".json", ".yaml", ".yml"):
+            shutil.copy(f, out / f.name)
+            try:
+                obj = json.loads(f.read_text(encoding="utf-8", errors="replace"))
+                body = f'<pre style="white-space:pre-wrap;font-size:.85rem">{esc(json.dumps(obj, ensure_ascii=False, indent=1)[:6000])}</pre>'
+            except Exception:
+                body = f'<div class="sub"><a href="/data/ochema-methods/{esc(f.name)}">file →</a></div>'
+            (out / (f.stem + ".html")).write_text(TF(TMPL, title=f.stem, h1=esc(f.stem), kicker="Method",
+                sub=f"vendored method asset · {f.name}",
+                sidenav=sidenav("abhinavagupta", ""),
+                body=body + srclink(f"site/data/ochema-methods/{f.name}", "source lives here.")))
+            cards.append(f'<div class="panel"><b>{esc(f.stem)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/ochema-methods/{esc(f.stem)}.html">open →</a></div></div>')
+    (out / "index.html").write_text(TF(TMPL, title="Ochema methods", h1="Ochema methods", kicker="Method",
+        sub=f"{len(cards)} method assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+    return len(cards)
+def build_source_metaphysics(): return render_asset("source-metaphysics","Source metaphysics","State-of-play",None,"*.json")
+def build_information_packets(): return render_asset("information-packets","Information packets","Packet",None,"*")
+def build_ochema_methods(): return render_asset("ochema-methods","Ochema methods","Method",None,"*")
+def build_philosophers(): return render_asset("philosophers","Philosophers","Research object",None,"*")
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1317,7 +1434,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1335,6 +1452,13 @@ def main():
     if "pushinghub" in want: done["pushinghub"] = build_pushing_hub()
     if "corpus" in want: done["corpus"] = build_corpus()
     if "receipts" in want: done["receipts"] = build_receipts()
+    if "workbooks" in want: done["workbooks"] = build_workbooks()
+    if "contentions" in want: done["contentions"] = build_contentions()
+    if "essay-objects" in want: done["essay-objects"] = build_essay_objects()
+    if "source-metaphysics" in want: done["source-metaphysics"] = build_source_metaphysics()
+    if "information-packets" in want: done["information-packets"] = build_information_packets()
+    if "ochema-methods" in want: done["ochema-methods"] = build_ochema_methods()
+    if "philosophers" in want: done["philosophers"] = build_philosophers()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))

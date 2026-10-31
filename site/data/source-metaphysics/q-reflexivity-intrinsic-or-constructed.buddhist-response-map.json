@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:buddhist-response-crystal-argument",
+  "claim_packet": "content/information-packets/buddhist-response-crystal-argument-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "buddhist_response_crystal_argument",
+  "candidate_under_test": "all",
+  "central_reading": "The Buddhist tradition has a robust account of self-awareness (svasaṃvitti) — cognition is inherently self-manifesting, not insentient like a crystal. The crystal argument misfires because it assumes the Buddhist position lacks an account of sentience when svasaṃvitti is a core doctrine.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:buddhist-cognition-is-self-manifesting",
+      "source_span_id": "span:dharmakirti-svasamvitti",
+      "quoted_anchor": "cognition has self-appearance and object-appearance",
+      "nn_expr": "prasanga(buddhist_lacks_self_awareness)",
+      "parse_status": "parsed",
+      "tradition_scope": "dharmakirti_buddhist",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "Buddhist account of consciousness",
+        "hetu": "Dignāga and Dharmakīrti argue every cognition has self-appearance",
+        "sadhya": "Buddhist tradition has an account of self-awareness distinct from determination-by-exclusion",
+        "vyapti": "If cognition has two appearances, self-awareness is intrinsic to cognition."
+      },
+      "argument_role": "support",
+      "targets": ["cand:dharmakirti-conditioned-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Buddhist svasaṃvitti reduces to determination-by-exclusion with no remainder."
+    },
+    {
+      "claim_id": "cl:nanavira-consciousness-as-presence-reflexive",
+      "source_span_id": "span:nanavira-vinnana",
+      "quoted_anchor": "consciousness is presence, reflexively given",
+      "nn_expr": "prasanga(consciousness_needs_extra_property_for_sentience)",
+      "parse_status": "parsed",
+      "tradition_scope": "nanavira_phenomenology",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "nature of consciousness",
+        "hetu": "consciousness is presence-of-phenomena, not a thing",
+        "sadhya": "reflexivity is structural to presence, not an added property",
+        "vyapti": "If consciousness IS presence, the question 'does structure produce sentience?' is misapplied."
+      },
+      "argument_role": "support",
+      "targets": ["cand:nanavira-structural-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that reflexive presence is compatible with insentience."
+    },
+    {
+      "claim_id": "cl:buddhist-crystal-response-combined",
+      "source_span_id": "span:buddhist-crystal-response",
+      "quoted_anchor": "crystal argument misfires against actual Buddhist position",
+      "nn_expr": "prasanga(crystal_argument_applies_to_buddhist)",
+      "parse_status": "parsed",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "applicability of crystal argument",
+        "hetu": "both Buddhist traditions have accounts of self-awareness",
+        "sadhya": "crystal argument does not apply to Buddhist position as actually held",
+        "vyapti": "If critique assumes metaphysics the target does not hold, it misfires."
+      },
+      "argument_role": "support",
+      "targets": ["cand:dharmakirti-conditioned-reflexivity", "cand:nanavira-structural-reflexivity", "cand:abh-vimarsa-intrinsic", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show Abhinavagupta already considered and refuted svasaṃvitti in the crystal argument."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:buddhist-self-manifesting-supports-dharmakirti",
+      "source_node_id": "cl:buddhist-cognition-is-self-manifesting",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.72,
+      "relation_rationale": "Direct textual evidence that cognition is inherently self-manifesting in the Dharmakīrti tradition."
+    },
+    {
+      "edge_id": "edge:buddhist-self-manifesting-attacks-trika-scope",
+      "source_node_id": "cl:buddhist-cognition-is-self-manifesting",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "relation_rationale": "If cognition is already self-manifesting via svasaṃvitti, Trika's claim that determination-by-exclusion cannot account for sentience misfires."
+    },
+    {
+      "edge_id": "edge:nanavira-presence-reflexive-supports-nanavira",
+      "source_node_id": "cl:nanavira-consciousness-as-presence-reflexive",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.70,
+      "relation_rationale": "Nanavira's Viññāṇa note directly addresses consciousness as structurally reflexive presence."
+    },
+    {
+      "edge_id": "edge:nanavira-presence-reflexive-attacks-trika",
+      "source_node_id": "cl:nanavira-consciousness-as-presence-reflexive",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attacks",
+      "strength": 0.48,
+      "relation_rationale": "The crystal argument assumes consciousness is a thing needing extra property; Nanavira's framework does not hold this view."
+    },
+    {
+      "edge_id": "edge:buddhist-combined-response-supports-both",
+      "source_node_id": "cl:buddhist-crystal-response-combined",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Synthetic response: both Buddhist traditions have accounts of self-awareness."
+    },
+    {
+      "edge_id": "edge:buddhist-combined-response-supports-nanavira",
+      "source_node_id": "cl:buddhist-crystal-response-combined",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Synthetic response: both Buddhist traditions have accounts of self-awareness."
+    },
+    {
+      "edge_id": "edge:buddhist-combined-response-attacks-trika",
+      "source_node_id": "cl:buddhist-crystal-response-combined",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attacks",
+      "strength": 0.52,
+      "relation_rationale": "Combined Buddhist response challenges the applicability of Trika's crystal argument."
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:buddhist-to-trika:crystal-misfire",
+      "critic_lens": "cross_tradition",
+      "target_lens": "trika_pratyabhijna",
+      "reveals_about_target": "The crystal argument assumes the Buddhist position lacks an account of self-awareness. But svasaṃvitti is a core Buddhist doctrine — cognition has two appearances. The critique may misfire against the actual Buddhist position.",
+      "pressure_type": "applicability_challenge",
+      "target_response_required": "Show that Abhinavagupta's crystal argument was specifically directed at a svasaṃvitti-style account and remains effective despite it — or acknowledge that the Trika critique applies to a specific formulation of Buddhism that does not include svasaṃvitti.",
+      "status": "open"
+    }
+  ],
+  "state_of_play_delta": {
+    "current_best_answer": "The Buddhist joint defense (Nanavira + Dharmakīrti) now has a response to the crystal argument: cognition is inherently self-manifesting in the Dharmakīrti tradition (svasaṃvitti), and structurally reflexive presence in Nanavira's framework. The open question is whether Abhinavagupta already considered and refuted svasaṃvitti in the crystal argument.",
+    "next_tests": [
+      "Check Tantrāloka Ahnika 1 for direct engagement with svasaṃvitti/svaprakāśa doctrine",
+      "If Abhinavagupta already refuted svasaṃvitti → Buddhist response needs a different tack",
+      "If not → crystal argument misfires, Trika position weakened",
+      "Update reflexivity benchmark to include buddhist-response-map"
+    ],
+    "candidate_deltas": {
+      "cand:dharmakirti-conditioned-reflexivity": "Gains textual support from svasaṃvitti doctrine",
+      "cand:nanavira-structural-reflexivity": "Gains support from Viññāṇa note on reflexive presence",
+      "cand:abh-vimarsa-intrinsic": "Crystal argument challenged on applicability"
+    }
+  }
+}

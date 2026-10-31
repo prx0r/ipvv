@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:perspectival-partition",
+  "source_packet_id": "ip:saiva-decombination-bind",
+  "claim_packet": "content/information-packets/saiva-decombination-bind-claims.json",
+  "generated_by": "codex_from_translated_siddhis",
+  "source_role": "candidate_constraint",
+  "candidate_under_test": "cand:siva-decombination",
+  "central_reading": "The three Siddhitrayī texts (APS, Sambandhasiddhi, Īśvarasiddhi) have now all been translated. None supplies the missing nondual universalization proof. APS asserts but does not prove it. Sambandhasiddhi assumes the framework. Īśvarasiddhi is intentionally dualistic. The decombination bind remains: Pratyabhijñā has not specified how unrestricted manifestation produces private exclusion profiles.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:aps-universalization-asserts-not-proves",
+      "source_span_id": "span:aps-16-17-25",
+      "quoted_anchor": "eka evānusandhānād ato 'nyo nopapadyate",
+      "nn_expr": "vyapti(anusandhana_loka,eka_pramatr)",
+      "parse_status": "invalid",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "pramāt",
+        "hetu": "anusandhāna observed within one body",
+        "sadhya": "one knower",
+        "vyapti": "Where anusandhāna operates, a unified knower is required."
+      },
+      "argument_role": "constraint",
+      "targets": ["cand:siva-decombination", "crux:local-to-global-gluing"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show anusandhāna operating across cognitive streams in a way not reducible to inference."
+    },
+    {
+      "claim_id": "cl:sambandhasiddhi-aikatyma-assumes-framework",
+      "source_span_id": "span:ss-8",
+      "quoted_anchor": "cinmātravapuṣāṃ satām",
+      "nn_expr": "abheda(vastu,cinmatra)",
+      "parse_status": "invalid",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "vastu",
+        "hetu": "entities are cinmātravapus",
+        "sadhya": "their unity is easy",
+        "vyapti": "If entities have consciousness as their essence, unity follows."
+      },
+      "argument_role": "constraint",
+      "targets": ["cand:siva-decombination", "crux:cinmatravapus-circularity"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [
+        {
+          "type": "asiddha",
+          "severity": "moderate",
+          "reason": "The premise 'entities are consciousness-essenced' is assumed from ĪPK, not argued here."
+        }
+      ],
+      "falsifier": "Show an independent argument for cinmātravapus within Sambandhasiddhi."
+    },
+    {
+      "claim_id": "cl:isvarasiddhi-dualistic-design-not-nondual",
+      "source_span_id": "span:is-56",
+      "quoted_anchor": "if that highest recognition must be established, its structure has been set out by us elsewhere",
+      "nn_expr": "virodha(isvara_siddhi,nondual_prameya)",
+      "parse_status": "invalid",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "Īśvarasiddhi",
+        "hetu": "its argument is designed for a dualistic framework",
+        "sadhya": "it does not contain the nondual proof",
+        "vyapti": "A text designed for dualists does not supply nondual conclusions."
+      },
+      "argument_role": "constraint",
+      "targets": ["cand:siva-decombination", "crux:isvarasiddhi-scope-limitation"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Reconstruct a nondual argument from Īśvarasiddhi alone, without appeal to ĪPK."
+    },
+    {
+      "claim_id": "cl:decombination-bind-maya-not-explained",
+      "source_span_id": "span:cp8-decombination",
+      "quoted_anchor": "Pratyabhijñā solves the emergence of manifestation only by inheriting decombination",
+      "nn_expr": "sambandha(siva,maya_privacy)",
+      "parse_status": "invalid",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "Śaiva decombination",
+        "hetu": "limitation mechanism faces a trilemma",
+        "sadhya": "Pratyabhijñā has not solved decombination",
+        "vyapti": "If every possible form of the limitation mechanism is problematic, the problem is unsolved."
+      },
+      "argument_role": "decombination_constraint",
+      "targets": ["cand:siva-decombination", "crux:limitation-mechanism-unexplained"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Specify a limitation mechanism that avoids all three horns."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:aps-asserts-pressures-siva",
+      "source": "cl:aps-universalization-asserts-not-proves",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.5,
+      "rationale": "APS 17 claims universal synthesis but Abhinavagupta limits anusandhāna per body."
+    },
+    {
+      "edge_id": "edge:ss-assumes-pressures-siva",
+      "source": "cl:sambandhasiddhi-aikatyma-assumes-framework",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.4,
+      "rationale": "Sambandhasiddhi assumes rather than proves the Pratyabhijñā ontology."
+    },
+    {
+      "edge_id": "edge:is-dualistic-pressures-siva",
+      "source": "cl:isvarasiddhi-dualistic-design-not-nondual",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.45,
+      "rationale": "Īśvarasiddhi explicitly leaves nondual proof to another text."
+    },
+    {
+      "edge_id": "edge:decombination-trilemma-pressures-siva",
+      "source": "cl:decombination-bind-maya-not-explained",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.6,
+      "rationale": "The limitation mechanism has not been specified; the trilemma shows why this matters."
+    },
+    {
+      "edge_id": "edge:decombination-supports-lambda-crux",
+      "source": "cl:decombination-bind-maya-not-explained",
+      "target": "crux:the-law-lambda",
+      "edge_type": "supports",
+      "strength": 0.55,
+      "rationale": "The missing Lᵢ is exactly Pratyabhijñā's version of the missing Λ."
+    }
+  ],
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "cand:siva-decombination": "Pressured by the accumulated evidence from all three Siddhis: APS asserts but doesn't prove, Sambandhasiddhi assumes the framework, Īśvarasiddhi is dualistic. Plus the formal trilemma on Lᵢ.",
+    "current_best_answer": "The three Siddhitrayī texts do not contain the missing nondual proof. The decombination bind — why unrestricted manifestation produces private exclusion profiles — remains unsolved within the Pratyabhijñā tradition."
+  },
+  "next_work": [
+    "Gate and ingest this packet, update the perspectival-partition benchmark",
+    "Move to Proof-set 2: Scientific exclusion principles from Q17 benchmark"
+  ]
+}

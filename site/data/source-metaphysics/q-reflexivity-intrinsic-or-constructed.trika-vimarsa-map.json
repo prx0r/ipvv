@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:trika-vimarsa-manifestness",
+  "claim_packet": "content/information-packets/trika-vimarsa-manifestness-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "trika_vimarsa_response",
+  "candidate_under_test": "all",
+  "central_reading": "Abhinavagupta provides a five-part argument that vimarśa cannot be reduced to determination-by-exclusion: (1) difference presupposes vimarśa, not vice versa; (2) without vimarśa consciousness would be insentient like a crystal; (3) apoha does not apply to self-luminous consciousness; (4) vimarśa is self-grounding freedom while determination is other-dependent; (5) difference culminates in separation, vimarśa in identity. The bridge between difference and apoha holds at the objective level but does not extend to the nature of consciousness itself.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-mutual-distinction-presupposes-vimarsa",
+      "source_span_id": "span:tantraloka-1-52cd",
+      "quoted_anchor": "mutual distinction arises within vimarśa",
+      "nn_expr": "vyāpti(mutual_distinction,vimarśa)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "determination-by-exclusion",
+        "hetu": "all tattvas are equally Light, requiring vimarśa for differentiation",
+        "sadhya": "structural difference presupposes reflexive awareness",
+        "vyapti": "If differentiation requires reflexive awareness, determination-by-exclusion is dependent on vimarśa."
+      },
+      "argument_role": "support",
+      "targets": ["cand:abh-vimarsa-intrinsic", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate mutual distinction without any prior reflexive awareness."
+    },
+    {
+      "claim_id": "cl:abh-crystal-argument",
+      "source_span_id": "span:tantraloka-4-crystal",
+      "quoted_anchor": "without vimarśa consciousness would be insentient like a crystal",
+      "nn_expr": "prasanga(determination_by_exclusion_equals_consciousness)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "consciousness",
+        "hetu": "a crystal reflects without awareness; vimarśa adds self-presence",
+        "sadhya": "structural determination alone cannot account for sentience",
+        "vyapti": "If structural determination were sufficient for consciousness, any system of mutual contrasts would be conscious."
+      },
+      "argument_role": "support",
+      "targets": ["cand:abh-vimarsa-intrinsic", "cand:nanavira-structural-reflexivity", "cand:dharmakirti-conditioned-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that a purely structural system of determination-by-exclusion exhibits conscious self-presence."
+    },
+    {
+      "claim_id": "cl:abh-apoha-inapplicable-to-consciousness",
+      "source_span_id": "span:tantraloka-1-apoha",
+      "quoted_anchor": "apoha not applicable to self-luminous consciousness",
+      "nn_expr": "prasanga(apoha_applies_to_consciousness)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "scope of apoha",
+        "hetu": "consciousness is self-luminous, not determined by negation",
+        "sadhya": "apoha/difference mapping does not apply to consciousness itself",
+        "vyapti": "If consciousness is self-luminous and not constituted by negation, determination-by-exclusion is inapplicable to its nature."
+      },
+      "argument_role": "support",
+      "targets": ["cand:abh-vimarsa-intrinsic", "cand:dharmakirti-conditioned-reflexivity", "cand:nanavira-structural-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Account for self-luminous consciousness fully through determination-by-exclusion."
+    },
+    {
+      "claim_id": "cl:abh-svatantrya-vimarsa",
+      "source_span_id": "span:tantraloka-4-svatantrya",
+      "quoted_anchor": "vimarśa is self-grounding freedom, not other-dependent",
+      "nn_expr": "prasanga(vimarsa_reducible_to_determination)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "nature of vimarśa",
+        "hetu": "vimarśa is svatantra, determination-by-exclusion is paratantra",
+        "sadhya": "vimarśa is categorically different from determination",
+        "vyapti": "If vimarśa is self-grounding and determination is other-dependent, they are categorically distinct."
+      },
+      "argument_role": "support",
+      "targets": ["cand:abh-vimarsa-intrinsic", "cand:nanavira-structural-reflexivity", "cand:dharmakirti-conditioned-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Characterize vimarśa fully as a determination-by-exclusion operation."
+    },
+    {
+      "claim_id": "cl:abh-culmination-in-identity",
+      "source_span_id": "span:tantraloka-1-identity",
+      "quoted_anchor": "difference culminates in oneness",
+      "nn_expr": "prasanga(difference_culminates_in_separation)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "direction of vimarśa vs difference",
+        "hetu": "difference terminates in A ≠ not-A, vimarśa terminates in tādātmya",
+        "sadhya": "vimarśa and determination are structurally different",
+        "vyapti": "If one operation culminates in separation and another in identity, they are structurally different."
+      },
+      "argument_role": "support",
+      "targets": ["cand:abh-vimarsa-intrinsic", "cand:nanavira-structural-reflexivity", "crux:constructed-reflexivity-presupposes-manifestness"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that determination-by-exclusion can culminate in identity."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-distinction-presupposes-supports-abhinavagupta",
+      "source_node_id": "cl:abh-mutual-distinction-presupposes-vimarsa",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.70,
+      "relation_rationale": "Direct textual evidence that difference arises within vimarśa."
+    },
+    {
+      "edge_id": "edge:abh-distinction-presupposes-attacks-nanavira",
+      "source_node_id": "cl:abh-mutual-distinction-presupposes-vimarsa",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "relation_rationale": "If difference presupposes vimarśa, then structural reflexivity cannot be foundational without accounting for manifestness."
+    },
+    {
+      "edge_id": "edge:abh-crystal-supports-abhinavagupta",
+      "source_node_id": "cl:abh-crystal-argument",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.75,
+      "relation_rationale": "Crystal argument: structural determination alone does not entail sentience."
+    },
+    {
+      "edge_id": "edge:abh-crystal-attacks-nanavira",
+      "source_node_id": "cl:abh-crystal-argument",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "attacks",
+      "strength": 0.55,
+      "relation_rationale": "Nanavira's structural reflexivity may describe form without accounting for sentient quality."
+    },
+    {
+      "edge_id": "edge:abh-crystal-attacks-dharmakirti",
+      "source_node_id": "cl:abh-crystal-argument",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attacks",
+      "strength": 0.55,
+      "relation_rationale": "Apoha-based cognition may account for determination but not for the sentient quality of awareness."
+    },
+    {
+      "edge_id": "edge:abh-apoha-scope-supports-abhinavagupta",
+      "source_node_id": "cl:abh-apoha-inapplicable-to-consciousness",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.72,
+      "relation_rationale": "Limits the scope of the Nanavira-Dharmakīrti bridge: it applies to objects, not to consciousness itself."
+    },
+    {
+      "edge_id": "edge:abh-apoha-scope-attacks-bridge-claim",
+      "source_node_id": "cl:abh-apoha-inapplicable-to-consciousness",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "attacks",
+      "strength": 0.52,
+      "relation_rationale": "The difference-apoha bridge is valid for objective determination but does not extend to the nature of consciousness."
+    },
+    {
+      "edge_id": "edge:abh-svatantrya-supports-abhinavagupta",
+      "source_node_id": "cl:abh-svatantrya-vimarsa",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.68,
+      "relation_rationale": "The svātantrya argument establishes a categorical distinction between self-grounding vimarśa and other-dependent determination."
+    },
+    {
+      "edge_id": "edge:abh-culmination-supports-abhinavagupta",
+      "source_node_id": "cl:abh-culmination-in-identity",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.65,
+      "relation_rationale": "Vimarśa culminates in identity, not separation — fundamentally different from determination."
+    },
+    {
+      "edge_id": "edge:abh-culmination-narrows-crux",
+      "source_node_id": "cl:abh-culmination-in-identity",
+      "target_node_id": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "relation_rationale": "If vimarśa has a fundamentally different direction (identity vs. separation), the crux narrows: manifestness is not reducible to structural determination."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:abh-vimarsa-nanavira-difference-scope",
+      "left_term": "nn:trika:vimarsa_intrinsic",
+      "left_scope": "trika_pratyabhijna",
+      "right_term": "nn:nanavira:structural_reflexivity",
+      "right_scope": "nanavira_phenomenology",
+      "shared_structure": "Both accounts posit that reflexivity is not an added property but constitutive of experience.",
+      "important_difference": "Abhinavagupta argues reflexivity is self-grounding (svatantra) and culminates in identity; Nanavira's structural reflexivity is grounded in difference-relations. The crystal argument challenges whether structure alone entails sentience.",
+      "status": "OVERLAPS"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:trika-to-joint-defense:consciousness-scope",
+      "critic_lens": "trika_pratyabhijna",
+      "target_lens": "cross_tradition",
+      "reveals_about_target": "The Nanavira-Dharmakīrti bridge is valid for objective determination-by-exclusion but does not extend to the nature of consciousness itself. Self-luminous awareness is not constituted by negation of an other. The bridge is scope-limited.",
+      "pressure_type": "scope_limitation",
+      "target_response_required": "Show that the difference-apoha framework extends to the self-luminous nature of consciousness itself — not just to objective content within consciousness.",
+      "status": "open"
+    }
+  ],
+  "bridge_probe_logic": {
+    "bridge_probe_id": "bridge:abh-vimarsa-joint-defense-scope",
+    "current_classification": "OVERLAPS",
+    "candidate_pair": {
+      "left": "cand:abh-vimarsa-intrinsic",
+      "right": "cand:nanavira-structural-reflexivity",
+      "surface_similarity": "Both posit reflexivity as constitutive of experience.",
+      "important_difference": "Abhinavagupta argues vimarśa is self-grounding freedom; Nanavira argues reflexivity is structural determination."
+    },
+    "formal_tests": [
+      {
+        "test_id": "vimarsa-sentience-test",
+        "probe": "Does structural determination-by-exclusion produce sentient self-presence? -> negative control",
+        "required_status_for_merge": "NOT_PROVED",
+        "status": "UNPROVED",
+        "rationale": "Crystal argument: structural determination alone does not entail sentience. Negative control: the Buddhist joint defense must show that determination-by-exclusion is sufficient for self-presence."
+      }
+    ],
+    "target_upgrade": "DIFFERENT",
+    "conditions_for_upgrade": "If determination-by-exclusion cannot account for sentience, then vimarśa and structural reflexivity are DIFFERENT — not equivalent."
+  },
+  "state_of_play_delta": {
+    "current_best_answer": "Abhinavagupta provides a five-part textual argument that vimarśa cannot be reduced to determination-by-exclusion. The crystal argument is the strongest: structural determination alone would leave consciousness insentient like a crystal. The bridge between difference and apoha is valid for objective determination but does not extend to consciousness itself.",
+    "next_tests": [
+      "Test the crystal argument falsifier: can determination-by-exclusion produce sentience?",
+      "If yes → Trika's position is defeated. If no → the bridge is scope-limited.",
+      "Update reflexivity benchmark to include trika-vimarsa map"
+    ],
+    "candidate_deltas": {
+      "cand:abh-vimarsa-intrinsic": "Gains 5 supporting edges from textual evidence",
+      "cand:nanavira-structural-reflexivity": "Attacked by priority, crystal, and scope arguments",
+      "cand:dharmakirti-conditioned-reflexivity": "Attacked by crystal and scope arguments"
+    }
+  }
+}

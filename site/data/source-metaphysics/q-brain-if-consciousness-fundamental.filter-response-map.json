@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-filter-response-lesion-claims",
+  "claim_packet": "content/information-packets/q17-filter-response-lesion-claims.json",
+  "generated_by": "codex_hermes_autonomous_loop",
+  "source_role": "filter_response_layer",
+  "candidate_under_test": "all",
+  "central_reading": "The filter account now generates operational predictions for content loss, access loss, and arousal loss that respond to the mechanism gap identified by the lesion layer. The kañcuka ontology provides a formal structure with orthogonal limitation dimensions, predicting categorically distinct experiential signatures for different lesion types, preserved witness across content abolition, recovery decoupling, and a specific mapping hypothesis against PP parameterization. These predictions keep the filter account live and sharpen the differential empirical space between filter, interface, and appearance-only candidates.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:kancukas-as-distinct-transformation-dimensions",
+      "source_span_id": "span:tantraloka-kancuka-orthogonal-dimensions",
+      "quoted_anchor": "six kañcukas as distinct restriction axes, not a single parameter",
+      "nn_expr": "sambandha(kancuka_dimensions,lesion_transformation_signatures)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_perennialism",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "lesion types and kañcuka dimensions",
+        "hetu": "the six kañcukas are described as orthogonal limitation dimensions in Tantraloka",
+        "sadhya": "lesion effects should show qualitatively distinct experiential signatures by dimension type",
+        "vyapti": "If distinct limitation dimensions exist, damage to their neural scaffolding should produce categorically distinct experiential transformations, not merely graded loss."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The mapping from kañcukas to specific neural systems is speculative; weak vyapti confidence."
+        }
+      ],
+      "falsifier": "All lesion effects on the structure of experience reduce to a single composite factor with no residual variance requiring qualitatively distinct limitation dimensions."
+    },
+    {
+      "claim_id": "cl:filter-predicts-preserved-witness-across-content-abolition",
+      "source_span_id": "span:tantrasara-saksin-invariant-witness",
+      "quoted_anchor": "sākṣin as invariant through all vṛtti modifications",
+      "nn_expr": "prasanga(content_elimination_eliminates_awareness)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_perennialism",
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "complete content-structuring system destruction",
+        "hetu": "sākṣin is invariant through all content modifications per Tantrasara",
+        "sadhya": "bare manifestness may survive content-abolition in a distinct form",
+        "vyapti": "If witness consciousness is content-invariant, then complete content-structuring system loss should leave manifestness detectable."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Detection of bare manifestness in severe brain injury is extremely difficult; claim is vulnerable to the hard problem of measuring consciousness in others."
+        }
+      ],
+      "falsifier": "In patients with complete destruction of content-structuring neural systems, no detectable phenomenology survives by any sensitive measure, or surviving phenomenology is indistinguishable from reduced generative-model output."
+    },
+    {
+      "claim_id": "cl:filter-recovery-decoupling-prediction",
+      "source_span_id": "span:pratyabhijnahrdayam-sankoca-vikasa",
+      "quoted_anchor": "recovery as release of contraction (saṃkoca-vikāsa)",
+      "nn_expr": "sambandha(filter_release,presence_before_content_recovery)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_perennialism",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "recovery from severe brain injury",
+        "hetu": "māyā-kañcuka is prior to specific content filters in Trika ontology",
+        "sadhya": "experiential capacity returns before fine-grained content-processing fidelity",
+        "vyapti": "If experience-capacity is ontologically prior to content-structuring, then recovery should show presence before content fidelity."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-interface-generative-model",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Existing clinical data has not been analysed for this pattern; weak empirical anchoring."
+        }
+      ],
+      "falsifier": "Recovery of consciousness after brain injury shows no decoupling: the return of experiential capacity and the return of content-specific processing always occur within the same temporal window."
+    },
+    {
+      "claim_id": "cl:kancuka-to-pp-differential-mapping-hypothesis",
+      "source_span_id": "span:tantraloka-kancuka-pp-mapping",
+      "quoted_anchor": "kalā maps to action-selection, vidyā to prior structure, rāga to valence-drive",
+      "nn_expr": "sambandha(kancuka_ontology,pp_parameterization)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_perennialism",
+      "evidence_dimension": "analogical",
+      "pramana": "upamana",
+      "nyaya_reading": {
+        "paksa": "agency and knowledge manipulations in cognition",
+        "hetu": "structural correspondence between kañcuka ontology and PP parameterization",
+        "sadhya": "kañcuka-to-PP mapping generates categorically distinct predictions at the agency/knowledge boundary",
+        "vyapti": "If kañcukas are categorically distinct dimensions, they should produce testably different experimental predictions than PP's graded parameter variations."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-interface-generative-model",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The mapping is analogical until empirically tested; confidence is low."
+        }
+      ],
+      "falsifier": "All cognitive-phenomenological effects of agency and knowledge manipulations are quantitatively captured by variations in a single precision parameter within standard PP models."
+    },
+    {
+      "claim_id": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "source_span_id": "span:tantraloka-maya-mula-kancuka",
+      "quoted_anchor": "māyā is the primary kañcuka that establishes the sense of separation",
+      "nn_expr": "sambandha(brainstem_tegmental,maya_kancuka_collapse)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_perennialism",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "brainstem tegmental lesion coma",
+        "hetu": "māyā is the foundational limitation dimension enabling localized perspective per Tantraloka",
+        "sadhya": "brainstem coma is collapse of perspectival scaffolding, not consciousness generation",
+        "vyapti": "If māyā-kañcuka establishes the localized perspective necessary for content, then brainstem lesions that disrupt its neural substrate collapse manifestness without destroying consciousness itself."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-interface-generative-model",
+        "crux:filter-mechanism-requirement",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "The mapping from māyā to brainstem-medial thalamocortical connectivity is speculative but testable."
+        }
+      ],
+      "falsifier": "Recovery of consciousness from coma is fully predicted by brainstem-reflex scores and metabolic measures alone, with residual connectivity through the proposed māyā-scaffold adding no predictive power."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:kancuka-dimensions-supports-filter-formal-structure",
+      "source": "cl:kancukas-as-distinct-transformation-dimensions",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.40,
+      "rationale": "The kañcuka ontology gives the filter account a formal dimensional structure, responding to the mechanism gap critique."
+    },
+    {
+      "edge_id": "edge:kancuka-dimensions-attacks-interface-single-factor",
+      "source": "cl:kancukas-as-distinct-transformation-dimensions",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.18,
+      "rationale": "Pure information-loss or prediction-error accounts treat lesion effects as a single factor; dimensional distinction pressures graded-only models.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:kancuka-dimensions-sharpens-damage-crux",
+      "source": "cl:kancukas-as-distinct-transformation-dimensions",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.34,
+      "rationale": "The crux sharpens: lesion effects may need qualitatively distinct transformation rules per dimension, not a single loss-of-content rule."
+    },
+    {
+      "edge_id": "edge:witness-survival-supports-filter",
+      "source": "cl:filter-predicts-preserved-witness-across-content-abolition",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.38,
+      "rationale": "A testable prediction for preserved manifestness gives the filter account operational content beyond the receiver analogy."
+    },
+    {
+      "edge_id": "edge:witness-survival-supports-appearance-reading",
+      "source": "cl:filter-predicts-preserved-witness-across-content-abolition",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.22,
+      "rationale": "If manifestness survives content-abolition, it pressures the appearance-only reading to explain why brain damage removes content without removing presence."
+    },
+    {
+      "edge_id": "edge:witness-survival-sharpens-damage-crux",
+      "source": "cl:filter-predicts-preserved-witness-across-content-abolition",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "The filter prediction creates a measurable empirical target for the content-loss side of the damage crux."
+    },
+    {
+      "edge_id": "edge:recovery-decoupling-supports-filter-differential",
+      "source": "cl:filter-recovery-decoupling-prediction",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.36,
+      "rationale": "The decoupling prediction is a specific differential from generative-model accounts: filter predicts presence before content, PP predicts co-recovery."
+    },
+    {
+      "edge_id": "edge:recovery-decoupling-attacks-interface",
+      "source": "cl:filter-recovery-decoupling-prediction",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.18,
+      "rationale": "If recovery shows a decoupling gap, pure generative-model accounts would need additional machinery to explain it.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:kancuka-pp-mapping-supports-filter-mechanism",
+      "source": "cl:kancuka-to-pp-differential-mapping-hypothesis",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "The mapping hypothesis gives filter theory a concrete experimental interface with PP: categorical vs graded distinction at the agency/knowledge boundary."
+    },
+    {
+      "edge_id": "edge:kancuka-pp-mapping-attacks-interface-parameterization",
+      "source": "cl:kancuka-to-pp-differential-mapping-hypothesis",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.16,
+      "rationale": "If agency-limitation and knowledge-limitation are categorically distinct dimensions rather than parameter variations of the same process, PP's graded-precision framework faces a boundary.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:kancuka-pp-mapping-supports-mechanism-crux",
+      "source": "cl:kancuka-to-pp-differential-mapping-hypothesis",
+      "target": "crux:filter-mechanism-requirement",
+      "edge_type": "supports",
+      "strength": 0.28,
+      "rationale": "Mapping kañcukas to PP parameters gives the mechanism crux a concrete research programme rather than remaining at analogy level."
+    },
+    {
+      "edge_id": "edge:maaya-arousal-supports-filter",
+      "source": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.44,
+      "rationale": "The māyā-kañcuka response directly addresses the strongest lesion pressure (brainstem coma) with a specific operational prediction about scaffold collapse."
+    },
+    {
+      "edge_id": "edge:maaya-arousal-attacks-interface-generative-reading",
+      "source": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.16,
+      "rationale": "If brainstem coma is scaffold collapse rather than generator shutdown, the interface account needs additional machinery for arousal-level effects.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:maaya-arousal-supports-filter-mechanism",
+      "source": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "target": "crux:filter-mechanism-requirement",
+      "edge_type": "supports",
+      "strength": 0.34,
+      "rationale": "Mapping māyā to brainstem-medial thalamocortical connectivity gives the mechanism crux a testable substrate prediction."
+    },
+    {
+      "edge_id": "edge:maaya-arousal-sharpens-damage-crux",
+      "source": "cl:maaya-kancuka-as-arousal-level-scaffold",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.38,
+      "rationale": "Distinguishing content-loss, access-loss, and arousal-loss as separate transformation types sharpens the damage crux into three sub-cruxes."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:filter-predictions-clinical-content-access-arousal",
+      "bridge_probe_id": "bridge:trika-filter-pp-interface",
+      "left_term": "nn:trika:kancuka_specific_prediction_set",
+      "left_scope": "trika_perennialism",
+      "right_term": "nn:clinical_neuroscience:lesion_transformation_empirics",
+      "right_scope": "clinical_neuroscience",
+      "shared_structure": "Both describe lawful relations between neural damage and phenomenological change: content loss, access loss, and arousal loss each have distinct signatures.",
+      "important_difference": "Filter theory reads these as changes in limitation dimensions (kañcuka collapse/contraction); clinical neuroscience treats them as changes in neural computation. The empirical predictions converge while the metaphysical interpretation diverges.",
+      "confidence_language": "empirical convergence with metaphysical divergence",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "text:tantraloka-kancukas",
+        "text:pratyabhijnahrdayam-sankoca-vikasa"
+      ],
+      "negative_control_status": "keeps_empirical_prediction_and_metaphysical_reading_distinct"
+    },
+    {
+      "correspondence_id": "corr:filter-pp-differential-prediction-boundary",
+      "bridge_probe_id": "bridge:trika-filter-pp-interface",
+      "left_term": "nn:trika:categorical_dimension_distinction",
+      "left_scope": "trika_perennialism",
+      "right_term": "nn:predictive_processing:graded_precision_parameterization",
+      "right_scope": "predictive_processing",
+      "shared_structure": "Both can model agency effects, knowledge effects, and valence effects on experience.",
+      "important_difference": "Trika treats agency-limitation (kalā), knowledge-limitation (vidyā), and desire-limitation (rāga) as categorically distinct metaphysical dimensions; PP treats them as variations in a single precision parameter. This difference is testable: categorical boundary at agency/knowledge vs graded continuum.",
+      "confidence_language": "testable divergence point, not yet resolved",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "text:tantraloka-kancukas",
+        "doi:10.33735/phimisci.2020.II.64"
+      ],
+      "negative_control_status": "prevents_merging_kancukas_and_pp_parameters"
+    }
+  ],
+  "bridge_probe_logic": {
+    "candidate_pair": {
+      "left_term": "nn:trika:kancuka_filter",
+      "right_term": "nn:predictive_processing:generative_model_interface",
+      "surface_similarity": "Both accounts describe lawful restriction/structuring of what appears to a finite perspective.",
+      "important_difference": "Trika kañcukas are metaphysical limitation principles; PP generative models are empirical/computational mechanisms. Treating them as identical would overclaim."
+    },
+    "formal_tests": [
+      {
+        "test_id": "probe:trika-filter-predictions-vs-pp-01",
+        "probe": "trika:categorical_dimension_distinction -> predictive_processing:graded_precision_parameterization",
+        "required_status_for_merge": "PROVED",
+        "actual_status": "UNPROVED",
+        "rationale": "The filter-response layer provides operational predictions but they remain untested. The categorical-vs-graded distinction has not been experimentally confirmed."
+      },
+      {
+        "test_id": "probe:trika-filter-predictions-vs-clinical-02",
+        "probe": "trika:kancuka_specific_prediction_set -> clinical_neuroscience:lesion_transformation_empirics",
+        "required_status_for_merge": "NOT_PROVED",
+        "actual_status": "UNPROVED",
+        "rationale": "Empirical predictions converge at the content/access/arousal level but metaphysical interpretation diverges. Negative control: predictions are not yet validated."
+      }
+    ]
+  },
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:pp-to-filter:mechanism-gap",
+      "critic_lens": "predictive_processing",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "Filter-response layer provides operational predictions: kañcuka-to-neural-system mapping with testable predictions for dimensional distinction, preserved witness, recovery decoupling, and arousal-scaffold collapse. These are operational but untested.",
+      "pressure_type": "mechanism_gap",
+      "target_response_required": "Design and execute experiments that test kañcuka-specific differential predictions against PP null models. The mapping from kañcukas to neural systems remains analogical until experimentally confirmed.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:kancukas-as-distinct-transformation-dimensions",
+        "cl:kancuka-to-pp-differential-mapping-hypothesis",
+        "cl:maaya-kancuka-as-arousal-level-scaffold"
+      ],
+      "crux_ids": [
+        "crux:filter-mechanism-requirement",
+        "crux:brain-damage-transformation"
+      ]
+    },
+    {
+      "pair_id": "critique:lesion-neuroscience-to-filter:arousal-mechanism-gap",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "The māyā-kañcuka to brainstem-medial thalamocortical connectivity mapping provides an operational prediction: arousal loss is scaffold collapse with distinctive recovery connectivity predictors. Recovery-decoupling prediction provides further differentiation from PP.",
+      "pressure_type": "arousal_mechanism_gap",
+      "target_response_required": "Validate the māyā-scaffold hypothesis against existing DOC recovery prediction studies. The mapping remains speculative until empirically confirmed.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:maaya-kancuka-as-arousal-level-scaffold",
+        "cl:filter-recovery-decoupling-prediction"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ]
+    },
+    {
+      "pair_id": "critique:trika-filter-response-to-clinical:operational-predictions",
+      "critic_lens": "trika_perennialism",
+      "target_lens": "clinical_neuroscience",
+      "reveals_about_target": "The filter account generates operational predictions that clinical neuroscience can test: dimensional clustering of lesion signatures, preserved manifestness in content-abolition, temporal decoupling in recovery, and arousal-scaffold connectivity markers.",
+      "pressure_type": "testable_prediction_set",
+      "target_response_required": "Design and execute clinical studies that test these filter-specific differential predictions against PP null models.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:kancukas-as-distinct-transformation-dimensions",
+        "cl:filter-predicts-preserved-witness-across-content-abolition",
+        "cl:filter-recovery-decoupling-prediction",
+        "cl:kancuka-to-pp-differential-mapping-hypothesis",
+        "cl:maaya-kancuka-as-arousal-level-scaffold"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "brain_as_interface": "Remains the strongest local empirical candidate by mechanism specificity. The filter-response layer creates testable differential predictions that, if confirmed, would pressure the interface account's claim to be the default mechanism."
+,
+    "brain_as_filter": "Significantly strengthened by the filter-response layer: now has operational predictions for content loss, access loss, arousal loss, and recovery decoupling. The mechanism gap is partially filled with kañcuka-to-PP mapping. Remains live with an open but testable programme.",
+    "brain_as_appearance_only": "Indirectly supported by the preserved-witness prediction (if manifestness survives content-abolition) but not directly strengthened by this layer. Still pressured by neuroscience predictive utility.",
+    "current_best_answer": "Brain as generative model / interface remains the strongest local candidate by current graph score, but the filter account has closed the mechanism gap from 'analogy only' to 'operational but untested predictions', narrowing the differential space between filter and interface candidates.",
+    "open_cruxes": [
+      "crux:brain-damage-transformation",
+      "crux:filter-mechanism-requirement",
+      "crux:neural-correlation-direction"
+    ]
+  },
+  "next_work": [
+    "Design and propose an experimental protocol testing categorical vs graded distinction at the agency/knowledge boundary between filter and PP predictions.",
+    "Validate the māyā-scaffold hypothesis against existing DOC recovery prediction studies (parvizi & damasio, edlow datasets already in lesion-map).",
+    "Add a radical-idealist primary source response to lesion predictive utility.",
+    "Consider splitting Q17 into Q17a (content structuring) and Q17b (level/arousal gating) given the māyā-kañcuka distinction from content-specific kañcukas."
+  ]
+}

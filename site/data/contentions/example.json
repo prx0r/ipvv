@@ -1,0 +1,32 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "trika-vimarsa-nature",
+  "title": "Abhinavagupta: self-awareness is the nature of consciousness, not the result of cognition",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "Abhinavagupta distinguishes his view from the Buddhist svasaṃvitti doctrine: self-awareness is the very nature (svabhāva) of consciousness, not a result (phala) produced by cognition.",
+  "claims": [
+    {
+      "id": "cl:abh-svasamvedana-nature",
+      "text": "Self-awareness (svasaṃvedana) is the nature (svabhāva) of consciousness, not a result (phala) produced by cognition. Consciousness is self-luminous (svaprakāśa) and is its own object of awareness; it is not an object of a means of knowledge other than its own self-awareness.",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": "Tantrāloka 1, commentary on verse 59-60 (ahnika-01.txt:7739-7745)",
+      "quote": "svasaṁvedyaṁ svaprakāśam na tu svasaṁvedanānyapramāṇaprameyam",
+      "evidence": "textual",
+      "pramana": "sabda",
+      "hetu": "consciousness is self-luminous and not dependent on any external means of knowledge",
+      "sadhya": "self-awareness is the nature of consciousness, not a result",
+      "vyapti": "If consciousness is self-luminous and its own object, then self-awareness is its nature, not a product of cognition.",
+      "vyapti_confidence": 0.80,
+      "falsifier": "Show that the Buddhist phala model of self-awareness is compatible with consciousness being self-luminous — i.e., that the result-of-cognition account does not undermine intrinsic self-awareness.",
+      "falsifier_status": "untested",
+      "weight": 0.42,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.74,
+      "targets": [
+        { "id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.75, "rationale": "Direct textual evidence that svasaṃvedana is svabhāva, not phala." },
+        { "id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.55, "rationale": "If self-awareness is nature not result, the Buddhist phala model is challenged." }
+      ]
+    }
+  ]
+}

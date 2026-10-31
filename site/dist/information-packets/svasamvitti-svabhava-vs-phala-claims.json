@@ -1,0 +1,203 @@
+{
+  "packet_id": "ip:svasamvitti-svabhava-vs-phala",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "analysis:svabhava_vs_phala_abhinavagupta_dignaga",
+    "title": "Svasaṃvitti as Nature vs. Result: Abhinavagupta and Dignāga on Self-Awareness",
+    "author": "Abhinavagupta, Dignāga, Dharmakīrti; curated from Tantrāloka and Buddhist pramāṇa sources",
+    "source_files": [
+      "/root/projects/tantraloka/read-clean/ahnika-01.txt",
+      "content/information-packets/buddhist-response-crystal-argument-claims.json",
+      "content/information-packets/dharmakirti-pv3-reflexivity-claims.json",
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json"
+    ],
+    "external_sources": [
+      {
+        "source_id": "coseru:perceiving-reality",
+        "title": "Perceiving Reality: Consciousness, Intentionality, and Cognition in Buddhist Philosophy",
+        "author": "Christian Coseru",
+        "doi": "10.1093/acprof:oso/9780199769409.001.0001",
+        "source_quality": "scholarly_monograph"
+      },
+      {
+        "source_id": "coseru:consciousness-causality",
+        "title": "Consciousness and Causality: Dharmakīrti Against Physicalism",
+        "author": "Christian Coseru",
+        "source_quality": "scholarly_article",
+        "locator": "Section on svasaṃvitti as phala — Dignāga's PS(V) 1.8-10"
+      },
+      {
+        "source_id": "kawajiri:self-awareness-pratyabhijna",
+        "title": "A Critique of the Buddhist Doctrine of Self-Awareness in the Pratyabhijñā School",
+        "author": "Kawajiri",
+        "source_quality": "scholarly_secondary"
+      }
+    ],
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "hermes_analysis",
+  "extracted_at": "2026-07-26",
+  "status": "source_extracted_primary_secondary",
+  "review_note": "The core distinction — svasaṃvitti as svabhāva (nature) vs. phala (result) — is the crux that separates the Trika Pratyabhijñā from the Buddhist pramāṇa tradition on self-awareness. The Tantrāloka passage at Ahnika 1 directly addresses this by denying that self-awareness could be the object of a pramāṇa. Coseru's work documents the Dignāga position where svasaṃvitti is the phala of perception. Further primary passage extraction from Dignāga's PS(V) is needed.",
+  "claims": [
+    {
+      "claim_id": "cl:abhinavagupta-svaprakasa-svabhava",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "file": "/root/projects/tantraloka/read-clean/ahnika-01.txt",
+        "locator": "lines 7739-7749",
+        "quote": "sarvasya, svasaṁvedyaṁ svaprakāśam na tu svasaṁvedanānyapramāṇaprameyam, tasya devātidevasya parāpekṣā na vidyate | parasya tadapekṣatvāt svatantro 'yam ataḥ sthitaḥ || ... asya bhagavataḥ pramāṇāgocaravāt ata eva svatantrātmaṇy avatiṣṭhate na tv anyatra tadviviktasyānyasyābhāvāt pratyutānyadviśvaṁ tadvyāptatvāt tanmayam eva saṁbhavati",
+        "translation": "Everything's own nature is its own object of awareness and is self-luminous; it is not an object of a means of knowledge that is other than its own self-awareness. That God Who surpasses the gods does not depend on any other, because every other depends on Him, and so He is always independent. [...] The Lord is not in the field of any means of knowledge, and so abides within his own independent nature, certainly not elsewhere, because there is nothing else separate from that."
+      },
+      "claim_text": "Abhinavagupta holds that self-awareness (svasaṃvedana) is not the result of a cognitive act but the very nature (svabhāva/svarūpa) of consciousness itself. Consciousness is svaprakāśa (self-luminous) intrinsically — it does not become self-aware by taking itself as an object via a pramāṇa. To treat self-awareness as the phala of a pramāṇa would make consciousness dependent on something other than itself (parāpekṣa), violating its svātantrya (independence). Self-awareness is what consciousness IS, not what it PRODUCES.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "niṣedha(svasaṃvitti_phala_vāda)",
+      "hetu": "self-awareness cannot be the object of a pramāṇa because that would create a dependency and infinite regress",
+      "sadhya": "self-awareness is the svabhāva of consciousness, not its phala",
+      "vyapti_statement": "If self-awareness required a means of knowledge (pramāṇa) to be known, then (1) consciousness would depend on something other than itself, (2) an infinite regress would follow (each pramāṇa would need another to know itself), and (3) the immediacy of self-acquaintance would be lost. Since consciousness is independent (svatantra) and immediate, self-awareness must be its intrinsic nature.",
+      "vyapti_confidence": 0.82,
+      "vyapti_violations": [
+        "If the argument against pramāṇa-dependence overgenerates — it may also rule out any account of cognition that admits subpersonal processing without immediate self-acquaintance.",
+        "The Trika view may conflate ultimate consciousness (Śiva) with empirical cognition; perhaps the independence claim holds only for the former."
+      ],
+      "log_bayes_factor": 0.48,
+      "w_rel": 0.80,
+      "w_map": 0.76,
+      "w_aux": 0.78,
+      "falsifier": {
+        "type": "textual",
+        "condition": "Show a Tantrāloka passage where Abhinavagupta concedes that svasaṃvedana functions as a phala of a cognitive act at the empirical level, with the svabhāva claim applying only to ultimate reality. Alternatively, show that Dignāga's phala account does not entail the dependency or regress that Abhinavagupta claims.",
+        "status": "untested"
+      },
+      "reasoning": "The Tantrāloka passage at lines 7739-7749 makes the argument directly. The Sanskrit states: svasaṃvedyaṃ svaprakāśam — consciousness is its own object of awareness AND self-luminous. The 'na tu' clause explicitly denies that it is the object of a pramāṇa distinct from itself. The reasoning: because any other thing depends on consciousness, consciousness must be independent; therefore it cannot be known through a means that would imply dependence on something else."
+    },
+    {
+      "claim_id": "cl:dignaga-svasamvitti-phala",
+      "source_type": "primary_text",
+      "source_id": "text:dignaga-psv-1-9",
+      "source_span": {
+        "file": "content/information-packets/buddhist-response-crystal-argument-claims.json",
+        "locator": "claim cl:buddhist-cognition-is-self-manifesting, citing PS(V) 1.9ab",
+        "quote": "Cognition arises actually with two appearances, self-appearance (svābhāsa) and object-appearance (viṣayābhāsa). The self-awareness of this cognition possessing both appearances is the result (phala)."
+      },
+      "claim_text": "Dignāga (followed by Dharmakīrti) holds that every cognition has two aspects — an object-appearance (grāhyākāra) and a cognition-appearance (grāhakākāra). Self-awareness (svasaṃvitti) is the result (phala) of the cognitive act: the cognition illuminates both its object and itself, and this dual illumination constitutes the result. For Dignāga, svasaṃvitti is what cognition ACHIEVES — it is not a pre-existing nature but the culminative self-disclosure of the cognitive event. The phala model avoids positing an enduring self that pre-exists cognition; self-awareness arises with and through each cognition.",
+      "targets": [
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "buddhist_pramana",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(svasaṃvitti_phala_tantraloka_critique)",
+      "hetu": "cognition has two appearances; the unity of these appearances is self-awareness",
+      "sadhya": "self-awareness is the result of the cognitive act, not an antecedent nature of consciousness",
+      "vyapti_statement": "If cognition has a dual-aspect structure (grāhya-grāhaka), and the result (phala) of cognition is the unified consciousness of both aspects, then self-awareness is accounted for within the causal structure of cognition without requiring an additional principle of self-luminosity.",
+      "vyapti_confidence": 0.70,
+      "vyapti_violations": [
+        "Dignāga's account may still presuppose a minimal self-luminosity — the cognition must already 'be there' to have two appearances at all.",
+        "If phala is temporally downstream of the cognitive act, the account may split self-awareness from the cognition that produces it, inviting a regress of its own."
+      ],
+      "log_bayes_factor": 0.30,
+      "w_rel": 0.72,
+      "w_map": 0.64,
+      "w_aux": 0.68,
+      "falsifier": {
+        "type": "textual",
+        "condition": "Show that Dignāga's PS(V) or its commentaries clarify that svasaṃvitti is NOT a temporally downstream product but simultaneous with cognition, collapsing the phala model into something functionally equivalent to svabhāva. Or show that Abhinavagupta's Tantrāloka critique was directed at a specific formulation that does not represent Dignāga's actual view.",
+        "status": "untested"
+      },
+      "reasoning": "This is the standard reading of Dignāga's PS(V) 1.8-10 as documented by Coseru and discussed in the secondary literature. The phala model allows the Buddhist to account for self-awareness without positing an abiding self or intrinsic self-nature — it falls out of the causal structure of cognition itself."
+    },
+    {
+      "claim_id": "cl:abhinavagupta-refutes-phala-model",
+      "source_type": "analysis",
+      "source_id": "analysis:tantraloka_pramana_argument",
+      "source_span": {
+        "file": "/root/projects/tantraloka/read-clean/ahnika-01.txt",
+        "locator": "lines 7739-7749, especially 'na tu svasaṃvedanānyapramāṇaprameyam' and 'pramāṇāgocaravāt'",
+        "quote": "na tu svasaṃvedanānyapramāṇaprameyam ... asya bhagavataḥ pramāṇāgocaravāt",
+        "translation": "not an object of a means of knowledge other than its own self-awareness ... because the Lord is not in the field of any means of knowledge"
+      },
+      "claim_text": "Abhinavagupta's argument directly refutes the Dignāga phala model of self-awareness. The argument runs: (1) If self-awareness were the result (phala) of a pramāṇa, it would be the object (prameya) of that pramāṇa. (2) But whatever is an object of a pramāṇa depends on that pramāṇa for its disclosure — it is not self-standing. (3) Consciousness is svatantra (independent) and sarvasya (the nature of everything) — it cannot depend on a pramāṇa. (4) Therefore self-awareness cannot be the phala of a pramāṇa; it must be the very nature (svabhāva) of consciousness. The 'na tu' clause at line 7739 is specifically denying the Buddhist identification of self-awareness with the result of a means of cognition.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:recognition-requires-self-manifestation", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "philosophical_analysis",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(na_tu_svasaṃvedanānyapramāṇaprameyam)",
+      "hetu": "the 'na tu' clause explicitly denies that self-awareness is the prameya of any pramāṇa other than itself",
+      "sadhya": "the phala model is incoherent because it treats self-awareness as dependent on a pramāṇa",
+      "vyapti_statement": "If consciousness cannot be an object of a pramāṇa (because it is svatantra and all pramāṇas depend on it), then any account that treats self-awareness as the result (phala) of a pramāṇa mislocates self-awareness — it treats the ground of all disclosure as a disclosed object.",
+      "vyapti_confidence": 0.74,
+      "vyapti_violations": [
+        "Abhinavagupta may be extending a claim about ultimate consciousness (Śiva/Paramaśiva) to empirical cognition, where the Buddhist analysis is aimed. The Buddhist could concede the point for ultimate reality and retain the phala model for empirical cognition.",
+        "The Tantrāloka passage is polemical — it states the Trika position without directly quoting Dignāga's text. It is possible Abhinavagupta is arguing against a strawman or against a specific local Mīmāṃsā/Naiyāyika view that he assimilates to the Buddhist position."
+      ],
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.74,
+      "falsifier": {
+        "type": "textual",
+        "condition": "Show that the 'na tu svasaṃvedanānyapramāṇaprameyam' clause is directed at externalist theories of perception (e.g., Nyāya) that take self-awareness to be inferred from an observed cognition, not at the Dignāga phala model specifically. Alternatively, show that Dignāga's phala is not an object of a pramāṇa in the sense Abhinavagupta attacks.",
+        "status": "untested"
+      },
+      "reasoning": "This claim makes explicit the implicit target of the Tantrāloka passage. The construction 'na tu X-anyapramāṇaprameyam' is a technical philosophical formulation: it denies that the subject (svasaṃvedana) is the object of a means of knowledge OTHER than itself. This directly targets any theory that makes self-awareness depend on a pramāṇa — and the Dignāga phala model is arguably the most prominent instance in the Indian philosophical landscape."
+    },
+    {
+      "claim_id": "cl:svabhava-over-phala-argument",
+      "source_type": "analysis",
+      "source_id": "analysis:hermes_curation",
+      "source_span": {
+        "locator": "synthesis of Tantrāloka passage with Dignāga/Dharmakīrti position",
+        "note": "Claim is a synthetic philosophical argument favoring the Abhinavagupta position"
+      },
+      "claim_text": "The svabhāva (nature) account of self-awareness is philosophically superior to the phala (result) account for three reasons. First, the priority argument: any account that treats self-awareness as the RESULT of a cognitive process must already presuppose some minimal self-acquaintance in the process itself — otherwise how would the result be recognized as self-awareness? Cognition cannot produce awareness-of-self unless the process is already, in some measure, for-itself. Second, the regress argument: if self-awareness is the phala of a cognition, then either (a) that cognition itself requires self-awareness to function (circularity), or (b) we need a second cognition to illuminate the first (infinite regress). Third, the unity argument: the phala model splits cognition into process and result, but self-awareness is the most intimate and immediate feature of experience — any model that introduces a temporal or causal gap between cognition and its self-awareness mischaracterizes the phenomenon. These three arguments together show that svaprakāśatva as svabhāva is more parsimonious and phenomenologically accurate than the phala model.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:recognition-requires-self-manifestation", "target_type": "crux" }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(phala_vāda_pūrvakapakṣa)",
+      "hetu": "the phala model presupposes what it purports to explain and invites regress",
+      "sadhya": "the svabhāva account is more parsimonious and explains the same phenomena without regress",
+      "vyapti_statement": "If the phala model of self-awareness presupposes minimal self-acquaintance in its own cognitive process, then it fails to explain self-awareness from first principles; and if it does not presuppose it, then it requires an external observer or second cognition, generating regress. In either case, the svabhāva model is preferable because it takes self-awareness as primitive and fundamental — the ground of all cognition, not its product.",
+      "vyapti_confidence": 0.68,
+      "vyapti_violations": [
+        "A sufficiently sophisticated phala model could avoid the regress by making svasaṃvitti simultaneous with cognition (sahaja) rather than temporally downstream — Dharmakīrti may have held this view, collapsing the distinction.",
+        "Parsimony alone may not decide: the Buddhist may accept a primitive self-acquaintance as a feature of each cognitive event (a minimal phala) while denying that it constitutes a permanent self-nature. The gap between a 'self-acquaintance-as-event-feature' and 'self-awareness-as-substance-nature' may be narrower than the Trika position requires."
+      ],
+      "log_bayes_factor": 0.32,
+      "w_rel": 0.72,
+      "w_map": 0.66,
+      "w_aux": 0.62,
+      "falsifier": {
+        "type": "phenomenological",
+        "condition": "Produce a model of cognition in which (a) self-awareness genuinely arises as a result of cognitive processing, (b) no circularity or regress occurs, and (c) the phenomenology of immediate self-acquaintance is fully preserved. This would show the phala model is viable without collapsing into the svabhāva view.",
+        "status": "untested"
+      },
+      "reasoning": "This synthetic argument draws on both the Tantrāloka's explicit anti-pramāṇa argument and the philosophical difficulties inherent in treating self-awareness as a product. The priority argument is the strongest: any cognitive process that produces self-awareness as its result must already be acquainted with itself enough to recognize the result as self-awareness — this is a version of the 'knowledge argument' against representationalist accounts of consciousness."
+    }
+  ]
+}

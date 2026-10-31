@@ -1,0 +1,227 @@
+{
+  "packet_id": "ip:q17-dissociation-vs-contraction-differential",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "synthetic:q17-dissociation-vs-contraction",
+    "title": "Differential Predictions: Kastrup's Dissociation Model vs. Trika's Kañcuka-Contraction Model for Lesion Phenomenology and DOC Recovery",
+    "author": "Hermes autonomous loop 007 (contrastive analysis)",
+    "external_sources": [
+      {
+        "source_id": "doi:10.2478/disp-2017-0025",
+        "title": "An Ontological Solution to the Mind-Body Problem",
+        "author": "Bernardo Kastrup",
+        "url": "https://doi.org/10.2478/disp-2017-0025",
+        "source_quality": "peer_reviewed_philosophy"
+      },
+      {
+        "source_id": "doi:10.3390/philosophies2020010",
+        "title": "Self-Transcendence Correlates with Brain Function Impairment: Implications for Consciousness",
+        "author": "Bernardo Kastrup",
+        "url": "https://doi.org/10.3390/philosophies2020010",
+        "source_quality": "peer_reviewed_philosophy"
+      },
+      {
+        "source_id": "text:tantraloka-kancukas",
+        "title": "Tantraloka, Chapters 3-9 on the six kañcukas as orthogonal limitation dimensions",
+        "author": "Abhinavagupta",
+        "url": "sourcematerial/trika/tantraloka/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:pratyabhijnahrdayam-sankoca-vikasa",
+        "title": "Pratyabhijñāhṛdayam on recovery as release of contraction (saṃkoca-vikāsa)",
+        "author": "Kṣemarāja",
+        "url": "sourcematerial/trika/pratyabhijnahrdayam/",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "text:tantrasara-saksin",
+        "title": "Tantrasara on sākṣin (witness consciousness) as invariant through all vṛtti modifications",
+        "author": "Abhinavagupta",
+        "url": "sourcematerial/trika/tantrasara/",
+        "source_quality": "primary_text"
+      }
+    ],
+    "tradition_scope": "analytic_idealism_trika_comparison"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "hermes_loop_007",
+  "extracted_at": "2026-07-27",
+  "status": "hermes_proposed",
+  "claims": [
+    {
+      "claim_id": "cl:dissociation-contraction-individuation-ontology-difference",
+      "source_type": "synthetic_analysis",
+      "source_id": "synthetic:q17-dissociation-vs-contraction",
+      "source_span": {
+        "locator": "Comparative analysis: Kastrup dissociation model vs. Trika kañcuka-contraction model",
+        "quote": "Kastrup treats individual minds as genuine dissociative partitions of universal consciousness (alters with real boundaries), while Trika treats individuation as illusory limitation (māyā-kañcuka creates the appearance of separation, not a real partition)."
+      },
+      "claim_text": "The ontology of individuation differs fundamentally between analytic idealism's dissociation model and Trika's kañcuka-contraction model. In Kastrup's analytic idealism, individual minds are dissociated alters of universal consciousness, separated by genuine dissociative boundaries; the brain is the extrinsic appearance of these boundaries. In Trika's kañcuka model, individual minds are the same universal consciousness appearing as limited through the six kañcukas (māyā, kalā, vidyā, rāga, kāla, niyati); the limitation is illusory (māyā), not a real partition. This difference is not merely terminological — it generates divergent predictions about what happens when brain injury alters the apparent mind-world boundary.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:neural-correlation-direction", "target_type": "crux" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "paradigm": "contrastive_ontology",
+      "evidence_dimension": "formal",
+      "pramana": "tarka",
+      "nn_expr": "sambandha(kastrup_real_alters,trika_illusory_maya)",
+      "hetu": "Both models reject production but differ on the ontology of individuation; if they cannot be empirically distinguished, the difference is merely terminological and either model suffices; if they can, the difference matters for future research.",
+      "sadhya": "Kastrup's dissociation model and Trika's kañcuka model make empirically distinguishable predictions about lesion phenomenology and DOC recovery.",
+      "vyapti_statement": "If two ontological accounts of individuation (real dissociative boundaries vs. illusory limitation) generate different predictions about observable phenomenology after brain injury, then the difference between them is empirically tractable and not merely terminological.",
+      "vyapti_confidence": 0.60,
+      "log_bayes_factor": 0.30,
+      "w_rel": 0.55,
+      "w_map": 0.50,
+      "w_aux": 0.52,
+      "falsifier": {
+        "type": "convergence",
+        "condition": "Demonstrate that all empirical predictions of the dissociation model and the kañcuka model are identical for all possible lesion and DOC-recovery data — i.e., no experiment can distinguish them. If they are empirically equivalent, the individuation difference collapses into a purely philosophical distinction with no scientific consequences.",
+        "status": "untested"
+      },
+      "reasoning": "This claim frames the entire contention. It identifies the core ontological difference (real vs. illusory boundaries) and asserts it is empirically tractable. If true, the two consciousness-first candidates must compete on empirical grounds. If false, they are terminological variants and the benchmark should treat them as such."
+    },
+    {
+      "claim_id": "cl:dissociation-predicts-non-hierarchical-alter-restructuring",
+      "source_type": "synthetic_analysis",
+      "source_id": "synthetic:q17-dissociation-vs-contraction",
+      "source_span": {
+        "locator": "Deduction from dissociation model: alter boundaries are individually structured, not hierarchically ordered",
+        "quote": "If individual minds are dissociated alters of universal consciousness, brain injury alters or collapses the dissociative boundary structure that defines each alter. Recovery is the re-establishment of this boundary structure — but there is no universal hierarchy of boundary features, because alters are individually constituted by their experiential history, not by a fixed set of limitation dimensions."
+      },
+      "claim_text": "Kastrup's dissociation model predicts that recovery of consciousness after severe brain injury will show non-hierarchical, individually variable patterns. Since alters are constituted by experiential history and dissociative boundary structure (not a fixed hierarchy of limitation dimensions), the re-establishment of consciousness after brain injury should follow patient-specific trajectories that reflect the individual's dissociative architecture. Two patients with anatomically comparable lesions may show different recovery sequences because their alter-boundary structures differ. This contrasts with the kañcuka model's prediction of hierarchical recovery (māyā-scaffold → content kañcukas → fine-grained content) which is universal across patients.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "paradigm": "contrastive_ontology",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(alter_non_hierarchical,maya_hierarchical)",
+      "hetu": "Dissociation model treats alter boundaries as individually constituted; kañcuka model treats limitation dimensions as universally ordered.",
+      "sadhya": "Recovery trajectories after brain injury distinguish the two consciousness-first accounts.",
+      "vyapti_statement": "If alters are individually constituted, recovery after brain injury should show patient-specific (not universally ordered) sequences. If limitation dimensions are universally ordered (māyā → content kañcukas), recovery should follow a consistent hierarchy across patients.",
+      "vyapti_confidence": 0.40,
+      "log_bayes_factor": 0.22,
+      "w_rel": 0.40,
+      "w_map": 0.35,
+      "w_aux": 0.38,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show that DOC recovery follows a consistent universal sequence across patients regardless of individual differences in premorbid cognitive/experiential structure, or that all apparent variability is explained by lesion heterogeneity alone with no residual patient-specific factor attributable to alter-boundary structure.",
+        "status": "untested"
+      },
+      "reasoning": "This is the sharpest differential prediction. The kañcuka model predicts universal hierarchy (māyā first, then content dimensions); the dissociation model predicts patient-specific variation. Existing DOC recovery data (Edlow, Giacino, Schiff cohorts) could be reanalyzed to test this — but the analysis has not been done because no one was testing this specific prediction."
+    },
+    {
+      "claim_id": "cl:dissociation-predicts-hybrid-fragment-phenomenology",
+      "source_type": "synthetic_analysis",
+      "source_id": "synthetic:q17-dissociation-vs-contraction",
+      "source_span": {
+        "locator": "Deduction from dissociation model: partial alter collapse produces hybrid experiential content",
+        "quote": "If a dissociative boundary partially collapses, two alters partially merge. The resulting phenomenology should show hybrid content from both alters — not pure presence or simple reduction, but structured experiential content that blends features from previously separated streams."
+      },
+      "claim_text": "Under the dissociation model, partial brain injury that partially disrupts a dissociative boundary should produce hybrid phenomenology — experiential content that blends features from the alter's stream and the surrounding universal consciousness (or from a neighbouring alter). This predicts that patients with moderate-severe DOC (MCS, emerging MCS) should report or manifest experiential content that is not merely reduced or degraded but qualitatively blended — e.g., dream-like content that intermingles personal memory fragments with impersonal archetypal content. Under the kañcuka model, partial collapse of kañcuka scaffolding should produce experiential reduction, simplification, or bare manifestness — but not hybrid blending, because the limitation dimensions are fixed axes of reduction (not boundaries between distinct contents). The kañcuka model predicts the quality of residual experience is determined by which kañcuka-specific dimension is affected, not by which experiential contents happen to be adjacent across a boundary.",
+      "targets": [
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" }
+      ],
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "paradigm": "contrastive_ontology",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "virodha(kastrup_hybrid_blending_phenomenology,trika_dimension_specific_reduction)",
+      "hetu": "Dissociation model treats alters as bounded content zones; partial boundary collapse produces blending. Kañcuka model treats limitation as dimensional reduction; partial collapse produces dimension-specific simplification.",
+      "sadhya": "The quality of residual experience in DOC distinguishes the two consciousness-first accounts: hybrid blending vs. dimension-specific reduction.",
+      "vyapti_statement": "If alters are bounded content zones that can partially merge, then partial dissociation boundary collapse produces hybrid-blend phenomenology. If limitation dimensions are fixed reduction axes, partial collapse produces dimension-specific experiential simplification.",
+      "vyapti_confidence": 0.35,
+      "log_bayes_factor": 0.18,
+      "w_rel": 0.35,
+      "w_map": 0.30,
+      "w_aux": 0.32,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show that all residual experiential content in DOC states is best described as either (a) simple graded reduction of content along identifiable dimensions, (b) bare manifestness without content, or (c) no detectable phenomenology — with no residual cases requiring a hybrid-blending explanation. If all DOC phenomenology is captured by reduction/simplification accounts, the dissociation model's distinctive prediction fails.",
+        "status": "untested"
+      },
+      "reasoning": "This is the most phenomenologically distinctive prediction. If NDE research, DOC experience-sampling, and MCS phenomenology ever reveals content that combines patient-specific memories with impersonal/archetypal content in ways that resist simple dimensional reduction, the dissociation model has unique explanatory power. The current DOC literature has barely begun structured phenomenological sampling."
+    },
+    {
+      "claim_id": "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+      "source_type": "synthetic_analysis",
+      "source_id": "synthetic:q17-dissociation-vs-contraction",
+      "source_span": {
+        "locator": "Deduction from kañcuka model: sākṣin as invariant witness survives content abolition",
+        "quote": "The witness consciousness (sākṣin) persists through all vṛtti modifications as their invariant ground. Content elimination does not produce hybrid content; it reveals the bare witness, which has no content of its own."
+      },
+      "claim_text": "The kañcuka-contraction model's distinctive prediction is that severe content-elimination (e.g., from cortical damage that abolishes sensory and cognitive content) should reveal the sākṣin — an experiential state characterized by contentless presence, luminous awareness without any object, structure, or personal memory. This is categorically different from the dissociation model's predicted hybrid blend. The sākṣin is empty of content; hybrid blends are full of blended content. These two predictions are empirically distinguishable if structured phenomenological reports from DOC recovery or near-death states can differentiate between 'contentless luminous awareness' and 'blended impersonal-personal content.' The former supports the kañcuka model; the latter supports the dissociation model. Both cannot be simultaneously true for the same brain state.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "crux:brain-damage-transformation", "target_type": "crux" },
+        { "target_id": "crux:filter-mechanism-requirement", "target_type": "crux" }
+      ],
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "paradigm": "trika",
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "nn_expr": "virodha(kancuka_saksin_contentless_witness,dissociation_hybrid_blended_content)",
+      "hetu": "Tantrasara describes sākṣin as content-invariant witness; dissociation model predicts content-blending from partial alter collapse — these are mutually exclusive predictions for the same lesion phenomenology.",
+      "sadhya": "Content-elimination phenomenology (sākṣin vs. hybrid blend) distinguishes the kañcuka model from the dissociation model.",
+      "vyapti_statement": "If the sākṣin is content-invariant witness, then content-elimination should produce contentless luminous awareness. If alters are bounded content zones, content-elimination should produce hybrid blended content. These are mutually exclusive predictions for the same degree of brain damage.",
+      "vyapti_confidence": 0.45,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.42,
+      "w_map": 0.38,
+      "w_aux": 0.40,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Demonstrate that content-elimination phenomenology always manifests as one specific type (either always contentless witness or always hybrid blend) regardless of lesion location and individual differences, thereby showing the two models are not distinguishing true alternatives but rather descriptions of the same thing from different perspectives. Or: show that the distinction between 'contentless witness' and 'hybrid blend' cannot be reliably operationalized for phenomenological reports.",
+        "status": "untested"
+      },
+      "reasoning": "This directly contrasts the two models' predictions for the most extreme lesion case. The kañcuka model predicts sākṣin (contentless luminous awareness); the dissociation model predicts hybrid blended content. NDE literature (Parnia AWARE, van Lommel) reports features that could support either — need structured phenomenological interviews designed to distinguish these."
+    },
+    {
+      "claim_id": "cl:agency-knowledge-boundary-differential",
+      "source_type": "synthetic_analysis",
+      "source_id": "synthetic:q17-dissociation-vs-contraction",
+      "source_span": {
+        "locator": "Deduction from kañcuka ontology: kalā (agency) and vidyā (knowledge) are distinct limitation dimensions",
+        "quote": "In Trika kañcuka ontology, kalā (limited agency/creativity) and vidyā (limited knowledge) are categorically distinct limitation dimensions. In the dissociation model, agency and knowledge are both features of the alter's boundary-maintenance and should co-vary."
+      },
+      "claim_text": "The kañcuka model predicts a categorical boundary between agency-limitation (kalā-kañcuka) and knowledge-limitation (vidyā-kañcuka) that should produce dissociable experiential effects after selective brain damage. Prefrontal lesions affecting agency (sense of control, intentional binding, sense of causality) should be dissociable from temporal/parietal lesions affecting knowledge (semantic access, factual recall, spatial orientation), and these dissociations should be qualitatively distinct — not merely different degrees of the same deficit. The dissociation model treats agency and knowledge as both features of the alter's boundary structure; they should co-vary because both depend on the same boundary integrity. A weakening of the alter boundary should reduce both agency and knowledge together, not produce a categorical dissociation between them. A controlled experiment comparing intentional binding (agency proxy) against semantic accuracy (knowledge proxy) in patients with prefrontal vs. temporal lesions could distinguish these predictions: the kañcuka model predicts a categorical double dissociation, the dissociation model predicts correlated impairment.",
+      "targets": [
+        { "target_id": "cand:brain-as-filter", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-appearance-only", "target_type": "candidate_explanation" },
+        { "target_id": "cand:brain-as-interface-generative-model", "target_type": "candidate_explanation" },
+        { "target_id": "crux:filter-mechanism-requirement", "target_type": "crux" }
+      ],
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "paradigm": "contrastive_ontology",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nn_expr": "virodha(kancuka_kala_vidya_categorical_dissociation,alter_boundary_covariance)",
+      "hetu": "Kañcuka model treats agency and knowledge as distinct dimensions; dissociation model treats them as co-varying features of alter boundary integrity.",
+      "sadhya": "Agency-knowledge dissociations in lesion patients distinguish the two consciousness-first accounts from each other and from PP (which treats both as precision parameters).",
+      "vyapti_statement": "If kalā and vidyā are categorically distinct limitation dimensions, selective damage to their neural scaffolding should produce dissociable agency and knowledge deficits. If agency and knowledge are both features of alter boundary integrity, they should co-vary in brain injury.",
+      "vyapti_confidence": 0.38,
+      "log_bayes_factor": 0.20,
+      "w_rel": 0.38,
+      "w_map": 0.32,
+      "w_aux": 0.35,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Show that agency and knowledge deficits in lesion patients always co-vary (no categorical dissociation between the two), supporting the alter-boundary view. Or: show that all agency-knowledge dissociations are fully explained by PP's precision-parameter variation with no residual requiring a categorical dimension distinction.",
+        "status": "untested"
+      },
+      "reasoning": "This extends the existing kañcuka-to-PP differential mapping claim (already in the filter-response packet) to also distinguish the kañcuka model from the dissociation model. It creates a three-way test: kañcuka predicts categorical dissociation, dissociation model predicts covariance, PP predicts graded precision variation."
+    }
+  ]
+}

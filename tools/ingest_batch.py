@@ -56,6 +56,7 @@ def ingest(s3, key, work):
             "checks": g.get("checks", {}) if isinstance(g, dict) else {},
             "en_variants": r.get("en_variants", []),
             "styles": r.get("styles", []),
+            "work_file": w,
         }
         if passed:
             item["l1"] = r.get("l1_text", "")

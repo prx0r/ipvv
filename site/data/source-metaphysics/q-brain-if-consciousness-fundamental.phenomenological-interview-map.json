@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-phenomenological-interview-wager",
+  "claim_packet": "content/information-packets/q17-phenomenological-interview-wager.json",
+  "generated_by": "hermes_loop_010",
+  "source_role": "phenomenological_interview_wager_saksin_vs_hybrid",
+  "candidate_under_test": "cand:brain-as-appearance-only",
+  "central_reading": "This layer formalizes the second differential prediction from Loop 007 (contentless luminous witness sākṣin vs. hybrid blended content) as a concrete experimental wager with a structured phenomenological interview protocol. The four claims frame the test as feasible and operationalizable (Claim 1), specify the kañcuka model's prediction of contentless luminous awareness after severe content-structuring damage (Claim 2), specify the dissociation model's prediction of hybrid blended content after partial alter-boundary collapse (Claim 3), and provide a minimum protocol specification including inclusion criteria, instruments, analysis methods, decisive criteria, and timeline (Claim 4). This moves the sākṣin/hybrid-blend differential from a theoretical prediction to an actionable research design. The wager does not claim to settle the ontology debate — it claims to determine whether the residual phenomenology of MCS patients after content-structuring damage better matches the kañcuka model's sākṣin prediction or the dissociation model's hybrid-blend prediction. If a two-cluster structure emerges with silhouette ≥ 0.40 and lesion-location correlation, the models are empirically differentiable. If no separable clusters emerge, both are underspecified on this prediction dimension.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:phenomenological-interview-framing",
+      "source_span_id": "synthetic:q17-phenomenological-interview-wager",
+      "quoted_anchor": "The kañcuka model predicts that severe content-structuring loss reveals sākṣin: contentless luminous awareness. The dissociation model predicts hybrid blended content. These are empirically distinguishable.",
+      "nn_expr": "upaya(saksin_hybrid_distinction,structured_phenomenological_interview)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "operationalizability of sākṣin vs. hybrid-blend distinction",
+        "hetu": "existing validated instruments operationalize contentless vs. contentful awareness; MCS patients can respond to scale-rated items",
+        "sadhya": "structured interview can produce distinguishing data",
+        "vyapti": "If the key dimensions are operationalizable and MCS patients can respond, the protocol can produce distinguishing data."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that MCS patients cannot reliably respond to scale-rated phenomenology items, or that all MCS reports fall on a single continuum rather than clustering into two qualitatively distinct patterns."
+    },
+    {
+      "claim_id": "cl:phenomenological-saksin-kancuka-prediction",
+      "source_span_id": "synthetic:q17-phenomenological-interview-wager",
+      "quoted_anchor": "The sākṣin is the invariant ground of all experiential states. When content-structuring kañcukas collapse, what remains is contentless, luminous, objectless, timeless, non-narrative awareness.",
+      "nn_expr": "sambandha(kancuka_content_loss,saksin_contentless_presence)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "MCS phenomenology after content-structuring damage",
+        "hetu": "kañcuka model: content-structuring loss removes object-creating limitations, revealing invariant witness ground",
+        "sadhya": "MCS patients should report contentless luminous awareness (sākṣin) rather than hybrid blended content",
+        "vyapti": "If content-structuring loss removes object-directed limitation dimensions, residual state is contentless witness with luminous presence; if dissociation model correct, same damage produces hybrid-blended content."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [{"type": "savyabhicara", "severity": "moderate", "reason": "Weak vyapti confidence; the reason does not reliably imply the target."}],
+      "falsifier": "Demonstrate that MCS patients with severe content-structuring damage consistently report hybrid blended content rather than contentless luminous awareness."
+    },
+    {
+      "claim_id": "cl:phenomenological-hybrid-dissociation-prediction",
+      "source_span_id": "synthetic:q17-phenomenological-interview-wager",
+      "quoted_anchor": "If a dissociative boundary partially collapses, experiential content hybridizes personal memory fragments with impersonal archetypal material. The result is not contentless awareness but blended content.",
+      "nn_expr": "sambandha(alter_boundary_collapse,hybrid_blended_phenomenology)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "MCS phenomenology after content-structuring damage",
+        "hetu": "dissociation model: partial alter-boundary collapse mixes content across boundaries",
+        "sadhya": "MCS patients should report hybrid blended content rather than contentless luminous awareness",
+        "vyapti": "If alters are bounded content zones, partial boundary collapse produces blending of content from both sides; if kañcuka model correct, same damage reveals contentless witness ground."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [{"type": "savyabhicara", "severity": "moderate", "reason": "Weak vyapti confidence; the reason does not reliably imply the target."}],
+      "falsifier": "Demonstrate that MCS patients consistently report contentless luminous awareness (sākṣin) with no reports of hybrid blended content."
+    },
+    {
+      "claim_id": "cl:phenomenological-interview-analysis-protocol",
+      "source_span_id": "synthetic:q17-phenomenological-interview-wager",
+      "quoted_anchor": "The protocol requires MCS patients meeting inclusion criteria, validated phenomenology instruments, defined analysis procedures, and decisive criteria.",
+      "nn_expr": "upaya(phenomenological_wager,protocol_specification)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "operationalizability of phenomenological interview wager",
+        "hetu": "sākṣin vs. hybrid-blend distinction requires specific operational criteria",
+        "sadhya": "wager is operationalized with specific inclusion criteria, instruments, analysis, and decisive criteria",
+        "vyapti": "If the protocol specifies clear criteria, validated instruments, predefined analysis, and decisive criteria, it is actionable."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that MCS patients meeting inclusion criteria are too rare for the study to complete in 24 months, or that they cannot respond to the adapted scale, or that the dimensions cannot achieve inter-rater reliability."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:phenomenological-framing-supports-appearance-candidate",
+      "source": "cl:phenomenological-interview-framing",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.40,
+      "rationale": "Framing the wager as a feasible test strengthens the appearance candidate by providing a concrete experimental path for its dissociation variant, but does not directly confirm its ontology."
+    },
+    {
+      "edge_id": "edge:phenomenological-framing-supports-filter-candidate",
+      "source": "cl:phenomenological-interview-framing",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "The wager indirectly supports the filter candidate by providing a test for its sākṣin prediction, showing the Trika variant can generate testable phenomenological predictions."
+    },
+    {
+      "edge_id": "edge:phenomenological-framing-operationalizes-differential",
+      "source": "cl:phenomenological-interview-framing",
+      "target": "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+      "edge_type": "supports",
+      "strength": 0.55,
+      "rationale": "Directly operationalizes the claim from Loop 007 that the sākṣin/hybrid-blend distinction is empirically tractable."
+    },
+    {
+      "edge_id": "edge:kancuka-saksin-prediction-supports-filter-candidate",
+      "source": "cl:phenomenological-saksin-kancuka-prediction",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.50,
+      "rationale": "The sākṣin prediction uniquely maps to the kañcuka/contractive reading of the filter candidate — if confirmed, it would provide phenomenological evidence for the Trika variant."
+    },
+    {
+      "edge_id": "edge:kancuka-saksin-prediction-supports-appearance-filter",
+      "source": "cl:phenomenological-saksin-kancuka-prediction",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.35,
+      "rationale": "Confirmation of the sākṣin prediction would support the broader consciousness-first family but specifically the Trika/kañcuka variant over the dissociation variant."
+    },
+    {
+      "edge_id": "edge:kancuka-saksin-attacks-dissociation-hybrid-prediction",
+      "source": "cl:phenomenological-saksin-kancuka-prediction",
+      "target": "cl:phenomenological-hybrid-dissociation-prediction",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "rationale": "The kañcuka sākṣin prediction and the dissociation hybrid prediction are mutually exclusive — the same MCS patients cannot simultaneously manifest contentless witness and hybrid blended content."
+    },
+    {
+      "edge_id": "edge:hybrid-dissociation-prediction-supports-appearance-candidate",
+      "source": "cl:phenomenological-hybrid-dissociation-prediction",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.50,
+      "rationale": "Confirmation of the hybrid blended content prediction would uniquely support the Kastrup dissociation variant of the appearance candidate."
+    },
+    {
+      "edge_id": "edge:hybrid-dissociation-attacks-filter-mechanism-requirement",
+      "source": "cl:phenomenological-hybrid-dissociation-prediction",
+      "target": "crux:filter-mechanism-requirement",
+      "edge_type": "attacks",
+      "strength": 0.35,
+      "rationale": "Hybrid blended content would suggest that what brain injury reveals is not the bare witness ground but blended experiential material from partially collapsed boundaries — this pressures accounts requiring a sākṣin-like invariant."
+    },
+    {
+      "edge_id": "edge:hybrid-dissociation-attacks-kancuka-saksin-prediction",
+      "source": "cl:phenomenological-hybrid-dissociation-prediction",
+      "target": "cl:phenomenological-saksin-kancuka-prediction",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "rationale": "The dissociation hybrid prediction directly contradicts the kañcuka sākṣin prediction for the same patient population."
+    },
+    {
+      "edge_id": "edge:protocol-operationalizes-framing",
+      "source": "cl:phenomenological-interview-analysis-protocol",
+      "target": "cl:phenomenological-interview-framing",
+      "edge_type": "supports",
+      "strength": 0.60,
+      "rationale": "The protocol specification directly supports the framing claim by providing concrete operationalization."
+    },
+    {
+      "edge_id": "edge:protocol-supports-both-predictions",
+      "source": "cl:phenomenological-interview-analysis-protocol",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "By providing a concrete test protocol, the claim makes both variants of the appearance candidate empirically accessible."
+    },
+    {
+      "edge_id": "edge:protocol-supports-filter-indirectly",
+      "source": "cl:phenomenological-interview-analysis-protocol",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.25,
+      "rationale": "The protocol indirectly supports the filter candidate by providing a path to test the sākṣin prediction that uniquely arises from its Trika mapping."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:phenomenological-saksin-hybrid-mutual-incompatibility",
+      "bridge_probe_id": "bridge:kastrup-dissociation-kancuka-phenomenology-contrast",
+      "left_term": "nn:phenomenological_wager:kancuka_saksin_contentless_witness",
+      "left_scope": "trika_perennialism",
+      "right_term": "nn:phenomenological_wager:dissociation_hybrid_blended_content",
+      "right_scope": "analytic_idealism",
+      "shared_structure": "Both predictions concern the phenomenology of MCS patients after severe content-structuring neural damage. Both agree that the residual phenomenology is informative about the nature of individuation. Both reject the null that MCS patients have no reportable phenomenology.",
+      "important_difference": "The kañcuka model predicts contentless luminous awareness (sākṣin) with no objects, no narrative, no memory fragments. The dissociation model predicts hybrid blended content that interweaves personal memory fragments with impersonal archetypal material. These predictions are mutually exclusive for the same patient with the same lesion profile.",
+      "confidence_language": "mutually exclusive empirical predictions with defined decisive criteria per protocol; both cannot simultaneously hold for the same data",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "text:tantrasara-saksin-invariant-witness",
+        "doi:10.2478/disp-2017-0025",
+        "doi:10.1016/j.neuroimage.2014.10.057",
+        "doi:10.1016/j.resuscitation.2014.09.004"
+      ],
+      "negative_control_status": "prevents_merging_kastrup_and_trika_as_identical_on_phenomenology"
+    },
+    {
+      "correspondence_id": "corr:phenomenological-wager-mcs-neuroscience-prediction",
+      "bridge_probe_id": "bridge:phenomenology-interview-neuroscience-feasibility",
+      "left_term": "nn:phenomenological_wager:mcs_phenomenology_operationalization",
+      "left_scope": "analytic_idealism_trika_comparison",
+      "right_term": "nn:clinical_neuroscience:doc_assessment_instruments",
+      "right_scope": "clinical_neuroscience",
+      "shared_structure": "Both describe MCS phenomenology as potentially assessable through adapted instruments. Both use CRS-R for DOC classification. Both recognize that MCS patients can produce meaningful phenomenology reports with appropriate instruments.",
+      "important_difference": "Standard clinical neuroscience uses CRS-R for DOC classification and basic behavioral assessment but does not systematically probe the quality of residual phenomenology in a way that distinguishes contentless witness from hybrid blend. The wager proposes extending existing DOC assessment by adding phenomenology-scale items that specifically target this distinction.",
+      "confidence_language": "potentially convergent on feasibility of MCS phenomenology assessment, but divergent on the specific dimensions and resolution required",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.1016/S1474-4422(14)70025-1",
+        "doi:10.1016/j.neuroimage.2014.10.057",
+        "doi:10.1016/S0033-3182(99)71256-5"
+      ],
+      "negative_control_status": "prevents_treating_phenomenological_wager_as_standard_neuroscience_practice"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:phenomenological-kancuka-to-dissociation:saksin-specificity",
+      "critic_lens": "trika_perennialism",
+      "target_lens": "analytic_idealism",
+      "reveals_about_target": "The dissociation model predicts hybrid blended content in MCS but does not specify what kind of blending to expect or how to distinguish hybrid blend from merely degraded content. The kañcuka model's sākṣin prediction is bolder and more specific — contentless luminous awareness with defined PCI/C-ES/NDE subscale profiles. The dissociation model's prediction may be harder to distinguish from the null hypothesis of 'noise and confabulation.'",
+      "pressure_type": "prediction_specificity",
+      "target_response_required": "The dissociation model should specify the expected phenomenology of hybrid blended content more precisely, including distinguishing criteria for differentiating genuine hybrid blending from degraded content, confabulation, or noise.",
+      "status": "open",
+      "supporting_claim_ids": ["cl:phenomenological-saksin-kancuka-prediction"],
+      "crux_ids": ["crux:brain-damage-transformation"]
+    },
+    {
+      "pair_id": "critique:phenomenological-dissociation-to-kancuka:contentless-description-paradox",
+      "critic_lens": "analytic_idealism",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "The kañcuka model predicts that MCS patients with severe content-structuring damage will report 'contentless luminous awareness' — but MCS patients by definition have severely limited language and communication. Those who can report anything at all must use contentful language to describe their experience. How can a patient reliably report contentless awareness if the very act of reporting is contentful? The kañcuka model must specify how the protocol distinguishes genuine contentless report from (a) the patient using content-denying language as a proxy for degraded but still-contentful awareness, or (b) the patient defaulting to culturally available descriptions of 'light' and 'peace' that may not reflect actual phenomenology.",
+      "pressure_type": "operationalization_paradox",
+      "target_response_required": "The kañcuka model must specify how the protocol distinguishes genuine sākṣin report from content-denying proxy reports, including specific Likert-scale patterns that should correlate with contentless awareness vs. degraded contentful awareness vs. confabulation.",
+      "status": "open",
+      "supporting_claim_ids": ["cl:phenomenological-hybrid-dissociation-prediction"],
+      "crux_ids": ["crux:filter-mechanism-requirement"]
+    },
+    {
+      "pair_id": "critique:phenomenological-protocol-to-both:patient-population-feasibility",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "combined_consciousness_first",
+      "reveals_about_target": "The proposed protocol requires MCS patients with severe cortical association area damage (excluding primary brainstem/arousal pathology) plus CRS-R scores 6-16, plus sufficient communication to complete a 16-item adapted phenomenology scale and open-ended question. This population may be very small — possibly not reaching N=20 even in multi-centre recruitment over 24 months. Additionally, the sensory-attenuation control condition with healthy participants raises the question of whether contentless reporting is a general capacity (e.g., meditative states in normals) or specifically related to brain damage. Both consciousness-first accounts must specify whether their predictions are specific to brain-damaged phenomenology or apply to all instances of contentless awareness.",
+      "pressure_type": "empirical_accessibility",
+      "target_response_required": "Both accounts should specify whether their prediction is (a) specific to brain-damage-induced content-structuring loss, (b) a general claim about the nature of consciousness under any content-attenuating condition, or (c) specifically testable in this patient population. If (c), they must provide a realistic assessment of recruitment feasibility.",
+      "status": "open",
+      "supporting_claim_ids": ["cl:phenomenological-interview-analysis-protocol"],
+      "crux_ids": ["crux:brain-damage-transformation", "crux:filter-mechanism-requirement"]
+    }
+  ],
+  "bridge_probe_stubs": [],
+  "state_of_play_delta": {
+    "summary": "This wager layer operationalizes the second differential prediction from Loop 007 (contentless witness vs. hybrid blend) that has remained untouched. It provides a concrete path for distinguishing the kañcuka model from the dissociation model using a different kind of evidence (structured phenomenology rather than recovery trajectory analysis), complementing the recovery hierarchy wager from Loop 008 and avoiding the dataset-feasibility bottleneck identified in Loop 009. The wager is designed to be achievable in 12-24 months with moderate resources (multi-centre recruitment, no new technology, adapted instruments only). If the two-cluster structure emerges, the sākṣin/hybrid-blend distinction is empirically tractable and the models are differentiable. If no clustering emerges, both models are underspecified on this prediction dimension and the distinction may collapse into terminological variants.",
+    "predictions_made": [
+      "Two-cluster phenomenology structure (sākṣin vs. hybrid blend) with silhouette ≥ 0.40 and lesion-location correlation → supports one variant over the other depending on cluster content",
+      "Single-cluster or no-cluster structure (silhouette < 0.25) → both models underspecified on this dimension",
+      "All patients in one cluster → supports the model predicting that cluster's phenomenology and weakens the other"
+    ],
+    "required_data": "N ≥ 20 MCS/EMCS patients (CRS-R 6-16) with severe cortical association area damage, confirmed via structural MRI, excluding primary brainstem/arousal pathology. Three instruments: CRS-R, 16-item adapted phenomenology scale, open-ended interview question. Administered at 2-week intervals over 6 weeks. Control: age-matched healthy participants under sensory-attenuation."
+  }
+}

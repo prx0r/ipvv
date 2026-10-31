@@ -1,0 +1,31 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-accepts-apoha",
+  "title": "Abhinavagupta accepts apoha as valid but recontextualizes it within Pratyabhijñā self-manifestation",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "Abhinavagupta does not reject apoha outright — he accepts it as a valid cognitive method but recontextualizes it within the Pratyabhijñā framework of progressive manifestation. The difference: Buddhist apoha determines by exclusion (what X is not); Pratyabhijñā determines by progressive manifestation of qualities (what X IS).",
+  "claims": [{
+    "id": "cl:abh-accepts-apoha-recontextualized",
+    "text": "Abhinavagupta explicitly engages Dignāga's apoha theory and accepts it as a valid cognitive method, but recontextualizes it within the Pratyabhijñā framework. He writes that apoha 'is accepted here as a method' but notes that in Pratyabhijñā, 'the nature of an object is determined by a process of progressive manifestation of its qualities as they come to be known, until they are sufficient for the nature of the object to be known.' The difference is not that apoha is wrong, but that it operates within a broader context: exclusion determines boundaries, but manifestation reveals content. The Buddhist svasaṃvitti (self-awareness of cognition) is similarly recontextualized — it is not rejected but taken up into the broader framework of consciousness's self-luminous nature.",
+    "source_id": "text:tantraloka-ahnika1",
+    "source_span": "Tantrāloka 1, lines 17060-17100 on Dignāga's apoha and Pratyabhijñā response",
+    "quote": "accepted by various schools of Indian philosophy beginning with its initial major formulation by the Buddhist idealist Diṅnāga",
+    "evidence": "textual",
+    "pramana": "sabda",
+    "hetu": "Abhinavagupta explicitly cites Dignāga's apoha and accepts it as a method while recontextualizing it",
+    "sadhya": "the Trika and Buddhist positions may be complementary rather than contradictory at the epistemological level",
+    "vyapti": "If Abhinavagupta explicitly accepts apoha as valid while reinterpreting it, then the crystal argument is not a rejection of Buddhist epistemology but a relocation of it within a broader framework.",
+    "vyapti_confidence": 0.75,
+    "falsifier": "Show that Abhinavagupta's 'acceptance' of apoha is merely rhetorical and that he ultimately rejects its validity for determining the nature of consciousness itself — i.e., that the recontextualization is actually a refutation.",
+    "falsifier_status": "untested",
+    "weight": 0.38,
+    "w_rel": 0.73,
+    "w_map": 0.65,
+    "w_aux": 0.70,
+    "targets": [
+      { "id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.68, "rationale": "Shows Abhinavagupta's position is more nuanced than simple rejection of Buddhist epistemology." },
+      { "id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.38, "rationale": "If Abhinavagupta accepts apoha's validity within limits, the Buddhist response must address the recontextualization, not just assert svasaṃvitti." },
+      { "id": "crux:constructed-reflexivity-presupposes-manifestness", "type": "crux", "role": "attack", "strength": 0.40, "rationale": "Narrows the crux: the debate is now about whether recontextualization is incorporation or subversion." }
+    ]
+  }]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-original-svasamvedana",
+  "claim_packet": "content/information-packets/abh-original-svasamvedana-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-original-svasamvedana",
+  "candidate_under_test": "all",
+  "central_reading": "Abhinavagupta makes original philosophical arguments (yukti) for svasa\u1e43vedana as the nature of consciousness in T\u0100 3, T\u0100 4.8-9, and T\u0100 4.181cd-182ab. These are not scripture quotations but rational arguments that self-awareness is intrinsic to consciousness, without which it would be insentient.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-ta4-8-9-original-argument",
+      "source_span_id": "span:abh-ta4-8-9-original-argument",
+      "quoted_anchor": "In T\u0100 4.8-9, Abhinavagupta presents an original p\u016brvapak\u1e63a-s",
+      "nn_expr": "sambandha(abh_ta4_8_9_original_argument,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "svasa\u1e43vedana is the intrinsic nature of ",
+        "hetu": "the objection that self-awareness would objectify consciousness fails because self-awareness is not objectification",
+        "sadhya": "svasa\u1e43vedana is the intrinsic nature of consciousness, not a second-order reflection",
+        "vyapti": "If consciousness is by nature self-aware, then self-awareness is not a problem b"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Abhinavagupta's argument in T\u0100 4.8-9 depends on scriptural authority rather than reason, or that the objection he refutes is a straw man not held by any actual Buddhist opponent."
+    },
+    {
+      "claim_id": "cl:abh-ta4-181-original-heart-argument",
+      "source_span_id": "span:abh-ta4-181-original-heart-argument",
+      "quoted_anchor": "In T\u0100 4.181cd-182ab, Abhinavagupta argues in his own voice t",
+      "nn_expr": "sambandha(abh_ta4_181_original_heart_argument,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "self-awareness is not static but dynamic",
+        "hetu": "consciousness is self-aware by nature, and this self-awareness is spontaneously creative",
+        "sadhya": "self-awareness is not static but dynamic \u2014 it is the creative Heart of reality",
+        "vyapti": "If self-awareness is the nature of consciousness and is spontaneously creative, "
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the mah\u0101 h\u1e5bdaya argument depends on a specific scriptural tradition that Abhinavagupta is merely transmitting, not extending."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-ta4-8-9-original-argument:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-ta4-8-9-original-argument",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.8,
+      "relation_rationale": "Original rational argument for svasa\u1e43vedana as svabh\u0101va, not transmitted scripture."
+    },
+    {
+      "edge_id": "edge:abh-ta4-8-9-original-argument:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-ta4-8-9-original-argument",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.55,
+      "relation_rationale": "If svasa\u1e43vedana is argued by reason not authority, the Buddhist objection that it's mere scripture fails."
+    },
+    {
+      "edge_id": "edge:abh-ta4-181-original-heart-argument:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-ta4-181-original-heart-argument",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.78,
+      "relation_rationale": "Original argument that self-awareness is generative, not merely cognitive."
+    },
+    {
+      "edge_id": "edge:abh-ta4-181-original-heart-argument:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-ta4-181-original-heart-argument",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.5,
+      "relation_rationale": "The generative dimension of self-awareness cannot be captured by the phala-model."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "Abhinavagupta makes original philosophical arguments (yukti) for svasa\u1e43vedana as the nature of consciousness in T\u0100 3, T\u0100 4.8-9, and T\u0100 4.181cd-182ab. These are not scripture quotations but rational arguments that self-awareness is intrinsic to consciousness, without which it would be insentient.",
+    "next_tests": []
+  }
+}

@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RASA-WORKBOOK · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Workbook</div><h1>RASA-WORKBOOK</h1><div class="skt"></div><div class="sub">1734 words · vendored research asset</div><div class="sub"><a href="/data/workbooks/RASA-WORKBOOK.md">source markdown →</a></div><ul>
+<li>SA: THE JUICE OF CONSCIOUSNESS</li>
+<li>TASTE-FIRST WORKBOOK</li>
+<li>at if the world is not matter but condensed experience?</li>
+<li>y does the tradition find liberation in the aesthetic, not against it?</li>
+<li>at is the difference between feeling an emotion and savoring it as rasa?</li>
+</ul>
+<ul>
+<li>RPOSE</li>
+<li>is workbook gives Abhinavagupta&#x27;s rasa theory a logical entry point. It does not ask you</li>
+<li> accept Kashmir Śaiva metaphysics. It reconstructs the questions the system asks, the</li>
+<li>swers it proposes, why each concept is introduced, and where the contested inferences</li>
+<li>main.</li>
+<li>epared as part of the Tantrāloka × Ochema research programme · August 2026</li>
+</ul>
+<hr/>
+<ul>
+<li>W TO USE THIS WORKBOOK</li>
+<li> not read rasa theory as a doctrine of aesthetics to memorize. Read it as one escalating</li>
+<li>oblem: *if the world is consciousness, and consciousness is self-delighting, then the</li>
+<li>sthetic is not a side-door to reality — it is the front door.*</li>
+<li> Read one unit at a time. The units are cumulative.</li>
+<li> Keep three columns: what the text claims / what Ochema translates / what remains unproven.</li>
+<li> Do the checkpoints. Conceptual control, not memorization.</li>
+<li> Treat every modern comparison as an analogue, never an identity.</li>
+<li> Return to the text map only after Units 1–6.</li>
+</ul>
+<ul>
+<li>THODOLOGICAL RULE</li>
+<li>ver allow a mathematical theorem, neuroscientific model, or contemplative experience to</li>
+<li>herit the truth of a metaphysical claim merely because their structures resemble one</li>
+<li>other. Translation, analogy, implementation, and identity are four different relations.</li>
+</ul>
+<hr/>
+<ul>
+<li>E ONE PROBLEM</li>
+<li> the physical world were the opposite of consciousness, then beauty, taste, and wonder</li>
+<li>uld be decorations over a dead substrate. The rasa thesis is the denial of that: matter</li>
+<li> consciousness&#x27;s own juice, thickened into form. To taste is to touch the source.</li>
+</ul>
+<ul>
+<li>IT 1 — WHAT IS RASA?</li>
+</ul>
+<ul>
+<li>1 The root meaning</li>
+<li>sa means &quot;juice,&quot; &quot;sap,&quot; &quot;taste,&quot; &quot;flavor&quot; — and in aesthetics, the savorable emotional</li>
+<li>sence. But in Abhinavagupta it is far more: it is the very texture of consciousness when</li>
+<li> experiences itself.</li>
+</ul>
+<ul>
+<li>2 The strongest textual statement</li>
+<li>e Tantrāloka&#x27;s opening invocation makes the ontology explicit. Dyczkowski renders it:</li>
+</ul>
+<blockquote>&quot;Bhairava&#x27;s visible body as the universe, which is the condensation of the flood of the</blockquote>
+<blockquote>juice (rasa) of consciousness, that has assumed a (fixed defined) form.&quot;</blockquote>
+<blockquote>— Tantrāloka 5, opening invocation (tr. Dyczkowski; the &quot;rasa-universe&quot; claim)</blockquote>
+<ul>
+<li>e physical world is not the opposite of consciousness; it is consciousness&#x27;s own</li>
+<li>sthetic &quot;juice&quot; thickened into form. This is matter as condensed experience.</li>
+</ul>
+<ul>
+<li>3 The escalating problem</li>
+<li> this is so, then the aesthetic is not an escape from reality but a return to it. The</li>
+<li>rkbook asks what this means for how we experience both art and the world.</li>
+</ul>
+<ul>
+<li>ECKPOINT 1</li>
+<li>What is the root meaning of rasa, and how does Abhinavagupta extend it?</li>
+<li>What does &quot;the condensation of the flood of the juice of consciousness&quot; claim about matter?</li>
+</ul>
+<ul>
+<li>IT 2 — WHAT IS CAMA TKĀRA?</li>
+</ul>
+<ul>
+<li>1 Wonder as the texture of reality</li>
+<li>matkāra — usually &quot;wonder&quot; or &quot;astonishment&quot; — is the central aesthetic category in</li>
+<li>hinavagupta&#x27;s rasa theory. But Biernacki argues it is much more:</li>
+</ul>
+<blockquote>&quot;Camatkāra... is the very texture of reality when experienced as the self-disclosure of</blockquote>
+<blockquote>consciousness. In Abhinavagupta&#x27;s panentheism...&quot;</blockquote>
+<blockquote>— Loriliai Biernacki, <i>The Matter of Wonder</i> (via the matter-of-wonder RO)</blockquote>
+<ul>
+<li>2 Reflexivity, not mere surprise</li>
+<li>malsina locates camatkāra precisely in the structure of consciousness:</li>
+</ul>
+<blockquote>&quot;camatkāra, the reflexivity intrinsic to consciousness. And this thesis provides the</blockquote>
+<blockquote>platform for a departure from nirodha-based aesthetics that lack reflexive evaluating</blockquote>
+<blockquote>modes for the appraisal of emotions.&quot;</blockquote>
+<blockquote>— Sthaneshwar Timalsina, <i>Abhinavagupta on Śānta Rasa</i></blockquote>
+<ul>
+<li>nder is not a passing surprise; it is the reflexive self-knowing (vimarśa) of</li>
+<li>nsciousness experienced as delight. To wonder at the world is to catch consciousness</li>
+<li>owing itself.</li>
+</ul>
+<ul>
+<li>3 Camatkāra is not a human privilege</li>
+<li>ernacki extends wonder to all beings:</li>
+</ul>
+<blockquote>&quot;The wonder (camatkāra) that characterises reality is not a human privilege but the</blockquote>
+<blockquote>intrinsic quality&quot; of existence — applying &#x27;even down to a worm.&#x27;</blockquote>
+<blockquote>— Biernacki, <i>The Matter of Wonder</i> (via the RO)</blockquote>
+<ul>
+<li>ECKPOINT 2</li>
+<li>What is camatkāra, and why is it &quot;the reflexivity intrinsic to consciousness&quot;?</li>
+<li>Why is wonder not merely surprise, and why is it not a human privilege?</li>
+</ul>
+<ul>
+<li>IT 3 — WHAT IS THE DIFFERENCE BETWEEN FEELING AND SAVORING?</li>
+</ul>
+<ul>
+<li>1 Emotion vs rasa</li>
+<li> emotion is felt; a rasa is <i>savored</i>. Timalsina makes the distinction:</li>
+</ul>
+<blockquote>&quot;To feel serenity is not just feeling serene but enjoying serenity, according to</blockquote>
+<blockquote>Abhinava. In this paradigm, the very reflexive mode embedded with savoring that allows</blockquote>
+<blockquote>Abhinava to establish self-awareness as the foundational mode.&quot;</blockquote>
+<blockquote>— Timalsina, <i>Abhinavagupta on Śānta Rasa</i></blockquote>
+<ul>
+<li>2 The savoring is reflexive</li>
+<li>e difference is the reflexivity: an emotion that is simply undergone is absorbed into</li>
+<li>self; an emotion appraised, distanced, and savored becomes rasa. This is why rasa is an</li>
+<li>sthetic (and ultimately liberating) category, not merely a psychological one.</li>
+</ul>
+<ul>
+<li>3 The correspondence with vimarśa</li>
+<li>is is the aesthetic form of the recognition model: just as consciousness knows its own</li>
+<li>pearing (vimarśa), the aesthetic self knows its own feeling. To savor is to know that</li>
+<li>e is feeling — the reflexive turn that turns emotion into rasa.</li>
+</ul>
+<ul>
+<li>ECKPOINT 3</li>
+<li>What is the difference between &quot;feeling serene&quot; and &quot;enjoying serenity&quot;?</li>
+<li>How is savoring the aesthetic form of vimarśa?</li>
+</ul>
+<ul>
+<li>IT 4 — WHY DOES ABHINAVAGUPTA REJECT CESSATION (ŚAMA)?</li>
+</ul>
+<ul>
+<li>1 The rival model: nirodha</li>
+<li>ddhist (and some nondual) aesthetics ground serenity in cessation (nirodha/śama) — the</li>
+<li>illing of the emotions. Abhinavagupta rejects this as the ground of rasa.</li>
+</ul>
+<ul>
+<li>2 Cessation has no content to savor</li>
+</ul>
+<blockquote>&quot;Abhinava rejects the experience of cessation (śama) as an enduring mode for the surge of</blockquote>
+<blockquote>serenity. He interprets this as absence, a sheer non-being that lacks the content to be</blockquote>
+<blockquote>savored.&quot;</blockquote>
+<blockquote>— Timalsina, <i>Abhinavagupta on Śānta Rasa</i></blockquote>
+<ul>
+<li>e problem with cessation is that it is empty. There is nothing there to taste. A</li>
+<li>illness that is the absence of experience cannot be the savor of liberation, because</li>
+<li>beration in the Śaiva model is the <i>fullness</i> of reflexive consciousness, not its</li>
+<li>sence.</li>
+</ul>
+<ul>
+<li>3 The sharp distinction</li>
+<li>is is the crux: is liberation the <i>stopping</i> of experience (śama) or the <i>fulfillment</i> of</li>
+<li>perience (rasa)? Abhinavagupta chooses fulfillment. The world is not to be escaped by</li>
+<li>illness; it is to be savored as consciousness&#x27;s own juice.</li>
+</ul>
+<ul>
+<li>ECKPOINT 4</li>
+<li>Why does Abhinavagupta reject cessation as the ground of rasa?</li>
+<li>How does &quot;no content to be savored&quot; distinguish Śaiva from nirodha aesthetics?</li>
+</ul>
+<ul>
+<li>IT 5 — HOW DOES RASA RELATE TO THE OTHER WORKBOOKS?</li>
+</ul>
+<ul>
+<li>1 Rasa and recognition</li>
+<li>cognition (Pratyabhijñā) is the re-cognition of an identity already present. Rasa is the</li>
+<li>ffective* register of that same recognition: to recognize oneself as consciousness is to</li>
+<li>vor oneself as delight. The receiver recognized as the source is also the taster</li>
+<li>cognized as the taste.</li>
+</ul>
+<ul>
+<li>2 Rasa and spanda</li>
+<li>anda is the pulse — the self-moving dynamism of consciousness. Camatkāra (wonder) is</li>
+<li>at pulse felt as delight. The throb that manifests and knows is experienced, at its</li>
+<li>llest, as astonishment.</li>
+</ul>
+<ul>
+<li>3 Rasa and kula</li>
+<li>e Kaula&#x27;s insight that lineage/body/totality are one is given its aesthetic form in rasa:</li>
+<li>e world-as-totality is the juice of consciousness, and to taste it is to belong to it.</li>
+</ul>
+<ul>
+<li>4 The whole corpus</li>
+<li>sa is not an eighth, separate topic. It is the affective key that unlocks the other six</li>
+<li>hools: every one of them is a way of understanding how consciousness&#x27;s own juice</li>
+<li>nifests, moves, sequences, sounds, is transmitted, and is synthesized.</li>
+</ul>
+<ul>
+<li>ECKPOINT 5</li>
+<li>How is rasa the affective register of recognition?</li>
+<li>Why is rasa &quot;the key,&quot; not a separate topic, to the other workbooks?</li>
+</ul>
+<ul>
+<li>IT 6 — WHAT IS ŚĀNTA RASA (THE PEACEFUL TASTE)?</li>
+</ul>
+<ul>
+<li>1 The ninth rasa</li>
+<li>aditionally there are eight rasas (erotic, heroic, comic, wrathful, wondrous, pathetic,</li>
+<li>rrible, odious). Abhinavagupta adds the ninth: śānta, the peaceful — and holds it</li>
+<li>ghest, because it is the savor of serenity, the rasa of liberation.</li>
+</ul>
+<ul>
+<li>2 Serenity must be appraised</li>
+</ul>
+<blockquote>&quot;The state of serenity needs to be appraised for it to be rasa; however, the determining</blockquote>
+<blockquote>factors for its surge are not emotions. Rather than tracing back to śānta, this essay</blockquote>
+<blockquote>considers...&quot;</blockquote>
+<blockquote>— Timalsina, <i>Abhinavagupta on Śānta Rasa</i></blockquote>
+<ul>
+<li>en serenity, to be rasa, must be savored — not merely undergone. The ninth rasa is the</li>
+<li>lfillment, not the extinction, of experience.</li>
+</ul>
+<ul>
+<li>3 The lived difference</li>
+<li> liberation is the savor of serenity, then the fully realized being does not lose the</li>
+<li>rld; the being tastes the world as the juice of its own consciousness. Peace is not</li>
+<li>ptiness; it is the fullest flavor.</li>
+</ul>
+<ul>
+<li>ECKPOINT 6</li>
+<li>What is the ninth rasa, and why is it highest?</li>
+<li>How is śānta the fulfillment of experience rather than its extinction?</li>
+</ul>
+<ul>
+<li>IT 7 — WHAT REMAINS UNRESOLVED?</li>
+</ul>
+<ul>
+<li>1 The strongest rasa chain</li>
+<li>tter is condensed consciousness (TĀ 5); consciousness is reflexive (vimarśa); reflexivity</li>
+<li>lt as delight is camatkāra; savoring is the reflexive appraisal of feeling; the fullest</li>
+<li>vor is śānta; śānta is liberation. The chain is coherent and textually anchored.</li>
+</ul>
+<ul>
+<li>2 The contested points</li>
+<li>ether rasa is primarily an aesthetic or an ontological category (Biernacki pushes the</li>
+<li>tter); the status of śānta as a ninth rasa; how far camatkāra extends to non-humans.</li>
+</ul>
+<ul>
+<li>3 What Ochema can contribute</li>
+<li>p rasa onto the grid (the A-Ground and Value-weighting cells); compare with the modern</li>
+<li>ilosophy of emotion, the &quot;intrinsic nature&quot; question (Russellian monism), and the rasa</li>
+<li>pothesis (quality = geometry) — as correspondence, never identity.</li>
+</ul>
+<ul>
+<li>4 What Ochema must not claim yet</li>
+<li>at affective science &quot;proves&quot; the rasa-ontology, or that the tradition &quot;proves&quot; a model</li>
+<li> emotion. The claim that matter is condensed experience is speculative, labelled as</li>
+<li>ch.</li>
+</ul>
+<ul>
+<li>5 Final synthesis</li>
+<li>sa gives the system its <i>flavor</i>. If the world is the condensation of the juice of</li>
+<li>nsciousness, then tasting is not an escape from reality but a return to its source. The</li>
+<li>sthetic is the front door: wonder is consciousness knowing itself, and liberation is</li>
+<li>e savor of serenity.</li>
+</ul>
+<hr/>
+<ul>
+<li>E PLACEMENT OF THIS WORKBOOK</li>
+<li>sa is the eighth and the affective key. It does not stand alongside the six schools as a</li>
+<li>er; it is the register in which they all resolve. Read it after Pratyabhijñā (whose</li>
+<li>cognition it makes delightful), Spanda (whose pulse it makes wondrous), and Kaula (whose</li>
+<li>la it makes savorous).</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/workbooks/RASA-WORKBOOK.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

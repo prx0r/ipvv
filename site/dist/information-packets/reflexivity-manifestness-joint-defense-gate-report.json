@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "artifact_type": "nyaya_truthmap_gate_report",
+  "packet_id": "ip:reflexivity-manifestness-joint-defense",
+  "claim_packet": "/root/projects/clean/content/information-packets/reflexivity-manifestness-joint-defense-claims.json",
+  "gate_script": "/root/projects/clean/scripts/nyaya-truthmap-gate.py",
+  "gate_version": "nyaya-truthmap-gate-v0.1",
+  "formal_probe": {
+    "enabled": false,
+    "summary": "Formal probing was not enabled for this gate run."
+  },
+  "summary": {
+    "total_claims": 4,
+    "accepted": 0,
+    "accepted_with_penalty": 4,
+    "hollow": 0,
+    "needs_review": 0,
+    "refuted": 0,
+    "can_update_posterior": 4,
+    "dimensions": {
+      "phenomenological": 4
+    },
+    "pramanas": {
+      "anumana": 3,
+      "sabda": 1
+    }
+  },
+  "claim_results": [
+    {
+      "claim_id": "cl:joint-structural-reflexivity-form-of-self-presence",
+      "outcome": "accepted_with_penalty",
+      "can_update_posterior": true,
+      "adjusted_lbf_cap": 0.35,
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "tradition_scope": "cross_tradition",
+      "formal_probe_status": "UNKNOWN",
+      "nnexpr_status": "parsed",
+      "fallacies": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "rationale": "The claim lists vyapti violations/counterexamples."
+        }
+      ],
+      "tarka_falsifier": "Show a case where self-similar reflexion preserves structural form across levels without adding a hidden substance holds but structural reflexivity explains the form of self-presence without intrinsic self-manifestation does not follow."
+    },
+    {
+      "claim_id": "cl:joint-apoha-determination-without-self",
+      "outcome": "accepted_with_penalty",
+      "can_update_posterior": true,
+      "adjusted_lbf_cap": 0.35,
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "tradition_scope": "cross_tradition",
+      "formal_probe_status": "UNKNOWN",
+      "nnexpr_status": "parsed",
+      "fallacies": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "rationale": "The claim lists vyapti violations/counterexamples."
+        }
+      ],
+      "tarka_falsifier": "Show a case where conceptual determination proceeds by exclusion of what is other holds but recognition and determination can be explained without intrinsic self-manifestation does not follow."
+    },
+    {
+      "claim_id": "cl:joint-structure-plus-apoha-accounts-for-manifestness",
+      "outcome": "accepted_with_penalty",
+      "can_update_posterior": true,
+      "adjusted_lbf_cap": 0.35,
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "tradition_scope": "cross_tradition",
+      "formal_probe_status": "UNKNOWN",
+      "nnexpr_status": "parsed",
+      "fallacies": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "rationale": "The claim lists vyapti violations/counterexamples."
+        }
+      ],
+      "tarka_falsifier": "Show a case where structural reflexivity gives form to self-presence while apoha gives determinacy to content holds but the combination accounts for manifestness without intrinsic self-manifestation does not follow."
+    },
+    {
+      "claim_id": "cl:joint-joint-defense-pressures-trika",
+      "outcome": "accepted_with_penalty",
+      "can_update_posterior": true,
+      "adjusted_lbf_cap": 0.35,
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "tradition_scope": "cross_tradition",
+      "formal_probe_status": "UNKNOWN",
+      "nnexpr_status": "parsed",
+      "fallacies": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "rationale": "The claim declares weak vyapti confidence; the reason does not reliably imply the target."
+        },
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "rationale": "The claim lists vyapti violations/counterexamples."
+        }
+      ],
+      "tarka_falsifier": "Show a case where joint defense covers form of self-presence and mechanism of determination holds but Trika's manifestness-gap critique is weakened (not refuted) does not follow."
+    }
+  ]
+}

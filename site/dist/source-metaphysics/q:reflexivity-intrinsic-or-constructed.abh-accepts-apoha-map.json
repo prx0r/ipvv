@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-accepts-apoha",
+  "claim_packet": "content/information-packets/abh-accepts-apoha-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-accepts-apoha",
+  "candidate_under_test": "all",
+  "central_reading": "Abhinavagupta does not reject apoha outright \u2014 he accepts it as a valid cognitive method but recontextualizes it within the Pratyabhij\u00f1\u0101 framework of progressive manifestation. The difference: Buddhist apoha determines by exclusion (what X is not); Pratyabhij\u00f1\u0101 determines by progressive manifestation of qualities (what X IS).",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-accepts-apoha-recontextualized",
+      "source_span_id": "span:abh-accepts-apoha-recontextualized",
+      "quoted_anchor": "accepted by various schools of Indian philosophy beginning with its initial major formulation by the Buddhist idealist Di\u1e45n\u0101ga",
+      "nn_expr": "sambandha(abh_accepts_apoha_recontextualized,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "the Trika and Buddhist positions may be ",
+        "hetu": "Abhinavagupta explicitly cites Dign\u0101ga's apoha and accepts it as a method while recontextualizing it",
+        "sadhya": "the Trika and Buddhist positions may be complementary rather than contradictory at the epistemological level",
+        "vyapti": "If Abhinavagupta explicitly accepts apoha as valid while reinterpreting it, then"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Abhinavagupta's 'acceptance' of apoha is merely rhetorical and that he ultimately rejects its validity for determining the nature of consciousness itself \u2014 i.e., that the recontextualization is actually a refutation."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-accepts-apoha-recontextualized:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-accepts-apoha-recontextualized",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.68,
+      "relation_rationale": "Shows Abhinavagupta's position is more nuanced than simple rejection of Buddhist epistemology."
+    },
+    {
+      "edge_id": "edge:abh-accepts-apoha-recontextualized:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-accepts-apoha-recontextualized",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.38,
+      "relation_rationale": "If Abhinavagupta accepts apoha's validity within limits, the Buddhist response must address the recontextualization, not just assert svasa\u1e43vitti."
+    },
+    {
+      "edge_id": "edge:abh-accepts-apoha-recontextualized:attack:crux-constructed-reflexivity-presupposes-manifestness",
+      "source_node_id": "cl:abh-accepts-apoha-recontextualized",
+      "target_node_id": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "attack",
+      "strength": 0.4,
+      "relation_rationale": "Narrows the crux: the debate is now about whether recontextualization is incorporation or subversion."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "Abhinavagupta does not reject apoha outright \u2014 he accepts it as a valid cognitive method but recontextualizes it within the Pratyabhij\u00f1\u0101 framework of progressive manifestation. The difference: Buddhist apoha determines by exclusion (what X is not); Pratyabhij\u00f1\u0101 determines by progressive manifestation of qualities (what X IS).",
+    "next_tests": []
+  }
+}

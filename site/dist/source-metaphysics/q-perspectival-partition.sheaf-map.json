@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:perspectival-partition",
+  "source_packet_id": "ip:perspectival-partition-sheaf-gluing",
+  "claim_packet": "content/information-packets/perspectival-partition-sheaf-gluing-claims.json",
+  "generated_by": "codex",
+  "source_role": "formal_constraint",
+  "central_reading": "All theories of consciousness face the same gate: they need a law Λ that maps manifestation or organization into exclusive phenomenal domains. The universalization debate was a special case of this deeper problem. The sheaf-theoretic gluing theorem provides an exact formal warning: local coherence does not entail global unifiability.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:sheaf-local-coherence-not-global",
+      "source_span_id": "span:checkpoint-9-globj",
+      "quoted_anchor": "local coherence does not entail global unifiability",
+      "nn_expr": "virodha(local_agreement,global_section)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "phenomenal field",
+        "hetu": "local fields lack phenomenal overlap",
+        "sadhya": "shared character does not entail one global field",
+        "vyapti": "Where local data agrees on empty overlaps, no global section follows."
+      },
+      "argument_role": "universal_constraint",
+      "targets": ["cand:siva-decombination", "cand:naturalist-emergent", "crux:local-to-global-gluing"],
+      "gate_outcome": "needs_review",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "weak",
+          "reason": "NNExpr virodha operator not in grammar; parsed as claim without formal/bridge status"
+        }
+      ],
+      "falsifier": "Show that phenomenal fields do overlap in a non-empty self-presence that constitutes a genuine global section."
+    },
+    {
+      "claim_id": "cl:privacy-not-a-positive-boundary",
+      "source_span_id": "span:checkpoint-11-privacy",
+      "quoted_anchor": "phenomenal separation need not appear as a positive boundary",
+      "nn_expr": "sambandha(exclusion,absence_of_co-presence)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "pratyaksa",
+      "nyaya_reading": {
+        "paksa": "phenomenal exclusion",
+        "hetu": "other experiences are not presented as bounded objects",
+        "sadhya": "exclusion can be privative",
+        "vyapti": "Where no boundary appears, separation may still obtain as absence of co-presence."
+      },
+      "argument_role": "attack_on_absorpt_boundary_argument",
+      "targets": ["cand:siva-decombination", "crux:boundary-introspection-invalid"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "candidate_under_test": "cand:siva-decombination"
+    },
+    {
+      "claim_id": "cl:all-theories-same-gate",
+      "source_span_id": "span:checkpoint-28-bind",
+      "quoted_anchor": "Every theory reaches the same gate",
+      "nn_expr": "vyapti(every_theory,lambda_missing)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "theories of consciousness",
+        "hetu": "all can be expressed as {X → Λ → Dᵢ}",
+        "sadhya": "Λ is the common missing object",
+        "vyapti": "Where every theory requires an unexplained function, that function is the shared gap."
+      },
+      "argument_role": "metaclaim",
+      "targets": ["cand:naturalist-emergent", "cand:siva-decombination", "cand:buddhist-stream", "cand:nyaya-plural-substances", "cand:neutral-monist", "crux:the-law-lambda"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "candidate_under_test": "crux:the-law-lambda"
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:sheaf-gluing-pressures-pratyabhijna",
+      "source": "cl:sheaf-local-coherence-not-global",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.55,
+      "rationale": "The sheaf obstruction directly blocks inferring a global subject from local coherence."
+    },
+    {
+      "edge_id": "edge:sheaf-gluing-pressures-naturalist",
+      "source": "cl:sheaf-local-coherence-not-global",
+      "target": "cand:naturalist-emergent",
+      "edge_type": "attacks",
+      "strength": 0.35,
+      "rationale": "Also blocks naturalist identification of global phenomenal field from local correlates."
+    },
+    {
+      "edge_id": "edge:privacy-attacks-absence-boundary",
+      "source": "cl:privacy-not-a-positive-boundary",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.5,
+      "rationale": "Refutes the argument that absence of perceived boundary proves absence of separation."
+    },
+    {
+      "edge_id": "edge:meta-claim-supports-lambda-crux",
+      "source": "cl:all-theories-same-gate",
+      "target": "crux:the-law-lambda",
+      "edge_type": "supports",
+      "strength": 0.7,
+      "rationale": "Shows that Λ is the shared explanatory gap across all theories."
+    },
+    {
+      "edge_id": "edge:sheaf-supports-lambda-crux",
+      "source": "cl:sheaf-local-coherence-not-global",
+      "target": "crux:local-to-global-gluing",
+      "edge_type": "supports",
+      "strength": 0.6,
+      "rationale": "Formalizes the gluing problem as a specific instance of the missing Λ."
+    }
+  ],
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "cand:siva-decombination": "Pressured by two formal constraints: (1) sheaf-theoretic gluing obstruction, (2) privative exclusion refutes boundary argument. Universalization cannot be inferred from shared character alone.",
+    "cand:naturalist-emergent": "Pressured by the same gluing obstruction — correlation with organization does not entail constitution.",
+    "current_best_answer": "The universalization debate was a special case of a deeper problem: every theory needs a law of perspectival partition (Λ) that maps manifestation or organization into exclusive phenomenal domains. No theory has specified Λ."
+  },
+  "next_work": [
+    "Create Śaiva decombination packet (Proof-set 3) from translated Siddhis",
+    "Extract exclusion principles from Q17 benchmark (Proof-set 2)",
+    "The remaining 4 candidates need specific claim packets"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_role": "pp-doc-systematic-review",
+  "title": "Predictive processing models of disorders of consciousness provide mechanistic specificity for the generative model/interface account",
+  "tradition": "computational_neuroscience",
+  "central_reading": "A 2026 systematic review of 30 peer-reviewed studies (pubmed:42179888, doi:10.3389/fncom.2026.1797090) examining computational predictive processing (PP) models applied to non-invasive brain signals in disorders of consciousness (DoC) reveals that hierarchical prediction error dynamics — specifically, global information-sharing capacity — effectively distinguish conscious (MCS) from unconscious (VS/UWS) states. This provides neural-level mechanistic specificity for the 'brain as generative model/interface' account: conscious level tracks the brain's capacity for hierarchical predictive integration. The review documents a transition from simple waveform averaging to high-dimensional decoding of hierarchical prediction errors, with temporal progression of prediction error signatures in early coma demonstrating diagnostic and prognostic utility. This evidence pressures both the appearance-only account (which lacks a mechanism for why conscious level tracks predictive integration) and the filter account (which must explain why DOC recovery correlates with PP dynamics rather than kañcuka collapse patterns alone).",
+  "claims": [
+    {
+      "id": "cl:pp-doc-global-integration-discriminates-consciousness",
+      "text": "Global information-sharing markers derived from computational predictive processing models applied to non-invasive brain signals (EEG, fMRI) reliably discriminate between minimally conscious (MCS) and vegetative/unresponsive (VS/UWS) states. The systematic review of 30 studies (pubmed:42179888) demonstrates that hierarchical prediction error dynamics — specifically measures of global signal integration and temporal progression of prediction error signatures — effectively distinguish conscious from unconscious states with diagnostic utility exceeding standard behavioral assessment.",
+      "source_id": "doi:10.3389/fncom.2026.1797090",
+      "source_span": "Full article — systematic review of 30 peer-reviewed studies on computational PP models in DoC; key finding that global information-sharing markers effectively distinguish conscious states",
+      "evidence": "empirical",
+      "pramana": "pratyaksa",
+      "hetu": "If consciousness level tracks the brain's capacity for hierarchical predictive integration, then PP-derived global integration measures should discriminate conscious from unconscious states, and this is confirmed across 30 studies using diverse methodological approaches (EEG, fMRI, hierarchical model comparison).",
+      "sadhya": "The brain as generative model / interface account gains mechanistic specificity for DOC: conscious level tracks hierarchical prediction error integration capacity, not merely level of arousal or content complexity.",
+      "vyapti": "If hierarchical prediction error integration (global information sharing) reliably discriminates MCS from VS/UWS across multiple independent studies (N=30, diverse modalities), then the brain's role in consciousness includes generative modeling via hierarchical predictive processing — supporting the interface/generative-model account over accounts that treat brain damage purely as filter collapse or appearance dissociation.",
+      "vyapti_confidence": 0.65,
+      "falsifier": "Show that global information-sharing markers are epiphenomenal correlates of arousal level rather than specific markers of conscious state — i.e., that they track brainstem-thalamic integrity (which the filter account also predicts) rather than hierarchical prediction error integration specifically. Or: demonstrate that the same PP-derived measures fail to generalize across independent cohorts with blinded classification.",
+      "falsifier_status": "partially_tested — systematic review reports diagnostic utility but acknowledges need for 24-hour continuous monitoring and multimodal fusion for clinical translation",
+      "weight": 0.40,
+      "w_rel": 0.70,
+      "w_map": 0.65,
+      "w_aux": 0.68,
+      "targets": [
+        { "id": "cand:brain-as-interface-generative-model", "type": "candidate_explanation", "role": "support", "strength": 0.72, "rationale": "The systematic review directly supports the interface/generative-model account by showing that conscious level tracks hierarchical predictive integration capacity — the core mechanism of the generative model account. Global information sharing as discriminator of conscious states is precisely what the predictive processing framework predicts." },
+        { "id": "cand:brain-as-appearance-only", "type": "candidate_explanation", "role": "pressure", "strength": 0.55, "rationale": "The appearance-only (analytic idealism/dissociation) account lacks a mechanism for why conscious level correlates specifically with hierarchical predictive integration. If consciousness is ontologically primitive and brain states are mere appearances, the tight correlation between PP integration and conscious level is epiphenomenal — but the systematic review suggests a constitutive rather than merely correlational relationship." },
+        { "id": "cand:brain-as-filter", "type": "candidate_explanation", "role": "pressure", "strength": 0.45, "rationale": "The filter (kañcuka) account can explain some DOC phenomenology via kañcuka collapse, but the PP systematic review reveals that DOC recovery tracks hierarchical prediction error dynamics — global information sharing — not just dimensional loss patterns. The filter model must explain why the recovery of conscious level follows PP-integration trajectories rather than kañcuka-unfolding order alone." }
+      ]
+    },
+    {
+      "id": "cl:pp-doc-temporal-prediction-error-signatures",
+      "text": "Temporal progression of prediction error signatures in early coma demonstrates diagnostic and prognostic utility. The systematic review documents that the evolution of hierarchical prediction error markers from acute coma through emergence into consciousness follows a characteristic trajectory that predicts recovery outcomes. This temporal dynamic — prediction error signatures progressively recovering in a structured hierarchy — provides evidence that the brain's generative model reconstructs itself hierarchically during recovery, consistent with the interface account's claim that consciousness is a product of hierarchical predictive integration.",
+      "source_id": "doi:10.3389/fncom.2026.1797090",
+      "source_span": "Results section: temporal progression of prediction error signatures in early stages of coma, prognostic utility demonstrated",
+      "evidence": "empirical",
+      "pramana": "anumana",
+      "hetu": "If the brain's generative model reconstructs hierarchically during recovery (lower-level sensory predictions before higher-level integrative predictions), prediction error signatures should show a characteristic temporal progression from acute coma through emergence. The systematic review confirms this trajectory.",
+      "sadhya": "DOC recovery involves hierarchical reconstruction of the brain's generative model, supporting the interface account over accounts that treat recovery as simple filter re-opening or dissociation boundary restoration.",
+      "vyapti": "If prediction error signatures show a structured hierarchical recovery trajectory across DoC states (coma → VS → MCS → emergence), this supports the generative model account of consciousness — the brain must hierarchically reintegrate its predictive model. If recovery were merely filter re-opening or dissociation reversal, the temporal dynamics would follow dimension-by-dimension unfolding rather than hierarchical predictive integration.",
+      "vyapti_confidence": 0.55,
+      "falsifier": "Show that the temporal progression of prediction error signatures is fully explained by non-specific recovery of thalamo-cortical arousal supporting the filter account (kañcuka re-expansion) without requiring hierarchical predictive integration specifically.",
+      "falsifier_status": "untested",
+      "weight": 0.35,
+      "w_rel": 0.65,
+      "w_map": 0.58,
+      "w_aux": 0.62,
+      "targets": [
+        { "id": "cand:brain-as-interface-generative-model", "type": "candidate_explanation", "role": "support", "strength": 0.65, "rationale": "Hierarchical recovery of prediction error signatures is a direct prediction of the generative model account and the systematic review confirms it across multiple studies." },
+        { "id": "cand:brain-as-filter", "type": "candidate_explanation", "role": "pressure", "strength": 0.40, "rationale": "If kañcuka re-expansion is the mechanism of recovery, it must explain why the recovery trajectory follows hierarchical predictive integration order rather than kañcuka-unfolding order." }
+      ]
+    },
+    {
+      "id": "cl:pp-doc-covert-consciousness-detection",
+      "text": "Computational PP models applied to non-invasive brain signals can detect covert consciousness (cognitive-motor dissociation) in behaviorally unresponsive patients. The systematic review reports that high-dimensional decoding of hierarchical prediction errors identifies evidence of conscious processing in patients who clinically appear vegetative — demonstrating that the generative model account captures a dimension of consciousness that behavioral assessment misses.",
+      "source_id": "doi:10.3389/fncom.2026.1797090",
+      "source_span": "Results and Discussion: detection of cognitive-motor dissociation via PP model decoding",
+      "evidence": "empirical",
+      "pramana": "pratyaksa",
+      "hetu": "If PP model decoding detects hierarchical prediction error processing consistent with conscious awareness in patients who behaviorally appear vegetative, this directly validates the generative model account's claim that consciousness involves hierarchical predictive integration measurable via brain signals.",
+      "sadhya": "Covert consciousness detection via PP models supports the interface account: consciousness is generative model integration, not just behavioral responsiveness, and PP models can detect it where behavior fails.",
+      "vyapti": "If PP-derived markers of hierarchical prediction error processing detect covert consciousness in behaviorally unresponsive patients, this confirms that the generative model account captures a real dimension of consciousness — one inaccessible to accounts that define consciousness solely by behavioral or arousal-based criteria.",
+      "vyapti_confidence": 0.60,
+      "falsifier": "Show that PP-detected 'covert consciousness' is non-specific — that the same hierarchical prediction error signatures appear in deep sleep or anesthesia, indicating they track cognitive processing without phenomenal consciousness.",
+      "falsifier_status": "partially_tested — systematic review situates covert detection within clinical validation frameworks",
+      "weight": 0.38,
+      "w_rel": 0.68,
+      "w_map": 0.62,
+      "w_aux": 0.65,
+      "targets": [
+        { "id": "cand:brain-as-interface-generative-model", "type": "candidate_explanation", "role": "support", "strength": 0.70, "rationale": "Covert consciousness detection is a unique prediction of the interface account that neither filter nor appearance accounts generate — the ability to decode conscious processing via PP patterns validates the generative model framework." },
+        { "id": "cand:brain-as-appearance-only", "type": "candidate_explanation", "role": "pressure", "strength": 0.50, "rationale": "If consciousness is ontologically primitive, the dissociation model must explain why PP signatures detect covert consciousness — why consciousness leaves a hierarchical predictive integration signature even when behavior and arousal are absent." }
+      ]
+    }
+  ],
+  "coverage_notes": "This contention introduces a newly published systematic review (2026, doi:10.3389/fncom.2026.1797090) of 30 studies applying computational predictive processing models to disorders of consciousness. This source was not previously cited in any existing Q17 contention, packet, or map. The review provides cross-modal evidence (EEG, fMRI) that hierarchical prediction error integration — global information sharing — distinguishes conscious from unconscious states, with proven diagnostic and prognostic utility. This directly supports the brain-as-generative-model/interface candidate with mechanistic specificity, and pressures both the appearance-only and filter accounts to explain why consciousness level tracks PP integration dynamics. Three claims are extracted: (1) global integration discriminates consciousness, (2) temporal prediction error progression in recovery, (3) covert consciousness detection via PP decoding.",
+  "next_action": "Gate this contention through Nyaya, create a source map linking these claims to the existing Q17 graph, ingest, and run state-of-play to observe whether the interface candidate's support increases relative to filter and appearance-only candidates."
+}

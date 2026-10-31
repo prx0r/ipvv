@@ -1,0 +1,194 @@
+{
+  "packet_id": "ip:trika-vimarsa-manifestness",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:tantraloka-vimarsa",
+    "title": "Abhinavagupta's argument that vimarśa (reflexive self-awareness) cannot be reduced to structural determination-by-exclusion",
+    "author": "Abhinavagupta (Tantrāloka)",
+    "external_sources": [
+      { "source_id": "text:tantraloka-ahnika1", "title": "Tantrāloka, Ahnika 1", "author": "Abhinavagupta", "source_quality": "primary_text" },
+      { "source_id": "text:tantraloka-ahnika4", "title": "Tantrāloka, Ahnika 4", "author": "Abhinavagupta", "source_quality": "primary_text" }
+    ],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "source_extracted",
+  "claims": [
+    {
+      "claim_id": "cl:abh-mutual-distinction-presupposes-vimarsa",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "locator": "Tantrāloka 1.52cd commentary, ahnika-01.txt lines 7286-7293",
+        "quote": "sa ca viśeṣaḥ svahṛdayagatayā vimarśasattayaivotpadyate — that difference arises as being essentially an act of reflective awareness"
+      },
+      "claim_text": "Mutual distinction (anyonyaviśeṣa) between entities cannot ground itself. Difference requires a prior reflexive awareness (vimarśa) in which it arises. All thirty-six tattvas are equally Light (prakāśa); without vimarśa there would be no basis for differentiating them at all. Determination-by-exclusion operates within vimarśa, not prior to it.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "vyāpti(mutual_distinction,vimarśa)",
+      "hetu": "all tattvas are equally Light, requiring vimarśa for differentiation",
+      "sadhya": "structural difference presupposes reflexive awareness, not vice versa",
+      "vyapti_statement": "If differentiation requires reflexive awareness to arise within, then determination-by-exclusion is not foundational but dependent on vimarśa.",
+      "vyapti_confidence": 0.78,
+      "log_bayes_factor": 0.40,
+      "w_rel": 0.75,
+      "w_map": 0.70,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Demonstrate a case where mutual distinction operates without any prior reflexive awareness — i.e., where A and not-A are determined as distinct without any awareness of the distinction.",
+        "status": "untested"
+      },
+      "reasoning": "Direct textual evidence from Tantrāloka 1.52cd. Abhinavagupta explicitly argues that difference (viśeṣa) arises from vimarśa, not prior to it. This directly challenges the claim that determination-by-exclusion is foundational."
+    },
+    {
+      "claim_id": "cl:abh-crystal-argument",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantrāloka Ahnika 4, ahnika-04.txt lines 5765, 11133-11139",
+        "quote": "Without vimarśa, consciousness would be insentient, like a crystal"
+      },
+      "claim_text": "Without vimarśa (reflexive self-awareness), consciousness would be insentient like a crystal or mirror — capable of passive reflection but lacking self-presence, life, and awareness. Vimarśa is what distinguishes consciousness from inert luminosity. A mere structural determination-by-exclusion framework cannot account for this qualitative difference between sentient self-presence and insentient reflection.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(determination_by_exclusion_equals_consciousness)",
+      "hetu": "a crystal reflects without being aware; vimarśa adds self-presence",
+      "sadhya": "determination-by-exclusion alone cannot account for the sentient quality of consciousness",
+      "vyapti_statement": "If structural determination-by-exclusion were sufficient for consciousness, then any system of mutually determined contrasts would be conscious, which is false.",
+      "vyapti_confidence": 0.80,
+      "log_bayes_factor": 0.42,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that a purely structural system of determination-by-exclusion (without any additional reflexive property) exhibits the qualitative character of conscious self-presence — i.e., that it is not merely a system of contrasts but feels like something to be that system.",
+        "status": "untested"
+      },
+      "reasoning": "This is Abhinavagupta's decisive argument against reducing consciousness to structure. The crystal argument shows that structure alone (mutual determination, difference, exclusion) does not entail awareness."
+    },
+    {
+      "claim_id": "cl:abh-apoha-inapplicable-to-consciousness",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "locator": "Tantrāloka 1.52cd commentary, ahnika-01.txt lines 7383-7391",
+        "quote": "Apoha is not applicable to the light of consciousness that shines everywhere as everything at all times"
+      },
+      "claim_text": "Buddhist apoha (determination-by-exclusion) applies to objective, differentiated entities — to determine 'cow' by excluding 'non-cow'. It does NOT apply to the light of consciousness itself, which is self-luminous, self-present, and not constituted by negation of anything else. Consciousness is not determined by what it excludes; it is self-given. Therefore the formal equivalence between difference and apoha holds at the level of objective determination but does not extend to the nature of consciousness itself.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(apoha_applies_to_consciousness)",
+      "hetu": "consciousness is self-luminous, not determined by negation of other",
+      "sadhya": "apoha/difference mapping does not apply to the nature of consciousness itself",
+      "vyapti_statement": "If consciousness is self-luminous and not constituted by negation, then determination-by-exclusion frameworks are inapplicable to consciousness itself, however applicable they may be to objective content.",
+      "vyapti_confidence": 0.76,
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.74,
+      "w_map": 0.68,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Demonstrate that the self-luminous nature of consciousness can be fully accounted for through determination-by-exclusion — i.e., that 'awareness' is just the exclusion of 'non-awareness' with no remainder.",
+        "status": "untested"
+      },
+      "reasoning": "Abhinavagupta explicitly restricts the scope of apoha: it applies to objective entities, not to consciousness itself. This is a scope-limitation argument — the bridge between difference and apoha is valid within its domain but does not extend to the nature of awareness."
+    },
+    {
+      "claim_id": "cl:abh-svatantrya-vimarsa",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantrāloka Ahnika 4, ahnika-04.txt lines 10940-10990",
+        "quote": "The power of reflective awareness is the inherent freedom of consciousness"
+      },
+      "claim_text": "Vimarśa is the freedom (svātantrya) of consciousness — self-grounding, self-referential, not dependent on any external contrast. Determination-by-exclusion is dependent on others (paratantra): X is 'this' because it is 'not that.' But vimarśa is svatantra: it is not constituted by relation to an other. This categorical difference — dependence on other vs. self-grounding freedom — means vimarśa cannot be reduced to a species of determination-by-exclusion.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "cand:dharmakirti-conditioned-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(vimarsa_reducible_to_determination)",
+      "hetu": "vimarśa is svatantra (self-grounding), determination-by-exclusion is paratantra (other-dependent)",
+      "sadhya": "vimarśa is categorically different from determination-by-exclusion",
+      "vyapti_statement": "If vimarśa is self-grounding freedom and determination-by-exclusion is other-dependent, they are categorically different operations even if they co-occur.",
+      "vyapti_confidence": 0.74,
+      "log_bayes_factor": 0.36,
+      "w_rel": 0.72,
+      "w_map": 0.65,
+      "w_aux": 0.70,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that vimarśa (reflexive self-awareness) can be fully characterized as a determination-by-exclusion operation — i.e., that self-awareness is just the exclusion of non-self-awareness, with no self-grounding remainder.",
+        "status": "untested"
+      },
+      "reasoning": "The svātantrya argument is the deepest philosophical point: determination-by-exclusion is constitutively other-dependent, while vimarśa is constitutively self-grounding. This is a categorical distinction, not a matter of degree."
+    },
+    {
+      "claim_id": "cl:abh-culmination-in-identity",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "locator": "Tantrāloka 1.52cd commentary, ahnika-01.txt lines 7291-7293",
+        "quote": "utpattiś ca tādātmye paryavasyati — difference culminates in oneness"
+      },
+      "claim_text": "Structural determination-by-exclusion terminates in separation: A is A because it is not not-A. But vimarśa culminates in identity (tādātmya): difference is resolved into oneness as the unfolding of the self-aware Heart. The tree-of-vimarśa metaphor — all variegated phenomena are 'sprouts and flowers of the tree of reflective awareness of one's own Self' — shows that vimarśa does not produce separation but expression. This is a fundamentally different structure from determination-by-contrast.",
+      "targets": [
+        { "target_id": "cand:abh-vimarsa-intrinsic", "target_type": "candidate_explanation" },
+        { "target_id": "cand:nanavira-structural-reflexivity", "target_type": "candidate_explanation" },
+        { "target_id": "crux:constructed-reflexivity-presupposes-manifestness", "target_type": "crux" }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "trika",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "prasanga(difference_culminates_in_separation)",
+      "hetu": "difference terminates in A ≠ not-A, vimarśa terminates in tādātmya (oneness)",
+      "sadhya": "vimarśa has a fundamentally different structure from determination-by-exclusion",
+      "vyapti_statement": "If one operation terminates in separation and another in identity, they are structurally different operations.",
+      "vyapti_confidence": 0.72,
+      "log_bayes_factor": 0.34,
+      "w_rel": 0.70,
+      "w_map": 0.62,
+      "w_aux": 0.68,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that determination-by-exclusion can also culminate in identity — i.e., that a system of mutual exclusions can resolve into a unified awareness without remainder.",
+        "status": "untested"
+      },
+      "reasoning": "This is the culminating argument: difference and vimarśa have opposite directions. Difference produces separation; vimarśa resolves into unity. They cannot be the same operation."
+    }
+  ]
+}

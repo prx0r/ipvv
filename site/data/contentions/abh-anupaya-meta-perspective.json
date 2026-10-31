@@ -1,0 +1,28 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-anupaya",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "TĀ 2 (Anupāya): from the No Means perspective, the two-aspect structure is seen as never having been separate. The entire reflexivity debate — whether the structure is self-grounding, grounded in vimarśa, or groundless — presupposes a separation that doesn't exist from this view.",
+  "claims": [{
+    "id": "cl:abh-anupaya-meta",
+    "text": "TĀ 2 (Anupāya/No Means chapter): 'Of what use can any means of realization be with regard to this Supreme Lord Who is self-luminous Light and our own Self? It cannot bring about the attainment of His own nature, because it is eternal, nor knowledge of it, because it illumines itself.' From the Anupāya perspective, the two-aspect structure (subject/object, means/goal, ground/grounded) was never truly separate. The reflexivity debate — whether structure is self-grounding (Dignāga), vimarśa-grounded (Abhinavagupta), or groundless (Ñāṇavīra) — operates at the level where separation appears real. Anupāya is the perspective from which the question dissolves.",
+    "source_id": "text:tantraloka-ahnika3",
+    "source_span": "Tantrāloka 2 (Anupāya), ahnika-03.txt lines 1-39",
+    "evidence": "textual",
+    "pramana": "sabda",
+    "hetu": "consciousness is self-luminous and requires no means — the distinction between ground and grounded does not arise at this level",
+    "sadhya": "the reflexivity debate presupposes a separation that Anupāya reveals as never having been actual",
+    "vyapti": "If consciousness needs no means to itself because it IS self-luminous, then the question 'what grounds the two aspects?' is a question that only arises from within the separation it presupposes.",
+    "vyapti_confidence": 0.78,
+    "falsifier": "Show that the Anupāya perspective still requires the two-aspect distinction (at least as something to be transcended), making it a position within the debate rather than a dissolution of it.",
+    "weight": 0.46,
+    "w_rel": 0.78,
+    "w_map": 0.72,
+    "w_aux": 0.75,
+    "targets": [
+      {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.82, "rationale": "Provides the deepest level of Abhinavagupta's position — the perspective from which the entire debate dissolves."},
+      {"id": "cand:self-grounding-structure", "type": "candidate_explanation", "role": "attack", "strength": 0.60, "rationale": "The self-grounding question only arises within the separation that Anupāya reveals as illusory."},
+      {"id": "cand:groundless-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.45, "rationale": "Both 'groundless' and 'Anupāya' reject the question, but differently — Ñāṇavīra via cessation of asmimāna, Abhinavagupta via the realization that separation never occurred."}
+    ]
+  }]
+}

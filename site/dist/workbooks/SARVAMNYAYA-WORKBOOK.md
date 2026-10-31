@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SARVAMNYAYA-WORKBOOK · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Workbook</div><h1>SARVAMNYAYA-WORKBOOK</h1><div class="skt"></div><div class="sub">1265 words · vendored research asset</div><div class="sub"><a href="/data/workbooks/SARVAMNYAYA-WORKBOOK.md">source markdown →</a></div><ul>
+<li>RVĀMNĀYA: THE SYNTHESIS</li>
+<li>CROSSWALK-FIRST WORKBOOK</li>
+<li>at happens when incompatible traditions are deliberately combined?</li>
+<li>w can Kubjikā, Kālī, Tripurā, and Siddhalakṣmī become one system?</li>
+<li>at does this reveal about the nature of the traditions themselves?</li>
+</ul>
+<ul>
+<li>RPOSE</li>
+<li>is workbook gives the Sarvāmnāya / Newar (Nepalese multi-āmnāya) synthesis a logical</li>
+<li>try point. It does not ask you to accept Kashmir Śaiva metaphysics. It reconstructs the</li>
+<li>estions the system asks, the answers it proposes, why each concept is introduced, and</li>
+<li>ere the contested inferences remain.</li>
+<li>epared as part of the Tantrāloka × Ochema research programme · August 2026</li>
+</ul>
+<blockquote>SOURCE CAVEAT — read this first.</blockquote>
+<blockquote>This is the least-documented of the seven schools in our corpus. The Newar paddhatis</blockquote>
+<blockquote>(ritual handbooks) are largely unstudied, and the saivamap/sarvamnyaya folder is not yet</blockquote>
+<blockquote>populated. What follows is therefore built primarily from the atlas&#x27;s definition of the</blockquote>
+<blockquote>tradition and the comparative framework of the other six workbooks — NOT from a full</blockquote>
+<blockquote>primary-source base. It is a <i>frame</i>, not a finished reading. Treat every claim here as</blockquote>
+<blockquote>provisional until the primary material is added.</blockquote>
+<hr/>
+<ul>
+<li>W TO USE THIS WORKBOOK</li>
+<li> not read the Sarvāmnāya as combined rituals to memorize. Read it as one escalating</li>
+<li>oblem: *if each tradition is founded on its own revelation, goddess, and initiation, how</li>
+<li>uld they ever be combined — and what does the combining reveal?*</li>
+<li> Read one unit at a time. The units are cumulative.</li>
+<li> Keep three columns: what the text claims / what Ochema translates / what remains unproven.</li>
+<li> Do the checkpoints. Conceptual control, not memorization.</li>
+<li> Treat every modern comparison as an analogue, never an identity.</li>
+<li> Return to the text map only after Units 1–6.</li>
+</ul>
+<ul>
+<li>THODOLOGICAL RULE</li>
+<li>ver allow a mathematical theorem, neuroscientific model, or contemplative experience to</li>
+<li>herit the truth of a metaphysical claim merely because their structures resemble one</li>
+<li>other. Translation, analogy, implementation, and identity are four different relations.</li>
+</ul>
+<hr/>
+<ul>
+<li>E ONE PROBLEM</li>
+<li> the traditions each claim their own goddess, text, and path, how could they be combined</li>
+<li>thout destroying what makes each distinctive? The Sarvāmnāya is the tradition&#x27;s own</li>
+<li>swer.</li>
+</ul>
+<ul>
+<li>IT 1 — WHAT IS A &quot;FULL TRANSMISSION&quot;?</li>
+</ul>
+<ul>
+<li>1 The name</li>
+<li>rvāmnāya = &quot;all the transmissions&quot; (sarva + āmnāya). It names the Nepalese multi-āmnāya</li>
+<li>ntheses: traditions that deliberately combine Kubjikā, Kālī, Tripurā, Siddhalakṣmī, and</li>
+<li>hers into integrated systems.</li>
+</ul>
+<ul>
+<li>2 Not a single tradition</li>
+<li>e Sarvāmnāya is not one more school. It is a synthesis that deliberately holds several</li>
+<li>aditions together in one system — the endgame of the corpus, where incompatible systems</li>
+<li>re made mutually translatable by practitioners themselves.</li>
+</ul>
+<ul>
+<li>3 The escalating problem</li>
+<li> each tradition is founded on its own revelation, its own goddess, and its own</li>
+<li>itiation, then how can they be combined without destroying what makes each distinctive?</li>
+</ul>
+<ul>
+<li>ECKPOINT 1</li>
+<li>Why is Sarvāmnāya &quot;all the transmissions&quot; rather than one more school?</li>
+<li>What problem does deliberate combination pose for the distinct traditions?</li>
+</ul>
+<ul>
+<li>IT 2 — WHY COMBINE?</li>
+</ul>
+<ul>
+<li>1 Mutual translatability</li>
+<li>e atlas notes that the synthesis arose because practitioners themselves made the</li>
+<li>compatible systems mutually translatable. The combining was not a scholar&#x27;s abstraction;</li>
+<li> was a lived practice — deities, texts, and rites brought into relation so that one</li>
+<li>itiation could open several traditions.</li>
+</ul>
+<ul>
+<li>2 The motive</li>
+<li>e motive was not syncretism for its own sake. It was the recognition that the different</li>
+<li>aditions could be held together — their goddesses and rites arranged into one working</li>
+<li>stem.</li>
+</ul>
+<ul>
+<li>3 The caution</li>
+<li>at traditions were combined is a historical datum. What the combination means</li>
+<li>eologically is the tradition&#x27;s claim.</li>
+</ul>
+<ul>
+<li>ECKPOINT 2</li>
+<li>What does &quot;mutually translatable&quot; mean as a lived practice?</li>
+<li>Why is this more than mere syncretism?</li>
+</ul>
+<ul>
+<li>IT 3 — HOW IS THIS DONE?</li>
+</ul>
+<ul>
+<li>1 A crosswalk of goddesses and rites</li>
+<li>e synthesis works by a crosswalk: the goddesses of the different āmnāyas (Kubjikā, Kālī,</li>
+<li>ipurā, Siddhalakṣmī) are arranged into a single hierarchy, and their rites into a single</li>
+<li>tual calendar. The distinct traditions are not erased; they are related.</li>
+</ul>
+<ul>
+<li>2 The integrated ritual system</li>
+<li>e result is a multi-āmnāya ritual system in which a practitioner can move across the</li>
+<li>aditions. This is the &quot;crosswalk layer&quot;: the mechanism by which distinct systems are</li>
+<li>ld together.</li>
+</ul>
+<ul>
+<li>ECKPOINT 3</li>
+<li>What is the crosswalk, and how does it relate the goddesses?</li>
+<li>Why are the traditions &quot;related&quot; rather than &quot;erased&quot;?</li>
+</ul>
+<ul>
+<li>IT 4 — WHAT DOES THIS TEST?</li>
+</ul>
+<ul>
+<li>1 The semantic-model test</li>
+<li>r the ochema project, the Sarvāmnāya is a test case: can the semantic model recognize</li>
+<li>veral traditions being deliberately combined? If the model can only handle traditions</li>
+<li>e at a time, it cannot describe the synthesis.</li>
+</ul>
+<ul>
+<li>2 The crosswalk layer</li>
+<li>e crosswalk layer tracks how distinct traditions are related — their shared structures,</li>
+<li>eir deliberate unions. The Sarvāmnāya is the strongest challenge to that layer.</li>
+</ul>
+<ul>
+<li>ECKPOINT 4</li>
+<li>Why is the Sarvāmnāya a test for the semantic model?</li>
+<li>What is the &quot;crosswalk layer&quot; and why does the synthesis stress it?</li>
+</ul>
+<ul>
+<li>IT 5 — WHY NEPAL?</li>
+</ul>
+<ul>
+<li>1 Where the manuscripts survive</li>
+<li>e multi-āmnāya synthesis is preserved overwhelmingly in Nepal, where the Kubjikā, Kālī,</li>
+<li>d other manuscripts survived and where Newar ritual continuity persisted.</li>
+</ul>
+<ul>
+<li>2 Ritual continuity</li>
+<li>pal preserves not only the texts but the living ritual tradition — the Newar paddhatis</li>
+<li>itual handbooks) that encode the synthesis in practice.</li>
+</ul>
+<ul>
+<li>3 The caution</li>
+<li>at Nepal preserved the material is a historical fact. That the synthesis is the corpus&#x27;s</li>
+<li>lmination is the interpretation.</li>
+</ul>
+<ul>
+<li>ECKPOINT 5</li>
+<li>Why is Nepal decisive for the Sarvāmnāya?</li>
+<li>What do the Newar paddhatis preserve beyond the texts?</li>
+</ul>
+<ul>
+<li>IT 6 — WHAT IS THE ENDGAME?</li>
+</ul>
+<ul>
+<li>1 The corpus&#x27;s culmination</li>
+<li>e Sarvāmnāya is the endgame of the corpus — the point where the distinct traditions,</li>
+<li>ving each been studied, are seen to be combinable. It tests the whole model.</li>
+</ul>
+<ul>
+<li>2 What it reveals</li>
+<li>e synthesis reveals that the traditions are not isolated monads; they share enough</li>
+<li>ructure to be deliberately united. What the other workbooks study one at a time (the</li>
+<li>ika&#x27;s recognition, the Krama&#x27;s sequence, the Kaula&#x27;s kula, the Kubjikā&#x27;s phoneme), the</li>
+<li>rvāmnāya holds together.</li>
+</ul>
+<ul>
+<li>ECKPOINT 6</li>
+<li>Why is the Sarvāmnāya the &quot;endgame&quot;?</li>
+<li>What does the possibility of synthesis reveal about the traditions?</li>
+</ul>
+<ul>
+<li>IT 7 — WHAT REMAINS UNRESOLVED?</li>
+</ul>
+<ul>
+<li>1 The provisional chain</li>
+<li>veral āmnāyas exist; practitioners combined them; the combination is a crosswalk; Nepal</li>
+<li>eserved it; the synthesis tests the semantic model. The chain is coherent in outline,</li>
+<li>t the primary-source documentation is thinner than for the other schools.</li>
+</ul>
+<ul>
+<li>2 The contested points</li>
+<li>e many Newar paddhatis still unstudied; the exact rules of combination (which deities</li>
+<li>p to which); the relation of the synthesis to the earlier individual traditions.</li>
+</ul>
+<ul>
+<li>3 What Ochema can contribute</li>
+<li>e the Sarvāmnāya as a stress-test of the crosswalk layer: can the model describe a</li>
+<li>liberate multi-tradition union, not just single traditions? This is a comparative-method</li>
+<li>estion, not a claim about the tradition.</li>
+</ul>
+<ul>
+<li>4 What Ochema must not claim yet</li>
+<li>at the model &quot;proves&quot; the synthesis&#x27;s theology, or that the synthesis validates a</li>
+<li>rticular comparative method.</li>
+</ul>
+<ul>
+<li>5 Final synthesis</li>
+<li>e Sarvāmnāya is the crosswalk layer made tradition: several āmnāyas deliberately united</li>
+<li> Nepal. It is the endgame of the corpus — where the distinct systems are shown to be</li>
+<li>tually translatable, and where the ochema model faces its strongest test.</li>
+</ul>
+<hr/>
+<ul>
+<li>SEARCH GAP</li>
+<li>e saivamap/sarvamnyaya folder is empty and the Newar paddhatis are unstudied. Before this</li>
+<li>rkbook can move from &quot;frame&quot; to &quot;reading,&quot; the primary material (Newar ritual handbooks,</li>
+<li>e cross-āmnāya dossiers) must be added. Until then, it is the most provisional of the</li>
+<li>ven.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/workbooks/SARVAMNYAYA-WORKBOOK.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>
