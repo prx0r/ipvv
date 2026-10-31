@@ -86,10 +86,7 @@ async function get(p){
   return ct.includes('json') ? r.json() : r.text();
 }
 const routes = {
-  '/': home, '/library': library,
-  '/read': translations, '/recite': recite, '/practice': practices,
-  '/enquire': pushing, '/translate': tools, '/write': essays,
-  '/masters': masters, '/scholars': scholars, '/concepts': concepts,
+  '/': home, '/library': library, '/practice': practices,
 };
 async function router(){
   const h = location.hash.slice(1) || '/';
@@ -135,12 +132,7 @@ async function library(){
   });
   if(sorted.length) showWorks(sorted[0], '#lib-works');
 }
-async function translations(){
-  const idx = await get('/data/translations.json').catch(()=>null);
-  const files = idx || ["kramastotra","bodhapancadasika","spanda","sivasutra","bhairavastava","stavacintamani","tantrasara","paratrimshika","paramarthasara","vbt"];
-  $('#view').innerHTML = `<h1>Read</h1><div class="sub">Sanskrit with gate-passed English. Withheld where the gate hasn't passed — fail-closed.</div>
-  <div class="idx">${files.map(w=>`<a href="#/work/${w}">${esc(w)}</a>`).join('')}</div><div id="answer" style="display:none"></div>`;
-}
+
 let KAR = { audio: null, timer: null, cur: null };
 function stopKaraoke(){
   if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
@@ -274,165 +266,19 @@ async function work(path){
     }catch(e){}
   };
 }
-async function recite(){
-  let works = [];
-  try{
-    const idx = await get('/data/translations.json');
-    works = idx.filter(w=>['bhairavastava','anuttarastika','stavacintamani','sivastotravali'].includes(w));
-  }catch(e){}
-  let html = `<h1>Recite</h1><div class="sub">Studio chants. Audio keeps playing while you browse.</div>`;
-  for(const w of works){
-    try{
-      const au = await get(`/data/audio-${w}.json`).catch(()=>null);
-      if(!au || !au.verses) continue;
-      html += `<h2>${esc(w)}</h2>`;
-      au.verses.slice(0,12).forEach((v,i)=>{
-        const id = v.id || `${w}_${i+1}`;
-        html += `<button class="playbtn" data-au="/audio/${w}/${id}.mp3" data-t="${esc(w)} v${v.n||i+1}">▶ v${v.n||i+1}</button>`;
-      });
-    }catch(e){}
-  }
-  $('#view').innerHTML = html + `<div id="answer" style="display:none"></div>`;
-  document.querySelectorAll('#view .playbtn[data-au]').forEach(b=>{
-    b.onclick = ()=>playAudio(b.getAttribute('data-au'), b.getAttribute('data-t'));
-  });
-}
+
 async function practices(){
   $('#view').innerHTML = `<div style="position:relative;margin:0 -1rem"><div style="position:absolute;top:.4rem;left:.8rem;z-index:6"><button class="playbtn" id="labexit" style="background:rgba(255,255,255,.92)">‹ app</button></div><div style="font-family:Inter,system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;color:var(--mut);padding:.5rem 1rem 0;text-align:center">PRACTISE · the lab, live</div><iframe src="https://body.stonedoorway.com/lab" style="width:100%;height:calc(100dvh - 220px);min-height:420px;border:0;display:block" title="practice lab" allow="autoplay; microphone"></iframe></div><div id="answer" style="display:none"></div>`;
   document.getElementById('labexit').onclick = ()=>{ location.hash = '#/'; };
 }
-async function pushing(){
-  let items = [];
-  try{
-    const c = await (await fetch('/data/corpus.jsonl')).text();
-    items = c.split('\n').filter(Boolean).map(l=>{ try{return JSON.parse(l)}catch(e){return null} }).filter(r=>r && r.kind==='probe');
-  }catch(e){}
-  const byWork = {};
-  items.forEach(r=>{ const w=(r.work||'pushing').replace('pushing:',''); (byWork[w]=byWork[w]||[]).push(r); });
-  const groups = Object.keys(byWork).sort();
-  $('#view').innerHTML = `<h1>Enquire</h1><div class="sub">Hound a text with why. Or ask below — the copilot fires a chain and shows its work.</div>` +
-    (groups.length ? groups.map(g=>`<h2>${esc(g)}</h2><div class="idx">${byWork[g].slice(0,30).map(r=>`<a href="#/probe/${esc(r.id.replace(/^pushing:/,''))}">${esc((r.ref||r.id).split('/').pop().replace(/\.md$/,'').replace(/[-_]/g,' ').slice(0,80))}</a>`).join('')}</div>`).join('') :
-    `<div class="idx"><a href="#/pushing/bodhapancadasika">Bodhapañcadaśikā — 5 sessions</a><a href="#/pushing/ipvv">IPVV — 12 probes</a><a href="#/pushing/tantraloka">Tantrāloka — 63 probes</a></div>`) +
-    `<div id="answer" style="display:none"></div>`;
-}
-function mdBasic(src){
-  let h = esc(src);
-  h = h.replace(/^###### (.*)$/gm,'<h6>$1</h6>').replace(/^##### (.*)$/gm,'<h5>$1</h5>').replace(/^#### (.*)$/gm,'<h4>$1</h4>').replace(/^### (.*)$/gm,'<h3>$1</h3>').replace(/^## (.*)$/gm,'<h2>$1</h2>').replace(/^# (.*)$/gm,'<h1>$1</h1>');
-  h = h.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/^&gt; (.*)$/gm,'<blockquote>$1</blockquote>');
-  h = h.split('\n\n').map(p=>/^\s*<(h\d|blockquote|ul|ol|li|div|pre)/.test(p)?p:'<p>'+p.replace(/\n/g,'<br>')+'</p>').join('\n');
-  return h;
-}
-async function probe(path){
-  const id = path.split('/').slice(2).join('/');
-  const recs = [];
-  try{
-    const c = await (await fetch('/data/corpus.jsonl')).text();
-    c.split('\n').filter(Boolean).forEach(l=>{ try{ const r=JSON.parse(l); if(r.kind==='probe'&&(r.id==='pushing:'+id||r.id===id)) recs.push(r); }catch(e){} });
-  }catch(e){}
-  let body = '', title = id.split('/').pop().replace(/\.md$/,'').replace(/[-_]/g,' ');
-  if(recs.length){ body = mdBasic((recs[0].en||'').slice(0,12000)); }
-  else {
-    try{ const t = await get('/data/pushing/'+id); body = mdBasic(t.slice(0,12000)); }
-    catch(e){ body = '<p>Probe not found.</p>'; }
-  }
-  $('#view').innerHTML = `<div class="sub"><a href="#/enquire">← enquire</a> · owner voice, not scripture</div><h1>${esc(title.slice(0,80))}</h1><div class="gate pass">OWNER · pushing probe</div>${body}<div id="answer" style="display:none"></div>`;
-  window.scrollTo(0,0);
-}
-async function tools(){
-  $('#view').innerHTML = `<h1>Translate</h1><div class="sub">Workbench · variants · witnesses · gates.</div>
-  <div class="idx"><a href="#/read">All translations</a><a href="#/concepts">Glossary (100 terms)</a></div><div id="answer" style="display:none"></div>`;
-}
-async function essays(){
-  $('#view').innerHTML = `<h1>Write</h1><div class="sub">Working papers argued from the translations. Tap to read.</div><div id="essays-list">loading…</div><div id="essay-body"></div><div id="answer" style="display:none"></div>`;
-  try{
-    let files = null;
-    try{ files = await get('/data/essays.json'); }catch(e){}
-    if(!Array.isArray(files)) files = ["IPVV-MEMORY-vs-whattheheckismemory","IPVV-buddhist-co-opting","IPVV-felt-to-ground-argument","IPVV-recognition-formulations-vs-mepit","IPVV-internal-arc-vimarsas"];
-    $('#essays-list').innerHTML = `<div class="idx">${files.map(f=>{ const n = typeof f==='string'?f:(f.id||f.file||''); return `<a href="#" data-essay="${esc(n)}">${esc(n.replace(/[-_]/g,' ').slice(0,60))}</a>`; }).join('')}</div>`;
-    document.querySelectorAll('#essays-list [data-essay]').forEach(a=>{
-      a.onclick = async (e)=>{ e.preventDefault();
-        const n = a.getAttribute('data-essay');
-        const eb = document.getElementById('essay-body');
-        eb.innerHTML = '<p style="color:#999">…</p>';
-        for(const u of [`/data/essay-${n}.md`,`/data/essay-ESSAY-${n}.md`,`/data/pushing/ipvv/${n}.md`]){
-          try{ const t = await get(u); eb.innerHTML = mdBasic(t.slice(0,15000)); eb.scrollIntoView({block:'start'}); return; }
-          catch(err){}
-        }
-        eb.innerHTML = '<p>Essay text not published yet.</p>';
-      };
-    });
-  }catch(e){ const el=document.getElementById('essays-list'); if(el) el.innerHTML='<p>Could not load.</p>'; }
-}
-async function masters(){
-  const secs = await get('/data/sections.json').catch(()=>null);
-  const ms = ((secs && secs.sections.find(s=>s.id==='masters')) || {members:[]}).members || [];
-  $('#view').innerHTML = `<h1>Masters</h1><div class="sub">Tap a name to see their works. By works, most first.</div><div id="mlist">loading…</div><div id="answer" style="display:none"></div>`;
-  const counts = {}, cache = {};
-  await Promise.all(ms.slice(0,25).map(async m=>{
-    try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; cache[m]=w; }catch(e){ counts[m]=0; }
-  }));
-  const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
-  const box = document.getElementById('mlist');
-  box.innerHTML = sorted.map(m=>`<div><a href="#" data-m="${esc(m)}"><b>${esc(m)}</b> <span class="sub">· ${counts[m]||0}</span></a><div class="mw" id="mw-${esc(m)}" style="display:none;margin:.2rem 0 .6rem 1rem"></div></div>`).join('');
-  box.querySelectorAll('[data-m]').forEach(a=>{
-    a.onclick = (e)=>{ e.preventDefault();
-      const m = a.getAttribute('data-m');
-      const d = document.getElementById('mw-'+m);
-      if(!d) return;
-      const open = d.style.display !== 'none';
-      box.querySelectorAll('.mw').forEach(x=>x.style.display='none');
-      if(open) return;
-      const w = cache[m]||[];
-      d.innerHTML = (Array.isArray(w)?w:[]).map(x=>`<div><a href="#/work/${esc(x.id||x.work||m)}">${esc(x.title||x.id||'')}</a></div>`).join('') || '<span class="sub">no works listed</span>';
-      d.style.display='';
-    };
-  });
-}
-async function scholars(){
-  $('#view').innerHTML = `<h1>Scholars</h1><div class="sub">Secondary witnesses — read and cite, host only what is open. Tap a name for bio.</div><div id="slist">loading…</div><div id="answer" style="display:none"></div>`;
-  try{
-    const ss = await get('/data/scholars.json');
-    const list = Array.isArray(ss) ? ss : [];
-    const box = document.getElementById('slist');
-    box.innerHTML = list.map((s,i)=>`<div><a href="#" data-s="${i}"><b>${esc(s.name||s.id)}</b></a> <span class="sub">· ${esc(s.affiliation||'')}</span><div class="sb" id="sb-${i}" style="display:none;margin:.2rem 0 .6rem 1rem"></div></div>`).join('');
-    box.querySelectorAll('[data-s]').forEach(a=>{
-      a.onclick = (e)=>{ e.preventDefault();
-        const i = +a.getAttribute('data-s');
-        const d = document.getElementById('sb-'+i);
-        if(!d) return;
-        const open = d.style.display !== 'none';
-        box.querySelectorAll('.sb').forEach(x=>x.style.display='none');
-        if(open) return;
-        const s = list[i]||{};
-        d.innerHTML = `<p>${esc(s.bio||s.summary||'No bio on file.')}</p>`;
-        d.style.display='';
-      };
-    });
-  }catch(e){ document.getElementById('slist').innerHTML = '<p>Could not load.</p>'; }
-}
-async function concepts(){
-  $('#view').innerHTML = `<h1>Concepts</h1><div class="sub">Glossary with every occurrence linked. Tap a term.</div><div id="clist">loading…</div><div id="answer" style="display:none"></div>`;
-  try{
-    const g = await get('/data/glossary.json');
-    const list = Array.isArray(g) ? g : [];
-    const box = document.getElementById('clist');
-    box.innerHTML = list.map((t,i)=>`<div><a href="#" data-t="${i}"><b>${esc(t.term||t.id)}</b></a><div class="cb" id="cb-${i}" style="display:none;margin:.2rem 0 .6rem 1rem"></div></div>`).join('');
-    box.querySelectorAll('[data-t]').forEach(a=>{
-      a.onclick = (e)=>{ e.preventDefault();
-        const i = +a.getAttribute('data-t');
-        const d = document.getElementById('cb-'+i);
-        if(!d) return;
-        const open = d.style.display !== 'none';
-        box.querySelectorAll('.cb').forEach(x=>x.style.display='none');
-        if(open) return;
-        const t = list[i]||{};
-        d.innerHTML = `<p>${esc(t.gloss||t.definition||'')}</p>` +
-          (t.passages && t.passages.length ? `<div class="sub">${t.passages.length} occurrence${t.passages.length>1?'s':''}: ${t.passages.slice(0,6).map(p=>esc(p)).join(', ')}</div>` : '');
-        d.style.display='';
-      };
-    });
-  }catch(e){ document.getElementById('clist').innerHTML = '<p>Could not load.</p>'; }
-}
+
+
+
+
+
+
+
+
 function notfound(){ $('#view').innerHTML = `<h1>—</h1><p><a href="#/">home</a></p>`; }
 
 /* ask box → Worker chat, answer inline */
