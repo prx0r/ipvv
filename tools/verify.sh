@@ -16,5 +16,7 @@ echo "== specs present =="
 for f in specs/CANONICAL-DAG.yaml specs/C1_SPEC.md specs/SPEC_L2.md specs/schema/person.json; do [ -f "$f" ] || { echo "FAIL missing $f"; fail=1; }; done
 echo "== people validate (masters + scholars vs person schema) =="
 python3 tools/validate_people.py 2>&1 | tail -n 3 || fail=1
+echo "== site gates (site/data + dist, fail-closed; pipeline paths warn-only) =="
+python3 tools/verify_site.py || fail=1
 [ "$fail" -eq 0 ] && echo "ALL PASS" || echo "GATES FAILED"
 exit "$fail"

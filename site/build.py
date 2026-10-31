@@ -1138,6 +1138,18 @@ def main():
     (DIST / "index.html").write_text(TF(TMPL,title="Trika Library", h1="Trika Library",
         sub="masters · modern · concepts · translations · tools · recitation — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
         body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + rec + "</div>" + lat))
+    # full search index: every rendered page, titled (overwrites the partial tools-page index)
+    import re as _re2
+    try: _part = {e.get("u"): e for e in json.loads((DIST / "data/search-index.json").read_text())}
+    except Exception: _part = {}
+    _full = []
+    for _f in sorted(DIST.rglob("*.html")):
+        _u = "/" + _f.relative_to(DIST).as_posix()
+        _m = _re2.search(r"<title>(.*?)</title>", _f.read_text(encoding="utf-8", errors="replace"))
+        _t = (_m.group(1).split("·")[0].strip() if _m else _f.stem)
+        _e = dict(_part.get(_u, {})); _e.update({"t": _t, "u": _u}); _e.setdefault("k", "page")
+        _full.append(_e)
+    (DIST / "data/search-index.json").write_text(json.dumps(_full, ensure_ascii=False))
     print("built", done)
 
 if __name__ == "__main__":
