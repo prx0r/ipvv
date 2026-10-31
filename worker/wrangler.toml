@@ -7,10 +7,6 @@ binding = "DB"
 database_name = "ipvv"
 database_id = "aaefcfe9-5901-43a5-8a0f-4954356ae634"
 
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "sanskritree"
-
 [ai]
 binding = "AI"
 

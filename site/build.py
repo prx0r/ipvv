@@ -320,6 +320,17 @@ document.getElementById('chatsend').onclick=function(){
 VARJS = """<script>
 (function(){
 if(!window.API)return;
+window.saveVariant=function(btn){
+  var work=btn.getAttribute('data-work');var chunk=btn.getAttribute('data-chunk');
+  var textarea=document.getElementById('variant-text-'+work+'-'+chunk);
+  var text=textarea?textarea.value.trim():'';
+  if(!text){alert('Enter a translation first');return}
+  var userId=prompt('Your profile id (from /api/profile):');
+  if(!userId){return}
+  fetch(window.API+'/api/variants',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:userId,work:work,chunk:chunk,text:text,style:'owner'})})
+    .then(r=>r.json()).then(d=>{alert('Saved: '+d.id);textarea.value=''})
+    .catch(e=>alert('Error: '+e.message));
+};
 window.loadVariants=function(btn){
   var c=btn.parentElement;var work=c.getAttribute('data-work');var chunk=c.getAttribute('data-chunk');
   var list=c.querySelector('.vlist');
@@ -963,6 +974,7 @@ def build_translations():
                 body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
                         f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
             blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
+            blocks.append(f'<div class="variant-switcher" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-{wid}-{esc(it.get("chunk",""))}" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button></div></div>')
             en_r = (it.get("l2") or it.get("l1") or "") if it["gate"] == "PASS" else ""
             rdis.append(f'<div data-recite data-id="{wid}-{esc(it.get("chunk",""))}" data-label="{esc(wid)} · {esc(it.get("chunk",""))}" data-sa="{esc(deva_of(it.get("sanskrit","")))}" data-en="{esc(en_r[:4000])}" style="display:none"></div>')
         abase = AUDIO_ALIAS.get(wid, wid)

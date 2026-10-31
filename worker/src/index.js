@@ -2,11 +2,14 @@ let cachedVectors = null;
 
 async function getVectors(env) {
   if (cachedVectors) return cachedVectors;
-  const obj = await env.BUCKET.get('vectors.json');
-  if (!obj) return null;
-  const text = await obj.text();
-  cachedVectors = JSON.parse(text);
-  return cachedVectors;
+  try {
+    const resp = await fetch('https://ipvv-a8u.pages.dev/data/vectors.json');
+    if (!resp.ok) return null;
+    cachedVectors = await resp.json();
+    return cachedVectors;
+  } catch (e) {
+    return null;
+  }
 }
 
 function cosine(a, b) {
@@ -96,18 +99,14 @@ export default {
       await env.DB.prepare('INSERT INTO chat_messages (id, session_id, role, content) VALUES (?, ?, ?, ?)')
         .bind('m:' + crypto.randomUUID(), sid, 'user', message).run();
 
-      // RAG: embed question, retrieve, rerank, generate
       let reply = '';
       try {
-        // 1. Embed question
         const qEmb = await env.AI.run('@cf/baai/bge-m3', { text: ['query: ' + message] });
         const qVec = qEmb.data[0];
 
-        // 2. Load vectors
         const vecs = await getVectors(env);
         if (!vecs) throw new Error('vectors not loaded');
 
-        // 3. Filter by work + gate, compute cosine
         const gateWeight = { 'PUBLISHED': 1.0, 'PASS': 0.9, 'OWNER': 0.7, 'BLOCKED': 0.0 };
         const candidates = vecs
           .filter(v => v.work === work && (v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER'))
@@ -115,15 +114,13 @@ export default {
           .sort((a, b) => b.score - a.score)
           .slice(0, 20);
 
-        // 4. Rerank
         let top = candidates.slice(0, 5);
         if (candidates.length > 5) {
-          const ctxs = candidates.map(c => ({ text: c.en || c.sa || '' }));
+          const ctxs = candidates.map(c => ({ text: (c.en || c.sa || '').slice(0, 500) || 'passage' }));
           const rerank = await env.AI.run('@cf/baai/bge-reranker-base', {
             query: message,
             contexts: ctxs,
           });
-          // rerank returns scores per context
           const scores = rerank.results || rerank.data || [];
           candidates.forEach((c, i) => {
             c.rerank = (scores[i] && (scores[i].score || scores[i])) || c.score;
@@ -131,24 +128,17 @@ export default {
           top = candidates.sort((a, b) => b.rerank - a.rerank).slice(0, 5);
         }
 
-        // 5. Graph traversal: follow argument packet edges for richer context
-        const argPackets = (await getVectors(env))?.filter(v => v.kind === 'argument') || [];
-        const argMap = {};
-        argPackets.forEach(a => { argMap[a.id] = a; });
-        // follow tension links and premise edges
+        // Graph traversal: follow argument packet edges
+        const argPackets = vecs.filter(v => v.kind === 'argument');
         const gathered = new Set(top.map(t => t.id));
         top.forEach(t => {
-          // find argument packets that reference this passage
           argPackets.forEach(a => {
             if (a.ref === t.id || a.id.includes(t.id)) gathered.add(a.id);
-            if (a.tension_id && a.ref === t.id) gathered.add(a.id);
           });
         });
-        // add tension-linked packets
         top.forEach(t => {
           argPackets.forEach(a => {
             if (a.tension_id && gathered.has(a.id)) {
-              // find other packets with same tension
               argPackets.forEach(a2 => {
                 if (a2.tension_id === a.tension_id && a2.id !== a.id) gathered.add(a2.id);
               });
@@ -156,8 +146,7 @@ export default {
           });
         });
 
-        // 6. Build context from gathered evidence (gate-aware)
-        const gatheredRecs = (await getVectors(env))?.filter(v => gathered.has(v.id)) || top;
+        const gatheredRecs = vecs.filter(v => gathered.has(v.id));
         const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
         const context = contextRecs.map(t => `[${t.id}] (gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
         const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
