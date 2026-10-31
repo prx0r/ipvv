@@ -1062,6 +1062,30 @@ ESSAY_GROUPS = [
 ]
 REVIEWED_ESSAYS = {"advaita-ipvv","buddhist-ipvv","epistemology-of-action","exclusion-individuation","felt-to-ground","ipvv-vs-tantraloka","krama-ipvv","nonconstructed-i","rasa-ipvv-abhinavabharati","recognition-and-formal-proofs","recognition-and-nisargadatta","sivasutra-vb-ipvv","soteriology-of-recognition","spanda-ipvv","two-abhinavaguptas-ipvv-tantraloka","ultimate-proof-of-recognition","why-recognition-is-felt"}
 
+def essay_arg_links(slug):
+    """Return HTML linking an essay to its argument packets."""
+    try:
+        links = json.loads((ROOT / "data/essay-links/links.json").read_text())
+        pids = links.get(slug, [])
+        if not pids:
+            return ""
+        rows = "".join(f'<div class="ev"><a href="/arguments/{pid.split(":")[-1]}.html"><b>{esc(pid.split(":")[-1])}</b></a></div>' for pid in pids[:12])
+        return f"<h3>Referenced arguments ({len(pids)})</h3>{rows}<div class='sub'><a href='/arguments/index.html'>all arguments →</a></div>"
+    except Exception:
+        return ""
+
+def arg_essay_links(pid):
+    """Return HTML linking an argument packet to essays that reference it."""
+    try:
+        links = json.loads((ROOT / "data/essay-links/links.json").read_text())
+        essays = [slug for slug, pids in links.items() if f"pt:argument:ipvv:{pid}" in pids or pid in [p.split(":")[-1] for p in pids]]
+        if not essays:
+            return ""
+        rows = "".join(f'<div class="ev"><a href="/essays/{slug}.html"><b>{esc(slug)}</b></a></div>' for slug in essays)
+        return f"<h3>Referenced by essays ({len(essays)})</h3>{rows}"
+    except Exception:
+        return ""
+
 def build_essays():
     """Owner's recognition essays (vendored volume prose, displayed as written)."""
     import json as _json
@@ -1081,7 +1105,9 @@ def build_essays():
         badge = '<span class="srcbadge">peer-reviewed Aug 2026</span>' if slug in REVIEWED_ESSAYS else '<span class="rsrc">working paper</span>'
         (out / f"{slug}.html").write_text(TF(ATmpl, title=title, h1=esc(title),
             kicker="Essay", sub=esc(stand[:220]),
-            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>' + md_lite(raw)
+            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>'
+            + essay_arg_links(slug)
+            + md_lite(raw)
             + srclink("site/data/essays/" + f.name, "essay source lives here.")))
         cards.append(f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])} {"[reviewed]" if slug in REVIEWED_ESSAYS else "[working]"}</a>')
         cardmeta.append((slug, title, stand))
@@ -1247,6 +1273,9 @@ def build_corpus():
             "status": pkt.get("status", ""), "tension_id": pkt.get("tension_id"),
             "premises": len(pkt.get("premises", [])),
             "immutable_id": pkt.get("source_passage", "")})
+    (DIST / "data/essay-links").mkdir(parents=True, exist_ok=True)
+    if (ROOT / "data/essay-links/links.json").exists():
+        shutil.copy(ROOT / "data/essay-links/links.json", DIST / "data/essay-links/links.json")
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     with open(DIST / "data/corpus.jsonl", "w", encoding="utf-8") as fh:
         for r in recs:
@@ -1644,6 +1673,7 @@ def build_arguments():
                 + f'<h3>Premises</h3>{prem}'
                 + f'<div class="panel"><b>Unresolved.</b> {esc(pkt["unresolved"][:600])}</div>'
                 + (f'<div class="sub">Tension: {esc(pkt["tension_id"])}</div>' if pkt["tension_id"] else "")
+                + arg_essay_links(pid)
                 + f'<div class="sub">Strength: {esc(pkt["strength"])} · Status: {esc(pkt["status"])} · <a href="/data/arguments/{esc(pid)}.json">packet JSON</a></div>'
                 + srclink("site/data/arguments/" + pid + ".json", "packet lives here."))
         (out / f"{pid}.html").write_text(TF(TMPL, title=pkt["title"], h1=esc(pkt["title"]),

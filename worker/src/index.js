@@ -86,7 +86,8 @@ export default {
     // POST /api/chat/:work — RAG chat
     const cm = path.match(/^\/api\/chat\/([^/]+)$/);
     if (cm && request.method === 'POST') {
-      const [, work] = cm;
+      const [, workParam] = cm;
+      const works = workParam.split(',').map(w => w.trim()).filter(Boolean);
       const { session_id, message, user_id } = await request.json();
       if (!message) return json({ error: 'message required' }, 400, cors);
 
@@ -94,7 +95,7 @@ export default {
       if (!sid) {
         sid = 's:' + crypto.randomUUID();
         await env.DB.prepare('INSERT INTO chat_sessions (id, user_id, work) VALUES (?, ?, ?)')
-          .bind(sid, user_id || null, work).run();
+          .bind(sid, user_id || null, works[0]).run();
       }
       await env.DB.prepare('INSERT INTO chat_messages (id, session_id, role, content) VALUES (?, ?, ?, ?)')
         .bind('m:' + crypto.randomUUID(), sid, 'user', message).run();
@@ -109,7 +110,7 @@ export default {
 
         const gateWeight = { 'PUBLISHED': 1.0, 'PASS': 0.9, 'OWNER': 0.7, 'BLOCKED': 0.0 };
         const candidates = vecs
-          .filter(v => v.work === work && (v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER'))
+          .filter(v => works.includes(v.work) && (v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER'))
           .map(v => ({ ...v, score: cosine(qVec, v.vec) * (gateWeight[v.gate] || 0.5) }))
           .sort((a, b) => b.score - a.score)
           .slice(0, 20);
@@ -148,8 +149,8 @@ export default {
 
         const gatheredRecs = vecs.filter(v => gathered.has(v.id));
         const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
-        const context = contextRecs.map(t => `[${t.id}] (gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
-        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
+        const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
+        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
         const gen = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 512,
