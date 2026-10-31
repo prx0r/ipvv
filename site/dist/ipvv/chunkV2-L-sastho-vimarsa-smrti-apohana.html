@@ -1805,6 +1805,21 @@ var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/")
 (function(){
 var b=document.getElementById('burger');
 if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+var mn=document.querySelector('details.mnav');
+if(mn){
+  var saved=localStorage.getItem('mnav');
+  if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+  mn.addEventListener('toggle',function(){localStorage.setItem('mnav',mn.open?'1':'0')});
+}
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
 var toc=document.getElementById('tocbody');
 if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
