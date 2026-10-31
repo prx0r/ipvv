@@ -1,9 +1,10 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Translation: sivastotravali · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<title>Translation: sivastotravali</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
-:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
@@ -28,19 +29,20 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
-.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
-.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
-.side a:hover{background:#f4f1ea}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
-.side .sub a{padding-left:1rem;color:#4a463c}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
 .side details.mnav{margin:.9rem 0 .3rem}
 .side details.mnav summary{cursor:pointer;list-style:none}
 .side details.mnav summary::-webkit-details-marker{display:none}
 .side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
 .side details.mnav[open] summary::after{transform:rotate(180deg)}
-.side .n{color:var(--faint);font-size:.78rem;font-family:var(--sans)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
 .side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side a b,.side b{font-weight:600}
 .idx a b,.panel b{font-weight:600}
@@ -129,7 +131,7 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
 <nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
@@ -236,7 +238,7 @@ carvanābhidhānam vimśam stotram nathaṃ tribhuvananāthaṃ bhūtisitaṃ tr
 [स्तोत्र २०]
 चर्वनाभिधानम् विम्शम् स्तोत्रम् नथं त्रिभुवननाथं भूतिसितं त्रिनयनं त्रिशूलधरम् &amp; उपवीतीकृतभोगिनम् इन्दुकलाशेखरं वन्दे नौमि निजतनुविनिस्मरदंशुकपरिवेषधवलपरिधानम् &amp; विलसत्कपालमालाकल्पितनृत्तोत्सवाकल्पम् वन्दे तान् दैवतं येषां हरश् चेष्टा हरोचिताः &amp; हरैकप्रवणाः प्राणाः सदा सौभाग्यसद्मनाम् क्रीडितं तव महेश्वरतायाः पृष्ठतो ऽन्यद् इदम् एव यथैतत् &amp; इष्टमात्रघटितेष्व् अवदानेष्व् आत्मना परम् उपायम् उपैमि त्वद्धाम्नि विश्ववन्द्ये ऽस्मिन्न् इयति क्रीडने सति &amp; तव नाथ कियान् भूयान्न् आनन्दरससम्भवः कथं स सुभगो मा भूद्यो गौर्या वल्लभो हरः &amp; हरो ऽपि मा भूद् अथ किं गौर्याः परमवल्लभः ध्यानामृतमयं यस्य स्वात्ममूलम् अनश्वरम् &amp; संविल्लतास् तथारूपास् तस्य कस्यापि सत्तरोः भक्तिकण्डूसम् उल्लासावसरे परमेश्वर &amp; महानिकषपाषाणस्थूणा पूजैव जायते सदा स्र्ष्टिविनोदाय सदा स्थितिसुखासिने &amp; सदा त्रिभुवनाहारतृप्ताय स्वामिने नमः न क्वापि गत्वा हित्वापि न किंचिद् इदम् एव ये &amp; भव्यं त्वद्धाम पश्यन्ति भव्यास् तेभ्यो नमो नमः भक्तिलक्ष्मीसमृद्धानां किम् अन्यद् उपयाचितम् &amp; एतया वा दरिद्रणां किम् अन्यद् उपयाचितम् दुःखान्य् अपि सुखायन्ते विषम् अप्य् अमृतायते &amp; मोक्षायते च संसारो यत्र मार्गः स शङ्करः मूले मध्ये ऽवसाने च नास्ति दुःखं भवज्जुषां &amp; तथापि वयम् ईशान सीदामः कथम् उच्यताम् ज्ञानयोगादिनान्येषाम् अप्य् अपेक्षितुम् अर्हति &amp; प्रकाशः स्वैरिणाम् इव भवान् भक्तिमतां प्रभो भक्तानां नार्तयो नाप्य् अस्त्य् आध्यानं स्वात्मनस् तव &amp; तथाप्य् अस्ति शिवेत्य् एतत् किम् अप्य् एषां बहिर्मुखे सर्वाभासावभासो यो विमर्शवलितो ऽखिलम् &amp; अहम् एतद् इति स्तौमि तां क्रियाशक्तिम् ईश ते वर्तन्ते जन्तवो ऽशेषा अपि ब्रह्मेन्द्रविष्णवः &amp; ग्रसमानास् ततो वन्दे देव विश्वं भवन्मयम् सतो विनाशसम्बन्धान् मत्परं निखिलं मृषा &amp; एवमेवोद्यते नाथ त्वया संहारलीलया ध्यातम् आत्मुपतिष्ठत एव त्वद्वपुर् वरद भक्तिधनानाम् &amp; अप्य् अचिन्त्यम् अखिलाद्भुतचिन्ताकर्तृतां प्रति च ते विजयन्ते तावकभक्तिरसासवसेकाद् इव सुखितमर्ममण्डलस्फुरितैः &amp; नृत्यति वीरजनो निशि वेतालकुलैः कृतोत्साहः आरब्धा भवदभिनुतिर् अमुना येनाङ्गकेन मम शम्भो &amp; तेनापर्यन्तम् इमं कालं दृढम् अखिलम् एव भविषीष्ट" data-en="" style="display:none"></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
@@ -251,6 +253,8 @@ document.querySelectorAll('details.mnav').forEach(function(mn,ix){
 var key=mn.getAttribute('data-mnav')||('mnav'+ix);
 var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
 if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
 mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
 });
 var side=document.getElementById('sidenav');

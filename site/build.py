@@ -20,7 +20,8 @@ FONTS = """<link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>"""
 
 CSS = """*{box-sizing:border-box}
-:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
@@ -45,19 +46,20 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
-.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
-.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
-.side a:hover{background:#f4f1ea}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
-.side .sub a{padding-left:1rem;color:#4a463c}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
 .side details.mnav{margin:.9rem 0 .3rem}
 .side details.mnav summary{cursor:pointer;list-style:none}
 .side details.mnav summary::-webkit-details-marker{display:none}
 .side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
 .side details.mnav[open] summary::after{transform:rotate(180deg)}
-.side .n{color:var(--faint);font-size:.78rem;font-family:var(--sans)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
 .side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side a b,.side b{font-weight:600}
 .idx a b,.panel b{font-weight:600}
@@ -400,6 +402,8 @@ document.querySelectorAll('details.mnav').forEach(function(mn,ix){
 var key=mn.getAttribute('data-mnav')||('mnav'+ix);
 var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
 if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
 mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
 });
 var side=document.getElementById('sidenav');
@@ -484,17 +488,17 @@ fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)
 
 TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
+<title>{title}</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
 <nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
@@ -771,17 +775,17 @@ def work_sidenav(work, active=""):
 
 ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
+<title>{title}</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
 <nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
@@ -1930,9 +1934,9 @@ def build_llms_txt():
     # Root llms.txt
     works = sorted(set(f.stem for f in (ROOT / "data/translations").glob("*.json")))
     lines = [
-        "# Trika Library — LLM Discovery File",
+        "# svatantrya — LLM Discovery File",
         "",
-        "> Machine-readable index of the Trika Library. All content is freely accessible.",
+        "> Machine-readable index. All content is freely accessible.",
         "> Source: https://github.com/prx0r/ipvv | Live: https://ipvv-a8u.pages.dev",
         "",
         "## What this site contains",
@@ -2376,9 +2380,15 @@ def main():
     tls = '<a href="/tools/index.html"><b>tools</b> — instant find, verse lookup (in-browser)</a>' if "tools" in done else ""
     sec = '<a href="/masters/index.html"><b>masters</b> — chronological, birth-year order</a><a href="/modern/index.html"><b>modern</b> — living scholars A–Z</a>' if "sections" in done else ""
     lat = '<h3>Latest</h3>' + latest if latest else ""
-    (DIST / "index.html").write_text(TF(TMPL,title="Trika Library", h1="Trika Library",
-        sub="masters · modern · concepts · translations · tools · recitation — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
-        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + rec + essb + "</div>" + lat))
+    (DIST / "index.html").write_text(TF(TMPL,title="Read · recite · ask", h1="Read · recite · ask",
+        sub="Sanskrit roots, gate-passed English, studio chant, live questions — display only what is formally done", sidenav=work_sidenav(""),
+        body='<div class="idx">'
+        + '<a href="/translations/index.html"><b>read</b> — 44 works · Sanskrit → READ · English only where the gate passed</a>'
+        + '<a href="/recite/index.html"><b>recite</b> — studio chants + four-mode readout, verse by verse</a>'
+        + '<a href="/practices/index.html"><b>practice</b> — 112 dhāraṇās with sound, breath-paced guidance</a>'
+        + '<a href="/ipvv/pushing.html"><b>pushing</b> — hound a text with why · or tap Ask below and ask it live</a>'
+        + '<a href="/essays/index.html"><b>essays</b> — working papers argued from the translations</a>'
+        + "</div>" + lat))
     # full search index: every rendered page, titled (overwrites the partial tools-page index)
     import re as _re2
     try: _part = {e.get("u"): e for e in json.loads((DIST / "data/search-index.json").read_text())}
