@@ -56,3 +56,24 @@ Per `specs/use-cases/embeddings-loop.md`, plus:
 1. 5–10 Bhairavastava verses in your voice (fixes gen-z exemplars; unblocks P2/pilot).
 2. Patreon URL (Support page still says "launching soon").
 3. Accept/reject on CL-3 theme adjudication (unblocks themes layer).
+
+## Ochema assets (checked 2026-10-31 — the comparative wing)
+- **ochema-site** (ochema.xyz vision): comparative metaphysics, razor aesthetic
+  (monochrome + gold, Source Serif, argument-diagram motif — corroborates our type
+  system), brand law "a position is only as strong as the objection it survives"
+  (= adversarial review as brand, cf. our verify gates).
+- **Contentions** (`basecamp/knowledge/contentions/`, 16 files incl. 8 Abhinava):
+  claim + source_span (work + line numbers) + quote + hetu/sadhya/vyapti +
+  explicit **falsifier** + support/attack targets + crux links. This is the seed
+  layer between pushing probes and essays that we were missing: every contention
+  carries its own defeat condition. Wire contentions as essay-traceability
+  targets (essay claim → contention → source span) and as adversarial-review gates.
+- **TIME-PARALLEL-IPK-OCHEMA.md** (research-library): IPK time-structure =
+  thermal time = Spanda/Ñāṇavīra/Seth/Ibn Arabi/Proclus. Proof that cross-tradition
+  synthesis works — validates the multi-text chat pillar.
+- **Hermetica sources** (`source-library/hermetica/` + render packs in
+  tantraloka/goldrender) remain the first pushing-service target.
+- Note: `ochema2/` is a dead symlink (volume gone); `blog/content/sources/` paths
+  in ochema-site docs don't exist on this volume (sources live elsewhere).
+  Ochema.app platform (grimoirer docs: profiles, diaries, bookmarks) already folded
+  into Pillar 2 above.
