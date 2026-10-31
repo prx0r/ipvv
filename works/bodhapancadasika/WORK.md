@@ -14,6 +14,11 @@
 - L200: 15/15 (8 sections, machine) · C1: 15/15 (250–400w, passage-local)
 - THEMES: seed only
 
+
+## Edition note
+
+Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS published editions (e.g., Śivasūtra 75 vs 77, VBT 161 verses vs 112 dhāraṇās, Spandakārikā 51 vs 52-53). Counts are from the vendored text file.
+
 ## Notes
 
 - Short stotra, good pilot for new works. All 15 verses are Abhinava's own voice (stotra, not commentary).

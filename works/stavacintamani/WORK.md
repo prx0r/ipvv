@@ -14,6 +14,11 @@
 - L200: 12/12 (8 sections, machine) · C1: 4 entries (grouped, 250-400w)
 - THEMES: seed only
 
+
+## Edition note
+
+Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS published editions (e.g., Śivasūtra 75 vs 77, VBT 161 verses vs 112 dhāraṇās, Spandakārikā 51 vs 52-53). Counts are from the vendored text file.
+
 ## Notes
 
 - 120 verses (colophon: service to Śarva, thought-free, lamp of knowledge).
