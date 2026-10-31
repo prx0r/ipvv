@@ -1,0 +1,15 @@
+# L200 — Tantrāloka Ahnika 35 (44 verses, 5 passages)
+
+## 1. What the text says (plain)
+Tantrāloka Ahnika 35 (44 verses) is Abhinavagupta's (c.975-1025) ahnika on the melting (melanam) of all śāstras. It establishes: thus said, melting of all śāstras, here; here, tāvat, same, this, vyavahāra, old; prasiddhi, anusandhāya, sa, eva, ca, āgama, said; anvaya, vyatireka, hi, prasiddhi, upajīvakau; svāyattatve, tayor, vyakti, pūge, kiṃ, syāt, tayor, gatiḥ; pratyakṣa, api, netra-ātma-dīpa-ārtha-ādi-viśeṣajam; apekṣate, tatra, mūle, prasiddhiṃ, tāṃ, tathātmikām; abhitah, saṃvṛte, jāta, ekākī, kṣudhitaḥ, śiśuḥ; kiṃ, karotu, kim, ādattām, kena, paśyatu, kiṃ, vrajet; nanu, vastu-śata-kīrṇe, sthāne, 'py, asya, yad, eva, hi; paśyato, jighrato, vā, api, spṛśataḥ, saṃprasīdati; cetas, tad, eva, ādāya, drāk, so, 'nvayavyatirekabhāk; hanta, cetaḥprasādaḥ, api, yo, 'sau, arthaviśeṣagaḥ; so, api, prāgvāsanārūpa, vimarśa, parikalpitaḥ; na, pratyakṣa, anumāna, ādi, bāhya, māna, prasādajaḥ; prāgvāsanopajīvye, tat, pratibhāmātram, eva, na; na, mṛdabhyavahāra, icchā, puṃso, bālasya, jāyate; prāgvāsanopajīvī, cet, vimarśaḥ, sā, ca, vāsanā. Prācyā, cet, āgatā, seyam, prasiddhiḥ, paurvakālikī; na, ca, cetaḥprasattyaiva, sarvo, vyavahṛtikramaḥ; mūlaṃ, prasiddhis, tanmānaṃ, sarvatra, eva, iti, gṛhyatām; pūrvapūrva, upajīvitvam, ārgaṇe, sā, kvacit, svayam; sarvajñarūpe, hi, śaṅkaraḥ, yāvat, tu, śivatā, nāsya. Naca, kāpyatra, doṣāśā, śaṅkāyāś, ca, nivṛttitaḥ; prasiddhiś, ca, avigāna, utthā, pratītiḥ, śabdanātmikā; mātuḥ, svabhāvo, yat, tasyāṃ, śaṅkate, naiṣa, jātucit; svakuṛtatvavaśāt, eva, sarvavitsa, hi, śaṅkaraḥ; yāvat, tu, śivatā, nāsya. Yathā, ekatra, api, vedādau, tattad, āśramagāminaḥ; saṃskārāntaram, atra, api, tathā, liṅgoddhṛtādikam; yathā, ca, tatra, pūrvasmin, āśrame, na, uttarāśramāt; phalam, eti, tathā; pāñcarātrādau, na, śivātmatām, eka, eva, āgamas, tasmāt, tat. Ekasmād, āgamāt, ca, ite, khaṇḍa, khaṇḍā, vyapoddhṛtāḥ; loce, syuḥ, āgamāḥ, taiḥ, ca, jano, bhrāmyati, mohitaḥ; anekāgama, pakṣe, 'pi, vācyā, viṣaya, bheditā; avaśyam, ūrdhvādhara, tāsthityā, prāmāṇya, siddhaye; anyathā, na, eva, kasyāpi, p... (close).
+
+## 2. What the text argues (core claims)
+- C1: Melting of all śāstras: thus said, melting of all śāstras, here.
+- C2: Here, tāvat, same, this, vyavahāra, old; prasiddhi, anusandhāya, sa, eva, ca, āgama, said.
+- C3: Anvaya, vyatireka, hi, prasiddhi, upajīvakau; svāyattatve, tayor, vyakti, pūge, kiṃ, syāt, tayor, gatiḥ.
+- C4: Pratyakṣa, api, netra-ātma-dīpa-ārtha-ādi-viśeṣajam; apekṣate, tatra, mūle, prasiddhiṃ, tāṃ, tathātmikām.
+- C5: Abhitah, saṃvṛte, jāta, ekākī, kṣudhitaḥ, śiśuḥ; kiṃ, karotu, kim, ādattām, kena, paśyatu, kiṃ, vrajet.
+- C6: Nanu, vastu-śata-kīrṇe, sthāne, 'py, asya, yad, eva, hi; paśyato, jighrato, vā, api, spṛśataḥ, saṃprasīdati.
+- C7: Cetas, tad, eva, ādāya, drāk, so, 'nvayavyatirekabhāk; hanta, cetaḥprasādaḥ, api, yo, 'sau, arthaviśeṣagaḥ.
+- C8: So, api, prāgvāsanārūpa, vimarśa, parikalpitaḥ; na, pratyakṣa, anumāna, ādi, bāhya, māna, prasādajaḥ.
+- C9: Prāgvāsanopajīvye, tat, pratibhāmātram, eva, na; na, mṛdabhyavahāra, icchā, puṃso, bālasya, jāyate.
