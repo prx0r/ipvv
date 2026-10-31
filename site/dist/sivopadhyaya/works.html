@@ -15,6 +15,13 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
 .topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
 .topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topnav a.on{background:#f4f1ea;font-weight:600}
+.topnav .drop{position:relative}
+.topnav .drop>button{padding:.4rem .6rem;border-radius:.5rem;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.topnav .drop>button:hover{background:#f4f1ea}
+.topnav .dropmenu{display:none;position:absolute;top:100%;left:0;min-width:11rem;background:#fff;border:1px solid var(--line);border-radius:.6rem;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:.3rem;z-index:95}
+.topnav .drop.open .dropmenu{display:block}
+.topnav .dropmenu a{display:block}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
 .topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
@@ -120,7 +127,7 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><details class="mnav" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">› Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Sivopadhyaya</div><a href="/sivopadhyaya/index.html">Bio</a><a href="/sivopadhyaya/works.html">› Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/sivopadhyaya/vb-vivrti.html">Vijnanabhairavavivrti (comm. on VBT)</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
@@ -164,6 +171,25 @@ if(!cur&&links.length)links[0].classList.add('on');}
 window.onscroll=function(){spy()};
 spy();}
 initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
 // instant nav: same-origin clicks fetch + swap <main>, no full reload
 function swapMain(html,url,push){
 var doc=new DOMParser().parseFromString(html,'text/html');
@@ -182,6 +208,7 @@ a.textContent=t;
 if(h===path){a.textContent='› '+t;}
 });
 initToc();
+initNav();
 if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
 window.scrollTo(0,0);
 }

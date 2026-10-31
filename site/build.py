@@ -32,6 +32,13 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
 .topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
 .topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topnav a.on{background:#f4f1ea;font-weight:600}
+.topnav .drop{position:relative}
+.topnav .drop>button{padding:.4rem .6rem;border-radius:.5rem;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.topnav .drop>button:hover{background:#f4f1ea}
+.topnav .dropmenu{display:none;position:absolute;top:100%;left:0;min-width:11rem;background:#fff;border:1px solid var(--line);border-radius:.6rem;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:.3rem;z-index:95}
+.topnav .drop.open .dropmenu{display:block}
+.topnav .dropmenu a{display:block}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
 .topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
@@ -413,6 +420,25 @@ if(!cur&&links.length)links[0].classList.add('on');}
 window.onscroll=function(){spy()};
 spy();}
 initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
 // instant nav: same-origin clicks fetch + swap <main>, no full reload
 function swapMain(html,url,push){
 var doc=new DOMParser().parseFromString(html,'text/html');
@@ -431,6 +457,7 @@ a.textContent=t;
 if(h===path){a.textContent='\u203a '+t;}
 });
 initToc();
+initNav();
 if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
 window.scrollTo(0,0);
 }
@@ -458,7 +485,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -745,7 +772,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
