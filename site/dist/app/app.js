@@ -49,8 +49,9 @@ document.getElementById('spk').addEventListener('click', function(){
 async function nav(){
   let mhtml = `<a href="#/practice">practise</a><a href="#/library">library</a>`;
   document.getElementById('menu').innerHTML = mhtml;
+  const closeIfMobile = ()=>{ if(window.matchMedia('(max-width: 800px)').matches) document.getElementById('menu').classList.remove('open'); };
   document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
-    a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
+    a.addEventListener('click', closeIfMobile);
   });
 }
 async function showWorks(m, boxSel){
@@ -331,8 +332,10 @@ document.getElementById('ask').addEventListener('submit', async ev=>{
     if(fq) fq.onclick = ()=>{ document.getElementById('askQ').value = r.suggestion; document.getElementById('ask').requestSubmit(); };
   }catch(e){ box.innerHTML = '<div class="who">ERROR</div>'+esc(e.message); }
 });
-document.getElementById('menuBtn').addEventListener('click', ()=>{
-  document.getElementById('menu').classList.toggle('open');
+document.getElementById('menuBtn').addEventListener('click', function(){
+  const m = document.getElementById('menu');
+  m.classList.toggle('open');
+  this.classList.toggle('on', m.classList.contains('open'));
 });
 window.addEventListener('hashchange', router);
 router();

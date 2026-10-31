@@ -35,13 +35,18 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1
 #player .x{border:0;background:none;cursor:pointer;font-size:1rem;color:var(--mut)}
 .playbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.3rem .8rem;cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;margin:.2rem .3rem .2rem 0}
 .playbtn:hover{border-color:var(--gold)}
-#menuBtn{position:fixed;z-index:11;left:.8rem;bottom:4.2rem;width:52px;height:52px;border-radius:12px;border:1px solid var(--line);cursor:pointer;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink)}
-#menu{position:fixed;z-index:11;left:.8rem;bottom:8rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.6rem;min-width:15rem;max-height:70vh;overflow:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.1);font-family:Inter,system-ui,sans-serif;font-size:.86rem}
+#menuBtn{position:fixed;z-index:30;left:.8rem;bottom:.8rem;width:52px;height:52px;border-radius:12px;border:1px solid var(--line);cursor:pointer;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink)}
+#menuBtn.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+#menu{position:fixed;z-index:20;top:0;left:0;bottom:0;width:min(84vw,320px);background:#fff;border-right:1px solid var(--line);padding:1rem .9rem 5rem;overflow:auto;display:none;font-family:Inter,system-ui,sans-serif;font-size:.86rem}
 #menu.open{display:block}
+#menu h3{margin:.8rem 0 .4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:400}
+#menu h3:first-child{margin-top:0}
+#menu .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3rem}
 #menu a{display:block;padding:.45rem .6rem;color:var(--ink);text-decoration:none;border-radius:.4rem}
 #menu a:hover{background:#f4f1ea}
 #menu a.on{background:#f4f1ea;font-weight:600}
 #menu .msec{margin:.5rem 0 .2rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+#menu details.mnav{border:0;margin:.2rem 0}
 #menu details.mnav summary{cursor:pointer;list-style:none;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:.45rem .6rem}
 #menu details.mnav summary::-webkit-details-marker{display:none}
 #menu details.mnav .sub a{padding-left:1.2rem;font-size:.8rem}
