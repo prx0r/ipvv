@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavastava:bh-p10",
+ "work_id": "bhairavastava",
+ "passage_id": "bhairavastava:bh-p10",
+ "title": "bhairavastava — bh-p10",
+ "kind": "entailment",
+ "question": "bh-p10 — the compassionate Lord",
+ "issue": "Derived from L2 text (no argmap). ## bh-p10 — the compassionate Lord\nBy whom the Lord becomes, the world's great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world's suffering instantly, compassionately.\n\n*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*",
+ "premises": [
+  {
+   "text": "yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavastava:bh-p10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bh-p10 — the compassionate Lord",
+  "passage_id": "bhairavastava:bh-p10"
+ },
+ "unresolved": "",
+ "argument_text": "## bh-p10 — the compassionate Lord\nBy whom the Lord becomes, the world's great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world's suffering instantly, compassionately.\n\n*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavastava:bh-p10",
+ "sanskrit": "yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

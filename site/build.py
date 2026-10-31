@@ -1062,6 +1062,10 @@ def build_glossary():
              '<script>q.oninput=()=>{const v=q.value.toLowerCase();document.querySelectorAll("#terms a").forEach(a=>a.style.display=a.textContent.toLowerCase().includes(v)?"":"none")}</script>'
              '<div class="sub"><a href="/data/glossary.json">machine-readable glossary</a> · mined from C1 key-terms + curated core</div>' + srclink("tools/build_glossary.py", "miner lives here.")))
     shutil.copy(ROOT / "data/glossary.json", DIST / "data/glossary.json")
+    (DIST / "data" / "authors").mkdir(parents=True, exist_ok=True)
+    for _af in (ROOT / "data" / "authors").glob("*.json"):
+        shutil.copy(_af, DIST / "data" / "authors" / _af.name)
+    shutil.copy(ROOT / "data" / "scholars.json", DIST / "data" / "scholars.json")
     return len(gl)
 
 def md_lite(src):
@@ -1551,6 +1555,9 @@ def build_arguments():
     import json as _json, re as _re
     src = ROOT / "data/arguments"; src.mkdir(parents=True, exist_ok=True)
     out = DIST / "arguments"; out.mkdir(parents=True, exist_ok=True)
+    (DIST / "data" / "arguments").mkdir(parents=True, exist_ok=True)
+    for _af in src.glob("*.json"):
+        shutil.copy(_af, DIST / "data" / "arguments" / _af.name)
     # clear old
     for old in src.glob("*.json"):
         old.unlink()
@@ -1757,6 +1764,117 @@ def build_stylelab():
         recitejs="", chatjs="", varjs=""))
     return 1
 
+def build_llms_txt():
+    """Generate llm.txt (agent-native discovery) + per-work llms.txt."""
+    import json as _json
+    out = DIST; out.mkdir(parents=True, exist_ok=True)
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    # Root llms.txt
+    works = sorted(set(f.stem for f in (ROOT / "data/translations").glob("*.json")))
+    lines = [
+        "# Trika Library — LLM Discovery File",
+        "",
+        "> Machine-readable index of the Trika Library. All content is freely accessible.",
+        "> Source: https://github.com/prx0r/ipvv | Live: https://ipvv-a8u.pages.dev",
+        "",
+        "## What this site contains",
+        "",
+        "A complete, auditable translation and commentary pipeline for Trika Śaivism:",
+        "- Sanskrit roots (vendored, licensed, CC BY-NC-SA)",
+        "- Translations (T1/L1/L2, gate-checked, source-traceable)",
+        "- Argument truth-packets (conclusion → premises → passage → Sanskrit)",
+        "- C1 passage commentaries (local hermeneutics)",
+        "- Themes (machine-proposed clusters, adjudication pending)",
+        "- Essays (22 recognition essays, 17 peer-reviewed)",
+        "- Scholars (36 bios + bibliographies)",
+        "- Recitation (studio chants + browser-voice readout)",
+        "- Pushing probes (73 Q→GEM sessions)",
+        "- Contentions (16 falsifiable claims with source spans)",
+        "",
+        "## Data endpoints (machine-readable)",
+        "",
+        "- /data/corpus.jsonl — 691 records (translations, passages, C1s, essays, arguments, probes)",
+        "- /data/receipts.jsonl — 546 audit receipts (qprivately kernel, tamper-checked)",
+        "- /data/vectors.json — 691 embeddings (bge-m3, contextual retrieval)",
+        "- /data/translations/{work}.json — per-work translation records",
+        "- /data/arguments/{id}.json — per-chunk argument truth-packets",
+        "- /data/scholars.json — 36 scholar bios + bibliographies",
+        "- /data/glossary.json — 100 concepts with occurrences",
+        "- /data/authors/{id}.json — 15 master bios + works",
+        "- /data/sections.json — taxonomy (Masters vs Modern)",
+        "- /data/read_alongside.json — scholar ↔ master cross-links",
+        "- /data/essay-links/links.json — essay ↔ argument links",
+        "- /data/styles/{id}.json — style cards for translation rendering",
+        "",
+        "## Per-work data",
+        "",
+    ]
+    for w in works:
+        lines.append(f"- /translations/{w}.html — {w} (translation + gate status)")
+        lines.append(f"  data: /data/translations/{w}.json")
+    lines += [
+        "",
+        "## API (Cloudflare Worker)",
+        "",
+        "- POST /api/chat/{work} — RAG chat (per-text or multi-text via comma-separated works)",
+        "- POST /api/chat/{work1,work2} — multi-text chat",
+        "- GET /api/variants/{work}/{chunk} — list saved variants",
+        "- POST /api/variants — save a variant",
+        "- POST /api/style/preview — A3S instant style preview",
+        "- GET /api/questions/{work} — list stored questions",
+        "- GET /api/themes/decisions — list theme adjudication decisions",
+        "",
+        "## Gate system",
+        "",
+        "Every translation chunk carries a gate status:",
+        "- PASS: English shown (machine-proposed, needs human review)",
+        "- BLOCKED: Sanskrit shown, English withheld (fail-closed)",
+        "- PUBLISHED: full display (IPVV passages)",
+        "",
+        "Every chunk has a receipt in /data/receipts.jsonl with gate verdicts,",
+        "evidence hashes, source file/line, license, model, and date.",
+        "",
+        "## License",
+        "",
+        "Sanskrit roots: CC BY-NC-SA 4.0 (GRETIL/Muktabodha).",
+        "Our translations/essays/arguments: CC BY-NC-SA 4.0.",
+        "Commercial use requires re-licensing.",
+        "",
+        "## MCP server",
+        "",
+        "MCP endpoint: https://ipvv-api.tradesprior.workers.dev/mcp",
+        "Tools: get_passage, get_translation, get_argument, search, get_scholar,",
+        "       get_work, list_works, get_themes, get_receipts, chat",
+        "",
+    ]
+    (out / "llms.txt").write_text("\n".join(lines))
+
+    # Per-work llms.txt
+    for w in works:
+        items = _json.loads((ROOT / "data/translations" / f"{w}.json").read_text())
+        n_pass = sum(1 for i in items if i.get("gate") == "PASS")
+        wlines = [
+            f"# {w} — LLM Discovery",
+            "",
+            f"Work: {w}",
+            f"Passages: {len(items)} ({n_pass} PASS, {len(items)-n_pass} BLOCKED)",
+            f"Data: /data/translations/{w}.json",
+            f"Page: /translations/{w}.html",
+            "",
+            "## Chunks",
+            "",
+        ]
+        for it in items:
+            g = it.get("gate", "")
+            wlines.append(f"- {it.get('chunk','')} (verses {it.get('verses','')}) [{g}]")
+            if g == "PASS":
+                wlines.append(f"  L1: {it.get('l1','')[:120]}")
+                wlines.append(f"  L2: {it.get('l2','')[:120]}")
+        (out / "llms" / w).mkdir(parents=True, exist_ok=True)
+        (out / "llms" / w / "llms.txt").write_text("\n".join(wlines))
+    print(f"llms.txt generated: root + {len(works)} per-work")
+    return 1
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1938,7 +2056,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1968,6 +2086,7 @@ def main():
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
     if "arguments" in want: done["arguments"] = build_arguments()
     if "stylelab" in want: done["stylelab"] = build_stylelab()
+    if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")

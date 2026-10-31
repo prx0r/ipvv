@@ -256,6 +256,85 @@ export default {
       return json({ questions: results }, 200, cors);
     }
 
+
+    // MCP server (JSON-RPC over HTTP)
+    if (path === '/mcp' && request.method === 'POST') {
+      const body = await request.json();
+      const { method, params, id } = body;
+      let result = null;
+
+      if (method === 'initialize') {
+        result = {
+          protocolVersion: '2024-11-05',
+          capabilities: { tools: {} },
+          serverInfo: { name: 'ipvv-mcp', version: '1.0.0' },
+        };
+      } else if (method === 'tools/list') {
+        result = { tools: [
+          { name: 'get_passage', description: 'Get a published IPVV passage (Sanskrit + L2 + C1)', inputSchema: { type: 'object', properties: { chunk: { type: 'string' } }, required: ['chunk'] } },
+          { name: 'get_translation', description: 'Get translation records for a work', inputSchema: { type: 'object', properties: { work: { type: 'string' } }, required: ['work'] } },
+          { name: 'get_argument', description: 'Get an argument truth-packet', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] } },
+          { name: 'search', description: 'Search across all content', inputSchema: { type: 'object', properties: { query: { type: 'string' }, work: { type: 'string' } } } },
+          { name: 'get_scholar', description: 'Get scholar bio + bibliography', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] } },
+          { name: 'list_works', description: 'List all translated works', inputSchema: { type: 'object', properties: {} } },
+          { name: 'get_themes', description: 'Get theme proposals', inputSchema: { type: 'object', properties: {} } },
+          { name: 'chat', description: 'Chat about a text (RAG)', inputSchema: { type: 'object', properties: { work: { type: 'string' }, message: { type: 'string' } }, required: ['work', 'message'] } },
+        ]};
+      } else if (method === 'tools/call') {
+        const { name, arguments: args } = params;
+        if (name === 'get_passage') {
+          const id = args.chunk.replace('.md','').replace('chunk','').toLowerCase();
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/arguments/ipvv-${args.chunk.replace('.md','')}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'get_translation') {
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/translations/${args.work}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'work not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'get_argument') {
+          const id = args.id.startsWith('ipvv-') ? args.id : 'ipvv-' + args.id;
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/arguments/${id}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'search') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/search-index.json');
+          const idx = await resp.json();
+          const q = (args.query || '').toLowerCase();
+          const hits = idx.filter(e => e.t.toLowerCase().includes(q)).slice(0, 20);
+          if (args.work) {
+            const filtered = hits.filter(e => e.u.includes('/' + args.work + '/'));
+            result = { content: [{ type: 'text', text: JSON.stringify(filtered) }] };
+          } else {
+            result = { content: [{ type: 'text', text: JSON.stringify(hits) }] };
+          }
+        } else if (name === 'get_scholar') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/scholars.json');
+          const scholars = await resp.json();
+          const s = scholars.find(x => x.id === args.id);
+          result = { content: [{ type: 'text', text: JSON.stringify(s || { error: 'not found' }) }] };
+        } else if (name === 'list_works') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/search-index.json');
+          const idx = await resp.json();
+          const works = [...new Set(idx.filter(e => e.k === 'work').map(e => e.t))];
+          result = { content: [{ type: 'text', text: JSON.stringify(works) }] };
+        } else if (name === 'get_themes') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/themes/clusters.json');
+          const data = await resp.json();
+          result = { content: [{ type: 'text', text: JSON.stringify(data) }] };
+        } else if (name === 'chat') {
+          result = { content: [{ type: 'text', text: 'Use /api/chat/' + (args.work || 'ipvv') + ' directly for RAG chat. MCP chat tool disabled to avoid subrequest errors.' }] };
+        } else {
+          result = { content: [{ type: 'text', text: JSON.stringify({ error: 'unknown tool: ' + name }) }] };
+        }
+      } else {
+        result = { error: { code: -32601, message: 'Method not found' } };
+      }
+
+      return new Response(JSON.stringify({ jsonrpc: '2.0', id, result }), {
+        headers: { ...cors, 'Content-Type': 'application/json' },
+      });
+    }
+
     return json({ error: 'not found' }, 404, cors);
   }
 };

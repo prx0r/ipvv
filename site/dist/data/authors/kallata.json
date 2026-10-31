@@ -1,0 +1,39 @@
+{
+ "dates": {
+  "flourished": "9th c. (Avantivarman r. 855-883, Rajatarangini V.66)",
+  "note": "placed among siddhas of Avantivarman's reign; no exact dates — royal date is association, not composition date Birth ~830 (approx).",
+  "birth": 830,
+  "approx": true
+ },
+ "id": "kallata",
+ "lineage": [
+  {
+   "relation": "pupil of",
+   "who": "Vasugupta"
+  },
+  {
+   "relation": "father of",
+   "who": "Mukulabhatta"
+  },
+  {
+   "relation": "instructed",
+   "who": "sister's son Pradyumnabhatta"
+  }
+ ],
+ "name": "Bhatta Kallata",
+ "name_iast": "Bhaṭṭa Kallaṭa",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Pupil of Vasugupta (Avantivarman reign): Spandavrtti on the Spandakarikas; Tattvartha works known from testimony.",
+ "kind": "master",
+ "bio": "Pupil of Vasugupta (Avantivarman reign, Rajatarangini V.66), father of Mukula, instructor of Pradyumna. His Spandavrtti (Stein also titles it Spandasarvasva) explains the Spandakarikas; Tattvartha-cintamani and Spanda-sutra-varttika known from Bhaskara/Utpala testimony.",
+ "image": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Folio_of_a_manuscript_of_the_Harshacharita_by_Banabhatta,_written_in_Sharada_script.jpg",
+  "caption": "Sharada court manuscript (Harshacharita, PD, via eGangotri digitisation). The 9th-century manuscript culture Kallata wrote in; folio shown is Bana, not Kallata.",
+  "credit": "Wikimedia Commons",
+  "credit_url": "https://commons.wikimedia.org/wiki/File:Folio_of_a_manuscript_of_the_Harshacharita_by_Banabhatta%2C_written_in_Sharada_script.jpg",
+  "licence": "Public domain",
+  "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+ },
+ "section": "masters"
+}

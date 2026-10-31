@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p17",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p17",
+ "title": "kramastotra — kram-p17",
+ "kind": "entailment",
+ "question": "kram-p17 (17)",
+ "issue": "Derived from L2 text (no argmap). ## kram-p17 (17)\nWorld-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. // AgKs_17",
+ "premises": [
+  {
+   "text": "jagatsaṃhāreṇa praśamayitukāmaḥ svarabhasāt svaśaṅkātaṅkākhyaṃ vidhim atha niṣedhaṃ prathayasi | yamaṃ sṛṣṭvetthaṃ tvaṃ punar api ca śaṅkāṃ vidalayan mahādevī seyaṃ mama bhavabhayaṃ saṃdalayatām",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "kram-p17 (17)",
+  "passage_id": "kramastotra:kram-p17"
+ },
+ "unresolved": "",
+ "argument_text": "## kram-p17 (17)\nWorld-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. // AgKs_17",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p17",
+ "sanskrit": "jagatsaṃhāreṇa praśamayitukāmaḥ svarabhasāt svaśaṅkātaṅkākhyaṃ vidhim atha niṣedhaṃ prathayasi | yamaṃ sṛṣṭvetthaṃ tvaṃ punar api ca śaṅkāṃ vidalayan mahādevī seyaṃ mama bhavabhayaṃ saṃdalayatām",
+ "license": "CC BY-NC-SA 4.0"
+}

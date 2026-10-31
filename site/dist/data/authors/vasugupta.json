@@ -1,0 +1,31 @@
+{
+ "dates": {
+  "flourished": "c. 850",
+  "note": "tradition: Sivasutras revealed on Mahadeva mountain rock Birth ~820 (approx).",
+  "birth": 820,
+  "approx": true
+ },
+ "id": "vasugupta",
+ "lineage": [
+  {
+   "relation": "teacher of",
+   "who": "Somananda, Kallata"
+  }
+ ],
+ "name": "Vasugupta",
+ "name_iast": "Vasugupta",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Source-point of the Trika/Spanda line: the Sivasutras (terse aphorisms of recognition) and, on one transmitted account, the teacher whose doctrine Kallata versified as the Spandakarikas (authorship disputed — Vasugupta vs Kallata recensions differ, preserve both).",
+ "kind": "master",
+ "bio": "Source-point of the Trika/Spanda line (c. 850): the Sivasutras, revealed on Mahadeva mountain rock, and — on one transmitted account — the doctrine Kallata versified as the Spandakarikas (authorship disputed across recensions; both readings kept).",
+ "image": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Kashmir_Sharada_MS.jpg",
+  "caption": "Birch-bark Sharada manuscript of Shaivite ritual paddhatis, Tuebingen Ma I 404 (PD). The script-and-birch culture transmitting his sutras; folio shown is ritual manual, not his text.",
+  "credit": "Wikimedia Commons",
+  "credit_url": "https://commons.wikimedia.org/wiki/File:Kashmir_Sharada_MS.jpg",
+  "licence": "Public domain",
+  "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+ },
+ "section": "masters"
+}

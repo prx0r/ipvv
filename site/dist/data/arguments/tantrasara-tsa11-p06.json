@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara:tsa11-p06",
+ "work_id": "tantrasara",
+ "passage_id": "tantrasara:tsa11-p06",
+ "title": "tantrasara — tsa11-p06",
+ "kind": "entailment",
+ "question": "tsa11-p06 — how initiation works, and what follows by rank",
+ "issue": "Derived from L2 text (no argmap). ## tsa11-p06 — how initiation works, and what follows by rank\nSo the seeker receives from the teacher the initiation whose mark is knowledge — and is free at\nonce, while still alive. It comes by a glance, a word, a text taught, a conduct shown, food\nshared, and more. There is also the initiation that severs the life-breath — but that one is for\nthe hour of death, as will be taught. From the highest three intensities of the intense, even the\ninitiated has no steady footing in his own Śiva-nature ",
+ "premises": [
+  {
+   "text": "evaṃ yiyāsuḥ guroḥ jñānalakṣaṇāṃ dīkṣāṃ prāpnoti yayā sadya eva mukto bhavati jīvann api atra avalokanāt kathanāt śāstrasambodhanāt caryādarśanāt carudānāt ityādayo bhedāḥ // abhts_11.11 abhyāsavato vā tadānīṃ sadya eva prāṇaviyojikāṃ dīkṣāṃ labhate sā tu maraṇakṣaṇa eva kāryā iti vakṣyāma iti // abhts_11.12 tīvrās tridhā utkṛṣṭamadhyāt śaktipātāt kṛtadīkṣāko 'pi svātmanaḥ śivatāyāṃ na tathā dṛḍhapratipattiḥ bhavati pratipattiparipākakrameṇa tu dehānte śiva eva madhyamadhyāt tu śivatotsuko 'pi bhogaprepsuḥ bhavati iti tathaiva dīkṣāyāṃ jñānabhājanam sa ca yogābhyāsalabdham anenaiva dehena bhogaṃ bhuktvā dehānte śiva eva // abhts_11.13",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara:tsa11-p06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "tsa11-p06 — how initiation works, and what follows by rank",
+  "passage_id": "tantrasara:tsa11-p06"
+ },
+ "unresolved": "",
+ "argument_text": "## tsa11-p06 — how initiation works, and what follows by rank\nSo the seeker receives from the teacher the initiation whose mark is knowledge — and is free at\nonce, while still alive. It comes by a glance, a word, a text taught, a conduct shown, food\nshared, and more. There is also the initiation that severs the life-breath — but that one is for\nthe hour of death, as will be taught. From the highest three intensities of the intense, even the\ninitiated has no steady footing in his own Śiva-nature — but as conviction ripens, at the body's\nend he is Śiva, no qualification. From the middle of the moderate: still hungry for pleasure, yet\na fit vessel for knowledge in that very initiation — he enjoys, with this same body, through yoga\npractice, and at the body's end he is Śiva.\n*Fidelity: preserved (instant + severing initiations, grade-fates). Added: nothing. Not-resolved:\nprāṇaviyojikā rite deferred (iti vakṣyāmaḥ).*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara:tsa11-p06",
+ "sanskrit": "evaṃ yiyāsuḥ guroḥ jñānalakṣaṇāṃ dīkṣāṃ prāpnoti yayā sadya eva mukto bhavati jīvann api atra avalokanāt kathanāt śāstrasambodhanāt caryādarśanāt carudānāt ityādayo bhedāḥ // abhts_11.11 abhyāsavato vā tadānīṃ sadya eva prāṇaviyojikāṃ dīkṣāṃ labhate sā tu maraṇakṣaṇa eva kāryā iti vakṣyāma iti // abhts_11.12 tīvrās tridhā utkṛṣṭamadhyāt śaktipātāt kṛtadīkṣāko 'pi svātmanaḥ śivatāyāṃ na tathā dṛḍhapratipattiḥ bhavati pratipattiparipākakrameṇa tu dehānte śiva eva madhyamadhyāt tu śivatotsuko 'pi bhogaprepsuḥ bhavati iti tathaiva dīkṣāyāṃ jñānabhājanam sa ca yogābhyāsalabdham anenaiva dehena bhogaṃ bhuktvā dehānte śiva eva // abhts_11.13",
+ "license": "CC BY-NC-SA 4.0"
+}
