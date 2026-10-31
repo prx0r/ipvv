@@ -1174,11 +1174,11 @@ def build_translations():
         chant = f'<div class="recitetools"><a class="vplay all" href="/recite/{abase}.html">Studio chant + recitation →</a></div>' if (ROOT / f"data/audio-{abase}.json").exists() else ""
         (out / f"{wid}.html").write_text(TF(ATmpl,title=f"Translation: {wid}",
             h1=f"Translation: {wid}", kicker="Pipeline translation", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
-            sidenav=sidenav("abhinavagupta", wid), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS, varjs=VARJS))
+            sidenav=work_sidenav(""), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS, varjs=VARJS))
         links.append((wid, n_pass, len(items)))
     (out / "index.html").write_text(TF(ATmpl,title="Translations", h1="Pipeline translations",
         sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",
-        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">'
+        sidenav=work_sidenav(""), body='<div class="idx">'
         + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>" + srclink("tools/ingest_batch.py", "ingest script; sources are R2 batch-t1 drafts.")
         + '<div class="sub">Audit trail: <a href="/data/receipts.jsonl">receipts.jsonl</a> — one machine-readable record per chunk (gates, evidence hash, license, model, date).</div>'))
     return len(links)
@@ -1197,7 +1197,7 @@ def build_glossary():
         slug = slugs[ei]
         links = "".join(f'<div class="ev"><a href="/ipvv/{p}.html">IPVV: {esc(p)}</a></div>' for p in e.get("passages", [])[:20])
         (out / f"{slug}.html").write_text(TF(ATmpl,title=e["term"], h1=esc(e["term"]),
-            sub="concept · glossary", sidenav=sidenav("abhinavagupta", ""),
+            sub="concept · glossary", sidenav=work_sidenav(""),
             body=f'<div class="panel">{esc(e.get("gloss") or "occurrence only — definition pending curation.")}</div>'
                  + (f"<h3>Occurs in</h3>{links}" if links else "<p><i>No linked passages yet.</i></p>")
                  + f'<div class="sub">source: {esc(e.get("source",""))} · <a href="/data/glossary.json">machine-readable glossary</a></div>'
@@ -1206,7 +1206,7 @@ def build_glossary():
                       f"/concepts/{slugs[ei+1]}.html" if ei < len(gl)-1 else None, gl[ei+1]["term"] if ei < len(gl)-1 else "")))
     idx = "".join(f'<a href="/concepts/{slugify(e["term"])}.html"><b>{esc(e["term"])}</b> — {esc((e.get("gloss") or "")[:90])}</a>' for e in gl)
     (out / "index.html").write_text(TF(ATmpl,title="Concepts", h1="Concepts",
-        sub=f"{len(gl)} terms — definitions link to every occurrence", sidenav=sidenav("abhinavagupta", ""),
+        sub=f"{len(gl)} terms — definitions link to every occurrence", sidenav=work_sidenav(""),
         body='<input id="q" placeholder="filter terms…" style="width:100%;padding:.6rem;font-size:1rem;margin-bottom:.6rem"/>'
              f'<div class="idx" id="terms">{idx}</div>'
              '<script>q.oninput=()=>{const v=q.value.toLowerCase();document.querySelectorAll("#terms a").forEach(a=>a.style.display=a.textContent.toLowerCase().includes(v)?"":"none")}</script>'
@@ -1302,7 +1302,7 @@ def build_essays():
         badge = '<span class="srcbadge">peer-reviewed Aug 2026</span>' if slug in REVIEWED_ESSAYS else '<span class="rsrc">working paper</span>'
         (out / f"{slug}.html").write_text(TF(ATmpl, title=title, h1=esc(title),
             kicker="Essay", sub=esc(stand[:220]),
-            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>'
+            sidenav=work_sidenav(""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>'
             + essay_arg_links(slug)
             + md_lite(raw)
             + srclink("site/data/essays/" + f.name, "essay source lives here.")))
@@ -1314,7 +1314,7 @@ def build_essays():
     grouped = "".join(f"<h3>{g}</h3>" + '<div class="idx">' + "".join(byslug[s] for s in slugs if s in byslug) + "</div>" for g, slugs in ESSAY_GROUPS)
     (out / "index.html").write_text(TF(ATmpl, title="Essays", h1="Essays",
         kicker="Working papers", sub="the owner\u2019s recognition essays — theses argued from the translations, displayed as written",
-        sidenav=sidenav("abhinavagupta", ""), body=grouped
+        sidenav=work_sidenav(""), body=grouped
         + srclink("site/data/essays/", "essay sources live here.")))
     return len(cards)
 
@@ -1334,7 +1334,7 @@ def build_pushing_hub():
     n_bodha = len(list((ROOT / "data/pushing/bodhapancadasika").glob("*.*")))
     (out / "index.html").write_text(TF(TMPL, title="Pushing", h1="Pushing",
         kicker="Method", sub="hound the text with why until it cannot escape — every probe below is that loop run to an endpoint",
-        sidenav=sidenav("abhinavagupta", ""), body=
+        sidenav=work_sidenav(""), body=
         '<div class="panel"><b>The method in one rule:</b> force the text\u2019s own reasoning to carry the conclusion. Frameworks enter only after the text has spoken. Full procedure in the specs below; the operator instructions in the agent spec.</div>'
         "<h3>How-to and algorithms</h3>" + "".join(specs)
         + f"<h3>Probe collections</h3><div class='idx'><a href='/ipvv/pushing.html'><b>IPVV probes</b> — {n_ipvv} files</a><a href='/ipvv/pushing.html'><b>Tantraloka probes</b> — {n_ta} files</a><a href='/ipvv/pushing.html'><b>Bodhapañcadaśikā probes</b> — {n_bodha} files</a></div>"
@@ -1495,7 +1495,7 @@ def render_asset(sub, title, kind, body_fn, filepat="*.*"):
     out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
     if not src.exists():
         (out / "index.html").write_text(TF(TMPL, title=title, h1=title,
-            kicker=kind, sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            kicker=kind, sub="pending", sidenav=work_sidenav(""),
             body=f"<div class='panel missing'>no {sub} yet</div>"))
         return 0
     cards = []
@@ -1507,7 +1507,7 @@ def render_asset(sub, title, kind, body_fn, filepat="*.*"):
             cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)} · {len(raw.split())} words</div><div class="sub"><a href="/{sub}/{esc(f.name)}">read →</a></div></div>')
             (out / f.name).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
                 sub=f"{len(raw.split())} words · vendored research asset",
-                sidenav=sidenav("abhinavagupta", ""),
+                sidenav=work_sidenav(""),
                 body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source markdown →</a></div>' + md_lite(raw)
                 + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
         elif f.suffix == ".json":
@@ -1532,12 +1532,12 @@ def render_asset(sub, title, kind, body_fn, filepat="*.*"):
                 body = f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">file →</a></div>'
             (out / (f.stem + ".html")).write_text(TF(TMPL, title=title2, h1=esc(str(title2)),
                 kicker=kind, sub=f"vendored research asset · {f.name}",
-                sidenav=sidenav("abhinavagupta", ""),
+                sidenav=work_sidenav(""),
                 body=body + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
             cards.append(f'<div class="panel"><b>{esc(str(title2)[:90])}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a> · <a href="/data/{sub}/{esc(f.name)}">json →</a></div></div>')
     (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
         sub=f"{len(cards)} assets vendored from basecamp",
-        sidenav=sidenav("abhinavagupta", ""),
+        sidenav=work_sidenav(""),
         body="".join(cards)))
     return len(cards)
 
@@ -1561,10 +1561,10 @@ def build_essay_objects():
                 + srclink(f"site/data/essay-objects/{d.name}/eo.json", "source lives here."))
         (out / (d.name + ".html")).write_text(TF(TMPL, title=title, h1=esc(str(title)),
             kicker="Enquiry", sub=f"guided enquiry · {d.name}",
-            sidenav=sidenav("abhinavagupta", ""), body=body))
+            sidenav=work_sidenav(""), body=body))
         cards.append(f'<div class="panel"><b>{esc(str(title)[:90])}</b><div class="sub">{esc(d.name)}</div><div class="sub"><a href="/essay-objects/{esc(d.name)}.html">open →</a></div></div>')
     (out / "index.html").write_text(TF(TMPL, title="Essay objects", h1="Essay objects", kicker="Enquiry",
-        sub=f"{len(cards)} guided enquiries", sidenav=sidenav("abhinavagupta", ""),
+        sub=f"{len(cards)} guided enquiries", sidenav=work_sidenav(""),
         body="".join(cards)))
     return len(cards)
 
@@ -1581,7 +1581,7 @@ def build_ochema_methods():
             first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
             (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker="Method",
                 sub=f"{len(raw.split())} words · vendored method",
-                sidenav=sidenav("abhinavagupta", ""),
+                sidenav=work_sidenav(""),
                 body=f'<div class="sub"><a href="/data/ochema-methods/{esc(f.name)}">source markdown →</a></div>' + md_lite(raw)
                 + srclink(f"site/data/ochema-methods/{f.name}", "source lives here.")))
             cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/ochema-methods/{esc(f.stem)}.html">open →</a></div></div>')
@@ -1594,11 +1594,11 @@ def build_ochema_methods():
                 body = f'<div class="sub"><a href="/data/ochema-methods/{esc(f.name)}">file →</a></div>'
             (out / (f.stem + ".html")).write_text(TF(TMPL, title=f.stem, h1=esc(f.stem), kicker="Method",
                 sub=f"vendored method asset · {f.name}",
-                sidenav=sidenav("abhinavagupta", ""),
+                sidenav=work_sidenav(""),
                 body=body + srclink(f"site/data/ochema-methods/{f.name}", "source lives here.")))
             cards.append(f'<div class="panel"><b>{esc(f.stem)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/ochema-methods/{esc(f.stem)}.html">open →</a></div></div>')
     (out / "index.html").write_text(TF(TMPL, title="Ochema methods", h1="Ochema methods", kicker="Method",
-        sub=f"{len(cards)} method assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+        sub=f"{len(cards)} method assets", sidenav=work_sidenav(""), body="".join(cards)))
     return len(cards)
 def build_source_metaphysics(): return render_asset("source-metaphysics","Source metaphysics","State-of-play",None,"*.json")
 def build_information_packets(): return render_asset("information-packets","Information packets","Packet",None,"*")
@@ -1610,7 +1610,7 @@ def render_text_assets(sub, title, kind, filepat="*.md"):
     out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
     if not src.exists():
         (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
-            sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            sub="pending", sidenav=work_sidenav(""),
             body=f"<div class='panel missing'>no {sub} yet</div>"))
         return 0
     cards = []
@@ -1622,12 +1622,12 @@ def render_text_assets(sub, title, kind, filepat="*.md"):
         first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
         (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
             sub=f"{len(raw.split())} words · vendored research asset",
-            sidenav=sidenav("abhinavagupta", ""),
+            sidenav=work_sidenav(""),
             body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source →</a></div>' + md_lite(raw)
             + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
         cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
     (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
-        sub=f"{len(cards)} assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+        sub=f"{len(cards)} assets", sidenav=work_sidenav(""), body="".join(cards)))
     return len(cards)
 
 def build_ratier_chapters(): return render_text_assets("ratie-chapters","Ratie chapters","Chapter","*.md")
@@ -1638,7 +1638,7 @@ def render_text_assets2(sub, title, kind, filepat="*"):
     out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
     if not src.exists():
         (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
-            sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            sub="pending", sidenav=work_sidenav(""),
             body=f"<div class='panel missing'>no {sub} yet</div>"))
         return 0
     cards = []
@@ -1651,7 +1651,7 @@ def render_text_assets2(sub, title, kind, filepat="*"):
             first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
             (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
                 sub=f"{len(raw.split())} words · vendored research asset",
-                sidenav=sidenav("abhinavagupta", ""),
+                sidenav=work_sidenav(""),
                 body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source →</a></div>' + md_lite(raw)
                 + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
             cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
@@ -1663,11 +1663,11 @@ def render_text_assets2(sub, title, kind, filepat="*"):
             except Exception:
                 body = f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">file →</a></div>'
             (out / (f.stem + ".html")).write_text(TF(TMPL, title=f.stem, h1=esc(f.stem), kicker=kind,
-                sub=f"vendored asset · {f.name}", sidenav=sidenav("abhinavagupta", ""),
+                sub=f"vendored asset · {f.name}", sidenav=work_sidenav(""),
                 body=body + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
             cards.append(f'<div class="panel"><b>{esc(f.stem)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
     (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
-        sub=f"{len(cards)} assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+        sub=f"{len(cards)} assets", sidenav=work_sidenav(""), body="".join(cards)))
     return len(cards)
 
 def build_r2_audio_transcripts(): return render_text_assets2("r2-audio-transcripts","R2 audio transcripts","Transcript","*")
@@ -1867,7 +1867,7 @@ def build_arguments():
     # index
     (out / "index.html").write_text(TF(TMPL, title="Arguments", h1="Arguments",
         kicker="Argument truth-packets", sub=f"{len(recs)} packets — conclusion → premises → passage → Sanskrit",
-        sidenav=sidenav("abhinavagupta", ""), body="<div class='idx'>"
+        sidenav=work_sidenav(""), body="<div class='idx'>"
         + "".join(f'<a href="/arguments/{p["id"].split(":")[-1]}.html"><b>{esc(p["title"][:70])}</b> — {esc(p["strength"])}</a>' for p in recs)
         + "</div>" + srclink("site/data/arguments/", "packets live here.")))
     # per-packet pages
@@ -1884,7 +1884,7 @@ def build_arguments():
                 + srclink("site/data/arguments/" + pid + ".json", "packet lives here."))
         (out / f"{pid}.html").write_text(TF(TMPL, title=pkt["title"], h1=esc(pkt["title"]),
             kicker="Argument", sub=f'{pkt["strength"]} · {len(pkt["premises"])} premises',
-            sidenav=sidenav("abhinavagupta", ""), body=body))
+            sidenav=work_sidenav(""), body=body))
     return len(recs)
 
 
@@ -1916,7 +1916,7 @@ def build_stylelab():
     """
     (out / "index.html").write_text(TF(TMPL, title="Style lab", h1="Style lab",
         kicker="A3S preview", sub="instant style transfer — paste exemplars, see the style in seconds",
-        sidenav=sidenav("abhinavagupta", ""), body=body,
+        sidenav=work_sidenav(""), body=body,
         recitejs="", chatjs="", varjs=""))
     return 1
 
@@ -2077,7 +2077,7 @@ def build_screen():
     """
     (out / "index.html").write_text(TF(TMPL, title="Screen", h1="Screen analysis",
         kicker="Over-the-shoulder", sub="capture your screen, ask a question, get a spoken answer",
-        sidenav=sidenav("abhinavagupta", ""), body=body,
+        sidenav=work_sidenav(""), body=body,
         recitejs="", chatjs="", varjs=""))
     return 1
 
@@ -2095,7 +2095,7 @@ def build_meditate():
     med_js = "<script>function startMed(n){alert('Meditation ' + n + ' starting. Close your eyes and breathe.')}function stopMed(){}</script>"
     (out / "index.html").write_text(TF(TMPL, title="Meditation", h1="Meditation",
         kicker="Practice", sub="Vijñānabhairava dhāraṇās as guided practices",
-        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>" + med_js
+        sidenav=work_sidenav(""), body='<div class="idx">' + "".join(cards) + "</div>" + med_js
         + srclink("https://github.com/prx0r/kashaudio", "chants render here as kashaudio reaches each work."),
         recitejs="", chatjs="", varjs=""))
     return len(vs)
@@ -2124,7 +2124,7 @@ def build_vbt_map():
     body = f'<div class="panel"><b>The path:</b> You don\u2019t do all 112. Find the upāya that matches your grace level, pick 2-3 dharanas, master them. When they stop working (the technique becomes the obstacle), move to a higher upaya. — Swami Lakshmanjoo</div>{upaya_table}<h2>112 Dharanas by Category</h2><div class="idx">{"".join(cards)}</div>'
     (out / "index.html").write_text(TF(TMPL, title="VBT Dharana Map", h1="VBT Dharana Map",
         kicker="Interactive", sub="112 techniques by upāya category — each linked to its VBT verse and Tantrāloka coordinate",
-        sidenav=sidenav("abhinavagupta", ""), body=body,
+        sidenav=work_sidenav(""), body=body,
         recitejs="", chatjs="", varjs=""))
     return len(vm["categories"])
 
@@ -2135,7 +2135,7 @@ def build_practices():
     out = DIST / "practices"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Practices", h1="Practices",
         kicker="Interactive", sub="VBT dhāraṇās, ānāpānasati, Ajahn Lee — voice cues, timed steps, audio tones",
-        sidenav=sidenav("abhinavagupta", ""), body=body_data["body"],
+        sidenav=work_sidenav(""), body=body_data["body"],
         recitejs="", chatjs="", varjs=""))
     return body_data.get("total", 0)
 
@@ -2143,7 +2143,7 @@ def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
         kicker="Support", sub="recitation, translation, proof — funded by readers",
-        sidenav=sidenav("abhinavagupta", ""),
+        sidenav=work_sidenav(""),
         body='<div class="panel">This library is a free, open record of the Trika masters: Sanskrit held in full, translations gated honestly, recitation growing verse by verse.</div>'
         '<h3>What patronage funds</h3><div class="idx">'
         '<a><b>studio chants</b> — GPU rendering of each short work, verse by verse</a>'
@@ -2174,7 +2174,7 @@ def build_tools():
     (DIST / "data/search-index.json").write_text(_j.dumps(entries, ensure_ascii=False))
     (out / "index.html").write_text(TF(ATmpl,title="Tools", h1="Tools",
         sub="instant find across masters, works, concepts — runs entirely in your browser",
-        sidenav=sidenav("abhinavagupta", ""),
+        sidenav=work_sidenav(""),
         body=('<input id="q" placeholder="search masters, works, concepts…" style="width:100%;padding:.7rem;font-size:1.1rem"/>'
               '<div class="idx" id="hits" style="margin-top:.6rem"></div>'
               '<div class="panel"><b>Verse lookup.</b> Type a passage id (e.g. <i>chunkV2-A-caturtho-vimarsa-aham</i>) — exact matches jump straight to the passage. <input id="v" placeholder="passage id…" style="width:100%;padding:.5rem;margin-top:.4rem"/><div id="vhit" style="margin-top:.4rem"></div></div>'
@@ -2283,7 +2283,7 @@ def build_recite():
         wtscript = "<script>window.__WT=" + _json.dumps(wt) + "</script>"
         (out / f"{work}.html").write_text(TF(TMPL, title=f"{title} recitation", h1=title,
             kicker="Recitation \u00b7 studio chant", sub=f"{len(A['verses'])} verses chanted, karaoke-timed · English shows only where the gate passed",
-            sidenav=sidenav("abhinavagupta", ""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "chants rendered by the kashaudio pipeline (Vagdhenu AI voice); timings by MMS alignment."),
+            sidenav=work_sidenav(""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "chants rendered by the kashaudio pipeline (Vagdhenu AI voice); timings by MMS alignment."),
             recitejs=wtscript + RECITEJS))
         cards.append(("studio", f'<a href="/recite/{work}.html"><b>{esc(title)}</b> &mdash; {len(A["verses"])} verses &middot; studio chant &middot; {n_en} with English</a>'))
     for work in SYNTH_RECITE:
@@ -2310,14 +2310,14 @@ def build_recite():
         stats = f'<div class="stats"><span><b>{len(vitems)}</b> verses</span><span><b>browser-voice readout</b></span><span><b>{n_en}/{len(vitems)}</b> with English</span></div>'
         (out / f"{work}.html").write_text(TF(TMPL, title=f"{title} recitation", h1=title,
             kicker="Recitation - readout", sub=f"{len(vitems)} verses, browser-voice readout — studio chant pending; English shows only where the gate passed",
-            sidenav=sidenav("abhinavagupta", ""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "studio chants render here as kashaudio reaches this work."),
+            sidenav=work_sidenav(""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "studio chants render here as kashaudio reaches this work."),
             recitejs=RECITEJS))
         cards.append(("synth", f'<a href="/recite/{work}.html"><b>{esc(title)}</b> — {len(vitems)} verses · readout · {n_en} with English</a>'))
     studio_cards = "".join(c for k, c in cards if k == "studio")
     synth_cards = "".join(c for k, c in cards if k == "synth")
     (out / "index.html").write_text(TF(TMPL, title="Recitation", h1="Recitation",
         kicker="Listen", sub="studio chant where rendered · browser-voice readout everywhere else",
-        sidenav=sidenav("abhinavagupta", ""), body='<h3>Studio chant</h3><div class="idx">' + studio_cards + "</div>"
+        sidenav=work_sidenav(""), body='<h3>Studio chant</h3><div class="idx">' + studio_cards + "</div>"
         + ("<h3>Readout</h3>" + f'<div class="idx">{synth_cards}</div>' if synth_cards else "")
         + '<div class="sub">Every verse and passage page also carries its own <b>Recite</b> button (browser-voice readout, four modes). Studio chant grows as kashaudio renders land — short works first.</div>'
         + srclink("https://github.com/prx0r/kashaudio", "chant pipeline lives here."), recitejs=RECITEJS))
