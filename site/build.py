@@ -1330,19 +1330,24 @@ def build_corpus():
         d = _json.loads(f.read_text())
         src = (d.get("source") or {}).get("text","") if isinstance(d.get("source"),dict) else ""
         recs.append({"id": f"ipvv:{d.get('chunk','')}", "work": "ipvv", "ref": d.get("chunk",""),
-            "sa": src, "en": d.get("l2_text",""), "en_gate": "PUBLISHED", "kind": "ipvv-passage"})
+            "sa": src, "en": d.get("l2_text",""), "en_gate": "PUBLISHED", "kind": "ipvv-passage",
+            "license": "CC BY-NC-SA 4.0", "source_file": "ipvv-vol" + str(d.get("vol",""))[2:3] + ".txt",
+            "immutable_id": d.get("immutable_id","")})
         c1 = d.get("c1") or {}
         if isinstance(c1, dict) and c1.get("body"):
             recs.append({"id": f"ipvv-c1:{d.get('chunk','')}", "work": "ipvv", "ref": d.get("chunk",""),
-                "sa": "", "en": c1.get("body",""), "en_gate": "PUBLISHED", "kind": "ipvv-c1"})
+                "sa": "", "en": c1.get("body",""), "en_gate": "PUBLISHED", "kind": "ipvv-c1",
+                "license": "CC BY-NC-SA 4.0", "immutable_id": d.get("immutable_id","")})
     for f in sorted((ROOT / "data/essays").glob("ESSAY-*.md")):
         recs.append({"id": f"essay:{f.stem.lower().replace('essay-','')}", "work": "essays", "ref": f.stem,
-            "sa": "", "en": f.read_text(encoding="utf-8", errors="replace"), "en_gate": "OWNER", "kind": "essay"})
+            "sa": "", "en": f.read_text(encoding="utf-8", errors="replace"), "en_gate": "OWNER", "kind": "essay",
+            "license": "CC BY-NC-SA 4.0"})
     for sub in ("ipvv", "tantraloka"):
         for f in sorted((ROOT / "data/pushing" / sub).glob("*.*")):
             if f.suffix not in (".md", ".txt"): continue
             recs.append({"id": f"pushing:{sub}/{f.name}", "work": "pushing", "ref": f"{sub}/{f.stem}",
-                "sa": "", "en": f.read_text(encoding="utf-8", errors="replace")[:6000], "en_gate": "OWNER", "kind": "probe"})
+                "sa": "", "en": f.read_text(encoding="utf-8", errors="replace")[:6000], "en_gate": "OWNER", "kind": "probe",
+                "license": "CC BY-NC-SA 4.0"})
     for af in sorted((ROOT / "data/arguments").glob("*.json")):
         pkt = _json.loads(af.read_text())
         recs.append({"id": pkt.get("id", ""), "work": pkt.get("work_id", ""),
