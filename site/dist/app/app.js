@@ -49,25 +49,78 @@ document.getElementById('spk').addEventListener('click', function(){
   });
 })();
 
+let LIB = { works: {}, masters: [] };
 async function nav(cur){
   let mhtml = `<div class="msec">Mode</div>` +
     NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
-  mhtml += `<div class="msec">Library</div><a href="#/concepts">Concepts</a><a href="#/pushing">Pushing probes</a>`;
-  try{
-    const sec = await get('/data/sections.json');
-    const ms = ((sec.sections||[]).find(s=>s.id==='masters')||{}).members || [];
-    const counts = {};
-    await Promise.all(ms.slice(0,20).map(async m=>{
-      try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; }catch(e){ counts[m]=0; }
-    }));
-    const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
-    mhtml += `<details class="mnav" open><summary>Masters · by works</summary><div class="sub">` +
-      sorted.map(m=>`<a href="#/work/${m}">${esc(m)}</a>`).join('') + `</div></details>`;
-  }catch(e){}
+  mhtml += `<div class="msec">Library</div><div id="librow"><a href="#" id="libopen">Library — masters & works ▸</a><a href="#/concepts">Concepts</a><a href="#/pushing">Pushing probes</a></div>`;
+  mhtml += `<div id="libpanel" style="display:none"><div class="msec"><a href="#" id="libback" style="display:inline">‹ back</a></div><div class="msec">Masters</div><div id="libmasters"><span class="sub">loading…</span></div></div>`;
+  mhtml += `<div id="workpanel" style="display:none"><div class="msec"><span id="wpname"></span></div><div id="wpworks"></div></div>`;
   document.getElementById('menu').innerHTML = mhtml;
   document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
     a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
   });
+  const libopen = document.getElementById('libopen');
+  if(libopen) libopen.addEventListener('click', (e)=>{ e.preventDefault(); showMasters(); });
+  const libback = document.getElementById('libback');
+  if(libback) libback.addEventListener('click', (e)=>{ e.preventDefault(); showLibHome(); });
+  loadMasters();
+}
+function showLibHome(){
+  const lp = document.getElementById('libpanel');
+  const wp = document.getElementById('workpanel');
+  const lr = document.getElementById('librow');
+  if(lp) lp.style.display='none';
+  if(wp) wp.style.display='none';
+  if(lr) lr.style.display='';
+}
+async function loadMasters(){
+  try{
+    const sec = await get('/data/sections.json');
+    const ms = ((sec.sections||[]).find(s=>s.id==='masters')||{}).members || [];
+    LIB.masters = ms;
+    const counts = {};
+    await Promise.all(ms.slice(0,25).map(async m=>{
+      try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; LIB.works[m]=w; }catch(e){ counts[m]=0; }
+    }));
+    const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+    const box = document.getElementById('libmasters');
+    if(!box) return;
+    box.innerHTML = sorted.map(m=>`<a href="#" data-master="${m}">${esc(m)} <span class="sub">· ${counts[m]||0}</span></a>`).join('');
+    box.querySelectorAll('[data-master]').forEach(a=>{
+      const open = (e)=>{ if(e) e.preventDefault(); showWorks(a.getAttribute('data-master')); };
+      a.addEventListener('click', open);
+      a.addEventListener('mouseenter', ()=>{ if(window.matchMedia('(pointer:fine)').matches) showWorks(a.getAttribute('data-master')); });
+    });
+  }catch(e){}
+}
+function showMasters(){
+  const lr = document.getElementById('librow');
+  const lp = document.getElementById('libpanel');
+  const wp = document.getElementById('workpanel');
+  if(lr) lr.style.display='none';
+  if(wp) wp.style.display='none';
+  if(lp) lp.style.display='';
+}
+async function showWorks(m){
+  let w = LIB.works[m];
+  if(!w){
+    try{ w = await get(`/data/works_${m}.json`); LIB.works[m]=w; }catch(e){ return; }
+  }
+  const lr = document.getElementById('librow');
+  const lp = document.getElementById('libpanel');
+  const wp = document.getElementById('workpanel');
+  if(lr) lr.style.display='none';
+  if(lp) lp.style.display='none';
+  if(!wp) return;
+  wp.style.display='';
+  document.getElementById('wpname').innerHTML = `<a href="#" id="wpback">‹ masters</a> · ${esc(m)}`;
+  document.getElementById('wpworks').innerHTML = (Array.isArray(w)?w:[]).map(x=>`<a href="#/work/${x.id||x.work||m}">${esc(x.title||x.id||'')}</a>`).join('') || '<span class="sub">no works listed</span>';
+  document.querySelectorAll('#wpworks a').forEach(a=>{
+    a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); showLibHome(); });
+  });
+  const wb = document.getElementById('wpback');
+  if(wb) wb.addEventListener('click', (e)=>{ e.preventDefault(); wp.style.display='none'; if(lp) lp.style.display=''; });
 }
 async function get(p){
   const r = await fetch(p);
@@ -118,29 +171,50 @@ async function work(path){
   try{ kar = await get(`/data/karaoke-${wid}.json`); }catch(e){}
   const hasKar = Array.isArray(kar) && kar.length > 0;
   const pass = items.filter(i=>i.gate==='PASS'), held = items.length - pass.length;
-  let html = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld${hasKar ? ' · karaoke available — press play and read along' : ''}</div>`;
-  if(hasKar){
-    html += `<div style="margin-bottom:1rem"><button class="playbtn" id="kall">▶ read all with chant</button> <button class="playbtn" id="kstop" style="display:none">■ stop</button></div><div id="kv"></div>`;
-  }
+  let mode = 'both';
+  try{ mode = localStorage.getItem('readmode') || 'both'; }catch(e){}
+  const modes = [['sa','SA'],['en','EN'],['both','SA+EN']];
+  let html = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld${hasKar ? ' · karaoke ready' : ''}</div>`;
+  html += `<div id="modebar" style="margin-bottom:1rem"><button class="playbtn" id="mRecite">▶ recite</button> ` +
+    modes.map(([m,l])=>`<button class="playbtn" data-mode="${m}" ${m===mode?'style="border-color:var(--gold)"':''}>${l}</button>`).join(' ') +
+    ` <button class="playbtn" id="kstop" style="display:none">■ stop</button></div><div id="kv"></div>`;
   html += items.map((it,ix)=>{
     const k = hasKar ? kar[ix % kar.length] : null;
-    let saHtml = `<div class="dev">${esc(it.sanskrit||'')}</div>`;
+    let saHtml = `<div class="dev rl-sa">${esc(it.sanskrit||'')}</div>`;
+    let roHtml = '';
     if(k && k.words){
       const padas=[[],[],[],[]];
       k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
-      saHtml = padas.filter(p=>p.length).map(p=>`<div class="dev">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(w.w)}</span>`).join(' ')}</div>`).join('');
+      saHtml = padas.filter(p=>p.length).map(p=>`<div class="dev rl-sa">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(w.w)}</span>`).join(' ')}</div>`).join('');
+      const rline = padas.filter(p=>p.length).map(p=>p.map(w=>esc(w.r||'')).join(' ')).join(' / ');
+      if(rline.trim()) roHtml = `<div class="iast rl-ro">${rline}</div>`;
     }
-    return `<div class="vblock" data-v="${ix}"><div style="display:flex;align-items:baseline;gap:.5rem"><h2 style="margin:0">${esc(it.chunk||'')}</h2>${k?`<button class="playbtn" data-kplay="${ix}" data-au="/audio/${wid}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3">▶</button>`:''}</div>${saHtml}` +
+    return `<div class="vblock" data-v="${ix}"><div style="display:flex;align-items:baseline;gap:.5rem"><h2 style="margin:0">${esc(it.chunk||'')}</h2>${k?`<button class="playbtn" data-kplay="${ix}" data-au="/audio/${wid}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3">▶</button>`:''}</div>${saHtml}${roHtml}` +
     (it.gate==='PASS'
-      ? `<p>${esc(it.l2||it.l1||'')}</p><div class="gate pass">PASS · English shown</div>`
-      : `<div class="gate blocked">Withheld — pending review. Sanskrit only, never translated by display.</div>`) + `</div>`;
+      ? `<div class="rl-en"><p>${esc(it.l2||it.l1||'')}</p><div class="gate pass">PASS · English shown</div></div>`
+      : `<div class="rl-en gate blocked">Withheld — pending review. Sanskrit only, never translated by display.</div>`) + `</div>`;
   }).join('');
   html += `<div id="answer" style="display:none"></div>`;
   $('#view').innerHTML = html;
+  const applyMode = (m)=>{
+    mode = m;
+    try{ localStorage.setItem('readmode', m); }catch(e){}
+    document.querySelectorAll('#modebar [data-mode]').forEach(b=>{
+      if(b.getAttribute('data-mode')===m) b.style.borderColor='var(--gold)'; else b.style.borderColor='';
+    });
+    const showSa = (m==='sa'||m==='both'), showEn = (m==='en'||m==='both'), showRo = (m!=='en');
+    document.querySelectorAll('.rl-sa').forEach(el=>el.style.display=showSa?'':'none');
+    document.querySelectorAll('.rl-ro').forEach(el=>el.style.display=showRo?'':'none');
+    document.querySelectorAll('.rl-en').forEach(el=>el.style.display=showEn?'':'none');
+  };
+  document.querySelectorAll('#modebar [data-mode]').forEach(b=>{
+    b.onclick = ()=>{ stopKaraoke(); KAR.cur=null; applyMode(b.getAttribute('data-mode')); };
+  });
+  applyMode(mode);
   if(!hasKar) return;
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
-  st.textContent = '.kw{transition:background .15s;border-radius:.2em;padding:0 .1em}.kw.on{background:#fdf0d5}';
+  st.textContent = '.kw{transition:background .15s;border-radius:.2em;padding:0 .1em}.kw.on{background:#fdf0d5}.iast{color:#76736e;font-size:14px;font-style:italic;margin-bottom:7px}';
   document.head.appendChild(st);
   function tick(){
     const t = audio.currentTime;
@@ -168,8 +242,8 @@ async function work(path){
     if(blk) blk.scrollIntoView({block:'center',behavior:'smooth'});
   }
   document.querySelectorAll('[data-kplay]').forEach(b=>{ b.onclick = ()=>playVerse(+b.getAttribute('data-kplay')); });
-  const kall = document.getElementById('kall');
-  if(kall) kall.onclick = ()=>{
+  const mRecite = document.getElementById('mRecite');
+  if(mRecite) mRecite.onclick = ()=>{
     let ix = 0;
     const total = document.querySelectorAll('[data-kplay]').length;
     audio.onended = ()=>{ ix++; if(ix >= total){ const sb=document.getElementById('kstop'); if(sb) sb.style.display='none'; KAR.cur=null; } else playVerse(ix); };
