@@ -393,6 +393,16 @@ export default {
       }
     }
 
+
+    // POST /api/variants/:id/accept — accept a variant (publish grant)
+    const va = path.match(/^\/api\/variants\/([^/]+)\/accept$/);
+    if (va && request.method === 'POST') {
+      const [, vid] = va;
+      const { user_id } = await request.json();
+      await env.DB.prepare('UPDATE variants SET accepted = 1 WHERE id = ?').bind(vid).run();
+      return json({ id: vid, accepted: true }, 200, cors);
+    }
+
     return json({ error: 'not found' }, 404, cors);
   }
 };

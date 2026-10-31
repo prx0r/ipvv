@@ -335,6 +335,20 @@ document.getElementById('chatsend').onclick=function(){
 VARJS = """<script>
 (function(){
 if(!window.API)return;
+window.acceptVariant=function(btn){
+  var work=btn.getAttribute('data-work');var chunk=btn.getAttribute('data-chunk');
+  var userId=prompt('Your profile id:');
+  if(!userId){return}
+  // fetch variants and accept the first one
+  fetch(window.API+'/api/variants/'+work+'/'+chunk).then(r=>r.json()).then(d=>{
+    if(!d.variants||!d.variants.length){alert('No variants to accept');return}
+    var v=d.variants[0];
+    // mark as accepted via a new endpoint
+    fetch(window.API+'/api/variants/'+v.id+'/accept',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:userId})})
+      .then(r=>r.json()).then(d=>alert('Accepted: '+d.id))
+      .catch(e=>alert('Error: '+e.message));
+  }).catch(e=>alert('Error: '+e.message));
+};
 window.saveVariant=function(btn){
   var work=btn.getAttribute('data-work');var chunk=btn.getAttribute('data-chunk');
   var textarea=document.getElementById('variant-text-'+work+'-'+chunk);
@@ -1027,7 +1041,7 @@ def build_translations():
                 body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
                         f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
             blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
-            blocks.append(f'<div class="variant-switcher" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-{wid}-{esc(it.get("chunk",""))}" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button></div></div>')
+            blocks.append(f'<div class="variant-switcher" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-{wid}-{esc(it.get("chunk",""))}" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div>')
             en_r = (it.get("l2") or it.get("l1") or "") if it["gate"] == "PASS" else ""
             rdis.append(f'<div data-recite data-id="{wid}-{esc(it.get("chunk",""))}" data-label="{esc(wid)} · {esc(it.get("chunk",""))}" data-sa="{esc(deva_of(it.get("sanskrit","")))}" data-en="{esc(en_r[:4000])}" style="display:none"></div>')
         abase = AUDIO_ALIAS.get(wid, wid)
