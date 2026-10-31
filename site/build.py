@@ -464,7 +464,11 @@ def build_ipvv():
     # pushing: real Q->GEM probe index (vendored volume prose, fail-closed excerpts)
     pb = ("<h3>IPVV probes</h3>" + "".join(pushing_cards("ipvv"))
           + "<h3>Tantraloka probes</h3><div class='sub'>Abhinavagupta's other magnum opus — same method, different mountain. Full TĀ display section pending; probes live here first.</div>"
-          + "".join(pushing_cards("tantraloka")))
+          + "".join(pushing_cards("tantraloka"))
+          + "<h3>Recognition research dossiers</h3><div class='sub'>The enquiry program behind the probes: transitions with verdicts, agent spec, comparative dossier, reading sequence, provisional Ajaḍapramātṛsiddhi translation.</div>"
+          + "".join(pushing_cards("research"))
+          + "<h3>Rasa audit</h3><div class='sub'>Quote-validation of the rasa thesis against Dyczkowski's text — attribution corrections (PTv vs TĀ vs footnote), the traceability discipline applied.</div>"
+          + "".join(pushing_cards("rasa")))
     (out / "pushing.html").write_text(TF(TMPL,title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth — hound the text with why, the text answers first", sidenav=work_sidenav("ipvv"), body=pb
         + srclink("site/data/pushing/", "probe prose vendored from volume research-library/recognition/; parsed pushing.py records next.")))
     return len(items)

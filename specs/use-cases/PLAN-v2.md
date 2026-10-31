@@ -57,8 +57,7 @@ Per `specs/use-cases/embeddings-loop.md`, plus:
 2. Patreon URL (Support page still says "launching soon").
 3. Accept/reject on CL-3 theme adjudication (unblocks themes layer).
 
-## Ochema assets (checked 2026-10-31 — the comparative wing)
-- **ochema-site** (ochema.xyz vision): comparative metaphysics, razor aesthetic
+## Ochema assets (checked 2026-10-31 — the comparative wing)- **ochema-site** (ochema.xyz vision): comparative metaphysics, razor aesthetic
   (monochrome + gold, Source Serif, argument-diagram motif — corroborates our type
   system), brand law "a position is only as strong as the objection it survives"
   (= adversarial review as brand, cf. our verify gates).
