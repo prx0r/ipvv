@@ -55,12 +55,13 @@
   ],
   "extant": true,
   "id": "svacchandoddyota",
-  "note": "15-ch tantra; rejects dualist reading, title = freedom; Brihattika of Bhullaka Rajanaka cited (biography unrecoverable); Madhusudan Kaul intro takes the nondual side — standpoint, not neutral fact.",
-  "status": "SOURCE_ONLY",
+  "note": "HELD: tantra with Ksemaraja Uddyota (kSemarAjakRtodyotAkhyavivaraNopetam). Argues the nondual reading vs dualist exegesis; Brihattika of Bhullaka cited (unrecoverable).",
+  "status": "SOURCE_HELD",
   "title": "Svacchandoddyota (comm. on Svacchanda Tantra)",
   "verses": "commentary",
   "sanskrit_root": "svacchandatantra.txt",
-  "sanskrit_source": "Root: Mukhabodha M00091 · CC BY-NC 4.0 · Uddyota itself undigitized (KSTS) — pointer"
+  "sanskrit_source": "Mukhabodha M00091: tantra + Ksemaraja Uddyota (KSTS 31/38/44/48/51/53/56) · CC BY-NC 4.0",
+  "sanskrit_file": "svacchandatantra.txt"
  },
  {
   "category": "agama",
@@ -70,12 +71,13 @@
   ],
   "extant": true,
   "id": "netroddyota",
-  "note": "Later copy can preserve earlier readings: ms age != material age. Uddyota unifies several person-models nondually — compare witnesses, don't assume one voice.",
-  "status": "SOURCE_ONLY",
+  "note": "HELD: tantra with Uddyota. Compare Nepalese recension (no Uddyota, 1200 ms — Flood 2020): witness, not single voice.",
+  "status": "SOURCE_HELD",
   "title": "Netroddyota (comm. on Netra Tantra)",
   "verses": "commentary",
   "sanskrit_root": "netratantra.txt",
-  "sanskrit_source": "Root: Mukhabodha M00038 · CC BY-NC 4.0 · Uddyota itself undigitized — pointer"
+  "sanskrit_source": "Mukhabodha M00038: tantra + Ksemaraja Uddyota (KSTS 46/61) · CC BY-NC 4.0",
+  "sanskrit_file": "netratantra.txt"
  },
  {
   "category": "agama",
