@@ -3,7 +3,7 @@ let cachedVectors = null;
 async function getVectors(env) {
   if (cachedVectors) return cachedVectors;
   try {
-    const resp = await fetch('https://ipvv-a8u.pages.dev/data/vectors.json');
+    const resp = await fetch('https://ipvv-a8u.pages.dev/data/vectors.json?v=' + Date.now());
     if (!resp.ok) return null;
     cachedVectors = await resp.json();
     return cachedVectors;
@@ -83,6 +83,14 @@ export default {
       return json({ bookmarks: results }, 200, cors);
     }
 
+    // GET /api/debug/vectors — check vector loading
+    if (path === '/api/debug/vectors' && request.method === 'GET') {
+      const vecs = await getVectors(env);
+      if (!vecs) return json({ error: 'vectors not loaded' }, 500, cors);
+      const bh = vecs.filter(v => v.work === 'bhairavastava');
+      return json({ total: vecs.length, bh: bh.length, sample: bh[0] ? { id: bh[0].id, en: (bh[0].en||'').slice(0,100) } : null }, 200, cors);
+    }
+
     // POST /api/chat/:work — RAG chat
     const cm = path.match(/^\/api\/chat\/([^/]+)$/);
     if (cm && request.method === 'POST') {
@@ -151,18 +159,32 @@ export default {
         const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
         const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
         const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
-        const gen = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
+        const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 512,
         });
-        reply = gen.response || gen.result?.response || JSON.stringify(gen).slice(0, 500);
+        reply = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || JSON.stringify(gen).slice(0, 500);
       } catch (e) {
         reply = `RAG error: ${e.message}. Vectors: ${cachedVectors ? cachedVectors.length : 'none'}.`;
       }
 
       await env.DB.prepare('INSERT INTO chat_messages (id, session_id, role, content) VALUES (?, ?, ?, ?)')
         .bind('m:' + crypto.randomUUID(), sid, 'assistant', reply).run();
-      return json({ session_id: sid, reply }, 200, cors);
+      // store question record with reply (for pushing corpus growth)
+      try {
+        const qid = 'q:' + crypto.randomUUID();
+        const retrievedIds = JSON.stringify(top ? top.map(t => t.id) : []);
+        const gateLabels = JSON.stringify(top ? top.map(t => t.gate) : []);
+        await env.DB.prepare('INSERT INTO questions (id, session_id, work, message, reply, retrieved_ids, gate_labels) VALUES (?, ?, ?, ?, ?, ?, ?)')
+          .bind(qid, sid, works[0], message, reply, retrievedIds, gateLabels).run();
+      } catch (e) { /* question storage is best-effort */ }
+      // proactive follow-up suggestion
+      let suggestion = '';
+      try {
+        const followup = await dashscopeChat(env, [{ role: 'user', content: `Given this Q&A about ${works.join(', ')}:\nQ: ${message}\nA: ${reply.slice(0,300)}\n\nSuggest one follow-up question a scholar would ask next. Just the question, nothing else.` }], 64);
+        if (followup && followup.length > 10 && followup.length < 200) suggestion = followup.trim();
+      } catch (e) { /* proactive is best-effort */ }
+      return json({ session_id: sid, reply, suggestion }, 200, cors);
     }
 
     // GET /api/chat/:session_id/history
@@ -202,15 +224,36 @@ export default {
       const ex = Array.isArray(exemplars) ? exemplars.join('\n---\n') : exemplars;
       const prompt = `You are a style transfer engine. Given these example translations in the target style:\n\n${ex}\n\nRewrite the following Sanskrit passage in the same style. Preserve meaning exactly. Only change register/diction.\n\nSource (Sanskrit): ${source}\n\nStyled translation:`;
       try {
-        const gen = await env.AI.run(model || '@cf/meta/llama-3.1-8b-instruct-fp8', {
-          messages: [{ role: 'user', content: prompt }],
-          max_tokens: 512,
-        });
-        const styled = gen.response || gen.result?.response || '';
-        return json({ styled, model: model || 'llama-3.1-8b' }, 200, cors);
+        let styled = '';
+        try {
+          styled = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
+        } catch (e2) {
+          const gen = await env.AI.run(model || '@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 512,
+          });
+          styled = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || '';
+        }
+        return json({ styled, model: 'qwen3.8-omni-flash' }, 200, cors);
       } catch (e) {
         return json({ error: e.message }, 500, cors);
       }
+    }
+
+
+    // GET /api/questions/:work — list stored questions for a work
+    const qm = path.match(/^\/api\/questions\/([^/]+)$/);
+    if (qm && request.method === 'GET') {
+      const [, work] = qm;
+      const { results } = await env.DB.prepare('SELECT id, message, reply, retrieved_ids, gate_labels, created_at FROM questions WHERE work = ? ORDER BY created_at DESC LIMIT 50')
+        .bind(work).all();
+      return json({ questions: results }, 200, cors);
+    }
+
+    // GET /api/questions — list all questions
+    if (path === '/api/questions' && request.method === 'GET') {
+      const { results } = await env.DB.prepare('SELECT id, work, message, reply, created_at FROM questions ORDER BY created_at DESC LIMIT 100').all();
+      return json({ questions: results }, 200, cors);
     }
 
     return json({ error: 'not found' }, 404, cors);

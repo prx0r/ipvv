@@ -167,7 +167,7 @@ document.getElementById('chatsend').onclick=function(){
   document.getElementById('chatin').value='';
   addMsg('user',msg);
   fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
-    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply)})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
     .catch(e=>addMsg('assistant','Error: '+e.message));
 };
 })();

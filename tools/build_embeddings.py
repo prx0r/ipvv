@@ -67,6 +67,8 @@ for i in range(0, len(corpus), batch_size):
         for j, r in enumerate(batch):
             vectors.append({'id': r['id'], 'work': r['work'], 'kind': r['kind'],
                            'gate': r.get('en_gate', ''), 'ref': r.get('ref', ''),
+                           'en': (r.get('en','') or '')[:500],
+                           'sa': (r.get('sa','') or '')[:500],
                            'vec': embs[j]})
         print(f'  embedded {min(i+batch_size, len(corpus))}/{len(corpus)}')
     except Exception as e:
