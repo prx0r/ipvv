@@ -73,3 +73,20 @@ Scholar translates 5–10 verses → A3S instant preview (seconds) → AuthorMix
 (<1hr) → generate rest in their style → gate battery runs every variant (meaning
 floor) → human picks → `accepted_by` on winners → accepted pairs accumulate to
 SFT/LoRA v2. Style card records method lineage throughout.
+
+## Verdict: which method stands out
+**AuthorMix for the real styles** (scholar adapters where meaning preservation is
+non-negotiable — only method ranked best-or-tied on every axis, human-evaluated).
+**A3S for instant try-before-you-train** (zero training, seconds). **InMyStyle
+pattern for local per-scholar adapters** (small Qwen, private, cheap).
+
+## What "jev" is and isn't (checked Oct 2026)
+Jev (TypeSafe API + open replicas: Kev, NanoJev, QwenJev) is a *decision* model:
+state + question + options → one letter + confidence. It does not generate text
+and cannot be trained on a style — category error for translation rendering.
+**Where the Jev family DOES fit:** the discriminative side. Gates are PASS/FAIL
+decisions over (chunk, candidate) pairs — a Kev-style classifier does
+SOURCE_BINDING/COVERAGE/ABSTENTION/TERM_CONSISTENCY/CITATION_GROUNDING in one
+forward pass, no generation, ~$17 training runs (Together AI walkthrough),
+CPU-runnable GGUFs. Likewise variant selection/reranking (pick-best scoring).
+Rule: Jev-family judges, adapters write. Never the reverse.
