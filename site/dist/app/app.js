@@ -11,6 +11,47 @@ const MENU = [
   ['Pushing','#/pushing'],['About','#/about'],
 ];
 let SID = null;
+let SPEAK = false;
+
+/* global player: survives route changes, audio keeps playing while you browse */
+function playAudio(url, title){
+  const p = document.getElementById('player');
+  const a = document.getElementById('paudio');
+  document.getElementById('ptitle').textContent = title || '—';
+  a.src = url; a.play().catch(()=>{});
+  p.classList.add('on');
+}
+document.getElementById('pclose').addEventListener('click', ()=>{
+  const a = document.getElementById('paudio');
+  a.pause(); a.removeAttribute('src'); a.load();
+  document.getElementById('player').classList.remove('on');
+});
+function listen(text){
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text.slice(0, 900));
+    u.rate = 0.95; speechSynthesis.speak(u);
+  }catch(e){}
+}
+document.getElementById('spk').addEventListener('click', function(){
+  SPEAK = !SPEAK;
+  this.textContent = SPEAK ? '🔊' : '🔈';
+  if(!SPEAK){ try{ speechSynthesis.cancel(); }catch(e){} }
+});
+/* mic: speak your question */
+(function(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR) { document.getElementById('mic').style.display='none'; return; }
+  const vr = new SR(); vr.lang='en-US'; vr.interimResults=false;
+  vr.onresult = e => {
+    document.getElementById('askQ').value = e.results[0][0].transcript;
+    document.getElementById('ask').requestSubmit();
+  };
+  vr.onerror = ()=>{};
+  document.getElementById('mic').addEventListener('click', ()=>{
+    try{ vr.start(); }catch(e){}
+  });
+})();
 
 function nav(cur){
   $('#nav').innerHTML = NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
@@ -60,14 +101,36 @@ async function work(path){
     `<div id="answer" style="display:none"></div>`;
 }
 async function recite(){
-  $('#view').innerHTML = `<h1>Recite</h1><div class="sub">Studio chants + four-mode readout. Audio keeps playing while you browse.</div>
-  <div class="idx"><a href="#/work/bhairavastava">Bhairavastava — 10 studio chants</a><a href="#/work/anuttarastika">Anuttarāṣṭikā</a></div><div id="answer" style="display:none"></div>`;
+  let works = [];
+  try{
+    const idx = await get('/data/translations.json');
+    works = idx.filter(w=>['bhairavastava','anuttarastika','stavacintamani','sivastotravali'].includes(w));
+  }catch(e){}
+  let html = `<h1>Recite</h1><div class="sub">Studio chants. Audio keeps playing while you browse.</div>`;
+  for(const w of works){
+    try{
+      const au = await get(`/data/audio-${w}.json`).catch(()=>null);
+      if(!au || !au.verses) continue;
+      html += `<h2>${esc(w)}</h2>`;
+      au.verses.slice(0,12).forEach((v,i)=>{
+        const id = v.id || `${w}_${i+1}`;
+        html += `<button class="playbtn" data-au="/audio/${w}/${id}.mp3" data-t="${esc(w)} v${v.n||i+1}">▶ v${v.n||i+1}</button>`;
+      });
+    }catch(e){}
+  }
+  $('#view').innerHTML = html + `<div id="answer" style="display:none"></div>`;
+  document.querySelectorAll('#view .playbtn[data-au]').forEach(b=>{
+    b.onclick = ()=>playAudio(b.getAttribute('data-au'), b.getAttribute('data-t'));
+  });
 }
 async function practices(){
   const items = await get('/data/practices.json').catch(()=>[]);
   const list = Array.isArray(items) ? items : [];
-  $('#view').innerHTML = `<h1>Practise</h1><div class="sub">112 dhāraṇās · breath-paced · <a href="https://body.stonedoorway.com/lab">open in the Lab ↗</a></div>
-  <div class="idx">${list.slice(0,60).map(p=>`<a>${esc(p.title||p.name||p.id)}</a>`).join('')||'<span class="sub">loading…</span>'}</div><div id="answer" style="display:none"></div>`;
+  $('#view').innerHTML = `<h1>Practise</h1><div class="sub">${list.length} practices · breath-paced · tap listen to hear the guidance</div>
+  <div id="plist"></div><div id="answer" style="display:none"></div>`;
+  $('#plist').innerHTML = list.map((p,i)=>`<div style="padding:.6rem 0;border-bottom:1px solid var(--line)"><b>${esc(p.title||p.id)}</b><br/><span class="sub">${esc((p.summary||'').slice(0,160))}</span><br/><button class="playbtn" data-listen="${i}">🔈 listen</button></div>`).join('');
+  const btns = document.querySelectorAll('#plist [data-listen]');
+  btns.forEach(b=>{ b.onclick = ()=>{ const p = list[+b.getAttribute('data-listen')]; listen((p.title||'')+'. '+(p.summary||'')); }; });
 }
 async function pushing(){
   $('#view').innerHTML = `<h1>Enquire</h1><div class="sub">Hound a text with why. Or ask below — the copilot fires a chain and shows its work.</div>
@@ -121,6 +184,7 @@ document.getElementById('ask').addEventListener('submit', async ev=>{
     if(r.session_id) SID = r.session_id;
     box.innerHTML = `<div class="who">ANSWER · ${esc(works)}</div><div>${esc(r.reply||'no answer').slice(0,2000)}</div>` +
       (r.suggestion ? `<span class="follow" id="followq">→ ${esc(r.suggestion)}</span>` : '');
+    if(SPEAK && r.reply) listen(r.reply);
     const fq = document.getElementById('followq');
     if(fq) fq.onclick = ()=>{ document.getElementById('askQ').value = r.suggestion; document.getElementById('ask').requestSubmit(); };
   }catch(e){ box.innerHTML = '<div class="who">ERROR</div>'+esc(e.message); }

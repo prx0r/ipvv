@@ -28,7 +28,13 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1
 #askbar form{max-width:46rem;margin:0 auto;display:flex;gap:.5rem;padding:.7rem 1rem}
 #askbar input{flex:1;font:1rem Georgia,serif;padding:.55rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink)}
 #askbar input:focus{outline:none;border-color:var(--gold)}
-#askbar button{font-family:Inter,system-ui,sans-serif;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem 1.1rem;cursor:pointer}
+#askbar button{font-family:Inter,system-ui,sans-serif;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .8rem;cursor:pointer;font-size:1rem}
+#player{display:none;position:fixed;bottom:4.2rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.35rem .6rem .35rem 1rem;font-family:Inter,system-ui,sans-serif;font-size:.8rem;max-width:92vw;align-items:center;gap:.5rem}
+#player.on{display:flex}
+#player audio{max-width:40vw;height:32px}
+#player .x{border:0;background:none;cursor:pointer;font-size:1rem;color:var(--mut)}
+.playbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.3rem .8rem;cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;margin:.2rem .3rem .2rem 0}
+.playbtn:hover{border-color:var(--gold)}
 #menuBtn{position:fixed;z-index:11;left:.8rem;bottom:4.2rem;width:52px;height:52px;border-radius:12px;border:1px solid var(--line);cursor:pointer;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink)}
 #menu{position:fixed;z-index:11;left:.8rem;bottom:8rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.5rem;min-width:12rem;display:none;box-shadow:0 8px 24px rgba(0,0,0,.1);font-family:Inter,system-ui,sans-serif;font-size:.86rem}
 #menu.open{display:block}
@@ -44,7 +50,8 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1
 <main id="view"></main>
 <button id="menuBtn" aria-label="menu">···</button>
 <div id="menu"></div>
-<div id="askbar"><form id="ask"><input id="askQ" placeholder="Ask anything…" autocomplete="off"/><button type="submit">?</button></form></div>
+<div id="askbar"><form id="ask"><button type="button" id="mic" title="speak">🎤</button><input id="askQ" placeholder="Ask or speak…" autocomplete="off"/><button type="button" id="spk" title="spoken replies">🔈</button><button type="submit">?</button></form></div>
+<div id="player"><span id="ptitle">—</span><audio id="paudio" controls preload="none"></audio><button class="x" id="pclose" aria-label="close">×</button></div>
 <script type="module" src="app.js"></script>
 </body>
 </html>
