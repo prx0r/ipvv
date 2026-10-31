@@ -109,6 +109,8 @@ export default {
         .bind('m:' + crypto.randomUUID(), sid, 'user', message).run();
 
       let reply = '';
+      let retrievedIds = '[]';
+      let retrievedGates = '[]';
       try {
         const qEmb = await env.AI.run('@cf/baai/bge-m3', { text: ['query: ' + message] });
         const qVec = qEmb.data[0];
@@ -157,6 +159,8 @@ export default {
 
         const gatheredRecs = vecs.filter(v => gathered.has(v.id));
         const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
+        retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
+        retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
         const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER).\n\nPassages:\n${context}\n\nQuestion: ${message}\n\nAnswer:`;
         const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
@@ -173,10 +177,8 @@ export default {
       // store question record with reply (for pushing corpus growth)
       try {
         const qid = 'q:' + crypto.randomUUID();
-        const retrievedIds = JSON.stringify(top ? top.map(t => t.id) : []);
-        const gateLabels = JSON.stringify(top ? top.map(t => t.gate) : []);
         await env.DB.prepare('INSERT INTO questions (id, session_id, work, message, reply, retrieved_ids, gate_labels) VALUES (?, ?, ?, ?, ?, ?, ?)')
-          .bind(qid, sid, works[0], message, reply, retrievedIds, gateLabels).run();
+          .bind(qid, sid, works[0], message, reply, retrievedIds, retrievedGates).run();
       } catch (e) { /* question storage is best-effort */ }
       // proactive follow-up suggestion
       let suggestion = '';
