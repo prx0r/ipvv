@@ -82,3 +82,31 @@ user's voice, the retrieval converges on actual curiosity.
 
 Same logic applies to the chatbot: the pushing questions ARE the likely user queries.
 Ask them like a user will ask them.
+
+---
+
+## Appendix A — the transferable bondage/liberation arc (2026-10-31)
+
+Five questions that work on any nondual text with a bondage/liberation structure. Proven on Bodhapañcadaśikā (5 sessions, all PASS-verse grounded). Each instantiates with the new text's verses; answers differ; differences are comparative findings.
+
+1. **Why forget?** (freedom must include eclipse, or it isn't freedom)
+   Template: if identity is eternal (X), who mis-takes it (Y)? Shape: Extraction → Branch.
+2. **Why suffering, not fun?** (play-gripped = terror by structure)
+   Template: if it's play/joy (X), why does it hurt (Y)? Shape: Mechanism → Theodicy.
+3. **Is suffering grace?** (terror → thirst → tasting)
+   Template: does the hurt do the saving work (X → Y)? Shape: Abstract → Felt-bridge.
+4. **No suffering, no liberation?** (recovery-grammar: awakened/remembered/living-after)
+   Template: does liberation's grammar require prior bondage? Shape: Gem → Honest crux.
+5. **No bondage, no liberation?** (the dissolution — ladder kicked away, :') hahahah)
+   Template: does the text's own summit dissolve its base? Shape: Thread → Unification-inverted.
+
+## Appendix B — the six chain shapes (extracted from 30 Tantrāloka sessions)
+
+1. **Extraction → Branch.** Take one open thread, make it the whole next session. (Q1→D→O, Q2Q3→E→K, grief→fear-recoil.)
+2. **Gem → Honest crux.** Re-examine a smooth derivation; face what it skipped. ("The last session smoothed over a real tension.")
+3. **Doctrine → First-person test.** Put a person inside the hardest implication. ("I am the mother, my child is gone.")
+4. **Thread → Unification.** Two chains converge; write the session that says so. (Rasa + masterkey → AD.)
+5. **Mechanism → Theodicy → Hardest objections.** Explain how, ask why, try to destroy. (Karma → theodicy → "why would Śiva play when people suffer?")
+6. **Abstract → Felt-bridge.** Is this structure felt? If yes, bridge to a framework. (Direction → felt → Solms/valence.)
+
+Each bodha session labels its shape (see PUSHING-BODHAPANCADASIKA.md). Next text: pick shapes that fit its material, instantiate, push.

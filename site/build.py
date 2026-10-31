@@ -589,7 +589,9 @@ def build_ipvv():
           + "<h3>Recognition research dossiers</h3><div class='sub'>The enquiry program behind the probes: transitions with verdicts, agent spec, comparative dossier, reading sequence, provisional Ajaḍapramātṛsiddhi translation.</div>"
           + "".join(pushing_cards("research"))
           + "<h3>Rasa audit</h3><div class='sub'>Quote-validation of the rasa thesis against Dyczkowski's text — attribution corrections (PTv vs TĀ vs footnote), the traceability discipline applied.</div>"
-          + "".join(pushing_cards("rasa")))
+          + "".join(pushing_cards("rasa"))
+          + "<h3>Bodhapañcadaśikā probes</h3><div class='sub'>Abhinavagupta's 15-verse doctrinal hymn, pushed as a 5-session arc: forgetting → terror → grace → necessity → dissolution. Same method, new mountain.</div>"
+          + "".join(pushing_cards("bodhapancadasika")))
     (out / "pushing.html").write_text(TF(TMPL,title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth — hound the text with why, the text answers first", sidenav=work_sidenav("ipvv"), body=pb
         + srclink("site/data/pushing/", "probe prose vendored from volume research-library/recognition/; parsed pushing.py records next.")))
     return len(items)
@@ -1214,15 +1216,16 @@ def build_pushing_hub():
         specs.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)} · {len(raw.split())} words</div><div class="sub"><a href="/data/pushing-method/{esc(f.name)}">read spec →</a></div></div>')
     n_ipvv = len(list((ROOT / "data/pushing/ipvv").glob("*.*")))
     n_ta = len(list((ROOT / "data/pushing/tantraloka").glob("*.*")))
+    n_bodha = len(list((ROOT / "data/pushing/bodhapancadasika").glob("*.*")))
     (out / "index.html").write_text(TF(TMPL, title="Pushing", h1="Pushing",
         kicker="Method", sub="hound the text with why until it cannot escape — every probe below is that loop run to an endpoint",
         sidenav=sidenav("abhinavagupta", ""), body=
         '<div class="panel"><b>The method in one rule:</b> force the text\u2019s own reasoning to carry the conclusion. Frameworks enter only after the text has spoken. Full procedure in the specs below; the operator instructions in the agent spec.</div>'
         "<h3>How-to and algorithms</h3>" + "".join(specs)
-        + f"<h3>Probe collections</h3><div class='idx'><a href='/ipvv/pushing.html'><b>IPVV probes</b> — {n_ipvv} files</a><a href='/ipvv/pushing.html'><b>Tantraloka probes</b> — {n_ta} files</a></div>"
+        + f"<h3>Probe collections</h3><div class='idx'><a href='/ipvv/pushing.html'><b>IPVV probes</b> — {n_ipvv} files</a><a href='/ipvv/pushing.html'><b>Tantraloka probes</b> — {n_ta} files</a><a href='/ipvv/pushing.html'><b>Bodhapañcadaśikā probes</b> — {n_bodha} files</a></div>"
         + '<div class="sub">Probes live on the IPVV pushing page (shared method, separate mountains). Essays argued from these cruxes: <a href="/essays/index.html">/essays/</a>.</div>'
         + srclink("https://github.com/prx0r/ipvv/tree/master/specs/pushing", "method specs live here.")))
-    return 5 + n_ipvv + n_ta
+    return 5 + n_ipvv + n_ta + n_bodha
 
 def build_receipts():
     import hashlib as _h
@@ -1342,7 +1345,7 @@ def build_corpus():
         recs.append({"id": f"essay:{f.stem.lower().replace('essay-','')}", "work": "essays", "ref": f.stem,
             "sa": "", "en": f.read_text(encoding="utf-8", errors="replace"), "en_gate": "OWNER", "kind": "essay",
             "license": "CC BY-NC-SA 4.0"})
-    for sub in ("ipvv", "tantraloka"):
+    for sub in ("ipvv", "tantraloka", "bodhapancadasika"):
         for f in sorted((ROOT / "data/pushing" / sub).glob("*.*")):
             if f.suffix not in (".md", ".txt"): continue
             recs.append({"id": f"pushing:{sub}/{f.name}", "work": "pushing", "ref": f"{sub}/{f.stem}",

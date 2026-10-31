@@ -64,12 +64,22 @@ def _checks_pass(inputs):
     return (not bad), ("all checks true" if not bad else f"failing: {bad}")
 
 
+@gate("pushing/graph-extract-v1")
+def _pushing_shape(inputs):
+    r0 = bool(_ev(inputs, "has_round0"))
+    rounds = _ev(inputs, "rounds") or 0
+    lim = bool(_ev(inputs, "has_limit"))
+    ok = r0 and rounds >= 1 and lim
+    return ok, f"round0={r0} rounds={rounds} limit={lim}"
+
+
 GATE_IDS = [
     "ipvv/has-source-v1",
     "ipvv/has-license-v1",
     "ipvv/has-immutable-id-v1",
     "ipvv/gate-consistent-v1",
     "ipvv/checks-pass-v1",
+    "pushing/graph-extract-v1",
 ]
 
 

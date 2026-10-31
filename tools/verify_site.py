@@ -105,6 +105,7 @@ try:
         "ipvv/has-immutable-id-v1": "sha256:cb644734619b646c262d7b8b9b578ab2b2f1188bea72d32cf08a3ddfa6200c42",
         "ipvv/gate-consistent-v1": "sha256:bdbf5e44faa8159e40179f5a83762b23ba985519b88a49a82c814a368e6f174c",
         "ipvv/checks-pass-v1": "sha256:dd803a9c03b7bf8243e7817abc34705faeebe48741d78910d0af6968c9a1daef",
+        "pushing/graph-extract-v1": "sha256:616dd22c0b65fbdeb60bf4e3e4a433a81cff4729914c077b794d1eb227d53a1b",
     }
     for _g, _h in _pinned.items():
         if program_hash(_g) != _h:
