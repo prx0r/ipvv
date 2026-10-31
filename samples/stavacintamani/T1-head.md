@@ -1,0 +1,15 @@
+# Stavacintāmaṇi — T1 frozen 2026-10-30
+
+*Source: GRETIL KSTS X (Bhaṭṭanārāyaṇa Stavacintāmaṇi). 120 verses (12 passages). Early Kashmir Śaivism stotra.
+Ledger: śiva=Śiva · ananda=bliss · māyā=Māyā · bhakti=devotion · jñāna=knowledge ·
+kṛpā=grace · stuti=praise · parameśvara=supreme Lord. FROZEN.*
+
+## stav-p01 (2-11)
+[and]-yaḥ sphītaḥ śrīdayābodhaparamānandasampadā vidyoddyotitamāhātmyaḥ sa jayaty aparājitaḥ prasaradbindunādāya śuddhāmṛtamayātmane namo 'nantaprakāśāya śaṃkarakṣīrasindhave dviṣmas tvāṃ tvāṃ stumas tubhyaṃ mantrayāmo 'mbikāpate ativāllabhyataḥ sādhu viśvaṅ no dhṛtavān asi saṃhṛtasparśayogāya sampūrṇāmṛtasūtaye viyanmāyāsvarūpāya vibhave śambhave namaḥ bhinneṣv api na bhinnaṃ yac chinneṣv achinnam eva ca namāmaḥ sarvasāmānyaṃ rūpaṃ tat pārameśvaram praṇavordhvārdhamātrāto 'py aṇave mahate punaḥ brahmāṇḍād api nairguṇyaguṇāya sthāṇave namaḥ brahmāṇḍagarbhiṇīṃ vyomavyāpinaḥ sarvatogateḥ parameśvarahaṃsasya śaktiṃ haṃsīm iva stumaḥ nirupādānasambhāram abhittāv eva tanvate jagaccitraṃ namas tasmai kalāślāghyāya śūline māyājalodarāt samyag uddhṛtya vimalīkṛtam śivajñānaṃ svato dugdhaṃ dehy ehi harahaṃsa naḥ ṣaṭpramāṇīparicchedabhedayoge 'py abhedine paramārthaikabhāvāya baliṃ yāmo bhavāya te
+
+## stav-p02 (12-21)
+[and]-api paśyema gambhīrāṃ pareṇa jyotiṣābhitaḥ unmṛṣṭatamasaṃ ramyām antarbhava bhavadguhām namas tebhyo 'pi ye somakalākalitaśekharam nāthaṃ svapne 'pi paśyanti paramānandadāyinam bhagavan bhava bhāvatkaṃ bhāvaṃ bhāvayituṃ ruciḥ punarbhavabhayocchedadakṣā kasmai na rocate yāvajjīvaṃ jagannātha kartavyam idam astu naḥ tvatprasādāt tvadekāgramanaskatvena yā sthitiḥ śākhāsahasravistīrṇavedāgamamayātmane namo 'nantaphalotpādakalpavṛkṣāya śambhave vāṅmanaḥkāyakarmāṇi viniyojya tvayi prabho tvanmayībhūya nirdvandvāḥ kaccit syāmāpi karhicit jagatāṃ sargasaṃhāratattaddhitaniyuktiṣu ananyāpekṣasāmarthyaśālini śūline namaḥ vyatītaguṇayogasya mukhyadhyeyasya dhūrjaṭeḥ nāmāpi dhyāyatāṃ dhyānaiḥ kim anyālambanaiḥ phalam namo namaḥ śivāyeti mantrasāmarthyam āśritāḥ ślāghyās te śāmbhavīṃ bhūtim upabhoktuṃ ya udyatāḥ kaḥ panthā yena na prāpyaḥ kā ca vāṅ nocyase yayā kiṃ dhyānaṃ yena na dhyeyaḥ kiṃ vā kiṃ nāsi yat prabho
+
+## stav-p03 (22-31)
+[and]-arcito 'yam ayaṃ dhyāta eṣa toṣita ity ayam rasaḥ srotaḥsahasreṇa tvayi me bhava vardhatām namo niḥśeṣadhīpatrimālālayamayātmane nāthāya sthāṇave tubhyaṃ nāgayajñopavītine ajñānatimirasyaikam auṣadhaṃ saṃsmṛtis tava bhava tattatpradānena prasādaḥ kriyatāṃ mayi nama īśāya niḥśeṣapuruṣārthaprasādhakaḥ praṇantavyaḥ praṇāmo 'pi yadīya iha dhīmatām magnair bhīme bhavāmbhodhau nilaye duḥkhayādasām bhakticintāmaṇiṃ śārvaṃ tataḥ prāpya na kiṃ jitam nirāvaraṇanirdvandvaniścalajñānasampadām jñeyo 'si kila ke 'py ete ye tvāṃ jānanti dhūrjaṭe nirguṇo 'pi guṇajñānāṃ jñeya eko jayaty ajaḥ niṣkāmo 'pi prakṛtyā yaḥ kāmanānāṃ paraṃ phalam śrīratnāmṛtalābhāya kliṣṭaṃ yatra na kaiḥ suraiḥ tat kṣīrodadam aiśvaryaṃ tavaiva sahajaṃ vibho namo bhaktyā nṛṇāṃ muktyai bhavate bhava te 'vate smṛtyā nutyā ca dadate śambhave śaṃ bhave 'bhave sarvajñaḥ sarvakṛt sarvam asīti jñānaśālinām vedyaṃ kiṃ karma vā nātha nānantyāya tvayārpyate
+
