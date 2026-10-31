@@ -1954,6 +1954,9 @@ def build_app():
         except Exception:
             pass
     (DIST / "data" / "practices.json").write_text(_j.dumps(pract, ensure_ascii=False))
+    _wi = ROOT / "data/works-index.json"
+    if _wi.exists():
+        _sh.copy(_wi, DIST / "data/works-index.json")
     for f in sorted((ROOT / "data").glob("karaoke-*.json")):
         _sh.copy(f, DIST / "data" / f.name)
     try:

@@ -62,10 +62,22 @@ async function showWorks(m, boxSel){
   if(!w){
     try{ w = await get(`/data/works_${m}.json`); LIB.works[m]=w; }catch(e){ return; }
   }
+  if(!LIB.index){
+    try{ LIB.index = await get('/data/works-index.json'); }catch(e){ LIB.index = {}; }
+  }
+  const idx = LIB.index || {};
   const box = document.querySelector(boxSel || '#lib-works');
   if(!box) return;
-  box.innerHTML = `<div class="msec">${esc(m)}</div>` +
-    ((Array.isArray(w)?w:[]).map(x=>`<a href="#/work/${x.id||x.work||m}">${esc(x.title||x.id||'')}</a>`).join('') || '<span class="sub">no works</span>');
+  box.innerHTML = `<div class="msec">${esc(m)}</div><div class="mgrid">` +
+    ((Array.isArray(w)?w:[]).map(x=>{
+      const wid = x.id||x.work||m;
+      const rec = idx[m+':'+wid] || {};
+      const target = rec.translation || wid;
+      const hasEn = !!rec.translation;
+      const hasSa = !!rec.sanskrit;
+      const mark = hasEn ? '' : (hasSa ? ' °' : ' ·');
+      return `<a class="mcard" href="#/work/${target}" data-wid="${esc(wid)}">${esc(x.title||x.id||'')}<span class="sub">${mark}</span></a>`;
+    }).join('') || '<span class="sub">no works</span>') + `</div>`;
 }
 async function get(p){
   const r = await fetch(p);
@@ -115,7 +127,7 @@ async function library(){
   const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
   const box = document.getElementById('lib-mlist');
   if(!box) return;
-  box.innerHTML = sorted.map(m=>`<div><a href="#" data-libm="${esc(m)}">${esc(m)} <span class="sub">· ${counts[m]||0}</span></a></div>`).join('');
+  box.innerHTML = `<div class="mgrid">` + sorted.map(m=>`<a href="#" data-libm="${esc(m)}" class="mcard">${esc(m)} <span class="sub">· ${counts[m]||0}</span></a>`).join('') + `</div>`;
   box.querySelectorAll('[data-libm]').forEach(a=>{
     const open = (e)=>{ if(e) e.preventDefault(); showWorks(a.getAttribute('data-libm'), '#lib-works'); };
     a.addEventListener('click', open);
@@ -139,7 +151,26 @@ function stopKaraoke(){
 }
 async function work(path){
   const wid = path.split('/')[2];
-  const items = await get(`/data/translations/${wid}.json`).catch(()=>[]);
+  let items = await get(`/data/translations/${wid}.json`).catch(()=>null);
+  if(!items || !items.length){
+    // fallback: Sanskrit root via works-index (fail-closed: Sanskrit only, no English)
+    try{
+      if(!LIB.index) LIB.index = await get('/data/works-index.json');
+      const rec = Object.values(LIB.index||{}).find(r=>r.translation===wid || r.work===wid);
+      if(rec && rec.sanskrit){
+        const raw = await get(`/data/sanskrit/${rec.sanskrit}`).catch(()=>null);
+        if(raw){
+          const paras = String(raw).split(/\n{2,}|\n(?=[\u0900-\u097F])/).filter(p=>p.trim()).slice(0,60);
+          $('#view').innerHTML = `<h1>${esc(rec.title||wid)}</h1><div class="sub">Sanskrit root · translation in progress — English withheld until the gate passes.</div>` +
+            paras.map(p=>`<div class="dev">${esc(p.trim().slice(0,600))}</div>`).join('') +
+            `<div id="answer" style="display:none"></div>`;
+          return;
+        }
+      }
+    }catch(e){}
+    $('#view').innerHTML = `<h1>${esc(wid)}</h1><div class="sub">Not yet on the site — Sanskrit root not vendored, translation not started.</div><div id="answer" style="display:none"></div>`;
+    return;
+  }
   const AUDIODIR = {anuttarastika:'anuttarashtika_trad'};
   const audir = AUDIODIR[wid] || wid;
   let kar = null;

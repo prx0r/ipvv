@@ -45,6 +45,10 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1
 #menu details.mnav summary{cursor:pointer;list-style:none;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:.45rem .6rem}
 #menu details.mnav summary::-webkit-details-marker{display:none}
 #menu details.mnav .sub a{padding-left:1.2rem;font-size:.8rem}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.4rem .8rem;margin:.5rem 0 1rem}
+.mgrid .mcard{display:block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;text-decoration:none;color:var(--ink);font-family:var(--sans);font-size:.86rem}
+.mgrid .mcard:hover{border-color:var(--gold)}
+#lib-works .mgrid{grid-template-columns:repeat(auto-fill,minmax(12rem,1fr))}
 #libwrap{flex-wrap:nowrap}
 @media (max-width:600px){
   #libwrap{gap:.75rem}
