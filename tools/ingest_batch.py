@@ -54,6 +54,8 @@ def ingest(s3, key, work):
             "immutable_id": r.get("immutable_id", ""),
             "status": r.get("status", ""),
             "checks": g.get("checks", {}) if isinstance(g, dict) else {},
+            "en_variants": r.get("en_variants", []),
+            "styles": r.get("styles", []),
         }
         if passed:
             item["l1"] = r.get("l1_text", "")

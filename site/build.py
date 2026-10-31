@@ -1127,6 +1127,9 @@ def build_corpus():
     with open(DIST / "data/corpus.jsonl", "w", encoding="utf-8") as fh:
         for r in recs:
             fh.write(_json.dumps(r, ensure_ascii=False) + "\n")
+    (DIST / "data/styles").mkdir(parents=True, exist_ok=True)
+    for f in sorted((ROOT / "data/styles").glob("*.json")):
+        shutil.copy(f, DIST / "data/styles" / f.name)
     return len(recs)
 
 def build_support():
