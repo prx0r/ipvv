@@ -190,7 +190,7 @@ STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskri
     "SOURCE_CHUNKED": "chunked, awaiting T1", "ESSAY0": "essay-0", "PUBLISHED_49": "full display (49)",
     "STOCKPILE": "listed", "LOST": "LOST", "REF_ONLY": "ref-only", "FRAGMENT": "fragments",
     "ATTRIBUTED_DISPUTED": "ascription disputed", "STOCKPILE_UNVERIFIED": "listed · unverified",
-    "SOURCE_HELD": "full Sanskrit held"}
+    "TEACHER_ONLY": "teacher — no independent works", "SOURCE_HELD": "full Sanskrit held"}
 
 def author_paths(aid):
     a = ROOT / "data/authors" / f"{aid}.json"
@@ -206,13 +206,15 @@ def sidenav(aid, active=""):
     works = json.loads(author_paths(aid)[1].read_text())
     items = "".join(f'<a href="/{aid}/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
     return ('<div class="hd">Masters</div>'
-        + "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(m)}</a>' for m in ["abhinavagupta", "utpaladeva", "ksemaraja"])
+        + "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(m)}</a>' for m in MASTERS)
         + f'<div class="hd">{esc(author["name"])}</div>'
         f'<a href="/{aid}/index.html">{"› " if active=="bio" else ""}Bio</a>'
         f'<a href="/{aid}/works.html">{"› " if active=="works" else ""}Works map</a>'
         '<div class="hd">Works (canonical list)</div><div class="sub">' + items + "</div>")
 
-MASTERS = ["abhinavagupta", "utpaladeva", "ksemaraja"]
+MASTERS = ["abhinavagupta", "somananda", "vasugupta", "kallata", "utpaladeva",
+           "lakshmanagupta", "sambhunatha", "ksemaraja", "bhutiraja", "jayaratha",
+           "yogaraja", "sivopadhyaya", "lalla"]
 
 def build_split(aid, wid):
     """Split a big Sanskrit file into per-section pages. Returns section count."""

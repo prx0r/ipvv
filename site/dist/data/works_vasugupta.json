@@ -1,0 +1,33 @@
+[
+ {
+  "category": "agama",
+  "date": null,
+  "editions": [
+   "GRETIL Kaul Shastri 1925"
+  ],
+  "extant": true,
+  "id": "sivasutra",
+  "note": "Revealed aphorisms; Bhaskara and Kshemaraja commentaries differ in lineage.",
+  "sanskrit_file": "sivasutra-root.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0",
+  "status": "SOURCE_HELD",
+  "title": "Sivasutra",
+  "verses": "77 sutras"
+ },
+ {
+  "category": "spanda",
+  "date": null,
+  "editions": [
+   "GRETIL",
+   "Mukhabodha variants"
+  ],
+  "extant": true,
+  "id": "spandakarika",
+  "note": "Authorship disputed within the tradition: Kallata versified the received doctrine (Pradipika account, stanza absent in Ramakantha/Ksemaraja recensions) vs Vasugupta named in Ksemaraja's recension closing verse. Keep both visible.",
+  "sanskrit_file": "spanda-root.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0",
+  "status": "SOURCE_HELD",
+  "title": "Spandakarika (authorship: Vasugupta vs Kallata — disputed)",
+  "verses": "52 karikas"
+ }
+]

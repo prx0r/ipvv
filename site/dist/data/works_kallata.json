@@ -1,0 +1,41 @@
+[
+ {
+  "category": "spanda",
+  "date": null,
+  "editions": [
+   "Dyczkowski SUNY 1992 (with Sandoha, Vivrti, Pradipika)",
+   "Motilal Hindi ed. 1981 (text + comm.)"
+  ],
+  "extant": true,
+  "id": "spandavrtti",
+  "note": "Stein's note on Kalhana also titles it Spandasarvasva. Commentary-authorship vs root-verse authorship are separate questions. Sanskrit e-text not yet held — Dyczkowski translation is the working witness.",
+  "status": "SOURCE_PLUS_TRANSLATION",
+  "title": "Spandavrtti (Spandasarvasva)",
+  "verses": "commentary"
+ },
+ {
+  "category": "spanda",
+  "date": null,
+  "editions": [
+   "Bhaskara Sivasutra-varttika testimony",
+   "Bhatta Utpala Pradipika v.53 (absent in Ramakantha/Ksemaraja recensions)"
+  ],
+  "extant": null,
+  "id": "spandasutra-varttika",
+  "status": "REF_ONLY",
+  "title": "Spanda-sutra-varttika (on 3 Sivasutra sections)",
+  "verses": "ref-only"
+ },
+ {
+  "category": "spanda",
+  "date": null,
+  "editions": [
+   "Bhaskara testimony; Aufrecht catalogue"
+  ],
+  "extant": null,
+  "id": "tattvarthacintamani",
+  "status": "REF_ONLY",
+  "title": "Tattvartha-cintamani(+tika, on 4th Sivasutra section; Tattvavicara quoted by Utpala)",
+  "verses": "ref-only"
+ }
+]

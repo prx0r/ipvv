@@ -1,0 +1,29 @@
+[
+ {
+  "category": "tantra",
+  "date": null,
+  "editions": [
+   "KSTS 12 vols with Abhinavagupta root (1918-38)"
+  ],
+  "extant": true,
+  "id": "tantralokaviveka",
+  "note": "Establishes Lakshmanagupta's Krama+Trika transmission after controversy.",
+  "status": "SOURCE_ONLY",
+  "title": "Tantralokaviveka (comm. on Tantraloka)",
+  "verses": "commentary"
+ },
+ {
+  "category": "aesthetics",
+  "date": null,
+  "editions": [
+   "GRETIL"
+  ],
+  "extant": true,
+  "id": "alamkarasarvasva-vimarsini",
+  "sanskrit_file": "jayaratha-alamkarasarvasva.txt",
+  "sanskrit_source": "GRETIL (Ruyyaka root + Jayaratha Vimarshini) · CC BY-NC-SA 4.0",
+  "status": "SOURCE_HELD",
+  "title": "Alankarasarvasva-Vimarshini (on Ruyyaka)",
+  "verses": "commentary (1-34)"
+ }
+]
