@@ -1041,6 +1041,15 @@ def build_translations():
                 body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
                         f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
             blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
+            _chunk_id = it.get("chunk", "")
+            _am = ROOT / "data/argmaps" / wid / f"{_chunk_id}.md"
+            _c1 = ROOT / "data/c1" / wid / f"{_chunk_id}.md"
+            if _am.exists():
+                _amt = _am.read_text(encoding="utf-8", errors="replace")
+                blocks.append(f'<div class="panel"><div class="sub"><b>Argument map</b> · {len(_amt.split())} words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)">{esc(_amt[:3000])}</pre><div class="sub"><a href="/data/argmaps/{wid}/{esc(_chunk_id)}.md">source →</a></div></div>')
+            if _c1.exists():
+                _c1t = _c1.read_text(encoding="utf-8", errors="replace")
+                blocks.append(f'<div class="panel"><div class="sub"><b>C1 commentary</b> · {len(_c1t.split())} words</div><div class="en">{esc(_c1t[:2000])}</div><div class="sub"><a href="/data/c1/{wid}/{esc(_chunk_id)}.md">source →</a></div></div>')
             blocks.append(f'<div class="variant-switcher" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-{wid}-{esc(it.get("chunk",""))}" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="{wid}" data-chunk="{esc(it.get("chunk",""))}" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div>')
             en_r = (it.get("l2") or it.get("l1") or "") if it["gate"] == "PASS" else ""
             rdis.append(f'<div data-recite data-id="{wid}-{esc(it.get("chunk",""))}" data-label="{esc(wid)} · {esc(it.get("chunk",""))}" data-sa="{esc(deva_of(it.get("sanskrit","")))}" data-en="{esc(en_r[:4000])}" style="display:none"></div>')

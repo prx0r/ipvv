@@ -67,6 +67,21 @@ for f in glob.glob(os.path.join(ROOT, 'site/dist/**/*.html'), recursive=True):
             fail(f'unfilled {ph} in {os.path.relpath(f, ROOT)}')
             break
 
+# 5b. argmap + C1 integrity (site/data — FAIL)
+for d, kind in [('argmaps', 'argmap'), ('c1', 'C1')]:
+    base = os.path.join(ROOT, 'site/data', d)
+    if not os.path.isdir(base):
+        continue
+    for f in glob.glob(os.path.join(base, '**/*.md'), recursive=True):
+        words = len(open(f, encoding='utf-8', errors='replace').read().split())
+        rel = os.path.relpath(f, ROOT)
+        if kind == 'C1' and words < 100:
+            fail(f'C1 too short ({words}w < 100): {rel}')
+        if kind == 'C1' and words > 450:
+            fail(f'C1 too long ({words}w > 450): {rel}')
+        if kind == 'argmap' and words < 150:
+            fail(f'argmap too short ({words}w < 150): {rel}')
+
 # 6. receipts coverage (dist — FAIL)
 _rp = os.path.join(ROOT, 'site/dist/data/receipts.jsonl')
 if os.path.exists(_rp):
