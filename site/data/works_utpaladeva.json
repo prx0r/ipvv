@@ -25,9 +25,11 @@
   ],
   "extant": true,
   "id": "ipk-vrtti",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "title": "Isvarapratyabhijnakarika-vrtti (auto-commentary)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "ipk.txt",
+  "sanskrit_source": "GRETIL (Karika+Vrtti together, Kaul Shastri/Torella) · CC BY-NC-SA 4.0"
  },
  {
   "category": "pratyabhijna",

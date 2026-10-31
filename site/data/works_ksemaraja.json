@@ -115,11 +115,12 @@
   ],
   "extant": true,
   "id": "stavacintamanitika",
-  "status": "SOURCE_HELD",
+  "status": "SOURCE_ONLY",
   "title": "Stavacintamanitika (on Bhattanarayana)",
   "verses": "commentary",
-  "sanskrit_file": "stavacintamani.txt",
-  "sanskrit_source": "GRETIL KSTS X ed (Ksemaraja comm. per ed. note) · CC BY-NC-SA 4.0 · deitybody clean (root only) as witness"
+  "sanskrit_source": "GRETIL KSTS X ed (Ksemaraja comm. per ed. note) · CC BY-NC-SA 4.0 · deitybody clean (root only) as witness",
+  "sanskrit_root": "stavacintamani.txt",
+  "note": "Tika itself undigitized (KSTS X print); root text (GRETIL) held as related. Verify KSTS X contents before claiming comm coverage."
  },
  {
   "category": "stotra",

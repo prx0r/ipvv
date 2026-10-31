@@ -214,7 +214,7 @@ def sidenav(aid, active=""):
 
 MASTERS = ["abhinavagupta", "somananda", "vasugupta", "kallata", "utpaladeva",
            "lakshmanagupta", "sambhunatha", "ksemaraja", "bhutiraja", "jayaratha",
-           "yogaraja", "sivopadhyaya", "lalla"]
+           "yogaraja", "bhattanarayana", "sivopadhyaya", "lalla"]
 
 def build_split(aid, wid):
     """Split a big Sanskrit file into per-section pages. Returns section count."""

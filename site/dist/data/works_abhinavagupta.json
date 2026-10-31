@@ -231,7 +231,7 @@
    "ptv-laghu.txt",
    "ptv-vivrti2.txt"
   ],
-  "sanskrit_source": "Mukhabodha M00044/M00042/M00154 · CC BY-NC 4.0"
+  "sanskrit_source": "Mukhabodha M00044/M00042/M00154 (+ M00043 Tatparya — verify) · CC BY-NC 4.0"
  },
  {
   "category": "tantra",
@@ -328,20 +328,22 @@
   "date": null,
   "extant": true,
   "id": "gitarthasamgraha",
-  "note": "Marjanovic English; Sharma English",
+  "note": "Abhinavagupta comm undigitized (Marjanovic/Sharma trans exist); Gita root (Mukhabodha M00167) held as related.",
   "status": "SOURCE_ONLY",
   "title": "Bhagavadgītārthasaṃgraha",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_root": "gita-root.txt"
  },
  {
   "category": "aesthetics",
   "date": null,
   "extant": true,
   "id": "abhinavabharati",
-  "note": "GOS; only ancient comm. on Natyashastra; rasa ch.6 classic",
+  "note": "Bharati itself undigitized (GOS print); Bharata root (Mukhabodha 3 vols + GRETIL) held as related.",
   "status": "SOURCE_ONLY",
   "title": "Abhinavabhāratī (Nāṭyaśāstravivṛti)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_root": "natya-root.txt"
  },
  {
   "category": "aesthetics",
@@ -349,9 +351,11 @@
   "extant": true,
   "id": "dhvanyalokalocana",
   "note": "N.S. ed; Ingalls/Masson/Patwardhan English",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Dhvanyālokalocana",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "dhvanyaloka.txt",
+  "sanskrit_source": "GRETIL (Anandavardhana root + Abhinavagupta Locana embedded, 1.4MB) · CC BY-NC-SA 4.0"
  },
  {
   "category": "aesthetics",

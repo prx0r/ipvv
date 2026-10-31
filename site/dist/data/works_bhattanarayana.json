@@ -1,0 +1,32 @@
+[
+ {
+  "category": "stotra",
+  "date": null,
+  "editions": [
+   "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+   "deitybody clean (root, 244 lines)"
+  ],
+  "extant": true,
+  "id": "stavacintamani",
+  "note": "Ksemaraja's tika comments on THIS text; read together with /ksemaraja/stavacintamanitika.html.",
+  "sanskrit_file": "stavacintamani.txt",
+  "sanskrit_source": "GRETIL KSTS X · CC BY-NC-SA 4.0",
+  "status": "SOURCE_HELD",
+  "title": "Stavacintamani",
+  "verses": "121 verses"
+ },
+ {
+  "category": "drama",
+  "date": null,
+  "editions": [
+   "GRETIL"
+  ],
+  "extant": true,
+  "id": "venisamhara",
+  "sanskrit_file": "venisamhara.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0",
+  "status": "SOURCE_HELD",
+  "title": "Venisamhara (drama)",
+  "verses": "6 acts"
+ }
+]
