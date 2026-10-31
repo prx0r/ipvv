@@ -727,6 +727,29 @@ def build_author(aid="abhinavagupta"):
         # pipeline translation link, if ingested (PASS-gated English lives there)
         trlink = ""
         trfile = ROOT / "data/translations" / f"{wid}.json"
+        # contentions: falsifiable claims tied to this work (basecamp research objects)
+        cfiles = sorted((ROOT / "data/contentions").glob("*.json"))
+        clinks = []
+        for cf in cfiles:
+            try:
+                co = json.loads(cf.read_text())
+            except Exception:
+                continue
+            if not isinstance(co, dict):
+                continue
+            sid = str(co.get("source_id") or co.get("target_question_id") or "")
+            if wid not in sid and wid.replace("-", "") not in sid.replace("-", ""):
+                continue
+            title = co.get("title") or co.get("question") or cf.stem
+            fals = ""
+            claims = co.get("claims")
+            if isinstance(claims, list) and claims and isinstance(claims[0], dict):
+                fals = claims[0].get("falsifier", "")
+            clinks.append(f'<div class="panel"><b>{esc(str(title)[:90])}</b>'
+                         f'<div class="sub">{esc(cf.name)}</div>'
+                         f'<div class="en">{esc(str(fals)[:180])}</div>'
+                         f'<div class="sub"><a href="/contentions/{esc(cf.stem)}.html">open contention →</a></div></div>')
+        contention_block = ("<h3>Contentions</h3>" + "".join(clinks)) if clinks else ""
         if trfile.exists():
             import json as _j
             _items = _j.loads(trfile.read_text())
@@ -793,7 +816,7 @@ def build_author(aid="abhinavagupta"):
                     + sfs + root + eds
                     + f'<div class="panel">Status: {esc(label)}. Next via pipe: cut SOURCE → T1 → L0 → argmap → L2 → L200 → C1.</div>')
         (out / f"{wid}.html").write_text(TF(ATmpl,title=w["title"], h1=esc(w["title"]),
-            sub=meta, sidenav=sidenav(aid, wid), body=trlink + body + srclink(f"site/data/works_{aid}.json", "canonical entry lives here.")))
+            sub=meta, sidenav=sidenav(aid, wid), body=trlink + contention_block + body + srclink(f"site/data/works_{aid}.json", "canonical entry lives here.")))
     # ship machine-readable data with the site
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     (DIST / "data" / f"author_{aid}.json").write_text(json.dumps(author, ensure_ascii=False, indent=1))

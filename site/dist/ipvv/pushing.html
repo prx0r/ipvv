@@ -1149,7 +1149,132 @@ without it)? (In response,) it is said that, of what use can (any) means (of rea
 with regard to this Supreme Lord Who is self (luminous) Light and (our) own Self? īt
 (cannot bring about) the attainment of (His) own nature, because it is eternal, nor
 knowledge (of it), because it illumines itself, nor (can any means to realisation) remove a
-covering (that obscure…</div><div class="sub"><a href="/data/pushing/tantraloka/Q9-anupaya-deepest-extracted.txt">full probe text →</a></div></div><h3>Recognition research dossiers</h3><div class='sub'>The enquiry program behind the probes: transitions with verdicts, agent spec, comparative dossier, reading sequence, provisional Ajaḍapramātṛsiddhi translation.</div><div class="panel"><b>Yes. The point is **not** for you to build a translation engine before discovering whether the project contains anything worth translating.</b> <span class="sub">truthadvice · 565 lines</span><div class="en">I can do the comparative research here. Your useful work begins only where the existing English scholarship and translations stop.
+covering (that obscure…</div><div class="sub"><a href="/data/pushing/tantraloka/Q9-anupaya-deepest-extracted.txt">full probe text →</a></div></div><h3>Recognition research dossiers</h3><div class='sub'>The enquiry program behind the probes: transitions with verdicts, agent spec, comparative dossier, reading sequence, provisional Ajaḍapramātṛsiddhi translation.</div><div class="panel"><b>Executive Summary</b> <span class="sub">bigvisionpatala.md · 339 lines</span><div class="en">Building Pāṭala’s philosophy engine is ambitious but tractable by **leveraging existing argumentation infrastructure** and plugging in the missing pieces.  In practice, we will **own the scholarly IR and provenance layer** (propositions, commitments, frames, alignments, epistemic regimes, cruxes) and **delegate** established tasks to existing tools: structured argumentation via **ASPIC+ (py-aspic)**, abstract evaluation via **Dung frameworks (ALIAS)**, interchange via **AIF (xaif)**, and argument-mining pipelines via **oAMF** or LLM-based extractors.  Key research gaps remain in *semantic alignment*, *speaker commitment extraction*, *epistemic-regime reasoning*, and *minimal crux identification*. We propose concrete data schemas, algorithms and benchmark tasks to address these. The implementation will proceed in phases: first **encode a handful of gold-standard IPVV disputes** end-to-end in our IR to validate the schema; then build adapters for py-aspic and AIF, audit inferences, and only afterward integrate LLM-based extraction.  The roadmap spans ~12 months with milestones at 2–3 m…</div><div class="sub"><a href="/data/pushing/research/bigvisionpatala.md.md">full probe text →</a></div></div><div class="panel"><b>Existing frameworks for argumentation and IR</b> <span class="sub">deep-research-report(10).md · 75 lines</span><div class="en">Recent research has produced mature tools covering most of the Pāṭala pipeline.  For structured reasoning, **py-aspic** is a Python library implementing the ASPIC+ framework (strict/defeasible rules, preferences, contraries).  For interchange, **xAIF** provides JSON-based import/export of argument components and relations.  For argument mining, the **Open Argument Mining Framework (oAMF)** offers modular, xAIF-compatible pipelines and GUI interfaces.  For abstract semantics, **ALIAS** implements Dung’s AF with Python APIs for computing extensions.  These projects align directly with the 12 IR objects.  For example, an `InferenceApplication` in Pāṭala can be converted to a py-aspic rule (e.g. using `Rule.from_string`), or to an xAIF JSON rule node.  The epistemic regime and evaluation logic can be handled by invoking ASPIC+ and ALIAS: Pāṭala’s `Argument` graphs can be fed into py-aspic (for structured reasoning) and ALIAS (for abstract acceptability) rather than reimplementing them.
+Recent papers also describe exactly this split.  Freedman *et al.* (AAAI’25) propose **Argumentative LL…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(10).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(11).md · 40 lines</span><div class="en">Pāṭala’s architecture aligns with cutting-edge argument-mining research: tools like py-aspic, oAMF and ArgLLM match its ASPIC+, AIF/xAIF, and contestable reasoning components. Recent surveys highlight that LLMs now handle claim/premise detection, relations and stances, suggesting Pāṭala can leverage prompt-based pipelines (e.g. LangGraph) alongside formal engines.  
+**Research Gaps:** Semantic‐alignment is nontrivial – word‐sense disambiguation remains an open challenge across languages. “Commitment” annotation (who said what) has no existing NLP solution; it will require custom discourse parsing or manual curation. Multi‐regime semantics (Śaiva vs. Buddhist logics) have been formalized in Epistemic Argumentation Frameworks, but no off‐the‐shelf tool implements them – custom labelings or multi-agent runs will be needed. “Crux extraction” (minimal pivotal premises) is essentially a minimal-hitting-set or abductive inference problem; it is novel and potentially NP-hard. No existing library solves it, so prototype brute-force or graph‐explanation methods must be explored (e.g. related G…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(11).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(12).md · 247 lines</span><div class="en">This report outlines a “market-entry” and partnership strategy for Pāṭala’s philosophy-IR project.  We identify key **academic partners** at Banaras Hindu University (BHU) and abroad, **funding/fellowship** sources, **institutional partnership models**, and **outreach/community** strategies.  We emphasize concrete, low-cost pilots (e.g. a 5–argument annotated corpus with scholar input) and careful use of existing infrastructure (GPL/LGPL tools, open texts) to build credibility.  Key next steps include finalizing the 5 gold-case arguments, running an ASPIC+ evaluation test, and piloting a scholar-driven annotation sprint.  
+- **Academic partners:**  At BHU, the **Faculty of Arts** houses relevant departments (Sanskrit; Philosophy &amp; Religion).  For example, Prof. Sadashiv K. Dwivedi is a senior professor in Sanskrit literature at BHU, and Prof. Sachchidanand Mishra is a BHU professor of philosophy and religion specializing in Indian philosophy.  Globally, we target Indology and philosophy scholars (e.g. A.G. Sanderson [Oxford, Kashmir Shaivism], Sheldon Pollock [Columbia, Sanskrit lit.…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(12).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(13).md · 354 lines</span><div class="en">Pāṭala’s vision – a transparent, scholar-in-the-loop argument-under-interpretation engine for Indian philosophical texts – is ambitious but increasingly feasible given recent advances. On the **technical side**, we can leverage existing argumentation infrastructure: ARG-Tech’s libraries (py-aspic for structured ASPIC+ semantics, `xaif` for the Argument Interchange Format, oAMF for pipeline orchestration, and ALIAS for abstract Dung-style reasoning).  Public datasets (ARG-Tech’s AIF corpora) and new LLM-driven pipelines (e.g. Pirozelli et al. 2026’s multi-stage argument mining pipeline) demonstrate that LLMs can extract structured arguments in practice.  A Python integration plan would use `pip install` for libraries (e.g. `pip install xaif`, `pip install oamf`) and small adapters (e.g. converting our IR to xAIF JSON for ingestion by py-aspic).  We can prototype with one gold argument to validate ASPIC+ semantics on IPVV. 
+The **algorithmic risks** are real but tractable.  Crux extraction – identifying minimal premises whose removal flips an argument’s status – is essentially a minima…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(13).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(14).md · 265 lines</span><div class="en">To build the **fastest possible human-facing website** (with strong SEO) or a **low-latency API** (for agents and retrieval), modern best practices converge on static/edge rendering, lean runtimes, efficient protocols, and intelligent data handling. Static Site Generators (SSGs) and *islands*-style frameworks (Astro, Fresh/Deno, Qwik, etc.) delivered via a global CDN minimize payload and TTFB, yielding ~20–50ms response times on cache hits. For dynamic sites, **Edge SSR** (e.g. Next.js/Vercel Edge or SvelteKit on Cloudflare) brings servers close to users. 
+For **APIs**, compiled or high-performance runtimes (Rust, Go, Bun) with HTTP/3/gRPC yield the lowest latency. Benchmarks show Bun (JSC) ~2–3× faster in raw HTTP throughput than Node/Deno, while Rust/Go (native binaries) typically handle far higher RPS under load. Binary protocols (gRPC+Protobuf) can be ~7–10× faster than JSON/REST and reduce payload size significantly. Across the stack, leveraging **HTTP/3 (QUIC)** and global edge networks cuts network latency (Akamai measured ~6–12% better TTFB/throughput vs HTTP/2). 
+**Caching/C…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(14).md.md">full probe text →</a></div></div><div class="panel"><b>The 7-Fold Comparative Model in Kashmir Śaivism</b> <span class="sub">deep-research-report(5).md · 101 lines</span><div class="en">Each school of non-dual Kashmir Śaivism embodies a distinct stage of this seven-fold “anatomy.” Below we run through each school in turn, answering the seven questions (Being, Power, Manifestation, Limitation, Cognition, Value, Liberation) from that school’s perspective. The foregrounded stage is noted, and the others appear in the background.
+## Pratyabhijñā (Recognition)  
+*Foregrounds Stage 1 (Being) and Stage 5 (Cognition).* Pratyabhijñā holds that the fundamental reality is **one universal consciousness** (Śiva) that is self-aware.  Śiva is the innermost Self of all, *“embodi[ed]…as all things, full of unbroken awareness”*.  Every stage of experience is the Self knowing itself.  Thus:  
+- **Being (Stage 1):** Pure consciousness itself is fundamental.  As Kshemarāja says, *“Awareness, free and independent, is the cause of the performance of everything.”*  The one Divine is the ground of all existence.  
+- **Power (Stage 2):** Śiva’s **will** (svātantrya) is creative power.  The world is animated by Śiva’s own Śakti; *“She unfolds the universe through Her own will and on Her own c…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(5).md.md">full probe text →</a></div></div><div class="panel"><b>Existing frameworks for argumentation and IR</b> <span class="sub">deep-research-report(9).md · 75 lines</span><div class="en">Recent research has produced mature tools covering most of the Pāṭala pipeline.  For structured reasoning, **py-aspic** is a Python library implementing the ASPIC+ framework (strict/defeasible rules, preferences, contraries).  For interchange, **xAIF** provides JSON-based import/export of argument components and relations.  For argument mining, the **Open Argument Mining Framework (oAMF)** offers modular, xAIF-compatible pipelines and GUI interfaces.  For abstract semantics, **ALIAS** implements Dung’s AF with Python APIs for computing extensions.  These projects align directly with the 12 IR objects.  For example, an `InferenceApplication` in Pāṭala can be converted to a py-aspic rule (e.g. using `Rule.from_string`), or to an xAIF JSON rule node.  The epistemic regime and evaluation logic can be handled by invoking ASPIC+ and ALIAS: Pāṭala’s `Argument` graphs can be fed into py-aspic (for structured reasoning) and ALIAS (for abstract acceptability) rather than reimplementing them.
+Recent papers also describe exactly this split.  Freedman *et al.* (AAAI’25) propose **Argumentative LL…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(9).md.md">full probe text →</a></div></div><div class="panel"><b>Recognition Enquiry across Pratyabhijñā, Its Rivals, and Contemporary Consciousness Research</b> <span class="sub">deep-research-report.md · 254 lines</span><div class="en">## Executive summary
+[T][R] The strongest textually grounded core of the Recognition Enquiry is **A**, not **C**: Utpaladeva’s most defensible arguments establish that consciousness is intrinsically self-present or reflexive (*prakāśa–vimarśa*), that determinate cognition requires exclusion and synthesis, and that episodic memory presupposes more than a bare causal trace; they do **not** yield an uncontested proof that all finite subjects are numerically one universal subject. citeturn10view0turn10view1turn12view0turn12view2turn23search3turn23search4
+[T][R] The decisive Utpaladevan materials for the present framework are: *ĪPK* 1.4.4–8 on memory and ownership, 1.5.11–14 on *vimarśa* and *svātantrya*, 1.6.3–8 on exclusion and finite ego-construction, 1.7.3–6 on synthesis and single-subject grounding, 2.4.14–19 on causal relation and the need for connective synthesis, plus *Ajaḍapramātṛsiddhi* 9–17 and 22–26 on why a non-reflexive light would be “crystal-like” and thus effectively inert. citeturn11view2turn10view0turn12view2turn12view0turn12view3turn9view0
+[R][C] Bhartṛ…</div><div class="sub"><a href="/data/pushing/research/deep-research-report.md.md">full probe text →</a></div></div><div class="panel"><b>Verdict</b> <span class="sub">finalword · 1384 lines</span><div class="en">[
+\boxed{
+\textbf{The synthesis contains a powerful insight, but it does not solve}
+}
+]
+[
+\boxed{
+\textbf{or dissolve the perspectival-partition problem.}
+}
+]
+It successfully identifies the **self-exemption error**:
+[
+O\text{ explains everything as conditioned}
+\quad\text{while treating }O\text{ as unconditioned}.
+]
+It also correctly distinguishes:
+[
+\text{description of a system}
+\neq
+\text{being that system},
+]
+and it offers a potentially valuable formal model of recognition as a change in structural self-positioning.
+But several central steps are invalid. Most importantly:
+[
+\boxed{
+\text{difference does not prove a common ontological substrate;}
+}</div><div class="sub"><a href="/data/pushing/research/finalword.md">full probe text →</a></div></div><div class="panel"><b>The material you named is useful, but in sharply different ways.</b> <span class="sub">finalwordexpansion1 · 1511 lines</span><div class="en">QRI and Tymoczko offer **formal machinery**. Campbell, Seth, and Selig offer **speculative models and phenomenological clues**. Channeling itself offers a research object: how a mind generates coherent speech experienced as originating from another agent.
+The correct method is:
+[
+\boxed{
+\text{extract the smallest testable claim from each system}
+}
+]
+rather than asking whether the whole cosmology is true.
+# 1. The new common hypothesis
+Campbell, Seth, Selig, QRI, and the geometry-of-music approach converge—despite their differences—on a structure like this:
+[
+\boxed{
+\text{a local world is selected or rendered from a larger}
+}
+]
+[
+\boxed{
+\text{space of possibilities through participant-specific constraints}.
+}
+]
+Formally:
+[
+D_i(t)
+======
+\mathcal R
+\left(
+\Omega,</div><div class="sub"><a href="/data/pushing/research/finalwordexpansion1.md">full probe text →</a></div></div><div class="panel"><b>[![Michael Levin | Department of Biology](https://images.openai.com/static-rsc-4/3fH1V7dYo742Ps1zuFbq0OoXJPeAXYwBqCwuW5UIpPkXRqMCs5GVs-kT83TqmA2c4K_OcT9qzJty9PtFcsADCsZ-Hlq8kQh1JFUBuD_03gGyxzhDJUpVKHmhX3QkH5Ac4lmRpcYJibqW98itk1IHOS7bXxUQUH-IdfTl-IQTxDM?purpose=inline)](https://as.tufts.edu/biology/people/faculty/michael-levin?utm_source=chatgpt.com)</b> <span class="sub">finalwordexpansion2 · 1158 lines</span><div class="en">Yes. The next step should be to derive **five tightly bounded research tracks** from the logical foundation, then use Levin, Wolfram, Deutsch, quantum biology, and anomalous cognition only where they directly pressure one of those tracks.
+The critical discipline is:
+[
+\boxed{
+\text{mathematical possibility}
+\neq
+\text{physical realization}
+\neq
+\text{biological use}
+\neq
+\text{phenomenal manifestation}.
+}
+]
+Much of the speculative literature becomes confused by silently moving across those four levels.
+I am assuming “Mae Hon Soe” refers to **Mae-Wan Ho**.
+# 1. What Levin’s “Platonic space” actually claims
+Levin’s recent proposal is much stronger than his established bioelectricity work. The empirical core of his laboratory programme is that cellular collectives can store and pursue anatomical target states, solve novel morphogenetic problems, and be reprogrammed through bioelectric signalling. His Platonic-space proposal then conjectures that mathematical, morphological, and cognitive patterns inhabit a structured nonphysical possibility space and that physical bodies act as “pointer…</div><div class="sub"><a href="/data/pushing/research/finalwordexpansion2.md">full probe text →</a></div></div><div class="panel"><b>Yes. After reading the current Hermes docs, I think there is a much deeper integration than “run Pāṭala agents through Hermes.”</b> <span class="sub">hermespatala2.md · 1077 lines</span><div class="en">Hermes can become the **agent execution substrate around Pāṭala&#x27;s epistemic graph**, while Pāṭala remains the authority about scholarly state.
+The useful mental separation is:
+```text
+PĀṬALA
+= epistemic state machine
+  objects / provenance / review / status /
+  dependencies / claims / transitions
+HERMES
+= cognitive execution fabric
+  sessions / skills / delegation / tools /
+  scheduling / hooks / messaging / trajectories
+```
+That division is important because Hermes already provides several pieces we were about to reinvent: isolated subagents, persistent searchable session history, self-maintaining procedural skills, scheduled fresh sessions, MCP tool filtering, event hooks, plugin lifecycle hooks, batch trajectories, and programmatic tool orchestration. ([Hermes Agent][1])
+Here are the **advanced recipes** I think are genuinely interesting for Pāṭala.
+---
+## 1. Make Pāṭala agents persistent Hermes identities, but keep their state OUT of Hermes memory
+This is subtle.
+Hermes has bounded `MEMORY.md`/`USER.md`, FTS5-backed `session_search`, optional external memory providers, and backgr…</div><div class="sub"><a href="/data/pushing/research/hermespatala2.md.md">full probe text →</a></div></div><div class="panel"><b>The dev plan should now be **integration-first, product-shaped, and aggressively stop infrastructure creep**. `25ee670` already freezes the right S0.1→S0.4 sequence and the six-item hard stop.</b> <span class="sub">toolintegration.md · 916 lines</span><div class="en">I would make the execution plan below the authoritative one.
+# S0 — Source Evidence Substrate
+## S0.0 — Freeze the contract
+Before touching more code, define one minimal end-to-end contract:
+```text
+RawSource
+→ BibliographicRecord
+→ Witness
+→ SourceSpan
+→ SourceAssertion
+→ CorroborationEvent
+→ downstream consumer
+```
+Pāṭala owns only:
+```text
+pt:source_id
+pt:witness_id
+pt:span_id
+SourceAssertion
+CorroborationEvent
+resolver()
+```
+External systems own the rest where possible.
+Acceptance criterion:
+&gt; replacing Zotero/GROBID/OpenAlex later must not invalidate Pāṭala IDs or epistemic objects.
+---
+# S0.1 — External-tool pilot</div><div class="sub"><a href="/data/pushing/research/toolintegration.md.md">full probe text →</a></div></div><div class="panel"><b>Yes. The point is **not** for you to build a translation engine before discovering whether the project contains anything worth translating.</b> <span class="sub">truthadvice · 565 lines</span><div class="en">I can do the comparative research here. Your useful work begins only where the existing English scholarship and translations stop.
 ## The actual result so far
 The debate has now compressed to four distinct transitions:
 [
