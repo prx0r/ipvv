@@ -1,0 +1,56 @@
+{
+ "sections": [
+  {
+   "id": "masters",
+   "title": "Masters",
+   "rule": "premodern author-masters, chronological by birth year (nulls last); undocumented dates flagged, never invented",
+   "members": [
+    "bhattanarayana",
+    "vasugupta",
+    "kallata",
+    "somananda",
+    "utpaladeva",
+    "bhutiraja",
+    "induraja",
+    "sambhunatha",
+    "lakshmanagupta",
+    "abhinavagupta",
+    "ksemaraja",
+    "jayaratha",
+    "lalla",
+    "sivopadhyaya",
+    "yogaraja"
+   ]
+  },
+  {
+   "id": "modern",
+   "title": "Modern",
+   "rule": "living scholars alphabetical (birth years are private, never asserted) + lineage teachers",
+   "members": [
+    "sanderson",
+    "padoux",
+    "baumer",
+    "marjanovic",
+    "wallis",
+    "lawrence",
+    "goodall",
+    "brunner",
+    "ratie",
+    "dupuche",
+    "hanneder",
+    "pandey",
+    "silburn",
+    "biernacki",
+    "dyczkowski",
+    "solms",
+    "rastogi",
+    "torella",
+    "gnoli",
+    "vasudeva",
+    "timalsina",
+    "lakshmanjoo",
+    "kawajiri"
+   ]
+  }
+ ]
+}

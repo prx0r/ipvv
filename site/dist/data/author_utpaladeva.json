@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 900-950 CE (actif 930)",
-  "note": "dates per Wikipedia/BnF/Potter; endonym UdAKarasUnu (Utpala, son of Udayakara), IPK IV.18"
+  "note": "dates per Wikipedia/BnF/Potter; endonym UdAKarasUnu (Utpala, son of Udayakara), IPK IV.18 Birth ~900 (approx).",
+  "birth": 900,
+  "approx": true
  },
  "id": "utpaladeva",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

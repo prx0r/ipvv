@@ -116,7 +116,8 @@
   "dates": {
    "flourished": "active since 2006",
    "note": "publication record 2006-; HAL CV 64 records; chair, College de France"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Sapienza University of Rome",
@@ -205,7 +206,8 @@
   "dates": {
    "flourished": "active since 1988",
    "note": "IRIS catalogue from 1988 fragment; Sapienza"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Oxford (emeritus)",
@@ -258,7 +260,8 @@
   "dates": {
    "flourished": "active since 1970s; emeritus",
    "note": "Oxford Spalding chair, now emeritus; bibliography to 2019 verified"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Independent (Dyczkowski personal/associated editions)",
@@ -291,7 +294,8 @@
   "dates": {
    "flourished": "active; 45-yr TA translation to 2023",
    "note": "Mukhabodha e-text supervision; commercial translations"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Independent teacher; Tantra Illuminated",
@@ -323,7 +327,8 @@
   "dates": {
    "flourished": "active (teacher)",
    "note": "independent teacher; app + lectures (study transcripts in-repo)"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Universal Shaiva Fellowship (oral lineage, d. 1990s reception)",
@@ -348,7 +353,8 @@
   "dates": {
    "flourished": "1907-1991",
    "note": "oral lineage; Academy editions carry the recitation tradition"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "silburn",
@@ -413,7 +419,8 @@
   "dates": {
    "flourished": "1908-1993",
    "note": "CNRS; ICI fascicles 1957-1995; Hymnes 1970/1986"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "CNRS (historical)",
@@ -488,7 +495,8 @@
   "dates": {
    "flourished": "1920-2017",
    "note": "CNRS/EFEO; Recherches 1964 to Blackwell 2022"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "brunner",
@@ -539,7 +547,8 @@
   "dates": {
    "flourished": "d. 2005",
    "note": "EFEO/IFP; Somasambhupaddhati 1963-1998"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Sanskritist (MVV; Bhutiraja editions)",
@@ -562,7 +571,8 @@
   "dates": {
    "flourished": "active",
    "note": "Sanskritist; MVV + Bhutiraja editions"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "Benares (Kaviraj lineage); Rudra Press",
@@ -594,7 +604,8 @@
   "dates": {
    "flourished": "active",
    "note": "Benares/Kaviraj lineage; Rudra Press TS"
-  }
+  },
+  "section": "modern"
  },
  {
   "affiliation": "GRETIL/Mukhabodha (infrastructure)",
@@ -626,7 +637,8 @@
   "dates": {
    "flourished": "active",
    "note": "GRETIL inputs; MV critical edition 2004 (top acquisition target)"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "timalsina",
@@ -672,7 +684,8 @@
   "dates": {
    "flourished": "active",
    "note": "Stony Brook chair; Vimarsha Foundation 2019; JIP 2020 aham paper"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "biernacki",
@@ -732,7 +745,8 @@
   "dates": {
    "flourished": "active; PhD Penn 1999",
    "note": "CU Boulder professor; AAR prize 2024"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "baumer",
@@ -762,7 +776,8 @@
   "dates": {
    "flourished": "active",
    "note": "Varanasi; VBT edition work; hermeneutics of the absolute"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "pandey",
@@ -792,7 +807,8 @@
   "dates": {
    "flourished": "historical (Varanasi)",
    "note": "K.C. Pandey: historical/philosophical study 1963; Bhaskari trans 1954"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "gnoli",
@@ -822,7 +838,8 @@
   "dates": {
    "flourished": "1920s-2010s (Rome)",
    "note": "Raniero Gnoli: first complete TA (Italian 1972); Essenza dei Tantra"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "rastogi",
@@ -854,7 +871,8 @@
   "dates": {
    "flourished": "active (Lucknow)",
    "note": "TA structural study; aesthetics chapter in Torella FS vol"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "kawajiri",
@@ -886,7 +904,8 @@
   "dates": {
    "flourished": "active (Kyoto)",
    "note": "marginalia philology; Lucknow ms work in Ratie 2020"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "lawrence",
@@ -909,7 +928,8 @@
   "dates": {
    "flourished": "active (North Dakota)",
    "note": "JIP 2005 mirror-analogy paper"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "dupuche",
@@ -932,7 +952,8 @@
   "dates": {
    "flourished": "active (Melbourne)",
    "note": "TA29 Kaula ritual trans. with Jayaratha"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "goodall",
@@ -962,7 +983,8 @@
   "dates": {
    "flourished": "active (EFEO Pondicherry)",
    "note": "Agama editions; Melanges Brunner co-ed"
-  }
+  },
+  "section": "modern"
  },
  {
   "id": "solms",
@@ -994,6 +1016,7 @@
   "dates": {
    "flourished": "active (Cape Town)",
    "note": "neuroscientist; Hidden Spring 2021; modern interlocutor only"
-  }
+  },
+  "section": "modern"
  }
 ]

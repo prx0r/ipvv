@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "14th c. (contemporary of Sufi missionary activity in Kashmir)",
-  "note": "Kashmiri-language mystic poetess; dates traditional"
+  "note": "Kashmiri-language mystic poetess; dates traditional Birth ~1320 (approx).",
+  "birth": 1320,
+  "approx": true
  },
  "id": "lalla",
  "lineage": [
@@ -24,5 +26,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_miniature_painting_of_Brahma%2C_Vishnu%2C_Mahesh%2C_and_other_Indic_deities_figuratively_within_the_Sharada_script_Omkar_glyph.jpg",
   "licence": "Public domain",
   "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
- }
+ },
+ "section": "masters"
 }

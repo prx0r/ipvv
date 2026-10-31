@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 12th-13th c.",
-  "note": "reports Abhinavagupta's oneness with Mahesvara (comm. on Paramarthasara)"
+  "note": "reports Abhinavagupta's oneness with Mahesvara (comm. on Paramarthasara)",
+  "birth": null,
+  "approx": false
  },
  "id": "yogaraja",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

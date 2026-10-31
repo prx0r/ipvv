@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "10th c.",
-  "note": "son and pupil of Utpaladeva (Deshpande/Pandey); initiated Abhinavagupta in Pratyabhijna and Krama (Jayaratha, TĀ comm.)"
+  "note": "son and pupil of Utpaladeva (Deshpande/Pandey); initiated Abhinavagupta in Pratyabhijna and Krama (Jayaratha, TĀ comm.) Birth ~950 (approx).",
+  "birth": 950,
+  "approx": true
  },
  "id": "lakshmanagupta",
  "lineage": [
@@ -32,5 +34,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

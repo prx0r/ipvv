@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "10th c. (Jalandhara pitha)",
-  "note": "Abhinava's Kaula teacher; enlightenment credited to him (Lakshmanjoo: seven states of turya/ananda teaching)"
+  "note": "Abhinava's Kaula teacher; enlightenment credited to him (Lakshmanjoo: seven states of turya/ananda teaching) Birth ~940 (approx).",
+  "birth": 940,
+  "approx": true
  },
  "id": "sambhunatha",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

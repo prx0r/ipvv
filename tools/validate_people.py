@@ -53,7 +53,7 @@ def main() -> int:
                 if not any(c and c.exists() for c in cand if c):
                     warns.append(f"{tag}: holding not found on volume: {h}")
         if p.get("kind") == "master":
-            w = ROOT / "site/data/works.json" if aid == "abhinavagupta" else ROOT / "site/data" / f"works_{aid}.json"
+            w = ROOT / "site/data" / f"works_{aid}.json"
             if not w.exists():
                 errs.append(f"{tag}: master without works file {w.name}")
         if aid in seen:

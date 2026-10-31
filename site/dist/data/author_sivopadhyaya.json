@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "18th c.",
-  "note": "late Kashmir commentator"
+  "note": "late Kashmir commentator",
+  "birth": null,
+  "approx": false
  },
  "id": "sivopadhyaya",
  "lineage": [
@@ -24,5 +26,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Kashmir_Sharada_MS.jpg",
   "licence": "Public domain",
   "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
- }
+ },
+ "section": "masters"
 }

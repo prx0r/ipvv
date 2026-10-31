@@ -27,25 +27,153 @@ h1{{font-weight:400}}.sub{{color:#666;font-size:.9rem}}
 .nav{{margin:1rem 0;font-size:.9rem}}.nav a{{margin-right:1rem}}
 """
 
+FONTS = """<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>"""
+
+CSS = """*{box-sizing:border-box}
+:root{--paper:#faf8f1;--card:#ffffff;--ink:#1c1a17;--mut:#6f6a5e;--line:#e6ddc9;--gold:#a86f14;--gold-soft:#f4ead3;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:'Noto Serif Devanagari',Georgia,'Times New Roman',serif;--disp:'Yatra One','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--gold-ink);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{font-family:var(--disp);font-size:1.25rem;color:var(--ink);white-space:nowrap}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink)}
+.topnav a:hover{background:var(--gold-soft);text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35}
+.side a:hover{background:var(--gold-soft);text-decoration:none}
+.side a.on{background:var(--gold-soft);font-weight:600;color:var(--gold-ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;margin:.2rem 0 .4rem}
+.sub{color:var(--mut);font-size:.92rem;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-size:1.32rem;line-height:2}
+.iast{color:var(--gold-ink)}
+.en{line-height:1.7}
+.skt{white-space:pre-wrap;font-size:1.06rem}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:.84rem;padding:.42rem .85rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards — white, hairline, no beige boxes */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:block;padding:.55rem .2rem;border-bottom:1px solid var(--line);color:var(--ink)}
+.idx a:hover{background:#fff;text-decoration:none}
+.idx a b{color:var(--ink)}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{position:absolute;left:0;top:.55em;width:.5em;height:.5em;border-radius:50%;background:var(--gold)}
+.tl{border-left:2px solid var(--gold);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:14px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4}
+.toc a.on{color:var(--gold-ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+}
+"""
+
+SHELLJS = """<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>"""
+
 TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title}</title><style>""" + CSS + """</style></head><body>
-<header><h1>{h1}</h1><div class="sub">{sub}</div></header>
-<div class="nav"><a href="/index.html">works</a><a href="/{work}/index.html">{work}</a>
-<a href="/{work}/themes.html">themes</a><a href="/{work}/pushing.html">pushing</a></div>
-{body}</body></html>"""
+<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + """</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
+<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
+<main><div class="crumbs" id="crumbs"></div><h1>{h1}</h1><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+""" + SHELLJS + """</body></html>"""
 
 def tabs(panels):
     btns, divs = [], []
     for i, (name, body, ok) in enumerate(panels):
         cls = "" if ok else "missing"
         on = "on" if i == 0 and ok else ""
-        btns.append(f'<button class="{on}" data-p="{i}">{name}{"" if ok else " · soon"}</button>')
-        divs.append(f'<div class="panel {cls}" data-p="{i}" style="display:{"block" if i==0 else "none"}">{body or "<i>not yet formally done — never invented</i>"}</div>')
-    js = """<script>document.querySelectorAll('.depth button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.depth button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.panel').forEach(p=>p.style.display=p.dataset.p===b.dataset.p?'block':'none')})</script>"""
-    return '<div class="depth">' + "".join(btns) + "</div>" + "".join(divs) + js
+        btns.append(f'<button class="{on}{"" if ok else " missing"}" data-p="{i}">{name}{"" if ok else " · soon"}</button>')
+        divs.append(f'<div class="panel tpanel {cls}" data-p="{i}" style="display:{"block" if i==0 else "none"}">{body or "<i>not yet formally done — never invented</i>"}</div>')
+    js = """<script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script>"""
+    return '<div class="depth" role="tablist">' + "".join(btns) + "</div>" + "".join(divs) + js
 
 def esc(s): return html.escape(str(s or ""))
+
+def TF(tmpl, **kw):
+    """Format a template on EXACT {placeholders} only — CSS/JS/content braces pass through untouched."""
+    for k, v in kw.items():
+        tmpl = tmpl.replace("{" + k + "}", str(v))
+    for k in ("title", "h1", "sub", "body", "sidenav"):
+        if "{" + k + "}" in tmpl:
+            raise KeyError("unfilled placeholder in template: {" + k + "}")
+    return tmpl
+
+def srclink(path, note=""):
+    """Edit-this-page affordance: exact source file on GitHub, or issues link for external/R2 sources."""
+    if path.startswith("http"):
+        link = f'<a href="{path}">propose a correction →</a>'
+    else:
+        link = f'<a href="https://github.com/prx0r/ipvv/edit/master/{path}">edit source →</a>'
+    extra = f" {esc(note)}" if note else ""
+    return f'<div class="sub">Sources & corrections: {link}.{extra}</div>'
+
+def pn(prev_url, prev_label, next_url, next_label):
+    l = f'<a href="{prev_url}">← {esc(prev_label)}</a>' if prev_url else "<span></span>"
+    r = f'<a href="{next_url}">{esc(next_label)} →</a>' if next_url else "<span></span>"
+    return f'<div class="pn">{l}{r}</div>'
 
 def build_ipvv():
     src = sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json"))
@@ -65,8 +193,9 @@ def build_ipvv():
         "chunkV3-I":"pilot_V3I","chunkV3-J":"pilot_V3J","chunkV3-K":"pilot_V3K","chunkV3-L":"pilot_V3L",
         "chunkV3-M":"pilot_V3M","chunkV3-N":"pilot_V3N","chunkV3-O":"pilot_V3O","chunkV3-P":"pilot_V3P"}
     links = []
-    for d in items:
-        pid = d["id"].split(":")[-1].replace(".md", "")
+    pids = [d["id"].split(":")[-1].replace(".md", "") for d in items]
+    for idx, d in enumerate(items):
+        pid = pids[idx]
         chunk = (d.get("chunk") or "").replace(".md", "")
         src_txt = (d.get("source") or {}).get("text", "") if isinstance(d.get("source"), dict) else ""
         l2 = d.get("l2_text") or ""
@@ -100,11 +229,13 @@ def build_ipvv():
             ("GUIDE", None, False),
             ("CRITICAL", f'<div class="en">immutable {esc(d.get("immutable_id",""))} · T1 chunk <i>sanskritree/{esc(chunk)}.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div>', True),
         ])
-        (out / f"{pid}.html").write_text(TMPL.format(title=pid, h1=pid, sub="IPVV · " + esc(d.get("vol", "")), work="ipvv", body=body))
+        (out / f"{pid}.html").write_text(TF(TMPL,title=pid, h1=pid, sub="IPVV · " + esc(d.get("vol", "")), sidenav=work_sidenav("ipvv"), body=body
+            + pn(f"/ipvv/{pids[idx-1]}.html" if idx > 0 else None, pids[idx-1] if idx > 0 else "",
+                 f"/ipvv/{pids[idx+1]}.html" if idx < len(pids)-1 else None, pids[idx+1] if idx < len(pids)-1 else "")))
         links.append(f'<a href="/ipvv/{pid}.html">{esc(pid)}</a>')
-    (out / "index.html").write_text(TMPL.format(title="IPVV", h1="Īśvarapratyabhijñāvivṛtivimarśinī",
-        sub=f"{len(items)} passages · Sanskrit → READ → STUDY · GUIDE soon", work="ipvv",
-        body='<div class="idx">' + "".join(links) + "</div>"))
+    (out / "index.html").write_text(TF(TMPL,title="IPVV", h1="Īśvarapratyabhijñāvivṛtivimarśinī",
+        sub=f"{len(items)} passages · Sanskrit → READ → STUDY · GUIDE soon", sidenav=work_sidenav("ipvv"),
+        body='<div class="idx">' + "".join(links) + "</div>" + srclink("https://github.com/prx0r/ipvv/issues/new", "passages generated from patala corpus (other repo) + R2 pilot cache — corrections welcome here.")))
     # themes
     try:
         cl = json.loads((PATALA / "data/published/ipvv/clusters.json").read_text())
@@ -112,10 +243,10 @@ def build_ipvv():
         tb = "".join(f'<div class="panel"><b>{esc(c.get("cluster_id",""))}</b> · {c.get("size",0)} members · coherence {c.get("coherence","")} <br/>{esc(", ".join(c.get("member_c1_ids",[])[:12]))}</div>' for c in cls)
     except Exception as e:
         tb = f"<i>themes pending: {esc(str(e))}</i>"
-    (out / "themes.html").write_text(TMPL.format(title="IPVV themes", h1="Themes", sub="overlapping, never partition", work="ipvv", body=tb))
+    (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="overlapping, never partition", sidenav=work_sidenav("ipvv"), body=tb))
     # pushing stub (prose scaffolds on volume; parsed records next)
     pb = '<div class="panel">Pushing = hound the text with why, text answers first. Full Q→GEM index parses next via <i>pushing.py</i>. Sources on volume: <i>research-library/recognition/pushing-ipvv/</i>, <i>pushing-tantraloka/</i>.</div>'
-    (out / "pushing.html").write_text(TMPL.format(title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth", work="ipvv", body=pb))
+    (out / "pushing.html").write_text(TF(TMPL,title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth", sidenav=work_sidenav("ipvv"), body=pb))
     return len(items)
 
 def build_vbt():
@@ -125,7 +256,8 @@ def build_vbt():
     seats = {x.get("v"): x for x in bd.get("dharanas", [])}
     out = DIST / "vbt"; out.mkdir(parents=True, exist_ok=True)
     links = []
-    for v in vs[:145]:
+    nums = [v.get("number") for v in vs[:145]]
+    for vi, v in enumerate(vs[:145]):
         n = v.get("number")
         skt, en = v.get("sanskrit", ""), v.get("english", "")
         seat = seats.get(n, {})
@@ -136,13 +268,15 @@ def build_vbt():
             ("STUDY", f'<div class="en">attention-seat: {esc(seat.get("locus","—"))} · do: {esc(seat.get("do","—"))}</div>', bool(seat)),
             ("CRITICAL", f'<div class="en">VBT verse {n} · Lakshmanjoo/KSTS</div>', True),
         ])
-        (out / f"v{n}.html").write_text(TMPL.format(title=f"VBT {n}", h1=f"Verse {n}", sub="Vijñānabhairava", work="vbt", body=body))
+        (out / f"v{n}.html").write_text(TF(TMPL,title=f"VBT {n}", h1=f"Verse {n}", sub="Vijñānabhairava", sidenav=work_sidenav("vbt"), body=body
+            + pn(f"/vbt/v{nums[vi-1]}.html" if vi > 0 else None, f"verse {nums[vi-1]}" if vi > 0 else "",
+                 f"/vbt/v{nums[vi+1]}.html" if vi < len(nums)-1 else None, f"verse {nums[vi+1]}" if vi < len(nums)-1 else "")))
         links.append(f'<a href="/vbt/v{n}.html">verse {n}</a>')
-    (out / "index.html").write_text(TMPL.format(title="VBT", h1="Vijñānabhairava Tantra",
-        sub=f"{len(vs)} verses · catalog of entries, not graded course", work="vbt", body='<div class="idx">' + "".join(links) + "</div>"))
-    (out / "themes.html").write_text(TMPL.format(title="VBT themes", h1="Themes", sub="by upaya/tattva (sanskrithelp mapping)", work="vbt",
+    (out / "index.html").write_text(TF(TMPL,title="VBT", h1="Vijñānabhairava Tantra",
+        sub=f"{len(vs)} verses · catalog of entries, not graded course", sidenav=work_sidenav("vbt"), body='<div class="idx">' + "".join(links) + "</div>" + srclink("https://github.com/prx0r/ipvv/issues/new", "verses from Lakshmanjoo mapping (other repo); seats from deitybody — corrections welcome here.")))
+    (out / "themes.html").write_text(TF(TMPL,title="VBT themes", h1="Themes", sub="by upaya/tattva (sanskrithelp mapping)", sidenav=work_sidenav("vbt"),
         body='<div class="panel">Breath · Void/gap · Light · Sound/mantra · Senses · Energy/kundalini · Sexual yoga · Direct recognition. Full mapping: <i>sanskrithelp/data/rag/vijnana-bhairava-mapping.md</i>.</div>'))
-    (out / "pushing.html").write_text(TMPL.format(title="VBT pushing", h1="Pushing", sub="liminal states, goddess, gaps", work="vbt",
+    (out / "pushing.html").write_text(TF(TMPL,title="VBT pushing", h1="Pushing", sub="liminal states, goddess, gaps", sidenav=work_sidenav("vbt"),
         body='<div class="panel">Start: V75 edge-of-sleep (para devi prakasate), V24 heart↔12-end, V50 any 12-end. Q→GEM index next.</div>'))
     return len(vs)
 
@@ -151,7 +285,9 @@ def build_tantrasara():
     units = e0.get("units", {})
     out = DIST / "tantrasara"; out.mkdir(parents=True, exist_ok=True)
     links = []
-    for k, u in units.items():
+    keys = list(units.keys())
+    for ki, k in enumerate(keys):
+        u = units[k]
         body = tabs([
             ("ORIGINAL", f'<div class="en">span {esc(u.get("text_span",""))} · lines {esc(str(u.get("text_line_range","")))}<br/>{esc(u.get("text",""))}</div>', bool(u.get("text"))),
             ("READ", f'<div class="en">{esc(u.get("plain",""))}</div>', bool(u.get("plain"))),
@@ -159,31 +295,60 @@ def build_tantrasara():
             ("STUDY", f'<div class="en">Q: {esc(u.get("question",""))}</div>', True),
             ("CRITICAL", f'<div class="en">alternates: {esc(str(u.get("alternates",""))[:500])}</div>', True),
         ])
-        (out / f"q{k}.html").write_text(TMPL.format(title=f"TS Q{k}", h1=esc(u.get("question", f"Q{k}")), sub="Tantrasara essay-0", work="tantrasara", body=body))
+        (out / f"q{k}.html").write_text(TF(TMPL,title=f"TS Q{k}", h1=esc(u.get("question", f"Q{k}")), sub="Tantrasara essay-0", sidenav=work_sidenav("tantrasara"), body=body
+            + pn(f"/tantrasara/q{keys[ki-1]}.html" if ki > 0 else None, f"Q{keys[ki-1]}" if ki > 0 else "",
+                 f"/tantrasara/q{keys[ki+1]}.html" if ki < len(keys)-1 else None, f"Q{keys[ki+1]}" if ki < len(keys)-1 else "")))
         links.append(f'<a href="/tantrasara/q{k}.html">{esc(u.get("question",""))}</a>')
-    (out / "index.html").write_text(TMPL.format(title="Tantrasara", h1="Tantrasāra",
-        sub=f"{len(units)} questions · verbatim → plain · audio pending", work="tantrasara", body='<div class="idx">' + "".join(links) + "</div>"))
-    (out / "themes.html").write_text(TMPL.format(title="TS themes", h1="Themes", sub="upaya ladder, saktipata, uccara", work="tantrasara",
+    (out / "index.html").write_text(TF(TMPL,title="Tantrasara", h1="Tantrasāra",
+        sub=f"{len(units)} questions · verbatim → plain · audio pending", sidenav=work_sidenav("tantrasara"), body='<div class="idx">' + "".join(links) + "</div>" + srclink("https://github.com/prx0r/ipvv/issues/new", "essay-0 units from prx0r/tantrasara (other repo) — corrections welcome here.")))
+    (out / "themes.html").write_text(TF(TMPL,title="TS themes", h1="Themes", sub="upaya ladder, saktipata, uccara", sidenav=work_sidenav("tantrasara"),
         body='<div class="panel">Next: run ahnika-11 through full pipe, cluster C1s like IPVV.</div>'))
-    (out / "pushing.html").write_text(TMPL.format(title="TS pushing", h1="Pushing", sub="why-questions per ahnika", work="tantrasara",
+    (out / "pushing.html").write_text(TF(TMPL,title="TS pushing", h1="Pushing", sub="why-questions per ahnika", sidenav=work_sidenav("tantrasara"),
         body='<div class="panel">Q→GEM scaffolds next, same pushing.py extractor.</div>'))
     return len(units)
 
+def work_sidenav(work, active=""):
+    """Contextual left sidebar per section. Masters get the full tree."""
+    sec = ""
+    if work in ("ipvv", "vbt", "tantrasara"):
+        sec = ('<div class="hd">This work</div>'
+               f'<a href="/{work}/index.html">{"› " if active=="index" else ""}Index</a>'
+               f'<a href="/{work}/themes.html">{"› " if active=="themes" else ""}Themes</a>'
+               f'<a href="/{work}/pushing.html">{"› " if active=="pushing" else ""}Pushing</a>')
+    elif work == "translations":
+        sec = '<div class="hd">This section</div><a href="/translations/index.html">All translations</a>'
+    elif work == "concepts":
+        sec = ('<div class="hd">This section</div><a href="/concepts/index.html">All concepts</a>'
+               '<a href="/tools/index.html">Tools</a>')
+    elif work in ("scholars", "tools"):
+        sec = ""
+    return ('<div class="hd">Masters (chronological)</div><div class="sub">'
+        + "".join(f'<a href="/{m}/index.html">{esc(n)}</a>' for m, n, _ in _masters_chrono()) + "</div>"
+        + sec +
+        '<div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a>'
+        '<div class="hd">Library</div>'
+        '<a href="/concepts/index.html">Concepts</a>'
+        '<a href="/translations/index.html">Translations</a>'
+        '<a href="/tools/index.html">Tools</a>')
+
 ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title}</title><style>""" + CSS + """.wrap{{display:flex;gap:1.5rem;align-items:flex-start}}
-.side{{min-width:210px;max-width:240px;border-right:1px solid #ddd;padding-right:1rem;font-size:.9rem}}
-.side a{{display:block;padding:.3rem 0;color:#222;text-decoration:none}}
-.side a:hover{{text-decoration:underline}}.side .hd{{color:#888;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin:.8rem 0 .3rem}}
-.side .sub a{{padding-left:.8rem;color:#555}}
-.main{{flex:1;min-width:0}}
-@media(max-width:640px){{.wrap{{flex-direction:column}}.side{{max-width:none;border-right:none;border-bottom:1px solid #ddd;padding-bottom:.6rem}}}}
-.tl{{border-left:2px solid #c9a227;margin:1rem 0 1rem .5rem;padding-left:1rem}}
-.tl .ev{{margin:.5rem 0}}.dot{{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:#c9a227;margin-right:.4em}}
-</style></head><body>
-<header><h1>{h1}</h1><div class="sub">{sub}</div></header>
-<div class="nav"><a href="/index.html">works</a><a href="/abhinavagupta/index.html">Abhinavagupta</a></div>
-<div class="wrap"><div class="side">{sidenav}</div><div class="main">{body}</div></div></body></html>"""
+<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + """</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
+<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
+<main><div class="crumbs" id="crumbs"></div><h1>{h1}</h1><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+""" + SHELLJS + """</body></html>"""
 
 STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskrit held · disputed",
     "SOURCE_PLUS_TRANSLATION": "Sanskrit + English", "SOURCE_PLUS_SCHOLARSHIP": "Sanskrit + scholarship",
@@ -194,23 +359,34 @@ STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskri
 
 def author_paths(aid):
     a = ROOT / "data/authors" / f"{aid}.json"
-    if not a.exists() and aid == "abhinavagupta":
-        a = ROOT / "data/author.json"
     w = ROOT / "data" / f"works_{aid}.json"
-    if not w.exists() and aid == "abhinavagupta":
-        w = ROOT / "data/works.json"
     return a, w
+
+def _masters_chrono():
+    """Masters sorted by birth year (nulls last), then name. Backend order for nav."""
+    out = []
+    for m in MASTERS:
+        try:
+            a = json.loads((ROOT / "data/authors" / f"{m}.json").read_text())
+            b = (a.get("dates") or {}).get("birth")
+            out.append((m, a.get("name", m), b if isinstance(b, int) else 9999))
+        except Exception:
+            out.append((m, m, 9999))
+    out.sort(key=lambda x: (x[2], x[1]))
+    return out
 
 def sidenav(aid, active=""):
     author = json.loads(author_paths(aid)[0].read_text())
     works = json.loads(author_paths(aid)[1].read_text())
     items = "".join(f'<a href="/{aid}/{w["id"]}.html">{"› " if w["id"]==active else ""}{esc(w["title"])}</a>' for w in works)
-    return ('<div class="hd">Masters</div>'
-        + "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(m)}</a>' for m in MASTERS)
+    masters = "".join(f'<a href="/{m}/index.html">{"› " if m==aid else ""}{esc(n)}</a>' for m, n, _ in _masters_chrono())
+    return ('<div class="hd">Masters (chronological)</div>' + masters
         + f'<div class="hd">{esc(author["name"])}</div>'
         f'<a href="/{aid}/index.html">{"› " if active=="bio" else ""}Bio</a>'
         f'<a href="/{aid}/works.html">{"› " if active=="works" else ""}Works map</a>'
-        '<div class="hd">Works (canonical list)</div><div class="sub">' + items + "</div>")
+        '<div class="hd">Works (canonical list)</div><div class="sub">' + items + "</div>"
+        + '<div class="hd">Library</div><a href="/concepts/index.html">Concepts</a>'
+        + '<a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a>')
 
 MASTERS = ["abhinavagupta", "somananda", "vasugupta", "kallata", "utpaladeva",
            "lakshmanagupta", "sambhunatha", "ksemaraja", "bhutiraja", "jayaratha",
@@ -222,10 +398,12 @@ def build_split(aid, wid):
     out = DIST / aid
     if wid == "tantraloka":
         txt = (ROOT / "data/sanskrit/tantraloka.txt").read_text()
+        srcfile, srclabel = "site/data/sanskrit/tantraloka.txt", "GRETIL KSTS text, vendored"
         parts = re.split(r"(?m)^(?=:C\d+ )", txt)
         heads = re.findall(r"(?m)^:C\d+ .{0,60}", txt)
     elif wid == "tantrasara":
         txt = (ROOT / "data/sanskrit/tantrasara.txt").read_text()
+        srcfile, srclabel = "site/data/sanskrit/tantrasara.txt", "GRETIL KSTS 17 text, vendored"
         parts = re.split(r"(?m)^(?=Tantras.+hnikam)", txt)
         heads = re.findall(r"(?m)^Tantras.+hnikam.*$", txt)
     else:
@@ -238,12 +416,12 @@ def build_split(aid, wid):
         n += 1
         prev = f'<a href="/{aid}/{wid}-{i-1}.html">← {i-1}</a>' if i > 1 else ""
         nxt = f'<a href="/{aid}/{wid}-{i+1}.html">{i+1} →</a>' if i < len(heads) else ""
-        nav = f'<div class="nav">{prev} <a href="/{aid}/{wid}.html">all {len(heads)}</a> {nxt}</div>'
+        nav = f'<div class="nav">{prev} <a href="/{aid}/{wid}.html">all {len(heads)}</a> {nxt}</div>' + srclink(srcfile, srclabel + "; English READ next via pipe.")
         body = nav + tabs([("ORIGINAL", f'<div class="dev skt">{esc(p.strip())}</div>', True),
             ("READ", None, False), ("GUIDE", None, False),
             ("STUDY", f'<div class="en">Section {i} of {len(heads)} — English READ next via pipe.</div>', True),
             ("CRITICAL", f'<div class="en">GRETIL/Mukhabodha; section head: {esc(h.strip()[:80])}</div>', True)]) + nav
-        (out / f"{wid}-{i}.html").write_text(ATmpl.format(title=f"{wid} §{i}", h1=f"Section {i}",
+        (out / f"{wid}-{i}.html").write_text(TF(ATmpl,title=f"{wid} §{i}", h1=f"Section {i}",
             sub=esc(h.strip()[:80]), sidenav=sidenav(aid, wid), body=body))
     return n
 
@@ -256,7 +434,8 @@ def author_bio_body(aid, author, lin, spine):
     return (f'<div class="panel">{esc(author["summary"])}</div>' + hero
             + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
             + f'<h3>Lineage</h3>{lin}'
-            + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>')
+            + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
+            + srclink(f"site/data/authors/{aid}.json", "bio, dates and lineage live here."))
 
 def build_author(aid="abhinavagupta"):
     out = DIST / aid; out.mkdir(parents=True, exist_ok=True)
@@ -267,7 +446,7 @@ def build_author(aid="abhinavagupta"):
     spine = {"abhinavagupta": "Raghavan “Abhinavagupta and His Works” 36 + attested extras",
              "utpaladeva": "Wikipedia/BnF/kashmirhope + GRETIL/Mukhabodha holdings",
              "ksemaraja": "Singh/SUNY + Flood 2020 + kashmirhope + ePustakalay/KSTS holdings"}.get(aid, "")
-    (out / "index.html").write_text(ATmpl.format(title=author["name"], h1=esc(author["name"]),
+    (out / "index.html").write_text(TF(ATmpl,title=author["name"], h1=esc(author["name"]),
         sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"),
         body=author_bio_body(aid, author, lin, spine)))
     cats = {}
@@ -283,10 +462,11 @@ def build_author(aid="abhinavagupta"):
     n_ext = sum(1 for w in works if w.get("extant") is True)
     n_lost = sum(1 for w in works if w.get("extant") is False)
     n_unk = len(works) - n_ext - n_lost
-    (out / "works.html").write_text(ATmpl.format(title="Works map", h1="Works map",
+    (out / "works.html").write_text(TF(ATmpl,title="Works map", h1="Works map",
         sub=f"canonical list: {len(works)} works ({n_ext} extant, {n_lost} lost/ref-only, {n_unk} unverified) — click any title", sidenav=sidenav(aid, "works"),
         body=f'<div class="tl">{"".join(blocks)}</div>'
-             f'<div class="sub">Spine: {spine} · <a href="/data/works_{aid}.json">machine-readable JSON</a></div>'))
+             f'<div class="sub">Spine: {spine} · <a href="/data/works_{aid}.json">machine-readable JSON</a></div>'
+             + srclink(f"site/data/works_{aid}.json", "canonical works list lives here.")))
     for w in works:
         wid = w["id"]
         label = STATUS_LABEL.get(w.get("status", ""), w.get("status", ""))
@@ -360,13 +540,10 @@ def build_author(aid="abhinavagupta"):
                 body = ((f'<div class="panel">{esc(note)}</div>' if note else "")
                     + sfs + root + eds
                     + f'<div class="panel">Status: {esc(label)}. Next via pipe: cut SOURCE → T1 → L0 → argmap → L2 → L200 → C1.</div>')
-        (out / f"{wid}.html").write_text(ATmpl.format(title=w["title"], h1=esc(w["title"]),
-            sub=meta, sidenav=sidenav(aid, wid), body=trlink + body))
+        (out / f"{wid}.html").write_text(TF(ATmpl,title=w["title"], h1=esc(w["title"]),
+            sub=meta, sidenav=sidenav(aid, wid), body=trlink + body + srclink(f"site/data/works_{aid}.json", "canonical entry lives here.")))
     # ship machine-readable data with the site
     (DIST / "data").mkdir(parents=True, exist_ok=True)
-    if aid == "abhinavagupta":
-        (DIST / "data" / "author.json").write_text((ROOT / "data/author.json").read_text())
-        (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
     (DIST / "data" / f"author_{aid}.json").write_text(json.dumps(author, ensure_ascii=False, indent=1))
     (DIST / "data" / f"works_{aid}.json").write_text(json.dumps(works, ensure_ascii=False, indent=1))
     import shutil as _sh2
@@ -386,16 +563,58 @@ def ship_translations():
         shutil.copy(f, tdir / f.name)
 
 def scholar_nav(active=""):
-    scholars = json.loads((ROOT / "data/scholars.json").read_text())
+    scholars = sorted(json.loads((ROOT / "data/scholars.json").read_text()), key=lambda s: s.get("name", ""))
     items = "".join(f'<a href="/scholars/{s["id"]}.html">{"› " if s["id"]==active else ""}{esc(s["name"])}</a>' for s in scholars)
-    return ('<div class="hd">Masters</div>'
-        + "".join(f'<a href="/{m}/index.html">{esc(m)}</a>' for m in MASTERS)
-        + '<div class="hd">Scholars</div>'
+    masters = "".join(f'<a href="/{m}/index.html">{esc(n)}</a>' for m, n, _ in _masters_chrono())
+    return ('<div class="hd">Masters (chronological)</div><div class="sub">' + masters + "</div>"
+        '<div class="hd">Modern — scholars (A–Z)</div>'
         f'<a href="/scholars/index.html">{"› " if active=="index" else ""}All scholars</a>'
-        '<div class="hd">People (secondary)</div><div class="sub">' + items + "</div>")
+        '<div class="sub">' + items + "</div>"
+        + '<div class="hd">Library</div><a href="/concepts/index.html">Concepts</a>'
+        + '<a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a>')
 
 ACC_LABEL = {"open": "open access", "login": "free login wall", "metadata": "metadata only — fetch via academia/DOI",
              "print": "print/commercial — cite, never host", "study": "in-repo study material"}
+
+def build_sections():
+    """Top-level taxonomy, backend-first: masters chronological by birth, modern alphabetical."""
+    import json as _j
+    masters = []
+    for m, n, y in _masters_chrono():
+        ap = ROOT / "data/authors" / f"{m}.json"
+        a = _j.loads(ap.read_text())
+        masters.append({"id": m, "name": a.get("name", n), "url": f"/{m}/index.html",
+                        "birth": a.get("dates", {}).get("birth"), "flourished": a.get("dates", {}).get("flourished", ""),
+                        "summary": a.get("summary", "")})
+    scholars = sorted(_j.loads((ROOT / "data/scholars.json").read_text()), key=lambda s: s.get("name", ""))
+    modern = [{"id": s["id"], "name": s["name"], "url": f'/scholars/{s["id"]}.html',
+               "affiliation": s.get("affiliation", ""), "summary": s.get("summary", "")} for s in scholars]
+    sec = {"sections": [
+        {"id": "masters", "title": "Masters", "rule": "premodern author-masters, chronological by birth year (nulls last); undocumented dates flagged, never invented",
+         "members": [m["id"] for m in masters]},
+        {"id": "modern", "title": "Modern", "rule": "living scholars alphabetical (birth years are private, never asserted) + lineage teachers",
+         "members": [m["id"] for m in modern]}]}
+    (ROOT / "data/sections.json").write_text(_j.dumps(sec, ensure_ascii=False, indent=1))
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    shutil.copy(ROOT / "data/sections.json", DIST / "data/sections.json")
+    out = DIST / "masters"; out.mkdir(parents=True, exist_ok=True)
+    rows = "".join(
+        f'<div class="ev"><span class="dot"></span><b>{_esc(y) if isinstance(y,int) else "date unknown"}</b> — '
+        f'<a href="/{m}/index.html"><b>{esc(n)}</b></a> — {esc(next((x["summary"] for x in masters if x["id"]==m), ""))}</div>'
+        for m, n, y in [(x["id"], x["name"], x["birth"]) for x in masters])
+    (out / "index.html").write_text(TF(ATmpl,title="Masters", h1="Masters",
+        sub="premodern author-masters in chronological order — click any name, bio loads first",
+        sidenav=sidenav(MASTERS[0], ""), body=f'<div class="tl">{rows}</div>'
+        f'<div class="sub">Order key: birth year (approx, flagged) · undated masters sort last · <a href="/data/sections.json">machine-readable taxonomy</a></div>' + srclink("site/data/authors/", "per-master JSON + person schema; birth years live in dates.birth.")))
+    out2 = DIST / "modern"; out2.mkdir(parents=True, exist_ok=True)
+    cards = "".join(f'<a href="{m["url"]}"><b>{esc(m["name"])}</b> — {esc(m.get("affiliation",""))}</a>' for m in modern)
+    (out2 / "index.html").write_text(TF(ATmpl,title="Modern", h1="Modern",
+        sub="living scholars A–Z + lineage teachers — secondary witnesses, linked not hosted",
+        sidenav=scholar_nav("index"), body=f'<div class="idx">{cards}</div>'
+        f'<div class="sub"><a href="/data/sections.json">machine-readable taxonomy</a></div>' + srclink("site/data/scholars.json", "all bios + bibliographies live here.")))
+    return len(masters), len(modern)
+
+def _esc(x): return esc(x)
 
 def build_translations():
     """Pipeline translations: PASS passages display L1/L2 with gate badge;
@@ -426,14 +645,14 @@ def build_translations():
                 body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
                         f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
             blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
-        (out / f"{wid}.html").write_text(ATmpl.format(title=f"Translation: {wid}",
+        (out / f"{wid}.html").write_text(TF(ATmpl,title=f"Translation: {wid}",
             h1=f"Translation: {wid}", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
-            sidenav=sidenav("abhinavagupta", wid), body="".join(blocks)))
+            sidenav=sidenav("abhinavagupta", wid), body="".join(blocks) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.")))
         links.append((wid, n_pass, len(items)))
-    (out / "index.html").write_text(ATmpl.format(title="Translations", h1="Pipeline translations",
+    (out / "index.html").write_text(TF(ATmpl,title="Translations", h1="Pipeline translations",
         sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",
         sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">'
-        + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>"))
+        + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>" + srclink("tools/ingest_batch.py", "ingest script; sources are R2 batch-t1 drafts.")))
     return len(links)
 
 def slugify(s):
@@ -445,21 +664,25 @@ def build_glossary():
     import json as _j
     gl = _j.loads((ROOT / "data/glossary.json").read_text())
     out = DIST / "concepts"; out.mkdir(parents=True, exist_ok=True)
-    for e in gl:
-        slug = slugify(e["term"])
+    slugs = [slugify(e["term"]) for e in gl]
+    for ei, e in enumerate(gl):
+        slug = slugs[ei]
         links = "".join(f'<div class="ev"><a href="/ipvv/{p}.html">IPVV: {esc(p)}</a></div>' for p in e.get("passages", [])[:20])
-        (out / f"{slug}.html").write_text(ATmpl.format(title=e["term"], h1=esc(e["term"]),
+        (out / f"{slug}.html").write_text(TF(ATmpl,title=e["term"], h1=esc(e["term"]),
             sub="concept · glossary", sidenav=sidenav("abhinavagupta", ""),
             body=f'<div class="panel">{esc(e.get("gloss") or "occurrence only — definition pending curation.")}</div>'
                  + (f"<h3>Occurs in</h3>{links}" if links else "<p><i>No linked passages yet.</i></p>")
-                 + f'<div class="sub">source: {esc(e.get("source",""))} · <a href="/data/glossary.json">machine-readable glossary</a></div>'))
+                 + f'<div class="sub">source: {esc(e.get("source",""))} · <a href="/data/glossary.json">machine-readable glossary</a></div>'
+                 + srclink("site/data/glossary.json", "term lives here; mined by tools/build_glossary.py.")
+                 + pn(f"/concepts/{slugs[ei-1]}.html" if ei > 0 else None, gl[ei-1]["term"] if ei > 0 else "",
+                      f"/concepts/{slugs[ei+1]}.html" if ei < len(gl)-1 else None, gl[ei+1]["term"] if ei < len(gl)-1 else "")))
     idx = "".join(f'<a href="/concepts/{slugify(e["term"])}.html"><b>{esc(e["term"])}</b> — {esc((e.get("gloss") or "")[:90])}</a>' for e in gl)
-    (out / "index.html").write_text(ATmpl.format(title="Concepts", h1="Concepts",
+    (out / "index.html").write_text(TF(ATmpl,title="Concepts", h1="Concepts",
         sub=f"{len(gl)} terms — definitions link to every occurrence", sidenav=sidenav("abhinavagupta", ""),
         body='<input id="q" placeholder="filter terms…" style="width:100%;padding:.6rem;font-size:1rem;margin-bottom:.6rem"/>'
              f'<div class="idx" id="terms">{idx}</div>'
              '<script>q.oninput=()=>{const v=q.value.toLowerCase();document.querySelectorAll("#terms a").forEach(a=>a.style.display=a.textContent.toLowerCase().includes(v)?"":"none")}</script>'
-             '<div class="sub"><a href="/data/glossary.json">machine-readable glossary</a> · mined from C1 key-terms + curated core</div>'))
+             '<div class="sub"><a href="/data/glossary.json">machine-readable glossary</a> · mined from C1 key-terms + curated core</div>' + srclink("tools/build_glossary.py", "miner lives here.")))
     shutil.copy(ROOT / "data/glossary.json", DIST / "data/glossary.json")
     return len(gl)
 
@@ -472,8 +695,6 @@ def build_tools():
             entries.append({"t": w.get("title", ""), "u": "", "k": "work"})
     for aid in MASTERS:
         ap = ROOT / "data/authors" / f"{aid}.json"
-        if not ap.exists() and aid == "abhinavagupta":
-            ap = ROOT / "data/author.json"
         if ap.exists():
             a = _j.loads(ap.read_text())
             entries.append({"t": a.get("name", aid), "u": f"/{aid}/index.html", "k": "master"})
@@ -484,17 +705,18 @@ def build_tools():
         slug = _re.sub(r"[^a-z0-9]+", "-", slug.lower()).strip("-") or "term"
         entries.append({"t": e["term"], "u": f"/concepts/{slug}.html", "k": "concept"})
     (DIST / "data/search-index.json").write_text(_j.dumps(entries, ensure_ascii=False))
-    (out / "index.html").write_text(ATmpl.format(title="Tools", h1="Tools",
+    (out / "index.html").write_text(TF(ATmpl,title="Tools", h1="Tools",
         sub="instant find across masters, works, concepts — runs entirely in your browser",
         sidenav=sidenav("abhinavagupta", ""),
-        body='<input id="q" placeholder="search masters, works, concepts…" style="width:100%;padding:.7rem;font-size:1.1rem"/>'
-             '<div class="idx" id="hits" style="margin-top:.6rem"></div>'
-             '<div class="panel"><b>Verse lookup.</b> Type a passage id (e.g. <i>chunkV2-A-caturtho-vimarsa-aham</i>) — exact matches jump straight to the passage. <input id="v" placeholder="passage id…" style="width:100%;padding:.5rem;margin-top:.4rem"/><div id="vhit" style="margin-top:.4rem"></div></div>'
-             '<div class="sub">Index built at deploy time from the same JSON the pages render. No server, no tracking.</div>'
-             '<script>let IDX=[];fetch("/data/search-index.json").then(r=>r.json()).then(d=>IDX=d);'
-             'q.oninput=()=>{const v=q.value.toLowerCase();const m=v?IDX.filter(e=>e.t.toLowerCase().includes(v)).slice(0,40):[];'
-             'hits.innerHTML=m.map(e=>`<a href="${e.u||"/"+e.k+"s/index.html"}"><b>${e.t}</b> <i>${e.k}</i></a>`).join("")||(v?"<i>No matches.</i>":"")};'
-             'v.oninput=()=>{const x=v.value.trim();vhit.innerHTML=x?`<a href="/ipvv/${x}.html">Open /ipvv/${x}</a> · <a href="/ipvv/${x.replace(/[^A-Za-z0-9_-]/g,"")}.html">try cleaned</a>`:""};</script>'))
+        body=('<input id="q" placeholder="search masters, works, concepts…" style="width:100%;padding:.7rem;font-size:1.1rem"/>'
+              '<div class="idx" id="hits" style="margin-top:.6rem"></div>'
+              '<div class="panel"><b>Verse lookup.</b> Type a passage id (e.g. <i>chunkV2-A-caturtho-vimarsa-aham</i>) — exact matches jump straight to the passage. <input id="v" placeholder="passage id…" style="width:100%;padding:.5rem;margin-top:.4rem"/><div id="vhit" style="margin-top:.4rem"></div></div>'
+              '<div class="sub">Index built at deploy time from the same JSON the pages render. No server, no tracking.</div>'
+              + srclink("site/build.py", "search index + pages are built here; tools/build_glossary.py mines the glossary.")
+              + '<script>let IDX=[];fetch("/data/search-index.json").then(r=>r.json()).then(d=>IDX=d);'
+              'q.oninput=()=>{const v=q.value.toLowerCase();const m=v?IDX.filter(e=>e.t.toLowerCase().includes(v)).slice(0,40):[];'
+              'hits.innerHTML=m.map(e=>`<a href="${e.u||"/"+e.k+"s/index.html"}"><b>${e.t}</b> <i>${e.k}</i></a>`).join("")||(v?"<i>No matches.</i>":"")};'
+              'v.oninput=()=>{const x=v.value.trim();vhit.innerHTML=x?`<a href="/ipvv/${x}.html">Open /ipvv/${x}</a> · <a href="/ipvv/${x.replace(/[^A-Za-z0-9_-]/g,"")}.html">try cleaned</a>`:""};</script>')))
     return 1
 
 def build_scholars():
@@ -514,18 +736,18 @@ def build_scholars():
                 + f'<div class="sub">{esc(s.get("affiliation",""))} · status: {esc(s.get("status",""))} · dates: {esc(s.get("dates",{}).get("flourished",""))} — {esc(s.get("dates",{}).get("note",""))}</div>'
                 + f'<div class="sub"><a href="/data/scholars.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
                 + items)
-        (out / f'{s["id"]}.html').write_text(ATmpl.format(title=s["name"], h1=esc(s["name"]),
-            sub=esc(s.get("affiliation","")), sidenav=scholar_nav(s["id"]), body=body))
+        (out / f'{s["id"]}.html').write_text(TF(ATmpl,title=s["name"], h1=esc(s["name"]),
+            sub=esc(s.get("affiliation","")), sidenav=scholar_nav(s["id"]), body=body + srclink("site/data/scholars.json", "bio + bibliography live here.")))
         links.append(f'<a href="/scholars/{s["id"]}.html"><b>{esc(s["name"])}</b> — {esc(s.get("affiliation",""))}</a>')
-    (out / "index.html").write_text(ATmpl.format(title="Scholars", h1="Scholars",
+    (out / "index.html").write_text(TF(ATmpl,title="Scholars", h1="Scholars",
         sub="secondary witnesses — read and cite, host only what is open", sidenav=scholar_nav("index"),
         body='<div class="idx">' + "".join(links) + "</div>"
-             '<div class="panel">Rule: GREEN (OA/GRETIL/Mukhabodha) ships on site. YELLOW (academia/login, HAL metadata, IRIS) is read-and-cited with links, never hosted. RED (pirated scans, commercial PDFs) never touches the repo.</div>'))
+             '<div class="panel">Rule: GREEN (OA/GRETIL/Mukhabodha) ships on site. YELLOW (academia/login, HAL metadata, IRIS) is read-and-cited with links, never hosted. RED (pirated scans, commercial PDFs) never touches the repo.</div>' + srclink("site/data/scholars.json", "all bios + bibliographies live here.")))
     return len(scholars)
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -536,19 +758,21 @@ def main():
     if "translations" in want: done["translations"] = build_translations()
     if "concepts" in want: done["concepts"] = build_glossary()
     if "tools" in want: done["tools"] = build_tools()
+    if "sections" in want: done["sections"] = build_sections()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
     masters = "".join(f'<a href="/{m}/index.html"><b>{m}</b> — bio · works map · click-in translations</a>' for m in MASTERS if m in done)
-    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY</a>' for w, n in done.items() if w not in MASTERS and w not in ("scholars", "translations", "concepts", "tools"))
+    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY</a>' for w, n in done.items() if w not in MASTERS and w not in ("scholars", "translations", "concepts", "tools", "sections"))
     sch = '<a href="/scholars/index.html"><b>scholars</b> — secondary witnesses, linked bibliography (read/cite, host only what is open)</a>' if "scholars" in done else ""
     trn = '<a href="/translations/index.html"><b>pipeline translations</b> — English shows ONLY for gate-PASS passages</a>' if "translations" in done else ""
     con = '<a href="/concepts/index.html"><b>concepts</b> — glossary with every occurrence linked</a>' if "concepts" in done else ""
     tls = '<a href="/tools/index.html"><b>tools</b> — instant find, verse lookup (in-browser)</a>' if "tools" in done else ""
+    sec = '<a href="/masters/index.html"><b>masters</b> — chronological, birth-year order</a><a href="/modern/index.html"><b>modern</b> — living scholars A–Z</a>' if "sections" in done else ""
     lat = '<h3>Latest</h3>' + latest if latest else ""
-    (DIST / "index.html").write_text(TMPL.format(title="Trika Library", h1="Trika Library",
-        sub="masters · works · scholars · concepts · tools — display only what is formally done", work="abhinavagupta",
-        body='<div class="idx">' + masters + rest + sch + trn + con + tls + "</div>" + lat))
+    (DIST / "index.html").write_text(TF(TMPL,title="Trika Library", h1="Trika Library",
+        sub="masters · modern · concepts · translations · tools — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
+        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + "</div>" + lat))
     print("built", done)
 
 if __name__ == "__main__":

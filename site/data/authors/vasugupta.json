@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 850",
-  "note": "tradition: Sivasutras revealed on Mahadeva mountain rock"
+  "note": "tradition: Sivasutras revealed on Mahadeva mountain rock Birth ~820 (approx).",
+  "birth": 820,
+  "approx": true
  },
  "id": "vasugupta",
  "lineage": [
@@ -24,5 +26,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Kashmir_Sharada_MS.jpg",
   "licence": "Public domain",
   "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
- }
+ },
+ "section": "masters"
 }

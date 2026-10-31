@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 1225-1275",
-  "note": "commentator two centuries after Abhinavagupta"
+  "note": "commentator two centuries after Abhinavagupta Birth ~1225 (approx).",
+  "birth": 1225,
+  "approx": true
  },
  "id": "jayaratha",
  "lineage": [
@@ -24,5 +26,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Sarada_Script_of_Kashmir.jpg",
   "licence": "Public domain",
   "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
- }
+ },
+ "section": "masters"
 }

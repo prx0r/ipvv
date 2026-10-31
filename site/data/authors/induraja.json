@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 10th c. (pre-Abhinavagupta)",
-  "note": "Dhvani teacher of Abhinavagupta (Pandey/Deshpande list); Laghuvrtti comm. on Udbhata preserved via GRETIL"
+  "note": "Dhvani teacher of Abhinavagupta (Pandey/Deshpande list); Laghuvrtti comm. on Udbhata preserved via GRETIL Birth ~930 (approx).",
+  "birth": 930,
+  "approx": true
  },
  "id": "induraja",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Folio_of_a_manuscript_of_the_Harshacharita_by_Banabhatta%2C_written_in_Sharada_script.jpg",
   "licence": "Public domain",
   "licence_url": "https://creativecommons.org/publicdomain/mark/1.0/"
- }
+ },
+ "section": "masters"
 }

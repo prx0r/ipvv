@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "10th c.",
-  "note": "Brahmavidya teacher of Abhinavagupta (Pandey/Deshpande list); Hanneder ZDMG 167 (2017) edition"
+  "note": "Brahmavidya teacher of Abhinavagupta (Pandey/Deshpande list); Hanneder ZDMG 167 (2017) edition Birth ~920 (approx).",
+  "birth": 920,
+  "approx": true
  },
  "id": "bhutiraja",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

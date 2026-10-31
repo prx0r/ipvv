@@ -1,20 +1,87 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>chunkV2-N-sastho-k8-11</title><style>body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:1rem;color:#222}
-header{text-align:center;border-bottom:1px solid #ddd;margin-bottom:1rem}
-h1{font-weight:400}.sub{color:#666;font-size:.9rem}
-.dev{font-size:1.4rem;line-height:2}.iast{color:#8a6d1b}.en{line-height:1.6}
-.depth{margin:.6rem 0}.depth button{margin-right:.4rem;padding:.4rem .8rem;border-radius:999px;border:1px solid #ccc;background:#f7f4ec;cursor:pointer}
-.depth button.on{background:#222;color:#fff}
-.panel{border:1px solid #e5e0d0;border-radius:12px;padding:1rem;margin:.6rem 0;background:#fffdf7}
-.missing{opacity:.4}.idx a{display:block;padding:.5rem 0;border-bottom:1px solid #eee;text-decoration:none;color:#222}
-.skt{white-space:pre-wrap;font-size:1.05rem}
-.nav{margin:1rem 0;font-size:.9rem}.nav a{margin-right:1rem}
+<title>chunkV2-N-sastho-k8-11 · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#faf8f1;--card:#ffffff;--ink:#1c1a17;--mut:#6f6a5e;--line:#e6ddc9;--gold:#a86f14;--gold-soft:#f4ead3;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:'Noto Serif Devanagari',Georgia,'Times New Roman',serif;--disp:'Yatra One','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--gold-ink);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{font-family:var(--disp);font-size:1.25rem;color:var(--ink);white-space:nowrap}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink)}
+.topnav a:hover{background:var(--gold-soft);text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35}
+.side a:hover{background:var(--gold-soft);text-decoration:none}
+.side a.on{background:var(--gold-soft);font-weight:600;color:var(--gold-ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;margin:.2rem 0 .4rem}
+.sub{color:var(--mut);font-size:.92rem;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-size:1.32rem;line-height:2}
+.iast{color:var(--gold-ink)}
+.en{line-height:1.7}
+.skt{white-space:pre-wrap;font-size:1.06rem}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:.84rem;padding:.42rem .85rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards — white, hairline, no beige boxes */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:block;padding:.55rem .2rem;border-bottom:1px solid var(--line);color:var(--ink)}
+.idx a:hover{background:#fff;text-decoration:none}
+.idx a b{color:var(--ink)}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{position:absolute;left:0;top:.55em;width:.5em;height:.5em;border-radius:50%;background:var(--gold)}
+.tl{border-left:2px solid var(--gold);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:14px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4}
+.toc a.on{color:var(--gold-ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+}
 </style></head><body>
-<header><h1>chunkV2-N-sastho-k8-11</h1><div class="sub">IPVV · M00021</div></header>
-<div class="nav"><a href="/index.html">works</a><a href="/ipvv/index.html">ipvv</a>
-<a href="/ipvv/themes.html">themes</a><a href="/ipvv/pushing.html">pushing</a></div>
-<div class="depth"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class="" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class="" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel " data-p="0" style="display:block"><div class="dev">pramātṛtvaṃ, tataśca nityameva iti asaṅgatam | etadāśaṅkāśāntaye 
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
+<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><h1>chunkV2-N-sastho-k8-11</h1><div class="sub">IPVV · M00021</div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">pramātṛtvaṃ, tataśca nityameva iti asaṅgatam | etadāśaṅkāśāntaye 
 prāha muktāṇūnāṃ
 
 (page 325)
@@ -399,7 +466,7 @@ mapohanaśaktivimarśaḥ ṣaṣṭhaḥ || 6 ||
 
 (page 338)
 
-atha saptamo vimarśaḥ |</div><div class="sub">vol M00021 · chunkV2-N-sastho-k8-11 · lines via source.start/end</div></div><div class="panel " data-p="1" style="display:none"><div class="en">**The inner appearance stands firm — for every living one**
+atha saptamo vimarśaḥ |</div><div class="sub">vol M00021 · chunkV2-N-sastho-k8-11 · lines via source.start/end</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">**The inner appearance stands firm — for every living one**
 
 The ṣaṣṭho vimarśa, on the power of removal, comes to its close; and its final claim is one of
 unfailing constancy. The inner appearance — the self-grasp, the reflexive-awareness — stands firm in
@@ -438,9 +505,31 @@ one. The inner appearance, the reflexive-awareness, never fails: it is the very 
 and it is what makes every living one a knower and a doer. The apohanaśaktivimarśa — the reflexion on
 the power of removal — here comes to its close.
 
----</div></div><div class="panel missing" data-p="2" style="display:none"><div class="en"></div></div><div class="panel " data-p="3" style="display:none"><div class="en">&gt; The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in
+---</div></div><div class="panel tpanel missing" data-p="2" style="display:none"><div class="en"></div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">&gt; The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in
 &gt; construction, and in cognition alike (kārikā 8). It is not something that flickers in and out; it is
 &gt; the one light that runs through them all. It is innate in the external-form cognition (kārikā 9), in
 &gt; the freely-wandering construction (kārikā 10), and from its manifestation knowledge and action are
 &gt; clear for every living one (kārikā 11). Even in liberation the freed souls are distinct, yet their
-&gt; manifestation is the un-broken all-knowing. The inner appearance never fails.</div></div><div class="panel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:3b074ddbaf3b · T1 chunk <i>sanskritree/chunkV2-N-sastho-k8-11.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.depth button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.panel').forEach(p=>p.style.display=p.dataset.p===b.dataset.p?'block':'none')})</script></body></html>
+&gt; manifestation is the un-broken all-knowing. The inner appearance never fails.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:3b074ddbaf3b · T1 chunk <i>sanskritree/chunkV2-N-sastho-k8-11.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="pn"><a href="/ipvv/chunkV2-M-sastho-vimarsa-k6-7.html">← chunkV2-M-sastho-vimarsa-k6-7</a><a href="/ipvv/chunkV2-O-saptamo-vimarsa.html">chunkV2-O-saptamo-vimarsa →</a></div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

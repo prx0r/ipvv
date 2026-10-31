@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 900",
-  "note": "teacher of Utpaladeva; pupil of Vasugupta per Trika lineage"
+  "note": "teacher of Utpaladeva; pupil of Vasugupta per Trika lineage Birth ~875 (approx).",
+  "birth": 875,
+  "approx": true
  },
  "id": "somananda",
  "lineage": [
@@ -28,5 +30,6 @@
   "credit_url": "https://commons.wikimedia.org/wiki/File:The_Lineage_of_Somananda.png",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ },
+ "section": "masters"
 }

@@ -1,7 +1,9 @@
 {
  "dates": {
   "flourished": "c. 975-1025 CE",
-  "note": "dates approximate per Sanderson/Dyczkowski; do not present as exact"
+  "note": "dates approximate per Sanderson/Dyczkowski; do not present as exact Birth ~955 (Pandey Saptarsi calc).",
+  "birth": 955,
+  "approx": true
  },
  "id": "abhinavagupta",
  "lineage": [
@@ -23,14 +25,7 @@
  "place": "Kashmir",
  "status": "historical",
  "summary": "Polymath systematiser of Trika/Kaula/Krama/Pratyabhijna (fl. c. 975-1025): Tantraloka, Tantrasara, IPV/IPVV, Paratrimsika exegesis, early stotras.",
+ "section": "masters",
  "kind": "master",
- "bio": "Polymath systematiser of Trika/Kaula/Krama/Pratyabhijna (fl. c. 975-1025): the Tantraloka encyclopedia, its Tantrasara distillation, two Pratyabhijna commentaries (IPV/IPVV), the Paratrimsika exegesis, and early stotras. Pupil of Lakshmanagupta (Pratyabhijna/Krama), Sambhunatha (Kaula), Bhutiraja and some twenty teachers across sects; never married, devoted to Siva after early family loss. Our site rests on his corpus.",
- "image": {
-  "src": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Trident_Yantra_of_Parama_Siva.svg",
-  "caption": "Trident yantra of Parama Siva — emblem of his system (CC BY-SA 3.0, via Wikimedia Commons). No contemporary portrait of Abhinavagupta survives; nothing here claims to be his likeness.",
-  "credit": "Wikimedia Commons",
-  "credit_url": "https://commons.wikimedia.org/wiki/File:Trident_Yantra_of_Parama_Siva.svg",
-  "licence": "CC BY-SA 3.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
- }
+ "bio": "Polymath systematiser of Trika, Kaula, Krama and Pratyabhijna (fl. c. 975-1025): the Tantraloka encyclopedia, its Tantrasara distillation, two Pratyabhijna commentaries (IPV/IPVV), the Paratrimsika exegesis, and early stotras. Pupil of Lakshmanagupta (Pratyabhijna/Krama), Sambhunatha (Kaula), Bhutiraja and some twenty teachers across sects; never married, devoted to Siva after early family loss. Our site rests on his corpus."
 }
