@@ -9,9 +9,11 @@
   ],
   "extant": true,
   "id": "ipk",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "title": "Isvarapratyabhijnakarika (IPK)",
-  "verses": "4 adhikaras"
+  "verses": "4 adhikaras",
+  "sanskrit_file": "ipk.txt",
+  "sanskrit_source": "GRETIL Kaul Shastri 1921/Torella · CC BY-NC-SA 4.0"
  },
  {
   "category": "pratyabhijna",
@@ -50,9 +52,11 @@
   ],
   "extant": true,
   "id": "isvarasiddhi",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Isvarasiddhi (Siddhitrayi 1: Proof of the Lord)",
-  "verses": "karikas"
+  "verses": "karikas",
+  "sanskrit_file": "isvarasiddhi.txt",
+  "sanskrit_source": "Mukhabodha M00023 (KSTS 34) · CC BY-NC 4.0"
  },
  {
   "category": "pratyabhijna",
@@ -63,9 +67,11 @@
   ],
   "extant": true,
   "id": "ajadapramatrsiddhi",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Ajadapramatrsiddhi (Siddhitrayi 2: Proof of the non-insentient Subject)",
-  "verses": "26 karikas"
+  "verses": "26 karikas",
+  "sanskrit_file": "ajadapramatrsiddhi.txt",
+  "sanskrit_source": "GRETIL KSTS 34 · CC BY-NC-SA 4.0"
  },
  {
   "category": "pratyabhijna",
@@ -75,9 +81,11 @@
   ],
   "extant": true,
   "id": "sambandhasiddhi",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Sambandhasiddhi (Siddhitrayi 3: Proof of Relation)",
-  "verses": "karikas"
+  "verses": "karikas",
+  "sanskrit_file": "sambandhasiddhi.txt",
+  "sanskrit_source": "Mukhabodha M00080 · CC BY-NC 4.0"
  },
  {
   "category": "stotra",
@@ -90,10 +98,12 @@
   "extant": true,
   "id": "sivastotravali",
   "note": "20-part arrangement associated with disciples/organizers; Lakshmanjoo reception is its own chronology. Full Sanskrit held locally.",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "text_file": "clean_shivastotravali.txt",
   "title": "Sivastotravali (Garland of Hymns to Siva)",
-  "verses": "20 stotras"
+  "verses": "20 stotras",
+  "sanskrit_file": "sivastotravali-u.txt",
+  "sanskrit_source": "GRETIL (Bailly ed.) · CC BY-NC-SA 4.0 · deitybody clean (Lakshmanjoo tradition) as witness"
  },
  {
   "category": "pratyabhijna",

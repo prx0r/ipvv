@@ -7,7 +7,8 @@
   "status": "SOURCE_ONLY",
   "text_file": "clean_bodhapanchadashika.txt",
   "title": "Bodhapañcadaśikā (Prabodhapañcadaśikā)",
-  "verses": 15
+  "verses": 15,
+  "witnesses": "GRETIL (1680b) · Mukhabodha M00173"
  },
  {
   "category": "stotra",
@@ -27,7 +28,8 @@
   "status": "SOURCE_ONLY",
   "text_file": "clean_bhairavastava.txt",
   "title": "Bhairavastava (Īśvarastava)",
-  "verses": "10"
+  "verses": "10",
+  "witnesses": "GRETIL (1402b) · Mukhabodha M00505"
  },
  {
   "category": "stotra",
@@ -35,9 +37,11 @@
   "extant": true,
   "id": "kramastotra",
   "note": "Volume Appendix F: Sanskrit + Dyczkowski English",
-  "status": "SOURCE_PLUS_SCHOLARSHIP",
+  "status": "SOURCE_HELD",
   "title": "Kramastotra",
-  "verses": "29+1"
+  "verses": "29+1",
+  "sanskrit_file": "kramastotra.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0"
  },
  {
   "category": "stotra",
@@ -108,9 +112,11 @@
   "date": "extra-canonical list (Sahapedia)",
   "extant": true,
   "id": "paryantapancasika",
-  "status": "STOCKPILE",
+  "status": "SOURCE_HELD",
   "title": "Paryantapañcāśikā",
-  "verses": 50
+  "verses": 50,
+  "sanskrit_file": "paryantapancasika.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0"
  },
  {
   "category": "stotra",
@@ -153,10 +159,11 @@
   "date": "magnum opus, c. 975-1025",
   "extant": true,
   "id": "tantraloka",
-  "note": "37 ahnikas on volume (01+04 1.7MB) + 6-variant texts-clean + 7 pre-split chunks; Dyczkowski vols 1-11 English",
-  "status": "SOURCE_CHUNKED",
+  "note": "GRETIL KSTS 1918-38 (37 ahnikas, :C markers) · CC BY-NC-SA 4.0 — per-ahnika pages",
+  "status": "SOURCE_HELD",
   "title": "Tantrāloka",
-  "verses": "37 ahnikas"
+  "verses": "37 ahnikas",
+  "sanskrit": "split-ahnika"
  },
  {
   "category": "tantra",
@@ -164,10 +171,11 @@
   "extant": true,
   "id": "tantrasara",
   "link": "/tantrasara/index.html",
-  "note": "Essays + essay-0 machine (prx0r/tantrasara)",
-  "status": "ESSAY0",
+  "note": "GRETIL Nirnaya Sagara 1918 KSTS 17 · CC BY-NC-SA 4.0 — per-ahnika pages + essay-0 display",
+  "status": "SOURCE_HELD",
   "title": "Tantrasāra",
-  "verses": "22 ahnikas"
+  "verses": "22 ahnikas",
+  "sanskrit": "split-ahnika"
  },
  {
   "category": "tantra",
@@ -194,9 +202,11 @@
   "extant": true,
   "id": "mvv",
   "note": "KSTS 32; Hanneder trans of vv.1-399",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Mālinīvijayavārttika (Mālinīślokavārttika)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "mvv.txt",
+  "sanskrit_source": "GRETIL KSTS 32/Hanneder · CC BY-NC-SA 4.0"
  },
  {
   "category": "tantra",
@@ -213,9 +223,15 @@
   "extant": true,
   "id": "ptv",
   "note": "Local PDF Singh/Baumer; Singh pp.148-156 madhyama+MalinI",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Parātrīśikāvivaraṇa (long)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_files": [
+   "ptv-madhyama.txt",
+   "ptv-laghu.txt",
+   "ptv-vivrti2.txt"
+  ],
+  "sanskrit_source": "Mukhabodha M00044/M00042/M00154 · CC BY-NC 4.0"
  },
  {
   "category": "tantra",
@@ -251,9 +267,11 @@
   "extant": true,
   "id": "ipv",
   "note": "Mukhabodha M00019; Pandey Bhaskari English complete",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "title": "Īśvarapratyabhijñāvimarśinī (laghvī)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "ipv.txt",
+  "sanskrit_source": "GRETIL (Iyer/Pandey ed.) · CC BY-NC-SA 4.0"
  },
  {
   "category": "pratyabhijna",
@@ -299,9 +317,11 @@
   "extant": true,
   "id": "paramarthasara",
   "note": "KSTS 7; Yogaraja comm; Silburn French",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Paramārthasāra",
-  "verses": "105 karikas"
+  "verses": "105 karikas",
+  "sanskrit_file": "paramarthasara.txt",
+  "sanskrit_source": "GRETIL KSTS 7 · CC BY-NC-SA 4.0"
  },
  {
   "category": "gita",
@@ -348,9 +368,11 @@
   "extant": true,
   "id": "ghatakarpara",
   "note": "Parlier ed./trans (1975)",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Ghaṭakarparakulakavivṛti",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "ghatakarpara.txt",
+  "sanskrit_source": "GRETIL (Parlier ed., Abhinavagupta vivrti) · CC BY-NC-SA 4.0"
  },
  {
   "category": "aesthetics",

@@ -11,9 +11,11 @@
   "extant": true,
   "id": "phrdaya",
   "note": "For devotees undeveloped in reflection: recognition without polemics. Ch.18 also commented by Shankarananda (2016).",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "title": "Pratyabhijnahrdaya (Heart of Recognition)",
-  "verses": "20 sutras + auto-comm."
+  "verses": "20 sutras + auto-comm.",
+  "sanskrit_file": "phrdaya.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0"
  },
  {
   "category": "spanda",
@@ -24,9 +26,11 @@
   "extant": true,
   "id": "spandasandoha",
   "note": "On Spanda K1 only; Singh intro distinguishes from Nirnaya.",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Spandasandoha",
-  "verses": "on K1"
+  "verses": "on K1",
+  "sanskrit_file": "spandasandoha.txt",
+  "sanskrit_source": "Mukhabodha M00084 · CC BY-NC 4.0"
  },
  {
   "category": "spanda",
@@ -36,9 +40,11 @@
   ],
   "extant": true,
   "id": "spandanirnaya",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Spandanirnaya (whole Spanda)",
-  "verses": "53 verses comm."
+  "verses": "53 verses comm.",
+  "sanskrit_file": "spandanirnaya.txt",
+  "sanskrit_source": "Mukhabodha M00163 · CC BY-NC 4.0"
  },
  {
   "category": "agama",
@@ -52,7 +58,9 @@
   "note": "15-ch tantra; rejects dualist reading, title = freedom; Brihattika of Bhullaka Rajanaka cited (biography unrecoverable); Madhusudan Kaul intro takes the nondual side — standpoint, not neutral fact.",
   "status": "SOURCE_ONLY",
   "title": "Svacchandoddyota (comm. on Svacchanda Tantra)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_root": "svacchandatantra.txt",
+  "sanskrit_source": "Root: Mukhabodha M00091 · CC BY-NC 4.0 · Uddyota itself undigitized (KSTS) — pointer"
  },
  {
   "category": "agama",
@@ -65,7 +73,9 @@
   "note": "Later copy can preserve earlier readings: ms age != material age. Uddyota unifies several person-models nondually — compare witnesses, don't assume one voice.",
   "status": "SOURCE_ONLY",
   "title": "Netroddyota (comm. on Netra Tantra)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_root": "netratantra.txt",
+  "sanskrit_source": "Root: Mukhabodha M00038 · CC BY-NC 4.0 · Uddyota itself undigitized — pointer"
  },
  {
   "category": "agama",
@@ -77,7 +87,9 @@
   "id": "vboddyota",
   "status": "SOURCE_ONLY",
   "title": "Vijnanabhairavoddyota",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_root": "vbt-root.txt",
+  "sanskrit_source": "Root: GRETIL Vijnanabhairava · CC BY-NC-SA 4.0 · Uddyota itself undigitized — pointer"
  },
  {
   "category": "agama",
@@ -89,9 +101,11 @@
   "extant": true,
   "id": "sivasutravimarsini",
   "note": "On Vasugupta's Sutras; Spanda-verse authorship (Vasugupta vs Kallata) preserved disputed per commentarial tradition.",
-  "status": "SOURCE_PLUS_TRANSLATION",
+  "status": "SOURCE_HELD",
   "title": "Sivasutravimarsini",
-  "verses": "77 sutras comm."
+  "verses": "77 sutras comm.",
+  "sanskrit_file": "sivasutravimarsini.txt",
+  "sanskrit_source": "Mukhabodha M00349 · CC BY-NC 4.0"
  },
  {
   "category": "stotra",
@@ -101,9 +115,11 @@
   ],
   "extant": true,
   "id": "stavacintamanitika",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Stavacintamanitika (on Bhattanarayana)",
-  "verses": "commentary"
+  "verses": "commentary",
+  "sanskrit_file": "stavacintamani.txt",
+  "sanskrit_source": "GRETIL KSTS X ed (Ksemaraja comm. per ed. note) · CC BY-NC-SA 4.0 · deitybody clean (root only) as witness"
  },
  {
   "category": "stotra",
@@ -123,9 +139,11 @@
   ],
   "extant": true,
   "id": "parapravesika",
-  "status": "SOURCE_ONLY",
+  "status": "SOURCE_HELD",
   "title": "Parapravesika",
-  "verses": "2 paras"
+  "verses": "2 paras",
+  "sanskrit_file": "parapravesika.txt",
+  "sanskrit_source": "Mukhabodha M00048 · CC BY-NC 4.0"
  },
  {
   "category": "prakarana",
@@ -136,5 +154,39 @@
   "status": "STOCKPILE",
   "title": "Tattvasandoha",
   "verses": "?"
+ },
+ {
+  "id": "spanda-root",
+  "title": "Spandakarika (root, ed. ref)",
+  "category": "spanda",
+  "date": null,
+  "extant": true,
+  "status": "SOURCE_HELD",
+  "verses": "52 karikas",
+  "sanskrit_file": "spanda-root.txt",
+  "sanskrit_source": "GRETIL · CC BY-NC-SA 4.0",
+  "note": "Root text; Ksemaraja comms above (Sandoha K1, Nirnaya whole)."
+ },
+ {
+  "id": "spanda-ksem-comm",
+  "title": "Spandakarika with Ksemaraja comm.",
+  "category": "spanda",
+  "date": null,
+  "extant": true,
+  "status": "SOURCE_HELD",
+  "verses": "commentary",
+  "sanskrit_file": "spanda-ksem.txt",
+  "sanskrit_source": "GRETIL (KSTS, Ksemaraja comm.) · CC BY-NC-SA 4.0"
+ },
+ {
+  "id": "sivasutra-root",
+  "title": "Sivasutra (root + varttika, ref)",
+  "category": "agama",
+  "date": null,
+  "extant": true,
+  "status": "SOURCE_HELD",
+  "verses": "77 sutras",
+  "sanskrit_file": "sivasutra-root.txt",
+  "sanskrit_source": "GRETIL Kaul Shastri 1925 · CC BY-NC-SA 4.0"
  }
 ]

@@ -7,7 +7,7 @@ Missing layers render greyed (planned), never invented.
 Usage: python3 site/build.py [--works ipvv,vbt,tantrasara]
 Output: site/dist/ (deploy to Cloudflare Pages, like shivastotravali.pages.dev)
 """
-import json, html, sys
+import json, html, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -23,6 +23,7 @@ h1{{font-weight:400}}.sub{{color:#666;font-size:.9rem}}
 .depth button.on{{background:#222;color:#fff}}
 .panel{{border:1px solid #e5e0d0;border-radius:12px;padding:1rem;margin:.6rem 0;background:#fffdf7}}
 .missing{{opacity:.4}}.idx a{{display:block;padding:.5rem 0;border-bottom:1px solid #eee;text-decoration:none;color:#222}}
+.skt{{white-space:pre-wrap;font-size:1.05rem}}
 .nav{{margin:1rem 0;font-size:.9rem}}.nav a{{margin-right:1rem}}
 """
 
@@ -188,7 +189,8 @@ STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskri
     "SOURCE_PLUS_TRANSLATION": "Sanskrit + English", "SOURCE_PLUS_SCHOLARSHIP": "Sanskrit + scholarship",
     "SOURCE_CHUNKED": "chunked, awaiting T1", "ESSAY0": "essay-0", "PUBLISHED_49": "full display (49)",
     "STOCKPILE": "listed", "LOST": "LOST", "REF_ONLY": "ref-only", "FRAGMENT": "fragments",
-    "ATTRIBUTED_DISPUTED": "ascription disputed", "STOCKPILE_UNVERIFIED": "listed · unverified"}
+    "ATTRIBUTED_DISPUTED": "ascription disputed", "STOCKPILE_UNVERIFIED": "listed · unverified",
+    "SOURCE_HELD": "full Sanskrit held"}
 
 def author_paths(aid):
     a = ROOT / "data/authors" / f"{aid}.json"
@@ -211,6 +213,37 @@ def sidenav(aid, active=""):
         '<div class="hd">Works (canonical list)</div><div class="sub">' + items + "</div>")
 
 MASTERS = ["abhinavagupta", "utpaladeva", "ksemaraja"]
+
+def build_split(aid, wid):
+    """Split a big Sanskrit file into per-section pages. Returns section count."""
+    import re
+    out = DIST / aid
+    if wid == "tantraloka":
+        txt = (ROOT / "data/sanskrit/tantraloka.txt").read_text()
+        parts = re.split(r"(?m)^(?=:C\d+ )", txt)
+        heads = re.findall(r"(?m)^:C\d+ .{0,60}", txt)
+    elif wid == "tantrasara":
+        txt = (ROOT / "data/sanskrit/tantrasara.txt").read_text()
+        parts = re.split(r"(?m)^(?=Tantras.+hnikam)", txt)
+        heads = re.findall(r"(?m)^Tantras.+hnikam.*$", txt)
+    else:
+        return 0
+    # first chunk is preamble before section 1 (usually tiny); merge into section 1
+    if len(parts) == len(heads) + 1:
+        parts[1] = parts[0] + parts[1]; parts = parts[1:]
+    n = 0
+    for i, (h, p) in enumerate(zip(heads, parts), 1):
+        n += 1
+        prev = f'<a href="/{aid}/{wid}-{i-1}.html">← {i-1}</a>' if i > 1 else ""
+        nxt = f'<a href="/{aid}/{wid}-{i+1}.html">{i+1} →</a>' if i < len(heads) else ""
+        nav = f'<div class="nav">{prev} <a href="/{aid}/{wid}.html">all {len(heads)}</a> {nxt}</div>'
+        body = nav + tabs([("ORIGINAL", f'<div class="dev skt">{esc(p.strip())}</div>', True),
+            ("READ", None, False), ("GUIDE", None, False),
+            ("STUDY", f'<div class="en">Section {i} of {len(heads)} — English READ next via pipe.</div>', True),
+            ("CRITICAL", f'<div class="en">GRETIL/Mukhabodha; section head: {esc(h.strip()[:80])}</div>', True)]) + nav
+        (out / f"{wid}-{i}.html").write_text(ATmpl.format(title=f"{wid} §{i}", h1=f"Section {i}",
+            sub=esc(h.strip()[:80]), sidenav=sidenav(aid, wid), body=body))
+    return n
 
 def build_author(aid="abhinavagupta"):
     out = DIST / aid; out.mkdir(parents=True, exist_ok=True)
@@ -248,8 +281,29 @@ def build_author(aid="abhinavagupta"):
         meta = f'{esc(w.get("date",""))} · {esc(label)}'
         if w.get("verses") not in (None, ""): meta += f' · {esc(w["verses"])}'
         tf = w.get("text_file")
+        sf = w.get("sanskrit_file")
         eds = "".join(f'<div class="sub">▪ {esc(e)}</div>' for e in w.get("editions", []))
-        if tf:
+        src_note = f'<div class="sub">{esc(w.get("sanskrit_source",""))}</div>' if w.get("sanskrit_source") else ""
+        if w.get("sanskrit") == "split-ahnika":
+            n = build_split(aid, wid)
+            body = (f'<div class="panel">Full Sanskrit in <b>{n} sections</b> — click in. {esc(w.get("note",""))}</div>'
+                    + "".join(f'<div class="ev"><a href="/{aid}/{wid}-{i}.html">section {i} →</a></div>' for i in range(1, n + 1)))
+        elif sf:
+            sp = ROOT / "data/sanskrit" / sf
+            txt = sp.read_text() if sp.exists() else ""
+            if txt and len(txt) > 500000:
+                body = (f'<div class="panel">Full Sanskrit ({len(txt)//1024}KB) — <a href="/data/sanskrit/{sf}"><b>read/download full text →</b></a></div>'
+                        + (f'<div class="panel">{esc(w.get("note",""))}</div>' if w.get("note") else "")
+                        + tabs([("ORIGINAL (head)", f'<div class="dev skt">{esc(txt[:15000])}\n…[continued in full text]</div>', True),
+                            ("READ", None, False), ("GUIDE", None, False),
+                            ("STUDY", f'<div class="en">{esc(w["title"])} — English READ next via pipe.</div>', True),
+                            ("CRITICAL", f'<div class="en">{esc(w.get("sanskrit_source",""))} · {meta}</div>', True)]))
+            else:
+                body = tabs([("ORIGINAL", f'<div class="dev skt">{esc(txt)}</div>', bool(txt)),
+                    ("READ", None, False), ("GUIDE", None, False),
+                    ("STUDY", f'<div class="en">{esc(w["title"])} — full Sanskrit above; English READ next via pipe.</div>', True),
+                    ("CRITICAL", f'<div class="en">{esc(w.get("sanskrit_source",""))} · {meta}</div>', True)])
+        elif tf:
             p = Path("/root/deitybody/corpus/stotra") / tf
             txt = p.read_text() if p.exists() else ""
             body = tabs([("ORIGINAL", f'<div class="dev">{esc(txt)}</div>', bool(txt)),
@@ -258,12 +312,24 @@ def build_author(aid="abhinavagupta"):
                 ("CRITICAL", f'<div class="en">deitybody corpus/stotra/{tf} · {meta}{eds}</div>', True)])
         elif w.get("link"):
             thesis = '<div class="panel">Thesis: recognition — the self re-cognises itself as the Lord.</div>' if wid == "ipvv" else ""
+            vols = ""
+            if wid == "ipvv":
+                vols = ('<div class="panel">Full Sanskrit vols (Mukhabodha IAST, CC BY-NC 4.0): '
+                        '<a href="/data/sanskrit/ipvv-vol1.txt">Vol 1</a> · '
+                        '<a href="/data/sanskrit/ipvv-vol2.txt">Vol 2</a> · '
+                        '<a href="/data/sanskrit/ipvv-vol3.txt">Vol 3</a></div>')
             body = (f'<div class="panel">Full display: <b><a href="{w["link"]}">open →</a></b></div>'
+                    + vols
                     + (f'<div class="panel">{esc(w["note"])}</div>' if w.get("note") else "")
                     + thesis
                     + (eds if w.get("editions") else ""))
         else:
             note = w.get("note", "")
+            sfs = "".join(f'<div class="panel">Sanskrit text: <a href="/data/sanskrit/{f}"><b>{esc(f)} →</b></a></div>' for f in w.get("sanskrit_files", []))
+            root = ""
+            if w.get("sanskrit_root"):
+                root = (f'<div class="panel">Related root text (comm. itself undigitized): '
+                        f'<a href="/data/sanskrit/{w["sanskrit_root"]}"><b>{esc(w["sanskrit_root"])} →</b></a></div>')
             if w.get("status") in ("LOST", "REF_ONLY", "FRAGMENT", "ATTRIBUTED_DISPUTED", "SOURCE_ONLY_DISPUTED"):
                 why = {"LOST": "references in the tradition", "REF_ONLY": "references in the tradition", "FRAGMENT": "quotations in the tradition", "ATTRIBUTED_DISPUTED": "a disputed ascription — verify before teaching as his", "SOURCE_ONLY_DISPUTED": "a disputed ascription — listed, flagged, never taught as his"}[w.get("status")]
                 body = (f'<div class="panel missing"><b>{esc(label)}.</b> No text survives; known only from {esc(why)}.</div>'
@@ -271,7 +337,7 @@ def build_author(aid="abhinavagupta"):
                     + eds)
             else:
                 body = ((f'<div class="panel">{esc(note)}</div>' if note else "")
-                    + eds
+                    + sfs + root + eds
                     + f'<div class="panel">Status: {esc(label)}. Next via pipe: cut SOURCE → T1 → L0 → argmap → L2 → L200 → C1.</div>')
         (out / f"{wid}.html").write_text(ATmpl.format(title=w["title"], h1=esc(w["title"]),
             sub=meta, sidenav=sidenav(aid, wid), body=body))
@@ -282,6 +348,10 @@ def build_author(aid="abhinavagupta"):
         (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
     (DIST / "data" / f"author_{aid}.json").write_text(json.dumps(author, ensure_ascii=False, indent=1))
     (DIST / "data" / f"works_{aid}.json").write_text(json.dumps(works, ensure_ascii=False, indent=1))
+    # ship ALL held Sanskrit bytes (research/education use; licence in each header)
+    sdir = DIST / "data/sanskrit"; sdir.mkdir(parents=True, exist_ok=True)
+    for f in (ROOT / "data/sanskrit").glob("*.txt"):
+        shutil.copy(f, sdir / f.name)
     return len(works)
 
 def main():
