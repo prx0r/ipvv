@@ -121,7 +121,7 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 <main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>Themes</h1><div class="skt"></div><div class="sub">machine-proposed clusters — overlapping, never partition; zero accepted themes yet</div><div class="panel"><b>CL-3</b> · 9 members · coherence 3.5556 · <i>adjudication proposed — awaiting review</i><br/>V2L-nonconstructed-I, V2N-inner-appearance, V2O-orderless-support, V2P-pramatr-vyapara, V2Q-omniscient, V2R-mahesvarya, V2S-unity-mahesvarya, V3F-grace, V3I-difference-real</div><div class="panel"><b>CL-4</b> · 9 members · coherence 3.1111 · <i>machine proposal — no editor decision yet</i><br/>V2M-descent-states, V3C-one-light, V3D-synthesis, V3E-error, V3I-difference-real, V3J-agama-sivatattva, V3K-kancukas, V3L-knowers-malas, V3M-states</div><div class="panel"><b>CL-1</b> · 5 members · coherence 3.4 · <i>machine proposal — no editor decision yet</i><br/>V2D-jnanasakti, V2E-external-inferred, V2F-other-minds, V2G-dream-inversion, V3F-grace</div><div class="panel"><b>CL-2</b> · 4 members · coherence 3.5 · <i>machine proposal — no editor decision yet</i><br/>V2H-vimarsa-paravak, V2I-sphuratta, V2J-samskara, V2K-vacakasphota</div><div class="panel"><b>CL-7</b> · 4 members · coherence 3.5 · <i>machine proposal — no editor decision yet</i><br/>V3F-grace, V3N-one-lord-many, V3O-bond-liberation, V3P-lover-union</div><div class="panel"><b>CL-0</b> · 3 members · coherence 3.6667 · <i>machine proposal — no editor decision yet</i><br/>V2A-memory-lords-power, V2B-pastness-svasamvitti, V2C-ajadapramatr</div><div class="panel"><b>CL-8</b> · 2 members · coherence 1.0 · <i>machine proposal — no editor decision yet</i><br/>V3G-causality, V3H-inference-across-knowers</div><div class="panel"><b>CL-5</b> · 1 members · coherence 0.0 · <i>machine proposal — no editor decision yet</i><br/>V3A-timeless-order</div><div class="panel"><b>CL-6</b> · 1 members · coherence 0.0 · <i>machine proposal — no editor decision yet</i><br/>V3B-bhedabheda</div><div class="sub">Evidence packet (machine-readable): <a href="/data/themes/clusters.json">clusters</a> · <a href="/data/themes/clusters.report.txt">editorial report</a> · <a href="/data/themes/adjudication-cl3.json">CL-3 adjudication</a> · <a href="/data/themes/essay-cl3.md">CL-3 essay</a> · <a href="/data/themes/goldchain-cl3.json">CL-3 gold chain</a> · <a href="/data/themes/theme-map-ipvv-v0.json">v0 theme map (63 segments, candidates)</a></div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
-<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
@@ -139,5 +139,30 @@ hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
 window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:#1c1a17;color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:#fff;border:1px solid #e6ddc9;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid #e6ddc9;font-weight:600;font-size:.84rem">Ask this text</div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid #e6ddc9;display:flex;gap:.4rem"><input id="chatin" placeholder="Ask..." style="flex:1;padding:.4rem .6rem;border:1px solid #e6ddc9;border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:#1c1a17;color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var work=location.pathname.split('/')[1]||'ipvv';
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+work,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply)})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
 })();
 </script></body></html>
