@@ -1099,6 +1099,8 @@ def build_sections():
                         "birth": a.get("dates", {}).get("birth"), "flourished": a.get("dates", {}).get("flourished", ""),
                         "summary": a.get("summary", "")})
     scholars = sorted(_j.loads((ROOT / "data/scholars.json").read_text()), key=lambda s: s.get("name", ""))
+    _border = {m: i for i, (m, _, _) in enumerate(_masters_by_works())}
+    masters.sort(key=lambda m: _border.get(m["id"], 999))
     modern = [{"id": s["id"], "name": s["name"], "url": f'/scholars/{s["id"]}.html',
                "affiliation": s.get("affiliation", ""), "summary": s.get("summary", "")} for s in scholars]
     sec = {"sections": [
@@ -1110,14 +1112,13 @@ def build_sections():
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     shutil.copy(ROOT / "data/sections.json", DIST / "data/sections.json")
     out = DIST / "masters"; out.mkdir(parents=True, exist_ok=True)
-    rows = "".join(
-        f'<div class="ev"><span class="dot"></span><b>{_esc(y) if isinstance(y,int) else "date unknown"}</b> — '
-        f'<a href="/{m}/index.html"><b>{esc(n)}</b></a> — {esc(next((x["summary"] for x in masters if x["id"]==m), ""))}</div>'
-        for m, n, y in [(x["id"], x["name"], x["birth"]) for x in masters])
+    cards = "".join(
+        f'<a href="/{m["id"]}/index.html"><b>{esc(_short_name(m["name"]))}</b> — {esc(str(m["birth"]) if m["birth"] else m["flourished"] or "date unknown")}</a>'
+        for m in masters)
     (out / "index.html").write_text(TF(ATmpl,title="Masters", h1="Masters",
-        sub="premodern author-masters in chronological order — click any name, bio loads first",
-        sidenav=sidenav(MASTERS[0], ""), body=f'<div class="tl">{rows}</div>'
-        f'<div class="sub">Order key: birth year (approx, flagged) · undated masters sort last · <a href="/data/sections.json">machine-readable taxonomy</a></div>' + srclink("site/data/authors/", "per-master JSON + person schema; birth years live in dates.birth.")))
+        sub="premodern author-masters — click any name, bio loads first",
+        sidenav=scholar_nav(""), body=f'<div class="idx">{cards}</div>'
+        f'<div class="sub">Order: most works first · full dates on each bio · <a href="/data/sections.json">machine-readable taxonomy</a></div>' + srclink("site/data/authors/", "per-master JSON + person schema; birth years live in dates.birth.")))
     out2 = DIST / "modern"; out2.mkdir(parents=True, exist_ok=True)
     cards = "".join(f'<a href="{m["url"]}"><b>{esc(m["name"])}</b> — {esc(m.get("affiliation",""))}</a>' for m in modern)
     (out2 / "index.html").write_text(TF(ATmpl,title="Modern", h1="Modern",
