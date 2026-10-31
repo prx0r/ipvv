@@ -91,16 +91,80 @@ async function translations(){
   $('#view').innerHTML = `<h1>Read</h1><div class="sub">Sanskrit with gate-passed English. Withheld where the gate hasn't passed — fail-closed.</div>
   <div class="idx">${files.map(w=>`<a href="#/work/${w}">${esc(w)}</a>`).join('')}</div><div id="answer" style="display:none"></div>`;
 }
+let KAR = { audio: null, timer: null, cur: null };
+function stopKaraoke(){
+  if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
+  if(KAR.audio){ KAR.audio.pause(); }
+  document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+  const b = document.getElementById('kstop');
+  if(b) b.style.display='none';
+}
 async function work(path){
   const wid = path.split('/')[2];
-  const items = await get(`/data/translations/${wid}.json`);
+  const items = await get(`/data/translations/${wid}.json`).catch(()=>[]);
+  let kar = null;
+  try{ kar = await get(`/data/karaoke-${wid}.json`); }catch(e){}
+  const hasKar = Array.isArray(kar) && kar.length > 0;
   const pass = items.filter(i=>i.gate==='PASS'), held = items.length - pass.length;
-  $('#view').innerHTML = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld</div>` +
-    items.map(it=>`<h2>${esc(it.chunk||'')}</h2><div class="dev">${esc(it.sanskrit||'')}</div>` +
-      (it.gate==='PASS'
-        ? `<p>${esc(it.l2||it.l1||'')}</p><div class="gate pass">PASS · English shown</div>`
-        : `<div class="gate blocked">Withheld — pending review. Sanskrit only, never translated by display.</div>`)).join('') +
-    `<div id="answer" style="display:none"></div>`;
+  let html = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld${hasKar ? ' · karaoke available — press play and read along' : ''}</div>`;
+  if(hasKar){
+    html += `<div style="margin-bottom:1rem"><button class="playbtn" id="kall">▶ read all with chant</button> <button class="playbtn" id="kstop" style="display:none">■ stop</button></div><div id="kv"></div>`;
+  }
+  html += items.map((it,ix)=>{
+    const k = hasKar ? kar[ix % kar.length] : null;
+    let saHtml = `<div class="dev">${esc(it.sanskrit||'')}</div>`;
+    if(k && k.words){
+      const padas=[[],[],[],[]];
+      k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
+      saHtml = padas.filter(p=>p.length).map(p=>`<div class="dev">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(w.w)}</span>`).join(' ')}</div>`).join('');
+    }
+    return `<div class="vblock" data-v="${ix}"><div style="display:flex;align-items:baseline;gap:.5rem"><h2 style="margin:0">${esc(it.chunk||'')}</h2>${k?`<button class="playbtn" data-kplay="${ix}" data-au="/audio/${wid}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3">▶</button>`:''}</div>${saHtml}` +
+    (it.gate==='PASS'
+      ? `<p>${esc(it.l2||it.l1||'')}</p><div class="gate pass">PASS · English shown</div>`
+      : `<div class="gate blocked">Withheld — pending review. Sanskrit only, never translated by display.</div>`) + `</div>`;
+  }).join('');
+  html += `<div id="answer" style="display:none"></div>`;
+  $('#view').innerHTML = html;
+  if(!hasKar) return;
+  const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
+  const st = document.createElement('style');
+  st.textContent = '.kw{transition:background .15s;border-radius:.2em;padding:0 .1em}.kw.on{background:#fdf0d5}';
+  document.head.appendChild(st);
+  function tick(){
+    const t = audio.currentTime;
+    document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+    const all = Array.prototype.slice.call(document.querySelectorAll('.kw'));
+    for(const w of all){
+      if(+w.getAttribute('data-v') !== KAR.cur) continue;
+      const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
+      if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
+    }
+    if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
+  }
+  function playVerse(ix){
+    if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
+    audio.pause();
+    document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+    const btn = document.querySelector(`[data-kplay="${ix}"]`);
+    if(!btn) return;
+    audio.src = btn.getAttribute('data-au');
+    KAR.cur = ix;
+    const sb = document.getElementById('kstop'); if(sb) sb.style.display='';
+    audio.play().catch(()=>{});
+    KAR.timer = requestAnimationFrame(tick);
+    const blk = document.querySelector(`.vblock[data-v="${ix}"]`);
+    if(blk) blk.scrollIntoView({block:'center',behavior:'smooth'});
+  }
+  document.querySelectorAll('[data-kplay]').forEach(b=>{ b.onclick = ()=>playVerse(+b.getAttribute('data-kplay')); });
+  const kall = document.getElementById('kall');
+  if(kall) kall.onclick = ()=>{
+    let ix = 0;
+    const total = document.querySelectorAll('[data-kplay]').length;
+    audio.onended = ()=>{ ix++; if(ix >= total){ const sb=document.getElementById('kstop'); if(sb) sb.style.display='none'; KAR.cur=null; } else playVerse(ix); };
+    playVerse(ix);
+  };
+  const kstop = document.getElementById('kstop');
+  if(kstop) kstop.onclick = ()=>{ audio.onended=null; stopKaraoke(); KAR.cur=null; };
 }
 async function recite(){
   let works = [];
