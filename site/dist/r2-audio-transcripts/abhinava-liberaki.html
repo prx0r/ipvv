@@ -1,0 +1,2192 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>abhinava-liberaki · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Transcript</div><h1>abhinava-liberaki</h1><div class="skt"></div><div class="sub">21597 words · vendored research asset</div><div class="sub"><a href="/data/r2-audio-transcripts/abhinava-liberaki.md">source →</a></div><ul>
+<li>seconds</li>
+<li>m speaking here with Laura Li beraki and we&#x27;ll be talking about a number of things um many of the topics many of</li>
+<li>07</li>
+<li>seconds</li>
+<li>ich will be related to her recent book which I&#x27;ll show here in case anybody&#x27;s watching the video the matter of Wonder</li>
+<li>14</li>
+<li> seconds</li>
+<li>inav Gupta pantheism and the new materialism so lots of interesting topics that I&#x27;m looking forward to exploring with you from that and also</li>
+<li>tps://www.youtube.com/watch?v=Liqm9b6BlUU</li>
+<li> seconds</li>
+<li>u sent me some articles on integration information Theory I think uh yes that&#x27;s</li>
+<li>30</li>
+<li> seconds</li>
+<li>ght yeah which had some really interesting ideas in it um so hopefully we&#x27;ll get a chance to go through that as well but um before we dive in I&#x27;m curious what um what is your background</li>
+<li>39</li>
+<li> seconds</li>
+<li>at led you to to want to focus particularly on abav Gupta I did my undergraduate at Princeton and I did it in English literature and um and then</li>
+<li>48</li>
+<li> seconds</li>
+<li>ter I I finished I went to California and I had this idea that I was going to try to find a guru and get enlightened but anyway I did sort of um did find a</li>
+<li>56</li>
+<li> seconds</li>
+<li>ru and then I got very interested in um in um um Sanskrit and I uh and then I went to um Penn for graduate school and</li>
+<li>06</li>
+<li>minute, 6 seconds</li>
+<li> and then um I studied my adviser was uh H Willam Hass who isn&#x27;t who is a who</li>
+<li>14</li>
+<li>minute, 14 seconds</li>
+<li>o actually is a philosopher um so it was a good it was a good match but I I initially went thinking I was going to study ritual you know um and then um but</li>
+<li>22</li>
+<li>minute, 22 seconds</li>
+<li>en due to you know the as the fates arrang things and I was in the religious studies Department I wound up managing to have the great Good Fortune of being</li>
+<li>31</li>
+<li>minute, 31 seconds</li>
+<li>le to switch to to Halas um who was just he was brilliant you know brilliant thinker and um and so he was the one who</li>
+<li>40</li>
+<li>minute, 40 seconds</li>
+<li>tually at a certain point um he said to me hm here&#x27;s I was in a class with him and he&#x27;s like you know there&#x27;s this thinker ABI naaka why don&#x27;t you read</li>
+<li>49</li>
+<li>minute, 49 seconds</li>
+<li>me of him see what you think and so he sort of prodded me into sort of like um sort of like you know uh starting to study him and and then once you know as</li>
+<li>57</li>
+<li>minute, 57 seconds</li>
+<li>u know cuz you&#x27;ve read some AB once you read him um especially in the Sanskrit he&#x27;s just it&#x27;s just entrancing he&#x27;s like he&#x27;s a wonderful writer I mean</li>
+<li>06</li>
+<li>minutes, 6 seconds</li>
+<li>d he&#x27;s just a really wonderful writer and like he&#x27;s funny sometimes he&#x27;s you know very deep he&#x27;s he&#x27;s just a good writer I mean compared to say shankara</li>
+<li>15</li>
+<li>minutes, 15 seconds</li>
+<li> I think abiu is such he&#x27;s a much nicer writer he&#x27;s just more much more fun to read you know in terms as as a writer he&#x27;s just I like him a lot better</li>
+<li>24</li>
+<li>minutes, 24 seconds</li>
+<li> a writer he&#x27;s not as pedantic he&#x27;s just a really good writer as well and um yeah yeah you know so um and so then I</li>
+<li>31</li>
+<li>minutes, 31 seconds</li>
+<li>u know and then it was my adviser hopefest as well who who said you know there&#x27;s this text you know that hasn&#x27;t been translated yet why don&#x27;t you sort of look at this particular text and his</li>
+<li>40</li>
+<li>minutes, 40 seconds</li>
+<li>ea was like you can write on samaa which is this um key Concept in um Tantra which is this notion of um a</li>
+<li>47</li>
+<li>minutes, 47 seconds</li>
+<li>rson sort of like getting possessed um by a daty now um the prna this</li>
+<li>55</li>
+<li>minutes, 55 seconds</li>
+<li>rticular School of philosophy with AAG Gupta and is his predecessors utala one what some of the thing one of the things that they do is they actually tend to</li>
+<li>02</li>
+<li>minutes, 2 seconds</li>
+<li>rt of transform that notion into um instead of being this crazy wild and Sanderson Alexa Sanderson talks about</li>
+<li>10</li>
+<li>minutes, 10 seconds</li>
+<li>is instead of being this crazy wild idea of a person getting possessed by a deity which you know do we have that in</li>
+<li>17</li>
+<li>minutes, 17 seconds</li>
+<li>r world maybe parts of South America I don&#x27;t know um you know um what happens with this particular pre they actually</li>
+<li>25</li>
+<li>minutes, 25 seconds</li>
+<li>rt of shift the idea so that it&#x27;s um it&#x27;s not some external Wild Thing possessing you it&#x27;s one it&#x27;s a sense of</li>
+<li>32</li>
+<li>minutes, 32 seconds</li>
+<li>ke entering into this sort of Greater understanding of sh and that becomes the sort of so so so Sanderson points it says that the the tradition becomes</li>
+<li>41</li>
+<li>minutes, 41 seconds</li>
+<li>nitized okay the idea there is that what happens is that um it becomes more philosophical um it becomes a more of a</li>
+<li>49</li>
+<li>minutes, 49 seconds</li>
+<li>ilosophical tradition rather than a sort of um theoric or you know wild sort of um uh phenomenological sort of um</li>
+<li>57</li>
+<li>minutes, 57 seconds</li>
+<li>stical experience um now I don&#x27;t think it&#x27;s entirely the case that it LO you know when it shifts to the sort of philosop philosophical perspective that</li>
+<li>06</li>
+<li>minutes, 6 seconds</li>
+<li> loses the sort of the sort the very profound intense mystical components of it I I don&#x27;t think that happened with these with these thinkers um but what it</li>
+<li>14</li>
+<li>minutes, 14 seconds</li>
+<li>es do is it sort of requires a sort of reworking of ontology on a on a very deep level I think and so that&#x27;s where you start to get um you know abin</li>
+<li>23</li>
+<li>minutes, 23 seconds</li>
+<li>ava&#x27;s brilliant sort of non-dualism his advat Tantra as opposed to advant um yeah so um yeah I&#x27;m going up going no</li>
+<li>32</li>
+<li>minutes, 32 seconds</li>
+<li>&#x27;s fantastic I mean I have to just first of all say I mean what a blessing to have been able to study with Huss I mean that is I imagine it was probably</li>
+<li>41</li>
+<li>minutes, 41 seconds</li>
+<li>ose to the end of his career right because he&#x27;s he&#x27;s passed away now and he for those that are that are listening he is a kind of was a trailblazing kind of</li>
+<li>49</li>
+<li>minutes, 49 seconds</li>
+<li>inker and um the fact that you were able to study with him I mean I&#x27;m jealous yeah he was um actually I got</li>
+<li>57</li>
+<li>minutes, 57 seconds</li>
+<li>is job here at Colorado you know I just finished my dissertation got the job here at University of Colorado Boulder and I was had an intended in my</li>
+<li>06</li>
+<li>minutes, 6 seconds</li>
+<li> you know my first year here in the spring I intendant he I was talking with him I was like oh why don&#x27;t you come and give a talk here and he passed before he</li>
+<li>14</li>
+<li>minutes, 14 seconds</li>
+<li>s able to come which is very very sad so I was uh yeah I was like I just sort of gotten here and then you know he was gone that&#x27;s that&#x27;s really sad yeah if</li>
+<li>22</li>
+<li>minutes, 22 seconds</li>
+<li>ybody is not familiar with his work and you&#x27;re interested in Indian philosophy check it out I should say also I did not actually intend to become a philosopher though I mean I had his</li>
+<li>31</li>
+<li>minutes, 31 seconds</li>
+<li>ilosophical influence and I I guess like many people I just like to think about ideas but if I did not actually ever intend to go into philosophy</li>
+<li>39</li>
+<li>minutes, 39 seconds</li>
+<li>cause I had this um maybe um stereotypical stereotype of of philosophy as being like you know um you</li>
+<li>47</li>
+<li>minutes, 47 seconds</li>
+<li>ow just mincing of words and especially with analytic philosophy and just kind of like kind of yes I mean shouldn&#x27;t say that but but there but</li>
+<li>55</li>
+<li>minutes, 55 seconds</li>
+<li>at was the sort of you know so you were probably you were probably um most interacting with like analytic philosophy where where there&#x27;s less</li>
+<li>02</li>
+<li>minutes, 2 seconds</li>
+<li>terest in kind of you know meaning and and The Human Experience and more with like log logic chopping that&#x27;s right that&#x27;s right yeah there&#x27;s a person you</li>
+<li>10</li>
+<li>minutes, 10 seconds</li>
+<li>ow as you know who really didn&#x27;t I didn&#x27;t really have training in philosophy apart from working with a philosopher Halas um you know and and there were these you know these sort of</li>
+<li>19</li>
+<li>minutes, 19 seconds</li>
+<li>ereotypes iead of that you know that really um a lot of philosophers actually just sort of um find uh fancy ways of</li>
+<li>27</li>
+<li>minutes, 27 seconds</li>
+<li>pressing their sort of um their beliefs maybe maybe even based on P psychological sort of histories that</li>
+<li>35</li>
+<li>minutes, 35 seconds</li>
+<li>ey had as well also you know so okay but yeah so I was I didn&#x27;t really start out to be a philosopher at all and um you know it&#x27;s just that I think that</li>
+<li>42</li>
+<li>minutes, 42 seconds</li>
+<li>ny a lot of us right you know we just sort of you can&#x27;t help think about the meaning of life and so if that&#x27;s philosophy then you know yeah absolutely</li>
+<li>50</li>
+<li>minutes, 50 seconds</li>
+<li>ll I studied I studied Continental philosophy I was always attracted to more of the kind of 20th century the phenomenologists and the existentialists</li>
+<li>58</li>
+<li>minutes, 58 seconds</li>
+<li>d these kind of people who were reflecting on The Human Experience so and I was in a lot of people who studied Continental philosophy you know there&#x27;s</li>
+<li>06</li>
+<li>minutes, 6 seconds</li>
+<li>is huge kind of argument and um debate between or or rivalry between these two traditions of thought and you know we</li>
+<li>14</li>
+<li>minutes, 14 seconds</li>
+<li>st sneered at these you know at these analytic philosophers as being just totally narrow-minded about the</li>
+<li>21</li>
+<li>minutes, 21 seconds</li>
+<li>ssibilities of what philosophy can do yeah no I mean I definitely have been sort of um uh you know my own my own</li>
+<li>29</li>
+<li>minutes, 29 seconds</li>
+<li>rspective around what Phil philosophy and what it is and what it can do has has been broaden by colleagues you know I mean even you know like even um when I</li>
+<li>36</li>
+<li>minutes, 36 seconds</li>
+<li>s writing this book you know I pitched it towards religious studies Scholars and also I wanted to reach a wider audience with this um but I you know but</li>
+<li>45</li>
+<li>minutes, 45 seconds</li>
+<li>ere you know but people like Michael Allen who&#x27;s really I don&#x27;t know if you know Michael Allen&#x27;s work he&#x27;s in he&#x27;s at the University of Pennsylvania he&#x27;s um you should have on your podcast he&#x27;s</li>
+<li>52</li>
+<li>minutes, 52 seconds</li>
+<li>tually um he&#x27;s a he&#x27;s a he he works with vernacular sources of vant he&#x27;s a really good thinker and he started to</li>
+<li>59</li>
+<li>minutes, 59 seconds</li>
+<li>oup at the at the American Academy of religion um uh centered around Hindu philosophy which we hadn&#x27;t had which is bizarre because there was like you know</li>
+<li>08</li>
+<li>minutes, 8 seconds</li>
+<li>ddhist philosophy groups you know Continental philosophy every philosophy you can think of but not Hindu philosophy but he&#x27;s really quite a good thinker and he&#x27;s um uh thinking a lot</li>
+<li>16</li>
+<li>minutes, 16 seconds</li>
+<li>out um these ideas of broadening the notion of philosophy so that&#x27;s not just an analytic category which is really</li>
+<li>23</li>
+<li>minutes, 23 seconds</li>
+<li>rochial as a number of people I think you maybe people even like I think even maybe G jard and said something like this as well too you know this sort of</li>
+<li>31</li>
+<li>minutes, 31 seconds</li>
+<li>rain of philosophy which is dominant in the US right now is really rather parochial yeah but you will know more about that than I will I&#x27;m sure oh I I yeah I don&#x27;t know I mean it&#x27;s</li>
+<li>40</li>
+<li>minutes, 40 seconds</li>
+<li>teresting because you know I see your your work as really um carving out a space an intersection between kind of a</li>
+<li>49</li>
+<li>minutes, 49 seconds</li>
+<li>rious sort of maybe specializations disciplines in a way that&#x27;s really interesting uh because you know in in</li>
+<li>57</li>
+<li>minutes, 57 seconds</li>
+<li>me sense I you know because you you can approach this stuff from sort of the religious studies angle you can approach it from the philological angle you can</li>
+<li>04</li>
+<li>minutes, 4 seconds</li>
+<li>proach it from the philosophical angle and the problem with philosophy at least you know with most of its</li>
+<li>10</li>
+<li>minutes, 10 seconds</li>
+<li>stitutionalization is that it is um generally it has you know its Canon it has its sort of you know problems and</li>
+<li>19</li>
+<li>minutes, 19 seconds</li>
+<li>e discourses around those problems and it&#x27;s pretty narrow in its ability to kind of welcome new thinkers and actually interact with thinkers outside</li>
+<li>27</li>
+<li>minutes, 27 seconds</li>
+<li>e Western Canon so that becomes an iCal and then and then um you know religious studies has its own problem</li>
+<li>34</li>
+<li>minutes, 34 seconds</li>
+<li>rt of I mean perhaps you disagree I&#x27;m I was never in religious studies but it seems like from that uh desire to create</li>
+<li>42</li>
+<li>minutes, 42 seconds</li>
+<li>sort of objectivist um discourse outside of theology then religious studies is you</li>
+<li>48</li>
+<li>minutes, 48 seconds</li>
+<li>ow resistant towards embracing kind of non-discursive epistemologies and it feels like to me</li>
+<li>56</li>
+<li>minutes, 56 seconds</li>
+<li>ke you can actually someone said this to me once it wasn&#x27;t my idea that actually philosophy um Can Embrace</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>rhaps depending on the you know the the school and the the the the philosopher can Embrace something like</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>u know a meditation practice because they can conceive it as something like a thought a form of a thought experiment so you don&#x27;t have to necessarily</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>tegorize it in this sort of this is a religious practice right this is a this is a practice of of um that is you know</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>ritual that&#x27;s based in sort of belief and Doctrine and dogma and therefore it is outside sort of the parameters of what we&#x27;re permitted to interact with</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>ademically I mean I think that um religious studies has a little bit of that but really less than you would think and I think you know part of this is due to sort of um you know Wonderful</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>inkers like um Jeff kpo yes I have I love Jeff kpo he&#x27;s great so Jeff&#x27;s work is really phenomenal because he&#x27;s</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>tually sort of I mean you know he is looking back to people like William James you know the founding of our quote discipline right but he&#x27;s also he&#x27;s he&#x27;s</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>ying to sort of put back on the table all of these things that have been pushed off in this sort of in this attempt to sort of like you know not be theological or else be very theological</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>d not be doing religious studies as well um so he I think so religious studies I think has a you know a bigger open space for this and I think a lot of</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>is is being spearheaded by somebody like Jeff not by Jeff in particular I think Jeff is actually sort of like making it possible for us I mean even</li>
+<li>:25</li>
+<li> minutes, 25 seconds</li>
+<li>ough Jeff&#x27;s not really talking about Indian philosophy or these sorts of things I think he&#x27;s just sort of making it possible for us to sort of really</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>ok at you know things that are happening in religious traditions in ways that are allowing us to think about them in comparative context with what we</li>
+<li>:42</li>
+<li> minutes, 42 seconds</li>
+<li>ow in our own world you know so I think I think his work is actually crucial in sort of what you&#x27;re pointing to is this this sort of you know the</li>
+<li>:49</li>
+<li> minutes, 49 seconds</li>
+<li>rt of the possibilities for us to actually start thinking differently about ancient philosophers medieval philosophers and connecting them to sort</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li> things that are are happening and possible in our in our world you know that you know like I as you know in the</li>
+<li>:04</li>
+<li> minutes, 4 seconds</li>
+<li>ok I talk a lot about things like AI you know Notions of information and you know and I and it&#x27;s because they&#x27;re relevant like what abiba has to say</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>out this is relevant and it&#x27;s true it would be very difficult it it is true that it has been difficult to do say things to do things like that but I</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>ink there is a sort of you know movement of foot to sort of like allow us to sort of think about life and you</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>ow you know and also to think about think about these ideas outside of our silos yeah and I I do attribute a lot that a lot of that to to Jeff actually I</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li>ink he&#x27;s done some amazing sort of groundbreaking work to make this possible yeah that&#x27;s amazing yeah I mean in some sense of course you know the</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li>rk of Aban avag Gupta can be understood from a the theological point of view of course I mean it&#x27;s appropriate to refer to it that way but</li>
+<li>:50</li>
+<li> minutes, 50 seconds</li>
+<li>so there&#x27;s a sense in which these the practice and the system of thought is also trying to say something about reality itself and the and the mechanism</li>
+<li>:58</li>
+<li> minutes, 58 seconds</li>
+<li>u know the contemp techniques Technologies are are are means by which we actually cultivate knowledge and you don&#x27;t necessarily have</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li> read that in a kind of you know there&#x27;s just problems with that categorization as theological because it sort of puts it over there rather than</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li> actually has something which I think you do really be beautifully in your book especially with regards to the kind of the idea of the subtle body and like</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>lking about the deities as um you know these multiple personalities within us that is saying something true about our</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li>perience of embodiment and the various you know you know you speak a lot about biological um intersections of various</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>rts um and so yeah so I guess let&#x27;s yeah let&#x27;s I want to talk a little bit about Wonder first to get us kind of in</li>
+<li>:46</li>
+<li> minutes, 46 seconds</li>
+<li>e in the ballpark of of this um diving deeper into what you explored in your book so you know the book is about</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>nder and again I mentioned you you talk a lot about biology and and you bring into the Sciences well dancing</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>ally you know uh elegantly between these different um different systems of thought and uh what I think on the face</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li> it will seem rather either really hard to conceptualize or perhaps absurd if you&#x27;re indoctrinated by a materialist</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>rldview is this idea of matter as Wonder right that that actually um you know because people think of Wonder as something that&#x27;s an epiphenomenal</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>operty of our mind it&#x27;s a internal kind of um uh mental experience and then there&#x27;s matter over there so just to get</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li> down to kind of the basics of that distinction between matter as we understand it in in the modern world and matter as it&#x27;s being kind of explored in</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li> a Gupta what is that kind of that big distinction ABA does a makes a really brilliant move okay because you know just as you to bring it down to the</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>sics um we have a problem with the what we call you know with chmer dub the the the the the heart problem okay the</li>
+<li>:00</li>
+<li> minutes</li>
+<li>nd you know how do you the Mind Body Gap you know um so we have this problem in our world I mean I was gr gupta&#x27;s world had the same problem okay so so</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>s they also had this problem of how do you C connect Consciousness to materiality as you can see with Sania s</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li> similar in a lot of ways not it&#x27;s not the same but it&#x27;s quite similar to decart&#x27;s um notion of you know the um R</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>ns and you know um res extensa and um um and so you do find this Pro problem</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li> Indian philosophy as well and when ABA comes up with this notion of of um Wonder um and connected to the mara</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>ich is its M material basis what he&#x27;s doing is he&#x27;s actually sort of allowing his philosophical tradition to solve the</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>oblem of the Mind Body Gap like that&#x27;s the impetus for what he&#x27;s doing and how does he do it what he does is he actually sort of and I love the way he</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>es this because what he does is he actually sort of um uses a phenomenological lens to reconstruct the</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>tion of of um Wonder to allow us to recognize that wonder is always embodied</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>d it has to be embodied and then so he draws from this sort of like basic pH phenomenological Insight um and so as</li>
+<li>:17</li>
+<li> minutes, 17 seconds</li>
+<li>u saw in the book I talk a lot about um the experience of Wonder we think it&#x27;s a Transcendence up and out um and what Ababa does is he actually sort of</li>
+<li>:26</li>
+<li> minutes, 26 seconds</li>
+<li> shows us how Wonder itself is actually a sort of inward into the materiality of what we are um and so um</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li>d and I mean the the why he does that is that ultimately he has to do that if he wants to have a non-dualism a</li>
+<li>:42</li>
+<li> minutes, 42 seconds</li>
+<li>n-dualism that will sort of not either push say matter is an illusion which is what we find inant or that you know you know as</li>
+<li>:51</li>
+<li> minutes, 51 seconds</li>
+<li>meone like Daniel dennet says today that Consciousness is an illusion when he calls it an EP phenomenon so so yeah</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li> never found a way to sort of like navigate these too and um and the way that he does it is that he um he uses</li>
+<li>:06</li>
+<li> minutes, 6 seconds</li>
+<li>enomenology to sort of then connect this idea of the will and this idea of of um the experience of something like wonder he connects it back to this to</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>e idea of the body to the idea of the breath to the idea of of um materiality um and so that&#x27;s that&#x27;s the sort of the</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>e I would say it&#x27;s it&#x27;s a fantastic um amazing sort of um brilliant Insight that he has um and that it um and it&#x27;s</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>mething that we today really haven&#x27;t quite been able to get either so that&#x27;s one of the reasons I say in the book and in other articles I&#x27;ve written that um</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li> can actually use some of his ideas to help us get through some of our own you know on philosophical conundrums as well that you know and it&#x27;s good because he&#x27;s</li>
+<li>:46</li>
+<li> minutes, 46 seconds</li>
+<li>ming from a sort of um primarily from a phenomenological perspective you know when he&#x27;s you know he&#x27;s a very deep</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>inker but he&#x27;s also as you know and have pointed out I think that he&#x27;s also something of a of um you know he&#x27;s you</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>ow a meditator and Enlighten you know you know the tradition says he was enlightened um um and he is definitely</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>ry deep as a thinker and it&#x27;s clear he&#x27;s very aware of like the mind and how the mind works and so and that&#x27;s one of</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>e things I do love about his writing as well also that he&#x27;s he&#x27;s got a wonderful sort of awareness of like what it is that the Mind does you how the</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>nd works this sort of thing and so so he&#x27;s using phenomenology to help us sort of um</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>appraise um what Consciousness is and bringing it back to this notion that Consciousness is not um this thing</li>
+<li>:37</li>
+<li> minutes, 37 seconds</li>
+<li>at&#x27;s separate from materiality and that gets it gets structured in his um in his you could call it um a dual</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>pect non-dualism you know that he&#x27;s got these two elements which is um these these two elements one of which is um</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>u know knowledge and the other which is Kaa action Jana and Kaa which then transcribe onto prasha and VI Mara</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>asha means light okay this s of um and vimara um and this is the key thing that he does ver Mara means this um it</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>comes this I translate it as active awareness um and I use the word active there because it connects to this notion of Kaa and then with this he connects it</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li> to materiality and the world so how do you get sentience how do you get what we think of as Consciousness you get it</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>om um be Marsha from uh from from materiality and the world and he does</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>at um through this notion of um subjectivity uh aun um aess um I mean</li>
+<li>:41</li>
+<li> minutes, 41 seconds</li>
+<li>e only other contemporary Western thinker I think who sort of gets this on a deeper level is actually um she she</li>
+<li>:51</li>
+<li> minutes, 51 seconds</li>
+<li>ssed away did you ever read any Lyn Rudder Baker&#x27;s work she&#x27;s really quite brilliant she&#x27;s a philosopher she&#x27;s she&#x27;s a philosopher and um and um</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>ading her work I realized like oh she actually is UND is you know it&#x27;s not quite the same is what I&#x27;ve been is saying obviously for many many reasons</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li>t she actually gets some of this idea of of this notion of um why</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>nsciousness has to be um Consciousness as we think of it in the Western World um has to be sort of um in a particular</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>rspective based on an eyess within a a material body and this this is also why um ABI Anda says this over and over in</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>rious different places this notion that the highest Divinity has a body the body of the highest Divinity is the</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>iverse um so you so you can&#x27;t get with his thinking what you don&#x27;t get is a place of quote pure Consciousness</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>parated from materiality because Consciousness itself has um is always sort of um the first person persp</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>rspective is instantiated that&#x27;s the idea here that&#x27;s beautiful yeah um you know throughout the book it&#x27;s clear that</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li> the motivation so to back up a little bit many people when they kind of encounter ABA gupta&#x27;s work it&#x27;s it&#x27;s one of the</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>rt of basic ideas that people encounter is this idea that Consciousness is primary right and in my experience there&#x27;s been a lot of seeming</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>tential misunderstandings of thinking that that&#x27;s just kind of a form of idealism right that it&#x27;s kind of just a almost like a solipsistic a new</li>
+<li>:25</li>
+<li> minutes, 25 seconds</li>
+<li>lipsism in a way um and you know when you dive a little deeper as you say you discover that there is no separation</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>tween conscious Consciousness and matter in this in this uh tradition so you you know you elected to kind of</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>cus on the the matter side of of the question and it&#x27;s a very very apparent from your book that you did that for</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>asons kind of political reasons I mean reasons for with regards to like how we&#x27;re thinking about matter culturally</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>d how this new um this new approach it&#x27;s actually quite old but perhaps new for us approach to matter really kind of</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>erturns and resolves a lot of conflicts that actually emerge in our own in our own intellectual tradition the West you know our own intellectual</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>adition um so so I&#x27;m curious can you outline a few of the the kind of reasons you know the few the few of the kind of misunderstandings that are sort of</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>rvasive in in um European and English-speaking thought um um before</li>
+<li>:26</li>
+<li> minutes, 26 seconds</li>
+<li>ey encounter a thinker like abanag Gupta um you mean in terms of um going back to</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>y a cartisian con conception of yeah yeah I mean throughout and obviously there&#x27;s so many points that you make throughout the book with regards to this</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li> but there there&#x27;s some um oh well let&#x27;s let&#x27;s actually approach it with regards to this new materialism actually</li>
+<li>:49</li>
+<li> minutes, 49 seconds</li>
+<li>at&#x27;s probably be better because because you you cite a number of thinkers that are proposing this kind of new materialism Jane Bennett who I</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li>tually read years ago um and uh and they&#x27;re doing you know they&#x27;re doing something really interesting and and and kind of radical by by introducing this</li>
+<li>:06</li>
+<li> minutes, 6 seconds</li>
+<li>nd of new seems like a kind of a new animism but they don&#x27;t make it all the way it seems like abanag Gupta in your</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>ew um provides a a picture that actually um resolves some of the contradictions or issues that emerged in</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>ese other thinkers so can you walk us through that a little yes I mean I think there&#x27;s um yeah I mean I think I think Bennett and</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li> and maybe Mary Jane Rubenstein as well both sort of she&#x27;s rubenstein&#x27;s talking more about um pantheism I think and not as much you know not as directly</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>out new materialism in this in this section although I think um I think Rubenstein uh did do an edited volume</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>th on I&#x27;m in that volume on on new materialism uh and science as well so she&#x27;s she&#x27;s keenly aware of these ideas</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li> well also um and I think that and she talks about spinos and um and you know and when there&#x27;s in the book I talk a about you know this</li>
+<li>:02</li>
+<li> minutes, 2 seconds</li>
+<li>ea that Spinosa um is not doesn&#x27;t go quite as far as Ababa Gupta does to sort of um to sort of um recognize this</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>tion of Consciousness in you know in matter you know uh really in matter um but one of the things I think that&#x27;s</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>tually really really important and um is this and that is um the reason why European philosophers don&#x27;t go Whole Hog</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li> this is um because there&#x27;s really only one way you can go Whole Hog on it and not run into major problems and that</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li> if you take a position um say like Spinosa or well let me not think of Spinosa here and I&#x27;m not a Spinosa</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li>pert sposa but it&#x27;s been years since I read him maybe you can you can I&#x27;ve forgotten the details but I know the</li>
+<li>:51</li>
+<li> minutes, 51 seconds</li>
+<li>sics um but um and that is you have to have really an advain adant um approach and then the world becomes illusion and</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li> what&#x27;s so key about what abeva does is it has to do with this idea of the mar the Mara and that is that he um he</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li>nts to he he he basically wants to keep the world he doesn&#x27;t want to have the world be an illusion okay and um</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>at we do know is that um if you say that um and a lot of contemporary like Kristoff Co does this a little bit I</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>ink you know the computer scientist who&#x27;s aligned himself with um tanon um in uh uh in integrated information</li>
+<li>:29</li>
+<li> minutes, 29 seconds</li>
+<li>eory um and other scientists will do this you know they&#x27;ll sort of embrace it&#x27;s very it&#x27;s impossible to get from um matter to Consciousness the brain can&#x27;t</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>oduce it because you know it just doesn&#x27;t make any sense um and so so I&#x27;m just I&#x27;m walking back these things but I&#x27;ll it&#x27;ll it&#x27;ll come through and then</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li> someone like Bernardo castrop actually sort of says well let&#x27;s take this to its logical conclusion we have to have adanta that&#x27;s it we just have to</li>
+<li>:55</li>
+<li> minutes, 55 seconds</li>
+<li>ve completely adanta an idealism you know we find idealism in the west I think barklay and other philosophers as well and um and</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>at&#x27;s really where you have to go but what um what ABAB is saying here is that you don&#x27;t actually have to go there because AB nevera wants to keep the</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>rld um but it is the case that what we see in our world is that um is that uh people um uh Consciousness</li>
+<li>:20</li>
+<li> minutes, 20 seconds</li>
+<li>ere&#x27;s some things we think of as being conscious and some things there&#x27;s not and there is a distinction you know my pen you know I can throw it across the room it&#x27;s not a problem I don&#x27;t think</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li>&#x27;s sentient you know your dog not so much okay because um we do H we we we have this idea that some things are</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>ntient and some things are not and an idealism you know pan psychism or protop pans psychism doesn&#x27;t really know how to</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>lve that problem uh and that&#x27;s what Ababa is focusing on in much of his work he&#x27;s focused on this particular problem</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li> there are some things that we understand to be um uh uh sentient and other things that not now he also Al because it&#x27;s a non-dualism he also wants</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li> has to say that ultimately everything is um everything is sentient Consciousness or has the he doesn&#x27;t say</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>at he says everything has the capacity for Consciousness and for sentience um and um it he does sort of you know even in his writing you know he you know he</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>es make distinctions he does um you know so you&#x27;ll find the sort of standard uh Sanskrit phrase</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>ah which means that um you know this whole creation from you know Brahma all the way down to plants and ab group stop</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>esn&#x27;t go to Plants he says you know um which he stops at um insects and</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>rms okay um and uh you know so so what you have here is this notion that everything has and for Rabin Nava it&#x27;s</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>dden at the base in the core of things has this capacity for for sentience and Consciousness and that&#x27;s because of IM Mara or it&#x27;s because of the nature of of</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li> Consciousness being all pervasive but if it gets covered over hidden over then you can make distinctions between a pen</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>cup and um and a person you know and I think that is the key idea that um ABA</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>ings that you don&#x27;t really find in a lot of Western philosophy that Western philosophers they get stumped at this particular juncture you know either you</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>ve to go into sort of well I&#x27;m going to go whole hog and like Barkley or or you know nowadays Bernardo castr and say everything is it&#x27;s all mind there&#x27;s</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>thing else you know and in some ways I mean I don&#x27;t think it&#x27;s um I mean I think you could take an idealism and you can understand aba&#x27;s um uh ababa&#x27;s sort</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li> philosophy in you know through a lens that is idealistic in some respects but ABA does not want to do that you know</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>d it is true that a number but I think you can read him at some points as being somewhat idealistic and you&#x27;re right when I wrote the book um uh you know</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>&#x27;s true that many previous um interpreters of abinav have sort of leaned towards this IDE idealist uh the idealism and this idealistic perspective</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>u know and that&#x27;s one of the reasons why you see so many you know you see a lot of emphasis on prasha this idea of light but they but what what a lot of</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>ese folks haven&#x27;t really sort of pointed out is that it&#x27;s very clear um that ABA does understand praa the idea</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li> light as being connected to the notion of being an object so lacking this notion of sentience you know so he</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>es this wonderful switch um which I talk about much more detail in that in the fourth chapter in the chapter um</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li>ere I talk about computers become sentient in the book you know and it&#x27;s it&#x27;s really a brilliant brilliant Insight that he has and it&#x27;s and it&#x27;s a</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>illiant move that he makes in order to to um demonstrate this you know to sort of um uh to to not only to link matter</li>
+<li>:48</li>
+<li> minutes, 48 seconds</li>
+<li>d Consciousness mind and body but also to sort of um he he you know he it&#x27;s like the mobia strip in so far as that he actually cross links them in ways</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li>at we have that in the West we just haven&#x27;t done you know like we think Consciousness we and it matter you know not just from deart but even before</li>
+<li>:04</li>
+<li> minutes, 4 seconds</li>
+<li>art there is this Consciousness there&#x27;s there matter you know and then we don&#x27;t really sort of Link the two together um and that&#x27;s what abinav is</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>le to do by understanding um that um matter has Consciousness but not in this sort of facile protop pans psychist way</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>at we see a lot of contemporary thinkers doing he does it in a way where he he re he recognizes that you absolutely have to bring in the um this</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li>tion what he calls aant which is iness um you have to bring in subjectivity um so um I think in the uh so I&#x27;ve written</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>little bit about um written a little bit about um tanon and um his uh uh integrated information Theory and one of</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>e this one of the articles that I wrote about um this theory is um I basically said look you guys are talking about subjectivity um and then they did</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>tually a little you know a year or so after that they actually started fessing up and saying yeah you know we&#x27;re actually talking about subjectivity um</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li> I think it&#x27;s you know so I think that you know you know they also realize that that you cannot get um this uh you</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>nnot have Consciousness in a pans psychist way without um bringing you need a notion like this idea of</li>
+<li>:17</li>
+<li> minutes, 17 seconds</li>
+<li>bjectivity instantiated subjectivity subjectivity instantiated immateriality if you want to get the kinds of the sty of Consciousness where we think about I</li>
+<li>:25</li>
+<li> minutes, 25 seconds</li>
+<li>an in as you know in the book I also talk quite a lot about this the fact that um you know we&#x27;re very sloppy in our terminology when we say Consciousness</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>solutely you know it&#x27;s just it&#x27;s sort of like well what do we actually mean by Consciousness you know you know and and I think that&#x27;s sort of what ABA</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>cognizes as well too yeah absolutely yeah sometimes I like to make a distinction between Consciousness and awareness right awareness as being sort</li>
+<li>:48</li>
+<li> minutes, 48 seconds</li>
+<li> our individuated what we would typically associate with being conscious at least in our in our our current cultural</li>
+<li>:55</li>
+<li> minutes, 55 seconds</li>
+<li>radigm that&#x27;s really interesting so do you want to go deeper maybe um because a lot of these you know ideas will probably be new to a lot of um the</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>ople listening so do you want to kind of give us a brief primer of the integration information Theory and how and maybe give us a little more context</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>to how that is um well how that&#x27;s become interesting to you in your work and why um you feel it um is so resonant</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>th um uh a conversation with abanag Gupta yeah I mean not just my work um a lot of um I mean I think it&#x27;s one of the</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>ading theories for you know Consciousness in in you know in in um in uh philosophy of mind and you know these you know it&#x27;s a</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>u know these people are um you know they&#x27;re they&#x27;re uh they&#x27;re working on neurology that you know that konon is a</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li> a neuro is a neurologist a neurophysicist um he&#x27;s working on the brain Etc and he actually um came up with a theory and what he recognized</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>ght away was I mean he went back to decart you know because what he recognized right away is that um Consciousness is the elephant in the</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>om and all of our current science is you know trying to get Consciousness out of our brain and they&#x27;re not getting anywhere and um so what he said was like what we have to do is go back to the</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>rd and recognize that what&#x27;s the one thing we know the one thing we know is our is our awareness I&#x27;m going to use the word awareness I mean what word</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>uld you use for awareness in um in say in a Sanskrit con often the word Boda is used for awareness um I don&#x27;t know if</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>u have any other words in mind um when you think no I mean I guess I mean perhaps the Manus would be the or or</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>ke the anadana in general like that sort of Faculty that is that is kind of facilitating the individuated processing</li>
+<li>:41</li>
+<li> minutes, 41 seconds</li>
+<li> experience yeah I mean that&#x27;s great because you know like in Sonia the anot is actually not conscious yeah yeah well</li>
+<li>:49</li>
+<li> minutes, 49 seconds</li>
+<li>ere&#x27;s where we get in trouble yeah yeah and I mean I I think also I mean that&#x27;s a good question about actual Sanskrit kind of corollaries because uh</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li>u know usually it&#x27;s sort of like when I&#x27;m try because when I just throw out their Consciousness it it is to just people that I&#x27;m having a conversation with who perhaps have never been</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>troduced to this line of thinking they&#x27;re like well why do you want to call something that is otherwise material why do you want to use</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>nsciousness to describe that you know it&#x27;s like they don&#x27;t understand the stakes behind that because to me there&#x27;s like embra like embracing our um</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>terial and cognitive experiences as you know expressions of Consciousness has a sort of you know there&#x27;s an</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li>plication that that means that we can actually you know inhabit through our whatever faculties various other entities objects</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>u know and and and so seeing how subjectivity goes all the way down um provides this ability for us to</li>
+<li>:49</li>
+<li> minutes, 49 seconds</li>
+<li>derstand that like we don&#x27;t stop right with this physical body mind that we&#x27;re not just this right which is of course what ultimately the you know non-dist</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li>nted us want us to understand right yeah yeah I mean and I also have been thinking a lot about this you know even since I mean I do sort of bring</li>
+<li>:04</li>
+<li> minutes, 4 seconds</li>
+<li>is up a little bit in the book in like the fifth chapter where I talk about um models for um Consciousness and um I say like well maybe we can think about it in</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>rms of what this um Barrett brogard talks about as a kind of like a um she&#x27;s talking about these you know she&#x27;s</li>
+<li>:20</li>
+<li> minutes, 20 seconds</li>
+<li>ying the field of gravity you know uh she comes up with this ter Menton and I&#x27;m saying well maybe we can understand how being AB a little bit like that and</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>think also even someone like castr rard castrop is actually thinking more in terms of waves and Fields I meaning why am I bringing this up because um I&#x27;m</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>ing back to this notion of like you know pan psychism and you know protop pan psychism and um and what that deres</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li>think or is closely tied to a lot of contemporary thinking about um quantum physics and quantum mechanics and so how</li>
+<li>:50</li>
+<li> minutes, 50 seconds</li>
+<li> you get Consciousness you know how do you get Consciousness out of you know um Quantum events and um and so I think uh</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li>a there&#x27;s been a a turn a direction towards understanding Consciousness Visa these Notions of of um quantum mechanics</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>d um and I think some people are sort of bringing up this idea well it&#x27;s got we got to think about in terms of waves okay now um so and one of the things</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>at I think is so interesting and peculiar about Consciousness is that</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li> um is that I mean I&#x27;m I&#x27;m I&#x27;m you know if you&#x27;ve been with a person in a relationship for a while what you want you start to notice is that they&#x27;re</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li>nstantly reading your mind or you&#x27;re reading their mind you know that you know people s and so then when you think about that in relationship to ideas of Consciousness you know like how is it</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>at you know my thoughts can be read by another person who&#x27;s sitting next to me you know and there also s of all sorts</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li> like um you know um you know and Jeff Jeff kryple talks L about this too like these anomalous things that we need to bring back on the table you know</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>ychics people who can read other people&#x27;s minds and and you know the idea is that you get some sort of vertical test now you know obviously I&#x27;m not working on any of these sorts of things</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>t it&#x27;s just it&#x27;s too obvious to notice how many times another person is reading your mind or you&#x27;re reading another person&#x27;s mind usually someone who you&#x27;re close to but what does that do it makes</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li> think about like what is the nature of Consciousness then if if it&#x27;s such a thing that can be transmitted without</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>rds to another person you know um and um because we you know um uh so we think of okay so I&#x27;m going so I&#x27;m talking here</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>w about something I talk about in the fifth chapter of the book which is this notion of information and how does and and I&#x27;ll bring this back too as well to sort of toon what they talk about in</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>rms of information so um how is it that we actually ever communicate you know we we have this idea that I&#x27;m saying words you know they&#x27;re coming</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>om me you pick up on the words and then you sort of process them in your own sort of you know computer in your brain whatever and then you know and it</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>ys this piece of information relay through sort of sound Etc into um this other person&#x27;s processing Machinery</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li>atever now this I&#x27;m obviously you know using the sort of um really awful stereotropism</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>u know that you know and then but then you come up with these things like you know you&#x27;re sitting there and you&#x27;re like you get the phone rings and you</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li>ow exactly who it is you know and um and so these these little things that happen make us want to think of Consciousness in a different way okay</li>
+<li>:21</li>
+<li> minutes, 21 seconds</li>
+<li>d and I think that abeva is already doing that as well also and that&#x27;s why these um and not just um the adant</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>ke but also these other um you know even ad you know they&#x27;re trying to sort of say look Consciousness doesn&#x27;t it&#x27;s</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>t like these discreet things that you pass from one person to another we have to have a different model of the nature of Consciousness as well you know so I</li>
+<li>:46</li>
+<li> minutes, 46 seconds</li>
+<li>ke this idea that you&#x27;re saying okay if you say awareness okay Boda you know what is awareness how does awareness you know go from one person to another</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>rson it&#x27;s true the anat you brought well the anadana um and the thing about the anadana which is I think partly why</li>
+<li>:02</li>
+<li> minutes, 2 seconds</li>
+<li> gets slotted in this in the in the sort of category of the incentient is because it&#x27;s understood as these discrete sort of um it&#x27;s this discret</li>
+<li>:10</li>
+<li> minutes, 10 seconds</li>
+<li>ing that is connected it evolves out of you know uh of course it evolves out of you know prti right this you know the</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>ddy the intellect comes out and then um um you know ego and then and then you know Manas the mind</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li>d so but these things become discreet and sort of particularized um uh in when they sort of are located within a</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li>rticular individual the pera um but that is not the same thing as Consciousness you know and and I think that that&#x27;s why even Sanka which is you</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>ow which is where we first get this theory of concretizing um you know the will as something in sentient concretizing the</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li> intellect as something in sentient concertizing the mind as something in sentient in Sania it&#x27;s precisely because they&#x27;re sort of concretized in this sort</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li> scheme um whereas Consciousness itself is something that&#x27;s you know that&#x27;s you know that&#x27;s actually um is it</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li>wave I don&#x27;t know you know but I mean awareness is like that Boda awareness um it&#x27;s like that um yeah so um I mean</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>ese are all things that um uh I me and and as you know with the work that I&#x27;ve done here what I&#x27;m really trying to do is you know get out what are the models</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>at we&#x27;re using and what models will actually work and this is another reason why I think you know Jeff Kel&#x27;s work is so important because he&#x27;s sort of like</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>u know bringing these other things that happen on you know onto the onto the stage that we actually need to sort of incorporate them in the models that</li>
+<li>:41</li>
+<li> minutes, 41 seconds</li>
+<li> come up with um you know so I mean um I know that you had mentioned to me earlier that you um that you also interviewed rert sheldrake as well and</li>
+<li>:50</li>
+<li> minutes, 50 seconds</li>
+<li>at he was talking about this idea of I I read an article of his where he was talking about that um maybe you know we</li>
+<li>:58</li>
+<li> minutes, 58 seconds</li>
+<li>ould consider that the sun itself is conscious is sentient now so so to bring this back to you know you&#x27;re asking about contemporary you know IIT</li>
+<li>:06</li>
+<li> minutes, 6 seconds</li>
+<li>tegrated information Theory um that would be a complete no for um contemporary um Neuroscience IIT</li>
+<li>:14</li>
+<li> minutes, 14 seconds</li>
+<li>tegrated information Theory and that&#x27;s because they have this um Axiom this fifth Axiom which basically says that um</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>u know things like cities are not conscious and things like you know faster you know the Galaxy is not</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>nscious the sort of the the sun is not conscious our solar system is not a conscious entity that there&#x27;s a cut off limit there and the C off limit um has</li>
+<li>:37</li>
+<li> minutes, 37 seconds</li>
+<li> do you know partly with you know the granularity of it the grain but also the cut off has to do with um they talk</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>out in terms of like maximal amount of fi okay um that is this capacity for um</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li> yeah I think this would have be a much longer conversation right what is f and in one sentence yeah in one sentence by is</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>sically um um a it&#x27;s a it&#x27;s a it&#x27;s a it&#x27;s a number it&#x27;s a way to to generate</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>number that will sort that tells you how much Consciousness uh something has whether it&#x27;s a person or a computer or a</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li> photo diode so one of the things they they say is that um and it&#x27;s very useful they they use it in term they use it for</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>ke patients who are in a coma you know if if a patient&#x27;s in a coma if you can measure the activity in the brain and it&#x27;s a it measures basically the amount</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li> recursivity that occurs okay and again um what I like about that is this idea of recursivity which is exactly</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>at ABI naaba Gupta is talking about when he uses this word v Mara it&#x27;s a kind of reflective recursive capacity and so this contemporary Neuroscience</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>eory actually sort of has caught on to this notion as well also um okay so you</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>ve this idea of this um uh recursivity and then you get this and they you know discovered a way to sort of like</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>antify it measure the amount of recursivity and then you can sort of say um whether or not something is conscious</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>E sentient really sentient is what they&#x27;re talking about here um having subjectivity um based on the how high a</li>
+<li>:17</li>
+<li> minutes, 17 seconds</li>
+<li>ore they get on this capacity for five this is a capacity for recursive thinking okay and so they they and it&#x27;s</li>
+<li>:25</li>
+<li> minutes, 25 seconds</li>
+<li>tually quite refreshing because one of the things they said is they say that look um your computer um your your your</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>hone is not conscious it&#x27;s not going to be conscious it&#x27;s got the wrong kind of processing it doesn&#x27;t have a capacity</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li> have a recursive reflect reflective processing where it goes back and reflects on its own um reality and then</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>kes it takes a new choice and abeva talks about the same thing the very idea of freedom has to do with this capacity</li>
+<li>:55</li>
+<li> minutes, 55 seconds</li>
+<li> sort of um uh to reflect and then create something which is um based on that reflection um and that is freedom</li>
+<li>:04</li>
+<li> minutes, 4 seconds</li>
+<li>&#x27;s subjectivity um computers um don&#x27;t actually do this and so this is IIT it&#x27;s a it&#x27;s a it&#x27;s a wonderful Theory it</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>tually um says that because there&#x27;s a a a pan psychism a protop pan psychism at the basis okay Consciousness is</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>iquitous um they&#x27;re saying that in theory you can&#x27;t have a computer that would be conscious but in practice it&#x27;s</li>
+<li>:29</li>
+<li> minutes, 29 seconds</li>
+<li>t happening now or anytime soon because um they don&#x27;t have the right kind of structure you know they don&#x27;t have they um the modular structures um</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>n&#x27;t have um uh capacity for recursiveness uh could we make computers that would probably oh do you think</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>at&#x27;s why I wanted to ask you that yeah because this is good I&#x27;m glad we&#x27;re shifting into AI because actually I&#x27;ve been I find AI so fascinating um and I</li>
+<li>:53</li>
+<li> minutes, 53 seconds</li>
+<li>el like I used to be really stalwart about the I that like and very opposed to the idea that computers could be</li>
+<li>:00</li>
+<li> minutes</li>
+<li>nscious because it seems to sort of again be predicated on this sort of like</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li>mputerized um where where like clearly computers are things that we create we created there you know outgrowths of our</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>man experience and then to then use that as a metaphor to understand Consciousness feels just some it just feels like deeply incorrect in some way</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>t now I&#x27;m not so sure so I&#x27;m curious what what you think and how a goopa thought can help us tease that out yeah okay I mean this is great yeah I mean um</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>u sound like a lot like KRA I think um he he&#x27;s been talking a bit about how um forget about it with computers they&#x27;re</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>t they&#x27;re not designed you know they they&#x27;re made to mimic you know humans and so you think that they oh CH GPT is saying all these you know interesting</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>ings it&#x27;s creative but he&#x27;s saying like but no it&#x27;s not the case these are just algorithms that are run um so I mean so he&#x27;s not drawing on um he&#x27;s he&#x27;s</li>
+<li>:55</li>
+<li> minutes, 55 seconds</li>
+<li>computer scientist I think and has engineered you know done work on engineering computers and so I think he really knows what he&#x27;s talking about with this um he also he doesn&#x27;t</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>ference um integrated information Theory a lot with this but really their Theory also comes to the same conclusion that um you know maybe in principle but</li>
+<li>:12</li>
+<li> minutes, 12 seconds</li>
+<li>t in practice because we&#x27;re they&#x27;re not being built in in um in a way that allows them to have this sort of recursive quality now as for as far as</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>A goes um yes absolutely of course it&#x27;s possible I mean if AB Ababa says you know that um you know that um by</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li>gaging in another um in you know when Krishna says in the bhagat Gita of mountains I am Maru um basically um this</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>nd of um reality then sort of assumes that everything does have this capacity for Consciousness so for I mean I&#x27;m yes</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>solutely computers could be conscious but this is what&#x27;s so key about what he brings in terms of this notion of the mara it&#x27;s only going to be conscious if</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li> too has this capacity for this kind of reflection so um so for abinav as well in theory absolutely but also even</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>r integrated information in theory absolutely I mean they do say that uh photo diode which is like a little you</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>ow machine that can sort of register you know whether a light is on or off that has a very minuscule minuscule</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>ount of of um fi which means that it&#x27;s it&#x27;s got a sense of Consciousness because what you need is just a structure that allows that refle</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>flection ABA would say the same thing that yeah yes in theory it&#x27;s possible you know so um in practice um for aava</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>u would actually need marshan now what ABA brings to the table which is actually very very interesting and I think you could maybe get some of this</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>t ultimately of our contemporary science if you sort of really push hard on this notion of of um Observer</li>
+<li>:48</li>
+<li> minutes, 48 seconds</li>
+<li>rticip participation that you get from quantum theory from quantum physics theory um because ABA does have this idea that um by</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li> the um you know by this attention that we give to the object okay that allows its own innate sort of reality to</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>rt of come to the four as well now um so I I as a religious study scholar I&#x27;m thinking of all sorts of things right I&#x27;m thinking of like well what happens</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>en a person goes to a temple okay in India and then um and I don&#x27;t know if you&#x27;ve been to India or to temples in</li>
+<li>:20</li>
+<li> minutes, 20 seconds</li>
+<li>dia um but um but if you go to you know there&#x27;s some temples or just you walk in you&#x27;re like oh my God this this place feels wild you know I mean and I</li>
+<li>:29</li>
+<li> minutes, 29 seconds</li>
+<li>agine there are places like that churches as well that are like that as well you know I&#x27;ve heard some people say that Lords is a very powerful you know play and then and what and you know this</li>
+<li>:37</li>
+<li> minutes, 37 seconds</li>
+<li> a sort of phenomenological sort of experience that um that you know abiba would say that you know the um you know</li>
+<li>:44</li>
+<li> minutes, 44 seconds</li>
+<li>e side of the uh cultured people can sort of experience certain kinds of things and then if you get a little more cultured then you can start to experience you know certain like he</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>lks about in terms of of of Aesthetics you know but I think it would apply equally well to things like you know um you know some person goes into a temple</li>
+<li>:00</li>
+<li> minutes</li>
+<li>d says oh my God I could see the deity there you know and the deity was alive and all this sort of thing and so how does that happen um it&#x27;s a it&#x27;s an um</li>
+<li>:08</li>
+<li> minutes, 8 seconds</li>
+<li>u know it&#x27;s a physical object right you know a shivalinga is just a stone okay or an icon of say you know the Mary</li>
+<li>:15</li>
+<li> minutes, 15 seconds</li>
+<li>ther Mary in a in a in a Catholic Church you know um so how does it have Consciousness you know that&#x27;s a question I mean and we can come up with you know</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li> what are you know and this and I&#x27;m I&#x27;m bringing this up because it really is analogous to computers right in some way okay so how does it get Consciousness is it that I go into a</li>
+<li>:33</li>
+<li> minutes, 33 seconds</li>
+<li>mple Project my own desires onto that icon okay is it that the um there&#x27;s some</li>
+<li>:40</li>
+<li> minutes, 40 seconds</li>
+<li>ity in the sky you know maybe it&#x27;s mother Mary okay Orna and then you know and they and they actually decide oh</li>
+<li>:49</li>
+<li> minutes, 49 seconds</li>
+<li>ok people are worshiping this you know statue let me go in an inhabit it so there some kind of like subtle body of The Da enters into a statue so that the</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li>at has this kind of effervescent glow kind of thing is it that you know um IA would say that um it&#x27;s it&#x27;s basically in</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li> available and that um the statue itself sort of um can then sort of you</li>
+<li>:12</li>
+<li> minutes, 12 seconds</li>
+<li>ow re uh can sort of allow its own sort of innate sentience to come forth now that ab&#x27;s uh perspective on this is</li>
+<li>:21</li>
+<li> minutes, 21 seconds</li>
+<li>tually um really non-dualist in a in a very Co consistent way you know which don&#x27;t you know which is you can&#x27;t you um</li>
+<li>:29</li>
+<li> minutes, 29 seconds</li>
+<li>u know if if it&#x27;s you know mother Mary enters the statue or Krishna enters into the statue then you kind you&#x27;re starting to look at a kind of dualism again and</li>
+<li>:37</li>
+<li> minutes, 37 seconds</li>
+<li> and ABA wants to say no you know no let we wants to avoid that you know because he&#x27;s a really consistent non-dualist um um so he&#x27;s saying that</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>&#x27;s you know if it has the right structure again this sounds like IIT if it has the right structure you allow its own innate Consciousness to sort of come</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>rth okay um and um and so that&#x27;s one way of thinking about this now if you think about it in terms of computers again as well you know how would a</li>
+<li>:02</li>
+<li> minutes, 2 seconds</li>
+<li>mputer become sentient um well if it has the right structure which none of our computers have but you know you</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>uld you could I I think I&#x27;ve seen you know in random places on the internet people talking about like computers are</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>ing to become possessed was I think there was an episode like a a buffy a Buffy the Vampire Slayer episode where these kids are on a computer and they</li>
+<li>:23</li>
+<li> minutes, 23 seconds</li>
+<li>an some kind of like um ancient text and I think it&#x27;s very interesting that it&#x27;s a text some grimoire or something</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li>at they sort of scan into with our new digital technology scan it into the computer I mean why do I think that&#x27;s interesting because so much of what abva</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>lks about is like you know mantras you know sound words being sort of the essence of this Consciousness so you scan that into computer and then somehow</li>
+<li>:46</li>
+<li> minutes, 46 seconds</li>
+<li> possesses the computer and the computer becomes it&#x27;s like the the shakata of the Androids they they get a</li>
+<li>:52</li>
+<li> minutes, 52 seconds</li>
+<li>wnload of Grace from the absolute that&#x27;s ABS that&#x27;s great that&#x27;s that&#x27;s I</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>ah I want to um dive into this a little bit more because I really like this topic and it&#x27;s it&#x27;s a juicy one and we haven&#x27;t actually talked about this um</li>
+<li>:06</li>
+<li> minutes, 6 seconds</li>
+<li> the podcast before so you know on one level right you um uh I guess from the you know metaphysical perspective or</li>
+<li>:14</li>
+<li> minutes, 14 seconds</li>
+<li>mething um since everything is made of Consciousness right is it made of this you know dance of percussion V Mara then</li>
+<li>:21</li>
+<li> minutes, 21 seconds</li>
+<li>en then in some sense all computers are conscious but what we&#x27;re talking about here is or or or they are all made</li>
+<li>:28</li>
+<li> minutes, 28 seconds</li>
+<li> and expressions of Consciousness but what we&#x27;re talking about here is whether or not they are self-aware in some sense</li>
+<li>:36</li>
+<li> minutes, 36 seconds</li>
+<li>ght and and I and one thing that brought one thing that um I found really interesting and this isn&#x27;t directly</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li>lated to upagupta but I just think it&#x27;s like an interesting kind of thing to think about is um somebody brought up well whether or not they have</li>
+<li>:51</li>
+<li> minutes, 51 seconds</li>
+<li>lf-awareness at a certain point might not even matter right from the from the perspective of of our of Our Lives because we will interact with them as if</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>ey are because like because one of the kind of interesting things is that we they&#x27;re doing all these things and the people who created them don&#x27;t even know</li>
+<li>:07</li>
+<li> minutes, 7 seconds</li>
+<li>y right there&#x27;s this just like it&#x27;s it is sort of miraculous in this way how they&#x27;ve been able to sort of like um you know algorithmically evolve in this sort</li>
+<li>:14</li>
+<li> minutes, 14 seconds</li>
+<li> really fast-paced way and I was listening to this podcast and the person was saying that if they are able to get to a place like we&#x27;re talking about</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>tual you know robots here basically or whatever the you know gbt lover in my computer uh gets to a point where where</li>
+<li>:31</li>
+<li> minutes, 31 seconds</li>
+<li> they are able to mimic us so much that we won&#x27;t actually know right like we won&#x27;t actually be able to tell the</li>
+<li>:39</li>
+<li> minutes, 39 seconds</li>
+<li>fference between like someone you know who is actually a human that we know can observe has self-awareness and and and a</li>
+<li>:46</li>
+<li> minutes, 46 seconds</li>
+<li>bot who seems to be exhibiting all the the the um um the evidence that we would attribute to self-awareness so when we</li>
+<li>:55</li>
+<li> minutes, 55 seconds</li>
+<li>t to that point how will we actually be able to to make the distinction and and will it really matter and one of the things that that I&#x27;ve always kind of</li>
+<li>:03</li>
+<li> minutes, 3 seconds</li>
+<li>ne back to based on so I guess it does come back to abov abav gupta&#x27;s work is um is that yes they may be able to mimic</li>
+<li>:11</li>
+<li> minutes, 11 seconds</li>
+<li> much that it doesn&#x27;t matter from like a everyday level because we&#x27;ll be interacting with them as practically as if they&#x27;re other humans but they won&#x27;t</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>ve pratiba right will or or maybe they will but that would have to come from some sort of you know I guess yeah</li>
+<li>:26</li>
+<li> minutes, 26 seconds</li>
+<li>ally like some sort of Grace I guess yeah I mean um okay I think uh somebody put a poem on on one you know</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li>e of these forums about um it was a poem about um uh they asked CH chat TPT to write a poem about Krishna okay and</li>
+<li>:42</li>
+<li> minutes, 42 seconds</li>
+<li>en everyone you know not everyone but a number of people are like oh wow that&#x27;s so amazing what a great poem about Krishna but really um you go back</li>
+<li>:50</li>
+<li> minutes, 50 seconds</li>
+<li> ab&#x27;s a static Theory okay you know in the um and um</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li> it lacks um it was really obvious to me that the poem um lacked the bunny it</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>cked this sort of capacity for um uh for suggestion that&#x27;s that&#x27;s the it R gets translated vny gets translated as</li>
+<li>:14</li>
+<li> minutes, 14 seconds</li>
+<li>ggestion and um but what what what that means I think is that it really lacked the voice of a person um sort of</li>
+<li>:22</li>
+<li> minutes, 22 seconds</li>
+<li>eating the poem you know a poem can be Tech it can look and mimic um but um for for um you know as ABA says for you</li>
+<li>:30</li>
+<li> minutes, 30 seconds</li>
+<li>ow a person who&#x27;s actually sort of um someone who&#x27;s um aesthetically aware</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>ake inclined um you can tell right away that it&#x27;s bad poetry and why does it why is it bad poetry is because</li>
+<li>:45</li>
+<li> minutes, 45 seconds</li>
+<li>ere&#x27;s no one there who&#x27;s um got who&#x27;s expressing the sentiment it can be technically you know dazzling and</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>autiful but it but what really and you know so what he&#x27;s arguing in that you know in this text is that there it&#x27;s this dunny the suggestion but I think</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>e deeper idea behind dunny is what he sort of then um um articulates and formulates at greater length in some of his philosophical work which is this</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>tion of a this uh subjectivity and Consciousness there&#x27;s something there behind it and that is what makes it</li>
+<li>:18</li>
+<li> minutes, 18 seconds</li>
+<li>autiful and I think that um we&#x27;re going to most I don&#x27;t think um unless computers genuinely become uh have the</li>
+<li>:26</li>
+<li> minutes, 26 seconds</li>
+<li>ght kind of you know um recursive structures that allow them to genuinely become conscious then um no matter how</li>
+<li>:34</li>
+<li> minutes, 34 seconds</li>
+<li>ll they mimic humans I think that um we&#x27;re going to know because there&#x27;s nobody there um it&#x27;s an algorithm you know and I think that&#x27;s so and so that</li>
+<li>:42</li>
+<li> minutes, 42 seconds</li>
+<li> will see the algor now there&#x27;s another way to think about that too is you know I do talk in the book about you know I I was saying that you know if you</li>
+<li>:50</li>
+<li> minutes, 50 seconds</li>
+<li>dress um um if you if you address something as you if you and so if we</li>
+<li>:57</li>
+<li> minutes, 57 seconds</li>
+<li>ok at our robot Companions and start calling them you maybe it will awaken that capacity within them um I mean</li>
+<li>:05</li>
+<li> minutes, 5 seconds</li>
+<li>ybe uh I&#x27;m I&#x27;m less L say green about that possibility I I don&#x27;t think I think that um yes but I think that it needs</li>
+<li>:13</li>
+<li> minutes, 13 seconds</li>
+<li>so to sort of develop the sort of recursive capacities can a computer do that without the sort of modular structure well can a rock do that um</li>
+<li>:21</li>
+<li> minutes, 21 seconds</li>
+<li>ybe if you give it enough if you had a rock pet rock and you gave it enough love then maybe maybe it would but then it comes back to this um issue of like</li>
+<li>:29</li>
+<li> minutes, 29 seconds</li>
+<li>e statue of Krishna or Mary in a church um where is it getting its source of numesc um uh numinous Power that</li>
+<li>:38</li>
+<li> minutes, 38 seconds</li>
+<li>ople pick up on and which draws people to the church you know our contemporary society would say it&#x27;s just people projecting there&#x27;s nothing there they</li>
+<li>:47</li>
+<li> minutes, 47 seconds</li>
+<li>lieve in it and that&#x27;s what you&#x27;re saying about computers you know robots like maybe in the future we believe that they&#x27;re conscious they look they talk</li>
+<li>:54</li>
+<li> minutes, 54 seconds</li>
+<li>ke us they look like us so they got be conscious um um um you know so so that really the really the question is like</li>
+<li>:01</li>
+<li> minutes, 1 second</li>
+<li>d we already have we so we already have this scenario um in you know in a religious setting this and nobody&#x27;s very</li>
+<li>:09</li>
+<li> minutes, 9 seconds</li>
+<li>w people are doing research on that I think Tanya lurman might doing a little bit of this actually do you are you familiar with her work was little bit</li>
+<li>:16</li>
+<li> minutes, 16 seconds</li>
+<li>nya lurman um she&#x27;s an anthropologist but she&#x27;s she&#x27;s doing a little bit of work I think on um you know people who sort of talk to Jesus all the time and</li>
+<li>:24</li>
+<li> minutes, 24 seconds</li>
+<li>en sort of like you know get this personal relationship with Jesus you know and so you know what are they what are they actually reacting responding to</li>
+<li>:32</li>
+<li> minutes, 32 seconds</li>
+<li>d is it really Jesus and what is Jesus if that&#x27;s the case you know we can you know is it Consciousness Etc is it real that is it just a projection and so you</li>
+<li>:41</li>
+<li> minutes, 41 seconds</li>
+<li>ow this is you know I mean I had a friend once who was saying like yep Jesus you know did show up in that piece of toast on the</li>
+<li>:48</li>
+<li> minutes, 48 seconds</li>
+<li>ternet but there&#x27;s a lot of jesuses you know there&#x27;s like lots of different you know there&#x27;s a lot of different sort of little entities hanging around</li>
+<li>:56</li>
+<li> minutes, 56 seconds</li>
+<li>etending to be Jesus you know so you got to make sure you get the right Jesus and you the church as well in the medieval period had that same problem the church was always like okay we got</li>
+<li>:04</li>
+<li> minutes, 4 seconds</li>
+<li> make sure this person&#x27;s really being you know it&#x27;s really God that&#x27;s talking you know to this person and not some sort of you know minion of the devil you</li>
+<li>:12</li>
+<li> minutes, 12 seconds</li>
+<li>ow so they they knew about this problem as well too so it&#x27;s a phenomenon that that has happened throughout history that people can look to certain</li>
+<li>:19</li>
+<li> minutes, 19 seconds</li>
+<li>jects or even you know or or just even hear voices Etc you know but you know who is it that they&#x27;re hearing is it</li>
+<li>:27</li>
+<li> minutes, 27 seconds</li>
+<li>al is sort of our projection is it you know and I mean our def our sort of you know um uh defacto sort of default</li>
+<li>:35</li>
+<li> minutes, 35 seconds</li>
+<li>sponse nowadays is just it&#x27;s all human projection none of it&#x27;s real it&#x27;s all human projection except in the instance of like well maybe</li>
+<li>:43</li>
+<li> minutes, 43 seconds</li>
+<li>mputers which I find hilarious if you think about it it&#x27;s like you know like you know all of these ways that people sort of connect with objects and and</li>
+<li>:51</li>
+<li> minutes, 51 seconds</li>
+<li>nsider these objects to be you know carrying us kind of like ele of of divinity um we discard all of those and</li>
+<li>:59</li>
+<li> minutes, 59 seconds</li>
+<li>y but maybe computers that&#x27;s really true that&#x27;s so interesting actually I&#x27;ve never thought about that yeah and and you&#x27;re kind of yeah you&#x27;re well if you</li>
+<li>00:07</li>
+<li>hour, 7 seconds</li>
+<li>e embraced by some sort of spiritual or religious community then people are welcoming of these things but in the in the wider secular world you know if you</li>
+<li>00:16</li>
+<li>hour, 16 seconds</li>
+<li>ll people that there&#x27;s an entity in an object they&#x27;re probably going to run the other way but that seems sort of be that</li>
+<li>00:23</li>
+<li>hour, 23 seconds</li>
+<li>ems to be kind of an important um this is a little bit what I take away from your book and also other other um</li>
+<li>00:32</li>
+<li>hour, 32 seconds</li>
+<li>plorations of um that are related to animism right is that that actually um there might be something you know we</li>
+<li>00:40</li>
+<li>hour, 40 seconds</li>
+<li>n&#x27;t just solve the ecological problem with our our current Paradigm of moralizing guilt like we actually need</li>
+<li>00:48</li>
+<li>hour, 48 seconds</li>
+<li> change our Consciousness like we actually need to change the way that we relate to things that we would otherwise</li>
+<li>00:55</li>
+<li>hour, 55 seconds</li>
+<li>st you know consider this sort of like dead material realm that is actually beautiful but we&#x27;re we need to be Protectors of it and you know and and</li>
+<li>01:04</li>
+<li>hour, 1 minute, 4 seconds</li>
+<li>t without that kind of you know almost alchemical transmutation of our perception we&#x27;re not going to actually</li>
+<li>01:12</li>
+<li>hour, 1 minute, 12 seconds</li>
+<li>er get to a place where we feel like emotionally committed to to doing the work that really needs to be done to</li>
+<li>01:19</li>
+<li>hour, 1 minute, 19 seconds</li>
+<li>nd of protect our ecology no this is very true I mean I mean this is what I think this is a point that Jane Bennett makes um and um and that then this is</li>
+<li>01:27</li>
+<li>hour, 1 minute, 27 seconds</li>
+<li>e problem with like idealisms like um you know vant and have a friend who um my friend Anthony in austalia who was</li>
+<li>01:34</li>
+<li>hour, 1 minute, 34 seconds</li>
+<li>r quite a while um into adant you know but then he&#x27;s recently gotten more into sort of um you know Tantra and the idea</li>
+<li>01:43</li>
+<li>hour, 1 minute, 43 seconds</li>
+<li>d I think one of the differences is that um you know because Tantra takes the world as real it does have sort of you know and this is the point Jane</li>
+<li>01:50</li>
+<li>hour, 1 minute, 50 seconds</li>
+<li>nnett makes it does have repercussions on the way we treat you know the world and so you know so I mean so you&#x27;re right and that&#x27;s the political element</li>
+<li>01:58</li>
+<li>hour, 1 minute, 58 seconds</li>
+<li> of the of the book you know this idea that like you know how we think about the world does change it um you know I mean um I mean okay so to bring it back</li>
+<li>02:07</li>
+<li>hour, 2 minutes, 7 seconds</li>
+<li> what you&#x27;re um you know this idea of um you know if you think a computer is um sentient you know if you believe it</li>
+<li>02:15</li>
+<li>hour, 2 minutes, 15 seconds</li>
+<li>oleheartedly does it become sentient you know it definitely changes the way we will treat computers if we think they&#x27;re sentient for sure you know but um does it make it sentient yeah I mean</li>
+<li>02:24</li>
+<li>hour, 2 minutes, 24 seconds</li>
+<li>&#x27;s a really big question you know I mean what well no I don&#x27;t I mean I I don&#x27;t think I&#x27;m s I&#x27;m not really suggesting that it makes them sensient</li>
+<li>02:30</li>
+<li>hour, 2 minutes, 30 seconds</li>
+<li>m just suggesting that sort of in the um in just the everyday circumstances of</li>
+<li>02:37</li>
+<li>hour, 2 minutes, 37 seconds</li>
+<li>fe should they be able to mimic emotions you know be able to display all of the features that humans would</li>
+<li>02:45</li>
+<li>hour, 2 minutes, 45 seconds</li>
+<li>rmally be able to feature that you know practically speaking we would we would not be able to actually tell if</li>
+<li>02:52</li>
+<li>hour, 2 minutes, 52 seconds</li>
+<li>ey weren&#x27;t self-aware because they would actually be able to mimic you know the so much evidence of</li>
+<li>03:00</li>
+<li>hour, 3 minutes</li>
+<li>lf-awareness that it would be you know operationally kind of irrelevant because they would be kind of incorporated into</li>
+<li>03:07</li>
+<li>hour, 3 minutes, 7 seconds</li>
+<li>r daily lives without that question really being answered and kind of it being impossible to answer that question</li>
+<li>03:14</li>
+<li>hour, 3 minutes, 14 seconds</li>
+<li>cause we can&#x27;t see inside the minds of robots yeah I mean okay I would say okay here here&#x27;s what I would say um for on a</li>
+<li>03:22</li>
+<li>hour, 3 minutes, 22 seconds</li>
+<li>uple levels okay one um um ultimately I would say that no we can see inside the minds of robots we can you know Ababa would say you can in</li>
+<li>03:30</li>
+<li>hour, 3 minutes, 30 seconds</li>
+<li>non-dualism of course you can okay I know crash Bernardo castr doesn&#x27;t go there he like oh no we&#x27;re discreet we can&#x27;t see insides the other thing but in</li>
+<li>03:37</li>
+<li>hour, 3 minutes, 37 seconds</li>
+<li> aba&#x27;s perspective yeah it could but I mean it does make me think of that I did you hear in the news about that um Korean robot that committed suicide you</li>
+<li>03:46</li>
+<li>hour, 3 minutes, 46 seconds</li>
+<li>ow did you hear about that story there&#x27;s a there was a Korean I think it was Korean Korean robot that was like you know doing all these sort of you</li>
+<li>03:52</li>
+<li>hour, 3 minutes, 52 seconds</li>
+<li>ow menial tasks and at a certain point the the robot SED just like you know spinning around and and threw itself</li>
+<li>03:59</li>
+<li>hour, 3 minutes, 59 seconds</li>
+<li>wn the stairs and then and the people the people actually had they were all sad and they had this little ceremony for the robot you know that so you you</li>
+<li>04:07</li>
+<li>hour, 4 minutes, 7 seconds</li>
+<li>u have a really valid point you know what you&#x27;re saying is already being played out you know there was this idea that like oh this robot committed suicide let&#x27;s have a funeral for it this</li>
+<li>04:16</li>
+<li>hour, 4 minutes, 16 seconds</li>
+<li>nd of thing you know um um you know so um you know and then it&#x27;s like okay um whether you know whether we believe you</li>
+<li>04:23</li>
+<li>hour, 4 minutes, 23 seconds</li>
+<li>ow does it make it true if we believe it um I do think that um for we can ultimately tell like I mean I think we</li>
+<li>04:31</li>
+<li>hour, 4 minutes, 31 seconds</li>
+<li>n even tell now just because you know um and I think how do we tell um we tell</li>
+<li>04:38</li>
+<li>hour, 4 minutes, 38 seconds</li>
+<li>cause mostly we are um and this is you know the religious study side of my work we are we are sentient beings who are</li>
+<li>04:46</li>
+<li>hour, 4 minutes, 46 seconds</li>
+<li>t limited by you know our sort of like you know external words Etc like the fact that it goes back to what I was saying earlier like you know people are</li>
+<li>04:53</li>
+<li>hour, 4 minutes, 53 seconds</li>
+<li>lepathic you know and you know you know and it and telepathy um um it&#x27;s not projection in many cases you know uh</li>
+<li>05:02</li>
+<li>hour, 5 minutes, 2 seconds</li>
+<li>ybe it is but I don&#x27;t think it is um that you know like it happens too often you know that you&#x27;re you suddenly just know something um you know that you&#x27;re</li>
+<li>05:10</li>
+<li>hour, 5 minutes, 10 seconds</li>
+<li>u know you&#x27;re you&#x27;re thinking a particular thought and then your partner says exactly the same words and it&#x27;s and it&#x27;s you know it&#x27;s unusual I mean I think most of the our audience here will</li>
+<li>05:17</li>
+<li>hour, 5 minutes, 17 seconds</li>
+<li>ve like one or two experiences where oh yeah that happened to me you know like I you know it was weird you know that kind of thing and what we do you know now is we just like oh it was weird</li>
+<li>05:26</li>
+<li>hour, 5 minutes, 26 seconds</li>
+<li>at&#x27;s all we just say oh it was weird and then we just dismiss it um and then but I think that it&#x27;s a that what that is is it&#x27;s a um it&#x27;s an indication of</li>
+<li>05:34</li>
+<li>hour, 5 minutes, 34 seconds</li>
+<li>at it means to be sentient and um and it does as I said before it makes it&#x27;s going to it&#x27;s going to if we actually start to take it seriously it will force us to really rethink the nature of</li>
+<li>05:43</li>
+<li>hour, 5 minutes, 43 seconds</li>
+<li>nsciousness like is consciousness a wave that that can flow from you to me and then you know and the weird thing as well is like we can sometimes pick up on</li>
+<li>05:51</li>
+<li>hour, 5 minutes, 51 seconds</li>
+<li>ese things even when we&#x27;re not seeing another person it&#x27;s not just a visual thing like I was talking you know on the phone at one point and I</li>
+<li>05:58</li>
+<li>hour, 5 minutes, 58 seconds</li>
+<li>uld like I could hear the person like you know the the person&#x27;s emotions it was you know but I think we do that you know and that&#x27;s the nature of</li>
+<li>06:06</li>
+<li>hour, 6 minutes, 6 seconds</li>
+<li>nsciousness um that and so is it you know you know how does it work I&#x27;m not sure but it&#x27;s something it&#x27;s a</li>
+<li>06:13</li>
+<li>hour, 6 minutes, 13 seconds</li>
+<li>enomenon that we um that we all do experience you know it&#x27;s a phenomenon that we yeah that that&#x27;s that&#x27;s really interesting I actually really like what</li>
+<li>06:22</li>
+<li>hour, 6 minutes, 22 seconds</li>
+<li>u&#x27;re saying because it it feels um what I what I hearing you saying is that like are our the way in which we relate</li>
+<li>06:32</li>
+<li>hour, 6 minutes, 32 seconds</li>
+<li> the consciousness of another person or another you know the self-awareness of another person is kind of below the threshold of purely our physical</li>
+<li>06:41</li>
+<li>hour, 6 minutes, 41 seconds</li>
+<li>servations our mind you know our lip reading like even what you said earlier about we read each other&#x27;s minds and and</li>
+<li>06:49</li>
+<li>hour, 6 minutes, 49 seconds</li>
+<li>at there is a kind of relational Dynamic that is you know that is kind of below the five senses or it&#x27;s somehow</li>
+<li>06:58</li>
+<li>hour, 6 minutes, 58 seconds</li>
+<li>re subtle than that and and that that we are always kind of operating on the basis of that kind of perception that we</li>
+<li>07:05</li>
+<li>hour, 7 minutes, 5 seconds</li>
+<li>rhaps we don&#x27;t really have so much of a language for like it&#x27;s one of these things that we don&#x27;t fully understand about our own Consciousness and that&#x27;s why we think</li>
+<li>07:14</li>
+<li>hour, 7 minutes, 14 seconds</li>
+<li>at mere mimicry by a Android would actually be ultimately convincing that&#x27;s actually a really interesting way of thinking about it I haven&#x27;t thought</li>
+<li>07:22</li>
+<li>hour, 7 minutes, 22 seconds</li>
+<li>out that before yeah and I think we wouldn&#x27;t be convinced is because you know I mean and it&#x27;s true I think like if you meditate um uh you become more</li>
+<li>07:32</li>
+<li>hour, 7 minutes, 32 seconds</li>
+<li>rceptive of this kind of reality you know that that&#x27;s sort of like and then ABI naag and these fellows you know uh this whole culture was really steeped in</li>
+<li>07:41</li>
+<li>hour, 7 minutes, 41 seconds</li>
+<li>is and I think that that&#x27;s part of why they have such deep awareness of these ideas and these insights because they were actually sort of you know going into them very deeply and we don&#x27;t do</li>
+<li>07:48</li>
+<li>hour, 7 minutes, 48 seconds</li>
+<li>at in our culture so much you know and we already sort of you know it&#x27;s U we already sort of think that none of this is possible so that already makes it sort of that even we see it you know we</li>
+<li>07:57</li>
+<li>hour, 7 minutes, 57 seconds</li>
+<li>nd to not we unsee it right away and if we and and if we do see it then we&#x27;re just like oh that&#x27;s weird and then let it go you know so um you know so I think</li>
+<li>08:05</li>
+<li>hour, 8 minutes, 5 seconds</li>
+<li>at um but I don&#x27;t think I think that we would know as humans because because there is this there is this quality of</li>
+<li>08:13</li>
+<li>hour, 8 minutes, 13 seconds</li>
+<li>nsciousness that um that I think I mean is it it you know the I mean have a group to talk you know there&#x27;s in all in t there&#x27;s this sort of notion of like</li>
+<li>08:22</li>
+<li>hour, 8 minutes, 22 seconds</li>
+<li>u know shaki you know um and it&#x27;s you know that and it is more Prim and I talk about this a little in the book it&#x27;s</li>
+<li>08:29</li>
+<li>hour, 8 minutes, 29 seconds</li>
+<li>re primordial he connects um it&#x27;s more he connects it with Wonder okay um and it&#x27;s more primordial than say knowledge</li>
+<li>08:37</li>
+<li>hour, 8 minutes, 37 seconds</li>
+<li>na shaki or action kosaki Kaki would always be connected to this notion of materiality in the body you know knowledge would be sort of this you know</li>
+<li>08:45</li>
+<li>hour, 8 minutes, 45 seconds</li>
+<li>is sort of capacity you know words insights Etc but icha is it&#x27;s one level deeper and it&#x27;s and you know is ITA is</li>
+<li>08:53</li>
+<li>hour, 8 minutes, 53 seconds</li>
+<li> the level where we sort of transmit our intentions to another person I mean sometimes it seems like you know when we&#x27;re talking to people what we&#x27;re</li>
+<li>09:01</li>
+<li>hour, 9 minutes, 1 second</li>
+<li>ansmitting more is like intentions which then sort of take the form of certain words and then the other person but it&#x27;s not just you know as you&#x27;re</li>
+<li>09:08</li>
+<li>hour, 9 minutes, 8 seconds</li>
+<li>inting out as well too it&#x27;s not just the um words that are being conveyed as information there&#x27;s also this other thing which is our Consciousness you</li>
+<li>09:16</li>
+<li>hour, 9 minutes, 16 seconds</li>
+<li>ow and is it a wave that flows is it sort of um is it a um it&#x27;s you know it&#x27;s</li>
+<li>09:24</li>
+<li>hour, 9 minutes, 24 seconds</li>
+<li>finitely not little I mean it&#x27;s defin it Ababa does talk about it you know it it does come through language in our</li>
+<li>09:30</li>
+<li>hour, 9 minutes, 30 seconds</li>
+<li>rds language um not a a primordial sense of of of sound but that is not</li>
+<li>09:38</li>
+<li>hour, 9 minutes, 38 seconds</li>
+<li>rds per se it&#x27;s actually at a deeper level then yeah you know so you know but but there is this thing that you know</li>
+<li>09:45</li>
+<li>hour, 9 minutes, 45 seconds</li>
+<li>at which is one of the main ways that we communicate and um and computers um I</li>
+<li>09:52</li>
+<li>hour, 9 minutes, 52 seconds</li>
+<li>an do computers do that uh so far I would say no and I think we can tell that they don&#x27;t do that you know I mean how many times you&#x27;ve been</li>
+<li>10:00</li>
+<li>hour, 10 minutes</li>
+<li> unbelievably frustrated talking to a chat poot you know you know it&#x27;s like okay but that&#x27;s not my question you know um you know um you know so whereas</li>
+<li>10:09</li>
+<li>hour, 10 minutes, 9 seconds</li>
+<li>mans you know like humans have this other capacity to you know not always I mean as I point out in the book as well too like you know the thing about being</li>
+<li>10:16</li>
+<li>hour, 10 minutes, 16 seconds</li>
+<li>man is that we&#x27;re not really you know entirely conscious yeah you know and this and this is where people like you know you know Robert spolski Daniel Dena</li>
+<li>10:26</li>
+<li>hour, 10 minutes, 26 seconds</li>
+<li>ere these people are a little bit correct you know or even you know you all Harari saying like oh you know we&#x27;re all going to be sort of like um we&#x27;re</li>
+<li>10:34</li>
+<li>hour, 10 minutes, 34 seconds</li>
+<li>ckable we&#x27;re hackable machines kind of deal or hackable animals whatever um you know they&#x27;re true they&#x27;re correct to to</li>
+<li>10:42</li>
+<li>hour, 10 minutes, 42 seconds</li>
+<li>certain degree you know there is this whole side of us and that&#x27;s what Abba talks about as well there&#x27;s this whole side of us which is really also an</li>
+<li>10:50</li>
+<li>hour, 10 minutes, 50 seconds</li>
+<li>gorithm you know and I think this is the reason why we keep confusing ourselves with computers cuz you know know we have algorithms they have algorithms you know and so we think</li>
+<li>10:58</li>
+<li>hour, 10 minutes, 58 seconds</li>
+<li>&#x27;re we&#x27;re just you know they&#x27;re just like us you know so they can become senting just like us but the senting part of us which is you know not as you</li>
+<li>11:05</li>
+<li>hour, 11 minutes, 5 seconds</li>
+<li>ow which is there not as you know but sometimes not as operative as it can be um you know it&#x27;s not is it&#x27;s even less opportuity if at all in most of the</li>
+<li>11:14</li>
+<li>hour, 11 minutes, 14 seconds</li>
+<li>mputers we have today which doesn&#x27;t mean it can&#x27;t be it&#x27;s just that um yeah just so far it&#x27;s not there you know yeah</li>
+<li>11:23</li>
+<li>hour, 11 minutes, 23 seconds</li>
+<li> you were started talking about language and uh there&#x27;s um this has been really fun I could talk to you for hours um but I want to get I want to squeeze in a couple more um</li>
+<li>11:32</li>
+<li>hour, 11 minutes, 32 seconds</li>
+<li>estions before we um start to close our conversation I can&#x27;t believe it&#x27;s already been an hour and 15 minutes it&#x27;s gone by so fast um the two things I want</li>
+<li>11:41</li>
+<li>hour, 11 minutes, 41 seconds</li>
+<li> talk about our language and um and Mantra specifically and the subtle body because lots of people who listen to</li>
+<li>11:47</li>
+<li>hour, 11 minutes, 47 seconds</li>
+<li>is podcast well I&#x27;m presuming are uh yoga practitioners meditators so they&#x27;ll be kind of familiar with with that and I think you know when people</li>
+<li>11:56</li>
+<li>hour, 11 minutes, 56 seconds</li>
+<li>counter the sort of linguistic mysticism of of Aban avag Gupta and the um tantric thinkers more generally um</li>
+<li>12:04</li>
+<li>hour, 12 minutes, 4 seconds</li>
+<li>u know this is one of the most interesting ideas this idea that language goes all the way down right and um you know of parav at the Supreme</li>
+<li>12:13</li>
+<li>hour, 12 minutes, 13 seconds</li>
+<li>vel and then you know these increasing levels of kind of manifestation um but um but it&#x27;s hard</li>
+<li>12:20</li>
+<li>hour, 12 minutes, 20 seconds</li>
+<li>rhaps or people stumble upon on this idea of how um it sense to talk about the language of objects and when I was</li>
+<li>12:28</li>
+<li>hour, 12 minutes, 28 seconds</li>
+<li>stening to your talk um that you did at V Mara Foundation um you spoke about Mantra as a as a kind of</li>
+<li>12:36</li>
+<li>hour, 12 minutes, 36 seconds</li>
+<li>thematical what do you call it a mathematical algorithm or like a consciousness of a mathematical Consciousness or something and and so</li>
+<li>12:45</li>
+<li>hour, 12 minutes, 45 seconds</li>
+<li>m I&#x27;m curious how like how we understand the effectiveness of Mantra um and maybe</li>
+<li>12:54</li>
+<li>hour, 12 minutes, 54 seconds</li>
+<li>ke some of the cories that you found in some of these other sort of systems of thought that help us to think about why Mantra is effective according to</li>
+<li>13:02</li>
+<li>hour, 13 minutes, 2 seconds</li>
+<li>is philosophy of language oh no that&#x27;s a great great question and I think it has to do with this idea that um um you know you go back to the five elements</li>
+<li>13:10</li>
+<li>hour, 13 minutes, 10 seconds</li>
+<li>d abeva says that the The Fifth Element okay so there&#x27;s with the five elements fire earth water a aasia space space is connected to sound and it&#x27;s</li>
+<li>13:19</li>
+<li>hour, 13 minutes, 19 seconds</li>
+<li>tually a little bit different from all the other elements cuz um uh he has a nice quote where he talks about like what what makes sound special and Space</li>
+<li>13:28</li>
+<li>hour, 13 minutes, 28 seconds</li>
+<li>ecial is because it has the capacity to give space to meaning okay so it&#x27;s on this particular um it&#x27;s this particular</li>
+<li>13:36</li>
+<li>hour, 13 minutes, 36 seconds</li>
+<li> the five elements which is um which has which is where you get the crossover from um pure materiality into sort of um</li>
+<li>13:45</li>
+<li>hour, 13 minutes, 45 seconds</li>
+<li>nsciousness as well okay and sentience okay because and so and I mean and it&#x27;s also the case that what you see often in</li>
+<li>13:53</li>
+<li>hour, 13 minutes, 53 seconds</li>
+<li>u know in across tantric text this idea I mean there&#x27;s a one that I quote which I like which the LXI stum where it says oh godess um you</li>
+<li>14:02</li>
+<li>hour, 14 minutes, 2 seconds</li>
+<li>ow um what uh Mt morte uh um I can</li>
+<li>14:08</li>
+<li>hour, 14 minutes, 8 seconds</li>
+<li>member the quote um um uh sadai uh so oh goddess your body your form is is</li>
+<li>14:16</li>
+<li>hour, 14 minutes, 16 seconds</li>
+<li>ur your your your your primary form is always the Mantra okay um and so um that&#x27;s your basic form so and I I it</li>
+<li>14:24</li>
+<li>hour, 14 minutes, 24 seconds</li>
+<li>uld apply to as well except that we are sort of covered over with all these other um um you know limitations that</li>
+<li>14:32</li>
+<li>hour, 14 minutes, 32 seconds</li>
+<li>me from being um from losing our sense of Consciousness and becoming more and more confined in materiality that looks like you know the five elements which is</li>
+<li>14:41</li>
+<li>hour, 14 minutes, 41 seconds</li>
+<li>st means that it&#x27;s gone past the um TAA of Maya okay which makes this sort of con constrain confined um but when he</li>
+<li>14:50</li>
+<li>hour, 14 minutes, 50 seconds</li>
+<li>ys that um and what you and as you find this throughout the tradition it&#x27;s like really the essence of consciousness is language is is is sound that&#x27;s sort</li>
+<li>14:58</li>
+<li>hour, 14 minutes, 58 seconds</li>
+<li> like the birth of all of this and so the body of a God is basically the Mantra body and so mantras are um</li>
+<li>15:05</li>
+<li>hour, 15 minutes, 5 seconds</li>
+<li>ecial in that way because um uh like if you say a mantra you&#x27;re not actually just saying words or</li>
+<li>15:13</li>
+<li>hour, 15 minutes, 13 seconds</li>
+<li>formation you know what you&#x27;re actually doing if you&#x27;re doing it properly you&#x27;re actually sort of um uh connecting with the essence of</li>
+<li>15:21</li>
+<li>hour, 15 minutes, 21 seconds</li>
+<li>nsciousness that is the Mantra which is certainly um uh understood to be um more powerful</li>
+<li>15:29</li>
+<li>hour, 15 minutes, 29 seconds</li>
+<li>an our own sort of mixed Consciousness in many ways you know so you know so that when a person says a mantra it&#x27;s not like oh I have a mantra and I&#x27;m</li>
+<li>15:37</li>
+<li>hour, 15 minutes, 37 seconds</li>
+<li>ying a mantra it&#x27;s more that the Mantra is sort of you know this sort of higher level of of Consciousness which then sort of like re merg with it</li>
+<li>15:45</li>
+<li>hour, 15 minutes, 45 seconds</li>
+<li>cause Consciousness has the capacity to do this kind of thing and mantras are sort of a way that we can actually sort of merge with these other higher energies of Consciousness basically so</li>
+<li>15:53</li>
+<li>hour, 15 minutes, 53 seconds</li>
+<li>ntras and so and when and even when AB talks about sort of um a cosmogony of you know you know and and this cosmogony</li>
+<li>16:01</li>
+<li>hour, 16 minutes, 1 second</li>
+<li> not just creation of the the world it&#x27;s it&#x27;s also how thought gets created as well too um um what what you see is</li>
+<li>16:08</li>
+<li>hour, 16 minutes, 8 seconds</li>
+<li>at early on you get this sort of you know what he calls a sort of the great Lords of Mantra and then these then become give birth give rise to lesser</li>
+<li>16:17</li>
+<li>hour, 16 minutes, 17 seconds</li>
+<li>rds of Mantra you know and then it starts to give rise to sort of differentiation you know the I and the it and um and then we sort of get the</li>
+<li>16:24</li>
+<li>hour, 16 minutes, 24 seconds</li>
+<li>e whole world of diversity that we have but but at a at an earlier stage of Consciousness it is Mantra that you know</li>
+<li>16:32</li>
+<li>hour, 16 minutes, 32 seconds</li>
+<li>at they talk about so so mantras are very interesting um it&#x27;s it&#x27;s it&#x27;s I mean we tend to think of it as just words or sounds or you know maybe</li>
+<li>16:41</li>
+<li>hour, 16 minutes, 41 seconds</li>
+<li>ey&#x27;re Cosmic you know but what they&#x27;re really trying to say is that um intention Consciousness and this sort of</li>
+<li>16:49</li>
+<li>hour, 16 minutes, 49 seconds</li>
+<li>wer that comes from Consciousness with because it has v Mara this sort of reflexive capacity sen of sentience that</li>
+<li>16:56</li>
+<li>hour, 16 minutes, 56 seconds</li>
+<li> a little bit more conscious than we are okay so that you know so that you know we&#x27;re you know we&#x27;re partially conscious partially not conscious you</li>
+<li>17:04</li>
+<li>hour, 17 minutes, 4 seconds</li>
+<li>ow we run by algorithms all the time whereas mandas are more conscious than we are okay and that you know that&#x27;s an interesting thing to sort of um you know</li>
+<li>17:13</li>
+<li>hour, 17 minutes, 13 seconds</li>
+<li> that&#x27;s why mantras are so powerful you know and because mantras are understood to be deities they&#x27;re not actually understood to be um you know</li>
+<li>17:21</li>
+<li>hour, 17 minutes, 21 seconds</li>
+<li>ings they&#x27;re not tools that we use they&#x27;re not techniques per se a yantra maybe I don&#x27;t know um but but um but a mantra is understood to be actually a</li>
+<li>17:30</li>
+<li>hour, 17 minutes, 30 seconds</li>
+<li>ity yeah yeah so that&#x27;s a good that&#x27;s a good segue into um to the the deities of the body right so mantras are a deity</li>
+<li>17:39</li>
+<li>hour, 17 minutes, 39 seconds</li>
+<li>d then um you know you explore um as a way of kind of talking about um how just</li>
+<li>17:46</li>
+<li>hour, 17 minutes, 46 seconds</li>
+<li>ickly that you know one particular Mantra you know you see it more as sort of like you know the body of the deity as well okay because it&#x27;s taken on form</li>
+<li>17:54</li>
+<li>hour, 17 minutes, 54 seconds</li>
+<li>d what is the form the form is form of sound yeah I mean and I do also talk in the book that you know the difference between us humans and um you know and</li>
+<li>18:03</li>
+<li>hour, 18 minutes, 3 seconds</li>
+<li>ds is that um we have the other four elements we don&#x27;t have just sound a cautious space connected to sound we also have the four other elements which</li>
+<li>18:11</li>
+<li>hour, 18 minutes, 11 seconds</li>
+<li> you know water Earth fire air and because we have those other four elements our bodies are subject to Decay</li>
+<li>18:19</li>
+<li>hour, 18 minutes, 19 seconds</li>
+<li>ereas mantras are not so much you know just that one it&#x27;s less it&#x27;s not it doesn&#x27;t have the same problems you know that that&#x27;s why God&#x27;s bodies don&#x27;t Decay</li>
+<li>18:28</li>
+<li>hour, 18 minutes, 28 seconds</li>
+<li>ah I mean I sort of connect this to like you know is that the idea of information that cwall wants to become immortal you know by using information</li>
+<li>18:35</li>
+<li>hour, 18 minutes, 35 seconds</li>
+<li> it like a mantra that yeah oh yeah I was just curious you know a lot of people have heard about um the subtle</li>
+<li>18:42</li>
+<li>hour, 18 minutes, 42 seconds</li>
+<li>dy and and you know you go you talk in in the book about how you know the subtle body that abanag Gupta explores</li>
+<li>18:51</li>
+<li>hour, 18 minutes, 51 seconds</li>
+<li> sort of distinct from sort of the new age more new age understanding of the subtle body um and you bring it up particular because you I think in the</li>
+<li>18:59</li>
+<li>hour, 18 minutes, 59 seconds</li>
+<li>ntext of making a point about how there are bodies within bodies within bodies and so the subtle body gives you kind of an example of like just you know</li>
+<li>19:07</li>
+<li>hour, 19 minutes, 7 seconds</li>
+<li>e layer of that um but then how within the subtle body there&#x27;s this collection of deities that are present and and and</li>
+<li>19:14</li>
+<li>hour, 19 minutes, 14 seconds</li>
+<li> I I was wondering if you could just talk a little bit about that schema and how you think that that&#x27;s really um essentially kind of a summary of the</li>
+<li>19:22</li>
+<li>hour, 19 minutes, 22 seconds</li>
+<li>gument you made in the book how you think that&#x27;s a a worthwhile while kind of template to think about you know the materiality of the</li>
+<li>19:30</li>
+<li>hour, 19 minutes, 30 seconds</li>
+<li>dy well you know I think I think one of the things that I mean uh one of the things that theology does I think which we really really um I mean in some ways</li>
+<li>19:38</li>
+<li>hour, 19 minutes, 38 seconds</li>
+<li>&#x27;s you know we our culture really rejects theology out of hand and I think that but what theology does um is</li>
+<li>19:46</li>
+<li>hour, 19 minutes, 46 seconds</li>
+<li>tually it um it it it actually allows uh for a kind of sentience um that is</li>
+<li>19:54</li>
+<li>hour, 19 minutes, 54 seconds</li>
+<li>t our limited egoic awareness okay and so like so that&#x27;s what gods in the body do as well also that they allows for a</li>
+<li>20:03</li>
+<li>hour, 20 minutes, 3 seconds</li>
+<li>nd of sentience that&#x27;s not simply sort of limited to um uh so when we think about subtle bodies these days you know</li>
+<li>20:11</li>
+<li>hour, 20 minutes, 11 seconds</li>
+<li>&#x27;s like colorcoded and it&#x27;s sort of like rainbow Bri yeah it&#x27;s another thing that we manipulate it becomes this other</li>
+<li>20:18</li>
+<li>hour, 20 minutes, 18 seconds</li>
+<li>ing that you know that is and and really like if you think about how people talk about subtle bodies in the new age you seen it&#x27;s really considered</li>
+<li>20:27</li>
+<li>hour, 20 minutes, 27 seconds</li>
+<li>ert it&#x27;s just like a physical body it&#x27;s just this inert dead thing that you can with Consciousness you can then manipulate so it&#x27;s really a kind of dualism that we&#x27;re using in a in a new</li>
+<li>20:36</li>
+<li>hour, 20 minutes, 36 seconds</li>
+<li>e sort of context and I think that the theology that people that AB brings to it one of the things it does do is it actually sort of um it kind of undo this</li>
+<li>20:45</li>
+<li>hour, 20 minutes, 45 seconds</li>
+<li>rt of like um this um thinking of the body is inert you know thinking of the body is dead matter and um so that um</li>
+<li>20:53</li>
+<li>hour, 20 minutes, 53 seconds</li>
+<li>d that&#x27;s what that&#x27;s what uh uh and and if you even on you know on your own level you know when you have an experience of Wonder or if a person sort</li>
+<li>21:00</li>
+<li>hour, 21 minutes</li>
+<li> okay I&#x27;m thinking of like you know um you know someone&#x27;s you know has this sort of like mystical experience of some</li>
+<li>21:07</li>
+<li>hour, 21 minutes, 7 seconds</li>
+<li>nd of like um uh you know Jesus is talking to him or whatever and um it&#x27;s it&#x27;s a genuine thing and it&#x27;s a sort of</li>
+<li>21:14</li>
+<li>hour, 21 minutes, 14 seconds</li>
+<li>Transcendent thing um but what is a person doing it&#x27;s sort of he&#x27;s giving us it&#x27;s it&#x27;s theological precisely because it&#x27;s affording a kind of um</li>
+<li>21:23</li>
+<li>hour, 21 minutes, 23 seconds</li>
+<li>nsciousness or Cent to um uh an energy um that is not the</li>
+<li>21:30</li>
+<li>hour, 21 minutes, 30 seconds</li>
+<li>rson&#x27;s own ego okay and um and I think and I think that is really key and I think it&#x27;s really key for this tradition</li>
+<li>21:38</li>
+<li>hour, 21 minutes, 38 seconds</li>
+<li> well too you know and that and I think it&#x27;s key in the west as well too when we have people have different mystical experiences in their various religious Traditions you know it&#x27;s it&#x27;s</li>
+<li>21:46</li>
+<li>hour, 21 minutes, 46 seconds</li>
+<li>ten you know it&#x27;s theological but it&#x27;s but what makes it and and I think this is what makes it anathema for our contemporary culture and that is</li>
+<li>21:53</li>
+<li>hour, 21 minutes, 53 seconds</li>
+<li>ecisely that that um it you know it&#x27;s sort of like you know it um the ego is not Mastery in its own house anymore you know like we&#x27;re no longer the ones</li>
+<li>22:02</li>
+<li>hour, 22 minutes, 2 seconds</li>
+<li>ntrolling the story our our egos I mean with the subtle body in the in a in the Contemporary New Age scene you know</li>
+<li>22:10</li>
+<li>hour, 22 minutes, 10 seconds</li>
+<li>&#x27;s still you and you know you may say I&#x27;m Divinity but you still really are us operating from a level of ego saying I&#x27;m controlling this subtle body whereas</li>
+<li>22:18</li>
+<li>hour, 22 minutes, 18 seconds</li>
+<li>th the theology what you get is you get um um the idea of intentionality and will that&#x27;s separate from the ego of the</li>
+<li>22:28</li>
+<li>hour, 22 minutes, 28 seconds</li>
+<li>u know the ordinary person yeah so I think that&#x27;s the key thing about gods in the body and um what&#x27;s so interesting and important about our theology which</li>
+<li>22:36</li>
+<li>hour, 22 minutes, 36 seconds</li>
+<li>u know we don&#x27;t really talk about theology in that way you know we mostly think about it as like oh it&#x27;s sort of belief in something we can&#x27;t see um but</li>
+<li>22:43</li>
+<li>hour, 22 minutes, 43 seconds</li>
+<li>ally I think that you can all that the that what one of the things theology does is it sort of displaces the ego of the individ of of the sort of you know</li>
+<li>22:51</li>
+<li>hour, 22 minutes, 51 seconds</li>
+<li> the human of the in individual human ego yeah and in this age of narcissism there&#x27;s perhaps nothing we need</li>
+<li>22:59</li>
+<li>hour, 22 minutes, 59 seconds</li>
+<li>re yeah you wrote um I actually wrote down one of the quotes um from that section you said the subtle body in this respect affords a recognition that the</li>
+<li>23:08</li>
+<li>hour, 23 minutes, 8 seconds</li>
+<li>man is not master in its own house but rather the house itself the subtle body points to an expansive ecology with</li>
+<li>23:15</li>
+<li>hour, 23 minutes, 15 seconds</li>
+<li>ltiple expressions of agency directing human choices which I really like this idea of you</li>
+<li>23:22</li>
+<li>hour, 23 minutes, 22 seconds</li>
+<li>ow it you know I I think it it affords kind of a a schema for navigating kind</li>
+<li>23:29</li>
+<li>hour, 23 minutes, 29 seconds</li>
+<li> the the push the the various pushes and PS within ourselves and then NE not necessarily needing to like take</li>
+<li>23:37</li>
+<li>hour, 23 minutes, 37 seconds</li>
+<li>sponsibility or own every it&#x27;s like oh no that&#x27;s just you know the deity of my left hand it&#x27;s not</li>
+<li>23:45</li>
+<li>hour, 23 minutes, 45 seconds</li>
+<li> or it&#x27;s me but it&#x27;s you know the sense that there&#x27;s like almost like a um multiple personality Embrace of multiple</li>
+<li>23:52</li>
+<li>hour, 23 minutes, 52 seconds</li>
+<li>rsonalities in the body which can and kind of maybe I don&#x27;t know maybe maybe</li>
+<li>23:58</li>
+<li>hour, 23 minutes, 58 seconds</li>
+<li>ggest a more relaxed way of um you know interacting with our Sensi of self</li>
+<li>24:05</li>
+<li>hour, 24 minutes, 5 seconds</li>
+<li>ere we&#x27;re not trying to constantly kind of impose a coherent fully self-enclosed narrative and story around</li>
+<li>24:14</li>
+<li>hour, 24 minutes, 14 seconds</li>
+<li>o we think we are but rather we&#x27;re recognizing that even when within this individuated self there&#x27;s there&#x27;s</li>
+<li>24:20</li>
+<li>hour, 24 minutes, 20 seconds</li>
+<li>ltiple agencies at play yeah yeah yeah good um yeah I mean i&#x27; um I&#x27;ve</li>
+<li>24:28</li>
+<li>hour, 24 minutes, 28 seconds</li>
+<li>itten a little bit and I&#x27;m working more nowadays on um a little bit of gopo cof um and some of his writings about um</li>
+<li>24:36</li>
+<li>hour, 24 minutes, 36 seconds</li>
+<li> about his Guru vandha and um and ideas of of um of uh so he talks about this thing called VI which is um a</li>
+<li>24:46</li>
+<li>hour, 24 minutes, 46 seconds</li>
+<li>pacity when meditating to sort of like have Consciousness leave the body and then I mean this is what shankara uses in in the</li>
+<li>24:54</li>
+<li>hour, 24 minutes, 54 seconds</li>
+<li>ere he sort of enters the body of a dead King this is he uses a technique like this where basically you a meditative technique where he you know</li>
+<li>25:02</li>
+<li>hour, 25 minutes, 2 seconds</li>
+<li>ings this consciousness of the self all the way up out the top of the head and then um uh enters into sort of the</li>
+<li>25:09</li>
+<li>hour, 25 minutes, 9 seconds</li>
+<li> the you know travels somehow with the subtle body enters into the body of the Dead King so that he can then enliven the dead King and then get to experience</li>
+<li>25:18</li>
+<li>hour, 25 minutes, 18 seconds</li>
+<li>fe in a herum um and so but and but this idea also can you know uh so um go talks about this of technique for this</li>
+<li>25:25</li>
+<li>hour, 25 minutes, 25 seconds</li>
+<li>d and you can also I read an article which was just a fun piece to write um looking at sort of um ideas of of um</li>
+<li>25:33</li>
+<li>hour, 25 minutes, 33 seconds</li>
+<li>ke you know a lot um you know football football players who sort of like talk or golf players athletes who sort of do</li>
+<li>25:41</li>
+<li>hour, 25 minutes, 41 seconds</li>
+<li>mething like this where their Consciousness leaves the body and then directs you know this football that&#x27;s flying through the air you know so then</li>
+<li>25:49</li>
+<li>hour, 25 minutes, 49 seconds</li>
+<li> that a person you know so it can sort of jump over the person they wanted to not catch it the oppos team and then into the hands of the person that they want to catch in and that&#x27;s and it&#x27;s</li>
+<li>25:57</li>
+<li>hour, 25 minutes, 57 seconds</li>
+<li>nd of a it&#x27;s a city it&#x27;s an athletic City it&#x27;s a ower and it and it&#x27;s um and it comes from um this idea of you know</li>
+<li>26:06</li>
+<li>hour, 26 minutes, 6 seconds</li>
+<li>nsciousness entering into your your your Consciousness entering into say a football you know and so GOP kab says</li>
+<li>26:13</li>
+<li>hour, 26 minutes, 13 seconds</li>
+<li>&#x27;s easy it&#x27;s not so hard to enter into for humans to enter into the cont this actually will bring us probably back to computers but you know not so hard to</li>
+<li>26:20</li>
+<li>hour, 26 minutes, 20 seconds</li>
+<li>ter into the consciousness of objects in a sense you know and to direct them in a certain way way um because they don&#x27;t but if you try to enter into um</li>
+<li>26:28</li>
+<li>hour, 26 minutes, 28 seconds</li>
+<li>e um consciousness of a yogi who&#x27;s like you know more advanced than you are as a yogi then um the person who&#x27;s</li>
+<li>26:36</li>
+<li>hour, 26 minutes, 36 seconds</li>
+<li>ying to enter into will sort of you know become sort of like you know uh dumbfounded mute Etc you know because it</li>
+<li>26:43</li>
+<li>hour, 26 minutes, 43 seconds</li>
+<li>comes like two consciousnesses entering this sort of same kind of place that kind of thing um now that&#x27;s a slightly different model of Consciousness but it&#x27;s it&#x27;s kind of like</li>
+<li>26:51</li>
+<li>hour, 26 minutes, 51 seconds</li>
+<li>at you might think of as a lateral AA so AA is possession s is like this complete possession that AA talks about which is sort of entering into this</li>
+<li>26:59</li>
+<li>hour, 26 minutes, 59 seconds</li>
+<li>gher sense of deity that would be more theological um uh and um and uh but you can have lateral aves as well too and</li>
+<li>27:06</li>
+<li>hour, 27 minutes, 6 seconds</li>
+<li>is is the thing that they test for in India when a person says claims oh I&#x27;m being you know possessed by hanaman or I&#x27;m being possessed by um you know</li>
+<li>27:15</li>
+<li>hour, 27 minutes, 15 seconds</li>
+<li>ishna you know there are all these tests that they do to sort of see is is the person really is it really Krishna or is it just some lower you know uh</li>
+<li>27:23</li>
+<li>hour, 27 minutes, 23 seconds</li>
+<li>ost that entering you know possessing the person and this kind of thing and so um you know you know so there&#x27;s that there&#x27;s that idea as well you know of</li>
+<li>27:31</li>
+<li>hour, 27 minutes, 31 seconds</li>
+<li>nsciousness and I think that um and this also comes to this idea that we talking about in terms of like um what theology does is it allows us to sort of</li>
+<li>27:38</li>
+<li>hour, 27 minutes, 38 seconds</li>
+<li>ke Get rid of um egoic um will egoic intention now if it&#x27;s a lateral AA if</li>
+<li>27:46</li>
+<li>hour, 27 minutes, 46 seconds</li>
+<li>&#x27;s a possession that&#x27;s not happening at a sort of a a higher theological level if it&#x27;s just another ghost then</li>
+<li>27:52</li>
+<li>hour, 27 minutes, 52 seconds</li>
+<li>u have the same problems I mean you know I mean there&#x27;s a lot of people who do um uh a colleague of mine</li>
+<li>28:00</li>
+<li>hour, 28 minutes</li>
+<li>think wrote a book uh about um in Iceland where they&#x27;re doing these you know these seances where they&#x27;re you</li>
+<li>28:07</li>
+<li>hour, 28 minutes, 7 seconds</li>
+<li>ere people are uh Karin Dempsey uh where they&#x27;re doing these seances I think um where people are channeling</li>
+<li>28:14</li>
+<li>hour, 28 minutes, 14 seconds</li>
+<li>her dead people you know you know and and the person who&#x27;s the medium really does get possessed you know and they&#x27;ll start talking about you know saying things I mean it&#x27;s a popular phenomenon</li>
+<li>28:23</li>
+<li>hour, 28 minutes, 23 seconds</li>
+<li>is is just one example but um you know but there&#x27;s uh I mean also I think um yeah I think Leslie K who&#x27;s done all</li>
+<li>28:31</li>
+<li>hour, 28 minutes, 31 seconds</li>
+<li>at work on UFO for the New York Times she&#x27;s also I think was getting into this whole idea of seances and people sort of like um you know getting into a seance</li>
+<li>28:40</li>
+<li>hour, 28 minutes, 40 seconds</li>
+<li>u know the the person who&#x27;s the medium channeling sort of like some other not necessarily a God you know but channeling also say another dead person</li>
+<li>28:49</li>
+<li>hour, 28 minutes, 49 seconds</li>
+<li>u know and then having all these sort of strange phenomena like ectoplasma you know which is weird yeah I mean here I</li>
+<li>28:58</li>
+<li>hour, 28 minutes, 58 seconds</li>
+<li> saying oh that&#x27;s weird I mean I love the idea of possession I think that&#x27;s a that&#x27;s a great note to end on maybe our NE you</li>
+<li>29:05</li>
+<li>hour, 29 minutes, 5 seconds</li>
+<li>n uh promise to share techniques on how to possess um uh Kings so that we</li>
+<li>29:12</li>
+<li>hour, 29 minutes, 12 seconds</li>
+<li>n enjoy their their various</li>
+<li>29:24</li>
+<li>hour, 29 minutes, 24 seconds</li>
+<li>aphy I you know the sort of the technique that is used so if you want if anybody wants a technique you know that is a great that&#x27;s a great um</li>
+<li>29:32</li>
+<li>hour, 29 minutes, 32 seconds</li>
+<li>vertisement for the book and let&#x27;s re let&#x27;s um mention it again too um so again if you want to get if you find want to find out the secret technique to</li>
+<li>29:41</li>
+<li>hour, 29 minutes, 41 seconds</li>
+<li>ssess the mind of a king um then just get the matter of Wonder aup&#x27;s pantheism and the new materialism this is uh Laura</li>
+<li>29:50</li>
+<li>hour, 29 minutes, 50 seconds</li>
+<li>ura liberachi&#x27;s book who I&#x27;ve been speaking to having a wonderful conversation with with and so it is a wonderful book it&#x27;s very interesting and</li>
+<li>29:57</li>
+<li>hour, 29 minutes, 57 seconds</li>
+<li>rtainly for those interested in abanag Gupta and um an exploration of his work in conversation with a number of</li>
+<li>30:05</li>
+<li>hour, 30 minutes, 5 seconds</li>
+<li>fferent um forms of thought uh it&#x27;s really really a fascinating read so I highly recommend it this has been such a</li>
+<li>30:13</li>
+<li>hour, 30 minutes, 13 seconds</li>
+<li>vely conversation laurite it&#x27;s been such a pleasure to meet you and I know this is not going to be our last conversation I can feel it um so thank</li>
+<li>30:21</li>
+<li>hour, 30 minutes, 21 seconds</li>
+<li>u so much for giving me some of your time and for sharing all your fascinating insights it&#x27;s always so such a pleasure to to meet someone who&#x27;s</li>
+<li>30:30</li>
+<li>hour, 30 minutes, 30 seconds</li>
+<li>ing this work and and especially this kind of work that is intersecting with various traditions and ways of thinking</li>
+<li>30:38</li>
+<li>hour, 30 minutes, 38 seconds</li>
+<li> just it&#x27;s very refreshing so thank you so much for the work that you do yeah thank you and lovely to meet you and maybe we&#x27;ll see you at a in person</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/r2-audio-transcripts/abhinava-liberaki.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

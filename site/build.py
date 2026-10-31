@@ -1304,6 +1304,44 @@ def render_text_assets(sub, title, kind, filepat="*.md"):
 def build_ratier_chapters(): return render_text_assets("ratie-chapters","Ratie chapters","Chapter","*.md")
 def build_torella_volume(): return render_text_assets("torella-volume","Torella volume","Chapter","*.txt")
 def build_recognition_framework(): return render_text_assets("recognition-framework","Recognition framework","Framework","*.md")
+def render_text_assets2(sub, title, kind, filepat="*"):
+    src = ROOT / "data" / sub
+    out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
+    if not src.exists():
+        (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
+            sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            body=f"<div class='panel missing'>no {sub} yet</div>"))
+        return 0
+    cards = []
+    for f in sorted(src.glob(filepat)):
+        if not f.is_file():
+            continue
+        if f.suffix in (".md", ".txt"):
+            shutil.copy(f, out / f.name)
+            raw = f.read_text(encoding="utf-8", errors="replace")
+            first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
+            (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
+                sub=f"{len(raw.split())} words · vendored research asset",
+                sidenav=sidenav("abhinavagupta", ""),
+                body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source →</a></div>' + md_lite(raw)
+                + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
+            cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
+        elif f.suffix in (".json", ".yaml", ".yml"):
+            shutil.copy(f, out / f.name)
+            try:
+                obj = json.loads(f.read_text(encoding="utf-8", errors="replace"))
+                body = f'<pre style="white-space:pre-wrap;font-size:.85rem">{esc(json.dumps(obj, ensure_ascii=False, indent=1)[:4000])}</pre>'
+            except Exception:
+                body = f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">file →</a></div>'
+            (out / (f.stem + ".html")).write_text(TF(TMPL, title=f.stem, h1=esc(f.stem), kicker=kind,
+                sub=f"vendored asset · {f.name}", sidenav=sidenav("abhinavagupta", ""),
+                body=body + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
+            cards.append(f'<div class="panel"><b>{esc(f.stem)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
+    (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
+        sub=f"{len(cards)} assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+    return len(cards)
+
+def build_r2_audio_transcripts(): return render_text_assets2("r2-audio-transcripts","R2 audio transcripts","Transcript","*")
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1513,6 +1551,7 @@ def main():
     if "ratier-chapters" in want: done["ratier-chapters"] = build_ratier_chapters()
     if "torella-volume" in want: done["torella-volume"] = build_torella_volume()
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
+
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
