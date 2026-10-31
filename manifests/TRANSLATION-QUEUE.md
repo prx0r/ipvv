@@ -40,3 +40,19 @@ Columns: priority | author | work_id | status | verses | source file | title
  31 | vasugupta        | sivasutra                      | SOURCE_HELD              | 77 sutras | sivasutra-root.txt                       | Sivasutra
  32 | vasugupta        | spandakarika                   | SOURCE_HELD              | 52 karikas | spanda-root.txt                          | Spandakarika (authorship: Vasugupta vs K
  33 | yogaraja         | paramarthasarasamgrahavivrti   | SOURCE_HELD              | commentary | yogaraja-paramarthasarasamgraha.txt      | Paramarthasarasamgrahavivrti
+
+## Seeded next targets (audio clips)
+- anubhavanivedana — 4 clips, 88 words (new)
+- bodhavilasa — 42 clips, 378 words (already translated)
+- bhairavanukarana — 48 clips, 492 words (already translated)
+- ajadapramatrsiddhi — 27 clips, 225 words (already translated)
+
+## Kashaudio next queue needing T1/C1
+- Pratyabhijnahrdayam (Ksemaraja, 20 sutras) — prose pilot
+- Parapravesika (Ksemaraja, 1 aphorism)
+- Paryantapancasika (Abhinavagupta, 50) — already translated in ipvv
+- Paramarthacarca (Abhinavagupta, TBD) — need source
+- Isvara/Sambandha-siddhi (Utpaladeva, TBD) — need source
+- Paramarthasara (Abhinavagupta, 105) — already translated in ipvv
+- Tattvasandoha (Ksemaraja, verify)
+- Shivastotravali stotras 2-20 (Utpaladeva) — sing phase

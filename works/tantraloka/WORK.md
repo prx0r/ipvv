@@ -1,4 +1,4 @@
-# works/tantraloka — ahnika stockpile + work plan
+# works/tantraloka — all 37 ahnikas processed (T1→GATE + L200 + C1)
 
 ## Sources
 
@@ -8,11 +8,9 @@
 
 ## Status
 
-Ahnika 1 DONE (331 verses, 34 passages, R2 uploaded byte-verified).
-Remaining: 36 ahnikas, ~5,495 verses.
-Full plan: `works/tantraloka/WORK-PLAN.md`.
+All 37 ahnikas processed: T1 frozen, L0 extracted, ARGMAP, L1, L2, L200, C1, GATE recorded, R2 uploaded and byte-verified.
+- R2 key pattern: s3://sanskritree/batch-t1/2026-10-31-tantraloka-aNN-raw.jsonl
 
-## Next (UPLOAD-RUNBOOK)
+## Next
 
-Phase 1: tiny ahnikas (34, 18, 20, 36, 12, 24, 25, 33, 35) — 9 ahnikas, ~200 verses.
-Each: chunk → T1 → freeze → t1_extract → L0 → ARGMAP → L1 → L2 → L200 → C1 → gate → upload.
+Quality pass: refine ARGMAP inferences, expand L2/C1 per passage, citation grounding. Gate blocks are heuristic.

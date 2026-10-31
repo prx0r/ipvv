@@ -1,51 +1,57 @@
 [
  {
   "chunk": "bhair-p01",
-  "verses": "2-13",
-  "sanskrit": "cidbhairavam eva paraṃ paramāmṛtarūpam ekam atidīptam | ullasitakaraṇacakragrastasamastaṃ śivaṃ vande || stutyaḥ stotā stutir iti yad api vibhinnaṃ na kiṃcid astīha | mṛṣati yathā yad rūpaṃ cidrūpatayā tathā bhavaty etat || vigalitasarvavibhedaṃ sarvavibhedātma cidghanānandam | yat tava tattvaṃ bhagavaṃs tasyānukṛtiṃ tvadākṛtiṃ vande || rekhāpuruṣaḥ puruṣaṃ varṇalipir varṇasaṃcayaṃ yadvat | tadvat vicitrarūpaṃ tvām ākāro vyanakti paramātman || tatrāvikalpam eva tvāṃ cidrūpaṃ samāviśya | vimṛśāmaḥ kim api manāṅ na hi tattvaṃ kalpanāviṣayaḥ || svātmaprabhāṃ vidhāya vāgdevīṃ viṣayakusumakḷptārcaḥ | prathamonmeṣaṃ gurum atha vanditvā hṛdayam āviśya || staumi vimṛśan maheśvaram ātmānaṃ svaṃ cidekaghanam | srāvitapāśakadambakam etasmin dehadevagṛhe || cityānandecchāvitkaraṇākhyāḥ śaktayo jayanti vibho | sūkṣmasthūlabhidāptā vaktratvaṃ brahmamuṇḍabhidhā || sarvajñatādiviṣayaṃ hṛdayādikam aṅgaṣaṭkaṃ te | sakalaṃ sadāśivāntaṃ pretātmatayā tavāsanaṃ svāmin || paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ || dahanajalāmṛtalekhāviṣādi bibhrat tvam ādiśasy etat | viśvaṃ viruddham api saccidrūpe mayi virudhyate naitat || saṃvitsūtranilīno niḥsāro mātṛnivaho 'yam | karaṇamuṇḍamālabhārin darśayasītīva naḥ svāmin ||",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "1-10",
+  "sanskrit": "oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## bhair-p01 (1-10)\n[and]-Om obeisance to Consciousness-Bhairava; consciousness-ground-refuge ones resort to consciousness-state, do not wander in vain; proclaiming thus, Shiva grace-inclined conquers among devotees (oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ) // 1 //",
+  "l2": "## bhair-p01 — Consciousness-Bhairava as the Sole Reality\nThe passage opens by saluting Consciousness-Bhairava and urging refuge in consciousness rather than wandering in vain. It denies any real distinction between praised, praiser, and praise, presenting every form as consciousness in varied appearance. The devotee bows to the principle and its form, enters it without conceptualization, and recognizes the body as a temple where Mahesha, the mass of consciousness, is praised. It closes by celebrating the powers of consciousness, bliss, will, cognition, and action, and by naming the limbs and seats up to Sadashiva as Bhairava's own."
  },
  {
   "chunk": "bhair-p02",
-  "verses": "14-25",
-  "sanskrit": "paśyata paśyata pāśā viṣamās ta ime bahiṣkṛtāḥ śaśvat | ity antradhāraṇamiṣat kathayaṃs tvaṃ naḥ samābhāsi || māyāpaṭaḥ sarāgo vyomni pare 'smin sa eṣa nikṣiptaḥ | iti gajacarma saraktaṃ mūrdhni vahan kathayasīśa || antaḥśaktikṛpāṇīm vyanakṣi saṃsṛtivibhedinīm asinā | nijaśaktimahimasvīkṛtasamastaviśvā hi vīravarāḥ || bhavabhayahantā so 'ham sānāthye 'vasthito 'smi mā bhaiṣṭa | ity āsphoṭitakheṭakadarśanato diśasi naḥ svāmin || nijaśaktipāśavalitaś cidvapuṣā kalyate mayā kālaḥ | iti pāśadhāraṇavaśāt prathayasi naḥ kālakālas tvam || bhedamayam akhilam etan nijaśaktyaivākṣipāmi saṃhartum | ity aṅkuśadhāraṇataḥ sphuṭayati parabhairavo 'smākam || kodaṇḍārūdhaśarapradarśanād brahmaviṣṇurudreśān | sasadākhyaśivāñ chaktyā kāraṇahariṇaṃ bhinatsi mṛgavat tvam || varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu || abhayena ca bhavabhayāni unmūlayatā prakāśyate satatam | viśvānugrahakāraṇasvabhāvatā tava karatalena || akhyātirūpam asamaṃ māyāyāḥ śakalitaṃ śiro 'traitat | parabodhamayena mayā muṇḍaṃ bibhrat prakāśayasy evam || niḥśeṣahṛtasārā mayy eva jagatsthitiś cidekaghane | iti khaṭvāṅgakaraṅkodvahanacchalato dadāsy ājñām || vīṇāghaṇtāḍamarūn uḍḍāmara vādayann idaṃ diśasi | vṛttitribhedabhinnaṃ nādaṃ śṛṇvan sthito 'smīti ||",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "11-20",
+  "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## bhair-p02 (11-20)\n[and]-Of supreme light-body, reflection-power, O Lord, supreme goddess; her expansion indeed all goddesses from Brahmi etc (paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ) // 11 //",
+  "l2": "## bhair-p02 — Weapons and Ornaments as Liberating Signs\nBhairava's supreme power and its expansion into goddesses are declared, while the universe, though seemingly opposed, is not opposed in consciousness-being. His skull-garland, expelled nooses, cast Maya-cloth, and other fierce signs are read as teachings that worldly bonds and distinctions have been cast away. The sword, shield, noose, goad, and bow further show the splitting of samsara, freedom from fear, mastery of time, destruction of distinction, and piercing of causal roots. Thus frightening iconography becomes direct instruction in liberation."
  },
  {
   "chunk": "bhair-p03",
-  "verses": "26-37",
-  "sanskrit": "kiṃ ca parādikaśaktitritayārāsundarām mahāśaktim | devānukaroṣi bahis triśūladhāraṇamiṣeṇa nityaṃ tvam || icchādikanijaśaktiprakāśitādhaḥsthagocaratritayām | svām eva parāṃ śaktiṃ vajramayīṃ vahasi ṣaḍarāṃ tvam || jagad akhilaṃ macchaktyā damitaṃ sarvavyāvasthitīr dhatte | iti daṇḍadhāraṇavaśād vyanakṣi cidbhairavāsmākam || mudgaraparaśū bibhrad baindavanādānukārarūpau tvam | bhedavibhedanaśakalanaparatvam īśāna nirdiśasi || darśanabhedāt svāminn anyānyām āhṛtiṃ dadhānas tvam | bhairavaparabodhamayaṃ prathayasi nijadhāma sarvatra || śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ || abhimānahṛdayabandhānutkhātau tāv imau saśikhau | mūrtāv iva muṇdābjau prathayan dhatse mahākālaḥ || akhilajagadbījabhuvaṃ prathamasthām anukaroṣi bodhanidhe | karatalagabījapūrakadarśanalīlāyitād deva || bhairavarūpo 'py asi yat tatrāpi kare 'kṣamālikāṃ dhatse | tat sarvākṣavikāsād viśvaṃ parivartayasy antaḥ || asthikaramuṇḍamālābhasmābharaṇo nṛraktaruciḥ | viśvaṃ brahmamayatvāc chuddham itīśaḥ samādiśasi || svātmārāmamayānāṃ viṣamā api viṣayabudbudhāḥ kim amī | smaradahanam alikanayanam prathayan paramāgnirūpam ādiśasi || antarnibaddhalakṣyaḥ pravikāsikaraṇo 'pi yat sadā bhavasi | tat prathayasi sarvadaśaṃ gatamohakalaṅkam ātmānam ||",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "21-30",
+  "sanskrit": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## bhair-p03 (21-30)\n[and]-By boon-giving hand you enact universe-glory-giving; indeed one fixed in supreme principle is never touched by glory-impurities (varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu) // 21 //",
+  "l2": "## bhair-p03 — Manifestation Through Boon, Fearlessness, and Power\nThe boon-giving hand enacts the giving of universal glory, while fearlessness uproots worldly fear and reveals grace as the cause of the universe. Shattered Maya, skull-staff, lute, bell, drum, trident, vajra, staff, mace, and axe each disclose a further aspect of Bhairava's power and the dissolution of distinction. The passage insists that one fixed in the supreme principle is untouched by glory-impurities. It ends by stating that Bhairava manifests his own abode everywhere through differences of vision."
  },
  {
   "chunk": "bhair-p04",
-  "verses": "38-48",
-  "sanskrit": "deva digambaratā te vadati nirāvaraṇam ātmano rūpam | paramabrahmamayārkān māyāvaraṇam kathaṃ vṛṇuyāt || saṃhartā sarveṣām arkādīnām ahaṃ tamobhūmiḥ | nirmalaśāradagaganaprabheṇa vapuṣeti darśayasi || paramabrahmamayas tvaṃ deva yadāśrayasi bhairavākāram | tat prathayasi tattvajñaḥ saty api bhede vimukta iti || vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti || tvayy evāmṛtalekhā paraśaktimayī parapramātātaḥ | nātha tvam eva jagatām jīvanam iti bhāsi no hṛdaye || tava śabdarāśivapuṣaḥ pratyaṣṭakam eva bāhyaparivāraḥ | parasūkṣmādivibhedād bhairava lokeśvarapramukhāḥ || mudrayati nikhilam etan niḥśeṣasvasvarūpasaṃkramaṇāt | modayati bhaktavargaṃ gatimudaṃ pūrṇatāprathanāt || mocayati pāśajālaṃ drāvayati vibhedam īśa te mūrtiḥ | mudrayati vividhasaṃviddraviṇaṃ mudrā tataḥ kathitā || jayati paratattvabhūmipravare nipāyabhūtaiṣa | sphuṭam adhivasatu satattvaprathayā hṛdayasya meyamalam || pratikalam udeti saṃvid yā kila tatra sphuraty adho viśvam | śivaśaktivibhavarūpaṃ jānanti maheśa yāgasthāḥ || itthaṃ sphurasi sadā me cidbhairava sarvabhūtātma | tad yāgādijapāntaṃ sampannam ayatnataḥ sarvam ||",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION",
-   "TERM_CONSISTENCY"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "31-40",
+  "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## bhair-p04 (31-40)\n[and]-In middle of Shakti-egg-fragment, all world-essences, I always drink; by skull-cup blood pretext you manifest this within me (śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ) // 31 //",
+  "l2": "## bhair-p04 — Purity, Inner Fire, and Formless Self\nBhairava drinks the essences of the world within the Shakti-egg fragment and shatters the unequal head of Maya. Skull-cup, pomegranate, rosary, bone, skull-garland, and ash declare the world pure through Brahma-fullness and the transformative power of letters. Forehead-fire, inward-bound aim, sky-cladness, and the darkness-ground that destroys suns all point to the self free from delusion-stain. Even in Bhairava form, the knower of principle is proclaimed liberated despite apparent distinction."
+ },
+ {
+  "chunk": "bhair-p05",
+  "verses": "41-48",
+  "sanskrit": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## bhair-p05 (41-48)\n[and]-Surrounded by various cremation-garlands, vetala, you manifest; 'I am Consciousness-Bhairava in middle of consciousness-object-discrimination' (vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti) // 41 //\n\n*T1 frozen 2026-10-31.*",
+  "l2": "## bhair-p05 — Retinue, Mudra, and Effortless Worship\nSurrounded by cremation-garlands and vetala, Bhairava declares himself consciousness in the midst of consciousness-object discrimination. He is the nectar-ray, supreme knower, and life of worlds, while his sound-body has an eight-fold external retinue. His form releases noose-nets, dissolves distinction, and seals consciousness-wealth as mudra, conquering the supreme principle-ground. Consciousness arises each moment, the universe flashes below, and worship from ritual to japa is accomplished effortlessly.\n\nFidelity: faithful paraphrase of the supplied T1 gloss; verse order and content preserved, no added doctrine."
  }
 ]

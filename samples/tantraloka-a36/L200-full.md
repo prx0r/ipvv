@@ -1,15 +1,22 @@
-# L200 — Tantrāloka Ahnika 36 (16 verses, 2 passages)
+# L200 — Tantrāloka Ahnika 36 (2 passages)
 
 ## 1. What the text says (plain)
-Tantrāloka Ahnika 36 (16 verses) is Abhinavagupta's (c.975-1025) ahnika on the arrival (āyāti) of the śāstra. It establishes: arrival of śāstra said, by vasara-agata; Śrī-Siddhas indicated, by gurus determined. Bhairava, Bhairavī, devī, Svacchanda, Lakula, anu-ruler. Gahaneśa, Abja, Śakra, guru, by koṭi-descended. Nine, gradually, studied, nine-koṭi-expansion. By these, then guru, koṭi-mātra, foot gave. To Daksha etc., both feet, to Saṃvarta etc. Foot to Vāmana etc., half to Bhārgava. Foot-foot to Bali, foot-foot which other. To Siṃha half, then remaining, two parts to Vinatā. Foot to Vāsuki-nāga, parts seventeen these. From svarga half, Rāvaṇa then took, Rāma half from that. From Vibhīṣaṇa etc. obtained, guru-disciple-rule. By parts nineteen, divided, that became, then. Part part and eight-part, said, foot-etc-difference. Foot Mūloddhāra, uttara, vṛhaduttara, tathā kalpa. Sāṃhita-kalpa-skandha, anuttara, vyāpaka, threefold, three. Goddesses there indicated, by gradation, expanded form. Ninth foot, no count said, without break. From Rāma, Lakṣmaṇa, from them Siddhas, from them Dānavas. Guhyakas from them, yogis, excellent men from them. Of them, by gradation, in middle, fallen, by time, when. Then by Śrīkaṇṭhanātha's command, Siddhas descended. Tryambaka, Amardaka, named Śrīnātha, in advaya, dvaya. In dvaya-advaya, skilled, by gradation, Śiva-śāsana. Of first, descendant born, second, by daughter-course. He also half-Tryambaka-named, lineage, well-established. Therefore half-four, here, maṭhikās, by lineage-course. By disciple-grand-disciple, expanded, hundred-branches, established. Having-done, lineage-stream, essence, rasas, gathered. Having-done, Tantrāloka this, flows, all rasas. Said arrival, upādeya-nature, determined, now.
+Tantrāloka Ahnika 36 is Abhinavagupta's (c.975-1025) ahnika. It establishes: [and]-:C36 atha śrītantrāloke ṣaṭtriṃśamāhnikam āyātiratha śāstrasya kathyate@vasarāgatā /0b śrīsiddhādivinirdiṣṭā gurubhiśca nirūpitā / bhairavo bhairavī devī svacchando lākulo@ṇurāṭ gahaneśo@bjajaḥ śakro guruḥ koṭyapakarṣataḥ / navabhiḥ kramaśo@dhītaṃ navakoṭipravistaram etaistato guruḥ koṭimātrāt pādaṃ vitīrṇavān / dakṣādibhya ubhau pādau saṃvartādibhya eva ca pādaṃ ca vāmanādibhyaḥ pādārdhaṃ bhārgavāya ca / pādapādaṃ tu balaye pādapādastu yo@paraḥ siṃhāyārdhaṃ tataḥ śiṣṭāddvau bhāgau vinatābhuve / pādaṃ vāsukināgāya khaṇḍāḥ saptadaśa tvamī svargādardhaṃ rāvaṇo@tha jahre rāmo@rdhamapyataḥ / vibhīṣaṇamukhādāpa guruśiṣyavidhikramāt khaṇḍairekānnaviṃśatyā vibhaktaṃ tadabhūttataḥ / khaṇḍaṃ khaṇḍaṃ cāṣṭakhaṇḍaṃ proktapādādibhedataḥ pādo mūloddhārāvuttaravṛhaduttare tathā kalpaḥ / sāṃhitakalpaskandāvanuttaraṃ vyāpakaṃ tridhā tisraḥ devyo@tra nirūpyante kramaśo vistāriṇaiva rūpeṇa / navame pade tu gaṇanā na kāciduktā vyavacchidāhīne rāmācca lakṣmaṇastasmāt siddhāstebhyo@pi dānavāḥ / guhyakāśca tatastebhyo yogino nṛvarāstataḥ [and]-teṣāṃ krameṇa tanmadhye bhraṣṭaṃ kālāntarādyadā / tadā śrīkaṇṭhanāthājñāvaśāt siddhā avātaram tryambakāmardakābhikhyaśrīnāthā advaye dvaye / dvayādvaye ca nipuṇāḥ krameṇa śivaśāsane ādyasya cānvayo jajñe dvitīyo duhitṛkramāt / sa cārdhatryambakābhikhyaḥ saṃtānaḥ supratiṣṭhitaḥ ataścārdhacatasro@tra maṭhikāḥ saṃtatikramāt / śiṣyapraśiṣyairvistīrṇāḥ śataśākhaṃ vyavasthitaiḥ adhyuṣṭasaṃtatisrotaḥsārabhūtarasāhṛtim / vidhāya tantrāloko@yaṃ syandate sakalānrasān uktāyātirupādeyabhāvo nirṇīyate@dhunā / [AbhT_36.16]
 
 ## 2. What the text argues (core claims)
-- C1: Arrival of śāstra said, by vasara-agata; Śrī-Siddhas indicated, by gurus determined.
-- C2: Bhairava, Bhairavī, devī, Svacchanda, Lakula, anu-ruler.
-- C3: Gahaneśa, Abja, Śakra, guru, by koṭi-descended; nine, gradually, studied, nine-koṭi-expansion.
-- C4: By these, then guru, koṭi-mātra, foot gave; to Daksha etc., both feet, to Saṃvarta etc.
-- C5: Foot to Vāmana etc., half to Bhārgava; foot-foot to Bali, foot-foot which other.
-- C6: To Siṃha half, then remaining, two parts to Vinatā; foot to Vāsuki-nāga, parts seventeen these.
-- C7: From svarga half, Rāvaṇa then took, Rāma half from that; from Vibhīṣaṇa etc. obtained, guru-disciple-rule.
-- C8: By parts nineteen, divided, that became, then; part part and eight-part, said, foot-etc-difference.
-- C9: Foot Mūloddhāra, uttara, vṛhaduttara, tathā kalpa; Sāṃhita-kalpa-skandha, anuttara, vyāpaka, threefold, three.
+- C1: [and]-:C36 atha śrītantrāloke ṣaṭtriṃśamāhnikam āyātiratha śāstrasya kathyate@vasarāgatā /0b śrīsiddhādivinirdiṣṭā gurub
+- C2: [and]-teṣāṃ krameṇa tanmadhye bhraṣṭaṃ kālāntarādyadā / tadā śrīkaṇṭhanāthājñāvaśāt siddhā avātaram tryambakāmardakābhik
+
+## 3. What the text rejects
+- R1: (none recorded).
+
+## 4. What the text leaves unresolved
+- U1: The relation to the broader Tantrāloka.
+- U2: Verse count verification.
+- U3: The exact dating.
+
+## 5. Cross-references
+- spans TS36.1–end.
+
+## 6. Translation notes
+- Machine-compressed; needs expansion for premium quality.

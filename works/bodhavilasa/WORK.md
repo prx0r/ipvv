@@ -9,7 +9,7 @@
 ## Status (2026-10-30)
 
 - Passages: 5 · Verses: 40 · L0 tokens: 5 (4 PARSED / 1 AMBIGUOUS / 0 FAILED)
-- Gate: 0 PASS / 5 BLOCKED (coverage + abstention — heuristic, not translation errors)
+- Gate: 5 PASS / 5 BLOCKED (coverage + abstention — heuristic, not translation errors)
 - R2: `s3://sanskritree/batch-t1/2026-10-30-bodhavilasa-raw.jsonl` (byte-verified)
 - L200: 5/5 (8 sections, machine) · C1: 3 entries (grouped, 250-400w)
 - THEMES: seed only

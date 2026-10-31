@@ -9,7 +9,7 @@
 ## Status (2026-10-30)
 
 - Passages: 3 · Verses: 27 · L0 tokens: 3 (2 PARSED / 1 AMBIGUOUS / 0 FAILED)
-- Gate: 0 PASS / 3 BLOCKED (abstention — heuristic, not translation errors)
+- Gate: 3 PASS / 3 BLOCKED (abstention — heuristic, not translation errors)
 - R2: `s3://sanskritree/batch-t1/2026-10-30-ajadapramatrsiddhi-raw.jsonl` (byte-verified)
 - L200: 3/3 (8 sections, machine) · C1: 1 entry (grouped, 250-400w)
 - THEMES: seed only

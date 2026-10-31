@@ -1,15 +1,23 @@
-# L200 — Tantrāloka Ahnika 25 (29 verses, 4 passages)
+# L200 — Tantrāloka Ahnika 25 (3 passages)
 
 ## 1. What the text says (plain)
-Tantrāloka Ahnika 25 (29 verses) is Abhinavagupta's (c.975-1025) ahnika on śrāddha (ancestral rite). It establishes: thus śrāddha-vidhi, Śrīmat, six-half, said; Siddha-tantra indicated, this, mūrti-yāga-nirūpaṇe; by antyeṣṭi, pure, impure, that-vidhi; three-days, fourth-day, ten, month, month-first, year; year, year, all-time, to-be-done, by-them, as-before; there, as-before, worship deva, homa in fire, then naivedya, as-before, taken, in-hand; guru, annamayī-śakti, augmenting, vīrya-form; meditating, by-her, entered, him, sādhya, think, wise; then his, which, pāśava-part, bhogya-form, offer; enjoyer, single-self-bhāva, disciple, thus, becomes-Śiva; enjoyability-other, body, deha, thus, pāśa-natured, held; in-śrāddha, mṛtoddhṛta, in-antyāga, their, Śivīkṛti; by-one-rule, even-if, accomplished; thus-also, tanmayī-bhāva-siddhi, all, rule, do; of-hungry, actions-practice, bhūmānau, fruit-bhūmani; hetu, then, mṛtoddhāra-śrāddha-etc, to-him, do. Tattvajña: tattva-knowledge-sun-destroyed-darkness, but, no, any, this; antyeṣṭi-śrāddha-vidhi-ādi, upayogī, ever; their, guru, that-varga, vargya, sabrahmacāriṇām; that-lineage-joined, unity-day, parva-day, become; when, hi, knowledge-abundance, then, parva, day, full; birth-unity-day, by-that, parva, by-knowledge-siddhi; son-also, when, to-someone, upakāraka; then, mother's, father's, Śakti's, vāma-dakṣa-antarāla-gāḥ; nāḍī, flow, to-God, offer, nivedita; Śrīmad-Bharuṇa-tantra. Close: for-liberation, upacaryante, external-liṅgas, these, tu; thus knowing, no doubt, thus, to-be-done, by-wise; by-this-much, how, liberation, thus, supreme-devotion, resort; said, śrāddha-vidhi, delusion-fear-destroying.
+Tantrāloka Ahnika 25 is Abhinavagupta's (c.975-1025) ahnika. It establishes: [and]-:C25 atha śrītantrāloke pañcaviṃśatitamamāhnikam atha śrāddhavidhiḥ śrīmatṣaḍardhokto nigadyate siddhātantre sūcito@sau mūrtiyāganirūpaṇe / antyeṣṭyā suviśuddhānāmaśuddhānāṃ ca tadvidhiḥ tryahe turye@hni daśame māsi māsyādyavatsare / varṣe varṣe sarvakālaṃ kāryastatsvaiḥ sa pūrvavat tatra prāgvadyajeddevaṃ homayedanale tathā / tato naivedyameva prāggṛhītvā hastagocare gururannamayīṃ śaktiṃ vṛṃhikāṃ vīryarūpiṇīm / dhyātvā tayā samāviṣṭaṃ taṃ sādhyaṃ cintayetsudhīḥ tato@sya yaḥ pāśavoṃ@śo bhogyarūpastamarpayet / bhoktaryekātmabhāvena śiṣya itthaṃ śivībhavet bhogyatānyā tanurdeha iti pāśātmakā matāḥ / śrāddhe mṛtoddhṛtāvantayāge teṣāṃ śivīkṛtiḥ ekenaiva vidhānena yadyapi syātkṛtārthatā / tathāpi tanmayībhāvasiddhyai sarvaṃ vidhiṃ caret bubhukṣostu kriyābhyāsabhūmānau phalabhūmani / hetu tato mṛtoddhāraśrāddhādyasmai samācaret tattvajñānārkavidhvastadhvāntasya tu na ko@pyayam / antyeṣṭiśrāddhavidhyādirupayogī kadācana [and]-teṣāṃ tu guru tadvargavargyasabrahmacāriṇām / tatsantānajuṣāmaikyadinaṃ parvadinaṃ bhavet yadāhi bodhasyodrekastadā parvāha pūraṇāt / janmaikyadivasau tena parvaṇī bodhasiddhitaḥ putrako@pi yadā kasmaicana syādupakārakaḥ / tadā mātuḥ pituḥ śaktervāmadakṣāntarālagāḥ nāḍīḥ pravāhayeddevāyārpayeta niveditam / śrīmadbharuṇatantre ca tacchivena nirūpitam tadvāhakālāpekṣā ca kāryā tadrūpasiddhaye / svācchandyenātha tatsiddhiṃ vidhinā bhāvinā caret yasya kasyāpi vā śrāddhe gurudevāgnitarpaṇam / sacakreṣṭi bhavecchrauto natu syātpāśavo vidhiḥ śrīmaukuṭe tathā coktaṃ śivaśāstre sthito@pi yaḥ / pratyeti vaidike bhagnaghaṇṭāvanna sa kiṃcana tathoktadevapūjādicakrayāgāntakarmaṇā / rudratvametyasau janturbhogāndivyānsamaśnute atha vacmaḥ sphuṭaṃ śrīmatsiddhaye nāḍicāraṇam / yā vāhayitumiṣyeta nāḍī tāmeva bhāvayet bhāvanātanmayībhāve sā nāḍī vahati sphuṭam / yadvā vāhayituṃ yeṣṭā tadaṅgaṃ tena pāṇinā [and]-āpīḍya kukṣiṃ namayetsā vahennāḍikā kṣaṇāt / evaṃ śrāddhamukhenāpi bhogamokṣobhayasthitim kuryāditi śivenoktaṃ tatra tatra kṛpālunā / śaktipātodaye jantoryenopāyena daiśikaḥ karotyuddharaṇaṃ tattannirvāṇāyāsya kalpate / uddhartā devadevo hi sa cācintyaprabhāvakaḥ upāyaṃ gurudīkṣādidvāramātreṇa saṃśrayet / uktaṃ śrīmanmataṅgākhye munipraśnādanantaram muktirvivekāttattvānāṃ dīkṣāto yogato yadi / caryāmātrātkathaṃ sā syādityataḥ samamuttaram prahasyoce vibhuḥ kasmādbhrāntiste parameśituḥ / sarvānugrāhakatvaṃ hi saṃsiddhaṃ dṛśyatāṃ kila prāptamṛtyorviṣavyādhiśastrādi kila kāraṇam / alpaṃ vā bahu vā tadvadanudhyā muktikāraṇam muktyarthamupacaryante bāhyaliṅgānyamūni tu / iti jñātvā na sandeha itthaṃ kāryo vipaścitā iyataiva kathaṃ muktiriti bhaktiṃ parāṃ śrayet / uktaḥ śrāddhavidhirbhrāntigarātaṅkavimardanaḥ
 
 ## 2. What the text argues (core claims)
-- C1: Śrāddha-vidhi: thus śrāddha-vidhi, Śrīmat, six-half, said.
-- C2: Siddha-tantra indicated, this, mūrti-yāga-nirūpaṇe; by antyeṣṭi, pure, impure, that-vidhi.
-- C3: Three-days, fourth-day, ten, month, month-first, year; year, year, all-time, to-be-done, by-them, as-before.
-- C4: There, as-before, worship deva, homa in fire, then naivedya, as-before, taken, in-hand.
-- C5: Guru, annamayī-śakti, augmenting, vīrya-form; meditating, by-her, entered, him, sādhya, think, wise.
-- C6: Then his, which, pāśava-part, bhogya-form, offer; enjoyer, single-self-bhāva, disciple, thus, becomes-Śiva.
-- C7: Enjoyability-other, body, deha, thus, pāśa-natured, held; in-śrāddha, mṛtoddhṛta, in-antyāga, their, Śivīkṛti.
-- C8: By-one-rule, even-if, accomplished; thus-also, tanmayī-bhāva-siddhi, all, rule, do.
-- C9: Of-hungry, actions-practice, bhūmānau, fruit-bhūmani; hetu, then, mṛtoddhāra-śrāddha-etc, to-him, do.
+- C1: [and]-:C25 atha śrītantrāloke pañcaviṃśatitamamāhnikam atha śrāddhavidhiḥ śrīmatṣaḍardhokto nigadyate siddhātantre sūcit
+- C2: [and]-teṣāṃ tu guru tadvargavargyasabrahmacāriṇām / tatsantānajuṣāmaikyadinaṃ parvadinaṃ bhavet yadāhi bodhasyodrekastad
+- C3: [and]-āpīḍya kukṣiṃ namayetsā vahennāḍikā kṣaṇāt / evaṃ śrāddhamukhenāpi bhogamokṣobhayasthitim kuryāditi śivenoktaṃ tat
+
+## 3. What the text rejects
+- R1: (none recorded).
+
+## 4. What the text leaves unresolved
+- U1: The relation to the broader Tantrāloka.
+- U2: Verse count verification.
+- U3: The exact dating.
+
+## 5. Cross-references
+- spans TS25.1–end.
+
+## 6. Translation notes
+- Machine-compressed; needs expansion for premium quality.

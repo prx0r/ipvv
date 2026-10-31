@@ -1,15 +1,23 @@
-# L200 — Tantrāloka Ahnika 24 (24 verses, 3 passages)
+# L200 — Tantrāloka Ahnika 24 (3 passages)
 
 ## 1. What the text says (plain)
-Tantrāloka Ahnika 24 (24 verses) is Abhinavagupta's (c.975-1025) ahnika on antyeṣṭi (funeral rite). It establishes: thus Śāmbhava-śāsana-said, secret, listen, antyeṣṭi-saṃskāra; of all lower-station, up to guru, clearly; by śaktipāta, before-said, do, antyeṣṭi-dīkṣaṇa; of ūrdhva-śāsana-goers, samaya-damaged-self; antyeṣṭi-dīkṣā, to-be-done, by guru, tattva-knower; samayācāra-faults, by-negligence, fallen; antyeṣṭi-dīkṣā, to-be-done, Śrī-dīkṣottara-śāsana; whatever said before, in mṛtoddhāra-vidhi; in icon, that very here, all, in corpse-body, do; Śrī-Siddha-tantra-said, vidhi, this, determined; final which becomes first, doing that, final, first; enclosing one by one, iṣṭi, that antyeṣṭi, dvitayī, held; pūjā-dhyāna-japa-pluṣṭa-samaye, not, for sādhaka; piṇḍapāta-etc, freed, khecaro or, becomes, dear; ācārya, tattva-endowed, where, there, died, sati; antyeṣṭi not, vidyeta, pure-consciousness-head; mantra-yoga-etc by, killed, in hell, those; to-be-done, their, here, antyeṣṭi, by-guru, very-compassionate; not maṇḍala-etc, here, would-be, in-śamāśānika-vidhi; some, that also, to-be-done, said, in-pretasadman; having-worshipped, vibhu, all, nyāsa, as-before, do; by-saṃhāra-krama-yoga, from-feet, to-head-backward; thus, awaken, him, by-action-knowledge-samādhi; by-bindu, restrain, tattva, by-śakti-bīja, pierce; by-ghaṭṭana, nāda-place, tu, by-triśūla, strike; by-suṣumnā-internal, by-visarga, again, again; strike, kalās, all, trembles, he, then, paśu; raise, left-hand, or, then, him, unite, supreme; by-pratyaya, without, liberation, indeed, incredible, to-deluded; for-that, this, declared, not, liberation-means, this; thus, said, Parameśa, Śrī-Kula-gahvara-śāsana; sādhya, measurable, mokṣa-etc, by-pratyaya, beyond-senses; after-initiation, and, puryaṣṭa-offering, here, declared; that-rule, in-śruti-patra, in-lotus, middle, deva, Sadāśiva; Īśa-Rudra-Hari-Brahma, four, from-east, etc.; having-worshipped, śruti-sparśa, rasa, gandha, vapu-dvaya; dhyā, ahaṃkṛti, manaś, ceti, to-Brahma-etc, offer, in-order; of-these, tarpaṇa, having-done, by-hundred-homa, daiśika; this, sāṃnyāsikī, initiation, puryaṣṭaka-purifying; puryaṣṭaka, absence, and, no, svarga-naraka, etc.; thus, having-done, not, to-be-done, laukika, anything, also; said, Śrī-Mādhava-kula, śāsana-stha, in-dead, also; piṇḍapāta-udakādi, laukika, avoid; Śiva, having-worshipped, cakra-arcā, as-able, do; by-gradual, three-ten, thirty, thirty, year, day; thus, said, antyeṣṭi-yāga, this, by-Parameśvara, spoken.
+Tantrāloka Ahnika 24 is Abhinavagupta's (c.975-1025) ahnika. It establishes: [and]-:C24 atha śrītantrāloke caturviṃśatitamamāhnikam atha śāmbhavaśāsanoditāṃ sarahasyāṃ śṛṇutāntyasaṃskriyām sarveṣāmadharasthānāṃ gurvantānāmapi sphuṭam / śaktipātātpurāproktātkuryādantyeṣṭidīkṣaṇam ūrdhvaśāsanagānāṃ ca samayopahatātmanām / antyeṣṭidīkṣā kartavyā guruṇā tattvavedinā samayācāradoṣeṣu pramādātskhalitasya hi / antyeṣṭidīkṣā kāryeti śrīdīkṣottaraśāsane yatkiṃcitkathitaṃ pūrvaṃ mṛtoddhārābhidhe vidhau / pratimāyāṃ tadevātra sarvaṃ śavatanau caret śrīsiddhātantrakathito vidhireṣa nirūpyate / antimaṃ yadbhavetpūrvaṃ tatkṛtvāntimamādimam saṃhṛtyaikaikamiṣṭiryā sāntyeṣṭirdvitayī matā / pūjādhyānajapāpluṣṭasamaye natu sādhake piṇḍapātādayaṃ muktaḥ khecaro vā bhavetpriye / ācārye tattvasaṃpanne yatra tatra mṛte sati antyeṣṭirnaiva vidyeta śuddhacetasyamūrdhani / mantrayogādibhirye ca māritā narake tu te kāryā teṣāmihāntyeṣṭirguruṇātikṛpālunā / na maṇḍalādikaṃ tvatra bhavecchamāśānike vidhau [and]-kecittadapi kartavyamūcire pretasadmani / pūjayitvā vibhuṃ sarvaṃ nyāsaṃ pūrvavadācaret saṃhārakramayogena caraṇānmūrdhapaścimam / tathaiva bodhayedenaṃ kriyājñānasamādhibhiḥ bindunā rodhayettattvaṃ śaktibījena vedhayet / ghaṭṭayennādadeśe tu triśūlena tu tāḍayet suṣumnāntargatenaiva visargeṇa punaḥ punaḥ / tāḍayeta kalāḥ sarvāḥ kampate@sau tataḥ paśuḥ utkṣipedvāmahastaṃ vā tatastaṃ yojayetpare / pratyayena vinā mokṣo hyaśraddheyo vimohitaiḥ tadarthametaduditaṃ natu mokṣopayogyadaḥ / ityūce parameśaḥ śrīkulagahvaraśāsane sādhyo@numeyo mokṣādiḥ pratyayairyadatīndriyaḥ / dīkṣottare ca puryaṣṭavargārpaṇamihoditam tadvidhiḥ śrutipatre@bje madhye devaṃ sadāśivam / īśarudraharibrahmacatuṣkaṃ prāgdigāditaḥ pūjayitvā śrutisparśau rasaṃ gandhaṃ vapurdvayam / dhyahaṃkṛtī manaśceti brahmādiṣvarpayetkramāt eteṣāṃ tarpaṇaṃ kṛtvā śatahomena daiśikaḥ / eṣā sāṃnyāsikī dīkṣā puryaṣṭakaviśodhanī [and]-puryaṣṭakasyābhāve ca na svarganarakādayaḥ / tathā kṛtvā na kartavyaṃ laukikaṃ kiṃcanāpi hi uktaṃ śrīmādhavakule śāsanastho mṛteṣvapi / piṇḍapātodakāsrvādi laukikaṃ parivarjayet śivaṃ saṃpūjya cakrārcāṃ yathāśakti samācaret / kramāttridaśamatriṃśatriṃśavatsaravāsare ityukto@ntyeṣṭiyāgo@yaṃ parameśvarabhāṣitaḥ
 
 ## 2. What the text argues (core claims)
-- C1: Antyeṣṭi (funeral rite): Śāmbhava-śāsana-said, secret, listen, antyeṣṭi-saṃskāra.
-- C2: Of all lower-station, up to guru, clearly; by śaktipāta, before-said, do, antyeṣṭi-dīkṣaṇa.
-- C3: Of ūrdhva-śāsana-goers, samaya-damaged-self; antyeṣṭi-dīkṣā, to-be-done, by guru, tattva-knower.
-- C4: Samayācāra-faults, by-negligence, fallen; antyeṣṭi-dīkṣā, to-be-done, Śrī-dīkṣottara-śāsana.
-- C5: Whatever said before, in mṛtoddhāra-vidhi; in icon, that very here, all, in corpse-body, do.
-- C6: Śrī-Siddha-tantra-said, vidhi, this, determined; final which becomes first, doing that, final, first.
-- C7: Enclosing one by one, iṣṭi, that antyeṣṭi, dvitayī, held; pūjā-dhyāna-japa-pluṣṭa-samaye, not, for sādhaka.
-- C8: Piṇḍapāta-etc, freed, khecaro or, becomes, dear; ācārya, tattva-endowed, where, there, died, sati.
-- C9: Antyeṣṭi not, vidyeta, pure-consciousness-head; mantra-yoga-etc by, killed, in hell, those.
+- C1: [and]-:C24 atha śrītantrāloke caturviṃśatitamamāhnikam atha śāmbhavaśāsanoditāṃ sarahasyāṃ śṛṇutāntyasaṃskriyām sarveṣām
+- C2: [and]-kecittadapi kartavyamūcire pretasadmani / pūjayitvā vibhuṃ sarvaṃ nyāsaṃ pūrvavadācaret saṃhārakramayogena caraṇān
+- C3: [and]-puryaṣṭakasyābhāve ca na svarganarakādayaḥ / tathā kṛtvā na kartavyaṃ laukikaṃ kiṃcanāpi hi uktaṃ śrīmādhavakule ś
+
+## 3. What the text rejects
+- R1: (none recorded).
+
+## 4. What the text leaves unresolved
+- U1: The relation to the broader Tantrāloka.
+- U2: Verse count verification.
+- U3: The exact dating.
+
+## 5. Cross-references
+- spans TS24.1–end.
+
+## 6. Translation notes
+- Machine-compressed; needs expansion for premium quality.

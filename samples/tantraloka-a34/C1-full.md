@@ -1,0 +1,14 @@
+# C1 — Tantrāloka Ahnika 34
+
+## tal-a34-p01–p01 — ahnika 34
+**SUMMARY.** Tantrāloka Ahnika 34: [and]-:C34 atha śrītantrāloke catustriṃśamāhnikam ucyate@tha svasvarūpapraveśaḥ kramasaṅgataḥ / 0b yadetadbahudhā proktamāṇavaṃ śivatāptaye / tatrāntarantarāviśya viśrāmyetsavidhe pade tato@pyāṇavasaṃtyāgācchāktīṃ bhūmimupāśrayet / tato@pi śāmbhavīmevaṃ tāratamyakramātsphuṭam itthaṃ kramoditavibodhamahāmarīcisaṃpūritaprasarabhairavabhāvabhāgī / ante@bhyupāyanirapekṣatayaiva nityaṃ svātmānamāviśati garbhitaviśvarūpam kathito@yaṃ svasvarūpapraveśaḥ parameṣṭhinā / [AbhT_34.4]
+
+**FUNCTION.** Establishes ahnika 34.
+
+**KEY TERMS.** (from gloss).
+
+**LOCAL CONTEXT.** Ahnika 34.
+
+**EXPLANATION.** [and]-:C34 atha śrītantrāloke catustriṃśamāhnikam ucyate@tha svasvarūpapraveśaḥ kramasaṅgataḥ / 0b yadetadbahudhā proktamāṇavaṃ śivatāptaye / tatrāntarantarāviśya viśrāmyetsavidhe pade tato@pyāṇavasaṃtyāgācchāktīṃ bhūmimupāśrayet / tato@pi śāmbhavīmevaṃ tāratamyakramātsphuṭam itthaṃ kramoditavibodhamahāmarīcisaṃpūritaprasarabhairavabhāvabhāgī / ante@bhyupāyanirapekṣatayaiva nityaṃ svātmānamāviśati garbhitaviśvarūpam kathito@yaṃ svasvarūpapraveśaḥ parameṣṭhinā / [AbhT_34.4]
+
+**BOUNDARY / OPEN.** None major. Verses are dense; L2 groups them.

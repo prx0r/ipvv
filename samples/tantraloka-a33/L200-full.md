@@ -1,15 +1,24 @@
-# L200 — Tantrāloka Ahnika 33 (32 verses, 4 passages)
+# L200 — Tantrāloka Ahnika 33 (4 passages)
 
 ## 1. What the text says (plain)
-Tantrāloka Ahnika 33 (32 verses) is Abhinavagupta's (c.975-1025) ahnika on unification (ekīkāra). It establishes: arrival, unification, said; which said, by cakra-bheda, with pūjyam, Trika; there, this, cakra-bheda, unification, by-this-course. Viśvā, Tadīśā, Hraudrī, Vīra, Netrī, Ambikā, tathā. Gurvī, six-are, devyas, Śrī-Siddha-Vīra-darśitāḥ. Māheśī, Brāhmaṇī, Skāndī, Vaiṣṇavī, Aindrī, Yamātmikā. Cāmuṇḍā, ca, eva, Yogīśī, ity, aṣṭāghorī, ādayo, athavā. Agni, Nirṛti, Vāyu, Īśa, Mātṛ, by, twelve, anvitāḥ. Nandā, Bhadrā, Jayā, Kālī, Karālī, Vikṛtānanā. Kroṣṭukī, Bhīmamudrā, ca, Vāyuvegā, Hayānanā. Gambhīrā, Ghoṣaṇī, ceti, twenty-four-are, vidhiḥ. Siddhi, Vṛddhi, Dyuti, Lakṣmī, Medhā, Kānti, Sudhā, Dhṛtiḥ. Dīpti, Puṣṭi, Mati, Kīrti, Susthiti, Sugati, Smṛtiḥ. Suprabhā, Ṣoḍaśī, ceti, Śrīkaṇṭha-etc-śaktis. Bali, ca, Balinanda, ca, Daśagrīva, Hara, Hayaḥ. Mādhava, six-are, cakre, twelve-are, tv, amī, smṛtāḥ. Dakṣa, Caṇḍa, Hara, Śauṇḍī, Pramatha, Bhīma, Manmathau. Śakuni, Sumati, Nanda, Gopāla, ca, Pitāmaha. Śrīkaṇṭha, Anantasūkṣmau, ca, Trimūrti, Śaṃbareśvara. Arghīśa, Bhārabhūti, ca, sthitiḥ... Śruti, agni, are, syurete, strīpāṭhāc, chaktayastvetāḥ. Juṃkāra, atha, agnipatnī, iti, ṣaḍare, ṣaṇṭhavarjitāḥ. Dvādaśāre, tatsahitāḥ, ṣoḍaśā... Viśva, eka, parāmarśa, sahatvāt, prabhṛti, sphuṭam. Aṃśāṃśika, parāmarśān, paryante, sahate, yataḥ. Ataḥ, pañcāśad, aikātmyaṃ, svaravyakt... (close).
+Tantrāloka Ahnika 33 is Abhinavagupta's (c.975-1025) ahnika. It establishes: [and]-:C33 atha śrītantrāloke trayastriṃśamāhnikam athāvasarasaṃprāpta ekīkāro nigadyate / 0b yaduktaṃ cakrabhedena sārdhaṃ pūjyamiti trikam / tatraiṣa cakrabhedānāmekīkāro diśānayā viśvā tadīśā hāraudrī vīranetryambikā tathā / gurvīti ṣaḍare devyaḥ śrīsiddhāvīradarśitāḥ māheśī brāhmaṇī skāndī vaiṣṇavyaindrī yamātmikā / cāmuṇḍā caiva yogīśītyaṣṭāghoryādayo@thavā agninirṛtivāyvīśamātṛbhirdvādaśānvitāḥ / nandā bhadrā jayā kālī karālī vikṛtānanā kroṣṭukī bhīmamudrā ca vāyuvegā hayānanā / gambhīrā ghoṣaṇī ceti caturviṃśatyare vidhiḥ siddhirvṛddhirdyutirlakṣmīrmedhā kāntiḥ sudhā dhṛtiḥ / dīptiḥ puṣṭirmatiḥ kīrtiḥ susthitiḥ sugatiḥ smṛtiḥ suprabhā ṣoḍaśī ceti śrīkaṇṭhādikaśaktayaḥ / baliśca balinandaśca daśagrīvo haro hayaḥ mādhavaḥ ṣaḍare cakre dvādaśāre tvamī smṛtāḥ / dakṣaścaṇḍo haraḥ śauṇḍī pramatho bhīmamanmathau śakuniḥ sumatirnando gopālaśca pitāmahaḥ / śrīkaṇṭho@nantasūkṣmau ca trimūrtiḥ śaṃbareśvaraḥ arghīśo bhārabhūtiśca sthitiḥ sthāṇurharastathā / jhaṇṭhibhautikasadyojānugrahakrūrasainikāḥ [and]-dvyaṣṭau yadvāmṛtastena yuktāḥ pūrṇābhataddravāḥ / oghormisyandanāṅgāśca vapurudgāravaktrakāḥ tanusecanamūrtīśāḥ sarvāmṛtadharo@paraḥ / śrīpāṭhācchaktayaścaitāḥ ṣoḍaśaiva prakīrtitāḥ saṃvartalakulibhṛgusitabakakhaṅgipinākibhujagabalikālāḥ / dviśchagalāṇḍau śikhiśoṇameṣamīnatridaṇḍi sāṣāḍhi devīkāntatadardhau dārukahalisomanāthaśarmāṇaḥ / jayavijayajayantājitasujayajayarudrakīrtanāvahakāḥ tanmūrtyutsāhadavardhanāśca balasubalabhadradāvahakāḥ / tadvāndātā ceśo nandanasamabhadratanmūrtiḥ śivadasumanaḥspṛhaṇakā durgo bhadrākhyakālaśca / ceto@nugakauśikakālaviśvasuśivāstathāparaḥ kopaḥ śrutyagnyare syurete strīpāṭhācchaktayastvetāḥ / juṃkāro@thāgnipatnīti ṣaḍare ṣaṇṭhavarjitāḥ dvādaśāre tatsahitāḥ ṣoḍaśāre svarāḥ kramāt / halastaddviguṇe@ṣṭāre yādyaṃ hāntaṃ tu tattrike dvātriṃśadarake sāntaṃ binduḥ sarveṣu mūrdhani / evamanyānbahūṃścakrabhedānasmātprakalpayet eka eva cidātmaiṣa viśvāmarśanasārakaḥ / śaktistadvānato mātā śabdarāśiḥ prakīrtitau [and]-tayoreva vibhāge tu śaktitadvatprakalpane / śabdarāśirmālinī ca kṣobhātma vapurīdṛśam tathāntaḥsthaparāmarśabhedane vastutastrikam / anuttarecchonmeṣākhyaṃ yato viśvaṃ vimarśanam ānandeśormiyoge tu tatṣaṭkaṃ samudāhṛtam / antaḥsthoṣmasamāyogāttadaṣṭakamudāhṛtam tadāmṛtacatuṣkonabhāve dvādaśakaṃ bhavet / tadyoge ṣoḍaśākhyaṃ syādevaṃ yāvadasaṃkhyatā viśvamekaparāmarśasahatvātprabhṛti sphuṭam / aṃśāṃśikāparāmarśān paryante sahate yataḥ ataḥ pañcāśadaikātmyaṃ svaravyaktivirūpatā / vargāṣṭakaṃ varṇabheda ekāśītikalodayaḥ iti pradarśitaṃ pūrvam ardhamātrāsahatvataḥ / svarārdhamapyasti yataḥ svaritasyārdhamātrakam tasyādita udāttaṃ tatkathitaṃ padavedinā / itthaṃ saṃvidiyaṃ yājyasvarūpāmarśarūpiṇī abhinnaṃ saṃvidaścaitaccakrāṇāṃ cakravālakam / svāmyāvaraṇabhedena bahudhā tatprayojayet parāparā parā cānyā sṛṣṭisthititirodhayaḥ / mātṛsadbhāvarūpā tu turyā viśrāntirucyate [and]-tacca prakāśaṃ vaktrasthaṃ sūcitaṃ tu pade pade / turye viśrāntirādheyā mātṛsadbhāvasāriṇi tathāsya viśvamābhāti svātmatanmayatāṃ gatam / ityeṣa śāstrārthasyokta ekīkāro gurūditaḥ
 
 ## 2. What the text argues (core claims)
-- C1: Unification (ekīkāra): arrival, unification, said; which said, by cakra-bheda, with pūjyam, Trika.
-- C2: There, this, cakra-bheda, unification, by-this-course.
-- C3: Viśvā, Tadīśā, Hraudrī, Vīra, Netrī, Ambikā, tathā.
-- C4: Gurvī, six-are, devyas, Śrī-Siddha-Vīra-darśitāḥ.
-- C5: Māheśī, Brāhmaṇī, Skāndī, Vaiṣṇavī, Aindrī, Yamātmikā.
-- C6: Cāmuṇḍā, ca, eva, Yogīśī, ity, aṣṭāghorī, ādayo, athavā.
-- C7: Agni, Nirṛti, Vāyu, Īśa, Mātṛ, by, twelve, anvitāḥ.
-- C8: Nandā, Bhadrā, Jayā, Kālī, Karālī, Vikṛtānanā.
-- C9: Kroṣṭukī, Bhīmamudrā, ca, Vāyuvegā, Hayānanā.
+- C1: [and]-:C33 atha śrītantrāloke trayastriṃśamāhnikam athāvasarasaṃprāpta ekīkāro nigadyate / 0b yaduktaṃ cakrabhedena sārd
+- C2: [and]-dvyaṣṭau yadvāmṛtastena yuktāḥ pūrṇābhataddravāḥ / oghormisyandanāṅgāśca vapurudgāravaktrakāḥ tanusecanamūrtīśāḥ s
+- C3: [and]-tayoreva vibhāge tu śaktitadvatprakalpane / śabdarāśirmālinī ca kṣobhātma vapurīdṛśam tathāntaḥsthaparāmarśabhedan
+- C4: [and]-tacca prakāśaṃ vaktrasthaṃ sūcitaṃ tu pade pade / turye viśrāntirādheyā mātṛsadbhāvasāriṇi tathāsya viśvamābhāti s
+
+## 3. What the text rejects
+- R1: (none recorded).
+
+## 4. What the text leaves unresolved
+- U1: The relation to the broader Tantrāloka.
+- U2: Verse count verification.
+- U3: The exact dating.
+
+## 5. Cross-references
+- spans TS33.1–end.
+
+## 6. Translation notes
+- Machine-compressed; needs expansion for premium quality.

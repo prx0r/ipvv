@@ -1,15 +1,22 @@
-# L200 — Tantrāloka Ahnika 20 (16 verses, 2 passages)
+# L200 — Tantrāloka Ahnika 20 (2 passages)
 
 ## 1. What the text says (plain)
-Tantrāloka Ahnika 20 (16 verses) is Abhinavagupta's (c.975-1025) ahnika on initiation (dīkṣā). It establishes: I declare initiation, giving breath to the deluded. In triangle, fire-abode, fire-colored-radiant, protected. By-wind-purified, in-left-hand, brilliant. Taking some seed, thus in heart, also in hand burning, thinking, with japa united. By-fire-ignited-phaṭ-stream-burning-pained. Seed becomes seedless, unable to give birth. Burned, not for growth, by that very pratyaya. Mala-Māyā-karma by mantra-meditation-action-power. Burned, not for own work, seedless-pratyaya, this. That Śrī, well-pleased, me, Śaṃbhunātha revealed. Of seed also here work and arrangement by guru's grace. Because initiation by great radiance liberates even immobile. Who guru by japa-homa-arcā-dhyāna-accomplished in self. Knowing, initiation does, his initiation with-pratyaya is called. In avadhūta nirācāra tattva-knower, not this rule. With ācāra, initiation done, with visible-pratyaya-joined. In nirācāra initiation, pratyaya not spoken. Knowledge own-pratyaya because not worthy of other fruit. Dhyāna-etc from fruit to be-accomplished, thus siddhas said. Tulā-śuddhi-test or do, pratyaya-yoginī. As Śrī-tantra-sadbhāva said by supreme Lord. Śrī-pūrva-śāstra also this indicated by supreme Lord. Ānanda, arising, trembling, sleep, drowsiness, fifth. Thus saying, śakti-gradation-named. Arising by light-nature, body-grasping-disappearance. Body indeed earthly, chief, then chiefness abandons. By future-lightness-mantra, disciple meditated, suddenly-arisen. Actions there all, previously-said, should-do, guru. Said this tulā-śuddhi-initiation, pratyaya-giving.
+Tantrāloka Ahnika 20 is Abhinavagupta's (c.975-1025) ahnika. It establishes: [and]-:C20 atha śrītantrāloke viṃśatitamamāhnikam atha dīkṣāṃ bruve mūḍhajanāśvāsapradāyinīm trikoṇe vahnisadane vahnivarṇojjvale@bhitaḥ / vāyavyapuranirdhūte kare savye sujājvale bījaṃ kiṃcidgṛhītvaitattathaiva hṛdayāntare / kare ca dahyamānaṃ saccintayettajjapaikayuk vahnidīpitaphaṭkāradhoraṇīdāhapīḍitam / bījaṃ nirbījatāmeti svasūtikaraṇākṣamam taptaṃ naitatprarohāya tenaiva pratyayena tu / malamāyākhyakarmāṇi mantradhyānakriyābalāt dagdhāni na svakāryāya nirbījapratyayaṃ tvimam / sa śrīmānsuprasanno me śaṃbhunātho nyarūpayat bījasyāpyatra kāryā ca yojanā kṛpayā guroḥ / yato dīkṣā sudīptatvātsthāvarāṇyapi mocayet yo gururjapahomārcādhyānasiddhatvamātmani / jñātvā dīkṣāṃ carettasya dīkṣā sapratyayā smṛtā avadhūte nirācāre tattvajñe natvayaṃ vidhiḥ / sācāraiḥ kriyate dīkṣā yā dṛṣṭapratyayānvitā nirācāreṇa dīkṣāyāṃ pratyayastu na gadyate / jñānaṃ svapratyayaṃ yasmānna phalāntaramarhati [and]-dhyānādi tu phalātsādhyamiti siddhāmatoditam / tulāśuddhiparīkṣāṃ vā kuryātpratyayayoginīm yathā śrītantrasadbhāve kathitā parameśinā / śrīpūrvaśāstre@pyeṣā ca sūcitā parameśinā ānanda udbhavaḥ kampo nidrā ghūrṇiśca pañcamī / ityevaṃvadatā śaktitāratamyābhidhāyinā udbhavo laghubhāvena dehagrahatirohiteḥ / deho hi pārthivo mukhyastadā mukhyatvamujjhati bhāvilāghavamantreṇa śiṣyaṃ dhyātvā samutplutam / karmāṇi tatrāśeṣāṇi pūrvoktānyācaredguruḥ uktā seyaṃ tulāśuddhidīkṣā pratyayadāyinī / [AbhT_20.16]
 
 ## 2. What the text argues (core claims)
-- C1: Initiation = giving breath to deluded; in triangle fire-abode; seed becomes seedless.
-- C2: Mala-Māyā-karma burned by mantra-meditation-action-power.
-- C3: Initiation by great radiance liberates even immobile.
-- C4: Who guru by japa-homa-arcā-dhyāna-accomplished in self.
-- C5: His initiation with-pratyaya is called.
-- C6: In avadhūta nirācāra tattva-knower, not this rule; with ācāra, initiation done, with visible-pratyaya-joined.
-- C7: Knowledge own-pratyaya because not worthy of other fruit.
-- C8: Dhyāna-etc from fruit to be-accomplished; tulā-śuddhi-test.
-- C9: Ānanda, arising, trembling, sleep, drowsiness, fifth.
+- C1: [and]-:C20 atha śrītantrāloke viṃśatitamamāhnikam atha dīkṣāṃ bruve mūḍhajanāśvāsapradāyinīm trikoṇe vahnisadane vahniva
+- C2: [and]-dhyānādi tu phalātsādhyamiti siddhāmatoditam / tulāśuddhiparīkṣāṃ vā kuryātpratyayayoginīm yathā śrītantrasadbhāve
+
+## 3. What the text rejects
+- R1: (none recorded).
+
+## 4. What the text leaves unresolved
+- U1: The relation to the broader Tantrāloka.
+- U2: Verse count verification.
+- U3: The exact dating.
+
+## 5. Cross-references
+- spans TS20.1–end.
+
+## 6. Translation notes
+- Machine-compressed; needs expansion for premium quality.
