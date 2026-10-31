@@ -2,62 +2,69 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>VBT · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
-:root{--paper:#faf8f1;--card:#ffffff;--ink:#1c1a17;--mut:#6f6a5e;--line:#e6ddc9;--gold:#a86f14;--gold-soft:#f4ead3;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:'Noto Serif Devanagari',Georgia,'Times New Roman',serif;--disp:'Yatra One','Noto Serif Devanagari',serif}
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
 html{-webkit-text-size-adjust:100%}
-body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column}
-a{color:var(--gold-ink);text-decoration:none}a:hover{text-decoration:underline}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
 /* top bar */
 .topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
-.brand{font-family:var(--disp);font-size:1.25rem;color:var(--ink);white-space:nowrap}
+.brand{font-family:var(--serif);font-weight:500;font-size:1.3rem;letter-spacing:.01em;color:var(--ink);white-space:nowrap;text-decoration:none}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
 .topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
-.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink)}
-.topnav a:hover{background:var(--gold-soft);text-decoration:none}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
 .topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
 .side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
 .side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35}
-.side a:hover{background:var(--gold-soft);text-decoration:none}
-.side a.on{background:var(--gold-soft);font-weight:600;color:var(--gold-ink)}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
 .side .sub a{padding-left:1rem;color:#4a463c}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
-h1{font-family:var(--disp);font-weight:400;font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;margin:.2rem 0 .4rem}
-.sub{color:var(--mut);font-size:.92rem;margin-bottom:1rem}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
 .sub a{color:var(--gold-ink)}
-.dev{font-size:1.32rem;line-height:2}
-.iast{color:var(--gold-ink)}
-.en{line-height:1.7}
-.skt{white-space:pre-wrap;font-size:1.06rem}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
 /* depth tabs */
 .depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
-.depth button{font-family:var(--sans);font-size:.84rem;padding:.42rem .85rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
 .depth button.missing{opacity:.45}
-/* cards — white, hairline, no beige boxes */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:.7rem 0}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
 .panel.missing{opacity:.55;border-style:dashed}
-.idx a{display:block;padding:.55rem .2rem;border-bottom:1px solid var(--line);color:var(--ink)}
-.idx a:hover{background:#fff;text-decoration:none}
-.idx a b{color:var(--ink)}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
 .ev{margin:.5rem 0;padding-left:1rem;position:relative}
-.ev .dot{position:absolute;left:0;top:.55em;width:.5em;height:.5em;border-radius:50%;background:var(--gold)}
-.tl{border-left:2px solid var(--gold);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
-.hero img{width:100%;border-radius:14px;border:1px solid var(--line)}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
 .hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
 /* right rail */
 .toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
 .toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
-.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4}
-.toc a.on{color:var(--gold-ink);font-weight:600}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
 /* prev/next + footer */
 .pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
 footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
@@ -72,6 +79,7 @@ body.navopen .side{transform:none}
 .topsearch input{min-width:0;width:110px}
 main{max-width:100%}
 .depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
@@ -81,7 +89,7 @@ main{max-width:100%}
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/vbt/index.html">Index</a><a href="/vbt/themes.html">Themes</a><a href="/vbt/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><h1>Vijñānabhairava Tantra</h1><div class="sub">145 verses · catalog of entries, not graded course</div><div class="idx"><a href="/vbt/v1.html">verse 1</a><a href="/vbt/v3.html">verse 3</a><a href="/vbt/v4.html">verse 4</a><a href="/vbt/v6.html">verse 6</a><a href="/vbt/v10.html">verse 10</a><a href="/vbt/v11.html">verse 11</a><a href="/vbt/v12.html">verse 12</a><a href="/vbt/v13.html">verse 13</a><a href="/vbt/v14.html">verse 14</a><a href="/vbt/v15.html">verse 15</a><a href="/vbt/v17.html">verse 17</a><a href="/vbt/v18.html">verse 18</a><a href="/vbt/v19.html">verse 19</a><a href="/vbt/v20.html">verse 20</a><a href="/vbt/v21.html">verse 21</a><a href="/vbt/v22.html">verse 22</a><a href="/vbt/v23.html">verse 23</a><a href="/vbt/v24.html">verse 24</a><a href="/vbt/v25.html">verse 25</a><a href="/vbt/v26.html">verse 26</a><a href="/vbt/v27.html">verse 27</a><a href="/vbt/v28.html">verse 28</a><a href="/vbt/v29.html">verse 29</a><a href="/vbt/v30.html">verse 30</a><a href="/vbt/v31.html">verse 31</a><a href="/vbt/v32.html">verse 32</a><a href="/vbt/v33.html">verse 33</a><a href="/vbt/v34.html">verse 34</a><a href="/vbt/v35.html">verse 35</a><a href="/vbt/v36.html">verse 36</a><a href="/vbt/v37.html">verse 37</a><a href="/vbt/v38.html">verse 38</a><a href="/vbt/v39.html">verse 39</a><a href="/vbt/v40.html">verse 40</a><a href="/vbt/v42.html">verse 42</a><a href="/vbt/v44.html">verse 44</a><a href="/vbt/v45.html">verse 45</a><a href="/vbt/v46.html">verse 46</a><a href="/vbt/v47.html">verse 47</a><a href="/vbt/v48.html">verse 48</a><a href="/vbt/v49.html">verse 49</a><a href="/vbt/v50.html">verse 50</a><a href="/vbt/v51.html">verse 51</a><a href="/vbt/v52.html">verse 52</a><a href="/vbt/v53.html">verse 53</a><a href="/vbt/v54.html">verse 54</a><a href="/vbt/v55.html">verse 55</a><a href="/vbt/v56.html">verse 56</a><a href="/vbt/v57.html">verse 57</a><a href="/vbt/v58.html">verse 58</a><a href="/vbt/v59.html">verse 59</a><a href="/vbt/v60.html">verse 60</a><a href="/vbt/v61.html">verse 61</a><a href="/vbt/v62.html">verse 62</a><a href="/vbt/v63.html">verse 63</a><a href="/vbt/v64.html">verse 64</a><a href="/vbt/v65.html">verse 65</a><a href="/vbt/v66.html">verse 66</a><a href="/vbt/v68.html">verse 68</a><a href="/vbt/v69.html">verse 69</a><a href="/vbt/v70.html">verse 70</a><a href="/vbt/v71.html">verse 71</a><a href="/vbt/v72.html">verse 72</a><a href="/vbt/v73.html">verse 73</a><a href="/vbt/v74.html">verse 74</a><a href="/vbt/v75.html">verse 75</a><a href="/vbt/v76.html">verse 76</a><a href="/vbt/v77.html">verse 77</a><a href="/vbt/v78.html">verse 78</a><a href="/vbt/v79.html">verse 79</a><a href="/vbt/v80.html">verse 80</a><a href="/vbt/v81.html">verse 81</a><a href="/vbt/v82.html">verse 82</a><a href="/vbt/v83.html">verse 83</a><a href="/vbt/v84.html">verse 84</a><a href="/vbt/v85.html">verse 85</a><a href="/vbt/v86.html">verse 86</a><a href="/vbt/v87.html">verse 87</a><a href="/vbt/v88.html">verse 88</a><a href="/vbt/v89.html">verse 89</a><a href="/vbt/v90.html">verse 90</a><a href="/vbt/v91.html">verse 91</a><a href="/vbt/v92.html">verse 92</a><a href="/vbt/v93.html">verse 93</a><a href="/vbt/v95.html">verse 95</a><a href="/vbt/v96.html">verse 96</a><a href="/vbt/v97.html">verse 97</a><a href="/vbt/v98.html">verse 98</a><a href="/vbt/v99.html">verse 99</a><a href="/vbt/v100.html">verse 100</a><a href="/vbt/v101.html">verse 101</a><a href="/vbt/v101.html">verse 101</a><a href="/vbt/v102.html">verse 102</a><a href="/vbt/v103.html">verse 103</a><a href="/vbt/v104.html">verse 104</a><a href="/vbt/v105.html">verse 105</a><a href="/vbt/v106.html">verse 106</a><a href="/vbt/v107.html">verse 107</a><a href="/vbt/v108.html">verse 108</a><a href="/vbt/v109.html">verse 109</a><a href="/vbt/v110.html">verse 110</a><a href="/vbt/v111.html">verse 111</a><a href="/vbt/v112.html">verse 112</a><a href="/vbt/v113.html">verse 113</a><a href="/vbt/v114.html">verse 114</a><a href="/vbt/v115.html">verse 115</a><a href="/vbt/v116.html">verse 116</a><a href="/vbt/v117.html">verse 117</a><a href="/vbt/v118.html">verse 118</a><a href="/vbt/v119.html">verse 119</a><a href="/vbt/v120.html">verse 120</a><a href="/vbt/v121.html">verse 121</a><a href="/vbt/v122.html">verse 122</a><a href="/vbt/v123.html">verse 123</a><a href="/vbt/v124.html">verse 124</a><a href="/vbt/v125.html">verse 125</a><a href="/vbt/v127.html">verse 127</a><a href="/vbt/v128.html">verse 128</a><a href="/vbt/v130.html">verse 130</a><a href="/vbt/v131.html">verse 131</a><a href="/vbt/v132.html">verse 132</a><a href="/vbt/v133.html">verse 133</a><a href="/vbt/v134.html">verse 134</a><a href="/vbt/v135.html">verse 135</a><a href="/vbt/v136.html">verse 136</a><a href="/vbt/v137.html">verse 137</a><a href="/vbt/v138.html">verse 138</a><a href="/vbt/v139.html">verse 139</a><a href="/vbt/v140.html">verse 140</a><a href="/vbt/v141.html">verse 141</a><a href="/vbt/v144.html">verse 144</a><a href="/vbt/v145.html">verse 145</a><a href="/vbt/v145.html">verse 145</a><a href="/vbt/v146.html">verse 146</a><a href="/vbt/v147.html">verse 147</a><a href="/vbt/v148.html">verse 148</a><a href="/vbt/v149.html">verse 149</a><a href="/vbt/v152.html">verse 152</a><a href="/vbt/v153.html">verse 153</a><a href="/vbt/v154.html">verse 154</a><a href="/vbt/v156.html">verse 156</a><a href="/vbt/v157.html">verse 157</a><a href="/vbt/v158.html">verse 158</a><a href="/vbt/v162.html">verse 162</a><a href="/vbt/v163.html">verse 163</a></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. verses from Lakshmanjoo mapping (other repo); seats from deitybody — corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>Vijñānabhairava Tantra</h1><div class="skt"></div><div class="sub">145 verses · catalog of entries, not graded course</div><div class="idx"><a href="/vbt/v1.html">verse 1</a><a href="/vbt/v3.html">verse 3</a><a href="/vbt/v4.html">verse 4</a><a href="/vbt/v6.html">verse 6</a><a href="/vbt/v10.html">verse 10</a><a href="/vbt/v11.html">verse 11</a><a href="/vbt/v12.html">verse 12</a><a href="/vbt/v13.html">verse 13</a><a href="/vbt/v14.html">verse 14</a><a href="/vbt/v15.html">verse 15</a><a href="/vbt/v17.html">verse 17</a><a href="/vbt/v18.html">verse 18</a><a href="/vbt/v19.html">verse 19</a><a href="/vbt/v20.html">verse 20</a><a href="/vbt/v21.html">verse 21</a><a href="/vbt/v22.html">verse 22</a><a href="/vbt/v23.html">verse 23</a><a href="/vbt/v24.html">verse 24</a><a href="/vbt/v25.html">verse 25</a><a href="/vbt/v26.html">verse 26</a><a href="/vbt/v27.html">verse 27</a><a href="/vbt/v28.html">verse 28</a><a href="/vbt/v29.html">verse 29</a><a href="/vbt/v30.html">verse 30</a><a href="/vbt/v31.html">verse 31</a><a href="/vbt/v32.html">verse 32</a><a href="/vbt/v33.html">verse 33</a><a href="/vbt/v34.html">verse 34</a><a href="/vbt/v35.html">verse 35</a><a href="/vbt/v36.html">verse 36</a><a href="/vbt/v37.html">verse 37</a><a href="/vbt/v38.html">verse 38</a><a href="/vbt/v39.html">verse 39</a><a href="/vbt/v40.html">verse 40</a><a href="/vbt/v42.html">verse 42</a><a href="/vbt/v44.html">verse 44</a><a href="/vbt/v45.html">verse 45</a><a href="/vbt/v46.html">verse 46</a><a href="/vbt/v47.html">verse 47</a><a href="/vbt/v48.html">verse 48</a><a href="/vbt/v49.html">verse 49</a><a href="/vbt/v50.html">verse 50</a><a href="/vbt/v51.html">verse 51</a><a href="/vbt/v52.html">verse 52</a><a href="/vbt/v53.html">verse 53</a><a href="/vbt/v54.html">verse 54</a><a href="/vbt/v55.html">verse 55</a><a href="/vbt/v56.html">verse 56</a><a href="/vbt/v57.html">verse 57</a><a href="/vbt/v58.html">verse 58</a><a href="/vbt/v59.html">verse 59</a><a href="/vbt/v60.html">verse 60</a><a href="/vbt/v61.html">verse 61</a><a href="/vbt/v62.html">verse 62</a><a href="/vbt/v63.html">verse 63</a><a href="/vbt/v64.html">verse 64</a><a href="/vbt/v65.html">verse 65</a><a href="/vbt/v66.html">verse 66</a><a href="/vbt/v68.html">verse 68</a><a href="/vbt/v69.html">verse 69</a><a href="/vbt/v70.html">verse 70</a><a href="/vbt/v71.html">verse 71</a><a href="/vbt/v72.html">verse 72</a><a href="/vbt/v73.html">verse 73</a><a href="/vbt/v74.html">verse 74</a><a href="/vbt/v75.html">verse 75</a><a href="/vbt/v76.html">verse 76</a><a href="/vbt/v77.html">verse 77</a><a href="/vbt/v78.html">verse 78</a><a href="/vbt/v79.html">verse 79</a><a href="/vbt/v80.html">verse 80</a><a href="/vbt/v81.html">verse 81</a><a href="/vbt/v82.html">verse 82</a><a href="/vbt/v83.html">verse 83</a><a href="/vbt/v84.html">verse 84</a><a href="/vbt/v85.html">verse 85</a><a href="/vbt/v86.html">verse 86</a><a href="/vbt/v87.html">verse 87</a><a href="/vbt/v88.html">verse 88</a><a href="/vbt/v89.html">verse 89</a><a href="/vbt/v90.html">verse 90</a><a href="/vbt/v91.html">verse 91</a><a href="/vbt/v92.html">verse 92</a><a href="/vbt/v93.html">verse 93</a><a href="/vbt/v95.html">verse 95</a><a href="/vbt/v96.html">verse 96</a><a href="/vbt/v97.html">verse 97</a><a href="/vbt/v98.html">verse 98</a><a href="/vbt/v99.html">verse 99</a><a href="/vbt/v100.html">verse 100</a><a href="/vbt/v101.html">verse 101</a><a href="/vbt/v101.html">verse 101</a><a href="/vbt/v102.html">verse 102</a><a href="/vbt/v103.html">verse 103</a><a href="/vbt/v104.html">verse 104</a><a href="/vbt/v105.html">verse 105</a><a href="/vbt/v106.html">verse 106</a><a href="/vbt/v107.html">verse 107</a><a href="/vbt/v108.html">verse 108</a><a href="/vbt/v109.html">verse 109</a><a href="/vbt/v110.html">verse 110</a><a href="/vbt/v111.html">verse 111</a><a href="/vbt/v112.html">verse 112</a><a href="/vbt/v113.html">verse 113</a><a href="/vbt/v114.html">verse 114</a><a href="/vbt/v115.html">verse 115</a><a href="/vbt/v116.html">verse 116</a><a href="/vbt/v117.html">verse 117</a><a href="/vbt/v118.html">verse 118</a><a href="/vbt/v119.html">verse 119</a><a href="/vbt/v120.html">verse 120</a><a href="/vbt/v121.html">verse 121</a><a href="/vbt/v122.html">verse 122</a><a href="/vbt/v123.html">verse 123</a><a href="/vbt/v124.html">verse 124</a><a href="/vbt/v125.html">verse 125</a><a href="/vbt/v127.html">verse 127</a><a href="/vbt/v128.html">verse 128</a><a href="/vbt/v130.html">verse 130</a><a href="/vbt/v131.html">verse 131</a><a href="/vbt/v132.html">verse 132</a><a href="/vbt/v133.html">verse 133</a><a href="/vbt/v134.html">verse 134</a><a href="/vbt/v135.html">verse 135</a><a href="/vbt/v136.html">verse 136</a><a href="/vbt/v137.html">verse 137</a><a href="/vbt/v138.html">verse 138</a><a href="/vbt/v139.html">verse 139</a><a href="/vbt/v140.html">verse 140</a><a href="/vbt/v141.html">verse 141</a><a href="/vbt/v144.html">verse 144</a><a href="/vbt/v145.html">verse 145</a><a href="/vbt/v145.html">verse 145</a><a href="/vbt/v146.html">verse 146</a><a href="/vbt/v147.html">verse 147</a><a href="/vbt/v148.html">verse 148</a><a href="/vbt/v149.html">verse 149</a><a href="/vbt/v152.html">verse 152</a><a href="/vbt/v153.html">verse 153</a><a href="/vbt/v154.html">verse 154</a><a href="/vbt/v156.html">verse 156</a><a href="/vbt/v157.html">verse 157</a><a href="/vbt/v158.html">verse 158</a><a href="/vbt/v162.html">verse 162</a><a href="/vbt/v163.html">verse 163</a></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. verses from Lakshmanjoo mapping (other repo); seats from deitybody — corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
