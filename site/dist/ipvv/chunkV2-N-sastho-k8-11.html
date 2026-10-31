@@ -13,16 +13,11 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
 .brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
-.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
-.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
-.topnav a:hover{background:#f4f1ea;text-decoration:none}
-.topnav a.on{background:#f4f1ea;font-weight:600}
-.topnav .drop{position:relative}
-.topnav .drop>button{padding:.4rem .6rem;border-radius:.5rem;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
-.topnav .drop>button:hover{background:#f4f1ea}
-.topnav .dropmenu{display:none;position:absolute;top:100%;left:0;min-width:11rem;background:#fff;border:1px solid var(--line);border-radius:.6rem;box-shadow:0 8px 24px rgba(0,0,0,.1);padding:.3rem;z-index:95}
-.topnav .drop.open .dropmenu{display:block}
-.topnav .dropmenu a{display:block}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
 .topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
@@ -70,8 +65,8 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
 .depth button.missing{opacity:.45}
 /* cards */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
-.panel.missing{opacity:.55;border-style:dashed}
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
 .idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
 .idx a:hover{text-decoration:underline}
 .ev{margin:.5rem 0;padding-left:1rem;position:relative}
@@ -133,7 +128,7 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
-<nav class="topnav" id="topnav"><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practices</a><a href="/essays/index.html" data-sec="essays">Essays</a><a href="/pushing/index.html" data-sec="pushing">Pushing</a><a href="/support/index.html" data-sec="support">Support</a><a href="/tools/index.html" data-sec="tools">Tools</a><span class="drop"><button id="libbtn" aria-haspopup="true">Library</button><span class="dropmenu"><a href="/masters/index.html" data-sec="masters">Masters</a><a href="/modern/index.html" data-sec="modern">Modern</a><a href="/concepts/index.html" data-sec="concepts">Concepts</a><a href="/translations/index.html" data-sec="translations">Translations</a><a href="/vbt-map/index.html" data-sec="vbt-map">VBT Map</a><a href="/meditate/index.html" data-sec="meditate">Meditate</a><a href="/screen/index.html" data-sec="screen">Screen</a><a href="/stylelab/index.html" data-sec="stylelab">Style lab</a><a href="/arguments/index.html" data-sec="arguments">Arguments</a></span></span></nav>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
@@ -1057,9 +1052,6 @@ var doc=new DOMParser().parseFromString(html,'text/html');
 var nm=doc.querySelector('main');
 if(!nm){location.href=url;return;}
 document.querySelector('main').innerHTML=nm.innerHTML;
-// re-execute inline scripts in swapped content (our own trusted pages only)
-try{Array.prototype.forEach.call(document.querySelectorAll('main script'),function(s){
-var n=document.createElement('script');n.text=s.textContent;document.querySelector('main').appendChild(n);s.remove();});}catch(e){}
 document.title=doc.title||document.title;
 var path=new URL(url,location.origin).pathname;
 document.querySelectorAll('#sidenav a').forEach(function(a){
@@ -1073,6 +1065,7 @@ initNav();
 if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
 window.scrollTo(0,0);
 }
+if(!window.__swapBound){window.__swapBound=true;
 document.addEventListener('click',function(e){
 var a=e.target.closest?e.target.closest('a'):null;
 if(!a||!a.href)return;
@@ -1082,12 +1075,22 @@ try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
 try{if(new URL(a.href).hash)return;}catch(x){return;}
 if(a.href===location.href)return;
 e.preventDefault();
+e.stopImmediatePropagation();
 fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
 });
 window.addEventListener('popstate',function(e){
 var u=(e.state&&e.state.u)||location.href;
 fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
 });
+}
 })();
 </script><script>
 (function(){
