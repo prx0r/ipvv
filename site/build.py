@@ -258,8 +258,10 @@ def build_author(aid="abhinavagupta"):
              "ksemaraja": "Singh/SUNY + Flood 2020 + kashmirhope + ePustakalay/KSTS holdings"}.get(aid, "")
     (out / "index.html").write_text(ATmpl.format(title=author["name"], h1=esc(author["name"]),
         sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"),
-        body=f'<div class="panel">{esc(author["summary"])}</div><h3>Lineage</h3>{lin}'
-             f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a></div>'))
+        body=f'<div class="panel">{esc(author["summary"])}</div>'
+             + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
+             + f'<h3>Lineage</h3>{lin}'
+             + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'))
     cats = {}
     for w in works:
         cats.setdefault(w.get("category", "?"), []).append(w)
@@ -350,6 +352,8 @@ def build_author(aid="abhinavagupta"):
         (DIST / "data" / "works.json").write_text((ROOT / "data/works.json").read_text())
     (DIST / "data" / f"author_{aid}.json").write_text(json.dumps(author, ensure_ascii=False, indent=1))
     (DIST / "data" / f"works_{aid}.json").write_text(json.dumps(works, ensure_ascii=False, indent=1))
+    import shutil as _sh2
+    _sh2.copy(ROOT.parent / "specs/schema/person.json", DIST / "data/person-schema.json")
     # ship ALL held Sanskrit bytes (research/education use; licence in each header)
     sdir = DIST / "data/sanskrit"; sdir.mkdir(parents=True, exist_ok=True)
     for f in (ROOT / "data/sanskrit").glob("*.txt"):
@@ -383,7 +387,9 @@ def build_scholars():
                       f'<div class="sub">{esc(acc)} · {link}</div>'
                       f'<div class="en">Used for: {esc(it.get("used_for",""))}</div></div>')
         body = (f'<div class="panel">{esc(s.get("summary",""))}</div>'
-                f'<div class="sub">{esc(s.get("affiliation",""))} · status: {esc(s.get("status",""))}</div>'
+                + (f'<div class="panel"><b>Bio.</b> {esc(s["bio"])}</div>' if s.get("bio") else "")
+                + f'<div class="sub">{esc(s.get("affiliation",""))} · status: {esc(s.get("status",""))} · dates: {esc(s.get("dates",{}).get("flourished",""))} — {esc(s.get("dates",{}).get("note",""))}</div>'
+                + f'<div class="sub"><a href="/data/scholars.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
                 + items)
         (out / f'{s["id"]}.html').write_text(ATmpl.format(title=s["name"], h1=esc(s["name"]),
             sub=esc(s.get("affiliation","")), sidenav=scholar_nav(s["id"]), body=body))

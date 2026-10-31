@@ -1,1 +1,24 @@
-{"dates": {"flourished": "c. 10th c. (pre-Abhinavagupta)", "note": "Dhvani teacher of Abhinavagupta (Pandey/Deshpande list); Laghuvrtti comm. on Udbhata preserved via GRETIL"}, "id": "induraja", "lineage": [{"relation": "teacher (Dhvani) of", "who": "Abhinavagupta"}, {"relation": "commentator on", "who": "Udbhata (Kavyalamkarasarasamgraha)"}], "name": "Induraja", "name_iast": "Indurāja", "place": "Kashmir", "status": "dates-approximate", "summary": "Abhinavagupta's Dhvani teacher: his Laghuvrtti on Udbhata's Kavyalamkarasarasamgraha survives (GRETIL), a direct witness to the poetics classroom Abhinavagupta came from before the Locana."}
+{
+ "dates": {
+  "flourished": "c. 10th c. (pre-Abhinavagupta)",
+  "note": "Dhvani teacher of Abhinavagupta (Pandey/Deshpande list); Laghuvrtti comm. on Udbhata preserved via GRETIL"
+ },
+ "id": "induraja",
+ "lineage": [
+  {
+   "relation": "teacher (Dhvani) of",
+   "who": "Abhinavagupta"
+  },
+  {
+   "relation": "commentator on",
+   "who": "Udbhata (Kavyalamkarasarasamgraha)"
+  }
+ ],
+ "name": "Induraja",
+ "name_iast": "Indurāja",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Abhinavagupta's Dhvani teacher: his Laghuvrtti on Udbhata's Kavyalamkarasarasamgraha survives (GRETIL), a direct witness to the poetics classroom Abhinavagupta came from before the Locana.",
+ "kind": "master",
+ "bio": "Abhinavagupta's Dhvani teacher; his Laghuvrtti on Udbhata's Kavyalamkarasarasamgraha survives (GRETIL) — a direct witness to the poetics classroom behind the Locana."
+}

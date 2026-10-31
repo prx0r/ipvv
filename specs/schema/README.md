@@ -14,6 +14,7 @@ One schema per layer (`specs/schema/`). A new translation is "the same thing" if
 | `c1.json` | STUDY | 100–450w local; derives from L200; See-also edges curated |
 | `theme.json` | THEME | overlap allowed; KEY TERMS + See-also signal; body-words noise |
 | `pushing.json` | Q→GEM | question_shape typed; passage_ids resolvable; strength labeled |
+| `person.json` | **Bio (masters + scholars alike)** | kind master/scholar/teacher/lineage; honesty-flagged dates; bio + holdings + lineage |
 | `site-item.json` | **display contract** | six fixed panels; `ok=false` renders greyed, never invented |
 
 Chain (enforced by `CANONICAL-DAG.yaml` + `import_work.py`):

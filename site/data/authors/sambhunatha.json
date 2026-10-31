@@ -1,1 +1,24 @@
-{"dates": {"flourished": "10th c. (Jalandhara pitha)", "note": "Abhinava's Kaula teacher; enlightenment credited to him (Lakshmanjoo: seven states of turya/ananda teaching)"}, "id": "sambhunatha", "lineage": [{"relation": "teacher (Kaula) of", "who": "Abhinavagupta"}, {"relation": "pitha", "who": "Jalandhara (Ardha-Tryambaka school)"}], "name": "Sambhunatha", "name_iast": "Śambhunātha", "place": "Jalandhara pitha; Kashmir", "status": "dates-approximate", "summary": "Abhinavagupta's Kaula teacher from Jalandhara: the Kula transmission through which Abhinava reports full satisfaction (after Krama experiments and Trika study) and enlightenment/true peace. No independent works catalogued."}
+{
+ "dates": {
+  "flourished": "10th c. (Jalandhara pitha)",
+  "note": "Abhinava's Kaula teacher; enlightenment credited to him (Lakshmanjoo: seven states of turya/ananda teaching)"
+ },
+ "id": "sambhunatha",
+ "lineage": [
+  {
+   "relation": "teacher (Kaula) of",
+   "who": "Abhinavagupta"
+  },
+  {
+   "relation": "pitha",
+   "who": "Jalandhara (Ardha-Tryambaka school)"
+  }
+ ],
+ "name": "Sambhunatha",
+ "name_iast": "Śambhunātha",
+ "place": "Jalandhara pitha; Kashmir",
+ "status": "lineage",
+ "summary": "Abhinavagupta's Kaula teacher from Jalandhara: the Kula transmission through which Abhinava reports full satisfaction (after Krama experiments and Trika study) and enlightenment/true peace. No independent works catalogued.",
+ "kind": "master",
+ "bio": "Kaula teacher from Jalandhara pitha (Ardha-Tryambaka school) through whom Abhinavagupta reports full satisfaction and enlightenment after Krama experiments and Trika study. No independent works catalogued."
+}

@@ -111,7 +111,12 @@
    "research-library/recognition/RATIE-EXCAVATION-EN.md",
    "research-library/recognition/ratie-chapters/",
    "research-library/recognition/books/Le-Soi-et-l-Autre-Ratie-2011.pdf"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active since 2006",
+   "note": "publication record 2006-; HAL CV 64 records; chair, College de France"
+  }
  },
  {
   "affiliation": "Sapienza University of Rome",
@@ -195,7 +200,12 @@
   "holdings": [
    "research-library/recognition/torella-volume/",
    "research-library/recognition/primary/torella_ipk.txt"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active since 1988",
+   "note": "IRIS catalogue from 1988 fragment; Sapienza"
+  }
  },
  {
   "affiliation": "Oxford (emeritus)",
@@ -243,7 +253,12 @@
   "bio": "Oxford historian of Saivism (Spalding chair, emeritus). Dated and mapped the traditions, exegesis, ritual and mandala systems the Trika authors presuppose.",
   "holdings": [
    "acquisitions/sanderson/sanderson_manifest.json (53 works, direct-vs-login graded)"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active since 1970s; emeritus",
+   "note": "Oxford Spalding chair, now emeritus; bibliography to 2019 verified"
+  }
  },
  {
   "affiliation": "Independent (Dyczkowski personal/associated editions)",
@@ -271,7 +286,12 @@
   "holdings": [
    "tantra/texts-clean/tantraloka-vol*-dyczkowski_clean.txt",
    "tantra/dyczkowski-translations/ (Aphorisms 475KB; Vibration 710KB; Spanda 1.7MB)"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active; 45-yr TA translation to 2023",
+   "note": "Mukhabodha e-text supervision; commercial translations"
+  }
  },
  {
   "affiliation": "Independent teacher; Tantra Illuminated",
@@ -298,7 +318,12 @@
   "bio": "Independent teacher (Tantra Illuminated; tantra112.app). His TS lecture transcripts independently confirm our TS3 reading; his VBT app popularised the 12-vowel diagram (treat as pedagogical).",
   "holdings": [
    "tantrasara study transcripts (in-repo)"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (teacher)",
+   "note": "independent teacher; app + lectures (study transcripts in-repo)"
+  }
  },
  {
   "affiliation": "Universal Shaiva Fellowship (oral lineage, d. 1990s reception)",
@@ -318,7 +343,12 @@
   "bio": "Kashmiri master (1907-1991) of the oral Trika line; Academy editions carry the recitation tradition (VBT breath turns, hAMSAH heart/dvadasanta, Stotravali chanting).",
   "holdings": [
    "tantra/lakshmanjoo/vb_lakshmanjoo.json + 2 epubs"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "1907-1991",
+   "note": "oral lineage; Academy editions carry the recitation tradition"
+  }
  },
  {
   "id": "silburn",
@@ -378,7 +408,12 @@
    }
   ],
   "bio": "CNRS Directeur de recherche (1908-1993). Nine annotated translation volumes 1957-1990 (ICI fascicles). Her 1970 Hymnes dates the late stotras with the PTv works — independent confirmation of our works map; her corpus (Hymnes I) is our stotra checklist.",
-  "holdings": []
+  "holdings": [],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "1908-1993",
+   "note": "CNRS; ICI fascicles 1957-1995; Hymnes 1970/1986"
+  }
  },
  {
   "affiliation": "CNRS (historical)",
@@ -448,7 +483,12 @@
   "holdings": [
    "deitybody/corpus/extracts/PADOUX_HTW_BODY_WORD.md",
    "deitybody/corpus/extracts/PADOUX_GURU.md"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "1920-2017",
+   "note": "CNRS/EFEO; Recherches 1964 to Blackwell 2022"
+  }
  },
  {
   "id": "brunner",
@@ -494,7 +534,12 @@
    }
   ],
   "bio": "EFEO/IFI Pondicherry (d. 2005); mathematician turned Agama editor. Somasambhupaddhati 4 vols (1963-1998, 2000+ pp) remains the ritual reference; Netra study (1974); TAbhidhanakosa co-editor.",
-  "holdings": []
+  "holdings": [],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "d. 2005",
+   "note": "EFEO/IFP; Somasambhupaddhati 1963-1998"
+  }
  },
  {
   "affiliation": "Sanskritist (MVV; Bhutiraja editions)",
@@ -512,7 +557,12 @@
   "status": "active",
   "summary": "Editor-translator on the margins: MVV opening and the Bhutiraja opuscule our Bhutiraja page rests on.",
   "bio": "Sanskritist; MVV edition/translation (vv.1-399) and Bhutiraja Svabodhasiddhi edition (ZDMG 2017) — both anchor our pages.",
-  "holdings": []
+  "holdings": [],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active",
+   "note": "Sanskritist; MVV + Bhutiraja editions"
+  }
  },
  {
   "affiliation": "Benares (Kaviraj lineage); Rudra Press",
@@ -539,7 +589,12 @@
   "bio": "Benares/Kaviraj lineage, Rudra Press. Sentence-by-sentence TS English (with Chakravarty) that our audit found faithful with fenced-gloss exceptions.",
   "holdings": [
    "tantrasara essay-0 machine (in-repo)"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active",
+   "note": "Benares/Kaviraj lineage; Rudra Press TS"
+  }
  },
  {
   "affiliation": "GRETIL/Mukhabodha (infrastructure)",
@@ -566,7 +621,12 @@
   "bio": "Sanskritist; GRETIL e-text inputs and the post-critical Malinivijayottara edition (2004, top acquisition target). Our Sanskrit provenance runs through his work.",
   "holdings": [
    "GRETIL IPK e-text (revised on Torella)"
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active",
+   "note": "GRETIL inputs; MV critical edition 2004 (top acquisition target)"
+  }
  },
  {
   "id": "timalsina",
@@ -607,7 +667,12 @@
     "link": "https://www.vimarshafoundation.org/writings",
     "used_for": "Embodiment, visualization, Netra healing papers"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active",
+   "note": "Stony Brook chair; Vimarsha Foundation 2019; JIP 2020 aham paper"
+  }
  },
  {
   "id": "biernacki",
@@ -662,7 +727,12 @@
     "link": "https://experts.colorado.edu/individual?uri=https%3A%2F%2Fexperts.colorado.edu%2Findividual%2Ffisid_115294",
     "used_for": "Complete chapter/article bibliography with abstracts"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active; PhD Penn 1999",
+   "note": "CU Boulder professor; AAR prize 2024"
+  }
  },
  {
   "id": "baumer",
@@ -687,7 +757,12 @@
     "link": null,
     "used_for": "PTv/absolute interpretation"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active",
+   "note": "Varanasi; VBT edition work; hermeneutics of the absolute"
+  }
  },
  {
   "id": "pandey",
@@ -712,7 +787,12 @@
     "link": null,
     "used_for": "IPV English against Torella/Dyczkowski"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "historical (Varanasi)",
+   "note": "K.C. Pandey: historical/philosophical study 1963; Bhaskari trans 1954"
+  }
  },
  {
   "id": "gnoli",
@@ -737,7 +817,12 @@
     "link": null,
     "used_for": "TS Italian witness alongside Marjanovic"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "1920s-2010s (Rome)",
+   "note": "Raniero Gnoli: first complete TA (Italian 1972); Essenza dei Tantra"
+  }
  },
  {
   "id": "rastogi",
@@ -764,7 +849,12 @@
     "link": null,
     "used_for": "Rasa/aesthetics thread"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (Lucknow)",
+   "note": "TA structural study; aesthetics chapter in Torella FS vol"
+  }
  },
  {
   "id": "kawajiri",
@@ -791,7 +881,12 @@
     "link": "https://doi.org/10.1163/9789004432802_007",
     "used_for": "Fragment provenance"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (Kyoto)",
+   "note": "marginalia philology; Lucknow ms work in Ratie 2020"
+  }
  },
  {
   "id": "lawrence",
@@ -809,7 +904,12 @@
     "link": "https://doi.org/10.1007/s10781-005-2827-4",
     "used_for": "Pratibimba doctrine (mirror metaphysics)"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (North Dakota)",
+   "note": "JIP 2005 mirror-analogy paper"
+  }
  },
  {
   "id": "dupuche",
@@ -827,7 +927,12 @@
     "link": null,
     "used_for": "Kaula rite (ch.29) English"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (Melbourne)",
+   "note": "TA29 Kaula ritual trans. with Jayaratha"
+  }
  },
  {
   "id": "goodall",
@@ -852,7 +957,12 @@
     "link": "https://publications.efeo.fr/en/livre-pdf/621_melanges-tantriques-a-la-memoire-d-helene-brunner-tantric-studies-in-memory-of-helene-brunner",
     "used_for": "Free EFEO PDF; Torella/Ratie chapters inside"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (EFEO Pondicherry)",
+   "note": "Agama editions; Melanges Brunner co-ed"
+  }
  },
  {
   "id": "solms",
@@ -879,6 +989,11 @@
     "link": null,
     "used_for": "Felt-primary triangulation (flagged comparative)"
    }
-  ]
+  ],
+  "kind": "scholar",
+  "dates": {
+   "flourished": "active (Cape Town)",
+   "note": "neuroscientist; Hidden Spring 2021; modern interlocutor only"
+  }
  }
 ]

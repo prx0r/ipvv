@@ -11,8 +11,10 @@ python3 tools/chunker.py --help >/dev/null 2>&1 || { echo "FAIL chunker"; fail=1
 echo "== no 145MB in git =="
 if find . -type f -size +20M | grep -q .; then echo "FAIL large file staged"; find . -type f -size +20M; fail=1; fi
 echo "== C1 length (samples) =="
-python3 -c "from pathlib import Path; [print(p, len(Path(p).read_text().split())) for p in Path('samples').glob('*')]" 2>&1 | head -n 20
+python3 -c "from pathlib import Path; [print(p, len(Path(p).read_text().split())) for p in Path('samples').glob('*') if p.is_file()]" 2>&1 | head -n 20
 echo "== specs present =="
-for f in specs/CANONICAL-DAG.yaml specs/C1_SPEC.md specs/SPEC_L2.md; do [ -f "$f" ] || { echo "FAIL missing $f"; fail=1; }; done
+for f in specs/CANONICAL-DAG.yaml specs/C1_SPEC.md specs/SPEC_L2.md specs/schema/person.json; do [ -f "$f" ] || { echo "FAIL missing $f"; fail=1; }; done
+echo "== people validate (masters + scholars vs person schema) =="
+python3 tools/validate_people.py 2>&1 | tail -n 3 || fail=1
 [ "$fail" -eq 0 ] && echo "ALL PASS" || echo "GATES FAILED"
 exit "$fail"

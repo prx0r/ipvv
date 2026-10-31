@@ -1,1 +1,24 @@
-{"dates": {"flourished": "10th c.", "note": "Brahmavidya teacher of Abhinavagupta (Pandey/Deshpande list); Hanneder ZDMG 167 (2017) edition"}, "id": "bhutiraja", "lineage": [{"relation": "teacher (Brahmavidya) of", "who": "Abhinavagupta"}, {"relation": "co-teacher line", "who": "Bhutirajatanaya/Helaraja (son)"}], "name": "Bhutiraja (Bhuti)", "name_iast": "Bhūtirāja", "place": "Kashmir", "status": "dates-approximate", "summary": "Abhinavagupta's Brahmavidya teacher; the surviving Svabodhasiddhi is a short doctrinal work now edited (Hanneder 2017)."}
+{
+ "dates": {
+  "flourished": "10th c.",
+  "note": "Brahmavidya teacher of Abhinavagupta (Pandey/Deshpande list); Hanneder ZDMG 167 (2017) edition"
+ },
+ "id": "bhutiraja",
+ "lineage": [
+  {
+   "relation": "teacher (Brahmavidya) of",
+   "who": "Abhinavagupta"
+  },
+  {
+   "relation": "co-teacher line",
+   "who": "Bhutirajatanaya/Helaraja (son)"
+  }
+ ],
+ "name": "Bhutiraja (Bhuti)",
+ "name_iast": "Bhūtirāja",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Abhinavagupta's Brahmavidya teacher; the surviving Svabodhasiddhi is a short doctrinal work now edited (Hanneder 2017).",
+ "kind": "master",
+ "bio": "Abhinavagupta's Brahmavidya teacher (Pandey/Deshpande list); the surviving Svabodhasiddhi is a short doctrinal work (Hanneder ZDMG 2017)."
+}

@@ -1,1 +1,24 @@
-{"dates": {"flourished": "c. 900-950 CE (actif 930)", "note": "dates per Wikipedia/BnF/Potter; endonym UdAKarasUnu (Utpala, son of Udayakara), IPK IV.18"}, "id": "utpaladeva", "lineage": [{"relation": "pupil of", "who": "Somananda (author of Sivadrsti)"}, {"relation": "teacher in line to", "who": "Laksman Gupta, teacher of Abhinavagupta"}], "name": "Utpaladeva (Utpalacarya)", "name_iast": "Utpaladeva", "place": "Kashmir", "status": "dates-approximate", "summary": "Founder of the Pratyabhijna school: the Isvarapratyabhijnakarika argues recognition (self, already established, re-cognises itself as the Lord) so ordinary people may realise without strain. Also theologian of the knower (Siddhitrayi) and bhakti poet (Sivastotravali). Vivrti survives only in fragments; arrangement of the Stotravali is by disciples/organizers, not assumed authorial sequence."}
+{
+ "dates": {
+  "flourished": "c. 900-950 CE (actif 930)",
+  "note": "dates per Wikipedia/BnF/Potter; endonym UdAKarasUnu (Utpala, son of Udayakara), IPK IV.18"
+ },
+ "id": "utpaladeva",
+ "lineage": [
+  {
+   "relation": "pupil of",
+   "who": "Somananda (author of Sivadrsti)"
+  },
+  {
+   "relation": "teacher in line to",
+   "who": "Laksman Gupta, teacher of Abhinavagupta"
+  }
+ ],
+ "name": "Utpaladeva (Utpalacarya)",
+ "name_iast": "Utpaladeva",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Founder of Pratyabhijna: IPK + Vrtti + lost Vivrti, Siddhitrayi theologian, Sivastotravali poet.",
+ "kind": "master",
+ "bio": "Son and pupil of Udayakara-line (Udayakara's son, SomAnanda's pupil): the Isvarapratyabhijnakarika founds Pratyabhijna (recognition without effort), with auto-Vrtti and the lost long Vivrti (fragments via Torella/Ratie); Siddhitrayi theologian of the knower; Sivastotravali bhakti poet. Teacher in line to Abhinavagupta through Lakshmanagupta."
+}
