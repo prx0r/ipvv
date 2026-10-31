@@ -47,7 +47,7 @@ document.getElementById('spk').addEventListener('click', function(){
 })();
 
 async function nav(){
-  let mhtml = `<a href="#/practice" data-k="practice" class="${cur==='practice'?'on':''}">practise</a><a href="#/library" data-k="library" class="${cur==='library'?'on':''}">library</a>`;
+  let mhtml = `<a href="#/practice">practise</a><a href="#/library">library</a>`;
   document.getElementById('menu').innerHTML = mhtml;
   document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
     a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
