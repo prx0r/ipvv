@@ -71,6 +71,8 @@ const routes = {
 async function router(){
   const h = location.hash.slice(1) || '/';
   const [path] = h.split('?');
+  // restore shell chrome (practices/lab hides it)
+  ['top','menuBtn','askbar'].forEach(id=>{ const el=document.getElementById(id); if(el) el.style.display=''; });
   const fn = routes[path] || (path.startsWith('/work/') ? work : notfound);
   const cur = (NAV.find(([k])=>'/'+k===path)||[])[0] || '';
   nav(cur);
@@ -124,13 +126,17 @@ async function recite(){
   });
 }
 async function practices(){
-  const items = await get('/data/practices.json').catch(()=>[]);
-  const list = Array.isArray(items) ? items : [];
-  $('#view').innerHTML = `<h1>Practise</h1><div class="sub">${list.length} practices · breath-paced · tap listen to hear the guidance</div>
-  <div id="plist"></div><div id="answer" style="display:none"></div>`;
-  $('#plist').innerHTML = list.map((p,i)=>`<div style="padding:.6rem 0;border-bottom:1px solid var(--line)"><b>${esc(p.title||p.id)}</b><br/><span class="sub">${esc((p.summary||'').slice(0,160))}</span><br/><button class="playbtn" data-listen="${i}">🔈 listen</button></div>`).join('');
-  const btns = document.querySelectorAll('#plist [data-listen]');
-  btns.forEach(b=>{ b.onclick = ()=>{ const p = list[+b.getAttribute('data-listen')]; listen((p.title||'')+'. '+(p.summary||'')); }; });
+  document.getElementById('top').style.display='none';
+  document.getElementById('menuBtn').style.display='none';
+  document.getElementById('askbar').style.display='none';
+  $('#view').innerHTML = `<div id="labwrap" style="position:fixed;inset:0;z-index:5;background:#fff"><iframe src="https://body.stonedoorway.com/lab" style="width:100%;height:100%;border:0" title="practice lab" allow="autoplay; microphone"></iframe></div>
+  <div style="position:fixed;z-index:6;left:.8rem;bottom:.8rem"><button class="playbtn" id="labback">← back</button></div><div id="answer" style="display:none"></div>`;
+  document.getElementById('labback').onclick = ()=>{
+    document.getElementById('top').style.display='';
+    document.getElementById('menuBtn').style.display='';
+    document.getElementById('askbar').style.display='';
+    location.hash = '#/';
+  };
 }
 async function pushing(){
   $('#view').innerHTML = `<h1>Enquire</h1><div class="sub">Hound a text with why. Or ask below — the copilot fires a chain and shows its work.</div>
