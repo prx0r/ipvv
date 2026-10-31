@@ -27,7 +27,7 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 /* top bar */
 .topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
-.brand{font-family:var(--serif);font-weight:500;font-size:1.3rem;letter-spacing:.01em;color:var(--ink);white-space:nowrap;text-decoration:none}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
 .topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
 .topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
@@ -313,14 +313,14 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
@@ -527,14 +527,14 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">{kicker}</div><h1>{h1}</h1><div class="skt">{subtitle}</div><div class="sub">{sub}</div>{body}<div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
@@ -625,8 +625,35 @@ def author_bio_body(aid, author, lin, spine):
     return (f'<div class="panel">{esc(author["summary"])}</div>' + hero
             + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
             + f'<h3>Lineage</h3>{lin}'
+            + read_alongside_html(aid)
             + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
             + srclink(f"site/data/authors/{aid}.json", "bio, dates and lineage live here."))
+
+def read_alongside_html(aid):
+    """Modern-scholar cross-links for a master (site/data/read_alongside.json)."""
+    try:
+        ra = json.loads((ROOT / "data/read_alongside.json").read_text()).get(aid, [])
+        sch = {s["id"]: s for s in json.loads((ROOT / "data/scholars.json").read_text())}
+        rows = "".join(f'<div class="ev"><a href="/scholars/{r["scholar"]}.html"><b>{esc(sch[r["scholar"]]["name"])}</b></a> — {esc(r["why"])}<br/><span class="sub">{esc(sch[r["scholar"]].get("affiliation",""))}</span></div>'
+                       for r in ra if r["scholar"] in sch)
+        return f"<h3>Read alongside</h3>{rows}" if rows else ""
+    except Exception:
+        return ""
+
+def read_with_html(sid):
+    """Reverse cross-links: which masters list this scholar as read-alongside."""
+    try:
+        ra = json.loads((ROOT / "data/read_alongside.json").read_text())
+        rows = []
+        for aid, rs in ra.items():
+            for r in rs:
+                if r["scholar"] == sid:
+                    try: nm = json.loads((ROOT / "data/authors" / f"{aid}.json").read_text())["name"]
+                    except Exception: nm = aid
+                    rows.append(f'<div class="ev"><a href="/{aid}/index.html"><b>{esc(nm)}</b></a> — {esc(r["why"])}</div>')
+        return f"<h3>Read with</h3>{''.join(rows)}" if rows else ""
+    except Exception:
+        return ""
 
 def build_author(aid="abhinavagupta"):
     out = DIST / aid; out.mkdir(parents=True, exist_ok=True)
@@ -881,6 +908,20 @@ def build_glossary():
     shutil.copy(ROOT / "data/glossary.json", DIST / "data/glossary.json")
     return len(gl)
 
+def build_support():
+    out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
+        kicker="Support", sub="recitation, translation, proof — funded by readers",
+        sidenav=sidenav("abhinavagupta", ""),
+        body='<div class="panel">This library is a free, open record of the Trika masters: Sanskrit held in full, translations gated honestly, recitation growing verse by verse.</div>'
+        '<h3>What patronage funds</h3><div class="idx">'
+        '<a><b>studio chants</b> — GPU rendering of each short work, verse by verse</a>'
+        '<a><b>editions</b> — manuscript comparison behind every translation gate</a>'
+        '<a><b>hosting</b> — audio and pages served free, forever</a></div>'
+        '<h3>Patreon</h3><div class="panel"><b>Launching soon.</b> A Patreon page is on its way — check back here. Until then, the fastest support is a correction: every page carries an <i>Improve this page</i> link.</div>'
+        + srclink("https://github.com/prx0r/ipvv/issues/new", "questions and offers of support land here until Patreon opens.")))
+    return 1
+
 def build_tools():
     import json as _j
     out = DIST / "tools"; out.mkdir(parents=True, exist_ok=True)
@@ -928,6 +969,7 @@ def build_scholars():
                       f'<div class="en">Used for: {esc(it.get("used_for",""))}</div></div>')
         body = (f'<div class="panel">{esc(s.get("summary",""))}</div>'
                 + (f'<div class="panel"><b>Bio.</b> {esc(s["bio"])}</div>' if s.get("bio") else "")
+                + read_with_html(s["id"])
                 + f'<div class="sub">{esc(s.get("affiliation",""))} · status: {esc(s.get("status",""))} · dates: {esc(s.get("dates",{}).get("flourished",""))} — {esc(s.get("dates",{}).get("note",""))}</div>'
                 + f'<div class="sub"><a href="/data/scholars.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'
                 + items)
@@ -950,7 +992,8 @@ def deva_of(s):
         return s or ""
 
 AUDIO_ALIAS = {"anuttarastika": "anuttarashtika"}
-RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika"}
+RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika", "bodhapancadasika": "Bodhapancadasika", "kramastotra": "Kramastotra"}
+SYNTH_RECITE = ("bodhapancadasika", "kramastotra")
 
 def build_recite():
     """Studio-chant recitation pages (kashaudio AI renders) + audio shipping.
@@ -1006,17 +1049,47 @@ def build_recite():
             kicker="Recitation \u00b7 studio chant", sub=f"{len(A['verses'])} verses chanted, karaoke-timed · English shows only where the gate passed",
             sidenav=sidenav("abhinavagupta", ""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "chants rendered by the kashaudio pipeline (Vagdhenu AI voice); timings by MMS alignment."),
             recitejs=wtscript + RECITEJS))
-        cards.append(f'<a href="/recite/{work}.html"><b>{esc(title)}</b> &mdash; {len(A["verses"])} verses &middot; studio chant &middot; {n_en} with English</a>')
+        cards.append(("studio", f'<a href="/recite/{work}.html"><b>{esc(title)}</b> &mdash; {len(A["verses"])} verses &middot; studio chant &middot; {n_en} with English</a>'))
+    for work in SYNTH_RECITE:
+        tp = ROOT / f"data/translations/{work}.json"
+        if not tp.exists():
+            continue
+        title = RECITE_TITLES.get(work, work)
+        vitems = []
+        for it in _json.loads(tp.read_text()):
+            try: vnum = int(str(it.get("verses", "")).strip())
+            except Exception: continue
+            vitems.append((vnum, it))
+        if not vitems:
+            continue
+        arts, n_en = [], 0
+        for i, (vnum, it) in enumerate(vitems):
+            en = (it.get("l2") or it.get("l1") or "") if it.get("gate") == "PASS" else ""
+            if en: n_en += 1
+            sa_roman, sa_deva = it.get("sanskrit", ""), deva_of(it.get("sanskrit", ""))
+            eng = f'<div class="eng">{esc(en[:4000])}</div>' if en else '<div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the Sanskrit readout stands alone.</div>'
+            arts.append(f'<article class="verse" data-recite data-id="{work}-{vnum}" data-label="{esc(title)} verse {vnum}" data-sa="{esc(sa_deva)}" data-en="{esc(en[:4000])}"><div class="vnum">{vnum}<br/><button class="vplay" data-play-idx="{i}">recite</button></div><div><div class="deva">{esc(sa_deva)}</div><div class="iast">{esc(sa_roman)}</div>{eng}<div class="rnote"><span class="rsrc">browser voice</span> — studio chant pending</div></div></article>')
+        en_btn = "" if n_en else "disabled"
+        tools = f'<div class="recitetools"><button class="vplay all" data-play-all>Recite all</button><span class="rmodes"><button data-mode="sa">Sanskrit only</button><button data-mode="en" {en_btn}>English only</button><button data-mode="verse" class="on">Verse SA to EN</button><button data-mode="line">Line SA to EN</button></span><span class="rnote">line mode: Sanskrit line-by-line, English follows each verse</span></div>'
+        stats = f'<div class="stats"><span><b>{len(vitems)}</b> verses</span><span><b>browser-voice readout</b></span><span><b>{n_en}/{len(vitems)}</b> with English</span></div>'
+        (out / f"{work}.html").write_text(TF(TMPL, title=f"{title} recitation", h1=title,
+            kicker="Recitation - readout", sub=f"{len(vitems)} verses, browser-voice readout — studio chant pending; English shows only where the gate passed",
+            sidenav=sidenav("abhinavagupta", ""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "studio chants render here as kashaudio reaches this work."),
+            recitejs=RECITEJS))
+        cards.append(("synth", f'<a href="/recite/{work}.html"><b>{esc(title)}</b> — {len(vitems)} verses · readout · {n_en} with English</a>'))
+    studio_cards = "".join(c for k, c in cards if k == "studio")
+    synth_cards = "".join(c for k, c in cards if k == "synth")
     (out / "index.html").write_text(TF(TMPL, title="Recitation", h1="Recitation",
         kicker="Listen", sub="studio chant where rendered · browser-voice readout everywhere else",
-        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>"
-        '<div class="sub">Every verse and passage page also carries its own <b>Recite</b> button (browser-voice readout, four modes). Studio chant grows as kashaudio renders land — short works first.</div>'
+        sidenav=sidenav("abhinavagupta", ""), body='<h3>Studio chant</h3><div class="idx">' + studio_cards + "</div>"
+        + ("<h3>Readout</h3>" + f'<div class="idx">{synth_cards}</div>' if synth_cards else "")
+        + '<div class="sub">Every verse and passage page also carries its own <b>Recite</b> button (browser-voice readout, four modes). Studio chant grows as kashaudio renders land — short works first.</div>'
         + srclink("https://github.com/prx0r/kashaudio", "chant pipeline lives here."), recitejs=RECITEJS))
     return len(cards)
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1029,6 +1102,7 @@ def main():
     if "tools" in want: done["tools"] = build_tools()
     if "sections" in want: done["sections"] = build_sections()
     if "recite" in want: done["recite"] = build_recite()
+    if "support" in want: done["support"] = build_support()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
