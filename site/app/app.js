@@ -3,9 +3,9 @@ const API = 'https://ipvv-api.tradesprior.workers.dev';
 const $ = s => document.querySelector(s);
 const esc = s => (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const NAV = [
-  ['read','/translations','Read'],['recite','/recite','Recite'],['practice','/practices','Practise'],
-  ['enquire','/ipvv/pushing.html','Enquire'],['translate','/tools','Translate'],['write','/essays','Write'],
+  ['practice','/practices','Practise'],['library','/library','Library'],
 ];
+let LIB = { works: {}, masters: [], sel: null };
 let SID = null;
 let SPEAK = false;
 
@@ -49,78 +49,23 @@ document.getElementById('spk').addEventListener('click', function(){
   });
 })();
 
-let LIB = { works: {}, masters: [] };
 async function nav(cur){
-  let mhtml = `<div class="msec">Mode</div>` +
+  let mhtml = `<div class="msec">Menu</div>` +
     NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
-  mhtml += `<div class="msec">Library</div><div id="librow"><a href="#" id="libopen">Library — masters & works ▸</a><a href="#/concepts">Concepts</a><a href="#/pushing">Pushing probes</a></div>`;
-  mhtml += `<div id="libpanel" style="display:none"><div class="msec"><a href="#" id="libback" style="display:inline">‹ back</a></div><div class="msec">Masters</div><div id="libmasters"><span class="sub">loading…</span></div></div>`;
-  mhtml += `<div id="workpanel" style="display:none"><div class="msec"><span id="wpname"></span></div><div id="wpworks"></div></div>`;
   document.getElementById('menu').innerHTML = mhtml;
   document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
     a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
   });
-  const libopen = document.getElementById('libopen');
-  if(libopen) libopen.addEventListener('click', (e)=>{ e.preventDefault(); showMasters(); });
-  const libback = document.getElementById('libback');
-  if(libback) libback.addEventListener('click', (e)=>{ e.preventDefault(); showLibHome(); });
-  loadMasters();
 }
-function showLibHome(){
-  const lp = document.getElementById('libpanel');
-  const wp = document.getElementById('workpanel');
-  const lr = document.getElementById('librow');
-  if(lp) lp.style.display='none';
-  if(wp) wp.style.display='none';
-  if(lr) lr.style.display='';
-}
-async function loadMasters(){
-  try{
-    const sec = await get('/data/sections.json');
-    const ms = ((sec.sections||[]).find(s=>s.id==='masters')||{}).members || [];
-    LIB.masters = ms;
-    const counts = {};
-    await Promise.all(ms.slice(0,25).map(async m=>{
-      try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; LIB.works[m]=w; }catch(e){ counts[m]=0; }
-    }));
-    const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
-    const box = document.getElementById('libmasters');
-    if(!box) return;
-    box.innerHTML = sorted.map(m=>`<a href="#" data-master="${m}">${esc(m)} <span class="sub">· ${counts[m]||0}</span></a>`).join('');
-    box.querySelectorAll('[data-master]').forEach(a=>{
-      const open = (e)=>{ if(e) e.preventDefault(); showWorks(a.getAttribute('data-master')); };
-      a.addEventListener('click', open);
-      a.addEventListener('mouseenter', ()=>{ if(window.matchMedia('(pointer:fine)').matches) showWorks(a.getAttribute('data-master')); });
-    });
-  }catch(e){}
-}
-function showMasters(){
-  const lr = document.getElementById('librow');
-  const lp = document.getElementById('libpanel');
-  const wp = document.getElementById('workpanel');
-  if(lr) lr.style.display='none';
-  if(wp) wp.style.display='none';
-  if(lp) lp.style.display='';
-}
-async function showWorks(m){
+async function showWorks(m, boxSel){
   let w = LIB.works[m];
   if(!w){
     try{ w = await get(`/data/works_${m}.json`); LIB.works[m]=w; }catch(e){ return; }
   }
-  const lr = document.getElementById('librow');
-  const lp = document.getElementById('libpanel');
-  const wp = document.getElementById('workpanel');
-  if(lr) lr.style.display='none';
-  if(lp) lp.style.display='none';
-  if(!wp) return;
-  wp.style.display='';
-  document.getElementById('wpname').innerHTML = `<a href="#" id="wpback">‹ masters</a> · ${esc(m)}`;
-  document.getElementById('wpworks').innerHTML = (Array.isArray(w)?w:[]).map(x=>`<a href="#/work/${x.id||x.work||m}">${esc(x.title||x.id||'')}</a>`).join('') || '<span class="sub">no works listed</span>';
-  document.querySelectorAll('#wpworks a').forEach(a=>{
-    a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); showLibHome(); });
-  });
-  const wb = document.getElementById('wpback');
-  if(wb) wb.addEventListener('click', (e)=>{ e.preventDefault(); wp.style.display='none'; if(lp) lp.style.display=''; });
+  const box = document.querySelector(boxSel || '#lib-works');
+  if(!box) return;
+  box.innerHTML = `<div class="msec">${esc(m)}</div>` +
+    ((Array.isArray(w)?w:[]).map(x=>`<a href="#/work/${x.id||x.work||m}">${esc(x.title||x.id||'')}</a>`).join('') || '<span class="sub">no works</span>');
 }
 async function get(p){
   const r = await fetch(p);
@@ -129,7 +74,8 @@ async function get(p){
   return ct.includes('json') ? r.json() : r.text();
 }
 const routes = {
-  '/': home, '/read': translations, '/recite': recite, '/practice': practices,
+  '/': home, '/library': library,
+  '/read': translations, '/recite': recite, '/practice': practices,
   '/enquire': pushing, '/translate': tools, '/write': essays,
   '/masters': masters, '/scholars': scholars, '/concepts': concepts,
 };
@@ -148,9 +94,34 @@ async function router(){
   window.scrollTo(0,0);
 }
 function home(){
-  $('#view').innerHTML = `<h1>svatantrya</h1><div class="sub">freedom · read · recite · practise · enquire · translate · write</div>
-  <div class="idx">${NAV.map(([k,u,t])=>`<a href="#/${k}"><b>${t}</b> <small>— ${{read:'the texts',recite:'chants + readout',practice:'112 dhāraṇās',enquire:'hound a text with why',translate:'workbench',write:'working papers'}[k]}</small></a>`).join('')}</div>
+  $('#view').innerHTML = `<h1>svatantrya</h1><div class="sub">freedom</div>
+  <div class="idx"><a href="#/practice"><b>practise</b> <small>— the lab, live</small></a><a href="#/library"><b>library</b> <small>— masters · works · read</small></a></div>
   <div id="answer" style="display:none"></div>`;
+}
+async function library(){
+  $('#view').innerHTML = `<div id="libwrap" style="display:flex;gap:1.5rem;align-items:flex-start"><div id="lib-masters" style="min-width:11rem"><div class="msec">Masters</div><div id="lib-mlist"><span class="sub">…</span></div></div><div id="lib-works" style="flex:1;min-width:0"></div></div><div id="answer" style="display:none"></div>`;
+  let ms = LIB.masters;
+  if(!ms.length){
+    try{
+      const sec = await get('/data/sections.json');
+      ms = ((sec.sections||[]).find(s=>s.id==='masters')||{}).members || [];
+      LIB.masters = ms;
+    }catch(e){ ms = []; }
+  }
+  const counts = {};
+  await Promise.all(ms.map(async m=>{
+    try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; LIB.works[m]=w; }catch(e){ counts[m]=0; }
+  }));
+  const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+  const box = document.getElementById('lib-mlist');
+  if(!box) return;
+  box.innerHTML = sorted.map(m=>`<div><a href="#" data-libm="${esc(m)}">${esc(m)} <span class="sub">· ${counts[m]||0}</span></a></div>`).join('');
+  box.querySelectorAll('[data-libm]').forEach(a=>{
+    const open = (e)=>{ if(e) e.preventDefault(); showWorks(a.getAttribute('data-libm'), '#lib-works'); };
+    a.addEventListener('click', open);
+    a.addEventListener('mouseenter', ()=>{ if(window.matchMedia('(pointer:fine)').matches) showWorks(a.getAttribute('data-libm'), '#lib-works'); });
+  });
+  if(sorted.length) showWorks(sorted[0], '#lib-works');
 }
 async function translations(){
   const idx = await get('/data/translations.json').catch(()=>null);
@@ -179,7 +150,7 @@ async function work(path){
   try{ mode = localStorage.getItem('readmode') || 'both'; }catch(e){}
   const modes = [['sa','SA'],['en','EN'],['both','SA+EN']];
   let html = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld${hasKar ? ' · karaoke ready' : ''}</div>`;
-  html += `<div id="modebar" style="margin-bottom:1rem"><button class="playbtn" id="mRecite">▶ recite</button> ` +
+  html += `<div id="modebar" style="margin-bottom:1rem"><button class="playbtn" id="mRecite">▶ recite</button> <button class="playbtn" id="readAloud" title="read aloud">🔊 read aloud</button> ` +
     modes.map(([m,l])=>`<button class="playbtn" data-mode="${m}" ${m===mode?'style="border-color:var(--gold)"':''}>${l}</button>`).join(' ') +
     ` <button class="playbtn" id="kstop" style="display:none">■ stop</button></div><div id="kv"></div>`;
   html += items.map((it,ix)=>{
@@ -255,6 +226,22 @@ async function work(path){
   };
   const kstop = document.getElementById('kstop');
   if(kstop) kstop.onclick = ()=>{ audio.onended=null; stopKaraoke(); KAR.cur=null; };
+  const readAloud = document.getElementById('readAloud');
+  if(readAloud) readAloud.onclick = ()=>{
+    stopKaraoke(); KAR.cur=null;
+    try{
+      speechSynthesis.cancel();
+      const parts = [];
+      document.querySelectorAll('.vblock').forEach(v=>{
+        const sa = Array.prototype.map.call(v.querySelectorAll('.rl-sa'), e=>e.textContent).join(' ');
+        const en = Array.prototype.map.call(v.querySelectorAll('.rl-en'), e=>e.textContent).join(' ');
+        if(sa) parts.push(sa);
+        if(en && mode !== 'sa') parts.push(en.slice(0, 400));
+      });
+      const u = new SpeechSynthesisUtterance(parts.join(' ').slice(0, 4000));
+      u.rate = 0.95; speechSynthesis.speak(u);
+    }catch(e){}
+  };
 }
 async function recite(){
   let works = [];
