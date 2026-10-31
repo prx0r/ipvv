@@ -35,6 +35,8 @@ git pull --rebase → import new/changed works output into site inputs
 
 Site never edits pipeline sources; it only reads them. If a work's output isn't yet in a shape the display contract consumes (`specs/schema/site-item.json`), the site agent notes it in CLAIMS and ships everything else — never blocks the train, never fakes the missing car.
 
+QA gate: before any work's full translation ships on site, `python3 tools/qa_vs_witness.py --work <id>` runs against the independent witness (Dyczkowski where he covers; Torella/Singh/Lakshmanjoo/Silburn/Wallis/Marjanovic otherwise). Reports land in `logs/qa/`. QA never overrides the pipeline's own gate — it verifies staging soundness (coverage, Sanskrit match, ledger table, claim spot-checks). Witnesses are compare-only (fair use, ≤25-word quotes); verdicts: SHIP_AS_IS / SHIP_WITH_NOTES / HOLD / NEEDS_WITNESS. Current: spanda HOLD (gate correctly blocking, staging sound), sivasutra HOLD (same).
+
 ## Current state (2026-10-31)
 
 - Pipeline agent: running T1→GATE→L200→C1 per work (stotra set done: Bhairavastava/Bodha/Krama/Paryanta/Stavacintamani/Paramarthasara/PHrdaya/Sivasutra/Spanda/Sivastotravali), R2 batch-t1 drafts.
