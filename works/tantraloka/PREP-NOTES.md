@@ -50,6 +50,41 @@
 - Jayaratha's commentary: "more than 1150 lines of about 18 syllables each" for ahnika 29 alone
 - Dyczkowski: "collected all known unpublished sources Abhinavagupta quotes"
 
+
+## R2 resources found (2026-10-31)
+
+### Source text
+- `source-library/tantra/abhinavagupta/ahnika-01…37.txt` — raw ahnika files (01+04 = 1.7MB, rest small)
+- `source-library/tantra/gretil_tantraloka.txt` — GRETIL full text (771KB, 17,642 lines, 5,826 verses)
+- `source-library/tantra/tantraloka-complete.txt` — complete text (3.9MB)
+
+### Cleaned versions
+- `source-library/tantra/texts-clean/ahnika-N-{CLEAN,CURATED,DZYKOWSKI,READ,verses}.txt`
+  - CURATED = clean verse text (66KB for ahnika-01, vs 1.6MB COMPLETE)
+  - DZYKOWSKI = Dyczkowski's translation (style gold)
+  - READ = readable version
+  - verses = verse-only extraction
+- `source-library/tantra/texts-clean/chunks/ahnika1-chunk-1…7.txt` (226-266KB each — still 50× too big, re-split)
+
+### Scholarly translations (style reference)
+- `source-library/tantra/dyczkowski-translations/` — aphorisms-of-siva (474KB), doctrine-of-vibration (710KB), spandakarika (1.6MB)
+- `source-library/tantra/explained-hareesh/tantraloka/` — 13 HTML files covering Tantrāloka 1.1-151 (Hareesh/Wallis explained versions)
+- `source-library/tantra/hareesh-blog/` — by-topic + hareesh.org (INDEX.md 7.5KB)
+- `source-library/tantra/lakshmanjoo/` — lakshmanjoo-vijnana-bhairava.epub (2.3MB), vb_lakshmanjoo.json (44KB)
+
+### Other
+- `source-library/tantra/trika/` — Trika materials
+- `source-library/tantra/utpaladeva-ipk/` — Utpaladeva's IPK
+- `source-library/tantra/source/` — source materials
+- `source-library/tantra/matter-of-wonder/` — matter of wonder
+- `source-library/tantra/hermeneutics-of-absolute/` — hermeneutics
+- `source-library/tantra/blog-sanskritree/` — blog-sanskritree
+
+### Downloaded (local)
+- `/root/tantraloka-resources/tantraloka-singh-djvu.txt` (547KB, Singh/Maheshvarananda vol 1, OCR'd)
+- `/root/tantraloka-resources/tantraloka-vol2-djvu.txt` (596KB, vol 2)
+- `/root/tantraloka-resources/tantraloka-vol3-djvu.txt` (620KB, vol 3)
+
 ## Difficulties (quick review of text)
 
 ### 1. Scale
