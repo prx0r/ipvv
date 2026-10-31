@@ -48,7 +48,9 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .side details.mnav{margin:.9rem 0 .3rem}
 .side details.mnav summary{cursor:pointer;list-style:none}
 .side details.mnav summary::-webkit-details-marker{display:none}
-.side .n{color:#8a8474;font-size:.78rem}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:.78rem;font-family:var(--sans)}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -768,6 +770,11 @@ def author_paths(aid):
     w = ROOT / "data" / f"works_{aid}.json"
     return a, w
 
+def _short_name(n):
+    """Nav display name: strip parenthetical epithets ('Ksemaraja (Rajanaka ...)')."""
+    return n.split(' (')[0].strip()
+
+
 def _masters_by_works():
     """Masters sorted by work count desc, then name. Backend order for nav."""
     out = []
@@ -775,7 +782,7 @@ def _masters_by_works():
         try:
             a = json.loads((ROOT / "data/authors" / f"{m}.json").read_text())
             w = json.loads((ROOT / "data" / f"works_{m}.json").read_text())
-            out.append((m, a.get("name", m), len(w) if isinstance(w, list) else 0))
+            out.append((m, _short_name(a.get("name", m)), len(w) if isinstance(w, list) else 0))
         except Exception:
             out.append((m, m, 0))
     out.sort(key=lambda x: (-x[2], x[1]))
@@ -800,7 +807,7 @@ def _masters_nav(active_mid=""):
     items = "".join(
         f'<a href="/{m}/index.html">{"› " if m == active_mid else ""}{esc(n)} <span class="n">({c})</span></a>'
         for m, n, c in _masters_by_works())
-    return ('<details class="mnav" open><summary class="hd">Masters (by works) ▾</summary>'
+    return ('<details class="mnav" open><summary class="hd">Masters (by works)</summary>'
             '<div class="sub">' + items + '</div></details>')
 
 def sidenav(aid, active=""):
