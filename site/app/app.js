@@ -126,17 +126,7 @@ async function recite(){
   });
 }
 async function practices(){
-  document.getElementById('top').style.display='none';
-  document.getElementById('menuBtn').style.display='none';
-  document.getElementById('askbar').style.display='none';
-  $('#view').innerHTML = `<div id="labwrap" style="position:fixed;inset:0;z-index:5;background:#fff"><iframe src="https://body.stonedoorway.com/lab" style="width:100%;height:100%;border:0" title="practice lab" allow="autoplay; microphone"></iframe></div>
-  <div style="position:fixed;z-index:6;left:.8rem;bottom:.8rem"><button class="playbtn" id="labback">← back</button></div><div id="answer" style="display:none"></div>`;
-  document.getElementById('labback').onclick = ()=>{
-    document.getElementById('top').style.display='';
-    document.getElementById('menuBtn').style.display='';
-    document.getElementById('askbar').style.display='';
-    location.hash = '#/';
-  };
+  $('#view').innerHTML = `<div style="margin:0 -1rem"><div style="font-family:Inter,system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;color:var(--mut);padding:.5rem 1rem 0">PRACTISE · the lab, live</div><iframe src="https://body.stonedoorway.com/lab" style="width:100%;height:calc(100dvh - 220px);min-height:420px;border:0;display:block" title="practice lab" allow="autoplay; microphone"></iframe></div><div id="answer" style="display:none"></div>`;
 }
 async function pushing(){
   $('#view').innerHTML = `<h1>Enquire</h1><div class="sub">Hound a text with why. Or ask below — the copilot fires a chain and shows its work.</div>
