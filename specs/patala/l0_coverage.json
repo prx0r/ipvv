@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "patala:l0:coverage:v1",
+  "title": "Pāṭala L0 — character-class coverage taxonomy",
+  "description": "Defines what 'lossless' means for L0. Not 'every character belongs to a token' but: 'every SEMANTICALLY relevant source character is either represented by an L0 token or explicitly classified as STRUCTURAL non-semantic material.' Any character left UNKNOWN is a coverage failure.",
+  "classification": {
+    "SEMANTIC": {
+      "description": "scholarly content that MUST be represented by an L0 token (the gloss/lemma stream)",
+      "examples": ["letters", "IAST diacritics", "the [and]- gloss marker content", "parenthesized IAST lemmas"]
+    },
+    "STRUCTURAL": {
+      "description": "non-semantic markdown/syntax that is explicitly classified and permitted between tokens",
+      "classes": {
+        "ws": "whitespace (space, tab)",
+        "newline": "\\n line boundary",
+        "separator": ", ; | : — – the token separators",
+        "marker": "the '[and]-' token prefix marker (structural, not content)",
+        "quote": "quotation marks '\" \" ' that wrap quoted spans",
+        "md_header": "'#' heading markers",
+        "md_hr": "'---' horizontal rules",
+        "md_emphasis": "'*' '*' italic/bold markers",
+        "md_blockquote": "'>' blockquote markers",
+        "md_bold": "'**' bold markers",
+        "bracket": "'[' ']' markdown link brackets"
+      }
+    },
+    "IGNORED_WITH_REASON": {
+      "description": "explicitly non-semantic material outside the token stream with a recorded reason",
+      "examples": ["front-matter/header prose", "source-attribution footer", "the '---' rule"]
+    },
+    "UNKNOWN": {
+      "description": "any character not token-covered and not classified above — a HARD FAILURE (potential real content loss)"
+    }
+  },
+  "proof_invariants": {
+    "token_integrity": "chunk_text[chunk_char_start:chunk_char_end] == raw_fragment",
+    "line_integrity": "source_text[line_char_start:line_char_end] == raw_fragment (when not wraps_line)",
+    "no_overlap": "no two tokens share a character",
+    "no_duplicate": "no two tokens have identical spans",
+    "monotonic": "token spans are strictly increasing in chunk_char_start",
+    "coverage": "no character classified UNKNOWN (every semantic char token-covered or STRUCTURAL/IGNORED_WITH_REASON)"
+  }
+}
