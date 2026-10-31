@@ -443,14 +443,24 @@ def build_ipvv():
     (out / "index.html").write_text(TF(TMPL,title="IPVV", h1="Īśvarapratyabhijñāvivṛtivimarśinī",
         sub=f"{len(items)} passages · Sanskrit → READ → STUDY · GUIDE soon", sidenav=work_sidenav("ipvv"),
         body='<div class="idx">' + "".join(links) + "</div>" + srclink("https://github.com/prx0r/ipvv/issues/new", "passages generated from patala corpus (other repo) + R2 pilot cache — corrections welcome here.")))
-    # themes
+    # themes: machine-proposed clusters (honestly labeled) + adjudication evidence packet
     try:
         cl = json.loads((PATALA / "data/published/ipvv/clusters.json").read_text())
         cls = cl.get("clusters", [])
-        tb = "".join(f'<div class="panel"><b>{esc(c.get("cluster_id",""))}</b> · {c.get("size",0)} members · coherence {c.get("coherence","")} <br/>{esc(", ".join(c.get("member_c1_ids",[])[:12]))}</div>' for c in cls)
+        for _f in ("clusters.json", "clusters.report.txt", "adjudication-cl3.json", "essay-cl3.json",
+                   "essay-cl3.md", "goldchain-cl3.json", "argument_comparison.json", "index.json",
+                   "theme-map-ipvv-v0.json", "theme-discovery-ipvv-v0.json"):
+            _s = ROOT / "data/themes" / _f
+            if _s.exists():
+                (DIST / "data/themes").mkdir(parents=True, exist_ok=True)
+                shutil.copy(_s, DIST / "data/themes" / _f)
+        def _stat(cid):
+            return "adjudication proposed — awaiting review" if cid == "CL-3" else "machine proposal — no editor decision yet"
+        tb = "".join(f'<div class="panel"><b>{esc(c.get("cluster_id",""))}</b> · {c.get("size",0)} members · coherence {c.get("coherence","")} · <i>{_stat(c.get("cluster_id",""))}</i><br/>{esc(", ".join(c.get("member_c1_ids",[])[:12]))}</div>' for c in cls)
+        tb += '<div class="sub">Evidence packet (machine-readable): <a href="/data/themes/clusters.json">clusters</a> · <a href="/data/themes/clusters.report.txt">editorial report</a> · <a href="/data/themes/adjudication-cl3.json">CL-3 adjudication</a> · <a href="/data/themes/essay-cl3.md">CL-3 essay</a> · <a href="/data/themes/goldchain-cl3.json">CL-3 gold chain</a> · <a href="/data/themes/theme-map-ipvv-v0.json">v0 theme map (63 segments, candidates)</a></div>'
     except Exception as e:
         tb = f"<i>themes pending: {esc(str(e))}</i>"
-    (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="overlapping, never partition", sidenav=work_sidenav("ipvv"), body=tb))
+    (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="machine-proposed clusters — overlapping, never partition; zero accepted themes yet", sidenav=work_sidenav("ipvv"), body=tb))
     # pushing: real Q->GEM probe index (vendored volume prose, fail-closed excerpts)
     pb = ("<h3>IPVV probes</h3>" + "".join(pushing_cards("ipvv"))
           + "<h3>Tantraloka probes</h3><div class='sub'>Abhinavagupta's other magnum opus — same method, different mountain. Full TĀ display section pending; probes live here first.</div>"

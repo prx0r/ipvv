@@ -1,0 +1,4252 @@
+{
+  "theme_map_version": "v0",
+  "corpus": "IPVV",
+  "lexicon_version": "ipvv-c1-v0",
+  "signal": "shared key technical terms (not body words)",
+  "coverage": {
+    "n_segments": 63,
+    "n_assigned": 63,
+    "assigned_pct": 1.0,
+    "n_unassigned": 0,
+    "unassigned_pct": 0.0,
+    "n_multi_assigned": 63,
+    "multi_assigned_pct": 1.0,
+    "n_unstable_sense_groups": 56
+  },
+  "extracted_concepts": [
+    "abheda",
+    "action",
+    "adhyāsa",
+    "agency",
+    "agent",
+    "aham",
+    "appearance",
+    "articulation",
+    "awareness",
+    "bheda",
+    "bhedābheda",
+    "bhāvanā",
+    "bond",
+    "caitanya",
+    "causality",
+    "cause",
+    "conceptual",
+    "consciousness",
+    "construction",
+    "continuity",
+    "contraction",
+    "creation",
+    "crystal",
+    "dhyāna",
+    "difference",
+    "effect",
+    "external",
+    "flashing",
+    "freedom",
+    "grace",
+    "identity",
+    "ignorance",
+    "inference",
+    "jñāna",
+    "knower",
+    "knowledge",
+    "kriyā",
+    "language",
+    "liberation",
+    "light",
+    "linguistic",
+    "lord",
+    "lordship",
+    "manifestation",
+    "means of knowledge",
+    "memory",
+    "māheśvarya",
+    "one",
+    "order",
+    "order-less",
+    "parā-vāk",
+    "past",
+    "pastness",
+    "perception",
+    "pervasion",
+    "power",
+    "prakāśa",
+    "pramātṛ",
+    "pramāṇa",
+    "pratibhā",
+    "reason",
+    "recognition",
+    "reflexive",
+    "saṃvid",
+    "self",
+    "self-awareness",
+    "self-grasp",
+    "shines",
+    "smṛti",
+    "speech",
+    "sphurattā",
+    "states",
+    "support",
+    "throbbing",
+    "unity",
+    "vikalpa",
+    "vimarśa",
+    "vāk",
+    "will",
+    "word",
+    "āśraya",
+    "śabda",
+    "śakti"
+  ],
+  "uncovered_segments": [],
+  "uncovered_c1_ids": [],
+  "uncertain_assignments": [
+    "s0",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s10",
+    "s11",
+    "s12",
+    "s13",
+    "s14",
+    "s15",
+    "s16",
+    "s17",
+    "s18",
+    "s19",
+    "s20",
+    "s21",
+    "s22",
+    "s23",
+    "s24",
+    "s25",
+    "s26",
+    "s27",
+    "s28",
+    "s29",
+    "s30",
+    "s31",
+    "s32",
+    "s33",
+    "s34",
+    "s35",
+    "s36",
+    "s37",
+    "s38",
+    "s39",
+    "s40",
+    "s41",
+    "s42",
+    "s43",
+    "s44",
+    "s45",
+    "s46",
+    "s47",
+    "s48",
+    "s49",
+    "s50",
+    "s51",
+    "s52",
+    "s53",
+    "s54",
+    "s55",
+    "s56",
+    "s57",
+    "s58",
+    "s59",
+    "s60",
+    "s61",
+    "s62"
+  ],
+  "themes": [
+    {
+      "candidate_id": "cand_prakāśa",
+      "label": "prakāśa",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s0",
+        "s13",
+        "s14"
+      ],
+      "key_lemmas": [
+        "prakāśa"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'prakāśa' occurs",
+      "nearest_competing_candidate": "cand_consciousness",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-mangala",
+        "V1A-svatyandya"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_saṃvid",
+      "label": "saṃvid",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s0",
+        "s13",
+        "s24"
+      ],
+      "key_lemmas": [
+        "saṃvid"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'saṃvid' occurs",
+      "nearest_competing_candidate": "cand_prakāśa",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-mangala",
+        "V1K-siddhanta-svasamvid"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_lord",
+      "label": "lord",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s0",
+        "s14",
+        "s15",
+        "s16",
+        "s18",
+        "s19",
+        "s2",
+        "s20",
+        "s24",
+        "s27",
+        "s28",
+        "s34",
+        "s35",
+        "s36",
+        "s37",
+        "s40",
+        "s42",
+        "s45",
+        "s46",
+        "s47",
+        "s5",
+        "s52",
+        "s53",
+        "s54",
+        "s57",
+        "s58",
+        "s59",
+        "s60",
+        "s61",
+        "s62",
+        "s8"
+      ],
+      "key_lemmas": [
+        "lord"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'lord' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1A-svatyandya",
+        "V1B-eligibility",
+        "V1C-svatma",
+        "V1E-foregrounding",
+        "V1F-upoddhata-opponents",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1K-siddhanta-svasamvid",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2G-dream-inversion",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta",
+        "V2J-samskara",
+        "V2M-descent-states",
+        "V2O-orderless-support",
+        "V2R-mahesvarya",
+        "V2S-unity-mahesvarya",
+        "V3A-timeless-order",
+        "V1-purvapaksa-opening",
+        "V3F-grace",
+        "V3G-causality",
+        "V3H-inference-across-knowers",
+        "V3K-kancukas",
+        "V3L-knowers-malas",
+        "V3M-states",
+        "V3N-one-lord-many",
+        "V3O-bond-liberation",
+        "V3P-lover-union",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1E-foregrounding": "The question is what a valid means does here at all. A pramāṇa is supposed to establish what is not yet established; but the self is already the Lord, so a pram",
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V3M-states": "The bound knower lives in a round of states. At the lowest extreme is the void: the pralayākala, the dissolved knower, with only the barest trace of an \"I\" — a ",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_one",
+      "label": "one",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s0",
+        "s10",
+        "s12",
+        "s14",
+        "s15",
+        "s16",
+        "s19",
+        "s2",
+        "s20",
+        "s22",
+        "s23",
+        "s25",
+        "s27",
+        "s28",
+        "s29",
+        "s30",
+        "s33",
+        "s34",
+        "s36",
+        "s38",
+        "s39",
+        "s40",
+        "s41",
+        "s42",
+        "s43",
+        "s46",
+        "s47",
+        "s48",
+        "s49",
+        "s50",
+        "s51",
+        "s52",
+        "s53",
+        "s54",
+        "s55",
+        "s57",
+        "s58",
+        "s6",
+        "s60",
+        "s61",
+        "s62",
+        "s8",
+        "s9"
+      ],
+      "key_lemmas": [
+        "one"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'one' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-k4-5-antargadu",
+        "V1-upoddhata-k9-10-sambandha",
+        "V1A-svatyandya",
+        "V1B-eligibility",
+        "V1C-svatma",
+        "V1F-upoddhata-opponents",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1I-action-refuted",
+        "V1J-agent-constructed",
+        "V1L-yogipratyaksa",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V2C-ajadapramatr",
+        "V2F-other-minds",
+        "V2G-dream-inversion",
+        "V2I-sphuratta",
+        "V2K-vacakasphota",
+        "V2L-nonconstructed-I",
+        "V2M-descent-states",
+        "V2N-inner-appearance",
+        "V2O-orderless-support",
+        "V2P-pramatr-vyapara",
+        "V2S-unity-mahesvarya",
+        "V3A-timeless-order",
+        "V3B-bhedabheda",
+        "V3C-one-light",
+        "V3D-synthesis",
+        "V3E-error",
+        "V3F-grace",
+        "V3G-causality",
+        "V3H-inference-across-knowers",
+        "V3I-difference-real",
+        "V3K-kancukas",
+        "V3L-knowers-malas",
+        "V1-purvapaksa-smrtibhranti-sankaranandana",
+        "V3N-one-lord-many",
+        "V3O-bond-liberation",
+        "V3P-lover-union",
+        "V1-upoddhata-k11-karta",
+        "V1-upoddhata-k3-memory"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-k4-5-antargadu": "The upoddhāta k4–5 develop the memory-argument against the impression-theory. If memory is from an impression (saṃskāra) — a trace left by the experience — then",
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1I-action-refuted": "Having shown the cognition is impossible in the opponent's view, Abhinavagupta now shows action (kriyā) is impossible too. Kārikā 9: the action of a body is the",
+        "V1J-agent-constructed": "The Buddhist's pūrvapakṣa has denied the self, the cognition, and the action. Now it completes itself: since the relation (between cognition and object, or agen",
+        "V1L-yogipratyaksa": "If the self is not manifest as an object, how does the yogin perceive another's cognition clearly? Abhinavagupta answers: this is the yogipratyakṣa — the yogin'",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3D-synthesis": "If the valid means seizes only an appearance, how can it reach the single thing those appearances belong to? The answer is the *synthesizing awareness* (anusand",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V1-purvapaksa-smrtibhranti-sankaranandana": "The passage engages the memory-error (smṛti-bhrānti) and the philosopher Bhaṭṭa Śaṅkaranandana, who presses the memory-argument. The Buddhist opponent points to",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t",
+        "V1-upoddhata-k3-memory": "The upoddhāta's third kārikā makes the memory-argument for the eternal self. Memory reaches what one has experienced; but if the self were momentary (as the kṣa"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_consciousness",
+      "label": "consciousness",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s0",
+        "s11",
+        "s13",
+        "s14",
+        "s16",
+        "s17",
+        "s2",
+        "s20",
+        "s21",
+        "s27",
+        "s34",
+        "s4",
+        "s40",
+        "s42",
+        "s43",
+        "s46",
+        "s47",
+        "s49",
+        "s55",
+        "s56"
+      ],
+      "key_lemmas": [
+        "consciousness"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'consciousness' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-k6-k8-caitanyamajada",
+        "V1-upoddhata-mangala",
+        "V1A-svatyandya",
+        "V1C-svatma",
+        "V1D-memory-eternal-knower",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1H-enjoyment-reflection",
+        "V1N-close-mahesvara",
+        "V2G-dream-inversion",
+        "V1-purvapaksa-k1.2.7-citsvarupam",
+        "V2M-descent-states",
+        "V2O-orderless-support",
+        "V2P-pramatr-vyapara",
+        "V2S-unity-mahesvarya",
+        "V3A-timeless-order",
+        "V3C-one-light",
+        "V3I-difference-real",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-k6-k8-caitanyamajada": "The upoddhāta k6 & k8 state the core claim: consciousness (caitanya) is ajaḍā — non-inert, not a passive thing. The seed of the crystal-argument (IPK 1.5.11): a",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1D-memory-eternal-knower": "The objection is the Rāmāyaṇa: memory reaches only the experienced, and \"I was not at the time of the Rāmāyaṇa.\" Abhinavagupta answers that the param-essence kn",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1H-enjoyment-reflection": "What is enjoyment (bhoga) — the experiencing of objects? Abhinavagupta argues it is the *union of reflections* in the consciousness: the reflection of conscious",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V1-purvapaksa-k1.2.7-citsvarupam": "The kārikā: knowledge is of the nature of consciousness (jñānaṃ citsvarūpam). Against the Vaiśeṣika/Nyāya view that knowledge is a quality produced in the self ",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_manifestation",
+      "label": "manifestation",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s0",
+        "s13",
+        "s14",
+        "s17",
+        "s27",
+        "s28",
+        "s29",
+        "s31",
+        "s36",
+        "s38",
+        "s41",
+        "s49",
+        "s5",
+        "s55",
+        "s56"
+      ],
+      "key_lemmas": [
+        "manifestation"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'manifestation' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-mangala",
+        "V1A-svatyandya",
+        "V1D-memory-eternal-knower",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V2D-jnanasakti",
+        "V2I-sphuratta",
+        "V2K-vacakasphota",
+        "V2N-inner-appearance",
+        "V3C-one-light",
+        "V1-purvapaksa-opening",
+        "V3I-difference-real",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1D-memory-eternal-knower": "The objection is the Rāmāyaṇa: memory reaches only the experienced, and \"I was not at the time of the Rāmāyaṇa.\" Abhinavagupta answers that the param-essence kn",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_light",
+      "label": "light",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s0",
+        "s13",
+        "s14",
+        "s29",
+        "s31",
+        "s35",
+        "s41",
+        "s44",
+        "s49",
+        "s50"
+      ],
+      "key_lemmas": [
+        "light"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'light' occurs",
+      "nearest_competing_candidate": "cand_manifestation",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.1-kathamcit",
+        "V1-upoddhata-mangala",
+        "V1A-svatyandya",
+        "V2B-pastness-svasamvitti",
+        "V2D-jnanasakti",
+        "V2H-vimarsa-paravak",
+        "V2N-inner-appearance",
+        "V2Q-omniscient",
+        "V3C-one-light",
+        "V3D-synthesis"
+      ],
+      "member_snippets": {
+        "V1-k1.1-kathamcit": "The first sūtra of the ĪPK: \"having in some way obtained (kathamcit āsādya) the Lord of the gods, [I make...].\" The \"in some way\" is the hinge — it concedes tha",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2Q-omniscient": "The saptamo vimarśa closes with the figure of the omniscient. Suppose there is a piśāca (goblin) in the dark interval; we do not see it, but the omniscient sees",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3D-synthesis": "If the valid means seizes only an appearance, how can it reach the single thing those appearances belong to? The answer is the *synthesizing awareness* (anusand"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_recognition",
+      "label": "recognition",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s1",
+        "s15",
+        "s18",
+        "s2",
+        "s24",
+        "s48",
+        "s51",
+        "s58",
+        "s60",
+        "s62",
+        "s8"
+      ],
+      "key_lemmas": [
+        "recognition"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'recognition' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.2-drstapi",
+        "V1B-eligibility",
+        "V1E-foregrounding",
+        "V1-k1.3-atmaiva",
+        "V1K-siddhanta-svasamvid",
+        "V3B-bhedabheda",
+        "V3E-error",
+        "V3L-knowers-malas",
+        "V3N-one-lord-many",
+        "V3P-lover-union",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1-k1.2-drstapi": "The kārikā: the Self is \"seen yet unperceived\" (dṛṣṭo'py anupalakṣitaḥ) — it is present, but not perceived as an object among objects. The example is the pot: t",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1E-foregrounding": "The question is what a valid means does here at all. A pramāṇa is supposed to establish what is not yet established; but the self is already the Lord, so a pram",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_awareness",
+      "label": "awareness",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s1",
+        "s16",
+        "s18",
+        "s24",
+        "s28",
+        "s30",
+        "s31",
+        "s35",
+        "s36",
+        "s37",
+        "s38",
+        "s39",
+        "s41",
+        "s46",
+        "s50",
+        "s51",
+        "s56",
+        "s58",
+        "s7"
+      ],
+      "key_lemmas": [
+        "awareness"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'awareness' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.2-drstapi",
+        "V1C-svatma",
+        "V1E-foregrounding",
+        "V1K-siddhanta-svasamvid",
+        "V2A-memory-lords-power",
+        "V2C-ajadapramatr",
+        "V2D-jnanasakti",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta",
+        "V2J-samskara",
+        "V2K-vacakasphota",
+        "V2L-nonconstructed-I",
+        "V2N-inner-appearance",
+        "V2S-unity-mahesvarya",
+        "V3D-synthesis",
+        "V3E-error",
+        "V3J-agama-sivatattva",
+        "V3L-knowers-malas",
+        "V1-upoddhata-k1-2-ahampratiti"
+      ],
+      "member_snippets": {
+        "V1-k1.2-drstapi": "The kārikā: the Self is \"seen yet unperceived\" (dṛṣṭo'py anupalakṣitaḥ) — it is present, but not perceived as an object among objects. The example is the pot: t",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1E-foregrounding": "The question is what a valid means does here at all. A pramāṇa is supposed to establish what is not yet established; but the self is already the Lord, so a pram",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3D-synthesis": "If the valid means seizes only an appearance, how can it reach the single thing those appearances belong to? The answer is the *synthesizing awareness* (anusand",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_self",
+      "label": "self",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s1",
+        "s10",
+        "s11",
+        "s13",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s2",
+        "s20",
+        "s21",
+        "s23",
+        "s24",
+        "s25",
+        "s26",
+        "s28",
+        "s29",
+        "s3",
+        "s30",
+        "s31",
+        "s32",
+        "s34",
+        "s35",
+        "s37",
+        "s38",
+        "s39",
+        "s4",
+        "s40",
+        "s41",
+        "s42",
+        "s43",
+        "s45",
+        "s46",
+        "s49",
+        "s5",
+        "s55",
+        "s57",
+        "s58",
+        "s6",
+        "s60",
+        "s62",
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "key_lemmas": [
+        "self"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'self' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.2-drstapi",
+        "V1-upoddhata-k4-5-antargadu",
+        "V1-upoddhata-k6-k8-caitanyamajada",
+        "V1-upoddhata-mangala",
+        "V1A-svatyandya",
+        "V1B-eligibility",
+        "V1C-svatma",
+        "V1D-memory-eternal-knower",
+        "V1E-foregrounding",
+        "V1F-upoddhata-opponents",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1H-enjoyment-reflection",
+        "V1J-agent-constructed",
+        "V1K-siddhanta-svasamvid",
+        "V1L-yogipratyaksa",
+        "V1M-determination",
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V1-k1.4-1.5-buddhipurva",
+        "V2C-ajadapramatr",
+        "V2D-jnanasakti",
+        "V2E-external-inferred",
+        "V2G-dream-inversion",
+        "V2H-vimarsa-paravak",
+        "V2J-samskara",
+        "V2K-vacakasphota",
+        "V2L-nonconstructed-I",
+        "V1-purvapaksa-k1.2.7-citsvarupam",
+        "V2M-descent-states",
+        "V2N-inner-appearance",
+        "V2O-orderless-support",
+        "V2P-pramatr-vyapara",
+        "V2R-mahesvarya",
+        "V2S-unity-mahesvarya",
+        "V3C-one-light",
+        "V1-purvapaksa-opening",
+        "V3I-difference-real",
+        "V3K-kancukas",
+        "V3L-knowers-malas",
+        "V1-purvapaksa-smrtibhranti-sankaranandana",
+        "V3N-one-lord-many",
+        "V3P-lover-union",
+        "V1-upoddhata-k1-2-ahampratiti",
+        "V1-upoddhata-k11-karta",
+        "V1-upoddhata-k3-memory"
+      ],
+      "member_snippets": {
+        "V1-k1.2-drstapi": "The kārikā: the Self is \"seen yet unperceived\" (dṛṣṭo'py anupalakṣitaḥ) — it is present, but not perceived as an object among objects. The example is the pot: t",
+        "V1-upoddhata-k4-5-antargadu": "The upoddhāta k4–5 develop the memory-argument against the impression-theory. If memory is from an impression (saṃskāra) — a trace left by the experience — then",
+        "V1-upoddhata-k6-k8-caitanyamajada": "The upoddhāta k6 & k8 state the core claim: consciousness (caitanya) is ajaḍā — non-inert, not a passive thing. The seed of the crystal-argument (IPK 1.5.11): a",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1D-memory-eternal-knower": "The objection is the Rāmāyaṇa: memory reaches only the experienced, and \"I was not at the time of the Rāmāyaṇa.\" Abhinavagupta answers that the param-essence kn",
+        "V1E-foregrounding": "The question is what a valid means does here at all. A pramāṇa is supposed to establish what is not yet established; but the self is already the Lord, so a pram",
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1H-enjoyment-reflection": "What is enjoyment (bhoga) — the experiencing of objects? Abhinavagupta argues it is the *union of reflections* in the consciousness: the reflection of conscious",
+        "V1J-agent-constructed": "The Buddhist's pūrvapakṣa has denied the self, the cognition, and the action. Now it completes itself: since the relation (between cognition and object, or agen",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V1L-yogipratyaksa": "If the self is not manifest as an object, how does the yogin perceive another's cognition clearly? Abhinavagupta answers: this is the yogipratyakṣa — the yogin'",
+        "V1M-determination": "The Buddhist's last resort is the *determination* (adhyavasāya) — the act by which the cognition is taken to establish an external thing. Abhinavagupta shows it",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V1-k1.4-1.5-buddhipurva": "The kārikās 1.4–1.5 treat two connected claims: the inference of other minds and the self-luminosity of cognition, against the Naiyāyika. Cognition is not a qua",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V1-purvapaksa-k1.2.7-citsvarupam": "The kārikā: knowledge is of the nature of consciousness (jñānaṃ citsvarūpam). Against the Vaiśeṣika/Nyāya view that knowledge is a quality produced in the self ",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V1-purvapaksa-smrtibhranti-sankaranandana": "The passage engages the memory-error (smṛti-bhrānti) and the philosopher Bhaṭṭa Śaṅkaranandana, who presses the memory-argument. The Buddhist opponent points to",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t",
+        "V1-upoddhata-k3-memory": "The upoddhāta's third kārikā makes the memory-argument for the eternal self. Memory reaches what one has experienced; but if the self were momentary (as the kṣa"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_knowledge",
+      "label": "knowledge",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s13",
+        "s15",
+        "s2",
+        "s20",
+        "s27",
+        "s28",
+        "s31",
+        "s4",
+        "s41",
+        "s42",
+        "s45",
+        "s49",
+        "s52",
+        "s56",
+        "s57",
+        "s62"
+      ],
+      "key_lemmas": [
+        "knowledge"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'knowledge' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V1B-eligibility",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2D-jnanasakti",
+        "V1-purvapaksa-k1.2.7-citsvarupam",
+        "V2N-inner-appearance",
+        "V2O-orderless-support",
+        "V2R-mahesvarya",
+        "V3C-one-light",
+        "V3F-grace",
+        "V3J-agama-sivatattva",
+        "V3K-kancukas",
+        "V3P-lover-union"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V1-purvapaksa-k1.2.7-citsvarupam": "The kārikā: knowledge is of the nature of consciousness (jñānaṃ citsvarūpam). Against the Vaiśeṣika/Nyāya view that knowledge is a quality produced in the self ",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_jñāna",
+      "label": "jñāna",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s19",
+        "s2",
+        "s20",
+        "s31",
+        "s32",
+        "s4",
+        "s45",
+        "s46",
+        "s52",
+        "s54"
+      ],
+      "key_lemmas": [
+        "jñāna"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'jñāna' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1F-upoddhata-opponents",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V2D-jnanasakti",
+        "V2E-external-inferred",
+        "V1-purvapaksa-k1.2.7-citsvarupam",
+        "V2R-mahesvarya",
+        "V2S-unity-mahesvarya",
+        "V3F-grace",
+        "V3H-inference-across-knowers"
+      ],
+      "member_snippets": {
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V1-purvapaksa-k1.2.7-citsvarupam": "The kārikā: knowledge is of the nature of consciousness (jñānaṃ citsvarūpam). Against the Vaiśeṣika/Nyāya view that knowledge is a quality produced in the self ",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_śakti",
+      "label": "śakti",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s13",
+        "s2",
+        "s27",
+        "s31",
+        "s5"
+      ],
+      "key_lemmas": [
+        "śakti"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'śakti' occurs",
+      "nearest_competing_candidate": "cand_power",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V1-k1.3-atmaiva",
+        "V1N-close-mahesvara",
+        "V2D-jnanasakti",
+        "V1-purvapaksa-opening"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu "
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_power",
+      "label": "power",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s13",
+        "s2",
+        "s27",
+        "s28",
+        "s31",
+        "s35",
+        "s36",
+        "s37",
+        "s42",
+        "s46",
+        "s5",
+        "s53",
+        "s56",
+        "s61"
+      ],
+      "key_lemmas": [
+        "power"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'power' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V1-k1.3-atmaiva",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2D-jnanasakti",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta",
+        "V2J-samskara",
+        "V2O-orderless-support",
+        "V2S-unity-mahesvarya",
+        "V1-purvapaksa-opening",
+        "V3G-causality",
+        "V3J-agama-sivatattva",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_kriyā",
+      "label": "kriyā",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s2",
+        "s20",
+        "s22",
+        "s47",
+        "s56"
+      ],
+      "key_lemmas": [
+        "kriyā"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'kriyā' occurs",
+      "nearest_competing_candidate": "cand_action",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1I-action-refuted",
+        "V3A-timeless-order",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1I-action-refuted": "Having shown the cognition is impossible in the opponent's view, Abhinavagupta now shows action (kriyā) is impossible too. Kārikā 9: the action of a body is the",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_action",
+      "label": "action",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s12",
+        "s13",
+        "s2",
+        "s20",
+        "s22",
+        "s23",
+        "s24",
+        "s33",
+        "s41",
+        "s45",
+        "s47",
+        "s48",
+        "s50",
+        "s53",
+        "s55",
+        "s56",
+        "s58",
+        "s60",
+        "s61",
+        "s8"
+      ],
+      "key_lemmas": [
+        "action"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'action' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V1-upoddhata-mangala",
+        "V1-k1.3-atmaiva",
+        "V1G-cognition-refuted",
+        "V1I-action-refuted",
+        "V1J-agent-constructed",
+        "V1K-siddhanta-svasamvid",
+        "V2F-other-minds",
+        "V2N-inner-appearance",
+        "V2R-mahesvarya",
+        "V3A-timeless-order",
+        "V3B-bhedabheda",
+        "V3D-synthesis",
+        "V3G-causality",
+        "V3I-difference-real",
+        "V3J-agama-sivatattva",
+        "V3L-knowers-malas",
+        "V3N-one-lord-many",
+        "V3O-bond-liberation",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1-k1.3-atmaiva": "The kārikā: the own-self alone is the Lord (ātmaiva īśvaraḥ). This is the maximal claim of the recognition-thesis, stated in its root form — not that the self i",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V1I-action-refuted": "Having shown the cognition is impossible in the opponent's view, Abhinavagupta now shows action (kriyā) is impossible too. Kārikā 9: the action of a body is the",
+        "V1J-agent-constructed": "The Buddhist's pūrvapakṣa has denied the self, the cognition, and the action. Now it completes itself: since the relation (between cognition and object, or agen",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3D-synthesis": "If the valid means seizes only an appearance, how can it reach the single thing those appearances belong to? The answer is the *synthesizing awareness* (anusand",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_inference",
+      "label": "inference",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s25",
+        "s3",
+        "s32",
+        "s54",
+        "s56"
+      ],
+      "key_lemmas": [
+        "inference"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'inference' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1L-yogipratyaksa",
+        "V1-k1.4-1.5-buddhipurva",
+        "V2E-external-inferred",
+        "V3H-inference-across-knowers",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1L-yogipratyaksa": "If the self is not manifest as an object, how does the yogin perceive another's cognition clearly? Abhinavagupta answers: this is the yogipratyakṣa — the yogin'",
+        "V1-k1.4-1.5-buddhipurva": "The kārikās 1.4–1.5 treat two connected claims: the inference of other minds and the self-luminosity of cognition, against the Naiyāyika. Cognition is not a qua",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_states",
+      "label": "states",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s4",
+        "s40",
+        "s59",
+        "s62"
+      ],
+      "key_lemmas": [
+        "states"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'states' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-purvapaksa-k1.2.7-citsvarupam",
+        "V2M-descent-states",
+        "V3M-states",
+        "V3P-lover-union"
+      ],
+      "member_snippets": {
+        "V1-purvapaksa-k1.2.7-citsvarupam": "The kārikā: knowledge is of the nature of consciousness (jñānaṃ citsvarūpam). Against the Vaiśeṣika/Nyāya view that knowledge is a quality produced in the self ",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V3M-states": "The bound knower lives in a round of states. At the lowest extreme is the void: the pralayākala, the dissolved knower, with only the barest trace of an \"I\" — a ",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_vimarśa",
+      "label": "vimarśa",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s35",
+        "s37",
+        "s44",
+        "s5",
+        "s52",
+        "s58"
+      ],
+      "key_lemmas": [
+        "vimarśa"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'vimarśa' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2H-vimarsa-paravak",
+        "V2J-samskara",
+        "V2Q-omniscient",
+        "V1-purvapaksa-opening",
+        "V3F-grace",
+        "V3L-knowers-malas"
+      ],
+      "member_snippets": {
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2Q-omniscient": "The saptamo vimarśa closes with the figure of the omniscient. Suppose there is a piśāca (goblin) in the dark interval; we do not see it, but the omniscient sees",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_lordship",
+      "label": "lordship",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s19",
+        "s20",
+        "s35",
+        "s45",
+        "s46",
+        "s5",
+        "s8"
+      ],
+      "key_lemmas": [
+        "lordship"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'lordship' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1F-upoddhata-opponents",
+        "V1G-cognition-refuted",
+        "V2H-vimarsa-paravak",
+        "V2R-mahesvarya",
+        "V2S-unity-mahesvarya",
+        "V1-purvapaksa-opening",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V1-purvapaksa-opening": "The second vimarśa opens with a homage to Bhairava as the wave of his own power, and then announces the structure of the pūrvapakṣa: seven verses (satyaṃ kintu ",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_memory",
+      "label": "memory",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s10",
+        "s17",
+        "s26",
+        "s27",
+        "s28",
+        "s29",
+        "s37",
+        "s38",
+        "s41",
+        "s42",
+        "s43",
+        "s6",
+        "s9"
+      ],
+      "key_lemmas": [
+        "memory"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'memory' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k4-5-antargadu",
+        "V1D-memory-eternal-knower",
+        "V1M-determination",
+        "V1N-close-mahesvara",
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V2J-samskara",
+        "V2K-vacakasphota",
+        "V2N-inner-appearance",
+        "V2O-orderless-support",
+        "V2P-pramatr-vyapara",
+        "V1-purvapaksa-smrtibhranti-sankaranandana",
+        "V1-upoddhata-k3-memory"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k4-5-antargadu": "The upoddhāta k4–5 develop the memory-argument against the impression-theory. If memory is from an impression (saṃskāra) — a trace left by the experience — then",
+        "V1D-memory-eternal-knower": "The objection is the Rāmāyaṇa: memory reaches only the experienced, and \"I was not at the time of the Rāmāyaṇa.\" Abhinavagupta answers that the param-essence kn",
+        "V1M-determination": "The Buddhist's last resort is the *determination* (adhyavasāya) — the act by which the cognition is taken to establish an external thing. Abhinavagupta shows it",
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V1-purvapaksa-smrtibhranti-sankaranandana": "The passage engages the memory-error (smṛti-bhrānti) and the philosopher Bhaṭṭa Śaṅkaranandana, who presses the memory-argument. The Buddhist opponent points to",
+        "V1-upoddhata-k3-memory": "The upoddhāta's third kārikā makes the memory-argument for the eternal self. Memory reaches what one has experienced; but if the self were momentary (as the kṣa"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_smṛti",
+      "label": "smṛti",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s6"
+      ],
+      "key_lemmas": [
+        "smṛti"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'smṛti' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-purvapaksa-smrtibhranti-sankaranandana"
+      ],
+      "member_snippets": {
+        "V1-purvapaksa-smrtibhranti-sankaranandana": "The passage engages the memory-error (smṛti-bhrānti) and the philosopher Bhaṭṭa Śaṅkaranandana, who presses the memory-argument. The Buddhist opponent points to"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_past",
+      "label": "past",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s28",
+        "s29",
+        "s38",
+        "s6",
+        "s9"
+      ],
+      "key_lemmas": [
+        "past"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'past' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V2K-vacakasphota",
+        "V1-purvapaksa-smrtibhranti-sankaranandana",
+        "V1-upoddhata-k3-memory"
+      ],
+      "member_snippets": {
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V1-purvapaksa-smrtibhranti-sankaranandana": "The passage engages the memory-error (smṛti-bhrānti) and the philosopher Bhaṭṭa Śaṅkaranandana, who presses the memory-argument. The Buddhist opponent points to",
+        "V1-upoddhata-k3-memory": "The upoddhāta's third kārikā makes the memory-argument for the eternal self. Memory reaches what one has experienced; but if the self were momentary (as the kṣa"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_reflexive",
+      "label": "reflexive",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s31",
+        "s35",
+        "s36",
+        "s37",
+        "s38",
+        "s39",
+        "s41",
+        "s46",
+        "s51",
+        "s56",
+        "s7"
+      ],
+      "key_lemmas": [
+        "reflexive"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'reflexive' occurs",
+      "nearest_competing_candidate": "cand_awareness",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2D-jnanasakti",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta",
+        "V2J-samskara",
+        "V2K-vacakasphota",
+        "V2L-nonconstructed-I",
+        "V2N-inner-appearance",
+        "V2S-unity-mahesvarya",
+        "V3E-error",
+        "V3J-agama-sivatattva",
+        "V1-upoddhata-k1-2-ahampratiti"
+      ],
+      "member_snippets": {
+        "V2D-jnanasakti": "The jñānaśakti (the knowledge-power) is the capacity by which anything is known. Its central claim: the manifestation is the very form of the objects. Their bei",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_self-awareness",
+      "label": "self-awareness",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s24",
+        "s35",
+        "s39",
+        "s46",
+        "s7"
+      ],
+      "key_lemmas": [
+        "self-awareness"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'self-awareness' occurs",
+      "nearest_competing_candidate": "cand_awareness",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1K-siddhanta-svasamvid",
+        "V2H-vimarsa-paravak",
+        "V2L-nonconstructed-I",
+        "V2S-unity-mahesvarya",
+        "V1-upoddhata-k1-2-ahampratiti"
+      ],
+      "member_snippets": {
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_construction",
+      "label": "construction",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s23",
+        "s35",
+        "s39",
+        "s40",
+        "s41",
+        "s61",
+        "s7",
+        "s8"
+      ],
+      "key_lemmas": [
+        "construction"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'construction' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1J-agent-constructed",
+        "V2H-vimarsa-paravak",
+        "V2L-nonconstructed-I",
+        "V2M-descent-states",
+        "V2N-inner-appearance",
+        "V3O-bond-liberation",
+        "V1-upoddhata-k1-2-ahampratiti",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1J-agent-constructed": "The Buddhist's pūrvapakṣa has denied the self, the cognition, and the action. Now it completes itself: since the relation (between cognition and object, or agen",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_aham",
+      "label": "aham",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s45",
+        "s7"
+      ],
+      "key_lemmas": [
+        "aham"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'aham' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2R-mahesvarya",
+        "V1-upoddhata-k1-2-ahampratiti"
+      ],
+      "member_snippets": {
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V1-upoddhata-k1-2-ahampratiti": "The upoddhāta faces the Buddhist account of the \"I.\" On the Buddhist view the \"I\"-cognition (ahaṃ-pratīti) is tied to the body: the sense of self arises as a co"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_will",
+      "label": "will",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s13",
+        "s28",
+        "s34",
+        "s40",
+        "s53",
+        "s55",
+        "s8"
+      ],
+      "key_lemmas": [
+        "will"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'will' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V2A-memory-lords-power",
+        "V2G-dream-inversion",
+        "V2M-descent-states",
+        "V3G-causality",
+        "V3I-difference-real",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_agent",
+      "label": "agent",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s12",
+        "s23",
+        "s53",
+        "s55",
+        "s8"
+      ],
+      "key_lemmas": [
+        "agent"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'agent' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V1J-agent-constructed",
+        "V3G-causality",
+        "V3I-difference-real",
+        "V1-upoddhata-k11-karta"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1J-agent-constructed": "The Buddhist's pūrvapakṣa has denied the self, the cognition, and the action. Now it completes itself: since the relation (between cognition and object, or agen",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V1-upoddhata-k11-karta": "The upoddhāta k11 closes the pūrvapakṣa with the strongest conclusion of the no-self attack: \"thence the agent too is constructed\" (tena kartāpi kalpitaḥ). If t"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_pramātṛ",
+      "label": "pramātṛ",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s11",
+        "s30",
+        "s43",
+        "s9"
+      ],
+      "key_lemmas": [
+        "pramātṛ"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'pramātṛ' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k6-k8-caitanyamajada",
+        "V2C-ajadapramatr",
+        "V2P-pramatr-vyapara",
+        "V1-upoddhata-k3-memory"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k6-k8-caitanyamajada": "The upoddhāta k6 & k8 state the core claim: consciousness (caitanya) is ajaḍā — non-inert, not a passive thing. The seed of the crystal-argument (IPK 1.5.11): a",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V1-upoddhata-k3-memory": "The upoddhāta's third kārikā makes the memory-argument for the eternal self. Memory reaches what one has experienced; but if the self were momentary (as the kṣa"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_cause",
+      "label": "cause",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s10",
+        "s12",
+        "s24",
+        "s26",
+        "s29",
+        "s32",
+        "s34",
+        "s37",
+        "s43",
+        "s45",
+        "s47",
+        "s49",
+        "s53",
+        "s54",
+        "s56",
+        "s57",
+        "s62"
+      ],
+      "key_lemmas": [
+        "cause"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'cause' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k4-5-antargadu",
+        "V1-upoddhata-k9-10-sambandha",
+        "V1K-siddhanta-svasamvid",
+        "V1M-determination",
+        "V2B-pastness-svasamvitti",
+        "V2E-external-inferred",
+        "V2G-dream-inversion",
+        "V2J-samskara",
+        "V2P-pramatr-vyapara",
+        "V2R-mahesvarya",
+        "V3A-timeless-order",
+        "V3C-one-light",
+        "V3G-causality",
+        "V3H-inference-across-knowers",
+        "V3J-agama-sivatattva",
+        "V3K-kancukas",
+        "V3P-lover-union"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k4-5-antargadu": "The upoddhāta k4–5 develop the memory-argument against the impression-theory. If memory is from an impression (saṃskāra) — a trace left by the experience — then",
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1K-siddhanta-svasamvid": "The Buddhist's pūrvapakṣa has denied the self, the cognition, the action, and the relation. Now the siddhānta replies, and its first move is a striking concessi",
+        "V1M-determination": "The Buddhist's last resort is the *determination* (adhyavasāya) — the act by which the cognition is taken to establish an external thing. Abhinavagupta shows it",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_caitanya",
+      "label": "caitanya",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s11"
+      ],
+      "key_lemmas": [
+        "caitanya"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'caitanya' occurs",
+      "nearest_competing_candidate": "cand_consciousness",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k6-k8-caitanyamajada"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k6-k8-caitanyamajada": "The upoddhāta k6 & k8 state the core claim: consciousness (caitanya) is ajaḍā — non-inert, not a passive thing. The seed of the crystal-argument (IPK 1.5.11): a"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_crystal",
+      "label": "crystal",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s11",
+        "s35"
+      ],
+      "key_lemmas": [
+        "crystal"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'crystal' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k6-k8-caitanyamajada",
+        "V2H-vimarsa-paravak"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k6-k8-caitanyamajada": "The upoddhāta k6 & k8 state the core claim: consciousness (caitanya) is ajaḍā — non-inert, not a passive thing. The seed of the crystal-argument (IPK 1.5.11): a",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_pramāṇa",
+      "label": "pramāṇa",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s12",
+        "s18",
+        "s43",
+        "s49",
+        "s51"
+      ],
+      "key_lemmas": [
+        "pramāṇa"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'pramāṇa' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V1E-foregrounding",
+        "V2P-pramatr-vyapara",
+        "V3C-one-light",
+        "V3E-error"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1E-foregrounding": "The question is what a valid means does here at all. A pramāṇa is supposed to establish what is not yet established; but the self is already the Lord, so a pram",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_agency",
+      "label": "agency",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s12",
+        "s53",
+        "s57"
+      ],
+      "key_lemmas": [
+        "agency"
+      ],
+      "sense_stability": "NEAR_SAME",
+      "membership_rationale": "segments where 'agency' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V3G-causality",
+        "V3K-kancukas"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_knower",
+      "label": "knower",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s12",
+        "s14",
+        "s15",
+        "s17",
+        "s30",
+        "s37",
+        "s42",
+        "s43",
+        "s46",
+        "s49",
+        "s51",
+        "s53",
+        "s54",
+        "s57",
+        "s58",
+        "s59",
+        "s61"
+      ],
+      "key_lemmas": [
+        "knower"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'knower' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V1A-svatyandya",
+        "V1B-eligibility",
+        "V1D-memory-eternal-knower",
+        "V2C-ajadapramatr",
+        "V2J-samskara",
+        "V2O-orderless-support",
+        "V2P-pramatr-vyapara",
+        "V2S-unity-mahesvarya",
+        "V3C-one-light",
+        "V3E-error",
+        "V3G-causality",
+        "V3H-inference-across-knowers",
+        "V3K-kancukas",
+        "V3L-knowers-malas",
+        "V3M-states",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V1D-memory-eternal-knower": "The objection is the Rāmāyaṇa: memory reaches only the experienced, and \"I was not at the time of the Rāmāyaṇa.\" Abhinavagupta answers that the param-essence kn",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V2J-samskara": "What makes an experience strong enough to lay the seed of memory? It is the resting of the experience in the reflexive-awareness — the moment it is aware of its",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V3M-states": "The bound knower lives in a round of states. At the lowest extreme is the void: the pralayākala, the dissolved knower, with only the barest trace of an \"I\" — a ",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_causality",
+      "label": "causality",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s12",
+        "s53"
+      ],
+      "key_lemmas": [
+        "causality"
+      ],
+      "sense_stability": "NEAR_SAME",
+      "membership_rationale": "segments where 'causality' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V3G-causality"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_effect",
+      "label": "effect",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s12",
+        "s33",
+        "s43",
+        "s53",
+        "s54",
+        "s56",
+        "s57"
+      ],
+      "key_lemmas": [
+        "effect"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'effect' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-k9-10-sambandha",
+        "V2F-other-minds",
+        "V2P-pramatr-vyapara",
+        "V3G-causality",
+        "V3H-inference-across-knowers",
+        "V3J-agama-sivatattva",
+        "V3K-kancukas"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-k9-10-sambandha": "The upoddhāta k9–10 argue that action is not a valid means of cognition (pramāṇa). A pramāṇa yields a cognition of an object; action yields a change in the worl",
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_bhāvanā",
+      "label": "bhāvanā",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s13",
+        "s52"
+      ],
+      "key_lemmas": [
+        "bhāvanā"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'bhāvanā' occurs",
+      "nearest_competing_candidate": "cand_knowledge",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V3F-grace"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_external",
+      "label": "external",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s13",
+        "s26",
+        "s32",
+        "s33",
+        "s34",
+        "s41"
+      ],
+      "key_lemmas": [
+        "external"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'external' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1-upoddhata-mangala",
+        "V1M-determination",
+        "V2E-external-inferred",
+        "V2F-other-minds",
+        "V2G-dream-inversion",
+        "V2N-inner-appearance"
+      ],
+      "member_snippets": {
+        "V1-upoddhata-mangala": "The opening homage to Bhairava as the Heart (hṛdaya). The Heart is \"not sundered from the triad of the powers\" (śakti-tritaya) — the powers of will, knowledge, ",
+        "V1M-determination": "The Buddhist's last resort is the *determination* (adhyavasāya) — the act by which the cognition is taken to establish an external thing. Abhinavagupta shows it",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something "
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_freedom",
+      "label": "freedom",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s14",
+        "s28",
+        "s35",
+        "s43",
+        "s45",
+        "s58",
+        "s60"
+      ],
+      "key_lemmas": [
+        "freedom"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'freedom' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1A-svatyandya",
+        "V2A-memory-lords-power",
+        "V2H-vimarsa-paravak",
+        "V2P-pramatr-vyapara",
+        "V2R-mahesvarya",
+        "V3L-knowers-malas",
+        "V3N-one-lord-many"
+      ],
+      "member_snippets": {
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V3L-knowers-malas": "The dvitīyo vimarśa examines the knowers, for the recognition of the Lord in the self is the heart of the śāstra. The homage is to the one \"who wields the tride",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_bheda",
+      "label": "bheda",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s14",
+        "s48"
+      ],
+      "key_lemmas": [
+        "bheda"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'bheda' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1A-svatyandya",
+        "V3B-bhedabheda"
+      ],
+      "member_snippets": {
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_abheda",
+      "label": "abheda",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s14",
+        "s48"
+      ],
+      "key_lemmas": [
+        "abheda"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'abheda' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1A-svatyandya",
+        "V3B-bhedabheda"
+      ],
+      "member_snippets": {
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_shines",
+      "label": "shines",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s14",
+        "s16",
+        "s28",
+        "s29",
+        "s48",
+        "s52",
+        "s57",
+        "s60",
+        "s61"
+      ],
+      "key_lemmas": [
+        "shines"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'shines' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1A-svatyandya",
+        "V1C-svatma",
+        "V2A-memory-lords-power",
+        "V2B-pastness-svasamvitti",
+        "V3B-bhedabheda",
+        "V3F-grace",
+        "V3K-kancukas",
+        "V3N-one-lord-many",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V1A-svatyandya": "The very opening of the IPVV. The maṅgala has been made; now Abhinavagupta expounds the first kārikā — the spontaneity (svācchandya) of the Lord. The blue and t",
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3K-kancukas": "Descending to the bound knower, the pure self is covered by the kañcukas (the \"armours\"): niyati (fixity), kāla (time), rāga (attachment), vidyā (limited knowle",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_support",
+      "label": "support",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s15",
+        "s42",
+        "s46",
+        "s47"
+      ],
+      "key_lemmas": [
+        "support"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'support' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1B-eligibility",
+        "V2O-orderless-support",
+        "V2S-unity-mahesvarya",
+        "V3A-timeless-order"
+      ],
+      "member_snippets": {
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_word",
+      "label": "word",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s15",
+        "s35",
+        "s36",
+        "s38",
+        "s42"
+      ],
+      "key_lemmas": [
+        "word"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'word' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1B-eligibility",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta",
+        "V2K-vacakasphota",
+        "V2O-orderless-support"
+      ],
+      "member_snippets": {
+        "V1B-eligibility": "The commentary on \"having attained, in some way\" (kathaṃcit) opens up what the prostration is and who is eligible to make it. The prostration is *two-resting*: ",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_perception",
+      "label": "perception",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s16",
+        "s25",
+        "s32",
+        "s43",
+        "s44",
+        "s56"
+      ],
+      "key_lemmas": [
+        "perception"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'perception' occurs",
+      "nearest_competing_candidate": "cand_self",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1C-svatma",
+        "V1L-yogipratyaksa",
+        "V2E-external-inferred",
+        "V2P-pramatr-vyapara",
+        "V2Q-omniscient",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1C-svatma": "The kārikā says \"the own-self alone\" (svātmā eva) is the Lord. The objection presses on what \"own-self\" includes: if the maheśvara is the self of the blue, he i",
+        "V1L-yogipratyaksa": "If the self is not manifest as an object, how does the yogin perceive another's cognition clearly? Abhinavagupta answers: this is the yogipratyakṣa — the yogin'",
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2Q-omniscient": "The saptamo vimarśa closes with the figure of the omniscient. Suppose there is a piśāca (goblin) in the dark interval; we do not see it, but the omniscient sees",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_vāk",
+      "label": "vāk",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s19",
+        "s35",
+        "s44"
+      ],
+      "key_lemmas": [
+        "vāk"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'vāk' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1F-upoddhata-opponents",
+        "V2H-vimarsa-paravak",
+        "V2Q-omniscient"
+      ],
+      "member_snippets": {
+        "V1F-upoddhata-opponents": "The upoddhāta (the preliminary) faces the opponents who deny the self's lordship. The Cārvāka (materialist) cannot even frame a refutation, having no means of p",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2Q-omniscient": "The saptamo vimarśa closes with the figure of the omniscient. Suppose there is a piśāca (goblin) in the dark interval; we do not see it, but the omniscient sees"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_reason",
+      "label": "reason",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s20"
+      ],
+      "key_lemmas": [
+        "reason"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'reason' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1G-cognition-refuted"
+      ],
+      "member_snippets": {
+        "V1G-cognition-refuted": "The Buddhist denied the self. But even granting the self, the opponent offered a reason for its lordship: \"by the union of knowledge and action\" (jñānakriyāyogā"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_order",
+      "label": "order",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s22",
+        "s34",
+        "s38",
+        "s42",
+        "s52",
+        "s53",
+        "s62"
+      ],
+      "key_lemmas": [
+        "order"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'order' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1I-action-refuted",
+        "V2G-dream-inversion",
+        "V2K-vacakasphota",
+        "V2O-orderless-support",
+        "V3F-grace",
+        "V3G-causality",
+        "V3P-lover-union"
+      ],
+      "member_snippets": {
+        "V1I-action-refuted": "Having shown the cognition is impossible in the opponent's view, Abhinavagupta now shows action (kriyā) is impossible too. Kārikā 9: the action of a body is the",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg",
+        "V3G-causality": "The relation between the known and the knower has been shown to be the expansion of the action-power. Now Abhinavagupta turns to cause and effect: the essence o",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p"
+      },
+      "significance": "LOW"
+    },
+    {
+      "candidate_id": "cand_difference",
+      "label": "difference",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s25",
+        "s30",
+        "s48",
+        "s55",
+        "s61"
+      ],
+      "key_lemmas": [
+        "difference"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'difference' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1L-yogipratyaksa",
+        "V2C-ajadapramatr",
+        "V3B-bhedabheda",
+        "V3I-difference-real",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V1L-yogipratyaksa": "If the self is not manifest as an object, how does the yogin perceive another's cognition clearly? Abhinavagupta answers: this is the yogipratyakṣa — the yogin'",
+        "V2C-ajadapramatr": "The yogin knows another's cognition. But a cognition can never be the *object* of another cognition — for the two would have to stand in the relation of object ",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_appearance",
+      "label": "appearance",
+      "suspected_kind": "DOCTRINAL_PROBLEM_DOMAIN",
+      "member_segments": [
+        "s26",
+        "s28",
+        "s33",
+        "s34",
+        "s40",
+        "s41",
+        "s43",
+        "s45",
+        "s49",
+        "s50",
+        "s51",
+        "s54"
+      ],
+      "key_lemmas": [
+        "appearance"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'appearance' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1M-determination",
+        "V2A-memory-lords-power",
+        "V2F-other-minds",
+        "V2G-dream-inversion",
+        "V2M-descent-states",
+        "V2N-inner-appearance",
+        "V2P-pramatr-vyapara",
+        "V2R-mahesvarya",
+        "V3C-one-light",
+        "V3D-synthesis",
+        "V3E-error",
+        "V3H-inference-across-knowers"
+      ],
+      "member_snippets": {
+        "V1M-determination": "The Buddhist's last resort is the *determination* (adhyavasāya) — the act by which the cognition is taken to establish an external thing. Abhinavagupta shows it",
+        "V2A-memory-lords-power": "The passage rejects the ordinary account of memory as the revival of a past impression — a trace stirred up after the experience has gone. Abhinavagupta replace",
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2G-dream-inversion": "The external object has been shown to be un-establishable — neither as a whole nor as atoms. The objector asks how this is so, since the external was earlier in",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V2P-pramatr-vyapara": "The valid means (pramāṇa) is not a separate instrument over against the knower; it is the knower's own operation (pramātṛ-vyāpāra). The five objects of percepti",
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The ",
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta",
+        "V3D-synthesis": "If the valid means seizes only an appearance, how can it reach the single thing those appearances belong to? The answer is the *synthesizing awareness* (anusand",
+        "V3E-error": "If the means seizes only appearances, how do we tell true from false — the real jar from the illusory double-moon or the shell-mistaken-for-silver? Abhinavagupt",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_pervasion",
+      "label": "pervasion",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s27",
+        "s54",
+        "s56"
+      ],
+      "key_lemmas": [
+        "pervasion"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'pervasion' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V1N-close-mahesvara",
+        "V3H-inference-across-knowers",
+        "V3J-agama-sivatattva"
+      ],
+      "member_snippets": {
+        "V1N-close-mahesvara": "The cognitions are of the manifestation-mere own-form. How, then, do they not take the form of the \"I\" when they shine beyond the \"I\"-part? Their excess over th",
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3J-agama-sivatattva": "The kriyādhikāra showed that the action-power's form is the un-clouded manifestation of all the categories. But what are these categories, the tattvas? Percepti"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_pastness",
+      "label": "pastness",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s29"
+      ],
+      "key_lemmas": [
+        "pastness"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'pastness' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2B-pastness-svasamvitti"
+      ],
+      "member_snippets": {
+        "V2B-pastness-svasamvitti": "How, if the manifestation has no touch of time, do we remember yesterday? The pastness is not a real quality of the object; it is the *being-previously-manifest"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_bond",
+      "label": "bond",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s32",
+        "s61"
+      ],
+      "key_lemmas": [
+        "bond"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'bond' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2E-external-inferred",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V2E-external-inferred": "The Vijñānavādin grants the cognition is self-luminous but presses its inner form: the blue-form is a reflection, and a reflection demands a ground (the arpaka)",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_speech",
+      "label": "speech",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s33",
+        "s35",
+        "s36"
+      ],
+      "key_lemmas": [
+        "speech"
+      ],
+      "sense_stability": "DIFFERENT_SENSE",
+      "membership_rationale": "segments where 'speech' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2F-other-minds",
+        "V2H-vimarsa-paravak",
+        "V2I-sphuratta"
+      ],
+      "member_snippets": {
+        "V2F-other-minds": "The Buddhist hopes to infer another's mind — from Maitra's speech, the other stream. Abhinavagupta shows it cannot work. To infer the fire in the sandalwood fro",
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_self-grasp",
+      "label": "self-grasp",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s35",
+        "s41"
+      ],
+      "key_lemmas": [
+        "self-grasp"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'self-grasp' occurs",
+      "nearest_competing_candidate": "cand_light",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2H-vimarsa-paravak",
+        "V2N-inner-appearance"
+      ],
+      "member_snippets": {
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe",
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something "
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_parā-vāk",
+      "label": "parā-vāk",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s35"
+      ],
+      "key_lemmas": [
+        "parā-vāk"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'parā-vāk' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2H-vimarsa-paravak"
+      ],
+      "member_snippets": {
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_language",
+      "label": "language",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s35"
+      ],
+      "key_lemmas": [
+        "language"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'language' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2H-vimarsa-paravak"
+      ],
+      "member_snippets": {
+        "V2H-vimarsa-paravak": "The claim is that the essence of light is the reflexive awareness, not the bare showing of objects. The crystal supplies the contrast: a light that merely showe"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_sphurattā",
+      "label": "sphurattā",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s36"
+      ],
+      "key_lemmas": [
+        "sphurattā"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'sphurattā' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2I-sphuratta"
+      ],
+      "member_snippets": {
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_throbbing",
+      "label": "throbbing",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s36"
+      ],
+      "key_lemmas": [
+        "throbbing"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'throbbing' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2I-sphuratta"
+      ],
+      "member_snippets": {
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_śabda",
+      "label": "śabda",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s36"
+      ],
+      "key_lemmas": [
+        "śabda"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'śabda' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2I-sphuratta"
+      ],
+      "member_snippets": {
+        "V2I-sphuratta": "The grammarian would make speech, the paśyantī, a separate supreme principle. But speech and the mind are only the operation of the ego — like the hand; none is"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_order-less",
+      "label": "order-less",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s38",
+        "s42"
+      ],
+      "key_lemmas": [
+        "order-less"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'order-less' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2K-vacakasphota",
+        "V2O-orderless-support"
+      ],
+      "member_snippets": {
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo",
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_adhyāsa",
+      "label": "adhyāsa",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s38"
+      ],
+      "key_lemmas": [
+        "adhyāsa"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'adhyāsa' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2K-vacakasphota"
+      ],
+      "member_snippets": {
+        "V2K-vacakasphota": "When we say \"this jar,\" the word is not pasted onto a free-standing thing; it is superimposed on the meaning (adhyāsa). If the word were not superimposed, it wo"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_vikalpa",
+      "label": "vikalpa",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s39",
+        "s40"
+      ],
+      "key_lemmas": [
+        "vikalpa"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'vikalpa' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2L-nonconstructed-I",
+        "V2M-descent-states"
+      ],
+      "member_snippets": {
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta",
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_conceptual",
+      "label": "conceptual",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s39"
+      ],
+      "key_lemmas": [
+        "conceptual"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'conceptual' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2L-nonconstructed-I"
+      ],
+      "member_snippets": {
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_articulation",
+      "label": "articulation",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s39"
+      ],
+      "key_lemmas": [
+        "articulation"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'articulation' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2L-nonconstructed-I"
+      ],
+      "member_snippets": {
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_linguistic",
+      "label": "linguistic",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s39"
+      ],
+      "key_lemmas": [
+        "linguistic"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'linguistic' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2L-nonconstructed-I"
+      ],
+      "member_snippets": {
+        "V2L-nonconstructed-I": "The objection is straightforward: if reflexive awareness is joined to linguistic form, why is it not simply a conceptual construction (*vikalpa*)? Abhinavagupta"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_continuity",
+      "label": "continuity",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s40"
+      ],
+      "key_lemmas": [
+        "continuity"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'continuity' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2M-descent-states"
+      ],
+      "member_snippets": {
+        "V2M-descent-states": "The consciousness descends, step by step, into the forms of the world — the void, the breath, the intellect, the body — and with each descent the self-conceit s"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_liberation",
+      "label": "liberation",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s41",
+        "s60",
+        "s62"
+      ],
+      "key_lemmas": [
+        "liberation"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'liberation' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2N-inner-appearance",
+        "V3N-one-lord-many",
+        "V3P-lover-union"
+      ],
+      "member_snippets": {
+        "V2N-inner-appearance": "The inner appearance — the self-grasp, the reflexive-awareness — stands firm in memory, in construction, and in cognition alike (kārikā 8). It is not something ",
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re",
+        "V3P-lover-union": "The closing sum of the IPVV. The teaching comes from the self, the śāstra, and the guru; the book-studied knowledge without the guru-order is sterile. And its p"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_pratibhā",
+      "label": "pratibhā",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s42"
+      ],
+      "key_lemmas": [
+        "pratibhā"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'pratibhā' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2O-orderless-support"
+      ],
+      "member_snippets": {
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_unity",
+      "label": "unity",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s42",
+        "s46",
+        "s48",
+        "s55"
+      ],
+      "key_lemmas": [
+        "unity"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'unity' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2O-orderless-support",
+        "V2S-unity-mahesvarya",
+        "V3B-bhedabheda",
+        "V3I-difference-real"
+      ],
+      "member_snippets": {
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support",
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,",
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true",
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_flashing",
+      "label": "flashing",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s42"
+      ],
+      "key_lemmas": [
+        "flashing"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'flashing' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2O-orderless-support"
+      ],
+      "member_snippets": {
+        "V2O-orderless-support": "The powers — knowledge, memory, removal — have been established. But a power needs a support, and the question is what supports them. Kārikā 1 gives the support"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_māheśvarya",
+      "label": "māheśvarya",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s45"
+      ],
+      "key_lemmas": [
+        "māheśvarya"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'māheśvarya' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2R-mahesvarya"
+      ],
+      "member_snippets": {
+        "V2R-mahesvarya": "The great-Lordship (māheśvarya) is twofold — directed at objects of knowledge and at objects of action; here the knowledge-directed lordship is determined. The "
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_identity",
+      "label": "identity",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s46"
+      ],
+      "key_lemmas": [
+        "identity"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'identity' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V2S-unity-mahesvarya"
+      ],
+      "member_snippets": {
+        "V2S-unity-mahesvarya": "The passage closes the jñānādhikāra with the unity of the knowers. Kārikā 10: the whole dealing of the world — the path by which consciousnesses know, remember,"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_āśraya",
+      "label": "āśraya",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s47"
+      ],
+      "key_lemmas": [
+        "āśraya"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'āśraya' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3A-timeless-order"
+      ],
+      "member_snippets": {
+        "V3A-timeless-order": "The kriyādhikāra opens a paradox: the Lord is beyond time and sequence, yet the world is shot through with sequence. How can the timeless act in time? The homag"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_bhedābheda",
+      "label": "bhedābheda",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s48"
+      ],
+      "key_lemmas": [
+        "bhedābheda"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'bhedābheda' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3B-bhedabheda"
+      ],
+      "member_snippets": {
+        "V3B-bhedabheda": "The cognitions of action, relation, universal, substance, direction and time have a substrate that is at once one and many, and they are accepted as true — true"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_means of knowledge",
+      "label": "means of knowledge",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s49"
+      ],
+      "key_lemmas": [
+        "means of knowledge"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'means of knowledge' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3C-one-light"
+      ],
+      "member_snippets": {
+        "V3C-one-light": "The passage asks what really makes a cognition valid. Ordinary discourse appears to locate the validating force in the object itself: a cognition of blue is sta"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_grace",
+      "label": "grace",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s52"
+      ],
+      "key_lemmas": [
+        "grace"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'grace' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3F-grace"
+      ],
+      "member_snippets": {
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_dhyāna",
+      "label": "dhyāna",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s52"
+      ],
+      "key_lemmas": [
+        "dhyāna"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'dhyāna' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3F-grace"
+      ],
+      "member_snippets": {
+        "V3F-grace": "The vimarśa closes on how one attains the Lord: by the Lord's grace, through a fourfold effort — the initiatory rite (dīkṣā), the vision-yoga (dhyāna), knowledg"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_creation",
+      "label": "creation",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s54",
+        "s59",
+        "s61"
+      ],
+      "key_lemmas": [
+        "creation"
+      ],
+      "sense_stability": "AMBIGUOUS",
+      "membership_rationale": "segments where 'creation' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3H-inference-across-knowers",
+        "V3M-states",
+        "V3O-bond-liberation"
+      ],
+      "member_snippets": {
+        "V3H-inference-across-knowers": "The Vijñānavādin objects: if everything is appearance, cause and effect are only relations between appearances, and an un-manifested fire is nothing — so how ca",
+        "V3M-states": "The bound knower lives in a round of states. At the lowest extreme is the void: the pralayākala, the dissolved knower, with only the barest trace of an \"I\" — a ",
+        "V3O-bond-liberation": "The bound one's creation is *un-common* (asādhāraṇī) — private, per-knower, per-moment, vanishing with him — yet sustained by the Lord's creation (īśasṛṣṭyujīvi"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_ignorance",
+      "label": "ignorance",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s55"
+      ],
+      "key_lemmas": [
+        "ignorance"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'ignorance' occurs",
+      "nearest_competing_candidate": "cand_one",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3I-difference-real"
+      ],
+      "member_snippets": {
+        "V3I-difference-real": "The sharpest objection to the unity: if consciousness is one and the difference of things is mere ignorance, how is action possible? For action needs an agent a"
+      },
+      "significance": "HIGH"
+    },
+    {
+      "candidate_id": "cand_contraction",
+      "label": "contraction",
+      "suspected_kind": "CONCEPT_TERM_FAMILY",
+      "member_segments": [
+        "s60"
+      ],
+      "key_lemmas": [
+        "contraction"
+      ],
+      "sense_stability": "NOT_ENOUGH_CONTEXT",
+      "membership_rationale": "segments where 'contraction' occurs",
+      "nearest_competing_candidate": "cand_lord",
+      "origin": "MACHINE",
+      "status": "MACHINE_PROPOSED",
+      "member_c1_ids": [
+        "V3N-one-lord-many"
+      ],
+      "member_snippets": {
+        "V3N-one-lord-many": "The tattvasaṅgraha (the collection of the essence) opens with the single great claim: the own-self alone of all beings is the one Lord, the maheśvara. His re-re"
+      },
+      "significance": "HIGH"
+    }
+  ],
+  "concept_to_c1_index": {
+    "prakāśa": [
+      "V1-k1.1-kathamcit",
+      "V1-upoddhata-mangala",
+      "V1A-svatyandya"
+    ],
+    "saṃvid": [
+      "V1-k1.1-kathamcit",
+      "V1-upoddhata-mangala",
+      "V1K-siddhanta-svasamvid"
+    ],
+    "lord": [
+      "V1-k1.1-kathamcit",
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-opening",
+      "V1-upoddhata-k11-karta",
+      "V1A-svatyandya",
+      "V1B-eligibility",
+      "V1C-svatma",
+      "V1E-foregrounding",
+      "V1F-upoddhata-opponents",
+      "V1G-cognition-refuted",
+      "V1K-siddhanta-svasamvid",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2G-dream-inversion",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta",
+      "V2J-samskara",
+      "V2M-descent-states",
+      "V2O-orderless-support",
+      "V2R-mahesvarya",
+      "V2S-unity-mahesvarya",
+      "V3A-timeless-order",
+      "V3F-grace",
+      "V3G-causality",
+      "V3H-inference-across-knowers",
+      "V3K-kancukas",
+      "V3L-knowers-malas",
+      "V3M-states",
+      "V3N-one-lord-many",
+      "V3O-bond-liberation",
+      "V3P-lover-union"
+    ],
+    "one": [
+      "V1-k1.1-kathamcit",
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-smrtibhranti-sankaranandana",
+      "V1-upoddhata-k11-karta",
+      "V1-upoddhata-k3-memory",
+      "V1-upoddhata-k4-5-antargadu",
+      "V1-upoddhata-k9-10-sambandha",
+      "V1A-svatyandya",
+      "V1B-eligibility",
+      "V1C-svatma",
+      "V1F-upoddhata-opponents",
+      "V1G-cognition-refuted",
+      "V1I-action-refuted",
+      "V1J-agent-constructed",
+      "V1L-yogipratyaksa",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V2C-ajadapramatr",
+      "V2F-other-minds",
+      "V2G-dream-inversion",
+      "V2I-sphuratta",
+      "V2K-vacakasphota",
+      "V2L-nonconstructed-I",
+      "V2M-descent-states",
+      "V2N-inner-appearance",
+      "V2O-orderless-support",
+      "V2P-pramatr-vyapara",
+      "V2S-unity-mahesvarya",
+      "V3A-timeless-order",
+      "V3B-bhedabheda",
+      "V3C-one-light",
+      "V3D-synthesis",
+      "V3E-error",
+      "V3F-grace",
+      "V3G-causality",
+      "V3H-inference-across-knowers",
+      "V3I-difference-real",
+      "V3K-kancukas",
+      "V3L-knowers-malas",
+      "V3N-one-lord-many",
+      "V3O-bond-liberation",
+      "V3P-lover-union"
+    ],
+    "consciousness": [
+      "V1-k1.1-kathamcit",
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-k1.2.7-citsvarupam",
+      "V1-upoddhata-k6-k8-caitanyamajada",
+      "V1-upoddhata-mangala",
+      "V1A-svatyandya",
+      "V1C-svatma",
+      "V1D-memory-eternal-knower",
+      "V1G-cognition-refuted",
+      "V1H-enjoyment-reflection",
+      "V1N-close-mahesvara",
+      "V2G-dream-inversion",
+      "V2M-descent-states",
+      "V2O-orderless-support",
+      "V2P-pramatr-vyapara",
+      "V2S-unity-mahesvarya",
+      "V3A-timeless-order",
+      "V3C-one-light",
+      "V3I-difference-real",
+      "V3J-agama-sivatattva"
+    ],
+    "manifestation": [
+      "V1-k1.1-kathamcit",
+      "V1-purvapaksa-opening",
+      "V1-upoddhata-mangala",
+      "V1A-svatyandya",
+      "V1D-memory-eternal-knower",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V2D-jnanasakti",
+      "V2I-sphuratta",
+      "V2K-vacakasphota",
+      "V2N-inner-appearance",
+      "V3C-one-light",
+      "V3I-difference-real",
+      "V3J-agama-sivatattva"
+    ],
+    "light": [
+      "V1-k1.1-kathamcit",
+      "V1-upoddhata-mangala",
+      "V1A-svatyandya",
+      "V2B-pastness-svasamvitti",
+      "V2D-jnanasakti",
+      "V2H-vimarsa-paravak",
+      "V2N-inner-appearance",
+      "V2Q-omniscient",
+      "V3C-one-light",
+      "V3D-synthesis"
+    ],
+    "recognition": [
+      "V1-k1.2-drstapi",
+      "V1-k1.3-atmaiva",
+      "V1-upoddhata-k11-karta",
+      "V1B-eligibility",
+      "V1E-foregrounding",
+      "V1K-siddhanta-svasamvid",
+      "V3B-bhedabheda",
+      "V3E-error",
+      "V3L-knowers-malas",
+      "V3N-one-lord-many",
+      "V3P-lover-union"
+    ],
+    "awareness": [
+      "V1-k1.2-drstapi",
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V1C-svatma",
+      "V1E-foregrounding",
+      "V1K-siddhanta-svasamvid",
+      "V2A-memory-lords-power",
+      "V2C-ajadapramatr",
+      "V2D-jnanasakti",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta",
+      "V2J-samskara",
+      "V2K-vacakasphota",
+      "V2L-nonconstructed-I",
+      "V2N-inner-appearance",
+      "V2S-unity-mahesvarya",
+      "V3D-synthesis",
+      "V3E-error",
+      "V3J-agama-sivatattva",
+      "V3L-knowers-malas"
+    ],
+    "self": [
+      "V1-k1.2-drstapi",
+      "V1-k1.3-atmaiva",
+      "V1-k1.4-1.5-buddhipurva",
+      "V1-purvapaksa-k1.2.7-citsvarupam",
+      "V1-purvapaksa-opening",
+      "V1-purvapaksa-smrtibhranti-sankaranandana",
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V1-upoddhata-k11-karta",
+      "V1-upoddhata-k3-memory",
+      "V1-upoddhata-k4-5-antargadu",
+      "V1-upoddhata-k6-k8-caitanyamajada",
+      "V1-upoddhata-mangala",
+      "V1A-svatyandya",
+      "V1B-eligibility",
+      "V1C-svatma",
+      "V1D-memory-eternal-knower",
+      "V1E-foregrounding",
+      "V1F-upoddhata-opponents",
+      "V1G-cognition-refuted",
+      "V1H-enjoyment-reflection",
+      "V1J-agent-constructed",
+      "V1K-siddhanta-svasamvid",
+      "V1L-yogipratyaksa",
+      "V1M-determination",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V2C-ajadapramatr",
+      "V2D-jnanasakti",
+      "V2E-external-inferred",
+      "V2G-dream-inversion",
+      "V2H-vimarsa-paravak",
+      "V2J-samskara",
+      "V2K-vacakasphota",
+      "V2L-nonconstructed-I",
+      "V2M-descent-states",
+      "V2N-inner-appearance",
+      "V2O-orderless-support",
+      "V2P-pramatr-vyapara",
+      "V2R-mahesvarya",
+      "V2S-unity-mahesvarya",
+      "V3C-one-light",
+      "V3I-difference-real",
+      "V3K-kancukas",
+      "V3L-knowers-malas",
+      "V3N-one-lord-many",
+      "V3P-lover-union"
+    ],
+    "knowledge": [
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-k1.2.7-citsvarupam",
+      "V1-upoddhata-mangala",
+      "V1B-eligibility",
+      "V1G-cognition-refuted",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2D-jnanasakti",
+      "V2N-inner-appearance",
+      "V2O-orderless-support",
+      "V2R-mahesvarya",
+      "V3C-one-light",
+      "V3F-grace",
+      "V3J-agama-sivatattva",
+      "V3K-kancukas",
+      "V3P-lover-union"
+    ],
+    "jñāna": [
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-k1.2.7-citsvarupam",
+      "V1F-upoddhata-opponents",
+      "V1G-cognition-refuted",
+      "V2D-jnanasakti",
+      "V2E-external-inferred",
+      "V2R-mahesvarya",
+      "V2S-unity-mahesvarya",
+      "V3F-grace",
+      "V3H-inference-across-knowers"
+    ],
+    "śakti": [
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-opening",
+      "V1-upoddhata-mangala",
+      "V1N-close-mahesvara",
+      "V2D-jnanasakti"
+    ],
+    "power": [
+      "V1-k1.3-atmaiva",
+      "V1-purvapaksa-opening",
+      "V1-upoddhata-mangala",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2D-jnanasakti",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta",
+      "V2J-samskara",
+      "V2O-orderless-support",
+      "V2S-unity-mahesvarya",
+      "V3G-causality",
+      "V3J-agama-sivatattva",
+      "V3O-bond-liberation"
+    ],
+    "kriyā": [
+      "V1-k1.3-atmaiva",
+      "V1G-cognition-refuted",
+      "V1I-action-refuted",
+      "V3A-timeless-order",
+      "V3J-agama-sivatattva"
+    ],
+    "action": [
+      "V1-k1.3-atmaiva",
+      "V1-upoddhata-k11-karta",
+      "V1-upoddhata-k9-10-sambandha",
+      "V1-upoddhata-mangala",
+      "V1G-cognition-refuted",
+      "V1I-action-refuted",
+      "V1J-agent-constructed",
+      "V1K-siddhanta-svasamvid",
+      "V2F-other-minds",
+      "V2N-inner-appearance",
+      "V2R-mahesvarya",
+      "V3A-timeless-order",
+      "V3B-bhedabheda",
+      "V3D-synthesis",
+      "V3G-causality",
+      "V3I-difference-real",
+      "V3J-agama-sivatattva",
+      "V3L-knowers-malas",
+      "V3N-one-lord-many",
+      "V3O-bond-liberation"
+    ],
+    "inference": [
+      "V1-k1.4-1.5-buddhipurva",
+      "V1L-yogipratyaksa",
+      "V2E-external-inferred",
+      "V3H-inference-across-knowers",
+      "V3J-agama-sivatattva"
+    ],
+    "states": [
+      "V1-purvapaksa-k1.2.7-citsvarupam",
+      "V2M-descent-states",
+      "V3M-states",
+      "V3P-lover-union"
+    ],
+    "vimarśa": [
+      "V1-purvapaksa-opening",
+      "V2H-vimarsa-paravak",
+      "V2J-samskara",
+      "V2Q-omniscient",
+      "V3F-grace",
+      "V3L-knowers-malas"
+    ],
+    "lordship": [
+      "V1-purvapaksa-opening",
+      "V1-upoddhata-k11-karta",
+      "V1F-upoddhata-opponents",
+      "V1G-cognition-refuted",
+      "V2H-vimarsa-paravak",
+      "V2R-mahesvarya",
+      "V2S-unity-mahesvarya"
+    ],
+    "memory": [
+      "V1-purvapaksa-smrtibhranti-sankaranandana",
+      "V1-upoddhata-k3-memory",
+      "V1-upoddhata-k4-5-antargadu",
+      "V1D-memory-eternal-knower",
+      "V1M-determination",
+      "V1N-close-mahesvara",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V2J-samskara",
+      "V2K-vacakasphota",
+      "V2N-inner-appearance",
+      "V2O-orderless-support",
+      "V2P-pramatr-vyapara"
+    ],
+    "smṛti": [
+      "V1-purvapaksa-smrtibhranti-sankaranandana"
+    ],
+    "past": [
+      "V1-purvapaksa-smrtibhranti-sankaranandana",
+      "V1-upoddhata-k3-memory",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V2K-vacakasphota"
+    ],
+    "reflexive": [
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V2D-jnanasakti",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta",
+      "V2J-samskara",
+      "V2K-vacakasphota",
+      "V2L-nonconstructed-I",
+      "V2N-inner-appearance",
+      "V2S-unity-mahesvarya",
+      "V3E-error",
+      "V3J-agama-sivatattva"
+    ],
+    "self-awareness": [
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V1K-siddhanta-svasamvid",
+      "V2H-vimarsa-paravak",
+      "V2L-nonconstructed-I",
+      "V2S-unity-mahesvarya"
+    ],
+    "construction": [
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V1-upoddhata-k11-karta",
+      "V1J-agent-constructed",
+      "V2H-vimarsa-paravak",
+      "V2L-nonconstructed-I",
+      "V2M-descent-states",
+      "V2N-inner-appearance",
+      "V3O-bond-liberation"
+    ],
+    "aham": [
+      "V1-upoddhata-k1-2-ahampratiti",
+      "V2R-mahesvarya"
+    ],
+    "will": [
+      "V1-upoddhata-k11-karta",
+      "V1-upoddhata-mangala",
+      "V2A-memory-lords-power",
+      "V2G-dream-inversion",
+      "V2M-descent-states",
+      "V3G-causality",
+      "V3I-difference-real"
+    ],
+    "agent": [
+      "V1-upoddhata-k11-karta",
+      "V1-upoddhata-k9-10-sambandha",
+      "V1J-agent-constructed",
+      "V3G-causality",
+      "V3I-difference-real"
+    ],
+    "pramātṛ": [
+      "V1-upoddhata-k3-memory",
+      "V1-upoddhata-k6-k8-caitanyamajada",
+      "V2C-ajadapramatr",
+      "V2P-pramatr-vyapara"
+    ],
+    "cause": [
+      "V1-upoddhata-k4-5-antargadu",
+      "V1-upoddhata-k9-10-sambandha",
+      "V1K-siddhanta-svasamvid",
+      "V1M-determination",
+      "V2B-pastness-svasamvitti",
+      "V2E-external-inferred",
+      "V2G-dream-inversion",
+      "V2J-samskara",
+      "V2P-pramatr-vyapara",
+      "V2R-mahesvarya",
+      "V3A-timeless-order",
+      "V3C-one-light",
+      "V3G-causality",
+      "V3H-inference-across-knowers",
+      "V3J-agama-sivatattva",
+      "V3K-kancukas",
+      "V3P-lover-union"
+    ],
+    "caitanya": [
+      "V1-upoddhata-k6-k8-caitanyamajada"
+    ],
+    "crystal": [
+      "V1-upoddhata-k6-k8-caitanyamajada",
+      "V2H-vimarsa-paravak"
+    ],
+    "pramāṇa": [
+      "V1-upoddhata-k9-10-sambandha",
+      "V1E-foregrounding",
+      "V2P-pramatr-vyapara",
+      "V3C-one-light",
+      "V3E-error"
+    ],
+    "agency": [
+      "V1-upoddhata-k9-10-sambandha",
+      "V3G-causality",
+      "V3K-kancukas"
+    ],
+    "knower": [
+      "V1-upoddhata-k9-10-sambandha",
+      "V1A-svatyandya",
+      "V1B-eligibility",
+      "V1D-memory-eternal-knower",
+      "V2C-ajadapramatr",
+      "V2J-samskara",
+      "V2O-orderless-support",
+      "V2P-pramatr-vyapara",
+      "V2S-unity-mahesvarya",
+      "V3C-one-light",
+      "V3E-error",
+      "V3G-causality",
+      "V3H-inference-across-knowers",
+      "V3K-kancukas",
+      "V3L-knowers-malas",
+      "V3M-states",
+      "V3O-bond-liberation"
+    ],
+    "causality": [
+      "V1-upoddhata-k9-10-sambandha",
+      "V3G-causality"
+    ],
+    "effect": [
+      "V1-upoddhata-k9-10-sambandha",
+      "V2F-other-minds",
+      "V2P-pramatr-vyapara",
+      "V3G-causality",
+      "V3H-inference-across-knowers",
+      "V3J-agama-sivatattva",
+      "V3K-kancukas"
+    ],
+    "bhāvanā": [
+      "V1-upoddhata-mangala",
+      "V3F-grace"
+    ],
+    "external": [
+      "V1-upoddhata-mangala",
+      "V1M-determination",
+      "V2E-external-inferred",
+      "V2F-other-minds",
+      "V2G-dream-inversion",
+      "V2N-inner-appearance"
+    ],
+    "freedom": [
+      "V1A-svatyandya",
+      "V2A-memory-lords-power",
+      "V2H-vimarsa-paravak",
+      "V2P-pramatr-vyapara",
+      "V2R-mahesvarya",
+      "V3L-knowers-malas",
+      "V3N-one-lord-many"
+    ],
+    "bheda": [
+      "V1A-svatyandya",
+      "V3B-bhedabheda"
+    ],
+    "abheda": [
+      "V1A-svatyandya",
+      "V3B-bhedabheda"
+    ],
+    "shines": [
+      "V1A-svatyandya",
+      "V1C-svatma",
+      "V2A-memory-lords-power",
+      "V2B-pastness-svasamvitti",
+      "V3B-bhedabheda",
+      "V3F-grace",
+      "V3K-kancukas",
+      "V3N-one-lord-many",
+      "V3O-bond-liberation"
+    ],
+    "support": [
+      "V1B-eligibility",
+      "V2O-orderless-support",
+      "V2S-unity-mahesvarya",
+      "V3A-timeless-order"
+    ],
+    "word": [
+      "V1B-eligibility",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta",
+      "V2K-vacakasphota",
+      "V2O-orderless-support"
+    ],
+    "perception": [
+      "V1C-svatma",
+      "V1L-yogipratyaksa",
+      "V2E-external-inferred",
+      "V2P-pramatr-vyapara",
+      "V2Q-omniscient",
+      "V3J-agama-sivatattva"
+    ],
+    "vāk": [
+      "V1F-upoddhata-opponents",
+      "V2H-vimarsa-paravak",
+      "V2Q-omniscient"
+    ],
+    "reason": [
+      "V1G-cognition-refuted"
+    ],
+    "order": [
+      "V1I-action-refuted",
+      "V2G-dream-inversion",
+      "V2K-vacakasphota",
+      "V2O-orderless-support",
+      "V3F-grace",
+      "V3G-causality",
+      "V3P-lover-union"
+    ],
+    "difference": [
+      "V1L-yogipratyaksa",
+      "V2C-ajadapramatr",
+      "V3B-bhedabheda",
+      "V3I-difference-real",
+      "V3O-bond-liberation"
+    ],
+    "appearance": [
+      "V1M-determination",
+      "V2A-memory-lords-power",
+      "V2F-other-minds",
+      "V2G-dream-inversion",
+      "V2M-descent-states",
+      "V2N-inner-appearance",
+      "V2P-pramatr-vyapara",
+      "V2R-mahesvarya",
+      "V3C-one-light",
+      "V3D-synthesis",
+      "V3E-error",
+      "V3H-inference-across-knowers"
+    ],
+    "pervasion": [
+      "V1N-close-mahesvara",
+      "V3H-inference-across-knowers",
+      "V3J-agama-sivatattva"
+    ],
+    "pastness": [
+      "V2B-pastness-svasamvitti"
+    ],
+    "bond": [
+      "V2E-external-inferred",
+      "V3O-bond-liberation"
+    ],
+    "speech": [
+      "V2F-other-minds",
+      "V2H-vimarsa-paravak",
+      "V2I-sphuratta"
+    ],
+    "self-grasp": [
+      "V2H-vimarsa-paravak",
+      "V2N-inner-appearance"
+    ],
+    "parā-vāk": [
+      "V2H-vimarsa-paravak"
+    ],
+    "language": [
+      "V2H-vimarsa-paravak"
+    ],
+    "sphurattā": [
+      "V2I-sphuratta"
+    ],
+    "throbbing": [
+      "V2I-sphuratta"
+    ],
+    "śabda": [
+      "V2I-sphuratta"
+    ],
+    "order-less": [
+      "V2K-vacakasphota",
+      "V2O-orderless-support"
+    ],
+    "adhyāsa": [
+      "V2K-vacakasphota"
+    ],
+    "vikalpa": [
+      "V2L-nonconstructed-I",
+      "V2M-descent-states"
+    ],
+    "conceptual": [
+      "V2L-nonconstructed-I"
+    ],
+    "articulation": [
+      "V2L-nonconstructed-I"
+    ],
+    "linguistic": [
+      "V2L-nonconstructed-I"
+    ],
+    "continuity": [
+      "V2M-descent-states"
+    ],
+    "liberation": [
+      "V2N-inner-appearance",
+      "V3N-one-lord-many",
+      "V3P-lover-union"
+    ],
+    "pratibhā": [
+      "V2O-orderless-support"
+    ],
+    "unity": [
+      "V2O-orderless-support",
+      "V2S-unity-mahesvarya",
+      "V3B-bhedabheda",
+      "V3I-difference-real"
+    ],
+    "flashing": [
+      "V2O-orderless-support"
+    ],
+    "māheśvarya": [
+      "V2R-mahesvarya"
+    ],
+    "identity": [
+      "V2S-unity-mahesvarya"
+    ],
+    "āśraya": [
+      "V3A-timeless-order"
+    ],
+    "bhedābheda": [
+      "V3B-bhedabheda"
+    ],
+    "means of knowledge": [
+      "V3C-one-light"
+    ],
+    "grace": [
+      "V3F-grace"
+    ],
+    "dhyāna": [
+      "V3F-grace"
+    ],
+    "creation": [
+      "V3H-inference-across-knowers",
+      "V3M-states",
+      "V3O-bond-liberation"
+    ],
+    "ignorance": [
+      "V3I-difference-real"
+    ],
+    "contraction": [
+      "V3N-one-lord-many"
+    ]
+  },
+  "argument_integration": [
+    {
+      "gold": "ARG-GOLD-001",
+      "structure": "CONCEPTUAL_DISTINCTION",
+      "passage": "chunkV2-O-saptamo-vimarsa",
+      "c1": "V2O-orderless-support",
+      "concepts": [
+        "pratibhā",
+        "orderless",
+        "support",
+        "akrama"
+      ],
+      "matched_themes": [
+        "cand_lord",
+        "cand_one",
+        "cand_consciousness",
+        "cand_self",
+        "cand_knowledge",
+        "cand_power",
+        "cand_memory",
+        "cand_knower",
+        "cand_support",
+        "cand_word",
+        "cand_order",
+        "cand_order-less",
+        "cand_pratibhā",
+        "cand_unity",
+        "cand_flashing"
+      ]
+    },
+    {
+      "gold": "ARG-GOLD-002",
+      "structure": "CONCEPTUAL_DISTINCTION",
+      "passage": "chunkV2-L-sastho-vimarsa-smrti-apohana",
+      "c1": "V2L-nonconstructed-I",
+      "concepts": [
+        "vikalpa",
+        "construction",
+        "i-awareness",
+        "reflexive"
+      ],
+      "matched_themes": [
+        "cand_one",
+        "cand_awareness",
+        "cand_self",
+        "cand_reflexive",
+        "cand_self-awareness",
+        "cand_construction",
+        "cand_vikalpa",
+        "cand_conceptual",
+        "cand_articulation",
+        "cand_linguistic"
+      ]
+    },
+    {
+      "gold": "ARG-GOLD-003",
+      "structure": "REDUCTIO",
+      "passage": "chunkV2-O-saptamo-vimarsa",
+      "c1": "V2O-orderless-support",
+      "concepts": [
+        "support",
+        "orderless",
+        "akrama",
+        "regress"
+      ],
+      "matched_themes": [
+        "cand_lord",
+        "cand_one",
+        "cand_consciousness",
+        "cand_self",
+        "cand_knowledge",
+        "cand_power",
+        "cand_memory",
+        "cand_knower",
+        "cand_support",
+        "cand_word",
+        "cand_order",
+        "cand_order-less",
+        "cand_pratibhā",
+        "cand_unity",
+        "cand_flashing"
+      ]
+    },
+    {
+      "gold": "ARG-GOLD-004",
+      "structure": "CONCEPTUAL_DISTINCTION",
+      "passage": "chunkV2-H-pancamo-vimarsa-k11-13",
+      "c1": "V2H-vimarsa-paravak",
+      "concepts": [
+        "vimarśa",
+        "prakāśa",
+        "reflexive",
+        "parā-vāk"
+      ],
+      "matched_themes": [
+        "cand_lord",
+        "cand_light",
+        "cand_awareness",
+        "cand_self",
+        "cand_power",
+        "cand_vimarśa",
+        "cand_lordship",
+        "cand_reflexive",
+        "cand_self-awareness",
+        "cand_construction",
+        "cand_crystal",
+        "cand_freedom",
+        "cand_word",
+        "cand_vāk",
+        "cand_speech",
+        "cand_self-grasp",
+        "cand_parā-vāk",
+        "cand_language"
+      ]
+    },
+    {
+      "gold": "ARG-GOLD-005",
+      "structure": "INTERPRETIVE_SCOPE",
+      "passage": "chunkV3-I-kriya-caturtho-close-k20-21",
+      "c1": "V3I-difference-real",
+      "concepts": [
+        "difference",
+        "ignorance",
+        "anirvācya",
+        "will"
+      ],
+      "matched_themes": [
+        "cand_one",
+        "cand_consciousness",
+        "cand_manifestation",
+        "cand_self",
+        "cand_action",
+        "cand_will",
+        "cand_agent",
+        "cand_difference",
+        "cand_unity",
+        "cand_ignorance"
+      ]
+    }
+  ],
+  "provenance": {
+    "origin": "MACHINE",
+    "status": "MACHINE_PROPOSED",
+    "lexicon_version": "ipvv-c1-v0",
+    "decomposition": [
+      "segment",
+      "concept_extraction",
+      "relation_graph",
+      "grouping",
+      "kind_proposal",
+      "sense_stability",
+      "coverage_audit"
+    ]
+  }
+}
