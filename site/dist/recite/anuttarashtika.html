@@ -148,8 +148,10 @@ if(side){
   side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
 }
 }catch(e){}
+function initToc(){
 var toc=document.getElementById('tocbody');
-if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
 toc.innerHTML=html||'<span style="color:#999">—</span>';
 var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
@@ -157,7 +159,42 @@ function spy(){var y=window.scrollY+120,cur=null;
 hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
-window.addEventListener('scroll',spy,{passive:true});spy();}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
 })();
 </script><script>window.__WT={"anuttara_01": {"dur": 22.09, "segs": [[0.06, 4.462], [5.623, 9.945], [11.045, 15.787], [16.848, 21.59]]}, "anuttara_02": {"dur": 21.714, "segs": [[0.06, 4.683], [5.664, 10.046], [11.147, 15.67], [16.831, 21.134]]}, "anuttara_03": {"dur": 21.874, "segs": [[0.04, 5.263], [6.484, 10.146], [11.347, 15.89], [16.911, 21.714]]}, "anuttara_04": {"dur": 22.271, "segs": [[0.08, 4.822], [5.663, 10.245], [11.386, 16.088], [17.109, 21.711]]}, "anuttara_05": {"dur": 21.893, "segs": [[0.1, 5.583], [6.324, 9.986], [11.126, 15.789], [16.73, 21.372]]}, "anuttara_06": {"dur": 21.774, "segs": [[0.04, 4.583], [5.644, 10.227], [11.207, 15.81], [16.851, 21.254]]}, "anuttara_07": {"dur": 22.63, "segs": [[0.14, 4.722], [5.642, 10.064], [11.445, 16.307], [17.328, 22.21]]}, "anuttara_08": {"dur": 21.274, "segs": [[0.02, 4.243], [5.063, 9.466], [10.507, 15.07], [16.411, 20.694]]}}</script><script>
 (function(){

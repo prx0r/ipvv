@@ -214,8 +214,10 @@ if(side){
   side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
 }
 }catch(e){}
+function initToc(){
 var toc=document.getElementById('tocbody');
-if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
 toc.innerHTML=html||'<span style="color:#999">—</span>';
 var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
@@ -223,7 +225,42 @@ function spy(){var y=window.scrollY+120,cur=null;
 hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
-window.addEventListener('scroll',spy,{passive:true});spy();}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
 })();
 </script><script>
 (function(){
