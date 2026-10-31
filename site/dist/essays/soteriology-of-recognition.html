@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE SOTERIOLOGY OF RECOGNITION: THE JĪVANMUKTA AND THE TRANSMISSION · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE SOTERIOLOGY OF RECOGNITION: THE JĪVANMUKTA AND THE TRANSMISSION</h1><div class="skt"></div><div class="sub">2026-08-11. The recognition-thesis is not only epistemology and metaphysics; it is a soteriology. The</div><div class="sub">1683 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-SOTERIOLOGY-OF-RECOGNITION.md">source markdown</a></div><h1>THE SOTERIOLOGY OF RECOGNITION: THE JĪVANMUKTA AND THE TRANSMISSION</h1>
+<h2>Why liberation is recognition, how the IPVV proves it, and the guru-paramparā — the closing sum (V3N–P)</h2>
+<ul>
+<li>026-08-11. The recognition-thesis is not only epistemology and metaphysics; it is a soteriology. The</li>
+<li>VV closes on the liberation: since liberation is from the recognition alone, the elaborate</li>
+<li>fort-yogas are useless; the recognition is the clear, effort-less means; and its fruit is the</li>
+<li>vanmukta — the one liberated while still living. This essay expounds the soteriology: why liberation</li>
+<li> recognition (not effort), how the IPVV argues it, the bond and the liberation, and the transmission</li>
+<li>he guru-paramparā). It is the soteriology essay, unique to the completed IPVV — the region neither the</li>
+<li>K nor Ratié develops.*</li>
+</ul>
+<hr/>
+<h2>1. Why liberation is recognition</h2>
+<ul>
+<li>e soteriological claim of the IPVV is precise and radical:</li>
+</ul>
+<blockquote>&quot;Since liberation is from the recognition alone, all the elaborate effort-yogas are useless here;</blockquote>
+<blockquote>this is the clear means, effort-less, un-undertaken, yet bearing the great fruit.&quot; (V3P)</blockquote>
+<ul>
+<li>The argument.<i>* Liberation is from the recognition *alone</i>. Why? Because — as the whole system has</li>
+<li>tablished — the self was never absent; it is only mis-positioned. The bondage is the misreading (the</li>
+<li>entification of the self as a thing among things); the liberation is the removal of that misreading.</li>
+<li>d the removal of a misreading is not an achievement; it is a recognition — the re-cognition of what</li>
+<li>s always there.</li>
+</ul>
+<ul>
+<li>The contrast with effort.** The breath-controls and the effort-yogas are &quot;artificial&quot;; &quot;the un-made</li>
+<li>ality does not yield to a sixteenth part of such effort.&quot; If the self was never absent, no effort can</li>
+<li>d it; and if the bondage is a misreading, no effort can remove it by adding something. Only the</li>
+<li>cognition — the turning that sees what was always present — can do it. The recognition is &quot;the clear</li>
+<li>ans, effort-less, un-undertaken, yet bearing the great fruit.&quot;</li>
+</ul>
+<ul>
+<li>The lover-image (the mechanism).** The lover stands near; as long as he is not recognized, he cannot</li>
+<li> enjoyed. The world-Lord is always present, always near; he is not experienced in his own splendor</li>
+<li>til the recognition arises. The recognition turns the un-known nearness into the joy of union. This</li>
+<li> the soteriological mechanism: nothing is added (the lover was near); the recognition turns the near</li>
+<li>to the enjoyed.</li>
+</ul>
+<hr/>
+<h2>2. The bond: the paśu&#x27;s un-common creation (V3O)</h2>
+<ul>
+<li>e soteriology requires an account of the bondage. The IPVV gives it in the tattvasaṅgraha (V3O):</li>
+</ul>
+<ul>
+<li>The bound one creates, after his own fashion — but his creation is un-common.** It is private,</li>
+<li>r-knower, per-moment, vanishing with him. And it does not stand on its own; it is *sustained by the</li>
+<li>rd&#x27;s creation*.</li>
+</ul>
+<blockquote>&quot;The whole difference of bound and liberated hangs on a single fact: the bound one does not <i>know</i></blockquote>
+<blockquote>his own power. He forgets that the world he builds is built with the Lord&#x27;s own materials.&quot; (V3O)</blockquote>
+<ul>
+<li>The construction-action is the bond.** &quot;By it the māyā-power binds the animal.&quot; Even the seemingly</li>
+<li>ee constructions — &quot;I, the king, stand,&quot; &quot;I have slain my enemy&quot; — are, on inspection,</li>
+<li>her-dependent; the bound one&#x27;s freedom is only apparent, resting on the Lord&#x27;s.</li>
+</ul>
+<ul>
+<li>The threefold māyā.** The māyā works in three ways: the appearance of the void, the appearance of the</li>
+<li>posite, the mere negation — spreading through the three stains (āṇava, māyīya, kārma).</li>
+</ul>
+<hr/>
+<h2>3. The liberation: the abandonment of construction (V3O)</h2>
+<ul>
+<li>ainst the bound one&#x27;s un-common creation stands the Lord&#x27;s common creation — clear-manifestation,</li>
+<li>ver constructed, always whole. And there is a path out of the prison:</li>
+</ul>
+<blockquote>&quot;When, by the thinning of the constructions and the gathering of the mind to one point, the bound one</blockquote>
+<blockquote>comes to the &#x27;I-this&#x27; of the Lord, his animal-ness is destroyed and the Lord-ness shines.&quot; (V3O)</blockquote>
+<ul>
+<li>The mechanism of the liberation.** The liberation is the abandonment of construction — the thinning of</li>
+<li>e vikalpas, the gathering of the mind to one point, the coming to the &quot;I-this&quot; of the Lord. This is</li>
+<li>t an addition of something new; it is the removal of the constructions (the misreadings) that hid the</li>
+<li>rd. The liberation is the recognition, because it is the removal of the false construction, not the</li>
+<li>tainment of a new state.</li>
+</ul>
+<hr/>
+<h2>4. The jīvanmukta (V3P)</h2>
+<ul>
+<li>e fruit of the recognition is the jīvanmukta — the one liberated while still living:</li>
+</ul>
+<blockquote>&quot;The one who, even in the body, is already free, and who at the fall of the body is simply the</blockquote>
+<blockquote>supreme Lord. This, Abhinavagupta says, is the most wondrous thing of all — liberation in this very</blockquote>
+<blockquote>life.&quot; (V3P)</blockquote>
+<ul>
+<li>The claim.** Liberation is not the destruction of the body or the escape from the world; it is the</li>
+<li>cognition that liberates <i>while still living</i>. The jīvanmukta lives in the body, deals with the world,</li>
+<li>t is already free — because the false identification has been removed, not the body.</li>
+</ul>
+<ul>
+<li>The significance for the recognition-thesis.** The jīvanmukta is the living proof that the</li>
+<li>cognition-thesis is true: if liberation were an attainment (something added), it would require a new</li>
+<li>ate; but it is a recognition (nothing added), so it can occur while the body and world remain. The</li>
+<li>vanmukta is the recognition, lived. This is why &quot;the most wondrous thing of all&quot; is liberation in</li>
+<li>is very life: because it is the removal of a misreading, not the acquisition of a state.</li>
+</ul>
+<hr/>
+<h2>5. The transmission: the guru-paramparā (V3P)</h2>
+<ul>
+<li>e IPVV closes on the transmission of the teaching:</li>
+</ul>
+<blockquote>&quot;Part of the teaching comes from the self (svataḥ); part from the śāstra (śāstrataḥ); and part must</blockquote>
+<blockquote>come from the guru (gurutaḥ). For even the vision of the śāstra must be carried to its proper power</blockquote>
+<blockquote>by the lineage of teachers.&quot; (V3P)</blockquote>
+<ul>
+<li>d Abhinava is stern:</li>
+</ul>
+<blockquote>&quot;The book-studied knowledges, without the guru-order, practicing and teaching, ripen long in hell.&quot;</blockquote>
+<blockquote>(V3P)</blockquote>
+<ul>
+<li>The line.** The transmission runs from the ādi-Śrīkaṇṭhanātha down through Durvāsa and Tryambakāditya,</li>
+<li>e mental sons who carry the un-precedented, effort-less word.</li>
+</ul>
+<ul>
+<li>Why the guru is necessary.** The teaching must be received from the living line, because the</li>
+<li>cognition is not a proposition to be believed but an event to be triggered. The guru does not give a</li>
+<li>w content; he <i>points</i> — he occasions the recognition of what was always there. This is why the</li>
+<li>ok-studied knowledge without the guru-order is sterile: it is the content without the pointing, and</li>
+<li>e recognition is not the content but the turning.</li>
+</ul>
+<hr/>
+<h2>6. The soteriological argument, complete</h2>
+<ul>
+<li>e soteriology of recognition, completely stated:</li>
+</ul>
+<ul>
+<li> <b>The self was never absent</b> (V1D) — so liberation cannot be an attainment.</li>
+<li> <b>The bondage is the misreading</b> (the identification with the finite self-positioning) — so</li>
+<li>beration cannot be an addition.</li>
+<li> <b>The liberation is the removal of the misreading</b> — the recognition, the abandonment of</li>
+<li>nstruction (V3O).</li>
+<li> <b>Therefore liberation is from the recognition alone</b> (V3P) — the effort-less, clear means.</li>
+<li> <b>The fruit is the jīvanmukta</b> — liberation in this very life, because it is a removal, not a state.</li>
+<li> <b>The recognition is transmitted</b> by the guru-paramparā, because it is a pointing, not a</li>
+<li>oposition (V3P).</li>
+</ul>
+<ul>
+<li>The conclusion.** The soteriology completes the recognition-thesis. The epistemology said knowledge</li>
+<li> the felt self-awareness; the metaphysics said action is the same self-awareness as the will; the</li>
+<li>teriology says liberation is the same self-awareness recognized — the jīvanmukta, the one who, even in</li>
+<li>e body, is free. Recognition is not only how we know and act; it is how we are liberated.</li>
+</ul>
+<hr/>
+<h2>7. The boundary</h2>
+<ul>
+<li>e soteriology is [T] in the IPVV (the recognition-path, the jīvanmukta, the guru-paramparā) and it</li>
+<li>llows from the first principles of the system. The one commitment is the same as everywhere: the</li>
+<li>iversalization — the step from &quot;each self re-cognizes itself&quot; to &quot;all selves are one Lord.&quot; The</li>
+<li>vanmukta is the recognition of the per-field self as the Lord; the identity of all such Lords is the</li>
+<li>ger. The soteriology is argued for the finite field; the one Lord is the commitment.</li>
+</ul>
+<hr/>
+<h2>8. The significance</h2>
+<ul>
+<li>e soteriology is the completion of the recognition-thesis, and it is unique to the completed IPVV —</li>
+<li>e region neither the IPK nor Ratié&#x27;s book develops. It shows:</li>
+</ul>
+<ul>
+<li> <b>Why recognition is the path</b> — because liberation is the removal of a misreading, not the</li>
+<li>tainment of a state.</li>
+<li> <b>How the liberation works</b> — the abandonment of construction, the coming to the &quot;I-this&quot; of the</li>
+<li>rd.</li>
+<li> <b>What it produces</b> — the jīvanmukta, the one liberated while living.</li>
+<li> <b>How it is transmitted</b> — the guru-paramparā, the pointing that occasions the recognition.</li>
+</ul>
+<ul>
+<li>e IPVV does not stop at the epistemology; it builds the path and closes on the jīvanmukta. This is</li>
+<li>e soteriology of recognition — the final region of the system, and the completion of the recognition-</li>
+<li>esis.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the soteriology essay. Liberation is from the recognition alone (V3P): because the self was</li>
+<li>ver absent and the bondage is the misreading, the liberation is the removal of the misreading — the</li>
+<li>cognition, the abandonment of construction (V3O). The fruit is the jīvanmukta, the one liberated while</li>
+<li>ving (V3P); the transmission is the guru-paramparā, the pointing that occasions the recognition. This</li>
+<li>mpletes the recognition-thesis as a soteriology. The universalization is the commitment.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li><b>IPVV L2, the tattvasaṅgraha</b>: V3O (the paśu&#x27;s un-common creation; the construction-action as the bond; &quot;the bound one does not know his own power&quot;), V3P (the jīvanmukta; the guru-paramparā; the lover-image). In <code>sanskritree/translations/_stack/ipvv/pilot/pilot_V3{O,P}_L2_read.md</code>.</li>
+<li><b>The key claim (V3P)</b>: &quot;Since liberation is from the recognition alone, all the elaborate effort-yogas are useless here; this is the clear means, effort-less, un-undertaken, yet bearing the great fruit.&quot;</li>
+<li><b>The jīvanmukta (V3P)</b>: &quot;The one who, even in the body, is already free, and who at the fall of the body is simply the supreme Lord... liberation in this very life.&quot;</li>
+<li>The guru-paramparā (V3P): &quot;The book-studied knowledges, without the guru-order, practicing and teaching, ripen long in hell.&quot;</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-SOTERIOLOGY-OF-RECOGNITION.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

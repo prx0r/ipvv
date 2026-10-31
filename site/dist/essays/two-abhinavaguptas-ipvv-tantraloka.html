@@ -1,0 +1,607 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE TWO ABHINAVAGUPTAS: A COMPARATIVE SYNTHESIS OF THE IPVV AND THE TANTRĀLOKA · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE TWO ABHINAVAGUPTAS: A COMPARATIVE SYNTHESIS OF THE IPVV AND THE TANTRĀLOKA</h1><div class="skt"></div><div class="sub">A magnum-opus essay. 2026-08-11. Abhinavagupta wrote two masterworks that face the same philosophical</div><div class="sub">4230 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-TWO-ABHINAVAGUPTAS-IPVV-TANTRALOKA.md">source markdown</a></div><h1>THE TWO ABHINAVAGUPTAS: A COMPARATIVE SYNTHESIS OF THE IPVV AND THE TANTRĀLOKA</h1>
+<h2>The encyclopedic and the dialectical faces of one philosophy — the six shared cruxes, the powers and the upāyas, the camatkāra, and the one commitment</h2>
+<ul>
+<li> magnum-opus essay. 2026-08-11. Abhinavagupta wrote two masterworks that face the same philosophical</li>
+<li>oblems: the Tantrāloka (TĀ), the encyclopedic synthesis of the whole Trika across thirty-seven</li>
+<li>nikas, and the Īśvarapratyabhijñāvivṛtivimarśinī (IPVV), the enormous nanu→āha dialectical commentary</li>
+<li> Utpaladeva&#x27;s lost Vivṛti. This essay is the complete comparative synthesis of the two. It is now</li>
+<li>ssible in full because the IPVV is translated. It shows that the two texts are two faces of one</li>
+<li>ilosophy — the TĀ states, the IPVV argues; the TĀ sweeps, the IPVV proves — and that they converge on</li>
+<li>e same load-bearing claims and the same one commitment. Every section compares the two on a shared</li>
+<li>eme, grounded in the text.*</li>
+</ul>
+<hr/>
+<h2>PART I — THE TWO TEXTS AND THE SHAPE OF THE COMPARISON</h2>
+<h3>1.1 The two masterworks</h3>
+<ul>
+<li>hinavagupta (c. 975–1025 CE), the great systematizer of Kashmiri Śaivism, wrote two enormous</li>
+<li>ntheses. They are the two peaks of his philosophical output, and they face the same problems.</li>
+</ul>
+<ul>
+<li>The Tantrāloka** (&quot;The Light on the Tantras&quot;) is the encyclopedic synthesis. Across thirty-seven</li>
+<li>nikas, with Jayaratha&#x27;s thirteenth-century Viveka commentary, it gathers the whole Trika — the ritual</li>
+<li>chnology, the four upāyas (means of liberation), the cosmology of the thirty-six tattvas, the</li>
+<li>sthetics of rasa, and the philosophy of consciousness. It is, in the phrase of the project&#x27;s dossier,</li>
+<li>our books at once: a theory of liberating knowledge, a total map of manifestation, a ritual technology</li>
+<li> subject reconstruction, and a politics of scriptural authority.&quot; Its register is <i>encyclopedic</i>: it</li>
+<li>ates the doctrines across a sweeping canvas, and its load-bearing steps are often asserted rather than</li>
+<li>gued.</li>
+</ul>
+<ul>
+<li>The Īśvarapratyabhijñāvivṛtivimarśinī** (&quot;The Reflection on the Vivṛti on the Recognition of the</li>
+<li>rd&quot;) is the dialectical commentary. It is Abhinavagupta&#x27;s enormous commentary on Utpaladeva&#x27;s (mostly</li>
+<li>st) Vivṛti, itself a commentary on the IPK. Across three volumes and some thirty-four thousand lines,</li>
+<li> argues the recognition-philosophy as a running nanu (objection) → āha (reply) dialectic, against the</li>
+<li>ddhist, the Vaiśeṣika, the Sāṃkhya, the grammarian, and the Advaitin. Its register is <i>dialectical</i>:</li>
+<li>ery passage is an objection met by a reply, and its load-bearing steps are argued rather than asserted.</li>
+</ul>
+<ul>
+<li>The thesis of this essay.** The two texts are two faces of one philosophy. The TĀ is the</li>
+<li>cyclopedic statement; the IPVV is the dialectical argument. They face the same cruxes, and the</li>
+<li>mparison is illuminating precisely because of the difference in form: **where the TĀ asserts, the IPVV</li>
+<li>oves.** This is why, on the shared cruxes, the IPVV generally resolves them better — not because it is</li>
+<li>better philosophy but because it is a better <i>argument</i>. And both converge on the same load-bearing</li>
+<li>aims and the same one commitment (the universalization).</li>
+</ul>
+<h3>1.2 The six shared cruxes</h3>
+<ul>
+<li>e project&#x27;s pushing-tantraloka sessions surfaced six genuine cruxes that both texts must face:</li>
+<li> The universality gap (how does &quot;manifest to me&quot; become &quot;the universal perceiver&quot;?).</li>
+<li> The memory→identity step (does memory prove the eternal self?).</li>
+<li> Karma vs. freedom (is law compatible with svātantrya?).</li>
+<li> The two-levels consistency (are the ground and the contraction consistent?).</li>
+<li> Recognition-not-attainment (what does recognition actually change?).</li>
+<li> The felt→ground step (does the felt prove the one?).</li>
+</ul>
+<ul>
+<li>ese six cruxes organize the comparison. But the comparison is larger than the cruxes: it also spans</li>
+<li>e powers and the upāyas, the camatkāra (the felt), the three impurities, and the relation to the</li>
+<li>her schools. The essay proceeds by theme, comparing the two texts on each.</li>
+</ul>
+<hr/>
+<h2>PART II — THE SIX CRUXES, COMPARED</h2>
+<h3>2.1 Crux 1 — The universality gap</h3>
+<ul>
+<li>The problem.** The regress proves the perceiver is non-objectifiable, but the step from &quot;not any</li>
+<li>ject&quot; to &quot;the consciousness of every object&quot; seems asserted, not argued. How does &quot;manifest to me&quot;</li>
+<li>come &quot;the universal perceiver&quot;?</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ asserts the step. Its perceiver-proof establishes that the regress stops in a</li>
+<li>n-objectifiable witness, and it then identifies this witness with the universal consciousness. But the</li>
+<li>ansition — from the non-objectifiable witness of <i>this</i> field to the consciousness of <i>every</i> field —</li>
+<li> asserted as the master-key&#x27;s conclusion, not derived.</li>
+</ul>
+<ul>
+<li>The IPVV.<i>* The IPVV *argues</i> the step, in three moves (V2C, V3C, V2G):</li>
+<li> <b>V2C — the sārūpya proof.</b> The cognition is self-luminous and &quot;never the object of another.&quot;</li>
+<li>ject-ness requires a real difference (the sārūpya, the conformity of a cognition to its object),</li>
+<li>d awarenesses lack it. The non-objectifiability is <i>proven</i> by the sārūpya-analysis, not asserted.</li>
+<li> <b>V3C — the blue-to-me inversion.</b> &quot;The object does not stand by its own power alone. If it did,</li>
+<li>e blue would appear <i>to me</i> and not to <i>Caitra</i>... So the other must be of the nature of</li>
+<li>nsciousness.&quot; The very fact the TĀ treated as the index of finitude — the blue appears to me and</li>
+<li>t to Caitra — is <i>inverted</i> into the proof of consciousness as the ground. And &quot;the one light</li>
+<li>ses, born of means, object and knower&quot; — the knower, means, and known are one act.</li>
+<li> <b>V2G — the from-within creation.</b> The world is created from within, like a yogin (the dream proves</li>
+<li>nsciousness alone creates an object-mass without a material cause). So no external recipient is</li>
+<li>eded — which removes the need for a universal <i>receiver</i> and leaves the universal <i>creator</i>.</li>
+</ul>
+<ul>
+<li>The comparison.** The TĀ asserts the universality; the IPVV argues it. The blue-to-me inversion (V3C)</li>
+<li> the decisive move: what looked like finitude becomes the proof of the ground. This is the IPVV&#x27;s</li>
+<li>gnature — it does not merely claim the universal; it <i>derives</i> it from the very structure that seemed</li>
+<li> deny it. <b>The IPVV resolves the universality gap better than the TĀ.</b></li>
+</ul>
+<h3>2.2 Crux 2 — The memory→identity step</h3>
+<ul>
+<li>The problem.** The memory argument claims a persisting subject is needed; the modern (essay)</li>
+<li>jection is that mechanistic source-attribution may explain it without a timeless self.</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ asserts that memory requires a persisting subject. The argument is that</li>
+<li>thout a subject that persists, memory across moments is impossible. But the mechanistic alternative —</li>
+<li>at a causal trace suffices for memory&#x27;s content — is not directly answered.</li>
+</ul>
+<ul>
+<li>The IPVV.<i>* The IPVV *answers</i> the mechanistic objection directly, in four moves (V1D, V2A, V2J, V2L,</li>
+<li>N):</li>
+<li> <b>V1D (&quot;I was never not&quot;):</b> memory presupposes an experiencer who was there; the &quot;un-precedented</li>
+<li>nifestation&quot; rests on the eternal knower.</li>
+<li> <b>V2J:</b> memory is laid and awakened ONLY by the reflexive-awareness (&quot;I, thus, shine&quot;); without it,</li>
+<li> seed (the coconut-island example — he who never saw smoke does not remember fire from smoke).</li>
+<li> <b>V2L:</b> the &quot;I&quot;-recollection is NOT a construction — it is the pure self-grasp that underlies all</li>
+<li>nstruction. This is the direct answer to the mechanistic objection: source-attribution is a</li>
+<li>nstruction; the &quot;I&quot; that it serves is the non-constructed grasp.</li>
+<li> <b>V2N:</b> the inner appearance stands firm in memory, cognition, and construction alike.</li>
+</ul>
+<ul>
+<li>The comparison.** The TĀ asserts the persisting subject; the IPVV answers the modern challenge (does</li>
+<li>chanistic source-attribution explain the &quot;I&quot;?) directly: **the mechanism explains the content of</li>
+<li>mory; it cannot explain the non-constructed &quot;I&quot; that holds it together — because the &quot;I&quot; is precisely</li>
+<li>at is not constructed.** This is a sharper answer than the TĀ gave, and it anticipates the</li>
+<li>ntemporary debate. <b>The IPVV resolves the memory→identity step better than the TĀ.</b></li>
+</ul>
+<h3>2.3 Crux 3 — Karma vs. freedom</h3>
+<ul>
+<li>The problem.** If consciousness is free (svātantrya), how is there lawful karma? Is the law</li>
+<li>mpatible with freedom?</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ answers: karma (niyati) is freedom contracted into a lawful sequence; the</li>
+<li>ntraction is itself a free act (&quot;empties itself out of free will&quot;). The law is not opposed to freedom;</li>
+<li> is freedom&#x27;s contracted form.</li>
+</ul>
+<ul>
+<li>The IPVV.<i>* The IPVV *deepens</i> this (V3B):</li>
+<li> The &quot;un-thwarted freedom&quot; (apratihata-svātantrya) is the action-power — nothing can thwart the</li>
+<li>rd&#x27;s will.</li>
+<li> The cognitions of action/relation/universal/substance/time are &quot;true by the stability and the use&quot;</li>
+<li>the law is real because it is stable and usable. This is a <i>functionalist</i> criterion.</li>
+<li> Even the Kāṇāda&#x27;s inherence (samavāya), &quot;given enough power to do its job, IS the param-Lord or His</li>
+<li>wer, under that name.&quot; The rival&#x27;s own mechanism collapses into the Lord&#x27;s power.</li>
+</ul>
+<ul>
+<li>The comparison.** The TĀ said karma = freedom contracted; the IPVV adds the functionalist criterion</li>
+<li>he law is true by stability and use) and the collapse of the rival&#x27;s mechanism into the Lord&#x27;s power.</li>
+<li>The freedom and the law are not opposed — the law is the stable, usable form the freedom takes.** The</li>
+<li>VV aligns with and sharpens the TĀ. <b>The IPVV deepens the karma-freedom resolution.</b></li>
+</ul>
+<h3>2.4 Crux 4 — The two-levels consistency</h3>
+<ul>
+<li>The problem.** The report&#x27;s flaws accused the TĀ of single-level contradictions (the ground vs. the</li>
+<li>ntraction). We resolved them with the two-levels (ground/contraction). But is the two-levels itself</li>
+<li>herent?</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ has a binary — ground/contraction. The master-key (the reversal of the</li>
+<li>rection of self-apprehension) holds the two levels together, but the binary is coarse.</li>
+</ul>
+<ul>
+<li>The IPVV.<i>* The IPVV makes the two-levels *structural</i> and adds a <i>third</i> grade (V3B): the threefold</li>
+<li>tya (true) / saṃvṛtisatya (conventional-true) / asatya (untrue). The conventional is NOT a fiction —</li>
+<li> is &quot;coordinate with the real&quot; (the dvandva point: the cow/bull, the city&#x27;s milk-and-curds). The</li>
+<li>iversal lives in the specifics; the object is &quot;true by stability and use.&quot;</li>
+</ul>
+<ul>
+<li>The comparison.** The TĀ&#x27;s binary becomes, in the IPVV, a threefold: the real, the</li>
+<li>nventional-true (real-but-not-substantial), and the untrue. This directly answers the report&#x27;s flaw</li>
+<li>(reality vs. illusion): the conventional is not illusion — it is coordinate with the real. **The IPVV&#x27;s</li>
+<li>ṃvṛtisatya is the missing precision the TĀ&#x27;s two-levels needed.** The IPVV makes the two-levels more</li>
+<li>ecise.</li>
+</ul>
+<h3>2.5 Crux 5 — Recognition-not-attainment</h3>
+<ul>
+<li>The problem.** What does recognition actually change, if it adds nothing and removes nothing?</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ&#x27;s master-key: recognition is the reversal of the direction of</li>
+<li>lf-apprehension (outward → inward). The self-apprehension that was turned outward into the world is</li>
+<li>-turned to the self.</li>
+</ul>
+<ul>
+<li>The IPVV.** The IPVV gives the precise mechanism:</li>
+<li> <b>V1E (foregrounding):</b> the pramāṇa here &quot;is not establishing something new... It is</li>
+<li>oregrounding* what is already present but hidden.&quot; The recognition &quot;makes the manifestation and</li>
+<li>signation of the self-as-Lord no longer an instrument lost among the things of the body and the</li>
+<li>rld, but the primary thing that we see.&quot; This is the &quot;see, see&quot; — turning the attention upon what</li>
+<li>s always before us.</li>
+<li> <b>V3P (the lover):</b> &quot;the lover stands near, sought by the slender woman; but as long as he is not</li>
+<li>cognized, he cannot be enjoyed. So the world-Lord, always present, always near, is not experienced</li>
+<li>til the recognition arises.&quot;</li>
+</ul>
+<ul>
+<li>The comparison.** The TĀ says recognition is the reversal of direction; the IPVV says it is</li>
+<li>oregrounding* — &quot;not an instrument lost among the things, but the primary thing we see.&quot; This is the</li>
+<li>ster-key&#x27;s inward turn made concrete. The lover-image is the master-key in aesthetic form. **The IPVV</li>
+<li>ves the precise mechanism the TĀ only gestured at.** The IPVV makes recognition-not-attainment</li>
+<li>ncrete.</li>
+</ul>
+<h3>2.6 Crux 6 — The felt does not entail the ground</h3>
+<ul>
+<li>The problem.** The felt-is-primary is shared with naturalism; the universal-ground interpretation is</li>
+<li> addition, not a consequence.</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ asserts the &quot;one light&quot; — the felt (camatkāra) is the primary characteristic</li>
+<li> consciousness, and it is identified with the universal. But the step from &quot;the felt of one cognition&quot;</li>
+<li> &quot;one universal consciousness&quot; is asserted, not derived.</li>
+</ul>
+<ul>
+<li>The IPVV.<i>* The IPVV *argues</i> the ground (V2O, V2P):</li>
+<li> <b>V2O — the transcendental argument of the order-less support:</b> the pratibhā (the flashing) is</li>
+<li>easoned with their order, touched by it, but is not the order.&quot; Its support is the order-less</li>
+<li>ower — &quot;the one who knows the order without being caught in it.&quot; Ordered experience requires an</li>
+<li>der-less support. This <i>derives</i> the ground from the structure of ordered experience.</li>
+<li> <b>V2P — the causal proof of the one knower:</b> memory requires the one who remembers; &quot;the valid</li>
+<li>ans is the self-consciousness of the one knower.&quot; The anvaya-vyatireka (presence-absence): the</li>
+<li>aling is fit with the support, not without it.</li>
+</ul>
+<ul>
+<li>The comparison.<i>* The IPVV argues the felt→ground step better than the TĀ — it *derives</i> the</li>
+<li>der-less support from the structure of experience rather than asserting the &quot;one light.&quot; But — and</li>
+<li>is is the honest boundary — it does not fully close the step: the transcendental argument establishes</li>
+<li>e <i>per-field</i> support, not the numerical identity of all supports. The universalization remains the</li>
+<li>mmitment. <b>The IPVV and the TĀ hit the SAME WALL on the felt→ground step</b> — the one crux neither</li>
+<li>xt closes, because the universalization is a commitment, not a consequence.</li>
+</ul>
+<h3>2.7 The cruxes table</h3>
+<ul>
+<li>Crux | Tantrāloka | IPVV | Verdict |</li>
+<li>-----|-----------|------|---------|</li>
+<li>1. Universality gap | asserted | <b>argued</b> (V2C sārūpya; V3C blue-to-me; V2G from-within) | <b>RESOLVED better</b> |</li>
+<li>2. Memory→identity | asserted | <b>answered</b> (V2L non-constructed &quot;I&quot;) | <b>RESOLVED better</b> |</li>
+<li>3. Karma vs. freedom | freedom-contracted | <b>deepened</b> (V3B true-by-stability-use) | resolved + sharpened |</li>
+<li>4. Two-levels | binary | <b>threefold</b> (satya/saṃvṛtisatya/asatya) | <b>made more precise</b> |</li>
+<li>5. Recognition | reversal of direction | <b>foregrounding</b> (V1E); the lover (V3P) | <b>made concrete</b> |</li>
+<li>6. Felt→ground | asserted | <b>argued</b> (V2O/V2P); still commits | <b>SAME WALL</b> |</li>
+</ul>
+<hr/>
+<h2>PART III — THE DEEPER THEMES, COMPARED</h2>
+<ul>
+<li>e six cruxes are the skeleton; the deeper themes are the flesh. This part compares the two texts on</li>
+<li>e powers and the upāyas, the camatkāra, the impurities, and the relation to the other schools.</li>
+</ul>
+<h3>3.1 The powers and the upāyas</h3>
+<ul>
+<li>The three powers (jñāna, smṛti, apohana).** The IPK states the three powers (IPK 1.3.7), and the</li>
+<li>VV organizes its whole jñānādhikāra around them: the jñānaśaktivimarśa, the smṛtiśaktivimarśa, the</li>
+<li>ohanaśaktivimarśa. The powers unfold in a necessary order — manifestation (jñāna) → persistence</li>
+<li>mṛti) → self-knowledge (apohana) → self-expression (kriyā) — and the apohana is the pivot (it turns</li>
+<li>e sequence from the powers to the self).</li>
+</ul>
+<ul>
+<li>The Tantrāloka&#x27;s map (TĀ 1/151–153 + ad 1/232).** The TĀ maps will/knowledge/action (icchā/jñāna/</li>
+<li>iyā) onto the three upāyas (the divine/śāmbhava, the empowered/śākta, the individual/āṇava) and onto</li>
+<li>e three impurities:</li>
+<li> Action = knowledge (1/151): &quot;Yoga does not differ from action and action does not differ from Yoga.</li>
+<li>e insight that, mounted up through the reality principles, serves to quell the latent impressions,</li>
+<li> termed action.&quot;</li>
+<li> The latent impressions come from the three impurities (1/152): āṇava, māyīya, karma.</li>
+<li> That insight, resting on the principles, is itself action and Yoga (1/153).</li>
+</ul>
+<ul>
+<li>The comparison.** The two texts map the powers differently but compatibly:</li>
+<li>The IPVV&#x27;s <i>epistemic</i> triad (jñāna-smṛti-apoha) is the <i>structural</i> account of the subject — how it</li>
+<li>ows, remembers, and excludes.</li>
+<li>The TĀ&#x27;s <i>volitional</i> triad (icchā-jñāna-kriyā) is the <i>soteriological</i> account — how the one acts,</li>
+<li>ows, and wills through the three upāyas.</li>
+</ul>
+<ul>
+<li>e IPVV&#x27;s vimarśa-structure (the powers as the self&#x27;s unfolding, converging on the self-awareness)</li>
+<li>d the TĀ&#x27;s upāya-structure (the same insight as action and Yoga through the means) are two maps of the</li>
+<li>me reality: the one self-awareness, unfolding into its powers and its means. The jñāna-kriyā pair</li>
+<li>he IPVV&#x27;s Śivatattva, &quot;the inseparable pair&quot;) is the TĀ&#x27;s insight-as-action. **The two texts converge</li>
+<li> the same architecture: the one self-awareness expressed as the powers (IPVV) and as the means (TĀ).**</li>
+</ul>
+<h3>3.2 The camatkāra (the felt)</h3>
+<ul>
+<li>The Tantrāloka&#x27;s camatkāra.** The TĀ gives the felt its fullest statement:</li>
+<li> <b>camatkāra is the primary characteristic of consciousness</b> (ad 1/53): &quot;Wonder (camatkāra) is the</li>
+<li>imary characteristic of consciousness; it is indicative of its sentience, which distinguishes it</li>
+<li>om the insentient (jaḍa).&quot;</li>
+<li> <b>camatkāra = the act of appearance</b> (1260–1268): &quot;The camatkāra (as the experience) &#x27;this appears</li>
+<li> me&#x27; (i.e., it is my perception). This is the (essential) nature of the colour &#x27;blue&#x27; and all other</li>
+<li>enomena.&quot; Perception itself is camatkāra.</li>
+<li> <b>Every emotion is a particular camatkāra</b> (15254, 25586): anger and suffering are &quot;particular</li>
+<li>nds of wonder.&quot;</li>
+<li> <b>camatkāra has three registers</b> (2339): cognition, bliss, wonder.</li>
+</ul>
+<ul>
+<li>The IPVV&#x27;s vimarśa.** The IPVV states the felt as the essence of light (IPK 1.5.11): the Vṛtti ties</li>
+<li>marśa to camatkṛti (&quot;since there is no savouring&quot;), and the IPVV expands it as the reflexivity that</li>
+<li>stinguishes consciousness from the inert, identified with the parā-vāk, the sphurattā, and the</li>
+<li>heśvarya.</li>
+</ul>
+<ul>
+<li>The comparison.** The two are the same doctrine at two levels of analysis:</li>
+<li>The TĀ gives the felt its <i>full</i> aesthetic register — camatkāra as perception, as every emotion, as</li>
+<li>e three registers (cognition, bliss, wonder). This is where the rasa-theory lives.</li>
+<li>The IPVV gives the felt its <i>philosophical</i> register — camatkāra as the essence of light, the felt</li>
+<li>lf-presence that distinguishes consciousness from the inert.</li>
+</ul>
+<ul>
+<li>e TĀ is the felt&#x27;s <i>aesthetic</i> face (camatkāra as wonder, the rasa); the IPVV is the felt&#x27;s</li>
+<li>pistemological* face (vimarśa as the felt reflexivity). Both are Abhinavagupta; both rest on the same</li>
+<li>aim — the felt is the essence of consciousness. The IPVV&#x27;s vimarśa is the TĀ&#x27;s camatkāra, brought into</li>
+<li>e epistemology of recognition.</li>
+</ul>
+<h3>3.3 The three impurities</h3>
+<ul>
+<li>th texts work with the three impurities (mala): āṇava (finitude), māyīya (objectivity), kārma</li>
+<li>ction).</li>
+</ul>
+<ul>
+<li>The Tantrāloka.** The TĀ treats the impurities as the source of the latent impressions (1/152), the</li>
+<li>nds that bind the bound one, and the origin of karma.</li>
+</ul>
+<ul>
+<li>The IPVV.** The IPVV (V3L) treats the impurities as the three nooses cut by the trident: the stain of</li>
+<li>nitude (āṇava), the stain of objectivity (māyīya), the stain of action (kārma). The bound one (paśu)</li>
+<li> bound because he has suffered the loss of freedom of the awareness.</li>
+</ul>
+<ul>
+<li>The comparison.** The two are the same three-fold. The TĀ&#x27;s impurities are the source of the</li>
+<li>pressions that drive the saṃsāra; the IPVV&#x27;s impurities are the nooses that bind the paśu. Both are</li>
+<li>e structure of bondage — the misreadings that recognition removes. And the AM0 formalization (the</li>
+<li>ree malas as the Sv(O) failure-modes) applies to both: the impurities are the structural</li>
+<li>sdescriptions that constitute the false self-exemption.</li>
+</ul>
+<h3>3.4 The relation to the other schools</h3>
+<ul>
+<li>th texts engage the other schools — the Buddhist, the Vaiśeṣika, the Sāṃkhya, the grammarian, the</li>
+<li>vaitin. The IPVV&#x27;s opponent-geography (from the pushing-ipvv session) is precise: the Buddhist</li>
+<li>minates the knowledge-sections; the Vaiśeṣika the metaphysics; the Sāṃkhya the near-rival; the</li>
+<li>ammarians the word-sections; the Advaitin is a minor opponent (V1N).</li>
+</ul>
+<ul>
+<li>e TĀ engages the same opponents across its sweep, but without the nanu→āha structure — it states the</li>
+<li>futations rather than staging them. The comparison confirms that the IPVV is the more <i>dialectical</i></li>
+<li> the two: it argues against each rival where that rival&#x27;s doctrine is at issue, in the dialectical</li>
+<li>rm, whereas the TĀ states the doctrine across its encyclopedic canvas.</li>
+</ul>
+<hr/>
+<h2>PART IV — THE TWO ABHINAVAGUPTAS, SYNTHESIZED</h2>
+<h3>4.1 The two faces of one philosophy</h3>
+<ul>
+<li>e comparative synthesis yields a clear picture: the TĀ and the IPVV are two faces of one philosophy.</li>
+</ul>
+<ul>
+<li>The TĀ is the encyclopedic face.** It states the whole doctrine across a sweeping canvas — the</li>
+<li>tual, the upāyas, the cosmology, the aesthetics. Its register is synthetic; its load-bearing steps are</li>
+<li>ten asserted.</li>
+</ul>
+<ul>
+<li>The IPVV is the dialectical face.** It argues the recognition-philosophy as a nanu→āha dialectic. Its</li>
+<li>gister is argumentative; its load-bearing steps are proved.</li>
+</ul>
+<ul>
+<li>The systematic reason for the difference.** The IPVV resolves four of the six cruxes better than the</li>
+<li> because of its <i>form</i>: it is built to argue, and so it supplies the arguments the TĀ only asserts —</li>
+<li>e universality proof (via sārūpya and the blue-to-me), the non-constructed &quot;I&quot; (V2L), the threefold</li>
+<li> the real, the foregrounding mechanism. The TĀ is the frame; the IPVV is the argument.</li>
+</ul>
+<h3>4.2 The convergence</h3>
+<ul>
+<li>spite the difference in form, the two texts converge on the same load-bearing claims:</li>
+<li> <b>The felt is the essence.</b> Both: camatkāra/vimarśa is the essence of consciousness (TĀ ad 1/53;</li>
+<li>K 1.5.11).</li>
+<li> <b>The powers are the self&#x27;s unfolding.</b> Both: the one self-awareness expressed as the powers (IPVV)</li>
+<li>d as the means (TĀ).</li>
+<li> <b>The impurities are the bondage.</b> Both: āṇava, māyīya, kārma as the bonds that recognition removes.</li>
+<li> <b>Recognition removes, not attains.</b> Both: the master-key (TĀ) and foregrounding (IPVV).</li>
+<li> <b>The difference is real, not ignorance.</b> Both: the TĀ&#x27;s pratibimbavāda (&quot;a true reflection, not a</li>
+<li>stake&quot;) and the IPVV&#x27;s anti-anirvācya (V3I).</li>
+</ul>
+<h3>4.3 The one commitment</h3>
+<ul>
+<li>d they converge on the same one commitment. On the felt→ground step, both assert or argue the &quot;one</li>
+<li>ght,&quot; and neither forces the universalization. **The fact that the two greatest works of</li>
+<li>hinavagupta hit the SAME wall on the deepest crux is the strongest evidence that the wall is not a</li>
+<li>alectical gap but a doctrinal commitment.** The universalization — the numerical identity of all</li>
+<li>der-less supports — is not something Abhinavagupta failed to argue in either text; it is something he</li>
+<li>ose to hold in both. The felt→ground step is the boundary where the recognition-thesis passes from</li>
+<li>gument to commitment — in the encyclopedic and the dialectical presentation alike.</li>
+</ul>
+<hr/>
+<h2>PART V — THE SCHOLARLY CONCLUSION</h2>
+<ul>
+<li>e comparative synthesis of the IPVV and the TĀ yields five results:</li>
+</ul>
+<ul>
+<li> <b>The two texts are two faces of one philosophy.</b> The TĀ states; the IPVV argues. The difference is</li>
+<li>rm, not doctrine.</li>
+<li> <b>The IPVV resolves four of the six cruxes better</b> (universality, memory→identity, two-levels,</li>
+<li>cognition) — because it is dialectical, and it supplies the arguments the TĀ asserts.</li>
+<li> <b>The IPVV deepens one</b> (karma-freedom) with the functionalist criterion of truth-by-stability-and-</li>
+<li>e.</li>
+<li> <b>Both hit the same wall on the felt→ground step</b> — and this convergence is the strongest evidence</li>
+<li>at the universalization is a commitment, not a gap.</li>
+<li> <b>The two texts converge on the load-bearing core:</b> the felt is the essence, the powers are the</li>
+<li>lf&#x27;s unfolding, the impurities are the bondage, recognition removes and does not attain, and the</li>
+<li>fference is real.</li>
+</ul>
+<ul>
+<li>The significance of the completed IPVV.** The comparison is unique to the completed IPVV. Only now,</li>
+<li>th the whole dialectical work translated, can the two Abhinavaguptas be held side by side and their</li>
+<li>ared cruxes measured. The IPVV is the argumentative face of the system the TĀ states — and the</li>
+<li>mparison shows that the two faces belong to one philosophy, one core, and one commitment. The two</li>
+<li>hinavaguptas are one.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the magnum-opus comparative synthesis of the IPVV and the Tantrāloka. The two texts are two</li>
+<li>ces of one philosophy — the encyclopedic (TĀ) and the dialectical (IPVV). The IPVV resolves four of</li>
+<li>e six shared cruxes better (universality, memory→identity, two-levels, recognition) and deepens one</li>
+<li>arma-freedom), because it is structured as a nanu→āha argument; both hit the same wall on the</li>
+<li>lt→ground step, the strongest evidence the universalization is a commitment. The texts converge on</li>
+<li>e felt-as-essence, the powers-as-unfolding, the impurities-as-bondage, and recognition-as-removal. The</li>
+<li>o Abhinavaguptas are one.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li>Primary texts.**</li>
+<li><b>Tantrāloka</b>, tr. Mark S. G. Dyczkowski, 11 vols, <i>texts-original/tantraloka-vol{1..11}-dyczkowski.txt</i></li>
+<li>sp. vol 1: the powers/upāyas at TĀ 1/151–153 + ad 1/232; the camatkāra at ad 1/53 and lines</li>
+<li>60–1268; the sphurattā/pratyavamarśa/parā vāc at lines 1227–1244).</li>
+<li><b>Īśvarapratyabhijñāvivṛtivimarśinī</b>, ed. M. K. Śāstrī (KSTS 60/62/65); the L2 READ layer in</li>
+<li>anskritree/translations/_stack/ipvv/pilot/` (esp. V2A–S, V3A–P).</li>
+<li><b>Īśvarapratyabhijñākārikā</b> with the Vṛtti, ed. and tr. Raffaele Torella, IPK 1.3.7, 1.5.11.</li>
+</ul>
+<ul>
+<li>Verbatim quotes used above (with locators).**</li>
+</ul>
+<ul>
+<li> <b>Tantrāloka, ad 1/53 (Dyczkowski, vol 1, lines 1262–1268)</b> — perception itself is camatkāra:</li>
+</ul>
+<blockquote>&quot;The (camatkāra) (as the experience) &#x27;this appears to me (mama)&#x27; (i.e., it is my perception). This is</blockquote>
+<blockquote>the (essential) nature (rūpatva) of (the colour) &#x27;blue&#x27; and (all other phenomena). This is &#x27;my&#x27; Heart</blockquote>
+<blockquote>of all the endless number of things such as (the colour) blue. The Void (of pure consciousness)</blockquote>
+<blockquote>(vyoman) (in the Heart) is where the differentiated universe, which is wonder, is properly sustained.&quot;</blockquote>
+<ul>
+<li> <b>Tantrāloka, ad 1/53 (vol 1, lines 1227–1234)</b> — sphurattā = pratyavamarśa = parā vāc (the</li>
+<li>oss-identification on which the &quot;two faces&quot; thesis rests):</li>
+</ul>
+<blockquote>&quot;According to Utpaladeva (IP 1/5/14 quoted ad 3/209), as the radiance (sphurattā) of the Light of</blockquote>
+<blockquote>consciousness, it is its reflective awareness (pratyavamarśa), which is identified with the supreme</blockquote>
+<blockquote>level of Speech (parā vāc) as the self-referential subjectivity or &#x27;I-ness&#x27; Deity has of itself.&quot;</blockquote>
+<ul>
+<li> <b>Tantrāloka, TĀ 1/151 (vol 1, the powers/upāyas)</b> — insight as action:</li>
+</ul>
+<blockquote>&quot;Yoga does not differ from action and action does not differ from Yoga. The insight (mati) that,</blockquote>
+<blockquote>mounted up through the reality principles, serves to quell the latent impressions in one&#x27;s own mind,</blockquote>
+<blockquote>is termed action.&quot;</blockquote>
+<ul>
+<li> <b>IPK 1.3.7</b> (the triad), <b>IPK 1.5.11</b> (the reflexivity claim), as cited in the essay.</li>
+</ul>
+<ul>
+<li>Peer-review note.** The crux-by-crux comparison is grounded in the pushing-tantraloka sessions</li>
+<li>/root/projects/tantraloka/notes/pushing-tantraloka/LOGICVID-session-*`) and the IPVV&#x27;s L2 layer. The</li>
+<li>rbatim TĀ quotes above confirm the &quot;two faces&quot; thesis: the TĀ and the IPVV both identify the felt</li>
+<li>flexivity (camatkāra/vimarśa) as the essence, and both connect it to the Word and the Heart. The</li>
+<li>ux-table (universality, memory, karma-freedom, two-levels, recognition, felt→ground) is this essay&#x27;s</li>
+<li>nthesis of the two texts&#x27; shared problem-space; the locators for each crux&#x27;s IPVV argument are given</li>
+<li> the essay body.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-TWO-ABHINAVAGUPTAS-IPVV-TANTRALOKA.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

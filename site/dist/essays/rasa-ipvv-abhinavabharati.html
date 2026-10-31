@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE FELT AND THE AESTHETIC: CAMATKĀRA AS THE REGISTER OF RECOGNITION · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE FELT AND THE AESTHETIC: CAMATKĀRA AS THE REGISTER OF RECOGNITION</h1><div class="skt"></div><div class="sub">A magnum-opus essay. 2026-08-11. Abhinavagupta wrote two great works on the felt: the IPVV, where the</div><div class="sub">1921 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-RASA-IPVV-ABHINAVABHARATI.md">source markdown</a></div><h1>THE FELT AND THE AESTHETIC: CAMATKĀRA AS THE REGISTER OF RECOGNITION</h1>
+<h2>The IPVV and the Abhinavabhāratī compared — the vimarśa, the rasa, and the felt re-cognition</h2>
+<ul>
+<li> magnum-opus essay. 2026-08-11. Abhinavagupta wrote two great works on the felt: the IPVV, where the</li>
+<li>lt (vimarśa/camatkāra) is the essence of consciousness and the register of recognition; and the</li>
+<li>hinavabhāratī (his commentary on the Nāṭyaśāstra), where the felt (rasa, camatkāra) is the very</li>
+<li>bstance of aesthetic experience. This essay is the complete comparative synthesis of the two. It shows</li>
+<li>at they are one doctrine in two registers: the felt is the essence of consciousness (IPVV) and the</li>
+<li>bstance of aesthetic delight (Abhinavabhāratī); the vimarśa of the IPVV and the rasa of the</li>
+<li>hinavabhāratī are the same camatkāra; and recognition is the aesthetic event in its purest form — the</li>
+<li>rning of the near into the enjoyed, the felt re-cognition of the self. The comparison is grounded in</li>
+<li>e IPVV&#x27;s L2 layer and the pushing-tantraloka rasa sessions, and it is now possible in full because the</li>
+<li>VV is translated.*</li>
+</ul>
+<hr/>
+<h2>PART I — THE TWO TEXTS</h2>
+<h3>1.1 The IPVV: the felt as the essence of consciousness</h3>
+<ul>
+<li>e IPVV, the deepest commentary on the recognition-philosophy, holds that the felt is the essence of</li>
+<li>nsciousness. The IPK 1.5.11 states it: the essential nature of light is vimarśa, the felt</li>
+<li>flexive-awareness; the Vṛtti ties it to camatkṛti (&quot;since there is no savouring&quot;); and the IPVV</li>
+<li>pands it — the felt self-grasp that distinguishes consciousness from the inert, identified with the</li>
+<li>rā-vāk, the sphurattā, and the māheśvarya.</li>
+</ul>
+<ul>
+<li> the IPVV, the felt is the register of recognition. The lover-union (V3P) states it: &quot;the single act</li>
+<li> recognition turns the un-known nearness into the joy of union.&quot; Recognition is felt because the</li>
+<li>-positioning of the self (the σ-flip) is experienced as a savouring.</li>
+</ul>
+<h3>1.2 The Abhinavabhāratī: the felt as the substance of aesthetic experience</h3>
+<ul>
+<li>e Abhinavabhāratī, Abhinavagupta&#x27;s commentary on Bharata&#x27;s Nāṭyaśāstra, holds that the felt — rasa,</li>
+<li>matkāra — is the very substance of aesthetic experience. It is where Abhinava develops the full</li>
+<li>sthetic theory: the sādhāraṇīkaraṇa (universalization), the rasa-mechanism, and the claim that the</li>
+<li>sa is a &quot;tasting&quot; (carvaṇā) of the rarefied emotion.</li>
+</ul>
+<ul>
+<li> the Abhinavabhāratī, the felt is the substance of delight. The spectator does not merely observe the</li>
+<li>ama; he <i>tastes</i> the rasa — the universalized, de-particularized emotion. And this tasting is</li>
+<li>matkāra — the wonder, the savouring, the aesthetic delight.</li>
+</ul>
+<h3>1.3 The question of the comparison</h3>
+<ul>
+<li>e two texts are both by Abhinavagupta, and both are about the felt. But they are usually studied</li>
+<li>parately — the IPVV as philosophy, the Abhinavabhāratī as aesthetics. This essay brings them together.</li>
+</ul>
+<ul>
+<li>The thesis of this essay.** The two are one doctrine in two registers. The felt is the essence of</li>
+<li>nsciousness (IPVV) and the substance of aesthetic delight (Abhinavabhāratī). The vimarśa of the IPVV</li>
+<li>d the rasa of the Abhinavabhāratī are the same camatkāra. And recognition is the aesthetic event in</li>
+<li>s purest form — the turning of the near into the enjoyed, the felt re-cognition of the self. Aesthetics</li>
+<li> not a side-branch of the recognition-philosophy; it is its felt register made explicit.</li>
+</ul>
+<hr/>
+<h2>PART II — THE FELT AS THE ESSENCE (THE SHARED GROUND)</h2>
+<h3>2.1 The Tantrāloka&#x27;s camatkāra (the bridging text)</h3>
+<ul>
+<li>fore the Abhinavabhāratī, the TĀ states the camatkāra doctrine that both texts share. The pushing-</li>
+<li>ntraloka rasa sessions drew it out:</li>
+</ul>
+<ul>
+<li> <b>camatkāra is the primary characteristic of consciousness</b> (TĀ ad 1/53): &quot;Wonder (camatkāra) is</li>
+<li>e primary characteristic of consciousness; it is indicative of its sentience, which distinguishes</li>
+<li> from the insentient (jaḍa).&quot;</li>
+<li> <b>camatkāra = the act of appearance</b> (TĀ 1260–1268): &quot;The camatkāra (as the experience) &#x27;this</li>
+<li>pears to me&#x27; (i.e., it is my perception). This is the (essential) nature of the colour &#x27;blue&#x27; and</li>
+<li>l other phenomena.&quot; Perception itself is camatkāra.</li>
+<li> <b>Every emotion is a particular camatkāra</b> (TĀ 15254, 25586): anger and suffering are &quot;particular</li>
+<li>nds of wonder.&quot;</li>
+<li> <b>camatkāra has three registers</b> (TĀ 2339): cognition, bliss, wonder.</li>
+</ul>
+<h3>2.2 The IPVV&#x27;s vimarśa</h3>
+<ul>
+<li>e IPVV states the same doctrine in the epistemology of recognition: the felt (vimarśa/camatkāra) is</li>
+<li>e essence of consciousness (IPK 1.5.11), the felt self-grasp that distinguishes consciousness from the</li>
+<li>ert. And the IPVV identifies it with the sphurattā (the throbbing) and the parā-vāk.</li>
+</ul>
+<h3>2.3 The convergence</h3>
+<ul>
+<li>e TĀ&#x27;s camatkāra and the IPVV&#x27;s vimarśa are the same reality:</li>
+<li>camatkāra = the primary characteristic of consciousness (TĀ) = vimarśa, the felt reflexivity (IPVV).</li>
+<li>camatkāra = the act of appearance (TĀ) = the felt self-grasp of the manifestation (IPVV).</li>
+<li>camatkāra distinguishes consciousness from the inert (TĀ) = the crystal-argument&#x27;s felt self-presence</li>
+<li>PVV).</li>
+</ul>
+<ul>
+<li>The felt is the essence of consciousness — in both.** The IPVV is the philosophical face of the</li>
+<li>matkāra; the TĀ (and the Abhinavabhāratī) give its aesthetic face.</li>
+</ul>
+<hr/>
+<h2>PART III — THE RASA-MECHANISM AND THE RECOGNITION</h2>
+<h3>3.1 The rasa-mechanism (the sādhāraṇīkaraṇa)</h3>
+<ul>
+<li>e Abhinavabhāratī&#x27;s account of rasa turns on the sādhāraṇīkaraṇa — the universalization. The spectator</li>
+<li>es not feel the emotion as his own (particular) emotion; he tastes it as a universalized, rarefied</li>
+<li>perience. The fear of the character is not my fear; it is fear-as-such, tasted as rasa.</li>
+</ul>
+<ul>
+<li>e rasa-mechanism (from the pushing-tantraloka sessions):</li>
+<li> The depicted emotion (the vibhāva, the causes; the anubhāva, the effects) is universalized</li>
+<li>ādhāraṇīkaraṇa).</li>
+<li> The spectator tastes the universalized emotion as rasa — the camatkāra, the delight.</li>
+<li> The rasa is alaukika (transmundane) — not the ordinary emotion but its rarefied tasting.</li>
+</ul>
+<h3>3.2 The recognition&#x27;s σ-flip</h3>
+<ul>
+<li>e recognition&#x27;s mechanism (the σ-flip) is structurally identical to the rasa-mechanism. Recognition</li>
+<li>anges the <i>positioning</i> of the self (σ₀ → σ₁) within an unchanged field; the rasa changes the</li>
+<li>ositioning* of the emotion (particular → universalized) within the unchanged dramatic content. In both,</li>
+<li>e content is unchanged and the <i>relation</i> changes — and the change is felt.</li>
+</ul>
+<ul>
+<li>The parallel:**</li>
+<li>The rasa: the emotion, universalized, tasted as delight (the content unchanged, the relation changed).</li>
+<li>The recognition: the field, re-positioned, felt as the joy of union (the content unchanged, the</li>
+<li>sitioning changed).</li>
+</ul>
+<ul>
+<li>e sādhāraṇīkaraṇa IS a form of the σ-flip: it re-positions the emotion from &quot;mine&quot; to &quot;universal&quot; and</li>
+<li> makes it tasteable as delight. And the recognition is the sādhāraṇīkaraṇa of the self: it re-positions</li>
+<li>e self from &quot;a thing among things&quot; to &quot;the primary thing,&quot; and so makes it felt as the joy of union.</li>
+</ul>
+<h3>3.3 The camatkāra as the register of both</h3>
+<ul>
+<li>e camatkāra is the register of both mechanisms:</li>
+<li>In the rasa, the camatkāra is the delight of the universalized emotion — the wonder, the savouring.</li>
+<li>In the recognition, the camatkāra is the delight of the re-positioned self — the joy of union (V3P).</li>
+</ul>
+<ul>
+<li>The felt re-cognition and the aesthetic delight are the same camatkāra.** The recognition is the</li>
+<li>sthetic event in its purest form: the self, universalized (recognized as the Lord), tasted as delight.</li>
+</ul>
+<hr/>
+<h2>PART IV — THE FELT AND THE LIBERATION</h2>
+<h3>4.1 The rasa as the foretaste of liberation</h3>
+<ul>
+<li>e aesthetic tradition (and the pushing-tantraloka sessions) draws the link between rasa and liberation:</li>
+<li>e rasa is the alaukika (transmundane) delight that is a foretaste of the bliss of consciousness. The</li>
+<li>dhāraṇīkaraṇa is the aesthetic analogue of the de-identification that liberation achieves.</li>
+</ul>
+<h3>4.2 The IPVV&#x27;s jīvanmukta</h3>
+<ul>
+<li>e IPVV&#x27;s liberation (the recognition, the jīvanmukta) is the same de-identification, achieved</li>
+<li>finitively. The jīvanmukta lives in the world, free — because the false identification has been</li>
+<li>moved, not the world. And the register of that freedom is the felt — the camatkāra, the joy of union.</li>
+</ul>
+<h3>4.3 The convergence</h3>
+<ul>
+<li>e rasa and the liberation are two degrees of the same felt de-identification:</li>
+<li>The rasa: the temporary, aesthetic universalization — the spectator tastes the delight without the</li>
+<li>rticular identification.</li>
+<li>The liberation: the definitive, ontological universalization — the self recognizes itself as the</li>
+<li>rd, permanently, and tastes the joy of union (V3P).</li>
+</ul>
+<ul>
+<li>e rasa is the foretaste of liberation; the liberation is the rasa made permanent. Both are the felt</li>
+<li>-cognition — the turning of the near into the enjoyed.</li>
+</ul>
+<hr/>
+<h2>PART V — THE COMPARATIVE TABLE</h2>
+<ul>
+<li>Theme | IPVV (recognition) | Abhinavabhāratī (aesthetics) |</li>
+<li>------|---------------------|------------------------------|</li>
+<li>The felt | vimarśa/camatkāra as the essence of consciousness | rasa/camatkāra as the substance of delight |</li>
+<li>The mechanism | the σ-flip (positioning, not content) | the sādhāraṇīkaraṇa (universalization, not content) |</li>
+<li>The change | the self re-positioned (σ₀→σ₁) | the emotion re-positioned (particular→universal) |</li>
+<li>The felt result | the joy of union (V3P) | the aesthetic delight (the rasa) |</li>
+<li>The register | epistemological | aesthetic |</li>
+<li>The goal | recognition (the jīvanmukta) | the alaukika rasa (the foretaste) |</li>
+<li>The camatkāra | the register of recognition | the register of delight |</li>
+</ul>
+<hr/>
+<h2>PART VI — THE SCHOLARLY CONCLUSION</h2>
+<ul>
+<li>e comparative synthesis of the IPVV and the Abhinavabhāratī yields five results:</li>
+</ul>
+<ul>
+<li> <b>The two texts are one doctrine in two registers.</b> The felt is the essence of consciousness</li>
+<li>PVV) and the substance of aesthetic delight (Abhinavabhāratī).</li>
+<li> <b>The vimarśa and the rasa are the same camatkāra.</b> The felt reflexivity of the IPVV and the</li>
+<li>sthetic tasting of the Abhinavabhāratī are the same felt.</li>
+<li> <b>The σ-flip and the sādhāraṇīkaraṇa are the same mechanism.</b> Both re-position (the self, the</li>
+<li>otion) without changing the content, and both are felt.</li>
+<li> <b>Recognition is the aesthetic event in its purest form.</b> The turning of the near into the enjoyed</li>
+<li>3P) is the self universalized, tasted as delight.</li>
+<li> <b>The rasa is the foretaste of liberation.</b> The temporary aesthetic universalization and the</li>
+<li>finitive recognition are two degrees of the same felt de-identification.</li>
+</ul>
+<ul>
+<li>The significance of the completed IPVV.** The comparison is grounded in the IPVV&#x27;s L2 layer (the</li>
+<li>marśa, the σ-flip, the joy of union) and the pushing-tantraloka rasa sessions (the camatkāra doctrine,</li>
+<li>e sādhāraṇīkaraṇa). The IPVV, now fully translated, reveals that the recognition-philosophy and the</li>
+<li>sthetic theory are one — that the felt re-cognition of the self and the aesthetic delight of the rasa</li>
+<li>e the same camatkāra. Aesthetics is not a side-branch of the recognition; it is its felt register made</li>
+<li>plicit. The recognition is the rasa of the self, and the rasa is the recognition in miniature.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the magnum-opus comparative synthesis of the IPVV and the Abhinavabhāratī. The two texts are</li>
+<li>e doctrine in two registers: the felt is the essence of consciousness (IPVV) and the substance of</li>
+<li>light (aesthetics). The vimarśa and the rasa are the same camatkāra; the σ-flip and the</li>
+<li>dhāraṇīkaraṇa are the same mechanism. Recognition is the aesthetic event in its purest form, and the</li>
+<li>sa is the foretaste of liberation.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li><b>The camatkāra doctrine</b> (the bridging text, TĀ), Dyczkowski, <i>texts-original/tantraloka-vol1-dyczkowski.txt</i>:</li>
+<li>ad 1/53 (lines 1262–1268): &quot;The (camatkāra) (as the experience) &#x27;this appears to me (mama)&#x27; (i.e., it is my perception). This is the (essential) nature (rūpatva) of (the colour) &#x27;blue&#x27; and (all other phenomena).&quot;</li>
+<li>The three registers (cognition, bliss, wonder): the pushing-tantraloka rasa sessions (<code>RASA-AND-SANTA-derivation.md</code>, <code>LOGICVID-session-rasa-santa.md</code>).</li>
+<li><b>The sādhāraṇīkaraṇa</b> (the rasa-mechanism): <code>pushing-tantraloka/RASA-AND-SANTA-derivation.md</code>.</li>
+<li><b>IPVV L2</b>: IPK 1.5.11 (vimarśa/camatkāra as the essence), V3P (the lover-union as the felt re-cognition), V2I (the sphurattā).</li>
+<li><b>Note</b>: the Abhinavabhāratī itself is not on disk in this project; the aesthetic doctrine is engaged via the TĀ&#x27;s camatkāra passages and the project&#x27;s rasa analyses. The σ-flip/sādhāraṇīkaraṇa parallel is this essay&#x27;s synthesis, not a claim the texts state.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-RASA-IPVV-ABHINAVABHARATI.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

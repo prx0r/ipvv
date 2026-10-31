@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE CO-OPTING OF THE BUDDHIST: THE IPVV AGAINST VIJÑĀNAVĀDA AND DHARMAKĪRTI · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE CO-OPTING OF THE BUDDHIST: THE IPVV AGAINST VIJÑĀNAVĀDA AND DHARMAKĪRTI</h1><div class="skt"></div><div class="sub">A magnum-opus essay. 2026-08-11. The Pratyabhijñā and the Buddhist idealists (the Vijñānavādins, and</div><div class="sub">2583 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-BUDDHIST-IPVV.md">source markdown</a></div><h1>THE CO-OPTING OF THE BUDDHIST: THE IPVV AGAINST VIJÑĀNAVĀDA AND DHARMAKĪRTI</h1>
+<h2>Two idealisms, one starting point — the dream-inversion, the other-minds refutation, and the valence of the same appearances</h2>
+<ul>
+<li> magnum-opus essay. 2026-08-11. The Pratyabhijñā and the Buddhist idealists (the Vijñānavādins, and</li>
+<li>eir Dharmakīrtian epistemology) are the two great idealisms of India. Both hold that appearances</li>
+<li>bhāsa) are all we have — that the world is, in some sense, consciousness. But they draw opposite</li>
+<li>nclusions: the Buddhist reads the appearances as unreal (no-self, empty), the Śaiva reads them as the</li>
+<li>al self-articulation of consciousness. This essay is the complete comparative synthesis of the two,</li>
+<li>ntered on the IPVV&#x27;s method of <i>co-opting</i> — its acceptance and inversion of the Buddhist&#x27;s own tools.</li>
+<li> expounds the co-opting pattern (the inference-theory, the dream, self-awareness), the</li>
+<li>eam-inversion (the deepest move), the other-minds refutation, and the honest check (does the co-opting</li>
+<li>uggle the conclusion?). It is grounded in the IPVV&#x27;s L2 layer (V2E, V2F, V2G, V2C) and the</li>
+<li>shing-ipvv sessions, and it is now possible in full because the IPVV is translated.*</li>
+</ul>
+<hr/>
+<h2>PART I — THE TWO IDEALISMS</h2>
+<h3>1.1 The Buddhist idealisms</h3>
+<ul>
+<li>e Vijñānavādins (the Yogācāra, the &quot;mind-only&quot; school) hold that the world is, in its essence,</li>
+<li>nsciousness — that objects are forms (ākāra) of cognition, not external things. Their epistemology</li>
+<li>aches its peak in Dharmakīrti, who systematizes the inference-theory (the hetu), the apoha (the</li>
+<li>clusion-theory of concepts), and the svasamvedana (self-awareness).</li>
+</ul>
+<ul>
+<li>e Buddhist idealist&#x27;s structure:</li>
+<li>`</li>
+<li>gnition with its form (ākāra) — the blue-form</li>
+<li>the world (no external object)</li>
+<li>momentary, self-contained, without a Self</li>
+<li>`</li>
+</ul>
+<ul>
+<li>e Buddhist reads the appearances negatively: they are unreal (no external thing), empty (no Self),</li>
+<li>d momentary (no persistence).</li>
+</ul>
+<h3>1.2 The Pratyabhijñā (the recognition school)</h3>
+<ul>
+<li>e Pratyabhijñā, founded by Utpaladeva and systematized by Abhinavagupta, also holds that the world is</li>
+<li>nsciousness — that objects are forms of cognition, not external things. But it draws the opposite</li>
+<li>nclusion from the shared starting point.</li>
+</ul>
+<ul>
+<li>e Śaiva&#x27;s structure:</li>
+<li>`</li>
+<li>gnition with its form (the blue-form)</li>
+<li>the world (no external object, but the object is REAL as the ground of the form)</li>
+<li>the self-articulation of consciousness (the object is the reflection&#x27;s ground)</li>
+<li>one free, self-aware consciousness (the Lord)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>e Śaiva reads the appearances positively: they are the real self-articulation of consciousness.</li>
+</ul>
+<h3>1.3 The question of the comparison</h3>
+<ul>
+<li>e two idealisms share the starting point — appearances (ābhāsa) as all we have. Neither posits an</li>
+<li>knowable external thing as primary. And they diverge on the <i>valence</i> given to the appearances:</li>
+<li><b>The Buddhist reads them negatively:</b> unreal, no-self, empty, momentary.</li>
+<li><b>The Śaiva reads them positively:</b> the real self-articulation of consciousness, self-aware, free.</li>
+</ul>
+<ul>
+<li>The thesis of this essay.<i>* The IPVV&#x27;s method against the Buddhist is *co-opting</i> — it does not</li>
+<li>fute the Buddhist&#x27;s premises but accepts them and shows they lead to the Śaiva conclusion. This is the</li>
+<li>epest thing about the Śaiva-Buddhist relation: it is not a clash of worldviews but a dispute over the</li>
+<li>lence of the same appearances. And the comparison reveals the honest boundary: the co-opting</li>
+<li>lidly blocks the Buddhist&#x27;s negative conclusion, but it smuggles the positive universalization.</li>
+</ul>
+<hr/>
+<h2>PART II — THE CO-OPTING PATTERN</h2>
+<h3>2.1 The co-opting moves (the gems)</h3>
+<ul>
+<li>e pushing-ipvv session on the Buddhist co-opting surfaced four moves where the IPVV accepts the</li>
+<li>ddhist&#x27;s own tools and turns them to the Śaiva conclusion:</li>
+</ul>
+<ul>
+<li> <b>V2E (the external-object inference):</b> the Vijñānavādin uses the reflection (pratibimba) to infer</li>
+<li> external ground. Abhinavagupta KEEPS the inference-structure but changes its conclusion: &quot;even</li>
+<li>e error, being a relation, is a pramā&quot; — the determination of the external is valid *by its bond</li>
+<li> the thing*. The Buddhist&#x27;s own inference-theory is used to establish the real object.</li>
+<li> <b>V2F (the other-minds inference):</b> the Buddhist hopes to infer another&#x27;s mind (the other stream).</li>
+<li>hinavagupta uses the Buddhist&#x27;s OWN inference-rules (the candana/agni fragrance; the</li>
+<li>eing-gone-to-the-other&quot; as un-inferable) to show the inference fails. Then: &quot;the appearances alone</li>
+<li>ffice&quot; — the ābhāsa is real and enough.</li>
+<li> <b>V2G (the dream):</b> the Buddhist (Yogācāra) says the world is like a dream (unreal). Abhinavagupta</li>
+<li>REES the world is like a dream — but draws the OPPOSITE conclusion: the dream proves the</li>
+<li>nsciousness CREATES the object-mass by its will, without a material cause. The Buddhist&#x27;s own</li>
+<li>ample is inverted.</li>
+<li> <b>V2C (self-luminous cognition):</b> the Buddhist&#x27;s own svasamvedana (self-awareness) is adopted and</li>
+<li>epened — cognition is self-luminous and never the object of another.</li>
+</ul>
+<h3>2.2 The pattern, stated</h3>
+<ul>
+<li>ross all four, the pattern is the same: **Abhinavagupta does not attack the Buddhist&#x27;s premises; he</li>
+<li>CEPTS them and shows they lead to the Śaiva conclusion.** The inference-theory, the dream, the</li>
+<li>lf-awareness — all the Buddhist&#x27;s own principles — are used to establish consciousness as fundamental</li>
+<li>d creative.</li>
+</ul>
+<h3>2.3 Why the co-opting works (the structural reason)</h3>
+<ul>
+<li>e co-opting succeeds because the two systems share the starting point. Both begin from appearances</li>
+<li>bhāsa) as all we have. The Buddhist concludes: therefore there is only the inner cognition (idealism).</li>
+<li>e Śaiva takes the SAME starting point and concludes: therefore the appearances are the</li>
+<li>lf-articulation of consciousness, and consciousness is real and creative.</li>
+</ul>
+<ul>
+<li>The difference is not the starting point but the VALENCE given to the appearances** — unreal</li>
+<li>pearances (Buddhist) vs. the real self-manifestation of consciousness (Śaiva). The co-opting shows</li>
+<li>e starting point is SHARED — and the difference is the valence, not the data.</li>
+</ul>
+<hr/>
+<h2>PART III — THE DREAM-INVERSION (THE DEEPEST CO-OPTING)</h2>
+<h3>3.1 The Buddhist&#x27;s dream</h3>
+<ul>
+<li>e Buddhist Yogācāra uses the dream as the model of illusion. In the dream, the jar appears without</li>
+<li>e clay-wheel-stick lineage of causes; so the world, like the dream, appears without a real external</li>
+<li>use — and is therefore unreal. The dream is the proof of unreality.</li>
+</ul>
+<h3>3.2 The inversion</h3>
+<ul>
+<li>hinavagupta AGREES the dream is uncaused. But he asks: what does the dream prove?</li>
+</ul>
+<blockquote>&quot;The dream proves that the consciousness alone can create an object-mass, by its will, without a</blockquote>
+<blockquote>material cause.&quot; (V2G)</blockquote>
+<ul>
+<li>e dream does not prove the world is unreal; it proves that consciousness <i>creates</i>. The yogin who</li>
+<li>eates an army or a city by mere will is the proof. And &quot;the Lord manifests the whole world from within</li>
+<li>mself, by his own will, exactly as a yogin does.&quot;</li>
+</ul>
+<ul>
+<li>The inversion is complete.** The Buddhist&#x27;s own example of unreality (the dream) is turned into the</li>
+<li>oof of the creation-power. The dream-jar, the yogin&#x27;s army — the Buddhist&#x27;s examples of illusion —</li>
+<li>come the proofs that consciousness is the sole creator.</li>
+</ul>
+<h3>3.3 The force of the inversion</h3>
+<ul>
+<li>e dream-inversion is the deepest co-opting because it is a complete reversal of the Buddhist&#x27;s own</li>
+<li>idence. The Buddhist marshals the dream for unreality; the IPVV re-reads it as the evidence for the</li>
+<li>eation-power. The very same phenomenon — the uncaused appearance — supports two opposite conclusions,</li>
+<li>cause the question is not whether the appearance is uncaused but what that reveals: an unreal</li>
+<li>pearance (Buddhist) or a creative consciousness (Śaiva).</li>
+</ul>
+<hr/>
+<h2>PART IV — THE OTHER-MINDS REFUTATION</h2>
+<h3>4.1 The Buddhist&#x27;s escape</h3>
+<ul>
+<li>e Buddhist hopes to escape solipsism by inferring another&#x27;s mind — from Maitra&#x27;s speech, his uttered</li>
+<li>rds and gestures, one can infer what is going on in his mind, the other stream.</li>
+</ul>
+<h3>4.2 The refutation (V2F)</h3>
+<ul>
+<li>hinavagupta shows the inference cannot work, using the Buddhist&#x27;s own inference-rules:</li>
+</ul>
+<ul>
+<li>The candana/agni example.** To infer the fire in the sandalwood from the smoke, you must set aside the</li>
+<li>ndalwood&#x27;s fragrance — the mark that this smoke comes from sandalwood. Without it you establish only</li>
+<li>re in general. To infer another&#x27;s mind, you would need exactly such a further distinction — the</li>
+<li>eing-gone-to-the-other,&quot; the fact that this utterance belongs to Maitra and not to you. And that</li>
+<li>nnot be inferred from the mere utterance.</li>
+</ul>
+<ul>
+<li>The samīhitā-niyama.<i>* Only the *aimed</i> action is the wish&#x27;s effect. A wish produces the action it</li>
+<li>tends, not a mere utterance that could be aimed at anything. So from Maitra&#x27;s utterance one cannot</li>
+<li>fer his wish. If the mere utterance sufficed, even the piśāca-like case would have to be established</li>
+<li> his intent, which is absurd.</li>
+</ul>
+<h3>4.3 The conclusion</h3>
+<ul>
+<li>e other-stream cannot be inferred. And then the co-opting: &quot;the appearances alone suffice&quot; (kārikā 6).</li>
+<li> do not need a hidden external object or a separate stream behind the appearances; the ābhāsa is real</li>
+<li>d enough. The Buddhist&#x27;s own inference-theory, used to reach the other, is turned to show the</li>
+<li>pearances suffice — the Śaiva conclusion.</li>
+</ul>
+<hr/>
+<h2>PART V — THE HONEST CHECK: DOES THE CO-OPTING SMUGGLE?</h2>
+<h3>5.1 The question</h3>
+<ul>
+<li>e co-opting is rhetorically powerful, but is it LOGICALLY valid, or does it smuggle in the Śaiva</li>
+<li>taphysics?</li>
+</ul>
+<h3>5.2 The honest analysis</h3>
+<ul>
+<li>e co-opting is valid at a specific level and smuggles at another.</li>
+</ul>
+<ul>
+<li>Valid:** it shows the Buddhist cannot use the dream/inference/self-awareness to conclude unreality or</li>
+<li>-self WITHOUT also licensing the Śaiva reading. The Buddhist&#x27;s arguments are under-determined — they</li>
+<li>pport idealism/self-awareness but not specifically the Buddhist&#x27;s conclusion. The co-opting blocks the</li>
+<li>ddhist&#x27;s negative conclusion.</li>
+</ul>
+<ul>
+<li>Smuggling:** the leap from &quot;the appearances are self-articulating&quot; to &quot;there is ONE universal</li>
+<li>nsciousness that creates&quot; is NOT entailed by the co-opting. The dream shows <i>a</i> consciousness can</li>
+<li>eate an object-mass; it does not show there is one universal creator. The co-opting establishes</li>
+<li>nsciousness-as-fundamental; the universality is the additional commitment (the same gap that runs</li>
+<li>rough the whole system).</li>
+</ul>
+<h3>5.3 The verdict</h3>
+<blockquote>&quot;The co-opting establishes consciousness-as-fundamental; the universality is the separate commitment —</blockquote>
+<blockquote>the same gap as the reflexion-core and the felt→ground crux.&quot; (the co-opting session)</blockquote>
+<ul>
+<li>e co-opting is valid against the Buddhist&#x27;s <i>negative</i> conclusion (the dream/inference/self-awareness</li>
+<li> not prove unreality or no-self) but <i>smuggles</i> the positive Śaiva conclusion (one universal creator)</li>
+<li>at the co-opting does not entail. This is the honest boundary, and it is the same in every document of</li>
+<li>e library.</li>
+</ul>
+<hr/>
+<h2>PART VI — THE VALENCE OF THE SAME APPEARANCES (THE SYNTHESIS)</h2>
+<h3>6.1 The deepest insight</h3>
+<ul>
+<li>e co-opting reveals that the Buddhist and the Śaiva are not two opposing systems but TWO READINGS OF</li>
+<li>E SAME STARTING POINT. Both begin from appearances (ābhāsa) as all we have. The Buddhist reads them</li>
+<li>gatively (unreal, no-self, empty); the Śaiva reads them positively (the real self-articulation of</li>
+<li>nsciousness).</li>
+</ul>
+<ul>
+<li>The debate is not a clash of worldviews but a dispute over the VALENCE of the same appearances.** The</li>
+<li>ddhist is not the enemy of the recognition-thesis but its co-owner of the starting point — the one who</li>
+<li>ads the same data negatively.</li>
+</ul>
+<h3>6.2 The two idealisms, compared</h3>
+<ul>
+<li>Theme | Vijñānavāda | IPVV (Pratyabhijñā) |</li>
+<li>------|-------------|---------------------|</li>
+<li>Starting point | appearances (ābhāsa) as all we have | appearances (ābhāsa) as all we have |</li>
+<li>The object | unreal (no external thing) | real as the ground of the form (the arpaka) |</li>
+<li>The self | no-self (momentary stream) | the non-constructed &quot;I&quot; (V2L) |</li>
+<li>The appearances | unreal, empty | the real self-articulation of consciousness |</li>
+<li>The dream | proof of unreality | proof of the creation-power |</li>
+<li>Self-awareness | svasamvedana (adopted) | the self-luminous cognition (deepened, V2C) |</li>
+<li>The valence | negative | positive |</li>
+</ul>
+<h3>6.3 The convergence on self-awareness</h3>
+<ul>
+<li>e two idealisms share the crucial claim of self-awareness (svasamvedana). The Buddhist holds cognition</li>
+<li> self-aware; the Śaiva deepens it. And the difference is the valence: for the Buddhist, the</li>
+<li>lf-awareness is momentary and empty; for the Śaiva, it is the felt self-grasp that is the essence of</li>
+<li>nsciousness and the root of the recognition. The co-opting (V2C) takes the shared self-awareness and</li>
+<li>ves it the positive reading.</li>
+</ul>
+<hr/>
+<h2>PART VII — THE COMPARATIVE VERDICT</h2>
+<h3>7.1 The co-opting as the Śaiva method</h3>
+<ul>
+<li>e IPVV&#x27;s method against the Buddhist is the co-opting: accept the Buddhist&#x27;s own tools (inference, the</li>
+<li>eam, self-awareness) and turn them to the Śaiva conclusion. This is not refutation; it is absorption.</li>
+<li>d it reveals the deepest fact about the two idealisms: they are two readings of the same appearances,</li>
+<li>ffering in valence.</li>
+</ul>
+<h3>7.2 The honest boundary</h3>
+<ul>
+<li>e co-opting validly blocks the Buddhist&#x27;s negative conclusion, but it smuggles the positive</li>
+<li>iversalization. The dream proves <i>a</i> consciousness creates; it does not prove one universal creator.</li>
+<li>e felt→ground step — from the per-field consciousness to the one — is the commitment, and the Buddhist</li>
+<li>ightly, from its own premises) declines it. The two idealisms share the starting point and diverge on</li>
+<li>e valence; the Śaiva&#x27;s positive universalization is the wager.</li>
+</ul>
+<h3>7.3 The significance</h3>
+<ul>
+<li>e comparison is important because it shows the recognition-thesis is not a refutation of Buddhism but</li>
+<li><i>re-valence</i> of it. The Buddhist&#x27;s tools are not destroyed; they are adopted and turned. The</li>
+<li>cognition-thesis is the Buddhist&#x27;s own starting point, read positively — the appearances as the real</li>
+<li>lf-articulation of consciousness, and the self-awareness as the felt self-grasp. And the one thing the</li>
+<li>o cannot share is the valence: the Buddhist reads the appearances as unreal, the Śaiva as real. That</li>
+<li>lence — and the universalization that goes with it — is the Śaiva commitment.</li>
+</ul>
+<hr/>
+<h2>PART VIII — THE SCHOLARLY CONCLUSION</h2>
+<ul>
+<li>e comparative synthesis of the IPVV and Buddhist idealism yields five results:</li>
+</ul>
+<ul>
+<li> <b>The two idealisms share the starting point:</b> appearances (ābhāsa) as all we have.</li>
+<li> <b>The IPVV&#x27;s method is co-opting:</b> accept the Buddhist&#x27;s own tools (inference, the dream,</li>
+<li>lf-awareness) and turn them to the Śaiva conclusion.</li>
+<li> <b>The dream-inversion is the deepest move:</b> the Buddhist&#x27;s example of unreality becomes the proof</li>
+<li> the creation-power.</li>
+<li> <b>The co-opting validly blocks the negative, smuggles the positive:</b> it establishes</li>
+<li>nsciousness-as-fundamental but commits to the universalization.</li>
+<li> <b>The debate is a dispute over valence:</b> two readings of the same appearances, differing in whether</li>
+<li>ey are unreal or the real self-articulation of consciousness.</li>
+</ul>
+<ul>
+<li>The significance of the completed IPVV.** The comparison is grounded in the IPVV&#x27;s L2 layer (V2E, V2F,</li>
+<li>G, V2C) and the pushing-ipvv co-opting session. The IPVV, now fully translated, reveals the</li>
+<li>cognition-philosophy as the Buddhist&#x27;s own starting point, read positively — and the co-opting as the</li>
+<li>thod by which it absorbs the Buddhist&#x27;s tools. The two idealisms are two readings of the same</li>
+<li>pearances; the Śaiva&#x27;s positive valence — and its universalization — is the commitment.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the magnum-opus comparative synthesis of the IPVV and Buddhist idealism. The two idealisms</li>
+<li>are the starting point (appearances as all we have) and differ in valence (unreal vs. real</li>
+<li>lf-articulation). The IPVV&#x27;s method is co-opting — accept the Buddhist&#x27;s tools and turn them to the</li>
+<li>iva conclusion. The dream-inversion is the deepest move; the other-minds inference is refuted by the</li>
+<li>ddhist&#x27;s own rules. The co-opting validly blocks the negative but smuggles the universalization — the</li>
+<li>mmitment. The debate is a dispute over the valence of the same appearances.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li><b>IPVV L2</b>: V2E (the external-object inference; &quot;even the error, being a relation, is a pramā&quot;), V2F (the other-minds inference refuted; the candana/agni; the samīhitā-niyama), V2G (the dream-inversion; &quot;the dream proves that the consciousness alone can create an object-mass, by its will, without a material cause&quot;), V2C (the self-luminous cognition).</li>
+<li><b>The co-opting synthesis</b>: <code>pushing-ipvv/IPVV-buddhist-co-opting.md</code>.</li>
+<li><b>Ratié</b> on the Śaiva subverting the Buddhist&#x27;s own principle (in <i>Le Soi et l&#x27;Autre</i> and the Otherness paper).</li>
+<li><b>Interpretive flag</b>: the Vijñānavāda position is reconstructed from the IPVV&#x27;s pūrvapakṣa, not from Dharmakīrti&#x27;s <i>Pramāṇavārttika</i> directly. The Buddhist position here is the IPVV&#x27;s reconstruction of it.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-BUDDHIST-IPVV.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

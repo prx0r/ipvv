@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE IPVV AND THE TANTRĀLOKA: THE SHARED CRUXES RESOLVED · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE IPVV AND THE TANTRĀLOKA: THE SHARED CRUXES RESOLVED</h1><div class="skt"></div><div class="sub">2026-08-11. Abhinavagupta wrote two enormous works: the Tantrāloka (the encyclopedic synthesis) and</div><div class="sub">1596 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-IPVV-VS-TANTRALOKA.md">source markdown</a></div><h1>THE IPVV AND THE TANTRĀLOKA: THE SHARED CRUXES RESOLVED</h1>
+<h2>Two Abhinavaguptas on the same problems — universality, memory, freedom, the two levels, recognition, the felt — compared from the pushing-tantraloka sessions</h2>
+<ul>
+<li>026-08-11. Abhinavagupta wrote two enormous works: the Tantrāloka (the encyclopedic synthesis) and</li>
+<li>e IPVV (the dialectical commentary on the recognition philosophy). They face the same cruxes, and</li>
+<li>ey resolve them differently — the Tantrāloka by encyclopedic assertion, the IPVV by nanu→āha</li>
+<li>gument. The pushing-tantraloka sessions surfaced six genuine cruxes; this essay runs each against</li>
+<li>th texts and shows how the IPVV — the sharper, dialectical work — resolves four of them better,</li>
+<li>epens one, and hits the same wall on the deepest. This is the comparative essay, and it is unique to</li>
+<li>e completed IPVV.*</li>
+</ul>
+<hr/>
+<h2>0. The two texts, the one author</h2>
+<ul>
+<li>hinavagupta wrote:</li>
+<li><b>The Tantrāloka</b> (TĀ): the great synthesis of the whole Trika — ritual, philosophy, liberation — in</li>
+<li>irty-seven āhnikas, with Jayaratha&#x27;s commentary.</li>
+<li><b>The IPVV</b>: the enormous commentary on Utpaladeva&#x27;s (mostly lost) Vivṛti — the recognition</li>
+<li>ilosophy argued as a running nanu (objection) → āha (reply) dialectic.</li>
+</ul>
+<ul>
+<li>th are Abhinavagupta. They face the same philosophical cruxes. But they approach them differently:</li>
+<li>e TĀ is encyclopedic (it states the doctrines across its sweep), while the IPVV is dialectical (it</li>
+<li>rgues* each point against an opponent). This is the key to the comparison: **where the TĀ asserts,</li>
+<li>e IPVV proves — because it is structured as an argument.**</li>
+</ul>
+<hr/>
+<h2>1. The six shared cruxes</h2>
+<ul>
+<li>e pushing-tantraloka sessions surfaced six cruxes that both texts must face. This section runs each</li>
+<li>ainst both, from the pushing-tantraloka records.</li>
+</ul>
+<h3>1.1 Crux 1 — The universality gap</h3>
+<ul>
+<li>The problem:** how does &quot;manifest to me&quot; become &quot;the universal perceiver&quot;?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** asserted. The step from &quot;the perceiver is non-objectifiable&quot; to &quot;the consciousness of</li>
+<li>ery object&quot; was asserted, not argued.</li>
+</ul>
+<ul>
+<li>IPVV (V2C, V2D, V2G, V3C):<i>* *argued.</i></li>
+<li>V2C: the cognition is self-luminous and &quot;never the object of another&quot; — object-ness requires a real</li>
+<li>fference (sārūpya) that awarenesses lack. The non-objectifiability is <i>proven</i>, not asserted.</li>
+<li>V3C: the object cannot stand by its own power — &quot;if it did, the blue would appear to me and not to</li>
+<li>itra.&quot; The very fact the TĀ treated as the index of finitude is inverted into the proof of</li>
+<li>nsciousness as the ground. &quot;The one light rises, born of means, object and knower.&quot;</li>
+<li>V2G: the world is created from within, like a yogin — no external recipient is needed.</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>RESOLVED BETTER by the IPVV.** The step from &quot;manifest to me&quot; to &quot;universal&quot; is argued,</li>
+<li>t asserted.</li>
+</ul>
+<h3>1.2 Crux 2 — The memory→identity step</h3>
+<ul>
+<li>The problem:** does memory prove the eternal self?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** asserted. The memory argument claimed a persisting subject is needed.</li>
+</ul>
+<ul>
+<li>IPVV (V1D, V2A, V2J, V2L, V2N):<i>* *answered</i>, against the mechanistic objection.</li>
+<li>V2J: memory is laid and awakened ONLY by the reflexive-awareness (&quot;I, thus, shine&quot;); without it, no</li>
+<li>ed (the coconut-island example).</li>
+<li>V2L: the &quot;I&quot;-recollection is NOT a construction — it is the pure self-grasp that underlies all</li>
+<li>nstruction. This is the answer to the mechanistic objection: source-attribution is a construction;</li>
+<li>e &quot;I&quot; it serves is the non-constructed grasp.</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>RESOLVED BETTER by the IPVV.** The IPVV answers the modern challenge (does mechanistic</li>
+<li>urce-attribution explain the &quot;I&quot;?) directly: the mechanism explains the content; the non-constructed</li>
+<li>&quot; is what the mechanism serves.</li>
+</ul>
+<h3>1.3 Crux 3 — Karma vs. freedom</h3>
+<ul>
+<li>The problem:** is law compatible with svātantrya?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** karma = freedom contracted into a lawful sequence; the contraction is itself a free act.</li>
+</ul>
+<ul>
+<li>IPVV (V3B):<i>* *deepened.</i></li>
+<li>The &quot;un-thwarted freedom&quot; (apratihata-svātantrya) is the action-power.</li>
+<li>The cognitions of action/relation/universal/time are &quot;true by the stability and the use&quot; — the law</li>
+<li> real because it is stable and usable.</li>
+<li>Even the Kāṇāda&#x27;s inherence (samavāya), &quot;given enough power to do its job, IS the param-Lord or His</li>
+<li>wer, under that name.&quot;</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>DEEPENED by the IPVV.** The law is the stable, usable form the freedom takes — a</li>
+<li>nctionalist criterion that sharpens the TĀ&#x27;s resolution.</li>
+</ul>
+<h3>1.4 Crux 4 — The two-levels consistency</h3>
+<ul>
+<li>The problem:** are the ground and the contraction consistent?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** a binary — ground/contraction.</li>
+</ul>
+<ul>
+<li>IPVV (V3B):<i>* *made precise</i> — a threefold: satya (true), saṃvṛtisatya (conventional-true, &quot;coordinate</li>
+<li>th the real&quot;), asatya (untrue). The conventional is not a fiction; it is real-but-not-substantial.</li>
+<li>is is the missing precision the TĀ&#x27;s two-levels needed.</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>RESOLVED BETTER by the IPVV.** The threefold answers the reality-vs-illusion objection</li>
+<li>re precisely than the binary.</li>
+</ul>
+<h3>1.5 Crux 5 — Recognition-not-attainment</h3>
+<ul>
+<li>The problem:** what does recognition actually change?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** recognition is the reversal of the direction of self-apprehension (the master-key).</li>
+</ul>
+<ul>
+<li>IPVV (V1E, V3P):<i>* *made concrete.</i></li>
+<li>V1E: recognition is <i>foregrounding</i> — &quot;not an instrument lost among the things, but the primary</li>
+<li>ing we see.&quot; The master-key&#x27;s &quot;inward turn&quot; made concrete.</li>
+<li>V3P: the lover-image — recognition turns the un-known nearness into the joy of union.</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>RESOLVED BETTER by the IPVV.** The precise mechanism (foregrounding) replaces the</li>
+<li>sture (reversal of direction).</li>
+</ul>
+<h3>1.6 Crux 6 — The felt does not entail the ground</h3>
+<ul>
+<li>The problem:** does the felt prove the universal ground?</li>
+</ul>
+<ul>
+<li>Tantrāloka:** asserted the &quot;one light.&quot;</li>
+</ul>
+<ul>
+<li>IPVV (V2O, V2P, V3C):<i>* *argues it</i> (the transcendental argument of the order-less support, V2O; the</li>
+<li>usal proof of the one knower, V2P) — but does not force the final identity.</li>
+</ul>
+<ul>
+<li>Verdict:<b> </b>SAME WALL.** The IPVV argues the felt→ground step better than the TĀ (it derives the</li>
+<li>der-less support), but the universalization — the numerical identity of all supports — remains the</li>
+<li>mmitment. This is the one crux neither text closes, and the IPVV narrows but does not bridge it.</li>
+</ul>
+<hr/>
+<h2>2. The comparative table</h2>
+<ul>
+<li>Crux | Tantrāloka | IPVV | Verdict |</li>
+<li>-----|-----------|------|---------|</li>
+<li>1. Universality gap | asserted | <b>argued</b> (V2C sārūpya; V3C blue-to-me; V2G from-within) | <b>RESOLVED better</b> |</li>
+<li>2. Memory→identity | asserted | <b>answered</b> (V2L the non-constructed &quot;I&quot;) | <b>RESOLVED better</b> |</li>
+<li>3. Karma vs freedom | freedom-contracted | <b>deepened</b> (V3B un-thwarted; true-by-stability-use) | resolved + sharpened |</li>
+<li>4. Two-levels | binary | <b>threefold</b> (satya/saṃvṛtisatya/asatya) | <b>made more precise</b> |</li>
+<li>5. Recognition | reversal of direction | <b>foregrounding</b> (V1E); the lover (V3P) | <b>made concrete</b> |</li>
+<li>6. Felt→ground | asserted | <b>argued</b> (V2O/V2P); still commits | <b>SAME WALL</b> |</li>
+</ul>
+<hr/>
+<h2>3. The reason for the difference: the dialectical form</h2>
+<ul>
+<li>e systematic reason the IPVV resolves four cruxes better is its <i>form</i>. The TĀ is encyclopedic — it</li>
+<li>ates the doctrines across a sweep of ritual and philosophy, and it asserts rather than argues the</li>
+<li>ad-bearing steps. The IPVV is dialectical — every passage is a nanu→āha, an objection met by a reply.</li>
+<li> is <i>built</i> to argue, and so it supplies the arguments the TĀ only asserts:</li>
+</ul>
+<ul>
+<li>The universality proof (via sārūpya and the blue-to-me).</li>
+<li>The non-constructed &quot;I&quot; (V2L).</li>
+<li>The threefold of the real (satya/saṃvṛtisatya/asatya).</li>
+<li>The foregrounding mechanism of recognition (V1E).</li>
+</ul>
+<ul>
+<li>e IPVV is the sharper, more dialectical work; the TĀ is the encyclopedic frame. This is why the</li>
+<li>mparison is illuminating: the same author, at two levels of argumentative discipline.</li>
+</ul>
+<hr/>
+<h2>4. The shared wall, and what it means</h2>
+<ul>
+<li>e one crux neither text closes is the felt→ground step. Both assert or argue the &quot;one light&quot;; neither</li>
+<li>rces the universalization. This is not a failure of either text; it is the nature of the claim. The</li>
+<li>ep from &quot;the felt requires an order-less support&quot; to &quot;all supports are one&quot; is the Śaiva wager, and</li>
+<li>th texts make it. The IPVV narrows the gap (it derives the order-less support); neither bridges it.</li>
+</ul>
+<ul>
+<li>The significance.<i>* That the two greatest works of Abhinavagupta hit the *same</i> wall is the strongest</li>
+<li>idence that the wall is not a dialectical gap but a doctrinal commitment. The universalization is not</li>
+<li>mething Abhinavagupta failed to argue; it is something he chose to hold. The felt→ground step is the</li>
+<li>undary where the recognition-thesis passes from argument to commitment — in both the encyclopedic and</li>
+<li>e dialectical presentation.</li>
+</ul>
+<hr/>
+<h2>5. The conclusion</h2>
+<ul>
+<li>e IPVV is the sharper, more dialectical Abhinavagupta. Facing the same six cruxes as the Tantrāloka,</li>
+<li>:</li>
+<li><b>Resolves four better</b> (universality, memory→identity, two-levels, recognition) by argument rather</li>
+<li>an assertion — because it is structured as a nanu→āha dialectic.</li>
+<li><b>Deepens one</b> (karma-freedom) with the functionalist criterion of truth-by-stability-and-use.</li>
+<li><b>Hits the same wall on one</b> (the felt→ground step), narrowing but not closing it — and the fact</li>
+<li>at both texts make the same commitment is the strongest evidence that the universalization is a</li>
+<li>oice, not a gap.</li>
+</ul>
+<ul>
+<li>e comparison is unique to the completed IPVV: only now, with the whole dialectical work translated,</li>
+<li>n the two Abhinavaguptas be held side by side and their shared cruxes measured. The IPVV is the</li>
+<li>gumentative face of the system the TĀ states.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the comparative essay. The IPVV and the Tantrāloka face six shared cruxes. The IPVV resolves</li>
+<li>ur better (universality via sārūpya/blue-to-me; memory→identity via the non-constructed &quot;I&quot;; the</li>
+<li>o-levels via the threefold; recognition via foregrounding), deepens one (karma-freedom), and hits the</li>
+<li>me wall on the felt→ground step. The difference is the dialectical form: the IPVV argues what the TĀ</li>
+<li>serts. The shared wall is the strongest evidence the universalization is a commitment, not a gap.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li>This is the earlier, shorter IPVV-vs-Tantrāloka essay; it has been superseded by the fuller <code>ESSAY-TWO-ABHINAVAGUPTAS-IPVV-TANTRALOKA.md</code> (which contains the verbatim TĀ quotes and the complete SOURCES). See that essay for the sources.</li>
+<li>The six-crux comparison: <code>pushing-ipvv/IPVV-probe-tantraloka-cruxes.md</code> and the pushing-tantraloka sessions.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-IPVV-VS-TANTRALOKA.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

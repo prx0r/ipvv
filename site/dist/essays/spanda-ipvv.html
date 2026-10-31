@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE PULSE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE SPANDAKĀRIKĀ AND THE IPVV · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE PULSE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE SPANDAKĀRIKĀ AND THE IPVV</h1><div class="skt"></div><div class="sub">A magnum-opus essay. 2026-08-11. The Spandakārikā (the &quot;Stanzas on Vibration&quot;) is the foundational</div><div class="sub">3259 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-SPANDA-IPVV.md">source markdown</a></div><h1>THE PULSE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE SPANDAKĀRIKĀ AND THE IPVV</h1>
+<h2>The vibratory dynamism and the felt reflexivity — two schools, one consciousness, and the spanda/vimarśa convergence</h2>
+<ul>
+<li> magnum-opus essay. 2026-08-11. The Spandakārikā (the &quot;Stanzas on Vibration&quot;) is the foundational</li>
+<li>xt of the Spanda school of Kashmiri Śaivism — the doctrine that consciousness is fundamentally a</li>
+<li>lsation (spanda), a vibratory dynamism. The IPVV is the recognition-philosophy&#x27;s deepest commentary.</li>
+<li>is essay is the complete comparative synthesis of the two. It shows that the Spanda and the</li>
+<li>cognition are two schools of one consciousness: the Spanda gives the <i>dynamic</i> face (consciousness as</li>
+<li>e pulse), the IPVV gives the <i>reflexive</i> face (consciousness as the felt self-grasp), and they</li>
+<li>nverge in the sphurattā (the throbbing) that the IPVV identifies with the vimarśa. The comparison is</li>
+<li>ounded in Dyczkowski&#x27;s edition of the Spandakārikā and the IPVV&#x27;s L2 layer, and it is now possible in</li>
+<li>ll because the IPVV is translated.*</li>
+</ul>
+<hr/>
+<h2>PART I — THE TWO SCHOOLS</h2>
+<h3>1.1 The Spanda school</h3>
+<ul>
+<li>e Spandakārikā, attributed to Vasugupta (traditionally the author of the Śivasūtra as well), is the</li>
+<li>undational text of the Spanda school — one of the three great currents of nondual Kashmiri Śaivism</li>
+<li>side the recognition (Pratyabhijñā) and the Krama. Its central principle is spanda — the vibratory</li>
+<li>namism of absolute consciousness.</li>
+</ul>
+<ul>
+<li> Dyczkowski&#x27;s introduction puts it (the Spandakārikā with its four commentaries):</li>
+</ul>
+<blockquote>&quot;Spanda is the vibratory dynamism of the absolute consciousness... a method that affords access to</blockquote>
+<blockquote>the liberating realization of one&#x27;s authentic identity vibrant with the vitality of the universal</blockquote>
+<blockquote>pulse of Śiva.&quot;</blockquote>
+<ul>
+<li>e Spanda doctrine holds that consciousness is not a static light but a <i>pulsation</i> — a vibratory</li>
+<li>lf-activity. It &quot;spanda&quot; (vibrates), and this vibration is its very being. The pulse is at once the</li>
+<li>urce of the world&#x27;s emanation and the means of its reabsorption.</li>
+</ul>
+<ul>
+<li>e school&#x27;s four commentaries — Kṣemarāja&#x27;s Spanda-saṃdoha, Kallaṭa&#x27;s Spanda-vṛtti, Rāma&#x27;s</li>
+<li>anda-vivṛti, and Utpala&#x27;s Spanda-pradīpikā — develop this. And the school has its own tripartition of</li>
+<li>e pulse (the &quot;three vibrations&quot;): the vibration of the powers (vibhūti-spanda), the vibration of</li>
+<li>e&#x27;s own nature (svarūpa-spanda), and the arising of innate knowledge (sahajavidyodaya-spanda).</li>
+</ul>
+<h3>1.2 The recognition school</h3>
+<ul>
+<li>e recognition school (Pratyabhijñā), founded by Utpaladeva and systematized by Abhinavagupta, holds</li>
+<li>at liberation is recognition — the felt re-cognition of the self as the Lord. Its deepest text is the</li>
+<li>VV, now fully translated.</li>
+</ul>
+<ul>
+<li>e recognition school&#x27;s central claim: the essence of consciousness is vimarśa, the felt</li>
+<li>flexive-awareness. Consciousness is not a passive light but a felt self-grasp — the light that knows</li>
+<li>self shining. And recognition is the return by which the self re-cognizes itself as the Lord.</li>
+</ul>
+<h3>1.3 The question of the comparison</h3>
+<ul>
+<li>e two schools are related — the Spanda and the Pratyabhijñā both belong to the nondual Trika, both</li>
+<li>me from the same Kashmirian milieu, and both were eventually reconciled (Kṣemarāja, a student of</li>
+<li>hinavagupta, wrote on both). But they give different faces to consciousness:</li>
+</ul>
+<ul>
+<li><b>The Spanda:</b> consciousness is fundamentally a <i>pulsation</i> — dynamic, vibratory, self-activity.</li>
+<li><b>The recognition:</b> consciousness is fundamentally a <i>felt reflexivity</i> — self-aware, self-grasping.</li>
+</ul>
+<ul>
+<li>The thesis of this essay.** The two are not opposed; they are two faces of one consciousness. The</li>
+<li>anda gives the <i>dynamic</i> face (consciousness as the pulse); the recognition gives the <i>reflexive</i></li>
+<li>ce (consciousness as the felt self-grasp). And they converge in the sphurattā — the throbbing that</li>
+<li>e IPVV identifies with the vimarśa, and that the Spanda names spanda. The pulse and the recognition</li>
+<li>e one: the felt reflexivity of consciousness is its vibration, and its vibration is its felt</li>
+<li>lf-grasp.</li>
+</ul>
+<hr/>
+<h2>PART II — THE CONVERGENCE: SPANDA, VIMARŚA, AND SPHURATTĀ</h2>
+<h3>2.1 The shared starting point: consciousness is not inert</h3>
+<ul>
+<li>th schools begin from the same claim: consciousness is not a passive, inert thing. It is not a lamp</li>
+<li>at reveals a finished world; it is an activity that is present to itself.</li>
+</ul>
+<ul>
+<li>The Spanda:** consciousness is the pulse — a self-activity that vibrates. Dyczkowski: &quot;the subtle</li>
+<li>lsation&quot; is what distinguishes the living consciousness from the inert. The pulse is not a thing; it</li>
+<li> the dynamism of being.</li>
+</ul>
+<ul>
+<li>The recognition:** consciousness is the felt self-grasp — a reflexivity that is present to itself.</li>
+<li>e IPK 1.5.11: without the vimarśa, light would be like crystal — inert. The IPVV expands this: &quot;the</li>
+<li>nifestation is not a passive, inert light. Its very nature is the reflexive-awareness — the light&#x27;s</li>
+<li>n grasp of itself.&quot;</li>
+</ul>
+<ul>
+<li>The convergence.** Both deny the inertness of consciousness. The Spanda denies it by making</li>
+<li>nsciousness a pulse (dynamic); the recognition denies it by making consciousness a felt self-grasp</li>
+<li>eflexive). The two denials are one: consciousness is not inert because it is active, and its activity</li>
+<li> its self-presence.</li>
+</ul>
+<h3>2.2 The Spanda&#x27;s vimarśa: the pulse is the self-reflective awareness</h3>
+<ul>
+<li>e deepest convergence is textual. Dyczkowski&#x27;s introduction to the Spandakārikā explicitly develops</li>
+<li>e relation of spanda to vimarśa — and it grounds the vimarśa in the Spanda tradition:</li>
+</ul>
+<blockquote>&quot;Utpaladeva is here explaining in his own Pratyabhijñā terms that the Spanda doctrine... implies that</blockquote>
+<blockquote>this, the liberated condition, is that of the pure ego-identity.&quot; (Spandakārikā, Dyczkowski, ad the</blockquote>
+<blockquote>vimarśa passage)</blockquote>
+<ul>
+<li>d the introduction traces the vimarśa&#x27;s lineage: it comes from Bhartṛhari&#x27;s &quot;self-reflective</li>
+<li>areness&quot; (pratyavamārśinī), which Utpaladeva takes up and completes:</li>
+</ul>
+<blockquote>&quot;Bhartṛhari declares that the universal light of consciousness... must be full of the power of speech,</blockquote>
+<blockquote>otherwise it would not be the one light but the darkness of its negation... This power he defines as</blockquote>
+<blockquote>&#x27;self-reflective awareness&#x27; (pratyavamārśinī). But while Bhartṛhari does not explain this notion fully</blockquote>
+<blockquote>to reach the ultimate conclusion that absolute being, as self-reflective consciousness, is absolute</blockquote>
+<blockquote>egoity, Utpaladeva makes full use of it to indicate this.&quot;</blockquote>
+<ul>
+<li>d the decisive statement of the vimarśa (which the Spandakārikā&#x27;s commentary gives):</li>
+</ul>
+<blockquote>&quot;According to him, vimarśa operates as the reflective awareness which is the non-discursive</blockquote>
+<blockquote>representation or judgement that consciousness has of its own infinite nature. This is its universal</blockquote>
+<blockquote>creative and cognitive power, through which it forms itself into the All and through which the All is</blockquote>
+<blockquote>resolved back into it... It is the ground of all possible judgement or representation, conceptual and</blockquote>
+<blockquote>intuitive, of the contents of consciousness in and through each cognitive act, even the most common,</blockquote>
+<blockquote>as the self-awareness of a pure non-discursive egoic consciousness.&quot;</blockquote>
+<ul>
+<li>d the kārikā itself (echoing the IPK 1.5.11):</li>
+</ul>
+<blockquote>&quot;If one were to consider the reflective awareness (vimarśa) of the light of consciousness (prakāśa)</blockquote>
+<blockquote>to be other than its own essential nature (svabhāva), it would be as insentient as crystal even when</blockquote>
+<blockquote>the light is colored by seemingly external phenomena (artha).&quot; (Spandakārikā, the vimarśa passage)</blockquote>
+<ul>
+<li>The convergence is textual and precise.** The Spanda tradition&#x27;s own commentary develops the vimarśa</li>
+<li> the self-reflective awareness that is the pulse&#x27;s self-presence — and it grounds this in the same</li>
+<li>ystal argument that the IPK states and the IPVV expands. The Spanda&#x27;s pulse and the recognition&#x27;s</li>
+<li>marśa are the same reality: the self-activity of consciousness, which is its self-presence.</li>
+</ul>
+<h3>2.3 The sphurattā: the IPVV&#x27;s identification of the pulse with the reflexivity</h3>
+<ul>
+<li>e IPVV makes the identification explicit. In the jñānaśaktivimarśa, the IPVV gives the positive</li>
+<li>count of the powers, and its key is the sphurattā — the throbbing:</li>
+</ul>
+<blockquote>&quot;The throbbing (sphurattā) — the very pulsing of the manifestation — is the great being (mahāsattā),</blockquote>
+<blockquote>undivided by place and time, the heart of the param-Lord.&quot; (IPVV, V2I, kārikā 14)</blockquote>
+<ul>
+<li>d the IPVV identifies the sphurattā with the reflexivity:</li>
+</ul>
+<blockquote>&quot;It is the same as the spanda, the wave (ūrmi), the eternal being.&quot; (V2I)</blockquote>
+<ul>
+<li>The convergence is complete.** The IPVV explicitly identifies the sphurattā (the throbbing) with the</li>
+<li>anda (the pulse) and with the vimarśa (the reflexivity). The pulse of the Spanda school is the</li>
+<li>robbing of the IPVV, and the throbbing is the felt reflexivity of the recognition. **The pulse and</li>
+<li>e recognition are one: the sphurattā is the spanda, and the spanda is the felt self-grasp.**</li>
+</ul>
+<h3>2.4 The convergence, stated</h3>
+<ul>
+<li>e two schools converge on a single claim, stated in two registers:</li>
+</ul>
+<ul>
+<li><b>The Spanda register:</b> consciousness is the pulse (spanda) — the vibratory dynamism of being.</li>
+<li><b>The recognition register:</b> consciousness is the felt reflexivity (vimarśa) — the self-grasp of the</li>
+<li>ght.</li>
+</ul>
+<ul>
+<li>d the two are one, because the IPVV identifies the throbbing (sphurattā) with both:</li>
+<li>sphurattā = spanda (the pulse, V2I), and</li>
+<li>sphurattā = vimarśa (the reflexivity, V2I).</li>
+</ul>
+<ul>
+<li>The single claim:** consciousness is a felt self-pulsation — a vibration that is present to itself.</li>
+<li>e Spanda gives the dynamism; the recognition gives the reflexivity; the sphurattā unites them.</li>
+</ul>
+<hr/>
+<h2>PART III — THE DIFFERENCES</h2>
+<ul>
+<li>e convergence is real, but the two schools are not identical. The differences are as instructive as</li>
+<li>e convergence.</li>
+</ul>
+<h3>3.1 The register: dynamism vs. reflexivity</h3>
+<ul>
+<li>The Spanda foregrounds dynamism.<i>* The Spandakārikā is a text about *motion</i> — the pulse, the</li>
+<li>bration, the self-activity. Its central teaching is that consciousness <i>moves</i> — it vibrates out into</li>
+<li>e world and pulses back into itself. The &quot;practice&quot; is to rest in the pulse, to cultivate the stable</li>
+<li>areness of the perpetual Present.</li>
+</ul>
+<ul>
+<li>The recognition foregrounds reflexivity.<i>* The IPVV is a text about *knowledge</i> — the felt</li>
+<li>lf-grasp, the re-cognition. Its central teaching is that consciousness <i>knows itself</i> — it is present</li>
+<li> itself in the act of manifesting. The liberation is the recognition, the re-cognition of the self.</li>
+</ul>
+<ul>
+<li>The difference is one of emphasis, not of substance.** The Spanda says consciousness is the pulse;</li>
+<li>e recognition says consciousness is the felt self-grasp. Both are true; the Spanda&#x27;s pulse is the</li>
+<li>cognition&#x27;s reflexivity in motion, and the recognition&#x27;s reflexivity is the Spanda&#x27;s pulse in</li>
+<li>lf-knowledge.</li>
+</ul>
+<h3>3.2 The soteriology: the practice vs. the recognition</h3>
+<ul>
+<li>The Spanda&#x27;s soteriology is a practice.** The Spandakārikā offers a way — the cultivation of the</li>
+<li>lse, the resting in the perpetual Present, the thinning of the breath and the body. It is a path of</li>
+<li>ustained awareness*.</li>
+</ul>
+<ul>
+<li>The recognition&#x27;s soteriology is the recognition.** The IPVV offers the recognition — the re-cognition</li>
+<li> the self as the Lord. &quot;Since liberation is from the recognition alone, all the elaborate effort-yogas</li>
+<li>e useless here; this is the clear means, effort-less, un-undertaken, yet bearing the great fruit&quot;</li>
+<li>3P).</li>
+</ul>
+<ul>
+<li>The difference.<i>* The Spanda is a *practice</i> (cultivate the pulse); the recognition is a <i>recognition</i></li>
+<li>e-cognize the self). But they are not opposed: the Spanda&#x27;s practice is the means by which the</li>
+<li>cognition arises. The pulse is cultivated so that the self-grasp can be recognized. The two soteriologies</li>
+<li>e two phases of one path: the practice prepares the recognition.</li>
+</ul>
+<h3>3.3 The epistemology: the pulse&#x27;s power vs. the felt reflexivity</h3>
+<ul>
+<li>The Spanda&#x27;s power is the pulse&#x27;s activity.** The pulse is the universal creative and cognitive</li>
+<li>wer — &quot;through which it forms itself into the All and through which the All is resolved back into</li>
+<li>.&quot; The power is the dynamism.</li>
+</ul>
+<ul>
+<li>The recognition&#x27;s power is the felt reflexivity.** The powers (knowledge, memory, exclusion) are the</li>
+<li>lf-awareness in its operations. The apohana (the third power) is &quot;the self&#x27;s own luminous grasp.&quot;</li>
+</ul>
+<ul>
+<li>The difference.<i>* The Spanda&#x27;s power is the *motion</i> of consciousness; the recognition&#x27;s power is the</li>
+<li>elf-grasp* of consciousness. But again, they are one: the motion is the self-grasp in activity, and the</li>
+<li>lf-grasp is the motion in self-knowledge. The sphurattā — the throbbing — is both the pulse (motion)</li>
+<li>d the reflexivity (self-grasp).</li>
+</ul>
+<hr/>
+<h2>PART IV — THE COMPARATIVE TABLE</h2>
+<ul>
+<li>Theme | Spandakārikā | IPVV | Convergence |</li>
+<li>------|-------------|------|-------------|</li>
+<li>The essence | consciousness is the pulse (spanda) | consciousness is the felt reflexivity (vimarśa) | the sphurattā = both |</li>
+<li>The inertness | the pulse distinguishes the conscious from the inert | without the vimarśa, light is like crystal | the same denial of inertness |</li>
+<li>The power | the pulse is the universal creative-cognitive power | the powers are the self-awareness&#x27;s operations | the sphurattā as both |</li>
+<li>The liberation | the practice: rest in the pulse | the recognition: re-cognize the self | the practice prepares the recognition |</li>
+<li>The vimarśa | the Spanda tradition develops it (from Bhartṛhari) | the IPVV expands it (the parā-vāk, the māheśvarya) | the same concept, two depths |</li>
+<li>The time | the pulse as the perpetual Present | the order-less support, the un-brokenness | the eternal Now = the order-less |</li>
+</ul>
+<hr/>
+<h2>PART V — THE RECONCILIATION AND THE COMMITMENT</h2>
+<h3>5.1 The reconciliation: two schools, one consciousness</h3>
+<ul>
+<li>e comparative synthesis yields a reconciliation. The Spanda and the recognition are two schools of</li>
+<li>e consciousness:</li>
+</ul>
+<ul>
+<li><b>The Spanda</b> is the <i>dynamic</i> face — consciousness as the pulse, the vibration, the self-activity.</li>
+<li><b>The recognition</b> is the <i>reflexive</i> face — consciousness as the felt self-grasp, the reflexivity,</li>
+<li>e self-knowledge.</li>
+<li><b>The sphurattā</b> (the throbbing) is their unity — the pulse that is the reflexivity, the reflexivity</li>
+<li>at is the pulse.</li>
+</ul>
+<ul>
+<li>e two schools are not rivals; they are two registers of the same nondual consciousness. And the IPVV</li>
+<li>self acknowledges this: it identifies the sphurattā with the spanda (V2I), and it grounds the vimarśa</li>
+<li> the Spanda tradition (as Dyczkowski&#x27;s introduction shows). The recognition-philosophy is, in part,</li>
+<li>e Spanda doctrine brought to the level of epistemology — the pulse made self-aware.</li>
+</ul>
+<h3>5.2 The historical lineage</h3>
+<ul>
+<li>e relationship is historical as well as doctrinal. Dyczkowski&#x27;s introduction shows that:</li>
+<li> <b>Bhartṛhari</b> supplies the power of self-reflective awareness (pratyavamārśinī).</li>
+<li> <b>Utpaladeva</b> takes it up and completes it — vimarśa as the reflective awareness of the self&#x27;s</li>
+<li>finite nature, the &quot;I&quot; consciousness (aham-pratyavamarśa).</li>
+<li> <b>Abhinavagupta</b> (in the IPVV) expands it into a wide-ranging hermeneutical key — vimarśa as the</li>
+<li>rā-vāk, the sphurattā, the māheśvarya.</li>
+</ul>
+<ul>
+<li>e Spanda tradition is part of this lineage: its pulse is the substrate from which the recognition&#x27;s</li>
+<li>marśa develops. The IPVV is the apex of the lineage — the pulse brought to full reflexivity.</li>
+</ul>
+<h3>5.3 The shared commitment</h3>
+<ul>
+<li>d the two schools share the one commitment. Both assert the universal:</li>
+<li>The Spanda: the &quot;universal pulse of Śiva&quot; — one pulse vibrating through all.</li>
+<li>The recognition: the one Lord — all order-less supports are one (the universalization, A4).</li>
+</ul>
+<ul>
+<li>th <i>make</i> this commitment, and neither <i>forces</i> it (in the formal sense). The pulse of one field and</li>
+<li>e pulse of another are asserted to be one pulse; the support of one field and the support of another</li>
+<li>e committed to be one support. **The felt→ground step — from the per-field pulse/support to the</li>
+<li>iversal — is the commitment both schools share.** This is the same wall the IPVV and the TĀ hit, and</li>
+<li>e Spanda hits it too: the universalization is the Śaiva wager.</li>
+</ul>
+<hr/>
+<h2>PART VI — THE SCHOLARLY CONCLUSION</h2>
+<ul>
+<li>e comparative synthesis of the Spandakārikā and the IPVV yields five results:</li>
+</ul>
+<ul>
+<li> <b>The two schools are two faces of one consciousness.</b> The Spanda gives the dynamic face (the</li>
+<li>lse); the recognition gives the reflexive face (the felt self-grasp).</li>
+<li> <b>The convergence is textual and precise.</b> The Spanda tradition develops the vimarśa (from</li>
+<li>artṛhari&#x27;s pratyavamārśinī), and the IPVV identifies the sphurattā with the spanda (V2I).</li>
+<li> <b>The pulse and the recognition are one.</b> The sphurattā — the throbbing — is both the spanda and</li>
+<li>e vimarśa: consciousness is a felt self-pulsation.</li>
+<li> <b>The schools differ in register, not substance.</b> The Spanda is the practice (cultivate the pulse);</li>
+<li>e recognition is the recognition (re-cognize the self); the practice prepares the recognition.</li>
+<li> <b>Both share the one commitment.</b> The universalization — the one pulse, the one Lord — is the wager</li>
+<li>th schools make and neither forces.</li>
+</ul>
+<ul>
+<li>The significance of the completed IPVV.** The comparison is grounded in the IPVV&#x27;s L2 layer (the</li>
+<li>hurattā identification at V2I) and in Dyczkowski&#x27;s edition of the Spandakārikā. The IPVV, now fully</li>
+<li>anslated, reveals the recognition-philosophy as the reflexivity of the Spanda&#x27;s pulse — and it shows</li>
+<li>at the two schools, the pulse and the recognition, are one. The recognition is the Spanda brought to</li>
+<li>lf-awareness; the Spanda is the recognition in motion. The pulse and the felt self-grasp are the one</li>
+<li>nsciousness.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the magnum-opus comparative synthesis of the Spandakārikā and the IPVV. The two schools are</li>
+<li>o faces of one consciousness: the Spanda gives the dynamic face (consciousness as the pulse), the</li>
+<li>cognition gives the reflexive face (consciousness as the felt self-grasp). The convergence is</li>
+<li>xtual — the Spanda tradition develops the vimarśa, and the IPVV identifies the sphurattā with the</li>
+<li>anda. The pulse and the recognition are one: consciousness is a felt self-pulsation. The schools</li>
+<li>ffer in register, not substance; both share the one commitment (the universalization).*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li>Primary texts.**</li>
+<li><b>Spandakārikā</b> with four commentaries, tr. Mark S. G. Dyczkowski, <i>The Stanzas on Vibration</i></li>
+<li>UNY, 1992), esp. the Introduction and the vimarśa analysis at lines 4497–4551.</li>
+<li><b>Īśvarapratyabhijñākārikā</b> with the Vṛtti, ed. and tr. Raffaele Torella (critical ed.),</li>
+<li>K 1.5.11.</li>
+<li><b>Īśvarapratyabhijñāvivṛtivimarśinī</b>, ed. M. K. Śāstrī (KSTS 60/62/65); the L2 READ layer in</li>
+<li>anskritree/translations/_stack/ipvv/pilot/` (esp. V2H, V2I: the sphurattā).</li>
+<li><b>Tantrāloka</b>, tr. Dyczkowski, <i>texts-original/tantraloka-vol1-dyczkowski.txt</i> (for the</li>
+<li>oss-identification of sphurattā, pratyavamarśa, parā vāc).</li>
+</ul>
+<ul>
+<li>Verbatim quotes used above (with locators).**</li>
+</ul>
+<ul>
+<li> <b>Spandakārikā, Dyczkowski&#x27;s Introduction, the vimarśa</b> (lines 4516–4535):</li>
+</ul>
+<blockquote>&quot;According to him, vimarśa operates as the reflective awareness which is the non-discursive</blockquote>
+<blockquote>representation or judgement that consciousness has of its own infinite nature. This is its universal</blockquote>
+<blockquote>creative and cognitive power, through which it forms itself into the All and through which the All is</blockquote>
+<blockquote>resolved back into it... It is the ground of all possible judgement or representation, conceptual and</blockquote>
+<blockquote>intuitive, of the contents of consciousness in and through each cognitive act.&quot;</blockquote>
+<ul>
+<li> <b>Spandakārikā, the vimarśa kārikā</b> (echoing IPK 1.5.11), at lines 4530–4535:</li>
+</ul>
+<blockquote>&quot;If one were to consider the reflective awareness (vimarśa) of the light of consciousness (prakāśa)</blockquote>
+<blockquote>to be other than its own essential nature (svabhāva), it would be as insentient as crystal even when</blockquote>
+<blockquote>the light is colored by (seemingly external) phenomena (artha).&quot;</blockquote>
+<ul>
+<li> <b>Tantrāloka, ad 1/53 (Dyczkowski, vol 1, lines 1227–1244)</b> — the identification of sphurattā with</li>
+<li>atyavamarśa and parā vāc, and the Heart as the felt &quot;my&quot;:</li>
+</ul>
+<blockquote>&quot;According to Utpaladeva (IP 1/5/14 quoted ad 3/209), as the radiance (sphurattā) of the Light of</blockquote>
+<blockquote>consciousness, it is its reflective awareness (pratyavamarśa), which is identified with the supreme</blockquote>
+<blockquote>level of Speech (parā vāc)... Thus he writes: &#x27;My&#x27; (mama) is the Heart, which is the place that is</blockquote>
+<blockquote>the abode of the foundation (pratiṣṭhā) (and ultimate ground) of all things... (which is) the</blockquote>
+<blockquote>uninterrupted (and unconditioned) wonder (of its aesthetic relish).&quot;</blockquote>
+<ul>
+<li> <b>IPVV, V2I (the sphurattā)</b>:</li>
+</ul>
+<blockquote>&quot;The throbbing (sphurattā) — the very pulsing of the manifestation — is the great being (mahāsattā),</blockquote>
+<blockquote>undivided by place and time, the heart of the param-Lord... It is the same as the spanda, the wave</blockquote>
+<blockquote>(ūrmi), the eternal being.&quot;</blockquote>
+<ul>
+<li>Peer-review note.** The identification of sphurattā = spanda = vimarśa is not an imposition on the</li>
+<li>xts; it is stated by the TĀ itself (Utpaladeva&#x27;s IP 1/5/14, ad 3/209), which identifies the sphurattā</li>
+<li> the Light with the pratyavamarśa and the parā vāc, and by the IPVV (V2I), which identifies the</li>
+<li>hurattā with the spanda. The comparison rests on these explicit identifications. The one interpretive</li>
+<li>ep is the claim that the 112-way re-positioning is the σ-flip; that is flagged as an interpretive</li>
+<li>tension in the essay body.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-SPANDA-IPVV.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

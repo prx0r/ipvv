@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE EPISTEMOLOGY OF ACTION: ABHINAVA'S METAPHYSICS OF AGENCY · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE EPISTEMOLOGY OF ACTION: ABHINAVA&#x27;S METAPHYSICS OF AGENCY</h1><div class="skt"></div><div class="sub">2026-08-11. The recognition-thesis is not only an epistemology (knowledge is the felt self-awareness)</div><div class="sub">1853 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-EPISTEMOLOGY-OF-ACTION.md">source markdown</a></div><h1>THE EPISTEMOLOGY OF ACTION: ABHINAVA&#x27;S METAPHYSICS OF AGENCY</h1>
+<h2>How the IPVV proves causality is the conscious knower&#x27;s agency — the kriyādhikāra&#x27;s argument-chain (V3A–I)</h2>
+<ul>
+<li>026-08-11. The recognition-thesis is not only an epistemology (knowledge is the felt self-awareness)</li>
+<li>t a metaphysics of action. In the kriyādhikāra, Abhinavagupta argues that causality itself is the</li>
+<li>nscious knower&#x27;s agency — that cause and effect are, in their essence, the relation of agent and</li>
+<li>ject of action. This essay reconstructs the argument-chain in full: the timeless that manifests order,</li>
+<li>e bhedābheda action-cognitions, the inert-cannot-cause proof, inference across knowers, and the will</li>
+<li> cause-agent-action. It is the kriyādhikāra essay, and it is unique to the completed IPVV — this is</li>
+<li>e region Ratié&#x27;s book does not develop.*</li>
+</ul>
+<hr/>
+<h2>1. The problem: how can the timeless act?</h2>
+<ul>
+<li>e kriyādhikāra opens the parallel — having established the power of knowledge, now the power of</li>
+<li>tion. And it confronts the paradox at the heart of the system: the Lord is beyond time and sequence,</li>
+<li>t the world he manifests is shot through with sequence — causes before effects, moments before moments.</li>
+</ul>
+<ul>
+<li>e IPVV announces the answer in the opening verse of homage:</li>
+</ul>
+<blockquote>&quot;He bows to Śiva, who, though free of sequence, manifests manifold sequences.&quot; (V3A)</blockquote>
+<ul>
+<li>The mirror.** The image is the mirror: a mirror bears countless reflections — of things before it,</li>
+<li>side it, in all their variety — without ever ceasing to be the one, undivided mirror. It is not torn</li>
+<li>to pieces by what it shows. So too the one consciousness, whose essence is nothing but appearance, can</li>
+<li>ke up within itself a host of seemingly contradictory forms without its oneness being divided.</li>
+</ul>
+<ul>
+<li>The first claim.** This is the &quot;action-support&quot; (kriyāśraya): the one that acts is one, and it is</li>
+<li>ecisely <i>because</i> it is one and un-divided that it can show sequence at all. The timeless manifests</li>
+<li>der because its oneness is not threatened by the order.</li>
+</ul>
+<hr/>
+<h2>2. Against the Buddhist: the five refutations (V3A)</h2>
+<ul>
+<li>e IPVV aims this squarely at the Buddhist, who had said: only momentary cognitions flash forth, with</li>
+<li> owner behind them; memory is nothing but impression; cognition is either inert or without real</li>
+<li>mporal distinctions. Abhinavagupta answers each point:</li>
+</ul>
+<ul>
+<li> <b>Distinct cognitions cannot serve the dealings of the world.</b> A string of unrelated flashes could</li>
+<li>ver get anyone to the village.</li>
+<li> <b>Memory is not mere impression.</b> Memory is the un-broken manifestation (V2A).</li>
+<li> <b>Cognition is the un-contracted consciousness</b>, contracting itself by its own power under the tint</li>
+<li> the known object.</li>
+<li> <b>Its oneness is not threatened</b> by its many appearances, any more than a mirror&#x27;s is by its</li>
+<li>flections.</li>
+</ul>
+<ul>
+<li>The first objection, rejected.** &quot;The action of the one is not ordered&quot; is rejected by establishing</li>
+<li>at <i>one</i> as the agent: the one can be of many natures; that is not a contradiction.</li>
+</ul>
+<hr/>
+<h2>3. The action-cognitions as bhedābheda (V3B)</h2>
+<ul>
+<li>e IPVV then takes up the cognitions of action — the bhedābheda (distinction-and-non-distinction)</li>
+<li>marśa:</li>
+</ul>
+<blockquote>&quot;The cognitions of action, relation, universal, substance, direction and time have a substrate that</blockquote>
+<blockquote>is at once one and many, and they are to be accepted as true — true by their stability and true by</blockquote>
+<blockquote>their efficacy.&quot; (V3B)</blockquote>
+<ul>
+<li>The example.** The body of Caitra — and of Maitra — although it differs according to this or that</li>
+<li>ace, time, and shape, nevertheless shines forth without ever abandoning its oneness, in the recognition</li>
+<li>his is the very same body.&quot; That very unity is the action, in the judgment &quot;Caitra is walking.&quot; The</li>
+<li>tion-cognitions are both one and many, and they are true by their stability and efficacy.</li>
+</ul>
+<ul>
+<li>The functionalist criterion.** This is where the IPVV gives the &quot;true by stability and use&quot; — the</li>
+<li>gnitions of action are accepted as true because they are stable (no refutation uproots them) and</li>
+<li>ficacious (they serve the intended end). This is the functionalist criterion that deepens the</li>
+<li>rma-freedom resolution.</li>
+</ul>
+<hr/>
+<h2>4. The inert cannot be a cause (V3G)</h2>
+<ul>
+<li>e hard work of the kriyādhikāra is to show that the <i>inert</i> cannot be a cause. The argument:</li>
+</ul>
+<ul>
+<li>The seed and the sprout.** The inert seed cannot endow the sprout with being — for the sprout is either</li>
+<li>ready existent (in which case nothing is acquired) or non-existent (in which case it cannot come to</li>
+<li>, since the non-existent has no nature by which to gain existence). The claim that the effect is both</li>
+<li>istent and non-existent, or neither, is self-contradictory. The blue cannot become yellow, however</li>
+<li>rd we try; so the non-existent cannot acquire existence.</li>
+</ul>
+<ul>
+<li>The conclusion.** Hence the inert, material cause has no real causal power. The real cause is</li>
+<li>sewhere — in the conscious:</li>
+</ul>
+<blockquote>&quot;The potter creates the pot by his power; the yogin, by his will alone, brings about an effect without</blockquote>
+<blockquote>any clay or seed. If the inert seed and clay were the true causes, this would be impossible. But it is</blockquote>
+<blockquote>not impossible — which shows that the true cause is consciousness, the free will that shapes the</blockquote>
+<blockquote>effect.&quot; (V3G)</blockquote>
+<ul>
+<li>The thesis.** Causality is the conscious knower&#x27;s agency. The essence of cause and effect is nothing</li>
+<li>t the relation of agent and object of action.</li>
+</ul>
+<hr/>
+<h2>5. Inference across knowers (V3H)</h2>
+<ul>
+<li>e Vijñānavādin objects: if everything is appearance, cause and effect are only relations between</li>
+<li>pearances — and the smoke-appearance can never reach the fire-appearance of another stream.</li>
+</ul>
+<ul>
+<li>The answer (V3H):** the Lord creates the appearances for all the knowers at once, as one.</li>
+</ul>
+<blockquote>&quot;So when we grasp the pervasion — that smoke implies fire — the smoke-appearance and the</blockquote>
+<blockquote>fire-appearance belong, in the Lord&#x27;s single creation, to every knower alike... The fire-appearance is</blockquote>
+<blockquote>one, not split by the difference of streams; so the smoke can arise from it and from nothing else.&quot;</blockquote>
+<blockquote>(V3H)</blockquote>
+<ul>
+<li>The result.** Inference holds across knowers because the Lord has created the appearances as one. The</li>
+<li>ause of the Lord&quot; (adhipatipratyaya) is the fire-appearance, indirect to the one who infers, by which</li>
+<li>e inference is made. This grounds shared inference in the one creation.</li>
+</ul>
+<hr/>
+<h2>6. The will as cause, agent, and action (V3I)</h2>
+<ul>
+<li>e crown of the kriyādhikāra is the sharpest objection and its answer.</li>
+</ul>
+<ul>
+<li>The objection.** If consciousness is one — if all the world is a single consciousness — then how is</li>
+<li>tion possible? Action needs an agent and an object, two distinct things; but if all is one, there is</li>
+<li> distinct object for the agent to act upon.</li>
+</ul>
+<ul>
+<li>The answer.** Action is the one will-to-do that joins the agent and the object:</li>
+</ul>
+<blockquote>&quot;There is a single re-recollection (parāmarśa) marked by the will-to-do — the moment &#x27;I will make</blockquote>
+<blockquote>this&#x27; — which rests, as it were, in the other consciousness-essence and binds the two together. It is</blockquote>
+<blockquote>this one will-recollection, and not any external contact, that makes the jar an object of action and</blockquote>
+<blockquote>consciousness its agent.&quot; (V3I)</blockquote>
+<ul>
+<li>And the refutation of the monist&#x27;s &quot;ignorance.&quot;** Against the Advaita&#x27;s claim that the difference is</li>
+<li>re ignorance, the IPVV asks: <i>of whom</i> is this ignorance? The one-form Brahman cannot have it; the</li>
+<li>parate souls would be raised up by it; &quot;un-explainable&quot; is the speech of a yakṣa. The difference is</li>
+<li>al:</li>
+</ul>
+<blockquote>&quot;Our cognition rests in difference as it does not rest in non-difference, and the very &#x27;refutation&#x27;</blockquote>
+<blockquote>that would remove difference is itself a manifestation — and so would be difference, and so would be</blockquote>
+<blockquote>ignorance.&quot; (V3I)</blockquote>
+<ul>
+<li>The summit (the will as the three):**</li>
+</ul>
+<blockquote>&quot;The cause does not cause, the agent does not act, the action does not move — all three are the one</blockquote>
+<blockquote>will, by which the Lord, wishing to stand, becomes the world.&quot; (V3I)</blockquote>
+<hr/>
+<h2>7. The complete argument-chain</h2>
+<ul>
+<li>e kriyādhikāra&#x27;s argument, completely stated:</li>
+</ul>
+<ul>
+<li> <b>The timeless manifests order</b> (V3A) — because the one is one, it can show sequence without</li>
+<li>vision (the mirror).</li>
+<li> <b>The action-cognitions are bhedābheda</b> (V3B) — one and many, true by stability and efficacy.</li>
+<li> <b>The inert cannot cause</b> (V3G) — the seed cannot endow the sprout (the existent/non-existent</li>
+<li>lemma); the real cause is the conscious, the free will.</li>
+<li> <b>Inference holds across knowers</b> (V3H) — because the Lord creates the appearances as one.</li>
+<li> <b>The will is cause, agent, and action</b> (V3I) — the one will-to-do joins agent and object; the</li>
+<li>fference is real, not ignorance.</li>
+</ul>
+<ul>
+<li>The conclusion.** Causality is the conscious knower&#x27;s agency. Action is not an external event; it is</li>
+<li>e will of consciousness. The one who knows is the one who acts; knowledge and action are the two faces</li>
+<li> the one self-awareness. This is the epistemology of action — the region that completes the</li>
+<li>cognition-thesis as a metaphysics.</li>
+</ul>
+<hr/>
+<h2>8. The significance for the recognition-thesis</h2>
+<ul>
+<li>e kriyādhikāra matters for recognition because it completes the parallel:</li>
+</ul>
+<ul>
+<li>The jñānādhikāra established: knowledge is the felt self-awareness.</li>
+<li>The kriyādhikāra establishes: action is the same self-awareness, as the will.</li>
+</ul>
+<ul>
+<li>e recognition-thesis is not only &quot;knowledge is self-aware&quot;; it is &quot;the self-aware consciousness is</li>
+<li>so the agent.&quot; And recognition — the re-cognition of the self as the Lord — re-cognizes the self as</li>
+<li>e <i>doer</i> as well as the <i>knower</i>. The Lord is the one who knows and acts (the jñāna-kriyā pair). The</li>
+<li>iyādhikāra gives the action-side of the recognition: the same felt self-awareness, in its freedom, is</li>
+<li>e agent of the world.</li>
+</ul>
+<hr/>
+<h2>9. The boundary</h2>
+<ul>
+<li>e kriyādhikāra&#x27;s arguments are [T] and largely sound: the inert-cannot-cause, the bhedābheda</li>
+<li>tion-cognitions, the will-as-the-three are argued. The one commitment is the same as everywhere: the</li>
+<li>ep from &quot;each field&#x27;s action is its own will&quot; to &quot;all action is one will&quot; (the universalization). The</li>
+<li>ert-cannot-cause proves the conscious agent per field; the identity of all agents is the commitment.</li>
+<li>e epistemology of action is argued for the finite field; the one agent is the wager.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the epistemology-of-action essay. The kriyādhikāra argues that causality is the conscious</li>
+<li>ower&#x27;s agency: the timeless manifests order (V3A), the action-cognitions are bhedābheda (V3B), the</li>
+<li>ert cannot cause (V3G), inference holds across knowers by the one creation (V3H), and the will is</li>
+<li>use-agent-action (V3I). This completes the recognition-thesis: the self-aware consciousness is also</li>
+<li>e agent. The one commitment is the universalization (one agent). This is the region Ratié&#x27;s book does</li>
+<li>t develop.*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li><b>IPVV L2, the kriyādhikāra</b>: V3A (the timeless manifests order; the mirror), V3B (the bhedābheda action-cognitions; &quot;true by stability and efficacy&quot;), V3G (the inert cannot cause), V3H (inference across knowers), V3I (the will as cause-agent-action; the anti-anirvācya). In <code>sanskritree/translations/_stack/ipvv/pilot/pilot_V3{A..I}_L2_read.md</code>.</li>
+<li><b>The key claim (V3G)</b>: &quot;The essence of cause and effect is nothing but the relation of agent and object of action. Causality, in the end, is the agency of a conscious knower.&quot;</li>
+<li><b>The summit (V3I)</b>: &quot;The cause does not cause, the agent does not act, the action does not move — all three are the one will, by which the Lord, wishing to stand, becomes the world.&quot;</li>
+<li>The TĀ parallel (action = knowledge, TĀ 1/151): <code>ESSAY-TWO-ABHINAVAGUPTAS-IPVV-TANTRALOKA.md</code> and <code>pushing-tantraloka/LOGICVID-session-Q2Q3-powers-upayas.md</code>.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-EPISTEMOLOGY-OF-ACTION.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

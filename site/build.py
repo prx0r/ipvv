@@ -314,7 +314,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -548,7 +548,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -928,6 +928,67 @@ def build_glossary():
     shutil.copy(ROOT / "data/glossary.json", DIST / "data/glossary.json")
     return len(gl)
 
+def md_lite(src):
+    """Minimal markdown renderer for vendored prose (essays). Escape-first, block rules only."""
+    import re as _re
+    out, para, lst = [], [], False
+    def flush_p():
+        nonlocal para
+        if para:
+            out.append("<p>" + " ".join(para) + "</p>"); para = []
+    def flush_l():
+        nonlocal lst
+        if lst:
+            out.append("</ul>"); lst = False
+    def inline(s):
+        s = esc(s)
+        s = _re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
+        s = _re.sub(r"(?<!\w)\*(.+?)\*(?!\w)", r"<i>\1</i>", s)
+        s = _re.sub(r"`(.+?)`", r"<code>\1</code>", s)
+        return s
+    for ln in src.splitlines():
+        s = ln.strip()
+        if not s:
+            flush_p(); flush_l(); continue
+        if s.startswith("### "): flush_p(); flush_l(); out.append(f"<h3>{inline(s[4:])}</h3>"); continue
+        if s.startswith("## "): flush_p(); flush_l(); out.append(f"<h2>{inline(s[3:])}</h2>"); continue
+        if s.startswith("# "): flush_p(); flush_l(); out.append(f"<h1>{inline(s[2:])}</h1>"); continue
+        if s in ("---", "***"): flush_p(); flush_l(); out.append("<hr/>"); continue
+        if s.startswith("> "): flush_p(); flush_l(); out.append(f"<blockquote>{inline(s[2:])}</blockquote>"); continue
+        if s.startswith(("- ", "* ")): flush_p(); 
+        if not lst: out.append("<ul>"); lst = True
+        out.append(f"<li>{inline(s[2:])}</li>"); continue
+        para.append(inline(ln.strip()))
+    flush_p(); flush_l()
+    return "\n".join(out)
+
+def build_essays():
+    """Owner's recognition essays (vendored volume prose, displayed as written)."""
+    import json as _json
+    src = ROOT / "data/essays"
+    out = DIST / "essays"; out.mkdir(parents=True, exist_ok=True)
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    for f in sorted(src.glob("*.md")):
+        shutil.copy(f, DIST / "data" / ("essay-" + f.name))
+    cards = []
+    for f in sorted(src.glob("*.md")):
+        raw = f.read_text(encoding="utf-8", errors="replace")
+        lines = raw.splitlines()
+        title = next((l.lstrip("# ").strip() for l in lines if l.startswith("# ")), f.stem)
+        stand = next((l.strip().strip("*").strip() for l in lines if l.strip().startswith("*") and len(l.strip()) > 20), "")
+        slug = f.stem.lower().replace("essay-", "")
+        words = len(raw.split())
+        (out / f"{slug}.html").write_text(TF(ATmpl, title=title, h1=esc(title),
+            kicker="Essay", sub=esc(stand[:220]),
+            sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>' + md_lite(raw)
+            + srclink("site/data/essays/" + f.name, "essay source lives here.")))
+        cards.append(f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])}</a>')
+    (out / "index.html").write_text(TF(ATmpl, title="Essays", h1="Essays",
+        kicker="Working papers", sub="the owner\u2019s recognition essays — theses argued from the translations, displayed as written",
+        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>"
+        + srclink("site/data/essays/", "essay sources live here.")))
+    return len(cards)
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1109,7 +1170,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1123,6 +1184,7 @@ def main():
     if "sections" in want: done["sections"] = build_sections()
     if "recite" in want: done["recite"] = build_recite()
     if "support" in want: done["support"] = build_support()
+    if "essays" in want: done["essays"] = build_essays()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
@@ -1132,12 +1194,13 @@ def main():
     trn = '<a href="/translations/index.html"><b>pipeline translations</b> — English shows ONLY for gate-PASS passages</a>' if "translations" in done else ""
     con = '<a href="/concepts/index.html"><b>concepts</b> — glossary with every occurrence linked</a>' if "concepts" in done else ""
     rec = '<a href="/recite/index.html"><b>recitation</b> — studio chant + four-mode readout</a>' if "recite" in done else ""
+    essb = '<a href="/essays/index.html"><b>essays</b> — working papers from the translations</a>' if "essays" in done else ""
     tls = '<a href="/tools/index.html"><b>tools</b> — instant find, verse lookup (in-browser)</a>' if "tools" in done else ""
     sec = '<a href="/masters/index.html"><b>masters</b> — chronological, birth-year order</a><a href="/modern/index.html"><b>modern</b> — living scholars A–Z</a>' if "sections" in done else ""
     lat = '<h3>Latest</h3>' + latest if latest else ""
     (DIST / "index.html").write_text(TF(TMPL,title="Trika Library", h1="Trika Library",
         sub="masters · modern · concepts · translations · tools · recitation — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
-        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + rec + "</div>" + lat))
+        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + rec + essb + "</div>" + lat))
     # full search index: every rendered page, titled (overwrites the partial tools-page index)
     import re as _re2
     try: _part = {e.get("u"): e for e in json.loads((DIST / "data/search-index.json").read_text())}

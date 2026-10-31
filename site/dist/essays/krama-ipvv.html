@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>THE SEQUENCE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE KRAMA SCHOOL AND THE IPVV · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Essay</div><h1>THE SEQUENCE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE KRAMA SCHOOL AND THE IPVV</h1><div class="skt"></div><div class="sub">A magnum-opus essay. 2026-08-11. The Krama school of Kashmiri Śaivism — the &quot;sequence&quot; — makes time</div><div class="sub">2948 words · owner’s working essay, displayed as written · <a href="/data/essay-ESSAY-KRAMA-IPVV.md">source markdown</a></div><h1>THE SEQUENCE AND THE RECOGNITION: A COMPARATIVE SYNTHESIS OF THE KRAMA SCHOOL AND THE IPVV</h1>
+<h2>The Kālīs of cognition and the three powers — time, the akrama vimarśa, and the order-less support</h2>
+<ul>
+<li> magnum-opus essay. 2026-08-11. The Krama school of Kashmiri Śaivism — the &quot;sequence&quot; — makes time</li>
+<li>d its goddess-energies (the Kālīs) central: consciousness is understood as a sequence of cognitive</li>
+<li>ments, and the goddesses are the divinized powers of the cognition-process. The IPVV is the</li>
+<li>cognition-philosophy&#x27;s deepest commentary. This essay is the complete comparative synthesis of the</li>
+<li>o. It shows that the Krama&#x27;s <i>sequence</i> (krama) and the recognition&#x27;s <i>order-less</i> (akrama) are two</li>
+<li>ces of one claim: the order-less consciousness manifests as the ordered sequence, and the Kālīs of</li>
+<li>gnition are the powers of the one consciousness. The comparison is grounded in the Krama material</li>
+<li>ramasadbhāva, the Mahānayaprakāśa, the c1 studies) and the IPVV&#x27;s L2 layer, and it is now possible in</li>
+<li>ll because the IPVV is translated.*</li>
+</ul>
+<hr/>
+<h2>PART I — THE TWO SCHOOLS</h2>
+<h3>1.1 The Krama school</h3>
+<ul>
+<li>e Krama (&quot;sequence,&quot; &quot;succession&quot;) is one of the three great currents of nondual Kashmiri Śaivism,</li>
+<li>side the Spanda and the recognition. Its central doctrine is that consciousness is understood through</li>
+<li>s <i>sequence</i> — the ordered process of cognition, emanation, and withdrawal. And its central image is</li>
+<li>e Kālīs — the goddess-energies who are the divinized powers of the cognition-process.</li>
+</ul>
+<ul>
+<li>e Krama&#x27;s key texts include:</li>
+<li><b>The Kramasadbhāva</b> (&quot;The Arising of the Sequence&quot;) — a Krama scripture whose maṅgala (the project</li>
+<li>s published the auditable translation of 1.8) invokes Mahākālī.</li>
+<li><b>The Mahānayaprakāśa</b> (&quot;The Illumination of the Great Way&quot;) — Rājānaka Śitikaṇṭhācārya&#x27;s</li>
+<li>ilosophical synthesis of the Krama, with the daśākhaṇḍa (the ten divisions of cognition&#x27;s</li>
+<li>lumination) and the four-egg cosmology.</li>
+<li><b>The twelve Kālīs</b> (a Kālīkrama doctrine) — the divinized sense-organs and the powers of cognition.</li>
+</ul>
+<ul>
+<li>e Krama&#x27;s central insight is that time is not an obstacle but the very texture of consciousness.</li>
+<li>e goddesses are not separate deities; they are the powers of the cognition-process — the sequence by</li>
+<li>ich consciousness knows, remembers, and withdraws. As Wenta&#x27;s analysis (in the Torella volume) shows,</li>
+<li>he Twelve Kālīs constitute the analytical model of the cognitive process, with the sense-organs and</li>
+<li>oughts accompanying sensory perception, pointing to the ultimate oneness of reality.&quot;</li>
+</ul>
+<h3>1.2 The recognition school</h3>
+<ul>
+<li>e recognition school (Pratyabhijñā) holds that liberation is recognition — the felt re-cognition of</li>
+<li>e self as the Lord. Its deepest text is the IPVV, now fully translated.</li>
+</ul>
+<ul>
+<li>e recognition school&#x27;s central claim: the essence of consciousness is vimarśa, the felt</li>
+<li>flexive-awareness — and recognition is the return by which the self re-cognizes itself as the Lord.</li>
+<li>s account of time is precise: the order-less (akrama) consciousness manifests the ordered sequence,</li>
+<li>d the &quot;one who knows the order without being caught in it&quot; is the order-less support (V2O).</li>
+</ul>
+<h3>1.3 The question of the comparison</h3>
+<ul>
+<li>e two schools are related — both belong to the nondual Trika, both come from Kashmir, and both were</li>
+<li>conciled by Kṣemarāja. But they give different faces to consciousness and time:</li>
+</ul>
+<ul>
+<li><b>The Krama:</b> consciousness is the <i>sequence</i> — the ordered process of cognition, the Kālīs, the</li>
+<li>śākhaṇḍa.</li>
+<li><b>The recognition:</b> consciousness is the <i>order-less</i> — the akrama vimarśa, the felt self-grasp that</li>
+<li>nows the order without being caught in it.&quot;</li>
+</ul>
+<ul>
+<li>The thesis of this essay.** The two are not opposed; they are two faces of one claim. The Krama&#x27;s</li>
+<li>equence* is the manifest face of the recognition&#x27;s <i>order-less</i>; and the Kālīs of cognition are the</li>
+<li>wers of the one consciousness. The order-less consciousness manifests as the ordered sequence — and</li>
+<li>e Krama studies the sequence while the recognition studies the order-less that it manifests. The</li>
+<li>quence and the recognition are one: the order-less is the source of the order, and the order is the</li>
+<li>lf-articulation of the order-less.</li>
+</ul>
+<hr/>
+<h2>PART II — THE CONVERGENCE: THE AKRAMA AND THE KRAMA</h2>
+<h3>2.1 The shared claim: the source of time is not temporal</h3>
+<ul>
+<li>th schools agree on a claim that is striking in its precision: **the source of time is not itself</li>
+<li>mporal.**</li>
+</ul>
+<ul>
+<li>The Krama (and the TĀ&#x27;s Krama passage).** The project&#x27;s krama-time session drew out the Krama&#x27;s</li>
+<li>count of time from the TĀ&#x27;s Krama passage:</li>
+</ul>
+<blockquote>&quot;The sequence (krama) of emanation, persistence, and withdrawal are understood as three processes or</blockquote>
+<blockquote>cycles (cakra) of a single process or cycle, which is the eternal activity of consciousness. **The</blockquote>
+<blockquote>source of time, this activity is not definable in temporal terms as either a process, its absence,</blockquote>
+<blockquote>both or neither.** Inexplicable in these, or any finite terms, the one reality is called the</blockquote>
+<blockquote>Inexplicable.&quot; (the TĀ&#x27;s Krama passage)</blockquote>
+<ul>
+<li>e tetralemma — &quot;a process, its absence, both, or neither&quot; — is the logical signature of a ground</li>
+<li>ior to its own categories. Time is not illusory (not &quot;absence&quot;), not substantial (not &quot;process&quot;), not</li>
+<li>mixture — it is the self-shaping of the non-temporal activity into succession.</li>
+</ul>
+<ul>
+<li>The recognition (the IPVV).** The IPVV gives the same account, in the transcendental argument of the</li>
+<li>der-less support (V2O):</li>
+</ul>
+<blockquote>&quot;The pratibhā is the flashing — the light that runs through the ordered word-objects... It is</blockquote>
+<blockquote>seasoned with their order, touched by it. But the flashing itself is not ordered. Its support — that</blockquote>
+<blockquote>in which the flashing flashes, the one who knows the order without being caught in it — is the</blockquote>
+<blockquote>order-less, infinite-consciousness-form knower.&quot;</blockquote>
+<ul>
+<li>The convergence.** Both hold that the source of time is not temporal. The Krama says the source is</li>
+<li>ot definable in temporal terms as either a process, its absence, both or neither&quot;; the IPVV says the</li>
+<li>ashing is &quot;seasoned with their order, touched by it, but is not the order.&quot; The order-less is the</li>
+<li>urce of the order — in both schools.</li>
+</ul>
+<h3>2.2 The Present as the crack in time</h3>
+<ul>
+<li>th schools privilege the Present as the locus of practice — because it is the point where the</li>
+<li>der-less ground is accessible.</li>
+</ul>
+<ul>
+<li>The Krama (and the TĀ&#x27;s Krama passage):**</li>
+</ul>
+<blockquote>&quot;The practice is to cultivate a stable state (sthiti) of awareness of the Present in the centre</blockquote>
+<blockquote>between the past moment that has ceased and the future moment that does not yet exist... The yogi</blockquote>
+<blockquote>absorbs time into eternal consciousness even as he experiences how all things stream forth from the</blockquote>
+<blockquote>immediacy of the Eternal Now and return to it.&quot;</blockquote>
+<ul>
+<li>e session&#x27;s penetration: &quot;the Present is the crack in time through which the non-temporal ground is</li>
+<li>t.&quot; The past has ceased; the future does not yet exist; only the Present is the actual moment of</li>
+<li>nsciousness, the pivot where eternity &quot;descends&quot; into time.</li>
+</ul>
+<ul>
+<li>The recognition (the IPVV).** The IPVV gives the same point in the time-work: the un-brokenness of</li>
+<li>e manifestation is what makes time-dealing possible (V2A). The &quot;one who says &#x27;I&#x27; across all of this&quot;</li>
+<li>lds the past, present, and future together — the one self who saw, remembers, and will see. The</li>
+<li>esent is where the order-less self-grasp is met, because it is the point not yet absorbed into the</li>
+<li>st or not-yet-real as the future.</li>
+</ul>
+<ul>
+<li>The convergence.** The Present is the seat of the recognition: it is the crack in time through which</li>
+<li>e akrama vimarśa is met. The Krama&#x27;s practice (settle into the Present) and the recognition&#x27;s return</li>
+<li>e-cognize the self in the Present) are the same movement.</li>
+</ul>
+<h3>2.3 The Kālīs and the powers</h3>
+<ul>
+<li>e deepest convergence is structural: the Krama&#x27;s Kālīs and the recognition&#x27;s powers are the same</li>
+<li>gnition-process, divinized or philosophized.</li>
+</ul>
+<ul>
+<li>The Krama&#x27;s Kālīs.** The twelve Kālīs (and the daśākhaṇḍa) are the divinized powers of the</li>
+<li>gnition-process — the sense-organs, the thoughts, the moments of knowing. Wenta: &quot;the Twelve Kālīs</li>
+<li>nstitute the analytical model of the cognitive process.&quot; The goddesses are not separate deities; they</li>
+<li>e the cognition-sequence made divine — each Kālī a moment or power of consciousness.</li>
+</ul>
+<ul>
+<li>The recognition&#x27;s powers.** The IPVV&#x27;s powers (knowledge, memory, exclusion — jñāna, smṛti, apohana)</li>
+<li>e the same cognition-process, philosophized: the powers of the one consciousness by which it knows,</li>
+<li>members, and excludes. They unfold in a necessary order — manifestation → persistence → self-knowledge</li>
+<li>self-expression.</li>
+</ul>
+<ul>
+<li>The convergence.** The Kālīs and the powers are two maps of the same reality — the cognition-process</li>
+<li> the one consciousness. The Krama divinizes it (the Kālīs as goddesses); the recognition philosophizes</li>
+<li> (the powers as operations). Both are the self-articulation of consciousness into its moments and</li>
+<li>wers. The Kālīs of cognition ARE the powers of the one consciousness, in the Krama&#x27;s mythological</li>
+<li>gister.</li>
+</ul>
+<h3>2.4 The daśākhaṇḍa and the sequence of the powers</h3>
+<ul>
+<li>e Mahānayaprakāśa&#x27;s daśākhaṇḍa — the ten divisions of cognition&#x27;s illumination — is the Krama&#x27;s</li>
+<li>ructured account of the cognition-process. And it corresponds to the IPVV&#x27;s account of the powers&#x27;</li>
+<li>folding.</li>
+</ul>
+<ul>
+<li>e daśākhaṇḍa maps the moments of cognition: the arising, the persistence, the withdrawal, and the</li>
+<li>ddess-energies that govern them. The IPVV&#x27;s vimarśa-arc (from the pushing-ipvv session) maps the same</li>
+<li>ocess: the powers unfold in a necessary order — manifestation (jñāna) → persistence (smṛti) →</li>
+<li>lf-knowledge (apohana) → self-expression (kriyā) — and the whole converges on the one self-awareness.</li>
+</ul>
+<ul>
+<li>The convergence.** The daśākhaṇḍa (the ten divisions) and the vimarśa-arc (the powers in order) are</li>
+<li>o structures of the same cognition-process. The Krama sequences it into ten divisions; the IPVV</li>
+<li>quences it into the powers. Both show consciousness as an ordered self-articulation, and both converge</li>
+<li> the one that sequences it.</li>
+</ul>
+<hr/>
+<h2>PART III — THE DIFFERENCES</h2>
+<ul>
+<li>e convergence is real, but the two schools differ in register and emphasis.</li>
+</ul>
+<h3>3.1 The register: mythological vs. philosophical</h3>
+<ul>
+<li>The Krama is mythological.** Its account of consciousness is expressed as goddesses — the Kālīs, the</li>
+<li>śākhaṇḍa&#x27;s divinities, the twelve. The cognition-process is <i>divinized</i>.</li>
+</ul>
+<ul>
+<li>The recognition is philosophical.** Its account is expressed as powers and operations — knowledge,</li>
+<li>mory, exclusion. The cognition-process is <i>philosophized</i>.</li>
+</ul>
+<ul>
+<li>The difference is one of register, not substance.** The Krama&#x27;s Kālīs and the recognition&#x27;s powers</li>
+<li>e the same reality, in two vocabularies. Wenta&#x27;s point — the senses are &quot;differentiated wonder&quot;</li>
+<li>iccamatkāra) — is the recognition&#x27;s point that the powers are the self-awareness, expressed as</li>
+<li>ddesses.</li>
+</ul>
+<h3>3.2 The soteriology: the sequence as the path vs. the recognition</h3>
+<ul>
+<li>The Krama&#x27;s soteriology is the sequence.<i>* The Krama path works *through</i> the sequence — it does not</li>
+<li>cape time but works with it. The yogin cultivates the Present, absorbs time into eternal</li>
+<li>nsciousness, and so passes through the Kālīs. The sequence is the path.</li>
+</ul>
+<ul>
+<li>The recognition&#x27;s soteriology is the recognition.** The IPVV offers the recognition — the re-cognition</li>
+<li> the self as the Lord, the &quot;effort-less&quot; means (V3P). The recognition cuts through the sequence rather</li>
+<li>an working through it.</li>
+</ul>
+<ul>
+<li>The difference.<i>* The Krama works *through</i> the sequence; the recognition works <i>by</i> the recognition</li>
+<li> the order-less. But they are not opposed: the Krama&#x27;s sequence is the manifest face of the order-less,</li>
+<li>d the recognition of the order-less is the consummation of the Krama&#x27;s path. The two soteriologies are</li>
+<li>o phases: the Krama traverses the sequence; the recognition re-cognizes the order-less it manifests.</li>
+</ul>
+<h3>3.3 Time as divine vs. time as the mode of manifestation</h3>
+<ul>
+<li>The Krama divinizes time.** Time is not an obstacle but the goddess-energies — the Kālīs who are the</li>
+<li>gnition-process. Time is sacred.</li>
+</ul>
+<ul>
+<li>The recognition makes time the mode of manifestation.** The IPVV: time is the un-brokenness of the</li>
+<li>nifestation (V2A), the appearance-order of the one light. The order is the mode by which the order-less</li>
+<li>nifests.</li>
+</ul>
+<ul>
+<li>The difference.** The Krama makes time divine (the Kālīs); the recognition makes time the mode of</li>
+<li>nifestation (the order-less&#x27;s self-articulation). But again, they are one: the divinized time (the</li>
+<li>līs) IS the self-articulation of the order-less. The goddesses are the moments by which the order-less</li>
+<li>nifests.</li>
+</ul>
+<hr/>
+<h2>PART IV — THE COMPARATIVE TABLE</h2>
+<ul>
+<li>Theme | Krama | IPVV | Convergence |</li>
+<li>------|-------|------|-------------|</li>
+<li>The source of time | not temporal (the tetralemma) | the order-less support (V2O) | the order-less is the source of the order |</li>
+<li>The Present | the crack in time, the locus of practice | the seat of the recognition | the Present is where the akrama is met |</li>
+<li>The powers | the Kālīs (divinized cognition) | the powers (jñāna-smṛti-apoha) | the same cognition-process, two registers |</li>
+<li>The sequence | the daśākhaṇḍa (ten divisions) | the vimarśa-arc (powers in order) | the ordered self-articulation |</li>
+<li>The soteriology | work through the sequence | the recognition of the order-less | the traversal consummated in the recognition |</li>
+<li>Time | divine (the Kālīs) | the mode of manifestation | the divinized sequence = the self-articulation |</li>
+</ul>
+<hr/>
+<h2>PART V — THE RECONCILIATION AND THE COMMITMENT</h2>
+<h3>5.1 The reconciliation: two schools, one consciousness</h3>
+<ul>
+<li>e comparative synthesis yields a reconciliation. The Krama and the recognition are two schools of one</li>
+<li>nsciousness:</li>
+</ul>
+<ul>
+<li><b>The Krama</b> studies the <i>sequence</i> — the ordered cognition-process, the Kālīs, the daśākhaṇḍa.</li>
+<li><b>The recognition</b> studies the <i>order-less</i> — the akrama vimarśa, the felt self-grasp that knows the</li>
+<li>der without being caught in it.</li>
+<li><b>The one claim:</b> the order-less manifests as the order. The Krama studies the manifest sequence;</li>
+<li>e recognition studies the order-less source.</li>
+</ul>
+<ul>
+<li>e two schools are not rivals; they are two registers of the same nondual consciousness — the sequence</li>
+<li>d its order-less source. And the IPVV itself acknowledges this: the transcendental argument (V2O) that</li>
+<li>rives the order-less support from the ordered experience is the philosophical form of the Krama&#x27;s</li>
+<li>sight that the source of time is not temporal.</li>
+</ul>
+<h3>5.2 The historical lineage</h3>
+<ul>
+<li>e relationship is historical as well as doctrinal. The Krama and the recognition both belong to the</li>
+<li>ika, and both were reconciled by Kṣemarāja (who wrote on the Spanda and the Pratyabhijñā). The</li>
+<li>hānayaprakāśa explicitly links the Krama to the Śivadṛṣṭi and the Pratyabhijñā (from the project&#x27;s</li>
+<li>ssier: &quot;the explicit yoking of the Krama-path to the Śivadṛṣṭi and the Pratyabhijñā&quot;). The two schools</li>
+<li>re not strangers; they were converging currents of the one nondual synthesis.</li>
+</ul>
+<ul>
+<li>d the IPVV draws on the Krama material: the vimarśa-arc (manifestation → persistence → self-knowledge</li>
+<li>self-expression) is the philosophical form of the Krama&#x27;s sequence, and the sphurattā (the throbbing,</li>
+<li>I) is the Krama&#x27;s dynamic pulse. The recognition-philosophy is, in part, the Krama&#x27;s sequence brought</li>
+<li> the level of the order-less.</li>
+</ul>
+<h3>5.3 The shared commitment</h3>
+<ul>
+<li>d the two schools share the one commitment. Both assert the universal:</li>
+<li>The Krama: the one cognition-process, the one consciousness through the sequence.</li>
+<li>The recognition: the one Lord — all order-less supports are one (the universalization, A4).</li>
+</ul>
+<ul>
+<li>th <i>make</i> this commitment, and neither <i>forces</i> it. The sequence of one consciousness and the sequence</li>
+<li> another are asserted to be one sequence; the support of one field and the support of another are</li>
+<li>mmitted to be one support. **The felt→ground step — from the per-field sequence/support to the</li>
+<li>iversal — is the commitment both schools share.** This is the same wall the IPVV hits against the TĀ,</li>
+<li>e Spanda, and every rival: the universalization is the Śaiva wager.</li>
+</ul>
+<hr/>
+<h2>PART VI — THE SCHOLARLY CONCLUSION</h2>
+<ul>
+<li>e comparative synthesis of the Krama school and the IPVV yields five results:</li>
+</ul>
+<ul>
+<li> <b>The two schools are two faces of one consciousness.</b> The Krama studies the sequence; the</li>
+<li>cognition studies the order-less; the order-less manifests as the order.</li>
+<li> <b>The convergence is precise.</b> Both hold that the source of time is not temporal (the Krama&#x27;s</li>
+<li>tralemma; the IPVV&#x27;s order-less support).</li>
+<li> <b>The Kālīs and the powers are the same cognition-process.</b> The Krama divinizes it; the recognition</li>
+<li>ilosophizes it.</li>
+<li> <b>The Present is the seat of the recognition.</b> Both privilege it as the crack in time where the</li>
+<li>der-less is met.</li>
+<li> <b>Both share the one commitment.</b> The universalization is the wager both schools make and neither</li>
+<li>rces.</li>
+</ul>
+<ul>
+<li>The significance of the completed IPVV.** The comparison is grounded in the Krama material (the</li>
+<li>amasadbhāva&#x27;s auditable translation, the Mahānayaprakāśa&#x27;s daśākhaṇḍa, the krama-time session) and the</li>
+<li>VV&#x27;s L2 layer (the order-less support, the vimarśa-arc, the sphurattā). The IPVV, now fully translated,</li>
+<li>veals the recognition-philosophy as the order-less face of the Krama&#x27;s sequence — and it shows that</li>
+<li>e two schools, the sequence and the recognition, are one. The sequence is the manifest order; the</li>
+<li>cognition is the order-less source; and the Kālīs of cognition are the powers of the one consciousness.</li>
+</ul>
+<hr/>
+<ul>
+<li>his is the magnum-opus comparative synthesis of the Krama school and the IPVV. The two schools are</li>
+<li>o faces of one consciousness: the Krama studies the sequence, the recognition studies the order-less,</li>
+<li>d the order-less manifests as the order. The convergence is precise (both hold the source of time is</li>
+<li>t temporal); the Kālīs and the powers are the same cognition-process; the Present is the seat of the</li>
+<li>cognition. Both share the one commitment (the universalization).*</li>
+</ul>
+<hr/>
+<h2>SOURCES AND KEY PASSAGES</h2>
+<ul>
+<li><b>Kramasadbhāva</b> 1.8 (the auditable translation): <code>patala/data/corpus/units/kramasadbhava-1.8-published.ts</code>; the c1 study <code>research-library/recognition/c1s/c1_kramasadbhava_1_8.md</code>.</li>
+<li><b>Mahānayaprakāśa</b> (the daśākhaṇḍa, the four-egg cosmology): cited via the project&#x27;s atlas dossier and the c1 study <code>c1_maharthamanjari.md</code>; <b>note</b> — the daśākhaṇḍa detail is referenced, not quoted directly.</li>
+<li><b>The Krama account of time</b>: <code>pushing-tantraloka/LOGICVID-session-krama-time.md</code> (the tetralemma: &quot;the source of time... is not definable in temporal terms as either a process, its absence, both or neither&quot;).</li>
+<li><b>IPVV L2</b>: V2O (the order-less support), V2A (the un-brokenness of time), the vimarśa-arc (<code>pushing-ipvv/IPVV-internal-arc-vimarsas.md</code>).</li>
+<li><b>Wenta on the Twelve Kālīs</b> (the divinized senses), in Torella &amp; Bäumer, <i>Utpaladeva, Philosopher of Recognition</i>: &quot;the Twelve Kālīs constitute the analytical model of the cognitive process.&quot;</li>
+<li><b>Interpretive flag</b>: the claim that the daśākhaṇḍa corresponds to the vimarśa-arc is this essay&#x27;s synthesis; the text does not state it explicitly.</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/essays/ESSAY-KRAMA-IPVV.md">edit source →</a>. essay source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>
