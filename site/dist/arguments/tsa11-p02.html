@@ -173,6 +173,9 @@ var doc=new DOMParser().parseFromString(html,'text/html');
 var nm=doc.querySelector('main');
 if(!nm){location.href=url;return;}
 document.querySelector('main').innerHTML=nm.innerHTML;
+// re-execute inline scripts in swapped content (our own trusted pages only)
+try{Array.prototype.forEach.call(document.querySelectorAll('main script'),function(s){
+var n=document.createElement('script');n.text=s.textContent;document.querySelector('main').appendChild(n);s.remove();});}catch(e){}
 document.title=doc.title||document.title;
 var path=new URL(url,location.origin).pathname;
 document.querySelectorAll('#sidenav a').forEach(function(a){
