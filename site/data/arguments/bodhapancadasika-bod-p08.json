@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p08",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p08",
+ "title": "bodhapancadasika — bod-p08",
+ "kind": "entailment",
+ "question": "bod-p08 (8)",
+ "issue": "Derived from L2 text (no argmap). ## bod-p08 (8)\nLimited-light-ness of inert indeed is mark; from inert different is awareness since not measured. // AgBpd_8",
+ "premises": [
+  {
+   "text": "paricchinnaprakāśatvaṃ jaḍasya kila lakṣaṇam | jaḍād vilakṣaṇo bodho yato na parimīyate",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bod-p08 (8)",
+  "passage_id": "bodhapancadasika:bod-p08"
+ },
+ "unresolved": "",
+ "argument_text": "## bod-p08 (8)\nLimited-light-ness of inert indeed is mark; from inert different is awareness since not measured. // AgBpd_8",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p08",
+ "sanskrit": "paricchinnaprakāśatvaṃ jaḍasya kila lakṣaṇam | jaḍād vilakṣaṇo bodho yato na parimīyate",
+ "license": "CC BY-NC 4.0"
+}

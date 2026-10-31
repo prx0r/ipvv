@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:bhairavastava:bh-p01",
+ "work_id": "bhairavastava",
+ "passage_id": "bhairavastava:bh-p01",
+ "title": "bhairavastava — bh-p01",
+ "kind": "entailment",
+ "question": "bh-p01 — veneration",
+ "issue": "Derived from L2 text (no argmap). ## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
+ "premises": [
+  {
+   "text": "bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavastava:bh-p01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bh-p01 — veneration",
+  "passage_id": "bhairavastava:bh-p01"
+ },
+ "unresolved": "",
+ "argument_text": "## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavastava:bh-p01",
+ "sanskrit": "bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+ "license": "CC BY-NC-SA 4.0"
+}

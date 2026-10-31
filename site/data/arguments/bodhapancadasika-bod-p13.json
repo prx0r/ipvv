@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p13",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p13",
+ "title": "bodhapancadasika — bod-p13",
+ "kind": "entailment",
+ "question": "bod-p13 (13)",
+ "issue": "Derived from L2 text (no argmap). ## bod-p13 (13)\nWhat of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. // AgBpd_13",
+ "premises": [
+  {
+   "text": "yat tattvasya parijñānaṃ sa mokṣaḥ parameśataḥ | tat pūrṇatvaṃ prabuddhānāṃ jīvanmuktiś ca sā smṛtā",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bod-p13 (13)",
+  "passage_id": "bodhapancadasika:bod-p13"
+ },
+ "unresolved": "",
+ "argument_text": "## bod-p13 (13)\nWhat of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. // AgBpd_13",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p13",
+ "sanskrit": "yat tattvasya parijñānaṃ sa mokṣaḥ parameśataḥ | tat pūrṇatvaṃ prabuddhānāṃ jīvanmuktiś ca sā smṛtā",
+ "license": "CC BY-NC-SA 4.0"
+}

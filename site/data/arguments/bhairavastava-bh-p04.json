@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:bhairavastava:bh-p04",
+ "work_id": "bhairavastava",
+ "passage_id": "bhairavastava:bh-p04",
+ "title": "bhairavastava — bh-p04",
+ "kind": "entailment",
+ "question": "bh-p04 — power-filled",
+ "issue": "Derived from L2 text (no argmap). ## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
+ "premises": [
+  {
+   "text": "śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo'smi",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavastava:bh-p04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bh-p04 — power-filled",
+  "passage_id": "bhairavastava:bh-p04"
+ },
+ "unresolved": "",
+ "argument_text": "## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavastava:bh-p04",
+ "sanskrit": "śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo'smi",
+ "license": "CC BY-NC-SA 4.0"
+}

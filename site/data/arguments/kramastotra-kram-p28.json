@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:kramastotra:kram-p28",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p28",
+ "title": "kramastotra — kram-p28",
+ "kind": "entailment",
+ "question": "kram-p28 (28)",
+ "issue": "Derived from L2 text (no argmap). ## kram-p28 (28)\nThus own-power-ray-mass-succession, having heard, Lord, if you go to grace; by that quickly, all-folk, own-doctrine-ray, all-darkness-mass removed, make. // AgKs_28",
+ "premises": [
+  {
+   "text": "itthaṃ svaśaktikiraṇaughanutiprabandhān ākarṇya deva yadi me vrajasi prasādam | tenāśu sarvajanatāṃ nijaśāsanāṃśusaṃśāntitākhilatamaḥpaṭalāṃ vidheyāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p28"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "kram-p28 (28)",
+  "passage_id": "kramastotra:kram-p28"
+ },
+ "unresolved": "",
+ "argument_text": "## kram-p28 (28)\nThus own-power-ray-mass-succession, having heard, Lord, if you go to grace; by that quickly, all-folk, own-doctrine-ray, all-darkness-mass removed, make. // AgKs_28",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p28",
+ "sanskrit": "itthaṃ svaśaktikiraṇaughanutiprabandhān ākarṇya deva yadi me vrajasi prasādam | tenāśu sarvajanatāṃ nijaśāsanāṃśusaṃśāntitākhilatamaḥpaṭalāṃ vidheyāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

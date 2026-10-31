@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:bhairavastava:bh-p07",
+ "work_id": "bhairavastava",
+ "passage_id": "bhairavastava:bh-p07",
+ "title": "bhairavastava — bh-p07",
+ "kind": "entailment",
+ "question": "bh-p07 — nondifference and hymn-rain",
+ "issue": "Derived from L2 text (no argmap). ## bh-p07 — nondifference and hymn-rain\nLord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.",
+ "premises": [
+  {
+   "text": "nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavastava:bh-p07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bh-p07 — nondifference and hymn-rain",
+  "passage_id": "bhairavastava:bh-p07"
+ },
+ "unresolved": "",
+ "argument_text": "## bh-p07 — nondifference and hymn-rain\nLord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavastava:bh-p07",
+ "sanskrit": "nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti",
+ "license": "CC BY-NC-SA 4.0"
+}

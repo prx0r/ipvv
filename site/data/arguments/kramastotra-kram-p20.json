@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:kramastotra:kram-p20",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p20",
+ "title": "kramastotra — kram-p20",
+ "kind": "entailment",
+ "question": "kram-p20 (20)",
+ "issue": "Derived from L2 text (no argmap). ## kram-p20 (20)\nThus these three, by own-power-ray-mass-expansion, obtained, six-wheel-course-made, powers these; gradually by unfolding, varied world-state making; from these, goddesses, devoted heart, I be, fear-gone. // AgKs_20",
+ "premises": [
+  {
+   "text": "taditthaṃ te tisro nijavibhavavisphāraṇavaśād avāptāḥ ṣaṭcakrakramakṛtapadaṃ śaktaya imāḥ | kramād unmeṣeṇa pravidadhati citrāṃ bhavadaśām imābhyo devībhyaḥ pravaṇahṛdayaḥ syāṃ gatabhayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "kram-p20 (20)",
+  "passage_id": "kramastotra:kram-p20"
+ },
+ "unresolved": "",
+ "argument_text": "## kram-p20 (20)\nThus these three, by own-power-ray-mass-expansion, obtained, six-wheel-course-made, powers these; gradually by unfolding, varied world-state making; from these, goddesses, devoted heart, I be, fear-gone. // AgKs_20",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p20",
+ "sanskrit": "taditthaṃ te tisro nijavibhavavisphāraṇavaśād avāptāḥ ṣaṭcakrakramakṛtapadaṃ śaktaya imāḥ | kramād unmeṣeṇa pravidadhati citrāṃ bhavadaśām imābhyo devībhyaḥ pravaṇahṛdayaḥ syāṃ gatabhayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

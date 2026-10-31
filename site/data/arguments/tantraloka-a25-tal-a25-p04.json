@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:tantraloka-a25:tal-a25-p04",
+ "work_id": "tantraloka-a25",
+ "passage_id": "tantraloka-a25:tal-a25-p04",
+ "title": "tantraloka-a25 — tal-a25-p04",
+ "kind": "entailment",
+ "question": "tal-a25-p04 (25.28-25.29)",
+ "issue": "Derived from L2 text (no argmap). ## tal-a25-p04 (25.28-25.29)\n(colophon). // 25.28-25.29\n\n*T1 frozen 2026-10-30. 4 passages.*",
+ "premises": [
+  {
+   "text": "muktyarthamupacaryante bāhyaliṅgānyamūni tu / iti jñātvā na sandeha itthaṃ kāryo vipaścitā iyataiva kathaṃ muktiriti bhaktiṃ parāṃ śrayet / uktaḥ śrāddhavidhirbhrāntigarātaṅkavimardanaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "tantraloka-a25:tal-a25-p04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "tal-a25-p04 (25.28-25.29)",
+  "passage_id": "tantraloka-a25:tal-a25-p04"
+ },
+ "unresolved": "",
+ "argument_text": "## tal-a25-p04 (25.28-25.29)\n(colophon). // 25.28-25.29\n\n*T1 frozen 2026-10-30. 4 passages.*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantraloka-a25:tal-a25-p04",
+ "sanskrit": "muktyarthamupacaryante bāhyaliṅgānyamūni tu / iti jñātvā na sandeha itthaṃ kāryo vipaścitā iyataiva kathaṃ muktiriti bhaktiṃ parāṃ śrayet / uktaḥ śrāddhavidhirbhrāntigarātaṅkavimardanaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

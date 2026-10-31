@@ -1377,18 +1377,25 @@ def parse_argmap(path):
             "premises": premises, "argument": argument, "unresolved": unresolved}
 
 def build_arguments():
-    """ArgumentTruthPackets from argmaps + pushing cruxes. The unlock layer."""
-    import json as _json
+    """ArgumentTruthPackets from argmaps + L2 text. IPVV uses argmaps;
+    non-IPVV stotra works derive from L2 prose. All MACHINE_DRAFT."""
+    import json as _json, re as _re
     src = ROOT / "data/arguments"; src.mkdir(parents=True, exist_ok=True)
     out = DIST / "arguments"; out.mkdir(parents=True, exist_ok=True)
-    # map chunk prefix -> pushing tension (from pushing-ipvv files)
+    # clear old
+    for old in src.glob("*.json"):
+        old.unlink()
+    for old in out.glob("*.html"):
+        old.unlink()
+    recs = []
+    # tension map from pushing-ipvv files
     tension_map = {}
     for pf in (ROOT / "data/pushing/ipvv").glob("*.md"):
         raw = pf.read_text(encoding="utf-8", errors="replace")
         for m in __import__("re").finditer(r'V[123][A-Z](?:-[A-Za-z0-9]+)?', raw):
             key = m.group(0).lower().replace("-", "")
             tension_map.setdefault(key, pf.stem)
-    recs = []
+    # --- IPVV (argmaps) ---
     pmap = {"chunkA":"pilot_V1A","chunkB":"pilot_V1B","chunkC":"pilot_V1C","chunkD":"pilot_V1D",
         "chunkE":"pilot_V1E","chunkF":"pilot_V1F","chunkG":"pilot_V1G","chunkH":"pilot_V1H",
         "chunkI":"pilot_V1I","chunkJ":"pilot_V1J","chunkK":"pilot_V1K","chunkL":"pilot_V1L",
@@ -1416,14 +1423,12 @@ def build_arguments():
         if not am_path.exists():
             continue
         am = parse_argmap(am_path)
-        # tension from pushing
-        chunkkey = chunk.lower().replace("-", "").replace("chunk", "")
         tid = ""
+        chunkkey = chunk.lower().replace("-", "").replace("chunk", "")
         for tk, tv in tension_map.items():
             if tk in chunkkey:
                 tid = tv
                 break
-        # strength: MACHINE_DRAFT (no human review yet)
         packet = {
             "id": f"pt:argument:ipvv:{chunk}",
             "work_id": "isvarapratyabhijnavivrtivimarsini",
@@ -1434,7 +1439,7 @@ def build_arguments():
             "issue": am["issue"],
             "premises": [{"text": p["text"], "label": p["label"], "passage_id": rec.get("immutable_id", "")}
                          for p in am["premises"]],
-            "inference": "reconstructed from argmap (see argument field)",
+            "inference": "reconstructed from argmap",
             "conclusion": {"text": am["question"], "passage_id": rec.get("immutable_id", "")},
             "unresolved": am["unresolved"],
             "argument_text": am["argument"],
@@ -1443,11 +1448,89 @@ def build_arguments():
             "status": "MACHINE_DRAFT",
             "source_passage": rec.get("immutable_id", ""),
             "sanskrit": (rec.get("source") or {}).get("text", "") if isinstance(rec.get("source"), dict) else "",
+            "license": "CC BY-NC-SA 4.0",
         }
-        (src / f"{chunk}.json").write_text(_json.dumps(packet, ensure_ascii=False, indent=1))
+        (src / f"ipvv-{chunk}.json").write_text(_json.dumps(packet, ensure_ascii=False, indent=1))
         recs.append(packet)
+    # --- Non-IPVV works (from L2 text) ---
+    # tension map for non-ipvv works (none yet)
+    for tf in sorted((ROOT / "data/translations").glob("*.json")):
+        work = tf.stem
+        if work == "ipvv" or work.startswith("tantraloka"):
+            continue
+        items = _json.loads(tf.read_text())
+        for it in items:
+            if it.get("gate") != "PASS":
+                continue
+            chunk = it.get("chunk", "?")
+            l2 = it.get("l2", "") or it.get("l1", "")
+            # extract question from L2 (first sentence or whole)
+            first_line = l2.split("\n")[0].strip() if l2 else ""
+            # strip markdown headers
+            first_line = _re.sub(r'^#+\s*', '', first_line).strip()
+            title = f"{work} — {chunk}"
+            sa = it.get("sanskrit", "")
+            packet = {
+                "id": f"pt:argument:{work}:{chunk}",
+                "work_id": work,
+                "passage_id": f"{work}:{chunk}",
+                "title": title,
+                "kind": "entailment",
+                "question": first_line[:500] if first_line else f"What does {work} {chunk} establish?",
+                "issue": f"Derived from L2 text (no argmap). {l2[:500]}",
+                "premises": [{"text": sa, "label": "Sanskrit source", "passage_id": f"{work}:{chunk}"}],
+                "inference": "derived from L2 prose (no argmap reconstruction)",
+                "conclusion": {"text": first_line[:500] if first_line else l2[:300],
+                               "passage_id": f"{work}:{chunk}"},
+                "unresolved": "",
+                "argument_text": l2,
+                "tension_id": None,
+                "strength": "MACHINE_DRAFT",
+                "status": "MACHINE_DRAFT",
+                "source_passage": f"{work}:{chunk}",
+                "sanskrit": sa,
+                "license": it.get("source_license", "CC BY-NC-SA 4.0"),
+            }
+            (src / f"{work}-{chunk}.json").write_text(_json.dumps(packet, ensure_ascii=False, indent=1))
+            recs.append(packet)
+    # --- tantraloka ahnikas with PASS ---
+    for tf in sorted((ROOT / "data/translations").glob("tantraloka-*.json")):
+        work = tf.stem
+        items = _json.loads(tf.read_text())
+        for it in items:
+            if it.get("gate") != "PASS":
+                continue
+            chunk = it.get("chunk", "?")
+            l2 = it.get("l2", "") or it.get("l1", "")
+            first_line = l2.split("\n")[0].strip() if l2 else ""
+            first_line = _re.sub(r'^#+\s*', '', first_line).strip()
+            title = f"{work} — {chunk}"
+            sa = it.get("sanskrit", "")
+            packet = {
+                "id": f"pt:argument:{work}:{chunk}",
+                "work_id": work,
+                "passage_id": f"{work}:{chunk}",
+                "title": title,
+                "kind": "entailment",
+                "question": first_line[:500] if first_line else f"What does {work} {chunk} establish?",
+                "issue": f"Derived from L2 text (no argmap). {l2[:500]}",
+                "premises": [{"text": sa, "label": "Sanskrit source", "passage_id": f"{work}:{chunk}"}],
+                "inference": "derived from L2 prose (no argmap reconstruction)",
+                "conclusion": {"text": first_line[:500] if first_line else l2[:300],
+                               "passage_id": f"{work}:{chunk}"},
+                "unresolved": "",
+                "argument_text": l2,
+                "tension_id": None,
+                "strength": "MACHINE_DRAFT",
+                "status": "MACHINE_DRAFT",
+                "source_passage": f"{work}:{chunk}",
+                "sanskrit": sa,
+                "license": it.get("source_license", "CC BY-NC-SA 4.0"),
+            }
+            (src / f"{work}-{chunk}.json").write_text(_json.dumps(packet, ensure_ascii=False, indent=1))
+            recs.append(packet)
     # index
-    (out / "index.html").write_text(TF(TMPL, title="IPVV arguments", h1="Arguments",
+    (out / "index.html").write_text(TF(TMPL, title="Arguments", h1="Arguments",
         kicker="Argument truth-packets", sub=f"{len(recs)} packets — conclusion → premises → passage → Sanskrit",
         sidenav=sidenav("abhinavagupta", ""), body="<div class='idx'>"
         + "".join(f'<a href="/arguments/{p["id"].split(":")[-1]}.html"><b>{esc(p["title"][:70])}</b> — {esc(p["strength"])}</a>' for p in recs)
@@ -1467,6 +1550,7 @@ def build_arguments():
             kicker="Argument", sub=f'{pkt["strength"]} · {len(pkt["premises"])} premises',
             sidenav=sidenav("abhinavagupta", ""), body=body))
     return len(recs)
+
 
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)

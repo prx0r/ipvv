@@ -1,0 +1,29 @@
+{
+ "id": "pt:argument:tantrasara:tsa11-p03",
+ "work_id": "tantrasara",
+ "passage_id": "tantrasara:tsa11-p03",
+ "title": "tantrasara — tsa11-p03",
+ "kind": "entailment",
+ "question": "tsa11-p03 — maturation, and the collapse of dualism",
+ "issue": "Derived from L2 text (no argmap). ## tsa11-p03 — maturation, and the collapse of dualism\n\"Grace comes when the stain ripens.\" Very well: what is this ripening — what is it, and what causes\nit? No answer comes. And with it fall the whole catalogue of supposed causes — dispassion, merit,\ndiscernment, good company, attainment, worship. For the dualist schools, every option on the table\nis now incoherent.\n*Fidelity: preserved (maturation challenge + hetu-list + verdict). Added: nothing.*",
+ "premises": [
+  {
+   "text": "atha malaparipāke śaktipātaḥ so 'pi kiṃsvarūpaḥ kiṃ ca tasya nimittam iti etena vairāgyaṃ dharmaviśeṣo vivekaḥ satsevā satprāptiḥ devapūjā ityādihetuḥ pratyukta iti bhedavādināṃ sarvam asamañjasam // abhts_11.4",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara:tsa11-p03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "tsa11-p03 — maturation, and the collapse of dualism",
+  "passage_id": "tantrasara:tsa11-p03"
+ },
+ "unresolved": "",
+ "argument_text": "## tsa11-p03 — maturation, and the collapse of dualism\n\"Grace comes when the stain ripens.\" Very well: what is this ripening — what is it, and what causes\nit? No answer comes. And with it fall the whole catalogue of supposed causes — dispassion, merit,\ndiscernment, good company, attainment, worship. For the dualist schools, every option on the table\nis now incoherent.\n*Fidelity: preserved (maturation challenge + hetu-list + verdict). Added: nothing.*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara:tsa11-p03",
+ "sanskrit": "atha malaparipāke śaktipātaḥ so 'pi kiṃsvarūpaḥ kiṃ ca tasya nimittam iti etena vairāgyaṃ dharmaviśeṣo vivekaḥ satsevā satprāptiḥ devapūjā ityādihetuḥ pratyukta iti bhedavādināṃ sarvam asamañjasam // abhts_11.4",
+ "license": "CC BY-NC-SA 4.0"
+}
