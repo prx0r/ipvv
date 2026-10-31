@@ -247,6 +247,17 @@ def build_split(aid, wid):
             sub=esc(h.strip()[:80]), sidenav=sidenav(aid, wid), body=body))
     return n
 
+def author_bio_body(aid, author, lin, spine):
+    hero = ""
+    if author.get("image"):
+        im = author["image"]
+        hero = (f'<div class="panel"><img src="{esc(im["src"])}" alt="{esc(author["name"])} — related imagery" loading="lazy" style="max-width:100%;border-radius:8px"/>'
+                f'<div class="sub">{esc(im["caption"])} Credit: <a href="{esc(im["credit_url"])}">{esc(im["credit"])}</a> · <a href="{esc(im["licence_url"])}">{esc(im["licence"])}</a></div></div>')
+    return (f'<div class="panel">{esc(author["summary"])}</div>' + hero
+            + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
+            + f'<h3>Lineage</h3>{lin}'
+            + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>')
+
 def build_author(aid="abhinavagupta"):
     out = DIST / aid; out.mkdir(parents=True, exist_ok=True)
     apath, wpath = author_paths(aid)
@@ -258,10 +269,7 @@ def build_author(aid="abhinavagupta"):
              "ksemaraja": "Singh/SUNY + Flood 2020 + kashmirhope + ePustakalay/KSTS holdings"}.get(aid, "")
     (out / "index.html").write_text(ATmpl.format(title=author["name"], h1=esc(author["name"]),
         sub=f'{esc(author["dates"]["flourished"])} · {esc(author.get("place",""))}', sidenav=sidenav(aid, "bio"),
-        body=f'<div class="panel">{esc(author["summary"])}</div>'
-             + (f'<div class="panel"><b>Bio.</b> {esc(author["bio"])}</div>' if author.get("bio") else "")
-             + f'<h3>Lineage</h3>{lin}'
-             + f'<div class="sub">dates {esc(author["dates"]["note"])} · canon: {spine} · <a href="/data/authors/{aid}.json">machine-readable JSON</a> · <a href="/data/person-schema.json">bio schema</a></div>'))
+        body=author_bio_body(aid, author, lin, spine)))
     cats = {}
     for w in works:
         cats.setdefault(w.get("category", "?"), []).append(w)
