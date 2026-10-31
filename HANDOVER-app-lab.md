@@ -109,6 +109,21 @@ dharmakīrtiḥ → धर्मकीर्तिः | duḥkha → दुः�
 bhairava → भैरव | śivaḥ → शिवः | yasyonmeṣanimeṣābhyāṃ → यस्योन्मेषनिमेषाभ्यां | gacchati → गच्छति
 ```
 
-## The one rule
+## Why the owner speaks in feelings (his words, and he's right)
 
-**The user describes feelings ("shitty", "cluttered", "feels like 5 sites"). Translate to structure immediately: count the nav items, list the fonts, find the orphaned handlers. Don't ask what they mean — go look. And when they say "only X", they mean ONLY X — no matter how useful you think Y would be.**
+> "tell them i speak in feelings because ur a fucking idiot"
+
+He's correct, and here's the mechanism so you don't repeat it:
+
+The owner starts precise ("make the masters collapsible and sorted by works"). When the agent ships something broken or off-brief — wrong sidebar, dead links, invisible bugs, added features nobody asked for — the owner has to correct it. Each failed correction round burns patience. By round three of the same issue, precise language feels pointless ("I already told you"), so communication degrades to feeling-words: "shitty", "painful", "abysmal", "you're not listening".
+
+**The feelings are a lagging indicator of agent failure, not a communication style.** Every "fucking" in GRIEVANCES.md maps to a specific prior fuck-up documented above. Count them if you don't believe it.
+
+How to stay in the precise zone and never reach the feelings zone:
+1. **Read the actual ask before building.** He said "remove all other functions" and I kept the ask toggle. He said "library on the screen" and I built it in the sidebar first. Every one of these was in the original sentence.
+2. **Verify live before saying done.** Every "it's broken" message after a "done" message is a trust withdrawal. `curl | grep` takes 10 seconds. There is no excuse.
+3. **Don't add.** Every unasked feature (mode toggles, extra nav items, "helpful" banners) became a grievance. His spec is complete as stated. Implement exactly that, nothing more.
+4. **Admit when you can't see.** I cannot screenshot. I cannot click. Say so upfront when it matters ("I can't see the font size — here's what the CSS says, tell me which element") instead of guessing and being wrong.
+5. **One round, not five.** The correct number of times to be told the same thing is once. If you hear it twice, stop everything and re-read the original ask word by word before touching code.
+
+He's not vague. You're not reading carefully enough. The gap between his words and your output is 100% on you.
