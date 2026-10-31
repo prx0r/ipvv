@@ -292,6 +292,15 @@ def build_author(aid="abhinavagupta"):
         label = STATUS_LABEL.get(w.get("status", ""), w.get("status", ""))
         meta = f'{esc(w.get("date",""))} · {esc(label)}'
         if w.get("verses") not in (None, ""): meta += f' · {esc(w["verses"])}'
+        # pipeline translation link, if ingested (PASS-gated English lives there)
+        trlink = ""
+        trfile = ROOT / "data/translations" / f"{wid}.json"
+        if trfile.exists():
+            import json as _j
+            _items = _j.loads(trfile.read_text())
+            _np = sum(1 for _i in _items if _i.get("gate") == "PASS")
+            trlink = (f'<div class="panel">Pipeline translation: <b><a href="/translations/{wid}.html">open →</a></b> '
+                      f'({_np}/{len(_items)} passages passed the gate; English shows for those only)</div>')
         tf = w.get("text_file")
         sf = w.get("sanskrit_file")
         eds = "".join(f'<div class="sub">▪ {esc(e)}</div>' for e in w.get("editions", []))
@@ -352,7 +361,7 @@ def build_author(aid="abhinavagupta"):
                     + sfs + root + eds
                     + f'<div class="panel">Status: {esc(label)}. Next via pipe: cut SOURCE → T1 → L0 → argmap → L2 → L200 → C1.</div>')
         (out / f"{wid}.html").write_text(ATmpl.format(title=w["title"], h1=esc(w["title"]),
-            sub=meta, sidenav=sidenav(aid, wid), body=body))
+            sub=meta, sidenav=sidenav(aid, wid), body=trlink + body))
     # ship machine-readable data with the site
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     if aid == "abhinavagupta":
@@ -370,6 +379,12 @@ def build_author(aid="abhinavagupta"):
         shutil.copy(ROOT / "data/roots.json", DIST / "data/roots.json")
     return len(works)
 
+def ship_translations():
+    # ship ingested pipeline translations (PASS-gated English + gate status)
+    tdir = DIST / "data/translations"; tdir.mkdir(parents=True, exist_ok=True)
+    for f in (ROOT / "data/translations").glob("*.json"):
+        shutil.copy(f, tdir / f.name)
+
 def scholar_nav(active=""):
     scholars = json.loads((ROOT / "data/scholars.json").read_text())
     items = "".join(f'<a href="/scholars/{s["id"]}.html">{"› " if s["id"]==active else ""}{esc(s["name"])}</a>' for s in scholars)
@@ -381,6 +396,45 @@ def scholar_nav(active=""):
 
 ACC_LABEL = {"open": "open access", "login": "free login wall", "metadata": "metadata only — fetch via academia/DOI",
              "print": "print/commercial — cite, never host", "study": "in-repo study material"}
+
+def build_translations():
+    """Pipeline translations: PASS passages display L1/L2 with gate badge;
+    BLOCKED passages show Sanskrit + withheld notice (never English-as-translation)."""
+    import json as _json
+    src = ROOT / "data/translations"
+    if not src.exists():
+        return 0
+    out = DIST / "translations"; out.mkdir(parents=True, exist_ok=True)
+    links = []
+    for f in sorted(src.glob("*.json")):
+        items = _json.loads(f.read_text())
+        if not items:
+            continue
+        wid = f.stem
+        n_pass = sum(1 for i in items if i.get("gate") == "PASS")
+        blocks = []
+        for it in items:
+            badge = ("PASS" if it["gate"] == "PASS"
+                     else "WITHHELD — pending review (" + ", ".join(it.get("blocking", ["review"])) + ")")
+            if it["gate"] == "PASS":
+                body = tabs([
+                    ("ORIGINAL", f'<div class="dev skt">{esc(it["sanskrit"])}</div>', bool(it["sanskrit"])),
+                    ("L1", f'<div class="en">{esc(it.get("l1",""))}</div>', bool(it.get("l1"))),
+                    ("READ", f'<div class="en">{esc(it.get("l2",""))}</div>', bool(it.get("l2"))),
+                    ("CRITICAL", f'<div class="en">gate: PASS · model {esc(it.get("model",""))} · {esc(it.get("date",""))} · machine-proposed, needs human review before doctrine use</div>', True)])
+            else:
+                body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
+                        f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
+            blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
+        (out / f"{wid}.html").write_text(ATmpl.format(title=f"Translation: {wid}",
+            h1=f"Translation: {wid}", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
+            sidenav=sidenav("abhinavagupta", wid), body="".join(blocks)))
+        links.append((wid, n_pass, len(items)))
+    (out / "index.html").write_text(ATmpl.format(title="Translations", h1="Pipeline translations",
+        sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",
+        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">'
+        + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>"))
+    return len(links)
 
 def build_scholars():
     out = DIST / "scholars"; out.mkdir(parents=True, exist_ok=True)
@@ -410,7 +464,7 @@ def build_scholars():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -418,11 +472,14 @@ def main():
     if "authors" in want:
         for aid in MASTERS: done[aid] = build_author(aid)
     if "scholars" in want: done["scholars"] = build_scholars()
+    if "translations" in want: done["translations"] = build_translations()
+    ship_translations()
     masters = "".join(f'<a href="/{m}/index.html"><b>{m}</b> — bio · works map · click-in translations</a>' for m in MASTERS if m in done)
-    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS and w != "scholars")
+    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS and w not in ("scholars", "translations"))
     sch = '<a href="/scholars/index.html"><b>scholars</b> — secondary witnesses, linked bibliography (read/cite, host only what is open)</a>' if "scholars" in done else ""
+    trn = '<a href="/translations/index.html"><b>pipeline translations</b> — English shows ONLY for gate-PASS passages</a>' if "translations" in done else ""
     (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Trika masters · Translations",
-        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + sch + "</div>"))
+        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + sch + trn + "</div>"))
     print("built", done)
 
 if __name__ == "__main__":

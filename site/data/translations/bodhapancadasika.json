@@ -1,0 +1,167 @@
+[
+ {
+  "chunk": "bod-p01",
+  "verses": "1",
+  "sanskrit": "# Text  anastamitabhārūpas tejasāṃ tamasām api | ya eko 'ntar yadantaś ca tejāṃsi ca tamāṃsi ca",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p02",
+  "verses": "2",
+  "sanskrit": "sa eva sarvabhūtānāṃ svabhāvaḥ parameśvaraḥ | bhāvajātaṃ hi tasyaiva śaktir īśvaratāmayī",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p03",
+  "verses": "3",
+  "sanskrit": "śaktiś ca śaktimadrūpād vyatirekam na vāñchati | tādātmyam anayor nityaṃ vahnidāhikayor iva",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p03 (3)\nPower too from power-possessor-form difference does not desire; identity of these two is eternal, as fire and burning. // AgBpd_3",
+  "l2": ""
+ },
+ {
+  "chunk": "bod-p04",
+  "verses": "4",
+  "sanskrit": "sa eva bhairavo devo jagadbharaṇalakṣaṇaḥ | svātmādṛṣe samagraṃ hi yacchaktyā pratibimbitam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p05",
+  "verses": "5",
+  "sanskrit": "tasyaivaiṣā parā devī svarūpāmarśanotsukā | pūrṇatvaṃ sarvabhaveṣu yasyā nālpaṃ na cādhikam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p06",
+  "verses": "6",
+  "sanskrit": "eṣa devo 'nayā devyā nityaṃ krīḍārasotsukaḥ | vicitrān sṛṣṭisaṃhārān vidhatte yugapad vibhuḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p06 (6)\nThis god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-pervading. // AgBpd_6",
+  "l2": ""
+ },
+ {
+  "chunk": "bod-p07",
+  "verses": "7",
+  "sanskrit": "atidurghaṭakāritvam asyānuttaram eva yat | etad eva svatantratvam aisvaryaṃ bodharūpatā",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p08",
+  "verses": "8",
+  "sanskrit": "paricchinnaprakāśatvaṃ jaḍasya kila lakṣaṇam | jaḍād vilakṣaṇo bodho yato na parimīyate",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p08 (8)\nLimited-light-ness of inert indeed is mark; from inert different is awareness since not measured. // AgBpd_8",
+  "l2": ""
+ },
+ {
+  "chunk": "bod-p09",
+  "verses": "9",
+  "sanskrit": "evam asya svatantrasya nijaśaktyupabhedinaḥ | svātmagāḥ sṛṣṭisaṃhārāḥ svarūpatvena saṃsthitāḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p10",
+  "verses": "10",
+  "sanskrit": "teṣu vaicitryam atyantam ūrdhvādhas tiryag eva yat | bhuvanāni tadaṃśāś ca sukhaduḥkhamatiś ca yā",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p10 (10)\nIn them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. // AgBpd_10",
+  "l2": "## bod-p10–p11 — variety and non-knowledge\nIn them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. What of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. Extreme variety in worlds, parts, and minds; non-knowledge of this autonomy is saṃsāra — the terrifying state of fools."
+ },
+ {
+  "chunk": "bod-p11",
+  "verses": "11",
+  "sanskrit": "yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p11 (11)\nWhat of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. // AgBpd_11",
+  "l2": ""
+ },
+ {
+  "chunk": "bod-p12",
+  "verses": "12",
+  "sanskrit": "tatprasādarasād eva gurvāgamata eva vā | śāstrād vā parameśasya yasmāt kasmād upāgatam",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p12 (12)\nFrom that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached. // AgBpd_12",
+  "l2": "## bod-p12–p14 — attainment, liberation, and non-difference\nFrom that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached. What of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. These two bondage and liberation from supreme-Lord-nature. Not they differ; no difference indeed in truth in supreme Lord. Three paths to the reality (grace, teacher-scripture, Lord's scripture); full knowledge of reality = liberation = living liberation; bondage and liberation are not ultimately different in the Lord."
+ },
+ {
+  "chunk": "bod-p13",
+  "verses": "13",
+  "sanskrit": "yat tattvasya parijñānaṃ sa mokṣaḥ parameśataḥ | tat pūrṇatvaṃ prabuddhānāṃ jīvanmuktiś ca sā smṛtā",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "l1": "## bod-p13 (13)\nWhat of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered. // AgBpd_13",
+  "l2": ""
+ },
+ {
+  "chunk": "bod-p14",
+  "verses": "14",
+  "sanskrit": "etau bandhavimokṣau ca parameśasvarūpataḥ | na bhidyete na bhedo hi tattvataḥ parameśvare",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "bod-p15",
+  "verses": "15",
+  "sanskrit": "ittham icchākalājñānaśaktiśūlāmbujāśritaḥ | bhairavaḥ sarvabhāvānāṃ svabhāvaḥ pariśīlyate",
+  "gate": "BLOCKED",
+  "blocking": [
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ }
+]

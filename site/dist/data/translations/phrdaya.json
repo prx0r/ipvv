@@ -1,0 +1,47 @@
+[
+ {
+  "chunk": "phr-p01",
+  "verses": "1-5",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ | svecchayā svabhittau viśvam unmīlayati | tan nānā anurūpagrāhyagrāhakabhedāt | citisaṃkocātmā cetano 'pi saṃkucitaviśvamayaḥ | cittam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION",
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "phr-p02",
+  "verses": "6-10",
+  "sanskrit": "tanmayo māyāpramātā | saptapañcakasvabhāvaḥ | tadbhūmikāḥ sarvadarśanasthitayaḥ | cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī | tathāpi tadvat pañcakṛtyāni karoti",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "phr-p03",
+  "verses": "11-15",
+  "sanskrit": "tāni | saṃsāritvam | cetanapadādhyārohāt citiḥ | meyendhanaṃ pluṣyati | balalābhe viśvam ātmasātkaroti",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ },
+ {
+  "chunk": "phr-p04",
+  "verses": "16-20",
+  "sanskrit": "cidaikātmyapratipattidārḍhyaṃ jīvanmuktiḥ | madhyavikāsāc cidānandalābhaḥ | iha upāyāḥ | cidaikyāmarśān nityoditasamādhilābhaḥ | bhavatīti śivam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30"
+ }
+]
