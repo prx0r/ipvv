@@ -364,6 +364,23 @@ def pn(prev_url, prev_label, next_url, next_label):
     r = f'<a href="{next_url}">{esc(next_label)} →</a>' if next_url else "<span></span>"
     return f'<div class="pn">{l}{r}</div>'
 
+def pushing_cards(sub):
+    """Q→GEM probe index from vendored volume prose (site/data/pushing/<sub>/)."""
+    src = ROOT / "data/pushing" / sub
+    dest = DIST / "data/pushing" / sub
+    dest.mkdir(parents=True, exist_ok=True)
+    cards = []
+    if not src.exists():
+        return [f"<div class='panel missing'>probes pending — volume path <i>research-library/recognition/pushing-{sub}/</i> not yet vendored</div>"]
+    for f in sorted(src.glob("*.md")):
+        raw = f.read_text(encoding="utf-8", errors="replace")
+        shutil.copy(f, dest / f.name)
+        lines = [l for l in raw.splitlines() if l.strip()][:28]
+        title = lines[0].lstrip("# ").strip() if lines else f.stem
+        body = "\n".join(lines[1:])[:1100]
+        cards.append(f'<div class="panel"><b>{esc(title)}</b> <span class="sub">{esc(f.stem)} · {len(raw.splitlines())} lines</span><div class="en">{esc(body)}{"…" if len(body) == 1100 else ""}</div><div class="sub"><a href="/data/pushing/{sub}/{esc(f.name)}">full probe text →</a></div></div>')
+    return cards
+
 def build_ipvv():
     src = sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json"))
     items = [json.loads(p.read_text()) for p in src]
@@ -434,9 +451,12 @@ def build_ipvv():
     except Exception as e:
         tb = f"<i>themes pending: {esc(str(e))}</i>"
     (out / "themes.html").write_text(TF(TMPL,title="IPVV themes", h1="Themes", sub="overlapping, never partition", sidenav=work_sidenav("ipvv"), body=tb))
-    # pushing stub (prose scaffolds on volume; parsed records next)
-    pb = '<div class="panel">Pushing = hound the text with why, text answers first. Full Q→GEM index parses next via <i>pushing.py</i>. Sources on volume: <i>research-library/recognition/pushing-ipvv/</i>, <i>pushing-tantraloka/</i>.</div>'
-    (out / "pushing.html").write_text(TF(TMPL,title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth", sidenav=work_sidenav("ipvv"), body=pb))
+    # pushing: real Q->GEM probe index (vendored volume prose, fail-closed excerpts)
+    pb = ("<h3>IPVV probes</h3>" + "".join(pushing_cards("ipvv"))
+          + "<h3>Tantraloka probes</h3><div class='sub'>Abhinavagupta's other magnum opus — same method, different mountain. Full TĀ display section pending; probes live here first.</div>"
+          + "".join(pushing_cards("tantraloka")))
+    (out / "pushing.html").write_text(TF(TMPL,title="IPVV pushing", h1="Pushing", sub="Q→GEM deep-dives at varying depth — hound the text with why, the text answers first", sidenav=work_sidenav("ipvv"), body=pb
+        + srclink("site/data/pushing/", "probe prose vendored from volume research-library/recognition/; parsed pushing.py records next.")))
     return len(items)
 
 def build_vbt():
