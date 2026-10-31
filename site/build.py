@@ -397,7 +397,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -683,7 +683,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -1996,6 +1996,17 @@ def build_vbt_map():
         recitejs="", chatjs="", varjs=""))
     return len(vm["categories"])
 
+def build_practices():
+    """Interactive practice player — VBT dhāraṇās, anapanasati, Ajahn Lee with voice cues."""
+    import json as _json
+    body_data = _json.loads(open('/tmp/practices_body.json').read())
+    out = DIST / "practices"; out.mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(TF(TMPL, title="Practices", h1="Practices",
+        kicker="Interactive", sub="VBT dhāraṇās, ānāpānasati, Ajahn Lee — voice cues, timed steps, audio tones",
+        sidenav=sidenav("abhinavagupta", ""), body=body_data["body"],
+        recitejs="", chatjs="", varjs=""))
+    return body_data["cards"]
+
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -2177,7 +2188,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2210,6 +2221,7 @@ def main():
     if "screen" in want: done["screen"] = build_screen()
     if "meditate" in want: done["meditate"] = build_meditate()
     if "vbtmap" in want: done["vbtmap"] = build_vbt_map()
+    if "practices" in want: done["practices"] = build_practices()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
 
     ship_translations()

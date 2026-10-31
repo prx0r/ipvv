@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Practices · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/practices/index.html">Practices</a><a href="/vbt-map/index.html">VBT Map</a><a href="/meditate/index.html">Meditate</a><a href="/screen/index.html">Screen</a><a href="/stylelab/index.html">Style lab</a><a href="/arguments/index.html">Arguments</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Interactive</div><h1>Practices</h1><div class="skt"></div><div class="sub">VBT dhāraṇās, ānāpānasati, Ajahn Lee — voice cues, timed steps, audio tones</div><div class="panel"><b>Interactive practices:</b> each one has a voice introduction, timed steps, and optional audio cues. Voice cues speak via browser TTS. Silent cues leave space. Tap Practice to begin.</div>
+<h3>VBT Dhāraṇās</h3><div class="idx"><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Bud-dho · Ajahn Lee, Method 1</b> <span class="sub">3 min · 7 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">Counting the breath with “bud-dho” in four stages, resting still like a post at the edge of the sea, then moving attention up the bases of the breath: nose, forehead, top of the head, middle of the he</div>
+<div class="sub" style="margin:.15rem 0">1. Sit upright and steady (half-lotus, right leg on the left, hands palm-up, right on left, or any stea</div><div class="sub" style="margin:.15rem 0">2. Optional: palms together at the heart, recollect the Buddha, Dhamma and Sangha; repeat buddho, dhamm</div><div class="sub" style="margin:.15rem 0">3. Count the breath with buddho: bud in, dho out ×10; buddho in and out ×7; one buddho per breath ×5; t</div><div class="sub">+4 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('ajahn-lee-method-1')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Seven steps · Ajahn Lee, Method 2</b> <span class="sub">3 min · 7 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">Ajaan Lee’s seven basic steps: a few long breaths with bud-dho, clear awareness of each breath, finding a comfortable breath and letting it spread from the base of the skull down the spine, legs and a</div>
+<div class="sub" style="margin:.15rem 0">1. Three (or seven) long breaths: bud on the in-breath, dho on the out, the word as long as the breath.</div><div class="sub" style="margin:.15rem 0">2. Be clearly aware of each in-and-out breath.</div><div class="sub" style="margin:.15rem 0">3. Observe the breath: comfortable or not, broad or narrow, fast or slow, short or long, warm or cool. </div><div class="sub">+4 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('ajahn-lee-method-2')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Bhramari · humming bee breath</b> <span class="sub">3 min · 4 steps</span></div>
+  <span class="rsrc">steps only</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">A soft in-breath, then a long, even hum on the out-breath, with the lips closed, so the vibration fills the skull. Then sit in the silence after the sound.</div>
+<div class="sub" style="margin:.15rem 0">1. Sit upright, lips closed, teeth slightly apart, jaw soft. Optionally close the ears with the thumbs.</div><div class="sub" style="margin:.15rem 0">2. Breathe in through the nose.</div><div class="sub" style="margin:.15rem 0">3. Breathe out slowly with a steady, low hum. Feel it vibrate through the head.</div><div class="sub">+1 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('bhramari')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div></div>
+<h3>Ānāpānasati &amp; Mettā</h3><div class="idx"><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Goodwill · Karaṇīya Metta Sutta (Sn 1:8)</b> <span class="sub">3 min · 6 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">A short goodwill reflection from the Karaṇīya Metta Sutta: may all beings be happy at heart, whatever they are; let no one wish another to suffer; guard this goodwill as a mother guards her only child</div>
+<div class="sub" style="margin:.15rem 0">1. Any posture (standing, walking, sitting, lying down), as long as you are not drowsy.</div><div class="sub" style="margin:.15rem 0">2. Think: happy, at rest, may all beings be happy at heart.</div><div class="sub" style="margin:.15rem 0">3. Whatever beings there may be, weak or strong, seen or unseen, near or far, born or seeking birth: ma</div><div class="sub">+3 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('karaniya-metta')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Sixteen steps · Ānāpānasati Sutta (MN 118)</b> <span class="sub">3 min · 5 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">The Buddha’s sixteen steps of mindfulness of breathing, in four groups of four: the body (long, short, the whole body, calming the breath), feelings (rapture, pleasure, mental fabrication, calming it)</div>
+<div class="sub" style="margin:.15rem 0">1. Sit with legs crossed (or any steady seat), body erect, mindfulness to the fore. Mindful, breathe in</div><div class="sub" style="margin:.15rem 0">2. The body: discern a long breath as long and a short breath as short; breathe in and out sensitive to</div><div class="sub" style="margin:.15rem 0">3. Feelings: breathe in and out sensitive to rapture, to pleasure, to mental fabrication (perceptions a</div><div class="sub">+2 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('mn118-anapanasati')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>The body as awareness · VBT v. 63</b> <span class="sub">3 min · 2 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">Verse 63 of the Vijñāna Bhairava, in Satsang’s words: rest attention on the whole body at once, the whole field of sensation, then take the body and the world around it as made of awareness; when the </div>
+<div class="sub" style="margin:.15rem 0">1. Rest attention on the whole body at once: the whole field of sensation, not one part.</div><div class="sub" style="margin:.15rem 0">2. Take the body and the world around it as made of awareness; felt rather than thought. When the mind </div>
+<div style="margin-top:.6rem"><button onclick="startPractice('vbt-body-as-awareness')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div></div>
+<h3>Ajahn Lee</h3><div class="idx"><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Spaciousness · VBT vv. 43–48</b> <span class="sub">3 min · 4 steps</span></div>
+  <span class="srcbadge">narrated</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">The spaciousness dhāraṇās of the Vijñāna Bhairava, in Satsang’s words: notice the space of the room, then the space inside the chest, mouth and skull, feel the skin as a thin wall with open space on b</div>
+<div class="sub" style="margin:.15rem 0">1. Notice the space of the room around you, holding the walls and your body.</div><div class="sub" style="margin:.15rem 0">2. Sense the space inside the body: the chest, the mouth, the skull.</div><div class="sub" style="margin:.15rem 0">3. Feel the skin as a thin wall, open space within and without.</div><div class="sub">+1 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('vbt-space-contemplation')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div><div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Trace the Sound</b> <span class="sub">2.7 min · 5 steps</span></div>
+  <span class="rsrc">steps only</span>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.85rem">A two-minute play. Pick any sound, follow it inward and let it fade on its own. When the line goes flat, rest in what is left. The voice speaks, then stops: the pause is the practice. Repeat it throug</div>
+<div class="sub" style="margin:.15rem 0">1. Pick a sound that is already here: the room, a fan, traffic, your own breath.</div><div class="sub" style="margin:.15rem 0">2. Follow it inward until it is only a vibration, not a thing out there.</div><div class="sub" style="margin:.15rem 0">3. Let it fade the way sounds fade. You are not making it stop.</div><div class="sub">+2 more steps…</div>
+<div style="margin-top:.6rem"><button onclick="startPractice('vbt-trace-the-sound')" style="padding:.4rem .9rem;background:var(--ink);color:var(--paper);border:0;border-radius:4rem;cursor:pointer;font-size:.85rem">Practice →</button></div>
+</div></div>
+<div id="practice-overlay" style="display:none;position:fixed;inset:0;background:rgba(10,8,6,.93);z-index:100;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:Inter,sans-serif;padding:2rem;text-align:center"></div>
+<script>
+var PRACTICES = {"ajahn-lee-method-1": {"name": "Bud-dho · Ajahn Lee, Method 1", "steps": [{"n": 1, "text": "Sit upright and steady (half-lotus, right leg on the left, hands palm-up, right on left, or any steady seat).", "cue": "breath", "instr": ["i01", "i02"]}, {"n": 2, "text": "Optional: palms together at the heart, recollect the Buddha, Dhamma and Sangha; repeat buddho, dhammo, saṅgho; then buddho three times.", "cue": "breath", "instr": ["i03", "i04", "i05", "i06"]}, {"n": 3, "text": "Count the breath with buddho: bud in, dho out ×10; buddho in and out ×7; one buddho per breath ×5; three buddhos per breath ×3.", "cue": "breath", "instr": ["i08", "i09", "i10", "i11"]}, {"n": 4, "text": "Stop counting; keep bud-dho with a relaxed, natural breath at the nostrils. Don't follow it in or out. Broad, open, unforced, like a post at the edge of the sea.", "cue": "breath", "instr": ["i12", "i13", "i14", "i15", "i16", "i17", "i18", "i19"]}, {"n": 5, "text": "When still, drop buddho and just feel the breath.", "cue": "breath", "instr": ["i20", "i21"]}, {"n": 6, "text": "Bases of the breath: nose ↔ forehead seven times, settle at the forehead; forehead ↔ top of the head seven times, breathing in at the top and spreading the breath through the head; top ↔ middle of the head, settling there.", "cue": "breath", "instr": ["i24", "i26", "i27", "i28", "i29", "i30", "i31", "i32", "i33"]}, {"n": 7, "text": "Keep awareness broad; let the refined breath spread from the head to the rest of the body and fill it.", "cue": "breath", "instr": ["i34", "i35", "i40", "i41"]}], "dur": 3, "has_narration": true}, "ajahn-lee-method-2": {"name": "Seven steps · Ajahn Lee, Method 2", "steps": [{"n": 1, "text": "Three (or seven) long breaths: bud on the in-breath, dho on the out, the word as long as the breath.", "cue": "breath", "instr": ["i01", "i02"]}, {"n": 2, "text": "Be clearly aware of each in-and-out breath.", "cue": "breath", "instr": ["i03"]}, {"n": 3, "text": "Observe the breath: comfortable or not, broad or narrow, fast or slow, short or long, warm or cool. Adjust it until it is comfortable.", "cue": "breath", "instr": ["i04", "i05"]}, {"n": 4, "text": "Let the comfortable breath spread: from the base of the skull down the spine, down each leg and out past the toes, over the shoulders and out through the fingertips; from the base of the throat down the front of the body; from the middle of the chest down to the belly. Let it all connect.", "cue": "breath", "instr": ["i06", "i07", "i08", "i09", "i10", "i11", "i12"]}, {"n": 5, "text": "Explore ways of breathing (long/short in and out) and breathe whichever way is most comfortable.", "cue": "breath", "instr": ["i13"]}, {"n": 6, "text": "Get to know the resting spots: tip of the nose, middle of the head, palate, base of the throat, breastbone, navel. Rest on whichever is most comfortable. Breathe freely and naturally; don’t force.", "cue": "breath", "instr": ["i15", "i16", "i17", "i18", "i19", "i20", "i21", "i22", "i23"]}, {"n": 7, "text": "Spread awareness through the entire body; let the breath sensations flow together, awareness as broad as possible.", "cue": "breath", "instr": ["i25", "i26"]}], "dur": 3, "has_narration": true}, "bhramari": {"name": "Bhramari · humming bee breath", "steps": [{"n": 1, "text": "Sit upright, lips closed, teeth slightly apart, jaw soft. Optionally close the ears with the thumbs.", "cue": "voice"}, {"n": 2, "text": "Breathe in through the nose.", "cue": "breath", "visual": "path:nose_to_kapala flow fill"}, {"n": 3, "text": "Breathe out slowly with a steady, low hum. Feel it vibrate through the head.", "cue": "breath", "visual": "field:kapala vibrate nada"}, {"n": 4, "text": "Repeat 5–9 times, then sit in the silence and listen inward.", "seconds": 20, "cue": "silent"}], "dur": 3, "has_narration": false}, "karaniya-metta": {"name": "Goodwill · Karaṇīya Metta Sutta (Sn 1:8)", "steps": [{"n": 1, "text": "Any posture (standing, walking, sitting, lying down), as long as you are not drowsy.", "cue": "breath", "instr": ["i01"]}, {"n": 2, "text": "Think: happy, at rest, may all beings be happy at heart.", "cue": "breath", "instr": ["i02"]}, {"n": 3, "text": "Whatever beings there may be, weak or strong, seen or unseen, near or far, born or seeking birth: may all be happy at heart.", "cue": "breath", "instr": ["i03"]}, {"n": 4, "text": "Let no one deceive or despise another, or wish another to suffer.", "cue": "breath", "instr": ["i04"]}, {"n": 5, "text": "Guard this goodwill as a mother guards her only child.", "cue": "breath", "instr": ["i05"]}, {"n": 6, "text": "Goodwill for the entire cosmos, without limit: above, below, all around, without hostility or hate.", "cue": "breath", "instr": ["i06"]}], "dur": 3, "has_narration": true}, "mn118-anapanasati": {"name": "Sixteen steps · Ānāpānasati Sutta (MN 118)", "steps": [{"n": 1, "text": "Sit with legs crossed (or any steady seat), body erect, mindfulness to the fore. Mindful, breathe in; mindful, breathe out.", "cue": "breath", "instr": ["i01", "i02"]}, {"n": 2, "text": "The body: discern a long breath as long and a short breath as short; breathe in and out sensitive to the entire body; calming bodily fabrication (the breath).", "cue": "breath", "instr": ["i03", "i04", "i05", "i06"]}, {"n": 3, "text": "Feelings: breathe in and out sensitive to rapture, to pleasure, to mental fabrication (perceptions and feelings); calming mental fabrication.", "cue": "breath", "instr": ["i07", "i08", "i09", "i10"]}, {"n": 4, "text": "The mind: sensitive to the mind, gladdening it, concentrating it, releasing it.", "cue": "breath", "instr": ["i11", "i12", "i13", "i14"]}, {"n": 5, "text": "Mental qualities: focusing on inconstancy, dispassion (fading), cessation, relinquishing.", "cue": "breath", "instr": ["i15", "i16", "i17", "i18"]}], "dur": 3, "has_narration": true}, "vbt-body-as-awareness": {"name": "The body as awareness · VBT v. 63", "steps": [{"n": 1, "text": "Rest attention on the whole body at once: the whole field of sensation, not one part.", "cue": "breath", "instr": ["i01"]}, {"n": 2, "text": "Take the body and the world around it as made of awareness; felt rather than thought. When the mind narrows to “me” and “mine”, return to the wider field.", "cue": "breath", "instr": ["i02", "i03", "i04"]}], "dur": 3, "has_narration": true}, "vbt-space-contemplation": {"name": "Spaciousness · VBT vv. 43–48", "steps": [{"n": 1, "text": "Notice the space of the room around you, holding the walls and your body.", "cue": "breath", "instr": ["i01"]}, {"n": 2, "text": "Sense the space inside the body: the chest, the mouth, the skull.", "cue": "breath", "instr": ["i02", "i03", "i04"]}, {"n": 3, "text": "Feel the skin as a thin wall, open space within and without.", "cue": "breath", "instr": ["i05"]}, {"n": 4, "text": "Let inner and outer space be one field; rest in that openness. When the mind reaches for something solid, return to space. Stay alert.", "cue": "breath", "instr": ["i06", "i07", "i08"]}], "dur": 3, "has_narration": true}, "vbt-trace-the-sound": {"name": "Trace the Sound", "steps": [{"n": 1, "text": "Pick a sound that is already here: the room, a fan, traffic, your own breath.", "cue": "voice", "visual": "wave: bright, answering the voice"}, {"n": 2, "text": "Follow it inward until it is only a vibration, not a thing out there.", "cue": "voice", "visual": "wave narrows toward the head; particles travel in"}, {"n": 3, "text": "Let it fade the way sounds fade. You are not making it stop.", "cue": "silent", "visual": "wave dims"}, {"n": 4, "text": "Notice that you cannot force quiet, and cannot stop trying either.", "cue": "voice"}, {"n": 5, "text": "When the line is flat, rest in the silence for as long as it lasts. Tap when you are back.", "cue": "silent", "visual": "flat line + rest timer"}], "dur": 2.7, "has_narration": false}};
+var NARRATIONS = {"ajahn-lee-method-1": [{"id": "L01", "block": "i01", "basis": "inferred", "instructions": ["i01"], "inferred": {"rule": "posture-accessibility", "note": "“or any steady seat” is ours"}, "text": "Sit upright. Half-lotus if it suits you, right leg on the left, hands palm-up, right on left. Or any steady seat.", "pause_after_s": 0.8}, {"id": "L02", "block": "i02", "basis": "paraphrased", "instructions": ["i02"], "text": "Body straight. Mind on the task in front of you.", "pause_after_s": 0.8}, {"id": "L03", "block": "i03", "basis": "paraphrased", "instructions": ["i03"], "text": "Bring your palms together in front of the heart, and recall the qualities of the Buddha, the Dhamma and the Sangha.", "pause_after_s": 1.2}, {"id": "L04", "block": "i04.a", "basis": "quoted", "instructions": ["i04"], "text": "The Buddha is my mainstay.", "quote": {"passage": "method-1:p1.s3", "text": "Buddho me nātho"}, "pause_after_s": 1.0}, {"id": "L05", "block": "i04.b", "basis": "quoted", "instructions": ["i04"], "text": "The Dhamma is my mainstay.", "quote": {"passage": "method-1:p1.s4", "text": "Dhammo me nātho"}, "pause_after_s": 1.0}, {"id": "L06", "block": "i04.c", "basis": "quoted", "instructions": ["i04"], "text": "The Sangha is my mainstay.", "quote": {"passage": "method-1:p1.s5", "text": "Saṅgho me nātho"}, "pause_after_s": 1.0}, {"id": "L07", "block": "i05", "basis": "paraphrased", "instructions": ["i05"], "text": "In your mind: buddho, buddho. Dhammo, dhammo. Sangho, sangho.", "say": "In your mind. Buddho, buddho. Dhammo, dhammo. Sangho, sangho.", "pause_after_s": 2.0}, {"id": "L08", "block": "i06", "basis": "paraphrased", "instructions": ["i06"], "text": "Hands back in your lap. Silently, three times: buddho.", "pause_after_s": 4.0}, {"id": "L09", "block": "i08.in", "basis": "paraphrased", "instructions": ["i07", "i08"], "text": "Breathing in, think “bud”…", "say": "Breathing in: bud."}, {"id": "L10", "block": "i08.out", "basis": "inferred", "instructions": ["i08"], "inferred": {"rule": "pace-guide", "note": "“at your own pace”: the orb's pace is our guide, not the text's"}, "text": "…breathing out, “dho”. Ten breaths, at your own pace."}, {"id": "L11", "block": "i09.in", "basis": "paraphrased", "instructions": ["i09"], "text": "Now “buddho” on the in-breath…"}, {"id": "L12", "block": "i09.out", "basis": "paraphrased", "instructions": ["i09"], "text": "…and “buddho” on the out-breath. Seven breaths."}, {"id": "L13", "block": "i10.in", "basis": "paraphrased", "instructions": ["i10"], "text": "Now one “buddho” for each whole breath, in and out. Five breaths."}, {"id": "L14", "block": "i11.b1.in", "basis": "paraphrased", "instructions": ["i11"], "text": "Now “buddho” three times in each breath. Three breaths."}, {"id": "L15", "block": "i12.in", "basis": "paraphrased", "instructions": ["i12"], "text": "Stop counting. Just “bud” on the in-breath, “dho” on the out."}, {"id": "L16", "block": "i13.g.in", "basis": "quoted", "instructions": ["i13"], "text": "Let the breath be relaxed and natural."}, {"id": "L17", "block": "i14.g.in", "basis": "paraphrased", "instructions": ["i14"], "text": "Keep the mind still, with the breath at the nostrils."}, {"id": "L18", "block": "i15.g.in", "basis": "paraphrased", "instructions": ["i15"], "text": "As it goes out, don't send the mind out after it. As it comes in, don't follow it in."}, {"id": "L19", "block": "i16.g.in", "basis": "quoted", "instructions": ["i16"], "text": "Let your awareness be broad, cheerful, and open."}, {"id": "L20", "block": "i17.g.in", "basis": "quoted", "instructions": ["i17"], "text": "Don't force the mind. Relax."}, {"id": "L21", "block": "i18.g.in", "basis": "paraphrased", "instructions": ["i18"], "text": "Imagine you're breathing out into the wide open air."}, {"id": "L22", "block": "i19.g.in", "basis": "paraphrased", "instructions": ["i19"], "text": "Be like a post at the edge of the sea. The tide rises and falls; the post doesn't move."}, {"id": "L23", "block": "i12.r.in", "basis": "paraphrased", "instructions": ["i12", "i19"], "text": "Bud… dho. Still, like the post."}, {"id": "L24", "block": "i21.b1.in", "basis": "paraphrased", "instructions": ["i20"], "text": "When you're this still, let go of “buddho”."}, {"id": "L25", "block": "i21.b2.in", "basis": "paraphrased", "instructions": ["i21"], "text": "Simply feel the breath itself."}, {"id": "L26", "block": "i24.in", "basis": "paraphrased", "instructions": ["i22", "i24"], "text": "Now inward: the tip of the nose…"}, {"id": "L27", "block": "i24.out", "basis": "paraphrased", "instructions": ["i24"], "text": "…and slowly up to the middle of the forehead."}, {"id": "L28", "block": "i25.g.in", "basis": "quoted", "instructions": ["i25"], "text": "Keep your awareness broad."}, {"id": "L29", "block": "i26.in", "basis": "paraphrased", "instructions": ["i26"], "text": "Rest a moment at the forehead, then come back to the nose."}, {"id": "L30", "block": "i27.in", "basis": "paraphrased", "instructions": ["i27"], "text": "Now back and forth, nose to forehead, like climbing up and down a mountain. Seven times."}, {"id": "L31", "block": "i28.in", "basis": "paraphrased", "instructions": ["i28"], "text": "Settle at the forehead. Don't go back to the nose."}, {"id": "L32", "block": "i29.in", "basis": "paraphrased", "instructions": ["i29"], "text": "Move up to the middle of the top of the head, and settle there."}, {"id": "L33", "block": "i30.in", "basis": "paraphrased", "instructions": ["i30"], "text": "Breathe in there; let it spread through the head…"}, {"id": "L34", "block": "i30.out", "basis": "paraphrased", "instructions": ["i30"], "text": "…then return to the forehead."}, {"id": "L35", "block": "i31.in", "basis": "paraphrased", "instructions": ["i31"], "text": "Back and forth between the forehead and the top of the head. Seven times."}, {"id": "L36", "block": "i31.end.in", "basis": "paraphrased", "instructions": ["i31"], "text": "Finally, rest on the top of the head."}, {"id": "L37", "block": "i32.in", "basis": "paraphrased", "instructions": ["i32"], "text": "Now into the centre of the brain…"}, {"id": "L38", "block": "i32.out", "basis": "paraphrased", "instructions": ["i32"], "text": "…be still a moment, then back to the top of the head."}, {"id": "L39", "block": "i33.in", "basis": "paraphrased", "instructions": ["i33"], "text": "Back and forth between these two spots: the top, and the middle."}, {"id": "L40", "block": "i33.end.in", "basis": "paraphrased", "instructions": ["i33"], "text": "Finally, settle in the middle of the brain."}, {"id": "L41", "block": "i34.g.in", "basis": "quoted", "instructions": ["i34"], "text": "Keep your awareness broad."}, {"id": "L42", "block": "i35.b1.in", "basis": "paraphrased", "instructions": ["i35"], "text": "Let the refined breath in the head spread down to the lower body."}, {"id": "L43", "block": "i41.b1.in", "basis": "inferred", "instructions": ["i40", "i41"], "inferred": {"rule": "condition-dropped", "note": "in the text these follow the light sign; here they are for the breath alone"}, "text": "Keep awareness still and expansive. Let the refined breath fill the whole body."}, {"id": "L44", "block": "close", "basis": "framing", "instructions": ["i41"], "text": "Stay with the whole body breathing, as long as you like."}], "ajahn-lee-method-2": [{"id": "L01", "block": "i01.b1.in", "basis": "paraphrased", "instructions": ["i01"], "text": "Start with three long breaths, thinking bud with the in-breath, and dho with the out.", "pause_after_s": 0.8, "quote": {"passage": "method-2:p2.s1", "text": "Start out with three or seven long in-and-out breaths"}}, {"id": "L02", "block": "i02.g.in", "basis": "quoted", "instructions": ["i02"], "text": "Keep the word as long as the breath.", "pause_after_s": 0.8}, {"id": "L03", "block": "i03.in", "basis": "paraphrased", "instructions": ["i03"], "text": "Now simply be clearly aware of each breath, in and out.", "pause_after_s": 0.8}, {"id": "L04", "block": "i04.in", "basis": "paraphrased", "instructions": ["i04"], "text": "Observe the breath. Is it comfortable or not? Broad or narrow? Fast or slow, short or long, warm or cool?", "pause_after_s": 0.8}, {"id": "L05", "block": "i05.g.in", "basis": "paraphrased", "instructions": ["i05"], "text": "If it doesn’t feel comfortable, adjust it until it does. If long breathing feels wrong, try short.", "pause_after_s": 0.8}, {"id": "L06", "block": "i06.in", "basis": "paraphrased", "instructions": ["i06"], "text": "When the breath feels comfortable, breathe in at the base of the skull and let it flow down the spine.", "pause_after_s": 0.8}, {"id": "L07", "block": "i07.in", "basis": "paraphrased", "instructions": ["i07"], "text": "In at the base of the skull again… down the right leg, to the toes, and out into the air.", "pause_after_s": 0.8}, {"id": "L08", "block": "i08.in", "basis": "paraphrased", "instructions": ["i08"], "text": "Again from the base of the skull: down the spine, down the left leg, out past the toes.", "pause_after_s": 0.8}, {"id": "L09", "block": "i09.in", "basis": "paraphrased", "instructions": ["i09"], "text": "From the base of the skull over both shoulders, down the arms, and out through the fingertips.", "pause_after_s": 0.8}, {"id": "L10", "block": "i10.in", "basis": "paraphrased", "instructions": ["i10"], "text": "From the base of the throat, down the front of the body, all the way to the belly.", "pause_after_s": 0.8}, {"id": "L11", "block": "i11.in", "basis": "paraphrased", "instructions": ["i11"], "text": "Breathe in at the middle of the chest and let it go all the way down to the belly.", "pause_after_s": 0.8}, {"id": "L12", "block": "i12.b1.in", "basis": "paraphrased", "instructions": ["i12"], "text": "Let all these breath sensations connect and flow together.", "pause_after_s": 0.8}, {"id": "L13", "block": "i13.in", "basis": "paraphrased", "instructions": ["i13"], "text": "Explore: in long, out long… in long, out short… in short, out long… in short, out short. Then breathe whichever way is most comfortable.", "pause_after_s": 0.8, "quote": {"passage": "method-2:p15.s1", "text": "Breathe whichever way is most comfortable for you."}}, {"id": "L14", "block": "i15.in", "basis": "paraphrased", "instructions": ["i15"], "text": "Get to know the resting spots of the breath. The tip of the nose.", "pause_after_s": 0.8}, {"id": "L15", "block": "i16.in", "basis": "quoted", "instructions": ["i16"], "text": "The middle of the head.", "pause_after_s": 0.8}, {"id": "L16", "block": "i17.in", "basis": "quoted", "instructions": ["i17"], "text": "The palate.", "pause_after_s": 0.8}, {"id": "L17", "block": "i18.in", "basis": "quoted", "instructions": ["i18"], "text": "The base of the throat.", "pause_after_s": 0.8}, {"id": "L18", "block": "i19.in", "basis": "paraphrased", "instructions": ["i19"], "text": "The breastbone, at the tip of the sternum.", "pause_after_s": 0.8}, {"id": "L19", "block": "i20.in", "basis": "quoted", "instructions": ["i20"], "text": "The navel, or just above it.", "pause_after_s": 0.8}, {"id": "L20", "block": "i21.in", "basis": "paraphrased", "instructions": ["i21"], "text": "Now center your awareness on whichever spot feels most comfortable.", "pause_after_s": 0.8}, {"id": "L21", "block": "i22.g.in", "basis": "paraphrased", "instructions": ["i22"], "text": "Don’t force the breath. Breathe freely and naturally.", "pause_after_s": 0.8}, {"id": "L22", "block": "i23.g.in", "basis": "paraphrased", "instructions": ["i23"], "text": "Let the mind be at ease with the breath, but not so much that it slips away.", "pause_after_s": 0.8}, {"id": "L23", "block": "i25.b1.in", "basis": "paraphrased", "instructions": ["i25"], "text": "Spread your awareness, your sense of feeling, throughout the entire body.", "pause_after_s": 0.8}, {"id": "L24", "block": "i26.b1.in", "basis": "paraphrased", "instructions": ["i26"], "text": "Let the breath sensations flow together through the whole body. Keep your awareness as broad as you can.", "pause_after_s": 0.8, "quote": {"passage": "method-2:p25.s1", "text": "keeping your awareness as broad as possible"}}], "karaniya-metta": [{"id": "L01", "block": "i01", "basis": "paraphrased", "instructions": ["i01"], "text": "Standing, walking, sitting or lying down: any posture, as long as you are not drowsy.", "pause_after_s": 0.8}, {"id": "L02", "block": "i02.b1.in", "basis": "quoted", "instructions": ["i02"], "text": "Think: happy, at rest, may all beings be happy at heart.", "pause_after_s": 0.8, "quote": {"passage": "snp1-8:p13.s1", "text": "may all beings be happy at heart."}}, {"id": "L03", "block": "i03.b1.in", "basis": "paraphrased", "instructions": ["i03"], "text": "Whatever beings there may be, weak or strong, seen or unseen, near or far, born or seeking birth: may all beings be happy at heart.", "pause_after_s": 0.8}, {"id": "L04", "block": "i04.b1.in", "basis": "paraphrased", "instructions": ["i04"], "text": "Let no one deceive another, or despise anyone anywhere, or wish for another to suffer.", "pause_after_s": 0.8}, {"id": "L05", "block": "i05.b1.in", "basis": "paraphrased", "instructions": ["i05"], "text": "As a mother would protect her only child, protect this goodwill toward all beings.", "pause_after_s": 0.8, "quote": {"passage": "snp1-8:p48.s2", "text": "One should protect one’s goodwill toward all beings in the same way that a mother would protect her only child."}}, {"id": "L06", "block": "i06.b1.in", "basis": "paraphrased", "instructions": ["i06"], "text": "With goodwill for the entire cosmos, let the heart go out without limit: above, below, and all around.", "pause_after_s": 0.8}], "mn118-anapanasati": [{"id": "L01", "block": "i01", "basis": "inferred", "instructions": ["i01"], "text": "Sit with your legs crossed, or in any steady seat. Hold the body erect, and bring mindfulness to the fore.", "pause_after_s": 0.8, "inferred": {"rule": "posture-accessibility", "note": "“or any steady seat” is ours"}}, {"id": "L02", "block": "i02.b1.in", "basis": "quoted", "instructions": ["i02"], "text": "Always mindful, breathe in. Mindful, breathe out.", "pause_after_s": 0.8}, {"id": "L03", "block": "i03.b1.in", "basis": "paraphrased", "instructions": ["i03"], "text": "When the breath is long, discern: I am breathing in long… I am breathing out long.", "pause_after_s": 0.8, "quote": {"passage": "mn118:p18.s1", "text": "Breathing in long, he discerns, ‘I am breathing in long’"}}, {"id": "L04", "block": "i04.b1.in", "basis": "paraphrased", "instructions": ["i04"], "text": "When it is short, discern: I am breathing in short… breathing out short.", "pause_after_s": 0.8}, {"id": "L05", "block": "i05.b1.in", "basis": "paraphrased", "instructions": ["i05"], "text": "Breathe in sensitive to the entire body. Breathe out sensitive to the entire body.", "pause_after_s": 0.8}, {"id": "L06", "block": "i06.b1.in", "basis": "paraphrased", "instructions": ["i06"], "text": "Breathe in calming bodily fabrication, the breath itself. Breathe out, calming it.", "pause_after_s": 0.8, "quote": {"passage": "mn118:p45.s2", "text": "in-&-out breaths are bodily fabrications"}}, {"id": "L07", "block": "i07.b1.in", "basis": "paraphrased", "instructions": ["i07"], "text": "Breathe in sensitive to rapture. Breathe out sensitive to rapture.", "pause_after_s": 0.8}, {"id": "L08", "block": "i08.b1.in", "basis": "paraphrased", "instructions": ["i08"], "text": "Breathe in sensitive to pleasure. Breathe out sensitive to pleasure.", "pause_after_s": 0.8}, {"id": "L09", "block": "i09.b1.in", "basis": "paraphrased", "instructions": ["i09"], "text": "Breathe in sensitive to mental fabrication: perceptions and feelings. Breathe out, sensitive to them.", "pause_after_s": 0.8}, {"id": "L10", "block": "i10.b1.in", "basis": "paraphrased", "instructions": ["i10"], "text": "Breathe in calming mental fabrication. Breathe out calming mental fabrication.", "pause_after_s": 0.8}, {"id": "L11", "block": "i11.b1.in", "basis": "paraphrased", "instructions": ["i11"], "text": "Breathe in sensitive to the mind. Breathe out sensitive to the mind.", "pause_after_s": 0.8}, {"id": "L12", "block": "i12.b1.in", "basis": "paraphrased", "instructions": ["i12"], "text": "Breathe in gladdening the mind. Breathe out gladdening the mind.", "pause_after_s": 0.8}, {"id": "L13", "block": "i13.b1.in", "basis": "paraphrased", "instructions": ["i13"], "text": "Breathe in concentrating the mind. Breathe out concentrating the mind.", "pause_after_s": 0.8}, {"id": "L14", "block": "i14.b1.in", "basis": "paraphrased", "instructions": ["i14"], "text": "Breathe in releasing the mind. Breathe out releasing the mind.", "pause_after_s": 0.8}, {"id": "L15", "block": "i15.b1.in", "basis": "paraphrased", "instructions": ["i15"], "text": "Breathe in focusing on inconstancy. Breathe out focusing on inconstancy.", "pause_after_s": 0.8}, {"id": "L16", "block": "i16.b1.in", "basis": "paraphrased", "instructions": ["i16"], "text": "Breathe in focusing on dispassion, on fading. Breathe out the same.", "pause_after_s": 0.8}, {"id": "L17", "block": "i17.b1.in", "basis": "paraphrased", "instructions": ["i17"], "text": "Breathe in focusing on cessation. Breathe out focusing on cessation.", "pause_after_s": 0.8}, {"id": "L18", "block": "i18.b1.in", "basis": "paraphrased", "instructions": ["i18"], "text": "Breathe in focusing on relinquishing. Breathe out focusing on relinquishing.", "pause_after_s": 0.8}], "vbt-body-as-awareness": [{"id": "L01", "block": "i01.in", "basis": "paraphrased", "instructions": ["i01"], "text": "Let attention rest on the whole body at once. Not one part: the whole field of sensation.", "pause_after_s": 0.8}, {"id": "L02", "block": "i02.in", "basis": "paraphrased", "instructions": ["i02"], "text": "Now take the body, and the world around it, as made of awareness.", "pause_after_s": 0.8}, {"id": "L03", "block": "i03.g.in", "basis": "paraphrased", "instructions": ["i03"], "text": "Let this be felt, rather than thought.", "pause_after_s": 0.8}, {"id": "L04", "block": "i04.g.in", "basis": "paraphrased", "instructions": ["i04"], "text": "When the mind narrows back to me and mine, return to the wider field, and rest there.", "pause_after_s": 0.8}], "vbt-space-contemplation": [{"id": "L01", "block": "i01.in", "basis": "paraphrased", "instructions": ["i01"], "text": "Notice the space of the room around you: the space that holds the walls, and your body.", "pause_after_s": 0.8}, {"id": "L02", "block": "i02.in", "basis": "paraphrased", "instructions": ["i02"], "text": "Now sense the space inside the body. The chest.", "pause_after_s": 0.8}, {"id": "L03", "block": "i03.in", "basis": "paraphrased", "instructions": ["i03"], "text": "The space of the mouth.", "pause_after_s": 0.8}, {"id": "L04", "block": "i04.in", "basis": "paraphrased", "instructions": ["i04"], "text": "The space inside the skull.", "pause_after_s": 0.8}, {"id": "L05", "block": "i05.in", "basis": "paraphrased", "instructions": ["i05"], "text": "Feel the skin as a thin wall, with open space within, and without.", "pause_after_s": 0.8}, {"id": "L06", "block": "i06.in", "basis": "paraphrased", "instructions": ["i06"], "text": "Let the inner and outer space be one field. Rest in that openness.", "pause_after_s": 0.8}, {"id": "L07", "block": "i07.g.in", "basis": "paraphrased", "instructions": ["i07"], "text": "When the mind reaches for something solid, notice the reaching, and return to space.", "pause_after_s": 0.8}, {"id": "L08", "block": "i08.g.in", "basis": "paraphrased", "instructions": ["i08"], "text": "Stay alert. This is open, not blank or sleepy.", "pause_after_s": 0.8}]};
+var _currentPractice=null, _stepIdx=0, _timerId=null, _audioCtx=null;
+
+function getCtx(){ if(!_audioCtx){_audioCtx=new (window.AudioContext||window.webkitAudioContext)()} return _audioCtx }
+function playTone(freq, dur) {
+  try {
+    var ctx=getCtx(),o=ctx.createOscillator(),g=ctx.createGain();
+    o.type='sine';o.frequency.value=freq;
+    g.gain.setValueAtTime(0,ctx.currentTime);
+    g.gain.linearRampToValueAtTime(0.2,ctx.currentTime+2);
+    g.gain.setValueAtTime(0.2,ctx.currentTime+dur-3);
+    g.gain.linearRampToValueAtTime(0,ctx.currentTime+dur);
+    o.connect(g);g.connect(ctx.destination);
+    o.start();o.stop(ctx.currentTime+dur);
+  } catch(e) {}
+}
+function speak(text, cb) {
+  if(!('speechSynthesis' in window)){ if(cb)cb(); return }
+  try{speechSynthesis.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);
+  u.rate=0.85;u.pitch=0.95;
+  u.onend=function(){if(cb)cb()};
+  u.onerror=function(){if(cb)cb()};
+  speechSynthesis.speak(u);
+}
+function startPractice(pid) {
+  var p=PRACTICES[pid];
+  if(!p){alert('Practice not found');return}
+  _currentPractice=p;_stepIdx=0;
+  var overlay=document.getElementById('practice-overlay');
+  overlay.style.display='flex';
+  var isSound = pid.indexOf('trace')>=0||pid.indexOf('bhramari')>=0;
+  overlay.innerHTML='<div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a86f14">Practice</div>'
+    +'<h2 style="font-family:serif;font-size:1.5rem;margin:.5rem 0">'+p.name+'</h2>'
+    +'<div style="max-width:560px;font-size:.95rem;line-height:1.7;margin:.5rem 0;min-height:4em" id="step-text"></div>'
+    +'<div id="step-indicator" style="font-size:.8rem;color:#a86f14;margin:.3rem 0"></div>'
+    +'<div id="practice-timer" style="font-size:2.5rem;margin:.8rem 0;font-variant-numeric:tabular-nums">'+Math.floor(p.dur)+':00</div>'
+    +(isSound?'<button onclick="playBhramari()" style="padding:.4rem .8rem;border:1px solid #a86f14;border-radius:4rem;background:transparent;color:#a86f14;cursor:pointer;font-size:.85rem">▶ Play tone</button>':'')
+    +'<div style="display:flex;gap:.6rem;margin-top:1rem">'
+    +'<button onclick="nextStep()" style="padding:.5rem 1.2rem;background:#fff;color:#17140f;border:0;border-radius:4rem;cursor:pointer;font-size:.9rem">Next →</button>'
+    +'<button onclick="stopPractice()" style="padding:.5rem 1.2rem;background:transparent;color:#fff;border:1px solid #555;border-radius:4rem;cursor:pointer;font-size:.9rem">End</button></div>';
+  var dur = Math.floor(p.dur * 60);
+  var t0=Date.now();
+  _timerId=setInterval(function(){
+    var el=Math.floor((Date.now()-t0)/1000);
+    var rem=dur-el;
+    var m=Math.floor(rem/60),s=rem%60;
+    var t=document.getElementById('practice-timer');
+    if(t) t.textContent=m+':'+(s<10?'0':'')+s;
+    if(rem<=0){clearInterval(_timerId);var el2=document.getElementById('step-text');if(el2)el2.textContent='Practice complete. Rest a moment.'}
+  },1000);
+  showStep(0);
+}
+function showStep(i) {
+  if(!_currentPractice)return;
+  var steps=_currentPractice.steps;
+  if(i>=steps.length){var el=document.getElementById('step-text');if(el)el.textContent='All steps complete. Rest a moment.';return}
+  _stepIdx=i;
+  var s=steps[i];
+  var el=document.getElementById('step-text');
+  var ind=document.getElementById('step-indicator');
+  if(el) el.textContent=s.text;
+  if(ind) ind.textContent='Step '+(i+1)+' of '+steps.length+(s.cue==='voice'?' · voice cue':s.cue==='silent'?' · silent':'');
+  if(s.cue==='voice'){ speak(s.text, function(){}); }
+  if(_currentPractice.has_narration && NARRATIONS[_currentPractice.id]) {
+    var narrs=NARRATIONS[_currentPractice.id];
+    var nIdx=i;
+    if(nIdx<narrs.length && narrs[nIdx].text) { speak(narrs[nIdx].text, function(){}); }
+  }
+}
+function nextStep() { showStep(_stepIdx+1) }
+function playBhramari() { playTone(200, 15) }
+function stopPractice() {
+  clearInterval(_timerId);
+  try{speechSynthesis.cancel()}catch(e){}
+  var o=document.getElementById('practice-overlay');
+  if(o) o.style.display='none';
+  _currentPractice=null;_stepIdx=0;
+}
+</script><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:#1c1a17;color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:#fff;border:1px solid #e6ddc9;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid #e6ddc9;font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid #e6ddc9;border-radius:.4rem;background:#fff;cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid #e6ddc9;display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid #e6ddc9;border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:#1c1a17;color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script></body></html>
