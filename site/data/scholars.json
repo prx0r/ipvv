@@ -97,8 +97,14 @@
     "used_for": "Complete bibliography + abstracts (HAL CV)"
    }
   ],
-  "status": "living",
-  "summary": "Philologist of the Pratyabhijna margins: discovered Vivrti fragments in manuscript margins (J11 etc.), edited/translated them, and mapped the Buddhist co-optation. The single most load-bearing secondary for IPVV: where she has edited text, follow her; where she argues, weigh her."
+  "status": "active",
+  "summary": "Philologist of the Pratyabhijna margins: discovered Vivrti fragments in manuscript margins (J11 etc.), edited/translated them, and mapped the Buddhist co-optation. The single most load-bearing secondary for IPVV: where she has edited text, follow her; where she argues, weigh her.",
+  "bio": "Philosopher of Sanskrit knowledge systems. Sorbonne Nouvelle (GREI) to the College de France chair in Indian thought; 64 HAL records. Sanskrit philology + Buddhist epistemology training brought to bear on Utpaladeva/Abhinavagupta manuscripts (marginalia mining, J11/SOAS/S2/S3/S5/S7/S9/S15).",
+  "holdings": [
+   "research-library/recognition/RATIE-EXCAVATION-EN.md",
+   "research-library/recognition/ratie-chapters/",
+   "research-library/recognition/books/Le-Soi-et-l-Autre-Ratie-2011.pdf"
+  ]
  },
  {
   "affiliation": "Sapienza University of Rome",
@@ -162,8 +168,13 @@
    }
   ],
   "name": "Raffaele Torella",
-  "status": "living",
-  "summary": "Editor of the base texts: IPK critical edition + translation (the karikas our IPVV comments on) and discoverer/editor of the only Vivrti manuscript. When Torella reads a fragment, that reading is the floor."
+  "status": "active",
+  "summary": "Editor of the base texts: IPK critical edition + translation (the karikas our IPVV comments on) and discoverer/editor of the only Vivrti manuscript. When Torella reads a fragment, that reading is the floor.",
+  "bio": "Sapienza University of Rome. Editor of the IPK (Serie Orientale Roma 71; Delhi 2002 corrected ed.) and discoverer/editor of the Vivrti codex unicus; Studies I-IV on apoha, memory, cognition, light. The GRETIL IPK e-text is revised on his edition.",
+  "holdings": [
+   "research-library/recognition/torella-volume/",
+   "research-library/recognition/primary/torella_ipk.txt"
+  ]
  },
  {
   "affiliation": "Oxford (emeritus)",
@@ -206,8 +217,12 @@
    }
   ],
   "name": "Alexis Sanderson",
-  "status": "living",
-  "summary": "Historian of the Saiva world: dating, traditions, exegesis, ritual. Use for what happened, when, and who read whom — not for settling philosophical cruxes (that's Ratia/Torella). Manifest grades every item direct vs login-walled."
+  "status": "active",
+  "summary": "Historian of the Saiva world: dating, traditions, exegesis, ritual. Use for what happened, when, and who read whom — not for settling philosophical cruxes (that's Ratia/Torella). Manifest grades every item direct vs login-walled.",
+  "bio": "Oxford historian of Saivism (Spalding chair, emeritus). Dated and mapped the traditions, exegesis, ritual and mandala systems the Trika authors presuppose.",
+  "holdings": [
+   "acquisitions/sanderson/sanderson_manifest.json (53 works, direct-vs-login graded)"
+  ]
  },
  {
   "affiliation": "Independent (Dyczkowski personal/associated editions)",
@@ -229,8 +244,13 @@
    }
   ],
   "name": "Mark Dyczkowski",
-  "status": "living",
-  "summary": "Translator of the Tantraloka whole and supervisor of the Mukhabodha e-texts (our Sanskrit provenance). Style model for readable fidelity; commercial — cite, quote briefly, never host."
+  "status": "active",
+  "summary": "Translator of the Tantraloka whole and supervisor of the Mukhabodha e-texts (our Sanskrit provenance). Style model for readable fidelity; commercial — cite, quote briefly, never host.",
+  "bio": "Independent scholar-translator; 45 years to the complete 11-volume English Tantraloka (2023); supervised the Mukhabodha e-text entry under which our Sanskrit sits.",
+  "holdings": [
+   "tantra/texts-clean/tantraloka-vol*-dyczkowski_clean.txt",
+   "tantra/dyczkowski-translations/ (Aphorisms 475KB; Vibration 710KB; Spanda 1.7MB)"
+  ]
  },
  {
   "affiliation": "Independent teacher; Tantra Illuminated",
@@ -252,8 +272,12 @@
    }
   ],
   "name": "Christopher Wallis (Hareesh)",
-  "status": "living",
-  "summary": "Teacher-translator whose TS lectures independently confirm our TS3 reading, and whose VBT app popularized the 12-vowel system (treat its diagram as pedagogical, flag before doctrine)."
+  "status": "active",
+  "summary": "Teacher-translator whose TS lectures independently confirm our TS3 reading, and whose VBT app popularized the 12-vowel system (treat its diagram as pedagogical, flag before doctrine).",
+  "bio": "Independent teacher (Tantra Illuminated; tantra112.app). His TS lecture transcripts independently confirm our TS3 reading; his VBT app popularised the 12-vowel diagram (treat as pedagogical).",
+  "holdings": [
+   "tantrasara study transcripts (in-repo)"
+  ]
  },
  {
   "affiliation": "Universal Shaiva Fellowship (oral lineage, d. 1990s reception)",
@@ -268,24 +292,72 @@
    }
   ],
   "name": "Swami Lakshmanjoo",
-  "status": "lineage (20th c.)",
-  "summary": "Oral-lineage witness: the Academy editions carry the living recitation (hAMSAH in heart/dvadasanta, breath turns). Pirated PDFs circulate — cite the Fellowship editions, never host scans."
+  "status": "lineage",
+  "summary": "Oral-lineage witness: the Academy editions carry the living recitation (hAMSAH in heart/dvadasanta, breath turns). Pirated PDFs circulate — cite the Fellowship editions, never host scans.",
+  "bio": "Kashmiri master (1907-1991) of the oral Trika line; Academy editions carry the recitation tradition (VBT breath turns, hAMSAH heart/dvadasanta, Stotravali chanting).",
+  "holdings": [
+   "tantra/lakshmanjoo/vb_lakshmanjoo.json + 2 epubs"
+  ]
  },
  {
-  "affiliation": "Historical (French school)",
   "id": "silburn",
+  "name": "Lilian Silburn",
+  "affiliation": "CNRS / College de France, ICI (1908-1993)",
+  "status": "historical",
+  "summary": "French translator of the Kashmir corpus: Vijnanabhairava (1961), Bhakti/Stavacintamani (1964), Maharthamanjari+Parimala (1968), Hymnes de Abhinavagupta (PICI 31, 1970; 2nd ed. 1986), Hymnes aux Kali (1975), Kundalini (1983), Sivasutra (1980), Tantraloka ch.1-5 with Padoux (1998), Vatulanatha w/ Anantasakti (1995). Her 1970 Hymnes intro dates the late hymns with the PTv works — our dating note. Eight hymns = Bodhapancadasika, Paramarthacarca, Anubhavanivedana, Bhairavastava, Paramarthadvadasika, Mahopadesavimsatika, Dehasthadevatacakra + Anuttarastika.",
   "items": [
    {
+    "title": "Hymnes de Abhinavagupta (PICI 31, 1970; 2nd ed. 1986)",
+    "year": 1970,
+    "access": "print",
+    "link": "https://catalogue.bnf.fr/ark:/12148/cb37358654d",
+    "used_for": "8-hymn French witnesses; late-dating thesis (PTv-era)"
+   },
+   {
+    "title": "Le Vijnanabhairava (PICI 15, 1961)",
+    "year": 1961,
     "access": "print",
     "link": null,
-    "title": "French translations: Stotravali, VBT contexts, Tantraloka ch.1-5 (with Padoux)",
-    "used_for": "Stotra readings; French triangulation on dense verses",
-    "year": null
+    "used_for": "VBT French witness"
+   },
+   {
+    "title": "La bhakti: Stavacintamani (PICI 19, 1964)",
+    "year": 1964,
+    "access": "print",
+    "link": null,
+    "used_for": "Stavacintamani French witness"
+   },
+   {
+    "title": "Maharthamanjari + Parimala extracts (1968)",
+    "year": 1968,
+    "access": "print",
+    "link": null,
+    "used_for": "Krama aesthetics witness"
+   },
+   {
+    "title": "Hymnes aux Kali (1975; Sanskrit IAST incl.)",
+    "year": 1975,
+    "access": "print",
+    "link": null,
+    "used_for": "Kramastotra + Pancasatika French + Sanskrit"
+   },
+   {
+    "title": "La Kundalini (1983; SUNY 1988)",
+    "year": 1983,
+    "access": "print",
+    "link": "https://sunypress.edu/Books/K/Kundalini",
+    "used_for": "Trika/Krama/Kaula passages anthology (Abhinavagupta thru Lalla)"
+   },
+   {
+    "title": "Tantraloka ch.1-5 with Padoux (1998)",
+    "year": 1998,
+    "access": "print",
+    "link": null,
+    "used_for": "TA opening French witness"
    }
   ],
-  "name": "Lilian Silburn",
-  "status": "historical",
-  "summary": "French witness for hymns and early TĀ chapters; use to triangulate, not as final authority."
+  "bio": "CNRS Directeur de recherche (1908-1993). Nine annotated translation volumes 1957-1990 (ICI fascicles). Her 1970 Hymnes dates the late stotras with the PTv works — independent confirmation of our works map; her corpus (Hymnes I) is our stotra checklist.",
+  "holdings": []
  },
  {
   "affiliation": "CNRS (historical)",
@@ -350,142 +422,11 @@
   ],
   "name": "Andre Padoux",
   "status": "historical",
-  "summary": "Theorist of Vac and mantra: levels of speech, japa, guru function. Our Padoux extracts (HTW ch.5/7, Guru) are the citable in-repo form."
- },
- {
-  "affiliation": "EFEO (historical)",
-  "id": "brunner",
-  "items": [
-   {
-    "access": "print",
-    "link": null,
-    "title": "Svacchanda/Sarada editions; ritual studies (Brunner FS volume)",
-    "used_for": "Ritual/Siddhanta background; Netra/Svacchanda edition context",
-    "year": null
-   }
-  ],
-  "name": "Helene Brunner",
-  "status": "historical",
-  "summary": "Ritual and Siddhanta editions; the Brunner Festschrift volume doubles as Sanderson-bibliography source."
- },
- {
-  "affiliation": "Heidelberg (Sanskrit)",
-  "id": "hanneder",
-  "items": [
-   {
-    "access": "print",
-    "link": null,
-    "title": "MVV trans vv.1-399; Bhuti Svabodhasiddhi (ZDMG 2017)",
-    "used_for": "MVV readings; Bhutiraja text",
-    "year": null
-   }
-  ],
-  "name": "Jurgen Hanneder",
-  "status": "living",
-  "summary": "Editor-translator on the margins: MVV opening and the Bhutiraja opuscule our Bhutiraja page rests on."
- },
- {
-  "affiliation": "Benares (Kaviraj lineage); Rudra Press",
-  "id": "marjanovic",
-  "items": [
-   {
-    "access": "print",
-    "link": null,
-    "title": "Tantrasara English (Chakravarty/Marjanovic, Rudra Press 2012)",
-    "used_for": "The TS translation under review (verified vs Sanskrit in-repo)",
-    "year": 2012
-   },
-   {
-    "access": "print",
-    "link": null,
-    "title": "Gitarthasangraha translation (2002/2006)",
-    "used_for": "Abhinavagupta Gita reading (where TS review needs it)",
-    "year": null
-   }
-  ],
-  "name": "Boris Marjanovic (/Chakravarty)",
-  "status": "living",
-  "summary": "TS translator under review: sentence-by-sentence Benares work; our audit found it faithful with fenced-gloss exceptions (sun/jar)."
- },
- {
-  "affiliation": "GRETIL/Mukhabodha (infrastructure)",
-  "id": "vasudeva",
-  "items": [
-   {
-    "access": "open",
-    "link": "https://gretil.sub.uni-goettingen.de/",
-    "title": "GRETIL e-text inputs (Somadeva Vasudeva and others)",
-    "used_for": "Sanskrit provenance for IPK/Siddhitrayi and more",
-    "year": null
-   },
-   {
-    "access": "open",
-    "link": null,
-    "title": "Malinivijayottara critical edition (Vasudeva 2004)",
-    "used_for": "MV root post-critical picture (acquire)",
-    "year": 2004
-   }
-  ],
-  "name": "Somadeva Vasudeva",
-  "status": "living",
-  "summary": "E-text maker and MV editor: GRETIL inputs underlie our Sanskrit layer; his MV edition is the top acquisition target."
- },
- {
-  "id": "silburn",
-  "name": "Lilian Silburn",
-  "affiliation": "CNRS / College de France, ICI (1908-1993)",
-  "status": "historical",
-  "summary": "French translator of the Kashmir corpus: Vijnanabhairava (1961), Bhakti/Stavacintamani (1964), Maharthamanjari+Parimala (1968), Hymnes de Abhinavagupta (PICI 31, 1970; 2nd ed. 1986), Hymnes aux Kali (1975), Kundalini (1983), Sivasutra (1980), Tantraloka ch.1-5 with Padoux (1998), Vatulanatha w/ Anantasakti (1995). Her 1970 Hymnes intro dates the late hymns with the PTv works — our dating note. Eight hymns = Bodhapancadasika, Paramarthacarca, Anubhavanivedana, Bhairavastava, Paramarthadvadasika, Mahopadesavimsatika, Dehasthadevatacakra + Anuttarastika.",
-  "items": [
-   {
-    "title": "Hymnes de Abhinavagupta (PICI 31, 1970; 2nd ed. 1986)",
-    "year": 1970,
-    "access": "print",
-    "link": "https://catalogue.bnf.fr/ark:/12148/cb37358654d",
-    "used_for": "8-hymn French witnesses; late-dating thesis (PTv-era)"
-   },
-   {
-    "title": "Le Vijnanabhairava (PICI 15, 1961)",
-    "year": 1961,
-    "access": "print",
-    "link": null,
-    "used_for": "VBT French witness"
-   },
-   {
-    "title": "La bhakti: Stavacintamani (PICI 19, 1964)",
-    "year": 1964,
-    "access": "print",
-    "link": null,
-    "used_for": "Stavacintamani French witness"
-   },
-   {
-    "title": "Maharthamanjari + Parimala extracts (1968)",
-    "year": 1968,
-    "access": "print",
-    "link": null,
-    "used_for": "Krama aesthetics witness"
-   },
-   {
-    "title": "Hymnes aux Kali (1975; Sanskrit IAST incl.)",
-    "year": 1975,
-    "access": "print",
-    "link": null,
-    "used_for": "Kramastotra + Pancasatika French + Sanskrit"
-   },
-   {
-    "title": "La Kundalini (1983; SUNY 1988)",
-    "year": 1983,
-    "access": "print",
-    "link": "https://sunypress.edu/Books/K/Kundalini",
-    "used_for": "Trika/Krama/Kaula passages anthology (Abhinavagupta thru Lalla)"
-   },
-   {
-    "title": "Tantraloka ch.1-5 with Padoux (1998)",
-    "year": 1998,
-    "access": "print",
-    "link": null,
-    "used_for": "TA opening French witness"
-   }
+  "summary": "Theorist of Vac and mantra: levels of speech, japa, guru function. Our Padoux extracts (HTW ch.5/7, Guru) are the citable in-repo form.",
+  "bio": "CNRS/EFEO (1920-2017). Thesis Recherches (PICI 21, 1964) to Vac (SUNY 1990): the theorist of speech-energy, mantra, japa, guru-function our extracts encode.",
+  "holdings": [
+   "deitybody/corpus/extracts/PADOUX_HTW_BODY_WORD.md",
+   "deitybody/corpus/extracts/PADOUX_GURU.md"
   ]
  },
  {
@@ -529,6 +470,372 @@
     "access": "print",
     "link": "https://publications.efeo.fr/en/livre-pdf/621_melanges-tantriques-a-la-memoire-d-helene-brunner-tantric-studies-in-memory-of-helene-brunner",
     "used_for": "Free EFEO PDF; Torella Vivrti studies inside"
+   }
+  ],
+  "bio": "EFEO/IFI Pondicherry (d. 2005); mathematician turned Agama editor. Somasambhupaddhati 4 vols (1963-1998, 2000+ pp) remains the ritual reference; Netra study (1974); TAbhidhanakosa co-editor.",
+  "holdings": []
+ },
+ {
+  "affiliation": "Sanskritist (MVV; Bhutiraja editions)",
+  "id": "hanneder",
+  "items": [
+   {
+    "access": "print",
+    "link": null,
+    "title": "MVV trans vv.1-399; Bhuti Svabodhasiddhi (ZDMG 2017)",
+    "used_for": "MVV readings; Bhutiraja text",
+    "year": null
+   }
+  ],
+  "name": "Jurgen Hanneder",
+  "status": "active",
+  "summary": "Editor-translator on the margins: MVV opening and the Bhutiraja opuscule our Bhutiraja page rests on.",
+  "bio": "Sanskritist; MVV edition/translation (vv.1-399) and Bhutiraja Svabodhasiddhi edition (ZDMG 2017) — both anchor our pages.",
+  "holdings": []
+ },
+ {
+  "affiliation": "Benares (Kaviraj lineage); Rudra Press",
+  "id": "marjanovic",
+  "items": [
+   {
+    "access": "print",
+    "link": null,
+    "title": "Tantrasara English (Chakravarty/Marjanovic, Rudra Press 2012)",
+    "used_for": "The TS translation under review (verified vs Sanskrit in-repo)",
+    "year": 2012
+   },
+   {
+    "access": "print",
+    "link": null,
+    "title": "Gitarthasangraha translation (2002/2006)",
+    "used_for": "Abhinavagupta Gita reading (where TS review needs it)",
+    "year": null
+   }
+  ],
+  "name": "Boris Marjanovic (/Chakravarty)",
+  "status": "active",
+  "summary": "TS translator under review: sentence-by-sentence Benares work; our audit found it faithful with fenced-gloss exceptions (sun/jar).",
+  "bio": "Benares/Kaviraj lineage, Rudra Press. Sentence-by-sentence TS English (with Chakravarty) that our audit found faithful with fenced-gloss exceptions.",
+  "holdings": [
+   "tantrasara essay-0 machine (in-repo)"
+  ]
+ },
+ {
+  "affiliation": "GRETIL/Mukhabodha (infrastructure)",
+  "id": "vasudeva",
+  "items": [
+   {
+    "access": "open",
+    "link": "https://gretil.sub.uni-goettingen.de/",
+    "title": "GRETIL e-text inputs (Somadeva Vasudeva and others)",
+    "used_for": "Sanskrit provenance for IPK/Siddhitrayi and more",
+    "year": null
+   },
+   {
+    "access": "open",
+    "link": null,
+    "title": "Malinivijayottara critical edition (Vasudeva 2004)",
+    "used_for": "MV root post-critical picture (acquire)",
+    "year": 2004
+   }
+  ],
+  "name": "Somadeva Vasudeva",
+  "status": "active",
+  "summary": "E-text maker and MV editor: GRETIL inputs underlie our Sanskrit layer; his MV edition is the top acquisition target.",
+  "bio": "Sanskritist; GRETIL e-text inputs and the post-critical Malinivijayottara edition (2004, top acquisition target). Our Sanskrit provenance runs through his work.",
+  "holdings": [
+   "GRETIL IPK e-text (revised on Torella)"
+  ]
+ },
+ {
+  "id": "timalsina",
+  "name": "Sthaneshwar Timalsina",
+  "affiliation": "Stony Brook (Nirmal/Mattoo Chair); ex-SDSU; founder, Vimarsha Foundation (2019)",
+  "status": "active",
+  "summary": "Body-first scholar of Tantra: embodiment, imagination, visualization as constitutive (not decorative) practice.",
+  "bio": "Sampurnanand Sanskrit + Halle PhD (2005). Tantric Visual Culture, Language of Images (2015), Consciousness in Indian Philosophy, Aham/Subjectivity/ Ego (JIP 2020 on Abhinavagupta aham), Reconstructing the Tantric Body (IJHS 2012), Ksemaraja BhairavanukaraNa study (2013). Founded the Vimarsha Foundation Gurukula (2019); writings free at vimarshafoundation.org/writings. Our body-overlay and Bhairavanukarana pages rest on him.",
+  "holdings": [
+   "tantra/matter-of-wonder/ (Biernacki RO adjacent)"
+  ],
+  "items": [
+   {
+    "title": "Aham, Subjectivity, and the Ego (JIP 2020)",
+    "year": 2020,
+    "access": "metadata",
+    "link": "https://philpapers.org/rec/TIMASA",
+    "used_for": "Aham topographies (ego/embodied/totality) — Pratyabhijna endpoint"
+   },
+   {
+    "title": "Reconstructing the Tantric Body (IJHS 2012)",
+    "year": 2012,
+    "access": "metadata",
+    "link": null,
+    "used_for": "Body-schema/body-image remapping — our overlays doctrine"
+   },
+   {
+    "title": "Contemplating upon the Image of Bhairava: Ksemaraja Bhairavanukaranastava (2013)",
+    "year": 2013,
+    "access": "open",
+    "link": "https://www.vimarshafoundation.org/writings",
+    "used_for": "Bhairavanukarana stotra study (Vimarsha writings, free)"
+   },
+   {
+    "title": "Writings collection (Vimarsha Foundation, many free PDFs)",
+    "year": null,
+    "access": "open",
+    "link": "https://www.vimarshafoundation.org/writings",
+    "used_for": "Embodiment, visualization, Netra healing papers"
+   }
+  ]
+ },
+ {
+  "id": "biernacki",
+  "name": "Loriliai Biernacki",
+  "affiliation": "CU Boulder (Associate Professor, Religious Studies)",
+  "status": "active",
+  "summary": "Panentheism reader of Abhinavagupta: foundational subjectivity pervading matter (vimarsa as sentience).",
+  "bio": "PhD Penn; Renowned Goddess of Desire (Kayden 2008); God’s Body co-editor (2013); The Matter of Wonder (OUP 2023, AAR 2024 prize) — built substantially on the untranslated IPVV cosmology section. Gives our IPVV a contemporary comparative horizon (AI, information, ecology).",
+  "holdings": [
+   "tantra/matter-of-wonder/ro.json + README"
+  ],
+  "items": [
+   {
+    "title": "The Matter of Wonder (OUP 2023)",
+    "year": 2023,
+    "access": "print",
+    "link": "https://doi.org/10.1093/oso/9780197643075.001.0001",
+    "used_for": "Panentheism/camatkara/vimarsa-as-sentience; IPVV cosmology use"
+   },
+   {
+    "title": "Renowned Goddess of Desire (OUP 2007)",
+    "year": 2007,
+    "access": "print",
+    "link": null,
+    "used_for": "Speech/sex/tantra background"
+   },
+   {
+    "title": "Review symposium (IJHS 2024, Pechilis)",
+    "year": 2024,
+    "access": "metadata",
+    "link": "https://link.springer.com/article/10.1007/s11407-024-09349-6",
+    "used_for": "Reception checkpoint"
+   }
+  ]
+ },
+ {
+  "id": "baumer",
+  "name": "Bettina Baumer",
+  "affiliation": "Varanasi (Samvidalaya; Vijnanabhairava edition work)",
+  "status": "active",
+  "summary": "Varanasi hermeneutics scholar: Vijnanabhairava edition work with Singh; Abhinavagupta hermeneutics of the absolute (Anuttaraprakriya/PTv).",
+  "bio": "Long Varanasi-based interpreter of Kashmir Shaivism; editorial work on the VBT translation and the hermeneutics of the absolute (Paratrimsika). Bridge between text scholarship and living recitation lineages.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "Vijnanabhairava edition work (with Jaideva Singh trans.)",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "VBT textual anchor"
+   },
+   {
+    "title": "Abhinavagupta’s Hermeneutics of the Absolute (Anuttaraprakriya)",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "PTv/absolute interpretation"
+   }
+  ]
+ },
+ {
+  "id": "pandey",
+  "name": "K. C. Pandey",
+  "affiliation": "Lucknow (figures in KSTS/Banaras circuits)",
+  "status": "historical",
+  "summary": "Chronology anchor: Abhinavagupta — An Historical and Philosophical Study fixed the Saptarsi-era dates our works map uses (Kramastotra 990-91, Bhairava 992-93, IPVV 1014-15) and translated the Bhaskari (IPV + commentary).",
+  "bio": "Historian-philosopher of Kashmir Shaivism. His Abhinavagupta volume established the teacher list (Lakshmanagupta/Krama first, Sambhunatha/Kula last), the 990-1014 literary activity window, and the Saptarsi dating method; his Bhaskari translation carries the IPV English used against Torella.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "Abhinavagupta: An Historical and Philosophical Study (Varanasi 1963; 2nd ed.)",
+    "year": 1963,
+    "access": "print",
+    "link": null,
+    "used_for": "Works list pp.22-68; Aufrecht catalogue refs; dating method"
+   },
+   {
+    "title": "Bhaskari: Isvarapratyabhijnavimarsini trans. (Motilal 1954)",
+    "year": 1954,
+    "access": "print",
+    "link": null,
+    "used_for": "IPV English against Torella/Dyczkowski"
+   }
+  ]
+ },
+ {
+  "id": "gnoli",
+  "name": "Raniero Gnoli",
+  "affiliation": "Rome (Serie Orientale Roma)",
+  "status": "historical",
+  "summary": "First complete European Tantraloka (Italian, 1972; 2nd ed. 1999) plus Essence of Tantra — the translation layer before Dyczkowski.",
+  "bio": "Italian orientalist; Luce delle Sacre Scritture gave the West its first full Tantraloka; Essenza dei Tantra the Tantrasara. Translation witness where English is thin.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "Luce delle Sacre Scritture (Tantraloka, 1972; 2nd ed. Adelphi 1999)",
+    "year": 1972,
+    "access": "print",
+    "link": null,
+    "used_for": "TA Italian witness"
+   },
+   {
+    "title": "Essenza dei Tantra (Tantrasara, Torino)",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "TS Italian witness alongside Marjanovic"
+   }
+  ]
+ },
+ {
+  "id": "rastogi",
+  "name": "Navjivan Rastogi",
+  "affiliation": "Lucknow University",
+  "status": "active",
+  "summary": "Tantraloka architectonics: structure, context, authors, contents — the map of the whole edifice our ahnika system presupposes.",
+  "bio": "Lucknow professor; Introduction to the Tantraloka: A Study in Structure plus the aesthetics chapter in the Torella 70th-birthday volume (ch5 in-repo). Use for where an ahnika sits in the whole.",
+  "holdings": [
+   "research-library/recognition/torella-volume/ch5_rastogi_aesthetics.txt"
+  ],
+  "items": [
+   {
+    "title": "Introduction to the Tantraloka: A Study in Structure",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "TA structural map"
+   },
+   {
+    "title": "Aesthetics chapter (Torella FS vol., ch5 in-repo)",
+    "year": null,
+    "access": "open",
+    "link": null,
+    "used_for": "Rasa/aesthetics thread"
+   }
+  ]
+ },
+ {
+  "id": "kawajiri",
+  "name": "Yohei Kawajiri",
+  "affiliation": "Kyoto (marginalia philology)",
+  "status": "active",
+  "summary": "Vivrti margin-miner: Lucknow Devanāgarī manuscript work feeding Ratie 2020 fragments (S19/SOAS loci).",
+  "bio": "Philologist of the IPV/Vivrti margins; his Lucknow-manuscript editions underpin the newest Vivrti fragments (Ratie 2020 Appendix I notes S19 work). Text-critical, not doctrinal.",
+  "holdings": [
+   "research-library/recognition/torella-volume/ch4_kawajiri_fragments.txt"
+  ],
+  "items": [
+   {
+    "title": "Vivrti fragments chapter (Torella FS vol., ch4 in-repo)",
+    "year": null,
+    "access": "open",
+    "link": null,
+    "used_for": "Margin fragment loci (S19, SOAS)"
+   },
+   {
+    "title": "Lucknow Devanāgarī ms editions (via Ratie 2020)",
+    "year": 2020,
+    "access": "print",
+    "link": "https://doi.org/10.1163/9789004432802_007",
+    "used_for": "Fragment provenance"
+   }
+  ]
+ },
+ {
+  "id": "lawrence",
+  "name": "David Peter Lawrence",
+  "affiliation": "North Dakota (philosophy of religion)",
+  "status": "active",
+  "summary": "Pratibimba theorist: the 2005 mirror-analogy paper is the English-language account of reflection doctrine our sensory-deity overlay cites.",
+  "bio": "Philosopher of the reflection analogy in Abhinavagupta; JIP 2005 paper on pratibimba use. Secondary witness for mirror metaphysics alongside Ratie.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "Remarks on Abhinavagupta use of the Analogy of Reflection (JIP 2005)",
+    "year": 2005,
+    "access": "metadata",
+    "link": "https://doi.org/10.1007/s10781-005-2827-4",
+    "used_for": "Pratibimba doctrine (mirror metaphysics)"
+   }
+  ]
+ },
+ {
+  "id": "dupuche",
+  "name": "John R. Dupuche",
+  "affiliation": "Melbourne (priest-scholar)",
+  "status": "active",
+  "summary": "Kaula rite translator: TĀ chapter 29 with Jayaratha commentary — the only English window into the esoteric ritual core.",
+  "bio": "Rev. Dr; translated the Kula ritual chapter (TĀ 29) with Jayaratha Viveka. Use for Kaula practice passages; never for metaphysics.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "TĀ 29 Kaula ritual trans. with Jayaratha (with Sanderson intro lineage)",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "Kaula rite (ch.29) English"
+   }
+  ]
+ },
+ {
+  "id": "goodall",
+  "name": "Dominic Goodall",
+  "affiliation": "EFEO Pondicherry",
+  "status": "active",
+  "summary": "Agama editor (Mrgendra, Raurava, Parakhya...): critical editions behind Siddhanta readings; Melanges Brunner co-editor.",
+  "bio": "Pondicherry textual scholar; IFP editions (Raurava 1961-88, Ajita, Mrgendra with Bhatta-Narayanakantha) underpin Siddhanta-side claims; co-edited the Brunner memorial volume holding Torella/Ratie chapters.",
+  "holdings": [],
+  "items": [
+   {
+    "title": "Raurava/Ajita/Mrgendra critical editions (IFP)",
+    "year": null,
+    "access": "print",
+    "link": null,
+    "used_for": "Siddhanta Agama texts"
+   },
+   {
+    "title": "Melanges Brunner co-ed. (2007, Goodall & Padoux)",
+    "year": 2007,
+    "access": "print",
+    "link": "https://publications.efeo.fr/en/livre-pdf/621_melanges-tantriques-a-la-memoire-d-helene-brunner-tantric-studies-in-memory-of-helene-brunner",
+    "used_for": "Free EFEO PDF; Torella/Ratie chapters inside"
+   }
+  ]
+ },
+ {
+  "id": "solms",
+  "name": "Mark Solms",
+  "affiliation": "Cape Town (neuropsychoanalysis)",
+  "status": "active",
+  "summary": "Modern interlocutor, NOT Trika authority: felt-is-primary affective consciousness triangulated with Ratie/IPK in-repo (Solms-Ratie-IPK synthesis).",
+  "bio": "Neuroscientist (The Hidden Spring, 2021). In-repo synthesis uses his felt-primacy thesis as a modern mirror for vimarsha/camatkara — comparative horizon only, never evidence for what Abhinavagupta meant. Flagged as such on every page that cites him.",
+  "holdings": [
+   "research-library/information-philosophy/solms/SOLMS-RATIE-IPK-SYNTHESIS.md"
+  ],
+  "items": [
+   {
+    "title": "The Hidden Spring (Norton 2021)",
+    "year": 2021,
+    "access": "print",
+    "link": null,
+    "used_for": "Affective consciousness (modern mirror only)"
+   },
+   {
+    "title": "Solms-Ratie-IPK synthesis (in-repo)",
+    "year": null,
+    "access": "open",
+    "link": null,
+    "used_for": "Felt-primary triangulation (flagged comparative)"
    }
   ]
  }
