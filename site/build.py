@@ -904,7 +904,8 @@ def build_translations():
     (out / "index.html").write_text(TF(ATmpl,title="Translations", h1="Pipeline translations",
         sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",
         sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">'
-        + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>" + srclink("tools/ingest_batch.py", "ingest script; sources are R2 batch-t1 drafts.")))
+        + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>" + srclink("tools/ingest_batch.py", "ingest script; sources are R2 batch-t1 drafts.")
+        + '<div class="sub">Audit trail: <a href="/data/receipts.jsonl">receipts.jsonl</a> — one machine-readable record per chunk (gates, evidence hash, license, model, date).</div>'))
     return len(links)
 
 def slugify(s):
@@ -1034,6 +1035,43 @@ def build_pushing_hub():
         + '<div class="sub">Probes live on the IPVV pushing page (shared method, separate mountains). Essays argued from these cruxes: <a href="/essays/index.html">/essays/</a>.</div>'
         + srclink("https://github.com/prx0r/ipvv/tree/master/specs/pushing", "method specs live here.")))
     return 5 + n_ipvv + n_ta
+
+def build_receipts():
+    """Per-chunk audit trail: the machine-readable record of why each chunk
+    displays what it displays. qprivately idiom, no dependency."""
+    import json as _json, hashlib as _h
+    out = []
+    for f in sorted((ROOT / "data/translations").glob("*.json")):
+        for it in _json.loads(f.read_text()):
+            ev = {"chunk": it.get("chunk"), "sanskrit": it.get("sanskrit"),
+                  "source_file": it.get("source_file"), "source_lines": it.get("source_lines"),
+                  "license": it.get("source_license"), "model": it.get("model"),
+                  "date": it.get("date"), "immutable_id": it.get("immutable_id")}
+            evroot = _h.sha256(_json.dumps(ev, sort_keys=True).encode()).hexdigest()[:16]
+            out.append({"id": f"receipt:{f.stem}:{it.get('chunk')}",
+                "subject": f"{f.stem}:{it.get('chunk')}", "state_before": "unreviewed",
+                "state_after": "PASS-display" if it.get("gate") == "PASS" else "BLOCKED-withheld",
+                "gates": [{"id": k, "result": "PASS" if v[0] else "FAIL", "proof": v[1]}
+                          for k, v in (it.get("checks") or {}).items()],
+                "gate": it.get("gate"), "blocking": it.get("blocking"),
+                "evidence_root": evroot, "evidence": ev,
+                "accepted_by": None, "passed": it.get("gate") == "PASS"})
+    for f in sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json")):
+        d = _json.loads(f.read_text())
+        src = (d.get("source") or {}).get("text", "") if isinstance(d.get("source"), dict) else ""
+        ev = {"chunk": d.get("chunk"), "sanskrit": src[:500], "vol": d.get("vol"),
+              "immutable_id": d.get("immutable_id")}
+        evroot = _h.sha256(_json.dumps(ev, sort_keys=True).encode()).hexdigest()[:16]
+        out.append({"id": f"receipt:{d.get('chunk')}", "subject": d.get("chunk"),
+            "state_before": "unreviewed", "state_after": "PUBLISHED-display",
+            "gates": [], "gate": "PUBLISHED", "blocking": [],
+            "evidence_root": evroot, "evidence": ev,
+            "accepted_by": None, "passed": True})
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    with open(DIST / "data/receipts.jsonl", "w", encoding="utf-8") as fh:
+        for r in out:
+            fh.write(_json.dumps(r, ensure_ascii=False) + "\n")
+    return len(out)
 
 def build_corpus():
     """Embeddings-ready corpus: one JSONL, stable ids, gate labels, all layers.
@@ -1252,7 +1290,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1269,6 +1307,7 @@ def main():
     if "essays" in want: done["essays"] = build_essays()
     if "pushinghub" in want: done["pushinghub"] = build_pushing_hub()
     if "corpus" in want: done["corpus"] = build_corpus()
+    if "receipts" in want: done["receipts"] = build_receipts()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))

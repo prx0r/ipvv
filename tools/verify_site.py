@@ -67,13 +67,23 @@ for f in glob.glob(os.path.join(ROOT, 'site/dist/**/*.html'), recursive=True):
             fail(f'unfilled {ph} in {os.path.relpath(f, ROOT)}')
             break
 
-# 6. dist freshness vs build.py (FAIL — rebuild before commit)
+# 6. receipts coverage (dist — FAIL)
+_rp = os.path.join(ROOT, 'site/dist/data/receipts.jsonl')
+if os.path.exists(_rp):
+    _rn = sum(1 for _ in open(_rp, encoding='utf-8'))
+    _tn = sum(len(json.load(open(f))) for f in glob.glob(os.path.join(ROOT, 'site/data/translations/*.json')))
+    _pn = len(glob.glob('/root/patalacheckpoints/data/published/ipvv/pt-passage-*.json'))
+    if _rn != _tn + _pn:
+        fail(f'receipts.jsonl has {_rn} records, expected {_tn + _pn} (translations + published passages)')
+else:
+    fail('receipts.jsonl not built')
+# 7. dist freshness vs build.py (FAIL — rebuild before commit)
 bpy = os.path.join(ROOT, 'site/build.py')
 dix = os.path.join(ROOT, 'site/dist/index.html')
 if os.path.exists(dix) and os.path.getmtime(bpy) > os.path.getmtime(dix):
     fail('site/build.py newer than site/dist — rebuild before commit')
 
-# 7. samples C1 band (pipeline-owned — WARN only)
+# 8. samples C1 band (pipeline-owned — WARN only)
 for f in glob.glob(os.path.join(ROOT, 'samples/*/C1-*.md')):
     txt = open(f, encoding='utf-8', errors='replace').read()
     for m in re.finditer(r'^## (.+)$', txt, re.M):
@@ -83,7 +93,7 @@ for f in glob.glob(os.path.join(ROOT, 'samples/*/C1-*.md')):
         if words and (words < 100 or words > 450):
             warn(f'{os.path.relpath(f, ROOT)} §{m.group(1)[:40]}: {words}w outside 100–450')
 
-# 8. WORK.md DONE-vs-gate (pipeline-owned — WARN only)
+# 9. WORK.md DONE-vs-gate (pipeline-owned — WARN only)
 for f in glob.glob(os.path.join(ROOT, 'works/*/WORK.md')):
     head = open(f, encoding='utf-8', errors='replace').readline()
     body = open(f, encoding='utf-8', errors='replace').read()
