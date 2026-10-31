@@ -2005,7 +2005,7 @@ def build_practices():
         kicker="Interactive", sub="VBT dhāraṇās, ānāpānasati, Ajahn Lee — voice cues, timed steps, audio tones",
         sidenav=sidenav("abhinavagupta", ""), body=body_data["body"],
         recitejs="", chatjs="", varjs=""))
-    return body_data["cards"]
+    return body_data.get("total", 0)
 
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
