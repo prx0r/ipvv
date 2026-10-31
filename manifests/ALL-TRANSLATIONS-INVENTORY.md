@@ -16,12 +16,14 @@ Generated 2026-10-30 from volume + R2. Bytes stay where they are; this repo hold
 - Volume `source-library/tantra/texts-clean/` — same ahnikas × 6 variants (CLEAN/COMPLETE/CURATED/DZYKOWSKI/READ/verses) + `chunks/ahnika1-chunk-1…7.txt` (224–264KB each, pre-split).
 - Work dir: `works/tantraloka/WORK.md`. Next: run UPLOAD-RUNBOOK on ahnika-1 chunk-1.
 
-## C. Tantrasara (next target)
+## C. Tantrasara (DONE 2026-10-30)
 
 - Volume `source-library/tantra/texts-clean/gretil_tantrasara_clean.txt` (Nirnaya Sagara 1918 via GRETIL).
-- `explained-hareesh/tantrasara/` chapter explainers + `hareesh-blog/by-topic/tantrasara/`.
-- GitHub `prx0r/tantrasara` — essay-0 machine (98 spans, essay0.json canonical, rung picks A/B locked, audio pending).
-- Work dir: `works/tantrasara/WORK.md`. Next: Ahnika 11 (saktipata) as 10-passage test.
+- GitHub `prx0r/tantrasara` — essay-0 machine (98 spans, essay0.json canonical, rung picks A/B locked).
+- Translation: 22 ahnikas, 51 passages, 712 verses, 4,579 L0 tokens, 7 gate PASS / 44 BLOCKED (attributed), 22 L200 + 22 C1 (machine), 14 theme seeds, 22 R2 batch files (byte-verified).
+- R2: `s3://sanskritree/batch-t1/2026-10-30-tantrasara-a01..a22-raw.jsonl`.
+- Work dir: `works/tantrasara/WORK.md`. Manifest: `manifests/tantrasara/R2-ALL.txt`.
+- Next: tantraloka-a01 (per INDEX.json queue).
 
 ## D. VBT (technique catalog, not OS)
 

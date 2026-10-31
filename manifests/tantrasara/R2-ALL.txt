@@ -1,0 +1,30 @@
+# Tantrasāra — R2 batch inventory (2026-10-30)
+
+Bucket: sanskritree  Prefix: batch-t1/  (all byte-verified via cmp)
+
+Format: ahnika | passages | verses | L0 tokens | R2 key | size (bytes)
+
+a01 | 1 | 1.1-1.5 | 233 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a01-raw.jsonl | 17598
+a02 | 1 | 2.1-2.4 | 72 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a02-raw.jsonl | 7632
+a03 | 2 | 3.1-3.34 | 166 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a03-raw.jsonl | 25420
+a04 | 3 | 4.1-4.46 | 146 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a04-raw.jsonl | 37609
+a05 | 2 | 5.1-5.43 | 235 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a05-raw.jsonl | 25507
+a06 | 4 | 6.1-6.82 | 282 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a06-raw.jsonl | 45122
+a07 | 1 | 7.1-7.28 | 169 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a07-raw.jsonl | 11940
+a08 | 4 | 8.1-8.93 | 174 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a08-raw.jsonl | 45852
+a09 | 3 | 9.1-9.53 | 222 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a09-raw.jsonl | 36616
+a10 | 1 | 10.1-10.18 | 136 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a10-raw.jsonl | 11025
+a11 | 10 | 11.1-11.25 | 427 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a11-raw.jsonl | 62510
+a12 | 1 | 12.1-12.10 | 118 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a12-raw.jsonl | 9527
+a13 | 4 | 13.1-13.101 | 219 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a13-raw.jsonl | 44047
+a14 | 1 | 14.1-14.29 | 276 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a14-raw.jsonl | 14546
+a15 | 1 | 15.1-15.7 | 105 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a15-raw.jsonl | 7290
+a16 | 1 | 16.1-16.24 | 156 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a16-raw.jsonl | 12956
+a17 | 1 | 17.1-17.6 | 89 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a17-raw.jsonl | 6363
+a18 | 1 | 18.1-18.2 | 55 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a18-raw.jsonl | 5605
+a19 | 1 | 19.1-19.7 | 127 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a19-raw.jsonl | 9426
+a20 | 4 | 20.1-20.65 | 657 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a20-raw.jsonl | 44693
+a21 | 1 | 21.1-21.13 | 210 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a21-raw.jsonl | 14378
+a22 | 3 | 22.1-22.54 | 305 | s3://sanskritree/batch-t1/2026-10-30-tantrasara-a22-raw.jsonl | 29536
+
+TOTAL | 22 ahnikas | 51 passages | 712 verses | 4579 L0 tokens
