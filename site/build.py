@@ -99,6 +99,198 @@ main{max-width:100%}
 .verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
 """
+RECITECSS = """
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+"""
+RECITEJS = """<script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[\u0964\u0965])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[\u0964\u0965]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?\u0964\u0965])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">\u23EE</button><button class="tbtn main" data-r="toggle" title="play/pause">\u23F8</button><button class="tbtn" data-r="next" title="next">\u23ED</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA \u2192 EN</option><option value="line">Line: SA \u2192 EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">\u2715</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="\u25B6"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="\u23F8"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="\u25B6";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script>"""
 SHELLJS = """<script>
 (function(){
 var b=document.getElementById('burger');
@@ -118,11 +310,11 @@ window.addEventListener('scroll',spy,{passive:true});spy();}
 
 TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + """</style></head><body>
+<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -133,7 +325,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
-""" + SHELLJS + """</body></html>"""
+""" + SHELLJS + """{recitejs}</body></html>"""
 
 def tabs(panels):
     btns, divs = [], []
@@ -151,7 +343,7 @@ def TF(tmpl, **kw):
     """Format a template on EXACT {placeholders} only — CSS/JS/content braces pass through untouched."""
     for k, v in kw.items():
         tmpl = tmpl.replace("{" + k + "}", str(v))
-    for k in ("kicker", "subtitle"):
+    for k in ("kicker", "subtitle", "recitejs"):
         tmpl = tmpl.replace("{" + k + "}", "")
     for k in ("title", "h1", "sub", "body", "sidenav"):
         if "{" + k + "}" in tmpl:
@@ -226,9 +418,10 @@ def build_ipvv():
             ("GUIDE", None, False),
             ("CRITICAL", f'<div class="en">immutable {esc(d.get("immutable_id",""))} · T1 chunk <i>sanskritree/{esc(chunk)}.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div>', True),
         ])
-        (out / f"{pid}.html").write_text(TF(TMPL,title=pid, h1=pid, sub="IPVV · " + esc(d.get("vol", "")), sidenav=work_sidenav("ipvv"), body=body
+        (out / f"{pid}.html").write_text(TF(TMPL,title=pid, h1=pid, sub="IPVV · " + esc(d.get("vol", "")), sidenav=work_sidenav("ipvv"), body='<div class="recitetools"><button class="vplay" data-play-all>Recite this passage</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + body
+            + f'<div data-recite data-id="{pid}" data-label="IPVV · {esc(chunk)}" data-sa="{esc(deva_of(src_txt))}" data-en="{esc(l2[:4000])}" style="display:none"></div>'
             + pn(f"/ipvv/{pids[idx-1]}.html" if idx > 0 else None, pids[idx-1] if idx > 0 else "",
-                 f"/ipvv/{pids[idx+1]}.html" if idx < len(pids)-1 else None, pids[idx+1] if idx < len(pids)-1 else "")))
+                 f"/ipvv/{pids[idx+1]}.html" if idx < len(pids)-1 else None, pids[idx+1] if idx < len(pids)-1 else ""), recitejs=RECITEJS))
         links.append(f'<a href="/ipvv/{pid}.html">{esc(pid)}</a>')
     (out / "index.html").write_text(TF(TMPL,title="IPVV", h1="Īśvarapratyabhijñāvivṛtivimarśinī",
         sub=f"{len(items)} passages · Sanskrit → READ → STUDY · GUIDE soon", sidenav=work_sidenav("ipvv"),
@@ -265,9 +458,10 @@ def build_vbt():
             ("STUDY", f'<div class="en">attention-seat: {esc(seat.get("locus","—"))} · do: {esc(seat.get("do","—"))}</div>', bool(seat)),
             ("CRITICAL", f'<div class="en">VBT verse {n} · Lakshmanjoo/KSTS</div>', True),
         ])
-        (out / f"v{n}.html").write_text(TF(TMPL,title=f"VBT {n}", h1=f"Verse {n}", sub="Vijñānabhairava", sidenav=work_sidenav("vbt"), body=body
+        (out / f"v{n}.html").write_text(TF(TMPL,title=f"VBT {n}", h1=f"Verse {n}", sub="Vijñānabhairava", sidenav=work_sidenav("vbt"), body='<div class="recitetools"><button class="vplay" data-play-all>Recite this verse</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + body
+            + f'<div data-recite data-id="vbt-{n}" data-label="VBT verse {n}" data-sa="{esc(deva_of(skt))}" data-en="{esc(en[:4000])}" style="display:none"></div>'
             + pn(f"/vbt/v{nums[vi-1]}.html" if vi > 0 else None, f"verse {nums[vi-1]}" if vi > 0 else "",
-                 f"/vbt/v{nums[vi+1]}.html" if vi < len(nums)-1 else None, f"verse {nums[vi+1]}" if vi < len(nums)-1 else "")))
+                 f"/vbt/v{nums[vi+1]}.html" if vi < len(nums)-1 else None, f"verse {nums[vi+1]}" if vi < len(nums)-1 else ""), recitejs=RECITEJS))
         links.append(f'<a href="/vbt/v{n}.html">verse {n}</a>')
     (out / "index.html").write_text(TF(TMPL,title="VBT", h1="Vijñānabhairava Tantra",
         sub=f"{len(vs)} verses · catalog of entries, not graded course", sidenav=work_sidenav("vbt"), body='<div class="idx">' + "".join(links) + "</div>" + srclink("https://github.com/prx0r/ipvv/issues/new", "verses from Lakshmanjoo mapping (other repo); seats from deitybody — corrections welcome here.")))
@@ -330,11 +524,11 @@ def work_sidenav(work, active=""):
 
 ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + """</style></head><body>
+<title>{title} · Trika Library</title>""" + FONTS + """<style>""" + CSS + RECITECSS + """</style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -345,7 +539,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
-""" + SHELLJS + """</body></html>"""
+""" + SHELLJS + """{recitejs}</body></html>"""
 
 STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskrit held · disputed",
     "SOURCE_PLUS_TRANSLATION": "Sanskrit + English", "SOURCE_PLUS_SCHOLARSHIP": "Sanskrit + scholarship",
@@ -628,7 +822,7 @@ def build_translations():
             continue
         wid = f.stem
         n_pass = sum(1 for i in items if i.get("gate") == "PASS")
-        blocks = []
+        blocks, rdis = [], []
         for it in items:
             badge = ("PASS" if it["gate"] == "PASS"
                      else "WITHHELD — pending review (" + ", ".join(it.get("blocking", ["review"])) + ")")
@@ -642,9 +836,13 @@ def build_translations():
                 body = (f'<div class="panel"><div class="dev skt">{esc(it["sanskrit"])}</div></div>'
                         f'<div class="panel missing"><b>{badge}.</b> English withheld until the gate passes — fail-closed.</div>')
             blocks.append(f'<h3>{esc(it.get("chunk",""))} · verses {esc(it.get("verses",""))} · {badge.split(" — ")[0]}</h3>' + body)
+            en_r = (it.get("l2") or it.get("l1") or "") if it["gate"] == "PASS" else ""
+            rdis.append(f'<div data-recite data-id="{wid}-{esc(it.get("chunk",""))}" data-label="{esc(wid)} · {esc(it.get("chunk",""))}" data-sa="{esc(deva_of(it.get("sanskrit","")))}" data-en="{esc(en_r[:4000])}" style="display:none"></div>')
+        abase = AUDIO_ALIAS.get(wid, wid)
+        chant = f'<div class="recitetools"><a class="vplay all" href="/recite/{abase}.html">Studio chant + recitation →</a></div>' if (ROOT / f"data/audio-{abase}.json").exists() else ""
         (out / f"{wid}.html").write_text(TF(ATmpl,title=f"Translation: {wid}",
             h1=f"Translation: {wid}", kicker="Pipeline translation", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
-            sidenav=sidenav("abhinavagupta", wid), body=f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.")))
+            sidenav=sidenav("abhinavagupta", wid), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS))
         links.append((wid, n_pass, len(items)))
     (out / "index.html").write_text(TF(ATmpl,title="Translations", h1="Pipeline translations",
         sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",
@@ -742,9 +940,83 @@ def build_scholars():
              '<div class="panel">Rule: GREEN (OA/GRETIL/Mukhabodha) ships on site. YELLOW (academia/login, HAL metadata, IRIS) is read-and-cited with links, never hosted. RED (pirated scans, commercial PDFs) never touches the repo.</div>' + srclink("site/data/scholars.json", "all bios + bibliographies live here.")))
     return len(scholars)
 
+def deva_of(s):
+    """IAST roman -> Devanagari for the speech synthesizer (display text unchanged)."""
+    try:
+        from indic_transliteration import sanscript
+        from indic_transliteration.sanscript import transliterate
+        return transliterate(s or "", sanscript.IAST, sanscript.DEVANAGARI)
+    except Exception:
+        return s or ""
+
+AUDIO_ALIAS = {"anuttarastika": "anuttarashtika"}
+RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika"}
+
+def build_recite():
+    """Studio-chant recitation pages (kashaudio AI renders) + audio shipping.
+    English merges from translations JSON, PASS only — BLOCKED verses chant Sanskrit alone."""
+    import json as _json
+    for adir in sorted((ROOT / "static-audio").iterdir()):
+        if adir.is_dir():
+            dest = DIST / "audio" / adir.name
+            dest.mkdir(parents=True, exist_ok=True)
+            for mp3 in adir.glob("*.mp3"):
+                shutil.copy(mp3, dest / mp3.name)
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    for aj in sorted((ROOT / "data").glob("audio-*.json")):
+        shutil.copy(aj, DIST / "data" / aj.name)
+    out = DIST / "recite"; out.mkdir(parents=True, exist_ok=True)
+    cards = []
+    for aj in sorted((ROOT / "data").glob("audio-*.json")):
+        A = _json.loads(aj.read_text()); work = A["work"]
+        trmap = {}
+        for cand in [work] + [k for k, v in AUDIO_ALIAS.items() if v == work]:
+            tp = ROOT / f"data/translations/{cand}.json"
+            if tp.exists():
+                for it in _json.loads(tp.read_text()):
+                    try: vnum = int(str(it.get("verses", "")).split("-")[0])
+                    except Exception: continue
+                    trmap[vnum] = it
+        title = RECITE_TITLES.get(work, work)
+        arts, wt, n_en = [], {}, 0
+        for i, v in enumerate(A["verses"]):
+            t = trmap.get(v["n"], {})
+            en = (t.get("l2") or t.get("l1") or "") if t.get("gate") == "PASS" else ""
+            if en: n_en += 1
+            sa_deva = " ".join(v["padas"])
+            byl = {}
+            for w in v["words"]: byl.setdefault(w["pada"], []).append(w)
+            pdivs, segs = [], []
+            for pi in range(len(v["padas"])):
+                ws = byl.get(pi, [])
+                if ws: segs.append([ws[0]["on"], ws[-1]["off"]])
+                spans = " ".join(f'<span class="w" data-on="{w["on"]}" data-off="{w["off"]}">{esc(w["w"])}</span>' for w in ws)
+                pdivs.append(f'<div class="pada">{spans or esc(v["padas"][pi])}</div>')
+            wt[v["id"]] = {"dur": v.get("dur", 0), "segs": segs}
+            iast = "<br/>".join(esc(x) for x in v.get("iast", []) if x)
+            eng = f'<div class="eng">{esc(en[:4000])}</div>' if en else '<div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div>'
+            badge = "studio chant"
+            arts.append(f'<article class="verse" data-recite data-id="{v["id"]}" data-label="{esc(title)} &middot; verse {v["n"]}" data-sa="{esc(sa_deva)}" data-en="{esc(en[:4000])}" data-audio="{v["mp3"]}"><div class="vnum">{v["n"]}<br/><button class="vplay" data-play-idx="{i}">recite</button></div><div>{"".join(pdivs)}<div class="iast">{iast}</div>{eng}<div class="rnote"><span class="srcbadge">{badge}</span> &middot; {esc(v.get("meter",""))} &middot; align {v.get("mms","?")}</div></div></article>')
+        mm = sum(v.get("mms", 0) for v in A["verses"]) / max(1, len(A["verses"]))
+        en_btn = "" if n_en else "disabled title=\"English withheld on every verse \u2014 gate pending\""
+        tools = f'<div class="recitetools"><button class="vplay all" data-play-all>Recite all</button><span class="rmodes"><button data-mode="sa">Sanskrit only</button><button data-mode="en" {en_btn}>English only</button><button data-mode="verse" class="on">Verse SA \u2192 EN</button><button data-mode="line">Line SA \u2192 EN</button></span><span class="rnote">line mode: Sanskrit line-by-line, English follows each verse</span></div>'
+        stats = f'<div class="stats"><span><b>{len(A["verses"])}</b> verses</span><span><b>studio chant</b> AI voice</span><span><b>{mm:.2f}</b> mean align</span><span><b>{n_en}/{len(A["verses"])}</b> with English</span></div>'
+        wtscript = "<script>window.__WT=" + _json.dumps(wt) + "</script>"
+        (out / f"{work}.html").write_text(TF(TMPL, title=f"{title} recitation", h1=title,
+            kicker="Recitation \u00b7 studio chant", sub=f"{len(A['verses'])} verses chanted, karaoke-timed · English shows only where the gate passed",
+            sidenav=sidenav("abhinavagupta", ""), body=stats + tools + "".join(arts) + srclink("https://github.com/prx0r/kashaudio", "chants rendered by the kashaudio pipeline (Vagdhenu AI voice); timings by MMS alignment."),
+            recitejs=wtscript + RECITEJS))
+        cards.append(f'<a href="/recite/{work}.html"><b>{esc(title)}</b> &mdash; {len(A["verses"])} verses &middot; studio chant &middot; {n_en} with English</a>')
+    (out / "index.html").write_text(TF(TMPL, title="Recitation", h1="Recitation",
+        kicker="Listen", sub="studio chant where rendered · browser-voice readout everywhere else",
+        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>"
+        '<div class="sub">Every verse and passage page also carries its own <b>Recite</b> button (browser-voice readout, four modes). Studio chant grows as kashaudio renders land — short works first.</div>'
+        + srclink("https://github.com/prx0r/kashaudio", "chant pipeline lives here."), recitejs=RECITEJS))
+    return len(cards)
+
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -756,6 +1028,7 @@ def main():
     if "concepts" in want: done["concepts"] = build_glossary()
     if "tools" in want: done["tools"] = build_tools()
     if "sections" in want: done["sections"] = build_sections()
+    if "recite" in want: done["recite"] = build_recite()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
@@ -764,12 +1037,13 @@ def main():
     sch = '<a href="/scholars/index.html"><b>scholars</b> — secondary witnesses, linked bibliography (read/cite, host only what is open)</a>' if "scholars" in done else ""
     trn = '<a href="/translations/index.html"><b>pipeline translations</b> — English shows ONLY for gate-PASS passages</a>' if "translations" in done else ""
     con = '<a href="/concepts/index.html"><b>concepts</b> — glossary with every occurrence linked</a>' if "concepts" in done else ""
+    rec = '<a href="/recite/index.html"><b>recitation</b> — studio chant + four-mode readout</a>' if "recite" in done else ""
     tls = '<a href="/tools/index.html"><b>tools</b> — instant find, verse lookup (in-browser)</a>' if "tools" in done else ""
     sec = '<a href="/masters/index.html"><b>masters</b> — chronological, birth-year order</a><a href="/modern/index.html"><b>modern</b> — living scholars A–Z</a>' if "sections" in done else ""
     lat = '<h3>Latest</h3>' + latest if latest else ""
     (DIST / "index.html").write_text(TF(TMPL,title="Trika Library", h1="Trika Library",
-        sub="masters · modern · concepts · translations · tools — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
-        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + "</div>" + lat))
+        sub="masters · modern · concepts · translations · tools · recitation — display only what is formally done", sidenav=work_sidenav("abhinavagupta"),
+        body='<div class="idx">' + sec + masters + rest + sch + trn + con + tls + rec + "</div>" + lat))
     print("built", done)
 
 if __name__ == "__main__":

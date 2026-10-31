@@ -81,15 +81,44 @@ main{max-width:100%}
 .depth{top:53px}
 .verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><div class="klabel">Pipeline translation</div><h1>Translation: spanda</h1><div class="skt"></div><div class="sub">0/6 passages passed the gate — only those show English</div><div class="stats"><span><b>6</b> passages</span><span><b>0</b> PASS</span><span><b>6</b> withheld</span></div><h3>span-p01 · verses 2-10 · WITHHELD</h3><div class="panel"><div class="dev skt">yatra sthitam idaṃ sarvaṃ kāryaṃ yasmāc ca nirgataṃ | tasyānāvṛtarūpatvān na nirodho &#x27;sti kutracit jāgradādi vibhede &#x27;pi tadabhinne prasarpati | nivartate nijānnaiva svabhāvād upalabdhṛtaḥ ahaṃ sukhī ca duḥkhī ca raktaś ca ityadisamvidaḥ | sukhādyavasthānusyūte vartante &#x27;nyatra tāḥ sphuṭam na duḥkhaṃ na sukhaṃ yatra na grāhyam grāhakaṃ na ca | na cāsti mūḍhabhāvo &#x27;pi tad asti paramārthataḥ yataḥ karaṇavargo &#x27;yaṃ vimūḍho &#x27;mūḍhavat svayam | sahāntareṇa cakreṇa pravṛttisthitisaṃhṛtiḥ labhate tatprayatnena parīkṣyaṃ tattvam ādarāt | yataḥ svatantratā tasya sarvatreyam akṛtrimā na hīcchānodanasyāyam prerakatvena vartate | api tv ātmabalasparśāt puruṣas tatsamo bhavet nijāśuddhyāsamarthasya kartavyeṣv abhilāṣiṇaḥ | yadā kṣobhaḥ pralīyeta tadā syāt paramam padam tadāsyākṛtrimo dharmo jñatvakartṛtvalakṣaṇah | yatas tadepsitaṃ sarvaṃ jānāti ca karoti ca</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION, CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p02 · verses 11-19 · WITHHELD</h3><div class="panel"><div class="dev skt">tam adhiṣṭhātṛbhāvena svabhāvam avalokayan | smayamāna ivāste yas tasyeyaṃ kusṛtiḥ kutaḥ nābhāvo bhāvyatām eti na ca tatrāsty amūḍhatā | yato &#x27;bhiyogasaṃsparśāt tadāsid iti niścayah atas tatkṛtrimaṃ jñeyaṃ sauṣuptapadavat sadā | na tv evaṃ smaryamāṇatvaṃ tat tattvam pratipadyate avasthāyugalaṃ cātra kāryakartṛtvaśabditam | kāryatā kṣayiṇī tatra kartṛtvam punar akṣayam kāryonmukhaḥ prayatno yaḥ kevalaṃ so &#x27;tra lupyate | tasmin lupte vilupto &#x27;smīty abudhaḥ pratipadyate na tu yo &#x27;ntarmukho bhāvah sarvajñātvaguṇāspadam | tasya lopaḥ kadācit syād anyasyānupalambhanāt tasyopalabdhiḥ satataṃ tripadāvyabhicāriṇī | nityaṃ syāt suprabuddhasya tadādyante parasya tu jñānajñeyasvarūpiṇyā śaktyā paramayā yutaḥ | padadvaye vibhur bhāti tadanyatra tu cinmayaḥ guṇādispandaniḥṣyandāḥ sāmānyaspandasaṃśrayāt | labdhātmalābhaḥ satataṃ syur jñasyāparipanthinaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION, CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p03 · verses 20-3 · WITHHELD</h3><div class="panel"><div class="dev skt">aprabudhadhiyas tv ete svasthitisthaganodyatāḥ | pātayanti duruttāre ghore saṃsāravartmani ataḥ satatam udyuktaḥ spandatattvaviviktaye | jāgrad eva nijam bhāvam acireṇādhigacchati atikruddhaḥ prahṛṣṭo vā kiṃ karomīti vā mṛśan | dhāvan va yat padaṃ gacchet tatra spandaḥ pratiṣṭhitaḥ yām avasthāṃ samālambya yad ayam mama vakṣyati | tadavaśyaṃ kariṣye &#x27;ham iti saṃkalpya tiṣṭhati tām aśrityordhvamārgeṇa candrasūryāv ubhāv api | sauṣumne &#x27;dhvanyastamito hitvā brahmā.ṅdagocaram tadā tasmin mahāvyomni pralīnaśaśibhāskare | sauṣuptapadavan mūḍhaḥ prabuddhaḥ syād anāvṛtaḥ dvitīyo niḥṣyandaḥ tadākramya balam mantrāḥ sarvajñābalaśālinaḥ | pravartante &#x27;dhikārāya karaṇānīva dehinām tatraiva sampralīyante śāntarūpā nirañjanāḥ | sahārādhakacittena tenaite śivadharmiṇaḥ yasmāt sarvamayo jīvaḥ sarvabhāvasamudbhavāt | tatsaṃvedanarūpeṇa tādātmyapratipattitaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p04 · verses 4-6 · WITHHELD</h3><div class="panel"><div class="dev skt">tasmāc chabdārthacintāsu na sāvasthā na yā śivaḥ | bhoktaiva bhogyabhāvena sadā sarvatra saṃsthitaḥ iti vā yasya saṃvittiḥ krīḍātvenākhilaṃ jagat | sa paśyan satataṃ yukto jīvanmukto na saṃśayaḥ ayam evodayas tasya dhyeyasya dhyāyicetasi | tadātmatāsamāpattir icchataḥ sādhakasya yā iyam evāmṛtaprāptir ayam evātmano grahaḥ | iyaṃ nirvāṇa-dīkṣā ca śivasadbhāvadāyini tṛtīyo niḥṣyandaḥ yathecchābhyarthito dhātā jāgrato &#x27;rthān hṛdi sthitān somasūryodayaṃ kṛtvā sampādayati dehinaḥ || 1 | tathā svapne &#x27;py abhīṣṭārthān praṇayasyānatikramāt | nityaṃ sphuṭataraṃ madhye sthito &#x27;vaśyaṃ prakāśayet anyathā tu svatantrā syāt sṛṣṭis taddharmakatvataḥ | satataṃ laukikasyeva jāgratsvapnapadadvaye yathā hi artho &#x27;sphuṭo dṛṣṭaḥ sāvadhāne &#x27;pi cetasi | bhūyaḥ sphuṭataro bhāti svabalodyogabhāvitaḥ tathā yat paramārthena yena yatra yathā sthitam | tat tathā balam ākramya na cirāt sampravartate durbalo &#x27;pi tadākramya yataḥ kārye pravartate | ācchādayed bubhukṣāṃ ca tathā yo &#x27;ti bubhukṣitaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p05 · verses 7-15 · WITHHELD</h3><div class="panel"><div class="dev skt">anenādhiṣṭhite dehe yathā sarvajñatādayaḥ | tathā svātmany adhiṣṭhānāt sarvatraivam bhaviṣyati glānir vilu.ṅthikā dehe tasyāścājñānataḥ sṛtiḥ | tad unmeṣaviluptaṃ cet kutaḥ sā syād ahetukā ekacintāprasaktasya yataḥ syād aparodayaḥ | unmeṣaḥ sa tu vijñeyaḥ svayaṃ tam upalakṣayet ato bindur ato nādo rūpam asmād ato rasaḥ | pravartante &#x27;cireṇaiva kṣobhakatvena dehinaḥ didṛkṣayeva sarvārthān yadā vyāpyāvatiṣṭhate | tadā kiṃ bahunoktena svayam eva avabhotsyate prabuddhaḥ sarvadā tiṣṭhej jñānenālokya gocaram | ekatrāropayet sarvaṃ tato &#x27;nyena na pīḍyate śabdarāśisamutthasya śaktivargasya bhogyatām | kalāviluptavibhavo gataḥ san sa paśuḥ smṛtaḥ parāmṛtarasāpāyas tasya yaḥ pratyayodbhavaḥ | tenāsvatantratām eti sa ca tanmātragocaraḥ svarūpāvaraṇe cāsya śaktayaḥ satatotthitāḥ | yataḥ śabdānuvedhena na vinā pratyayodbhavaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p06 · verses 16-2 · WITHHELD</h3><div class="panel"><div class="dev skt">seyaṃ kriyātmikā śaktiḥ śivasya paśuvartinī | bandhayitrī svamārgasthā jñāta siddhyupapādikā tanmātrodayarūpena mano &#x27;haṃbuddhivartinā | puryaṣṭakena saṃruddhas taduttham pratyayodbhavam bhuṅkte paravaśo bhogaṃ tadbhāvāt saṃsared ataḥ | saṃsṛtipralayasyāsya kāraṇaṃ sampracakṣmahe yadā tv ekatra saṃrūḍhas tadā tasya layodayau | niyacchan bhoktṛtām eti tataś cakreśvaro bhavet caturtho niḥṣyandaḥ agādhasaṃśayāmbhodhisamuttaraṇatārinīm | vande vicitrārthapadāṃ citrāṃ tāṃ gurubhāratīm labdhvāpy alabhyam etaj jñānadhanaṃ hṛdguhāntakṛtanihiteḥ | vasuguptavac chivāya hi bhavati sadā sarvalokasya</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Pipeline translation</div><h1>Translation: spanda</h1><div class="skt"></div><div class="sub">0/6 passages passed the gate — only those show English</div><div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="stats"><span><b>6</b> passages</span><span><b>0</b> PASS</span><span><b>6</b> withheld</span></div><h3>span-p01 · verses 2-10 · WITHHELD</h3><div class="panel"><div class="dev skt">yatra sthitam idaṃ sarvaṃ kāryaṃ yasmāc ca nirgataṃ | tasyānāvṛtarūpatvān na nirodho &#x27;sti kutracit jāgradādi vibhede &#x27;pi tadabhinne prasarpati | nivartate nijānnaiva svabhāvād upalabdhṛtaḥ ahaṃ sukhī ca duḥkhī ca raktaś ca ityadisamvidaḥ | sukhādyavasthānusyūte vartante &#x27;nyatra tāḥ sphuṭam na duḥkhaṃ na sukhaṃ yatra na grāhyam grāhakaṃ na ca | na cāsti mūḍhabhāvo &#x27;pi tad asti paramārthataḥ yataḥ karaṇavargo &#x27;yaṃ vimūḍho &#x27;mūḍhavat svayam | sahāntareṇa cakreṇa pravṛttisthitisaṃhṛtiḥ labhate tatprayatnena parīkṣyaṃ tattvam ādarāt | yataḥ svatantratā tasya sarvatreyam akṛtrimā na hīcchānodanasyāyam prerakatvena vartate | api tv ātmabalasparśāt puruṣas tatsamo bhavet nijāśuddhyāsamarthasya kartavyeṣv abhilāṣiṇaḥ | yadā kṣobhaḥ pralīyeta tadā syāt paramam padam tadāsyākṛtrimo dharmo jñatvakartṛtvalakṣaṇah | yatas tadepsitaṃ sarvaṃ jānāti ca karoti ca</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION, CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p02 · verses 11-19 · WITHHELD</h3><div class="panel"><div class="dev skt">tam adhiṣṭhātṛbhāvena svabhāvam avalokayan | smayamāna ivāste yas tasyeyaṃ kusṛtiḥ kutaḥ nābhāvo bhāvyatām eti na ca tatrāsty amūḍhatā | yato &#x27;bhiyogasaṃsparśāt tadāsid iti niścayah atas tatkṛtrimaṃ jñeyaṃ sauṣuptapadavat sadā | na tv evaṃ smaryamāṇatvaṃ tat tattvam pratipadyate avasthāyugalaṃ cātra kāryakartṛtvaśabditam | kāryatā kṣayiṇī tatra kartṛtvam punar akṣayam kāryonmukhaḥ prayatno yaḥ kevalaṃ so &#x27;tra lupyate | tasmin lupte vilupto &#x27;smīty abudhaḥ pratipadyate na tu yo &#x27;ntarmukho bhāvah sarvajñātvaguṇāspadam | tasya lopaḥ kadācit syād anyasyānupalambhanāt tasyopalabdhiḥ satataṃ tripadāvyabhicāriṇī | nityaṃ syāt suprabuddhasya tadādyante parasya tu jñānajñeyasvarūpiṇyā śaktyā paramayā yutaḥ | padadvaye vibhur bhāti tadanyatra tu cinmayaḥ guṇādispandaniḥṣyandāḥ sāmānyaspandasaṃśrayāt | labdhātmalābhaḥ satataṃ syur jñasyāparipanthinaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION, CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p03 · verses 20-3 · WITHHELD</h3><div class="panel"><div class="dev skt">aprabudhadhiyas tv ete svasthitisthaganodyatāḥ | pātayanti duruttāre ghore saṃsāravartmani ataḥ satatam udyuktaḥ spandatattvaviviktaye | jāgrad eva nijam bhāvam acireṇādhigacchati atikruddhaḥ prahṛṣṭo vā kiṃ karomīti vā mṛśan | dhāvan va yat padaṃ gacchet tatra spandaḥ pratiṣṭhitaḥ yām avasthāṃ samālambya yad ayam mama vakṣyati | tadavaśyaṃ kariṣye &#x27;ham iti saṃkalpya tiṣṭhati tām aśrityordhvamārgeṇa candrasūryāv ubhāv api | sauṣumne &#x27;dhvanyastamito hitvā brahmā.ṅdagocaram tadā tasmin mahāvyomni pralīnaśaśibhāskare | sauṣuptapadavan mūḍhaḥ prabuddhaḥ syād anāvṛtaḥ dvitīyo niḥṣyandaḥ tadākramya balam mantrāḥ sarvajñābalaśālinaḥ | pravartante &#x27;dhikārāya karaṇānīva dehinām tatraiva sampralīyante śāntarūpā nirañjanāḥ | sahārādhakacittena tenaite śivadharmiṇaḥ yasmāt sarvamayo jīvaḥ sarvabhāvasamudbhavāt | tatsaṃvedanarūpeṇa tādātmyapratipattitaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p04 · verses 4-6 · WITHHELD</h3><div class="panel"><div class="dev skt">tasmāc chabdārthacintāsu na sāvasthā na yā śivaḥ | bhoktaiva bhogyabhāvena sadā sarvatra saṃsthitaḥ iti vā yasya saṃvittiḥ krīḍātvenākhilaṃ jagat | sa paśyan satataṃ yukto jīvanmukto na saṃśayaḥ ayam evodayas tasya dhyeyasya dhyāyicetasi | tadātmatāsamāpattir icchataḥ sādhakasya yā iyam evāmṛtaprāptir ayam evātmano grahaḥ | iyaṃ nirvāṇa-dīkṣā ca śivasadbhāvadāyini tṛtīyo niḥṣyandaḥ yathecchābhyarthito dhātā jāgrato &#x27;rthān hṛdi sthitān somasūryodayaṃ kṛtvā sampādayati dehinaḥ || 1 | tathā svapne &#x27;py abhīṣṭārthān praṇayasyānatikramāt | nityaṃ sphuṭataraṃ madhye sthito &#x27;vaśyaṃ prakāśayet anyathā tu svatantrā syāt sṛṣṭis taddharmakatvataḥ | satataṃ laukikasyeva jāgratsvapnapadadvaye yathā hi artho &#x27;sphuṭo dṛṣṭaḥ sāvadhāne &#x27;pi cetasi | bhūyaḥ sphuṭataro bhāti svabalodyogabhāvitaḥ tathā yat paramārthena yena yatra yathā sthitam | tat tathā balam ākramya na cirāt sampravartate durbalo &#x27;pi tadākramya yataḥ kārye pravartate | ācchādayed bubhukṣāṃ ca tathā yo &#x27;ti bubhukṣitaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (COVERAGE, ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p05 · verses 7-15 · WITHHELD</h3><div class="panel"><div class="dev skt">anenādhiṣṭhite dehe yathā sarvajñatādayaḥ | tathā svātmany adhiṣṭhānāt sarvatraivam bhaviṣyati glānir vilu.ṅthikā dehe tasyāścājñānataḥ sṛtiḥ | tad unmeṣaviluptaṃ cet kutaḥ sā syād ahetukā ekacintāprasaktasya yataḥ syād aparodayaḥ | unmeṣaḥ sa tu vijñeyaḥ svayaṃ tam upalakṣayet ato bindur ato nādo rūpam asmād ato rasaḥ | pravartante &#x27;cireṇaiva kṣobhakatvena dehinaḥ didṛkṣayeva sarvārthān yadā vyāpyāvatiṣṭhate | tadā kiṃ bahunoktena svayam eva avabhotsyate prabuddhaḥ sarvadā tiṣṭhej jñānenālokya gocaram | ekatrāropayet sarvaṃ tato &#x27;nyena na pīḍyate śabdarāśisamutthasya śaktivargasya bhogyatām | kalāviluptavibhavo gataḥ san sa paśuḥ smṛtaḥ parāmṛtarasāpāyas tasya yaḥ pratyayodbhavaḥ | tenāsvatantratām eti sa ca tanmātragocaraḥ svarūpāvaraṇe cāsya śaktayaḥ satatotthitāḥ | yataḥ śabdānuvedhena na vinā pratyayodbhavaḥ</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><h3>span-p06 · verses 16-2 · WITHHELD</h3><div class="panel"><div class="dev skt">seyaṃ kriyātmikā śaktiḥ śivasya paśuvartinī | bandhayitrī svamārgasthā jñāta siddhyupapādikā tanmātrodayarūpena mano &#x27;haṃbuddhivartinā | puryaṣṭakena saṃruddhas taduttham pratyayodbhavam bhuṅkte paravaśo bhogaṃ tadbhāvāt saṃsared ataḥ | saṃsṛtipralayasyāsya kāraṇaṃ sampracakṣmahe yadā tv ekatra saṃrūḍhas tadā tasya layodayau | niyacchan bhoktṛtām eti tataś cakreśvaro bhavet caturtho niḥṣyandaḥ agādhasaṃśayāmbhodhisamuttaraṇatārinīm | vande vicitrārthapadāṃ citrāṃ tāṃ gurubhāratīm labdhvāpy alabhyam etaj jñānadhanaṃ hṛdguhāntakṛtanihiteḥ | vasuguptavac chivāya hi bhavati sadā sarvalokasya</div></div><div class="panel missing"><b>WITHHELD — pending review (ABSTENTION).</b> English withheld until the gate passes — fail-closed.</div><div data-recite data-id="spanda-span-p01" data-label="spanda · span-p01" data-sa="यत्र स्थितम् इदं सर्वं कार्यं यस्माच् च निर्गतं । तस्यानावृतरूपत्वान् न निरोधो ऽस्ति कुत्रचित् जाग्रदादि विभेदे ऽपि तदभिन्ने प्रसर्पति । निवर्तते निजान्नैव स्वभावाद् उपलब्धृतः अहं सुखी च दुःखी च रक्तश् च इत्यदिसम्विदः । सुखाद्यवस्थानुस्यूते वर्तन्ते ऽन्यत्र ताः स्फुटम् न दुःखं न सुखं यत्र न ग्राह्यम् ग्राहकं न च । न चास्ति मूढभावो ऽपि तद् अस्ति परमार्थतः यतः करणवर्गो ऽयं विमूढो ऽमूढवत् स्वयम् । सहान्तरेण चक्रेण प्रवृत्तिस्थितिसंहृतिः लभते तत्प्रयत्नेन परीक्ष्यं तत्त्वम् आदरात् । यतः स्वतन्त्रता तस्य सर्वत्रेयम् अकृत्रिमा न हीच्छानोदनस्यायम् प्रेरकत्वेन वर्तते । अपि त्व् आत्मबलस्पर्शात् पुरुषस् तत्समो भवेत् निजाशुद्ध्यासमर्थस्य कर्तव्येष्व् अभिलाषिणः । यदा क्षोभः प्रलीयेत तदा स्यात् परमम् पदम् तदास्याकृत्रिमो धर्मो ज्ञत्वकर्तृत्वलक्षणह् । यतस् तदेप्सितं सर्वं जानाति च करोति च" data-en="" style="display:none"></div><div data-recite data-id="spanda-span-p02" data-label="spanda · span-p02" data-sa="तम् अधिष्ठातृभावेन स्वभावम् अवलोकयन् । स्मयमान इवास्ते यस् तस्येयं कुसृतिः कुतः नाभावो भाव्यताम् एति न च तत्रास्त्य् अमूढता । यतो ऽभियोगसंस्पर्शात् तदासिद् इति निश्चयह् अतस् तत्कृत्रिमं ज्ञेयं सौषुप्तपदवत् सदा । न त्व् एवं स्मर्यमाणत्वं तत् तत्त्वम् प्रतिपद्यते अवस्थायुगलं चात्र कार्यकर्तृत्वशब्दितम् । कार्यता क्षयिणी तत्र कर्तृत्वम् पुनर् अक्षयम् कार्योन्मुखः प्रयत्नो यः केवलं सो ऽत्र लुप्यते । तस्मिन् लुप्ते विलुप्तो ऽस्मीत्य् अबुधः प्रतिपद्यते न तु यो ऽन्तर्मुखो भावह् सर्वज्ञात्वगुणास्पदम् । तस्य लोपः कदाचित् स्याद् अन्यस्यानुपलम्भनात् तस्योपलब्धिः सततं त्रिपदाव्यभिचारिणी । नित्यं स्यात् सुप्रबुद्धस्य तदाद्यन्ते परस्य तु ज्ञानज्ञेयस्वरूपिण्या शक्त्या परमया युतः । पदद्वये विभुर् भाति तदन्यत्र तु चिन्मयः गुणादिस्पन्दनिःष्यन्दाः सामान्यस्पन्दसंश्रयात् । लब्धात्मलाभः सततं स्युर् ज्ञस्यापरिपन्थिनः" data-en="" style="display:none"></div><div data-recite data-id="spanda-span-p03" data-label="spanda · span-p03" data-sa="अप्रबुधधियस् त्व् एते स्वस्थितिस्थगनोद्यताः । पातयन्ति दुरुत्तारे घोरे संसारवर्त्मनि अतः सततम् उद्युक्तः स्पन्दतत्त्वविविक्तये । जाग्रद् एव निजम् भावम् अचिरेणाधिगच्छति अतिक्रुद्धः प्रहृष्टो वा किं करोमीति वा मृशन् । धावन् व यत् पदं गच्छेत् तत्र स्पन्दः प्रतिष्ठितः याम् अवस्थां समालम्ब्य यद् अयम् मम वक्ष्यति । तदवश्यं करिष्ये ऽहम् इति संकल्प्य तिष्ठति ताम् अश्रित्योर्ध्वमार्गेण चन्द्रसूर्याव् उभाव् अपि । सौषुम्ने ऽध्वन्यस्तमितो हित्वा ब्रह्मा.ङ्दगोचरम् तदा तस्मिन् महाव्योम्नि प्रलीनशशिभास्करे । सौषुप्तपदवन् मूढः प्रबुद्धः स्याद् अनावृतः द्वितीयो निःष्यन्दः तदाक्रम्य बलम् मन्त्राः सर्वज्ञाबलशालिनः । प्रवर्तन्ते ऽधिकाराय करणानीव देहिनाम् तत्रैव सम्प्रलीयन्ते शान्तरूपा निरञ्जनाः । सहाराधकचित्तेन तेनैते शिवधर्मिणः यस्मात् सर्वमयो जीवः सर्वभावसमुद्भवात् । तत्संवेदनरूपेण तादात्म्यप्रतिपत्तितः" data-en="" style="display:none"></div><div data-recite data-id="spanda-span-p04" data-label="spanda · span-p04" data-sa="तस्माच् छब्दार्थचिन्तासु न सावस्था न या शिवः । भोक्तैव भोग्यभावेन सदा सर्वत्र संस्थितः इति वा यस्य संवित्तिः क्रीडात्वेनाखिलं जगत् । स पश्यन् सततं युक्तो जीवन्मुक्तो न संशयः अयम् एवोदयस् तस्य ध्येयस्य ध्यायिचेतसि । तदात्मतासमापत्तिर् इच्छतः साधकस्य या इयम् एवामृतप्राप्तिर् अयम् एवात्मनो ग्रहः । इयं निर्वाण-दीक्षा च शिवसद्भावदायिनि तृतीयो निःष्यन्दः यथेच्छाभ्यर्थितो धाता जाग्रतो ऽर्थान् हृदि स्थितान् सोमसूर्योदयं कृत्वा सम्पादयति देहिनः ॥ १ । तथा स्वप्ने ऽप्य् अभीष्टार्थान् प्रणयस्यानतिक्रमात् । नित्यं स्फुटतरं मध्ये स्थितो ऽवश्यं प्रकाशयेत् अन्यथा तु स्वतन्त्रा स्यात् सृष्टिस् तद्धर्मकत्वतः । सततं लौकिकस्येव जाग्रत्स्वप्नपदद्वये यथा हि अर्थो ऽस्फुटो दृष्टः सावधाने ऽपि चेतसि । भूयः स्फुटतरो भाति स्वबलोद्योगभावितः तथा यत् परमार्थेन येन यत्र यथा स्थितम् । तत् तथा बलम् आक्रम्य न चिरात् सम्प्रवर्तते दुर्बलो ऽपि तदाक्रम्य यतः कार्ये प्रवर्तते । आच्छादयेद् बुभुक्षां च तथा यो ऽति बुभुक्षितः" data-en="" style="display:none"></div><div data-recite data-id="spanda-span-p05" data-label="spanda · span-p05" data-sa="अनेनाधिष्ठिते देहे यथा सर्वज्ञतादयः । तथा स्वात्मन्य् अधिष्ठानात् सर्वत्रैवम् भविष्यति ग्लानिर् विलु.ङ्थिका देहे तस्याश्चाज्ञानतः सृतिः । तद् उन्मेषविलुप्तं चेत् कुतः सा स्याद् अहेतुका एकचिन्ताप्रसक्तस्य यतः स्याद् अपरोदयः । उन्मेषः स तु विज्ञेयः स्वयं तम् उपलक्षयेत् अतो बिन्दुर् अतो नादो रूपम् अस्माद् अतो रसः । प्रवर्तन्ते ऽचिरेणैव क्षोभकत्वेन देहिनः दिदृक्षयेव सर्वार्थान् यदा व्याप्यावतिष्ठते । तदा किं बहुनोक्तेन स्वयम् एव अवभोत्स्यते प्रबुद्धः सर्वदा तिष्ठेज् ज्ञानेनालोक्य गोचरम् । एकत्रारोपयेत् सर्वं ततो ऽन्येन न पीड्यते शब्दराशिसमुत्थस्य शक्तिवर्गस्य भोग्यताम् । कलाविलुप्तविभवो गतः सन् स पशुः स्मृतः परामृतरसापायस् तस्य यः प्रत्ययोद्भवः । तेनास्वतन्त्रताम् एति स च तन्मात्रगोचरः स्वरूपावरणे चास्य शक्तयः सततोत्थिताः । यतः शब्दानुवेधेन न विना प्रत्ययोद्भवः" data-en="" style="display:none"></div><div data-recite data-id="spanda-span-p06" data-label="spanda · span-p06" data-sa="सेयं क्रियात्मिका शक्तिः शिवस्य पशुवर्तिनी । बन्धयित्री स्वमार्गस्था ज्ञात सिद्ध्युपपादिका तन्मात्रोदयरूपेन मनो ऽहंबुद्धिवर्तिना । पुर्यष्टकेन संरुद्धस् तदुत्थम् प्रत्ययोद्भवम् भुङ्क्ते परवशो भोगं तद्भावात् संसरेद् अतः । संसृतिप्रलयस्यास्य कारणं सम्प्रचक्ष्महे यदा त्व् एकत्र संरूढस् तदा तस्य लयोदयौ । नियच्छन् भोक्तृताम् एति ततश् चक्रेश्वरो भवेत् चतुर्थो निःष्यन्दः अगाधसंशयाम्भोधिसमुत्तरणतारिनीम् । वन्दे विचित्रार्थपदां चित्रां तां गुरुभारतीम् लब्ध्वाप्य् अलभ्यम् एतज् ज्ञानधनं हृद्गुहान्तकृतनिहितेः । वसुगुप्तवच् छिवाय हि भवति सदा सर्वलोकस्य" data-en="" style="display:none"></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
@@ -111,4 +140,165 @@ links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c
 if(!cur&&links.length)links[0].classList.add('on');}
 window.addEventListener('scroll',spy,{passive:true});spy();}
 })();
-</script></body></html>
+</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script></body></html>

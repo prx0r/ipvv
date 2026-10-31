@@ -81,15 +81,44 @@ main{max-width:100%}
 .depth{top:53px}
 .verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkV3-P-tattva-caturtho-close-k1-3</h1><div class="skt"></div><div class="sub">IPVV · M00022</div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">atha caturtho vimarśaḥ |
+<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkV3-P-tattva-caturtho-close-k1-3</h1><div class="skt"></div><div class="sub">IPVV · M00022</div><div class="recitetools"><button class="vplay" data-play-all>Recite this passage</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">atha caturtho vimarśaḥ |
 
      prasṛtamanuttararūpādānandādikrameṇa viśvamadaḥ |
      sarvāmṛtadharamantarbahiśca visṛjantamabhivande ||
@@ -433,7 +462,332 @@ own-self of all beings is the one Lord, and the recognition of this — received
 &gt; The passage establishes the recognition as the path and the jīvanmukta as its fruit. Whether the
 &gt; &quot;effort-less&quot; means excludes all practice is a further question the tradition addresses elsewhere.
 
-recognition.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:aad4bfd27078 · T1 chunk <i>sanskritree/chunkV3-P-tattva-caturtho-close-k1-3.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="pn"><a href="/ipvv/chunkV3-O-tattva-trtiyo-k9-15.html">← chunkV3-O-tattva-trtiyo-k9-15</a><span></span></div><div class="pn" id="pnslot"></div></main>
+recognition.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:aad4bfd27078 · T1 chunk <i>sanskritree/chunkV3-P-tattva-caturtho-close-k1-3.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div data-recite data-id="chunkV3-P-tattva-caturtho-close-k1-3" data-label="IPVV · chunkV3-P-tattva-caturtho-close-k1-3" data-sa="अथ चतुर्थो विमर्शः ।
+
+     प्रसृतमनुत्तररूपादानन्दादिक्रमेण विश्वमदः ।
+     सर्वामृतधरमन्तर्बहिश्च विसृजन्तमभिवन्दे ॥
+
+     ज्ञानक्रियाधिकारयुगलेन तत्त्वार्थसङ्ग्रहसहितेन 
+स्वप्रकाशेऽपि तत्त्वे युक्त्युपबृंहिते निरूपिते स्वतः इत्यंशः पूरितः 
+आगमाधिकारेण, तमेव अर्थमुपोद्बलयता शास्त्रतः इति अयम् । 
+शास्त्रदृष्टिरपि तत्प्रसिद्धगुरुपरम्परोपदेशेन सम्यगागमत्वं 
+नेया । यथा उक्तं प्राक् शाम्भवनीत्यादीनामपि इत्यादि । तत एव 
+परमहदन्तरालदिव्यदिव्यादिव्यादिव्यसम्बन्धमनादृत्य 
+स्बुद्धिपुस्तकमात्रशरणा विडम्बिता इत्याशयेन
+
+     पुस्तकाधीतविद्याश्च गुरुक्रमविवर्जिताः ।
+     आचरन्तो दिशन्तश्च पच्यन्ते नरके चिरम् ॥
+     यातनाराजराजानां ते भोक्तारो विनिन्दिताः ।
+     तस्माद्गुरुक्रमायातं दिशन्नेति परं शिवम् ॥
+
+इति उक्तम् । ततो गुरुतः इति अयं तृतीयः अंशः पूरयितव्यः । उक्तं हि 
+श्रीकिरणायां
+
+     ---------------------------गुरुतः शास्त्रतः स्वतः ।
+
+इति । तमंशं पूरयितुं श्लोकत्रयेण प्रकारान्तरमाह । तत्र 
+प्रथमश्लोकेन स्वगुरुपर्वक्रमं वदन्नादिश्रीकण्ठनाथात् 
+प्रवृत्तिमस्य दर्शयति उपदेशस्य अपूर्वत्वेन अप्रयासकारित्वेन 
+अवश्योपदेश्यतां च । द्वितीयेन अभिज्ञानप्रकटनात्मना उपदेशः 
+सतोऽपि असत्कल्पस्य अनुप्राणकः इति तत्र आदरः कर्तव्यः इति दर्शितम् । 
+तृतीयेन व्याख्यानश्रवणचिन्तनाभ्यसनसाफल्यसिद्धये 
+स्वकपूर्वगुरुवन्दनमवश्यं कर्तव्यमिति शिक्षया 
+प्रवृत्तशिष्यानुग्रहाय स्वात्मनो गुरुत्वे योग्यताभिधानाय
+
+(पगे ४०१)
+
+     कीर्तनीयो गुरोर्वर्गः शास्त्रार्थस्य प्रसिद्धये ।
+
+इतिनयं पालयितुं पितुरलौकिकवस्तुविषयप्रसिद्ध्यभिधानेन
+
+     उपकाराय प्रसिद्धो दिष्टे लोकः प्रवर्तते ।
+
+इति लोकस्य अप्रवृत्तस्य प्रवर्तनाद्वारेण च अनुग्रहाय च स्वात्मनो 
+वंशप्रदर्शनपूर्वकनामप्रकटीकरणपुरःसरमधिकारप्रयोज-
+नसम्बन्धाभिधेयाभिधानानां निगमनमिति प्रकरणार्थः । 
+प्रतिश्लोकं तु अर्थो निरूपणीयः । सच स्पष्ट एव, वृत्तिविवृत्योश्च 
+निरूपितः । यत्तु किञ्चित् किञ्चिदस्पष्टमत्र, तदेव विमृश्यते
+
+     इति प्रकटितो मया सुघट एष मार्गो नवो
+     महागुरुभिरुच्यते स्म शिवदृष्टिशास्त्रे यथा ।
+     तदत्र निदधत्पदं भुवनकर्तृतामात्मनो
+     विभाव्य शिवतामयीमनिशमाविशन्सिध्यति ॥ १ ॥
+
+     अत एव इति यतः प्रत्यभिज्ञामात्रात् मोक्षः, तत एव 
+यमनियमादिक्लेशयोगोऽनुपयोग एव अत्र । अस्पष्टत्वात् इति
+
+     स्फुटोपायमनायासमनारम्भं महाफलम् ।
+     श्रोतुमिच्छामि देवेश योगं योगविदां वर ॥
+
+इति
+
+     प्राणायामादिकैरङ्गैर्योगाः स्युः कृत्रिमा यतः ।
+     तेन नाकृतकस्यास्य कलामर्घन्ति षोडशीम् ॥
+
+इत्यादि च यदपि रहस्यागमेषु निरूपितम्, तथा विस्पष्टत्वेन न उक्तं 
+गर्भीकृत्य तु निरूपितं
+
+     नचैतदप्रसन्नेन शङ्करेणोपदिश्यते ।
+     कथञ्चिदुपलब्धेऽपि वासना न प्रजायते ॥
+     वासनामात्रलाभेऽपि योऽप्रमत्तो न जायते ।
+     तमनित्येषु भोगेषु योजयन्ति विन्यायकाः ॥
+
+(पगे ४०२)
+
+इति । यदि अहं परमशिवः सर्वज्ञसर्वकर्तृत्वात्, तर्हि किमिति न 
+शत्रून्सर्वान् सपदि ग्रसे इत्यादिर्मायीये देहादावनभ्यासेन 
+विभवेच्छामयो हि परमो विघ्नः । स एतच्छास्त्रार्थपरिशीलनेन 
+निवर्तते । लोके मोक्षोपायत्वेन न प्रतीताः, नञभावे तु लोकप्रसिद्धा 
+ये ज्ञानक्रियादयस्तैरिति व्याख्या । प्रथमं पादं व्याख्याय 
+द्वितीयं व्याचष्टे एष च इत्यादिना अनाविष्ट इत्यन्तेन
+
+     विकल्पहानेनैकाग्र्यात्---------------------------। (४।१।११)
+
+इत्यत्र अनुप्रवेशः उक्तः शश्वत् इत्यादिः ।
+
+     सर्वो मम---------------------------। (४।१।१२)
+
+इत्यत्र शिवपद इत्यादिना स्वात्मनि मायामोहसंस्कारकलुषसाधक-
+वर्गाभिलषितोचितविभूत्यनासङ्गेन सम्यक्तत्त्वदर्शितया कृतकृत्यत्वे 
+ज्ञानक्रिययोः परिशेषविशेषत्वान् परानुग्रहतन्त्रता । सकललोकलो-
+चनतां प्रपन्नेन अवलोकत्वेन प्रसिद्धिपर्यवसानं नाम 
+पूर्वोक्तगुरुलक्षणम् । शिवदृष्टि इति तद्गतमाश्रीकण्ठनाथात् 
+गुरुपर्वक्रमं सूचयति । तत्रहि श्रीश्रीकण्ठनाथः शासने 
+समुत्सन्ने श्रीदुर्वासोमुनिं तदवतारणाय दिदेश, सोऽपि 
+श्रीत्र्यम्बकादित्यं त्रैयम्बकाख्ये लोकप्रसिद्ध्या तैरिम्बाभिधाने 
+गुरुसन्ताने प्रवर्तयितारं मानसं ससर्ज,-इत्यादि वितत्य उक्तम् । 
+श्रीकण्ठनाथश्च अधिगततत्त्वः श्रीमदनन्तनाथात्, सोऽपि 
+श्रीभगवच्छक्तितः इत्यादि आगमेषु निरूपितमिति संपूर्णो 
+गुरुपर्वक्रमः उक्तः । समूढः इति प्रबोधितः, 
+पक्वचन्दनादिसंस्कारस्थिरीकृतसौरभश्च । घनसारः कर्पूरम् । 
+अष्टादशभुजाद्याकारसाक्षात्करणभ्रान्तिर्विकत्थनोऽयमद्यापि 
+अतत्त्वज्ञोऽयमनुपयोगिनिरूपणरसिकोऽयमितिच प्रतीतिफला मा 
+भूदित्याशयेन आह अन्तःकृत इति । चित्रकर्मणः क्व प्रकृते उपयोगः । 
+आह तज्ज्ञानस्य
+
+(पगे ४०३)
+
+एव ऐश्वर्यज्ञानस्य अधिकालौकिकवस्तुप्राप्तौ मूढानां 
+दृढप्रत्ययता भवतीति । द्वितीयमर्धं विवृणोति ईश्वर इत्यादिना । 
+अनेन हेतुतृतीयान्तेन पदेन तत् इति सौत्रं तस्मादित्यर्थं विवृतवान् ।
+
+     --------------------जीवन्मुक्तो न संशयः ।
+
+इत्यादिषु आगमस्थानेषु नियमार्थव्याख्यानाय वृत्तौ यः एवकारः, 
+तं व्याचष्टे देहपातात् इत्यादिना । अद्भुततमत्वमपि च एवकारेण 
+सूचितमस्य उपदेशस्य । देहपातादेकभविको मोक्षः इतिहि एतदेव 
+तावदद्भुतम् ।
+
+     इहैकभविको मोक्ष एष तावत् परीक्ष्यताम् ।
+     अनेकभविको मोक्षः पश्चात्स च गमिष्यति ॥
+
+इति हि परमकृपालुना भगवता आगमग्रन्थेन निरूपितमद्भुतत्वम् । 
+इदं तु अद्भुततमं यत्किल जीवन्नेव मुक्त इति ॥ १ ॥
+
+     तैस्तैरप्युपयाचितैरुपनतस्तन्व्याः स्थितोऽप्यन्तिके 
+     कान्तो लोकसमान एवमपरिज्ञातो न रन्तुं यथा ।
+     लोकस्यैष तथानवेक्षितगुणः स्वात्मापि विश्वेश्वरो
+     नैवालं निजवैभवाय तदियं तत्प्रत्यभिज्ञोदिता ॥ २ ॥
+
+     उपयाचितैः इति 
+देवताप्रार्थनदूतीप्रेषणात्मावस्थानिवेदनाभिः । तन्व्याः इति 
+विरहकृशायाः न रन्तुमलम् इति संबन्धः । 
+प्रत्यभिज्ञानमात्रादानन्दलाभः, परिशीलनात् तु 
+संभोगसहस्रप्राप्तिरिति तुल्यमुभयत्र । वस्तुविशेष इति वस्तुनि 
+अर्थक्रियालाभे । कान्ते च इति पूर्वदृष्टेऽपि मोहात्पूर्वमविज्ञाते इति 
+भावः । यद्वा इति निर्भाते अपि अनिर्भातकल्पत्वं, ततो दृढनिश्चये 
+तथाभिमान इति उभयत्र अपि तुल्यमिति यावत् । एकता प्रकाशात्मा इति 
+सोऽयं इति हि अत्रापि तत्त्वेदन्तयोरेकीकरणं प्रकाशनम्, इहापि 
+ईश्वरताहन्तयोरित्यर्थः ।
+
+(पगे ४०४)
+
+आश्रयौचित्य इति । दृष्टान्तदार्ष्टान्तिकरूपौ यावाश्रयौ, 
+तदौचित्यादेव तद्बलानीतो विशेषो भूषणम्, अन्यथाहि ऐक्यमेव स्यात्, 
+न सादृश्यम् ॥ २ ॥
+
+     जनस्यायत्नसिद्ध्यर्थमुदयाकरसूनुना ।
+     ईश्वरप्रत्यभिज्ञेयमुत्पलेनोपपादिता ॥ ३ ॥
+
+     यः कश्चित् जननधर्मा, तस्य अतः सिद्धिः; नतु अत्र 
+जात्याचारादौ भरः इति सर्वानुग्राहकत्वमुक्तम् । एतच्च प्रारम्भे एव 
+अस्माभिर्विततम् । ततोऽपि इति यशःसमुचितेन फलेन पितुर्योगात् । अस्य इति 
+कर्तुः । अनेन सर्वतः कृतकृत्यत्वं दर्शितम्,-इति शिवम् ॥ ३ ॥
+
+     विवृतिकारः संक्षिप्य सर्वमाह इत्थम् इत्यादिश्लोकैः । अनेन 
+अस्मदुक्तेन ईश्वरताप्रकारेण या सुसंवित्तिः स्थिता, ताम् । लाट 
+इत्यादिना पूर्वं शुद्धवंशजन्मनो द्वितीये वागीश्वरीगर्भजन्मनि 
+कृते पूर्णं द्विजत्वं भवतीति । अन्तःप्रकृतिः इति अमात्यसुहृत्प्रायः । 
+कर्काभिधानः इति यदियं कर्कसंग्रहादिशास्त्रम् । जन्ममात्रे 
+चरमेऽभिमानः इति दर्शयति त्र्यम्बक इति
+
+     तिस्रो देव्यो यदा चैनं---------------------------।
+
+इति शक्तित्रयपरिपूर्णत्र्यम्बकदास्यलक्ष्मीयोगात् 
+पूर्वोक्तमितात्मतागुणीकरणतद्रूपतोन्मज्जनसमावेशात् तद्दासः 
+कृतकृत्यत्वेन साभिमानोऽस्मि । भोग इत्यादि विश्वेश्वरस्य 
+प्रत्यभिज्ञामृतस्य च विशेषणम् । अस्य उपादेयतामाह प्रायेण 
+इत्यादिना । खेटपालाचार्यप्रभृतयो द्वैतप्राधान्यमशिश्रियन्, 
+तदनुसारिणोऽपि अन्ये तथैव । अविद्यया इति अनिर्वाच्यरूपया । अयं 
+ब्रह्मवादोऽपि न एकान्तवादो, न निश्चिताद्वयवादः इति । मतं न 
+विशदमिति सम्बन्धः । आत्मा ईश्वरो नास्ति तेषां यो वस्तुतोऽस्ति, 
+
+(पगे ४०५)
+
+सन्तानान्तरं च अस्ति यत् वस्तुतो नास्ति,-इति । अवसन्न इति 
+उपायलाभाभावात् । अस्मिंस्तु सति आगमेषु द्वैतव्याख्यानमपास्य 
+ब्रह्मवादे अविद्यां मायाशक्तीकृत्य 
+विज्ञानाद्वयमात्मेश्वराभिप्रायेण निरूप्य सिध्यति एव जनो यथा 
+पूर्वमुक्तमिति दर्शयति अस्मिन्नेवम् इति । पारमेश्वरेषु तावदागमेषु 
+शैववैष्णवरहस्येषु वेदान्तेषु च स्पष्ट एव 
+उक्तोऽयमस्मदुक्तोऽर्थः । तदनुसारिणा एव सुगतेन उक्तं
+
+     चित्तमात्रमिदं यदुत त्रैधातुकम् ।
+
+इति । तदत्र विवरणकारैर्दुरभिनिवेशवशेन विप्रतारितो जनः । इदमेव तु 
+तत्त्वमिति तु तात्पर्यम् । अत एव प्रथातोऽखिलग्रहणेन इदमाह-सकलो 
+लोकः सकलं च शास्त्रमस्माभिर्यद्यपि न अवलोक्यते, तथापि यत्किञ्चित् 
+वस्तु वा, विकल्पितं वा; तत् सर्वं प्रथमानमेव सत् भवति । 
+प्रथमानता च प्रथारूपात् भगवतः परमशिवादनतिरेकिणी,-इति स 
+एव पर्यन्तोपासनीयः परमशिवः उपासितः कल्पते परमशिवाय,-इति 
+शिवम् ॥
+
+भट्टात्रिगुप्तकुलजातवराहगुप्त-
+जन्माभवत् चुखुलकः शिवमार्गनिष्ठः ।
+श्रीभूतिराजवदनोदितशम्भुशास्त्र-
+तत्त्वांशुशातितसमस्तभवान्धकारः ॥ १ ॥
+तज्जन्मदेहपदभाक् पदवाक्यमान-
+संस्कारसंस्कृतमतिः परमेशशक्तेः ।
+सामर्थ्यतः शिवपदाम्बुजभक्तिभागी 
+दारात्मजप्रभृतिबन्धुकथामनाप्तः ॥ २ ॥
+नानागुरुप्रवरपादनिपातजात-
+संवित्सरोरुहविकासनिवेशितश्रीः ।
+
+(पगे ४०६)
+
+श्रीशास्त्रकृद्धटितलक्ष्मणगुप्तपाद-
+सत्योपदर्शितशिवाद्वयवाददृप्तः ॥ ३ ॥
+सर्वान्यशासनकथाः कलविङ्ककेलि-
+कल्पाः परं प्रकलयन्निह शास्त्रसारे ।
+आज्ञामलङ्घ्यफलदां गुरुनाथपाद-
+नित्यार्चनस्मरणयोगकृतामवाप्य ॥ ४ ॥
+श्रीशाम्भवाद्वयपदे जनतां नियोक्तु-
+मभ्युदितः सकलसंपदुदारवृत्तौ ।
+टीकाविमर्शमकरोल्लघुना नयेन
+स्पष्टेन चाभिनवगुप्तपदप्रतिष्ठः ॥ ५ ॥
+नादातुं नच दातुमेष सुलभः किं कृत्यमेतावते-
+त्येवं तर्कयता जनेन शकलीकृत्याथ यद्गृह्यसे ।
+माणिक्याचल चन्द्रकीर्तिरचला सा ते जगद्व्यापिनी
+लोकस्यैव मितोपयोगरसिकस्यैषा पुनः खण्डना ॥ ६ ॥
+सङ्कोच्य निञ्चिदिह किञ्चिदथ प्रसार्य
+प्रक्षिप्य किञ्चिदिव किञ्चिदथाप्यपास्य ।
+विद्वाञ्जनो भवतु संप्रति शास्त्रकृच्च
+सम्यक्प्रचारणविधिः सहि जन्म तस्य ॥ ७ ॥
+कल्पान्ताम्बुनिधेः प्रचण्डपवनप्रक्षोभितौर्वानल-
+ज्वालाजालमिलत्तरङ्गवलनानश्यत्कुलक्ष्माभृतः ।
+भूयानप्यवगाहनाय विभवेन्नत्वीश्वराभिज्ञया
+निर्णीतस्य विधेर्विमर्शविधये शक्तः परः शङ्करात् ॥ ८ ॥
+प्राक् पश्यन्त्यां स्फुरतु भजतां मध्यमायां विकासं
+वैखर्यां च प्रकटपदवीं श्रोत्रवृत्तिं प्रयातु ।
+
+(पगे ४०७)
+
+विश्रान्ता चेदभिनवमतिस्तद्विमर्शिन्यथान्त-
+स्तत्साफल्यं भजति नितरामीश्वरप्रत्यभिज्ञा ॥ ९ ॥
+पाषाणान् प्रति वक्तु कः शृणुत भो युष्मान् ब्रुवे जङ्गमाः
+शय्योत्थायमनर्थमर्थसरणे कोऽयं वृथैवोद्यमः ।
+संविद्धामनि शाम्भवे विशथ चेत्कालीयमेकं लवं
+किं किं वर्णनिकाभिराभिरभितः सत्यं स्वयं ज्ञास्यथ ॥ १० 
+॥
+परिचिनुत तदेनामीश्वरप्रत्यभिज्ञां
+दहत हृदि निविष्टं वासनाचक्रवालम् ।
+ज्वलदनलशिखान्तर्लेलिहानारणेय-
+स्थिरपरिचयभाक् किं सूतये बीजपुञ्जः ॥ ११ ॥
+वाक्यप्रमाणपदतत्त्वसदागमार्थाः
+स्वात्मोपयोगममुतः किल यन्ति शास्त्रात् ।
+भौमान् रसाञ्जलमयांश्च न सस्यपुष्ट्यै
+मुक्त्वार्कमेकमिह योजयितुं क्षमोऽन्यः ॥ १२ ॥
+आत्मानमनभिज्ञाय विवेक्तुं योऽन्यदिच्छति ।
+तेन भौतेन किं वाच्यं प्रश्नेऽस्मिन् को भवानिति ॥ १३ ॥
+यावानात्मावरणविधये कल्पते कोऽपि कल्प-
+स्तावानात्मप्रकटनविधौ नीत एवोपयोगम् ।
+येन स्पष्टं परमगुरवे तीव्रकारुण्यपूर्ण-
+श्रीशर्वाणीदयितसततावेशभाजे नमोऽस्मै ॥ १४ ॥
+इति नवतितमेऽस्मिन् वत्सरेऽन्त्ये युगांशे
+तिथिशशिजलधिस्थे मार्गशीर्षावसाने ।
+जगति विहितबोधामीश्वरप्रत्यभिज्ञां
+व्यवृणुत परिपूर्णां प्रेरितः शम्भुपादैः ॥ १५ ॥
+
+(पगे ४०८)
+
+परमशिव न तादृक् क्वापि यत्तावकीन-
+स्फुरितविभववन्ध्यं स्यादथान्तर्बहिर्वा ।
+इति सुदृढविमर्शावेशि---------------------------
+स्तुतिररचि मयेयं संमुखं त्वां विधातुम् ॥ १६ ॥
+ईश्वरप्रत्यभिज्ञा तु विमर्शादीश्वरेण-------------।
+--------------त्मविमर्शोद्योगिनीं क्रियात् ॥ १७ ॥
+
+इति महामाहेश्वरश्रीमदाचार्याभिनवगुप्तविरचितायामीश्वर-
+पत्यभिज्ञाविवृतिविमर्शिन्यां समस्तनिगमनं 
+चतुर्थो विमर्शः ॥ ४ ॥
+
+
+समाप्ता च इयमीश्वरप्रत्यभिज्ञाविवृतिविमर्शिनी ॥
+कृतिः श्रीत्रिनयनचरणचिन्तनलब्धप्रसिद्धीना-
+मभिनवगुप्तपादानाम् ॥
+
+
+
+###########   एन्द् ओफ़् फ़िले  #######" data-en="**The closing sum: the recognition, and the end of the whole teaching**
+
+We come to the end. This final vimarśa of the Īśvarapratyabhijñāvivṛtivimarśinī is the closing sum — the
+drawing together of everything that has gone before. And its theme is fittingly the *transmission* of
+the teaching itself: it comes from the guru, from the śāstra, and from the self.
+
+The whole teaching — the self-manifest essence, established by the knowledge and the action, aided by
+reason — has been given. Part of it comes from the self (svataḥ); part from the śāstra (śāstrataḥ);
+and part must come from the guru (gurutaḥ). For even the vision of the śāstra must be carried to its
+proper power by the lineage of teachers. And here Abhinavagupta is stern: &quot;the book-studied knowledges,
+without the guru-order,&quot; he warns, &quot;practicing and teaching, ripen long in hell.&quot; The teaching must be
+received from the living line — from the ādi-Śrīkaṇṭhanātha down through Durvāsa and Tryambakāditya, the
+mental sons who carry the un-precedented, effort-less word.
+
+And now the path itself. Abhinavagupta presents it as a &quot;new, well-fitted path,&quot; spoken by the great
+gurus in the Śivadṛṣṭi. It is the path of the recognition. Since liberation is from the recognition
+alone, all the elaborate effort-yogas are useless here; this is the clear means, effort-less,
+un-undertaken, yet bearing the great fruit. The breath-controls and the rest are artificial; the
+un-made reality does not yield to a sixteenth part of such effort. Even the proud fancies of the bound
+— &quot;I am the king,&quot; &quot;I have slain my enemy&quot; — are, when examined, still other-dependent, riding on the
+Lord&#x27;s power. The recognition cuts through all of it. And its fruit is the while-living-liberated, the
+jīvanmukta: the one who, even in the body, is already free, and who at the fall of the body is simply
+the supreme Lord. This, Abhinavagupta says, is the most wondrous thing of all — liberation in this very
+life.
+
+The closing sum puts it in a beautiful image. The lover stands near, sought by the slender woman; but
+as long as he is not recognized, he cannot be enjoyed. So the world-Lord — always present, always near —
+is not experienced in his own splendor until the recognition arises. The world has him before it, and
+yet does not see him, until the single act of recognition turns the un-known nearness into the joy of
+union. One who knows only the mere flash of recognition gains the bliss; one who cultivates it gains
+the thousand-fold embrace.
+
+And this recognition, Abhinavagupta reminds us, was established for the world by Utpala — &quot;the sun-rise
+son&quot; — for the effort-less establishment of all people, not by caste or conduct but by the very fact of
+being born a knower. Through it, all beings are graced; and by it, the author himself is complete. The
+whole teaching — the Lord&#x27;s recognition — is here gathered and handed on.
+
+The closing vimarśa then turns to the author&#x27;s own lineage — the vivṛtikāra&#x27;s seventeen verses of
+praise. They trace the line: Varāha-gupta, the Cukhulaka, father of Bhūtirāja; Bhūtirāja himself;
+Haṭitalakṣmaṇagupta, the maker of the śāstra, the guru of Abhinava; the Tryambaka with its three
+powers; and the method of the recognition throughout. The final verses praise the supreme Lord and
+hand the work to him: &quot;the Lord-recognition, from the reflective-awareness of the Lord, may he make it
+the one minding the self&#x27;s reflection.&quot; And then the two colophons close the entire work: the
+&quot;all-conclusion, the fourth vimarśa&quot;; and &quot;completed — this, the Īśvarapratyabhijñāvivṛtivimarśinī, the
+composition of the Abhinavagupta-foots, whose fame is won by meditation on the feet of Tri-nayana.&quot;
+
+So ends the greatest work of Abhinavagupta — the Vivṛtivimarśinī on the recognition of the Lord. It
+has traced, across four adhikāras, the knowledge and the action of consciousness, the categories of
+the world, the knowers and the stains, the bond and the liberation. And it closes where it began: the
+own-self of all beings is t" style="display:none"></div><div class="pn"><a href="/ipvv/chunkV3-O-tattva-trtiyo-k9-15.html">← chunkV3-O-tattva-trtiyo-k9-15</a><span></span></div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
@@ -455,4 +809,165 @@ links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c
 if(!cur&&links.length)links[0].classList.add('on');}
 window.addEventListener('scroll',spy,{passive:true});spy();}
 })();
-</script></body></html>
+</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script></body></html>

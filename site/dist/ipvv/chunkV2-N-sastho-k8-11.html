@@ -81,15 +81,44 @@ main{max-width:100%}
 .depth{top:53px}
 .verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkV2-N-sastho-k8-11</h1><div class="skt"></div><div class="sub">IPVV · M00021</div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">pramātṛtvaṃ, tataśca nityameva iti asaṅgatam | etadāśaṅkāśāntaye 
+<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkV2-N-sastho-k8-11</h1><div class="skt"></div><div class="sub">IPVV · M00021</div><div class="recitetools"><button class="vplay" data-play-all>Recite this passage</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">pramātṛtvaṃ, tataśca nityameva iti asaṅgatam | etadāśaṅkāśāntaye 
 prāha muktāṇūnāṃ
 
 (page 325)
@@ -518,7 +547,431 @@ the power of removal — here comes to its close.
 &gt; the one light that runs through them all. It is innate in the external-form cognition (kārikā 9), in
 &gt; the freely-wandering construction (kārikā 10), and from its manifestation knowledge and action are
 &gt; clear for every living one (kārikā 11). Even in liberation the freed souls are distinct, yet their
-&gt; manifestation is the un-broken all-knowing. The inner appearance never fails.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:3b074ddbaf3b · T1 chunk <i>sanskritree/chunkV2-N-sastho-k8-11.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="pn"><a href="/ipvv/chunkV2-M-sastho-vimarsa-k6-7.html">← chunkV2-M-sastho-vimarsa-k6-7</a><a href="/ipvv/chunkV2-O-saptamo-vimarsa.html">chunkV2-O-saptamo-vimarsa →</a></div><div class="pn" id="pnslot"></div></main>
+&gt; manifestation is the un-broken all-knowing. The inner appearance never fails.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:3b074ddbaf3b · T1 chunk <i>sanskritree/chunkV2-N-sastho-k8-11.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div data-recite data-id="chunkV2-N-sastho-k8-11" data-label="IPVV · chunkV2-N-sastho-k8-11" data-sa="प्रमातृत्वं, ततश्च नित्यमेव इति असङ्गतम् । एतदाशङ्काशान्तये 
+प्राह मुक्ताणूनां
+
+(पगे ३२५)
+
+च मोक्षावस्थायामपि परमशिवादनादिशिवतामयात् 
+मलनिर्हाराभिव्यक्तशिवत्वानां भेदः इति । अनेन अंशेन 
+द्वैतपक्षे मुक्ताणवो भिन्ना एव, तेषां च शिवत्वेन 
+सार्वज्ञ्यादविच्छिन्नमेव अवभासनं; त्रैकालिकत्वावभासस्तु 
+[वभासः तेषां मायीय ग. ।] एषां मायीयप्रमातृनिष्ठितं 
+निर्भासनमपेक्ष्य, तदपि तेषां सार्वज्ञ्यात् न न स्फुरति । चकारेण 
+इदमाह- मन्त्रेश्वराणामधिकारक्षयात् मोक्षेऽपि तत्स्थाने परस्य 
+अणोस्तावत्पदप्राप्तिनिमित्तदीक्षाव्रतजपतपःसमाधानचर्या-
+नुष्ठानमहिम्ना संक्रमणे तस्यापि सर्वज्ञभावात् त्रैयम्बिके 
+अर्थसार्थेऽकदर्थित एव प्रमातृभावः,- इति मन्त्रेश्वरापेक्षयापि 
+नित्यमेव इति युक्तम् । पश्वणून् इति पश्वणुतामात्रं सामान्येन 
+अपेक्ष्येत्यर्थः । तत्त्वभुवनादयः इति आदिपदेन भावभूतादीनां 
+कलामन्त्रपदवर्णानां च ग्रहणम् । घटादयोऽपि 
+तज्जातीयतापेक्षया न अत्यन्तापूर्वे केचित् । इतिशब्द उक्तस्य अर्थस्य 
+हेतुतां भाविनि अर्थे- न तदानीमेव सृष्टाश्च संहृताश्च- इत्येतत् 
+द्योतयति । तमेव हेतुं संक्षेपेण आह पूर्वसृष्टत्वेन इत्यादिना । 
+इयता पूर्वपक्षे यदुक्तं कथं व्यवहारकाले निर्माणं स्यादिति 
+इति, तत्र युक्तवादितैव पूर्वपक्षवादिनो दर्शिता । कथं तर्हि 
+निर्माणता,- इत्याशङ्कामधिकसंभवविशेषद्योतनोपक्रमे 
+पराकरोति किन्तु इति । तदा इति तस्मिन् समये । येन इति ऐक्यगमनेन । तथा 
+सति इति प्रतिप्रमातृ यदि भिन्नभिन्नो घटाद्याभासो देहाभासश्च । 
+उक्तम् इति वासनाप्रबोधसूत्रे (१।५।५)
+
+	चिदात्मैव हि..................................... । (१।५।७)
+
+इति सूत्रे च । ननु एवं विघटेतैव प्रमातृभेद इत्यत आह नतु 
+
+(पगे ३२६)
+
+इति । प्राणपुर्यष्टकादौ तृट्शाखादिभेदव्यवस्थायास्तादवस्थ्यादिति 
+भावः । नच अत्र विप्रतिपत्तिः कस्यचिदिति दर्शयितुं ज्ञानं च इति यत् 
+वक्ष्यति तत् प्रकृतेन संगमयितुं स एव अवभासो ज्ञानमुच्यते 
+इत्याचष्टे । ननु अवभासो घटादिरूपो वेद्यस्तत्कथं स ज्ञानं स्यात् । 
+आह प्रमातृव्यापाररूपा च इति । सैव अस्य कथमिति चेत्, आह 
+प्रमातृनिष्ठत्वेन इत्यादि । ननु एवं प्रमात्रिच्छया 
+प्रमात्रन्तरसंयोजनयुक्त्या प्रतिक्षणं प्रमेयाणां 
+प्रमातॄणां च निर्माणं संहरणं च, तत् कथं महेश्वरो 
+भसयति इति उक्तं वृत्तौ,- इति चोद्यं उच्चाटयति सा च इति । एवमर्थमपि 
+इति । न केवलं वृत्तिगतस्य क्रमपदस्य 
+शुद्धादिरूपतापरिपाटीमात्रमभिधेयमपितु 
+प्रमात्रन्तरसंयोजनपरम्पराप्रवाहोऽपि । एतद्विक्षिप्तीभूतं 
+संक्षिप्य उपसंहरति तदेवम् इति । सर्गस्थितिभ्यां पञ्चधापि 
+कृत्यमुपलभ्यते । देहादिमाविशन् बहिः इति यद्विशेषणद्वयं 
+तद्व्यतिरेकेण योऽर्थः सूत्रात् अवगम्यते, तं प्रकटयितुं या वृत्तिः 
+देहादि इति; तां व्याचष्टे यदा पुनः इति । सकृदेव इति विच्छिन्नत्वेन 
+अक्रममित्यर्थः, अनेन युगपत् पदं वृत्तौ कालक्रमाभावतात्पर्येण 
+व्याख्यातम् । ननु परमशिवदशामस्पृशतैव वृत्तिकृता केन आशयेन 
+सदाशिवेश्वरदशा इयमुक्ता । उच्यते, इह चिदात्मनि 
+भावराशिरन्तारूपत्वेन अहमित्येव भातीति प्रकृतं प्रमेयम्, तत्र 
+कश्चिदाशङ्कते- अहमितिनिर्भासने भाववर्गो निर्भात इति किमेतत्, 
+सदाशिवेशभुवि भवतु नाम तथा इदन्तोन्मीलनादिति स प्रत्याय्यते, 
+सदाशिवादिभूमावपि कथं भाववर्गो भाति, स हि क्रमिकः 
+प्ररूढेदंभावश्च । अथ उच्यते भावानां तावदिदमितिरूपं, 
+तच्च अत्रापि अस्ति प्ररोहक्रमिकत्वे तु 
+मायाकालप्रभृतिशक्त्यन्तरविजृम्भितमिति,
+
+(पगे ३२७)
+
+तर्हि भावानां प्रकाशतैव पारमार्थिकं 
+वपुरप्ररूढेदन्तोन्मेषस्तु विद्याशक्तिविजृम्भितमिति, ततो यथा 
+सदाशिवादिपदे सामानाधिकरण्यादभेदविश्रान्तेन भेदेन सन्त एव 
+मायायां भेदेन भान्ति, तथा शिवपदेऽत्यन्ताभेदेन सन्त एव अत्र 
+इति सदाशिवादिभुवि एवं इति सामानाधिकरण्येन भान्ति,- इत्येतद्वस्तु 
+अनेन इति ऐश्वर्यदशाभिधायिना वृत्तिग्रन्थेन प्रतिपादितं 
+दृष्टान्तमभिदधता, दार्ष्टान्तिकं तु प्रकरणापन्नत्वादवगम्यते 
+इति दर्शयति अवस्थित इत्यादिना । तथाच इति एतेन उक्तेन प्रमेयप्रकारेण 
+वक्.यमाणसूत्रार्थोऽप्रयाससिद्धः इति ॥ ७ ॥
+
+	अन्तरर्थावभासे स्थिते किं कारणान्तरचिन्तया,- इति प्रकृतं 
+प्रमेयं प्रसक्तानुप्रसक्तेन प्रत्यवमर्शविकल्पादिनिरूपणेन 
+विच्छिन्नकल्पं शिष्यधियि निधातुं निगमयति
+
+	एवं स्मृतौ विकल्पे वाप्यपोहनपरायणे ।
+	ज्ञाने वाप्यन्तराभासः स्थित एवेति निश्चितम् ॥ ८ ॥
+
+	एवं स्मृतौ इति सूत्रेण स्मृतिज्ञानापोहननिरूपणानि त्रीणि 
+प्रकरणानि एकीकुर्वता यदुक्तं- प्रभुरेव इदं भासयति, ततो 
+ज्ञानादौ पशुप्रमात्रपेक्षया यद्यपि भिन्ना बाह्याश्च भावाः; 
+तथापि परमार्थप्रमातैव जानाति स्मरति अध्यवस्यति,- इति 
+वस्तुतोऽन्तःस्थिता एव घटाद्याभासाः,- इति अयत्नसिद्धमदः । यदि तु 
+देहादिरेव परमार्थतः प्रमाता, तदा तत्र घटाद्यवभासोऽस्ति,- इति 
+किं केन संगच्छेतेति सूत्रार्थः । विवृतिरत्र स्पष्टप्रायैव । प्राक् इति 
+ज्ञानस्मृत्यादिसूत्रे (१।३।७) । नहि इति एको हिशब्दः प्रागेव अस्य अर्थस्य 
+आत्मसंस्थाद्यवभासने सूत्रोक्ते हेतुत्वेन निर्देशः,- इति दर्शयति । 
+प्रकृतप्रमेयसमर्थनहेतुतया 
+
+(पगे ३२८)
+
+यस्मादुक्तमेतत्, तस्मादन्तः संनिविष्टा एव तथा स्फुरन्ति,- इति 
+युक्तमेव । तथाहि सति इति अयं घट इति विमर्शे वेद्यत्वमेव स्फुटं 
+भवेदिति का चिदात्मता भवेत् । इयता आनुरूप्यपदं विवृतम् । ननु 
+इदमितिविमर्शो भावानां स्फुरितं, नतु अहमितिविमर्शः,- 
+इत्याशङ्कामनुवदन् परिहरति नच इति 
+
+	प्राक्........................................... । (१।५।२)
+
+इति 
+
+	अहंप्रत्यवमर्श........................... । (१।६।१)
+
+इत्यादिसूत्रद्वये । एतत् संवादयति सैवच इति । चः 
+संवादनद्वारमतान्तरसमुच्चयद्योतकः । तदुक्तं कक्ष्यास्तोत्रे
+
+	सर्वेऽनुभूता यदि नान्तरर्था-
+		स्त्वदात्मसात्कारसुरक्षिताः स्युः ।
+	विज्ञातवस्त्वप्रतिमोषरूपा
+		काचित्स्मृतिर्नाम न संभवेत्तत् ॥
+
+इत्यादि ॥ ८ ॥
+
+	ननु एवं स्मरणविकल्पज्ञानेषु अन्तरवभासस्य 
+परमार्थवृत्तेन बाह्यतावभासस्य च मायाशक्त्यनुसारेण 
+अविशेषः,- इति अस्फुटस्फुटतादिर्यो विशेषो निर्भासते, स किंकृतः,- 
+इत्याशङ्कायां सूत्रं
+
+	किन्तु नैसर्गिको ज्ञाने बहिराभासनात्मनि ।
+	पूर्वानुभवरूपस्तु स्थितः स स्मरणादिषु ॥ ९ ॥
+
+	यद्यपि अस्ति अयमविशेषः, तथापि विशेषोऽपि अस्ति विशेषहेतोः 
+सद्भावादिति किन्तु इत्यनेन द्योत्यते । तथाहि पूर्वं बहिराभासनरूपे 
+[अवभासन क. ।] ज्ञाने घटाभासो निसृष्टेः 
+स्वातन्त्र्यादनन्यशरणतयैव
+
+(पगे ३२९)
+
+आयातो व्यवहारकालप्रथमदर्शनेन प्रथमनिर्माणकाले वा 
+ततोऽपूर्वोन्मेषयोगादिति स्फुटः, आभासनक्रियायां हि आयतमान 
+आभासस्तस्या अपूर्वत्वेन स्फुटतया च अपूर्वश्च स्फुटश्च घट 
+[पटः क. ।] इव निर्माणक्रियायाः, अन्यथा घटोऽपि कथं 
+कदाचिदपूर्वः, कदाचित् नेति भवेत्, तत्क्रियारूपमेव कार्यैरन्वीयते । 
+स्मरणादौ तु न स्वातन्त्र्यायातोऽसौ । अनुभववासनाशरणतया यतो 
+भवति, ततः परिभोगधूसरितप्राय इव असौ निर्माल्यकल्पः परिम्लान 
+एव अवभासः । अनुवर्तमानता हि नाम अनुभवस्य संस्काररूपता, 
+अनुभवश्च नीलाद्याभासमयः;- इति 
+तदनुभवतादात्म्यापत्तिबलायातः स्मरणादौ सोऽर्थाभासो 
+[अर्थावभासः क. ।] न अव्यवहितत्वेन प्रकाश्यः,-इति अस्फुट एव । 
+संक्षिप्य सूत्रार्थमवतारयन् प्रसरति इत्यन्तेन 
+प्रथममर्धमवतारयति । सर्गद्वयेऽपि इति ऐक्यविशिष्टे 
+इदमहंभावसामानाधिकरण्यसारे ऐश्वरे शुद्धे, इतरत्र च 
+अशुद्धे, व्यवहारकालेऽपि यः साक्षात्काररूपाणां संविदां 
+क्रमोऽनुभवपरम्परा तत्रापि,- इत्येवं बहिराभासनात्म ज्ञानं 
+त्रिधा निरूपितम् । सहज इति भगवत एव स्वातन्त्र्यादुल्लसित इति यावत् । 
+द्वितीयमर्धमवतारयति स्मृति इति । ननु परमेश्वरस्य 
+अविच्छिन्नप्रकाशविमर्शस्वातन्त्र्यपरमार्थस्य न 
+स्मरणादिकमुपपद्यते [अस्मरणादिकं ग. ।] इत्याशङ्कां तस्यैव 
+परिगृहीतक्षेत्रज्ञभावस्य स एव हि तत्र तत्र शरीरादौ स्मरति अवस्यति 
+उत्प्रेक्षते अपोहति इति कथितनीत्या युज्यते,- इति निरूपयन् निर्मूलयति 
+क्षेत्रज्ञानाम् इति । ननु वृत्तौ ज्ञाने बहिरवभासनरूपे इत्यनेन 
+ऐश्वरसर्गो न स्पृष्ट एव, तत्र कोऽभिप्रायः,- इति निरूपयति 
+ईश्वरदशा इति । न असौ काचित्
+
+(पगे ३३०)
+
+तृतीया दशा येन पृथक्परिगणनं सहेत । सर्वानुयायिनी हि सा संवित् 
+परमशिवसंविदिव, तेन तत्र कथमाभासचिन्ता पृथक् भवेदिति 
+तात्पर्यम् । तस्य इति प्रमात्रन्तरैकीभावस्य । उक्तम् इति चित्तत्त्वस्य अन्तः 
+इति वृत्तिग्रन्थेन । एतदेव संवादयति अत एव इति । यदेतदुक्तं 
+प्रमात्रन्तरैकीभावः क्रमेण सृज्यते भगवता इति, तत 
+एतदुपपन्नम् । यदुच्यते सर्वत्र आगमे 
+
+	प्रवृत्तिर्जन्तूनामैश्वरी
+
+इति । एतदेव स्पष्टयति तथाहि इति । कलाशक्त्या इति 
+किंचित्कर्तृत्वोपोद्बलनसामर्थ्यादिच्छाविषयीकृते इष्यमाणे 
+ग्रामादावर्थे कायस्पन्दगमनादिकमीश्वर एव आभासयंस्तथा 
+भासते इति । सा तावत् इति एकव्यवहारमात्ररूपा अपि ऐश्वरी इति यावत् । 
+परतोऽपि इति उक्तैवंरूपगमनादिप्रवृत्तिमध्य [मय्येव क. ।] एव 
+निर्भासमानेत्यर्थः । इयं तु व्यवहारकालेऽपि स्पष्टैव ऐश्वरी 
+प्रवृत्तिरिति दर्शयति द्विचन्द्रादि इति । बहुब्रीहिगर्भो द्वन्द्वः । तत्र 
+प्रथमेन पदेन ऐन्द्रियिको विभ्रमोऽपरेण मानसः संगृहीतः । एवं 
+ज्ञानरूपे व्यवहारे नवां सृष्टिं प्रमात्रन्तरमेलनेन 
+कायप्रवृत्त्या भ्रमद्वयेन च चतुर्विधामुपपाद्य क्रियारूपे 
+व्यवहारे व्यवस्थामाह घट इति । तत्त्वेष्विव इति तदनन्तरं 
+नोत्पादनम् इति एतदपेक्षया साधर्म्यदृष्टान्तः । 
+साधर्म्यसमर्थनाय तु हेतुः आदिसर्गसृष्टत्वात् इति । 
+धूममदृष्ट्वापि इति अनुमानाशङ्कां निराकुरुते । 
+प्रसिद्धस्मृतिवैलक्षण्यं समर्थयते नन्वभ्हुत् इति । अवस्यति इति 
+पूर्वेण संबन्धः ननु किमर्थमादिपदमियति नीयते 
+प्रत्यक्षसमनन्तरभाविविकल्पपरिग्राहकं
+
+(पगे ३३१)
+
+किमिति न व्याख्यायते । अत्र आह दृश्यमान इति । ननु 
+एवमचिरवृत्तप्रत्यक्षप्रभवोऽपि विकल्पो दृश्यमानविकल्पवदेव 
+पूर्वकालत्वापरिस्फुरणादसंस्कारज एव युक्त इति न 
+असावादिग्रहणेन संग्राह्य [संग्राहः ग. ।] इत्याशयेन 
+पक्षान्तरमाह अथवा इति स नैसर्गिक एव इति वक्ष्यमाणसूत्रयोः 
+स्वतन्त्रविकल्पेषु विकल्पनीयार्थानां योजनांशे पशोः स्वातन्त्र्यं 
+वक्ष्यते, नतु योज्यमानांशे, नहि अननुभूतं जलं ज्वलनं च 
+योजयेत् कश्चिदिति । तेऽर्था इति तद्विकल्प्यमानार्थविषयतया 
+योज्यमानांशविषया विकल्पा निर्दिष्टा आदिग्रहणेनेति संबन्धः । 
+विषयविषयिणोरत्र न वास्तवो भेदः,- इति निरूपयितुमुपचारेण 
+तेऽर्था इति तदर्थविषया विकल्पा मन्तव्याः, 
+संस्कारसंज्ञोऽन्तस्तमोवरणप्रच्छनाभासत्वेन [संसारसंतः 
+ग. ।] संस्कार इति यस्य नाम तादृशोऽर्थावभासस्तस्मादेव 
+आवरणापसरणमहिमप्रबुद्धात् जाता, तस्य अर्थाभासस्य यद्यपि 
+तदानीं न पारमार्थिकं संवेदनेन ऐक्यं सुषुप्ततया 
+शक्तिरूपस्य अवस्थानात् तु तमसा वरणेन पृथगाभासो भवन् न 
+भवेत् दशीयो ? यतः संपन्नस्तत इदानीं वरणविगमे स एव 
+पृथगाभासोऽधुना समुन्मीलितः,- इति तत्पृथत्करणरूपा 
+स्मृतिरित्याह । एतदेव स्पष्टयिष्यति अनुभूताभास इत्यादिना । 
+विशेषानिर्देशात् इति । अकर्तृकायाश्च क्रियाया अभावो 
+विशेषानभिधाने सामान्यस्य कर्तृत्वेन प्रतिपत्तिरवश्यं भाविनी,- 
+इति अभिप्रायशेषः ॥ ९ ॥
+
+	ननु बहिराभासनात्मनि ज्ञाने नैसर्गिकत्वेन अन्तराभासस्य 
+अव्यवधानेन बहिराभासनमित्याभासगतं स्फुटत्वमित्युक्तं, 
+तदन्यत्र स्मरणादौ अन्यव्यवधिना [व्यवधानात् क. ।] 
+बहिराभासनात् तात्कालिकत्वाभावादस्फुटत्वमाभासस्य,-
+
+(पगे ३३२)
+
+इति लभ्यते एव, तत्किमर्थं द्वितीयमर्धम् । सत्यं, एवं तु 
+अनुभववर्जं सर्वसंविदामेक एव वृत्तान्तः स्यात्, नच एवमिति 
+दर्शयति सूत्रेण
+
+	स नैसर्गिक एवास्ति विकल्पे स्वैरचारिणि ।
+	यथाभिमतसंस्थानाभासनाद् बुद्धिगोचरे ॥ १० ॥
+
+	स्वैरम् इति परप्रेरणनैरपेक्ष्येण स्वतन्त्रतया यश्चरति उदेति व्येति 
+च तच्छीलश्चेतसो व्याक्षेपसात्मीभावात् मनोराज्यादिविकल्पस्तत्र 
+नीलादेरन्तराभासमयस्य यो बहिराभासः, स नैसर्गिको न न भवति, 
+अपितु अस्ति । ननु न असौ नैसर्गिकः, तत्रापि हि तद्गवाश्वं 
+पूर्वानुभवविषयीकृतमेव विकल्प्यते इति चोद्ये निरूपयति यथा इति, 
+श्वेतं दन्तदशकाकीर्णकरत्रयकलितवदनं दन्तिनमन्तः 
+प्रमातृभूमौ स्थितं स्वच्छबुद्धिमकुरलक्षणे बाह्यगोचरे 
+विकल्पस्तात्कालिकमाभासयति स्वेच्छानुसारेण,- इति 
+संस्थानयोजनांशेन अस्य अनुभवानुसारित्वमिति अस्ति नैसर्गिकोऽसौ । 
+नास्ति इति योज्यमानोऽपि भागः 
+पूर्वकालापरामर्शादनुभवानुपजीव्येव, अर्थतत्त्वचिन्तया [तत्वे ग. 
+।] तु प्रागुक्तं तथापि तेऽर्था इति । अनुभवानुसारेण तु गजनिमीलिकया 
+आभासवस्तुवादे यथाभासं व्यवस्था,- इति नवत्वमेव युक्तमिति 
+सूत्रार्थः । ननु सौगतवत् किमिह विकल्प एव स्वतन्त्रो येन वृत्तौ तथा 
+उक्तमिति भ्रान्तिं निरस्यति क्षेत्रज्ञ इत्यादिना । उपचारफलमाह 
+देशादि इति । 
+प्राच्यानुभवविषयीकृतवस्तुगतदेशकालप्रमात्रन्तरसाचिव्यादि-
+पारतन्त्र्यपराकरणप्रवणा इयमुक्तिरिति यावत् । तस्मात् इति 
+आभासमानतैव वस्तुनः परमार्थः, नच 
+असावसंवेद्यमानाङ्गुलिमोटनहठारोपणार्हा 
+
+(पगे ३३३)
+
+भवति,- इति भावः । विभागः इति 
+संस्कारजत्वतदभावयोरनुभवसिद्धोऽयं 
+विषयविभागोऽभ्युपगम्य इत्यर्थः । अनेन विषयविभागेन यावति 
+पूर्वदृष्टतानुसन्धिरुपयोगी, तावति शब्दनगोचरीकरणीयेन । नच 
+तात्त्विकं तन्निर्माणमिति स्फुटयति परस्तात् इति
+
+	पृथग्दीपप्रकाशानाम्..................... । (२।३।७)
+
+इति सूत्रे । ननु स्वालक्षण्यापत्तौ तद्विरुद्धा सामान्यरूपता हीयेत, 
+ततश्च तन्मुखेन शब्दनीयता या समर्थिता, सापि विघटेत । 
+नैवमित्यत्र हेतुमह तथा इति । नहि निकुरुम्बरूपत्वे तद्रूपत्वं 
+विरुद्धं योधरूपत्वमिव सेनात्वे इति । नित्यं व्यापकं च इति 
+सकलकालदेशयोगात् [सकलदेशयोगात् ग. ।] । ततश्च पूर्वदृष्टं च 
+तदा दृष्टं च,-इति एकमेव तत्, नतु अनुसन्धानबलात् यत्नत 
+एकतानेयं, अभिलापसंसर्गसंकेतकरणोपयोगी विकल्पप्रत्ययः, 
+तद्वासनाप्रबोधादवभास ऐन्द्रियिकं विज्ञानं यस्य तादृशं तत् 
+सामान्यं भवतीति संबन्धः । ननु यदि अत्र अंशे 
+पूर्वानुभवसंस्कारजत्वं किमन्यत् तर्हि नैसर्गिकम् । आह स्वलक्षण 
+इति । प्रागेव इति पूर्वसूत्र इव इदं प्रमाणेन उपपादितम् । आभाससारे 
+हि पदार्थवर्गे आभासनक्रियैव प्राधान्येन विजृम्भते, तत एव 
+क्रियाशक्तिविस्फारमात्रं भगवतो जगदिति कृतमतयो मन्यन्ते । 
+आभासनक्रिया च यावदपूर्वा नैसर्गिकी व्यवधानवन्ध्या 
+तात्कालिकतालिङ्गितस्फुटभावा वर्तते, तावदाभासोऽपि स्फुटोऽभिनव 
+एव । घटस्यापि इह इत्थमेव नवता, न अन्यथेति दर्शितमेतत् । अत एव 
+पूर्वदृष्टाभासमुखेन न कुत्रचित् परमार्थतो निर्माणसंकथा 
+सावकाशा, प्रकाशरूपतया सर्वस्य सदैव स्वयमेव 
+परमार्थसत्त्वे कस्यचित् 
+
+(पगे ३३४)
+
+निर्माणमित्यवकाशाभावात्, आभासनक्रियामुखेन तु अपूर्वत्वं 
+कुलगिरिप्रभृतेरपि
+
+	प्रतिक्षणमविश्रान्त.................. । (स्त. चि. ११२)
+
+इति कथितयुक्त्या भवति,- इति तदपि सृज्यते एवेति सदासृष्ट्यादिशक्तियोगोऽपि 
+भगवति न न उपपद्यते इति तात्पर्यम् । यत् यथा प्रकाशते, तत् तथा 
+परमार्थसत् प्रकाश इव, तथाच भावानामपूर्वतया सपूर्वतया 
+च आभासनमिति स्वभावहेतुः । परमार्थसत्ताव्यवहारो हि 
+तथाप्रकाशनमात्रेण व्याप्तो निमित्तान्तरायोगात् । इदन्ता इति 
+नालिकेरद्वीपवासिनो यदि पृथिव्याद्याभासो न विदितः 
+सत्त्ववस्तुत्वाभासस्तु स्वशरीरदर्शनसमये विदित एवेति मन्यते । ननु 
+यदा गर्भशरीरे प्रथममस्य साहा.........षंवित् देहप्राणविषया 
+अहमिति प्रबुध्यमाना देहादिकमपि विषयीकरोति, तदा 
+अत्यन्तापूर्वत्वेन तस्य देहादिस्वलक्षणस्य 
+संकेतविषयीकृतत्वाभावात् कथं तत्र अभिलापसंसृष्टता 
+प्रत्ययस्य भवेत् यतः संस्कारजत्वं स्यात्,- इति शङ्कां निकृन्तति 
+तथापि इति ।
+
+	स्वभावमवभासस्य.................. । (१।५।११)
+
+इति हि अत्र प्रागुपपादितम् । इदन्ताविमर्शे इकारादिसंभेदमन्तरेणापि 
+सहजोऽङ्गुलिनिष्क्रमनिर्देशप्रख्यो भगवन्मायाशक्त्युपपादितः 
+समस्तेतरशब्दसंकेते चित्रकर्मकुड्यकल्पः संभवत्येव कृतकः इति । 
+इत्थं विषयविभागमभिधाय प्रकृतमुपसंहरन्ननुबध्नाति 
+एवंच इति । सामान्यरूपतायाम् इति 
+अनादृतपरस्परसंमेलनाकलितपृथग्भावायामित्यर्थः । पूर्वं 
+पूर्वं दृष्टमेव इति पूर्वदृष्टतामेव प्राधान्येन समुल्लिखति, 
+यावदर्थस्य स्वतन्त्रविकल्पं प्रति कल्पनीयतां गतस्य योऽवभासो, न 
+असौ पूर्वानुभूतः । तत्रैव तु विकल्पे यो योज्यमानरूपः 
+सामान्यांशः, स न अपूर्वो, नहिच विकल्पस्तत्र अंशे 
+स्वतन्त्रोऽनुभववासनोपजीवित्वादिति । तत्र इति वृत्तौ स्वतन्त्रविकल्पो 
+निर्दिष्टः, तस्य च अधिकरणत्वादौपश्लेषिकादेश्च अधिकरणस्य 
+स्वतन्त्रवस्तुद्वयविषयस्य इह असंभवात्, विषयविषयितात्मनश्च 
+अनुक्तसमत्वप्रसङ्गादन्तर्भावनलक्षणव्याप्यमधिकरणं 
+प्रतीयते,- इति दर्शयति स्वतन्त्र इति । 
+एवमर्थसामर्थ्यादन्तरर्थलाभं व्याख्याय 
+प्रकरणसामर्थ्यादपि व्याचष्टे पक्षान्तरपरिग्रहद्वारेण अथवा इति 
+। एवं स्मृतौ इति हि यदत्र उपसंहृतम् अन्तराभासः स्थित एवेति तदेव 
+सूत्रद्वयेन अमुना विभागेन प्रकटीकृतमिति तदनुसारेण विकल्पे इति 
+सौत्री सप्तमी अन्तरर्थं प्रस्तुतमाक्षिप्यैव वर्तते, तदनुसारेण च 
+वृत्तावपि तत्रशब्दः । वृत्तिव्याख्यानद्वारेण च सौत्रमत्र तत्त्वं 
+व्याख्यातं, वृत्तिविकासरूपा विवृतिरिति हि उक्तम्, एवमग्रेऽपि तत्र तत्र 
+अवधातव्यम् ॥ १० ॥
+
+	अन्तराभाससंभवोपपादनप्रसङ्गायातादाभासवैचित्र्य-
+विचारात् तदपि अयत्नसिद्धं जातं
+
+	यत्सिद्धावन्यप्रकरणसिद्धिः । (न्या. सू. १।१।३०)
+
+इति अधिकरणसिद्धान्तलाभात् यदिह शास्त्रे स्वात्मनि 
+ईश्वररूपताप्रत्यभिज्ञोपायप्रकटीकरणं नाम मुख्यं 
+प्रयोजनमिति निरूपयति सूत्रेण
+
+	अत एव यथाभीष्टसमुल्लेखावभासनात् ।
+	ज्ञानक्रिये स्फुटे एव सिद्धे सर्वस्य जीवतः ॥ ११ ॥
+
+	बहिरत्यन्तासत्त्वादननुभूतस्य सम्यगुल्लेखनं 
+निर्माणपूर्वकं यदवभासनं 
+
+(पगे ३३६) 
+
+प्रसङ्गवशेन दर्शितम्, अस्मादेव हेतोः सर्वस्य ब्रह्मादेरपि 
+कीटपर्यन्तस्य [कीटक ग. ।] वेद्यरूपदेहाद्यात्ममानितया 
+प्राणधारणवतो जीवतो ज्ञानं अवभासनात्मकं, क्रिया च 
+स्वोल्लेखनिर्माणरूपा [उल्लेख क. ।] स्वातन्त्र्येणेति शक्तियुगलकमपि 
+सिद्धमिति । तदिदानीं सुष्ठुतमां दृढीभूतं यदवोचाम-सर्वस्य 
+आत्मा महेश्वरो ज्ञानक्रियायोगात्-इति,-इति सूत्रार्थः । सर्वेषाम् इति 
+बहुवानोपक्रमम् । ऐश्वर्यम् इति एकवचनं पारमार्थिकमद्वयमेव 
+मायीये सत्यपि द्वयावभासे इति दर्शयति । यतो बहिराभासीक्रियते, ततो 
+बहिष्क्रियेत्यादि,- इति संबन्धः । अत्रैव च मध्ये अस्यैव हेत्वर्थस्य 
+व्यतिरेकद्वारेण स्पुटीकरणं ननु [नतु क. ।] इति । वृत्तियोजनं च 
+एतत्मध्य एव, तदाह इत्यादि । यथा इति येन प्रस्तुतप्रसङ्गप्रकारेण 
+इदमायातं-यत् क्षेत्रज्ञो न केवलं स्मृत्यैव बुद्धिभूमौ 
+वेद्यत्वेन बाह्यत्वेन अर्थमाभासयति, यावत् 
+स्वतन्त्रविकल्पनव्यापारेणापि- इति, तेन प्रसङ्गप्रकारेण यदर्थोऽयं 
+शास्त्रारम्भोद्यमः, सोऽपि 
+ईश्वररूपताप्रत्यभिज्ञापनोपायनिरूपणक्रमोऽवसितो लब्धः । 
+कथम् । आह अनेन इति स्वतन्त्रविकल्पनात्मकव्यापारप्रकारेण 
+उक्तेनेत्यर्थः । सिद्धेः समुच्चयोऽन्यदपि पूर्वप्रकृतं सिद्धं न 
+केवलमविदूरप्रकारन्तमिति यः, स चेन वृत्तौ द्योत्यते । सूत्रे तु इति 
+एवकारेण अयं सिद्धिसमुच्चयः कृतोऽतःशब्दसहायेन । अतःशब्देन 
+हि पूर्वसूत्रहेतुता न त्यक्ता,- इति सूचितम् । एवशब्देन तु अत्र हेतुतां 
+गच्छन्नेव अयमर्थः साध्यान्तरं प्रसाधयति, नतु तत्र 
+हेत्वन्तरमभिधानीयमिति हेत्वन्तराभिधानावकाशव्यवच्छेदं 
+द्योतयता सिद्धिसमुच्चयः क्रियते इति । सर्वत्र इयम् अत एव इत्यस्य 
+गमनिका मन्तव्या । प्रवृत्तिविशेषैः इति ।
+
+(पगे ३३७)
+
+तिर्यञ्चोऽपि हि अकस्मादेव त्रासहर्षयुक्ता इव
+
+	बुद्धिपूर्वां क्रियां दृष्ट्वा..................... ।
+
+इति न्यायेन । श्रीमद्भट्टप्रद्युम्नपादैः 
+संविच्छक्तिप्रसरमात्रतां षट्त्रिंशत्तत्त्व(क्त्व्या)मुपपाद्य यत् 
+वितत्य विकल्पप्रतिभासनस्य स्वातन्त्र्यमुदितं, तत्र एतत्सूत्रार्थ एव 
+सारमिति मन्तव्यम् । तदेवमियता ज्ञानस्मृतिशक्त्योरनुग्राहिका 
+अपोहनशक्तिर्वितत्य समर्थितेति शिवम् ॥ ११ ॥
+
+इति श्रीमहामाहेश्वरश्रीमदाचार्याभिनवगुप्तपादविरचिता-
+यामीश्वरप्रत्यभिज्ञाविवृतिविमर्शिन्या-
+मपोहनशक्तिविमर्शः षष्ठः ॥ ६ ॥
+
+
+
+(पगे ३३८)
+
+अथ सप्तमो विमर्शः ।" data-en="**The inner appearance stands firm — for every living one**
+
+The ṣaṣṭho vimarśa, on the power of removal, comes to its close; and its final claim is one of
+unfailing constancy. The inner appearance — the self-grasp, the reflexive-awareness — stands firm in
+memory, in construction, and in cognition alike (kārikā 8). It is not something that flickers in and
+out, present in cognition and absent in memory. It is the one light that runs through them all. In the
+cognition whose form is the external manifestation, this inner appearance — the prior-experience-form —
+is innate (kārikā 9); and it stands, too, in memory and the rest. In the freely-wandering construction,
+the inner appearance is innate indeed (kārikā 10): the construction may wander at will, forming this or
+that shape, but the self-grasp that shapes it is always there, in the mind&#x27;s range. And hence — from the
+manifestation of the uplifting as wished — knowledge and action are clear, established for every living
+one (kārikā 11).
+
+And this constancy extends even to the freed. Even in liberation, the freed souls (muktāṇava) are
+distinct — yet their manifestation, by the śiva-ness, is the un-broken all-knowing. The three-time
+manifestation may be established in the māyīya knower, but it does not fail to flash for them either,
+from their all-knowing. And the mantreśvaras — even in liberation, by the exhaustion of their authority,
+in the place of the other — by the word-obtaining (the dīkṣā, the vow, the japa, the tapas, the
+concentration, the conduct), transmigrating, are all-knowing; the knower-ness is not de-valued. The
+animal-atoms are distinct only in their animal-ness, generally. The categories, the worlds, the
+elements, the kalā, the mantra, the word, the phoneme — the jars and the rest, with respect to their
+own class, are not utterly unprecedented.
+
+The objection &quot;how, in the dealing-time, is the creation?&quot; is met. The creation is by the unity — at
+that time, per-knower, the jar-appearance and the body-appearance are distinct, but the consciousness-
+self alone [creates them]; and the knower-distinction is not destroyed, for it stands in the
+prāṇa-puryaṣṭaka and the like. And the appearance is the cognition: the jar-form appearance, though
+known, is of the knower-operation-form, of the knower-standing-ness — it is the cognition itself. The
+final objection — &quot;then by the knower&#x27;s will, per-moment the creation and withdrawal of objects and
+knowers — how does the maheśvara shine?&quot; — is answered: the order-word&#x27;s pure-form-sequence is not the
+whole; the maheśvara, the Lord, is the one who shines through it all.
+
+So the vimarśa closes with the constancy of the self-grasp. It is innate in memory, in cognition, in
+construction; it stands firm for the bound and for the freed, for the animal-atom and the mantreśvara;
+and from its manifestation — the uplifting as wished — knowledge and action are clear for every living
+one. The inner appearance, the reflexive-awareness, never fails: it is the very nature of the light,
+and it is what makes every living one a knower and a doer. The apohanaśaktivimarśa — the reflexion on
+the power of removal — here comes to its close.
+
+---" style="display:none"></div><div class="pn"><a href="/ipvv/chunkV2-M-sastho-vimarsa-k6-7.html">← chunkV2-M-sastho-vimarsa-k6-7</a><a href="/ipvv/chunkV2-O-saptamo-vimarsa.html">chunkV2-O-saptamo-vimarsa →</a></div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
@@ -540,4 +993,165 @@ links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c
 if(!cur&&links.length)links[0].classList.add('on');}
 window.addEventListener('scroll',spy,{passive:true});spy();}
 })();
-</script></body></html>
+</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script></body></html>

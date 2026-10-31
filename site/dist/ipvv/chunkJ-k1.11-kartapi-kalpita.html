@@ -81,15 +81,44 @@ main{max-width:100%}
 .depth{top:53px}
 .verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
 }
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html">Trika Library<small>sanskrit · translation · proof</small></a>
-<nav class="topnav"><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkJ-k1.11-kartapi-kalpita</h1><div class="skt"></div><div class="sub">IPVV · M00020</div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">     pāratantryādyayogācca tena kartāpi kalpitaḥ || 11 ||
+<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>chunkJ-k1.11-kartapi-kalpita</h1><div class="skt"></div><div class="sub">IPVV · M00020</div><div class="recitetools"><button class="vplay" data-play-all>Recite this passage</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">READ</button><button class=" missing" data-p="2">ARGMAP · soon</button><button class="" data-p="3">STUDY</button><button class=" missing" data-p="4">GUIDE · soon</button><button class="" data-p="5">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev">     pāratantryādyayogācca tena kartāpi kalpitaḥ || 11 ||
 
      tathāhi sūtrāvataraṇamitthameva karoti tadevam iti | kriyāyāstāvadevamiti 
 kriyāpyarthasya iti tatra tatra sthite iti sūtradvayoktāt sādhakābhāvāt, 
@@ -297,7 +326,210 @@ Abhinavagupta will now restore: the self, the Lord, who is not constructed but r
 &gt; agent too is constructed&quot; (kartāpi kalpitaḥ). The &quot;thence&quot; gathers a fourfold absence: the absence of
 &gt; the action, the absence of the object, the absence of the relation, and the absence of the
 &gt; determination of the being. The relation is not, for the two-resting thing cannot be one; hence the
-&gt; agent, like everything else, is only a construction. This is the close of the no-self attack.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:5b225fdbeb52 · T1 chunk <i>sanskritree/chunkJ-k1.11-kartapi-kalpita.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="pn"><a href="/ipvv/chunkI-k1.9-1.10-kriya-karyakarana.html">← chunkI-k1.9-1.10-kriya-karyakarana</a><a href="/ipvv/chunkK-purvapaksa-siddhanta.html">chunkK-purvapaksa-siddhanta →</a></div><div class="pn" id="pnslot"></div></main>
+&gt; agent, like everything else, is only a construction. This is the close of the no-self attack.</div></div><div class="panel tpanel missing" data-p="4" style="display:none"><i>not yet formally done — never invented</i></div><div class="panel tpanel " data-p="5" style="display:none"><div class="en">immutable pt:pid:ipvv:5b225fdbeb52 · T1 chunk <i>sanskritree/chunkJ-k1.11-kartapi-kalpita.md</i> via <i>tools/fetch.sh</i> · L200 8-section audit per <i>specs/C1_SPEC + l200 spec</i> · L1 apparatus: V3B pilot in <i>samples/</i></div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div data-recite data-id="chunkJ-k1.11-kartapi-kalpita" data-label="IPVV · chunkJ-k1.11-kartapi-kalpita" data-sa="     पारतन्त्र्याद्ययोगाच्च तेन कर्तापि कल्पितः ॥ ११ ॥
+
+     तथाहि सूत्रावतरणमित्थमेव करोति तदेवम् इति । क्रियायास्तावदेवमिति 
+क्रियाप्यर्थस्य इति तत्र तत्र स्थिते इति सूत्रद्वयोक्तात् साधकाभावात्, 
+बाधकयोगाच्च योऽभावः नान्योऽस्ति, नान्यदस्ति इत्येवं सूत्रद्वये 
+निर्दिष्टः, संबन्धस्यापि योऽभावोऽस्तित्वनिश्चयाभावनास्तित्व-
+निश्चयरूपः एवमिति तत्र तत्र इत्युक्तेन साधकाभावेन द्विष्ठत्वादियुक्ति-
+
+(पगे २०२)
+
+भिश्च बाधकेन मिलित्वा उपपादितः, तदिदमभावचतुष्टयं मिलितं 
+कर्तापि कल्पितः इत्यत्र हेतुतां सूत्रे तेन इति नीतम् । सा हेतुता तु टीकायाम् 
+अभावात् इति पञ्चम्या संक्षेपादुक्ता । पञ्चमी चशब्दं च 
+पूर्वसूत्रेण संगमयति । संबन्धः इति नान्योऽस्ति संबन्धो 
+द्विष्ठस्यानेकत्वात् सिद्धस्यान्यानपेक्षणात् पारतन्त्र्यादियोगाच्च इति 
+संगतिः । संबन्धः इत्येतावन्मात्रं तु स्वकण्ठेन विवृतौ निर्दिष्टम् । 
+द्विष्ठस्य इति सामान्योक्तावपि प्रकरणात् संबन्धस्येत्ययमपि अर्थो 
+लभ्यतामिति । ननु दृश्यानुपलपलब्ध्यैव नास्तित्वनिश्चयकारिण्या सोऽर्थो 
+बाध्यते । वस्तुत इयमेव हि अस्य बाधा यत् निश्चितनास्तित्वावेदनं, नतु 
+द्रुघणेन इव शरावस्य विशरारूकरणम् । साच अत्र प्रदर्शितैव दृश्यस्य 
+प्रमाणेन अनुपलम्भादिति । सत्यम्, अनुपलब्ध्या तु नियतदेशकालावच्छेदेन 
+नास्तित्वप्रतिपत्तिः-इह अधुना घटो नास्तीति । यदाह
+
+     -नासत्तानिश्चयो विप्रकर्षिणाम् ।
+
+इति, यथा
+
+     इष्टं विरुद्धकार्येऽपि देशकालाद्यपेक्षणम् ।
+     अन्यथा व्यभिचारि स्याद्भस्मेवाशीतसाधने ॥
+
+इति । तस्मात् सार्वत्रिकीं संबन्धादेरसत्तामावेदयितुं पराभ्युपगततदी-
+यरूपासंभवसंपादको विरोधः प्रमेयनिष्ठो वक्तव्यः, यत् त्वयैव अस्य 
+रूपमुक्तं, तत् त्वदुक्तेनैव रूपान्तरेण विरुध्यते इति तत एव 
+तद्रूपद्वयविरोधसिद्ध्यैव बाधकाभिधायी कृतार्थो जायते इति 
+दूषणहेतौ न धर्म्यसिद्ध्यादिचोद्यप्रसङ्गः-इति वितत्य निर्णीतं 
+प्रसङ्गग्रन्थादावित्यास्तां तावत् । तत्र सामान्यलक्षणद्वारं 
+बाधकमुपन्यस्यति । यत् किल द्वयोः स्वरूपसमाप्त्या युगपत् तिष्ठति, तदेकं 
+न भवति वेश्मद्वयवर्ति घटद्वयमिव ।
+
+(पगे २०३)
+
+एकत्वं हि अभिन्नरूपत्वं, तद्विरुद्धेन च भिन्नरूपत्वेन व्याप्तं 
+द्वयोर्युगपत्स्वरूपसर्वस्वेन अवस्थानम् । अभिन्नरूपो हि यद्येवं स्यात् 
+घटादिः सर्वः, एकोऽपि एवं स्यादिति द्विष्ठत्वस्य क्वचिदेव भाव 
+इत्येवंरूपो यः खलु नियमो व्यापकः, सहीयेत । तद्विरुद्धव्याप्तोपलब्ध्या 
+एकत्वस्य निषेधः । एवं सामान्येन द्विष्ठैकसंबन्धमात्रे 
+बाधकमभिधाय तद्विशेषेऽपि अभिधित्सुराह सिद्धस्य इति । इह राज्ञ इत्युक्ते 
+प्रतीतिर्न निराकाङ्क्षा राजेतिवत्, अपितु अन्यदाकाङ्क्षति राजा । तत् सा 
+आकाङ्क्षा क्वचित् संबन्धस्य वपुर्भवन्ती सार्वत्रिकत्वेन व्यवस्थाप्यते इति 
+अपेक्षैव संबन्ध इति व्यवह्रियते । तां दूषयति उपकारकविषयैव इति 
+भवतीति । अस्य अयमर्थः-न तावत् जडेषु अपेक्षा युक्ता । यदाह
+
+     अपेक्षा पारतन्त्र्यं च न संबन्धो जडात्मनोः ।
+     असंभवात्-----------------॥ (संषि. १)
+
+इति । यत्रापि सा भवति, तत्रापि उक्तद्विष्ठसंबन्धलक्षणा एकपदार्थरूपा 
+न उपपन्नेत्याह स्वरूपातिशयलक्षण इति अव्यतिरिक्तो यत उपकारस्तं कुर्वन् 
+कारणमेव स्यात् । अपेक्षितं च कार्यमित्थमुक्तं स्यात् । नच एतद्यक्तमित्याह 
+सतश्च इति । यदाह
+
+     अपेक्षा यदि संबन्धः सोऽसन्कथमपेक्षते ।
+
+इति । निःस्वभावस्य स्वभाव इति विरोधमाह । ननु सतस्तर्हि कारणस्य 
+कार्येऽपेक्षा भवतु, अविद्यमाने का अपेक्षा, लब्धं च अनेन रूपं, तत् 
+किमर्थमस्य अपेक्षा । यदाह
+
+     संश्च सर्वनिराशंसो भावः कथमपेक्षते ।
+
+इति । कारणत्वप्रतिलम्भाय कार्ये अस्य अस्तु अपेक्षेति
+
+(पगे २०४)
+
+चेत्, ननु कारणत्वमस्य न स्वरूपाधिकं किञ्चित्, स्वरूपं च एतेन लब्धम् । 
+सत्यं लब्धम्, तद्व्यवहारस्तु न लब्धः । इदमपि सत्यम्, किन्तु व्यवहारो 
+ज्ञानाभिधानात्मा तस्य कारणस्य न कश्चित्, अपितु व्यवहर्तुरसौ । एवंच 
+व्यवहर्तुरपेक्षेति आयातम् । सा च विकल्परूपा भवत्येवेति अङ्गीकृतमदः
+
+     ------------तान्मिश्रयति कल्पना ।
+
+इति । तदेतदुक्तं तदभावात् इत्यादिना । सतोस्तर्हि अपेक्षा भविष्यति राज्ञः 
+पुरुष इतिवत् । एतत् निरस्यति नच इति । द्वयोः इति संबन्धसामान्ये षष्ठी । 
+षष्ठ्यर्थमेकगतं सप्तम्यर्थं च अपरगतं स्वीकरोति । अयं हि अत्र अर्थः 
+-राज्ञः सतः सति एव पुंसि अपेक्षेति, नतु अन्योन्यापेक्षा अत्र विवक्षिता । सा हि 
+पारतन्त्र्ये वक्ष्यते । अन्योन्यापेक्षाशब्दोऽपि वृत्तावेवमर्थपर्यवसायी 
+मन्तव्यः । एवं च प्रयोगो लाघवेन पारतन्त्र्येऽपि तथाप्रतिपत्त्यर्थः । तेन 
+तत्रापि राजपुरुषयोः कार्यकारणभावविश्रान्ततैव कर्तव्या, अन्यथा 
+वास्तवषष्ठ्यर्थायोग इति आकूतशेषः । ननु पत्नीयजमानयोरिवयागे, 
+रागियुगलस्य इव आलिङ्गने परस्परापेक्षारूपं पारतन्त्र्यं संबन्धो 
+भविष्यति धवश्च खदिरश्च च्छिद्यतामित्यादावित्याशङ्क्य आह 
+परस्परोन्मुखता इति अन्योन्यमौन्मुख्यम् इति । शब्दमात्रमेकम्, नतु 
+एकस्य या उन्मुखता, सा अन्यस्येति कथं संबन्धः स्यात् । सिद्धे का 
+परतन्त्रतेति तु दूषणमुक्तं पुनः पुनरस्य अर्थस्य स्पष्टत्वात् । तत् भवतु 
+उन्मुखता काचित्, तया न संबन्धसिद्धिरित्येवमत्र अभ्युपगमसिद्धान्ते 
+तात्पर्यम् । तेन पारतन्त्र्यरूपः संबन्ध इत्यत्र इत्थं योजना-
+पारतन्त्र्यं भवदपि संबन्धो न सिद्ध्यतीति । सिद्धयोश्च किं 
+पारतन्त्र्यमित्यपि  स्पृष्टं वृत्तौ टीकायां च । राजा
+
+(पगे २०५)
+
+राजेति एकत्र तद्रूपं दृष्ट्वा सर्वत्र तदेव रूपं संबन्धस्य 
+तत्तदन्यतमरूपवादिना कल्प्यते इत्येवं राज्ञः पुरुष इत्यपेक्षायामपि 
+पारतन्त्र्यमेव दर्शितम् । राजा च पुरुषश्चेत्युदाहरणान्तराभिप्रायेण वा 
+यदपि उच्यते परस्पररूपा प्राप्तिरेव अङ्गुल्योरिव संबन्ध इति, तत्रापि आह 
+रूपश्लेषात्मापि इति । यदि द्वे रूपे कथं श्लेषः, अथ श्लेषः ऐक्यरूपात्, 
+कथं संबन्धता । तदुक्तं
+
+     ------द्वित्वे सति कथं भवेत् ।
+
+इति । ननु रूपश्लेषः सूत्रे तावदादिशब्देन उक्तः, वृत्तौ तु किं न विवृत 
+इत्याशङ्य आह एवमादि न विवृतम् इति । बहुधान्यदूषित इति 
+ग्रन्थपरिवर्तने को भर इति यावत् । दूषितेऽभिनवेन दूषणसंरम्भेण 
+इति च वदन् ग्रन्थकृत् पूर्वपक्षोऽपि अयं भागे सिद्धान्तेन संमतः 
+वाद्यन्तरोक्तस्य संबन्धादेरनभ्युपगमादिति दर्शयति । तथा च 
+सिद्धान्तोपगमे सत्यम् इति वक्ष्यति । आदिपदेन तन्त्रान्तरोक्तमपि सूचयति । 
+यदाह तत्रभवान्
+
+     नाभिधानं स्वधर्मेण संबन्धस्यास्ति वाचकम् ।
+     अत्यन्तपरतन्त्रत्वाद्रूपं नास्योपदिश्यते ॥
+     उपकारात्स यत्रास्ति धर्मस्तत्रानुगम्यते ।
+     शक्तीनामपि सा शक्तिर्गुणानामप्यसौ गुणः ॥
+     तद्धर्मणोस्तु ताच्छब्द्यं संयोगसमवाययोः ।
+
+इत्यादि । एतच्च संबन्धस्तोत्रमात्रम्, नतु न्यायाभिधानमिति न दूषितं 
+ग्रन्थकृता । कार्यकारणभावश्च न अत्र संगतः । तथाहि आत्मा तावत् न 
+कार्यः । ज्ञानमपि विषयेन्द्रियमनस्कारादेर्भवत् ना आत्मानं 
+कारणीकुर्यात्
+
+(पगे २०६)
+
+     यस्मिन्सति भवत्येव यत्ततोऽन्यस्य कल्पने ।
+     तद्धेतुत्वेन सर्वत्र हेतूनामनवस्थितिः ॥
+
+इति न्यायात् । क्रिया च नाम न काचिदिति न कश्चित् संबन्ध इहेति । तत्समाश्रय 
+इति । प्रकृत्या क्रिया, प्रत्ययेन च कर्ता संबद्धौ वक्तव्यौ । नच अस्ति असौ 
+संबन्धः कश्चिदिति भावः । अनुभवविकल्पनस्मरणादिज्ञानमालैव अस्ति, 
+नतु ज्ञाता,-इत्यस्य अर्थस्य प्राक् प्रसाधितत्वात् । अधुना दृष्टान्ततां प्राह 
+यथा इति । ननु कर्तृत्वमपि इति कथं वृत्तिः । ज्ञातृत्वे हि ज्ञानमस्ति, तदन्यत् 
+तत्संबन्धश्च न विद्यते, परकर्तृत्वे तु न क्रिया, न तदन्यः, न तत्संबन्ध 
+इति कथं साम्यम् । कल्पितः इति इयति अंशे दृष्टान्त इति किं सर्वसाम्येन । 
+तदपिच न अतिदुर्योजमित्याह अतोऽपि इति सुतराम् इति ज्ञानमपि तावत् 
+धात्वर्थरूपं वैयाकरणमते क्रिया मीमांसकानां च, 
+भावनावादिनां केषांचित् तु प्रत्ययवाच्येति विशेषः । तत्र 
+समस्तक्रियादूषणेन ज्ञानक्रियापि परसंमता दूषितैव भवति । तदस्ति 
+सर्वसाम्यम् । प्रत्युत ज्ञाने सत्यपि ज्ञातृता न उपपन्नेति दृढोऽयं वाद 
+इति प्रकर्षप्रत्ययः । तत एव ज्ञातृताया दृष्टान्तता युक्ता । 
+प्रसङ्गदूषणेन च सिद्धान्तिनो ज्ञानानुपपत्तौ का ज्ञातृतेत्यपि प्रकर्षः 
+। इदानीं 
+
+     ननु स्वलक्षणाभासं------। (१ । २ । १)
+
+इत्यादेः
+
+     ------------तेन कर्तापि कल्पितः ।
+
+इत्यन्तस्य सूत्रसंधातस्य वृत्तिकृत् पूर्वपक्षे उपयोगि फलमाह इति 
+कथमात्मा सर्वेश्वरः इति । इतिशब्देन धर्म्यसिद्धिं
+
+(पगे २०७)
+
+सूचितां विवृणोति ज्ञानस्यैव बोधात्मनः इत्यादिना । हेत्वसिद्धिं 
+सूचितां दर्शयति क्रियाकारक इति तावन्मात्रलक्षणमुपकल्पितमिति 
+सिद्धान्तिना उक्तस्य ऐश्वर्यव्यवहारसिद्धौ स्वभावहेतोरभावमाह,-इति 
+बौद्धेन ज्ञानसंततिमात्रमेव आत्मेति प्रसाधितमिति शिवम् ॥ ११ ॥
+
+इति श्रीमहामाहेश्वरश्रीमदाचार्याभिनवगुप्तविरचितायामीश्वर 
+प्रत्यभिज्ञाविवृतिविमर्शिन्यां पूर्वपक्षविमर्शो द्वितीयः ॥ २ ॥" data-en="**&quot;Thence the agent too is constructed&quot;**
+
+The Buddhist&#x27;s attack has been relentless. He has denied the self, denied the cognition, denied the
+action. Now he completes it. For what holds all these together — the *relation* between the knower and
+the known, between the agent and the act — is itself impossible; and once the relation is gone, &quot;thence
+the agent too is constructed.&quot; The agent, like everything else, is only a fabrication, a convenient
+construction with nothing real behind it.
+
+The kārikā&#x27;s &quot;thence&quot; gathers a fourfold absence as its reason: the absence of the action, the absence
+of the object, the absence of the relation, and the absence of any determination of being in any of
+them. And the relation&#x27;s absence is argued on its own terms. A relation would have to stand *in both*
+its terms — in the knower and the known at once. But the two-resting thing cannot be one: what stands
+in two cannot be a single thing, any more than the two jars in the two houses are one jar. Moreover,
+the established does not expect another — a thing already complete does not reach out for a relation —
+and the dependence that a relation would impose is itself unfitting. So the relation is absent; and
+with it, the agent that the relation would bind together is only constructed.
+
+Abhinavagupta pauses to make one methodological point, and it is important. The Buddhist thinks he
+refutes the relation by a bare non-perception — &quot;I do not see it, so it is not.&quot; But a bare
+non-perception proves non-being only within a restriction of place and time: &quot;here, now, there is no
+jar.&quot; It cannot reach the universal non-being of the relation. To do that, one must show a real
+contradiction in the opponent&#x27;s own account — that the very form he ascribes to the relation is
+contradicted by another form he ascribes to it. That is a refutation grounded in the thing itself
+(prameya-niṣṭha), not a mere failure to perceive.
+
+And this is where the pūrvapakṣa — the no-self attack — comes to its close. The Buddhist has shown,
+to his own satisfaction, that the self, the cognition, the action, and the relation all fall; and
+&quot;thence the agent too is constructed.&quot; The whole edifice of a real knower and doer is, for him, a
+fabrication.
+
+But this is precisely the claim the siddhānta — the established doctrine — will reverse. The Buddhist
+has built his case on the denial of the real; but his own arguments, turned aright, will show the
+opposite. The agent is not constructed; the agent is the real, free self — the one who knows and acts,
+whose cognition and action are not momentary flashes but the ordered operation of a single
+consciousness. The relation that the Buddhist found impossible is, in truth, the self&#x27;s own nature —
+the union of knowledge and action in the one knower. The construction the Buddhist sees is the reality
+Abhinavagupta will now restore: the self, the Lord, who is not constructed but real.
+
+---" style="display:none"></div><div class="pn"><a href="/ipvv/chunkI-k1.9-1.10-kriya-karyakarana.html">← chunkI-k1.9-1.10-kriya-karyakarana</a><a href="/ipvv/chunkK-purvapaksa-siddhanta.html">chunkK-purvapaksa-siddhanta →</a></div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
 <footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
 <script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
@@ -319,4 +551,165 @@ links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+c
 if(!cur&&links.length)links[0].classList.add('on');}
 window.addEventListener('scroll',spy,{passive:true});spy();}
 })();
-</script></body></html>
+</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script></body></html>
