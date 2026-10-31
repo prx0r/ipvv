@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 104 kārikās (colophon: all becomes Śiva).
 - Key doctrine: Śambhu supreme; supreme tattva (pure/thought-free, 36 tattvas like mirror); senses/elements/tanmātras; bondage (delusion, I-am-not-self); saṃkoca (Paramaśiva as if impure by Māyā, śaktipāta required); five knowers (Śiva/Mantramaheśvara/Mantreśvara/Mantrī/vijñānakala/pralayākala/sakala); liberation (Śivahood, three upāyas: anupāya/śāmbhava/śākta/āṇava); world (Śiva's own-nature, threefold); body (Śiva's garment, winds/channels); mind (fourfold inner instrument); soul (threefold: jīva/ātman/paramātman); close (all-is-Śiva).
 - Reference: Bansat-Boudon/Yogarāja (tier-A).

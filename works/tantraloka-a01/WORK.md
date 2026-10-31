@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 331 verses, 34 passages (colophon: close of ahnika 1).
 - Key doctrine: anuttara = couple-shining-state-emission-made, heart, unsurpassed-nectar-kula; Śiva-Śakti as father/mother; consciousness-pratibhā as supreme Bhairava-yoginī; knowledge-trident cuts bonds; guru = Lakṣmaṇagupta; jñāna = sole cause of liberation; ignorance = cause of saṃsāra; mukti = not separately named; higher and higher knowledge pacifies saṃsāra; unliberated indeed liberated, free from all limitation; vijñāna = blooming, personal, thought-free; jīvanmukti in hand; continues through sādhana, siddhi, fruit, close.
 - Reference: Dyczkowski (tier-A).

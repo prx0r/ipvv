@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 21 verses (colophon: self-awareness-accomplished).
 - Key doctrine: saṃbandha = relation; word-meaning not explained by conjunction/contact/union; world-self light supreme Lord victorious; relation operates by restraining activity from other thought; if touching other thought, mother-difference arises; by one-reflection, one-word-superimposition, many become one-meaning; relation is for help; close = by relation-course, Māyā-knower-established; intellects of varied-meaning-view cause transaction; not all deluded every moment; established in infinite consciousness-reflection, called self-awareness; self-awareness-accomplished, unobstructed, useful.
 - Reference: none available (first translation).

@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 27 verses (colophon: autonomy, agency, īśvaratā).
 - Key doctrine: knower (pramātṛ) is non-inert (ajaḍa): inert/non-inert distinction collapses without the knower's dependence; distinction accomplished by the knower; knower abides as "I" by self; inert ones are light of self; establishment/support/attainment/completion are said; close = breath etc. are knowable, not knower, from delusion; in jīva, restrained, abides in paramātman; established in recognition; light's self-rest = "I"-ness; autonomy, agency, īśvaratā.
 - Reference: Torella (tier-A).

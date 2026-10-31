@@ -20,6 +20,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 8 verses (colophon: none).
 - Key doctrine: anuttara = unsurpassed; self = Śiva; omniscience gained by varied wandering; difference burned; bliss arises.
 - Reference: none available (first translation).

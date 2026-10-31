@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 29+1 verses (colophon: 66th year, 9th dark, Mārgaśīrṣa).
 - Key doctrine: hymn as first means to Śiva-oneness; abandoning = expiation; Śiva = self (all-thing-one-sap); omniscience gained by varied wandering; three goddesses (red/maintenance-dissolution/world-fear); binding action of three powers; one-utterance binding; khecarī-mudrā close.
 - Dyczkowski reference translation available (Volume Appendix F).

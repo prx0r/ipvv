@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 161 verses, 112 dhāraṇās (colophon: close).
 - Key doctrine: Devī's question about Bhairava's true form (śabdarāśi/kalā, navātman, triśira, śaktitraya, nādabindu, candrārdha, cakrārūḍha, anacka); 112 dhāraṇās (practices) for attaining Bhairava-state (breath, nāda, bindu, cakra, khecarī, etc.); close = colophon.
 - Reference: Lakshmanjoo (tier-A).

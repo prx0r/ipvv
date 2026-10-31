@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 20 sūtras (colophon: it becomes Śiva).
 - Key doctrine: citi (free consciousness, cause of world, unfolds by own will); saṃkoca (contracted state, Māyā-knower, seven-septenary, worldly yet does five acts); liberation (ascending to consciousness-status, burning fuel of knowables, making world one's own); close (jīvanmukti, middle-expansion bliss, means, ever-risen samādhi, becomes Śiva).
 - Reference: Taimni/Wallis (tier-A).

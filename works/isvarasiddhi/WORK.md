@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 56 verses (colophon: flees, of god-struck, good gem; shines, fire, at night).
 - Key doctrine: Īśvara as cause (as pot from potter, so world from Lord); creation by fitting, uncombined, supreme; by variety alone, not by own-mark; puruṣārtha by negating self-interest; no other instrumental cause except puruṣārtha-effort; material cause denied (not material cause's end, by entering helpers); all-knowing questioned (mind's function individually conditioned; that is of principal, common, for all); mokṣa not by nature (by nature he becomes, but not fitting; mokṣa by karma-destruction, not from attachment); close = flees, of god-struck, good gem; shines, fire, at night.
 - Reference: Torella (tier-A).

@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 51 verses (colophon: Śambhu, nondifferent-heart, teachers of old victorious).
 - Key doctrine: unsurpassed = Bhairava/Bhairavī (all-encompassing); course = place-time-self (pure/impure); paśu = contracted consciousness; entry = five acts + "I am Śiva"; yāmala = Śiva-Śakti couple; four powers + three from will-power; paśyantī/madhyamā/vaikharī; close = mantra-seal secret.
 - No English reference translation available (first translation).<|end|>

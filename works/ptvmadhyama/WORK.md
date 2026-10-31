@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 35 verses (colophon: seed without beginning/end).
 - Key doctrine: anuttara = of the uttara, the anuttara; instantly Kaulika-siddhi-giving; śakti abiding in heart, Kaulikī; by time-yoga, moon and sun proclaimed; mantra powers = when pronounced well, great mantra-mudrā-group; one who remembers for a moment, stamped by cumbaka; tells past/future calamities; directly sees, attracted by Rudra's śaktis; knowledge = when known, known by all śaktis; ignorant of rules becomes knower of rules; Śiva, world-devouring, endless-end, supreme śakti-triad; pure atom attains divine knowledge; all-pervading, stainless, clear, satisfied, own-abode, pure; close = flowers etc. in order, all, in liṅga or sthaṇḍila; there, creation, worship, vīra; again seat; all-tattva-full, all-ornament-beautiful; with fragrant flowers, as able, worship; in fire-rite too this rule; seed without beginning/end.
 - Reference: Jaideva Singh (tier-A).

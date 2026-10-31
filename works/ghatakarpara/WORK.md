@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 21 verses (colophon: pour water in ghaṭakarpara).
 - Key doctrine: kāvya (love poem) with Abhinava's vivṛti: lament of separated beloved (Kāma in heart, to kill, arises; separated beloved; cruel foreign-serving one will kill without him; release foreign love or wife; cātaka thirsty begs water; suffering traveler, beloved yours); beauty of grove (for Kāma's sake, groves of abodes shine; you are chief of groves by sprouts, eye-festival of youth; kuṭaja laughed at by flowers; I bow, hard to laugh; flower-looked-at body released); close (clouds thundering make travelers long; sorrow grows; love-festival with beloveds; cloud-arrival; by which poet conquered by yamakas; to him, pour water in ghaṭakarpara).
 - Reference: none available (first translation).

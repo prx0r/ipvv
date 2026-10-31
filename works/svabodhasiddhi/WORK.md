@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 32 verses (colophon: self-knowledge-accomplishment spoken).
 - Key doctrine: self-knowledge = supreme Śiva (self-aware, self-known, abiding in self, free from particular absorption in all views, destroyer of thought-network, cause of kaivalya-knowledge); pure consciousness swallows spanda and non-spanda; by self-knowledge's wakefulness, sage's state without division; yogī becomes happy; operation through reflection on own-thought, pure-knowledge-refuge, supreme delight → consciousness-single-density; power/power-possessor unity is yogī's goal; liberation when own-nature-knowledge gained; result = liberation's Lakṣmī not hard to gain; own-nature-rest; affliction ceased; graspable/grasper-ness broken; tattva-knower; close = non-attachment/self-knowledge → no body-grasping; kaivalya; stainless consciousness-light.
 - Reference: none available (first translation).

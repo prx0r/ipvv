@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 40 verses (colophon: non-dual knowledge-nectar).
 - Key doctrine: citi = free consciousness, cause of world; unfolds by own will; world varies by object/subject; contracted state = seven knowers, 36 tattvas; Maheśāna, mokṣa-Lakṣmī operates; stages artificial like actor; consciousness-bliss self shines; liberation = by true-reflection-strength, constant practice → liberated, bliss-filled; consciousness-fire swallows; suprabuddha → stainless, all-devouring; yogī has nirvāṇa-character; upāya = in middle-abode-expansion, strong-state; thought-destruction from thinking nothing; close = shining yogī in Mantreśvara-state; non-dual knowledge-nectar unsurpassed.
 - Reference: Taimni/Wallis (tier-A).

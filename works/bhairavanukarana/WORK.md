@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 47 verses (colophon: paramabrahma when resorting to Bhairava).
 - Key doctrine: cidbhairava = supreme, nectar-form, one, radiant; Śiva swallows all by radiant instrument-wheel; praise/praiser/praised not different; all becomes consciousness-form; pāśas = bonds vicious, excluded always; Māyā-cloth/passion thrown in supreme sky; Lord reveals internal-power-knife cutting saṃsāra; śaktis = supreme-first-triad, beautiful, great; Lord imitates gods outside by trident-bearing pretense; by own will-śakti, three lower realms revealed; carries own supreme diamond-made six-spoked śakti; entire world subdued by śakti; close = nakedness = uncovered self-form; paramabrahma-sun not covered by Māyā; paramabrahma when resorting to Bhairava.
 - Reference: Taimni/Wallis (tier-A).

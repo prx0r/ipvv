@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 450 verses across 20 stotras (colophon: divine play, illumination, tasting).
 - Key doctrine: bhakti as supreme (not for one who meditates without rule; bow to Śiva's light); bhakti-possessors move by expansion; no mantra fails; intoxicated with bhakti-nectar; even non-dual, always your second; know your truth, ocean of endless bliss; bhakti self-established; Śiva easily seen by bhaktas; bhakti inseparable from Śiva; consciousness-path threefold; knowledge-state like vinegar-sourness; recognition, autonomy, self in devotional register; close (divine play, illumination, tasting).
 - Reference: none available (first translation).

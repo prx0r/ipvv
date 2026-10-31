@@ -21,5 +21,7 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - Short stotra, good pilot for new works. All 15 verses are Abhinava's own voice (stotra, not commentary).
 - Key doctrine: svabhāva = prakāśa = Bhairava; śakti eternally identical to śaktiman; autonomy = unsurpassed = awareness-form; inert = limited light; creation/dissolution = self's nature; non-knowledge = saṃsāra of fools; three paths to reality (grace/teacher-scripture/Lord's scripture); full knowledge = liberation = living liberation; bondage/liberation not ultimately different.

@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 51 verses (colophon: declares cause of saṃsāra-dissolution).
 - Key doctrine: spanda = Śiva's opening/closing (unmeṣa/nimeṣa) = source of śakti-wheel; flows undivided; supreme truth beyond suffering/pleasure; operates through presiding over own-nature; danger = unawakened intellect → saṃsāra; remedy = constant striving; spanda in every state; jīvanmukta = world as play; body's spanda (omniscience by presiding, languor from ignorance); close (śakti of Śiva abiding in paśu binds; tanmātra-arising; eight-city; declares cause of saṃsāra-dissolution).
 - Reference: Dyczkowski (tier-A).

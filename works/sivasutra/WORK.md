@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 75 sūtras (colophon: jīva-destruction, Lord-like, closing of eyes).
 - Key doctrine: consciousness is self (caitanya = ātman); knowledge is bondage (jñāna = bandha); arising is Bhairava (udyama = bhairava); three states (waking/dream/deep sleep); self = mind; mantra (mind = mantra, Guru = means, body = offering, knowledge = food); siddhi = free-state; practice (immersed, breath-conduct = equal-vision, becomes Śiva-like); close (jīva-destruction, Lord-like, closing of eyes).
 - Reference: Dyczkowski + Lakshmanjoo (tier-A).

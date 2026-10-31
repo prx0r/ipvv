@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 120 verses (colophon: service to Śarva, thought-free, lamp of knowledge).
 - Key doctrine: Śiva supreme Lord (unconquered, bliss, pure nectar, unlimited light, accessible); worship (remembrance = medicine for ignorance, grace accomplishes all ends); power (desire with three-world fruit, Brahmā run up karma-ladder); grace (needs no service, sole benefactor; Māyā deludes); sovereignty (withdraws desire, Śāṃkarī power, no peer); bliss (three-world bliss = drop of ocean); protection (shatters confusion, steals Māyā); remembrance (memory = single hero, name thrills); devotee's state (refuge, contentment); close (nectar of service, thought-free creation, lamp of knowledge).
 - No English reference translation available (first translation).

@@ -21,6 +21,8 @@ Verse counts follow GRETIL (primary source). GRETIL may differ from KSTS publish
 
 ## Notes
 
+STATUS: L2/C1 content below is derived interpretation pending gate PASS. Gate blocks are heuristic (abstention/citation grounding), not translation errors. Treat as draft, not settled doctrine.
+
 - 30 verses (colophon: when śakti awakens).
 - Key doctrine: Śākta vijñāna = thirteenfold supreme knowledge (place/entry/form/mark/characteristic/rising/awakening/wheel-rest/rest/transformation/going); indicated by Śambhu in all Trika śāstras; kanda is wheel-place; conquered breath leads to middle; rising = meditate on awakened śakti, staff-like, supreme Goddess; throat = imperishable, directly Rudra, palate = abiding; go to unattached Śiva-state; close = fear not; supreme Goddess plays; affliction-triad's modification from many births; knot-bursting, divine touch-delight, bindu-vibration; when śakti awakens.
 - Reference: none available (first translation).
