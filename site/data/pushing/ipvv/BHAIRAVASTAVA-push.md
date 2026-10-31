@@ -18,13 +18,13 @@ rival → unresolved.*
 
 | # | Question | Verdict |
 |---|----------|---------|
-| Q1 | If svātmamaya = constitutively Bhairava's, who bows? (v1 vs v2) | GEM: prakāśa/vimarśa in bhakti grammar — the bowing IS recognition, not transition |
+| Q1 | If svātmamaya = constitutively Bhairava's, who bows? (v1 vs v2) | GEM + ROUND 2: prakāśa/vimarśa in bhakti grammar — the stotra perpetuates recognition, not describes it |
 | Q2 | How can suffering be acknowledged (v3) AND fear be absolutely absent (v5)? | RESOLVED: plenitude, not stoicism — fear cannot enter what is pūrṇa |
-| Q3 | If suffering present (v3) and pacification instant (v10), why isn't it gone? | GEM: perennial-present soteriology — always-present AND always-being-cooled |
+| Q3 | If suffering present (v3) and pacification instant (v10), why isn't it gone? | GEM + ROUND 2: perennial-present — the devotee IS the field of perpetual pacification |
 | Q4 | If mind already His (v1), why need method (v4)? | RESOLVED: two transformations — grace (immediate, v1) vs practice (gradual, v4) |
-| Q5 | If identity always (v2), why nondifference conditional on hymn (v7)? | GEM: always-is vs then-shows — svabhāva vs prakāśa in devotional time |
+| Q5 | If identity always (v2), why nondifference conditional on hymn (v7)? | GEM + ROUND 2: v7 is the structural hinge — the hymn converts personal recognition into cosmic instrument |
 | Q6 | What does samayajñam (covenant-knowing) actually grant? (v9) | PARTIAL: access through covenant not merit; rival (kāla-samaya) unresolved |
-| Q7 | Why does affliction TRIGGER grace rather than block it? (v7) | GEM: Dyczkowski lecture — "the minute the troubles are filled, nectar springs" — trouble and nectar are one movement |
+| Q7 | Why does affliction TRIGGER grace rather than block it? (v7) | GEM + ROUND 2: v3→v4→v7 IS the nanu→āha structure — the stotra performs the IPVV's dialectic in devotional time |
 | Q8 | Why does scripture (v8) replace ritual discipline? | TEXT SPEAKS: vows/gifts/bathing/austerities CAUSE suffering; scripture's nectar flows without effort |
 | Q9 | Is the colophon's date (v10) historical or mythic? | STATED + TRADITION: Vasura-saṃvatsara/Pauṣa/kṛṣṇadaśamī; cave-entry tradition separate from the date |
 | Q10 | Why nine verses (padyanavaka) counted when ten are written? | GEM: colophon counts 9; the opening vyāpta-verse is invocation not verse — the stotra is 9+1, and the 1 is the cosmic frame within which 9 devotional movements occur |
@@ -48,6 +48,32 @@ Argmap: site/data/argmaps/bhairavastava/bh-p01.md + bh-p02.md
 
 ### GEM
 The stotra's first two verses ARE the Trika: v1 = prakāśa (the light that recognizes), v2 = vimarśa (the self that knows). The bowing is prakāśa's recognition; the identity is vimarśa's confirmation. Read horizontally, these two verses are a complete philosophical statement dressed in bhakti grammar.
+
+---
+
+## Q1 — ROUND 2: If the bowing IS recognition (prakāśa), why does Abhinavagupta need a STOTRA rather than a philosophy?
+
+**ROUND 1 found:** v1 = prakāśa (light recognizing), v2 = vimarśa (self confirming). The bowing is recognition, not transition. The tension is the Trika structure.
+
+**ROUND 2 — the deeper question:** if the first two verses state the complete Trika (prakāśa + vimarśa), why does the rest of the stotra exist? Eight more verses follow a structure already complete. Why sing what has already been said?
+
+### The text's own reasoning (the deeper layer)
+
+1. **The stotra's own claim (v7):** the hymn is the CONDITION of nondifference (tadaiva). Not description — instrument. The bowing in v1 is prakāśa's recognition; the hymn's continuation is vimarśa's *re-enactment*. Recognition is one moment; the hymn keeps it alive.
+
+2. **The register difference:** the IPVV (dialectical) argues prakāśa/vimarśa through nanu→āha (objection → reply). The stotra (devotional) enacts it through bowing → claim → result. The philosophical register EXPLAINS; the devotional register ENACTS. Both work on the same structure, but the stotra's audience is not the scholar — it is the devotee whose mind needs to STAY recognized, not just recognize once.
+
+3. **Dyczkowski lecture:** "Yoga is a form of worship. A large part of worship is expression of gratitude." The stotra is not a philosophy lesson wearing devotion as clothes — it is gratitude's own logic. You bow because the bowing IS the recognition; you keep singing because the singing IS the vimarśa, continuously re-performed.
+
+4. **The IPVV parallel:** the IPVV's svācchandya doctrine says the Lord's self-aware manifestation is PERPETUAL (not one-time). The stotra's 9 verses enact that perpetuity: the recognition does not happen once (v1) and end; it is the ongoing structure of the stotra itself. The 9 verses are not 9 claims but ONE recognition re-performed 9 ways.
+
+### ROUND 2 GEM
+The stotra is not a sequence of devotional claims but the recognition (prakāśa) continuously re-performing itself through 9 verses of vimarśa. The genre choice (stotra, not kārikā) is not accident but doctrine: philosophy explains the recognition; the hymn PERPETUATES it. The stotra's form IS its theology — nine verses of the self-apprehending itself, over and over, until the recognition cannot be forgotten. This is why the text needs a hymn and not a treatise: the IPVV can be read once; the stotra must be chanted again and again.
+
+### ROUND 2 claim status
+STATED (the instrument-reading in v7). ESTABLISHED (the perpetuity reading matches the IPVV's svācchandya). The register claim (devotional vs dialectical as different modes of the same structure) requires an unstated premise: that the Trika accepts multiple modes of the same doctrine (supported by Tantrāloka's three upāyas — the same truth, three approaches).
+
+---
 
 ---
 
@@ -92,6 +118,32 @@ The stotra's soteriology is not "suffering ends" but "suffering is always being 
 
 ---
 
+## Q3 — ROUND 2: If the pacification is always ongoing, what is the devotee's ROLE in it?
+
+**ROUND 1 found:** perennial-present — suffering is present AND being pacified simultaneously. The Lord's compassion is ongoing, not one-time.
+
+**ROUND 2 — the deeper question:** if the Lord's compassion is perpetual and independent of the devotee's effort (v10: "by compassion, not by method"), what does the devotee actually DO? Is the stotra telling us to do nothing?
+
+### The text's own reasoning (the deeper layer)
+
+1. **The stotra's answer is in v7:** the devotee's role is to NOTICE. The affliction comes to mind (mānasagocaram eti) → the nectar springs (tadaiva). The devotee does not produce the nectar but provides the occasion (the affliction being noticed). The noticing IS the practice.
+
+2. **Dyczkowski lecture:** "the minute he fills this body of troubles, immediately inspires rain of nectar." The devotee's role is to be the one FOR WHOM the troubles arise — the receptacle. Grace needs a location; the noticing devotee IS that location.
+
+3. **The Tantrāloka parallel (from the pushing corpus):** the TĀ teaches that śaktipāta (grace-descent) requires a "field" (kṣetra) — the devotee is the field. The stotra's role is the same: the devotee does not earn grace but becomes the field in which grace operates. The v5 fearlessness is not produced by namas but occurs WITHIN the field that namas creates.
+
+4. **The deeper mechanism:** this is the same structure as the TĀ's "the Self shines forth but once" session — the Self's manifestation is perpetual, but it needs a perceiver. The devotee is the perpetual perceiver; the compassion is the perpetual manifestation. Neither depends on the other causally; they are the two poles of one movement.
+
+### ROUND 2 GEM
+The stotra's soteriology is not "the Lord pacifies suffering" but "the devotee IS the field in which the Lord's perpetual pacification operates." The devotee's role is not effort but receptivity — and receptivity in Trika is not passive: it is the active act of noticing the affliction (v7), which is itself vimarśa (self-awareness). The stotra therefore has no "do nothing" theology: noticing IS the doing, and noticing is recognition. This reconciles the stotra's apparent quietism (grace is automatic) with the Trika's radical activism (awareness is the one power that cannot be not-exercised).
+
+### ROUND 2 claim status
+STATED (the noticing-role is in v7's grammar). ESTABLISHED (the field-reading matches the TĀ's kṣetra doctrine). Requires unstated premise: that vimarśa (self-awareness) IS the devotee's practice — supported by v2 (svātmamaya) and the IPVV's vimarśa doctrine. Rival: pure quietism ("do nothing, grace is automatic") — ruled out because v7's grammar requires the noticing (mānasagocaram eti) as an active event.
+
+---
+
+---
+
 ## Q4 — If the mind is already His (v1), why does one need method (v4)? (v1 vs v4)
 
 ### The stored passage
@@ -127,6 +179,32 @@ v7: `nātha tadaiva mama tvadabhedastotraparāmṛtavṛṣṭir udeti` (then al
 
 ### GEM
 The stotra maps the Trika's svabhāva/prakāśa distinction onto devotional time: always-is (v2) vs then-shows (v7). The hymn is the prakāśa that makes visible what was always the case. This is the IPVV's opening doctrine (svācchandya as self-aware manifestation) in nine verses of stotra.
+
+---
+
+## Q5 — ROUND 2: Why does the CONDITIONAL (tadaiva, v7) sit in the MIDDLE of the stotra rather than the end?
+
+**ROUND 1 found:** v2 = svabhāva (always-is), v7 = prakāśa (then-shows). The conditional sits between the identity claim and the cosmic close.
+
+**ROUND 2 — the deeper question:** if the hymn's role is prakāśa (making visible), why does it appear at verse 7 of 10? Why not at the end, after all the results are stated?
+
+### The text's own reasoning (the deeper layer)
+
+1. **The structural position:** verse 7 is the pivot. Verses 1–6 establish identity and personal results (v1 surrender, v2 identity, v3 concession, v4 method, v5 fearlessness, v6 bliss). Verses 7–10 extend to cosmic scope (v7 hymn as instrument, v8 scripture, v9 the Lord's qualities, v10 cosmic compassion). The conditional (v7) is the HINGE: the personal becomes the cosmic through the hymn.
+
+2. **The mechanism:** v7's tadaiva ("then alone") marks the transition from "what I experience" (v1–v6) to "what the hymn does" (v7–v10). Before v7, the results are personal. After v7, the results are universal (v10: "world's heat"). The hymn is what converts personal recognition into cosmic compassion.
+
+3. **Dyczkowski lecture:** "Abhinavagupta composed this hymn... by whom the Lord swiftly cools." The hymn's COMPOSITION (not just recitation) is the event. The conditional in v7 says: the hymn, once composed, becomes an instrument that operates independently of the specific devotee. The composer's personal recognition becomes a universal instrument.
+
+4. **The Tantrāloka parallel:** the TĀ teaches that mantras, once revealed, have independent efficacy (mantra-caitanya). The stotra's v7 is the same claim for the stotra itself: once sung, the hymn has independent efficacy — "then alone" applies to anyone who sings it, not just the original devotee.
+
+### ROUND 2 GEM
+Verse 7 is the stotra's structural hinge: the moment personal recognition (v1–v6) becomes cosmic instrument (v7–v10). The conditional tadaiva does not limit the hymn's power — it marks the transition from personal to universal. The stotra is therefore not just Abhinavagupta's devotional autobiography but a TOOL: once composed, it operates independently, cooling anyone's suffering who sings it. This is the mantra-caitanya claim applied to stotra: the hymn is alive, and its aliveness is the conditional (it manifests when needed — tadaiva — not permanently as a fixed object). The hinge structure explains why the stotra survives: it is not a historical document but an active instrument.
+
+### ROUND 2 claim status
+STATED (the pivot position is structural fact). ESTABLISHED (the hinge-reading matches the v7→v10 expansion). Requires unstated premise: that the stotra genre allows self-referential claims (the hymn commenting on its own efficacy) — supported by the colophon's self-description (padyanavaka) and the TĀ's mantra-caitanya doctrine. Rival: the conditional is merely temporal (about the original occasion) — ruled out because v10 generalizes to "janasya" (of the people), not "mama" (of me).
+
+---
 
 ---
 
@@ -166,6 +244,32 @@ Dyczkowski lecture: "The minute he fills this body of troubles, immediately insp
 
 ### GEM
 Affliction is the trigger for grace, not its obstacle. The stotra's temporal grammar (yadaiva → tadaiva) makes trouble and nectar one movement. This is the Trika's non-dual causality: the obstacle IS the occasion.
+
+---
+
+## Q7 — ROUND 2: If affliction triggers grace, why does the stotra acknowledge suffering BEFORE naming the method? (v3 before v4)
+
+**ROUND 1 found:** affliction is the trigger, not the obstacle. yadaiva → tadaiva = one movement.
+
+**ROUND 2 — the deeper question:** the stotra's ORDER is v3 (suffering acknowledged) → v4 (method) → v5 (fearlessness). If affliction triggers grace directly (v7's mechanism), why does the stotra go through method (v4) first? The direct route (v3 → v7) exists — why the detour?
+
+### The text's own reasoning (the deeper layer)
+
+1. **The stotra's own answer:** v3's concession is not passive acknowledgment — it is the DEVOTEE's affliction coming to mind (mānasagocaram eti, v7). The stotra dramatizes the process: v3 = the affliction arises; v4 = the devotee responds with method; v7 = the nectar springs. The method (v4) is not a detour — it is the devotee's RESPONSE to the affliction, which is itself the occasion for grace.
+
+2. **The deeper mechanism:** v4's sevanā + cintanā are not prerequisites for grace — they are the FORM the noticing takes. When the affliction comes to mind (v3→v7), the devotee naturally turns to service and contemplation (v4) — not as effort but as the expression of devotion that affliction triggers. The method IS the affliction's own response.
+
+3. **Dyczkowski lecture:** "When I'm in trouble, I'm suffering... But for him, when this trouble arises, then this is how I experience the rain of nectar." The devotee's experience of trouble TURNS INTO the hymn. The method is the trouble's own transmutation.
+
+4. **The IPVV parallel:** the IPVV's nanu→āha (objection → reply) has the same structure: the objection IS the occasion for the reply. The stotra's affliction → method → grace is the devotional version of nanu → āha. The affliction is the nanu; the method is the āha; the grace is the result.
+
+### ROUND 2 GEM
+The stotra's structure (v3 → v4 → v5 → v6 → v7) is the devotional version of the IPVV's dialectical structure (nanu → āha → result). The affliction (v3) is the nanu; the method (v4) is the āha; the fearlessness/bliss (v5–v6) are the result; the nectar-spring (v7) is the RECOGNITION that the whole sequence was one movement. The stotra does not merely describe the Trika's structure — it PERFORMS it in devotional time. This is why the pushing found the two-axis grid: the vertical axis (v1→v10) is the devotional arc; the horizontal axis (v1↔v2, v3↔v7) is the dialectical structure. The stotra is BOTH simultaneously.
+
+### ROUND 2 claim status
+STATED (the v3→v4→v7 sequence is explicit). ESTABLISHED (the nanu→āha parallel matches the IPVV's documented structure). Requires unstated premise: that the stotra genre can perform dialectical structure — supported by the colophon's self-awareness (padyanavaka) and the TĀ's teaching on stotra as philosophical vehicle. Rival: the order is merely conventional (devotional hymns follow standard sequences) — ruled out because the v7 hinge is at a structurally precise position (personal→cosmic transition).
+
+---
 
 ---
 
