@@ -1956,6 +1956,20 @@ def build_app():
     (DIST / "data" / "practices.json").write_text(_j.dumps(pract, ensure_ascii=False))
     for f in sorted((ROOT / "data").glob("karaoke-*.json")):
         _sh.copy(f, DIST / "data" / f.name)
+    try:
+        import glob as _g
+        _kmap = {"bhairavastava": "bhairavastava",
+                 "anuttarashtika_trad": "anuttarastika",
+                 "anuttarashtika": "anuttarastika-trad-ai"}
+        for src in _g.glob("/root/kashaudio/*/word_timings.json"):
+            wd = src.split("/")[-2]
+            if wd not in _kmap:
+                continue
+            dst = DIST / "data" / f"karaoke-{_kmap[wd]}.json"
+            if not dst.exists():
+                _sh.copy(src, dst)
+    except Exception:
+        pass
     return len(works)
 
 def build_llms_txt():

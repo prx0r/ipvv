@@ -6,10 +6,6 @@ const NAV = [
   ['read','/translations','Read'],['recite','/recite','Recite'],['practice','/practices','Practise'],
   ['enquire','/ipvv/pushing.html','Enquire'],['translate','/tools','Translate'],['write','/essays','Write'],
 ];
-const MENU = [
-  ['Masters','#/masters'],['Scholars','#/scholars'],['Concepts','#/concepts'],
-  ['Pushing','#/pushing'],['About','#/about'],
-];
 let SID = null;
 let SPEAK = false;
 
@@ -53,9 +49,25 @@ document.getElementById('spk').addEventListener('click', function(){
   });
 })();
 
-function nav(cur){
-  $('#nav').innerHTML = NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
-  $('#menu').innerHTML = MENU.map(([t,u])=>`<a href="${u}">${t}</a>`).join('');
+async function nav(cur){
+  let mhtml = `<div class="msec">Mode</div>` +
+    NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
+  mhtml += `<div class="msec">Library</div><a href="#/concepts">Concepts</a><a href="#/pushing">Pushing probes</a>`;
+  try{
+    const sec = await get('/data/sections.json');
+    const ms = ((sec.sections||[]).find(s=>s.id==='masters')||{}).members || [];
+    const counts = {};
+    await Promise.all(ms.slice(0,20).map(async m=>{
+      try{ const w = await get(`/data/works_${m}.json`); counts[m]=Array.isArray(w)?w.length:0; }catch(e){ counts[m]=0; }
+    }));
+    const sorted = [...ms].sort((a,b)=>(counts[b]||0)-(counts[a]||0));
+    mhtml += `<details class="mnav" open><summary>Masters · by works</summary><div class="sub">` +
+      sorted.map(m=>`<a href="#/work/${m}">${esc(m)}</a>`).join('') + `</div></details>`;
+  }catch(e){}
+  document.getElementById('menu').innerHTML = mhtml;
+  document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
+    a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
+  });
 }
 async function get(p){
   const r = await fetch(p);
