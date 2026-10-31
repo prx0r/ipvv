@@ -7,7 +7,7 @@ Missing layers render greyed (planned), never invented.
 Usage: python3 site/build.py [--works ipvv,vbt,tantrasara]
 Output: site/dist/ (deploy to Cloudflare Pages, like shivastotravali.pages.dev)
 """
-import json, html, shutil, sys
+import json, html, re, shutil, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -436,6 +436,67 @@ def build_translations():
         + "".join([f'<a href="/translations/{w}.html"><b>{w}</b> — {p}/{n} PASS</a>' for w, p, n in links]) + "</div>"))
     return len(links)
 
+def slugify(s):
+    import unicodedata as _u
+    s = _u.normalize("NFD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "term"
+
+def build_glossary():
+    import json as _j
+    gl = _j.loads((ROOT / "data/glossary.json").read_text())
+    out = DIST / "concepts"; out.mkdir(parents=True, exist_ok=True)
+    for e in gl:
+        slug = slugify(e["term"])
+        links = "".join(f'<div class="ev"><a href="/ipvv/{p}.html">IPVV: {esc(p)}</a></div>' for p in e.get("passages", [])[:20])
+        (out / f"{slug}.html").write_text(ATmpl.format(title=e["term"], h1=esc(e["term"]),
+            sub="concept · glossary", sidenav=sidenav("abhinavagupta", ""),
+            body=f'<div class="panel">{esc(e.get("gloss") or "occurrence only — definition pending curation.")}</div>'
+                 + (f"<h3>Occurs in</h3>{links}" if links else "<p><i>No linked passages yet.</i></p>")
+                 + f'<div class="sub">source: {esc(e.get("source",""))} · <a href="/data/glossary.json">machine-readable glossary</a></div>'))
+    idx = "".join(f'<a href="/concepts/{slugify(e["term"])}.html"><b>{esc(e["term"])}</b> — {esc((e.get("gloss") or "")[:90])}</a>' for e in gl)
+    (out / "index.html").write_text(ATmpl.format(title="Concepts", h1="Concepts",
+        sub=f"{len(gl)} terms — definitions link to every occurrence", sidenav=sidenav("abhinavagupta", ""),
+        body='<input id="q" placeholder="filter terms…" style="width:100%;padding:.6rem;font-size:1rem;margin-bottom:.6rem"/>'
+             f'<div class="idx" id="terms">{idx}</div>'
+             '<script>q.oninput=()=>{const v=q.value.toLowerCase();document.querySelectorAll("#terms a").forEach(a=>a.style.display=a.textContent.toLowerCase().includes(v)?"":"none")}</script>'
+             '<div class="sub"><a href="/data/glossary.json">machine-readable glossary</a> · mined from C1 key-terms + curated core</div>'))
+    shutil.copy(ROOT / "data/glossary.json", DIST / "data/glossary.json")
+    return len(gl)
+
+def build_tools():
+    import json as _j
+    out = DIST / "tools"; out.mkdir(parents=True, exist_ok=True)
+    entries = []
+    for f in (ROOT / "data").glob("works*.json"):
+        for w in _j.loads(f.read_text()):
+            entries.append({"t": w.get("title", ""), "u": "", "k": "work"})
+    for aid in MASTERS:
+        ap = ROOT / "data/authors" / f"{aid}.json"
+        if not ap.exists() and aid == "abhinavagupta":
+            ap = ROOT / "data/author.json"
+        if ap.exists():
+            a = _j.loads(ap.read_text())
+            entries.append({"t": a.get("name", aid), "u": f"/{aid}/index.html", "k": "master"})
+    for e in _j.loads((ROOT / "data/glossary.json").read_text()):
+        import unicodedata as _u
+        slug = _u.normalize("NFD", e["term"]).encode("ascii", "ignore").decode()
+        import re as _re
+        slug = _re.sub(r"[^a-z0-9]+", "-", slug.lower()).strip("-") or "term"
+        entries.append({"t": e["term"], "u": f"/concepts/{slug}.html", "k": "concept"})
+    (DIST / "data/search-index.json").write_text(_j.dumps(entries, ensure_ascii=False))
+    (out / "index.html").write_text(ATmpl.format(title="Tools", h1="Tools",
+        sub="instant find across masters, works, concepts — runs entirely in your browser",
+        sidenav=sidenav("abhinavagupta", ""),
+        body='<input id="q" placeholder="search masters, works, concepts…" style="width:100%;padding:.7rem;font-size:1.1rem"/>'
+             '<div class="idx" id="hits" style="margin-top:.6rem"></div>'
+             '<div class="panel"><b>Verse lookup.</b> Type a passage id (e.g. <i>chunkV2-A-caturtho-vimarsa-aham</i>) — exact matches jump straight to the passage. <input id="v" placeholder="passage id…" style="width:100%;padding:.5rem;margin-top:.4rem"/><div id="vhit" style="margin-top:.4rem"></div></div>'
+             '<div class="sub">Index built at deploy time from the same JSON the pages render. No server, no tracking.</div>'
+             '<script>let IDX=[];fetch("/data/search-index.json").then(r=>r.json()).then(d=>IDX=d);'
+             'q.oninput=()=>{const v=q.value.toLowerCase();const m=v?IDX.filter(e=>e.t.toLowerCase().includes(v)).slice(0,40):[];'
+             'hits.innerHTML=m.map(e=>`<a href="${e.u||"/"+e.k+"s/index.html"}"><b>${e.t}</b> <i>${e.k}</i></a>`).join("")||(v?"<i>No matches.</i>":"")};'
+             'v.oninput=()=>{const x=v.value.trim();vhit.innerHTML=x?`<a href="/ipvv/${x}.html">Open /ipvv/${x}</a> · <a href="/ipvv/${x.replace(/[^A-Za-z0-9_-]/g,"")}.html">try cleaned</a>`:""};</script>'))
+    return 1
+
 def build_scholars():
     out = DIST / "scholars"; out.mkdir(parents=True, exist_ok=True)
     scholars = json.loads((ROOT / "data/scholars.json").read_text())
@@ -464,7 +525,7 @@ def build_scholars():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -473,13 +534,21 @@ def main():
         for aid in MASTERS: done[aid] = build_author(aid)
     if "scholars" in want: done["scholars"] = build_scholars()
     if "translations" in want: done["translations"] = build_translations()
+    if "concepts" in want: done["concepts"] = build_glossary()
+    if "tools" in want: done["tools"] = build_tools()
     ship_translations()
+    shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
+    latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
     masters = "".join(f'<a href="/{m}/index.html"><b>{m}</b> — bio · works map · click-in translations</a>' for m in MASTERS if m in done)
-    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY · GUIDE soon</a>' for w, n in done.items() if w not in MASTERS and w not in ("scholars", "translations"))
+    rest = "".join(f'<a href="/{w}/index.html"><b>{w}</b> — {n} items · Sanskrit → READ → STUDY</a>' for w, n in done.items() if w not in MASTERS and w not in ("scholars", "translations", "concepts", "tools"))
     sch = '<a href="/scholars/index.html"><b>scholars</b> — secondary witnesses, linked bibliography (read/cite, host only what is open)</a>' if "scholars" in done else ""
     trn = '<a href="/translations/index.html"><b>pipeline translations</b> — English shows ONLY for gate-PASS passages</a>' if "translations" in done else ""
-    (DIST / "index.html").write_text(TMPL.format(title="Translations", h1="Trika masters · Translations",
-        sub="display only what is formally done", work="abhinavagupta", body='<div class="idx">' + masters + rest + sch + trn + "</div>"))
+    con = '<a href="/concepts/index.html"><b>concepts</b> — glossary with every occurrence linked</a>' if "concepts" in done else ""
+    tls = '<a href="/tools/index.html"><b>tools</b> — instant find, verse lookup (in-browser)</a>' if "tools" in done else ""
+    lat = '<h3>Latest</h3>' + latest if latest else ""
+    (DIST / "index.html").write_text(TMPL.format(title="Trika Library", h1="Trika Library",
+        sub="masters · works · scholars · concepts · tools — display only what is formally done", work="abhinavagupta",
+        body='<div class="idx">' + masters + rest + sch + trn + con + tls + "</div>" + lat))
     print("built", done)
 
 if __name__ == "__main__":
