@@ -195,38 +195,35 @@ async function work(path){
   const verses = items.map((it,ix)=>{
     const raw = cleanSA(it.sanskrit||'');
     const k = hasKar ? kar[ix % kar.length] : null;
-    let dev, ro;
+    let units = [];
     if(k && k.words){
-      const padas=[[],[],[],[]];
-      k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
-      const ps = padas.filter(p=>p.length);
-      dev = ps.map(p=>`<div class="dev">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(IAST_DEVA.convert(w.w))}</span>`).join(' ')}</div>`).join('');
-      const rl = ps.map(p=>p.map(w=>esc(w.r||'')).join(' ')).join(' / ');
-      ro = rl.trim() ? `<div class="ro">${rl}</div>` : `<div class="ro">${esc(raw)}</div>`;
-    } else {
-      dev = `<div class="dev">${esc(IAST_DEVA.convert(raw))}</div>`;
-      ro = raw ? `<div class="ro">${esc(raw)}</div>` : '';
+      units = k.words.map(w=>({sa: IAST_DEVA.convert(w.w), ro: w.r||'', t0: w.t_on, t1: w.t_off}));
+    } else if(raw){
+      units = raw.split(/\s+/).filter(Boolean).map(w=>({sa: IAST_DEVA.convert(w), ro: w, t0: null, t1: null}));
     }
+    const dev = `<div class="wline">` + units.map(u=>
+      `<span class="wunit"${u.t0!=null?` data-t0="${u.t0}" data-t1="${u.t1}" data-v="${ix}"`:''}><span class="dw">${esc(u.sa)}</span><span class="rw">${esc(u.ro)}</span></span>`
+    ).join('') + `</div>`;
     const en = (it.gate==='PASS' && (it.l2||it.l1)) ? `<div class="en">${esc(cleanEN(it.l2||it.l1))}</div>` : '';
     const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
-    return {dev, ro, en, au, ix};
+    return {dev, ro:'', en, au, ix};
   });
   $('#view').innerHTML =
-    verses.map((v,ix)=>`<div class="verse" data-v="${ix}">${v.dev}${v.ro}${v.en}</div>`).join('') +
+    `<div id="reader">` + verses.map((v,ix)=>`<div class="verse" data-v="${ix}">${v.dev}${v.en}</div>`).join('') + `</div>` +
     `<div id="rcbar"><button id="rcPlay" title="recite">▶</button><button id="rcRead" title="read aloud">🔊</button><button id="rcStop" style="display:none" title="stop">■</button></div>` +
     `<div id="answer" style="display:none"></div>`;
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
-  st.textContent = '.verse{margin:1.8rem 0;max-width:44rem}.verse:first-child{margin-top:.5rem}.dev{font-size:1.5rem;line-height:1.9;margin-bottom:.25rem}.ro{font-size:.95rem;color:#76736e;font-style:italic;margin-bottom:.5rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em;cursor:pointer}.kw.on{background:#fdf0d5}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
+  st.textContent = '#reader{max-width:none}.verse{margin:2rem 0}.verse:first-child{margin-top:.5rem}.wline{line-height:1.4}.wunit{display:inline-block;text-align:center;vertical-align:top;margin:0 .45em .9em 0}.dw{display:block;font-size:1.55rem;line-height:1.4}.rw{display:block;font-size:.78rem;color:#76736e;font-style:normal;letter-spacing:.01em}.en{font-size:1rem;line-height:1.65;max-width:44rem}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.wunit.hl{background:#fdf0d5;border-radius:.3em}.wunit.hl .dw{font-weight:500}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
   document.head.appendChild(st);
   function tick(){
     const t = audio.currentTime;
-    document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
-    const all = Array.prototype.slice.call(document.querySelectorAll('.kw'));
+    document.querySelectorAll('.wunit.hl').forEach(w=>w.classList.remove('hl'));
+    const all = Array.prototype.slice.call(document.querySelectorAll('.wunit[data-t0]'));
     for(const w of all){
       if(+w.getAttribute('data-v') !== KAR.cur) continue;
       const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
-      if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
+      if(t >= t0 && t <= t1){ w.classList.add('hl'); break; }
     }
     if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
   }
@@ -234,7 +231,7 @@ async function work(path){
     if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
     audio.pause(); audio.onended = null;
     try{ speechSynthesis.cancel(); }catch(e){}
-    document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+    document.querySelectorAll('.wunit.hl').forEach(w=>w.classList.remove('hl'));
     document.querySelectorAll('.vnow').forEach(v=>v.classList.remove('vnow'));
     const sb = document.getElementById('rcStop'); if(sb) sb.style.display='none';
     const pb = document.getElementById('rcPlay'); if(pb) pb.style.display='';
