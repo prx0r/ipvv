@@ -2,90 +2,89 @@
  {
   "chunk": "pary-p01",
   "verses": "1-7",
-  "sanskrit": "śrī gaṇapataye namaḥ | ādyantāntargatānantaśaktiviśrāntinirbharām | anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ sa eva bhairavo devas sarve devāś ca yanmayāḥ | saivāsau bhairavī sattāsattāpi ca yanmayī tad eva bhairavaṃ jñānam ajñānam api yanmayam | sa hi bhairavasiddhāntaḥ pūrvapakṣo 'pi yanmayaḥ aikadhyam adhvanāṃ ṣa.ṅnāṃ yatra sā bhairavī sthitiḥ | paryante sarvatantrāṇām avācyā paramā gatiḥ sā cidānandamātrātmamagnecchājñānasatkriyā | hṛdayaṃ devadevasya bhairavasyāvibhāgabhūḥ citsvābhāvyād asau devaḥ svātmanā vimṛṣan prabhuḥ | anāśritādibhūmyantā bhūmikāḥ pratipadyate tatra vācakavācyātmaspandayor ekaśaḥ prabhoḥ | sthūlasūkṣmaparābhāsakramayoḥ ṣaḍvidhādhvatā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION",
-   "CITATION_GROUNDING"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "sanskrit": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p01 (1-7)\n[and]-filled-with-rest-of-infinite-power-gone-within-beginning-and-end (ādyantāntargatānantaśaktiviśrāntinirbharām) [and]-unspeakable (anuccāryām) [and]-I (ahaṃ) [and]-speech (vācam) [and]-I-study (adhīye) [and]-heart (hṛdayaṃ) [and]-of-the-Lord (vibhoḥ) // 1 //",
+  "l2": "## pary-p01 — Bhairava's Non-Dual Heart\nThe text opens with rest in infinite power and the speech of the Lord's heart. Bhairava is the god of all gods, and Bhairavi is both being and non-being. Knowledge, ignorance, doctrine, and opposition are all made of him. The six paths unite in Bhairavi's abode, and Bhairava's heart is pure consciousness-bliss, from which stages and vibrations unfold."
  },
  {
   "chunk": "pary-p02",
   "verses": "8-14",
-  "sanskrit": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām | vicchedād eṣa vijñātur vicitrābhāsatākṛtaḥ ubhayo tatra vai rītiḥ śuddhāśuddhātmabhedataḥ | śuddhir bahiṣkṛtārthānāṃ svāhantāyāṃ nimajjanam aśuddhir api magnānāṃ naivaṃ hṛdayaviśramaḥ | atrāntare 'py anantās syuḥ sthitayas tāratamyataḥ ucitocitameyānāṃ pramātṝṇāṃ prakāśane | sādhāraṇānyathābhāvau bhidyete mātṛmeyayoḥ avikalpasphuṭābhāsā sā sṛṣṭiḥ śāmbhavī matā | abhedenātmanirmāṇe svātmaiva karaṇīkṛtaḥ kriyājñānātmacicchaktir bhedāsūtraṇakāraṇāt | kalāvidyāpadaṃ prāpya bhedodbhede punar bhavet pramāṇabuddhiprakarā yatkriyāyā vikalpanāḥ | saiva vicchinnavicchinnakriyā jñānodyamā yadā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "sanskrit": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p02 (8-14)\n[and]-sequence (kramo) [and]-which (yo) [and]-space-time-self (deśakālātmā) [and]-difference-life (bhedaprāṇas) [and]-that (sa) [and]-of-cognitions (saṃvidām) [and]-from-separation (vicchedād) [and]-this (eṣa) [and]-of-knower (vijñātuḥ) [and]-makes-varied-appearance (vicitrābhāsatākṛtaḥ) // 8 //",
+  "l2": "## pary-p02 — Cognition and Creation\nCognitions arise in varied appearance through separation of space, time, and self. Purity and impurity divide the pure and impure paths, while many states remain between them. Shambhavi creation is held as thought-free appearance, and action-knowledge becomes kalā and vidyā through difference. Finally, pramāṇa and intellect cut action and knowledge into effortful imaginations."
  },
  {
   "chunk": "pary-p03",
-  "verses": "15-21",
-  "sanskrit": "karmabuddhyakṣatāṃ prāptā tadāsau paśur ucyate | itīcchayā sa bhagavān bhairavaḥ parimīyate mitavṛttis satī sā ca śaktis tam anuvartate | tasya vidyeśasādākhyaśivatās saṃkucatsthiteḥ | dehaprāṇabuddhiśūnyapramātṛtvam upāgaman tasyāsādhāraṇī sṛṣṭis tattannānāvikalpanā | śaivasargotthasaṃskārasaṃskṛtasya tadāśrayā pramātaivāyam etāvatprakāro 'vagrahotsave | avyagro vartate svātmany avikalpe cidātmake vatsa paśya tvam evaitat advayatvena saṃvidaḥ | viditaṃ tanmayaṃ viśvam anyat tuccham asad yataḥ kim upāyam idaṃ tattvaṃ yato 'nyan naiva sambhavi | ananyopāyam etat tadātmopāyaṃ pracakṣate saṃhṛtya sarvataś cintām [aha]m ity anuśīlayan | avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "15-20",
+  "sanskrit": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p03 (15-20)\n[and]-limitation-of-action-intellect (karmabuddhyakṣatāṃ) [and]-having-obtained (prāptā) [and]-then (tadā) [and]-that (asau) [and]-bound-soul (paśur) [and]-is-called (ucyate) [and]-thus (iti) [and]-by-will (icchayā) [and]-he (sa) [and]-blessed (bhagavān) [and]-Bhairava (bhairavaḥ) [and]-is-measured (parimīyate) // 15 //",
+  "l2": "## pary-p03 — The Limited Knower\nWhen action and intellect are limited, the bound soul is measured by Bhairava's will. His contracted powers produce Vidyeśa, Sadākhya, and Śiva states in body, breath, and intellect. The knower remains undistracted in self, while Shaiva creation arises from impressions. The world is known as made of consciousness, and this principle is its own means."
  },
  {
   "chunk": "pary-p04",
-  "verses": "22-28",
-  "sanskrit": "anantaitāvadākārasvīkāre 'py ekalakṣaṇām | tāṃ svasaṃvidam āviśya vikalpān na vikalpayet khecaryādicatussrotovāhapūrṇamahāhradām | vyomeśvarīm ātmacitiṃ vigāhya broḍayej jaḍam sargasthāpanasaṃhāranigrahānugrahakramāt | pañcakṛtyāni kurvāṇaḥ śivo 'ham iti viśvaset kṣepajñānaprasaṃkhyā[naga]tinādakrameṇa vā | guruvaktreṇa tāny ātmany ākalayya kṛtī bhavet vikalpayitvā viśvātmā bhairavo 'haṃ mamaiva tāḥ | viśvabhaṅgyo yathā vahner jvālābhaṅgyaḥ prabhā raveḥ eko 'haṃ mātṛvijñānamānameyaprakāravān | śuddhabodhādirūpeṇa khecaryādicaturdaśaḥ medāmedaprakāreṇa bandhamokṣau vibhāvayan | bhairavo 'smīti visrambhāt svācchandyaṃ paramaṃ vrajet",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "21-27",
+  "sanskrit": "saṃhṛtya sarvataś cintām ahaṃ iti anuśīlayan avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p04 (21-27)\n[and]-having-withdrawn (saṃhṛtya) [and]-from-all (sarvataś) [and]-thought (cintām) [and]-I (ahaṃ) [and]-thus (iti) [and]-cultivating (anuśīlayan) [and]-without-thought (avikalpāṃ) [and]-own-consciousness (svasaṃvittiṃ) [and]-direct (pratyakṣāṃ) [and]-attains (pratipadyate) // 21 //",
+  "l2": "## pary-p04 — Diving into Consciousness\nWithdrawing thought, one attains direct self-consciousness and dives into the great lake. Shiva performs the five acts while trusting \"I am Shiva.\" Through guru's word and self-contemplation, the practitioner becomes accomplished. Imagining the world as Bhairava's own modifications, one recognizes oneself as subject, knowledge, and measured object."
  },
  {
   "chunk": "pary-p05",
-  "verses": "29-35",
-  "sanskrit": "antaḥkārabahiṣkārāv akālakramam ātmanaḥ | aparādhīnam ādhatse yat tvaṃ prābhavanirbharaḥ anuttaravisargātmaviśramodayayāmalam | saṃghaṭṭaś śivaśaktyos tadantare cānyaśaktayaḥ ānandeccheśanonmeṣā ūnatā ceśanecchayoḥ | asphuṭasphuṭabhedena vedyollāsas tayor vidaḥ ānandānuttarābhyāṃ ca sandhībhāvo 'tha vedanā | vedyānāṃ prāṇabhūteti pūrṇaṃ tad bhairavaṃ vapuḥ vedyollāso 'yam icchāyām īśane caikataḥ sthitaḥ | sthūlatvena pṛthivyādibhūtapañcakatām iyāt sūkṣmatvena ca gandhādipañcatanmātratāṃ tataḥ | karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām vedyatāyāḥ chādanena vettṛtodbhāsanakrame | mano 'haṃbuddhitāṃ eṣām avibhāge pradhānatām | puruṣatvaṃ ca saṃkocavikāsau yadapekṣayā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "28-33",
+  "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p05 (28-33)\n[and]-by-mode-of-measured-and-unmeasured (medāmedaprakāreṇa) [and]-bondage-and-liberation (bandhamokṣau) [and]-contemplating (vibhāvayan) [and]-Bhairava (bhairavo) [and]-I-am (asmi) [and]-thus (iti) [and]-by-trust (visrambhāt) [and]-freedom (svācchandyaṃ) [and]-supreme (paramaṃ) [and]-should-go (vrajet) // 28 //",
+  "l2": "## pary-p05 — Shiva and Shakti\nContemplating bondage and liberation, one goes freely as Bhairava. Inner and outer action, timeless sequence, and the fullness of lordly power are held in oneself. Shiva and Shakti unite with their other powers between emission and rest. Bliss, will, lordship, and deficiency manifest the known, while gross and subtle elements unfold from that body."
  },
  {
   "chunk": "pary-p06",
-  "verses": "36-42",
-  "sanskrit": "abhūvann iṣyasaṃyogād dvirūpād ubhayātmanaḥ | icchāsvarūpād unmeṣād anyathānuttarāyutāt catasraś śaktyo 'ntaḥsthāḥ puṃso 'syāntaś ca dhārikāḥ | cidvyomno jaḍabhūmeś ca māyāmayyas triśaṅkuvat icchāśaktes trirūpāyās tisro 'nyāś śaktyo 'bhavan | visargo 'yam athātyarthaṃ sphuṭo 'bhūt sṛjyavistarāt etat sṛṣṭvātmaśaktīnām itaretaramiśrāt | bhavet kṣobhāntaraṃ nāsmād visargād bāhyato bhavet iyatsarvaṃ sad icchādidvārānuttarabhairave | viśramya viśramya muhus tata eva visṛjyate antarnilīnānantārthasvātmāmarśaś citiḥ parā | ekavāravahād yeyaṃ mantrī vāk śuddhakartṛtā trivahaṃ tripathaṃ tristhaṃ kālaṃ sā karṣati svataḥ | bahis tataś cātmanīti śrīparā kālakarṣiṇī",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "34-39",
+  "sanskrit": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p06 (34-39)\n[and]-by-subtleness (sūkṣmatvena) [and]-and (ca) [and]-smell (gandha) [and]-etc (ādi) [and]-five (pañca) [and]-subtle-elements (tanmātratām) [and]-then (tataḥ) [and]-by-instrumentality (karaṇatvena) [and]-from-touch (saṃsparśād) [and]-of-senses (indriyāṇāṃ) [and]-tenfoldness (dvipañcatām) // 34 //",
+  "l2": "## pary-p06 — Elements and Contraction\nSubtle elements and senses arise through subtleness and instrumentality. Knowability covers subjecthood, while mind, I-intellect, and personhood gain predominance through contraction and expansion. Four inner powers of spirit support consciousness-space and the inert ground like Trishanku. Will-power's three forms produce emission, and mixing of self-powers creates inner agitation."
  },
  {
   "chunk": "pary-p07",
-  "verses": "43-49",
-  "sanskrit": "bheditāntaḥkṛtākha.ṅdabhāvāvekṣā parāparā | kartṛtā saiva paśyantī tasyaiveśadaśāśrayā || 43 madhyamā sakramā sthūlā antaḥkaraṇavartinī | vikalpanābhinnavācyā prāṇavṛttivibheditā svavāsanātādavasthyād daśayoḥ pūrvayor api | māyāmātur mitatvaṃ syāt paśyantyāś ca kramo hy aṇuḥ tayor āviśya daśayoḥ kramāc chāntavikalpayoḥ | dhanyas svasaṃvidvistāraṃ sāścaryam anupaśyati sā sthānakaraṇāghātapuṃvyāpārātmikā satī | vaikharī vṛttayo yasyāstā imāḥ śrutigocarāḥ ābhiḥ parasparaṃ jñānasaṃkrāntyātmā sa laukikaḥ | vyavahāro 'tha śāstrīyo nānāsaṃkocasaṃkaṭaḥ iti vāgvyāptividvāṃsam etadvargādhidevatāḥ | māheśvarīmukhā devyo jāgare 'pi na bhuñjate upāyenāgrahaḥ kārya upeyā bhairavīsthitiḥ | yāsau svasaṃvit tām eva sarvopāyāṃ samāviśet",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "40-46",
+  "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p07 (40-46)\n[and]-so-much (iyat) [and]-all (sarvaṃ) [and]-being (sat) [and]-will (icchā) [and]-etc (ādi) [and]-by-door (dvārā) [and]-supreme (anuttara) [and]-in-Bhairava (bhairave) [and]-having-rested (viśramya) [and]-having-rested (viśramya) [and]-again (muhuḥ) [and]-from-that (tataḥ) [and]-indeed (eva) [and]-is-emitted (visṛjyate) // 40 //",
+  "l2": "## pary-p07 — Speech and Time\nAll rests in Bhairava and is emitted again through will and other doors. Hidden infinite meaning is reflected as supreme consciousness and pure mantra-agency. Three flows draw time outward and inward as the glorious time-drawer. Paśyantī, madhyamā, and vaikharī mark higher, middle, and gross speech, while Maya limits the two states."
  },
  {
   "chunk": "pary-p08",
-  "verses": "50-51",
-  "sanskrit": "ādyantāntargatānantavācyavācakanirbharam | rahasyaṃ mantramudrāṇāṃ prapadye 'nuttaraṃ mahaḥ śambhor abhinnahṛdayā jayanti guravaḥ purā | nirvyutthānasamādhānaprāptaparyantasaṃpadaḥ",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "verses": "47-52",
+  "sanskrit": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "model": "beam-free",
+  "date": "2026-10-31",
+  "l1": "## pary-p08 (47-52)\n[and]-that (sā) [and]-place (sthāna) [and]-instrument (karaṇa) [and]-strike (āghāta) [and]-spirit (puṃ) [and]-activity (vyāpāra) [and]-nature (ātmikā) [and]-being (satī) [and]-Vaikhari (vaikharī) [and]-functions (vṛttayaḥ) [and]-whose (yasya) [and]-these (astāḥ) [and]-these (imāḥ) [and]-audible (śrutigocarāḥ) // 47 //\n\n*T1 frozen 2026-10-31.*",
+  "l2": "## pary-p08 — Vaikhari and Transmission\nVaikhari functions through place, instrument, strike, and spirit, enabling worldly and scriptural usage. Presiding goddesses headed by Maheshvari do not enjoy even in waking. The Bhairavi state is to be entered through all means as self-consciousness. Finally, the secret of mantras and mudras is attained, and gurus who hold Shambhu's undivided heart are victorious.\n\nFidelity: high"
  }
 ]
