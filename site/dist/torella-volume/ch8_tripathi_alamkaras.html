@@ -1,0 +1,678 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch8_tripathi_alamkaras · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch8_tripathi_alamkaras</h1><div class="skt"></div><div class="sub">3147 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch8_tripathi_alamkaras.txt">source →</a></div><ul>
+<li>aṁkāras in the Stotras of Utpaladeva</li>
+</ul>
+<ul>
+<li>dhavallabh Tripathi</li>
+</ul>
+<ul>
+<li>e concept of alaṁkāra in Sanskrit poetics is marked with a</li>
+<li>mprehensive approach to arts. Bharatamuni says that there are two</li>
+<li>pects of creativity in art — svabhāva and alaṁkāra.1 The former</li>
+<li>dicates natural acquisitions and the latter extraordinariness attained</li>
+<li>rough practice and devotion. In a dramatic performance they culminate</li>
+<li>to the renderings of lokadharmī and nāṭyadharmī, and in literature</li>
+<li>to svabhāvokti and vakrokti. The effects created by the process of</li>
+<li>aṁkāra lead to transgressing whatever may be commonplace or trivial.</li>
+<li> etymology the term alaṁkāra (making perfect) stands in agreement with</li>
+<li>is approach. Amarakośa has given four meanings of the term alam-, i.e.</li>
+<li>ūṣaṇa (decoration or embellishment), vāraṇa (negation or elimination),</li>
+<li>ryāpti (sufficiency) and śakti (power).2 They are related to surface</li>
+<li>ructure, deep structure and deeper structures in an art form. They are</li>
+<li>t isolated. The process of beautification (bhūṣaṇa) starts from the</li>
+<li>ter structure and basically relates to the form, but it is always</li>
+<li>nked to the content. This linkage necessitates the activity of</li>
+<li>imination or exclusion (vāraṇa) and both these processes of bhūṣaṇa</li>
+<li>d vāraṇa work together to bring in paryāpti (sufficiency). Thus a</li>
+<li>ece of art attains the state of fulfilment through bhūṣaṇa, vāraṇa and</li>
+<li>ryāpti and in this attainment lies its śakti. The alaṁkāra involves</li>
+<li>is fourfold view of alam, resulting in a holistic view of art. The</li>
+<li>iple process of bhūṣaṇa, vāraṇa and paryāpti, with the fourth element</li>
+<li> śakti embedded as an inherent force, tends to make an artistic</li>
+<li>eation extraordinary and this extraordinary nature of art is alaṁkāra.</li>
+<li>e ācāryas (masters of literary theory) have termed it as alambhāva or</li>
+<li>aṁkāra-bhāva. Abhinavagupta says:</li>
+</ul>
+<ul>
+<li>kottīrṇena rūpeṇa avasthānam iti ayam eva asau alaṁkārabhāvaḥ.</li>
+</ul>
+<ul>
+<li>maining in the state of extraordinariness is essence of alaṁkāra.3</li>
+</ul>
+<ul>
+<li> this completeness, each and every category in an art piece would</li>
+<li>mpete with the other ones in an ascending order for creating</li>
+<li>cellence. It is this ascendance of various components of poetry that</li>
+<li>ntaka terms as parasparaspardhādhiroha4 — a process in which various</li>
+<li>mponents of poetry vie with each other to enhance the charm of poetry</li>
+<li>d to make it reach the peaks of excellence.</li>
+</ul>
+<ul>
+<li>is manifestation of alambhāva or alaṁkāra-bhāva in literature or a</li>
+<li>ece of art encompasses all the three levels of human existence, i.e.</li>
+<li>hibhautika (empirical), ādhidaivika (psychic) and ādhyātmika</li>
+<li>piritual). The creative process under bhūṣaṇa, vāraṇa and paryāpti</li>
+<li>nctions on these three levels respectively. Therefore, alaṁkāra in</li>
+<li>terature and art must unfold a holistic view of life that functions on</li>
+<li>l these three levels, and it would reveal the extraordinary nature as</li>
+<li>scussed above only after completing its functions on all these three</li>
+<li>vels. It is also presumed that the gods are pleased by alaṁkāras.</li>
+<li>hinavagupta, commenting on the very first kārikā of the NŚ, says that</li>
+<li>e use of anuprāsa (alliteration) in the compound pitāmahamaheśvarau</li>
+<li>eaning Brahmā and Śiva) is to please both these gods.5 That means that</li>
+<li>sides devotion, the beauty of expression is also required to be</li>
+<li>essed with anugraha. The concept of alaṁkāra thus tends to make an art</li>
+<li>rm an abode of divine.</li>
+</ul>
+<ul>
+<li>e nature and choice of alaṁkāras in metaphysical poetry or in a stotra</li>
+<li>uld differ from their use in secular literature — śr̥ṅgāra-kāvya or</li>
+<li>ra-kāvya (romantic or heroic poetry). In metaphysical poetry or in a</li>
+<li>otra, use of virodha or virodhābhāsa (contradiction) alaṁkāra may be</li>
+<li>re meaningful than mere employment of alaṁkāras like upamā (simile).</li>
+<li> would seem contradictory in itself that the poetry that tends to</li>
+<li>move all contradictions of life, itself abounds in the use of</li>
+<li>ntradiction. Contradiction becomes effective to describe the Reality</li>
+<li>at cannot be encompassed in the ambit of ordinary language. In such</li>
+<li>ses it culminates into a paradox. This happens in many of the</li>
+<li>aniṣadic sayings. For example:</li>
+</ul>
+<ul>
+<li>rṇam adaḥ pūrṇam idaṁ pūrṇāt pūrṇam udacyate ।</li>
+</ul>
+<ul>
+<li>rṇasya pūrṇam ādaya pūrṇam eva avaśiṣyate ।।6</li>
+</ul>
+<ul>
+<li>is is full, that is full. Being full, it is enjoined with the full.</li>
+</ul>
+<ul>
+<li>king out full from the full, full itself remains.</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<ul>
+<li>d ejati tan nejati tad dūre tad u antike ।</li>
+</ul>
+<ul>
+<li>d antar asya sarvasya tad u sarvasya bāhyataḥ ।।</li>
+</ul>
+<ul>
+<li>at moves, that moves not. That is far off, That is very near. That is</li>
+<li>thin all this and That is outside all this — Īśa Upaniṣad 5</li>
+</ul>
+<ul>
+<li>rodha as a figure of speech occurs in the statements regarding</li>
+<li>existence of two opposite attributes in one stratum. Mammaṭa has</li>
+<li>umbrated ten varieties of virodha on the basis of permutations and</li>
+<li>mbinations of contradiction between jāti (universal), guṇa (quality),</li>
+<li>iyā (action) and yadr̥cchā (substance).7 These ten varieties encompass</li>
+<li>cosmic view of virodha. Some theoreticians have upheld the view that</li>
+<li>rodha and virodhābhāsa are two different alaṁkāras, with the</li>
+<li>stinction that the contradiction stands unresolved in the former</li>
+<li>ereas it is just apparent in the latter and finally resolved. In fact,</li>
+<li> it virodha or virodhābhāsa, the contradiction in this alaṁkāra is not</li>
+<li>al. In terms of Vedānta, it is a prātibhāsika-sattā.</li>
+</ul>
+<ul>
+<li>metimes the description of transcendental reality requires the</li>
+<li>mbination of śleṣa (pun) or rūpaka (metaphor) with virodha. Such</li>
+<li>mbinations then assume a unique character. The śleṣa or the rūpaka</li>
+<li>st then come as subservient to virodha in such cases. This type of</li>
+<li>mbination, termed as aṅgāṅgī-bhāva by the masters of literary theory,</li>
+<li>uld invest a poem, especially a stotra, with a unique character,</li>
+<li>king it distinct from the other forms of literature.</li>
+</ul>
+<ul>
+<li>stances of such use of virodha alaṁkāra abound in Utpaladeva’s</li>
+<li>otras. He employs this alaṁkāra to bring out the extraordinary nature</li>
+<li> metaphysical experience. For example:</li>
+</ul>
+<ul>
+<li>mā mama bhavadbhaktisudhāpānayuvā ’pi san ।</li>
+</ul>
+<ul>
+<li>kayātrārajorāgat palitair iva dhūsaraḥ ।। — Śivastotrāvalī I.2</li>
+<li>haktivilāsa)</li>
+</ul>
+<ul>
+<li> soul, even being young by drinking the elixir of devotion to the</li>
+<li>rd, appears as if dusty with grey hair, due to the rāga (colour,</li>
+<li>tachment) of the rajas (dust, rajoguṇa) during the course of the</li>
+<li>urney in this world.</li>
+</ul>
+<ul>
+<li>is is an example of virodha alaṁkāra based on contradiction between</li>
+<li>ṇas (qualities). Youth and old age are two opposite guṇas, they are</li>
+<li>own to be present in one entity (the ātman). This makes the poem an</li>
+<li>ample of contradiction. But this contradiction is substantiated by</li>
+<li>eṣa in the word rajorāga — to suit the double context of the lokayātrā</li>
+<li>ourney in this world).</li>
+</ul>
+<ul>
+<li> difference to the Vedāntic view that ātman is nirguṇa (devoid of</li>
+<li>alities), Utpaladeva apparently juxtaposes youth and old age</li>
+<li>multaneously in one substratum, bringing out the sound effect of</li>
+<li>votion to the Lord (bhavad bhakti). The kr̥t-suffix śatr̥ joined to the</li>
+<li>ot as (to be) in the words yuvā ’pi san emphasizes the continuity of</li>
+<li>uth through devotion, whereas the word iva (as if) added in the</li>
+<li>atement on old age suggests that the contradiction is not a part of</li>
+<li>e Reality. Despite the apparent contradiction of youth and old age</li>
+<li>nifesting in ātman simultaneously, Utpaladeva has carefully phrased</li>
+<li>is situation to bring out a resolution. The contradiction is further</li>
+<li>solved due to subtle use of utprekṣā in palitair iva dhūsaraḥ (appears</li>
+<li> if dusty with grey hair). The ātman is neither young nor old, it</li>
+<li>pears like that during the course of the journey in this world.</li>
+</ul>
+<ul>
+<li>eṣa as an alaṁkāra is of two types — śabda-śleṣa (based on word) and</li>
+<li>tha-śleṣa (based on the meaning). Here Utpala has used the former, as</li>
+<li>e double meaning of the word rajorāga can be conveyed only through the</li>
+<li>e of this particular word.</li>
+</ul>
+<ul>
+<li>e ācāryas like Mammaṭa also uphold the view that śabda-śleṣa</li>
+<li>lminates into simile. The rajas or dust gathered due to the journey in</li>
+<li>is world thus becomes comparable to rajoguṇa. This fusion of</li>
+<li>bda-śleṣa and the upamā with virodha here creates deep structures of</li>
+<li>taphysical and philosophical speculations. The very imagery of ātman</li>
+<li>ing continuously invested with youth, and yet appearing as an old</li>
+<li>rson, is suggestive of the fact that the journey in life does afflict</li>
+<li>e sādhaka (devotee) with its tinge of colours, but the grace of the</li>
+<li>rd will continue to be showered on him.</li>
+</ul>
+<ul>
+<li>pala makes skilful use of virodha with other alaṁkāras to bring out</li>
+<li>s philosophy in many other stanzas in Bhaktivilāsa-Stotra. Virodha in</li>
+<li>ch cases stands as aṅgī or main figure of speech whereas alaṁkāras</li>
+<li>sed on similarity or pun come as the aṅgas or subservient to virodha</li>
+<li> substantiate the premises of the poet.</li>
+</ul>
+<ul>
+<li>t us take up another example:</li>
+</ul>
+<ul>
+<li>yanti bhaktipīyūṣarasāsavavaronmadāḥ ।</li>
+</ul>
+<ul>
+<li>vitīyā api sadā tvaddvitīyā api prabho ।।</li>
+</ul>
+<ul>
+<li>Śivastotrāvalī I.5 (Bhaktivilāsa)</li>
+</ul>
+<ul>
+<li>ctorious are they who are intoxicated by bhaktipīyūṣarasāsavavara (the</li>
+<li>st quality essence of the wine of the nectar of devotion). They are</li>
+<li>vitīya (single, unique) and even then they are always tvaddvitīyā</li>
+<li>ccompanied by you).</li>
+</ul>
+<ul>
+<li>ere is a metaphor in bhaktipīyūṣarasāsavavara (the excellent essence</li>
+<li> the wine of the nectar of devotion). The effects of the intoxication</li>
+<li> wine can terminate the discretion and the discriminatory powers of a</li>
+<li>rson. Here the bhaktipīyūṣarasāsavavara leads to the termination of</li>
+<li>ality. The complexity of dualism and non-dualism going together is</li>
+<li>phasized by the use of virodha alaṁkāra. Here too, śabda-śleṣa and</li>
+<li>paka support virodha to project the uniqueness of experiences arising</li>
+<li>t of devotion to the Lord. In the same way, the experience of seeing</li>
+<li>e Lord when there is complete annihilation of all objects of knowledge</li>
+<li>s been brought out in the following stanza:</li>
+</ul>
+<ul>
+<li>tha vedyakṣaye kena na dr̥śyo asy ekakaḥ sthitaḥ ।</li>
+</ul>
+<ul>
+<li>dyavedaikasaṅkṣobhe ’py asi bhaktaiḥ sudarśanaḥ ।। — Śivastotrāvalī</li>
+<li>8 (Bhaktivilāsa)</li>
+</ul>
+<ul>
+<li>rd, who will not see you as the One standing alone, after the complete</li>
+<li>nihilation of all objects of knowledge? After all the subject and</li>
+<li>ject are merged together, you are to be sighted easily.</li>
+</ul>
+<ul>
+<li> the seer and the seen are merged together, how can the Lord be seen</li>
+<li>sily? This contradiction in the statement cannot be resolved unless</li>
+<li>e stanza is considered to be having a tinge of bhāvika alaṁkāra. The</li>
+<li>ality of a literary discourse leading the connoisseur to a clear</li>
+<li>rception is bhāvika alaṁkāra. The happenings of past and things to</li>
+<li>ppen in future are portrayed so vividly that the reader is able to see</li>
+<li>em. Defining bhāvika alaṁkāra in his Kāvyālaṁkāra, Bhāmaha says:</li>
+</ul>
+<ul>
+<li>āvika is that quality of a literary discourse where things of past and</li>
+<li>ture are perceived as if by eyes. It is caused by variety, sublimity</li>
+<li>d dramatic quality of a narrative as well as by the clarity of words.8</li>
+</ul>
+<ul>
+<li>ṇḍin understands bhāva as the intention of the poet. The theme is</li>
+<li>and, and speech and expressions match it, so that everything becomes</li>
+<li>bservient to the intention of the poet.9 Later authors have viewed</li>
+<li>āvika as unfolding of the vision of past and future leading to</li>
+<li>alization. Ruyyaka says that the past and the future become alive</li>
+<li>fore our eyes through bhāvika — they become perceptible and we stand</li>
+<li>tness to them.10 Appaya Dīkṣita defines it as</li>
+<li>ūtabhavyārthasākṣāddarśanavarṇanam (direct vision and narration of the</li>
+<li>st and the future). Āśādhara Bhaṭṭa in his commentary on Kuvalayānanda</li>
+<li>fines bhāva in bhāvika as sākṣātkāra (vision) — bhāvāya sākṣātkārāya</li>
+<li>abhavati iti bhāvikaṁ. Ruyyaka also says that there are two types of</li>
+<li>rrespondences in poetry — subjective and objective — hr̥daya-saṁvāda</li>
+<li>mpathy) and vastu-saṁvāda (objective visualization). In</li>
+<li>savadalaṁkāra we have hr̥daya-saṁvāda and in svabhāvokti there is</li>
+<li>stu-saṁvāda. But in bhāvika it is neither vastu-saṁvāda nor</li>
+<li>̥daya-saṁvāda; it is clear perception. The masters of literary theory</li>
+<li>ve used the term sākṣātkāra for the experience of poetry having</li>
+<li>āvika alaṁkāra. The same term is used in Śaivism and Vedānta to define</li>
+<li>e mystic experience. The mystic poems as those of Utpala lead to a</li>
+<li>rception beyond time and space, and thus they illustrate bhāvika</li>
+<li>aṁkāra.</li>
+</ul>
+<ul>
+<li>aṅgati (incongruity or disconnection) is another important alaṁkāra of</li>
+<li>e group of alaṁkāras based on contradiction. It is used for situations</li>
+<li>volving non-applicability of the rules of cause and effect, etc.</li>
+<li>aṅgati is often used to bring a sense of saṅgati (connection).</li>
+<li>bhākaramiśra has enumerated eight types of asaṅgatis enveloping a vast</li>
+<li>ectrum of time and space. They are: (i) the effect manifests</li>
+<li>sewhere, (ii) the effect that should have been at two different places</li>
+<li>nifests at one place; (iii-iv) the effect manifests earlier, or</li>
+<li>nifests with the cause, (v-vi) the effect manifests much later or too</li>
+<li>rly; and (vii-viii) the effect belonging to this world is found in</li>
+<li>other world and vice versa.11</li>
+</ul>
+<ul>
+<li>paladeva explores the disconnections or connections between the causes</li>
+<li>d the effects through asaṅgati alaṁkāra with a view to establish the</li>
+<li>iqueness of metaphysical experiences. The following stanza from his</li>
+<li>otra is a good example of asaṅgati alaṁkāra —</li>
+</ul>
+<ul>
+<li>tram nisargato nātha duḥkhabījaṁ idaṁ manaḥ ।</li>
+</ul>
+<ul>
+<li>adbhaktirasasaṁsiktaṁ niḥśreyasamahāphalam ।। — Śivastotrāvalī I.26</li>
+<li>haktitavilāsa)</li>
+</ul>
+<ul>
+<li>range as it is, O Lord, that my mind — a seed of sorrow by nature —</li>
+<li>s yielded the great fruit of salvation.</li>
+</ul>
+<ul>
+<li>e asaṅgati alaṁkāra here joins hand again with a complex metaphor,</li>
+<li>erein the mind is the earth, sorrow is the seed sown in it, bhakti</li>
+<li>evotion) is the rasa (water, bliss) and niḥśreyasa (salvation) is the</li>
+<li>hāphala (great fruit).</li>
+</ul>
+<ul>
+<li> fact, we do not find singular usages of alaṁkāras in this type of</li>
+<li>etry, as one alaṁkāra would be joined invariably by other members of</li>
+<li>s group or the other group. This becomes necessary due to the</li>
+<li>mplexity and unique character of the experiences that are to be</li>
+<li>lineated in devotional and mystic poetry. Rūpaka assumes a distinct</li>
+<li>aracter, supported by an alaṁkāra like vyatireka. The following stanza</li>
+<li>mbines a number of alaṁkāras to bring out the unparalleled nature of</li>
+<li>rd Śiva:</li>
+</ul>
+<ul>
+<li>śvendhanamahākṣārānulepaśucivarcase ।</li>
+</ul>
+<ul>
+<li>hānalāya bhavate viśvaikahaviṣe namaḥ ।। — Śivastotrāvalī II.2</li>
+<li>arvātmaparibhāvana)</li>
+</ul>
+<ul>
+<li>lutations to you, O Big Fire, consuming the offering of the whole</li>
+<li>iverse, and with your body having become pious by smearing the ashes</li>
+<li> the firewood of this world.</li>
+</ul>
+<ul>
+<li>paka is the main alaṁkāra here, supported by virodha alaṁkāra. The</li>
+<li>taphor of the world as a fuel incorporates the contradiction or</li>
+<li>rodha alaṁkāra, i.e. that the Lord is pious even when he smears his</li>
+<li>dy with the ashes of this fuel. The metaphor of mahānala (great fire)</li>
+<li> also suggestive of vyatireka alaṁkāra, as it implies that Lord Śiva</li>
+<li>ceeds an ordinary fire. Again the metaphor and vyatireka in the second</li>
+<li>ne are supported by another metaphor of viśvaikahaviḥ — that the world</li>
+<li> a haviḥ (oblation) for the great fire that is Śiva. The whole stanza</li>
+<li> also an example of parikara alaṁkāra. Parikara alaṁkāra manifests by</li>
+<li>e appropriate use of adjectives. There are three adjectives used here</li>
+<li>r Lord Śiva — viśvendhanamahākṣārānulepaśucivarcas, mahānala and</li>
+<li>śvaikahaviḥ. All of them suitably bring out the distinct nature of the</li>
+<li>rd. Also as the adjectives so suitably used to describe Lord Śiva are</li>
+<li>l suggestive of his extraordinariness and grandeur, the stanza is also</li>
+<li>aracterized by udātta alaṁkāra. In fact, Utpala’s poetry subtly</li>
+<li>eathes in the mixture of such alaṁkāras like parikara, udātta with</li>
+<li>paka. It is the vision of the divine that leads to the expressions</li>
+<li>ructured with alaṁkāras like virodha, parikara, udātta, rūpaka and</li>
+<li>atireka — with implications of atiśayokti.</li>
+</ul>
+<ul>
+<li>ch specific combinations of alaṁkāras distinguish the poetry of</li>
+<li>stics like Utpala from other types of literary compositions. The</li>
+<li>aṁkāras employed in such poetry present a feast of contradictions that</li>
+<li>variably and unmistakably culminates in the state of bliss. The</li>
+<li>ntradictions then become the vehicles for a journey to travel beyond</li>
+<li>e mundane. A glimpse of the transcendental can be had through the</li>
+<li>ope created by contradictory statements, such as</li>
+</ul>
+<ul>
+<li>hasrasūryakiraṇādhikaśuddhaprakāśavān ।</li>
+</ul>
+<ul>
+<li>i tvaṁ sarvabhuvanavyāpako ’pi na dr̥śyase ।। — Śivastotrāvalī III.19</li>
+<li>raṇayaprasāda)</li>
+</ul>
+<ul>
+<li>ving pure brilliance more than the rays of thousands of suns, you are</li>
+<li>t visible even when you pervade all the cosmos.</li>
+</ul>
+<ul>
+<li>is leads us to distinguish the specific nature of alaṁkāras and the</li>
+<li>pes of alaṁkāras that are used in the stotras of the</li>
+<li>ilosopher-poets, like Utpaladeva.</li>
+</ul>
+<ul>
+<li>e following stanza 14 from Sarvātmaparibhāvana presents a combination</li>
+<li> rūpaka and udātta:</li>
+</ul>
+<ul>
+<li>ṭeṣv eva paribhrāntaiḥ labdhās tās tā vibhūtayaḥ ।</li>
+</ul>
+<ul>
+<li>sya tasmai namas tubhyam agādhaharasindhave ।।</li>
+</ul>
+<ul>
+<li>lutations to thee, O unfathomed sea Lord Śiva, just by loitering upon</li>
+<li>ose banks people get unaccountable prosperities.</li>
+</ul>
+<ul>
+<li>re also udātta is aṅga (subservient) to rūpaka. In all such instances,</li>
+<li>iśayokti forms the base. Ultimately, the saṅkara (commixture) of such</li>
+<li>gures of speech enables the poet to create divine aesthetics. The</li>
+<li>ṁsr̥ṣṭi (fusion) of alaṁkāras like rūpaka, parikara, vyatireka and</li>
+<li>ātta leads to a samplava — a confluence of diverse streams forming</li>
+<li>fathomed sea — which Utpala terms as rāgarasa.</li>
+</ul>
+<ul>
+<li>accidānandajaladhes cyutāḥ saṁvittivipruṣaḥ ।</li>
+</ul>
+<ul>
+<li>āḥ kathaṁ me bhagavan na amr̥tāsvādasundarāḥ ।।</li>
+</ul>
+<ul>
+<li>ayi rāgarase nātha na magnaṁ hr̥dayaṁ prabho ।</li>
+</ul>
+<ul>
+<li>ṣāṁ ahr̥dayā eva te avajñāspadaṁ īdr̥śāḥ ।। — Śivastotrāvalī III.6-7</li>
+<li>raṇayaprasāda)</li>
+</ul>
+<ul>
+<li>e drops of consciousness trickling from the Sea of Bliss that is You —</li>
+<li>ll they not be beautiful to me like nectar? O Lord, heartless are they</li>
+<li>ose hearts have not been submerged in the rāgarasa that You are. They</li>
+<li>e not subjected to the grace from you.</li>
+</ul>
+<ul>
+<li>ferences</li>
+</ul>
+<ul>
+<li>aṁkāra-Ratnākara of Śobhākaramiśra, ed. C.R. Devadhar, Poona: Oriental</li>
+<li>ok Agency, 1942.</li>
+</ul>
+<ul>
+<li>aṁkāra-Sarvasva of Ruyyaka with Sañjīvinī of Śrīvidyācakravartin, ed.</li>
+<li>C. Dwivedi, Delhi: Motilal Banarsidass, 1965.</li>
+</ul>
+<ul>
+<li>arakośa – Edited by Hargovind Shastri, Kashi Sanskrit Granthamālā,</li>
+<li>8, Chowkhambha Sanskrit Series Office, Varanasi, Vikram Saṁvat 2016.</li>
+</ul>
+<ul>
+<li>vanyāloka of Ānandavardhana, ed. K. Krishnamoorthy, Delhi: Motilal</li>
+<li>narsidass, 1982.</li>
+</ul>
+<ul>
+<li>vanyālokalocana (Locana): Dhvanyālokalocana- Kerala Commentaries,</li>
+<li>ls. I-II, ed. C.M. Neelkanthan, Tripunithura: Centre for Heritage</li>
+<li>udies, 2011.</li>
+</ul>
+<ul>
+<li>ādidaśopaniṣadaḥ, Delhi: Motilal Banarsidass, 1st edn., 1964, repr.</li>
+<li>75.</li>
+</ul>
+<ul>
+<li>vyādarśa of Daṇḍin with commentary of Ramachandra Mishra, Varanasi:</li>
+<li>owkhambha Vidya Bhavan, 1958.</li>
+</ul>
+<ul>
+<li>vyālaṁkāra of Bhāmaha, ed. Raman Kumar Sharma, Delhi: Vidya Nidhi</li>
+<li>akashan, 1994.</li>
+</ul>
+<ul>
+<li>vyaprakāśa of Mammaṭa with English translation by Sir Ganganatha Jha,</li>
+<li>lhi: Bharatiya Vidya Prakashan, 1985.</li>
+</ul>
+<ul>
+<li>ṭyaśāstra (NŚ) – of Bharatamuni, ed. Ravishankar Nagar, vols. I-IV,</li>
+<li>lhi: Parimal Publications, 1983-84.</li>
+</ul>
+<ul>
+<li>vastrotrāvalī of Utpaladeva, ed. Sushama Jadu, New Delhi: Rashtriya</li>
+<li>nskrit Sansthan, 2010.</li>
+</ul>
+<ul>
+<li>ddhitrayī of Utpaladeva, ed. Surya Prakash Vyas, Varanasi: Chowkhambha</li>
+<li>nskrit Sansthan, 1988.</li>
+</ul>
+<ul>
+<li>kroktijīvitam of Kuntaka, ed. K. Krishmoorthy, Dharwad: Karnatak</li>
+<li>iversity, 1977.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>NŚ, XXXIII.6.</li>
+</ul>
+<ul>
+<li>alam bhūṣaṇaparyāptiśaktivāraṇavācakam — Amarakośa III.3.252; mā sma</li>
+<li> alaṁ ca vāraṇe — ibid. 3.4.11.</li>
+</ul>
+<ul>
+<li>Locana on Dhvanyāloka (Varanasi edn.), p. 499.</li>
+</ul>
+<ul>
+<li>vakratāvividhaguṇālaṁkārasampadāṁ paraspara-spardhādhirohaḥ —</li>
+<li>kroktijīvitam, p. 10.</li>
+</ul>
+<ul>
+<li>pitāmahamaheśvarau iti kramaḥ chekānuprāsārthaḥ । sālaṁkārasya ca</li>
+<li>kyābhinayatāṁ darśayityuṁ । sālaṅkārasya devatāparitoṣahetutvaṁ ca</li>
+<li>rśayituṁ । — Abhinavabhāratī on Nāṭyaśāstra I.1.</li>
+</ul>
+<ul>
+<li>This verse occurs in the beginning of the fifth chapter of</li>
+<li>̥hadāraṇyaka Upaniṣad. Śaṅkarācārya has commented upon it.</li>
+<li>ādidaśopaniṣadaḥ, p. 950.</li>
+</ul>
+<ul>
+<li>KP, X.110-11a: 407-08.</li>
+</ul>
+<ul>
+<li>tad bhāvikam iti prāhuḥ prabandhaviṣayaṁ guṇaṁ ।</li>
+</ul>
+<ul>
+<li>atyakṣa iva dr̥śyante yatrārthāḥ bhūtabhāvinaḥ ।।</li>
+</ul>
+<ul>
+<li>trodāttādbhutārthatvaṁ kathāyāḥ svabhinīyatā ।</li>
+</ul>
+<ul>
+<li>bdānākulatā ca iti tasya hetuṁ pracakṣate ।। — Kāvyālaṁkāra III.53-54</li>
+</ul>
+<ul>
+<li>bhāvaḥ kaver abhiprāyaḥ kāvyeṣv āsiddhisaṁsthitaḥ ।</li>
+</ul>
+<ul>
+<li>rasparopakāritvaṁ sarveṣāṁ vastuparvaṇām ।।</li>
+</ul>
+<ul>
+<li>śeṣaṇānāṁ vyarthānām akriyā sthānavarṇanā ।</li>
+</ul>
+<ul>
+<li>aktir uktikramabalād gabhīrasyāpi vastunaḥ ।।</li>
+</ul>
+<ul>
+<li>āvāyattam idaṁ sarvam iti tad bhāvikaṁ viduḥ ।। — Kāvyādarśa II.364-65</li>
+</ul>
+<ul>
+<li> Alaṁkāra-Sarvasva, sūtra 80, p. 328.</li>
+</ul>
+<ul>
+<li> Alaṁkāra-Ratnākara, sūtra 55, p. 96.</li>
+</ul>
+<ul>
+<li></li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch8_tripathi_alamkaras.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

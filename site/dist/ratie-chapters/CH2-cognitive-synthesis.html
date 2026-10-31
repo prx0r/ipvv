@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RATIÉ CH. 2 — THE RIPOSTE: THE PROBLEM OF COGNITIVE SYNTHESIS · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>RATIÉ CH. 2 — THE RIPOSTE: THE PROBLEM OF COGNITIVE SYNTHESIS</h1><div class="skt"></div><div class="sub">1336 words · vendored research asset</div><div class="sub"><a href="/data/ratie-chapters/CH2-cognitive-synthesis.md">source →</a></div><h1>RATIÉ CH. 2 — THE RIPOSTE: THE PROBLEM OF COGNITIVE SYNTHESIS</h1>
+<ul>
+<li>er-chapter analysis for the thesis. Source lines 5925–8573. The riposte to the Buddhist</li>
+<li>-self: the Self is needed for the synthesis of cognitions (memory, recognition across</li>
+<li>ments).*</li>
+</ul>
+<hr/>
+<h2>1. THE CHAPTER&#x27;S THESIS</h2>
+<ul>
+<li>e Buddhist has denied the Self; the Pratyabhijñā shows the Self is *needed for the</li>
+<li>nthesis of cognitions* — memory and recognition across moments are impossible without a</li>
+<li>rsisting subject. <b>This is where the felt self emerges.</b></li>
+</ul>
+<h2>2. EXTENDED QUOTES (French verbatim + English translation)</h2>
+<h3>Q1 — Memory = asampramosha (no complete dispossession) (lines 6924–6939)</h3>
+<blockquote>&quot;La forme essentielle (ātmīya) de la mémoire consiste à manifester [quelque chose]</blockquote>
+<blockquote>exactement de la même manière [que dans le passé]… le fait qu&#x27;il n&#x27;y a pas dépossession</blockquote>
+<blockquote>complète (asampramoṣa)… de l&#x27;objet expérimenté.&quot;</blockquote>
+<blockquote>**&quot;The essential form (ātmīya) of memory consists in manifesting something exactly in the</blockquote>
+<blockquote>same way as in the past — the fact that there is no complete dispossession</blockquote>
+<blockquote>(asampramoṣa) of the experienced object.&quot;**</blockquote>
+<ul>
+<li>→<b> Memory = the recovery of what was never truly lost. </b>The template for recognition</li>
+<li> re-cognition.**</li>
+</ul>
+<h3>Q2 — Memory as re-appropriation (lines 6973–6981)</h3>
+<blockquote>&quot;La mémoire est expérience d&#x27;une réappropriation de l&#x27;objet passé : se souvenir, c&#x27;est</blockquote>
+<blockquote>réaliser que le passé n&#x27;est pas complètement perdu.&quot;</blockquote>
+<blockquote>**&quot;Memory is the experience of a re-appropriation of the past object: to remember is to</blockquote>
+<blockquote>realize that the past is not completely lost.&quot;**</blockquote>
+<h3>Q3 — Synthesis (anusandhāna) = the life of all mundane existence (ĪPK 1.3.6, lines 7409–7424)</h3>
+<blockquote>&quot;evam anyonyabhinnānām aparasparavedinām / jñānānām anusandhānajanmā naśyej janasthitiḥ</blockquote>
+<blockquote>// … l&#x27;existence mondaine, qui naît de la synthèse (anusandhāna)… toute activité mondaine</blockquote>
+<blockquote>suppose… le désir… le désir suppose à son tour la mémoire (smṛti).&quot;</blockquote>
+<blockquote>**&quot;If one accepted [the Buddhist thesis], the mundane existence that arises from the</blockquote>
+<blockquote>synthesis (anusandhāna) of cognitions… would have to perish… all mundane activity</blockquote>
+<blockquote>presupposes… desire… and desire presupposes memory (smṛti).&quot;**</blockquote>
+<h3>Q4 — Vimarśa = the felt self-luminous grasping (lines 8134–8150)</h3>
+<blockquote>&quot;Vimarśa désigne… le fait que la conscience n&#x27;est pas seulement manifestation (prakāśa)…</blockquote>
+<blockquote>mais en prend conscience… cette saisie immédiate de soi qui constitue la conscience de</blockquote>
+<blockquote>soi (svasamvedana).&quot;</blockquote>
+<blockquote>**&quot;Vimarśa designates… the fact that consciousness is not merely manifestation (prakāśa)…</blockquote>
+<blockquote>but becomes aware of it… this immediate self-seizure that constitutes the self-consciousness</blockquote>
+<blockquote>(svasamvedana).&quot;**</blockquote>
+<ul>
+<li>→<b> Vimarśa = the felt, self-luminous moment of every cognition. </b>The felt substrate</li>
+<li>at recognition re-appropriates.**</li>
+</ul>
+<h3>Q5 — Even perception contains a vimarśa (ĪPK 1.5.19, lines 8279–8327)</h3>
+<blockquote>&quot;sākṣātkārakṣaṇe&#x27;py asti vimarśaḥ… Même au moment de la perception immédiate, il y a une</blockquote>
+<blockquote>prise de conscience (vimarśa)… d&#x27;une manière si subtile que d&#x27;ordinaire nous n&#x27;y prêtons</blockquote>
+<blockquote>pas attention.&quot;</blockquote>
+<blockquote>**&quot;Even at the moment of immediate perception there is a taking-conscious (vimarśa)… in so</blockquote>
+<blockquote>subtle a manner that ordinarily we do not pay attention to it.&quot;**</blockquote>
+<ul>
+<li>→ POST-RECOGNITION SEED.** Recognition is not an added construction but the explicit</li>
+<li>covery of what is always latently felt. <b>The felt is always already there.</b></li>
+</ul>
+<h3>Q6 — The synthesis of the anterior and posterior forms of the &quot;I&quot; (lines 8461–8473)</h3>
+<blockquote>&quot;cette &#x27;synthèse des formes antérieure et postérieure du Je&#x27; (aham iti pūrvāpararūpānusandhāna)</blockquote>
+<blockquote>par laquelle le sujet percevant se saisit à la fois comme la conscience d&#x27;où émerge</blockquote>
+<blockquote>l&#x27;objet et comme la conscience où il se résorbe.&quot;</blockquote>
+<blockquote>**&quot;this &#x27;synthesis of the anterior and posterior forms of the I&#x27; by which the perceiving</blockquote>
+<blockquote>subject seizes itself at once as the consciousness from which the object emerges and as</blockquote>
+<blockquote>the consciousness in which it is reabsorbed.&quot;**</blockquote>
+<ul>
+<li>→ THE FELT MOTION OF RE-COGNITION.** The self spans its own moments — the felt motion</li>
+<li>at the paper&#x27;s post-recognition theory rests on.</li>
+</ul>
+<h3>Q7 — Cognitions are &quot;blind, deaf and mute&quot; to each other (lines 8511–8562)</h3>
+<blockquote>&quot;ces cognitions… sont pour ainsi dire inconscientes, aveugles, sourdes et muettes en ce</blockquote>
+<blockquote>qui concerne l&#x27;objet des autres… la synthèse… ne peut provenir ni de la nature [de chaque</blockquote>
+<blockquote>cognition], ni de l&#x27;objet.&quot;</blockquote>
+<blockquote>**&quot;these cognitions… are as it were unconscious, blind, deaf and mute with regard to the</blockquote>
+<blockquote>object of the others… the synthesis… can proceed neither from the nature of each</blockquote>
+<blockquote>cognition nor from the object.&quot;**</blockquote>
+<ul>
+<li>→<b> No objectified cognition can synthesize others. </b>Only a self that is the felt light</li>
+<li> all cognitions can effect the re-cognition.** The felt cannot be captured as an object</li>
+<li>the non-objective felt.</li>
+</ul>
+<h2>3. IPK LINKS</h2>
+<ul>
+<li><b>ĪPK 1.3.4</b> (memory = asampramoṣa) — Q1.</li>
+<li><b>ĪPK 1.3.6</b> (anusandhāna synthesis) — Q3, Q7.</li>
+<li><b>ĪPK 1.5.19</b> (vimarśa in every perception) — Q5, Q6.</li>
+<li>The synthesis argument → <b>ĪPK 1.3.7</b> (the unifier, treated in Ch3).</li>
+</ul>
+<h2>4. THESIS LITERATURE-REVIEW VALUE</h2>
+<ul>
+<li><b>Memory as re-appropriation</b> (Q1, Q2) = the felt template for recognition.</li>
+<li><b>The felt is always already present</b> (Q4, Q5): vimarśa is latent in every perception —</li>
+<li>cognition makes it explicit. This is the paper&#x27;s post-recognition re-rendering.</li>
+<li><b>The felt is non-objective</b> (Q7): the synthesizing self cannot be objectified. Pairs</li>
+<li>th Solms&#x27; felt-as-non-objective affect.</li>
+<li><b>The &quot;synthesis of the anterior/posterior I&quot;</b> (Q6) = the felt spanning of moments —</li>
+<li>lms&#x27; autonoetic memory / the felt-enduring subject.</li>
+</ul>
+<h2>5. ⭐ THE SVASAMVEDANA DIALECTIC (the deep crux — mined from Ratié Ch2, lines 5925–6254)</h2>
+<ul>
+<li>is is the single most important dialectical passage for the felt-self thesis. Deep-mined</li>
+<li>om the primary source:</li>
+</ul>
+<ul>
+<li>The no-self challenge (Ch1, the strongest form):** the trace (saṃskāra) suffices to</li>
+<li>plain memory; the Self is a &quot;useless burden&quot; (antargaḍu). Ratié notes the Vaiśeṣika&#x27;s own</li>
+<li>āvanā is &quot;the cause of <b>souvenir (smṛti) AND recognition (pratyabhijñāna)</b> of objects</li>
+<li>ready experienced&quot; (lines 4243–4250) — **recognition already appears in the rival system</li>
+<li> an ordinary byproduct of the trace.**</li>
+</ul>
+<ul>
+<li>Utpaladeva&#x27;s riposte (ĪPK 1.3.1, lines 5962–5984):<i>* the trace explains the *object</i> of</li>
+<li>mory but NOT the <i>felt consciousness that this was experienced by me</i>:</li>
+</ul>
+<blockquote>&quot;cette cognition, confinée à elle-même (ātmaniṣṭha), ne peut pas faire connaître</blockquote>
+<blockquote>l&#x27;expérience originale.&quot;</blockquote>
+<blockquote>&quot;this cognition, confined to itself, cannot make known the original experience.&quot;</blockquote>
+<ul>
+<li>The Buddhist&#x27;s reply (lines 6063–6089):<i>* memory takes the past *cognition</i> as its</li>
+<li>ject (&quot;j&#x27;ai perçu la tasse ce matin&quot;).</li>
+</ul>
+<ul>
+<li>The Śaiva&#x27;s fatal counter (lines 6090–6184):** this contradicts the Buddhist&#x27;s OWN</li>
+<li>inciple of <b>svasamvedana</b> (self-awareness). If every cognition is self-aware, it can</li>
+<li>ver be the object of another — so memory cannot objectify the past experience:</li>
+</ul>
+<blockquote>&quot;la cognition est l&#x27;acte d&#x27;objectivation que rien ne peut à son tour objectiver.&quot;</blockquote>
+<blockquote>&quot;cognition is the act of objectivation that nothing can in turn objectify.&quot;</blockquote>
+<ul>
+<li>The scholarly crux — the &quot;glissement de sens&quot; (subversion of meaning, lines 6129–6148):**</li>
+<li>e Śaiva ADOPTS the Buddhist&#x27;s svasamvedana but SHIFTS its meaning — from &quot;no Self needed&quot;</li>
+<li>uddhist) to &quot;the felt-self is real, non-objective, and prior to cognition&quot; (Śaiva).</li>
+</ul>
+<ul>
+<li>The felt-self conclusion:** memory is not object-recall but the felt re-cognition of</li>
+<li>his was experienced by me&quot; — a felt dimension that the objectifying machinery (the</li>
+<li>ace) cannot capture. <b>The felt self is real, non-objective, and prior to cognition.</b></li>
+</ul>
+<blockquote><b>CONNECTION TO SOLMS:</b> the felt is non-objective (cannot be objectified — the Śaiva</blockquote>
+<blockquote>proof) = Solms&#x27; felt (affect) is non-objective (Ch5). But NOTE the dissonance (see</blockquote>
+<blockquote><code>CRITICAL-COMMENTARY-felt-self-dialectic.md</code>, Dissonance 3): the Buddhist, Śaiva, and</blockquote>
+<blockquote>Solms all hold the felt is non-objective, but for INCOMPATIBLE reasons. The convergence</blockquote>
+<blockquote>is phenomenological, not metaphysical.</blockquote>
+<h2>6. IPVV TRANSLATION HOOKS</h2>
+<ul>
+<li><b>anusandhāna</b> (synthesis) / <b>anusandhātṛ</b> (synthesizer) — the life of cognition.</li>
+<li><b>smṛti</b> (memory) / <b>asampramoṣa</b> — memory&#x27;s essence.</li>
+<li><b>vimarśa</b> / <b>svasamvedana</b> — the felt self-grasping.</li>
+<li><b>aham iti pūrvāpararūpānusandhāna</b> — the synthesis of the two &quot;I&quot;s.</li>
+<li><b>saṃskāra</b> (impression) — the Buddhist rival explanation.</li>
+</ul>
+<hr/>
+<ul>
+<li>h2 is where the felt self emerges: memory is re-appropriation (never truly lost),</li>
+<li>marśa is latent in every perception, and the synthesizing self is non-objective. This is</li>
+<li>e paper&#x27;s foundation for recognition-as-felt and post-recognition re-rendering. The</li>
+<li>lind, deaf, mute&quot; cognitions (Q7) prove only a felt self can unify them.*</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/ratie-chapters/CH2-cognitive-synthesis.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

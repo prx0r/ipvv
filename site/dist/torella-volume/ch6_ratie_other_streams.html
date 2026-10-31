@@ -1,0 +1,1538 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch6_ratie_other_streams · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch6_ratie_other_streams</h1><div class="skt"></div><div class="sub">10966 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch6_ratie_other_streams.txt">source →</a></div><ul>
+<li>me Hitherto Unknown Fragments of Utpaladeva’s Vivr̥ti (I)</li>
+</ul>
+<ul>
+<li> the Buddhist Controversy Over the</li>
+</ul>
+<ul>
+<li>istence of Other Conscious Streams*</li>
+</ul>
+<ul>
+<li>abelle Ratié</li>
+</ul>
+<ul>
+<li>Raffaele Torella,</li>
+</ul>
+<ul>
+<li>ns qui les œuvres d’Utpaladeva</li>
+</ul>
+<ul>
+<li>raient demeurées à maints égards apratyabhijñāta.</li>
+</ul>
+<ul>
+<li>me Old Sources for New Vivr̥ti Fragments</li>
+</ul>
+<ul>
+<li>dology owes to Raffaele Torella one of the most exciting manuscript</li>
+<li>scoveries made in the last decades, namely, that of the only extensive</li>
+<li>agment thus far known of Utpaladeva’s Vivr̥ti on his ĪPK. The edition</li>
+<li>d translation of this fragmentary codex unicus by its discoverer1 has</li>
+<li>d several important consequences. First of all, it has confirmed</li>
+<li>ffaele Torella’s initial hypothesis that the great innovator as</li>
+<li>gards the Pratyabhijñā system is not Abhinavagupta but Utpaladeva:2 a</li>
+<li>ick comparison between the extant fragment of the Vivr̥ti and the</li>
+<li>rallel passages in Abhinavagupta’s ĪPV and ĪPVV shows that at least in</li>
+<li>is part of the treatise, Abhinavagupta is extremely faithful to</li>
+<li>paladeva’s thought and closely follows his argumentation. But there is</li>
+<li>other great advantage to this discovery: we are now able to examine</li>
+<li>e marginal annotations contained in the manuscripts of Abhinavagupta’s</li>
+<li>V3 and to check whether some of them contain quotations from the</li>
+<li>vr̥ti. And this is a task of the utmost importance because, so far,</li>
+<li>art from the fragment discovered by Raffaele Torella, we could only</li>
+<li>ly on Abhinavagupta’s commentaries so as to try and reconstruct the</li>
+<li>st of the arguments in the Vivr̥ti.</li>
+</ul>
+<ul>
+<li>mittedly, Abhinavagupta’s ĪPVV in particular constitutes a very rich</li>
+<li>urce of information regarding Utpaladeva’s detailed commentary on his</li>
+<li>n verses: although the ĪPVV most often quotes only one or two words of</li>
+<li>e Vivr̥ti while commenting on it, not only does Abhinavagupta expound</li>
+<li> Utpaladeva’s reasonings: he sometimes gives lengthier quotations as</li>
+<li>ll, although these are not always found where we would expect them to</li>
+<li>. Thus as I have shown elsewhere, the first concluding verse of</li>
+<li>paladeva’s Vivr̥ti can be retrieved from Abhinavagupta’s ĪPV ad ĪPK</li>
+<li>4.3.4</li>
+</ul>
+<ul>
+<li>t now that we are in possession of a lengthy fragment of the Vivr̥ti,</li>
+<li> can be certain that we have at our disposal another crucial source of</li>
+<li>formation on this text besides Abhinavagupta’s commentaries, since a</li>
+<li>mparison between the text edited by Raffaele Torella and the</li>
+<li>notations found in the margins of ĪPV manuscripts shows that some of</li>
+<li>ese annotations are in fact quotations of Utpaladeva’s Vivr̥ti.</li>
+</ul>
+<ul>
+<li>is is the case of some of the annotations in manuscript D2, which, as</li>
+<li>ffaele Torella has already noticed, was in all probability one of the</li>
+<li>ur manuscripts used by the editors of the Kashmir Series of Texts and</li>
+<li>udies (KSTS).5 But D2 is not an exception: Yohei Kawajiri has been</li>
+<li>udying a Devanāgarī manuscript of the ĪPV preserved in Lucknow that</li>
+<li>so contains such passages in its margins,6 and among the manuscripts</li>
+<li>at I have been able to consult, it is also the case of the ĪPV</li>
+<li>nuscript preserved in the School of Oriental and African Studies</li>
+<li>brary (SOAS), and to a greater extent, of one of the manuscripts</li>
+<li>eserved in the Srinagar Oriental Research Library (S3). Thus D2, SOAS</li>
+<li>d S3 share at least two quotations belonging to the part of the Vivr̥ti</li>
+<li>ited by Raffaele Torella (and appearing as well in footnotes of the</li>
+<li>shmir Text and Studies edition of the ĪPV).7 I could not find in S3 a</li>
+<li>mber of quotations that are present in the margins of both D2 and</li>
+<li>AS,8 while S3 gives quotations (sometimes significantly lengthier than</li>
+<li>ose found in D2 and SOAS) that are not found in the first two</li>
+<li>nuscripts,9 which seems to indicate that if D2 and SOAS are very</li>
+<li>obably related, the annotations in S3 might have an independent</li>
+<li>igin.</li>
+</ul>
+<ul>
+<li>w, since we are sure that these manuscripts bear quotations of the</li>
+<li>xt found in the incomplete manuscript of the Vivr̥ti discovered by</li>
+<li>ffaele Torella, we may quite safely surmise that they also contain</li>
+<li>otations of hitherto unknown parts of the Vivr̥ti. I think that it is</li>
+<li>doubtedly the case of S3. Of course, for now – that is, as long as no</li>
+<li>mplete manuscript of the Vivr̥ti is discovered –, we cannot always be</li>
+<li>solutely sure that the passages quoted do belong to Utpaladeva’s lost</li>
+<li>xt: the author of the marginal annotations in S3 sometimes specifies</li>
+<li>at he is indeed quoting the Vivr̥ti,10 but alas he does not do so</li>
+<li>stematically. However, here Abhinavagupta’s commentary is once more an</li>
+<li>tremely precious source: while commenting on Utpaladeva’s lost text,</li>
+<li> regularly quotes some of its words, so that the probability for the</li>
+<li>rginal annotations to be taken from the Vivr̥ti is high enough to</li>
+<li>nfine to certainty if the words quoted in the ĪPVV appear in the</li>
+<li>rginal annotations in the same sequence as that found in</li>
+<li>hinavagupta’s commentary. This means that we now have at our disposal</li>
+<li>mine (or rather several mines) of fragments of Utpaladeva’s lost work,</li>
+<li>d that thanks to Raffaele Torella’s pioneering works, we may be able</li>
+<li> retrieve many passages of the Vivr̥ti even if no complete manuscript</li>
+<li> the text comes to light in the near future. The following pages,</li>
+<li>ich present the first results of an ongoing investigation of the</li>
+<li>rginal annotations found in S3,11 offer an edition and translation of</li>
+<li>passage of the Vivr̥ti quoted in the margins of S3 and devoted to the</li>
+<li>planation of ĪPK 1.5.4-5. Both the edition and the translation are</li>
+<li>ntative and I still have many doubts as to the meaning (or adequate</li>
+<li>ading) of a number of passages. Nonetheless it seems to me that given</li>
+<li>e present extent of our knowledge regarding the Vivr̥ti, an imperfect</li>
+<li>tempt at editing and translating any fragment of Utpaladeva’s lost</li>
+<li>rk is better than no attempt at all, and I am confident that my</li>
+<li>stakes will soon be corrected by scholars more learned than me.</li>
+</ul>
+<ul>
+<li>e Context of the Fragment ad ĪPK 1.5.4-5:</li>
+</ul>
+<ul>
+<li>e Debate between a Vijñānavādin and a Sautrāntika</li>
+</ul>
+<ul>
+<li>d the Problem of the Other Conscious Streams</li>
+</ul>
+<ul>
+<li> ĪPK 1.5.4-5,12 Utpaladeva lets a Sautrāntika criticize the</li>
+<li>jñānavādins’ idealistic thesis that the universe is merely an internal</li>
+<li>rm taken on by consciousness and that phenomenal variety is the result</li>
+<li> an internal mechanism of latent traces or imprints (vāsanā). In the</li>
+<li>urse of this criticism, not only does the Sautrāntika attack the</li>
+<li>jñānavādins’ position regarding the status of the external object:13</li>
+<li> also argues that the Vijñānavāda can only lead to solipsism, since in</li>
+<li>e Vijñānavādin’s perspective, other subjects must be mere internal</li>
+<li>pects of my own stream or series (santāna) of momentary cognitive</li>
+<li>ents. I have examined elsewhere the details of this controversy,14 so</li>
+<li>re I shall only give a basic summary of it.</li>
+</ul>
+<ul>
+<li>e Vijñānavādin denies the accusation of solipsism by using</li>
+<li>armakīrti’s line of argument in the Santānāntarasiddhi.15 According to</li>
+<li>armakīrti, just as in a system that admits the reality of entities</li>
+<li>ternal to consciousness, in the idealistic system of the Vijñānavāda,</li>
+<li>e other streams of consciousness cannot be directly perceived (since a</li>
+<li>nsciousness cannot be directly apprehended by another consciousness</li>
+<li>t only by itself); yet, just as in a system that accepts the reality</li>
+<li> external entities, in the Vijñānavāda, the other streams of</li>
+<li>nsciousness can be inferred. This inference of the existence of other</li>
+<li>nscious entities or streams of momentary cognitions rests on the fact</li>
+<li>at we experience in ourselves that when we act (and for instance when</li>
+<li> speak), our action is preceded by a will to act. So when we witness</li>
+<li> action that has not been preceded by our own will to act, we can</li>
+<li>fer that this action was preceded by a desire to act that does not</li>
+<li>long to our own stream of cognitions – and this other willing entity</li>
+<li>st be another conscious subject.</li>
+</ul>
+<ul>
+<li> this argument the Sautrāntika replies that the Vijñānavādin’s own</li>
+<li>esuppositions prevent him from making the very inference that he</li>
+<li>fends. He thus shows that the Vijñānavādin has no means of</li>
+<li>tablishing the invariable concomitance on which his inference of other</li>
+<li>nscious streams rests. For indeed, I can observe an invariable</li>
+<li>ncomitance between my own speech and my previous desire to speak, so</li>
+<li>at the logical pervasion (vyāpti) between “I want to speak” and “I am</li>
+<li>eaking” is established; but in the case where I hear a speech that is</li>
+<li>t uttered by me, my thought does not take the form “I am speaking” but</li>
+<li>e form “he/she is speaking”. Now, the Vijñānavādin has no way of</li>
+<li>tablishing any invariable concomitance between the thought “I want to</li>
+<li>eak” (in someone else’s conscious stream) and the thought “X is</li>
+<li>eaking” (in my conscious stream when I hear someone else speaking).</li>
+<li>e two propositions “I want to speak” and “I am speaking” are</li>
+<li>sentially linked to the subject, or they are not “separated”</li>
+<li>icchinna) from the “I”, whereas the proposition “X is speaking” is</li>
+<li>parated from the “I” since it is expressed by using the third</li>
+<li>ammatical person, and we have no way of determining that there is a</li>
+<li>usal relationship (kāryakāraṇabhāva) between somebody else</li>
+<li>bjectively thinking “I want to speak” and our own objective16 thought</li>
+<li> is speaking”, so that the cause of the phenomenon “X is speaking”</li>
+<li>mains perfectly unknown.</li>
+</ul>
+<ul>
+<li>e Vijñānavādin replies that in fact this necessary relation between</li>
+<li>e subjective cognition “I want to speak” and the objective cognition</li>
+<li> is speaking” is constantly apprehended in the ordinary world, because</li>
+<li>r actions are always related to our awareness that they can be</li>
+<li>tnessed by others: when we act, we act while desiring either to be</li>
+<li>en acting or not to be seen acting, but whether we conceal our actions</li>
+<li> whether we act ostentatiously, we are aware that our desire to act</li>
+<li>es not merely result in the cognition “I am acting” (which occurs in</li>
+<li> conscious stream) but also in the cognition “X is acting” (which</li>
+<li>curs in the other conscious streams witnessing my action). And</li>
+<li>cording to the Vijñānavādin, it is thanks to this understanding of the</li>
+<li>variable concomitance between my subjective desire to act and the fact</li>
+<li>at my action becomes an object of cognition for the others that the</li>
+<li>ference of other conscious streams is possible.</li>
+</ul>
+<ul>
+<li>e following passage of the Vivr̥ti begins with the Vijñānavādin’s</li>
+<li>planation of this very argument, after which Utpaladeva (or, as</li>
+<li>hinavagupta says, the Īśvarādvayavādin, the “proponent of the thesis</li>
+<li> the non-duality [of the universe] with the Lord”) helps the</li>
+<li>utrāntika criticize the Vijñānavādin’s position. Utpaladeva points out</li>
+<li>at this position entails a logical circle, because our awareness of</li>
+<li>e existence of other conscious entities is supposed to stem from our</li>
+<li>areness that the others can witness our actions, while our awareness</li>
+<li>at the others can witness our actions must derive from our awareness</li>
+<li> the existence of other conscious entities. He also points out that in</li>
+<li>ct there is no such thing as an invariable concomitance between the</li>
+<li>bjective thought “I want to be heard by others” and the objective</li>
+<li>ought “X is speaking”, because we sometimes experience that we can</li>
+<li>eak without being heard whether we want it or not: thus the causality</li>
+<li>lationship invoked by the Vijñānavādin between a subjective will to</li>
+<li>t and the objective awareness that X is acting cannot be established.</li>
+</ul>
+<ul>
+<li>e Śaiva non-dualist concludes from this that the other subject can</li>
+<li>ly be established when the other’s action is perceived both by him/her</li>
+<li>n the form “I want to speak/I am speaking”) and by me (in the form</li>
+<li>e/she is speaking”), from the supposition that the same action is then</li>
+<li>prehended in these two different forms. For we have to make this</li>
+<li>sumption in order to justify the unity of the sphere of human practice</li>
+<li>yavahāra): if we do not accept it, then we cannot justify our belief</li>
+<li>at the other subjects share with us the same spatio-temporal</li>
+<li>terminations and therefore live in a common world, and the notion of</li>
+<li>tersubjectivity collapses.</li>
+</ul>
+<ul>
+<li> Abhinavagupta makes clear in his commentary, the Śaiva non-dualists</li>
+<li>ve a solution to this problem of intersubjectivity:17 according to</li>
+<li>em, the unity of the sphere of human practice is to be explained as</li>
+<li>e result of the constant activity of division and synthesis through</li>
+<li>ich the universal consciousness appears to itself in the form of</li>
+<li>veral distinct subjects and yet is capable of unifying these subjects</li>
+<li> terms of spatial and temporal determinations, because although it</li>
+<li>nifests itself as plural, it remains fundamentally one, just as a</li>
+<li>eaming consciousness is capable of dividing itself into a multiplicity</li>
+<li> characters without losing its unity. Recognizing the others is</li>
+<li>erefore understood by Utpaladeva as a partial “recognition of the</li>
+<li>rd” (īśvarapratyabhijñā), i.e. as the incomplete realization of the</li>
+<li>namism inherent in consciousness: when I witness an activity that is</li>
+<li>t mine in the world, I recognize in that activity a freedom that is</li>
+<li>thing but the essence of my own subjectivity, so that my awareness of</li>
+<li>e existence of other subjects is not the result of an inference based</li>
+<li> causality (“another conscious entity must have produced this</li>
+<li>tion”): rather, it arises from an inference based on the identity of</li>
+<li>ture (svabhāva) between the freedom to act and consciousness.</li>
+</ul>
+<ul>
+<li>netheless, in the Vivr̥ti fragment below, this solution remains mostly</li>
+<li>plicit,18 because the Śaiva non-dualist is almost immediately</li>
+<li>terrupted (at least if we follow Abhinavagupta’s commentary)19 by the</li>
+<li>utrāntika, who takes advantage (or at least thinks he does so) of</li>
+<li>paladeva’s criticism of the Vijñānavāda so as to put forward his own</li>
+<li>sition. He agrees with the Śaiva non-dualist that the Vijñānavādin</li>
+<li>ils to explain the spatio-temporal determination (avadhāra) of the</li>
+<li>her subjects (a reproach that Vasubandhu had already faced in his</li>
+<li>ṁśikā)20 and he points out that the only option left to the</li>
+<li>jñānavādin trying to infer the existence of other subjects is to admit</li>
+<li>at the thought formulated as “I want to act/I am acting” in one given</li>
+<li>nscious stream projects an image of itself in another conscious stream</li>
+<li>n image that takes the form “he/she is acting”): the other subject</li>
+<li>st be inferred as the reflected object (bimba) producing in my</li>
+<li>nscious stream the reflection (pratibimba) “he/she is acting”, just as</li>
+<li>particular reflection in a mirror presupposes the existence of a</li>
+<li>flected object which exists outside of the mirror and gives it its</li>
+<li>rticular shape.</li>
+</ul>
+<ul>
+<li> first sight, this theory must be appealing to the Vijñānavādin</li>
+<li>ponent as it seems to fit his idealism: if he adopts it, he can admit</li>
+<li>e existence of several conscious streams projecting reflections of</li>
+<li>emselves onto each other without conceding the existence of external</li>
+<li>jects. As a matter of fact, there is evidence in several Yogācāra</li>
+<li>xts that at least some Buddhist idealists held this thesis and used it</li>
+<li> as to explain the fact that several subjects seem to perceive the</li>
+<li>me objects: according to those texts, the objects apprehended by the</li>
+<li>nses must be reflecting an “original” object in the ālayavijñāna,21</li>
+<li>d this “original” object is in turn a reflection of images occurring</li>
+<li> other conscious streams.22 This idea that the phenomenal variety</li>
+<li>perienced in one conscious stream is the result of the influence of</li>
+<li>other conscious stream rather than of an external object is found in</li>
+<li>rticular in Vasubandhu’s Viṁśikā23 (demonstrably known of Utpaladeva</li>
+<li>d Abhinavagupta).24</li>
+</ul>
+<ul>
+<li> course, such an explanation is not without danger for the</li>
+<li>jñānavādin, since as the Sautrāntika points out in Abhinavagupta’s</li>
+<li>V, acknowledging the existence of entities distinct from my own</li>
+<li>gnitive stream (be they other conscious streams) seems to pave the way</li>
+<li>r externalism.25 But whereas in the ĪPV, the Sautrāntika apparently</li>
+<li>rgets in a general way any idealistic thesis that concedes the</li>
+<li>istence of a plurality of conscious streams while denying the reality</li>
+<li> anything external to them, in the fragment presented here, he seems</li>
+<li> have in mind, more specifically, the idealistic contention that</li>
+<li>enomenal variety can be explained as a result of the mutual influence</li>
+<li> various conscious streams; and he shows that such a thesis leads to</li>
+<li> absurd consequence, since each conscious stream should then perceive</li>
+<li> infinite number of objects, just as (according to Abhinavagupta’s</li>
+<li>age) several mirrors reflecting each other produce an infinite number</li>
+<li> reflections.</li>
+</ul>
+<ul>
+<li>e fragment ends on an objection made by the Vijñānavādin. The latter</li>
+<li>adily accepts that all the other manifestations contained in other</li>
+<li>nscious streams do not project reflections of themselves onto my</li>
+<li>nscious stream (he agrees that this would lead to an absurd</li>
+<li>nsequence), but he argues that some of these manifestations in other</li>
+<li>nscious streams awaken a particular imprint (vāsanā) already contained</li>
+<li> my own conscious stream and left by previous experiences. He thus</li>
+<li>es the theory of the vāsanā mechanism to explain why we only perceive</li>
+<li>limited number of objects.</li>
+</ul>
+<ul>
+<li>fortunately, the end of the discussion (won by the Sautrāntika, at</li>
+<li>ast in this part of the treatise) is missing. This is all the more</li>
+<li>grettable since in the corresponding passage of the ĪPVV,</li>
+<li>hinavagupta alludes to a very interesting discussion on ālayavijñāna26</li>
+<li>an important topic for the historian of Buddhist doctrines, and one</li>
+<li>at is not found in Utpaladeva’s ĪPK and Vr̥tti, nor in Abhinavagupta’s</li>
+<li>V, but that may well have been treated in some detail in Utpaladeva’s</li>
+<li>vr̥ti.</li>
+</ul>
+<ul>
+<li>netheless, the fragment as it stands is of great interest, not only</li>
+<li>cause it confirms once again how faithful Abhinavagupta’s ĪPVV is to</li>
+<li>e text on which it comments (all the ideas mentioned in the</li>
+<li>rresponding passage of the ĪPVV are to be found in the Vivr̥ti), or</li>
+<li>cause it confirms interpretations of the ĪPV that were so far only</li>
+<li>sed on the ĪPVV,27 but also because it illustrates Utpaladeva’s</li>
+<li>timate acquaintance with Buddhist theories in general,28 and his</li>
+<li>terest for the Buddhist debate over the epistemological (and/or</li>
+<li>tological)29 status of other streams of consciousness in particular.</li>
+<li>e reason for this interest probably lies in the fact that Utpaladeva’s</li>
+<li>stem is a variety of absolute idealism: according to him, the universe</li>
+<li> nothing but a manifestation of a single and all-powerful</li>
+<li>nsciousness out of which nothing exists. He therefore shares with the</li>
+<li>jñānavāda the burden of dealing with the accusation of solipsism, and</li>
+<li> is all the more attentive to this problem since he wants to offer a</li>
+<li>lution capable of superseding both that of the Vijñānavādins and that</li>
+<li> their externalist opponents, the Sautrāntikas. His strategy, here as</li>
+<li>ten, consists in letting the Sautrāntika triumph over the Vijñānavādin</li>
+<li>fore showing (as he will in the following verses) that the Sautrāntika</li>
+<li>ew regarding both objects and other subjects is untenable.30 His</li>
+<li>urce regarding the Vijñānavādins’ position in this fragment is in all</li>
+<li>obability Dharmakīrti’s Santānāntarasiddhi (a treatise that was read</li>
+<li> the Śaiva philosophers, whether dualist or non-dualist).31 As for his</li>
+<li>urce regarding the Sautrāntika opponent, it is difficult to judge to</li>
+<li>at extent it is borrowed from externalist objections answered by</li>
+<li>armakīrti in the Santānāntarasiddhi, and one might also suspect that</li>
+<li>paladeva is inventing a Sautrāntika position rather than depicting a</li>
+<li>al historical position.32 However, it seems to me that Utpaladeva’s</li>
+<li>rvapakṣas are hardly ever (if at all) figments of his imagination, and</li>
+<li>at on the contrary, they show a precise knowledge of his opponents’</li>
+<li>eories, as can be verified in all instances where his particular</li>
+<li>urce can be determined and has come down to us. In this regard, it is</li>
+<li>rth noting that Abhinavagupta mentions in his commentary on the</li>
+<li>ssing end of this fragment a lost work by Dharmottara, the</li>
+<li>hyārthasiddhi:33 for now at least, it seems to me that we cannot rule</li>
+<li>t the possibility that the latter text was one of Utpaladeva’s sources</li>
+<li>f not his main source) for his depiction of the Sautrāntikas’ position</li>
+<li> this debate.</li>
+</ul>
+<ul>
+<li>Fragment of Utpaladeva’s Vivr̥ti ad ĪPK 1.5.4-534</li>
+</ul>
+<ul>
+<li>nu yatra parajñānaviṣayābhāvāpattivāraṇena nijaṣṭhīvanādiceṣṭām</li>
+<li>chet, tatra paṭādyapavāraṇādinaiva †. . .†35, yatra punar anyathaiva</li>
+<li>thā ceṣṭate, tatra parajñānaviṣayabhāvagamanābhisandhir asty eva.</li>
+</ul>
+<ul>
+<li>d etan mandamatibhāṣitaṁ parapramātr̥pravibhāgapratyayasya vyutpatteḥ.</li>
+<li>thābhūtavyāhārādy-36avabhāsenaiva hi pramātrantaraniścayaḥ syāt, tad</li>
+<li>ad itaretarāśrayatvam, vyāhārādy-37avabhāsaviśeṣaiḥ</li>
+<li>amātrantaragatiḥ, tadgatyā ca</li>
+<li>jjñānagatavyāhārādyavabhāsajananāyābhisandher viśiṣṭād</li>
+<li>āhārādyavabhāsaviśeṣāḥ. yadi hi38 paratrotpādanābhisandheḥ</li>
+<li>ratrotpannanr̥ttaṣṭhīvanodgrāhaṇādyavabhāsānāṁ svātmano vicchinnānāṁ</li>
+<li>amāṇāntarāt kāryakāraṇabhāvo’vagataḥ syāt, tat svātmany api</li>
+<li>cchinnaṣṭhīvanādyavabhāsair anyair apy anyadā pramātrantaram</li>
+<li>umīyetāpi, yāvatānyataḥ parapramātary avijñāte</li>
+<li>dgataṣṭhīvanādyābhāseṣv anavagateṣu kathaṁ svātmagatair api tair</li>
+<li>cchinnair ābhāsaiḥ parasantānānumānam.</li>
+</ul>
+<ul>
+<li> ca paro māṁ paśyatv ity abhisandhānāt parasantāne</li>
+<li>cchinnavyāhārādyavabhāsotpattir yuktā, tathābhisandhāne mā drākṣīd iti</li>
+<li> viparītābhisandhāne tadanutpattiprasaṅgāt.</li>
+</ul>
+<ul>
+<li>d eva[ṁ] tad buddhisamīhāyuktapramātravicchinnāt</li>
+<li>tpratyakṣatānuṣaṅgina eva yathāvadhāritotpādakra[ma]m avasthitād</li>
+<li>āhārādyavabhāsāt siddhyet pramātrantaraṁ yathāsmābhir vakṣyate.</li>
+</ul>
+<ul>
+<li>aṁ ca viśiṣṭadeśakālatāpi tasya tadāveśāt sidhyati, [a]nyathā39</li>
+<li>thāvabhātadeśasthenaiva pramātrantareṇa paratrāsau janyeteti kuto</li>
+<li>ścayaḥ.</li>
+</ul>
+<ul>
+<li>āvat punaḥ syāt, buddhisamīhājanita-svapratyakṣavyāhārādyavabhāsād</li>
+<li>padyate parapramātr̥ṣu vicchinnas tathāvabhāsaḥ pratibimbam iva, tataś</li>
+<li> tadutpādakabimbabhūtavyāhārāvabhāsānumānamukhena parapramātānumīyeta.</li>
+</ul>
+<ul>
+<li>y evaṁ ca ghaṭapaṭādyavabhāsā api kvacana krimisarvajñādipramātrantare</li>
+<li>hitās tatsadr̥śābhāsa-40 sahabhāvinaḥ pramātrantarasyāpy avabhāsāñ</li>
+<li>nayeyuḥ, tathā ca bāhyārthavādaprakāra eva syāt, jñānabāhyānām</li>
+<li>hāsabhede hetutvābhyupagamaviśeṣaḥ, yato’vabhāsānāṁ41</li>
+<li>asadr̥śāvabhāsāntarajanakatve pramātr̥ṣv ābhāsāparyavasānaṁ42 syāt, tair</li>
+<li>y anya[syā]nyasya jananād iti.</li>
+</ul>
+<ul>
+<li>hāpi parapramātr̥gatāvabhāsās tathāvabhāsajanikāṁ vāsanām eva</li>
+<li>abodhayanti, na tu svato janayanti yenābhāsānantyaṁ syāt. vāsanā hy</li>
+<li>abhāsāntaraśate nādhipatitvocitaikaiveti43 pratipramātrekam eva</li>
+<li>davabhāsaṁ janayatīti nātiprasaṅgaḥ.</li>
+</ul>
+<ul>
+<li>Tentative Translation</li>
+</ul>
+<ul>
+<li>– Objection from the Vijñānavādin:] But in the [case] where one wants</li>
+<li> accomplish one’s own activity – such as spitting etc. – while hiding</li>
+<li> so as to prevent it from becoming an object for [someone] else’s</li>
+<li>gnition, it is only while concealing [it] for instance behind a screen</li>
+<li>hat one acts?],44 whereas in the [case] where one performs the same</li>
+<li>tion [of spitting] but in a different way[, i.e. without concealing</li>
+<li>],45 there must be an intention (abhisandhi) [of accomplishing the</li>
+<li>tion while] becoming the object of someone else’s cognition.46</li>
+</ul>
+<ul>
+<li>– Answer from the Śaiva non-dualist momentarily siding with the</li>
+<li>utrāntika:]47 This [statement can only be] uttered by some simpleton,</li>
+<li>cause of [the way in which it] explains the origin (vyutpatti) of the</li>
+<li>owledge that the other subject is distinct [from myself]; for</li>
+<li>ccording to this thesis,] it is only thanks to the manifestation of</li>
+<li>g. [my action] of speaking, which is such [, i.e. which involves the</li>
+<li>tention of being heard or not by someone else,]48 that one can</li>
+<li>certain [the existence of] another subject. Therefore [your reasoning</li>
+<li>volves] this logical circle (itaretarāśrayatva): the knowledge of [the</li>
+<li>istence of] another subject [supposedly occurs] thanks to the</li>
+<li>rticular manifestations [of my actions] such as speaking, [i.e. this</li>
+<li>owledge supposedly occurs thanks to my awareness that my own speech is</li>
+<li>rticularized by an intention to be heard by the other;] and it is</li>
+<li>anks to this [very] knowledge [, i.e. the knowledge that the other</li>
+<li>bject exists,] that the particular manifestations of [my actions] such</li>
+<li> speaking [can arise] from an intention that is particularized</li>
+<li>nasmuch as it] aims at producing the manifestation [of my own action]</li>
+<li> e.g. speaking inside that [other] consciousness [in the form “this</li>
+<li>rson is speaking”].49 For if [we] could understand through some other</li>
+<li>ans of knowledge [i.e. perception] the relation of cause and effect</li>
+<li>tween [my] intention of making [these manifestations of my actions]</li>
+<li>ise in someone else [and] the manifestations [of my actions] such as</li>
+<li>ncing, spitting or arguing that arise in another [conscious stream</li>
+<li>en I am acting while being] distinct from myself [i.e. expressed in</li>
+<li>e other conscious stream as “he/she is acting” and not as “I am</li>
+<li>ting”,] then the other subject could also be inferred at some other</li>
+<li>me [, i.e. when this relation is not perceived,] from the</li>
+<li>nifestations [in my own conscious stream] of [actions of which I am</li>
+<li>t the agent] such as spitting and so on [that] are separated [from me</li>
+<li> so far as they occur objectively in myself as “X is spitting”, etc.,]</li>
+<li>though [these manifestations] which [occur] in myself are different</li>
+<li>rom what the other subject must be thinking in the subjective form “I</li>
+<li>nt to spit” – just as a fire is inferred from smoke although smoke is</li>
+<li>fferent from fire].50 But [I] cannot know the manifestations such as</li>
+<li>itting and so on that reside in the [other subject, e.g. in the form</li>
+<li>e/she is spitting” when I am spitting,] because the other subject is</li>
+<li>t known through any other [means of knowledge besides inference, i.e.</li>
+<li>rough perception,51 and since therefore the relation of cause and</li>
+<li>fect between the subjective will “I want to spit” and the objective</li>
+<li>ought “he/she is spitting” remains unknown,] how could the inference</li>
+<li> another conscious stream [take place] through manifestations which,</li>
+<li>though existing in myself, are separated [from myself, in the form “X</li>
+<li> spitting”]?</li>
+</ul>
+<ul>
+<li>reover,52 it is not [true] that the arising in some other [conscious]</li>
+<li>ream of a manifestation of [an action of] e.g. speaking separated</li>
+<li>rom the subject, i.e. taking the form “X is speaking”,] is [only]</li>
+<li>ssible due to the [previous] intention [in my own conscious stream]</li>
+<li>ay the other see me”; because whether [the acting subject has] such an</li>
+<li>tention [of being seen acting] or whether [he has] the contrary</li>
+<li>tention “may [the other] not see [me acting]”, an absence of arising</li>
+<li> the [manifestation of this action in the form “X is acting”] can</li>
+<li>sue.53</li>
+</ul>
+<ul>
+<li>erefore [since it is] so, as we shall explain [later], another subject</li>
+<li>n be established from the manifestation of [his/her action of], e.g.</li>
+<li>eaking, [a manifestation which is] not separated from [this] subject</li>
+<li>dowed with a will [to speak consisting in] a cognition, [i.e. a</li>
+<li>nifestation which is expressed in that subject as “I want to speak”,]</li>
+<li>ly (eva) [when this manifestation] involves (anuṣaṅgin) its</li>
+<li>rceptibility for the [hearer as well, i.e. only if this manifestation</li>
+<li> perceived by me54 too and not just by the other subject, and] comes</li>
+<li> existence according to the [specific] order of [phonological]</li>
+<li>oduction determined (avadhārita) [by the various causes that are the</li>
+<li>ints of articulation and the phonatory organs of the speaker].55</li>
+</ul>
+<ul>
+<li>The Sautrāntika:]56 And [it is] thus [only – i.e. it is only if this</li>
+<li>nifestation of the action of speaking is common to both subjects and</li>
+<li>termined by the same conditions – that we can] establish as well the</li>
+<li>ct that this [other subject] has the particular place and time</li>
+<li>ssociated with his/her manifestation in my conscious stream,] because</li>
+<li>hen this fact] belongs to this [manifestation of speech shared by both</li>
+<li>gnitive streams]. Otherwise how could [we] be certain that this</li>
+<li>anifestation of an activity of speech] must have been produced in some</li>
+<li>her [stream of consciousness, i.e. mine,] by another subject who</li>
+<li>sides precisely in [the particular] place where it is manifested [to</li>
+<li>]?57</li>
+</ul>
+<ul>
+<li>t this only can be [admitted by the Vijñānavādin]58: from a</li>
+<li>nifestation such as [my action of] speaking that is directly perceived</li>
+<li> myself [and] produced by a will [consisting in] a cognition, such a</li>
+<li>nifestation arises in the other subjects [as being] separated [from</li>
+<li>eir own subjectivity, in the form “he/she is acting”,] as a reflection</li>
+<li>ratibimba) [arises in a mirror]; and therefore, the other subject must</li>
+<li> inferred through an inference [based on] this manifestation of</li>
+<li>eech, as being the reflected object (bimba) that produces this</li>
+<li>eflection in my own conscious stream].</li>
+</ul>
+<ul>
+<li>d [if the Vijñānavādin admits that this is] so, [i.e. if he accepts</li>
+<li>at there is a plurality of conscious streams reflecting their images</li>
+<li>to each other, but no external object,] even the manifestations of</li>
+<li>bjects such as] a pot, a cloth and so on which reside in any other</li>
+<li>bject – whether a worm or an omniscient [being], etc.­ – should</li>
+<li>oduce manifestations occurring simultaneously [and] with aspects</li>
+<li>milar to [what the worm or the omniscient being, etc., perceive] for</li>
+<li>ny] other subject as well; and thus [this inference of the other</li>
+<li>nscious streams as entities reflected in my own conscious stream that</li>
+<li>e Vijñānavādin is ready to accept] is [in fact] nothing but a variety</li>
+<li> externalism. [That is to say, it is] the particular acknowledgement</li>
+<li>at [entities] external to cognitions are the causes of the phenomenal</li>
+<li>fference[s], since if the manifestations [in other conscious streams]</li>
+<li>re what produces other manifestations similar to them [in my conscious</li>
+<li>ream,] there would be an infinite number (aparyavasāna) of</li>
+<li>nifestations in [each of] the subjects, because these [reflections in</li>
+<li> conscious stream] would in turn produce another [reflection in</li>
+<li>other conscious stream, and] another[, and so on ad infinitum].59</li>
+</ul>
+<ul>
+<li>– Objection from the Vijñānavādin:] But still, the manifestations</li>
+<li>curring in another subject only awaken an imprint (vāsanā) that [in</li>
+<li>rn] produces manifestations of the same sort, but they do not produce</li>
+<li>hese manifestations] by themselves, which would [indeed] lead to an</li>
+<li>finite number of manifestations. For one imprint only is not capable</li>
+<li> influencing (adhipatitva) the innumerable other manifestations;</li>
+<li>erefore it [merely] produces a manifestation of the [previously</li>
+<li>perienced object] that is only one for each subject – therefore there</li>
+<li> no absurd consequence [involved in our theory].60</li>
+</ul>
+<ul>
+<li>This article was written thanks to the generous financial help of the</li>
+<li>utsche Forschungsgemeinschaft, as part of project FR 2531/3-1. I am</li>
+<li>s usual) greatly indebted to Alexis Sanderson, who generously shared</li>
+<li>th me some of his copies of manuscripts of the ĪPV as well as his</li>
+<li>thusiasm for the historical study of the Pratyabhijñā texts, and to</li>
+<li>ncent Eltschinger, Eli Franco and Harunaga Isaacson, who read a</li>
+<li>evious version of this paper, corrected a number of mistakes, engaged</li>
+<li> lengthy discussions on several difficult points and provided many</li>
+<li>sightful remarks.</li>
+</ul>
+<ul>
+<li>bliographical References</li>
+</ul>
+<ul>
+<li>nuscripts</li>
+</ul>
+<ul>
+<li>= Īśvarapratyabhijñā[-Vr̥tti,] Vivr̥ti [and Vimarśinī], Delhi, National</li>
+<li>chives of India (Manuscripts belonging to the Archaeology and Research</li>
+<li>partment, Jammu and Kashmir Government, Srinagar), no. 30, vol. 9</li>
+<li>Pratyabhijñāvivr̥tiḥ by Utpaladeva”, śāradā script].</li>
+</ul>
+<ul>
+<li> = Īśvarapratyabhijñāvimarśinī by Abhinavagupta, Delhi, National</li>
+<li>chives of India (Manuscripts belonging to the Archaeology and Research</li>
+<li>partment, Jammu and Kashmir Government, Srinagar), no. 5, vol. 2,</li>
+<li>āradā script].</li>
+</ul>
+<ul>
+<li> = Īśvarapratyabhijñāvimarśinī, Śrinagar, Oriental Research Library,</li>
+<li>. 838 (Īśvarapratyabhijñākaumudi) [śāradā script].</li>
+</ul>
+<ul>
+<li>AS = Īśvarapratyabhijñāvimarśinī, London, School of Oriental and</li>
+<li>rican Studies Library, no. 207 in R.C Dogra’s 1978 catalogue / MS no.</li>
+<li>255 [“Pratyabhijñāsūtra with Abhinavagupta’s Sūtrārthavimarśinī”,</li>
+<li>radā script].</li>
+</ul>
+<ul>
+<li>itions</li>
+</ul>
+<ul>
+<li>āskarī = Īśvarapratyabhijñāvimarśinī of Abhinavagupta, Doctrine of</li>
+<li>vine Recognition, vols. I-II: Sanskrit text with the commentary</li>
+<li>āskarī edited by K.A.S. Iyer and K.C. Pandey [Allahabad, 1938, 1950],</li>
+<li>l. III: English translation by K.C. Pandey [Allahabad, 1954], Delhi:</li>
+<li>tilal Banarsidass, 1986.</li>
+</ul>
+<ul>
+<li>K = Īśvarapratyabhijñākārikā: See Torella [1994] 2002.</li>
+</ul>
+<ul>
+<li>V= Īśvarapratyabhijñāvimarśinī, edited with notes by M.R. Shāstrī and</li>
+<li> K. Shāstrī, KSTS 22 &amp; 33, 2 vols., Srinagar: Nirnaya Sagar Press,</li>
+<li>18-21.</li>
+</ul>
+<ul>
+<li>VV = Īśvarapratyabhijñāvivr̥tivimarśinī by Abhinavagupta, ed. M.K.</li>
+<li>āstrī, KSTS 60, 62 &amp; 65, 3 vols., Bombay: Nirnaya Sagar Press,</li>
+<li>38-43.</li>
+</ul>
+<ul>
+<li>in = Dharmakīrti’s Pramāṇaviniścaya, Chapters 1 and 2, Critically</li>
+<li>ited by E. Steinkellner, Beijing/Vienna: China Tibetology Publishing</li>
+<li>use/Austrian Academy of Sciences Press, 2007.</li>
+</ul>
+<ul>
+<li>antānāntaradūṣaṇa, in] Ratnakīrtinibandhāvaliḥ, ed. A. Thakur, Patna:</li>
+<li>shi Prasad Jayaswal Research Institute, 2nd edn., 1975, pp. 145-49.</li>
+</ul>
+<ul>
+<li>ntānāntarasiddhi (rec.) = Santānāntarasiddhiḥ of Ācārya Dharmakīrti</li>
+<li>d Santānāntarasiddhiḥ Ṭīkā of Ācārya Vinītadeva, restored and edited</li>
+<li> J.S. Negi, Bibliotheca Indo Tibetica Series 37, Sarnath–Varanasi:</li>
+<li>ntral Institute of Higher Tibetan Studies, 1997.</li>
+</ul>
+<ul>
+<li>ṁśikā, Viṁśikāvr̥tti = Vijñaptimātratāsiddhi. Deux traités de</li>
+<li>subandhu. Viṁśatikā accompagnée d’une explication en prose et Triṁśikā</li>
+<li>ec le commentaire de Sthiramati, publié par S. Lévi, Paris:</li>
+<li>bliothèque de l’École des Hautes Études 245, 1925.</li>
+</ul>
+<ul>
+<li>vr̥ti (fragments) = See Torella 1988; 2007a-d; Ratié (forthcoming).</li>
+</ul>
+<ul>
+<li>anslations and studies</li>
+</ul>
+<ul>
+<li>u, J., 2011, “Sanskrit Fragments of Dharmakīrti’s</li>
+<li>ntānāntarasiddhi*”, in H. Krasser et al. (eds.) Religion and Logic in</li>
+<li>ddhist Philosophical Analysis: Proceedings of the Fourth International</li>
+<li>armakīrti Conference, Vienna, 23-27 August 2005, Wien: Österreichische</li>
+<li>ademie der Wissenschaften, pp. 33-42.</li>
+</ul>
+<ul>
+<li>rmigatti, C.A., 2011, Sanskrit Annotated Manuscripts from Northern</li>
+<li>dia and Nepal, Unpublished Ph.D. Thesis, Universität Hamburg.</li>
+</ul>
+<ul>
+<li>jiyama, Y., 1965, “Buddhist Solipsism: A Free Translation of</li>
+<li>tnakīrti’s Saṁtānāntaradūṣaṇa”, Journal of Indian and Buddhist</li>
+<li>udies, 13(1): 9-24.</li>
+</ul>
+<ul>
+<li>no, K., 2008, “Two Short Glosses on Yogācāra Texts by</li>
+<li>irocanarakṣita: Viṁśikāṭīkāvivr̥ti and *Dharmadharmatāvibhāgavivr̥ti”,</li>
+<li> F. Sferra (ed.) Manuscripta Buddhica 1: Sanskrit Texts from Giuseppe</li>
+<li>cci’s Collection, part I, Roma: Istituto Italiano per l’Africa e</li>
+<li>Oriente, pp. 343-80.</li>
+</ul>
+<ul>
+<li>tsura, S., 2007, “Dharmakīrti’s Proof of the Existence of Other</li>
+<li>nds”, in B. Kellner, H. Krasser et al. (eds.) Pramāṇakīrtiḥ: Papers</li>
+<li>dicated to Ernst Steinkellner on the Occasion of His 70th Birthday,</li>
+<li>ener Studien zur Tibetologie und Buddhismuskunde 70.2, Wien:</li>
+<li>beitskreis für tibetische und buddhistische Studien Universität Wien,</li>
+<li>. 407-22.</li>
+</ul>
+<ul>
+<li>tagawa, H., 1955, “A Refutation of Solipsism (Annotated Translation of</li>
+<li>e Santānāntarasiddhi)”, Journal of the Greater India Society, 14(1-2):</li>
+<li>32.</li>
+</ul>
+<ul>
+<li>Crea, L.J. and P. Patil, 2010, Buddhist Philosophy of Language in</li>
+<li>dia – Jñānaśrīmitra on Exclusion, New York: Columbia University Press.</li>
+</ul>
+<ul>
+<li>tié, I., 2007, “Otherness in the Pratyabhijñā Philosophy”, Journal of</li>
+<li>dian Philosophy, 35(4): 313-70.</li>
+</ul>
+<ul>
+<li>—, 2010, “The Dreamer and the Yogin: On the Relationship between</li>
+<li>ddhist and Śaiva Idealisms”, Bulletin of the School of Oriental and</li>
+<li>rican Studies, 73(3): 437-78.</li>
+</ul>
+<ul>
+<li>—, 2011a, Le Soi et l’Autre. Identité, différence et altérité dans la</li>
+<li>ilosophie de la Pratyabhijñā, Jerusalem Studies in Religion and</li>
+<li>lture 13, Leiden-Boston: Brill.</li>
+</ul>
+<ul>
+<li>—, 2011b, “Can One Prove that Something Exists Beyond Consciousness? A</li>
+<li>iva Criticism of the Sautrāntika Inference of External Objects”,</li>
+<li>urnal of Indian Philosophy, 39(4-5): 479-501.</li>
+</ul>
+<ul>
+<li>—, forthcoming, “Some Hitherto Unknown Fragments of Utpaladeva’s</li>
+<li>vr̥ti (II): Against the Existence of External Objects”, in D. Goodall</li>
+<li>d P.S. Filliozat (eds.) Mélanges tantriques à la mémoire de N.</li>
+<li>macandra Bhatt.</li>
+</ul>
+<ul>
+<li>hmithausen, L., 1987, Ālayavijñāna. On the Origin and the Early</li>
+<li>velopment of a Central Concept of Yogācāra Philosophy, vol. I: Text,</li>
+<li>l. II: Notes, Bibliography and Indices, Tokyo: The International</li>
+<li>stitute for Buddhist Studies.</li>
+</ul>
+<ul>
+<li>—, 2005, On the Problem of the External World in the Ch’eng wei shih</li>
+<li>n, Studia Philologica Buddhica (Occasional Paper Series) 13, Tokyo:</li>
+<li>e International Institute for Buddhist Studies.</li>
+</ul>
+<ul>
+<li>rella, R., 1988, “A Fragment of Utpaladeva’s</li>
+<li>varapratyabhijñā-vivr̥ti”, East and West, 38: 137-74.</li>
+</ul>
+<ul>
+<li>—, 1992, “The Pratyabhijñā and the Logical-Epistemological School of</li>
+<li>ddhism”, in T. Goudriaan (ed.) Ritual and Speculation in Early</li>
+<li>ntrism, Studies in Honor of André Padoux, SUNY Series in Tantric</li>
+<li>udies, Albany: State University of New York Press, pp. 327-45.</li>
+</ul>
+<ul>
+<li>— [1994] 2002: Īśvarapratyabhijñākārikā of Utpaladeva with the</li>
+<li>thor’s Vr̥tti, critical edition and annotated translation [Roma, 1994],</li>
+<li>rrected Edition, Delhi: Motilal Banarsidass.</li>
+</ul>
+<ul>
+<li>—, 2007a, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part I:</li>
+<li>upalabdhi and apoha in a Śaiva Garb”, in K. Preisendanz (ed.)</li>
+<li>panding and Merging Horizons: Contributions to South Asian and</li>
+<li>oss-Cultural Studies in Commemoration of Wilhelm Halbfass, Wien:</li>
+<li>rlag der Österreichischen Akademie der Wissenschaften, pp. 473-90.</li>
+</ul>
+<ul>
+<li>—, 2007b, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part II:</li>
+<li>at Is Memory?”, in K. Klaus and J.-U. Hartmann (eds.) Indica et</li>
+<li>betica. Festschrift für Michael Hahn zum 65. Geburtstag von Freunden</li>
+<li>d Schülern überreicht, Wiener Studien zur Tibetologie und</li>
+<li>ddhismuskunde 66, Wien: Arbeitskreis für Tibetische und Buddhistische</li>
+<li>udien Universität Wien, pp. 539-63.</li>
+</ul>
+<ul>
+<li>—, 2007c, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part</li>
+<li>I: Can a Cognition Become the Object of Another Cognition?”, in D.</li>
+<li>odall and A. Padoux (eds.) Mélanges tantriques à la mémoire d’Hélène</li>
+<li>unner, Collection Indologie 106, Pondichéry: Institut Français de</li>
+<li>ndichéry/École Française d’Extrême-Orient, pp. 475-84.</li>
+</ul>
+<ul>
+<li>—, 2007d, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part IV:</li>
+<li>ght of the Subject, Light of the Object”, in B. Kellner, H. Krasser et</li>
+<li>. (eds.), Pramāṇakīrtiḥ: Papers Dedicated to Ernst Steinkellner on the</li>
+<li>casion of His 70th Birthday, Wiener Studien zur Tibetologie und</li>
+<li>ddhismuskunde 70.2, Wien: Arbeitskreis für tibetische und</li>
+<li>ddhistische Studien Universität Wien, pp. 925-40.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>See Torella 1988 (this first part of the fragment was in fact edited</li>
+<li>om a transcript of the original manuscript D later found by Raffaele</li>
+<li>rella in the National Archives of India and used for the edition of</li>
+<li>e remaining parts of the fragment); 2007a-d.</li>
+</ul>
+<ul>
+<li>See Torella 1988: 140; [1994] 2002: xliii.</li>
+</ul>
+<ul>
+<li>For a study of some marginal annotations in ĪPV manuscripts (which</li>
+<li>es not, however, bear on fragments of the Vivr̥ti), see Formigatti</li>
+<li>11.</li>
+</ul>
+<ul>
+<li>See Ratié 2011a: 250. Abhinavagupta gives a complete quotation of the</li>
+<li>rse in ĪPV I: 130 while explicitly ascribing it to Utpaladeva (yad āha</li>
+<li>anthakāra eva), and from ĪPVV, vol. III, p. 404, it is obvious that</li>
+<li>e verse was the first of a series concluding the Vivr̥ti: vivr̥tikāraḥ</li>
+<li>ṁkṣipya sarvam āhettham ity</li>
+<li>iślokaiḥ. anenāsmadukteneśvaratāprakāreṇa yā svasaṁvittiḥ* sthitā tām.</li>
+<li>svasaṁvittiḥ corr.: susaṁvittiḥ ĪPVV]. According to the ĪPV the verse</li>
+<li>ns as follows: itthaṁ svasaṁvittim apahnuvānair yat tad vadadbhiḥ</li>
+<li>luṣīkr̥taṁ yat । pramātr̥tattvaṁ sphuṭayuktibhis tān mūkān vidhāya</li>
+<li>akaṭīkr̥taṁ tat ।। “After having thus reduced to silence through clear</li>
+<li>guments those who, denying their [own] self-consciousness, hold this</li>
+<li> that thesis, [I] have made obvious the true nature of the subject [so</li>
+<li>r] stained by them.”</li>
+</ul>
+<ul>
+<li>See Torella 2007b: 544, n 14; 2007c: 479, n 8; 2007d: 929, n 11.</li>
+</ul>
+<ul>
+<li>See Yohei Kawajiri’s contribution to this volume.</li>
+</ul>
+<ul>
+<li>D2, SOAS and S3 all contain the passage from pūrvāvabhāsitavastunaḥ. .</li>
+<li>to vicitrecchābodhitāvabhāsabhedavāsanāmātropapāditavikalparū-</li>
+<li>vijñānāpohanaśaktiḥ (as noted in Torella 2007a: 480, n 38, so does</li>
+<li>0, n 71, in the Kashmir Series of Texts and Studies edition of the ĪPV</li>
+<li> the three manuscripts as well as the ĪPV footnote invert the two</li>
+<li>ntences) and the passage from smr̥tyādīnām idānīṁ. . . to sambhavam āha</li>
+<li> Torella 2007b: 544 (which is also quoted in ĪPV I: 116, n 17).</li>
+</ul>
+<ul>
+<li>D2 and SOAS both contain the passage from arthitvāc ca . . . (the two</li>
+<li>nuscripts bear the reading arthitāvaśāt . . .) to avabhāso bhavati in</li>
+<li>rella 2007b: 547 (Torella notes in n 44 that the same passage is found</li>
+<li> n 62, p. 124 of ĪPV I, and that the text of the footnote shows some</li>
+<li>ignificant divergence” from the text he has established. It is worth</li>
+<li>ting in this regard that while D2 bears exactly the same reading as</li>
+<li>at found in the ĪPV n, the text in SOAS differs from it in several</li>
+<li>stances, among which upajātāyāṁ, also found in manuscript D used by</li>
+<li>ffaele Torella for his edition, but for which D2 and the ĪPV n have</li>
+<li>ayāyamānāyāṁ); the passage from kadācit punar . . . to na kṣatiḥ in</li>
+<li>rella 2007b: 548 (as noted in Torella 2007b: 548, n 51, this passage</li>
+<li> also quoted in ĪPV I: 125, n 67; the text of the footnote has the</li>
+<li>me variant readings as the two manuscripts); the passage from aham</li>
+<li>vabhūvam iti . . . to anubhāvyadharmopacāreṇa in Torella 2007c: 481</li>
+<li>n fact this passage is also found in ĪPV I: 129-30, n 69; SOAS bears</li>
+<li>e obviously mistaken reading iti vā pūrvapakṣānubhavasya instead of</li>
+<li>i vā pūrvānubhavasya); and the passage from pratyakṣapr̥ṣṭapātināpi . .</li>
+<li>to parāmarśa ity āha in Torella 2007d: 930 (the sentence is also</li>
+<li>oted in ĪPV I: 142, n 141).</li>
+</ul>
+<ul>
+<li>S3 quotes the passage from viṣayopalabdhr̥tāpy arthasya . . . to</li>
+<li>tpūrvakāloparaktānubhūtabhāvāvamarśanāvasānā in Torella 2007b: 544-45;</li>
+<li>e passage from tena ca sūtre liṅartho . . . to prakāśanād bhavati in</li>
+<li>rella 2007b: 546-47; the passage from nanu prakāśānupraveśaṁ vinā . .</li>
+<li>to sahaikyaṁ syād iti in Torella 2007c: 481-82; the passage from</li>
+<li>ginām api parabodhaḥ . . . to na tv etannidarśane’nubhavasmr̥tyor</li>
+<li>āhyagrāhakabhāva iti in Torella 2007c: 482 (as noted in Torella 2007c:</li>
+<li>2, n 42, this passage is also reproduced in ĪPV I: 137, n 121, from</li>
+<li>āhyabhūmi . . . onwards. Note that both S3 and the ĪPV footnote bear</li>
+<li>e reading ’pi vā tasya parabodhasya instead of ’pi vā tasya); the</li>
+<li>ssage from kadācid dr̥kparāmarśapūrvatvena . . . to dr̥kparāmarśa iti in</li>
+<li>rella 2007d: 931-32; the passage from athāpi yogyadeśasthatayā . . .</li>
+<li> pītasyāpi syāt in Torella 2007d: 937 (in S3 a gloss is interpolated</li>
+<li>ter vā pratyāsattyā, and the manuscript shows several variant</li>
+<li>adings, among which pītasyāpi na syāt instead of pītasyāpi syāt at the</li>
+<li>d of the passage).</li>
+</ul>
+<ul>
+<li> Some of the quotations end with iti ṭīkāyām or iti ṭīkākāraḥ; some</li>
+<li>e preceded by tad āha ṭīkākāraḥ or iti darśayati vivr̥tikāraḥ.</li>
+</ul>
+<ul>
+<li> See also Ratié (forthcoming).</li>
+</ul>
+<ul>
+<li> tattadākasmikābhāso bāhyaṁ ced anumāpayet । na hy abhinnasya bodhasya</li>
+<li>citrābhāsahetutā ।। na vāsanāprabodho’tra vicitro hetutām iyāt ।</li>
+<li>syāpi tatprabodhasya vaicitrye kiṁ nibandhanam ।। “[A Sautrāntika</li>
+<li>ght] object (cet) [the following]: the manifestation of this or that</li>
+<li>articular object,] which is [apparently] devoid of cause (ākasmika),</li>
+<li>st lead [us] to infer an external [reality], for consciousness, which</li>
+<li> [in itself] undifferentiated, cannot be the cause of manifestations</li>
+<li>at are varied. [And] the varied awakening of imprints (vāsanā) cannot</li>
+<li> the cause of this [phenomenal variety]; for what would be in turn the</li>
+<li>use of the variety of the awakening of these [imprints]?”</li>
+</ul>
+<ul>
+<li> On this criticism of the Vijñānavāda by a Sautrāntika as explained in</li>
+<li>hinavagupta’s commentaries, see Ratié 2010: 453-60.</li>
+</ul>
+<ul>
+<li> See Ratié 2007 and 2011a (chap. 8).</li>
+</ul>
+<ul>
+<li> As far as I know the text is entirely preserved in its Tibetan</li>
+<li>rsion only. For an English translation from the Tibetan, see Kitagawa</li>
+<li>55; for a tentative reconstruction of the Sanskrit text, see</li>
+<li>ntānāntarasiddhi (rec.), and for a short bibliography of scholarly</li>
+<li>rks on this text, see Katsura 2007: 408-09. For newly-published</li>
+<li>nskrit fragments, see also Chu 2011. On Abhinavagupta’s quotation and</li>
+<li>mmary of Dharmakīrti’s treatise, see Ratié 2007: 323, n 20; 2011a:</li>
+<li>1.</li>
+</ul>
+<ul>
+<li> Objective in the sense that the agent of the action is not</li>
+<li>prehended by him- or herself, subjectively, but as an object distinct</li>
+<li>om the “I”.</li>
+</ul>
+<ul>
+<li> See below, n 55.</li>
+</ul>
+<ul>
+<li> For an analysis of Utpaladeva’s position in this debate see Ratié</li>
+<li>07: 336-68; 2011a: 606-42.</li>
+</ul>
+<ul>
+<li> See below, n 56.</li>
+</ul>
+<ul>
+<li> See below, n 57 (on the probability that Vasubandhu’s work originally</li>
+<li>re the title Viṁśikā rather than Viṁśatikā, see Kano 2008: 345).</li>
+</ul>
+<ul>
+<li> See Schmithausen 1987, vol. II: 415-16 n 769.</li>
+</ul>
+<ul>
+<li> See Schmithausen 2005: 39-47.</li>
+</ul>
+<ul>
+<li> Viṁśikā 18ab: anyonyādhipatitvena vijñaptiniyamo mithaḥ । “There is a</li>
+<li>tual determination of representations (vijñapti) due to the fact that</li>
+<li>he various representations in various conscious streams] influence</li>
+<li>dhipatitva) each other.” Cf. Viṁśikāvr̥tti, p. 9: sarveṣāṁ hi sattvānām</li>
+<li>yonyavijñaptyādhipatyena mitho vijñapter niyamo bhavati yathāyogam.</li>
+<li>tha iti parasparataḥ. ataḥ santānāntaravijñaptiviśeṣāt santānāntare</li>
+<li>jñaptiviśeṣa utpadyate nārthaviśeṣāt. “Thus for all living beings</li>
+<li>attva), due to the fact that representations influence each other,</li>
+<li>ere is accordingly a determination of representation[s] that is</li>
+<li>tual, i.e. [exerted] by each other. Therefore a particular</li>
+<li>presentation arises in one [conscious] stream due to the particular</li>
+<li>presentation of another [conscious] stream[, and] not due to a</li>
+<li>rticular [external] object.” Note that Vasubandhu, as well as</li>
+<li>hiramati (see Schmithausen 2005: 44) and Dharmakīrti in the</li>
+<li>ntānāntarasiddhi, call this influence of one conscious stream on the</li>
+<li>hers an adhipati/adhipatipratyaya an – expression used by the</li>
+<li>jñānavādin portrayed by Utpaladeva in the last paragraph of the</li>
+<li>agment below. And whereas Vasubandhu seems to consider that thanks to</li>
+<li>is influence the occurrence of specific representations can be</li>
+<li>plained away without having recourse to an external object, Sthiramati</li>
+<li>ecifies that this influence does not produce the representational</li>
+<li>ject itself but only functions as some “controlling or directing</li>
+<li>ndition” (ibid.), and Dharmakīrti contrasts this influencing condition</li>
+<li> a conscious stream “A” of another conscious stream “B” with the</li>
+<li>terial cause (upādānakāraṇa) that the previous cognition in the</li>
+<li>nscious stream “A” constitutes for the next cognition in that same</li>
+<li>ream (Kitagawa 1955: 20-21).</li>
+</ul>
+<ul>
+<li> See e.g. ĪPVV II: 126 (quoted below n 57) and ĪPVV: II: 144 (quoted</li>
+<li> Ratié 2010: 446; 2011a: 391).</li>
+</ul>
+<ul>
+<li> ĪPV I: 174-75: anumīyamānam api ca bodhāntaram anumātr̥saṁmatād bodhād</li>
+<li>di bhinnaṁ tad asti tāvat saṁbhavo yat prameyaṁ bodhād bhinnam astīti.</li>
+<li>hopalambhaniyamāder anaikāntikatvān nīlapītādināpi prameyarāśinā kim</li>
+<li>akr̥taṁ yenāsya svarūpaviśrāntir na sahyate. tasmāt pramātrantarāṇām</li>
+<li>y asiddhir eva. “Moreover, if the other consciousness being inferred</li>
+<li> distinct (bhinna) from the consciousness considered as the inferring</li>
+<li>bject, then obviously, the possibility arises that the object of</li>
+<li>nsciousness [too] may be distinct from consciousness! Since [as a</li>
+<li>nsequence, Dharmakīrti’s idealistic arguments] such as ‘the necessity</li>
+<li>or the object] of being perceived along with [the cognition]’</li>
+<li>ahopalambhaniyama) are inconclusive, what crime have all objects – the</li>
+<li>ue, the yellow, etc. – committed that would prevent them from resting</li>
+<li> their own nature [independently of the consciousness apprehending</li>
+<li>em]? Therefore, [just as there can be no correct account of phenomenal</li>
+<li>riety in the Vijñānavāda,] there can be no demonstration of [the</li>
+<li>istence of] other subjects either.” Cf. Ratnakīrti’s remark in the</li>
+<li>ntānāntaradūṣaṇa, p. 148: if other streams are admitted to exist</li>
+<li>dependently of the cognitive stream apprehending them, “then how does</li>
+<li>e demonstrate that the external object too does not exist? For [then]</li>
+<li>e can cast a doubt on this [non-existence of external objects] as</li>
+<li>ll” (tarhi bahirarthasyāpi katham abhāvaḥ sidhyati, śakyam hi tatrāpi</li>
+<li>ndeham avatārayitum). On the Pratyabhijñā’s exploitation of</li>
+<li>armakīrti’s sahopalambhaniyama as formulated in PVin,</li>
+<li>atyakṣapariccheda 54ab, see Ratié 2011b: 484-86.</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 128.</li>
+</ul>
+<ul>
+<li> See, for example, the problem of the interpretation of ĪPV I: 173 and</li>
+<li> divergence with K.C. Pandey’s interpretation in particular (see</li>
+<li>āskarī III: 62; Ratié 2011a: 596-97, n 61): it seems to me that the</li>
+<li>agment definitely settles the matter of what the vyāpti attacked by</li>
+<li>e Sautrāntika really is.</li>
+</ul>
+<ul>
+<li> See Torella 1992.</li>
+</ul>
+<ul>
+<li> As explained elsewhere (see Ratié 2011a: 644, n 133) I believe that</li>
+<li>armakīrti’s Santānāntarasiddhi mainly focuses on an epistemological</li>
+<li>oblem (how do we become aware of the existence of other conscious</li>
+<li>reams?) and answers this problem by saying that the other conscious</li>
+<li>reams are mere conceptual objects for us, i.e. that the assumption of</li>
+<li>eir existence is epistemologically valid in the sphere of human</li>
+<li>actice (vyavahāra), but cannot be considered as an ultimate truth</li>
+<li>nce the existence of other streams remains impossible to perceive.</li>
+<li>netheless, later Buddhist authors claiming to belong to Dharmakīrti’s</li>
+<li>adition explicitly deny the ontological reality of other conscious</li>
+<li>reams, as Ratnakīrti does in his Santānāntaradūṣaṇa (see Kajiyama</li>
+<li>65: 13).</li>
+</ul>
+<ul>
+<li> On Utpaladeva’s refutation of the Sautrāntikas’ externalism, see</li>
+<li>tié 2011b.</li>
+</ul>
+<ul>
+<li> On Abhinavagupta’s and Rāmakaṇṭha’s quotations of this treatise see</li>
+<li>tié 2011a: 591, nn 50-51.</li>
+</ul>
+<ul>
+<li> See Ratié 2011b: 481, n 5, on the problematic identity of these</li>
+<li>utrāntikas.</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 128. On the hypothesis that Dharmottara may have held a</li>
+<li>eory similar to that ascribed by Abhinavagupta to the Sautrāntikas,</li>
+<li>d on the ongoing debate among scholars regarding this issue, see e.g.</li>
+<li>Crea and Patil 2010: 141-42, n 71.</li>
+</ul>
+<ul>
+<li> The passage is quoted on the margins of S3 ad ĪPK 1.5.4-5 (the folio</li>
+<li>ars the number 40); it starts on the top of the page, extends on the</li>
+<li>ght margin down to the bottom of the page, and goes on in the left</li>
+<li>rgin down to the bottom of the page. The words quoted in</li>
+<li>hinavagupta’s ĪPVV are underlined and in bold type. I have taken the</li>
+<li>berty of adding punctuation marks and of standardizing the use of the</li>
+<li>ndhi whenever needed. Sanskrit words or syllables are in brackets</li>
+<li>enever the akṣaras are barely legible or illegible but obviously</li>
+<li>quired by the context. All my conjectural emendations are indicated in</li>
+<li>otnotes.</li>
+</ul>
+<ul>
+<li> A few akṣaras (four?) are illegible.</li>
+</ul>
+<ul>
+<li> -vyāhārādy- conj.: -vyavahārādy- S3.</li>
+</ul>
+<ul>
+<li> vyāhārādy- conj.: vyavahārādy- S3.</li>
+</ul>
+<ul>
+<li> yadi hi conj.: yad iha S3.</li>
+</ul>
+<ul>
+<li> From here on the text is noted on the left margin.</li>
+</ul>
+<ul>
+<li> tatsadr̥śābhāsa- conj.: tattadr̥śābhāsa- S3.</li>
+</ul>
+<ul>
+<li> yato’vabhāsānāṁ conj.: yathāvabhāsānāṁ S3.</li>
+</ul>
+<ul>
+<li> pramātr̥ṣv ābhāsāparyavasānaṁ conj.: pramātr̥prābhā-saparyavasānaṁ S3.</li>
+</ul>
+<ul>
+<li> nādhipatitvocitaikaiveti conj.: nādhipratitvocitaikaiveti S3.</li>
+</ul>
+<ul>
+<li> See above, n 35.</li>
+</ul>
+<ul>
+<li> Cf. ĪPVV II: 122: anyathaivety anapavāryety arthaḥ.</li>
+</ul>
+<ul>
+<li> This is the reason why, according to the Vijñānavādin, we do know the</li>
+<li>variable concomitance between “I want to act” and “X is acting”: when</li>
+<li> act we are aware that our subjective will to act must produce the</li>
+<li>areness “he/she is acting” in other conscious streams – otherwise we</li>
+<li>uld not try to hide our actions, nor would we act while wanting the</li>
+<li>hers to see us. And since the invariable concomitance between “I want</li>
+<li> act” and “X is acting” is known, we can legitimately infer the</li>
+<li>istence of a will to act in some other conscious subject when we have</li>
+<li>e cognition “he/she is acting” – so our awareness that all our actions</li>
+<li>e potential objects for other conscious subjects is the basis of our</li>
+<li>ferential knowledge that other subjects exist.</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 122, quoted and translated in Ratié 2011a: 598-99, n 64.</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 123: dr̥śyatāṁ hi yadā pāmarakadāserakāv anyonyaṁ</li>
+<li>hīvato vādināv udgrāhayato yuvānau nr̥tyataḥ, tadāyaṁ para etaj jānātv</li>
+<li>i yad abhisandhānaṁ tat parapramātr̥jñānapūrvakam, parajñānaṁ ca</li>
+<li>thābhisandhijanitanr̥ttābhāsajñānapūrvakam ity anyonyāśrayam. tad āha</li>
+<li>thābhūteti. paratrotpadyatām ayam ābhāsa ity</li>
+<li>adabhisandhānajanito’yam vyāhārābhāsa iti. “For see: when two</li>
+<li>w-caste men are spitting on each other, when two philosophers are</li>
+<li>guing, when two young persons are dancing, the intention [occurring]</li>
+<li>n the form]: ‘may this other [person] know this [action of mine]’ must</li>
+<li> preceded by the knowledge of [the existence of] the other subject;</li>
+<li>d the knowledge of [the existence of] the other [subject] must be</li>
+<li>eceded by the knowledge that the manifestation [in the other conscious</li>
+<li>ream] of [my action of] dancing [etc.], results from such an intention</li>
+<li>f being perceived by others] – therefore there is a logical circle.</li>
+<li>is is what [Utpaladeva] expresses [by saying] ‘[the manifestation of</li>
+<li>e action of speaking,] which is such’ – [i.e.], the manifestation of</li>
+<li>he action of] speaking which is the result of this intention: ‘may</li>
+<li>is manifestation [of my action] arise in [someone] else’.”</li>
+</ul>
+<ul>
+<li> That is, if I understand correctly, the Vijñānavādin is accused here</li>
+<li> grounding his inference of the existence of other subjects on the</li>
+<li>ct that my actions are particularized by a will to be perceived by the</li>
+<li>hers (which is why, according to him, the relation of cause and effect</li>
+<li>tween the subjective will “I want to speak” and the objective thought</li>
+<li>e/she is speaking” is already ascertained, and can be used as a</li>
+<li>nsequence to prove that the other subject exists in the form of a</li>
+<li>bjective will causing my objective thought “he/she is speaking”),</li>
+<li>ereas the very fact that my will is thus particularized already</li>
+<li>esupposes the knowledge of the existence of other subjects. Cf. e.g.</li>
+<li>V I: 173: vicchinna ābhāsaḥ paratrotpadyatām iti yā samīhā tayā saha</li>
+<li>ratrotpannasya vicchinnābhāsasya kāryakāraṇabhāvagrahaṇam eva</li>
+<li>rāsiddhau na yuktam. “The very fact that [I] apprehend the relation of</li>
+<li>use and effect between [my] will [to be heard while speaking – a will</li>
+<li>at takes the form] ‘may a manifestation [of my action] separated [from</li>
+<li>e subject, i.e. expressed as ‘he/she is speaking’,] arise in the other</li>
+<li>ubject]’ – and the manifestation that occurs in the other [subject</li>
+<li>d] is separated [from the subject, i.e. takes the form ‘he/she is</li>
+<li>eaking’], is not possible if the other [subject] has not been</li>
+<li>tablished [beforehand].”</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 124: tad anyena dhūmena yathāgnyantarasyāvagamas</li>
+<li>thānyena vicchinnanr̥ttādyavabhāsenānyasya pramātur avasānaṁ ghaṭeta.</li>
+<li>hen just as [we] learn [the existence] of fire, which is one thing,</li>
+<li>rough [the knowledge of the existence of] smoke, which is [something]</li>
+<li>se, in the same way, [we] could determine [the existence of] the</li>
+<li>ther] subject, which is one [thing], through a manifestation which is</li>
+<li>omething else] such as dancing and so on [since this manifestation</li>
+<li>es not take the form ‘I am dancing’ characteristic of a conscious</li>
+<li>ream, but rather, is] separated [from the subject in the form ‘he/she</li>
+<li>nces’, etc.].”</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 124: anyata iti pratyakṣāt.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta’s commentary (ĪPVV II: 124), Utpaladeva is</li>
+<li>w showing that there is no invariable concomitance between the</li>
+<li>bjective desire to be seen acting and the objective cognition “X is</li>
+<li>ting” (so that the Vijñānavādin cannot rightly claim that the other</li>
+<li>bject can be inferred on the basis of the logical pervasion between</li>
+<li>ese two).</li>
+</ul>
+<ul>
+<li> That is, my action might not be seen by anybody, whether I want</li>
+<li>hers to see it or not; and conversely, my action might be seen by</li>
+<li>hers whereas I do not have any particular intention of showing it to</li>
+<li>hers: cf. Abhinavagupta’s example of the crying child in ĪPVV I: 124</li>
+<li>ee Ratié 2007: 330-31; 2011a: 599).</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 125: yaḥ pramātā maitraḥ, tasmād avicchinna eva yo</li>
+<li>āharāmīty ābhāsaḥ svātmani pratyakṣapratibhāsī. . . “The manifestation</li>
+<li> am speaking’ that is not separated from the subject [called] Maitra</li>
+<li>nd] involves a perceptual image (pratyakṣapratibhāsin) in myself</li>
+<li>vātman) . . .”</li>
+</ul>
+<ul>
+<li> The passage is difficult and I am not sure whether my interpretation</li>
+<li> correct. At any rate here is what I understand: the Vijñānavādin’s</li>
+<li>ponent has just explained that the intention (abhisandhi) of the</li>
+<li>eaker willing to be heard by others is not enough to ascertain the</li>
+<li>istence of other subjects, and he now explains that the existence of</li>
+<li>her subjects must rather be established from the fact that the same</li>
+<li>tion of speaking is perceived both by the speaker (in the subjective</li>
+<li>rm “I am speaking”) and by the hearer (in the objective form “he/she</li>
+<li> speaking”) and is determined (avadhārita) in both cases according to</li>
+<li>e same spatio-temporal conditions – a fact that the Vijñānavādin is</li>
+<li>ecisely incapable of justifying. Abhinavagupta considers that here the</li>
+<li>iva non-dualist is still speaking and anticipating on his own</li>
+<li>planation of intersubjectivity: according to him, the Śaiva</li>
+<li>n-dualistic perspective justifies this unity of experiences belonging</li>
+<li> several subjects in so far as it considers all these subjects as</li>
+<li>mited aspects that the all-powerful and all-encompassing consciousness</li>
+<li>eely takes on while playfully dividing and synthesizing its</li>
+<li>numerable manifestations. See ĪPVV II: 125: tasminn eva yataś caitraḥ</li>
+<li>amātā parameśvareṇābhāsāntaraikyād upasaṁhr̥tyaikībhāvena sr̥ṣṭaḥ . . .</li>
+<li>tataḥ so ’pi sarvaṁ maitravad evāvabudhyate, paratas tu</li>
+<li>rīrādyahaṁbhāvadārḍhyāt svaparavibhāgagaṇanānapagamād* vikalpayati</li>
+<li>itro vyāharatīty evam īśvaravādisaṁmatam etat. [*-gaṇanānapagamād</li>
+<li>nj.: -gaṇanāpagamād ĪPVV] “Because the Highest Lord, after withdrawing</li>
+<li>he individual called Caitra] from the unity of [all] other</li>
+<li>nifestations, has created the subject [called] Caitra as being one</li>
+<li>ith the subject Maitra] with respect to this very [manifestation of</li>
+<li>eech subjectively apprehended in Maitra as ‘I am speaking’], [. . .]</li>
+<li>is [Caitra] too is aware of everything exactly as Maitra is; but on</li>
+<li>e other hand, because [Caitra] does not cease taking into account the</li>
+<li>stinction between himself and the other(s) due to the strength of his</li>
+<li>lf-identification with his body [, intellect, vital breath and void</li>
+<li>ich are mere objects that he wrongly considers as himself], he</li>
+<li>nceptualizes [this manifestation] in this form: ‘Maitra is speaking’ –</li>
+<li>is is the opinion of the proponent of the [non-duality with] the</li>
+<li>rd.” However, Abhinavagupta also considers that up to this point, the</li>
+<li>scourse of the protagonist fighting with the Vijñānavādin could be</li>
+<li>terpreted as an expression of the Sautrāntika’s opinion</li>
+<li>āhyavādimata, ibid.). I assume that this is the case because so far</li>
+<li>is protagonist has not explained how this unity of experiences</li>
+<li>rtaining to various subjects is possible (the Śaiva non-dualist</li>
+<li>plains it as a result of the dynamism of consciousness, which is</li>
+<li>pable of dividing itself without ceasing to be one, whereas the</li>
+<li>utrāntika justifies it by having recourse to the existence of an</li>
+<li>ternal world common to all subjects). But whatever the interpretation</li>
+<li>osen, what matters here, according to Abhinavagupta, is the assertion</li>
+<li>at the sphere of human practice (vyavahāra) has a fundamental unity</li>
+<li>at must be accounted for. See ibid.: ekarūpatā tāvad</li>
+<li>avahārasyānenoktā. “In any case (tāvat), the [passage] expresses the</li>
+<li>ity of the sphere of mundane practice.”</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, from here on the Sautrāntika is speaking</li>
+<li>ain. See ĪPVV II: 126: sā ca bāhyatāyām apīti labdhocchvāso bāhyavādy</li>
+<li>a: evaṁ ceti . . . “And the externalist, who has regained faith [in</li>
+<li>e possibility of his victory thanks to the intervention of the Śaiva</li>
+<li>n-dualist and considers that] this [unity of the sphere of human</li>
+<li>actice is possible] in the externalist perspective as well, says: ‘And</li>
+<li>t is thus] . . .’.”</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 126: aparathā kampate maitra iti yaś caitrasyābhāsas</li>
+<li>ddeśābhāsasahitaḥ, sa brahmalokasthamaitrābh-</li>
+<li>hānapramātrantarajanito na bhavatīti kuto niścayaḥ. “Otherwise how</li>
+<li>uld [we] be certain that the manifestation ‘Maitra is moving’ that</li>
+<li>longs to Caitra[’s conscious stream and] is associated with the</li>
+<li>nifestation of the place [where Caitra is perceiving Maitra] is not</li>
+<li>n fact] produced by another subject called ‘Maitra’ who resides in</li>
+<li>ahma’s world?” Abhinavagupta explains that the Sautrāntika is</li>
+<li>sisting on the fact that the other subject must be associated with the</li>
+<li>rticular time and place where I perceive him/her to exist because he</li>
+<li>nsiders that the Vijñānavādin, according to whom there is no external</li>
+<li>rld, is unable to account for this fact. See ĪPVV II: 126: evaṁ</li>
+<li>ddeśatvādyanavadhāraṇadoṣam uktvā doṣāntaram api vijñānavādina</li>
+<li>ādayaty evaṁ ceti. “Having thus formulated the fault [in the</li>
+<li>jñānavādin’s thesis consisting in] the fact that the [other subject’s]</li>
+<li>istence in that [very] place, etc., cannot be determined</li>
+<li>navadhāraṇa), he brings about another fault of the Vijñānavādin [in</li>
+<li>e sentence beginning with] ‘moreover, since it is so. . .’.” This</li>
+<li>cusation is of course reminiscent of the externalist’s objection</li>
+<li>dressed by Vasubandhu at the beginning of the Viṁśikā, and as a matter</li>
+<li> fact Abhinavagupta quotes Viṁśikā 2 while commenting on this passage.</li>
+<li>e ibid.: tat satyam uktam: na deśakālaniyamaḥ santānaniyamo na । na ca</li>
+<li>̥tyakriyā yuktā vijñaptir yadi nārthataḥ ।। iti. “Therefore it has</li>
+<li>ghtly been said that ‘If representation (vijñapti) does not [arise]</li>
+<li>om an [external] object, there [can be] no restriction (niyama) [of</li>
+<li>is representation to a particular] place and time, nor any restriction</li>
+<li>f this representation to a particular conscious] stream; nor is</li>
+<li>ficacy possible [, since dreamt or illusory objects lack efficacy].”</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, the gist of the argument about to be</li>
+<li>rmulated here is as follows: the existence of the other subject must</li>
+<li> inferred on the grounds that a form which is manifest in something as</li>
+<li> it were external to the nature of that thing must have been projected</li>
+<li>to that thing by something else, just as the form of a pot in a mirror</li>
+<li>st be the projection of a pot existing outside the mirror. See ibid.:</li>
+<li>āvad eva hi tadā syād yad yatrābhāti* svarūpabahirbhūtam iva ca, tad</li>
+<li>yataḥ saṁkrāntaṁ darpaṇa iva ghaṭādiḥ . . . caitrapramātari cābhāti</li>
+<li>āhāraḥ svarūpabahirbhāvena maitro vyāharatīti, tad anenānyataḥ</li>
+<li>ṁkrāntena bhavitavyam iti svabhāvahetuḥ. [*yad yatrābhāti corr.: yady</li>
+<li>rābhāti ĪPVV] “For then this only can be [admitted by the</li>
+<li>jñānavādin]: a [thing A] that is manifest in a [thing B] and [is</li>
+<li>nifest there] as if it were external to the nature [of B] is [a form]</li>
+<li>at has passed [onto B] (saṁkrānta) from [something] else, just as a</li>
+<li>t in a mirror for instance [is the form of a pot external to the</li>
+<li>rror that has passed onto the mirror]. [. . .] And the speech [of</li>
+<li>itra] is manifest in the subject [called] Caitra as being external to</li>
+<li>e nature [of Caitra, in the form] ‘Maitra is speaking’; therefore this</li>
+<li>peech] must be [a form] passed onto [Caitra’s consciousness] from some</li>
+<li>her [entity, i.e. another subject] – therefore the inferential reason</li>
+<li>n which the inference of the other subjects’ existence is based] is a</li>
+<li>ture [and not an effect].” This thesis is of course reminiscent of the</li>
+<li>y in which the Sautrāntika demonstrates the existence of the external</li>
+<li>rld by inferring the existence of a “reflected object” (bimba)</li>
+<li>ojecting its form onto consciousness and thus accounting for the</li>
+<li>riety and specificity of our perceptions (see Ratié 2011a: 368-76;</li>
+<li>11b: 481-84). But as far as I understand, here the Sautrāntika is</li>
+<li>inting out that the Vijñānavādin is compelled to accept this</li>
+<li>planation of the way we become aware of the other subjects (because he</li>
+<li>s no other option left, and also because the thesis that several</li>
+<li>reams of consciousness reflect their images onto each other is still</li>
+<li>mpatible with his idealism and seems to have been held at least by</li>
+<li>me Vijñānavādins: see above, nn 22-23). And the Sautrāntika is</li>
+<li>sisting on this point because he wants to show (as he will in the next</li>
+<li>ragraph) that this explanation of our awareness that other subjects</li>
+<li>ist necessarily leads to his own thesis, namely, that of the existence</li>
+<li> an external world.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, the Sautrāntika is explaining here that</li>
+<li>e Vijñānavādin has to admit defeat (by conceding the existence of</li>
+<li>ternal objects) because the only idealistic option left to him in this</li>
+<li>scussion leads to absurd consequences. This option consists in</li>
+<li>nsidering that the phenomenal variety in my own conscious stream is</li>
+<li>timately due to manifestations occurring in other conscious streams</li>
+<li>d projecting their reflections onto my conscious stream, just as, when</li>
+<li>other subject has the cognition “I am speaking”, his/her action is</li>
+<li>flected in my conscious stream in the form “he/she is acting”. This</li>
+<li>esis (on which see above, nn 22-23) has the advantage of enabling the</li>
+<li>jñānavādin to acknowledge the existence of other subjects while not</li>
+<li>ving recourse to any reality external to consciousness (since the</li>
+<li>iverse is then nothing but a variety of consciousnesses reflecting</li>
+<li>to each other their own manifestations). But it is problematic for two</li>
+<li>asons. First, if it were the case then all the manifestations of</li>
+<li>jects occurring in one conscious stream should occur in all the</li>
+<li>hers, so that every conscious stream would be simultaneously conscious</li>
+<li> all objects. Second, the manifestation of an object in a given</li>
+<li>nscious stream, which supposedly projects its form onto other</li>
+<li>nscious streams, must be considered itself as some sort of reflection</li>
+<li>nce it appears objectively, in the form “this”, i.e. as separated from</li>
+<li>e subject perceiving it, and since it has been established that an</li>
+<li>jective thought such as “he/she is speaking” must be a reflection in</li>
+<li>e conscious stream of a subjective thought “I am speaking” in some</li>
+<li>her conscious stream. If any manifestation of an object in a given</li>
+<li>nscious stream is to be considered as a reflection of a manifestation</li>
+<li> some other conscious stream, then in order to avoid an infinite</li>
+<li>gress (since my thought “the pot” must be a reflection of somebody</li>
+<li>se’s thought “the pot”, which in turn is a reflection of somebody</li>
+<li>se’s thought, etc.), we could consider that the objective thought “the</li>
+<li>t” ultimately amounts to the subjective thought “I am the pot” or “I</li>
+<li> manifest [as] the pot”, just as my objective thought “he/she is</li>
+<li>eaking” is in fact a reflection of somebody else’s subjective thought</li>
+<li> am speaking”. But then, as Abhinavagupta points out, we would have to</li>
+<li>mit that all objects are ultimately one and the same thing, namely,</li>
+<li>e “I”, and phenomenal variety could not be accounted for. The only way</li>
+<li> escape the infinite regress is therefore to admit that this</li>
+<li>enomenal variety has as its cause the existence of entities that are</li>
+<li>ternal to consciousness. See ĪPVV II: 127: sarva eva</li>
+<li>amātrantaravartina ābhāsāḥ samarpakāḥ prāptā viśeṣābhāvāt.</li>
+<li>rpaṇadvaye’pi hy anyonyapratibimbārpaṇe’saṁkhyapratibimbodayaḥ, kim-</li>
+<li>ga pramātr̥koṭiparārdhānām anyonyapratibimbārpaṇe. tad āhāparyavasānaṁ</li>
+<li>ād iti. kiṁ ca samarpakasaṁmato’pi pramātrantaravarty asāv ābhāso</li>
+<li>madarthaviśrāntivailakṣaṇyenedam iti nirbhāsamānaḥ</li>
+<li>̥thagbhāvābhimānayogyatvāt pratibimbakalpa iti tasyāpy arpakeṇa</li>
+<li>āvyam, tatrāpy evam ity anavasthā. tatparihārāya tu paryante ghaṭa</li>
+<li>āsmadarthasaṁbhinnaḥ sakalapramātr̥vyatirikta</li>
+<li>hāsanasāro’bhyupagantavyo’haṁ ghaṭo bhāsa ity evaṁrūpaḥ. tatrāpi ca</li>
+<li>aṭatā yadi nādhikā tad ahaṁ ghaṭo ’haṁ paṭa iti nirbhāsamānayor</li>
+<li>aṭapaṭayor aikyam eva syāt. adhikā cet tatrāpi pratibimbateti</li>
+<li>mbenānyena bhavitavyam ābhāsarūpatāśūnyeneti bāhya evārthaḥ siddhaḥ.</li>
+<li>In that case] all the manifestations without exception that exist in</li>
+<li>e other subjects would as a consequence be projecting [their forms</li>
+<li>to my conscious stream,] since there is no difference [between them</li>
+<li>at would prevent some of them from thus projecting their form]. For</li>
+<li>en when two mirrors project reflections onto each other, countless</li>
+<li>flections arise – all the more if innumerable subjects project their</li>
+<li>flections onto each other! This is what [the Sautrāntika portrayed by</li>
+<li>paladeva] expresses [by saying that] ‘there would be an infinite</li>
+<li>mber [of manifestations in each of the subjects’]. Moreover, although</li>
+<li>is manifestation [of a pot] existing in another subject is considered</li>
+<li> what projects [its reflection onto my consciousness, since it is]</li>
+<li>nifest [in the form] ‘this’, [i.e.] as [something] that does not rest</li>
+<li> the first [grammatical] person, it is similar to a reflection, since</li>
+<li> can be associated with the belief that it exists separately [from the</li>
+<li>bject, in the form ‘this’ and not in the form ‘I’, and since we are</li>
+<li>suming for the sake of argumentation that all the objective</li>
+<li>nifestations in my conscious stream are reflections of a subjective</li>
+<li>nifestation in some other conscious stream]. Therefore this</li>
+<li>eflection] too must have [something that produces it by] projecting</li>
+<li>ts form, and] that [thing projecting its form too] requires [a third</li>
+<li>ojecting entity in so far as it must be a reflection as well];</li>
+<li>erefore there is an infinite regress. But in order to avoid this</li>
+<li>nfinite regress, we] could acknowledge that in the end the pot itself,</li>
+<li>ich is [apprehended as an object, i.e. as being] distinct from the</li>
+<li>rst grammatical person [and] separated from all subjects, has as its</li>
+<li>sence the [subjective conscious] manifestation which takes such a</li>
+<li>rm: ‘I am manifest [as] the pot’. And in that case too, if being a pot</li>
+<li> nothing more [than an internal, subjective manifestation,] then the</li>
+<li>t and the cloth, which should be manifest [in the same subjective</li>
+<li>rm] ‘I am the pot, I am the cloth’ would just be one and the same</li>
+<li>hing]. But if [being a pot] is something more than [an internal aspect</li>
+<li> consciousness,] in that case too [this manifestation] is a</li>
+<li>flection; therefore there must be some other [entity] that is the</li>
+<li>flected object (bimba) [projecting its form onto consciousness and]</li>
+<li>at does not consist [in turn] in a [conscious] manifestation [but</li>
+<li>ther, is external to it] – therefore the [existence] of the external</li>
+<li>ject is established.”</li>
+</ul>
+<ul>
+<li> See ĪPVV II: 127: aparyavasānadoṣaparijihīrṣāṁ parakīyāṁ</li>
+<li>ṁkate’thāpīti. vāsanāprabodhamātre teṣāṁ vyāpāro na</li>
+<li>apratibimbārpaṇe, vāsanā ca ghaṭasahasrair api pūrvaghaṭānubhavajanitā</li>
+<li>atibodhitā tam evaikaṁ pūrvānubhūtaghaṭābhāsam unmeṣayati, tato</li>
+<li>paryavasānātmābhāsānām atiprasaṅgaḥ. “[With the words] ‘But still’,</li>
+<li>tpaladeva] states as an objection the opponent’s desire to avoid the</li>
+<li>ult of an infinite number [of manifestations in each conscious stream.</li>
+<li>re is what the opponent means:] the activity of the [manifestations</li>
+<li>curring in other conscious streams] only concerns the awakening of</li>
+<li>prints [in my conscious stream, but] not the projection of a</li>
+<li>flection of their own [form into my conscious stream]; and the</li>
+<li>print, which has been produced by previous experiences of pots, [i.e.]</li>
+<li> innumerable pots, makes this manifestation of a previously</li>
+<li>perienced pot arise [and] this [manifestation] only; therefore there</li>
+<li> no absurd consequence [in our position that would] consist in an</li>
+<li>finite number of manifestations.”</li>
+</ul>
+<ul>
+<li></li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch6_ratie_other_streams.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

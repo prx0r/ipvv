@@ -1276,6 +1276,34 @@ def build_information_packets(): return render_asset("information-packets","Info
 def build_ochema_methods(): return render_asset("ochema-methods","Ochema methods","Method",None,"*")
 def build_philosophers(): return render_asset("philosophers","Philosophers","Research object",None,"*")
 
+def render_text_assets(sub, title, kind, filepat="*.md"):
+    src = ROOT / "data" / sub
+    out = DIST / sub; out.mkdir(parents=True, exist_ok=True)
+    if not src.exists():
+        (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
+            sub="pending", sidenav=sidenav("abhinavagupta", ""),
+            body=f"<div class='panel missing'>no {sub} yet</div>"))
+        return 0
+    cards = []
+    for f in sorted(src.glob(filepat)):
+        if f.suffix not in (".md", ".txt"):
+            continue
+        shutil.copy(f, out / f.name)
+        raw = f.read_text(encoding="utf-8", errors="replace")
+        first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
+        (out / (f.stem + ".html")).write_text(TF(TMPL, title=first, h1=esc(first), kicker=kind,
+            sub=f"{len(raw.split())} words · vendored research asset",
+            sidenav=sidenav("abhinavagupta", ""),
+            body=f'<div class="sub"><a href="/data/{sub}/{esc(f.name)}">source →</a></div>' + md_lite(raw)
+            + srclink(f"site/data/{sub}/{f.name}", "source lives here.")))
+        cards.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)}</div><div class="sub"><a href="/{sub}/{esc(f.stem)}.html">open →</a></div></div>')
+    (out / "index.html").write_text(TF(TMPL, title=title, h1=title, kicker=kind,
+        sub=f"{len(cards)} assets", sidenav=sidenav("abhinavagupta", ""), body="".join(cards)))
+    return len(cards)
+
+def build_ratier_chapters(): return render_text_assets("ratie-chapters","Ratie chapters","Chapter","*.md")
+def build_torella_volume(): return render_text_assets("torella-volume","Torella volume","Chapter","*.txt")
+def build_recognition_framework(): return render_text_assets("recognition-framework","Recognition framework","Framework","*.md")
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(TF(TMPL, title="Support", h1="Support the library",
@@ -1457,7 +1485,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1482,6 +1510,9 @@ def main():
     if "information-packets" in want: done["information-packets"] = build_information_packets()
     if "ochema-methods" in want: done["ochema-methods"] = build_ochema_methods()
     if "philosophers" in want: done["philosophers"] = build_philosophers()
+    if "ratier-chapters" in want: done["ratier-chapters"] = build_ratier_chapters()
+    if "torella-volume" in want: done["torella-volume"] = build_torella_volume()
+    if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))

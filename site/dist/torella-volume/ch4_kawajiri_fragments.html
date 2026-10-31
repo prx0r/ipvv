@@ -1,0 +1,1546 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch4_kawajiri_fragments · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch4_kawajiri_fragments</h1><div class="skt"></div><div class="sub">5438 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch4_kawajiri_fragments.txt">source →</a></div><ul>
+<li>w Fragments of the Īśvarapratyabhijñā-vivr̥ti1</li>
+</ul>
+<ul>
+<li>hei Kawajiri</li>
+</ul>
+<ul>
+<li>troduction</li>
+</ul>
+<ul>
+<li>e Pratyabhijñā school is named after the work of Utpaladeva (c.</li>
+<li>5-75) who is a disciple of Somānanda (c. 900-50), though Somānanda is</li>
+<li>cognized as the founder of the Pratyabhijñā school. According to</li>
+<li>dhurāja (c. 1000-50) who was from south India and travelled to Kashmir</li>
+<li> become a disciple of Abhinavagupta (c. 975–1025), the following works</li>
+<li>e regarded as the authoritative Pratyabhijñā texts:2</li>
+</ul>
+<ul>
+<li>Īśvarapratyabhijñā-kārikā (ĪPK) of Utpaladeva</li>
+</ul>
+<ul>
+<li>Īśvarapratyabhijñā-vr̥tti (ĪPVr̥) of Utpaladeva</li>
+</ul>
+<ul>
+<li>Īśvarapratyabhijñā-vivr̥ti/ṭīkā (ĪPViv) of Utpaladeva</li>
+</ul>
+<ul>
+<li>Īśvarapratyabhijñā-vimarśinī (ĪPV) of Abhinavagupta</li>
+</ul>
+<ul>
+<li>Īśvarapratyabhijñā-vivr̥ti-vimarśinī (ĪPVV) of Abhinavagupta</li>
+</ul>
+<ul>
+<li>e ĪPViv is a commentary on the ĪPK and ĪPVr̥, both of which are written</li>
+<li> the same time. The ĪPV and the ĪPVV are commentaries on the ĪPK and</li>
+<li>e ĪPViv, respectively. Among these, the ĪPViv is only extant in a</li>
+<li>agmentary form. After Torella published an article on the ĪPViv in</li>
+<li>88, he recently edited a part of the ĪPViv in his articles.3 His</li>
+<li>ition is based on a transcript copied by K.C. Pandey himself and the</li>
+<li>iginal of it. The original manuscript written in Śāradā script (Skt.</li>
+<li> No. 30) was discovered in the National Archives of India, New Delhi.4</li>
+<li> contains the part of the ĪPViv relative to ĪPK1.3.6-1.5.3 and the</li>
+<li>troduction to ĪPK 1.5.4-5.</li>
+</ul>
+<ul>
+<li> present, this is a unique manuscript of the ĪPViv, though so</li>
+<li>agmentary. Except this part of the ĪPViv edited by Torella, one can</li>
+<li>ean some passages of the ĪPViv not only from the works of</li>
+<li>hinavagupta and Kṣemarāja but also from the footnotes of the KSTS</li>
+<li>ition of the ĪPV.5 According to Torella (2007c: 479, fn. 8), those</li>
+<li>otnotes must have been in the margin of a manuscript of the ĪPV, that</li>
+<li>ven the siglum Gh in the edition of the ĪPV.6</li>
+</ul>
+<ul>
+<li> the course of search for the manuscripts of the Pratyabhijñā works, I</li>
+<li>quired photocopies of a manuscript of the ĪPK along with the ĪPVr̥ (ms</li>
+<li>. 4408) kept in the Akhila Bhāratīya Saṁskrit Parishad, Lucknow.7 This</li>
+<li>nuscript is written in Devanāgarī script and contains marginal notes</li>
+<li>re and there. I began examining them. Very soon, I realized that some</li>
+<li>ssages in the margin are from the ĪPViv, by means of collating them</li>
+<li>th the already edited text of the ĪPViv, and expected that there would</li>
+<li> new fragments of the ĪPViv in the margin. With reference to this</li>
+<li>nuscript, it is noteworthy that most of the passages in the margin are</li>
+<li>om the Pratyabhijñā texts. A scribe of this manuscript seems to</li>
+<li>nfine himself to add his own comments.</li>
+</ul>
+<ul>
+<li> this paper, I will present new fragments of the ĪPViv. This paper is</li>
+<li>voted to the diplomatic edition of the new fragments of the ĪPViv</li>
+<li>lative to ĪPK1.1.1-1.5.3.</li>
+</ul>
+<ul>
+<li>itorial signs in the apparatus and the diplomatic edition</li>
+</ul>
+<ul>
+<li>the reading of the edition by Torella</li>
+</ul>
+<ul>
+<li>illegible akṣara(s) or part of an akṣara due, e.g. to blurring</li>
+</ul>
+<ul>
+<li>lacunae in the manuscript</li>
+</ul>
+<ul>
+<li>&gt; contain added akṣara(s) in the manuscript (the position is indicated</li>
+<li> the margin)</li>
+</ul>
+<ul>
+<li>] contain unclear akṣara(s) or part of an akṣara that is unclear due,</li>
+<li>g., to blurring</li>
+</ul>
+<ul>
+<li>} contain akṣara(s) deleted in the manuscript</li>
+</ul>
+<ul>
+<li>sign of insertion added above the line</li>
+</ul>
+<ul>
+<li>sign of insertion added below the line</li>
+</ul>
+<ul>
+<li>agments Corresponding to Torella’s Edition</li>
+</ul>
+<ul>
+<li> a beginning, we will examine the passages of the ĪPViv in the</li>
+<li>nuscript with the help of the edition of the ĪPViv. Though there are</li>
+<li>so passages from the ĪPV and so on in the margin, they are not given</li>
+<li>re since they are not in question.</li>
+</ul>
+<ul>
+<li>Viv1.3.6:</li>
+</ul>
+<ul>
+<li>r) vyatiriktārthaprakāśanam api jñānānāṁ svarūpam eva na tv arthasya</li>
+<li> py atiśayas tac ca tasya rūpaṁ nānyasya jñānasya svarūpatām eti</li>
+<li>nānyaviviṣaye* nyasyāpīti viṣayamelanaṁ syāt tadā** jñānāni</li>
+<li>ātmamātreti</li>
+</ul>
+<ul>
+<li>enānyaviṣaye T.8</li>
+</ul>
+<ul>
+<li>tad āha T.9</li>
+</ul>
+<ul>
+<li>Torella 1988: 144, ll. 7-10</li>
+</ul>
+<ul>
+<li>Viv1.3.7:</li>
+</ul>
+<ul>
+<li>r) yujyate* punar etādr̥śo vyavahāro yady eṣām anubhavasmr̥tyādīnāṁ</li>
+<li>nmātrasāratvenaika evātmā syād yasyaitā** viśvātmanaḥ parameśvarasya</li>
+<li>ānādikā<b><i> vicitrāḥ śaktayo nyathā tu na syād ity āha na cetyādi</b></i>*</li>
+<li></li>
+</ul>
+<ul>
+<li>ujyeta T.10</li>
+</ul>
+<ul>
+<li>yasyaiva T.</li>
+</ul>
+<ul>
+<li>*etā jñānādikāḥ T.</li>
+</ul>
+<ul>
+<li>**āha na cetyādi not found in T.11</li>
+</ul>
+<ul>
+<li>Torella 2007a: 477, ll. 20-22</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK 1.3.7. Though,</li>
+<li> Torella pointed out, another part of the ĪPViv which contains the</li>
+<li>pression śaktiyogalakṣaṇaṁ ca seems to be mentioned in the ĪPVV,12 it</li>
+<li> also not found in this fragment. We may say that that part of the</li>
+<li>Viv has not come down to us or occurs in elsewhere.</li>
+</ul>
+<ul>
+<li>r) bhinnāvabhāsinām api cārthānāṁ cidekarūpatve tadviṣayāṇāṁ jñānānām</li>
+<li>ivādasiddham eva tadātmakatvam</li>
+</ul>
+<ul>
+<li>Torella 2007a: 477, ll. 31-32</li>
+</ul>
+<ul>
+<li>v) tad evam ekāṁtarmukhasvasaṁvedanarūpacit-tattvātmatāviśrāntiṁ</li>
+<li>[jñā]nānām* aiṁdriyakānām** apy anyonyaṁ sahabhāvapr̥thagbhāvaprakāśo</li>
+<li> syād ity arthānām api sadasattāniyamaniścayo na syāt tataś ca</li>
+<li>rvavyavahārocchedaprasaṁgaḥ tasmād eṣām ekacittattvaviśrāṁti{ma}rūpam</li>
+<li>usaṁdhānam avaśyābhyupagaṁtavyaṁ tad āha śeṣapadārthajñānā-nām*** iti</li>
+</ul>
+<ul>
+<li>inā jñānānām T.13</li>
+</ul>
+<ul>
+<li>aindriyakāṇām T.14</li>
+</ul>
+<ul>
+<li>*aśeṣapadārthajñānām T.15</li>
+</ul>
+<ul>
+<li>Torella 2007a: 480, ll. 3-7</li>
+</ul>
+<ul>
+<li>v) [. . .]śrāṁti[. . .]saṁdhā[. . .]kaśabdo pi vivr̥taḥ — Torella</li>
+<li>07a: 480, ll. 7-8</li>
+</ul>
+<ul>
+<li>v) smr̥tir api pūrvāvabhāsitavastunaḥ pūrvāvabhā-sitatvena</li>
+<li>rtamānakāle prakhyāpanaśaktiḥ deśakālaviśeṣāvacchedaśūnyatvena</li>
+<li>citrecchāprati-bodhitāvabhāsabhedavāsanāmātropapāditavi-</li>
+<li>lparūpavikalparūpavijñānā ’pohanaśaktiḥ*</li>
+<li>ṁkita-pratipakṣapratikṣepapatvād** vikalpānāṁ</li>
+</ul>
+<ul>
+<li>icitrecchābodhitā- T,16 -upapāditavikalparūpavijñānā- T.17</li>
+</ul>
+<ul>
+<li>-pratikṣepaparatvād T.18</li>
+</ul>
+<ul>
+<li>Torella 2007a: 480, ll. 14-17</li>
+</ul>
+<ul>
+<li>Viv 1.4.1</li>
+</ul>
+<ul>
+<li>v) smr̥tyādīnām idānīṁ jñānena prakaraṇenānena* svarūpaṁ nirūpayinn**</li>
+<li>eṣakālānugatasvataṁtrā-vabodha-lakṣaṇātmatatvasvabhāveśvaraśaktirūpatāṁ</li>
+<li>atipipādayiṣuḥ smr̥ter eva tāvat suspaṣṭam īśvarātmasiddhihetutayā</li>
+<li>athamaṁ saṁbhavam āha sa hītyādi***</li>
+</ul>
+<ul>
+<li>ñānaprakaraṇenānena T.</li>
+</ul>
+<ul>
+<li>nirūpayiṣyann T.19</li>
+</ul>
+<ul>
+<li>*sa hītyādi not found in T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 544, ll. 2-5</li>
+</ul>
+<ul>
+<li>is fragment, which gives the avataraṇikā of the ĪPViv to ĪPK1.4.1, is</li>
+<li>so found in the footnote 17 of the ĪPV I 115.20</li>
+</ul>
+<ul>
+<li>v) bodhātmano nityatvenaitadavibhaktāyā boddhr̥tāyā nityatve pi</li>
+<li>ttattathānirmitavibhinnadeśakālopasarja- nārthoparāgeṇa</li>
+<li>dhaikarūpasyārthānubhavasyāpi* bhinnakālatvena pūrvapaścādvyavahāraḥ</li>
+<li>d āha paścād apīti ।।</li>
+</ul>
+<ul>
+<li>odhaikarūpasyārthānubhavasyāpi ca T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 544, ll. 11-14</li>
+</ul>
+<ul>
+<li>th reference to the part of tattatathānirmita-, Torella points out</li>
+<li>at Abhinavagupta seems to have a partly different text. However, this</li>
+<li>agment accords with the text edited by Torella.21</li>
+</ul>
+<ul>
+<li>v) anubhavasmaraṇakālavyāpitvaṁ sa parato pi sann iti sūtre nirdiṣṭaṁ</li>
+<li>vivr̥taṁ ca paścād api pūrvānu-bhūtārthānubhavitr̥tvād iti ।।</li>
+</ul>
+<ul>
+<li>Torella 2007b: 545, ll. 17-18</li>
+</ul>
+<ul>
+<li>Viv 1.4.2</li>
+</ul>
+<ul>
+<li>r) smr̥tivikalparūpaparāmarśasamaye deśakālādy-avacchedavat*tathā</li>
+<li>taḥsthitasya vahir api tad idam ityādisarvanāmanirdeśasyārthasya**</li>
+<li>marthyād eva prakāśo bhavatīty āha bhāsayec cetyādi*** ।।</li>
+</ul>
+<ul>
+<li>eśakālādyavacchedāt T.</li>
+</ul>
+<ul>
+<li>-nirdeśyasyārthasya T.22</li>
+</ul>
+<ul>
+<li>*bhāsayec cetyādi not found in T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 546, ll. 1-3</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.4.2. The</li>
+<li>ading deśakālādyavacchedāt is to be corrected to</li>
+<li>śa-kālādyavacchedavat- as given in this fragment, which is supported</li>
+<li> the ĪPVV.23 Also, it seems to me that va just before</li>
+<li>tathāntaḥsthitasya is dropped or blurred and only ā-diacritical mark</li>
+<li> left.</li>
+</ul>
+<ul>
+<li>r) prakāśasvabhāvaś ca parāmarśo yathāsau tasyāvaśyaṁ prakāśamānatayā*</li>
+<li>āvyam anyathā parāmarśanam eva nopapadyeta ’to tra nāsti vivādaḥ</li>
+</ul>
+<ul>
+<li>vaśyaṁ prakāśanena tathā T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 546, ll. 14-16</li>
+</ul>
+<ul>
+<li>r) sūtre liṅartho niyogakaraṇalakṣaṇe vivr̥taḥ</li>
+</ul>
+<ul>
+<li>Torella 2007b: 546, ll. 16-17</li>
+</ul>
+<ul>
+<li>r) [ke]valaṁ yad yathā parāmr̥śyate tat tathaivāva-bhāsyate smr̥tau ca</li>
+<li>rvaprakāśitasya parāmarśāt pūrvaprakāśitatvenaivābhāsas tad āhānyathā</li>
+<li>akāśitasya parāmarśo na kr̥taḥ syād iti eṣa eva cānubhūtāsaṁpra-mauṣaḥ*</li>
+<li></li>
+</ul>
+<ul>
+<li>ānubhūtaviṣayāsampramoṣaḥ T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 546, l. 17; 547, l. 1</li>
+</ul>
+<ul>
+<li>r) pūrvaprakāśitatvaṁ ca pūrvātītadeśakālapramātrā-</li>
+<li>raviśeṣāvacchedenaiva prakāśanād bhavati tad āha svasattākāla eva ceti</li>
+<li>।।</li>
+</ul>
+<ul>
+<li>Torella 2007b: 547, l. 1; 547, l. 2</li>
+</ul>
+<ul>
+<li>r)++++[tvāc ca bhogava]śena* smr̥t{i}āv upajāya**++++++++++sasyaiva</li>
+<li>ṁcanādyābhā-sāsaṁ***+++++++++++payogaṁ</li>
+<li>rva-deśakālābhyā*<i>*</i>++++++++++āt svalakṣaṇarūpasya smara+++++++sphuṭo</li>
+<li>v avabhāso bhavati tad āha kadācit tv iti ।। 25</li>
+</ul>
+<ul>
+<li>bhogavaśena T.24</li>
+</ul>
+<ul>
+<li>upajātāyāṁ T.25</li>
+</ul>
+<ul>
+<li>**kāṁcanādyābhāsāsambhinnasya- T.26)</li>
+</ul>
+<ul>
+<li>**pūrvadeśakālābhāsādi- T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 547, ll. 14-17</li>
+</ul>
+<ul>
+<li>r) yadā punar arthitāvaśenaiva sadghaṭakāṁcana-lohitatvādyābhāsa{s tad</li>
+<li>a}saṁvedanenaiva pūrva-dikkālādyābhāsasaṁbhedina* evārthāsya smaraṇaṁ</li>
+<li>dā sphuṭa evāvabhāsas** tad āhānyadā tv iti ।।</li>
+</ul>
+<ul>
+<li>pūrvadikkālābhāsasaṁbhedinaḥ T.</li>
+</ul>
+<ul>
+<li>evābhāsaḥ T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 548, ll. 5-7</li>
+</ul>
+<ul>
+<li>r) kadācit punar atyaṁtaikarasāvadhānodyuktasya*</li>
+<li>ravaśeṣaviśeṣaṇāvabhāsasāmānādhikaranyāpattiviṣa- dīkr̥tasmaryamāṇo</li>
+<li>haḥ<b> sākṣātkārasamaya iva</b>* sphuṭaṁ puraḥ sphurati tad</li>
+<li>ātiśayetyādi*<i>*</i> ।।25</li>
+</ul>
+<ul>
+<li> atyantaikarasāvadhānodyuktasya T.27)</li>
+</ul>
+<ul>
+<li>-viśadīkr̥taḥ smaryamāṇaḥ T.</li>
+</ul>
+<ul>
+<li>*sākṣātkāramaya eva T.</li>
+</ul>
+<ul>
+<li>**atiśayanirantara iti T.</li>
+</ul>
+<ul>
+<li>Torella 2007b: 548, ll. 7-10</li>
+</ul>
+<ul>
+<li>is fragment of the ĪPViv is quoted in the footnote 67 of the ĪPV I</li>
+<li>5.28 It is to be noted that it has the reading sākṣātkārasamaya iva</li>
+<li>stead of the reading sākṣātkāramaya eva which the text edited by</li>
+<li>rella as well as the footnote of the edition of the ĪPV has.29</li>
+</ul>
+<ul>
+<li>Viv 1.4.3</li>
+</ul>
+<ul>
+<li>r) anubhavakāle* ca pūrvakālāvacchedenārthābhāsasya samarthitasya</li>
+<li>rtamānikasmr̥tiprakāśād** bhedo nopapadyate ity anubhavasmr̥tyābhāsayoḥ</li>
+<li>rīrībhūta eko rthas tayor apy ekatvam*** ākṣipatīti copadarśayan</li>
+<li>aṣṭāraṁ<b><i>* kartāraṁ</b><b></i> caikam upapādayati na cetiyādi</b><i>*</i>* 25</li>
+</ul>
+<ul>
+<li>mr̥tikāle T.30</li>
+</ul>
+<ul>
+<li>*vārtamānikasmr̥tiprakāśāt T.31)</li>
+</ul>
+<ul>
+<li>**ekatvam T.32)</li>
+</ul>
+<ul>
+<li>**draṣṭāraṁ T.33</li>
+</ul>
+<ul>
+<li>***smartāram T.34</li>
+</ul>
+<ul>
+<li><i>*</i>*na cetyādi not found in T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 479, ll. 2-5</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.4.3.</li>
+</ul>
+<ul>
+<li>r) smr̥tiś ca jñānarūpaivety āha smr̥tiprakāśa iti — Torella 2007c: 479,</li>
+<li> 16</li>
+</ul>
+<ul>
+<li>r) smr̥tiprakāśasya tātkālikatvaviśeṣaṇena vartamānatoktyā</li>
+<li>ladvayānusaṁdhānāt smartr̥siddhir upakṣiptā 26</li>
+</ul>
+<ul>
+<li>Torella 2007c: 479, l. 16; 480, l. 1</li>
+</ul>
+<ul>
+<li>v) ādigrahaṇenotprekṣādisaṁvid uktā 1 — Torella 2007c: 480, l. 10</li>
+</ul>
+<ul>
+<li>Viv 1.4.4</li>
+</ul>
+<ul>
+<li>v) na ca prakāśamānatānyathānupapatyā prakāś-ānupraveśe pi ghaṭavad</li>
+<li>āhyāṁśāvasthānaṁ pūrvānubhavasya grāhikāṁśopāroheṇa* prathanād ity āha</li>
+<li>ivetyādi** ।। 27</li>
+</ul>
+<ul>
+<li>rāhakāṁśopāroheṇa T.</li>
+</ul>
+<ul>
+<li>naivetyādi not found in T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 481, ll. 3-5</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.4.4.</li>
+</ul>
+<ul>
+<li>v) smaraṇajñāne ghaṭādyarthākāra eva ekaḥ pūrvakālādyavacchinno</li>
+<li>āhyabhāvasthaḥ pr̥thaktvenedaṁtānirdeśe* vabhāti na tu</li>
+<li>rvānu-bhavākāro parasmr̥tāv iti** na cāsau yogino</li>
+<li>rthārtha-mātrajñāna*** iva pūrvānubhavo naiva prakāśate</li>
+<li>aṁkārāspadībhūtagrāhakāṁśānupraviṣṭasyāham<b><i>* anubhūvaṁ</b></i>**</li>
+<li>yānubhūto rtha iti vā pūrvānubhavasya smartr̥bodhaikhyena prakāśanāt 27</li>
+</ul>
+<ul>
+<li>dantānirdeśyo T.</li>
+</ul>
+<ul>
+<li>aparaḥ smr̥tāv iti T.35</li>
+</ul>
+<ul>
+<li>*atītārthamātrajñāne T.</li>
+</ul>
+<ul>
+<li><i>*</i>-grāhakāṁśā- T.36)</li>
+</ul>
+<ul>
+<li>***anvabhūvam iti T.37</li>
+</ul>
+<ul>
+<li>Torella 2007c: 481, ll. 11-16</li>
+</ul>
+<ul>
+<li>v) vedyatātra prathamānatātātparyeṇoktā na tv anyā-yattaprakāśatvena*</li>
+<li>danakarmatayā</li>
+</ul>
+<ul>
+<li>a tv anyāyattaprakāratvena T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 481, ll. 26-27</li>
+</ul>
+<ul>
+<li>e reading anyāyattaprakāratvena is to be corrected to</li>
+<li>yāyattaprakāśatvena as given in this fragment.</li>
+</ul>
+<ul>
+<li>Viv 1.4.5</li>
+</ul>
+<ul>
+<li>v) nanu prakāśānupraveśaṁ vinā prakāśamānatā mā bhūn na tu tāvataiva</li>
+<li>akāśyaprakāśakayor aikyāpattir grāhyabhāge eva grāhakād vicchinne</li>
+<li>aṭādeḥ prakāśyasya prakāśābhinnasyāpi prathanāt tathā ca* yogināṁ</li>
+<li>rapramātr̥bodhaḥ paratvenaivedaṁtayā prakāśate nyathā bhrāṁtiḥ syāt tat</li>
+<li>thaṁ jñānasya jñānāṁtaragrāhyatve<b> nubhavaviṣayāyāḥ smr̥ter aikyaṁ</b>*</li>
+<li>ād iti । āha yoginām iti । 28</li>
+</ul>
+<ul>
+<li>athā T.</li>
+</ul>
+<ul>
+<li>*jñānāntaragrāhyatve T.38)</li>
+</ul>
+<ul>
+<li>*smr̥ter anubhavena sahaikyam T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 481, l. 28 - 482, l. 4</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.4.5.</li>
+</ul>
+<ul>
+<li>v) tad atra yoginām api parabodhaḥ svasaṁvinmaya evāvabhāsate nyathā</li>
+<li>āguktarītyā* bodhatāhāniḥ syāt ।।</li>
+</ul>
+<ul>
+<li>rāguktanītyā T.39</li>
+</ul>
+<ul>
+<li>Torella 2007c: 482, ll. 12-13</li>
+</ul>
+<ul>
+<li>v) pramātraṁtaragatāḥ pramātrantarasthitāḥ-pramātraṁtarātmānas</li>
+<li>ttadghaṭapaṭādi-bhinnabhāvaviṣayā* ity arthaḥ jñānānām</li>
+<li>ānāṁtaravedyatve svabhāvahāniḥ syād iti svabhāvapadam upāttaṁ nāpy</li>
+<li>hayavedyateti pratipādanāya mātragrahaṇam ।। 28</li>
+</ul>
+<ul>
+<li>ghaṭādi- T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 482, ll. 19-22</li>
+</ul>
+<ul>
+<li>v) tad evaṁ sarvathā jñānānāṁ vedyavedakabhāvo*</li>
+<li>āhakabhāvenaikyāpattyā** svaparavibhāgasaṁskāra-bhraṁśe pi vastutaḥ</li>
+<li>asaṁvedanarūpatayaiva bhavatīti*** sthitam 29 ।।</li>
+</ul>
+<ul>
+<li>a vedyavedakabhāvaḥ T.40</li>
+</ul>
+<ul>
+<li>grāhakabhāvaikyāpattyā T.</li>
+</ul>
+<ul>
+<li>*bhavanti T.41</li>
+</ul>
+<ul>
+<li>Torella 2007c: 484, ll. 13-15</li>
+</ul>
+<ul>
+<li>r) vāstavena tu bodhaikātmanā pramāṇāṁtareṇaikyāpattir* eva</li>
+<li>ramātmavedanaṁ** sarvajñasya tad āha yoginām paramātmatāpattir</li>
+<li>eti***</li>
+</ul>
+<ul>
+<li>odhaikātmanā pramātrā pramātrantaraikyāpattiḥ T.42</li>
+</ul>
+<ul>
+<li>paramātmavedakatvaṁ T.43</li>
+</ul>
+<ul>
+<li>*parātmatāpattir eva iti T.44</li>
+</ul>
+<ul>
+<li>Torella 2007c: 483, ll. 21-23</li>
+</ul>
+<ul>
+<li>r) pramāṇāṁtaragatasaṁbaṁdhi*śarīrabuddhyākārot-tīrṇena bodhamātreṇa**</li>
+<li>aṁtāparatvena***</li>
+</ul>
+<ul>
+<li>atpramātrantarasambandhi- T.</li>
+</ul>
+<ul>
+<li>bodhamātreṇātmanā T.</li>
+</ul>
+<ul>
+<li>*idantayā paratvena T.</li>
+</ul>
+<ul>
+<li>Torella 2007c: 484, ll. 17-18</li>
+</ul>
+<ul>
+<li>r) eṣa ca pakṣo noktanayena saṁbhavati ity abhyupagama-vādamātram</li>
+<li>edaṁ tad āha yadi tathā saṁbhaved iti</li>
+</ul>
+<ul>
+<li>Torella 2007c: 484, ll. 19-21</li>
+</ul>
+<ul>
+<li>Viv 1.4.6</li>
+</ul>
+<ul>
+<li>r) yāpīdaṁtayaivānubhavaparāmarśakāriṇī smr̥tir udeti sāpi</li>
+<li>avahāramātreṇa tathārūpā na tu vastusthityeti darśayann āha smaryate</li>
+<li>yādi*</li>
+</ul>
+<ul>
+<li>maryate ityādi not found in T.</li>
+</ul>
+<ul>
+<li>Torella 2007d: 929, ll. 4-5</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK 1.4.6.45</li>
+</ul>
+<ul>
+<li>r) yat punas tad etādr̥śaṁ darśanaṁ mamāsīd iti tadahaṁkārāspadasyaiva</li>
+<li>sya darśanasya* svarūpa-viśeṣakhyāpanāya** tathā vyākhyānaṁ yathā yo</li>
+<li>v ahaṁ-pratītimātraviṣaya ātmā sa nitya iti</li>
+</ul>
+<ul>
+<li>adahaṅkārāspadasyaiva taddarśanopasarjanam T.46</li>
+</ul>
+<ul>
+<li>dr̥ṣṭa ity eva svarūpaviśeṣakhyāpanāya T.</li>
+</ul>
+<ul>
+<li>Torella 2007d: 930, ll. 3-5</li>
+</ul>
+<ul>
+<li>Viv 1.4.7</li>
+</ul>
+<ul>
+<li>v) pra+++++dr̥ṣṭapātināpi parāmarśena darśana-syāhaṁkārāspadasyaiva</li>
+<li>rāmarśa ity āha yā cetyādi*</li>
+</ul>
+<ul>
+<li>ā cetyādi not found in T</li>
+</ul>
+<ul>
+<li>Torella 2007d: 930, ll. 12-13</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.4.7.47 This</li>
+<li>agment of the ĪPViv is quoted in the footnote 141 of the ĪPV I 142.</li>
+</ul>
+<ul>
+<li>v) pratyakṣīkārasamaye ca kadācid darśanaṁ paśyāmīti svanāmnopādīyate</li>
+<li>dācid dr̥ṣṭa-syedaṁtādirdeśenaivobhayatrāpi* cātrāsmaccha-bdenaiva</li>
+<li>rśanaparāmarśaḥ ahaṁ paśyāmīty asmaddr̥kchabdaprayogaṁ** vināpi ghaṭo</li>
+<li>m ity ahaṁkārāroheṇa*** darśanaparāmarśo sty evānyathā</li>
+<li>aṭasyedaṁtāpratyakṣatvaṁ*<i>*</i> kathaṁ parāmr̥śyeta pratyakṣatvaṁ hy</li>
+<li>thasyāhaṁkāragocaro ta eva<b><i></b> tad āha puraḥsthitārtheti<b></i></b>*</li>
+<li>amātr̥mayam iti ca ।।</li>
+</ul>
+<ul>
+<li>dantānirdeśenaiva । ubhayatrāpi T.48</li>
+</ul>
+<ul>
+<li>asmacchabdaprayogam T.</li>
+</ul>
+<ul>
+<li>*ahaṅkāreṇa T.</li>
+</ul>
+<ul>
+<li>**ghaṭasyedantayā pratyakṣatvam T.</li>
+</ul>
+<ul>
+<li>***arthasya ahaṅkāragocaro ’nubhava eva T.</li>
+</ul>
+<ul>
+<li><i>*</i>*puraḥsthita iti T.</li>
+</ul>
+<ul>
+<li>Torella 2007d: 931, ll. 1-5</li>
+</ul>
+<ul>
+<li>part of this fragment is quoted in the footnote 148 of the ĪPV I</li>
+<li>3.49</li>
+</ul>
+<ul>
+<li>Viv 1.4.8</li>
+</ul>
+<ul>
+<li>v) arthamātraparāmarśena smr̥tiḥ sa iti — Torella 2007d: 932, ll. 1-2</li>
+</ul>
+<ul>
+<li>v) grāhakasya tāvad ahaṁkārabhāga eva prathā grāhyasyāpi</li>
+<li>akāśātmatāsāratvenaiva prakāśamānatā ghaṭate nānyatheti — Torella</li>
+<li>07d: 932, ll. 4-6</li>
+</ul>
+<ul>
+<li>v) mauliko vicchedas tu mayīyaḥ tad āha māyā-kr̥tavicchinnetyādi* ।।</li>
+</ul>
+<ul>
+<li>āyākr̥tavicchedāv iti T.50 — Torella 2007d: 932, ll. 7-8</li>
+</ul>
+<ul>
+<li>Viv 1.5.3</li>
+</ul>
+<ul>
+<li>r) prakāśamānatā evārthasya siddhiḥ sā ca prakāśa eva tasya cārthād</li>
+<li>ede ghaṭasya prakāśaḥ paṭasyāpi syād ity āha bhinne ityādi* ।।</li>
+</ul>
+<ul>
+<li>hinne ityādi not found in T — Torella 2007d: 937, ll. 1-2</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.5.3.</li>
+</ul>
+<ul>
+<li>Viv 1.5.4-5</li>
+</ul>
+<ul>
+<li>v) atha mataṁ vicitraghaṭapaṭādyābhāsakramasyaika-</li>
+<li>ridr̥śyamānabodhamātrah[e]tutvāyoge* nyathānupa-pattyā vāhyo rthaḥ**</li>
+<li>atyakṣato pi sidhyed ity āha tattad ityādi***</li>
+</ul>
+<ul>
+<li>ābhāsasyaikaparidr̥śyamāna- T.51</li>
+</ul>
+<ul>
+<li>bāhyārthaḥ T.</li>
+</ul>
+<ul>
+<li>*tattad ityādi not found in T. — Torella 2007d: 938, ll. 10-11</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.5.4-5.</li>
+</ul>
+<ul>
+<li>w Fragments</li>
+</ul>
+<ul>
+<li> we have seen, there are a number of passages of the ĪPViv in the</li>
+<li>rgin of the manuscript kept in the Akhila Bhāratīya Sanskrit Parishad.</li>
+<li>w let us turn to the marginal notes which are not identified with</li>
+<li>ready edited texts of the Pratyabhijñā works.</li>
+</ul>
+<ul>
+<li>e words underlined in the text are those literally cited or</li>
+<li>raphrased in the ĪPVV.</li>
+</ul>
+<ul>
+<li>v) svātmani mahe???? svātmanaḥ ka???svabhā[vasy?]papadyamānapar[ā]</li>
+<li>na pra[??]kr̥tasiddhivi??bhāvaḥ ??taḥ । kartarīti yuddhas? nī??lakṣaṇaṁ</li>
+<li>rtr̥??prathanaṁ nirdiṣṭaṁ yaj jñātr̥??yām apy anugatam</li>
+<li>ya??ni??tr̥tārūpā kartr̥tāpaś??lliśet sāpi ??ṣani śa??tr̥śatr̥no pā??vayo</li>
+<li>̥?i??tmikāyāḥ pradarśanena</li>
+</ul>
+<ul>
+<li> my knowledge, this fragment does not come from any specific</li>
+<li>atyabhijñā work. It seems to give some comments on ĪPK1.1.2-3.52</li>
+</ul>
+<ul>
+<li>v) bhātabhāsamānarūpānusaṁdhānātmikā pratyabhijñā ।</li>
+</ul>
+<ul>
+<li>is fragment that gives a definition of recognition seems to be from</li>
+<li>e ĪPV, though not exactly.53</li>
+</ul>
+<ul>
+<li>v) tasmād īśvare kārakavyāpāraḥ pramāṇavyāpāraś cānupayuktaḥ</li>
+</ul>
+<ul>
+<li>r) paratra jñātr̥tvānumāpi kā</li>
+</ul>
+<ul>
+<li>r) nanv ity ākṣepe ātmano jñānakriyāyogaiśvaryam ātmaiva tu nāsty</li>
+<li>upalaṁbhād ahaṁpratyayenāpi śarīrādyatirekeṇānyasyā pratīter ity āha</li>
+<li>ipann āha nanv ityādi</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.2.1-2, which is</li>
+<li>pported by the ĪPVV.54 However, the reading nanv ity ākṣepe is from</li>
+<li>e ĪPV.55</li>
+</ul>
+<ul>
+<li>r) ātmano jñānakriyāyogād aiśvaryam ātmaiva tu nāsty anupalaṁbhād</li>
+<li>aṁpratyayenāpi śarīrādyatirekeṇānyasyā pratītir ity ākṣipann āha nanv</li>
+<li>i ।।</li>
+</ul>
+<ul>
+<li>rangely, this fragment gives the same avataraṇikā as the above.</li>
+</ul>
+<ul>
+<li>r) avikalpake rūpaṁ etadvyatiriktasya anubhavituḥ saṁbaṁdhi</li>
+</ul>
+<ul>
+<li>is fragment seems to be from the ĪPV.56</li>
+</ul>
+<ul>
+<li>r) nanu aham iti śabdena kiṁ vikalpyate ।</li>
+</ul>
+<ul>
+<li>r) nanv arthānubhavasaṁskārajatvāt smr̥tes tadanubhavāpāye pi</li>
+<li>dviṣayeṇaiva viṣayavattābhīṣṭāv ātmopagamo vyartha ity āha</li>
+<li>traivetyādi</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.2.4cd,57 which</li>
+<li> supported by the ĪPVV.58 Here the reading pūrvārthānubhava- instead</li>
+<li> arthānubhava- is suggested in the ĪPVV.</li>
+</ul>
+<ul>
+<li>r) tad evaṁ saṁskāramātrāt smr̥tyudgame siddhe nityatvād ātmanaḥ</li>
+<li>ṁskārodayānudayayor avaicitryād kiṁcitkaratve kalpanāmātram etad</li>
+<li>aṣṭāyaṁ sthirā ātmā nāma sattā cety āha tata ityādi ।।</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.2.6, which is</li>
+<li>pported by the ĪPVV.59</li>
+</ul>
+<ul>
+<li>v) anyā ca vr̥ttiḥ pariṇāmāt pariṇāmo hi pūrvasvabhā-vatirodhānenaiva</li>
+<li>thā ghaṭasya kāpālānivr̥ttis tu tasyaiva rūpasyāpratyastamitasya yathā</li>
+<li>ūtenaiva parāmr̥śamānasya yathā tathā vattena tadyathā devadattasya</li>
+<li>mana ghaṭasyodakāharaṇaṁ tadvr̥ttibhedānutattvabhedo bhavati tenaiva</li>
+<li>peṇāvādhitapratyajñāviṣayatvāt iti ca nr̥pativārtikaṭīkāyām ।।</li>
+</ul>
+<ul>
+<li>is fragment is from the Nr̥pativārtikaṭīkā which does not seem to have</li>
+<li>me down to us. The text, beginning with tadvr̥ttibhedā- and ending with</li>
+<li>iṣayatvāt, is found in the footnote 3 of the KSTS edition of the</li>
+<li>vadr̥ṣṭi.60</li>
+</ul>
+<ul>
+<li>v) ātmano jñānasya ca bodharūpatvāviśeṣe dvitvakalpanānupapannety āha</li>
+<li>ānaṁ cetyādi</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.2.7, which is</li>
+<li>pported by the ĪPVV.61</li>
+</ul>
+<ul>
+<li>v) jaḍo py asāv ity amathasya prakāśo bhavatīti sāṁkhyamatam āśaṁkate</li>
+<li> sāṁkhy{ī}o yam abhijñānaṁ buddhivr̥ttirūpaṁ pūrvavad eva nopapannam</li>
+<li>y āha athārthasyetyādi ।।</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.2.8, which is</li>
+<li>pported by the ĪPVV.62 The reading sāṁkhyo ’yam api instead of sāṁkhyo</li>
+<li>am abhi- is suggested in the ĪPVV.</li>
+</ul>
+<ul>
+<li>v) ataḥ pariṇāmād ayam anyo vr̥ttiśabdasyārthaḥ</li>
+<li>igalitasvarūpasatattvasyaiva bhānasya dharma-kalparūpāṁtarachāyā</li>
+<li>āraṇaṁ ghaṭasyevodakāharaṇaṁ caitrasyaiva gamanaṁ vr̥ttir ucyate</li>
+<li>riṇāmas tu svarūpāṁtarapattir eveti nr̥pativārtikaṭīkāyām ।।</li>
+</ul>
+<ul>
+<li>is fragment is also from the Nr̥pativārtikaṭīkā. The text, beginning</li>
+<li>th avigalitasvarūpa- and ending with vr̥ttir ucyate, is quoted in the</li>
+<li>otnote 3 of the KSTS edition of the Śivadr̥ṣṭi.63</li>
+</ul>
+<ul>
+<li>r) evaṁ kalākārayor api jñeyam ।।</li>
+</ul>
+<ul>
+<li>v) kārikopapattim āha</li>
+</ul>
+<ul>
+<li>v) jaḍatvena viṣayasya kiṁcit kr̥taṁ</li>
+</ul>
+<ul>
+<li>r) nanu kenaivam uktaṁ jaḍo dhyavasāyaḥ saṁvitsvabhāvo hy asau</li>
+<li>ānāvyatirekāt tad āha cidrūpo pīti</li>
+</ul>
+<ul>
+<li>is fragment seems to give the avataraṇikā of the ĪPViv to ĪPK1.3.5cd.</li>
+<li> is noteworthy that this fragment is found in the footnote 21 of the</li>
+<li>V I 102, in which the reading cidrūpo ’pīti64 is replaced by tata</li>
+<li>yādi.65</li>
+</ul>
+<ul>
+<li>r) jñānāni svarūpamātrapariniṣṭhitāni anyonyarūpā- saṁsparśāt tataś ca</li>
+<li>amopajātatattadvicitraviṣayasaṁ-</li>
+<li>tsaṁtānamelanopapadyamānapravr̥ttiviṣayā</li>
+<li>havi-śeṣaniścayābhāvenārthakriyālābho rthināṁ na syād iti</li>
+<li>kavyavahāroccheda ity āha evam ityādi ।।</li>
+</ul>
+<ul>
+<li>is fragment gives the avataraṇikā of the ĪPViv to ĪPK1.3.6, which is</li>
+<li>pported by the ĪPVV.66</li>
+</ul>
+<ul>
+<li>r) svātmani abhinne sati padārthānāṁ bhedāvedanāt</li>
+</ul>
+<ul>
+<li>r) svapratipattiḥ prakhyā paratra tatpratipādanaṁ upākhyā</li>
+</ul>
+<ul>
+<li>ncluding Remark</li>
+</ul>
+<ul>
+<li> have seen:</li>
+</ul>
+<ul>
+<li> in the manuscript of the ĪPK preserved in Lucknow, a number of</li>
+<li>cerpts from the ĪPViv are found;</li>
+</ul>
+<ul>
+<li> new fragments of the ĪPViv are found;</li>
+</ul>
+<ul>
+<li> they are mainly from the avataraṇikā of the ĪPViv to the ĪPK; and</li>
+</ul>
+<ul>
+<li> with reference to the part of the ĪPViv edited by Torella, the</li>
+<li>agments of this manuscript give not only the avataraṇikā but also part</li>
+<li> the commentary for the ĪPK and ĪPVr̥.</li>
+</ul>
+<ul>
+<li> is true that a part of the text of the ĪPViv has been transmitted in</li>
+<li>rth Indian manuscripts, but it is unlikely that the full text of the</li>
+<li>Viv has been transmitted there. At least, the scribe of this</li>
+<li>nuscript did not have it. For, if he had known of it, he would have</li>
+<li>ven the part of the commentary for the ĪPK as well as the avataraṇikā</li>
+<li> the ĪPViv with reference to the part of the ĪPViv which are not</li>
+<li>ited.</li>
+</ul>
+<ul>
+<li>vertheless, what is important here is that we can glean the new</li>
+<li>agments of the ĪPViv from this manuscript. We should notice the</li>
+<li>rginal notes of this manuscript not only from the aspect of gleaning</li>
+<li>em but also from the aspect of the manuscript transmission of the</li>
+<li>atyabhijñā texts. It is urgent that we should examine the rest of the</li>
+<li>rginal notes in this manuscript.</li>
+</ul>
+<ul>
+<li>bliography</li>
+</ul>
+<ul>
+<li>xts</li>
+</ul>
+<ul>
+<li>K = Utpaladeva, Īśvarapratyabhijñākārikā (see Torella 2002).</li>
+</ul>
+<ul>
+<li>V = Abhinavagupta, Īśvarapratyabhijñāvimarśinī, ed. Mukund Ram</li>
+<li>astri, vols. I-II, KSTS XXII, XXXIII, Bombay, 1918-21.</li>
+</ul>
+<ul>
+<li>Viv = Utpaladeva, Īśvarapratyabhijñā-vivr̥ti/ṭīkā.</li>
+</ul>
+<ul>
+<li>Vr̥ = Utpaladeva, Īśvarapratyabhijñāvr̥tti (see Torella 2002).</li>
+</ul>
+<ul>
+<li>VV = Abhinavagupta, Īśvarapratyabhijñāvivr̥tivimarśinī, ed. Madhusudan</li>
+<li>ul Shastri, vols. I-III, KSTS LX, LXII, LXV, Bombay, 1938-43.</li>
+</ul>
+<ul>
+<li>TS = Kashmir Series of Texts and Studies.</li>
+</ul>
+<ul>
+<li> = Somānanda, Śivadr̥ṣṭi, ed. Madhusudan Kaul Shastri, KSTS LIV, Poona,</li>
+<li>34.</li>
+</ul>
+<ul>
+<li>anslations and studies</li>
+</ul>
+<ul>
+<li>rella, Raffaele, 1988, “A Fragment of Utpaladeva’s</li>
+<li>varapratyabhijñā-vivr̥ti”, East and West, 38: 137-74.</li>
+</ul>
+<ul>
+<li>—, 2002, The Īśvarapratyabhijñākārikā of Utpaladeva with the Author’s</li>
+<li>̥tti. Critical Edition and Annotated Translation, 2nd edn., Delhi:</li>
+<li>tilal Banarsidass. [1st edn. Serie Orientale Roma 71, Roma: Istitute</li>
+<li>aliano per il Medio ed Estremo Oriente, 1994.]</li>
+</ul>
+<ul>
+<li>—, 2007a, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti — Part I:</li>
+<li>upalabdhi and Apoha in a Śaiva Garb”, in Expanding and Merging</li>
+<li>rizons: Contributions to South Asian and Cross-Cultural Studies in</li>
+<li>mmemoration of Wilhelm Halbfass, ed. K. Preisendanz, Vienna, pp.</li>
+<li>3-90.</li>
+</ul>
+<ul>
+<li>—, 2007b, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti — Part</li>
+<li>: What is Memory?”, in Indica et Tibetica. Festschrift für Michael</li>
+<li>hn zum 65. Geburtstag von Freunden und Shülern überreicht, ed. Klaus</li>
+<li>nrad and Hartmann, Jens-Uwe, Wien, pp. 539-63.</li>
+</ul>
+<ul>
+<li>—, 2007c, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti — Part</li>
+<li>I: Can a cognition become the object of another cognition?”, in</li>
+<li>langes tantriques à la mémoire d’Hélène Brunner, ed. D. Goodall and A.</li>
+<li>doux, Pondicherry, pp. 475-84.</li>
+</ul>
+<ul>
+<li>—, 2007d, “Studies on Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti — Part</li>
+<li>: Light of the subject, light of the object”, in Pramāṇakīrtiḥ: Papers</li>
+<li>dicated to Ernst Steinkellner on the occasion of his 70th Birthday,</li>
+<li>rt 2, ed. B. Kellner, H. Krasser, H. Lasic, M.T. Much and H. Tauscher,</li>
+<li>en, pp. 925-39.</li>
+</ul>
+<ul>
+<li>—, 2009, “Variazioni Kashmire sul Tema della Percezione dello Yogin</li>
+<li>ogipratyakṣa)”, Rivista degli Studi Orientali, LXXXI: 35-58.</li>
+</ul>
+<ul>
+<li>—, 2012, “Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti — Part V:</li>
+<li>lf-Awareness and Yogic Perception”, in Devadattīyam: Johannes</li>
+<li>onkhorst Felicitation Volume, ed. Francois Voegeli, Vincent</li>
+<li>tshinger, Danielle Feller, Maria Piera Candotti, Bogdan Diaconescu and</li>
+<li>hlar Kulkarn, Bern, pp. 275-300.</li>
+</ul>
+<ul>
+<li>his research was supported in part by a Grant-in-Aid for JSPS</li>
+<li>llows.)</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>I would like to thank the Akhila Bhāratīya Saṁskrit Parishad for</li>
+<li>lowing me to take copies of a manuscript used in this paper. I am very</li>
+<li>ateful to Prof. Raffaele Torella for encouraging me to undertake this</li>
+<li>rk. My special thanks are due to Prof. David Peter Lawrence who kindly</li>
+<li>rrected my English.</li>
+</ul>
+<ul>
+<li>Śāstraparāmarśa 4: sūtraṁ vr̥ttir vivr̥tir laghvī br̥haty ubhe</li>
+<li>marśinyau । prakaraṇavivaraṇapañcakam iti śāstraṁ pratyabhijñāyāḥ ।।</li>
+<li>orella 1988: 137: Five commentaries on the Treatise [the Śivadr̥ṣṭi]</li>
+<li>nstitute the corpus of the authoritative Pratyabhijñā texts and these</li>
+<li>e the sūtra [ĪPK], the vr̥tti, the vivr̥ti and the two vimarśinīs the</li>
+<li>ng one [ĪPVV] and the short one [ĪPV].)</li>
+</ul>
+<ul>
+<li>See Torella 2007a, etc. See Appendix I and II.</li>
+</ul>
+<ul>
+<li>For further details of this manuscript, see Torella 2007a.</li>
+</ul>
+<ul>
+<li>They are sometimes introduced by the expression yathoktam</li>
+<li>ṭasāhasryām.</li>
+</ul>
+<ul>
+<li>This manuscript is now preserved in the National Archives of India,</li>
+<li>w Delhi (Skt. ms No. 5).</li>
+</ul>
+<ul>
+<li>For a critical edition of the ĪPK, this manuscript is not used by</li>
+<li>rella. See Torella 2002: xlvi-liv.</li>
+</ul>
+<ul>
+<li>-viviṣaye in this fragment is a scribal error for -viṣaye.</li>
+</ul>
+<ul>
+<li>In this fragment, an akṣara ha after tadā seems to be dropped.</li>
+</ul>
+<ul>
+<li> Torella follows Abhinavagupta’s reading, though the manuscript of the</li>
+<li>Viv as well as this fragment has the reading yujyate. See ĪPVV I 273,</li>
+<li>. 6-7: tad etat tātparyam avatāraṇikāyām āha yujyeta iti hetuhetumator</li>
+<li>ṅā ।</li>
+</ul>
+<ul>
+<li> na cetyādi in this fragment should be corrected to na ced ityādi,</li>
+<li>cause ĪPK1.3.7 begins with na cet. See ĪPK1.3.7: na ced</li>
+<li>taḥkr̥tānantaviśvarūpo maheśvaraḥ । syād ekaś cidvapur</li>
+<li>ānasmr̥tyapohanaśaktimān ।।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 273, l. 14: nāpi tatsvarūpātiriktā dharmadharmibhāvena</li>
+<li>raṁ vartamānā ity āha śaktiyogalakṣaṇaṁ ca iti ।</li>
+</ul>
+<ul>
+<li> An akṣara nā after vi seems to be dropped.</li>
+</ul>
+<ul>
+<li> aindriyakānām in this fragment is a scribal error for aindriyakāṇām.</li>
+</ul>
+<ul>
+<li> śeṣapadārthajñānānām in this fragment should be emended to</li>
+<li>eṣapadārthajñānām,</li>
+</ul>
+<ul>
+<li> According to Torella (2007a: 480 fnn. 38, 39), the footnote 71 of the</li>
+<li>V I 110 is based on a marginal note found in one of the manuscripts of</li>
+<li>e ĪPV which is used for the KSTS edition. The text as quoted in the</li>
+<li>V manuscript has vicitrecchāprabodhitā-, while this fragment does</li>
+<li>citrecchāpratibodhitā-.</li>
+</ul>
+<ul>
+<li> -vikalparūpavikalparūpa- is a scribal error for -vikalparūpa-.</li>
+</ul>
+<ul>
+<li> -pratikṣepapatvāt is a scribal error for -pratikṣepaparatvāt.</li>
+</ul>
+<ul>
+<li> nirūpayinn is a scribal error for nirūpayiṣyann.</li>
+</ul>
+<ul>
+<li> The text as quoted in the footnote 17 of the ĪPV I 115 has</li>
+<li>ānaprakaraṇenānena.</li>
+</ul>
+<ul>
+<li> Or, it may be that, in the ĪPVV, Abhinavagupta analysed tattat in</li>
+<li>ttattathānirmita- into tena te, and then said in other words, namely,</li>
+<li>dhena and anubhūyamānāḥ. If so, tattat does not mean “various”, but</li>
+<li>objects] which are being directly perceived (anubhūyamāna) by</li>
+<li>rception (bodha).” See ĪPVV II 5, ll. 10-14: tena iti bodhena । te iti</li>
+<li>ubhūyamānāḥ । tathā iti svarūpād avibhaktā api</li>
+<li>dhasvātantryaprakāreṇa nirmitavibhaktatām iva āpāditāḥ, ata eva</li>
+<li>citraṁ kr̥tvā bhinnā bodhāc ca anyonyaṁ ca tata eva deśakālaviśeṣaṇā ye</li>
+<li>thāḥ, taiḥ prakāśamānair yaḥ uparāgaḥ, tena hetunā . . . । — See</li>
+<li>rella 2007b: 544, fn 18</li>
+</ul>
+<ul>
+<li> Torella corrects -nirdeśasya in the manuscript of the ĪPViv to</li>
+<li>irdeśyasya, which is supported by the ĪPVV. In the ĪPVV, Abhinavagupta</li>
+<li>raphrases nirdeśya as parāmr̥śya. See ĪPVV II 19, ll. 9-10: ata eva tad</li>
+<li>y anena vapuṣā parāmr̥śyo yo ’rthaḥ, tasya sāmarthyād iti . . . ।</li>
+</ul>
+<ul>
+<li> See ĪPVV II 19, ll. 7-9: smr̥tirūpaparāmarśe</li>
+<li>rvakāla-deśādyavacchedavān so ’rtho ’ntar iti indriyabhūmim atikramya</li>
+<li>hito ’pi bahir iti saṁvidbhāgāt vyatiriktatvena ahantāvibhaktaḥ . . .</li>
+<li></li>
+</ul>
+<ul>
+<li> Both the manuscript of the ĪPViv and this fragment have the reading</li>
+<li>oga-. However, as Torella pointed out, the detailed comments of</li>
+<li>hinavagupta refer to the reading ābhoga-. See ĪPVV II 25, ll. 20-23: ā</li>
+<li>mantāt bhogaḥ saṁvedanāntarbruḍitānantabhāvasaṁskāramadhyanimagnasya</li>
+<li>dbhāvasya unmeṣanātmakapālanacarvaṇavyāpāro ’nveṣaṇātmā, ābhōgaś</li>
+<li>ntāsantatilakṣaṇaṁ prāṇidhānam ।</li>
+</ul>
+<ul>
+<li> The footnote 62 of the ĪPV I 124 reads as follows: yathoktaṁ</li>
+<li>dhyapratyabhijñāyāṁ arthitāvaśāt smr̥tāv upajāyamānāyāṁ</li>
+<li>aṭādyābhāsasyaiva kāñcanādyābhāsasaṁbhinnasyāpi yathopayogaṁ</li>
+<li>rvadeśakālādyābhāsādyavacchedoparāgāt svalakṣaṇarūpasya smaraṇād asāv</li>
+<li>abhāso bhavati iti, svalakṣaṇe tu tatrāvabhāsonmeṣa eva kathita iti na</li>
+<li>ścid virodha iti । The text Torella edited is as follows: arthitvāc ca</li>
+<li>hogavaśena smr̥tāv upajātāyāṁ ghaṭādyābhāsasyaiva</li>
+<li>ñcanādyābhāsāsambhinnasyāpi yathopayogaṁ</li>
+<li>rvadeśakālābhāsādyavacchedoparāgāt svalakṣaṇarūpasya smaraṇād asphuṭo</li>
+<li>āv avabhāso bhavati । tad āha kadācit tu iti । With regard to</li>
+<li>ajātāyām/upajāyamānāyām, this fragment seems to have the reading</li>
+<li>ajāyamānāyām. See Torella 2007b: 547, fn. 44.</li>
+</ul>
+<ul>
+<li> Torella corrects -sambhinnasyāpi in the manuscript of the ĪPViv to</li>
+<li>sambhinnasyāpi, which is supported by this fragment. See Torella</li>
+<li>07b: 547, fn. 46.</li>
+</ul>
+<ul>
+<li> Torella’s conjectural emendation for -ādhāna- in the manuscript of</li>
+<li>e ĪPViv is supported by this fragment.</li>
+</ul>
+<ul>
+<li> It reads as follows: yathoktam aṣṭasahasryām kadācit punar</li>
+<li>yantaikarasādhānodyuktasya</li>
+<li>ravaśeṣaviśeṣaṇāvabhāsasāmā-nādhikaraṇyāpattiviśadīkr̥taḥ smaryamāṇo</li>
+<li>thaḥ sākṣātkāramaya eva sphuṭam puraḥ sphurati . . .</li>
+</ul>
+<ul>
+<li> See ĪPVV II 29, ll. 13-15: tāṁ vyācaṣṭe kadācit iti sākṣātkārasamaye</li>
+<li>vadbhir ābhāsaiḥ pūrṇo ’rthaḥ pratyabhāsiṣṭa, tāvadbhir eva smaryate</li>
+<li>dā ।</li>
+</ul>
+<ul>
+<li> The reading smr̥tikāle is Torella’s conjectural emendation for</li>
+<li>ūtakāle in the manuscript of the ĪPViv. This conjectural emendation is</li>
+<li>pported by the ĪPVV. See ĪPVV II 33, l. 13: tad avatārayati saṁkṣepeṇa</li>
+<li>r̥tikāle ca iti ।</li>
+</ul>
+<ul>
+<li> The reading vārtamānika- is Torella’s conjectural emendation for</li>
+<li>numānika- in the manuscript of the ĪPViv. This conjectural emendation</li>
+<li> supported by this fragment.</li>
+</ul>
+<ul>
+<li> The reading ekatvam is Torella’s conjectural emendation for ekataram</li>
+<li> the manuscript of the ĪPViv. This conjectural emendation is supported</li>
+<li> this fragment.</li>
+</ul>
+<ul>
+<li> praṣṭāram is a scribal error for draṣṭāram.</li>
+</ul>
+<ul>
+<li> The reading smartāraṁ is Torella’s conjectural emendation for</li>
+<li>rtāraṁ in the manuscript of the ĪPViv. This fragment has the reading</li>
+<li>rtāram.</li>
+</ul>
+<ul>
+<li> The reading aparaḥ is Torella’s conjectural emendation for apara- in</li>
+<li>e manuscript of the ĪPViv. This fragment has the same reading apara-</li>
+<li> the manuscript of the ĪPViv.</li>
+</ul>
+<ul>
+<li> The reading -grāhakāṁśā- is Torella’s emendation for -grāhakāṁ cā- in</li>
+<li>e manuscript of the ĪPViv. This emendation is supported by this</li>
+<li>agment.</li>
+</ul>
+<ul>
+<li> The reading iti is Torella’s conjectural addition. anubhūvam is a</li>
+<li>ribal error for anvabhūvam.</li>
+</ul>
+<ul>
+<li> The reading jñānāntaragrāhyatve is Torella’s conjectural emendation</li>
+<li>r jñānāntarāgrāhyatve in the manuscript of the ĪPViv. This conjectural</li>
+<li>endation is supported by this fragment.</li>
+</ul>
+<ul>
+<li> The reading prāguktanityā which Torella’s edition has, being a simple</li>
+<li>po, is corrected to prāguktanītyā as given in the ĪPVV. See ĪPVV II</li>
+<li>, ll. 22–24: prāguktanītyā iti dr̥k svābhāsaiva . . . । (ĪPK1.3.2)</li>
+<li>yādyuktenanyāyena ।</li>
+</ul>
+<ul>
+<li> In Torella 2007c: 484, Torella had made two emendations (addition of</li>
+<li> before vedyavedakabhāvo; bhavanti instead of bhavati). However, these</li>
+<li>endations are withdrawn in Torella 2012: 295, fn. 58.</li>
+</ul>
+<ul>
+<li> Subsequently, Torella 2012: 295, fn. 58 has adopted the reading</li>
+<li>avatīti.</li>
+</ul>
+<ul>
+<li> pramātrā, not found in the manuscript of the ĪPViv, is restored by</li>
+<li>rella.</li>
+</ul>
+<ul>
+<li> The reading -vedakatvam is Torella&#x27;s conjectural emendation for</li>
+<li>edanam in the manuscript of the ĪPViv. See ĪPVV II 47, ll. 10-11:</li>
+<li>ttvam iti vivr̥ṇoti paramātmavedakam ity anena । tattvaṁ</li>
+<li>ramātmavedakatvam ity arthaḥ ।</li>
+</ul>
+<ul>
+<li> Changing his view with respect to Torella 2007c, Torella is convinced</li>
+<li>at the reading parātmatāpattir eva iti is the correct one. See Torella</li>
+<li>12: 290, fn. 43.</li>
+</ul>
+<ul>
+<li> Abhinavagupta seems to have a partly different text which contains</li>
+<li>vat. Or, the text Abhinavagupta had in front of him may have had the</li>
+<li>ading yāvat instead of yāpī- found in the manuscript of the ĪPViv and</li>
+<li>is fragment. See ĪPVV II 53, l. 17: yāvat iti yadety arthaḥ ।</li>
+</ul>
+<ul>
+<li> The reading taddarśanopasarjanam is Torella’s tentative restoration</li>
+<li>r tasya darśanasya in the manuscript of the ĪPViv.</li>
+</ul>
+<ul>
+<li> See ĪPV I 142, fn. 141: idam atra punaḥ saṁkṣepeṇa tātparyam</li>
+<li>atyakṣadr̥ṣṭapātināpi parāmarśena darśanasyāhaṁkārāspadasyaiva</li>
+<li>rāmarśa iti ।</li>
+</ul>
+<ul>
+<li> The reading idantādirdeśenaiva found in this fragment is a scribal</li>
+<li>ror for idantānirdeśenaiva. The edition of the ĪPVV has the reading</li>
+<li>antānirdeśena vā. See ĪPVV II 55, ll. 8–9: idantānirdeśena vā iti</li>
+<li>rśanaṁ prarāmr̥śyate [sic] iti saṁbandhaḥ ।</li>
+</ul>
+<ul>
+<li> See ĪPV I 143, fn. 148: ahaṁ paśyāmi iti hi asmacchabdaprayogaṁ</li>
+<li>nāpi iti ।</li>
+</ul>
+<ul>
+<li> If Utpaladeva quotes the ĪPVr̥ here, the reading māyākr̥tavicchedāv iti</li>
+<li>ould be corrected to māyākr̥tavicchinnetyādi given in this fragment. It</li>
+<li>, however, to be noted that Abhinavagupta seems to have a partly</li>
+<li>fferent text of the ĪPVr̥ which reads māyākr̥tavicchedau instead of</li>
+<li>yākr̥tavicchināvabhāsau. See ĪPVr̥ 1.4.8: . . .</li>
+<li>yākr̥tavicchinnāvabhāsāv api prakāśete ।। and ĪPVV II 62, ll. 19-20:</li>
+<li>nu māyākr̥tavicchedāv iti yad uktaṁ, tena bhagavata eva māyāyogāt</li>
+<li>linyaṁ syāt ।</li>
+</ul>
+<ul>
+<li> Though Torella had given the reading -ābhāsasyaikaparidr̥śyamāna- in</li>
+<li>rella 2007d, he kindly informed me (personal communication, 19 August</li>
+<li>13) that his manuscript did have the reading</li>
+<li>bhāsakramasyaikaparidr̥śyamāna-. In fact, Abhinavagupta seems to have</li>
+<li>e reading -ābhāsakramasyaikaparidr̥śyamāna- instead of</li>
+<li>bhāsasyaikaparidr̥śyamāna-. See ĪPVV II 82: tam avatārayati atha matam</li>
+<li>i । etat cet ity asya vyākhyānaṁ bhāvisūtrārthaparyantasparśi</li>
+<li>ākhyeyam । vicitraśabdena tattad iti vyākhyātam, kramaśabdena</li>
+<li>asmikatvam ।</li>
+</ul>
+<ul>
+<li> See ĪPK1.1.2-3: kartari jñātari svātmany ādisiddhe maheśvare ।</li>
+<li>aḍātmā niṣedhaṁ vā siddhiṁ vā vidadhīta kaḥ ।। kiṁtu mohavaśād asmin</li>
+<li>̥ṣṭe ’py anupalakṣite । śaktyāviṣkaraṇeneyaṁ pratyabhijñopadarśyate ।।</li>
+</ul>
+<ul>
+<li> See ĪPV I 20: pratyabhijñā ca bhātabhāsamānarūpā-nusaṁdhān-ātmikā ।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 113: ātmanaḥ ityādinā dharmiṇaṁ hetuṁ vyavahāryatvena</li>
+<li>dhyaṁ ca bruvatā padatrayeṇa siddhāntimataṁ pūrvapakṣavādī dūṣaṇāya</li>
+<li>ṁkṣepeṇa anubhāṣate । ātmaiva tu ityādinā pūrvapakṣī svamataṁ</li>
+<li>rdhaślokoktaṁ saṁkṣipya darśayati । tuśabdaḥ svapakṣasya viśeṣaṁ</li>
+<li>otayann upapannatāṁ dhvanayan siddhāntimatasya dūṣyamāṇatvaṁ sūcayati</li>
+<li>siddhāntī khalu anupalabdher asiddhatāṁ brūyād ity āśaṅkya yam</li>
+<li>dhaślokaṁ brūte, tasya arthaṁ saṁkṣepeṇa āha ahaṁpratyayenāpi ityādinā</li>
+<li>ādiśabdena indriyaprāṇajñānādisaṁtānasya saṁgrahaḥ । ity āha iti</li>
+<li>advastu ślokadvayena āhety arthaḥ । katham । ākṣipan ākṣepeṇa lakṣitā</li>
+<li>canakriyā iyam iti yāvat । anena nanuśabdasya ākṣepadyotakatā</li>
+<li>ākhyātā । ākṣepeṇa ca pūrvapakṣī yuktividagdhaṁmanyatākrāntahr̥dayo</li>
+<li>ra vipratipanno yatnena svābhiniveśāt</li>
+<li>ujanyāṅgīkr̥taparopakāraprāvaṇyena siddhāntinā nivartyate iti sūcayann</li>
+<li>ñasasaṁśayau daṇḍāpūpikayaiva iha vyutpādyete iti darśayati</li>
+</ul>
+<ul>
+<li> See ĪPV I 54: nanu iti ākṣepe ।</li>
+</ul>
+<ul>
+<li> See ĪPV I 56-57: tan na, yato dvayam api etad avikalpetararūpaṁ na</li>
+<li>yasya kasyacit etadatiriktasya draṣṭuḥ anubhavituḥ saṁbandhi ।</li>
+</ul>
+<ul>
+<li> See ĪPK1.2.4cd: smr̥tiḥ kenātha yatraivānubhavas tatpadaiva sā ।।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 126: ṭīkākāraḥ atha yatraiva ityādeḥ yady evam ityantasya</li>
+<li>trasya tātparyaṁ pūrvārtha ityādinā viṣayavattābhiṣṭau ityantena</li>
+<li>hyāya ko ’rthaḥ ityāder āha ātmopagamo vyarthaḥ itiśabdena</li>
+<li>targaḍuśabdasya vyarthaḥ ityanena ko ’rthaḥ ity asya ।</li>
+<li>thāvabhāsakr̥tā vāsanā saṁskārarūpā yasya ātmano</li>
+<li>tarmukhabodharūpasya, sa yadā tādr̥śadarśanakr̥tavāsanāprabodhadvāreṇa</li>
+<li>abodhito bhavati ।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 130-31: tasmāt saṁskārasya āśraya ekaḥ, ekatvādeva ca</li>
+<li>hiro yaḥ; sa eva ātmeti pūrvapakṣavādino matam āśaṅkya kārikāṁ</li>
+<li>ṁkṣepeṇa vyācaṣṭe pūrvakārikārtham eva upajīvan tad evam iti । yato</li>
+<li>tya ātmā ato yathā asāv anuditasaṁskāro ’pi na smr̥tau vyāpariṣṭa;</li>
+<li>thā uditasaṁskāro ’pi na vyāpriyeta tatsvarūpasya aṁśenāpi</li>
+<li>ailakṣaṇyāt । vailakṣaṇyaṁ hi saṁskāra eva, tatkr̥te vā</li>
+<li>atirekarāhitye tasya pūrvarūpāpāyādanityatvam । vyatirikte tu tasya na</li>
+<li>t kiṁcit syāt । tataḥ saṁskārasya kim āśrayeṇa smr̥tau janyāyām</li>
+<li>upayukteneti mātrapadam । ubhayam apīha kalpanārūpaṁ kevalaṁ</li>
+<li>rvasiddhatvād ekaṁ sūtre upamānatvena uktam ity āśayena āha draṣṭāyaṁ</li>
+<li>artā ca iti ।</li>
+</ul>
+<ul>
+<li> The full text of this footnote is from the Nr̥pativārtikaṭῑkā. See ŚD</li>
+<li>, fn. 3: avigalitasvarūpasatattvasyaiva bhāvasya</li>
+<li>armakalparūpāntaracchāyādhāraṇaṁ ghaṭasyevodakāharaṇaṁ caitrasyeva</li>
+<li>manaṁ vr̥ttir ucyate । tathā tadvr̥ttibhedān na vr̥ttibhedo bhavati</li>
+<li>naiva rūpeṇābādhitapratyabhijñāviṣayatvāt ।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 133: tatra prathamam ajaḍarūpatve jñānaṁ siddhāntino na</li>
+<li>apadyate iti yat sūtreṇa ucyate, tat saṁkṣepeṇa avatārayati ātmanaḥ</li>
+<li>i । sūtre anityam iti prādhānyād upāttaṁ dharmāntarāṇy api</li>
+<li>ilakṣaṇyakārīṇi upalakṣayatīty āśayena dvitvavikalpeneti sāmānyena āha</li>
+<li>ātmāpi citsvabhāvo jñānam api, tato dvitvena anyatvena</li>
+<li>tyatvānityatvalakṣaṇena dharmadharmibhāvena ca yā kalpanā kr̥tā, sā</li>
+<li>upapannā, pramāṇamūlatvābhāvāt na vastusādhanītyetadvastu āha</li>
+</ul>
+<ul>
+<li> See ĪPVV I 145: asya arthaṁ saṁkṣepeṇa ṭīkākāro vyācaṣṭe sāṁkhyo ’yam</li>
+<li>i iti । samyak khyātiḥ prakr̥tipuruṣayorvivekena, saṁkhyānaṁ ca</li>
+<li>rigaṇanaṁ tattvabhedānāṁ saṁkhyā; tad adhikr̥tya kr̥to granthaḥ sāṁkhyaḥ</li>
+<li>tatra buddhitattvasya vr̥ttir jñānam uktam । vartanaṁ vr̥ttiḥ</li>
+<li>riṇāmaviśeṣaḥ । pūrvarūpaṁ hi tirodadhat kaścit pariṇāmaḥ</li>
+<li>ṣṭhabhasmavat, sa kāryapariṇāma ucyate; yas tu atirodadhat, sa</li>
+<li>armapariṇāmo yaḥ siddhākāratayā bhāti suvarṇasyeva kuṇḍalatā; yas tu</li>
+<li>irodadhat sādhyākāratvena gacchati budhyate iti yathā, sa</li>
+<li>̥ttipariṇāmaḥ । tathā hi vartanaṁ tasyeva tatheti vr̥ttir ucyate ।</li>
+<li>rvavad eva iti cidbhāgadvāreṇa nityatādidūṣaṇam, jaḍabhāgadiśā</li>
+<li>ṣayavyavasthānāyogaḥ iti ।</li>
+</ul>
+<ul>
+<li> See ŚD 21, fn. 3: avigalitasvarūpasatattvasyaiva bhāvasya</li>
+<li>armakalparūpāntaracchāyādhāraṇaṁ ghaṭasyevodakāharaṇaṁ caitrasyeva</li>
+<li>manaṁ vr̥ttir ucyate । tathā tadvr̥ttibhedānna vr̥ttibhedo bhavati</li>
+<li>naiva rūpeṇābādhitapratyabhijñāviṣayatvāt ।</li>
+</ul>
+<ul>
+<li> See ĪPVr̥ 1.3.5: adhyavasāya eva bhrāntyā viṣayavyavasthāpako na tu</li>
+<li>asaṁvit, sa ca jaḍaḥ katham arthavyavasthāyā hetuḥ । cidrūpo ’py</li>
+<li>ītārthamātram ābhāsayed abāhyasvātmollekhamātraprakāśo vā na taddhetuḥ</li>
+<li>5।।</li>
+</ul>
+<ul>
+<li> See ĪPV I 102, fn. 21: nanu kenaivam uktaṁ - jaḍo ’dhyavasāyaḥ</li>
+<li>ṁvitsvabhāvo hy asau jñānāvyatirekāt ity āha tata ityādi । nijaṁ ca</li>
+<li>lekhaś ca dvandvaḥ । niṣṭhād iti lyablope pañcamī । tataḥ</li>
+<li>r̥tyadhyavasāyata iti ।</li>
+</ul>
+<ul>
+<li> See ĪPVV I 253-54: tathā vr̥ttiḥ svātmamātra iti । atra hetur</li>
+<li>antaropapādito nyāyaḥ । tena hi nyāyena kiṁ kr̥tam iti । āha</li>
+<li>arūpamātra iti । iyatā prathamaṁ kārikārdhaṁ vyākhyātam, dvitīyaṁ</li>
+<li>ācaṣṭe tataś ca iti । tataḥ parajñānaviṣayasvīkārābhāvāc ca arthinām</li>
+<li>thakriyālābhaḥ pravr̥ttipūrvako na syād arthitāyā eva anudayāt । sā hi</li>
+<li>avr̥ttiviṣayasya prārthanīyasya arthaviśeṣasya niścaye sati bhavati ।</li>
+<li>ārthanīyaś ca ittham artho bhavati yadi sa pūrvaṁ sukhasādhanatvena</li>
+<li>̥ṣṭa iti niścayaḥ । evaṁ ca viṣayasaṁmelanātmā niścayaḥ</li>
+<li>ārthanākāraṇaṁ, tat nāstīti kāraṇānupalabdhyā prārthanāyā abhāve</li>
+<li>yaiva uttarottarakāryāṇām abhāvaḥ iti</li>
+<li>ārthanādhyavasāyapravr̥ttiprāptihānādānasaṁvyavahārādir lokayātrā</li>
+<li>sīdet । kramopajātasya saṁvitprabandhasya vicitraṁ kr̥tvā</li>
+<li>ṁyojanaviyojanādinā bahuprakāreṇa vaicitryeṇa yat kasmiṁścit viṣaye</li>
+<li>lanaṁ – yas tvayā adya viṣayo dr̥śyate, sa pūrvam api mayā ittham</li>
+<li>alokitaḥ ityevaṁrūpaṁ; tena kila tatsamarthācaraṇaṁ pravr̥ttiviṣayasya</li>
+<li>thaviśeṣasya niścaye kriyeta । tad eva tu na ghaṭate । anena</li>
+<li>usaṁdhānajanmā iti vyākhyātam ।</li>
+</ul>
+<ul>
+<li></li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch4_kawajiri_fragments.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>

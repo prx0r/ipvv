@@ -1,0 +1,1649 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>app1_torella_apoha · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
+.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
+.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
+.side a:hover{background:#f4f1ea}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
+.panel.missing{opacity:.55;border-style:dashed}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>app1_torella_apoha</h1><div class="skt"></div><div class="sub">10767 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/app1_torella_apoha.txt">source →</a></div><ul>
+<li>rt I: Anupalabdhi and Apoha in a Śaiva Garb**</li>
+</ul>
+<ul>
+<li>ffaele Torella</li>
+</ul>
+<ul>
+<li> the outset of an article published in 1988, I noted that the</li>
+<li>varapratyabhijñā-Vivr̥ti or ṭīkā (henceforth Vivr̥ti) would deserve a</li>
+<li>ominent place in any imaginary catalogue of the lost works of Indian</li>
+<li>ilosophical literature (Torella 1988: 137). Thirteen years later, in</li>
+<li>ich the Pratyabhijñā school of the Kashmirian Śaivādvaita has</li>
+<li>ntinued to be one of my preferred fields of research, I would still</li>
+<li>lly subscribe to that earlier statement. The role of Utpaladeva’s long</li>
+<li>mmentary on his Īśvarapratyabhijñā-Kārikā (ĪPK) as the real centre of</li>
+<li>avity of Pratyabhijñā philosophy has become, in fact, clearer and</li>
+<li>earer, though the later Śaiva philosophical tradition chose instead</li>
+<li>hinavagupta’s Īśvarapratyabhijñā-Vimarśinī (ĪPV) as the standard text.</li>
+<li>is brilliant and more compact and accessible text was copied again and</li>
+<li>ain over the centuries and became popular in south India too, where a</li>
+<li>mber of manuscripts in the principal southern scripts are still</li>
+<li>ailable. The success of a particular commentary is very often the</li>
+<li>direct cause of the decline of others, which are less and less read</li>
+<li>d, consequently, copied, until they are completely or almost</li>
+<li>mpletely lost. One could mention, among others, the particularly</li>
+<li>emplary case of the Yuktidīpikā on the Sāṁkhya-Kārikā that has come</li>
+<li>wn to us in a very few copies.</li>
+</ul>
+<ul>
+<li>need not repeat here what I have already said elsewhere on the nature</li>
+<li> the Vivr̥ti and its relation to the other commentaries.1 Suffice it to</li>
+<li>call that Utpaladeva is said to have composed the ĪPK and the concise</li>
+<li>̥tti at the same time, and later on to have devoted an analytic</li>
+<li>mmentary to the complex of Kārikā–Vr̥tti, i.e. our Vivr̥ti (or Ṭīkā), in</li>
+<li>ich he discussed possible alternative views and rejected them, also</li>
+<li>dulging in occasionally quite long digressions on particular subjects.</li>
+</ul>
+<ul>
+<li>e only mention of an extant fragmentary manuscript of the Vivr̥ti</li>
+<li>curred in K.C. Pandey’s pioneering book on Abhinavagupta and the</li>
+<li>-called Kashmir Shaivism (Pandey 1963: 69-70; see also Torella 1988:</li>
+<li>1). Though the original manuscript was apparently lost, a transcript</li>
+<li> it, by Pandey’s own hand, was found among the papers left by the</li>
+<li>arned scholar upon his demise and kept by his widow on behalf of the</li>
+<li>hinavagupta Institute, University of Lucknow. During my visit to</li>
+<li>cknow in 1987, Mrs Lila Pandey and the Trustees of the Institute were</li>
+<li> kind as to show me the notebook with the transcript, but did not</li>
+<li>low me to copy or photograph it, except for a small portion (10 pages</li>
+<li>t of 49), which I edited and translated in the above-mentioned</li>
+<li>ticle. My efforts in later years to secure the entire transcript were,</li>
+<li>spite the good offices of N. Rastogi and J.P. Sinha, totally</li>
+<li>successful. By now, Pandey’s transcript is to be considered</li>
+<li>finitively lost.</li>
+</ul>
+<ul>
+<li>e good fortune that sometimes helps scholars in their research,</li>
+<li>unteracting the obstacles set up by human unhelpfulness, took me in</li>
+<li>98 to the India National Archives in Delhi in search of the</li>
+<li>nuscripts used by the paṇḍits of the Srinagar Research Department for</li>
+<li>e editions of the Kashmir Series. I was interested in those</li>
+<li>nuscripts because of the important marginal notes that some of them</li>
+<li>ntained, where I assumed to find quotations from lost Kashmiri works.</li>
+<li>en I chanced upon a Śāradā manuscript, entitled Pratyabhijñā-Vivr̥ti</li>
+<li>kt. ms No. 30), belonging to a small fund of manuscripts that the</li>
+<li>haraja of Jammu &amp; Kashmir had transmitted to the National Archives in</li>
+<li>48, I began looking through it with the same scepticism with which I</li>
+<li>d in the past looked through manuscripts with the same title all over</li>
+<li>dia (in all cases, the title had simply been the outcome of careless</li>
+<li>taloguing). Very soon, however, I realized that what I had in front of</li>
+<li> was precisely the original of Pandey’s transcript, as described by</li>
+<li>m on the very first page of his notebook.2 Once the transcript had</li>
+<li>come irretrievably lost to us, the original came to light again.</li>
+</ul>
+<ul>
+<li>e thirty-three folios of the manuscript cover the full text of ĪPK</li>
+<li>3.6 through 1.5.3 along with Utpaladeva’s Vr̥tti and Vivr̥ti, plus</li>
+<li>hinavagupta’s Vimarśinī. The manuscript begins with the Vimarśinī’s</li>
+<li>ūmikā to ĪPK I.3.6 (saṁskāre saty api smr̥tiḥ [. . .], vol. 1, p. 103,</li>
+<li> 6) and ends abruptly with iha bodhas tāvad abhinnaḥ prakāśamātram eva</li>
+<li> asya paramā-&lt;rthaḥ&gt;, i.e. the first line of the Vimarśinī on ĪPK</li>
+<li>5.4-5 (vol. 1, p. 135, ll. 5-6). Although the portion of the recovered</li>
+<li>xt is comparatively short, it proves to be particularly important for</li>
+<li>e study of Pratyabhijñā philosophy since some very crucial points are</li>
+<li>alt with there at great length. Among them, we find the nature of</li>
+<li>gnition, its being self-aware, the impossibility of a cognition’s</li>
+<li>coming the object of another cognition, the necessity for the various</li>
+<li>gnitions to rest on a single substratum for a connection between</li>
+<li>gnitions to be possible, and the necessity for cognition and its</li>
+<li>ject to share the same essential nature, i.e., “light”. Utpaladeva,</li>
+<li>d after him Abhinavagupta, progressively attain their final position</li>
+<li> means of a very interesting dialogue, mainly with the Buddhist</li>
+<li>amāṇa tradition and the Vijñānavāda, with the participation of the</li>
+<li>māṁsakas (Bhāṭṭas and Prābhākaras) on specific points.</li>
+</ul>
+<ul>
+<li> this contribution I am continuing, after an interval of thirteen</li>
+<li>ars, my above-mentioned article, which contained the edition and</li>
+<li>anslation of the full text of the Vivr̥ti on ĪPK 1.3.6 up to the</li>
+<li>ginning of the Vivr̥ti on ĪPK 1.3.7. The present article is devoted to</li>
+<li>e edition and translation of the full text of the Vivr̥ti on ĪPK 1.3.7.</li>
+</ul>
+<ul>
+<li>e third āhnika of ĪPK deals with the untenability of the opponent’s</li>
+<li>eses as regards the unification of cognitions, which alone renders all</li>
+<li>man experiences (vyavahāra) possible (cf. the relevant colophon of the</li>
+<li>marśinī [ĪPV I: 112]: paradarśanānupapattir nāma tr̥tīyam āhnikam). The</li>
+<li>eses of the opponents were presented in the previous āhnika (ibid.:</li>
+<li>: pūrvapakṣavivr̥tir nāma dvitīyam āhnikam). In order to better</li>
+<li>derstand the content of v. 1.3.6 of the ĪPK, we must read it together</li>
+<li>th the previous verse, to which it is closely connected (tr. Torella</li>
+<li>02: 102-03):</li>
+</ul>
+<ul>
+<li>us, the functioning of the human world — which stems precisely from</li>
+<li>e unification (anusandhāna) of cognitions, in themselves separate from</li>
+<li>ch other and incapable of knowing one another — would be destroyed . .</li>
+<li>(I.3.6) . . . if there were no Maheśvara who contains within himself</li>
+<li>l the infinite forms, who is one, whose essence is consciousness,</li>
+<li>ssessing the powers of knowledge, memory and exclusion (I.3.7).</li>
+</ul>
+<ul>
+<li>paladeva’s final aim is to establish a single cosmic consciousness,</li>
+<li>e. Śiva, as the common background of all reality and, particularly, of</li>
+<li>l human experiences. He pursues this intention not by apodictically</li>
+<li>ating the Śaiva truth — for example, by resorting to the authority of</li>
+<li>vealed texts — but by critically examining diametrically opposed</li>
+<li>ctrines, i.e. those of the Buddhist pramāṇa philosophers. In doing so,</li>
+<li> recognizes the leading position of the Buddhist philosophy in the</li>
+<li>shmir of his day and at the same time shows that he is not afraid of</li>
+<li>allenging the great cultural prestige of the Buddhist doctrines.</li>
+<li>reover, in many cases he makes use, as far as possible, of their</li>
+<li>guments to preliminarily build up and then refine his own position.</li>
+<li>is way of carrying out the “duel” with the pramāṇa philosophers</li>
+<li>minds one of the attitude often found in oriental martial arts.</li>
+<li>stead of directly attacking his adversary, Utpaladeva seeks to exploit</li>
+<li>e adversary’s intellectual ability to finally turn it back upon him.</li>
+<li>e main technique on which Utpaladeva’s argumentation is based is the</li>
+<li>e well known in śāstric debate as prasaṅga-viparyaya. The Buddhist</li>
+<li>eas are not rejected at the outset but are rather apparently accepted</li>
+<li>d then pushed to their extreme consequences.</li>
+</ul>
+<ul>
+<li> a result, the Buddhist opponent is finally confronted with two</li>
+<li>ternatives: either to abandon his own specific theses or, if he is</li>
+<li>ill convinced of them (and, interestingly, this is the case not only</li>
+<li>r the Buddhist, but for the Śaiva philosopher himself), to change the</li>
+<li>rspective from which they are to be viewed. In other words, he should</li>
+<li>cept the overall theoretical Śaiva framework precisely to safeguard</li>
+<li>s own Buddhist ideas.3</li>
+</ul>
+<ul>
+<li>e main part of the Vivr̥ti passage edited here is devoted to the</li>
+<li>scussion of the Buddhist concepts of “non-perception” (anupalabdhi)</li>
+<li>d, less extensively, of “exclusion” (apoha) as the very core of</li>
+<li>nceptual thought. If one accepts the self-contained nature of</li>
+<li>gnition (as the Buddhist does), it becomes impossible to account for</li>
+<li>ther of them. On seeing an empty surface we would not be allowed to</li>
+<li>y that there is no jar there because the cognition of a certain object</li>
+<li>uld not be able to give rise to, at the same time, alternative</li>
+<li>gnitions later to be rejected. Yet the world of human knowledge,</li>
+<li>nguage and practical activity has among its pillars precisely the</li>
+<li>ssibility of taking something for “absent”, or of building mental</li>
+<li>ages by way of exclusion. Furthermore, granted that the Buddhist</li>
+<li>scription of how an individual cognition works in isolation is</li>
+<li>nsidered as basically correct, the capability of the individual</li>
+<li>gnitions to communicate with each other, to enter into a network, is</li>
+<li>quired. Such a “network” cannot be provided but by the single and</li>
+<li>itary consciousness in which all of them are rooted, in a word: by the</li>
+<li>va-nature which permeates reality, constituting its ultimate ground.</li>
+</ul>
+<ul>
+<li>th the topics of anupalabdhi and apoha will receive a separate and</li>
+<li>tensive treatment later on in the ĪPK (see I.7.7-11 for anupalabdhi</li>
+<li>d 1.6.1-5 for apoha). Here they are preliminarily discussed from a</li>
+<li>rticular viewpoint, i.e. as exemplary grounds for the necessity to</li>
+<li>stulate a single consciousness-principle (in the case of anupalabdhi)</li>
+<li>d a basic “universal” stuff in everything (in the case of apoha). The</li>
+<li>ddhists account for the establishment of the absence of a jar in a</li>
+<li>rtain place by saying that the cognition of the empty place, being</li>
+<li>are of itself as opposed to the cognition of the place together with a</li>
+<li>r, is also aware of the place as “devoid of a jar”. In fact, if a jar</li>
+<li>re present in a certain place, the jar would also be manifested in the</li>
+<li>gnition of the place since both the jar and the place share the same</li>
+<li>pacity [of being perceptible] (tulyayogyatārūpatvāt). This can be</li>
+<li>intained, the Buddhists go on, because particulars belonging to the</li>
+<li>me class (i.e. “visible” particulars) are grasped by one and the same</li>
+<li>gnition (here a “visual” cognition), and, consequently, in the case of</li>
+<li>jar being there, the cognition of the place should also contain a</li>
+<li>nifestation of the jar; but in the case at issue, this is not so.</li>
+<li>paladeva points out that we are dealing here with two distinct and</li>
+<li>parate cognitions, which are bound to remain so: the one can by no</li>
+<li>ans include or exclude the other, unless one intends to explain the</li>
+<li>tablishment of the absence of a jar in terms of inference, which is</li>
+<li>t assumed by the Buddhists (see Torella 2002: 143 n. 17). These and</li>
+<li>her arguments are taken into account in the text (see below). To</li>
+<li>mmarize, each cognition sheds light on itself alone; or, in other</li>
+<li>rds, each cognition has its own self-awareness (svasaṁvedana), which</li>
+<li>n by no means act as a common basis where two distinct cognitions may</li>
+<li>et. No single cognition, Utpaladeva concludes, not even perceptual</li>
+<li>gnition, can by itself establish the absence of something. The only</li>
+<li>y to fill the gap between cognitions and in this way give a reasonable</li>
+<li>planation of the establishment of “absences” which is so common in</li>
+<li>eryday life is to accept their resting on a single consciousness.</li>
+<li>stead of a multiplicity of unrelated svasaṁvedanas each corresponding</li>
+<li> a single cognition, Utpaladeva posits the one supreme</li>
+<li>nsciousness-principle as the common svasaṁvedana of all cognitions,</li>
+<li>ich in this way derive from it the capacity to enter into relation</li>
+<li>th each other.</li>
+</ul>
+<ul>
+<li>e starting point for the discussion of the apoha issue is clearly</li>
+<li>ated in Abhinavagupta’s Īśvarapratyabhijñā-Vivr̥ti-Vimarśinī (ĪPVV I:</li>
+<li>2, 9ff.): Why, on the appearance of a particular object, should one</li>
+<li>gure out something different destined to be excluded later (nanu</li>
+<li>alakṣaṇe ’vabhāte kuto ’tadrūpam āśaṅkyate yad apohyate)?</li>
+<li>hinavagupta is not satisfied with Dharmakīrti’s answer, elaborated at</li>
+<li>ngth in the Svārthānumānapariccheda chapter of his Pramāṇa-Vārttika</li>
+<li>d Svavr̥tti: the correct knowledge of the particular (svalakṣaṇa) is</li>
+<li>ntinually threatened by erroneous superimpositions (samāropa), caused,</li>
+<li>g. by misleading similarities — such as the brightness equally found</li>
+<li> mother-of-pearl and in silver — which make the knower mistake one</li>
+<li>ing for another. The doubt which projects alternative objective forms</li>
+<li> be negated would arise precisely because the knower is aware of the</li>
+<li>ct that in principle many superimpositions are possible; thus a</li>
+<li>finite ascertainment becomes possible only after hypothetical mistaken</li>
+<li>rms are preliminarily rejected. Subsequently, Abhinavagupta takes into</li>
+<li>count the position of Śaṅkaranandana (ll. 18ff.), who in his</li>
+<li>ohasiddhi recognizes prasaṅga, i.e. the mere possibility that a thing</li>
+<li> different from itself (?) (anyathā-prasaṅga), as the cause of doubt.4</li>
+<li>th samāropa and prasaṅga are untenable for Abhinavagupta because, no</li>
+<li>tter whether they derive from beginningless nescience or from other</li>
+<li>uses, they ultimately lead to a regressus ad infinitum.</li>
+</ul>
+<ul>
+<li>paladeva puts forward his own version of how apoha works, taking for</li>
+<li>anted that apoha is indeed the pivot of all conceptual thought. His</li>
+<li>ew, evidently nourished by Buddhist ideas, is centred on the plurality</li>
+<li> causal efficiencies found in any object, an idea he substitutes for</li>
+<li>at of the plurality of wrong assumptions (vikalpa, samāropa), with</li>
+<li>spect to which Abhinavagupta will clearly explicate the fault of</li>
+<li>finite regress (anavasthā) (cf. below, n 68) already implicit in</li>
+<li>paladeva’s argument. But, more importantly, he makes an additional</li>
+<li>mark. On the level of māyā, on which alone discursive thought</li>
+<li>ikalpa) is at work, the objects should be at their highest level of</li>
+<li>fferentiation; then, how can their cognition also evoke “other”</li>
+<li>jects? Utpaladeva’s answer is rooted in Śaiva theology. The</li>
+<li>varatattva-level on which the whole manifested world is still enclosed</li>
+<li> the I (sarvam idam aham) remains so to speak in the background even</li>
+<li> the world of māyā, which is marked by full-fledged differentiation.</li>
+<li>is is especially true for the process of cognition, in which even the</li>
+<li>lly differentiated object ends up flowing into consciousness and being</li>
+<li>sorbed into it; moreover, as is often repeated by the Śaiva</li>
+<li>ilosophers, if the object were not essentially light, it could not at</li>
+<li>l shine in cognition (cf. ĪPVV I: 294, ll. 18-20: sa hy eko ’pi bhāvo</li>
+<li>stuto ’nyaiḥ saha tadātmaiva yadyapi māyāśaktyā pr̥thakkr̥taḥ, tathāpi</li>
+<li>ātatvād eva anyonyātmatām unmīlayati; see also p. 296, ll. 5-8). This</li>
+<li>tent basic non-differentiation of the object (from other objects and</li>
+<li>om the Self) is, according to Utpaladeva, what finally renders the</li>
+<li>ocess of apoha possible, the potential “openness” of the object (and</li>
+<li>e subject) being the very ground for the “doubt” about it. On this</li>
+<li>emise alone, the Buddhist apoha is accepted by the Śaivas, who take it</li>
+<li> a particular śakti figuring side by side with jñāna-śakti.</li>
+</ul>
+<ul>
+<li>xt5</li>
+</ul>
+<ul>
+<li>. 4v,16] vivr̥tau — yujyeta6 punar etādr̥śo vyavahāro yady eṣām</li>
+<li>ubhavasmr̥tyādīnāṁ cinmātrasāratvenaika evātmā syāt, yasyaitā</li>
+<li>śvātmanaḥ parameśvarasya jñānādikā vicitrāḥ śaktayaḥ,7 anyathā tu na</li>
+<li>ād iti ।।</li>
+</ul>
+<ul>
+<li> ced antaḥkr̥tānanta [f. 5r] viśvarūpo maheśvaraḥ ।</li>
+</ul>
+<ul>
+<li>ād ekaś cidvapur jñānasmr̥tyapohanaśaktimān ।। [1.3.7]</li>
+</ul>
+<ul>
+<li>imarśinī follows] [f. 6r,4] atra vr̥ttiḥ — cittattvam eva viśvarūpam</li>
+<li>o ’tiriktasyānupapatter aśeṣapadārthajñānānām anyonyānusandhānam</li>
+<li>yaiva jñānādiśaktayaḥ, mattaḥ smr̥tir jñānam apohanaṁ ceti hy uktam ।।</li>
+</ul>
+<ul>
+<li>vr̥tiḥ — prakāśarūpaṁ8 hi cittattvaṁ kartr̥tāmayam ādisiddham eva</li>
+<li>datiriktatvaṁ ca nīlasukhāder jaḍābhimatasya bhāva9jātasya svayam</li>
+<li>rakāśarūpatvaṁ syād atadrūpatve ca prakāśamānatānupapattiḥ, na hy</li>
+<li>vetarūpaḥ prakāśaḥ śveta iti bhavaty etac copapādayiṣyate10 । tad āha</li>
+<li>ttattvam evety ato ’tiriktasyeti ca । bhinnāvabhāsinām api cārthānāṁ</li>
+<li>dekarūpatve tadviṣayāṇāṁ jñānānām avivādasiddham eva tadātmakatvam, na</li>
+<li> tāni tato bhedena prathante, tathāpi11 viṣayabhedāvakalpita-12</li>
+<li>edānām api teṣāṁ vibhinnadeśakālāvacchede ’py</li>
+<li>acin-mayasvabhāvaviśrāntir eva । anyathā sarveṣām eva jñānānām</li>
+<li>asvasaṁvedanarūpāntarmukhacittattvamayasvabhāvābhāve</li>
+<li>valapradeśajñānaprakāśasamaye saghaṭapradeśajñānaṁ nāstīti kathaṁ</li>
+<li>[f. 6v]ścīyate, jñānānāṁ svaprakāśarūpatayā</li>
+<li>aṭādiviṣa-yavadekajñānasaṁsargitvābhāvāt ।</li>
+</ul>
+<ul>
+<li>valapradeśe hi ghaṭo yadi syāt, tat tatra pradeśajñāne</li>
+<li>lyayogyatārūpatvāt so ’pi prakāśeta tathā ca saghaṭapradeśajñānam etat</li>
+<li>āt, na kevalapradeśajñānam; ataḥ kevalapradeśajñānaṁ svātmānaṁ</li>
+<li>ghaṭapradeśajñānaviparītaṁ saṁvedayamānaṁ pradeśam api ghaṭarahitaṁ</li>
+<li>ṁvedayate iti ghaṭābhāvasiddhiḥ pradeśe syāt ।</li>
+</ul>
+<ul>
+<li>vatā kevalapradeśajñānena yadi nāma svātmā</li>
+<li>ghaṭapradeśa-jñānaviparītaḥ saṁviditas tato dvitīyam arthāntarabhūtaṁ</li>
+<li>ghaṭa-13 pradeśajñānaṁ svaprakāśarūpaṁ nāstīti kathaṁ sidhyet ।</li>
+</ul>
+<ul>
+<li>aṭo nāstīti kāmaṁ sidhyet, anyathā ghaṭāsadbhāve tasyaiva</li>
+<li>adeśajñānasya saghaṭapradeśajñānatāpattiprasaṅgāt । na ca tat</li>
+<li>ghaṭapradeśajñānam, api tu tadviparītam,14 atas tajjñānasaṁvedyo nāsti</li>
+<li>aṭa iti bhavet ।</li>
+</ul>
+<ul>
+<li>itīyaṁ tu saghaṭapradeśajñānaṁ nāstīti kena jñātaṁ yatas15</li>
+<li>jjñānasaṁvedyaḥ syād api tatra ghaṭaḥ, na ca tatra dvitīyaṁ</li>
+<li>ghaṭapradeśajñānaṁ yadi syāt tan16 na prakāśeta, na ca prakāśate ’to</li>
+<li>stīti vaktuṁ yujyate tad eva hi paryanuyuktam ।</li>
+</ul>
+<ul>
+<li>tham etaj jñānam aghaṭapradeśajñā[f. 7r]ne17 prakāśata iti tu tenaiva</li>
+<li>aprakāśena svātmā tathā jñāyeta, ghaṭe yadvad aghaṭābhāvarūpatā ।</li>
+</ul>
+<ul>
+<li>itīyaṁ tu saghaṭapradeśajñānam arthāntarabhūtam aghaṭa-18</li>
+<li>adeśajñānābhāvam api na na19 vyabhicarati yena tatprakāśād eva</li>
+<li>ghaṭapradeśajñānābhāvo ’pi jñāyeta, dvitīyārthāntarabhūtasaghaṭa-</li>
+<li>adeśajñānabhāvābhāvayor api tasyāghaṭa20</li>
+<li>adeśajñānapra-kāśasyopapatter ekatarā21navyabhicārāt ।</li>
+</ul>
+<ul>
+<li>ha saghaṭapradeśajñānaṁ ghaṭamātrajñānaṁ vā na pradeśajñānād bhinnaṁ</li>
+<li>mbhavaty ekajātīyarūpaviśeṣaviṣayasyāpi cākṣuṣasyaikatvaniyamāt,</li>
+<li>yathā ghaṭe ’pi pratiparamāṇujñāna-bhedāpatter ghaṭābhāsa eva na syād</li>
+<li>yādiyuktibhis tat kevala-pradeśajñānam evedaṁ ghaṭe sati</li>
+<li>aṭapratibhāsam api syāt, na ca tatheti tata eva kathaṁ na</li>
+<li>aṭajñānābhāvasiddhiḥ ।</li>
+</ul>
+<ul>
+<li>d evam iyannyāyānusaraṇād ānumāniky eva ghaṭābhāvasiddhiḥ syāt, na</li>
+<li>ātyakṣī. yadi vā samandhakāre22 rūpajñānaṁ nāstīti kathaṁ jñāyeta,</li>
+<li>rhy atraitad api vaktuṁ yujyeta23 +yadi rūpajñānaṁ syāt tad etat</li>
+<li>arśādijñānābhinnam eva syād+ [my tentative restoration: yadi</li>
+<li>pajñānaṁ tattatsparśādijñānābhinnam eva syād] iti rūpasparśajñānānāṁ</li>
+<li>innendriyajanyānām anekatvenaivopagamāt ।</li>
+</ul>
+<ul>
+<li>py uttarakālotpannavikalpaḥ24 smr̥tir vā sparśa-jñānamātrābhāsā</li>
+<li>pajñānābhāvāvyabhicāriṇī25 tam api sādhayati, yato26 rūpasyāpi tadā</li>
+<li>dbhāve yathā[f. 7v]sau sparśajñānābhāsā tathā rūpajñānābhāsā caiva27</li>
+<li>āt, na caivaṁ tadātmānaṁ sparśajñānamātrābhāsaṁ saṁvedayamānāpi</li>
+<li>pajñānābhāsavivekaṁ sādhayatīti । tato yady api svātmani</li>
+<li>pajñānābhāsaṁ vyavacchindyāt saṁvedyamānākāraviparītatvāt tathāpi</li>
+<li>rvaṁ sparśajñānamātraprakāśakāle rūpajñānaṁ nābhūd iti kathaṁ jānīyāt,</li>
+<li>arśamātrajñānasya tatra parisphurataḥ pūrvoktanyāyena</li>
+<li>itīyarūpajñānābhāvāvyabhicārābhāvāt28 । smārtaṁ hi vijñānaṁ</li>
+<li>rvānubhavasaṁskārajaṁ pūrvānu-bhavānusāreṇaiva vyavasthāpakaṁ bhavati,</li>
+<li> tu svātantryeṇa pūrvapravr̥ttānubhavabhedasākṣātkāri sad yena</li>
+<li>ātmany29 ābhāsamānākāraviparītaṁ rūpajñānaṁ pūrvasmin kāle</li>
+<li>avacchindan viṣayam api pūrvabhāvinaṁ vyavacchindyāt, yathā</li>
+<li>adeśamātrajñānaṁ svātmani saghaṭa-30 pradeśābhāsatāvyavacchedena bahir</li>
+<li>aṭam api vyavacchinattīty āhuḥ । tato vikalpajñānaṁ</li>
+<li>rvānubhavasaṁskārāt tadanusāri jāyamānam, yathā tatpūrvānubhavadvayaṁ</li>
+<li>̥thakpr̥thakprakāśam ekaprakāśasaṁsargarahitam āsīt, tathānubhūtam31</li>
+<li>ubhavāmīti ca tat parāmr̥śati ।</li>
+</ul>
+<ul>
+<li>taś cobhayaparāmarśe ’pi</li>
+<li>tsvaprakāśasparśarūpajñāna-dvayamātravyavasthānaṁ syāt,32 na tv</li>
+<li>akālikatvena yena tad andhakārakālagatasparśajñānamātraṁ</li>
+<li>tkālikarūpajñānavimuktaṁ svābhāsopārūḍhaṁ [f. 8r] parāmr̥śad api</li>
+<li>dandhakārakāle rūpajñānaṁ nirākuryāt । yāvatā jñānānām</li>
+<li>yonyaprakāśarahitānāṁ svātmamātrapratiṣṭhānāṁ yathā na svayaṁ</li>
+<li>lyakālatāvyavasthāpanaṁ tathā vikalpenāpi tatsaṁskārajanmanā</li>
+<li>arūpamātraprakāśakānekajñāna-33 parāmarśakena naikakālavyavasthāpanaṁ</li>
+<li>kyaṁ pūrvānubhūtātiriktavastusaṁsparśisaṁvedanatvābhāvāt tasya, na</li>
+<li>pi pūrvānubhūtavastusaṁsparśitvam api vikalpānāṁ ghaṭata ity uktam ।</li>
+<li>d evam ekāntarmukhasvasaṁveda- narūpacittattvātmatāviśrāntiṁ vinā</li>
+<li>ānānām aindriya-kāṇām apy anyonyaṁ sahabhāvapr̥thagbhāvaprakāśo na syād</li>
+<li>y arthānām api sadasattāniyamaniścayo na syāt, tataś ca</li>
+<li>rvavyavahārocchedaprasaṅgaḥ । tasmād eṣām ekacittattvaviśrāntirūpam</li>
+<li>usandhānam avaśyābhyupagantavyam । tad āha aśeṣapadārthajñānānām iti</li>
+<li>ānānāṁ bahūnām anusandhānam eva cittattvam ity anena ekaśabdo ’pi</li>
+<li>vr̥taḥ ।</li>
+</ul>
+<ul>
+<li>r̥tyādau34 cānekānubhavānām anusandhānam eka-cittattvaviśrāntir evāta</li>
+<li>ābhedenātra cittattvam anusandhānam iti tasya caivam avibhedena</li>
+<li>kṣyamāṇanayenāśeṣabhāvanirbharasya35 tattadvicitrabhāvāvabhāsanāmayaṁ</li>
+<li>ānaṁ nāma śaktir eva । phalabhedāropitabhedo36 hi padārthātmaiva</li>
+<li>ktir ucyate sā ca śaktiḥ svecchā[f. 8v]vaśenaiva na punar</li>
+<li>yakāraṇasāmarthyasācivyena yasya phalati37 sa maheśvara iti sūtre</li>
+<li>thā nirdiṣṭaḥ । cittattvasya caikarūpatvam agre pratipādayiṣyate ।38</li>
+<li>r̥tir api pūrvāvabhāsitavastunaḥ pūrvāvabhāsitatvena vartamānakāle</li>
+<li>akhyāpanaśaktiḥ । deśakālaviśeṣāvacchedaśūnyatvena</li>
+<li>citrecchābodhitā39vabhāsabhedavāsanāmātropapāditavikal-</li>
+<li>rūpavijñānāpohanaśaktiḥ śaṅkitapratipakṣapratikṣepaparatvād vikalpānām</li>
+<li>padārthāntarasamparkarahite ’py arthe pratiniyataprakr̥tāv avabhāte40</li>
+<li>vidhārthakriyākāriṇy api viśiṣṭaikārthakriyārthina īśvarāṅgabhūta</li>
+<li>ānyonyātmatayā</li>
+<li>ṅkyamānatattadarthakriyākāritattatpratipakṣanirākriyāṁ vinā na tena</li>
+<li>avahartum alaṁ pratipattāra iti svabhāva evaiteṣāṁ41 padārthānām</li>
+<li>yonyabhedamayatvāt ।</li>
+</ul>
+<ul>
+<li>d viśvavyavahāraprajanaiṣā vikalpavyāpārāpohanaśaktir iti gītāsu</li>
+<li>agavatāviṣṭamaheśvarabhāvena parigaṇitā । tad āha mattaḥ smr̥tir iti ।</li>
+<li>ac ca jñānaśaktibhedāt ।।</li>
+</ul>
+<ul>
+<li>anslation</li>
+</ul>
+<ul>
+<li>vr̥ti: On the contrary, such a world of practical experience</li>
+<li>yavahāraḥ) will become possible (yujyeta)42 — if all the various</li>
+<li>gnitions — direct perception, memory, etc. — have only one intrinsic</li>
+<li>ture (ātmā),43 being in essence consciousness only. Of this [ātman],</li>
+<li>mely the Supreme Lord, whose essence is all, these cognitions, etc.,</li>
+<li>present the various and multiform powers.44 [The world of practical</li>
+<li>perience] would otherwise be impossible.</li>
+</ul>
+<ul>
+<li>rikā: “. . . if there were no Maheśvara who contains within Himself</li>
+<li>l the infinite forms, who is one, whose essence is consciousness,</li>
+<li>ssessing the powers of knowledge, memory and exclusion.” [1.3.7]</li>
+</ul>
+<ul>
+<li>̥tti: The mutual unification of all cognitions of things is</li>
+<li>onstituted by] the consciousness principle itself (cittattvam) whose</li>
+<li>rm is all, since nothing distinct and separate (atiriktasya) from it</li>
+<li> admissible. The powers of knowledge, etc. only pertain to this</li>
+<li>onsciousness-principle]. For it has been said: “From me derive memory,</li>
+<li>owledge and exclusion.”45</li>
+</ul>
+<ul>
+<li>vr̥ti: For the consciousness-principle, whose form is light,</li>
+<li>nstituted by agency, is established since the very beginning. If the</li>
+<li>rld of objects, such as a patch of blue colour or pleasure,</li>
+<li>rroneously] assumed as being insentient, were separate from it, this</li>
+<li>uld [amount to saying] that its nature is not by itself light. But if</li>
+<li>hings] did not have light as their essence, their shining would be</li>
+<li>possible, for, as we are going to demonstrate,46 a light which is not</li>
+<li>ite47 cannot become white. This concept has been expressed [by the</li>
+<li>̥tti] with the phrases “the consciousness-principle itself” and</li>
+<li>istinct and separate from it”. If the objects, though appearing as</li>
+<li>fferentiated [from consciousness], are to be recognized as constituted</li>
+<li>lely by consciousness, it is established beyond discussion that [also]</li>
+<li>e cognitions which refer to them are made of consciousness.48 For</li>
+<li>gnitions never manifest themselves separately from it; all the same,49</li>
+<li>ough they (i.e. the cognitions) may show [a certain level of]</li>
+<li>fferentiation somehow induced (avakalpita)50 by the differentiation of</li>
+<li>eir contents, yet, despite this delimitation due to spatio-temporal</li>
+<li>fferences, they ultimately do rest (viśrāntir eva)51 on their own</li>
+<li>ture consisting of a single and unitary consciousness (ekacit).52 If</li>
+<li> were not so, and all the various cognitions did not have as their</li>
+<li>sential nature the consciousness-principle, introverted, in the form</li>
+<li> a single and unitary self-awareness (eka-svasaṁvedana), how could</li>
+<li>e, at the moment when the cognition of an empty surface occurs, arrive</li>
+<li> the statement “There is no jar here” [lit.: “This is not the</li>
+<li>gnition of a surface with a jar”]? For cognitions, being by their very</li>
+<li>ture conscious of themselves [alone], cannot combine to form a single</li>
+<li>omplex] cognition (ekajñānasaṁsargitvābhāva)53 having as its object a</li>
+<li>r and so on.54</li>
+</ul>
+<ul>
+<li>uddhist:] In fact, if a jar were in an empty place, then also the</li>
+<li>ar] would be manifested in the cognition of the place since [both the</li>
+<li>r and the place] share the same capacity [of being perceptible]</li>
+<li>ulyayogyatārūpatva),55 and in this way it would be the cognition of a</li>
+<li>ace with a jar, not the cognition of an empty place. Therefore, the</li>
+<li>gnition of an empty place, being aware of itself as opposed to the</li>
+<li>gnition of a place with a jar, is also aware of the place as devoid of</li>
+<li>jar. In this way the absence of a jar in the place can indeed be</li>
+<li>tablished.</li>
+</ul>
+<ul>
+<li>aiva:] But if the cognition of an empty place is aware [only] of</li>
+<li>self as opposed to the cognition of the place with a jar, how would it</li>
+<li> possible to establish that there is not a second56 cognition — which</li>
+<li> another fact-event (arthāntarabhūta) — having the place with a jar as</li>
+<li>s object and being manifest by itself?</li>
+</ul>
+<ul>
+<li>uddhist:] It is none the less true that, some way or other, one should</li>
+<li> able to affirm that a jar is absent, for otherwise it would ensue</li>
+<li>at when there is no jar that very cognition of the place [without a</li>
+<li>r] would be the same as the cognition of the place with a jar.</li>
+<li>wever, that cognition would not be the cognition of the place with a</li>
+<li>r, but a cognition opposed to it;57 hence we would have: “There is no</li>
+<li>r being cognized by that cognition.”</li>
+</ul>
+<ul>
+<li>aiva:] But by which cognitive act is a second (dvitīyam) (i.e.</li>
+<li>stinct and separate)58 cognition of the place with a jar cognized as</li>
+<li>t being there, thanks to which [one could say that] the jar, being</li>
+<li>tentially cognized by that same cognition, should also have been</li>
+<li>ere? If such a distinct and separate cognition were there, it could</li>
+<li>t but be manifested (na ca . . . na prakāśeta), whereas, on the</li>
+<li>ntrary, it is not manifested. Therefore, one cannot reasonably say</li>
+<li>at it exists.59 In fact, this is precisely what has been questioned.</li>
+</ul>
+<ul>
+<li>uddhist:] But to him who might wonder how this cognition can be</li>
+<li>nifested when [only] the cognition of the place without a jar occurs,</li>
+<li> would reply that it is cognized by that (i.e. the latter’s) very</li>
+<li>lf-awareness, just as when there is a jar, its being there has the</li>
+<li>rm of the not-being-there of a non-jar.60</li>
+</ul>
+<ul>
+<li>aiva:] However, the distinct and separate cognition of the place with</li>
+<li>jar, which is “another” fact-event, is not also invariably accompanied</li>
+<li> the absence of the cognition of the place without a jar, so that</li>
+<li>mply from the manifesting of the latter61 one could also cognize the</li>
+<li>sence of the cognition of the place with a jar.62 For, even as regards</li>
+<li>e presence and the absence of a distinct and separate cognition of the</li>
+<li>ace with a jar which is “another” fact/event, there is no invariable</li>
+<li>ncomitance with either [the absence or the presence of the cognition</li>
+<li> the place without the jar], since the cognition of the place without</li>
+<li>jar is manifested [in both cases].63</li>
+</ul>
+<ul>
+<li>uddhist:] But the cognition of the place with the jar or the cognition</li>
+<li> the jar alone cannot occur separately from the cognition of the</li>
+<li>ace, since a visual cognition having particulars belonging to the same</li>
+<li>ass as its objects is by necessity unitary.64 If it were not so, also</li>
+<li>th reference to a jar the manifestation “jar” itself would not take</li>
+<li>ace because one would come to have a single and separate cognition for</li>
+<li>ery single atom.65 Therefore, from these arguments and others of this</li>
+<li>nd it ensues that this cognition of the place alone should, in the</li>
+<li>se of a jar being there, also contain the manifestation of the jar.</li>
+<li>t [in the case at issue] it is not so.66 Due to this very reason, the</li>
+<li>tablishment of the absence of the cognition of a jar cannot be</li>
+<li>estioned.</li>
+</ul>
+<ul>
+<li>aiva:]67 Thus, if we accept your argument as following such a line of</li>
+<li>asoning, the absence of a jar comes to be established by means of</li>
+<li>ference (ānumāniky eva), not by means of direct perception (na</li>
+<li>ātyakṣī).68 If, on the other hand, someone [i.e. a Buddhist] objected</li>
+<li>at on these conditions one could not [even] say when one is in</li>
+<li>ntinuous darkness that there is no cognition of a visible form, [we</li>
+<li>uld reply that] in this case this too69 would be admissible, provided</li>
+<li>at such a cognition of a visible form were not distinct from the</li>
+<li>gnition of a tangible form and so on — whereas [on the contrary] the</li>
+<li>gnitions of tangible and visual forms, being produced by different</li>
+<li>nses, are to be admitted as [differentiated and therefore] not</li>
+<li>educible to] one.70</li>
+</ul>
+<ul>
+<li>r can a conceptual elaboration, which takes place at a later time,71</li>
+<li> memory, in which only the cognition of a tangible form is manifested</li>
+<li>d which is [consequently deemed as] invariably associated with the</li>
+<li>sence of the cognition of a visual form, also establish the absence of</li>
+<li>e cognition of a visual form. For if at that time a visual form had</li>
+<li>so been there, then, just as [now] in this [memory] the cognition of a</li>
+<li>ngible form is manifested, in the same way also the cognition of a</li>
+<li>sual form should be manifested in it.72 In fact, although [memory], in</li>
+<li>e manner [outlined above], is aware of itself — referring to that time</li>
+<li>as containing the manifestation of the mere cognition of a tangible</li>
+<li>rm, it does not [contextually] establish a discrimination (i.e. the</li>
+<li>sence) of the manifestation of a cognition of a visual form.</li>
+<li>erefore, although it may [be admitted to] exclude in itself the</li>
+<li>nifestation of a cognition of a visual form as being opposed to the</li>
+<li>rm being currently cognized, none the less how could it (i.e. memory)</li>
+<li>ow that previously, i.e. at the time when only the cognition of a</li>
+<li>ngible form was manifested, there was no cognition of a visual form?</li>
+<li>r on the basis of the already stated reason, there is no invariable</li>
+<li>ncomitance of the cognition of a mere tangible form, which is taking</li>
+<li>ace there, with the absence of a distinct and separate cognition of a</li>
+<li>sual form. In fact, that [particular kind of] cognition that is memory</li>
+<li>mārtaṁ vijñānam) derives from the impressions left by a previous</li>
+<li>rception [and] performs the task of determining [its object] only by</li>
+<li>nforming to the previous perception, [that is,] not by autonomously</li>
+<li>vātantryeṇa)73 having access to the particular perception that</li>
+<li>curred in the past, so that, while excluding in itself the cognition</li>
+<li> a visual form in the past74 as being opposed to the form currently</li>
+<li>ing manifested, it might also exclude its object [equally] belonging</li>
+<li> the past.75 In the same vein, some [opponents] maintain that by</li>
+<li>cluding the manifestation in itself of the place with a jar the</li>
+<li>gnition of a mere [empty] place also externally excludes a jar. For</li>
+<li>e above-mentioned reason, just as two [distinct] former perceptions</li>
+<li>ch shining by its own light were not associated into a single light,</li>
+<li> the same way a discursive cognition (vikalpajñāna)76 — which derives</li>
+<li>om the impressions left by a former cognition and [consequently]</li>
+<li>nforms to it — is reflectively aware (parāmr̥śati) of them in terms of</li>
+<li>This has been] perceived” and “I am perceiving”.77</li>
+</ul>
+<ul>
+<li>erefore, although we have a reflective awarenesses of both</li>
+<li>ognitions], [none the less we do have] the determination only of those</li>
+<li>o cognitions — that of a tangible form and that of the visible form —</li>
+<li>ken in themselves (-mātra-), each being self-illuminating, but not the</li>
+<li>termination of their occurring at the same time (na tv</li>
+<li>akālikatvena), by virtue of which it (i.e. the memory/discursive</li>
+<li>gnition) — being reflectively aware only of the cognition of the</li>
+<li>ngible form which occurred at the time of darkness, free from any</li>
+<li>gnition of a visual form occurring at the same time and resting in its</li>
+<li>n self-manifestation (svābhāsopārūḍha) — might [be able to] negate the</li>
+<li>gnition of a visual form at the time of that darkness.78</li>
+</ul>
+<ul>
+<li> the contrary, [perceptual] cognitions, being unable to illuminate</li>
+<li>ch other and each being grounded in itself only, cannot by themselves</li>
+<li>tablish their occurrence at the same time. Similarly, the discursive</li>
+<li>gnition, too (vikalpenāpi), which originates from the impressions left</li>
+<li> them and has a reflective awareness of several [distinct] cognitions</li>
+<li>ch illuminating its own form alone, cannot establish their occurrence</li>
+<li> the same time, for it is not in the nature of [discursive cognition]</li>
+<li> be an awareness directly touching a distinct real entity which has</li>
+<li>rmerly been perceived. Nor, on the other hand, has it ever been said</li>
+<li>at the discursive cognitions are admitted to directly touch (i.e. have</li>
+<li>rect access to) the real entity formerly perceived. On these premises,</li>
+<li>gnitions, even the perceptual ones (aindriyakāṇām api),79 could not be</li>
+<li>nifested as mutually associated or separated, unless they rest on</li>
+<li>ving as their essential nature the consciousness-principle in the form</li>
+<li> a single and unitary introverted self-awareness. Consequently, one</li>
+<li>uld not determine for things, too, a restriction of their being</li>
+<li>utually] present or absent, whence the destruction of the world of</li>
+<li>actical experience would ensue. Therefore, we are obliged to admit for</li>
+<li>gnitions [some] unification which has the form of their resting on a</li>
+<li>ngle consciousness-principle. This [is what is meant by the Vr̥tti]</li>
+<li>th the phrase “of all cognitions of things”. The</li>
+<li>nsciousness-principle is that very unification (anusandhāna) of the</li>
+<li>ny cognitions: in this way, also the word “one” in the Kārikā (cf.</li>
+<li>acidvapuḥ) has been explained.</li>
+</ul>
+<ul>
+<li>so the unification of many perceptual cognitions in memory, etc. is</li>
+<li>thing but their resting on the single consciousness-principle; it is</li>
+<li>r this very reason that “consciousness-principle” and “unification”</li>
+<li>e put here [in the Vr̥tti] in a relationship of non-difference. And</li>
+<li>us, on the basis of the reasoning that will be stated below, to this</li>
+<li>nsciousness-principle, full of all things, there belongs a power, in</li>
+<li>rms of non-differentiation [from it], named “knowledge”, consisting in</li>
+<li>e manifestation (-avabhāsanā)80 of the various multiform things. In</li>
+<li>ct, when something which is in itself a [unitary] substance</li>
+<li>adārthātmaiva) is superimposed with a differentiation deriving from</li>
+<li>s different effects, we call it “power”.81 And by the word “Great</li>
+<li>rd” (maheśvara iti) the sūtra indicates him whose “power” yields fruit</li>
+<li>e to his will alone, i.e. without the intermediation of the capacity</li>
+<li> other causes. And the fact that the consciousness-principle is to be</li>
+<li>e and unitary in its nature will be explained later on.82 Memory, for</li>
+<li>s part, is the power to make an entity, which has been manifested in</li>
+<li>e past, known in the present as formerly manifested. We have the power</li>
+<li> exclusion (apohana-śakti) when a cognition in the form of conceptual</li>
+<li>aboration is generated exclusively by the latent impression left by a</li>
+<li>rticular manifestation, [a latent impression which is] awakened by the</li>
+<li>nderful (vicitra)83 will [of the Lord] as devoid of any specific</li>
+<li>atio-temporal delimitation. For these (i.e. “this kind of”) conceptual</li>
+<li>aborations have as their [specific] function that of rejecting</li>
+<li>visaged contrary options (śaṅkita- pratipakṣa).84 Also in respect to</li>
+<li> object being manifested without commingling with other realities</li>
+<li>nd] having a well-defined nature of its own85 — but at same time being</li>
+<li>pable of having a variety of possible causal efficiencies — the</li>
+<li>owing subjects aspiring to only one of these causal efficiencies — a</li>
+<li>ecific one — will not succeed in making use of such an object in the</li>
+<li>rious occurrences of practical life, unless we reject the various</li>
+<li>ntrary options, endowed with various causal efficiencies, which they</li>
+<li>e figuring out.86 For the object, which is not separated from the</li>
+<li>vel of īśvara, as it were, has as its essence that of all other</li>
+<li>jects.87 The above is the very essential nature of these88 realities</li>
+<li> they are characterized by mutual differentiation.89</li>
+</ul>
+<ul>
+<li>erefore, it is precisely this power of exclusion, whose sphere of</li>
+<li>tivity is represented by conceptual elaboration, that opens the way to</li>
+<li>e transactions of practical life.90 On account of this, [the power of</li>
+<li>clusion] has been mentioned separately in the Songs by the Blessed</li>
+<li>e, who possesses the status of the Great Lord. In fact, He said: “From</li>
+<li> memory [. . .]”.91 [All] these [powers derive] from a differentiation</li>
+<li> the power of Knowledge.</li>
+</ul>
+<ul>
+<li>Originally published in K. Preisendanz (ed.), Expanding and Merging</li>
+<li>rizons: Contributions to South Asian and Cross-Cultural Studies in</li>
+<li>mmemoration of Wilhelm Halbfass, Vienna 2007, pp. 473-90.</li>
+</ul>
+<ul>
+<li>* I wish to thank Prof. Karin Preisendanz for her useful comments and</li>
+<li>en editorial care.</li>
+</ul>
+<ul>
+<li>ferences</li>
+</ul>
+<ul>
+<li>xts</li>
+</ul>
+<ul>
+<li>G = Bhagavad-Gītā, in BhGŚ.</li>
+</ul>
+<ul>
+<li>GAS = Bhagavad-Gītārtha-Saṁgraha of Abhinavagupta, in</li>
+<li>īmadbhagavad-Gītā with Gītārtha-Saṁgraha, part I: Text, ed. S.</li>
+<li>nkaranarayanan, Oriental Research Institute, Tirupati, 1985.</li>
+</ul>
+<ul>
+<li>agavad-Gītā-Bhāṣya, in Śrīmadbhagavad-Gītā with the Commentaries</li>
+<li>imat-Śāṅkarabhāṣya (with Ānandagiri’s Vyākhyā), Nīlakaṇṭhī,</li>
+<li>āṣyotkarṣa-Dīpikā of Dhanapati, Śrīdharī, Gītārtha-Saṁgraha of</li>
+<li>hinavaguptācārya, Gūḍhārtha-Dīpikā of Madhusūdana (with</li>
+<li>ḍhārtha-Tattvāloka of Śrīdharmadattaśarma), ed. L.S. Panshikar, 2nd</li>
+<li>n., Motilal Banarsidass, Delhi, 1978.</li>
+</ul>
+<ul>
+<li>GS = Sarvatobhadra, in The Bhagavad-Gītā with the Commentary Called</li>
+<li>rvatobhadra of Rāmakaṇṭha, KSTS 64, ed. M.K. Shastri, Bombay 1943.</li>
+</ul>
+<ul>
+<li>P = Dharmottara-pradīpa of Durveka Miśra, in Dharmottara-Pradīpa</li>
+<li>eing a Sub-commentary on Dharmottara’s Nyāyabindu-Ṭīkā, a Commentary</li>
+<li> Dharmakīrti’s Nyāyabindu], ed. Pandita Dalsukhbhai Malvania, rev. 2nd</li>
+<li>n., Patna 1971.</li>
+</ul>
+<ul>
+<li> = Dharmakīrti, Hetubindu, ed. in Steinkellner 1967.</li>
+</ul>
+<ul>
+<li>K = Īśvarapratyabhijñā-Kārikā and -Vr̥tti of Utpaladeva, ed. and tr. in</li>
+<li>rella 2002.</li>
+</ul>
+<ul>
+<li>V = Īśvarapratyabhijñā-Vimarśinī of Abhinavagupta, ed. Mukund Ram</li>
+<li>astri, 2 vols., KSTS 22 and 33, Bombay 1918-21.</li>
+</ul>
+<ul>
+<li>VV = Īśvarapratyabhijñā-Vivr̥ti-Vimarśinī of Abhinavagupta, ed.</li>
+<li>dhusudan Kaul Shastri, 3 vols., KSTS 60, 62 and 65, Bombay 1938-43.</li>
+</ul>
+<ul>
+<li>-Ṭ = Nyāyabindu-Ṭīkā of Dharmottara in DhP.</li>
+</ul>
+<ul>
+<li>= Pāṇini’s Aṣṭādhyāyī, ed. in Sharma 1995.</li>
+</ul>
+<ul>
+<li> = Pramāṇa-Vārttika of Dharmakīrti, in Pramāṇa-Vārttika with the</li>
+<li>mmentary “Vr̥tti” of Acharya Manorathanandin, critically ed. Swami</li>
+<li>arikadas Shastri, Varanasi, 1968.</li>
+</ul>
+<ul>
+<li>SV = Dharmakīrti’s Svavr̥tti on Pramāṇa-Vārttika I, ed. in Gnoli 1960.</li>
+</ul>
+<ul>
+<li> = Vākyapadīya of Bhartr̥hari, in Vākyapadīya with the</li>
+<li>akīrṇakaprakāśa of Helārāja: Kāṇḍa 3, ed. K.A.S. Iyer, 2 vols., Poona,</li>
+<li>63-73.</li>
+</ul>
+<ul>
+<li>kyapadīya, ed. in W. Rau, Bhartr̥haris Vākyapadīya: Die Mūlakārikās</li>
+<li>ch den Handschriften, Abhandlungen für die Kunde des Morgenlandes 42,</li>
+<li>esbaden, 1977.</li>
+</ul>
+<ul>
+<li>h = Vijñāna-Bhairava-Tantra with the Commentary partly by Kṣemarāja</li>
+<li>d partly by Śivopādhyāya, ed. Mukunda Ram Shastri, Kashi Sanskrit Text</li>
+<li>ries 8, Bombay 1918.</li>
+</ul>
+<ul>
+<li>udies and translations</li>
+</ul>
+<ul>
+<li>hnemann, G., 1980, “Identifizierung von Sanskrittexten</li>
+<li>ṅkaranandanas”, Wiener Zeitschrift für die Kunde Südasiens, 24:</li>
+<li>1-98.</li>
+</ul>
+<ul>
+<li>oli, R., 1960, Pramāṇavārttikam: Chapter One with the Autocommentary</li>
+<li>erie Orientale Roma 23), Roma, 1960.</li>
+</ul>
+<ul>
+<li>ata, T., 1993, Prasaṅga und Prasaṅgaviparyaya bei Dharmakīrti und</li>
+<li>inen Kommentatoren (Wiener Studien zur Tibetologie und Buddhismuskunde</li>
+<li>), Wien.</li>
+</ul>
+<ul>
+<li>asser, H., 2001, “On the Date and Works of Śaṅkaranandana”, in R.</li>
+<li>rella (ed.) Le Parole e i Marmi: Studi in Onore di Raniero Gnoli nel</li>
+<li>o 70° compleanno (Serie Orientale Roma 92), pp. 489-508.</li>
+</ul>
+<ul>
+<li>ndey, K.C., 1963, Abhinavagupta: An Historical and Philosophical</li>
+<li>udy, 2nd edn., Varanasi.</li>
+</ul>
+<ul>
+<li>arma, R.N. (ed. and tr.), 1995, The Aṣṭādhyāyī of Pāṇini, vol. 3,</li>
+<li>lhi.</li>
+</ul>
+<ul>
+<li>einkellner, E., 1967, Dharmakīrti’s Hetubindu: Teil I: Tibetischer</li>
+<li>xt und rekonstruierter Sanskrit-Text; Teil II: Übersetzung und</li>
+<li>merkungen, Wien.</li>
+</ul>
+<ul>
+<li>einkellner, E. and M.T. Much, 1995, Texte der erkenntnistheoretischen</li>
+<li>hule des Buddhismus (Systematische Übersicht über die buddhistische</li>
+<li>nskrit-Literatur 2), Göttingen. (Abhandlungen der Akademie der</li>
+<li>ssenschaften in Göttingen, Philologisch- Historische Klasse, Folge</li>
+<li>214).</li>
+</ul>
+<ul>
+<li>rella, R., 1988, “A Fragment of Utpaladeva’s</li>
+<li>varapratyabhijñā-Vivr̥ti”, East and West, 38: 137-74.</li>
+</ul>
+<ul>
+<li>—, 2002, The Īśvarapratyabhijñā-Kārikā of Utpaladeva with the Author’s</li>
+<li>̥tti: Critical Edition and Annotated Translation, Motilal Banarsidass,</li>
+<li>lhi (I edn. Serie Orientale Roma 71, IsMEO, Roma, 1994), repr. 2014.</li>
+</ul>
+<ul>
+<li>—, 2011, The Philosophical Traditions of India: An Appraisal,</li>
+<li>ranasi: Indica Books.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>Cf. Torella 2002: xl-xliv.</li>
+</ul>
+<ul>
+<li>“Leaf 33. Size 7⅟2 x 9⅟2”. Lines per page 19 approximately. Syll. per</li>
+<li>ne 21. Handwriting almost recent. Written on local paper which does</li>
+<li>t seem to be old. Thirty-first leaf worm eaten, it is clear from the</li>
+<li>tebook pages 44-46. The ms begins line no. 1, top: śrīgaṇeśāya namaḥ;</li>
+<li>ne 2: saṁskāre saty api, etc. Ends abruptly as can be seen at page 49.</li>
+<li>aracter Śāradā”. This description perfectly suits the National</li>
+<li>chives manuscript, except for the mention of the worm-eaten</li>
+<li>irty-first leaf, which, at least as far as I can see from a rather</li>
+<li>int xerox-copy, would seem more or less intact. According to Prakash</li>
+<li>ndey (personal communication), the manuscript belongs to the latter</li>
+<li>lf of the eighteenth century.</li>
+</ul>
+<ul>
+<li>The technique of prasaṅga-viparyaya is also well known to Buddhists</li>
+<li>f. Iwata 1993).</li>
+</ul>
+<ul>
+<li>The ĪPVV seems to be the only work to quote from the Apohasiddhi;</li>
+<li>ong the five quotations (pp. 272, l. 14; 292, ll. 19, 21, 23; 293, l.</li>
+<li>) the second one is certainly in prose, thus showing that the</li>
+<li>ohasiddhi, just like other works by Śaṅkaranandana, consisted of</li>
+<li>rikās mixed with prose passages. Only three out of the five quotations</li>
+<li>uld be traced either in its single extant Sanskrit manuscript</li>
+<li>ühnemann 1980: 193-94) or in the Tibetan translation (see Gnoli 1960:</li>
+<li>iii-xxiv); on Śaṅkaranandana, see Steinkellner and Much 1995 and</li>
+<li>asser 2001. (For a new interpretation of Śaṅkarānandana’s religious</li>
+<li>filiation see Torella 2011: 19 n.12) In a separate study under</li>
+<li>eparation I propose to examine the context of the Apohasiddhi from</li>
+<li>ich the above passages have been drawn. I cordially thank Ernst</li>
+<li>einkellner and Helmut Krasser for very kindly and generously putting</li>
+<li> my disposal all the available material on Śaṅkaranandana’s</li>
+<li>ohasiddhi, including a copy of the only available Sanskrit manuscript</li>
+<li>roduced from Rahula Sankrityayana’s negatives) and a transcript of the</li>
+<li>betan translation.</li>
+</ul>
+<ul>
+<li>The words underlined in the text are those literally cited in the</li>
+<li>VV. Punctuation is mine (that found in the ms is often misleading).</li>
+<li>e sandhi has been “normalized”.</li>
+</ul>
+<ul>
+<li>Ms yujyate. I follow Abhinavagupta’s reading (ĪPVV I: 273, ll. 6-7):</li>
+<li>d etat tātparyam avataraṇikāyām āha “yujyeta” iti ।</li>
+</ul>
+<ul>
+<li>At this point the ĪPVV seems to refer to other parts of the Vivr̥ti</li>
+<li>ich are not found in the ms (ĪPVV I: 273, ll. 15-16: śaktiyogalakṣaṇaṁ</li>
+<li>ti).</li>
+</ul>
+<ul>
+<li>prakāśarūpaṁ, my emendation (ms viśvarūpaṁ), following Abhinavagupta’s</li>
+<li>ading (cited and commented upon in ĪPVV I: 273, ll. 18-21) which seems</li>
+<li>re appropriate to the context.</li>
+</ul>
+<ul>
+<li>-sya bhāva-, my emendation (ms svabhāva-); cf. ĪPVV I: 273, l. 25.</li>
+</ul>
+<ul>
+<li> upapādayiṣyate, my emendation (ms pratipādayiṣyatāṁ); cf. ĪPVV I:</li>
+<li>4, ll. 17-18: upapādayiṣyata iti prakāśātmā prakāśyo ’rtha</li>
+<li>yādisthāneṣu.</li>
+</ul>
+<ul>
+<li> tathāpi, my emendation (ms tathā hi); I follow the reading cited and</li>
+<li>mmented upon in ĪPVV I: 275, ll. 5-6 (s. n. 47 to the translation).</li>
+</ul>
+<ul>
+<li> avakalpita-, my emendation (ms -vikalpita-). Cf. ĪPVV I: 275, ll.</li>
+<li>8: bhedas tenāvakalpito ’vajñayāprarohayogena kalpitaḥ.</li>
+</ul>
+<ul>
+<li> saghaṭa-, my emendation (ms ghaṭa-).</li>
+</ul>
+<ul>
+<li> ĪPVV I: 277, l. 17 seems to have one more quotation from the Vivr̥ti</li>
+<li>haṭam api) which is not found in the ms.</li>
+</ul>
+<ul>
+<li> Ms jñātam atas is to be corrected to jñātaṁ yatas. This was probably</li>
+<li>e reading of the exemplar, as we can surmise from the anusvāra above</li>
+<li>a- (subsequently deleted); the following ya- must have been misread as</li>
+<li>-, thus suggesting the deletion of the anusvāra.</li>
+</ul>
+<ul>
+<li> I correct ms tat to tan na, as meaning strictly requires.</li>
+</ul>
+<ul>
+<li> aghaṭapradeśajñāne, my emendation (ms tatsaghaṭapradeśajñānaṁ). This</li>
+<li>ems to be the reading required by the context. This would also tally</li>
+<li>th Abhinavagupta’s remark (ĪPVV I: 278, ll. 2-3): nanv</li>
+<li>haṭapradeśajñānaṁ prakāśata ity atredam eva tattvaṁ</li>
+<li>ghaṭapradeśajñānaṁ na prakāśata iti.</li>
+</ul>
+<ul>
+<li> aghaṭa-, my emendation (ms ghaṭa-), supported by Abhinavagupta’s</li>
+<li>otation and comments (ĪPVV I: 278, ll. 3-5: naitad ity āha “aghaṭa”</li>
+<li>i paryudāsavr̥ttyā hy atra vastvantaraprakāśo bhāti, na tu</li>
+<li>asajyapratiṣedhātmā saghaṭapradeśajñānaprakāśābhavaḥ).</li>
+</ul>
+<ul>
+<li> na na, my emendation (ms na).</li>
+</ul>
+<ul>
+<li> tasyāghaṭa-, my emendation (ms tasya ghaṭa-), supported by</li>
+<li>hinavagupta’s paraphrase (ĪPVV I: 278, ll. 13-14):</li>
+<li>valapradeśapratyayasyobhayathāpy upapatteḥ.</li>
+</ul>
+<ul>
+<li> -anavyabhicārāt, my emendation. This (or also -vyabhicārāt) is in</li>
+<li>ct the reading one would expect, instead of ms -avyabhicārāt</li>
+<li>katarāvyabhicārāt); see also Abhinavagupta’s comments ĪPVV I: 278, l.</li>
+<li>: avyabhicāro ’vinābhāvo nāsti.</li>
+</ul>
+<ul>
+<li> The original reading of the ms was sambandhakāre, then transformed</li>
+<li>to samandhakāre, which is in fact the correct reading (cf. ĪPVV I:</li>
+<li>0, l. 23: santate ’ndhakāre).</li>
+</ul>
+<ul>
+<li> yujyeta, my emendation (ms yujyate).</li>
+</ul>
+<ul>
+<li> In the ms -vikalpa- has been later corrected to the correct</li>
+<li>ikalpaḥ.</li>
+</ul>
+<ul>
+<li> -avyabhicāriṇī, my emendation (ms -vyabhicāriṇī); cf. ĪPVV I: 281,</li>
+<li>. 18-19: [. . .] rūpajñānasyābhāvam avyabhicāreṇa bhavantaṁ sādhayet.</li>
+</ul>
+<ul>
+<li> yato, absent in the ms but cited by Abhinavagupta, apparently has to</li>
+<li> added here. The following phrases up to sādhayatīti are taken by him</li>
+<li> a quotation (from an unknown source). Cf. ĪPVV I: 281, ll. 20-21:</li>
+<li>tra hetutvaṁ granthāntarasyāha “yataḥ” iti.</li>
+</ul>
+<ul>
+<li> caiva, my emendation (the ms has cai-, corrected to nai- above the</li>
+<li>ne).</li>
+</ul>
+<ul>
+<li> -abhāvāt, my emendation (ms -bhāvāt). Utpaladeva is here stating the</li>
+<li>iva position on the matter which in fact excludes any correlation</li>
+<li>tween the two cognitions.</li>
+</ul>
+<ul>
+<li> The expected meaning (with the further support of Abhinavagupta’s</li>
+<li>mments in ĪPVV I: 282, ll. 10- 15) has induced me to modify at some</li>
+<li>aces the transmitted text which is evidently corrupt. In fact, the ms</li>
+<li>ads: ābhāsamānākāraviparītaṁ paricchindan pūrvasmin kāle viṣayam api</li>
+<li>pajñānaṁ pūrvabhāvi vyavacchindyāt. In particular, Abhinavagupta’s</li>
+<li>dātmyena asahamānā (ibid.: l. 12) can by no means refer to the</li>
+<li>ansmitted paricchindan.</li>
+</ul>
+<ul>
+<li> saghaṭa-, my emendation (ms ghaṭa-).</li>
+</ul>
+<ul>
+<li> The ms has an anusvāra deleted above -ta-.</li>
+</ul>
+<ul>
+<li> -vyavasthānaṁ syāt, my emendation (ms -vyavasthā na syān).</li>
+</ul>
+<ul>
+<li> By reading -prakāśakānekajñāna-, I restore what seems to have been</li>
+<li>e original reading of ms, which was corrected to -prakāśakāle jñāna-</li>
+<li>y changing -ne- to -le- and deleting -ka- by means of a horizontal</li>
+<li>roke).</li>
+</ul>
+<ul>
+<li> smr̥tyādau, my emendation (ms smr̥tyātmā); cf. ĪPVV I: 285, l. 6.</li>
+</ul>
+<ul>
+<li> The ms has nirbharasya, corrected to nirbhara-. The correct reading</li>
+<li> the original nirbharasya (cf. the paraphrase ĪPVV I: 285, ll. 21-25:</li>
+<li>tābhir yuktibhir ekasya [. . .] ityādivakṣyamāṇābhiḥ</li>
+<li>mastabhāvapūrṇasya jñānaṁ nāma śaktiḥ).</li>
+</ul>
+<ul>
+<li> phalabhedāropitabhedo, my emendation (ms phalabhedāropitadbhedo). The</li>
+<li>ssage is also quoted, with a slightly different, equally possible</li>
+<li>ading in Kṣemarāja’s commentary on the Vijñāna-Bhairava-Tantra (VBh)</li>
+<li>. 14, ll. 3-5): uktaṁ ca pratyabhijñāyāṁ “phalabhedād āropitabhedaḥ</li>
+<li>dārthātmā śaktiḥ”.</li>
+</ul>
+<ul>
+<li> The ms has pratiphalati, apparently corrected to phalati; the latter</li>
+<li>ading, which I have accepted, is also confirmed by ĪPVV I: 289, ll.</li>
+<li>7: “phalati” phalaparyantā saṁpadyate, na punaḥ pratihanyate yasya.</li>
+</ul>
+<ul>
+<li> The following definitions of smr̥ti and apohana are incorporated in a</li>
+<li>rginal note found in one of the mss of Abhinavagupta’s ĪPV used for</li>
+<li>e Kashmir Series edition (Delhi National Archives, Sanskrit ms No. 5,</li>
+<li> 131, right margin): deśakālaviśeṣā- vacchedaśūnyatvena</li>
+<li>citrecchāprabodhitāvabhāsabhedavāsanā-</li>
+<li>tropapāditavikalparūpavijñānāpohanaśaktiḥ । pūrvā-vabhāsitavastunaḥ</li>
+<li>rvāvabhāsitatvena vartamānakāle prakhyā-panaśaktiḥ smr̥tiśaktir ity</li>
+<li>ayor bhedaḥ. Note 71 of the ĪPV edition (vol. I, p. 117) is based on</li>
+<li>is marginal annotation.</li>
+</ul>
+<ul>
+<li> The text as quoted in the ĪPV manuscript (see above n 38) has</li>
+<li>rabodhitā-.</li>
+</ul>
+<ul>
+<li> avabhāte, my emendation (ms avabhāti). The latter reading would not</li>
+<li> itself be impossible; Abhinavagupta’s paraphrase and comments,</li>
+<li>wever, consistently have avabhāte).</li>
+</ul>
+<ul>
+<li> If we rely upon ĪPVV I: 295, l. 25 (atrāha “māyīyānām” iti), we</li>
+<li>ould add māyīyānām (omitted in the ms) after eteṣām. However, this</li>
+<li>uld involve a slight redundancy, which is not usual in Utpaladeva’s</li>
+<li>yle. I prefer to surmise that eteṣām was omitted in the edited text of</li>
+<li>VV, leaving merely māyīyānām which glossed it.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, here the meaning of the optative conforms</li>
+<li> Pāṇini’s Aṣṭādhyāyī (P) III.3.156: hetuhetumator liṅ, “Affix LIṄ</li>
+<li>tionally occurs after a verbal root when hetu ‘cause’ and hetumat</li>
+<li>ffect’ are denotated” (tr. Sharma 1995: 574). The fact that cognitions</li>
+<li>are the same essential nature is precisely what renders vyavahāra</li>
+<li>ssible.</li>
+</ul>
+<ul>
+<li> Cf. ĪPVV I: 273, l. 12: “ātmā” iti svabhāvaḥ.</li>
+</ul>
+<ul>
+<li> This means that they rest on the Lord, and are neither independent of</li>
+<li>m nor exceeding His own form (ĪPVV I: 273, ll. 14-15).</li>
+</ul>
+<ul>
+<li> See below n 91.</li>
+</ul>
+<ul>
+<li> See, e.g. ĪPK 1.5.3.</li>
+</ul>
+<ul>
+<li> That is, a cognition in which the colour white does not appear.</li>
+</ul>
+<ul>
+<li> For Abhinavagupta (ĪPVV I: 274, l. 25) this is a case of</li>
+<li>ṇḍāpūpīyanyāya, “the maxim of the stick and cakes”. A stick and cakes</li>
+<li>e usually tied together so that if something happens to the stick</li>
+<li>.g. being eaten by rats) the same happens to the cakes.</li>
+</ul>
+<ul>
+<li> Despite any “superficial” differentiation deriving from their</li>
+<li>ntents, cognitions too must have (at least) the same status of</li>
+<li>timate non-differentiation from consciousness as their objects (ĪPVV</li>
+<li> 275, ll. 5-7: “tathāpi” iti tenāpy ahamaṁśāvyatirekeṇa vartamānānām</li>
+<li>y arthaḥ).</li>
+</ul>
+<ul>
+<li> The preverb ava- is given a derogatory meaning (avajñayā) by</li>
+<li>hinavagupta: the objects are only able to shed an imperfect, i.e. not</li>
+<li>lly developed (aprarohayogena), appearance of differentiation onto</li>
+<li>eir cognition (cf. n 12 to the text).</li>
+</ul>
+<ul>
+<li> eva means here “restriction”. As the Vivr̥ti sets out to show, this</li>
+<li>sting of the various cognitions on one unitary consciousness principle</li>
+<li> the necessary condition for the worldly transactions to take place</li>
+<li>ccessfully (ĪPVV I: 275, ll. 14-17).</li>
+</ul>
+<ul>
+<li> In this context, eka (qualifying cit, jñāna, etc.) always oscillates</li>
+<li>tween “one, single” and “unitary”, usually expressing both meanings at</li>
+<li>e same time.</li>
+</ul>
+<ul>
+<li> The Buddhist position Utpaladeva is referring to is clearly</li>
+<li>rmulated in Dharmottara’s Nyāyabindu-Ṭīkā (NBṬ): 101, ll. 13-14:</li>
+</ul>
+<ul>
+<li>daikajñānasaṁsargivastvantaropalambhaḥ । ekendriya-jñānagrāhyaṁ</li>
+<li>canādipraṇidhānābhimukhaṁ vastudvayam anyonyāpekṣam ekajñānasaṁsargi</li>
+<li>thyate ।।</li>
+</ul>
+<ul>
+<li> Utpaladeva’s criticism is addressed to the Buddhists, who, just like</li>
+<li>e Śaivas, uphold the self-awareness of cognitions but, unlike the</li>
+<li>ivas, reject a common ground for them, represented by the unitary</li>
+<li>nscious subject. Interestingly, in order to present an exemplary</li>
+<li>atement on the self-awareness of cognition, Abhinavagupta resorts to</li>
+<li>artr̥hari’s Vākyapadīya, by citing a well-known verse from the</li>
+<li>tisamuddeśa (VP III.1.104):</li>
+</ul>
+<ul>
+<li>thā jyotiḥ prakāśena nānyenābhiprakāśyate ।</li>
+</ul>
+<ul>
+<li>ānarūpaṁ tathā jñāne nānyatrābhiprakāśyate ।।</li>
+</ul>
+<ul>
+<li>ncidentally, it is to be noted that pādas c and d differ considerably</li>
+<li>om the text in Rau’s and Iyer’s editions, which both read: jñānākāras</li>
+<li>thānyena na jñānenopagr̥hyate.) The weakness of the Buddhist position</li>
+<li> the matter appears quite clearly in their treatment of the crucial</li>
+<li>oblem of anupalabdhi (non-perception) and abhāva (non-being, absence),</li>
+<li>ich therefore becomes the object of a sustained analysis in the</li>
+<li>bsequent portion of the Vivr̥ti (ĪPVV I: 276, l. 24 to 277, l. 1:</li>
+<li>yavyavacchedair grahaṇavyavahāro ’pi svaparaviṣayo ya ucyate, so ’pi</li>
+<li> nirvahed ityāśayena saugatīyam abhāvasiddhiprakāram eva vicārayati).</li>
+</ul>
+<ul>
+<li> Cf. Hetubindu (HB), p. 22*, ll. 2-4 (Steinkellner 1967: Teil I, p.</li>
+<li>): yatra yasminn upalabhyamāne niyamena yasyopalabdhir bhavati</li>
+<li>gyatāyā aviśeṣāt, sa tatsaṁsr̥ṣṭaḥ, ekajñānasaṁsargāt. See also the</li>
+<li>ntences immediately following the NBṬ passage quoted above (n 50):</li>
+<li>yor hi sator naikaniyatā bhavati pratipattiḥ । yogyatāyā dvayor apy</li>
+<li>iśiṣṭatvāt (NBṬ, pp. 101, l. 14 to 102, l. 1).</li>
+</ul>
+<ul>
+<li> As to the meaning of dvitīya (lit. “second”), see below n 58.</li>
+</ul>
+<ul>
+<li> Cf. ĪPVV I: 277, ll. 18-19: saghaṭapradeśajñānaṁ tad bhavet, na tv</li>
+<li>adviparītāghaṭapradeśajñānam.</li>
+</ul>
+<ul>
+<li> ĪPVV I: 277, l. 19: “dvitīyaṁ tv” iti vyatiriktam. In other words,</li>
+<li>e perception of an empty surface cannot evoke the possible perception</li>
+<li> a surface with a jar, to be subsequently negated. This is apparently</li>
+<li>at Abhinavagupta means to say with the laconic remark (ibid., lines</li>
+<li>. 19-21): na hy aghaṭapradeśajñānena jñānāntarasya bhāvo jñāyate, yena</li>
+<li>dabhāvo ’pi jñāyeta.</li>
+</ul>
+<ul>
+<li> Ibid.: 277, ll. 24-25: iti ca vaktuṁ na yujyata iti saṁbandhaḥ.</li>
+</ul>
+<ul>
+<li> According to the Buddhists, we do not need a separate cognition to</li>
+<li>count for the cognition of the absence of a non-jar when a jar is</li>
+<li>gnized: it is the self-awareness of the cognition “jar” which</li>
+<li>plicitly also cognizes the negation of its contrary. The jar itself</li>
+<li>s as its own form the not being a non-jar.</li>
+</ul>
+<ul>
+<li> That is, of the cognition of the place without the jar, i.e. an empty</li>
+<li>ace.</li>
+</ul>
+<ul>
+<li> In other words, the negation of the cognition of an empty space in</li>
+<li>e Buddhist argument is not to be taken in terms of prasajyapratiṣedha</li>
+<li>t of paryudāsa: it does not confine itself to negating a thing but</li>
+<li>firms the presence of another (see n 18 to the text).</li>
+</ul>
+<ul>
+<li> That is, of the space taken in itself, independently of the jar’s</li>
+<li>ing or not being there; cf. Abhinavagupta’s paraphrase (ĪPVV I: 278,</li>
+<li>. 13-14): kevalapradeśapratyayasyobhayathāpy upapatteḥ.</li>
+</ul>
+<ul>
+<li> Abhinavagupta develops the Buddhist’s arguments outlined by</li>
+<li>paladeva and casts them into full-fledged inferences based on various</li>
+<li>rms of anupalabdhi (cf. ĪPVV I: 278, ll. 14ff.).</li>
+</ul>
+<ul>
+<li> Cf. ĪPVV I: 278 l. 22 to 279 l. 1: kiṁ ca kevalapradeśo ghaṭo</li>
+<li>nantarūpaparamāṇumayaḥ saṁnihitānantāvayavo vā । tatra yāvanti</li>
+<li>avyāṇi, tāvanti cet pr̥thag jñānāni; tarhi teṣāṁ pr̥thak pr̥thak</li>
+<li>aprakāśatvenaikasamūharūpaprakāśābhāvāt pradeśajñānam eva na bhavet,</li>
+<li>āti ca tat pradeśajñānam iti.</li>
+</ul>
+<ul>
+<li> That is, when one is perceiving an empty space.</li>
+</ul>
+<ul>
+<li> From this point onwards it is no longer feasible to present the</li>
+<li>rger structure of the argumentation by demarcating the Śaiva and the</li>
+<li>ddhist positions, because the latter comes to be too closely embedded</li>
+<li> the former.</li>
+</ul>
+<ul>
+<li> The Buddhist explanation is seen as not conforming to common sense,</li>
+<li>ich explains the matter under discussion in a much simpler way (ĪPVV</li>
+<li> 280, l. 8: “evam” iti svakalpanayā lokapratītyananugr̥hītayā).</li>
+<li>reover, the Buddhist argument would lead to a regressus ad infinitum</li>
+<li>bid.: iyān ity anavasthāpādako nyāyaḥ).</li>
+</ul>
+<ul>
+<li>armakīrti himself was well aware of the risk involved in not</li>
+<li>counting for anupalambha directly, i.e. by explaining it within the</li>
+<li>ner dynamics of the self-awareness of a perceptive act: the absence of</li>
+<li> object would be arrived at by means of its non-perception, but the</li>
+<li>sence of its perception would need another anupalambha to be</li>
+<li>tablished, which would lead to a regressus ad infinitum.</li>
+<li>amāṇa-Vārttika [PV] IV.274-75:</li>
+</ul>
+<ul>
+<li>smād anupalambho ’yaṁ svayaṁ pratyakṣato* gataḥ ।</li>
+</ul>
+<ul>
+<li>amātravr̥tter gamakas tadabhāvavyavasthiteḥ ।।</li>
+</ul>
+<ul>
+<li>yathārthasya nāstitvaṁ gamyate ’nupalambhataḥ ।</li>
+</ul>
+<ul>
+<li>alambhasya nāstitvam anyenety anavasthitiḥ ।।).</li>
+</ul>
+<ul>
+<li>anorathanandin reads svasaṁvedanāt.</li>
+</ul>
+<ul>
+<li>rses 270-75 are quoted by Abhinavagupta in ĪPVV I: 279 l. 24 to 280 l.</li>
+<li> The same kind of objection is put by Dharmakīrti into the mouth of an</li>
+<li>ponent in his Svavr̥tti on Pramāṇa-Vārttika I.3 (PVSV: 4, ll. 15-17:</li>
+<li>rānupalabdher liṅgād asattāyām upalabdher abhāvo ’py anyayānupalabdhyā</li>
+<li>dhya ity anavasthānād apratipattiḥ syāt). The Buddhist explanation</li>
+<li>self would become acceptable (instead of coming to a dead end) if it</li>
+<li>re placed in a Śaiva perspective (ĪPVV I: 280, l. 13: yad bhavadbhir</li>
+<li>tam, tad upapadyate . . .). For the Śaivas, in fact, a single</li>
+<li>troverted self-consciousness is the common ground which unifies all</li>
+<li>gnitions (ibid. l. 10: asmaddr̥śā jñānānāṁ svasaṁvedanam antarmukham</li>
+<li>am eveti).</li>
+</ul>
+<ul>
+<li> Cf. ĪPVV I: 280, ll. 24-25: “etad api” ity aprātītikaṁ niṣphalaṁ ca</li>
+<li>d apīty apiśabdārthaḥ.</li>
+</ul>
+<ul>
+<li> If two things (e.g. a jar and a cloth) are the object of the same</li>
+<li>nse, they are cognized by the same cognitive act. But this is not the</li>
+<li>se with a visual and a tangible form. In the negative case it ensues</li>
+<li>at in the dark the absence of a tangible form cannot be understood as</li>
+<li>e absence of a visual form, since there is no single cognition in</li>
+<li>ich both a visual and a tangible form are manifested. Cf. ĪPVV I: 281,</li>
+<li>. 1-4: abhinnendriyajanyānāṁ hi ghaṭapaṭādīnām iva saṁnihitānām eṣa</li>
+<li>yamaḥ — ekajñānagrāhyateti । na ca rūpasparśau rūparasau vā</li>
+<li>mānendriyagrāhyau, yena tadviṣayam ekam eva jñānaṁ rūpasparśābhāsaṁ</li>
+<li>ṁbhāvyeta rūparasābhāsaṁ vā.</li>
+</ul>
+<ul>
+<li> If I understand correctly, this remark is meant to exclude the</li>
+<li>kalpa which immediately follows direct perception and transforms it</li>
+<li>to a determinate cognition.</li>
+</ul>
+<ul>
+<li> This inference would have as its hetu “the non-perception of the</li>
+<li>fect” (kāryānupalabdhi), whose validity is viewed by Abhinavagupta as</li>
+<li>ghly questionable already in itself, i.e. prior to his examination of</li>
+<li>e relevant arguments.</li>
+</ul>
+<ul>
+<li> Namely, through an illuminating power of its own (cf. ĪPVV I: 282, l.</li>
+<li> svātantryeṇa svena prakāśabalena). What memory can do is only to</li>
+<li>call the illuminating power belonging to the original perception, or,</li>
+<li> other words, it conforms to it or “imitates” it (ibid.: ll. 15-16:</li>
+<li>r̥tir hi pūrvam anubhavam anukaroti); however, this perception being</li>
+<li>mitated”, Abhinavagupta goes on, is to be related to the object of</li>
+<li>mory (ibid., l. 16: paraṁ smartavyasaṁbandhinam).</li>
+</ul>
+<ul>
+<li> That is, a cognition which had been hypothesized and then negated in</li>
+<li>e past.</li>
+</ul>
+<ul>
+<li> This crucial passage has been carefully examined and explained by</li>
+<li>hinavagupta (ĪPVV I: 282, ll. 10-15). Memory, while cognizing the</li>
+<li>evious cognition of a tangible form, contextually realizes that in the</li>
+<li>nge of its own cognitive act the cognition of a certain visual form,</li>
+<li>posed to that of the tangible form, would not be admissible. In this</li>
+<li>y, memory would be allowed to establish now the previous absence of</li>
+<li>e cognition of a visual form (and, through it, also the previous</li>
+<li>sence of that visual form) on the basis of the fact that if the</li>
+<li>gnition of a visual form had taken place it would have entered the</li>
+<li>nge of the memory cognition along with the cognition of the tangible</li>
+<li>rm. This argument, however, is based on a presupposition that is</li>
+<li>together unacceptable to the Śaivas for whom a cognition cannot</li>
+<li>ssibly become the object of another cognition. In the case at issue,</li>
+<li>e former cognition cannot become the “object” (viṣaya) of memory</li>
+<li>bid.: ll. 7-8: na tu viṣayatvenābhāsayati jñānānāṁ parasaṁvedyatvasya</li>
+<li>starato nirākr̥tatvāt).</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, this is a general designation also</li>
+<li>cluding memory (ĪPVV I: 282, ll. 24-25: “vikalpajñānam” iti</li>
+<li>mānyoktiḥ smr̥tim api saṁgr̥hṇīte). Abhinavagupta (ibid.: 283, ll. 1-4)</li>
+<li>so records a different interpretation by “others” who take vikalpa as</li>
+<li>particular form of memory, the only difference being that memory</li>
+<li>oper refers to a perception which occurred in the past and is now</li>
+<li>tinct (apart from the impressions left by it).</li>
+</ul>
+<ul>
+<li> That is, memory and discursive cognition respectively.</li>
+</ul>
+<ul>
+<li> Cf. the construction of the sentence by Abhinavagupta (ĪPVV I: 283,</li>
+<li>. 15-16): rūpajñānaviviktasvābhāsopārūḍhasparśajñānaparāmarśi-</li>
+<li>kalpajñānam iti sambandhaḥ.</li>
+</ul>
+<ul>
+<li> Utpaladeva is addressing again the Buddhist opponent: no single</li>
+<li>gnition, particularly not even the perceptual cognition, can establish</li>
+<li>e absence of something by itself alone. As a consequence, either the</li>
+<li>rception has to enter by itself into a net of relations to other</li>
+<li>gnitions (which goes against the Buddhist presuppositions) or the</li>
+<li>ddhist has to admit that absence can only be established by means of</li>
+<li>ference (which the Buddhist intended to reserve for the establishment</li>
+<li> the abhāvavyavahāra alone). But also the establishment of the</li>
+<li>hāvavyavahāra by means of inference would entail a regressus ad</li>
+<li>finitum (cf. ĪPVV I: 284, l. 25 to 285, l. 1: pradeśakaivalyavyavahāro</li>
+<li>y ānumānikatvād anavasthopahata iti).</li>
+</ul>
+<ul>
+<li> The “causing things to appear [as ‘this’]” concerns the limited</li>
+<li>bject (ĪPVV I: 286, l. 3: idam ity avabhāsamānā [read: avabhāsanā]</li>
+<li>śupramātr̥vartinī). The samarthācaraṇa component that Abhinavagupta</li>
+<li>ngles out in the causative form (“to make somebody/something able to .</li>
+<li>.”) is referred to the freedom of the Lord. The manifestation of the</li>
+<li>ject as external to consciousness (“this”) does not entail a real</li>
+<li>paration from the absolute light of consciousness (ibid., ll. 10-11:</li>
+<li> mahāprakāśāt pr̥thakkaroti), since it presupposes the contextual</li>
+<li>reation” of a māyic subject, from whose limited light alone the object</li>
+<li>pears as separate.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta (cf. ĪPVV I: 287, ll. 3-9), a single thing</li>
+<li> being, capable of producing various effects, does not lend itself to</li>
+<li> indicated, or taught successfully, through a single word or concept.</li>
+<li>actical reality and linguistic communication (vyavahāra) require the</li>
+<li>itary thing to be expressed in manifold ways on the basis of its</li>
+<li>rious efficiencies: one and the same fire can be indicated as</li>
+<li>urner”, “cooker” or “illuminator”. When the manifoldness of aspects is</li>
+<li>rne in mind, we speak of “power(s)”; when unity is borne in mind, we</li>
+<li>eak of “possessor of powers”. However, none of these two approaches,</li>
+<li>hinavagupta continues, can be claimed to be ultimately true, because</li>
+<li>th of them are a creation of the Supreme Lord (ibid.: ll. 8-9:</li>
+<li>rameśvareṇaiva tathā sr̥ṣṭatvāt). In their conception of śakti</li>
+<li>paladeva and Abhinavagupta are reminiscent of what Bhartr̥hari says</li>
+<li>out the many śaktis that any substance possesses, being the basis of</li>
+<li>e grammatical notion of sādhana; see particularly VP III.7.2:</li>
+</ul>
+<ul>
+<li>ktimātrasamūhasya viśvasyānekadharmaṇaḥ ।</li>
+</ul>
+<ul>
+<li>rvadā sarvathā bhāvāt kvacit kiñcid vivakṣyate ।।</li>
+</ul>
+<ul>
+<li>. Helarāja’s commentary thereon (VP: 232, ll. 4-5): ghaṭādayo bhāvā</li>
+<li>śvaśabdavācyāḥ । te ca tattadudakāharaṇādikāryasādhikānāṁ śaktīnāṁ</li>
+<li>mūharūpāḥ); see also kārikā 6.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, Utpaladeva here refers to ĪPK I.6.11.</li>
+</ul>
+<ul>
+<li> What puzzles a hypothetical opponent in the “exclusion” process</li>
+<li>pohana) outlined here is the fact that the conceptual elaboration</li>
+<li>ises only from the impression left by the former perception of the</li>
+<li>ject, and yet does not possess the same character of spatio-temporal</li>
+<li>finiteness that belonged to its source (in fact, the conceptual</li>
+<li>aboration is in essence something general). The objection is made</li>
+<li>plicit in ĪPVV I: 291, ll. 8-9: nanu deśādyavacchinne ’nubhūte tatkr̥tā</li>
+<li>sanā kathaṁ tadanavacchinnaviṣayā [my correction; the edited text is</li>
+<li>parently corrupt: tatkr̥tayā vāsanā kathaṁ tadavacchinnaviṣayayā]</li>
+<li>abudhyate. According to Utpaladeva, this inexplicable fact is due to</li>
+<li>e unfathomable (ibid.: vicitrāparyanuyojyā) will of the Lord.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta (ĪPVV I: 291, ll. 13ff.), the peculiarity</li>
+<li> apohana-śakti with respect to the mere jñāna-śakti lies precisely in</li>
+<li>is figuring out of possible alternatives and then excluding them. In</li>
+<li>armakīrti’s formulation of the apoha theory, the alternatives to be</li>
+<li>jected are in fact various erroneous superimpositions (adhyāropa).</li>
+<li>wever, Abhinavagupta replies (ibid.: 292, ll. 15-17), the object of</li>
+<li>e superimposition is already a mental construct, which in turn had to</li>
+<li> established by way of the exclusion of other superimpositions, and so</li>
+<li>; this entails that the simple ascertainment of a patch of blue colour</li>
+<li>uld not be arrived at even in thousands of cosmic eras</li>
+<li>ikalpasamāropaparamparānavasthānād yugakoṭibhir api na nīlaniścayaḥ).</li>
+<li>xt, Abhinavagupta takes into account the position of Śaṅkaranandana</li>
+<li>bid., ll. 18ff.), who in the Apohasiddhi substitutes anyathā-prasaṅga</li>
+<li>he mere possibility that a thing be different from itself? Cf. ll.</li>
+<li>-25: tatrāpi viśiṣṭe ’rthe pratibhāte ko ’nyathāprasaṅgasyāvasara iti</li>
+<li>ktavyam) for Dharmakīrti’s adhyāropa as the cause of doubt (see above</li>
+<li>3). Both samāropa and anyathā-prasaṅga, however, are seen by</li>
+<li>hinavagupta as inevitably leading to a regressus ad infinitum.</li>
+</ul>
+<ul>
+<li> The possibility that an object may be different from what it appears</li>
+<li> be usually depends on its being mixed with something else (e.g. milk</li>
+<li>th water) or on its having the same features as something else.</li>
+<li>paladeva’s following explanation of the apoha process is intended to</li>
+<li>ver all possible cases, including the one most difficult to account</li>
+<li>r: the case of a distinctly characterized object which is not mixed</li>
+<li>th anything else.</li>
+</ul>
+<ul>
+<li> According to Abhinavagupta, this peculiar variation on the theme of</li>
+<li>oha, which, though not being at all incompatible with the Buddhists’</li>
+<li>sition, has, to the best of my knowledge, never been explicitly put</li>
+<li>rth by them, is to be traced back to some ācāryapāda, presumably a</li>
+<li>iva teacher (Utpaladeva himself?); cf. ĪPVV I: 295, ll. 18-20: tad</li>
+<li>tam ācāryapādair eva yāvatyo ’rthakriyās tāvatsaṁkhyo ’tatkāriṇāṁ</li>
+<li>ṇaḥ । tāvantas tatsamāropās tanniṣedhāś ca tatsamāḥ, etc.</li>
+</ul>
+<ul>
+<li> The unexpressed question that Utpaladeva is answering is highlighted</li>
+<li> Abhinavagupta (ĪPVV I: 294, ll. 6-7): How can a particular object be</li>
+<li>strictly individualized entity and at the same time the occasion for a</li>
+<li>mber of hypothetical alternatives?</li>
+</ul>
+<ul>
+<li> That is, the objects existing on the level of māyā. To sum up, they</li>
+<li>e primarily anyonyabhedamaya, and secondarily anyonyātma.</li>
+</ul>
+<ul>
+<li> In conclusion, the process of apoha can be successfully explained</li>
+<li>ly in a Śaiva context. Particularly, it presupposes that both the</li>
+<li>owing subject and the object are ultimately identified with īśvara and</li>
+<li>e viśvātmā — even at the level of māyā, although in a more virtual and</li>
+<li>ncealed form. In the Buddhist explanation the defect of anavasthā,</li>
+<li>c., is unescapable because vikalpana, samāropaṇa, etc. are separate</li>
+<li>d incapable of relating to each other by their own capacity alone</li>
+<li>PVV I: 296, l. 22: yena [referring to the Śaiva position]</li>
+<li>̥thagvikalpanasamāropaṇānavasthādoṣāprasaṅgaḥ). This potential</li>
+<li>penness” of the object (and the subject) is at the root of the</li>
+<li>bject’s “doubt” about it. Of this “openness”, i.e. of the</li>
+<li>śvātmā-nature of the object, the subject maintains some kind of</li>
+<li>bliminal, inner awareness, even on the level of māyā. To sum up:</li>
+<li>like the Buddhists who view the “doubt” (i.e. the first step in the</li>
+<li>oha process) as deriving from the object alone, the Śaivas have it</li>
+<li>ise from the “greatness” of the subject as well (ibid.: 296, ll.</li>
+<li>-19: māyāpade ’pi ca tatprakāśasaṁskārasyeśvarasyānativr̥tter āśaṅkā</li>
+<li>amātr̥māhātmyād evottiṣṭhati). The solution of the problem of objective</li>
+<li>d subjective disparateness involved in the Buddhist theory as proposed</li>
+<li> Dharmakīrti, who maintains that the objects, though being essentially</li>
+<li>fferentiated, can be ascertained by the subject as unified owing to</li>
+<li>eir production of a single effect, e.g. a single cognition (PVSV: 60,</li>
+<li>. 16-17: bhāvāḥ prakr̥tibhedino ’pi jñānādikam ekaṁ kāryaṁ kecit</li>
+<li>rvanti nānya iti), does not seem satisfactory to Abhinavagupta. In</li>
+<li>ct, after quoting PV I.119 he refers to his subsequent indication of</li>
+<li>s shortcomings (ĪPVV I: 297, l. 1: tatra sphuritam api vastu</li>
+<li>ḥsamartham ity agre [to be added: sphuṭaṁ] bhaviṣyati).</li>
+</ul>
+<ul>
+<li> It is precisely for this reason, Abhinavagupta says (ĪPVV I: 297, ll.</li>
+<li>8), that the power of exclusion has been given a separate status,</li>
+<li>ough exclusion is the very body of conceptual cognition and of the</li>
+<li>ecial case of conceptual cognition which is memory.</li>
+</ul>
+<ul>
+<li> Bhagavad-Gītā (BhG) XV.15b: “From me derive memory, knowledge and</li>
+<li>clusion.” This passage sounds somewhat cryptic. For Śaṅkara</li>
+<li>ītābhāṣya [BhGŚ]: 627, l. 4), apohana stands for “turning away from,</li>
+<li>parting from” (apāyanam apagamanam), i.e. the loss of knowledge and</li>
+<li>mory due to evil karma (the objects of apohana are jñāna and smr̥ti:</li>
+<li>dapohanam). According to Ānandagiri’s Vyākhyā thereon (p. 626, ll.</li>
+<li>-15), “knowledge” is the supernatural power to perceive what is beyond</li>
+<li>e normal reach of the senses; “memory” is the capacity to recollect</li>
+<li>at has been experienced in past lives. The commentary of Rājānaka</li>
+<li>makaṇṭha (possibly identical with Utpaladeva’s disciple) is the one</li>
+<li>at seems closer to the interpretation given by Utpaladeva. According</li>
+<li> Rāmakaṇṭha (Sarvatobhadra [BhGS]: 330, ll. 3ff.), memory, perceptual</li>
+<li>gnition and exclusion are the outcome of the outflowing of Power</li>
+<li>aktiprasara) in human beings. This Power, or more precisely this</li>
+<li>nsciousness-Power (saṁvedana-śakti) acts in two ways, in that it</li>
+<li>fines the being and the non-being of the various realities</li>
+<li>attatpadārthabhāvābhāvaparicchedakatva). While the “non-being” of</li>
+<li>alities is defined by means of apohana alone, their “being” is defined</li>
+<li> means of perceptual cognition (which makes something which was not</li>
+<li>ere before manifest) and by means of memory (which brings something</li>
+<li>at has already been perceived in the past again to the mind). In both</li>
+<li>ocesses apohana acts as prakāśanābhāva (absence of manifestation).</li>
+<li>ough these powers act in limited subjects, they ultimately flow from</li>
+<li>e one and absolutely real knowing subject (paramārthasaṁveditur</li>
+<li>asmāt). According to Abhinavagupta’s Bhagavad-Gītārtha-Saṁgraha (BhGA)</li>
+<li>. 231, ll. 10-16), jñāna is the manifestation of something new and</li>
+<li>rresponds to the “great” creation (mahāsr̥ṣṭi) of the universe;</li>
+<li>ohana, which represents the creation of the limited soul, is a</li>
+<li>nceptual thought, which acts by fragmenting all-inclusive reality;</li>
+<li>r̥ti has the function to make manifest again what, subsequent to the</li>
+<li>iginal cognition, has been reduced to the status of a latent</li>
+<li>pression.</li>
+</ul>
+<ul>
+<li>pendix II*</li>
+</ul>
+<ul>
+<li>udies on Utpaladeva’s Īśvarapratyabhijñā-Vivr̥ti</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/app1_torella_apoha.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+var toc=document.getElementById('tocbody');
+if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script></body></html>
