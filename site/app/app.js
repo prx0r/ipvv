@@ -125,18 +125,50 @@ async function library(){
 }
 
 let KAR = { audio: null, timer: null, cur: null };
-function stopKaraoke(){
-  if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
-  if(KAR.audio){ KAR.audio.pause(); }
-  document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
-  const b = document.getElementById('kstop');
-  if(b) b.style.display='none';
+// shared ereader: IAST glyphs + cleanSA
+/* IAST -> Devanagari, deterministic longest-match. No dependencies. */
+const IAST_DEVA = (()=>{
+  const VOW={a:'\u0905','\u0101':'\u0906',i:'\u0907','\u012b':'\u0908',u:'\u0909','\u016b':'\u090a','\u1e5b':'\u090b','\u1e5d':'\u090c','\u1e37':'\u090d',e:'\u090f',o:'\u0913',ai:'\u0910',au:'\u0914'};
+  const VSN={'\u0101':'\u093e',i:'\u093f','\u012b':'\u0940',u:'\u0941','\u016b':'\u0942','\u1e5b':'\u0943','\u1e5d':'\u0944','\u1e37':'\u0962',e:'\u0947',o:'\u094b',ai:'\u0948',au:'\u094c'};
+  const CON={k:'\u0915',kh:'\u0916',g:'\u0917',gh:'\u0918','\u014b':'\u0919',c:'\u091a',ch:'\u091b',j:'\u091c',jh:'\u091d','\u00f1':'\u091e','\u1e6d':'\u091f','\u1e6dh':'\u0920','\u1e0d':'\u0921','\u1e0dh':'\u0922','\u1e47':'\u0923',t:'\u0924',th:'\u0925',d:'\u0926',dh:'\u0927',n:'\u0928',p:'\u092a',ph:'\u092b',b:'\u092c',bh:'\u092d',m:'\u092e',y:'\u092f',r:'\u0930',l:'\u0932',v:'\u0935','\u015b':'\u0936','\u1e63':'\u0937',s:'\u0938',h:'\u0939'};
+  const OTH={'\u1e43':'\u0902','\u1e41':'\u0902','\u1e25':'\u0903',"'":'\u093d','\u2019':'\u093d','.':'\u0964','..':'\u0965','|':'\u0964','||':'\u0965',' ':' ','\n':'\n','\u2014':'\u0964'};
+  const HAL='\u094d';
+  const ALL=Object.keys(CON).concat(Object.keys(VOW)).sort((a,b)=>b.length-a.length);
+  function convert(s){
+    const tk=[]; let i=0;
+    while(i<s.length){
+      let hit=null;
+      for(const k of ALL){ if(s.startsWith(k,i)){hit=k;break;} }
+      if(!hit){ const c=s[i]; tk.push({t:'o',v:(OTH[c]!==undefined?OTH[c]:c)}); i++; continue; }
+      if(CON[hit]) tk.push({t:'c',v:CON[hit]});
+      else tk.push({t:'v',v:VOW[hit],k:hit});
+      i+=hit.length;
+    }
+    let out='';
+    for(let j=0;j<tk.length;j++){
+      const t=tk[j];
+      if(t.t==='o'){out+=t.v;continue;}
+      if(t.t==='v'){out+=t.v;continue;}
+      const nx=tk[j+1];
+      if(nx&&nx.t==='v'){ if(nx.k==='a'){out+=t.v;} else {out+=t.v+(VSN[nx.k]||'');} j++; }
+      else if(nx&&nx.t==='c'){ out+=t.v+HAL; }
+      else { out+=t.v+HAL; }
+    }
+    return out;
+  }
+  return {convert};
+})();
+function cleanSA(s){
+  return (s||'').replace(/^# Text\s*/,'').replace(/\[[A-Za-z0-9_]+\]/g,'').replace(/\s+/g,' ').trim();
 }
+function cleanEN(s){
+  return (s||'').replace(/^#+\s*[^\n]*\n/,'').replace(/\s*\/\/\s*\S+\s*$/,'').trim();
+}
+
 async function work(path){
   const wid = path.split('/')[2];
   let items = await get(`/data/translations/${wid}.json`).catch(()=>null);
   if(!items || !items.length){
-    // fallback: Sanskrit root via works-index (fail-closed: Sanskrit only, no English)
     try{
       if(!LIB.index) LIB.index = await get('/data/works-index.json');
       const rec = Object.values(LIB.index||{}).find(r=>r.translation===wid || r.work===wid);
@@ -144,14 +176,15 @@ async function work(path){
         const raw = await get(`/data/sanskrit/${rec.sanskrit}`).catch(()=>null);
         if(raw){
           const paras = String(raw).split(/\n{2,}|\n(?=[\u0900-\u097F])/).filter(p=>p.trim()).slice(0,60);
-          $('#view').innerHTML = `<h1>${esc(rec.title||wid)}</h1><div class="sub">Sanskrit root · translation in progress — English withheld until the gate passes.</div>` +
-            paras.map(p=>`<div class="dev">${esc(p.trim().slice(0,600))}</div>`).join('') +
-            `<div id="answer" style="display:none"></div>`;
+          $('#view').innerHTML = paras.map(p=>{
+            const t = cleanSA(p.trim().slice(0,600));
+            return `<div class="verse"><div class="dev">${esc(IAST_DEVA.convert(t))}</div><div class="ro">${esc(t)}</div></div>`;
+          }).join('') + `<div id="answer" style="display:none"></div>`;
           return;
         }
       }
     }catch(e){}
-    $('#view').innerHTML = `<h1>${esc(wid)}</h1><div class="sub">Not yet on the site — Sanskrit root not vendored, translation not started.</div><div id="answer" style="display:none"></div>`;
+    $('#view').innerHTML = `<div class="verse"><div class="dev">· · ·</div></div><div id="answer" style="display:none"></div>`;
     return;
   }
   const AUDIODIR = {anuttarastika:'anuttarashtika_trad'};
@@ -159,51 +192,32 @@ async function work(path){
   let kar = null;
   try{ kar = await get(`/data/karaoke-${wid}.json`); }catch(e){}
   const hasKar = Array.isArray(kar) && kar.length > 0;
-  const pass = items.filter(i=>i.gate==='PASS'), held = items.length - pass.length;
-  let mode = 'both';
-  try{ mode = localStorage.getItem('readmode') || 'both'; }catch(e){}
-  const modes = [['sa','SA'],['en','EN'],['both','SA+EN']];
-  let html = `<h1>${esc(wid)}</h1><div class="sub">${pass.length} PASS · ${held} withheld${hasKar ? ' · karaoke ready' : ''}</div>`;
-  html += `<div id="modebar" style="margin-bottom:1rem"><button class="playbtn" id="mRecite">▶ recite</button> <button class="playbtn" id="readAloud" title="read aloud">🔊 read aloud</button> ` +
-    modes.map(([m,l])=>`<button class="playbtn" data-mode="${m}" ${m===mode?'style="border-color:var(--gold)"':''}>${l}</button>`).join(' ') +
-    ` <button class="playbtn" id="kstop" style="display:none">■ stop</button></div><div id="kv"></div>`;
-  html += items.map((it,ix)=>{
+  const verses = items.map((it,ix)=>{
+    const raw = cleanSA(it.sanskrit||'');
     const k = hasKar ? kar[ix % kar.length] : null;
-    let saHtml = `<div class="dev rl-sa">${esc(it.sanskrit||'')}</div>`;
-    let roHtml = '';
+    let dev, ro;
     if(k && k.words){
       const padas=[[],[],[],[]];
       k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
-      saHtml = padas.filter(p=>p.length).map(p=>`<div class="dev rl-sa">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(w.w)}</span>`).join(' ')}</div>`).join('');
-      const rline = padas.filter(p=>p.length).map(p=>p.map(w=>esc(w.r||'')).join(' ')).join(' / ');
-      if(rline.trim()) roHtml = `<div class="iast rl-ro">${rline}</div>`;
+      const ps = padas.filter(p=>p.length);
+      dev = ps.map(p=>`<div class="dev">${p.map(w=>`<span class="kw" data-t0="${w.t_on}" data-t1="${w.t_off}" data-v="${ix}">${esc(IAST_DEVA.convert(w.w))}</span>`).join(' ')}</div>`).join('');
+      const rl = ps.map(p=>p.map(w=>esc(w.r||'')).join(' ')).join(' / ');
+      ro = rl.trim() ? `<div class="ro">${rl}</div>` : `<div class="ro">${esc(raw)}</div>`;
+    } else {
+      dev = `<div class="dev">${esc(IAST_DEVA.convert(raw))}</div>`;
+      ro = raw ? `<div class="ro">${esc(raw)}</div>` : '';
     }
-    return `<div class="vblock" data-v="${ix}"><div style="display:flex;align-items:baseline;gap:.5rem"><h2 style="margin:0">${esc(it.chunk||'')}</h2>${k?`<button class="playbtn" data-kplay="${ix}" data-au="/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3">▶</button>`:''}</div>${saHtml}${roHtml}` +
-    (it.gate==='PASS'
-      ? `<div class="rl-en"><p>${esc(it.l2||it.l1||'')}</p><div class="gate pass">PASS · English shown</div></div>`
-      : `<div class="rl-en gate blocked">Withheld — pending review. Sanskrit only, never translated by display.</div>`) + `</div>`;
-  }).join('');
-  html += `<div id="answer" style="display:none"></div>`;
-  $('#view').innerHTML = html;
-  const applyMode = (m)=>{
-    mode = m;
-    try{ localStorage.setItem('readmode', m); }catch(e){}
-    document.querySelectorAll('#modebar [data-mode]').forEach(b=>{
-      if(b.getAttribute('data-mode')===m) b.style.borderColor='var(--gold)'; else b.style.borderColor='';
-    });
-    const showSa = (m==='sa'||m==='both'), showEn = (m==='en'||m==='both'), showRo = (m!=='en');
-    document.querySelectorAll('.rl-sa').forEach(el=>el.style.display=showSa?'':'none');
-    document.querySelectorAll('.rl-ro').forEach(el=>el.style.display=showRo?'':'none');
-    document.querySelectorAll('.rl-en').forEach(el=>el.style.display=showEn?'':'none');
-  };
-  document.querySelectorAll('#modebar [data-mode]').forEach(b=>{
-    b.onclick = ()=>{ stopKaraoke(); KAR.cur=null; applyMode(b.getAttribute('data-mode')); };
+    const en = (it.gate==='PASS' && (it.l2||it.l1)) ? `<div class="en">${esc(cleanEN(it.l2||it.l1))}</div>` : '';
+    const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
+    return {dev, ro, en, au, ix};
   });
-  applyMode(mode);
-  if(!hasKar) return;
+  $('#view').innerHTML =
+    verses.map((v,ix)=>`<div class="verse" data-v="${ix}">${v.dev}${v.ro}${v.en}</div>`).join('') +
+    `<div id="rcbar"><button id="rcPlay" title="recite">▶</button><button id="rcRead" title="read aloud">🔊</button><button id="rcStop" style="display:none" title="stop">■</button></div>` +
+    `<div id="answer" style="display:none"></div>`;
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
-  st.textContent = '.kw{transition:background .15s;border-radius:.2em;padding:0 .1em}.kw.on{background:#fdf0d5}.iast{color:#76736e;font-size:14px;font-style:italic;margin-bottom:7px}';
+  st.textContent = '.verse{margin:1.8rem 0;max-width:44rem}.verse:first-child{margin-top:.5rem}.dev{font-size:1.5rem;line-height:1.9;margin-bottom:.25rem}.ro{font-size:.95rem;color:#76736e;font-style:italic;margin-bottom:.5rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em;cursor:pointer}.kw.on{background:#fdf0d5}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
   document.head.appendChild(st);
   function tick(){
     const t = audio.currentTime;
@@ -216,45 +230,70 @@ async function work(path){
     }
     if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
   }
-  function playVerse(ix){
+  function stopAll(){
     if(KAR.timer){ cancelAnimationFrame(KAR.timer); KAR.timer = null; }
-    audio.pause();
+    audio.pause(); audio.onended = null;
+    try{ speechSynthesis.cancel(); }catch(e){}
     document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
-    const btn = document.querySelector(`[data-kplay="${ix}"]`);
-    if(!btn) return;
-    audio.src = btn.getAttribute('data-au');
-    KAR.cur = ix;
-    const sb = document.getElementById('kstop'); if(sb) sb.style.display='';
-    audio.play().catch(()=>{});
-    KAR.timer = requestAnimationFrame(tick);
-    const blk = document.querySelector(`.vblock[data-v="${ix}"]`);
-    if(blk) blk.scrollIntoView({block:'center',behavior:'smooth'});
+    document.querySelectorAll('.vnow').forEach(v=>v.classList.remove('vnow'));
+    const sb = document.getElementById('rcStop'); if(sb) sb.style.display='none';
+    const pb = document.getElementById('rcPlay'); if(pb) pb.style.display='';
+    KAR.cur = null;
   }
-  document.querySelectorAll('[data-kplay]').forEach(b=>{ b.onclick = ()=>playVerse(+b.getAttribute('data-kplay')); });
-  const mRecite = document.getElementById('mRecite');
-  if(mRecite) mRecite.onclick = ()=>{
-    let ix = 0;
-    const total = document.querySelectorAll('[data-kplay]').length;
-    audio.onended = ()=>{ ix++; if(ix >= total){ const sb=document.getElementById('kstop'); if(sb) sb.style.display='none'; KAR.cur=null; } else playVerse(ix); };
-    playVerse(ix);
-  };
-  const kstop = document.getElementById('kstop');
-  if(kstop) kstop.onclick = ()=>{ audio.onended=null; stopKaraoke(); KAR.cur=null; };
-  const readAloud = document.getElementById('readAloud');
-  if(readAloud) readAloud.onclick = ()=>{
-    stopKaraoke(); KAR.cur=null;
+  function markVerse(ix){
+    document.querySelectorAll('.vnow').forEach(v=>v.classList.remove('vnow'));
+    const blk = document.querySelector(`.verse[data-v="${ix}"]`);
+    if(blk){ blk.classList.add('vnow'); blk.scrollIntoView({block:'center',behavior:'smooth'}); }
+  }
+  function playVerse(ix){
+    stopAll();
+    KAR.cur = ix;
+    markVerse(ix);
+    const au = verses[ix] && verses[ix].au;
+    const hasAudio = !!au;
+    if(hasAudio){
+      audio.src = au;
+      const sb = document.getElementById('rcStop'); if(sb) sb.style.display='';
+      const pb = document.getElementById('rcPlay'); if(pb) pb.style.display='none';
+      audio.play().catch(()=>{ speakVerse(ix, false); });
+      KAR.timer = requestAnimationFrame(tick);
+    } else {
+      speakVerse(ix, false);
+    }
+  }
+  function speakVerse(ix, advance){
     try{
       speechSynthesis.cancel();
-      const parts = [];
-      document.querySelectorAll('.vblock').forEach(v=>{
-        const sa = Array.prototype.map.call(v.querySelectorAll('.rl-sa'), e=>e.textContent).join(' ');
-        const en = Array.prototype.map.call(v.querySelectorAll('.rl-en'), e=>e.textContent).join(' ');
-        if(sa) parts.push(sa);
-        if(en && mode !== 'sa') parts.push(en.slice(0, 400));
-      });
-      const u = new SpeechSynthesisUtterance(parts.join(' ').slice(0, 4000));
-      u.rate = 0.95; speechSynthesis.speak(u);
+      const v = document.querySelector(`.verse[data-v="${ix}"]`);
+      if(!v) return;
+      markVerse(ix);
+      const u = new SpeechSynthesisUtterance(v.textContent.slice(0, 1200));
+      u.rate = 0.95;
+      if(advance){
+        u.onend = ()=>{ ix++; if(ix < verses.length) speakVerse(ix, true); else stopAll(); };
+      } else {
+        u.onend = ()=>{ stopAll(); };
+      }
+      speechSynthesis.speak(u);
     }catch(e){}
+  }
+  // tap a verse: hear it (chant if audio exists, spoken otherwise)
+  document.querySelectorAll('.verse').forEach((el,ix)=>{
+    el.style.cursor = 'pointer';
+    el.onclick = ()=>playVerse(ix);
+  });
+  const mRecite = document.getElementById('rcPlay');
+  if(mRecite) mRecite.onclick = ()=>{
+    let ix = 0;
+    audio.onended = ()=>{ ix++; if(ix >= verses.length){ stopAll(); } else playVerse(ix); };
+    playVerse(ix);
+  };
+  const kstop = document.getElementById('rcStop');
+  if(kstop) kstop.onclick = ()=>{ stopAll(); };
+  const readAloud = document.getElementById('rcRead');
+  if(readAloud) readAloud.onclick = ()=>{
+    stopAll();
+    speakVerse(0, true);
   };
 }
 
