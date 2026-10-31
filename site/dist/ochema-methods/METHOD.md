@@ -348,4 +348,4 @@ document.getElementById('chatsend').onclick=function(){
     .catch(e=>addMsg('assistant','Error: '+e.message));
 };
 })();
-</script></body></html>
+</script>{varjs}</body></html>

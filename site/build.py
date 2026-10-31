@@ -317,6 +317,23 @@ document.getElementById('chatsend').onclick=function(){
 };
 })();
 </script>"""
+VARJS = """<script>
+(function(){
+if(!window.API)return;
+window.loadVariants=function(btn){
+  var c=btn.parentElement;var work=c.getAttribute('data-work');var chunk=c.getAttribute('data-chunk');
+  var list=c.querySelector('.vlist');
+  if(list.dataset.loaded){list.style.display=list.style.display==='none'?'block':'none';return}
+  list.innerHTML='<i>Loading...</i>';
+  fetch(window.API+'/api/variants/'+work+'/'+chunk)
+    .then(r=>r.json()).then(d=>{
+      if(!d.variants||!d.variants.length){list.innerHTML='<i>No saved variants yet.</i>';list.dataset.loaded='1';return}
+      list.innerHTML=d.variants.map(v=>'<div class="panel" style="margin:.3rem 0"><b>'+v.style+'</b> <span style="color:#76736e;font-size:.7rem">'+v.created_at+'</span><div style="margin-top:.3rem;white-space:pre-wrap">'+v.text.slice(0,500)+'</div></div>').join('');
+      list.dataset.loaded='1';
+    }).catch(e=>{list.innerHTML='<i>Error: '+e.message+'</i>'});
+};
+})();
+</script>"""
 SHELLJS = """<script>
 (function(){
 var b=document.getElementById('burger');
@@ -351,7 +368,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
-""" + SHELLJS + """{recitejs}""" + CHATJS + """</body></html>"""
+""" + SHELLJS + """{recitejs}""" + CHATJS + """{varjs}""" + """</body></html>"""
 
 def tabs(panels):
     btns, divs = [], []
@@ -599,7 +616,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
-""" + SHELLJS + """{recitejs}""" + CHATJS + """</body></html>"""
+""" + SHELLJS + """{recitejs}""" + CHATJS + """{varjs}""" + """</body></html>"""
 
 STATUS_LABEL = {"SOURCE_ONLY": "Sanskrit held", "SOURCE_ONLY_DISPUTED": "Sanskrit held · disputed",
     "SOURCE_PLUS_TRANSLATION": "Sanskrit + English", "SOURCE_PLUS_SCHOLARSHIP": "Sanskrit + scholarship",
@@ -952,7 +969,7 @@ def build_translations():
         chant = f'<div class="recitetools"><a class="vplay all" href="/recite/{abase}.html">Studio chant + recitation →</a></div>' if (ROOT / f"data/audio-{abase}.json").exists() else ""
         (out / f"{wid}.html").write_text(TF(ATmpl,title=f"Translation: {wid}",
             h1=f"Translation: {wid}", kicker="Pipeline translation", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
-            sidenav=sidenav("abhinavagupta", wid), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS))
+            sidenav=sidenav("abhinavagupta", wid), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS, varjs=VARJS))
         links.append((wid, n_pass, len(items)))
     (out / "index.html").write_text(TF(ATmpl,title="Translations", h1="Pipeline translations",
         sub="English shows ONLY for gate-PASS passages; the rest stay Sanskrit + status",

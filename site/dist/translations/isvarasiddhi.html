@@ -355,4 +355,20 @@ document.getElementById('chatsend').onclick=function(){
     .catch(e=>addMsg('assistant','Error: '+e.message));
 };
 })();
+</script><script>
+(function(){
+if(!window.API)return;
+window.loadVariants=function(btn){
+  var c=btn.parentElement;var work=c.getAttribute('data-work');var chunk=c.getAttribute('data-chunk');
+  var list=c.querySelector('.vlist');
+  if(list.dataset.loaded){list.style.display=list.style.display==='none'?'block':'none';return}
+  list.innerHTML='<i>Loading...</i>';
+  fetch(window.API+'/api/variants/'+work+'/'+chunk)
+    .then(r=>r.json()).then(d=>{
+      if(!d.variants||!d.variants.length){list.innerHTML='<i>No saved variants yet.</i>';list.dataset.loaded='1';return}
+      list.innerHTML=d.variants.map(v=>'<div class="panel" style="margin:.3rem 0"><b>'+v.style+'</b> <span style="color:#76736e;font-size:.7rem">'+v.created_at+'</span><div style="margin-top:.3rem;white-space:pre-wrap">'+v.text.slice(0,500)+'</div></div>').join('');
+      list.dataset.loaded='1';
+    }).catch(e=>{list.innerHTML='<i>Error: '+e.message+'</i>'});
+};
+})();
 </script></body></html>
