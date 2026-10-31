@@ -314,7 +314,7 @@ TMPL = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -558,7 +558,7 @@ ATmpl = """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
 <a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
 <div class="shell"><aside class="side" id="sidenav">{sidenav}</aside>
@@ -972,6 +972,11 @@ def md_lite(src):
     flush_p(); flush_l()
     return "\n".join(out)
 
+ESSAY_GROUPS = [
+ ("Comparative — IPVV against the traditions", ["two-abhinavaguptas-ipvv-tantraloka","spanda-ipvv","krama-ipvv","advaita-ipvv","buddhist-ipvv","rasa-ipvv-abhinavabharati","sivasutra-vb-ipvv"]),
+ ("Core proofs — the recognition thesis", ["ultimate-proof-of-recognition","why-recognition-is-felt","nonconstructed-i","felt-to-ground","recognition-and-formal-proofs","recognition-and-nisargadatta","epistemology-of-action","exclusion-individuation","soteriology-of-recognition"]),
+ ("Extensions", ["abhinava-extensions","abhinava-vs-utpaladeva","c-razor-ipvv-authority","ontology-soteriology","other-intersubjectivity"]),
+]
 REVIEWED_ESSAYS = {"advaita-ipvv","buddhist-ipvv","epistemology-of-action","exclusion-individuation","felt-to-ground","ipvv-vs-tantraloka","krama-ipvv","nonconstructed-i","rasa-ipvv-abhinavabharati","recognition-and-formal-proofs","recognition-and-nisargadatta","sivasutra-vb-ipvv","soteriology-of-recognition","spanda-ipvv","two-abhinavaguptas-ipvv-tantraloka","ultimate-proof-of-recognition","why-recognition-is-felt"}
 
 def build_essays():
@@ -982,7 +987,7 @@ def build_essays():
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     for f in sorted(src.glob("*.md")):
         shutil.copy(f, DIST / "data" / ("essay-" + f.name))
-    cards = []
+    cards, cardmeta = [], []
     for f in sorted(src.glob("*.md")):
         raw = f.read_text(encoding="utf-8", errors="replace")
         lines = raw.splitlines()
@@ -996,11 +1001,72 @@ def build_essays():
             sidenav=sidenav("abhinavagupta", ""), body=f'<div class="sub">{words} words · owner\u2019s working essay, displayed as written · {badge} · <a href="/data/essay-{esc(f.name)}">source markdown</a></div>' + md_lite(raw)
             + srclink("site/data/essays/" + f.name, "essay source lives here.")))
         cards.append(f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])} {"[reviewed]" if slug in REVIEWED_ESSAYS else "[working]"}</a>')
+        cardmeta.append((slug, title, stand))
+    byslug = {}
+    for (slug, title, stand) in cardmeta:
+        byslug[slug] = f'<a href="/essays/{slug}.html"><b>{esc(title)}</b> — {esc(stand[:140])} {"[reviewed]" if slug in REVIEWED_ESSAYS else "[working]"}</a>'
+    grouped = "".join(f"<h3>{g}</h3>" + '<div class="idx">' + "".join(byslug[s] for s in slugs if s in byslug) + "</div>" for g, slugs in ESSAY_GROUPS)
     (out / "index.html").write_text(TF(ATmpl, title="Essays", h1="Essays",
         kicker="Working papers", sub="the owner\u2019s recognition essays — theses argued from the translations, displayed as written",
-        sidenav=sidenav("abhinavagupta", ""), body='<div class="idx">' + "".join(cards) + "</div>"
+        sidenav=sidenav("abhinavagupta", ""), body=grouped
         + srclink("site/data/essays/", "essay sources live here.")))
     return len(cards)
+
+def build_pushing_hub():
+    """One place for all pushing work: method specs + probe collections + essay link."""
+    import json as _json
+    out = DIST / "pushing"; out.mkdir(parents=True, exist_ok=True)
+    mdest = DIST / "data/pushing-method"; mdest.mkdir(parents=True, exist_ok=True)
+    specs = []
+    for f in sorted((ROOT.parent / "specs/pushing").glob("*.md")):
+        shutil.copy(f, mdest / f.name)
+        raw = f.read_text(encoding="utf-8", errors="replace")
+        first = next((l.lstrip("# ").strip() for l in raw.splitlines() if l.startswith("# ")), f.stem)
+        specs.append(f'<div class="panel"><b>{esc(first)}</b><div class="sub">{esc(f.name)} · {len(raw.split())} words</div><div class="sub"><a href="/data/pushing-method/{esc(f.name)}">read spec →</a></div></div>')
+    n_ipvv = len(list((ROOT / "data/pushing/ipvv").glob("*.*")))
+    n_ta = len(list((ROOT / "data/pushing/tantraloka").glob("*.*")))
+    (out / "index.html").write_text(TF(TMPL, title="Pushing", h1="Pushing",
+        kicker="Method", sub="hound the text with why until it cannot escape — every probe below is that loop run to an endpoint",
+        sidenav=sidenav("abhinavagupta", ""), body=
+        '<div class="panel"><b>The method in one rule:</b> force the text\u2019s own reasoning to carry the conclusion. Frameworks enter only after the text has spoken. Full procedure in the specs below; the operator instructions in the agent spec.</div>'
+        "<h3>How-to and algorithms</h3>" + "".join(specs)
+        + f"<h3>Probe collections</h3><div class='idx'><a href='/ipvv/pushing.html'><b>IPVV probes</b> — {n_ipvv} files</a><a href='/ipvv/pushing.html'><b>Tantraloka probes</b> — {n_ta} files</a></div>"
+        + '<div class="sub">Probes live on the IPVV pushing page (shared method, separate mountains). Essays argued from these cruxes: <a href="/essays/index.html">/essays/</a>.</div>'
+        + srclink("https://github.com/prx0r/ipvv/tree/master/specs/pushing", "method specs live here.")))
+    return 5 + n_ipvv + n_ta
+
+def build_corpus():
+    """Embeddings-ready corpus: one JSONL, stable ids, gate labels, all layers.
+    This file is the input to any embedding run (bge-m3/Qwen3-Embedding + rerank, per nibbanahelp relay)."""
+    import json as _json
+    recs = []
+    for f in sorted((ROOT / "data/translations").glob("*.json")):
+        for it in _json.loads(f.read_text()):
+            recs.append({"id": f"{f.stem}:{it.get('chunk','')}", "work": f.stem, "ref": str(it.get("verses","")),
+                "sa": it.get("sanskrit",""), "en": (it.get("l2") or it.get("l1") or ""),
+                "en_gate": it.get("gate",""), "kind": "translation"})
+    for f in sorted((PATALA / "data/published/ipvv").glob("pt-passage-*.json")):
+        d = _json.loads(f.read_text())
+        src = (d.get("source") or {}).get("text","") if isinstance(d.get("source"),dict) else ""
+        recs.append({"id": f"ipvv:{d.get('chunk','')}", "work": "ipvv", "ref": d.get("chunk",""),
+            "sa": src, "en": d.get("l2_text",""), "en_gate": "PUBLISHED", "kind": "ipvv-passage"})
+        c1 = d.get("c1") or {}
+        if isinstance(c1, dict) and c1.get("body"):
+            recs.append({"id": f"ipvv-c1:{d.get('chunk','')}", "work": "ipvv", "ref": d.get("chunk",""),
+                "sa": "", "en": c1.get("body",""), "en_gate": "PUBLISHED", "kind": "ipvv-c1"})
+    for f in sorted((ROOT / "data/essays").glob("ESSAY-*.md")):
+        recs.append({"id": f"essay:{f.stem.lower().replace('essay-','')}", "work": "essays", "ref": f.stem,
+            "sa": "", "en": f.read_text(encoding="utf-8", errors="replace"), "en_gate": "OWNER", "kind": "essay"})
+    for sub in ("ipvv", "tantraloka"):
+        for f in sorted((ROOT / "data/pushing" / sub).glob("*.*")):
+            if f.suffix not in (".md", ".txt"): continue
+            recs.append({"id": f"pushing:{sub}/{f.name}", "work": "pushing", "ref": f"{sub}/{f.stem}",
+                "sa": "", "en": f.read_text(encoding="utf-8", errors="replace")[:6000], "en_gate": "OWNER", "kind": "probe"})
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    with open(DIST / "data/corpus.jsonl", "w", encoding="utf-8") as fh:
+        for r in recs:
+            fh.write(_json.dumps(r, ensure_ascii=False) + "\n")
+    return len(recs)
 
 def build_support():
     out = DIST / "support"; out.mkdir(parents=True, exist_ok=True)
@@ -1183,7 +1249,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -1198,6 +1264,8 @@ def main():
     if "recite" in want: done["recite"] = build_recite()
     if "support" in want: done["support"] = build_support()
     if "essays" in want: done["essays"] = build_essays()
+    if "pushinghub" in want: done["pushinghub"] = build_pushing_hub()
+    if "corpus" in want: done["corpus"] = build_corpus()
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
     latest = "".join(f'<div class="ev"><b>{esc(i["date"])}</b> — <a href="{esc(i["url"])}">{esc(i["text"][:110])}</a></div>' for i in json.loads((ROOT / "data/latest.json").read_text()))
