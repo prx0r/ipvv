@@ -2,9 +2,6 @@
 const API = 'https://ipvv-api.tradesprior.workers.dev';
 const $ = s => document.querySelector(s);
 const esc = s => (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-const NAV = [
-  ['practice','/practices','Practise'],['library','/library','Library'],
-];
 let LIB = { works: {}, masters: [], sel: null };
 let SID = null;
 let SPEAK = false;
@@ -49,9 +46,8 @@ document.getElementById('spk').addEventListener('click', function(){
   });
 })();
 
-async function nav(cur){
-  let mhtml = `<div class="msec">Menu</div>` +
-    NAV.map(([k,u,t])=>`<a href="#/${k}" data-k="${k}" class="${k===cur?'on':''}">${t}</a>`).join('');
+async function nav(){
+  let mhtml = `<a href="#/practice" data-k="practice" class="${cur==='practice'?'on':''}">practise</a><a href="#/library" data-k="library" class="${cur==='library'?'on':''}">library</a>`;
   document.getElementById('menu').innerHTML = mhtml;
   document.querySelectorAll('#menu a[href^="#/"]').forEach(a=>{
     a.addEventListener('click', ()=>{ document.getElementById('menu').classList.remove('open'); });
@@ -91,21 +87,16 @@ const routes = {
 async function router(){
   const h = location.hash.slice(1) || '/';
   const [path] = h.split('?');
-  // restore shell chrome (practices/lab hides it)
-  ['top','askbar'].forEach(id=>{ const el=document.getElementById(id); if(el) el.style.display=''; });
-  const mb = document.getElementById('menuBtn');
-  if(mb) mb.style.display = (path === '/practice') ? 'none' : '';
+  const bar = document.getElementById('askbar');
+  if(bar) bar.style.display = (path === '/' ? 'none' : '');
   const fn = routes[path] || (path.startsWith('/work/') ? work : (path.startsWith('/probe/') ? probe : notfound));
-  const cur = (NAV.find(([k])=>'/'+k===path)||[])[0] || '';
-  nav(cur);
+  nav();
   $('#view').innerHTML = '<p style="color:#999">…</p>';
   try { await fn(path); } catch(e){ $('#view').innerHTML = '<p>Could not load. <a href="#/">home</a></p>'; }
   window.scrollTo(0,0);
 }
 function home(){
-  $('#view').innerHTML = `<h1>svatantrya</h1><div class="sub">freedom</div>
-  <div class="idx"><a href="#/practice"><b>practise</b> <small>— the lab, live</small></a><a href="#/library"><b>library</b> <small>— masters · works · read</small></a></div>
-  <div id="answer" style="display:none"></div>`;
+  $('#view').innerHTML = `<div id="answer" style="display:none"></div>`;
 }
 async function library(){
   $('#view').innerHTML = `<div id="libwrap" style="display:flex;gap:1.5rem;align-items:flex-start"><div id="lib-masters" style="min-width:11rem"><div class="msec">Masters</div><div id="lib-mlist"><span class="sub">…</span></div></div><div id="lib-works" style="flex:1;min-width:0"></div></div><div id="answer" style="display:none"></div>`;
