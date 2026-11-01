@@ -49,8 +49,11 @@ function cosine(a, b) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // allow-list: configured origin + the two reading front-ends (public data, no credentials)
+    const reqOrigin = request.headers.get('Origin') || '';
+    const allowed = new Set([env.CORS_ORIGIN || '', 'https://svread.pages.dev', 'https://ipvv-a8u.pages.dev'].filter(Boolean));
     const cors = {
-      'Access-Control-Allow-Origin': env.CORS_ORIGIN || '*',
+      'Access-Control-Allow-Origin': allowed.has(reqOrigin) ? reqOrigin : (env.CORS_ORIGIN || '*'),
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     };
@@ -292,6 +295,54 @@ export default {
       }
     }
 
+    // POST /api/c2/render — C2 styled rendition, grounded on the canonical packet.
+    // implements skills/render-c2: PASS-only, meaning locked to L1/L2/C1, style is diction only.
+    if (path === '/api/c2/render' && request.method === 'POST') {
+      const { work, chunk, style, model } = await request.json();
+      const st = String(style || '').trim().slice(0, 60);
+      if (!work || !chunk || !st) return json({ error: 'work, chunk and style (1-60 chars) required' }, 400, cors);
+      if (!/^[a-zA-Z0-9 _-]+$/.test(work) || !/^[a-zA-Z0-9 _-]+$/.test(chunk)) return json({ error: 'bad work/chunk' }, 400, cors);
+      let packet = null;
+      try {
+        const lr = await fetch('https://ipvv-a8u.pages.dev/data/layers/' + work + '.json');
+        if (!lr.ok) return json({ error: 'work not on file: ' + work }, 404, cors);
+        const layers = await lr.json();
+        packet = (layers.chunks || []).find(c => c.chunk === chunk);
+      } catch (e) {
+        return json({ error: 'canonical fetch failed: ' + e.message }, 502, cors);
+      }
+      if (!packet) return json({ error: 'chunk not on file: ' + chunk }, 404, cors);
+      if (packet.gate !== 'PASS') return json({ error: 'English withheld — gate ' + (packet.gate || 'BLOCKED') }, 422, cors);
+      const trim = (s, n) => String(s || '').replace(/^#+\s*[^\n]*\n/, '').replace(/\s+/g, ' ').trim().slice(0, n);
+      const prompt = 'You render verses into a requested voice. Meaning is FIXED by the packet below. Change diction and rhythm only.\n\n'
+        + 'Sanskrit: ' + trim(packet.sanskrit, 600) + '\n'
+        + 'Close translation (proposition-faithful): ' + trim(packet.l1, 800) + '\n'
+        + 'Reading translation (book prose): ' + trim(packet.l2, 800) + '\n'
+        + 'Commentary (what it means): ' + (trim(packet.c1, 800) || 'none on file — stay inside L1/L2') + '\n'
+        + 'Argument (what the verse claims): ' + (trim(packet.argmap, 1200) || 'none') + '\n\n'
+        + 'Voice: ' + st + '\n'
+        + 'Rules: 2-6 sentences. Same claims, new voice. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly.\n\nRendition:';
+      try {
+        let c2 = '', used = '';
+        try {
+          c2 = await dashscopeChat(env, [{ role: 'user', content: prompt }], 300);
+          used = 'qwen3.8-omni-flash';
+        } catch (e2) {
+          const gen = await env.AI.run(model || '@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 300,
+          });
+          c2 = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || '';
+          used = model || '@cf/deepseek-ai/deepseek-v4-flash';
+        }
+        if (!c2.trim()) return json({ error: 'empty rendering' }, 502, cors);
+        return json({ c2: c2.trim(), style: st, model: used,
+          provenance: { work, chunk, gate: 'PASS', date: new Date().toISOString().slice(0, 10) },
+          label: 'machine rendering' }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
+    }
 
     // GET /api/questions/:work — list stored questions for a work
     const qm = path.match(/^\/api\/questions\/([^/]+)$/);
