@@ -4,7 +4,7 @@
  "version": "v2",
  "kind": "c2-curated",
  "label": "machine rendering — style demo over canonical stack, NOT canonical translation",
- "model": "handcrafted by agent 2026-11-01 from layers (L1/L2/C1/argmap) against slang-glossary.json",
+ "model": "handcrafted by agent 2026-11-01 from layers (L1/L2/C1/argmap) against slang-glossary.json; v2.1 owner-theology corrections (twin→aham, aura in with terrifying kept)",
  "glossary": "site/data/c2/slang-glossary.json",
  "provenance": {
   "source": "ipvv layers bh-p01..bh-p10, all gate PASS",
@@ -57,28 +57,28 @@
    "gate": "PASS",
    "sanskrit": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
    "style": "gen-z",
-   "c2": "Everything I see right now? All His — grace-tinted glasses, Bhairava all the way down, no filter. Me and Maheśa? We're twin. Same self, same essence, and it was never not like this — always. So through Him, everything's mine too. Locked in, permanently.",
-   "rasa": "owned identity — certainty that was always true",
+   "c2": "Everything I see right now? All His — grace-tinted glasses, Bhairava all the way down, no filter. And the wildest part? It's not me and Him. It's just Him — I'm Him, always was, no cap. Same self, zero distance. So through Him, everything's mine too. Locked in, permanently.",
+   "rasa": "owned identity — not twoness but I-am-Him (aham)",
    "choices": [
     {
-     "term": "twin: same self, same essence",
-     "payload": "svātmamaya (made of Your own-self)",
-     "why": "glossary-cleared: shared-essence intimate, glossed in-voice so it can't read as buddy-slang; twin-flame doctrine explicitly not imported"
+     "term": "I'm Him (not twin)",
+     "payload": "svātmamaya + sadaiva",
+     "why": "owner correction: twin keeps two persons; the claim is nondual identity. Aham stated outright, 'always was' keeps sadaiva"
     },
     {
      "term": "no filter",
      "payload": "aśeṣam + idānīm",
-     "why": "without-remainder immediacy"
+     "why": "unmediated immediacy, unchanged"
     },
     {
      "term": "grace-tinted glasses",
      "payload": "tvadanugrahaśaktyā",
-     "why": "grace as the mechanism of seeing, kept causal"
+     "why": "grace as mechanism of seeing, unchanged"
     },
     {
      "term": "Locked in, permanently",
      "payload": "sadaiva",
-     "why": "always-ness doubled; locked-in = committed state, correct domain (practitioner, not Lord)"
+     "why": "always-ness doubled; practitioner-state domain"
     }
    ],
    "provenance": {
@@ -129,33 +129,28 @@
    "gate": "PASS",
    "sanskrit": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
    "style": "gen-z",
-   "c2": "Ayo Death — don't even look at me like that. Put the scary face away. I'm standing on business: serving Śaṅkara, contemplation locked in — so right now I'm literally made of terrifying Bhairava-power. You're barking up the wrong tree, unc.",
+   "c2": "Ayo Death — don't even look at me like that. Put the scary face away. I'm standing on business: serving Śaṅkara, contemplation locked in — so right now I'm soaked in His terrifying aura. You're barking up the wrong tree, unc.",
    "rasa": "authority — talking back to Death itself",
    "choices": [
     {
      "term": "standing on business",
      "payload": "sevanā + cintanā + dhīra",
-     "why": "concurrent disciplines as duty handled; glossary payload exact"
+     "why": "concurrent disciplines as duty handled, unchanged"
     },
     {
      "term": "locked in",
      "payload": "dhīra steadiness",
-     "why": "practitioner-state domain, correct per glossary"
+     "why": "practitioner-state domain, unchanged"
     },
     {
-     "term": "literally made of",
-     "payload": "-maya",
-     "why": "change of nature, not grant of capability (C1 crux kept)"
-    },
-    {
-     "term": "terrifying kept, aura refused",
-     "payload": "bhīṣaṇa",
-     "why": "aura would cool terror into coolness — documented restraint"
+     "term": "soaked in His terrifying aura",
+     "payload": "bhīṣaṇabhairavaśaktimaya",
+     "why": "aura = śakti-as-presence-field (glossary cleared); 'soaked in' keeps -maya composed-of; 'terrifying' kept as its quality so bhīṣaṇa loses nothing"
     },
     {
      "term": "unc",
      "payload": "mā dṛśam vinidhehi",
-     "why": "Death framed as outdated authority whose gaze has no power here"
+     "why": "Death as outdated authority, unchanged"
     }
    ],
    "provenance": {
