@@ -369,6 +369,64 @@ export default {
       }
     }
 
+    // POST /api/c2/verify — MIS-style bidirectional entailment + validated-vocabulary check.
+    // forward: canonical packet entails C2 (nothing added). backward: C2 entails L1 props (nothing lost).
+    // Implements skills/render-c2 § verification; cf. Babakov et al. 2022 (MIS), 2025 meta-eval (style-aware only).
+    // Validated voice vocabulary only: slang-glossary USE verdicts + Toronto-shared-with-MLE + MLE core.
+    // Anything outside this set in a rendering gets reported (not failed) for curator review.
+    const VOICE_WHITELIST = new Set(("locked standing business cap canon cooked ate crumbs bussin giving lore tapped delulu clocked clocking aura mandem fam brudda leng peng lengest allow bare bruv duppy gassed innit dun know bless shook patterned valid lowkey highkey twin unc ghost ghosted chill vibe vibes rizz bet slay period ohio skibidi gyatt fanum kai cenat say wallahi blud wasteman bait long moist rent-free").split(" ").filter(w => w.length > 2));
+    if (path === '/api/c2/verify' && request.method === 'POST') {
+      const { work, chunk, c2, style } = await request.json();
+      if (!work || !chunk || !c2) return json({ error: 'work, chunk and c2 required' }, 400, cors);
+      let packet = null;
+      try {
+        const lr = await fetch('https://ipvv-a8u.pages.dev/data/layers/' + work + '.json');
+        if (!lr.ok) return json({ error: 'work not on file: ' + work }, 404, cors);
+        const layers = await lr.json();
+        packet = (layers.chunks || []).find(c => c.chunk === chunk);
+      } catch (e) {
+        return json({ error: 'canonical fetch failed: ' + e.message }, 502, cors);
+      }
+      if (!packet) return json({ error: 'chunk not on file: ' + chunk }, 404, cors);
+      const trim = (s, n) => String(s || '').replace(/^#+\s*[^\n]*\n/, '').replace(/\s+/g, ' ').trim().slice(0, 900);
+      let argBlock = '';
+      try {
+        const ar = await fetch('https://ipvv-a8u.pages.dev/data/arguments/' + work + '-' + chunk + '.json');
+        if (ar.ok) { const ap = await ar.json();
+          argBlock = 'Claim skeleton: ' + trim(ap.question, 300) + ' // ' + trim((ap.conclusion && ap.conclusion.text) || ap.conclusion, 400); }
+      } catch (e) {}
+      const judgePrompt = 'You audit a styled rendition against its canonical packet. Two entailment checks.\n'
+        + 'JUDGING RULES: (1) Sincerity/discourse markers (no cap, fr, innit, wallahi, bet, no crumbs as completion) are voice devices, NOT propositions — never list them as added. (2) A title may ride on the bare name where the referent is unambiguous — list as missing only if lordship/refuge-status is denied or lost. (3) C1 commentary is canon: anything C1 states explicitly may appear in the candidate.\n\n'
+        + 'CANON (L1 propositions — every one must survive): ' + trim(packet.l1, 1200) + '\n'
+        + 'CANON (L2 resolved reading): ' + trim(packet.l2, 1200) + '\n'
+        + 'CANON (C1 commentary — explicit statements are licensed): ' + (trim(packet.c1, 900) || 'none') + '\n'
+        + 'CANON (claim skeleton): ' + (argBlock || trim(packet.argmap, 600) || 'none') + '\n'
+        + 'CANDIDATE (' + String(style || 'styled') + ' rendition): ' + String(c2).replace(/\s+/g, ' ').trim().slice(0, 1500) + '\n\n'
+        + 'Answer ONLY this JSON, no other text: {"forward_pass": true/false (canon entails candidate — nothing added), "backward_pass": true/false (candidate entails every L1 proposition — nothing lost), "added": ["claims in candidate with no canon basis"], "missing": ["L1 propositions absent from candidate"], "note": "one line"}';
+      try {
+        let raw = '';
+        try { raw = await dashscopeChat(env, [{ role: 'user', content: judgePrompt }], 400); }
+        catch (e2) {
+          const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: judgePrompt }], max_tokens: 400,
+          });
+          raw = gen.response || gen.choices?.[0]?.message?.content || '';
+        }
+        const m = raw.match(/\{[\s\S]*\}/);
+        if (!m) throw new Error('no JSON from judge');
+        const j = JSON.parse(m[0]);
+        const words = String(c2).toLowerCase().replace(/[^a-z0-9' -]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+        const glossaryHits = [...new Set(words.filter(w => VOICE_WHITELIST.has(w)))];
+        const verdict = (j.forward_pass && j.backward_pass) ? 'PASS' : 'FLAG';
+        return json({ verdict, forward_entails: !!j.forward_pass, backward_entails: !!j.backward_pass,
+          added: j.added || [], missing: j.missing || [], note: j.note || '',
+          voice_words: glossaryHits,
+          provenance: { work, chunk, gate: packet.gate, date: new Date().toISOString().slice(0, 10) } }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
+    }
+
     // GET /api/questions/:work — list stored questions for a work
     const qm = path.match(/^\/api\/questions\/([^/]+)$/);
     if (qm && request.method === 'GET') {

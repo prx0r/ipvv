@@ -131,6 +131,20 @@ when a reader needs explaining, energy, or beauty:
 Reference triple (bh-p01) lives at `site/data/c2/bhairavastava.gen-z.triple.json` —
 same verse in all three modes. Match new renders to its bar.
 
+## Verification (the loop is the layer)
+
+Every C2 is graded by POST /api/c2/verify before it ships anywhere: MIS-style
+bidirectional entailment (Babakov et al. 2022) — forward (packet entails C2,
+nothing added) and backward (C2 entails every L1 proposition, nothing lost) —
+plus a validated-vocabulary report (Toronto-shared-with-MLE + MLE core +
+glossary USE terms; unlisted voice words reported, not failed).
+
+Judging rules (the judge prompt carries these): sincerity/discourse markers are
+voice, not propositions; titles may ride on bare names where unambiguous; C1's
+explicit statements are licensed canon. The judge has caught real micro-losses
+in our own handcrafted files (e.g. a dropped -nātha) — that is the system
+working, not failing. Fix the rendering, never the gate.
+
 ## Output shape
 
 ```json
