@@ -2321,8 +2321,21 @@ def deva_of(s):
         return s or ""
 
 AUDIO_ALIAS = {"anuttarastika": "anuttarashtika"}
-RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika", "bodhapancadasika": "Bodhapancadasika", "kramastotra": "Kramastotra"}
-SYNTH_RECITE = ("bodhapancadasika", "kramastotra")
+RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika",
+ "stavacintamani": "Stavacintāmaṇi", "dehastha": "Dehasthadevatācakra",
+ "bodhapancadasika": "Bodhapañcadaśikā", "mahopadeshavimshatika": "Mahopadeśaviṃśatikā",
+ "rahasyapanchadashika": "Rahasyapañcadaśikā", "paramadvayadvadashika": "Paramārthadvādaśikā",
+ "pancashloki": "Pañcaślokī", "kramastotra": "Kramastotra",
+ "shivastotravali_1": "Śivastotrāvalī 1", "anubhavanivedana": "Anubhavanivedana",
+ "bodhavilasa": "Bodhavilāsa", "bhairavanukarana": "Bhairavānukaraṇa",
+ "ajadapramatrsiddhi": "Ajadapramātṛsiddhi", "paryantapancasika": "Paryantapañcāśikā",
+ "pratyabhijnahrdaya": "Pratyabhijñāhṛdayam", "paramarthasara": "Paramārthasāra",
+ "sambandhasiddhi": "Sambandhasiddhi", "isvarasiddhi": "Īśvarasiddhi",
+ "ptvmadhyama": "PTV Madhyama", "paramarthacarca": "Paramārthacarcā",
+ "parapravesika": "Parāprāveśikā", "tattvasandoha": "Tattvasandoha",
+ "svabodhasiddhi": "Svabodhasiddhi", "saktavijnana": "Śaktavijñāna",
+ "spandakarika": "Spandakārikā", "sivasutra": "Śivasūtra"}
+SYNTH_RECITE = ()
 
 def build_recite():
     """Studio-chant recitation pages (kashaudio AI renders) + audio shipping.

@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Īśvarasiddhi recitation</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.kword{white-space:nowrap}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Recitation · studio chant</div><h1>Īśvarasiddhi</h1><div class="skt"></div><div class="sub">17 verses chanted, karaoke-timed · English shows only where the gate passed</div><div class="stats"><span><b>17</b> verses</span><span><b>studio chant</b> AI voice</span><span><b>0.00</b> mean align</span><span><b>0/17</b> with English</span></div><div class="recitetools"><button class="vplay all" data-play-all>Recite all</button><span class="rmodes"><button data-mode="sa">Sanskrit only</button><button data-mode="en" disabled title="English withheld on every verse — gate pending">English only</button><button data-mode="verse" class="on">Verse SA → EN</button><button data-mode="line">Line SA → EN</button></span><span class="rnote">line mode: Sanskrit line-by-line, English follows each verse</span></div><article class="verse" data-recite data-id="iss_01" data-label="Īśvarasiddhi &middot; verse 1" data-sa="करोति तम् अहं देवम् एकं नौमि महेश्वरम् । घट.. ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_01.mp3"><div class="vnum">1<br/><button class="vplay" data-play-idx="0">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.12">क</span><span class="w" data-on="0.18" data-off="0.261">रो</span><span class="w" data-on="0.441" data-off="0.521">ति</span></span> <span class="kword"><span class="w" data-on="0.582" data-off="0.722">तम्</span></span> <span class="kword"><span class="w" data-on="0.862" data-off="0.912">अ</span><span class="w" data-on="0.963" data-off="1.103">हम्</span></span> <span class="kword"><span class="w" data-on="1.223" data-off="1.324">दे</span><span class="w" data-on="1.484" data-off="1.644">वम्</span></span> <span class="kword"><span class="w" data-on="1.845" data-off="1.895">ए</span><span class="w" data-on="2.005" data-off="2.166">कम्</span></span> <span class="kword"><span class="w" data-on="2.306" data-off="2.487">नौ</span><span class="w" data-on="2.567" data-off="2.647">मि</span></span> <span class="kword"><span class="w" data-on="2.707" data-off="2.787">म</span><span class="w" data-on="2.848" data-off="3.128">हेश्</span><span class="w" data-on="3.188" data-off="3.269">व</span><span class="w" data-on="3.329" data-off="3.509">रम्</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="3.549" data-off="3.75">घ</span><span class="w" data-on="3.93" data-off="4.011">ट</span></span></div><div class="iast">karoti tam ahaṃ devam ekaṃ naumi maheśvaram |<br/>ghaṭa.. ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_02" data-label="Īśvarasiddhi &middot; verse 2" data-sa="परमाणुवत् । टतो घटो यथा ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_02.mp3"><div class="vnum">2<br/><button class="vplay" data-play-idx="1">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.08">प</span><span class="w" data-on="0.14" data-off="0.201">र</span><span class="w" data-on="0.281" data-off="0.502">मा</span><span class="w" data-on="0.602" data-off="0.702">णु</span><span class="w" data-on="0.783" data-off="0.963">वत्</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="1.686" data-off="1.786">ट</span><span class="w" data-on="1.846" data-off="1.926">तो</span></span> <span class="kword"><span class="w" data-on="2.127" data-off="2.207">घ</span><span class="w" data-on="2.247" data-off="2.368">टो</span></span> <span class="kword"><span class="w" data-on="2.548" data-off="2.609">य</span><span class="w" data-on="2.689" data-off="2.889">था</span></span></div><div class="iast">paramāṇuvat |<br/>ṭato ghaṭo yathā ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_03" data-label="Īśvarasiddhi &middot; verse 3" data-sa="निश्चितो ऽर्थो ऽस्य । संस्थाने तस्मिन्न् अर्थक्रियाचिते. ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_03.mp3"><div class="vnum">3<br/><button class="vplay" data-play-idx="2">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.2">निश्</span><span class="w" data-on="0.24" data-off="0.32">चि</span><span class="w" data-on="0.4" data-off="0.481">तो</span></span> <span class="kword"><span class="w" data-on="0.621" data-off="0.881">र्थो</span></span> <span class="kword"><span class="w" data-on="1.081" data-off="1.301">स्य</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="2.142" data-off="2.403">संस्</span><span class="w" data-on="2.503" data-off="2.783">था</span><span class="w" data-on="2.863" data-off="2.943">ने</span></span> <span class="kword"><span class="w" data-on="3.123" data-off="3.304">तस्</span><span class="w" data-on="3.404" data-off="3.704">मिन्न्</span></span> <span class="kword"><span class="w" data-on="3.744" data-off="3.844">अर्</span><span class="w" data-on="3.984" data-off="4.205">थक्</span><span class="w" data-on="4.325" data-off="4.405">रि</span><span class="w" data-on="4.445" data-off="4.685">या</span><span class="w" data-on="4.745" data-off="4.825">चि</span><span class="w" data-on="4.885" data-off="4.985">ते</span></span></div><div class="iast">niścito &#x27;rtho &#x27;sya |<br/>saṃsthāne tasminn arthakriyācite. ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; anushtubh &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_04" data-label="Īśvarasiddhi &middot; verse 4" data-sa="चक्षुरादौ तदौचित्याद् आत्मेष्टो ऽसंहतः परः । वह्निस्तत्प्रतिपत्त्यैव खादिरत्वेन सिद्ध्यति ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_04.mp3"><div class="vnum">4<br/><button class="vplay" data-play-idx="3">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.18">चक्</span><span class="w" data-on="0.18" data-off="0.34">षु</span><span class="w" data-on="0.44" data-off="0.64">रा</span><span class="w" data-on="0.74" data-off="0.941">दौ</span></span> <span class="kword"><span class="w" data-on="1.041" data-off="1.101">त</span><span class="w" data-on="1.181" data-off="1.361">दौ</span><span class="w" data-on="1.461" data-off="1.701">चित्</span><span class="w" data-on="1.821" data-off="2.141">याद्</span></span> <span class="kword"><span class="w" data-on="2.321" data-off="2.522">आत्</span><span class="w" data-on="2.622" data-off="2.902">मेष्</span><span class="w" data-on="2.962" data-off="3.122">टो</span></span> <span class="kword"><span class="w" data-on="3.362" data-off="3.582">सं</span><span class="w" data-on="3.642" data-off="3.722">ह</span><span class="w" data-on="3.802" data-off="4.022">तः</span></span> <span class="kword"><span class="w" data-on="4.143" data-off="4.223">प</span><span class="w" data-on="4.283" data-off="4.483">रः</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="5.643" data-off="5.904">वह्</span><span class="w" data-on="5.904" data-off="6.064">निस्</span><span class="w" data-on="6.204" data-off="6.504">तत्प्</span><span class="w" data-on="6.544" data-off="6.604">र</span><span class="w" data-on="6.644" data-off="6.724">ति</span><span class="w" data-on="6.784" data-off="7.004">पत्त्</span><span class="w" data-on="7.144" data-off="7.304">यै</span><span class="w" data-on="7.404" data-off="7.485">व</span></span> <span class="kword"><span class="w" data-on="7.585" data-off="7.805">खा</span><span class="w" data-on="7.925" data-off="8.005">दि</span><span class="w" data-on="8.065" data-off="8.305">रत्</span><span class="w" data-on="8.385" data-off="8.465">वे</span><span class="w" data-on="8.665" data-off="8.725">न</span></span> <span class="kword"><span class="w" data-on="8.805" data-off="9.146">सिद्ध्</span><span class="w" data-on="9.166" data-off="9.226">य</span><span class="w" data-on="9.326" data-off="9.426">ति</span></span></div><div class="iast">cakṣurādau tadaucityād ātmeṣṭo &#x27;saṃhataḥ paraḥ |<br/>vahnistatpratipattyaiva khādiratvena siddhyati ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; anushtubh &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_05" data-label="Īśvarasiddhi &middot; verse 5" data-sa="तथा वैचित्र्यमात्रेण न स्वलक्षणलक्ष्मणा । संस्थानमात्र एव.. ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_05.mp3"><div class="vnum">5<br/><button class="vplay" data-play-idx="4">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.08">त</span><span class="w" data-on="0.16" data-off="0.401">था</span></span> <span class="kword"><span class="w" data-on="0.481" data-off="0.661">वै</span><span class="w" data-on="0.742" data-off="1.022">चित्र्</span><span class="w" data-on="1.042" data-off="1.102">य</span><span class="w" data-on="1.163" data-off="1.423">मात्</span><span class="w" data-on="1.483" data-off="1.584">रे</span><span class="w" data-on="1.684" data-off="1.764">ण</span></span> <span class="kword"><span class="w" data-on="1.824" data-off="1.884">न</span></span> <span class="kword"><span class="w" data-on="1.984" data-off="2.145">स्व</span><span class="w" data-on="2.185" data-off="2.345">लक्</span><span class="w" data-on="2.345" data-off="2.486">ष</span><span class="w" data-on="2.526" data-off="2.626">ण</span><span class="w" data-on="2.686" data-off="2.927">लक्ष्</span><span class="w" data-on="2.987" data-off="3.047">म</span><span class="w" data-on="3.087" data-off="3.468">णा</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="4.55" data-off="4.811">संस्</span><span class="w" data-on="4.891" data-off="5.091">था</span><span class="w" data-on="5.172" data-off="5.232">न</span><span class="w" data-on="5.292" data-off="5.573">मात्</span><span class="w" data-on="5.633" data-off="5.693">र</span></span> <span class="kword"><span class="w" data-on="5.833" data-off="5.883">ए</span><span class="w" data-on="6.034" data-off="6.114">व</span></span></div><div class="iast">tathā vaicitryamātreṇa na svalakṣaṇalakṣmaṇā |<br/>saṃsthānamātra eva.. ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_06" data-label="Īśvarasiddhi &middot; verse 6" data-sa="हेतुत्वं । बुद्धिशालिनः. ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_06.mp3"><div class="vnum">6<br/><button class="vplay" data-play-idx="5">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.08" data-off="0.141">हे</span><span class="w" data-on="0.261" data-off="0.422">तुत्</span><span class="w" data-on="0.442" data-off="0.542">वम्</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="1.225" data-off="1.365">बुद्</span><span class="w" data-on="1.446" data-off="1.546">धि</span><span class="w" data-on="1.606" data-off="1.827">शा</span><span class="w" data-on="1.928" data-off="2.008">लि</span><span class="w" data-on="2.048" data-off="2.229">नः</span></span></div><div class="iast">hetutvaṃ |<br/>buddhiśālinaḥ. ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_07" data-label="Īśvarasiddhi &middot; verse 7" data-sa="स्वार्थतादिनिषेधेन साधिता पुरुषार्थता । तथा तथा परिणतिः स्यान् न किंचन दुर्घटम् ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_07.mp3"><div class="vnum">7<br/><button class="vplay" data-play-idx="6">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.06" data-off="0.34">स्वार्</span><span class="w" data-on="0.44" data-off="0.541">थ</span><span class="w" data-on="0.621" data-off="0.821">ता</span><span class="w" data-on="0.941" data-off="1.021">दि</span><span class="w" data-on="1.061" data-off="1.141">नि</span><span class="w" data-on="1.161" data-off="1.321">षे</span><span class="w" data-on="1.562" data-off="1.682">धे</span><span class="w" data-on="1.882" data-off="1.962">न</span></span> <span class="kword"><span class="w" data-on="2.042" data-off="2.282">सा</span><span class="w" data-on="2.363" data-off="2.463">धि</span><span class="w" data-on="2.543" data-off="2.763">ता</span></span> <span class="kword"><span class="w" data-on="2.923" data-off="3.003">पु</span><span class="w" data-on="3.043" data-off="3.103">रु</span><span class="w" data-on="3.103" data-off="3.444">षार्</span><span class="w" data-on="3.564" data-off="3.644">थ</span><span class="w" data-on="3.744" data-off="4.004">ता</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="5.005" data-off="5.086">त</span><span class="w" data-on="5.166" data-off="5.386">था</span></span> <span class="kword"><span class="w" data-on="5.506" data-off="5.566">त</span><span class="w" data-on="5.666" data-off="5.886">था</span></span> <span class="kword"><span class="w" data-on="6.007" data-off="6.087">प</span><span class="w" data-on="6.147" data-off="6.227">रि</span><span class="w" data-on="6.267" data-off="6.367">ण</span><span class="w" data-on="6.447" data-off="6.707">तिः</span></span> <span class="kword"><span class="w" data-on="6.707" data-off="7.108">स्यान्</span></span> <span class="kword"><span class="w" data-on="7.208" data-off="7.268">न</span></span> <span class="kword"><span class="w" data-on="7.348" data-off="7.568">किञ्</span><span class="w" data-on="7.648" data-off="7.748">च</span><span class="w" data-on="7.809" data-off="7.889">न</span></span> <span class="kword"><span class="w" data-on="7.969" data-off="8.109">दुर्</span><span class="w" data-on="8.229" data-off="8.329">घ</span><span class="w" data-on="8.389" data-off="8.609">टम्</span></span></div><div class="iast">svārthatādiniṣedhena sādhitā puruṣārthatā |<br/>tathā tathā pariṇatiḥ syān na kiṃcana durghaṭam ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; anushtubh &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_08" data-label="Īśvarasiddhi &middot; verse 8" data-sa="निमित्तकारणं नान्यत् पुरुषार्थोद्यमादृते । चित्तभूमेर् अधरतः शरीरादिविधिं प्रति ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_08.mp3"><div class="vnum">8<br/><button class="vplay" data-play-idx="7">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.1">नि</span><span class="w" data-on="0.16" data-off="0.34">मित्</span><span class="w" data-on="0.44" data-off="0.521">त</span><span class="w" data-on="0.601" data-off="0.841">का</span><span class="w" data-on="0.901" data-off="0.981">र</span><span class="w" data-on="0.981" data-off="1.221">णम्</span></span> <span class="kword"><span class="w" data-on="1.362" data-off="1.642">नान्</span><span class="w" data-on="1.722" data-off="1.902">यत्</span></span> <span class="kword"><span class="w" data-on="2.022" data-off="2.082">पु</span><span class="w" data-on="2.122" data-off="2.202">रु</span><span class="w" data-on="2.202" data-off="2.563">षार्</span><span class="w" data-on="2.703" data-off="3.043">थोद्</span><span class="w" data-on="3.083" data-off="3.143">य</span><span class="w" data-on="3.224" data-off="3.424">मा</span><span class="w" data-on="3.524" data-off="3.664">दृ</span><span class="w" data-on="3.704" data-off="3.804">ते</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="4.965" data-off="5.126">चित्</span><span class="w" data-on="5.206" data-off="5.306">त</span><span class="w" data-on="5.426" data-off="5.626">भू</span><span class="w" data-on="5.746" data-off="6.047">मेर्</span></span> <span class="kword"><span class="w" data-on="6.207" data-off="6.257">अ</span><span class="w" data-on="6.307" data-off="6.407">ध</span><span class="w" data-on="6.467" data-off="6.527">र</span><span class="w" data-on="6.607" data-off="6.707">तः</span></span> <span class="kword"><span class="w" data-on="6.868" data-off="7.008">श</span><span class="w" data-on="7.068" data-off="7.268">री</span><span class="w" data-on="7.368" data-off="7.588">रा</span><span class="w" data-on="7.729" data-off="7.809">दि</span><span class="w" data-on="7.869" data-off="7.949">वि</span><span class="w" data-on="8.029" data-off="8.229">धिम्</span></span> <span class="kword"><span class="w" data-on="8.389" data-off="8.489">प्र</span><span class="w" data-on="8.569" data-off="8.67">ति</span></span></div><div class="iast">nimittakāraṇaṃ nānyat puruṣārthodyamādṛte |<br/>cittabhūmer adharataḥ śarīrādividhiṃ prati ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; anushtubh &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_09" data-label="Īśvarasiddhi &middot; verse 9" data-sa="ततो ऽत्र । कुत्र व्यापार ईश्वर्... ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_09.mp3"><div class="vnum">9<br/><button class="vplay" data-play-idx="8">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.081">त</span><span class="w" data-on="0.161" data-off="0.242">तो</span></span> <span class="kword"><span class="w" data-on="0.242" data-off="1.19">त्र</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="1.19" data-off="1.412">कुत्</span><span class="w" data-on="1.472" data-off="1.533">र</span></span> <span class="kword"><span class="w" data-on="1.654" data-off="1.875">व्या</span><span class="w" data-on="1.956" data-off="2.138">पा</span><span class="w" data-on="2.218" data-off="2.299">र</span></span> <span class="kword"><span class="w" data-on="2.42" data-off="2.642">ईश्</span><span class="w" data-on="2.662" data-off="2.803">वर्</span></span></div><div class="iast">tato &#x27;tra |<br/>kutra vyāpāra īśvar... ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_10" data-label="Īśvarasiddhi &middot; verse 10" data-sa="तद्विना कुम्भकारेण घटो ऽपि न भवेत् कथम् । अथ स्वभाव एषो ऽस्य यत्कुलालाद्यपेक्षणम् ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_10.mp3"><div class="vnum">10<br/><button class="vplay" data-play-idx="9">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.22">तद्</span><span class="w" data-on="0.3" data-off="0.36">वि</span><span class="w" data-on="0.44" data-off="0.641">ना</span></span> <span class="kword"><span class="w" data-on="0.761" data-off="0.941">कुम्</span><span class="w" data-on="1.061" data-off="1.161">भ</span><span class="w" data-on="1.241" data-off="1.482">का</span><span class="w" data-on="1.562" data-off="1.682">रे</span><span class="w" data-on="1.802" data-off="1.922">ण</span></span> <span class="kword"><span class="w" data-on="2.002" data-off="2.082">घ</span><span class="w" data-on="2.122" data-off="2.262">टो</span></span> <span class="kword"><span class="w" data-on="2.463" data-off="2.543">पि</span></span> <span class="kword"><span class="w" data-on="2.623" data-off="2.683">न</span></span> <span class="kword"><span class="w" data-on="2.783" data-off="2.863">भ</span><span class="w" data-on="2.943" data-off="3.263">वेत्</span></span> <span class="kword"><span class="w" data-on="3.364" data-off="3.424">क</span><span class="w" data-on="3.524" data-off="3.724">थम्</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="5.045" data-off="5.095">अ</span><span class="w" data-on="5.145" data-off="5.246">थ</span></span> <span class="kword"><span class="w" data-on="5.366" data-off="5.546">स्व</span><span class="w" data-on="5.606" data-off="5.866">भा</span><span class="w" data-on="5.946" data-off="6.026">व</span></span> <span class="kword"><span class="w" data-on="6.187" data-off="6.237">ए</span><span class="w" data-on="6.327" data-off="6.487">षो</span></span> <span class="kword"><span class="w" data-on="6.607" data-off="6.787">स्य</span></span> <span class="kword"><span class="w" data-on="6.887" data-off="7.028">यत्</span><span class="w" data-on="7.148" data-off="7.228">कु</span><span class="w" data-on="7.308" data-off="7.508">ला</span><span class="w" data-on="7.608" data-off="7.908">लाद्</span><span class="w" data-on="7.969" data-off="8.049">य</span><span class="w" data-on="8.109" data-off="8.369">पेक्</span><span class="w" data-on="8.389" data-off="8.509">ष</span><span class="w" data-on="8.569" data-off="8.789">णम्</span></span></div><div class="iast">tadvinā kumbhakāreṇa ghaṭo &#x27;pi na bhavet katham |<br/>atha svabhāva eṣo &#x27;sya yatkulālādyapekṣaṇam ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; anushtubh &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_11" data-label="Īśvarasiddhi &middot; verse 11" data-sa="नैवोपादनहेत्वन्तः प्रवेशात्सहकारिभिः । लोकयात्रानुसंधानवतीं प्रज्ञां विना नहि स्थूलतामात्रमेव स्यान्न त्... ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_11.mp3"><div class="vnum">11<br/><button class="vplay" data-play-idx="10">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.2">नै</span><span class="w" data-on="0.281" data-off="0.361">वो</span><span class="w" data-on="0.541" data-off="0.762">पा</span><span class="w" data-on="0.842" data-off="0.902">द</span><span class="w" data-on="0.962" data-off="1.022">न</span><span class="w" data-on="1.102" data-off="1.363">हेत्</span><span class="w" data-on="1.403" data-off="1.563">वन्</span><span class="w" data-on="1.643" data-off="1.824">तः</span></span> <span class="kword"><span class="w" data-on="1.904" data-off="2.024">प्र</span><span class="w" data-on="2.084" data-off="2.165">वे</span><span class="w" data-on="2.345" data-off="2.686">शात्</span><span class="w" data-on="2.746" data-off="2.826">स</span><span class="w" data-on="2.886" data-off="2.946">ह</span><span class="w" data-on="3.026" data-off="3.247">का</span><span class="w" data-on="3.327" data-off="3.427">रि</span><span class="w" data-on="3.487" data-off="3.668">भिः</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="4.87" data-off="4.95">लो</span><span class="w" data-on="5.111" data-off="5.171">क</span><span class="w" data-on="5.251" data-off="5.532">यात्</span><span class="w" data-on="5.592" data-off="5.752">रा</span><span class="w" data-on="5.832" data-off="5.892">नु</span><span class="w" data-on="5.953" data-off="6.113">सन्</span><span class="w" data-on="6.213" data-off="6.434">धा</span><span class="w" data-on="6.514" data-off="6.574">न</span><span class="w" data-on="6.614" data-off="6.694">व</span><span class="w" data-on="6.754" data-off="6.995">तीम्</span></span> <span class="kword"><span class="w" data-on="7.095" data-off="7.295">प्रज्</span><span class="w" data-on="7.356" data-off="7.656">ञाम्</span></span> <span class="kword"><span class="w" data-on="7.756" data-off="7.817">वि</span><span class="w" data-on="7.877" data-off="8.057">ना</span></span> <span class="kword"><span class="w" data-on="8.137" data-off="8.217">न</span><span class="w" data-on="8.257" data-off="8.338">हि</span></span> <span class="kword"><span class="w" data-on="8.398" data-off="8.738">स्थू</span><span class="w" data-on="8.799" data-off="8.879">ल</span><span class="w" data-on="8.939" data-off="9.119">ता</span><span class="w" data-on="9.24" data-off="9.52">मात्</span><span class="w" data-on="9.58" data-off="9.64">र</span><span class="w" data-on="9.7" data-off="9.781">मे</span><span class="w" data-on="9.961" data-off="10.021">व</span></span> <span class="kword"><span class="w" data-on="10.141" data-off="10.642">स्यान्</span><span class="w" data-on="10.723" data-off="10.943">नत्</span></span></div><div class="iast">naivopādanahetvantaḥ praveśātsahakāribhiḥ |<br/>lokayātrānusaṃdhānavatīṃ prajñāṃ vinā nahi sthūlatāmātrameva syānna t... ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_12" data-label="Īśvarasiddhi &middot; verse 12" data-sa="विना संवेद्यतां पुंसस्तथात्वे पुरुषार्थता । अथापि मनसो वृत्तिर् बुद्धेर्वैकैकसंस्कृता स्यात् ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_12.mp3"><div class="vnum">12<br/><button class="vplay" data-play-idx="11">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.1">वि</span><span class="w" data-on="0.14" data-off="0.301">ना</span></span> <span class="kword"><span class="w" data-on="0.421" data-off="0.561">सं</span><span class="w" data-on="0.661" data-off="0.922">वेद्</span><span class="w" data-on="0.962" data-off="1.022">य</span><span class="w" data-on="1.082" data-off="1.343">ताम्</span></span> <span class="kword"><span class="w" data-on="1.423" data-off="1.583">पुं</span><span class="w" data-on="1.683" data-off="1.843">सस्</span><span class="w" data-on="1.924" data-off="2.004">त</span><span class="w" data-on="2.084" data-off="2.364">थात्</span><span class="w" data-on="2.445" data-off="2.525">वे</span></span> <span class="kword"><span class="w" data-on="2.705" data-off="2.765">पु</span><span class="w" data-on="2.825" data-off="2.875">रु</span><span class="w" data-on="2.885" data-off="3.186">षार्</span><span class="w" data-on="3.286" data-off="3.386">थ</span><span class="w" data-on="3.447" data-off="3.727">ता</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="4.609" data-off="4.659">अ</span><span class="w" data-on="4.709" data-off="4.909">था</span><span class="w" data-on="4.969" data-off="5.05">पि</span></span> <span class="kword"><span class="w" data-on="5.11" data-off="5.17">म</span><span class="w" data-on="5.23" data-off="5.28">न</span><span class="w" data-on="5.35" data-off="5.43">सो</span></span> <span class="kword"><span class="w" data-on="5.591" data-off="5.771">वृत्</span><span class="w" data-on="5.831" data-off="5.971">तिर्</span></span> <span class="kword"><span class="w" data-on="6.092" data-off="6.232">बुद्</span><span class="w" data-on="6.332" data-off="6.633">धेर्</span><span class="w" data-on="6.713" data-off="6.853">वै</span><span class="w" data-on="6.933" data-off="7.093">कै</span><span class="w" data-on="7.174" data-off="7.234">क</span><span class="w" data-on="7.314" data-off="7.594">संस्</span><span class="w" data-on="7.634" data-off="7.735">कृ</span><span class="w" data-on="7.795" data-off="7.975">ता</span></span> <span class="kword"><span class="w" data-on="8.115" data-off="8.777">स्यात्</span></span></div><div class="iast">vinā saṃvedyatāṃ puṃsastathātve puruṣārthatā |<br/>athāpi manaso vṛttir buddhervaikaikasaṃskṛtā syāt ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_13" data-label="Īśvarasiddhi &middot; verse 13" data-sa="किं तु सा प्रधानस्य सामान्यस्याखिलान्प्रति । सर्वेषां यदि सार्वज्ञ्यमेकैकस्य प्रसज्यते ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_13.mp3"><div class="vnum">13<br/><button class="vplay" data-play-idx="12">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.2">किम्</span></span> <span class="kword"><span class="w" data-on="0.26" data-off="0.361">तु</span></span> <span class="kword"><span class="w" data-on="0.421" data-off="0.601">सा</span></span> <span class="kword"><span class="w" data-on="0.721" data-off="0.841">प्र</span><span class="w" data-on="0.902" data-off="1.102">धा</span><span class="w" data-on="1.182" data-off="1.342">नस्</span><span class="w" data-on="1.422" data-off="1.482">य</span></span> <span class="kword"><span class="w" data-on="1.563" data-off="1.723">सा</span><span class="w" data-on="1.803" data-off="2.063">मान्</span><span class="w" data-on="2.104" data-off="2.284">यस्</span><span class="w" data-on="2.384" data-off="2.544">या</span><span class="w" data-on="2.624" data-off="2.745">खि</span><span class="w" data-on="2.785" data-off="3.125">लान्प्</span><span class="w" data-on="3.165" data-off="3.215">र</span><span class="w" data-on="3.265" data-off="3.366">ति</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="4.387" data-off="4.528">सर्</span><span class="w" data-on="4.608" data-off="4.708">वे</span><span class="w" data-on="4.848" data-off="5.189">षाम्</span></span> <span class="kword"><span class="w" data-on="5.289" data-off="5.339">य</span><span class="w" data-on="5.389" data-off="5.449">दि</span></span> <span class="kword"><span class="w" data-on="5.509" data-off="5.75">सार्</span><span class="w" data-on="5.81" data-off="6.05">वज्ञ्</span><span class="w" data-on="6.07" data-off="6.13">य</span><span class="w" data-on="6.19" data-off="6.291">मे</span><span class="w" data-on="6.451" data-off="6.591">कै</span><span class="w" data-on="6.671" data-off="6.852">कस्</span><span class="w" data-on="6.952" data-off="7.012">य</span></span> <span class="kword"><span class="w" data-on="7.152" data-off="7.252">प्र</span><span class="w" data-on="7.312" data-off="7.513">सज्</span><span class="w" data-on="7.573" data-off="7.633">य</span><span class="w" data-on="7.713" data-off="7.793">ते</span></span></div><div class="iast">kiṃ tu sā pradhānasya sāmānyasyākhilānprati |<br/>sarveṣāṃ yadi sārvajñyamekaikasya prasajyate ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_14" data-label="Īśvarasiddhi &middot; verse 14" data-sa="अथापि । सर्वपुरुष्... ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_14.mp3"><div class="vnum">14<br/><button class="vplay" data-play-idx="13">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.041" data-off="0.091">अ</span><span class="w" data-on="0.142" data-off="0.324">था</span><span class="w" data-on="0.365" data-off="0.973">पि</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="0.973" data-off="1.136">सर्</span><span class="w" data-on="1.237" data-off="1.298">व</span><span class="w" data-on="1.359" data-off="1.44">पु</span><span class="w" data-on="1.48" data-off="1.704">रुष्</span></span></div><div class="iast">athāpi |<br/>sarvapuruṣ... ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_15" data-label="Īśvarasiddhi &middot; verse 15" data-sa="स्वभावतः अथापि स भवत्येव किं तु तेन न युज्यते । नैतन्नार्थित्वमस्यास्ति जातु पुंसो ऽथ चेतसः ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_15.mp3"><div class="vnum">15<br/><button class="vplay" data-play-idx="14">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.06" data-off="0.18">स्व</span><span class="w" data-on="0.26" data-off="0.481">भा</span><span class="w" data-on="0.561" data-off="0.621">व</span><span class="w" data-on="0.701" data-off="1.041">तः</span></span> <span class="kword"><span class="w" data-on="1.041" data-off="1.091">अ</span><span class="w" data-on="1.091" data-off="1.281">था</span><span class="w" data-on="1.381" data-off="1.442">पि</span></span> <span class="kword"><span class="w" data-on="1.502" data-off="1.582">स</span></span> <span class="kword"><span class="w" data-on="1.642" data-off="1.722">भ</span><span class="w" data-on="1.782" data-off="2.022">वत्</span><span class="w" data-on="2.082" data-off="2.202">ये</span><span class="w" data-on="2.322" data-off="2.403">व</span></span> <span class="kword"><span class="w" data-on="2.463" data-off="2.643">किम्</span></span> <span class="kword"><span class="w" data-on="2.763" data-off="2.843">तु</span></span> <span class="kword"><span class="w" data-on="2.923" data-off="3.003">ते</span><span class="w" data-on="3.203" data-off="3.263">न</span></span> <span class="kword"><span class="w" data-on="3.324" data-off="3.384">न</span></span> <span class="kword"><span class="w" data-on="3.484" data-off="3.724">युज्</span><span class="w" data-on="3.764" data-off="3.844">य</span><span class="w" data-on="3.924" data-off="4.004">ते</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="5.186" data-off="5.326">नै</span><span class="w" data-on="5.406" data-off="5.566">तन्</span><span class="w" data-on="5.646" data-off="5.886">नार्</span><span class="w" data-on="5.966" data-off="6.147">थित्</span><span class="w" data-on="6.227" data-off="6.277">व</span><span class="w" data-on="6.327" data-off="6.547">मस्</span><span class="w" data-on="6.607" data-off="6.847">यास्</span><span class="w" data-on="6.927" data-off="6.987">ति</span></span> <span class="kword"><span class="w" data-on="7.048" data-off="7.228">जा</span><span class="w" data-on="7.348" data-off="7.408">तु</span></span> <span class="kword"><span class="w" data-on="7.488" data-off="7.648">पुं</span><span class="w" data-on="7.768" data-off="7.848">सो</span></span> <span class="kword"><span class="w" data-on="8.089" data-off="8.169">थ</span></span> <span class="kword"><span class="w" data-on="8.229" data-off="8.329">चे</span><span class="w" data-on="8.509" data-off="8.589">त</span><span class="w" data-on="8.649" data-off="8.829">सः</span></span></div><div class="iast">svabhāvataḥ athāpi sa bhavatyeva kiṃ tu tena na yujyate |<br/>naitannārthitvamasyāsti jātu puṃso &#x27;tha cetasaḥ ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_16" data-label="Īśvarasiddhi &middot; verse 16" data-sa="तदेतदपि न न्याय्यं जाते देहस्थचेतसि तत्स्वभावत्वमेव स्यान्मोक्षः कर्मक्षयाश्रयः । न रागात्... ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_16.mp3"><div class="vnum">16<br/><button class="vplay" data-play-idx="15">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.04" data-off="0.1">त</span><span class="w" data-on="0.16" data-off="0.26">दे</span><span class="w" data-on="0.44" data-off="0.5">त</span><span class="w" data-on="0.56" data-off="0.62">द</span><span class="w" data-on="0.66" data-off="0.74">पि</span></span> <span class="kword"><span class="w" data-on="0.8" data-off="0.881">न</span></span> <span class="kword"><span class="w" data-on="0.981" data-off="1.381">न्याय्</span><span class="w" data-on="1.401" data-off="1.581">यम्</span></span> <span class="kword"><span class="w" data-on="1.701" data-off="1.921">जा</span><span class="w" data-on="1.981" data-off="2.081">ते</span></span> <span class="kword"><span class="w" data-on="2.321" data-off="2.401">दे</span><span class="w" data-on="2.542" data-off="2.702">हस्</span><span class="w" data-on="2.802" data-off="2.902">थ</span><span class="w" data-on="2.962" data-off="3.062">चे</span><span class="w" data-on="3.282" data-off="3.362">त</span><span class="w" data-on="3.422" data-off="3.502">सि</span></span> <span class="kword"><span class="w" data-on="3.582" data-off="3.842">तत्स्</span><span class="w" data-on="3.882" data-off="3.942">व</span><span class="w" data-on="4.043" data-off="4.343">भा</span><span class="w" data-on="4.343" data-off="4.523">वत्</span><span class="w" data-on="4.603" data-off="4.663">व</span><span class="w" data-on="4.723" data-off="4.823">मे</span><span class="w" data-on="5.023" data-off="5.083">व</span></span> <span class="kword"><span class="w" data-on="5.223" data-off="5.583">स्यान्</span><span class="w" data-on="5.664" data-off="5.944">मोक्</span><span class="w" data-on="6.004" data-off="6.184">षः</span></span> <span class="kword"><span class="w" data-on="6.304" data-off="6.444">कर्</span><span class="w" data-on="6.524" data-off="6.724">मक्</span><span class="w" data-on="6.784" data-off="6.864">ष</span><span class="w" data-on="6.944" data-off="7.305">याश्</span><span class="w" data-on="7.305" data-off="7.365">र</span><span class="w" data-on="7.425" data-off="7.605">यः</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="8.986" data-off="9.046">न</span></span> <span class="kword"><span class="w" data-on="9.106" data-off="9.306">रा</span><span class="w" data-on="9.386" data-off="9.626">गात्</span></span></div><div class="iast">tadetadapi na nyāyyaṃ jāte dehasthacetasi tatsvabhāvatvameva syānmokṣaḥ karmakṣayāśrayaḥ |<br/>na rāgāt... ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><article class="verse" data-recite data-id="iss_17" data-label="Īśvarasiddhi &middot; verse 17" data-sa="पलायते दैवहतस्य सन्मणिः । भाति वह्निर् निशीथे. ॥" data-en="" data-audio="/audio/isvarasiddhi/iss_17.mp3"><div class="vnum">17<br/><button class="vplay" data-play-idx="16">recite</button></div><div><div class="pada"><span class="kword"><span class="w" data-on="0.02" data-off="0.08">प</span><span class="w" data-on="0.14" data-off="0.341">ला</span><span class="w" data-on="0.441" data-off="0.501">य</span><span class="w" data-on="0.582" data-off="0.662">ते</span></span> <span class="kword"><span class="w" data-on="0.882" data-off="1.043">दै</span><span class="w" data-on="1.123" data-off="1.203">व</span><span class="w" data-on="1.263" data-off="1.313">ह</span><span class="w" data-on="1.384" data-off="1.584">तस्</span><span class="w" data-on="1.684" data-off="1.745">य</span></span> <span class="kword"><span class="w" data-on="1.805" data-off="1.965">सन्</span><span class="w" data-on="2.086" data-off="2.146">म</span><span class="w" data-on="2.206" data-off="2.406">णिः</span></span></div><div class="pada"><span class="kword"><span class="w" data-on="3.69" data-off="3.87">भा</span><span class="w" data-on="3.93" data-off="3.991">ति</span></span> <span class="kword"><span class="w" data-on="4.051" data-off="4.311">वह्</span><span class="w" data-on="4.311" data-off="4.432">निर्</span></span> <span class="kword"><span class="w" data-on="4.552" data-off="4.602">नि</span><span class="w" data-on="4.652" data-off="4.833">शी</span><span class="w" data-on="4.933" data-off="5.053">थे</span></span></div><div class="iast">palāyate daivahatasya sanmaṇiḥ |<br/>bhāti vahnir niśīthe. ||</div><div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div><div class="rnote"><span class="srcbadge">studio chant</span> &middot; gadya &middot; align 0.0</div></div></article><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/kashaudio">propose a correction →</a>. chants rendered by the kashaudio pipeline (Vagdhenu AI voice); timings by MMS alignment.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>window.__WT={"iss_01": {"dur": 4.793, "segs": [[0.02, 4.191], [4.191, 4.713]]}, "iss_02": {"dur": 3.05, "segs": [[0.02, 1.495], [1.495, 2.97]]}, "iss_03": {"dur": 5.446, "segs": [[0.02, 1.875], [1.875, 5.366]]}, "iss_04": {"dur": 9.886, "segs": [[0.02, 4.668], [4.668, 9.806]]}, "iss_05": {"dur": 6.214, "segs": [[0.02, 4.288], [4.288, 6.134]]}, "iss_06": {"dur": 2.51, "segs": [[0.02, 0.938], [0.938, 2.43]]}, "iss_07": {"dur": 9.17, "segs": [[0.02, 4.621], [4.621, 9.09]]}, "iss_08": {"dur": 9.03, "segs": [[0.02, 4.799], [4.799, 8.95]]}, "iss_09": {"dur": 2.843, "segs": [[0.02, 0.706], [0.706, 2.763]]}, "iss_10": {"dur": 9.37, "segs": [[0.02, 4.588], [4.588, 9.29]]}, "iss_11": {"dur": 11.063, "segs": [[0.02, 3.976], [3.976, 10.983]]}, "iss_12": {"dur": 8.837, "segs": [[0.02, 4.069], [4.069, 8.757]]}, "iss_13": {"dur": 8.314, "segs": [[0.02, 4.127], [4.127, 8.234]]}, "iss_14": {"dur": 1.785, "segs": [[0.02, 0.488], [0.488, 1.705]]}, "iss_15": {"dur": 9.33, "segs": [[0.02, 4.635], [4.635, 9.25]]}, "iss_16": {"dur": 9.646, "segs": [[0.02, 8.316], [8.316, 9.566]]}, "iss_17": {"dur": 5.254, "segs": [[0.02, 2.795], [2.795, 5.174]]}}</script><script>
+(function(){
+"use strict";
+var items=[],qi=0,si=0,steps=[],mode="verse",rate=1,playing=false;
+var audio=new Audio();audio.preload="auto";
+var synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+var WT=(window.__WT||{});
+function $(s,r){return (r||document).querySelectorAll(s)}
+function escT(s){return (s||"").replace(/\s+/g," ").trim()}
+function saLines(sa){try{return (sa||"").split(/(?<=[।॥])/).map(escT).filter(Boolean)}catch(e){return (sa||"").split(/[।॥]+/).map(escT).filter(Boolean)}}
+function enChunks(en){var parts=(en||"").split(/(?<=[.!?।॥])\s+/).map(escT).filter(Boolean);var out=[],cur="";parts.forEach(function(p){if((cur+" "+p).length>220){if(cur)out.push(cur);cur=p}else{cur=(cur?cur+" ":"")+p}});if(cur)out.push(cur);return out.length?out:[escT(en)].filter(Boolean)}
+function collect(){
+  items=[];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-recite]"),function(el){
+    items.push({el:el,id:el.getAttribute("data-id")||"",sa:el.getAttribute("data-sa")||"",
+      en:el.getAttribute("data-en")||"",audio:el.getAttribute("data-audio")||"",
+      label:el.getAttribute("data-label")||""});
+  });
+}
+function segsFor(id,nlines){
+  var w=WT[id];if(!w||!w.segs||!w.segs.length)return null;
+  if(w.segs.length>=nlines)return w.segs.slice(0,nlines);
+  return null;
+}
+function buildSteps(it){
+  var st=[];
+  if(mode==="en"){
+    if(!it.en)return st;
+    enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})});
+    return st;
+  }
+  var lines=(mode==="line")?saLines(it.sa):[escT(it.sa)];
+  var segs=(mode==="line"&&it.audio)?segsFor(it.id,lines.length):null;
+  lines.forEach(function(ln,i){
+    if(it.audio){var s={k:"au",url:it.audio,it:it,part:"sa",line:i};if(segs&&segs[i]){s.t0=segs[i][0];s.t1=segs[i][1]}st.push(s)}
+    else if(ln){st.push({k:"sp",lang:"sa",text:ln,it:it,part:"sa",line:i})}
+  });
+  if(mode!=="sa"&&it.en){enChunks(it.en).forEach(function(c){st.push({k:"sp",lang:"en",text:c,it:it,part:"en"})})}
+  return st;
+}
+function pickVoice(lang){
+  if(!synth)return null;
+  var vs=synth.getVoices?synth.getVoices():[];
+  var pref=lang==="sa"?["sa","hi"]:["en"];
+  for(var pi=0;pi<pref.length;pi++){for(var i=0;i<vs.length;i++){if((vs[i].lang||"").toLowerCase().indexOf(pref[pi])===0)return vs[i]}}
+  return vs.length?vs[0]:null;
+}
+function utter(text,lang,done){
+  if(!synth){done();return}
+  try{synth.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);u.rate=rate;u.lang=lang==="sa"?"sa-IN":"en-US";
+  var v=pickVoice(lang);if(v)u.voice=v;
+  u.onend=done;u.onerror=done;
+  try{synth.speak(u)}catch(e){done()}
+}
+function bar(){return document.getElementById("rbar")}
+function showBar(){
+  if(bar()){bar().style.display="block";return}
+  var d=document.createElement("div");d.className="rbar";d.id="rbar";d.style.display="block";
+  d.innerHTML='<div class="rbar-in"><button class="tbtn" data-r="prev" title="previous">⏮</button><button class="tbtn main" data-r="toggle" title="play/pause">⏸</button><button class="tbtn" data-r="next" title="next">⏭</button><select class="rrate" data-r="mode" title="recitation mode"><option value="sa">Sanskrit only</option><option value="en">English only</option><option value="verse" selected>Verse: SA → EN</option><option value="line">Line: SA → EN</option></select><select class="rrate" data-r="rate" title="speed"><option value="0.75">0.75x</option><option value="1" selected>1x</option><option value="1.15">1.15x</option></select><span class="rsrc" data-r="src">browser voice</span><span class="rlabel" data-r="label"></span><div class="rprog"><i data-r="prog"></i></div><button class="tbtn" data-r="close" title="stop">✕</button></div>';
+  document.body.appendChild(d);
+  d.addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(!b)return;var a=b.getAttribute("data-r");
+    if(a==="toggle")toggle();else if(a==="next")next(true);else if(a==="prev")prev();else if(a==="close")stop()});
+  d.querySelector('[data-r="mode"]').addEventListener("change",function(e){setMode(e.target.value,true)});
+  d.querySelector('[data-r="rate"]').addEventListener("change",function(e){rate=parseFloat(e.target.value)||1});
+}
+function setLabel(html){var l=document.querySelector('[data-r="label"]');if(l)l.innerHTML=html}
+function setSrc(studio){var s=document.querySelector('[data-r="src"]');if(!s)return;s.textContent=studio?"studio chant":"browser voice";s.className="rsrc"+(studio?" studio":"")}
+function setProg(f){var pr=document.querySelector('[data-r="prog"]');if(pr)pr.style.width=Math.max(0,Math.min(1,f||0))*100+"%"}
+function markItem(it){
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  if(it&&it.el&&it.el.scrollIntoView){try{it.el.classList.add("on");it.el.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}}
+}
+function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.querySelectorAll(".w.lit"),function(x){x.classList.remove("lit")})}
+function litAt(it,t){
+  if(!it||!it.el||!it.el.querySelectorAll)return;
+  Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
+    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
+    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+  });
+}
+function playStep(){
+  if(!playing)return;
+  if(si>=steps.length){next(false);return}
+  var s=steps[si],it=s.it;
+  markItem(it);clearLit(it);
+  setLabel("<b>"+escT(it.label||("verse "+(qi+1)))+"</b> &middot; "+(qi+1)+"/"+items.length+(s.part==="en"?" &middot; English":s.part==="sa"?" &middot; Sanskrit":""));
+  if(s.k==="au"){
+    setSrc(true);
+    try{
+      if(audio.getAttribute("src")!==s.url){audio.src=s.url}
+      var seek=function(){try{if(s.t0!=null)audio.currentTime=s.t0}catch(e){}try{audio.playbackRate=rate;audio.play()}catch(e){advance()} };
+      if(audio.readyState>=1)seek();else{audio.onloadedmetadata=seek}
+    }catch(e){advance()}
+  }else{
+    setSrc(false);setProg(0);
+    utter(s.text,s.lang,function(){advance()});
+  }
+}
+audio.addEventListener("timeupdate",function(){
+  if(!playing||si>=steps.length)return;
+  var s=steps[si];if(s.k!=="au")return;
+  if(s.t1!=null&&audio.currentTime>=s.t1){advance();return}
+  try{var d=audio.duration||1;var base=(s.t0!=null?s.t0:0),span=((s.t1!=null?s.t1:d)-base)||1;setProg((audio.currentTime-base)/span)}catch(e){}
+  litAt(s.it,audio.currentTime);
+  var w=WT[s.it.id];if(w&&w.dur&&s.t0==null)setProg(audio.currentTime/w.dur);
+});
+audio.addEventListener("ended",function(){if(playing)advance()});
+audio.addEventListener("error",function(){if(playing){var s=steps[si];if(s&&s.k==="au"){s.k="sp";s.lang="sa";s.text=saLines(s.it.sa)[s.line||0]||s.it.sa;playStep()}}});
+function advance(){si++;setProg(0);playStep()}
+function next(manual){if(!items.length)return;clearLit(items[qi]);qi++;if(qi>=items.length){stop(true);return}startAt(qi)}
+function prev(){if(!items.length)return;clearLit(items[qi]);qi=Math.max(0,qi-1);startAt(qi)}
+function startAt(i){
+  qi=i;var it=items[qi];
+  if(mode==="en"&&!it.en){next(false);return}
+  steps=buildSteps(it);si=0;
+  if(!steps.length){next(false);return}
+  playing=true;showBar();
+  var m=document.querySelector('[data-r="mode"]');if(m)m.value=mode;
+  playStep();
+}
+function toggle(){
+  if(!items.length)return;
+  if(playing){playing=false;try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶"}
+  else{if(!steps.length){if(qi>=items.length)qi=0;startAt(qi);return}playing=true;playStep();var t2=document.querySelector('[data-r="toggle"]');if(t2)t2.innerHTML="⏸"}
+}
+function stop(done){
+  playing=false;steps=[];si=0;
+  try{audio.pause()}catch(e){}try{if(synth)synth.cancel()}catch(e){}
+  if(items[qi])clearLit(items[qi]);
+  Array.prototype.forEach.call(document.querySelectorAll("article.verse.on"),function(x){x.classList.remove("on")});
+  setProg(0);
+  if(done)setLabel("done &middot; "+items.length+" verses");
+  var t=document.querySelector('[data-r="toggle"]');if(t)t.innerHTML="▶";
+}
+function setMode(m,restart){
+  mode=m;
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){b.classList.toggle("on",b.getAttribute("data-mode")===m)});
+  var sel=document.querySelector('[data-r="mode"]');if(sel)sel.value=m;
+  if(restart&&playing){stop();startAt(qi)}
+}
+function pageQueue(){
+  collect();
+  if(!items.length)return;
+  showBar();startAt(0);
+}
+function init(){
+  collect();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mode]"),function(b){
+    b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"),playing)});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-idx]"),function(b){
+    b.addEventListener("click",function(){collect();var i=parseInt(b.getAttribute("data-play-idx"),10)||0;showBar();startAt(Math.min(i,items.length-1))});
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-play-all]"),function(b){
+    b.addEventListener("click",function(){pageQueue()});
+  });
+  if("speechSynthesis" in window){try{speechSynthesis.getVoices()}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+window.__recite={setMode:setMode,play:pageQueue};
+})();</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>
