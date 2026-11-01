@@ -313,24 +313,42 @@ export default {
       }
       if (!packet) return json({ error: 'chunk not on file: ' + chunk }, 404, cors);
       if (packet.gate !== 'PASS') return json({ error: 'English withheld — gate ' + (packet.gate || 'BLOCKED') }, 422, cors);
+      // claim skeleton: structured arguments packet where the build ships one
+      let argBlock = '', openBlock = '';
+      try {
+        const ar = await fetch('https://ipvv-a8u.pages.dev/data/arguments/' + work + '-' + chunk + '.json');
+        if (ar.ok) {
+          const ap = await ar.json();
+          const prems = (ap.premises || []).map(p => '- ' + String(p.text || '').replace(/\s+/g, ' ').trim().slice(0, 300)).join('\n');
+          argBlock = 'Question: ' + String(ap.question || '').replace(/\s+/g, ' ').trim().slice(0, 400)
+            + '\nPremises:\n' + (prems || '- (none listed)') + '\nConclusion: '
+            + String((ap.conclusion && ap.conclusion.text) || ap.conclusion || '').replace(/\s+/g, ' ').trim().slice(0, 400);
+          const un = Array.isArray(ap.unresolved) ? ap.unresolved.join('; ') : String(ap.unresolved || '');
+          if (un.trim()) openBlock = un.replace(/\s+/g, ' ').trim().slice(0, 400);
+        }
+      } catch (e) { /* arguments packet optional — layers packet is the floor */ }
       const trim = (s, n) => String(s || '').replace(/^#+\s*[^\n]*\n/, '').replace(/\s+/g, ' ').trim().slice(0, n);
-      const prompt = 'You render verses into a requested voice. Meaning is FIXED by the packet below. Change diction and rhythm only.\n\n'
-        + 'Sanskrit: ' + trim(packet.sanskrit, 600) + '\n'
-        + 'Close translation (proposition-faithful): ' + trim(packet.l1, 800) + '\n'
-        + 'Reading translation (book prose): ' + trim(packet.l2, 800) + '\n'
-        + 'Commentary (what it means): ' + (trim(packet.c1, 800) || 'none on file — stay inside L1/L2') + '\n'
-        + 'Argument (what the verse claims): ' + (trim(packet.argmap, 1200) || 'none') + '\n\n'
+      const prompt = 'You render verses into a requested voice. Meaning is FIXED by the canonical packet below — every floor of the translation stack stands behind it. Change diction and rhythm only.\n\n'
+        + 'Source (Sanskrit): ' + trim(packet.sanskrit, 600) + '\n'
+        + 'Load-bearing propositions, L1 — every one must survive: ' + trim(packet.l1, 800) + '\n'
+        + 'Resolved reading, L2: ' + trim(packet.l2, 800) + '\n'
+        + 'Commentary — what it means, C1: ' + (trim(packet.c1, 800) || 'none on file — stay inside L1/L2') + '\n'
+        + 'Claim skeleton:\n' + (argBlock || trim(packet.argmap, 1200) || 'none') + '\n'
+        + 'Open points — hedge in-voice or omit, never close: ' + (openBlock || 'none listed') + '\n'
+        + 'Contested readings: none on file for this work — never present uncertain readings as certain.\n\n'
+        + 'First, in one silent line, name this verse\'s rasa: what must the reader feel. That line never ships.\n'
+        + 'Then render.\n\n'
         + 'Voice: ' + st + '\n'
-        + 'Rules: 2-6 sentences. Same claims, new voice. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly.\n\nRendition:';
+        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. Sanskrit technical terms keep their Sanskrit on first use. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly.\n\nRendition:';
       try {
         let c2 = '', used = '';
         try {
-          c2 = await dashscopeChat(env, [{ role: 'user', content: prompt }], 300);
+          c2 = await dashscopeChat(env, [{ role: 'user', content: prompt }], 350);
           used = 'qwen3.8-omni-flash';
         } catch (e2) {
           const gen = await env.AI.run(model || '@cf/deepseek-ai/deepseek-v4-flash', {
             messages: [{ role: 'user', content: prompt }],
-            max_tokens: 300,
+            max_tokens: 350,
           });
           c2 = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || '';
           used = model || '@cf/deepseek-ai/deepseek-v4-flash';
