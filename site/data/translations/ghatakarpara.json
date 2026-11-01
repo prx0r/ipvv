@@ -1,134 +1,65 @@
 [
  {
   "chunk": "ghat-p01",
-  "verses": "1-9",
+  "verses": "1",
   "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
   "gate": "BLOCKED",
   "blocking": [
-   "ABSTENTION"
+   "no proof record"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "ghatakarpara",
-  "immutable_id": "pt:pid:ghat:f4aa6b121a08",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ghatakarpara.txt",
-  "source_lines": 14,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
-  "match_words": 10
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "",
+  "l2": "",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "ghat-p02",
-  "verses": "10-18",
+  "verses": "1",
   "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
   "gate": "BLOCKED",
   "blocking": [
-   "ABSTENTION"
+   "no proof record"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "ghatakarpara",
-  "immutable_id": "pt:pid:ghat:16a5384f807b",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ghatakarpara.txt",
-  "source_lines": 61,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
-  "match_words": 12
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "",
+  "l2": "",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "ghat-p03",
-  "verses": "19-21",
+  "verses": "1",
   "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
   "gate": "BLOCKED",
   "blocking": [
-   "ABSTENTION"
+   "no proof record"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "ghatakarpara",
-  "immutable_id": "pt:pid:ghat:9b6748de21b4",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ghatakarpara.txt",
-  "source_lines": 113,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
-  "match_words": 12
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "",
+  "l2": "",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": null
+  }
  }
 ]

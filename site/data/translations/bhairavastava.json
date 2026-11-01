@@ -2,441 +2,191 @@
  {
   "chunk": "bh-p01",
   "verses": "1",
-  "sanskrit": "bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+  "sanskrit": "vyāptacarācarabhāvaviśeṣaṃ cinmayam ekam anantam anādim bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:65a6297add76",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p01 (1)\nBhairava-Lord, refuge of the helpless, by mind-become-Yours, in heart I venerate. // abhts_1",
-  "l2": "## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 6,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 3
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p01 (1)\npervading-the-particular-states-of-moving-and-unmoving / consisting-of-consciousness / one / endless / beginningless / Bhairava-Lord / of-helpless / by-mind-become- Yours / in-heart / I-venerate",
+  "l2": "Pervading the particular states of moving and unmoving — consciousness-made, one, endless, beginningless: Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p02",
   "verses": "2",
-  "sanskrit": "tvaṃ ca maheśa ! sadaiva mamā'tmā svātmamayaṃ mama tena samastam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "CITATION_GROUNDING"
+  "sanskrit": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:478a3bf66bbf",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    false,
-    "'ātman' used in candidate but not in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 9,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 4
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p02 (2)\nbecome-of-You / this / without-remainder / now / appears / to-me / by-power-of-Your-grace / You / Maheśa / always / my / self / my / all",
+  "l2": "All this, become of You, now appears to me by the power of Your grace. You, Maheśa, are always my self; by You all is mine.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p03",
   "verses": "3",
-  "sanskrit": "satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
+  "sanskrit": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:ad4ece1358b3",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p03 (3)\nEven though hard-to-bear suffering, delusion, terror-causing karma-hosts. // abhts_3",
-  "l2": "## bh-p03 — suffering acknowledged\nEven though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 12,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p03 (3)\nin-own-self / all-pervading / in-You / as-Lord / therefore / not / of-transmigration-fear-talk / exists / Even-though / hard-to-bear / suffering / delusion / terror / causing / in-karma-hosts",
+  "l2": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p04",
   "verses": "4",
-  "sanskrit": "śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo'smi",
+  "sanskrit": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:42ceeffb4f90",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p04 (4)\nBy Śaṅkara-service, contemplation-firm, I am terrifying-Bhairava-power-filled. // abhts_4",
-  "l2": "## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 15,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p04 (4)\nO-Ender / toward-me / toward / not / gaze / this / most-wrathful-terrible / direct / By-Śaṅkara-service / contemplation-firm / I-am / terrifying-Bhairava-power-filled",
+  "l2": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p05",
   "verses": "5",
-  "sanskrit": "mṛtyuyamāntakakarmapiśācairnātha ! namo'stu na jātu bibhemi",
+  "sanskrit": "ittham upoḍhabhavanmayasaṃviddīdhitidāritabhūritamisraḥ mṛtyuyamāntakakarmapiśācaiḥ nātha ! namo'stu na jātu bibhemi",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:516427fc7cfd",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p05 (5)\nDeath, Yama, ender, karma-ghosts — Lord, salutation; never I fear. // abhts_5",
-  "l2": "## bh-p05 — fearlessness\nDeath, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 18,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p05 (5)\nthus / whose-great-darkness-is-dispelled-by-rays-of-world-awareness / Death-Yama-ender-karma-ghosts / Lord / salutation / never / I-fear",
+  "l2": "Thus — great darkness already dispelled by rays of awareness: death, Yama, ender, karma-ghosts met with salutation alone, and never do I fear.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p06",
   "verses": "6",
-  "sanskrit": "bhāvaparāmṛtanirbharapūrṇe tvayyahamātmani nirvṛtimemi",
+  "sanskrit": "proditasatyavibodhamarīciprekṣitaviśvapadārthasatattvaḥ bhāvaparāmṛtanirbharapūrṇe tvayi aham ātmani nirvṛtim emi",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:6865783fe184",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p06 (6)\nIn being-full in You, I, self, bliss I enter. // abhts_6",
-  "l2": "## bh-p06 — bliss\nIn being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 21,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p06 (6)\nwhose-true-essence-of-world-objects-is-seen-by-rays-of-arisen-true-awakening / In-being-full / in-you / I / self / bliss / I-enter",
+  "l2": "Arisen true awakening: its rays reveal the true essence of world-objects. In You, being-full, I the self enter bliss.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p07",
   "verses": "7",
-  "sanskrit": "nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti",
+  "sanskrit": "mānasagocaram eti yadaiva kleśadaśā tanutāpavidhātrī nātha ! tadaiva mama tvadabhedas stotraparāmṛtavṛṣṭiḥ udeti",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:b6fd6bd5c487",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p07 (7)\nLord, then alone my with-You-nondifference; hymn-supreme-nectar-rain arises. // abhts_7",
-  "l2": "## bh-p07 — nondifference and hymn-rain\nLord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 24,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p07 (7)\ninto-mind's-range / comes / when-indeed / affliction-state / producing-slight-anguish / Lord / then-alone / my / with-you-nondifference / hymn-supreme-nectar-rain / arises",
+  "l2": "When affliction, producing slight anguish, comes into mind's range — then alone my nondifference with You, and nectar-rain arises.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p08",
   "verses": "8",
-  "sanskrit": "tāvakaśāstraparāmṛtacintā syandati cetasi nirvṛtidhārām",
+  "sanskrit": "śaṅkara satyam idam vratadānasnānatapaḥ bhavatāpavidāri tāvakaśāstra parāmṛtacintā cetasi nirvṛtidhārām syandati",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:2933a74e6cf7",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p08 (8)\nYour-scripture supreme-nectar-contemplation in mind, bliss-stream flows. // abhts_8",
-  "l2": "## bh-p08 — scripture-contemplation\nYour scripture's supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind.",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 27,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 3
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p08 (8)\nO-Śaṅkara / truly / this / vow-giving-bathing-austerity / dispelling-becoming's-heat / Your-scripture / supreme-nectar-contemplation / in-mind / bliss-stream / flows",
+  "l2": "Truly, O Śaṅkara: vow, giving, bathing, austerity dispel becoming's heat. Contemplation of Your scripture as supreme nectar streams a bliss-stream in mind.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p09",
   "verses": "9",
-  "sanskrit": "tvāṃ priyamāpya sudarśanamekaṃ durlabhamanyajanaiḥ samayajñam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "CITATION_GROUNDING"
+  "sanskrit": "nṛtyati gāyati hṛṣyati gāḍham saṃvit iyam mama bhairavanātha tvāṃ priyam āpya sudarśanamekam durlabhamanyajanaiḥ samayajñam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:0f6e31d3c42d",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    false,
-    "'māyā' used in candidate but not in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 30,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match": "spaceless"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p09 (9)\ndances / sings / rejoices / deeply / consciousness / this / my / O-Bhairava-Lord / You / dear / having-obtained / beautiful-vision-alone / hard-to-get-by-others / samaya-knower",
+  "l2": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  },
  {
   "chunk": "bh-p10",
   "verses": "10",
-  "sanskrit": "yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ",
+  "sanskrit": "vasurasapauṣe kṛṣṇadaśamyām abhinavaguptaḥ stavam imam akarot yena vibhuḥ bhavati janasya arusantāpaṃ śamayati jhaṭiti dayāluḥ",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bhairavastava",
-  "immutable_id": "pt:pid:bh:32db605be8aa",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
-   ]
-  },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## bh-p10 (10)\nBy whom the Lord becomes, world's great-heat pacifies instantly, compassionate. // abhts_10\n\n*T1 frozen 2026-10-30.*",
-  "l2": "## bh-p10 — the compassionate Lord\nBy whom the Lord becomes, the world's great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world's suffering instantly, compassionately.\n\n*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*",
-  "source_file": "abhinavagupta-bhairavastava.txt",
-  "source_lines": 33,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 4
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bh-p10 (10)\nin-the-month-of-Pauṣa / on-the-dark-tenth / Abhinavagupta / hymn / this / made / By-whom / the-Lord / becomes / world's / great-heat / pacifies / instantly / compassionate",
+  "l2": "In the month of Pauṣa, on the dark tenth, Abhinavagupta made this hymn. The pervasive, compassionate Lord pacifies the world's desert-heat — instantly.",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00505 (GRETIL)",
+   "source_lines": null
+  }
  }
 ]

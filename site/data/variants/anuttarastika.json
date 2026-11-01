@@ -1,0 +1,3707 @@
+[
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p000",
+  "surface": "saṃkrāmaḥ",
+  "citation": "saṃkrāmaḥ",
+  "morph": "nom.sg (saṃkrāma)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "transition",
+  "options": [
+   {
+    "gloss": "transition",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p001",
+  "surface": "atra",
+  "citation": "atra",
+  "morph": "adv (atra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "here",
+  "options": [
+   {
+    "gloss": "here",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p002",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p003",
+  "surface": "bhāvanā",
+  "citation": "bhāvanā",
+  "morph": "nom.sg (bhāvanā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "contemplation",
+  "options": [
+   {
+    "gloss": "contemplation",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p004",
+  "surface": "na ca",
+  "citation": "na ca",
+  "morph": "neg+indecl (na ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "nor",
+  "options": [
+   {
+    "gloss": "nor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p005",
+  "surface": "kathāyuktiḥ",
+  "citation": "kathāyuktiḥ",
+  "morph": "nom.sg (kathāyukti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "connection-of-speech",
+  "options": [
+   {
+    "gloss": "connection-of-speech",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p006",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "nor",
+  "options": [
+   {
+    "gloss": "nor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p007",
+  "surface": "carcā",
+  "citation": "carcā",
+  "morph": "nom.sg (carcā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "discussion",
+  "options": [
+   {
+    "gloss": "discussion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p008",
+  "surface": "na ca",
+  "citation": "na ca",
+  "morph": "neg+indecl (na ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "nor",
+  "options": [
+   {
+    "gloss": "nor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p009",
+  "surface": "dhyānaṃ",
+  "citation": "dhyānaṃ",
+  "morph": "acc.sg (dhyāna)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "visualization",
+  "options": [
+   {
+    "gloss": "visualization",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p010",
+  "surface": "vā",
+  "citation": "vā",
+  "morph": "indecl (vā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "or",
+  "options": [
+   {
+    "gloss": "or",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p011",
+  "surface": "na ca",
+  "citation": "na ca",
+  "morph": "neg+indecl (na ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "nor",
+  "options": [
+   {
+    "gloss": "nor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p012",
+  "surface": "dhāraṇā",
+  "citation": "dhāraṇā",
+  "morph": "nom.sg (dhāraṇā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "steadying",
+  "options": [
+   {
+    "gloss": "steadying",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p013",
+  "surface": "na ca",
+  "citation": "na ca",
+  "morph": "neg+indecl (na ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "nor",
+  "options": [
+   {
+    "gloss": "nor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p014",
+  "surface": "japābhyāsaprayāso na ca",
+  "citation": "japābhyāsaprayāso na ca",
+  "morph": "comp+neg (japābhyāsaprayāso na ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "japa-practice-effort",
+  "options": [
+   {
+    "gloss": "japa-practice-effort",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p015",
+  "surface": "tat",
+  "citation": "tat",
+  "morph": "nom.sg (tat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "That",
+  "options": [
+   {
+    "gloss": "That",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p016",
+  "surface": "kiṃ",
+  "citation": "kiṃ",
+  "morph": "interrog (kiṃ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p017",
+  "surface": "nāma",
+  "citation": "nāma",
+  "morph": "indecl (nāma)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "name",
+  "options": [
+   {
+    "gloss": "name",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p018",
+  "surface": "suniścitam",
+  "citation": "suniścitam",
+  "morph": "acc.sg (suniścita)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "well-decided",
+  "options": [
+   {
+    "gloss": "well-decided",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p019",
+  "surface": "vada",
+  "citation": "vada",
+  "morph": "2sg.imper (vada)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "speak",
+  "options": [
+   {
+    "gloss": "speak",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p020",
+  "surface": "paraṃ",
+  "citation": "paraṃ",
+  "morph": "acc.sg (para)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "supreme",
+  "options": [
+   {
+    "gloss": "supreme",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p021",
+  "surface": "satyaṃ",
+  "citation": "satyaṃ",
+  "morph": "acc.sg (satya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "truth",
+  "options": [
+   {
+    "gloss": "truth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p022",
+  "surface": "ca",
+  "citation": "ca",
+  "morph": "indecl (ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "and",
+  "options": [
+   {
+    "gloss": "and",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p023",
+  "surface": "tac",
+  "citation": "tac",
+  "morph": "acc.sg (tad)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "that",
+  "options": [
+   {
+    "gloss": "that",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p024",
+  "surface": "śrūyatām",
+  "citation": "śrūyatām",
+  "morph": "3sg.imper (śrūyatām)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "hear",
+  "options": [
+   {
+    "gloss": "hear",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p025",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p026",
+  "surface": "tyāgī",
+  "citation": "tyāgī",
+  "morph": "nom.sg (tyāgī)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "renouncer",
+  "options": [
+   {
+    "gloss": "renouncer",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p027",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p028",
+  "surface": "parigrahī",
+  "citation": "parigrahī",
+  "morph": "nom.sg (parigrahī)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "possessor",
+  "options": [
+   {
+    "gloss": "possessor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p029",
+  "surface": "bhaja",
+  "citation": "bhaja",
+  "morph": "2sg.imper (bhaja)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "enjoy",
+  "options": [
+   {
+    "gloss": "enjoy",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p030",
+  "surface": "sukhaṃ",
+  "citation": "sukhaṃ",
+  "morph": "acc.sg (sukha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "happiness",
+  "options": [
+   {
+    "gloss": "happiness",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p031",
+  "surface": "sarvam",
+  "citation": "sarvam",
+  "morph": "acc.sg (sarva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "all",
+  "options": [
+   {
+    "gloss": "all",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p01",
+  "l0_id": "anu-p01-p032",
+  "surface": "yathāvasthitaḥ",
+  "citation": "yathāvasthitaḥ",
+  "morph": "nom.sg (yathāvasthita)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "as-staying",
+  "options": [
+   {
+    "gloss": "as-staying",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p000",
+  "surface": "saṃsāraḥ",
+  "citation": "saṃsāraḥ",
+  "morph": "nom.sg (saṃsāra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Saṃsāra",
+  "options": [
+   {
+    "gloss": "Saṃsāra",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p001",
+  "surface": "asti na",
+  "citation": "asti na",
+  "morph": "neg+3sg.pres (asti na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p002",
+  "surface": "tattvatas",
+  "citation": "tattvatas",
+  "morph": "adv (tattvatas)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "in-truth",
+  "options": [
+   {
+    "gloss": "in-truth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p003",
+  "surface": "bandhasya",
+  "citation": "bandhasya",
+  "morph": "gen.sg (bandha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "of-bondage",
+  "options": [
+   {
+    "gloss": "of-bondage",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p004",
+  "surface": "vārtā",
+  "citation": "vārtā",
+  "morph": "nom.sg (vārtā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "news",
+  "options": [
+   {
+    "gloss": "news",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p005",
+  "surface": "eva kā",
+  "citation": "eva kā",
+  "morph": "interrog (eva kā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p006",
+  "surface": "bandhaḥ",
+  "citation": "bandhaḥ",
+  "morph": "nom.sg (bandha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Bondage",
+  "options": [
+   {
+    "gloss": "Bondage",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p007",
+  "surface": "yasya",
+  "citation": "yasya",
+  "morph": "gen.sg (yasya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "of-whom",
+  "options": [
+   {
+    "gloss": "of-whom",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p008",
+  "surface": "na jātu",
+  "citation": "na jātu",
+  "morph": "neg (na jātu)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "never",
+  "options": [
+   {
+    "gloss": "never",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p009",
+  "surface": "tasya",
+  "citation": "tasya",
+  "morph": "gen.sg (tasya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "of-him",
+  "options": [
+   {
+    "gloss": "of-him",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p010",
+  "surface": "vitathā",
+  "citation": "vitathā",
+  "morph": "adj (vitathā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "false",
+  "options": [
+   {
+    "gloss": "false",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p011",
+  "surface": "muktasya muktikriyā",
+  "citation": "muktasya muktikriyā",
+  "morph": "comp (muktasya muktikriyā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "liberation-action",
+  "options": [
+   {
+    "gloss": "liberation-action",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p012",
+  "surface": "eṣaḥ",
+  "citation": "eṣaḥ",
+  "morph": "indecl (eṣaḥ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "This",
+  "options": [
+   {
+    "gloss": "This",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p013",
+  "surface": "mithyāmohakṛt",
+  "citation": "mithyāmohakṛt",
+  "morph": "neg (mā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "error-making",
+  "options": [
+   {
+    "gloss": "error-making",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p014",
+  "surface": "mā",
+  "citation": "mā",
+  "morph": "indecl (kiṃcit)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Do-not",
+  "options": [
+   {
+    "gloss": "Do-not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p015",
+  "surface": "kiṃcit",
+  "citation": "kiṃcit",
+  "morph": "2sg.imper (tyaja)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "anything",
+  "options": [
+   {
+    "gloss": "anything",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p016",
+  "surface": "tyaja",
+  "citation": "tyaja",
+  "morph": "neg (mā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "abandon",
+  "options": [
+   {
+    "gloss": "abandon",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p017",
+  "surface": "mā",
+  "citation": "mā",
+  "morph": "2sg.imper (gṛhāṇa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "do-not",
+  "options": [
+   {
+    "gloss": "do-not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p018",
+  "surface": "gṛhāṇa",
+  "citation": "gṛhāṇa",
+  "morph": "2sg.imper (vihara)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "grasp",
+  "options": [
+   {
+    "gloss": "grasp",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p019",
+  "surface": "vihara",
+  "citation": "vihara",
+  "morph": "adj (svastha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "live",
+  "options": [
+   {
+    "gloss": "live",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p020",
+  "surface": "svasthaḥ",
+  "citation": "svasthaḥ",
+  "morph": "nom.sg (yathāvasthita)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "healthy",
+  "options": [
+   {
+    "gloss": "healthy",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p02",
+  "l0_id": "anu-p02-p021",
+  "surface": "yathāvasthitaḥ",
+  "citation": "yathāvasthitaḥ",
+  "morph": "nom.sg (yathāvasthita)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "as-staying",
+  "options": [
+   {
+    "gloss": "as-staying",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p000",
+  "surface": "pūjapūjakapūjya",
+  "citation": "pūjapūjakapūjya",
+  "morph": "comp (pūjapūjakapūjya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Worship-worshipper-worshipped",
+  "options": [
+   {
+    "gloss": "Worship-worshipper-worshipped",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p001",
+  "surface": "bhedasaraṇiḥ",
+  "citation": "bhedasaraṇiḥ",
+  "morph": "nom.sg (bhedasaraṇi)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "difference-course",
+  "options": [
+   {
+    "gloss": "difference-course",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p002",
+  "surface": "keyam",
+  "citation": "keyam",
+  "morph": "interrog (keyam)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p003",
+  "surface": "kathā",
+  "citation": "kathā",
+  "morph": "nom.sg (kathā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "speech",
+  "options": [
+   {
+    "gloss": "speech",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p004",
+  "surface": "anuttare",
+  "citation": "anuttare",
+  "morph": "loc.sg (anuttara)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "in-unsurpassed",
+  "options": [
+   {
+    "gloss": "in-unsurpassed",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p005",
+  "surface": "saṃkrāmaḥ",
+  "citation": "saṃkrāmaḥ",
+  "morph": "nom.sg (saṃkrāma)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Transition",
+  "options": [
+   {
+    "gloss": "Transition",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p006",
+  "surface": "kila",
+  "citation": "kila",
+  "morph": "indecl (kila)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "indeed",
+  "options": [
+   {
+    "gloss": "indeed",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p007",
+  "surface": "kasya",
+  "citation": "kasya",
+  "morph": "gen.sg (kasya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "of-whom",
+  "options": [
+   {
+    "gloss": "of-whom",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p008",
+  "surface": "kena",
+  "citation": "kena",
+  "morph": "instr.sg (kena)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "by-whom",
+  "options": [
+   {
+    "gloss": "by-whom",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p009",
+  "surface": "vidadhe",
+  "citation": "vidadhe",
+  "morph": "3sg.pres (vidadhe)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "does",
+  "options": [
+   {
+    "gloss": "does",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p010",
+  "surface": "ko vā",
+  "citation": "ko vā",
+  "morph": "interrog (ko vā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "who",
+  "options": [
+   {
+    "gloss": "who",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p011",
+  "surface": "praveśakramaḥ",
+  "citation": "praveśakramaḥ",
+  "morph": "nom.sg (praveśakrama)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "entry-course",
+  "options": [
+   {
+    "gloss": "entry-course",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p012",
+  "surface": "māyeyam",
+  "citation": "māyeyam",
+  "morph": "indecl (māyeyam)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "This",
+  "options": [
+   {
+    "gloss": "This",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p013",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p014",
+  "surface": "cidadvayāt",
+  "citation": "cidadvayāt",
+  "morph": "abl.sg (cidadvaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "from-consciousness-nonduality",
+  "options": [
+   {
+    "gloss": "from-consciousness-nonduality",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p015",
+  "surface": "paratayā",
+  "citation": "paratayā",
+  "morph": "abl.sg (paratā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "from-otherness",
+  "options": [
+   {
+    "gloss": "from-otherness",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p016",
+  "surface": "bhinnā api",
+  "citation": "bhinnā api",
+  "morph": "adj (bhinnā api)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "different",
+  "options": [
+   {
+    "gloss": "different",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p017",
+  "surface": "aho",
+  "citation": "aho",
+  "morph": "indecl (aho)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "alas",
+  "options": [
+   {
+    "gloss": "alas",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p018",
+  "surface": "vartate",
+  "citation": "vartate",
+  "morph": "3sg.pres (vartate)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "stands",
+  "options": [
+   {
+    "gloss": "stands",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p019",
+  "surface": "sarvam",
+  "citation": "sarvam",
+  "morph": "nom.sg (sarvam)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "All",
+  "options": [
+   {
+    "gloss": "All",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p020",
+  "surface": "svānubhavasvabhāvavimalaṃ",
+  "citation": "svānubhavasvabhāvavimalaṃ",
+  "morph": "comp (svānubhavasvabhāvavimala)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "own-experience- nature-pure",
+  "options": [
+   {
+    "gloss": "own-experience- nature-pure",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p021",
+  "surface": "cintāṃ",
+  "citation": "cintāṃ",
+  "morph": "acc.sg (cintā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Thought",
+  "options": [
+   {
+    "gloss": "Thought",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p022",
+  "surface": "vṛthā",
+  "citation": "vṛthā",
+  "morph": "adv (vṛthā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "in-vain",
+  "options": [
+   {
+    "gloss": "in-vain",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p023",
+  "surface": "mā",
+  "citation": "mā",
+  "morph": "neg (mā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "do-not",
+  "options": [
+   {
+    "gloss": "do-not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p03",
+  "l0_id": "anu-p03-p024",
+  "surface": "kṛthāḥ",
+  "citation": "kṛthāḥ",
+  "morph": "2sg.imper (kṛthāḥ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "do",
+  "options": [
+   {
+    "gloss": "do",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p000",
+  "surface": "ānandaḥ",
+  "citation": "ānandaḥ",
+  "morph": "nom.sg (ānanda)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Bliss",
+  "options": [
+   {
+    "gloss": "Bliss",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p001",
+  "surface": "atra",
+  "citation": "atra",
+  "morph": "adv (atra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "here",
+  "options": [
+   {
+    "gloss": "here",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p002",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p003",
+  "surface": "vittamadhya",
+  "citation": "vittamadhya",
+  "morph": "comp (vittamadhya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "wealth-middle",
+  "options": [
+   {
+    "gloss": "wealth-middle",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p004",
+  "surface": "madavan naivāṅganāsaṅgavat",
+  "citation": "madavan naivāṅganāsaṅgavat",
+  "morph": "comp (madavan naivāṅganāsaṅgavat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "like",
+  "options": [
+   {
+    "gloss": "like",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p005",
+  "surface": "dīpārkendukṛta",
+  "citation": "dīpārkendukṛta",
+  "morph": "comp (dīpārkendukṛta)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "lamp-sun-moon-made",
+  "options": [
+   {
+    "gloss": "lamp-sun-moon-made",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p006",
+  "surface": "prabhāprakaravan",
+  "citation": "prabhāprakaravan",
+  "morph": "comp (prabhāprakaravan)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "splendor- multitude-like",
+  "options": [
+   {
+    "gloss": "splendor- multitude-like",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p007",
+  "surface": "naiva",
+  "citation": "naiva",
+  "morph": "neg (naiva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p008",
+  "surface": "prakāśodayaḥ",
+  "citation": "prakāśodayaḥ",
+  "morph": "nom.sg (prakāśodaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "light-rise",
+  "options": [
+   {
+    "gloss": "light-rise",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p009",
+  "surface": "harṣaḥ",
+  "citation": "harṣaḥ",
+  "morph": "nom.sg (harṣa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "Joy",
+  "options": [
+   {
+    "gloss": "Joy",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p010",
+  "surface": "saṃbhṛtabhedamuktisukha-bhūr",
+  "citation": "saṃbhṛtabhedamuktisukha-bhūr",
+  "morph": "comp (saṃbhṛtabhedamuktisukhabhūr)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "with-gathered-difference-liberation-bliss-ground",
+  "options": [
+   {
+    "gloss": "with-gathered-difference-liberation-bliss-ground",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p011",
+  "surface": "bhārāvatāropamaḥ",
+  "citation": "bhārāvatāropamaḥ",
+  "morph": "comp (bhārāvatāropama)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "burden-lowering-like",
+  "options": [
+   {
+    "gloss": "burden-lowering-like",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p012",
+  "surface": "sarvādvaita-padasya",
+  "citation": "sarvādvaita-padasya",
+  "morph": "gen.sg (sarvādvaitapada)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "of-all-nonduality-state",
+  "options": [
+   {
+    "gloss": "of-all-nonduality-state",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p013",
+  "surface": "vismṛtanidheḥ",
+  "citation": "vismṛtanidheḥ",
+  "morph": "gen.sg (vismṛtanidhi)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "forgotten-treasure",
+  "options": [
+   {
+    "gloss": "forgotten-treasure",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p014",
+  "surface": "prāptiḥ",
+  "citation": "prāptiḥ",
+  "morph": "nom.sg (prāpti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "attainment",
+  "options": [
+   {
+    "gloss": "attainment",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p04",
+  "l0_id": "anu-p04-p015",
+  "surface": "prakāśodayaḥ",
+  "citation": "prakāśodayaḥ",
+  "morph": "nom.sg (prakāśodaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "BLOCKED",
+  "chosen": "is",
+  "options": [
+   {
+    "gloss": "is",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p000",
+  "surface": "rāga",
+  "citation": "rāga",
+  "morph": "nom.sg (rāga)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Passion",
+  "options": [
+   {
+    "gloss": "Passion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p001",
+  "surface": "dveṣa",
+  "citation": "dveṣa",
+  "morph": "nom.sg (dveṣa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "aversion",
+  "options": [
+   {
+    "gloss": "aversion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p002",
+  "surface": "sukha",
+  "citation": "sukha",
+  "morph": "nom.sg (sukha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "pleasure",
+  "options": [
+   {
+    "gloss": "pleasure",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p003",
+  "surface": "asukha",
+  "citation": "asukha",
+  "morph": "nom.sg (asukha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "displeasure",
+  "options": [
+   {
+    "gloss": "displeasure",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p004",
+  "surface": "udaya",
+  "citation": "udaya",
+  "morph": "nom.sg (udaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "rise",
+  "options": [
+   {
+    "gloss": "rise",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p005",
+  "surface": "laya",
+  "citation": "laya",
+  "morph": "nom.sg (laya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "dissolution",
+  "options": [
+   {
+    "gloss": "dissolution",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p006",
+  "surface": "ahaṃkāra",
+  "citation": "ahaṃkāra",
+  "morph": "nom.sg (ahaṃkāra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "I-ness",
+  "options": [
+   {
+    "gloss": "I-ness",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p007",
+  "surface": "dainya",
+  "citation": "dainya",
+  "morph": "nom.sg (dainya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "misery",
+  "options": [
+   {
+    "gloss": "misery",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p008",
+  "surface": "ādayo",
+  "citation": "ādayo",
+  "morph": "indecl (ādayaḥ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "and-the-rest",
+  "options": [
+   {
+    "gloss": "and-the-rest",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p009",
+  "surface": "ye",
+  "citation": "ye",
+  "morph": "indecl (ye)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "those",
+  "options": [
+   {
+    "gloss": "those",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p010",
+  "surface": "bhāvāḥ",
+  "citation": "bhāvāḥ",
+  "morph": "nom.pl (bhāva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "things",
+  "options": [
+   {
+    "gloss": "things",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p011",
+  "surface": "pravibhānti",
+  "citation": "pravibhānti",
+  "morph": "3pl.pres (pravibhānti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "shining-forth",
+  "options": [
+   {
+    "gloss": "shining-forth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p012",
+  "surface": "viśvavapuṣo",
+  "citation": "viśvavapuṣo",
+  "morph": "adj (viśvavapus)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "universe-bodied",
+  "options": [
+   {
+    "gloss": "universe-bodied",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p013",
+  "surface": "bhinnasvabhāvā",
+  "citation": "bhinnasvabhāvā",
+  "morph": "adj (bhinnasvabhāva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "different-natured",
+  "options": [
+   {
+    "gloss": "different-natured",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p014",
+  "surface": "na te",
+  "citation": "na te",
+  "morph": "neg (na te)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p015",
+  "surface": "vyaktiṃ",
+  "citation": "vyaktiṃ",
+  "morph": "acc.sg (vyakti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Manifestation",
+  "options": [
+   {
+    "gloss": "Manifestation",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p016",
+  "surface": "paśyasi",
+  "citation": "paśyasi",
+  "morph": "2sg.pres (paśyasi)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "you-see",
+  "options": [
+   {
+    "gloss": "you-see",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p017",
+  "surface": "yasyayasya",
+  "citation": "yasyayasya",
+  "morph": "gen.sg (yasya yasya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "of-whom",
+  "options": [
+   {
+    "gloss": "of-whom",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p018",
+  "surface": "sahasā",
+  "citation": "sahasā",
+  "morph": "adv (sahasā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "suddenly",
+  "options": [
+   {
+    "gloss": "suddenly",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p019",
+  "surface": "tattattat",
+  "citation": "tattattat",
+  "morph": "indecl (tattattad)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "that-that",
+  "options": [
+   {
+    "gloss": "that-that",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p020",
+  "surface": "ekātmatā",
+  "citation": "ekātmatā",
+  "morph": "comp (ekātmatā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "one-self-natured",
+  "options": [
+   {
+    "gloss": "one-self-natured",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p021",
+  "surface": "saṃvidrūpam",
+  "citation": "saṃvidrūpam",
+  "morph": "acc.sg (saṃvidrūpa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "consciousness-form",
+  "options": [
+   {
+    "gloss": "consciousness-form",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p022",
+  "surface": "avekṣya",
+  "citation": "avekṣya",
+  "morph": "part (avekṣya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "having-regarded",
+  "options": [
+   {
+    "gloss": "having-regarded",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p023",
+  "surface": "kiṃ na",
+  "citation": "kiṃ na",
+  "morph": "interrog (kiṃ na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "why",
+  "options": [
+   {
+    "gloss": "why",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p024",
+  "surface": "ramase",
+  "citation": "ramase",
+  "morph": "2sg.pres (ramase)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "do-you-delight",
+  "options": [
+   {
+    "gloss": "do-you-delight",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p025",
+  "surface": "tad",
+  "citation": "tad",
+  "morph": "indecl (tad)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "with-that",
+  "options": [
+   {
+    "gloss": "with-that",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p05",
+  "l0_id": "anu-p05-p026",
+  "surface": "bhāvanānirbharaḥ",
+  "citation": "bhāvanānirbharaḥ",
+  "morph": "adj (bhāvanānirbhara)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "contemplation-full",
+  "options": [
+   {
+    "gloss": "contemplation-full",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p000",
+  "surface": "pūrva",
+  "citation": "pūrva",
+  "morph": "adj (pūrva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Former",
+  "options": [
+   {
+    "gloss": "Former",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p001",
+  "surface": "abhāva",
+  "citation": "abhāva",
+  "morph": "nom.sg (abhāva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "non-being",
+  "options": [
+   {
+    "gloss": "non-being",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p002",
+  "surface": "bhava",
+  "citation": "bhava",
+  "morph": "nom.sg (bhava)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "being",
+  "options": [
+   {
+    "gloss": "being",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p003",
+  "surface": "kriyā",
+  "citation": "kriyā",
+  "morph": "nom.sg (kriyā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "action",
+  "options": [
+   {
+    "gloss": "action",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p004",
+  "surface": "hi",
+  "citation": "hi",
+  "morph": "indecl (hi)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "indeed",
+  "options": [
+   {
+    "gloss": "indeed",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p005",
+  "surface": "sahasā",
+  "citation": "sahasā",
+  "morph": "adv (sahasā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "suddenly",
+  "options": [
+   {
+    "gloss": "suddenly",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p006",
+  "surface": "bhāvāḥ",
+  "citation": "bhāvāḥ",
+  "morph": "nom.pl (bhāva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "things",
+  "options": [
+   {
+    "gloss": "things",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p007",
+  "surface": "sadā",
+  "citation": "sadā",
+  "morph": "adv (sadā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "always",
+  "options": [
+   {
+    "gloss": "always",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p008",
+  "surface": "'smin",
+  "citation": "'smin",
+  "morph": "loc.sg (asmin)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "in-this",
+  "options": [
+   {
+    "gloss": "in-this",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p009",
+  "surface": "bhave",
+  "citation": "bhave",
+  "morph": "loc.sg (bhava)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "existence",
+  "options": [
+   {
+    "gloss": "existence",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p010",
+  "surface": "madhyākāra",
+  "citation": "madhyākāra",
+  "morph": "adj (madhyākāra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "middle-formed",
+  "options": [
+   {
+    "gloss": "middle-formed",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p011",
+  "surface": "vikāra",
+  "citation": "vikāra",
+  "morph": "nom.sg (vikāra)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "transformation",
+  "options": [
+   {
+    "gloss": "transformation",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p012",
+  "surface": "saṃkaravatām",
+  "citation": "saṃkaravatām",
+  "morph": "gen.pl (saṃkaravat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "confusion",
+  "options": [
+   {
+    "gloss": "confusion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p013",
+  "surface": "teṣām",
+  "citation": "teṣām",
+  "morph": "gen.pl (teṣām)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "of-them",
+  "options": [
+   {
+    "gloss": "of-them",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p014",
+  "surface": "kutaḥ",
+  "citation": "kutaḥ",
+  "morph": "interrog (kutaḥ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "whence",
+  "options": [
+   {
+    "gloss": "whence",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p015",
+  "surface": "satyatā",
+  "citation": "satyatā",
+  "morph": "nom.sg (satyatā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "truth",
+  "options": [
+   {
+    "gloss": "truth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p016",
+  "surface": "niḥsatye",
+  "citation": "niḥsatye",
+  "morph": "loc.sg (niḥsatya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "In-non-truth",
+  "options": [
+   {
+    "gloss": "In-non-truth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p017",
+  "surface": "capale",
+  "citation": "capale",
+  "morph": "loc.sg (capala)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "unsteady",
+  "options": [
+   {
+    "gloss": "unsteady",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p018",
+  "surface": "prapañcanicaye",
+  "citation": "prapañcanicaye",
+  "morph": "loc.sg (prapañcanicaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "manifold",
+  "options": [
+   {
+    "gloss": "manifold",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p019",
+  "surface": "svapnabhrame",
+  "citation": "svapnabhrame",
+  "morph": "loc.sg (svapnabhrama)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "dream-delusion",
+  "options": [
+   {
+    "gloss": "dream-delusion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p020",
+  "surface": "peśale",
+  "citation": "peśale",
+  "morph": "loc.sg (peśala)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "clever",
+  "options": [
+   {
+    "gloss": "clever",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p021",
+  "surface": "śaṅkātaṅkakalaṅkayuktikalanātītaḥ",
+  "citation": "śaṅkātaṅkakalaṅkayuktikalanātītaḥ",
+  "morph": "comp (śaṅkātaṅkakalaṅkayuktikalanātīta)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "from-doubt- fear-stain-reasoning-transcended",
+  "options": [
+   {
+    "gloss": "from-doubt- fear-stain-reasoning-transcended",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p022",
+  "surface": "prabuddho",
+  "citation": "prabuddho",
+  "morph": "nom.sg (prabuddha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "awakened",
+  "options": [
+   {
+    "gloss": "awakened",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p06",
+  "l0_id": "anu-p06-p023",
+  "surface": "bhava",
+  "citation": "bhava",
+  "morph": "2sg.imper (bhava)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "become",
+  "options": [
+   {
+    "gloss": "become",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p000",
+  "surface": "bhāvānāṃ",
+  "citation": "bhāvānāṃ",
+  "morph": "gen.pl (bhāva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Of-things",
+  "options": [
+   {
+    "gloss": "Of-things",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p001",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "no",
+  "options": [
+   {
+    "gloss": "no",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p002",
+  "surface": "samudbhavo 'sti",
+  "citation": "samudbhavo 'sti",
+  "morph": "comp (samudbhavo 'sti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "arising",
+  "options": [
+   {
+    "gloss": "arising",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p003",
+  "surface": "sahajas",
+  "citation": "sahajas",
+  "morph": "adj (sahaja)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "natural",
+  "options": [
+   {
+    "gloss": "natural",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p004",
+  "surface": "tvadbhāvitā",
+  "citation": "tvadbhāvitā",
+  "morph": "instr.sg (tvadbhāvitā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "by-your-contemplation",
+  "options": [
+   {
+    "gloss": "by-your-contemplation",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p005",
+  "surface": "bhānty amī",
+  "citation": "bhānty amī",
+  "morph": "3pl.pres (bhānti amī)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "they-shine",
+  "options": [
+   {
+    "gloss": "they-shine",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p006",
+  "surface": "niḥsatyā api",
+  "citation": "niḥsatyā api",
+  "morph": "adj (niḥsatya api)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "non-true",
+  "options": [
+   {
+    "gloss": "non-true",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p007",
+  "surface": "satyatām",
+  "citation": "satyatām",
+  "morph": "acc.sg (satyatā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "truth",
+  "options": [
+   {
+    "gloss": "truth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p008",
+  "surface": "anubhavabhrāntyā",
+  "citation": "anubhavabhrāntyā",
+  "morph": "instr.sg (anubhavabhrānti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "by-experience-delusion",
+  "options": [
+   {
+    "gloss": "by-experience-delusion",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p009",
+  "surface": "bhajanti",
+  "citation": "bhajanti",
+  "morph": "3pl.pres (bhajanti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "partake",
+  "options": [
+   {
+    "gloss": "partake",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p010",
+  "surface": "kṣaṇam",
+  "citation": "kṣaṇam",
+  "morph": "acc.sg (kṣaṇa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "for-a-moment",
+  "options": [
+   {
+    "gloss": "for-a-moment",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p011",
+  "surface": "eṣa",
+  "citation": "eṣa",
+  "morph": "indecl (eṣa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "This",
+  "options": [
+   {
+    "gloss": "This",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p012",
+  "surface": "viśvamahimā",
+  "citation": "viśvamahimā",
+  "morph": "nom.sg (viśvamahimā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "universe-glory",
+  "options": [
+   {
+    "gloss": "universe-glory",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p013",
+  "surface": "tvatsaṅkalpajaḥ",
+  "citation": "tvatsaṅkalpajaḥ",
+  "morph": "comp (tvatsaṅkalpaja)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "from-your-will-born",
+  "options": [
+   {
+    "gloss": "from-your-will-born",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p014",
+  "surface": "nāsty",
+  "citation": "nāsty",
+  "morph": "neg (nāsti)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p015",
+  "surface": "asya",
+  "citation": "asya",
+  "morph": "gen.sg (asya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "its",
+  "options": [
+   {
+    "gloss": "its",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p016",
+  "surface": "janmā",
+  "citation": "janmā",
+  "morph": "nom.sg (janman)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "birth",
+  "options": [
+   {
+    "gloss": "birth",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p017",
+  "surface": "anyataḥ",
+  "citation": "anyataḥ",
+  "morph": "abl.sg (anyatas)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "from-elsewhere",
+  "options": [
+   {
+    "gloss": "from-elsewhere",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p018",
+  "surface": "tasmāt",
+  "citation": "tasmāt",
+  "morph": "indecl (tasmāt)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Hence",
+  "options": [
+   {
+    "gloss": "Hence",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p019",
+  "surface": "tvaṃ",
+  "citation": "tvaṃ",
+  "morph": "nom.sg (tvaṃ)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "you",
+  "options": [
+   {
+    "gloss": "you",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p020",
+  "surface": "vibhavena",
+  "citation": "vibhavena",
+  "morph": "instr.sg (vibhava)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "by-splendor",
+  "options": [
+   {
+    "gloss": "by-splendor",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p021",
+  "surface": "bhāsi",
+  "citation": "bhāsi",
+  "morph": "2sg.pres (bhāsi)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "shine",
+  "options": [
+   {
+    "gloss": "shine",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p022",
+  "surface": "bhuvaneṣv",
+  "citation": "bhuvaneṣv",
+  "morph": "loc.pl (bhuvana)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "in-worlds",
+  "options": [
+   {
+    "gloss": "in-worlds",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p023",
+  "surface": "ekopy",
+  "citation": "ekopy",
+  "morph": "indecl (ekopy)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "one",
+  "options": [
+   {
+    "gloss": "one",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p07",
+  "l0_id": "anu-p07-p024",
+  "surface": "anekātmakaḥ",
+  "citation": "anekātmakaḥ",
+  "morph": "nom.sg (anekātmaka)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "many-selfed",
+  "options": [
+   {
+    "gloss": "many-selfed",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p000",
+  "surface": "yat",
+  "citation": "yat",
+  "morph": "indecl (yat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "What",
+  "options": [
+   {
+    "gloss": "What",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p001",
+  "surface": "satyaṃ",
+  "citation": "satyaṃ",
+  "morph": "nom.sg (satya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "true",
+  "options": [
+   {
+    "gloss": "true",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p002",
+  "surface": "yad",
+  "citation": "yad",
+  "morph": "indecl (yad)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p003",
+  "surface": "asatyam",
+  "citation": "asatyam",
+  "morph": "adj (asatya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "untrue",
+  "options": [
+   {
+    "gloss": "untrue",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p004",
+  "surface": "alpabahulaṃ",
+  "citation": "alpabahulaṃ",
+  "morph": "adj (alpabahula)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "little-much",
+  "options": [
+   {
+    "gloss": "little-much",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p005",
+  "surface": "nityaṃ",
+  "citation": "nityaṃ",
+  "morph": "adj (nitya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "eternal",
+  "options": [
+   {
+    "gloss": "eternal",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p006",
+  "surface": "na",
+  "citation": "na",
+  "morph": "neg (na)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "not",
+  "options": [
+   {
+    "gloss": "not",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p007",
+  "surface": "nityaṃ ca",
+  "citation": "nityaṃ ca",
+  "morph": "adj (nitya ca)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "eternal",
+  "options": [
+   {
+    "gloss": "eternal",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p008",
+  "surface": "yat",
+  "citation": "yat",
+  "morph": "indecl (yat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p009",
+  "surface": "māyāmalinaṃ",
+  "citation": "māyāmalinaṃ",
+  "morph": "adj (māyāmalina)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Māyā-stained",
+  "options": [
+   {
+    "gloss": "Māyā-stained",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p010",
+  "surface": "yad",
+  "citation": "yad",
+  "morph": "indecl (yad)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "what",
+  "options": [
+   {
+    "gloss": "what",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p011",
+  "surface": "ātmavimalaṃ",
+  "citation": "ātmavimalaṃ",
+  "morph": "adj (ātmavimala)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "self-pure",
+  "options": [
+   {
+    "gloss": "self-pure",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p012",
+  "surface": "ciddarpaṇe",
+  "citation": "ciddarpaṇe",
+  "morph": "loc.sg (ciddarpaṇa)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "in- consciousness-mirror",
+  "options": [
+   {
+    "gloss": "in- consciousness-mirror",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p013",
+  "surface": "rājate",
+  "citation": "rājate",
+  "morph": "3sg.pres (rājate)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "shines",
+  "options": [
+   {
+    "gloss": "shines",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p014",
+  "surface": "tat",
+  "citation": "tat",
+  "morph": "indecl (tat)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "That",
+  "options": [
+   {
+    "gloss": "That",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p015",
+  "surface": "sarvaṃ",
+  "citation": "sarvaṃ",
+  "morph": "nom.sg (sarva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "all",
+  "options": [
+   {
+    "gloss": "all",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p016",
+  "surface": "svavimarśasaṃvidudayād",
+  "citation": "svavimarśasaṃvidudayād",
+  "morph": "abl.sg (svavimarśasaṃvidudaya)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "from-own-grasping-consciousness-rise",
+  "options": [
+   {
+    "gloss": "from-own-grasping-consciousness-rise",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p017",
+  "surface": "rūpaprakāśātmakaṃ",
+  "citation": "rūpaprakāśātmakaṃ",
+  "morph": "adj (rūpaprakāśātmaka)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "form-light-natured",
+  "options": [
+   {
+    "gloss": "form-light-natured",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p018",
+  "surface": "jñātvā",
+  "citation": "jñātvā",
+  "morph": "part (jñātvā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "having-known",
+  "options": [
+   {
+    "gloss": "having-known",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p019",
+  "surface": "svānubhavādhi-rūḍha",
+  "citation": "svānubhavādhi-rūḍha",
+  "morph": "comp (svānubhavādhirūḍha)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "own-experience-risen",
+  "options": [
+   {
+    "gloss": "own-experience-risen",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p020",
+  "surface": "mahimā",
+  "citation": "mahimā",
+  "morph": "nom.sg (mahimā)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "glory",
+  "options": [
+   {
+    "gloss": "glory",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p021",
+  "surface": "viśveśvaratvaṃ",
+  "citation": "viśveśvaratvaṃ",
+  "morph": "nom.sg (viśveśvaratva)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "Lordhood",
+  "options": [
+   {
+    "gloss": "Lordhood",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ },
+ {
+  "chunk": "anu-p08",
+  "l0_id": "anu-p08-p022",
+  "surface": "bhaja",
+  "citation": "bhaja",
+  "morph": "2sg.imper (bhaja)",
+  "fork": "none",
+  "status": "PARSED",
+  "gate": "PASS",
+  "chosen": "worship",
+  "options": [
+   {
+    "gloss": "worship",
+    "rank": 1,
+    "source": "t1-draft",
+    "grounds": "T1 quick gloss carried; morph analyzed; no genuine fork."
+   }
+  ]
+ }
+]
