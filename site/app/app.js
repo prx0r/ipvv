@@ -168,37 +168,9 @@ function cleanEN(s){
   return (s||'').replace(/^#+\s*[^\n]*\n/,'').replace(/\s*\/\/\s*\S+\s*$/,'').trim();
 }
 
-/* ---- multi-view reader: READ / COMPARE / LITERAL / CRITICAL ----
-   VISION's four views. One chunk = one segment; every layer keys to it
-   (Bilara cognates in /data/layers/). Fail-closed everywhere: BLOCKED
-   chunks show Sanskrit only, never English. User versions live in
-   localStorage only — paste from your own books, never bundled. */
-let VIEW = localStorage.getItem('svv-view') || 'read';
-function setView(v){ VIEW = v; try{ localStorage.setItem('svv-view', v); }catch(e){} router(); }
-function mdLite(s){
-  return (s||'').split(/\n{2,}/).map(p=>{
-    p = p.trim(); if(!p) return '';
-    const hm = p.match(/^(#{1,3})\s+(.*)$/);
-    if(hm) return `<div class="vlab">${esc(hm[2])}</div>`;
-    const lm = p.match(/^\*\*([^*]+)\*\*\s*(.*)$/s);
-    let h = esc(p).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>');
-    if(lm) return `<div class="c1sec"><div class="vlab">${esc(lm[1]).replace(/\.+$/,'')}</div><div>${esc(lm[2]).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')}</div></div>`;
-    return `<p>${h}</p>`;
-  }).join('');
-}
-function getVar(wid, ch){ try{ return localStorage.getItem(`svv-${wid}-${ch}`) || ''; }catch(e){ return ''; } }
-function setVar(wid, ch, v){ try{ localStorage.setItem(`svv-${wid}-${ch}`, v); }catch(e){} }
-
 async function work(path){
   const wid = path.split('/')[2];
-  let items = null, karaWork = wid;
-  try{
-    const L = await get(`/data/layers/${wid}.json`);
-    if(L && Array.isArray(L.chunks) && L.chunks.length){ items = L.chunks; }
-  }catch(e){}
-  if(!items || !items.length){
-    try{ items = await get(`/data/translations/${wid}.json`).catch(()=>null); }catch(e){ items = null; }
-  }
+  let items = await get(`/data/translations/${wid}.json`).catch(()=>null);
   if(!items || !items.length){
     try{
       if(!LIB.index) LIB.index = await get('/data/works-index.json');
@@ -218,18 +190,10 @@ async function work(path){
     $('#view').innerHTML = `<div class="verse"><div class="dev">· · ·</div></div><div id="answer" style="display:none"></div>`;
     return;
   }
-  // title: look through loaded works maps, else prettify wid
-  let title = wid;
-  for(const m of Object.keys(LIB.works||{})){
-    const w = LIB.works[m];
-    if(Array.isArray(w)){ const hit = w.find(x=>(x.id||x.work)===wid); if(hit){ title = hit.title||wid; break; } }
-  }
-  const nPass = items.filter(it=>it.gate==='PASS' && (it.l2||it.l1)).length;
   const AUDIODIR = {anuttarastika:'anuttarashtika_trad'};
   const audir = AUDIODIR[wid] || wid;
   let kar = null;
   try{ kar = await get(`/data/karaoke-${wid}.json`); }catch(e){}
-  try{ if(!kar) kar = await get(`/data/karaoke-${karaWork}.json`); }catch(e){}
   const hasKar = Array.isArray(kar) && kar.length > 0;
   const verses = items.map((it,ix)=>{
     const raw = cleanSA(it.sanskrit||'');
@@ -245,53 +209,17 @@ async function work(path){
     } else if(raw){
       lines = [{words: raw.split(/\s+/).filter(Boolean).map(w=>({sa: IAST_DEVA.convert(w), ro: w, t0: null, t1: null})), ro: esc(raw)}];
     }
-    const sa = lines.map(l=>`<div class="dline">` + l.words.map(w=>
+    const dev = lines.map(l=>`<div class="dline">` + l.words.map(w=>
       `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`
     ).join(' ') + `</div><div class="rline">${l.ro}</div>`).join('');
-    const pass = it.gate==='PASS' && (it.l2||it.l1);
-    const en1 = pass ? cleanEN(it.l1||'') : '';
-    const en2 = pass ? cleanEN(it.l2||it.l1||'') : '';
+    const en = (it.gate==='PASS' && (it.l2||it.l1)) ? `<div class="en">${esc(cleanEN(it.l2||it.l1))}</div>` : '';
     const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
-    return {sa, en1, en2, au, ix, it, pass};
+    return {dev, ro:'', en, au, ix};
   });
-  const vbtn = (v,l)=>`<button class="vsw${VIEW===v?' on':''}" data-view="${v}">${l}</button>`;
   $('#view').innerHTML =
-    `<div class="whead"><h1>${esc(title)}</h1>`
-    + `<div class="sub">${items.length} passages · ${nPass} with English · Sanskrit always</div>`
-    + `<div class="vswitch">${vbtn('read','Read')}${vbtn('compare','Compare')}${vbtn('literal','Literal')}${vbtn('critical','Critical')}</div></div>`
-    + `<div id="reader">` + verses.map((v,ix)=>{
-      const ch = v.it.chunk||('p'+String(ix+1).padStart(2,'0'));
-      const uv = getVar(wid, ch);
-      if(!v.pass) return `<div class="verse" data-v="${ix}">${v.sa}</div>`;
-      if(VIEW==='read') return `<div class="verse" data-v="${ix}"><div class="en read">${esc(v.en2)}</div></div>`;
-      if(VIEW==='compare') return `<div class="verse" data-v="${ix}"><div class="cmp"><div><div class="vlab">L1 · close</div><div class="en">${esc(v.en1||v.en2)}</div></div><div><div class="vlab">L2 · read</div><div class="en">${esc(v.en2)}</div></div></div></div>`;
-      if(VIEW==='literal') return `<div class="verse" data-v="${ix}">${v.sa}<div class="vlab">L1 · close</div><div class="en">${esc(v.en1||v.en2)}</div></div>`;
-      // critical: stacked voices with attribution, provenance, your version
-      return `<div class="verse" data-v="${ix}">${v.sa}`
-        + `<div class="vlab">L1 · close</div><div class="en">${esc(v.en1||v.en2)}</div>`
-        + `<div class="vlab">L2 · read</div><div class="en">${esc(v.en2)}</div>`
-        + (v.it.c1?`<div class="vlab">C1 · commentary</div><div class="c1">${mdLite(v.it.c1)}</div>`:'')
-        + (v.it.argmap?`<details class="arg"><summary>Argument map</summary><div class="c1">${mdLite(v.it.argmap)}</div></details>`:'')
-        + `<div class="prov">gate ${esc(v.it.gate||'?')} · ${esc(v.it.model||'')} · ${esc(v.it.date||'')} · machine-proposed, needs human review</div>`
-        + (uv?`<div class="vlab">Your version · this device only</div><div class="en yours">${esc(uv)}</div>`:'')
-        + `<div class="varbox" style="display:none"><textarea id="var-${ix}" placeholder="Paste your translation (from your own book)…"></textarea><button class="playbtn" data-savevar="${ix}" data-ch="${esc(ch)}">Save on this device</button></div>`
-        + `<button class="playbtn addvar" data-ix="${ix}">＋ add your version</button>`
-        + `</div>`;
-    }).join('') + `</div>` +
+    `<div id="reader">` + verses.map((v,ix)=>`<div class="verse" data-v="${ix}">${v.dev}${v.ro}${v.en}</div>`).join('') + `</div>` +
     `<div id="rcbar"><button id="rcPlay" title="recite">▶</button><button id="rcRead" title="read aloud">🔊</button><button id="rcStop" style="display:none" title="stop">■</button></div>` +
     `<div id="answer" style="display:none"></div>`;
-  document.querySelectorAll('.vsw').forEach(b=>{ b.onclick = ()=>setView(b.getAttribute('data-view')); });
-  document.querySelectorAll('.addvar').forEach(b=>{
-    b.onclick = (e)=>{ e.stopPropagation(); const box = b.parentElement.querySelector('.varbox'); if(box) box.style.display = box.style.display==='none' ? '' : 'none'; };
-  });
-  document.querySelectorAll('[data-savevar]').forEach(b=>{
-    b.onclick = (e)=>{
-      e.stopPropagation();
-      const ix = +b.getAttribute('data-savevar'), ch = b.getAttribute('data-ch');
-      const ta = document.getElementById(`var-${ix}`);
-      if(ta){ setVar(wid, ch, ta.value); setView(VIEW); }
-    };
-  });
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
   st.textContent = '#reader{max-width:46rem}.verse{margin:2.2rem 0}.verse:first-child{margin-top:1rem}.dline{font-size:1.75rem;line-height:1.75;color:var(--ink)}.rline{font-size:.98rem;color:#76736e;margin:.15rem 0 1rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em}.kw.on{background:#fdf0d5}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
@@ -303,7 +231,7 @@ async function work(path){
     for(const w of all){
       if(+w.getAttribute('data-v') !== KAR.cur) continue;
       const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
-      if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
+      if(t >= t0 && t <= t1){ w.classList.add('hl'); break; }
     }
     if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
   }
