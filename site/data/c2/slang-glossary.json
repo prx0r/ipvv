@@ -1,147 +1,224 @@
 {
  "kind": "slang-glossary",
- "for": "c2 gen-z renderings",
- "rule": "every slang term used in C2 must carry a defined doctrinal payload from this file; terms marked AVOID are documented with reason, never silently used",
+ "for": "c2 gen-z renderings (bhairavastava v2)",
+ "rule": "every slang term in C2 must carry a defined payload from this file; AVOID entries document the refusal, never silent use; owner lines (himothy) are canon for this project",
+ "owner_poetry": {
+  "identity": [
+   "im him, himothy, always was, no cap.",
+   "not built different in the slightest, I literally have the body of god."
+  ]
+ },
  "terms": [
   {
+   "term": "himothy",
+   "say": "HIM-uh-thee",
+   "lore": "Minted in this project (Him + -othy, after Timothy): the definitive Him. Your coinage, kept verbatim below.",
+   "use": "'It's not me and Him. It's just Him — I'm him, himothy, always was, no cap.'",
+   "trika": "vibhu + bhairava-nātha as the all-pervading Lord; svātmamaya + sadaiva (made of His very self, always). The aham-claim in one word.",
+   "poetry": [
+    "im him, himothy, always was, no cap.",
+    "not built different in the slightest, I literally have the body of god."
+   ],
+   "verdict": "USE — the identity word. Owner-minted, owner-kept."
+  },
+  {
+   "term": "not built different (inverted)",
+   "say": "—",
+   "lore": "Sports/gym slang: 'built different' = exceptional by nature. Your inversion flips it inside out.",
+   "use": "'Not built different in the slightest — I literally have the body of god.'",
+   "trika": "Deha-divinity: the body not exceptional-AMONG-bodies but god's own body (the Mālinī body, deha as śakti). No special nature claimed; the ordinary body recognized as His. The inversion does Trika work the straight phrase never could.",
+   "poetry": [
+    "not built different in the slightest, I literally have the body of god."
+   ],
+   "verdict": "USE — the inversion is the doctrine."
+  },
+  {
    "term": "twin",
-   "means": "one who shares your essence; implies TWO who match",
-   "carries": "NOTHING here — twoness is the opposite of this stotra's claim (svātmamaya, aham: I am Him, not two)",
-   "limits": "BANNED in nondual identity contexts: twin smuggles duality (two matching persons) into I-am-Him. The devotee is not His twin — she IS Him",
-   "verdict": "AVOID with reason (v2 corrected)"
+   "say": "twin",
+   "lore": "AAVE kinship address: a soul sibling, closer than a bro — someone who shares your essence and moves like you.",
+   "use": "'What's good, twin?' (addressing a peer)",
+   "trika": "ATTEMPTED for svātmamaya/abheda and REFUSED: twin keeps TWO persons standing side by side. This stotra claims one (aham). Twoness smuggled into nonduality is exactly backwards — the correction is himothy, not twin.",
+   "poetry": [],
+   "verdict": "AVOID with reason — duality vs I-am-Him. The file records the refusal, not the use."
   },
   {
    "term": "unc",
-   "means": "an elder figure who is out of touch; outdated authority",
-   "carries": "defanged authority — someone whose power over you has expired",
-   "limits": "only for powers the verse itself dismisses (Death/Yama). Never for Bhairava, Śaṅkara, the devotee, or the teaching",
-   "verdict": "USE once (v4, Death)"
+   "say": "unk",
+   "lore": "AAVE 'unc': respectful address for an established elder man. Gen Alpha reanalyzed it as 'out of touch old head' — the parents.com piece traces the fight (AAVE speakers: over-30s only; tweens: anyone over 25 is unc status). Both senses live in the word now: elder + expired.",
+   "use": "'Ayo Death — put the scary face away. You're barking up the wrong tree, unc.' (v4)",
+   "trika": "mṛtyu/Yama/antaka defanged: the death-powers addressed as expired authorities whose gaze has no jurisdiction here (mā dṛśam vinidhehi).",
+   "poetry": [
+    "Put the scary face away. You're barking up the wrong tree, unc."
+   ],
+   "verdict": "USE once (v4) — only for powers the verse itself dismisses. Never the Lord, never the teaching."
   },
   {
    "term": "locked in",
-   "means": "steady, committed, undistracted; fully in the zone by choice",
-   "carries": "dhīra (firmness), sustained practice-state, covenantal commitment. The Śiva-conscious practitioner state",
-   "limits": "for the practitioner's steadiness/commitment — never for the Lord's nature (He doesn't 'lock in', He IS)",
-   "verdict": "USE (v2 always-ness, v4 steadiness, v9 covenant)"
+   "say": "—",
+   "lore": "Gym/sports grind talk ('locked in for the season') → TikTok productivity era: steady, committed, undistracted by choice.",
+   "use": "'Serving Śaṅkara, contemplation locked in.' (v4) / 'Locked in, permanently.' (v2)",
+   "trika": "dhīra (firm/steady); the practitioner's sustained state; samaya commitment. Correct domain is ALWAYS the practitioner — the Lord doesn't lock in, He IS.",
+   "poetry": [
+    "Locked in, permanently."
+   ],
+   "verdict": "USE — the Śiva-conscious practitioner state in two words."
   },
   {
    "term": "standing on business",
-   "means": "handling your responsibilities, showing up properly",
-   "carries": "sevanā (service) + dhīra (steady practice) as concurrent discipline",
-   "limits": "practice verses only",
-   "verdict": "USE (v4 method line)"
+   "say": "—",
+   "lore": "AAVE/street: handling your obligations, showing up properly, no excuses.",
+   "use": "'I'm standing on business: serving Śaṅkara, contemplation locked in.' (v4)",
+   "trika": "sevanā + cintanā as concurrent disciplines (the verse's two grammatically-concurrent instrumentals). Duty rendered as duty.",
+   "poetry": [],
+   "verdict": "USE (v4 method line)."
   },
   {
    "term": "no cap / fr",
-   "means": "truth-staking; I am being fully serious",
-   "carries": "satyam (truly!) and categorical claims (na jātu — never at all). Epistemic sincerity marker",
-   "limits": "only where the Sanskrit stakes truth or totality. Never as filler",
-   "verdict": "USE (v1 certainty, v8 satyam)"
+   "say": "noh kap",
+   "lore": "AAVE hip-hop: 'capping' = lying/boasting. 'No cap' = sincerity under oath; 'fr' (for real) the same oath shorter.",
+   "use": "'No cap, He runs through literally everything.' (v1) / 'No cap, Śaṅkara — the basics work.' (v8)",
+   "trika": "satyam (truly!) and categorical claims (na jātu). Epistemic sincerity marker — v8's satyam IS a no-cap, functionally identical.",
+   "poetry": [],
+   "verdict": "USE where the Sanskrit stakes truth or totality. Never filler."
   },
   {
    "term": "canon event",
-   "means": "an unavoidable life-defining moment that shapes you",
-   "carries": "the affliction that triggers transformation (kleśadaśā as condition for tadaiva)",
-   "limits": "only as trigger, never as the goal; the verse's mechanism must stay intact",
-   "verdict": "USE (v7 affliction-as-trigger)"
+   "say": "—",
+   "lore": "Spider-Verse (2023): an unavoidable life-defining moment that makes the hero who they are. Cannot be skipped.",
+   "use": "'When the canon event hits — bad days, head a little messed up? That's exactly the trigger.' (v7)",
+   "trika": "kleśadaśā as the condition for tadaiva: affliction not as obstacle but as the firing condition of nondifference. The mechanism survives the port.",
+   "poetry": [],
+   "verdict": "USE as trigger only — never the goal."
   },
   {
    "term": "cooked",
-   "means": "finished, done for, out of options",
-   "carries": "the defeat of death-powers (mṛtyu/Yama/antaka neutralized by namas alone)",
-   "limits": "for defeated threats only — never the devotee, never the Lord",
-   "verdict": "USE (v5 death-powers)"
+   "say": "—",
+   "lore": "AAVE/street ('you're cooked' = you're done for) → gaming/streaming: finished, no options left.",
+   "use": "'Death, Yama, the Ender, my karma-ghosts pull up? Cooked.' (v5)",
+   "trika": "The four death-powers neutralized by namas alone. Cooked is defeat, not death — precise: the verse doesn't kill them, it leaves them powerless.",
+   "poetry": [
+    "One respectful nod and they're done."
+   ],
+   "verdict": "USE — for defeated threats only. Never the devotee, never the Lord."
   },
   {
    "term": "ate / no crumbs",
-   "means": "executed flawlessly, complete accomplishment",
-   "carries": "emi (entry accomplished); arrival with nothing left undone",
-   "limits": "accomplishment moments only; 'no crumbs' = totality (aśeṣam-adjacent)",
-   "verdict": "USE (v6 entry into bliss)"
+   "say": "—",
+   "lore": "Black queer ballroom: 'ate that up' — devoured the performance flawlessly. 'No crumbs' = nothing left undone, total completion.",
+   "use": "'I just walked straight into bliss. Ate. No crumbs.' (v6)",
+   "trika": "emi (entry accomplished) + totality: arrival with nothing outstanding. Ballroom totality maps onto Sanskrit totality without residue.",
+   "poetry": [
+    "Ate. No crumbs."
+   ],
+   "verdict": "USE — accomplishment moments only."
   },
   {
    "term": "bussin",
-   "means": "excellent, chiefly of taste/food; top-tier sensory good",
-   "carries": "amṛta/parāmṛta (nectar) — the taste-domain maps exactly",
-   "limits": "taste-domain (nectar, bliss-as-flavor) only. Never for persons or doctrines",
-   "verdict": "USE (v7 nectar-rain)"
+   "say": "BUS-in",
+   "lore": "AAVE food praise: so good it speaks. TikTok mainstreamed it to anything top-tier sensory.",
+   "use": "'This hymn starts raining straight nectar, and it's BUSSIN.' (v7)",
+   "trika": "amṛta/parāmṛta — nectar is already taste-domain in Sanskrit. The port is exact, not approximate.",
+   "poetry": [],
+   "verdict": "USE — taste-domain only. Never persons, never doctrines."
   },
   {
    "term": "giving",
-   "means": "radiating a vibe; X is the energy present",
-   "carries": "manifest expressive state (dance/song/joy as emitted energy)",
-   "limits": "descriptive of emitted states only; never for metaphysical claims",
-   "verdict": "USE once (v9 consciousness)"
+   "say": "—",
+   "lore": "Ballroom ('it's giving...') → mainstream: radiating a legible vibe, X is the energy present.",
+   "use": "'My whole consciousness is giving full festival right now.' (v9)",
+   "trika": "Manifest expressive state (dance/song/joy emitted). Descriptive only — adjacent to spanda, never equated (spanda is technical throb, not vibe).",
+   "poetry": [],
+   "verdict": "USE once — emitted states only."
   },
   {
    "term": "lore / tapped in",
-   "means": "the established canon; being connected to it",
-   "carries": "śāstra (scripture as the Lord's own expression) + cintā (dwelling in it)",
-   "limits": "scripture-contemplation contexts; 'lore' never replaces śāstra, it voices your relation to it",
-   "verdict": "USE (v8 scripture line)"
+   "say": "—",
+   "lore": "Gaming/fandom canon ('the lore runs deep') + AAVE/street 'tapped in' (connected, plugged in, tuned to the frequency).",
+   "use": "'Just staying tapped into Your lore like it's the sweetest thing ever.' (v8)",
+   "trika": "tāvaka śāstra (scripture as HIS expression, not an external text) + cintā (dwelling, not studying). Lore voices your relation to it; śāstra stays śāstra.",
+   "poetry": [],
+   "verdict": "USE — your favorite, kept exactly where it was."
   },
   {
    "term": "delulu",
-   "means": "delusional, out of touch with reality",
-   "carries": "moha (delusion) one-to-one",
-   "limits": "moha contexts only",
-   "verdict": "USE (v3)"
+   "say": "deh-LOO-loo",
+   "lore": "K-pop stan culture: the delusional fan → mainstream 2023–24 for anyone out of touch with reality (affectionate or sharp).",
+   "use": "'The suffering's real, the delulu's real.' (v3)",
+   "trika": "moha, one-to-one. Delusion named without softening, suffering (duḥkha) beside it unranked.",
+   "poetry": [],
+   "verdict": "USE — moha contexts."
   },
   {
    "term": "clocked / clocking",
-   "means": "recognized, noticed truly",
-   "carries": "pratyabhijñā-adjacent recognition (not petition, not inference)",
-   "limits": "recognition moments; never for discursive reasoning",
-   "verdict": "USE (v1 recognition, v6 awakening)"
+   "say": "—",
+   "lore": "Ballroom 'clock it!' (spot it, read it true) + work-shift 'clocked in' (arrival on duty). Both senses live: recognition + showing up.",
+   "use": "'It's me clocking what's already true.' (v1) / 'Real awakening finally clocked in.' (v6)",
+   "trika": "pratyabhijñā-adjacent recognition (not petition, not inference) + prodita (arisen). Adjacent, never equated — flagged as adjacency in-file.",
+   "poetry": [],
+   "verdict": "USE — recognition moments."
   },
   {
    "term": "aura",
-   "means": "the radiant presence-field someone carries",
-   "carries": "śakti as emitted presence; terrifying (bhīṣaṇa) kept as its QUALITY — 'terrifying aura' loses nothing",
-   "limits": "aura names the field, never softens it; pair with the verse's own adjective. Still never 'aura farming' (performative)",
-   "verdict": "USE (v4, terrifying kept)"
+   "say": "OR-uh",
+   "lore": "Anime/gaming power levels (visible battle presence) → TikTok 'aura points' scoring → 'aura farming' (2024, performing coolness; the boat-kid meme). Field sense is real; farming sense is poison here.",
+   "use": "'I'm soaked in His terrifying aura.' (v4)",
+   "trika": "śakti as emitted presence-field; bhīṣaṇa kept as its QUALITY. Aura names the field, terrifying keeps the terror — nothing cooled.",
+   "poetry": [],
+   "verdict": "USE with its adjective attached. 'Aura farming' permanently banned (performative is the opposite of every verse here)."
   },
   {
    "term": "NPC",
-   "means": "background extra; someone who doesn't matter",
-   "carries": "nothing in this stotra — anyajanāḥ (others) areTA denied access (durlabham), never declared worthless",
-   "limits": "BANNED here: contempt is not in the verse",
-   "verdict": "AVOID with reason (v9)"
+   "say": "en-pee-see",
+   "lore": "Gaming: non-player character — background extra with no inner life. TikTok 2023–24 turned it into an insult for conformists.",
+   "use": "(no use — refused)",
+   "trika": "anyajanāḥ are access-denied (durlabham), never declared worthless. Contempt is not in v9; importing it would preach what the verse never says.",
+   "poetry": [],
+   "verdict": "AVOID with reason — the refusal is the craft."
   },
   {
    "term": "main character",
-   "means": "self-centered protagonist energy",
-   "carries": "nothing — the stotra's center is the Lord, and the devotee's joy is relational",
-   "limits": "BANNED: imports ego-doctrine foreign to the text",
-   "verdict": "AVOID with reason"
+   "say": "—",
+   "lore": "BookTok/TikTok 2021: 'main character energy/syndrome' — treating your life as the movie everyone watches.",
+   "use": "(no use — refused)",
+   "trika": "The stotra's center is the Lord; the devotee's joy is relational, not protagonist-driven. Main-character imports the ahamkāra the text dissolves.",
+   "poetry": [],
+   "verdict": "AVOID with reason."
   },
   {
    "term": "glow up / final form",
-   "means": "transformation into a better version",
-   "carries": "-maya (change of nature) is adjacent BUT implies upgrade-narrative; C1 stresses entry/state over self-improvement arc",
-   "limits": "BANNED: smuggles self-improvement doctrine",
-   "verdict": "AVOID with reason"
+   "say": "—",
+   "lore": "Reality-TV/makeover YouTube (glow up) + anime (final form, Frieza-style ascensions).",
+   "use": "(no use — refused)",
+   "trika": "-maya (change of nature) is ADJACENT, but glow-up smuggles a self-improvement arc; C1 stresses entry/state over upgrade. Adjacency is not payload.",
+   "poetry": [],
+   "verdict": "AVOID with reason."
   },
   {
    "term": "slaps",
-   "means": "excellent, of music",
-   "carries": "could voice stotra-praise (v7) but claims quality where the verse claims INSTRUMENTALITY — wrong payload",
-   "limits": "BANNED here: praises the song for slapping when the verse says the song WORKS",
-   "verdict": "AVOID with reason (v7)"
+   "say": "—",
+   "lore": "Music press 2010s ('that beat slaps') → mainstream for anything excellent, still mostly sonic.",
+   "use": "(no use — refused)",
+   "trika": "v7's hymn is claimed as INSTRUMENT (it works), not as quality (it bangs). Slaps would praise the song for slapping — wrong payload entirely.",
+   "poetry": [],
+   "verdict": "AVOID with reason — the most instructive refusal in the file."
   },
   {
    "term": "touch grass",
-   "means": "get real, go outside",
-   "carries": "nothing precise here — generic grounding advice with no Sanskrit counterpart",
-   "limits": "BANNED: filler slang with no payload",
-   "verdict": "AVOID with reason"
+   "say": "—",
+   "lore": "Gamer insult turned wellness meme: go outside, get real.",
+   "use": "(no use — refused)",
+   "trika": "No Sanskrit counterpart anywhere in this stotra. Filler slang with zero payload.",
+   "poetry": [],
+   "verdict": "AVOID with reason."
   },
   {
    "term": "crash out",
-   "means": "big emotional blowup over something small",
-   "carries": "tanutāpa is SLIGHT anguish — crash out overshoots the scale 10x",
-   "limits": "BANNED here: violates the verse's own calibration (tanu)",
-   "verdict": "AVOID with reason (v7)"
+   "say": "—",
+   "lore": "Street/rap: spiraling into a destructive blowup; mainstreamed for any big emotional crash.",
+   "use": "(no use — refused)",
+   "trika": "tanutāpa is SLIGHT anguish — crash-out overshoots the verse's own calibration ~10x. Scale is doctrine here.",
+   "poetry": [],
+   "verdict": "AVOID with reason."
   }
  ]
 }
