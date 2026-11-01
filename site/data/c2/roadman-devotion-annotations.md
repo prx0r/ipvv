@@ -80,3 +80,29 @@ routine as teaching, teaching as routine. Dizzee 2008 → Cench 2023 → our C2:
 a straight lineage of street-to-world translation. When anyone asks why sacred
 verse belongs in roadman, the answer is fifteen years of precedent: the ends have
 been translating themselves for the world since Dizzee held the seminar.
+
+## 7. Stormzy, "Blinded By Your Grace" Pts. 1–2 — bar-by-bar for C2
+
+Full lyrics banked in `/tmp/opencode/genz/stormzy-blinded.json`. The annotated bars:
+
+- **"I stay prayed up then I get the job done"** — method → result in one line.
+  This is bh-p04's sevanā→śakti logic with the serial numbers filed off. Prayer as
+  practice, outcome as consequence. Use as the proof that roadman already speaks
+  instrumental devotion (practice-*works*), not just praise.
+- **"Yeah I'm Abigail's yout, but I'm God's son"** — dual identity resolved upward.
+  Mum's boy vs God's son is *structurally identical* to our v2 move (human self vs
+  made-of-Him self). Stormzy did the aham-claim on a No. 1 album: not twoness,
+  sonship. Cite whenever anyone flinches at "I'm Him."
+- **"It's not by blood and it's not by birth"** — grace-not-heredity. Direct sibling
+  to v9's samaya-not-merit: access by covenant, not by resume. Same doctrine,
+  different scripture.
+- **"I can't escape you / I can't replace you"** (Pt. 1 coda) — inescapable presence
+  as *experienced* pervasion. This is vyāpta from the inside: not "He is everywhere"
+  (doctrine) but "I cannot get away" (testimony). Strongest v1-adjacent line in the
+  mainstream catalogue — pervasion as pursuit, not geography.
+- **"I said a prayer this morning… I was so afraid / 'Til you came and saved"** —
+  fear → rescue arc in four lines. Sibling to v5 (fearlessness), different mechanism:
+  here rescue removes fear; in v5, salutation alone suffices. The pair teaches the
+  difference between deliverance devotion and recognition devotion.
+- **"This is God's plan, they can never stop this"** — na jātu energy (categorical,
+  unblockable). The never-claim with a roadblock metaphor built in.
