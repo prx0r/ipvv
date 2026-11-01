@@ -1,7 +1,7 @@
 # Slang Glossary — the lore, the use, the Trika conversion
 
 Every term the gen-z C2 uses, with where it comes from, how to say it, what Trika payload it carries, and where it is banned. Refusals are craft, not gaps.
-New: UK roadman register + bliss-talk ladder. Same rule: payload or ban.
+New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek guide) + bliss-talk ladder. Same rule: payload or ban.
 
 ## himothy
 *Verdict:* **USE — the identity word. Owner-minted, owner-kept.**
@@ -248,5 +248,23 @@ New: UK roadman register + bliss-talk ladder. Same rule: payload or ban.
 *Use:* 'tapped into Your lore like the sweetest thing ever.' (v8, already in v2)
 *Trika:* madhura-adjacent: sweetness as the flavor of parāmṛta-cintā. Already filed and holding.
 
+## swear down
+*Verdict:* **USE — the London sincerity marker.**
+*Lore:* London-wide oath: 'what I'm saying is 100% true, no lies' (Newsweek Top Boy guide). The ends' sincerity marker.
+*Use:* 'Swear down, He's everywhere.' (v1 alternative to no cap)
+*Trika:* satyam-oath, same payload as no cap/wallahi. Register knob: no cap (US/AAVE), swear down (London), wallahi (heaviest). Pick by verse's voice, never stack two.
+
+## shook
+*Verdict:* **USE — fear-negation contexts.**
+*Lore:* Roadman standard: to be scared, afraid (Newsweek: 'to be scared').
+*Use:* 'Death pulled up and I'm not even shook.' (v5 alternative)
+*Trika:* bhaya (fear) named plainly — the exact word v5 negates (na bibhemi). Shook states the fear only to refuse it.
+
+## patterned
+*Verdict:* **OBSERVED — do not use until a verse earns it.**
+*Lore:* 2020s youth: organized, sorted out ('get it patterned').
+*Use:* (observed, unmapped — no verse yet needs sorted-out-ness)
+*Trika:* No payload assigned. Candidate: vidhāna (arrangement)? Undecided — filed as observed, not used.
+
 ## Bliss-talk ladder
-*verses on ānanda/nirvṛti/sukha/amṛta (v6–v8)* — lengest (supreme grade — parama) → bussin (taste literal — amṛta) → fire (intensity, third choice) → sweetest (disposition of the taster) Rule: supremacy→lengest, taste→bussin, intensity→fire. Never stack two in one verse.
+supremacy → lengest · taste → bussin · intensity → fire · disposition → sweetest. Rule: never stack two in one verse.
