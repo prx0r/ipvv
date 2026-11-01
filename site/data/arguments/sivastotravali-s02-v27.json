@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v27",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v27",
+ "title": "sivastotravali — s02-v27",
+ "kind": "entailment",
+ "question": "On oneness-fame's great cloth, full of immortality-nectar — where, Lord, there is no wonder — I praise Your teaching.",
+ "issue": "Derived from L2 text (no argmap). On oneness-fame's great cloth, full of immortality-nectar — where, Lord, there is no wonder — I praise Your teaching.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "On oneness-fame's great cloth, full of immortality-nectar — where, Lord, there is no wonder — I praise Your teaching.",
+  "passage_id": "sivastotravali:s02-v27"
+ },
+ "unresolved": "",
+ "argument_text": "On oneness-fame's great cloth, full of immortality-nectar — where, Lord, there is no wonder — I praise Your teaching.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v27",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v04",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v04",
+ "title": "sivastotravali — s05-v04",
+ "kind": "entailment",
+ "question": "Ah nectar-ocean master! Ah sweet three-eyed One! Ah tasty deformed-eyed One! — thus may I dance, shouting.",
+ "issue": "Derived from L2 text (no argmap). Ah nectar-ocean master! Ah sweet three-eyed One! Ah tasty deformed-eyed One! — thus may I dance, shouting.",
+ "premises": [
+  {
+   "text": "aho sudhānidhe svāminn aho mṛṣṭa trilocana aho svādo virūpakṣety eva nṛtyeyam āraṭan",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Ah nectar-ocean master! Ah sweet three-eyed One! Ah tasty deformed-eyed One! — thus may I dance, shouting.",
+  "passage_id": "sivastotravali:s05-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Ah nectar-ocean master! Ah sweet three-eyed One! Ah tasty deformed-eyed One! — thus may I dance, shouting.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v04",
+ "sanskrit": "aho sudhānidhe svāminn aho mṛṣṭa trilocana aho svādo virūpakṣety eva nṛtyeyam āraṭan",
+ "license": "CC BY-NC-SA 4.0"
+}

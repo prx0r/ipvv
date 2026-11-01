@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s06-v01",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s06-v01",
+ "title": "sivastotravali — s06-v01",
+ "kind": "entailment",
+ "question": "Even a moment parted from You, Lord — of me burning dense always — may I be the ground of Your gaze.",
+ "issue": "Derived from L2 text (no argmap). Even a moment parted from You, Lord — of me burning dense always — may I be the ground of Your gaze.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s06-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Even a moment parted from You, Lord — of me burning dense always — may I be the ground of Your gaze.",
+  "passage_id": "sivastotravali:s06-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Even a moment parted from You, Lord — of me burning dense always — may I be the ground of Your gaze.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s06-v01",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

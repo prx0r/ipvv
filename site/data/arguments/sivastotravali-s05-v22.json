@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v22",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v22",
+ "title": "sivastotravali — s05-v22",
+ "kind": "entailment",
+ "question": "In speech, mind-thoughts, body-gestures made by senses — everywhere, always, may bhakti-rasa go before me as leader.",
+ "issue": "Derived from L2 text (no argmap). In speech, mind-thoughts, body-gestures made by senses — everywhere, always, may bhakti-rasa go before me as leader.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In speech, mind-thoughts, body-gestures made by senses — everywhere, always, may bhakti-rasa go before me as leader.",
+  "passage_id": "sivastotravali:s05-v22"
+ },
+ "unresolved": "",
+ "argument_text": "In speech, mind-thoughts, body-gestures made by senses — everywhere, always, may bhakti-rasa go before me as leader.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v22",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

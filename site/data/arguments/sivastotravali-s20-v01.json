@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s20-v01",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s20-v01",
+ "title": "sivastotravali — s20-v01",
+ "kind": "entailment",
+ "question": "Bow to the three-worlds' Lord, ash-white, three-eyed, trident-bearing, snake-threaded, moon-crested.",
+ "issue": "Derived from L2 text (no argmap). Bow to the three-worlds' Lord, ash-white, three-eyed, trident-bearing, snake-threaded, moon-crested.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s20-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bow to the three-worlds' Lord, ash-white, three-eyed, trident-bearing, snake-threaded, moon-crested.",
+  "passage_id": "sivastotravali:s20-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Bow to the three-worlds' Lord, ash-white, three-eyed, trident-bearing, snake-threaded, moon-crested.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s20-v01",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

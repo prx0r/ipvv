@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v02",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v02",
+ "title": "sivastotravali — s02-v02",
+ "kind": "entailment",
+ "question": "To the great fire fed by the universe as fuel, smeared-pure with great ash, to the Becoming to whom the world is the sole oblation — bow.",
+ "issue": "Derived from L2 text (no argmap). To the great fire fed by the universe as fuel, smeared-pure with great ash, to the Becoming to whom the world is the sole oblation — bow.",
+ "premises": [
+  {
+   "text": "viśvendhanamahākṣārānulepaśucivarcase mahānalāya bhavate viśvaikahaviṣe namaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "To the great fire fed by the universe as fuel, smeared-pure with great ash, to the Becoming to whom the world is the sole oblation — bow.",
+  "passage_id": "sivastotravali:s02-v02"
+ },
+ "unresolved": "",
+ "argument_text": "To the great fire fed by the universe as fuel, smeared-pure with great ash, to the Becoming to whom the world is the sole oblation — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v02",
+ "sanskrit": "viśvendhanamahākṣārānulepaśucivarcase mahānalāya bhavate viśvaikahaviṣe namaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

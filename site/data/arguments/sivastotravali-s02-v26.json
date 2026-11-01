@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v26",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v26",
+ "title": "sivastotravali — s02-v26",
+ "kind": "entailment",
+ "question": "I praise Your mantra-formed, clear-cool, unprecedentedly joyful, supreme-nectar-juicy form.",
+ "issue": "Derived from L2 text (no argmap). I praise Your mantra-formed, clear-cool, unprecedentedly joyful, supreme-nectar-juicy form.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v26"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "I praise Your mantra-formed, clear-cool, unprecedentedly joyful, supreme-nectar-juicy form.",
+  "passage_id": "sivastotravali:s02-v26"
+ },
+ "unresolved": "",
+ "argument_text": "I praise Your mantra-formed, clear-cool, unprecedentedly joyful, supreme-nectar-juicy form.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v26",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

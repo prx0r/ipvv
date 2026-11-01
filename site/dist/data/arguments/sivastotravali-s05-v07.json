@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v07",
+ "title": "sivastotravali — s05-v07",
+ "kind": "entailment",
+ "question": "Where You stand with the Goddess, many-formed, from palace to gate-tower — in that city may I dwell.",
+ "issue": "Derived from L2 text (no argmap). Where You stand with the Goddess, many-formed, from palace to gate-tower — in that city may I dwell.",
+ "premises": [
+  {
+   "text": "yatra devīsametas tvam āsaudhādā ca gopurāt bahurūpaḥ sthitas tasmin vāstavyaḥ syām ahaṃ pure",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Where You stand with the Goddess, many-formed, from palace to gate-tower — in that city may I dwell.",
+  "passage_id": "sivastotravali:s05-v07"
+ },
+ "unresolved": "",
+ "argument_text": "Where You stand with the Goddess, many-formed, from palace to gate-tower — in that city may I dwell.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v07",
+ "sanskrit": "yatra devīsametas tvam āsaudhādā ca gopurāt bahurūpaḥ sthitas tasmin vāstavyaḥ syām ahaṃ pure",
+ "license": "CC BY-NC-SA 4.0"
+}

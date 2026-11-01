@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v05",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v05",
+ "title": "sivastotravali — s01-v05",
+ "kind": "entailment",
+ "question": "Victory to those intoxicated with the finest wine of devotion's nectar-essence! Though non-dual, they are ever Your second, O Lord.",
+ "issue": "Derived from L2 text (no argmap). Victory to those intoxicated with the finest wine of devotion's nectar-essence! Though non-dual, they are ever Your second, O Lord.",
+ "premises": [
+  {
+   "text": "jayanti bhaktipīyūṣarasāsavavaronmadāḥ advitīyā api sadā tvaddvitīyā api prabho",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Victory to those intoxicated with the finest wine of devotion's nectar-essence! Though non-dual, they are ever Your second, O Lord.",
+  "passage_id": "sivastotravali:s01-v05"
+ },
+ "unresolved": "",
+ "argument_text": "Victory to those intoxicated with the finest wine of devotion's nectar-essence! Though non-dual, they are ever Your second, O Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v05",
+ "sanskrit": "jayanti bhaktipīyūṣarasāsavavaronmadāḥ advitīyā api sadā tvaddvitīyā api prabho",
+ "license": "CC BY-NC-SA 4.0"
+}

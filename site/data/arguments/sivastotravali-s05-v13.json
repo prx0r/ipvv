@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v13",
+ "title": "sivastotravali — s05-v13",
+ "kind": "entailment",
+ "question": "Take what I offer — passion and the rest, Lord; make it nectar and eat it with devotees.",
+ "issue": "Derived from L2 text (no argmap). Take what I offer — passion and the rest, Lord; make it nectar and eat it with devotees.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Take what I offer — passion and the rest, Lord; make it nectar and eat it with devotees.",
+  "passage_id": "sivastotravali:s05-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Take what I offer — passion and the rest, Lord; make it nectar and eat it with devotees.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v13",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

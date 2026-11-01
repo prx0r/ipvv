@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s20-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s20-v08",
+ "title": "sivastotravali — s20-v08",
+ "kind": "entailment",
+ "question": "At devotion-itch's showing, Lord's pillar-firmness arises — by it the world, great festival, is won.",
+ "issue": "Derived from L2 text (no argmap). At devotion-itch's showing, Lord's pillar-firmness arises — by it the world, great festival, is won.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s20-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "At devotion-itch's showing, Lord's pillar-firmness arises — by it the world, great festival, is won.",
+  "passage_id": "sivastotravali:s20-v08"
+ },
+ "unresolved": "",
+ "argument_text": "At devotion-itch's showing, Lord's pillar-firmness arises — by it the world, great festival, is won.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s20-v08",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

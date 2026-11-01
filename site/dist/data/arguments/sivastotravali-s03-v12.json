@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s03-v12",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s03-v12",
+ "title": "sivastotravali — s03-v12",
+ "kind": "entailment",
+ "question": "Where no other knowable for action, no other yoga for knowing — yet what if knowledge? Consciousness alone, world-filled-one, expands.",
+ "issue": "Derived from L2 text (no argmap). Where no other knowable for action, no other yoga for knowing — yet what if knowledge? Consciousness alone, world-filled-one, expands.",
+ "premises": [
+  {
+   "text": "nānyad vedyaṃ kriyā yatra nānyo yogo vidā ca yat jñānaṃ syāt kiṃ tu viśvaikapūrṇā cittvaṃ vijṛmbhate",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s03-v12"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Where no other knowable for action, no other yoga for knowing — yet what if knowledge? Consciousness alone, world-filled-one, expands.",
+  "passage_id": "sivastotravali:s03-v12"
+ },
+ "unresolved": "",
+ "argument_text": "Where no other knowable for action, no other yoga for knowing — yet what if knowledge? Consciousness alone, world-filled-one, expands.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s03-v12",
+ "sanskrit": "nānyad vedyaṃ kriyā yatra nānyo yogo vidā ca yat jñānaṃ syāt kiṃ tu viśvaikapūrṇā cittvaṃ vijṛmbhate",
+ "license": "CC BY-NC-SA 4.0"
+}

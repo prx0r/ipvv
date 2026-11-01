@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s16-v21",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s16-v21",
+ "title": "sivastotravali — s16-v21",
+ "kind": "entailment",
+ "question": "You are pleased by devotion; devotion, You pleased — this mutual dependence is fitting, as You alone know.",
+ "issue": "Derived from L2 text (no argmap). You are pleased by devotion; devotion, You pleased — this mutual dependence is fitting, as You alone know.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s16-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "You are pleased by devotion; devotion, You pleased — this mutual dependence is fitting, as You alone know.",
+  "passage_id": "sivastotravali:s16-v21"
+ },
+ "unresolved": "",
+ "argument_text": "You are pleased by devotion; devotion, You pleased — this mutual dependence is fitting, as You alone know.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s16-v21",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

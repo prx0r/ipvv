@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v13",
+ "title": "sivastotravali — s04-v13",
+ "kind": "entailment",
+ "question": "The word, grown by strange-rasa-sprinkling, though uttered \"Śaṅkara\" hundreds of times — enters even sideways hearts, ever-fresh in purpose.",
+ "issue": "Derived from L2 text (no argmap). The word, grown by strange-rasa-sprinkling, though uttered \"Śaṅkara\" hundreds of times — enters even sideways hearts, ever-fresh in purpose.",
+ "premises": [
+  {
+   "text": "yo vicitrarasasekavardhitaḥ śaṅkareti śataśo 'py udīritaḥ śabda āviśati tiryagāśayeṣv apy ayaṃ navanavaprayojanaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The word, grown by strange-rasa-sprinkling, though uttered \"Śaṅkara\" hundreds of times — enters even sideways hearts, ever-fresh in purpose.",
+  "passage_id": "sivastotravali:s04-v13"
+ },
+ "unresolved": "",
+ "argument_text": "The word, grown by strange-rasa-sprinkling, though uttered \"Śaṅkara\" hundreds of times — enters even sideways hearts, ever-fresh in purpose.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v13",
+ "sanskrit": "yo vicitrarasasekavardhitaḥ śaṅkareti śataśo 'py udīritaḥ śabda āviśati tiryagāśayeṣv apy ayaṃ navanavaprayojanaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

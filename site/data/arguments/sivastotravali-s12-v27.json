@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s12-v27",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s12-v27",
+ "title": "sivastotravali — s12-v27",
+ "kind": "entailment",
+ "question": "The eager toward You who face You as counter-form — ah, what would befall them, what practice would fruit for them?",
+ "issue": "Derived from L2 text (no argmap). The eager toward You who face You as counter-form — ah, what would befall them, what practice would fruit for them?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s12-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The eager toward You who face You as counter-form — ah, what would befall them, what practice would fruit for them?",
+  "passage_id": "sivastotravali:s12-v27"
+ },
+ "unresolved": "",
+ "argument_text": "The eager toward You who face You as counter-form — ah, what would befall them, what practice would fruit for them?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s12-v27",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

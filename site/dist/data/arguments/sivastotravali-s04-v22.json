@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v22",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v22",
+ "title": "sivastotravali — s04-v22",
+ "kind": "entailment",
+ "question": "Where the sun sets with the moon and all — that unconquered Śiva-night shines, self-light-spread-lustrous.",
+ "issue": "Derived from L2 text (no argmap). Where the sun sets with the moon and all — that unconquered Śiva-night shines, self-light-spread-lustrous.",
+ "premises": [
+  {
+   "text": "yatra so 'stam ayam eti vivasvāṃś candramaḥ prabhṛtibhiḥ saha sarvaiḥ kāpi sā vijayate śivarātriḥ svaprabhāprasarabhāsvararūpā",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Where the sun sets with the moon and all — that unconquered Śiva-night shines, self-light-spread-lustrous.",
+  "passage_id": "sivastotravali:s04-v22"
+ },
+ "unresolved": "",
+ "argument_text": "Where the sun sets with the moon and all — that unconquered Śiva-night shines, self-light-spread-lustrous.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v22",
+ "sanskrit": "yatra so 'stam ayam eti vivasvāṃś candramaḥ prabhṛtibhiḥ saha sarvaiḥ kāpi sā vijayate śivarātriḥ svaprabhāprasarabhāsvararūpā",
+ "license": "CC BY-NC-SA 4.0"
+}

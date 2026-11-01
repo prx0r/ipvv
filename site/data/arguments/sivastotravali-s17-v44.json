@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v44",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v44",
+ "title": "sivastotravali — s17-v44",
+ "kind": "entailment",
+ "question": "In the whole worship-treasure, what fortune of the organ-host blooms?",
+ "issue": "Derived from L2 text (no argmap). In the whole worship-treasure, what fortune of the organ-host blooms?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v44"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the whole worship-treasure, what fortune of the organ-host blooms?",
+  "passage_id": "sivastotravali:s17-v44"
+ },
+ "unresolved": "",
+ "argument_text": "In the whole worship-treasure, what fortune of the organ-host blooms?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v44",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

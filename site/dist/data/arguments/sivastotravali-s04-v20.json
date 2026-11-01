@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v20",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v20",
+ "title": "sivastotravali — s04-v20",
+ "kind": "entailment",
+ "question": "Do You remember, Lord, any desired sense-pleasure I ever asked? Give instead, always, Your body-vision-nectar as the only wish.",
+ "issue": "Derived from L2 text (no argmap). Do You remember, Lord, any desired sense-pleasure I ever asked? Give instead, always, Your body-vision-nectar as the only wish.",
+ "premises": [
+  {
+   "text": "smarasi nātha kadācid apīhitaṃ viṣayasaukhyam athāpi mayārthitam satatam eva bhavadvapurīkṣaṇāmṛtamabhīṣṭamalaṃ mama dehi tat",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Do You remember, Lord, any desired sense-pleasure I ever asked? Give instead, always, Your body-vision-nectar as the only wish.",
+  "passage_id": "sivastotravali:s04-v20"
+ },
+ "unresolved": "",
+ "argument_text": "Do You remember, Lord, any desired sense-pleasure I ever asked? Give instead, always, Your body-vision-nectar as the only wish.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v20",
+ "sanskrit": "smarasi nātha kadācid apīhitaṃ viṣayasaukhyam athāpi mayārthitam satatam eva bhavadvapurīkṣaṇāmṛtamabhīṣṭamalaṃ mama dehi tat",
+ "license": "CC BY-NC-SA 4.0"
+}

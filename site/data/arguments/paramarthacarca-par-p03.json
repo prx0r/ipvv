@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p03",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p03",
+ "title": "paramarthacarca — par-p03",
+ "kind": "entailment",
+ "question": "Thus — dense own-consciousness, one indeed: he is Śiva, the universe's supreme light. There too, indeed, shines, in variegated power: apprehended-apprehender-division-difference.",
+ "issue": "Derived from L2 text (no argmap). Thus — dense own-consciousness, one indeed: he is Śiva, the universe's supreme light. There too, indeed, shines, in variegated power: apprehended-apprehender-division-difference.",
+ "premises": [
+  {
+   "text": "itthaṃ svasaṃvidghana eka eva śivaḥ sa viśvasya paraḥ prakāśaḥ | tatrāpi bhātyeva vicitraśaktau grāhyagṛhītṛpravibhāgabhedaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus — dense own-consciousness, one indeed: he is Śiva, the universe's supreme light. There too, indeed, shines, in variegated power: apprehended-apprehender-division-difference.",
+  "passage_id": "paramarthacarca:par-p03"
+ },
+ "unresolved": "",
+ "argument_text": "Thus — dense own-consciousness, one indeed: he is Śiva, the universe's supreme light. There too, indeed, shines, in variegated power: apprehended-apprehender-division-difference.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p03",
+ "sanskrit": "itthaṃ svasaṃvidghana eka eva śivaḥ sa viśvasya paraḥ prakāśaḥ | tatrāpi bhātyeva vicitraśaktau grāhyagṛhītṛpravibhāgabhedaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

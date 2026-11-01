@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s03-v06",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s03-v06",
+ "title": "sivastotravali — s03-v06",
+ "kind": "entailment",
+ "question": "Fallen from Your consciousness-bliss ocean — these knowings, these drops — why are they not nectar-sweet-beautiful to me, Lord?",
+ "issue": "Derived from L2 text (no argmap). Fallen from Your consciousness-bliss ocean — these knowings, these drops — why are they not nectar-sweet-beautiful to me, Lord?",
+ "premises": [
+  {
+   "text": "tvaccidānandajaladheś cyutāḥ saṃvittivipruṣaḥ imāḥ kathaṃ me bhagavan nāmṛtāsvādasundarāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s03-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Fallen from Your consciousness-bliss ocean — these knowings, these drops — why are they not nectar-sweet-beautiful to me, Lord?",
+  "passage_id": "sivastotravali:s03-v06"
+ },
+ "unresolved": "",
+ "argument_text": "Fallen from Your consciousness-bliss ocean — these knowings, these drops — why are they not nectar-sweet-beautiful to me, Lord?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s03-v06",
+ "sanskrit": "tvaccidānandajaladheś cyutāḥ saṃvittivipruṣaḥ imāḥ kathaṃ me bhagavan nāmṛtāsvādasundarāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

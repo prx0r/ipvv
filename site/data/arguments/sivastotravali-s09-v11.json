@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s09-v11",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s09-v11",
+ "title": "sivastotravali — s09-v11",
+ "kind": "entailment",
+ "question": "All-around pure-You-light-spread — when shall I so shine that no Māyā-shadow-cave is in me?",
+ "issue": "Derived from L2 text (no argmap). All-around pure-You-light-spread — when shall I so shine that no Māyā-shadow-cave is in me?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s09-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "All-around pure-You-light-spread — when shall I so shine that no Māyā-shadow-cave is in me?",
+  "passage_id": "sivastotravali:s09-v11"
+ },
+ "unresolved": "",
+ "argument_text": "All-around pure-You-light-spread — when shall I so shine that no Māyā-shadow-cave is in me?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s09-v11",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

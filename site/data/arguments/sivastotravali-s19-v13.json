@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v13",
+ "title": "sivastotravali — s19-v13",
+ "kind": "entailment",
+ "question": "In liberation-state, where is devotion to You — how could it shine even for the mortal-natured? So set me, Unborn, on a fitting attainment-ground.",
+ "issue": "Derived from L2 text (no argmap). In liberation-state, where is devotion to You — how could it shine even for the mortal-natured? So set me, Unborn, on a fitting attainment-ground.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In liberation-state, where is devotion to You — how could it shine even for the mortal-natured? So set me, Unborn, on a fitting attainment-ground.",
+  "passage_id": "sivastotravali:s19-v13"
+ },
+ "unresolved": "",
+ "argument_text": "In liberation-state, where is devotion to You — how could it shine even for the mortal-natured? So set me, Unborn, on a fitting attainment-ground.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v13",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

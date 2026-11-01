@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s06-v09",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s06-v09",
+ "title": "sivastotravali — s06-v09",
+ "kind": "entailment",
+ "question": "What stage do You not rule, what could there be that is not Your body? Tired — by effortlessness may I reach You everywhere.",
+ "issue": "Derived from L2 text (no argmap). What stage do You not rule, what could there be that is not Your body? Tired — by effortlessness may I reach You everywhere.",
+ "premises": [
+  {
+   "text": "kāṃ bhūmikāṃ nādhiśeṣe kiṃ tat syād yan na te vapuḥ śrāntas tenāprayāsena sarvatas tvām avāpnuyām",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s06-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "What stage do You not rule, what could there be that is not Your body? Tired — by effortlessness may I reach You everywhere.",
+  "passage_id": "sivastotravali:s06-v09"
+ },
+ "unresolved": "",
+ "argument_text": "What stage do You not rule, what could there be that is not Your body? Tired — by effortlessness may I reach You everywhere.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s06-v09",
+ "sanskrit": "kāṃ bhūmikāṃ nādhiśeṣe kiṃ tat syād yan na te vapuḥ śrāntas tenāprayāsena sarvatas tvām avāpnuyām",
+ "license": "CC BY-NC-SA 4.0"
+}

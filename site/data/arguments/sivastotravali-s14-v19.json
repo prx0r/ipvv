@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s14-v19",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s14-v19",
+ "title": "sivastotravali — s14-v19",
+ "kind": "entailment",
+ "question": "Victory: life-of-life humming inside the body-mountain cave; victory: best rasa sporting in good minds' sky.",
+ "issue": "Derived from L2 text (no argmap). Victory: life-of-life humming inside the body-mountain cave; victory: best rasa sporting in good minds' sky.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s14-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Victory: life-of-life humming inside the body-mountain cave; victory: best rasa sporting in good minds' sky.",
+  "passage_id": "sivastotravali:s14-v19"
+ },
+ "unresolved": "",
+ "argument_text": "Victory: life-of-life humming inside the body-mountain cave; victory: best rasa sporting in good minds' sky.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s14-v19",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s09-v18",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s09-v18",
+ "title": "sivastotravali — s09-v18",
+ "kind": "entailment",
+ "question": "Siddhis gained, all heat-fear melted — when shall I play, devoted to drinking Your devotion-rasa-medicine?",
+ "issue": "Derived from L2 text (no argmap). Siddhis gained, all heat-fear melted — when shall I play, devoted to drinking Your devotion-rasa-medicine?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s09-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Siddhis gained, all heat-fear melted — when shall I play, devoted to drinking Your devotion-rasa-medicine?",
+  "passage_id": "sivastotravali:s09-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Siddhis gained, all heat-fear melted — when shall I play, devoted to drinking Your devotion-rasa-medicine?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s09-v18",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

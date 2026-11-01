@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v04",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v04",
+ "title": "sivastotravali — s04-v04",
+ "kind": "entailment",
+ "question": "Śiva Śiva Śambhu Śaṅkara — swift pity on the refuge-seekers' lover! Fortune is near for whoever remembers Your lotus-feet-pair.",
+ "issue": "Derived from L2 text (no argmap). Śiva Śiva Śambhu Śaṅkara — swift pity on the refuge-seekers' lover! Fortune is near for whoever remembers Your lotus-feet-pair.",
+ "premises": [
+  {
+   "text": "śiva śiva śambho śaṅkara śaraṇāgatavatsalāśu kuru karuṇām tava caraṇakamalayugalasmaraṇaparasya hi sampado 'dūre",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Śiva Śiva Śambhu Śaṅkara — swift pity on the refuge-seekers' lover! Fortune is near for whoever remembers Your lotus-feet-pair.",
+  "passage_id": "sivastotravali:s04-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Śiva Śiva Śambhu Śaṅkara — swift pity on the refuge-seekers' lover! Fortune is near for whoever remembers Your lotus-feet-pair.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v04",
+ "sanskrit": "śiva śiva śambho śaṅkara śaraṇāgatavatsalāśu kuru karuṇām tava caraṇakamalayugalasmaraṇaparasya hi sampado 'dūre",
+ "license": "CC BY-NC-SA 4.0"
+}

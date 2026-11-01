@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v08",
+ "title": "sivastotravali — s01-v08",
+ "kind": "entailment",
+ "question": "Lord — when the knowable is destroyed, by whom are You not seen, standing alone? Even amid the agitation of knower and knowable, You are easily seen by devotees.",
+ "issue": "Derived from L2 text (no argmap). Lord — when the knowable is destroyed, by whom are You not seen, standing alone? Even amid the agitation of knower and knowable, You are easily seen by devotees.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Lord — when the knowable is destroyed, by whom are You not seen, standing alone? Even amid the agitation of knower and knowable, You are easily seen by devotees.",
+  "passage_id": "sivastotravali:s01-v08"
+ },
+ "unresolved": "",
+ "argument_text": "Lord — when the knowable is destroyed, by whom are You not seen, standing alone? Even amid the agitation of knower and knowable, You are easily seen by devotees.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v08",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

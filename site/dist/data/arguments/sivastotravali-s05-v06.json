@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v06",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v06",
+ "title": "sivastotravali — s05-v06",
+ "kind": "entailment",
+ "question": "May I dwell anywhere, O All-pervading, mind-mountain on earth, where that practice is — uninterrupted, great-rasa, made of Your prattle.",
+ "issue": "Derived from L2 text (no argmap). May I dwell anywhere, O All-pervading, mind-mountain on earth, where that practice is — uninterrupted, great-rasa, made of Your prattle.",
+ "premises": [
+  {
+   "text": "cittabhūbhṛd bhuvi vibho vaseyaṃ kvāpi yatra sā nirantaratvatpralāpamayī vṛttir mahārasā",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May I dwell anywhere, O All-pervading, mind-mountain on earth, where that practice is — uninterrupted, great-rasa, made of Your prattle.",
+  "passage_id": "sivastotravali:s05-v06"
+ },
+ "unresolved": "",
+ "argument_text": "May I dwell anywhere, O All-pervading, mind-mountain on earth, where that practice is — uninterrupted, great-rasa, made of Your prattle.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v06",
+ "sanskrit": "cittabhūbhṛd bhuvi vibho vaseyaṃ kvāpi yatra sā nirantaratvatpralāpamayī vṛttir mahārasā",
+ "license": "CC BY-NC-SA 4.0"
+}

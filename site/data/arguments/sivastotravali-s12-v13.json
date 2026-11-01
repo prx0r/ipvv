@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s12-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s12-v13",
+ "title": "sivastotravali — s12-v13",
+ "kind": "entailment",
+ "question": "The world-born worshipped as chief by being inside You — how, Lord, could non-being outside be worshipped, or by whom?",
+ "issue": "Derived from L2 text (no argmap). The world-born worshipped as chief by being inside You — how, Lord, could non-being outside be worshipped, or by whom?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s12-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The world-born worshipped as chief by being inside You — how, Lord, could non-being outside be worshipped, or by whom?",
+  "passage_id": "sivastotravali:s12-v13"
+ },
+ "unresolved": "",
+ "argument_text": "The world-born worshipped as chief by being inside You — how, Lord, could non-being outside be worshipped, or by whom?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s12-v13",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

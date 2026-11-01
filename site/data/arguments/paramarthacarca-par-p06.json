@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p06",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p06",
+ "title": "paramarthacarca — par-p06",
+ "kind": "entailment",
+ "question": "O consciousness-dense one — therefore you indeed are supreme; in you indeed the universes shine at once. And they flash forth by the power of your glory; you indeed are also their supreme-Lord maker.",
+ "issue": "Derived from L2 text (no argmap). O consciousness-dense one — therefore you indeed are supreme; in you indeed the universes shine at once. And they flash forth by the power of your glory; you indeed are also their supreme-Lord maker.",
+ "premises": [
+  {
+   "text": "saṃvidghanas tena parastvam eva tvayyeva viśvāni cakāsati drāk | sphuranti ca tvanmahasaḥ prabhāvāt tvam eva caiṣāṃ parameśakartā",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "O consciousness-dense one — therefore you indeed are supreme; in you indeed the universes shine at once. And they flash forth by the power of your glory; you indeed are also their supreme-Lord maker.",
+  "passage_id": "paramarthacarca:par-p06"
+ },
+ "unresolved": "",
+ "argument_text": "O consciousness-dense one — therefore you indeed are supreme; in you indeed the universes shine at once. And they flash forth by the power of your glory; you indeed are also their supreme-Lord maker.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p06",
+ "sanskrit": "saṃvidghanas tena parastvam eva tvayyeva viśvāni cakāsati drāk | sphuranti ca tvanmahasaḥ prabhāvāt tvam eva caiṣāṃ parameśakartā",
+ "license": "CC BY-NC-SA 4.0"
+}

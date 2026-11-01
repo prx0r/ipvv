@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v07",
+ "title": "sivastotravali — s02-v07",
+ "kind": "entailment",
+ "question": "To the hidden Lord — Veda-opposing, Veda-making, the Veda's true essence, secret master — bow.",
+ "issue": "Derived from L2 text (no argmap). To the hidden Lord — Veda-opposing, Veda-making, the Veda's true essence, secret master — bow.",
+ "premises": [
+  {
+   "text": "vedāgamaviruddhāya vedāgamavidhāyine vedāgamasatattvāya guhyāya svāmine namaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "To the hidden Lord — Veda-opposing, Veda-making, the Veda's true essence, secret master — bow.",
+  "passage_id": "sivastotravali:s02-v07"
+ },
+ "unresolved": "",
+ "argument_text": "To the hidden Lord — Veda-opposing, Veda-making, the Veda's true essence, secret master — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v07",
+ "sanskrit": "vedāgamaviruddhāya vedāgamavidhāyine vedāgamasatattvāya guhyāya svāmine namaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

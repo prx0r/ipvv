@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v02",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v02",
+ "title": "sivastotravali — s07-v02",
+ "kind": "entailment",
+ "question": "\"This is mine, not this\" — on passion-aversion's firm-nailed root may the axe fall inside: the certainty of oneness-with-You-made.",
+ "issue": "Derived from L2 text (no argmap). \"This is mine, not this\" — on passion-aversion's firm-nailed root may the axe fall inside: the certainty of oneness-with-You-made.",
+ "premises": [
+  {
+   "text": "etan mama na tv idam iti rāgadveṣādinigaḍadṛḍhamūle nātha bhavanmayataikyapratyayaparaśuḥ patatvantaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "\"This is mine, not this\" — on passion-aversion's firm-nailed root may the axe fall inside: the certainty of oneness-with-You-made.",
+  "passage_id": "sivastotravali:s07-v02"
+ },
+ "unresolved": "",
+ "argument_text": "\"This is mine, not this\" — on passion-aversion's firm-nailed root may the axe fall inside: the certainty of oneness-with-You-made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v02",
+ "sanskrit": "etan mama na tv idam iti rāgadveṣādinigaḍadṛḍhamūle nātha bhavanmayataikyapratyayaparaśuḥ patatvantaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

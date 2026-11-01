@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v08",
+ "title": "sivastotravali — s04-v08",
+ "kind": "entailment",
+ "question": "Lord, like lightning at dawn gleams my nectar-smeared — if it stayed steadier, You are worshipped duly — what else?",
+ "issue": "Derived from L2 text (no argmap). Lord, like lightning at dawn gleams my nectar-smeared — if it stayed steadier, You are worshipped duly — what else?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Lord, like lightning at dawn gleams my nectar-smeared — if it stayed steadier, You are worshipped duly — what else?",
+  "passage_id": "sivastotravali:s04-v08"
+ },
+ "unresolved": "",
+ "argument_text": "Lord, like lightning at dawn gleams my nectar-smeared — if it stayed steadier, You are worshipped duly — what else?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v08",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

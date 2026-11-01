@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s11-v11",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s11-v11",
+ "title": "sivastotravali — s11-v11",
+ "kind": "entailment",
+ "question": "Śambhu Śarva moon-crested Śiva, three-eyed rosary-bearer, fierce-skulled, trident-armed, ocean of pity, world-builder by fierce power, blue-throated — destroy ill-fortune fast, give supreme success.",
+ "issue": "Derived from L2 text (no argmap). Śambhu Śarva moon-crested Śiva, three-eyed rosary-bearer, fierce-skulled, trident-armed, ocean of pity, world-builder by fierce power, blue-throated — destroy ill-fortune fast, give supreme success.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s11-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Śambhu Śarva moon-crested Śiva, three-eyed rosary-bearer, fierce-skulled, trident-armed, ocean of pity, world-builder by fierce power, blue-throated — destroy ill-fortune fast, give supreme success.",
+  "passage_id": "sivastotravali:s11-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Śambhu Śarva moon-crested Śiva, three-eyed rosary-bearer, fierce-skulled, trident-armed, ocean of pity, world-builder by fierce power, blue-throated — destroy ill-fortune fast, give supreme success.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s11-v11",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

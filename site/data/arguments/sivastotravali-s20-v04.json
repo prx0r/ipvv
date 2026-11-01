@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s20-v04",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s20-v04",
+ "title": "sivastotravali — s20-v04",
+ "kind": "entailment",
+ "question": "Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means.",
+ "issue": "Derived from L2 text (no argmap). Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s20-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means.",
+  "passage_id": "sivastotravali:s20-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s20-v04",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

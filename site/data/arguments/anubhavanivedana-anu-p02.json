@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anubhavanivedana:anu-p02",
+ "work_id": "anubhavanivedana",
+ "passage_id": "anubhavanivedana:anu-p02",
+ "title": "anubhavanivedana — anu-p02",
+ "kind": "entailment",
+ "question": "Half-open-eyed, steady-minded, gaze placed on the nose-tip — moon and sun too have attained dissolution in the interior of the triple-throb state — light-formed, devoid of all exteriority, and one supreme person: reality attains that state, the thing supreme. What more is there to say here?",
+ "issue": "Derived from L2 text (no argmap). Half-open-eyed, steady-minded, gaze placed on the nose-tip — moon and sun too have attained dissolution in the interior of the triple-throb state — light-formed, devoid of all exteriority, and one supreme person: reality attains that state, the thing supreme. What more is there to say here?",
+ "premises": [
+  {
+   "text": "ardhoddhāṭitalocanaḥ sthiramanā nāsāgradattekṣaṇaḥ candrārkāvapi līnatāmupagatau trispandabhāvāntare | jyotīrūpamaśeṣabāhyarahitaṃ caikaṃ pumāṃsaṃ paraṃ tattvaṃ tatpadameti vastu paramam vācyaṃ kimatrādhikam",
+   "label": "Sanskrit source",
+   "passage_id": "anubhavanivedana:anu-p02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Half-open-eyed, steady-minded, gaze placed on the nose-tip — moon and sun too have attained dissolution in the interior of the triple-throb state — light-formed, devoid of all exteriority, and one supreme person: reality attains that state, the thing supreme. What more is there to say here?",
+  "passage_id": "anubhavanivedana:anu-p02"
+ },
+ "unresolved": "",
+ "argument_text": "Half-open-eyed, steady-minded, gaze placed on the nose-tip — moon and sun too have attained dissolution in the interior of the triple-throb state — light-formed, devoid of all exteriority, and one supreme person: reality attains that state, the thing supreme. What more is there to say here?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anubhavanivedana:anu-p02",
+ "sanskrit": "ardhoddhāṭitalocanaḥ sthiramanā nāsāgradattekṣaṇaḥ candrārkāvapi līnatāmupagatau trispandabhāvāntare | jyotīrūpamaśeṣabāhyarahitaṃ caikaṃ pumāṃsaṃ paraṃ tattvaṃ tatpadameti vastu paramam vācyaṃ kimatrādhikam",
+ "license": "CC BY-NC-SA 4.0"
+}

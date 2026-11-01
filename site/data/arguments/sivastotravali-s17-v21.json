@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v21",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v21",
+ "title": "sivastotravali — s17-v21",
+ "kind": "entailment",
+ "question": "Till Your worship-nectar-taste-festival is got, I count no drop of fortune's happiness tasted.",
+ "issue": "Derived from L2 text (no argmap). Till Your worship-nectar-taste-festival is got, I count no drop of fortune's happiness tasted.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Till Your worship-nectar-taste-festival is got, I count no drop of fortune's happiness tasted.",
+  "passage_id": "sivastotravali:s17-v21"
+ },
+ "unresolved": "",
+ "argument_text": "Till Your worship-nectar-taste-festival is got, I count no drop of fortune's happiness tasted.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v21",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

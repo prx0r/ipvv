@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s09-v01",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s09-v01",
+ "title": "sivastotravali — s09-v01",
+ "kind": "entailment",
+ "question": "When will my mind, eager to taste new-rasa-moist union, rush past all else to Your touch?",
+ "issue": "Derived from L2 text (no argmap). When will my mind, eager to taste new-rasa-moist union, rush past all else to Your touch?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s09-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "When will my mind, eager to taste new-rasa-moist union, rush past all else to Your touch?",
+  "passage_id": "sivastotravali:s09-v01"
+ },
+ "unresolved": "",
+ "argument_text": "When will my mind, eager to taste new-rasa-moist union, rush past all else to Your touch?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s09-v01",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

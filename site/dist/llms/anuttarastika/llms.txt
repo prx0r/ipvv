@@ -1,17 +1,32 @@
 # anuttarastika — LLM Discovery
 
 Work: anuttarastika
-Passages: 8 (0 PASS, 8 BLOCKED)
+Passages: 8 (5 PASS, 3 BLOCKED)
 Data: /data/translations/anuttarastika.json
 Page: /translations/anuttarastika.html
 
 ## Chunks
 
-- anu-p01 (verses 1) [BLOCKED]
+- anu-p01 (verses 1) [PASS]
+  L1: ## anu-p01 (1)
+transition / here / not / contemplation / nor / connection-of-speech / nor / discussion / nor / visualiza
+  L2: Transition here is no method at all — not contemplation, not speech-connection, not discussion, not visualization, not s
 - anu-p02 (verses 2) [BLOCKED]
 - anu-p03 (verses 3) [BLOCKED]
 - anu-p04 (verses 4) [BLOCKED]
-- anu-p05 (verses 5) [BLOCKED]
-- anu-p06 (verses 6) [BLOCKED]
-- anu-p07 (verses 7) [BLOCKED]
-- anu-p08 (verses 8) [BLOCKED]
+- anu-p05 (verses 5) [PASS]
+  L1: ## anu-p05 (5)
+Passion / aversion / pleasure / displeasure / rise / dissolution / I-ness / misery / and-the-rest / those
+  L2: Passion, aversion, pleasure, displeasure, rise and fall, I-ness, misery and the rest — things shining forth, universe-bo
+- anu-p06 (verses 6) [PASS]
+  L1: ## anu-p06 (6)
+Former / non-being / being / action / indeed / suddenly / things / always / in-this / existence / middle-
+  L2: Former non-being, being, action — things always, suddenly, in this existence: middle-formed, transformation-confused — w
+- anu-p07 (verses 7) [PASS]
+  L1: ## anu-p07 (7)
+Of-things / no / arising / natural / by-your-contemplation / they-shine / non-true / truth / by-experienc
+  L2: Of things there is no arising; naturally, by your contemplation they shine; even the non-true partakes of truth for a mo
+- anu-p08 (verses 8) [PASS]
+  L1: ## anu-p08 (8)
+What / true / what / untrue / little-much / eternal / not / eternal / what / Māyā-stained / what / self-p
+  L2: What true, what untrue, little-much, eternal, not eternal, what Māyā-stained, what self-pure — in the consciousness-mirr

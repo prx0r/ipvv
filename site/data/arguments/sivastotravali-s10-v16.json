@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v16",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v16",
+ "title": "sivastotravali — s10-v16",
+ "kind": "entailment",
+ "question": "All sorrows even of worldlings — joined to Your ghee-self, become bearable.",
+ "issue": "Derived from L2 text (no argmap). All sorrows even of worldlings — joined to Your ghee-self, become bearable.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "All sorrows even of worldlings — joined to Your ghee-self, become bearable.",
+  "passage_id": "sivastotravali:s10-v16"
+ },
+ "unresolved": "",
+ "argument_text": "All sorrows even of worldlings — joined to Your ghee-self, become bearable.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v16",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

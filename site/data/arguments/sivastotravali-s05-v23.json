@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v23",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v23",
+ "title": "sivastotravali — s05-v23",
+ "kind": "entailment",
+ "question": "While Your name \"Śiva Śiva Śiva\" is chanted endlessly, Lord — may I taste some great unrepeatable rasa.",
+ "issue": "Derived from L2 text (no argmap). While Your name \"Śiva Śiva Śiva\" is chanted endlessly, Lord — may I taste some great unrepeatable rasa.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v23"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "While Your name \"Śiva Śiva Śiva\" is chanted endlessly, Lord — may I taste some great unrepeatable rasa.",
+  "passage_id": "sivastotravali:s05-v23"
+ },
+ "unresolved": "",
+ "argument_text": "While Your name \"Śiva Śiva Śiva\" is chanted endlessly, Lord — may I taste some great unrepeatable rasa.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v23",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

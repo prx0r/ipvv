@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v26",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v26",
+ "title": "sivastotravali — s05-v26",
+ "kind": "entailment",
+ "question": "Something flashes sometime in mind, touching Your feet — where this whole world melts — show it always, in the nectar-lake, Lord.",
+ "issue": "Derived from L2 text (no argmap). Something flashes sometime in mind, touching Your feet — where this whole world melts — show it always, in the nectar-lake, Lord.",
+ "premises": [
+  {
+   "text": "kim api nātha kadācana cetasi sphurati tad bhavadaṃghritalaspṛśām galati yatra samastamidaṃ sudhāsarasi viśvam idaṃ diśa me sadā",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v26"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Something flashes sometime in mind, touching Your feet — where this whole world melts — show it always, in the nectar-lake, Lord.",
+  "passage_id": "sivastotravali:s05-v26"
+ },
+ "unresolved": "",
+ "argument_text": "Something flashes sometime in mind, touching Your feet — where this whole world melts — show it always, in the nectar-lake, Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v26",
+ "sanskrit": "kim api nātha kadācana cetasi sphurati tad bhavadaṃghritalaspṛśām galati yatra samastamidaṃ sudhāsarasi viśvam idaṃ diśa me sadā",
+ "license": "CC BY-NC-SA 4.0"
+}

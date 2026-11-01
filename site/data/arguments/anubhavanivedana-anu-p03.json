@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anubhavanivedana:anu-p03",
+ "work_id": "anubhavanivedana",
+ "passage_id": "anubhavanivedana:anu-p03",
+ "title": "anubhavanivedana — anu-p03",
+ "kind": "entailment",
+ "question": "Whatever sound arises from the mouth — that mantra is transcendent. Whatever posture of the pleasure-pain-born body — that indeed is mudrā. Whatever flowing of breath by its own rhythm — that indeed is wonderful yoga. The supreme śākta abode — while I experience, what indeed would not shine?",
+ "issue": "Derived from L2 text (no argmap). Whatever sound arises from the mouth — that mantra is transcendent. Whatever posture of the pleasure-pain-born body — that indeed is mudrā. Whatever flowing of breath by its own rhythm — that indeed is wonderful yoga. The supreme śākta abode — while I experience, what indeed would not shine?",
+ "premises": [
+  {
+   "text": "śabdaḥ kaścana yo mukhādudayate mantraḥ sa lokottaraḥ saṃsthānaṃ sukhaduḥkhajanmavapuṣo yatkāpi mudraiva sā | prāṇasya svarasena yatpravahaṇaṃ yogaḥ sa evādbhutaḥ śāktaṃ dhāma paraṃ mamānubhavataḥ kinnāma na bhrājate",
+   "label": "Sanskrit source",
+   "passage_id": "anubhavanivedana:anu-p03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whatever sound arises from the mouth — that mantra is transcendent. Whatever posture of the pleasure-pain-born body — that indeed is mudrā. Whatever flowing of breath by its own rhythm — that indeed is wonderful yoga. The supreme śākta abode — while I experience, what indeed would not shine?",
+  "passage_id": "anubhavanivedana:anu-p03"
+ },
+ "unresolved": "",
+ "argument_text": "Whatever sound arises from the mouth — that mantra is transcendent. Whatever posture of the pleasure-pain-born body — that indeed is mudrā. Whatever flowing of breath by its own rhythm — that indeed is wonderful yoga. The supreme śākta abode — while I experience, what indeed would not shine?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anubhavanivedana:anu-p03",
+ "sanskrit": "śabdaḥ kaścana yo mukhādudayate mantraḥ sa lokottaraḥ saṃsthānaṃ sukhaduḥkhajanmavapuṣo yatkāpi mudraiva sā | prāṇasya svarasena yatpravahaṇaṃ yogaḥ sa evādbhutaḥ śāktaṃ dhāma paraṃ mamānubhavataḥ kinnāma na bhrājate",
+ "license": "CC BY-NC-SA 4.0"
+}

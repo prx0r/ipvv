@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v08",
+ "title": "sivastotravali — s19-v08",
+ "kind": "entailment",
+ "question": "By touch of Your peerless rasa, unroaming abandoned — not even now is my mind, Lord: when will it be? Let it be soon.",
+ "issue": "Derived from L2 text (no argmap). By touch of Your peerless rasa, unroaming abandoned — not even now is my mind, Lord: when will it be? Let it be soon.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By touch of Your peerless rasa, unroaming abandoned — not even now is my mind, Lord: when will it be? Let it be soon.",
+  "passage_id": "sivastotravali:s19-v08"
+ },
+ "unresolved": "",
+ "argument_text": "By touch of Your peerless rasa, unroaming abandoned — not even now is my mind, Lord: when will it be? Let it be soon.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v08",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v27",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v27",
+ "title": "sivastotravali — s17-v27",
+ "kind": "entailment",
+ "question": "Dependent on Your foot-worship-enjoyment — may I, O world-Lord, be the one self-willed in movement.",
+ "issue": "Derived from L2 text (no argmap). Dependent on Your foot-worship-enjoyment — may I, O world-Lord, be the one self-willed in movement.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Dependent on Your foot-worship-enjoyment — may I, O world-Lord, be the one self-willed in movement.",
+  "passage_id": "sivastotravali:s17-v27"
+ },
+ "unresolved": "",
+ "argument_text": "Dependent on Your foot-worship-enjoyment — may I, O world-Lord, be the one self-willed in movement.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v27",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

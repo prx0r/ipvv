@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v24",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v24",
+ "title": "sivastotravali — s01-v24",
+ "kind": "entailment",
+ "question": "They have grasped something of Your devotion-nectar's essence who, though fallen into this mud of passion and the rest, are not smeared by it.",
+ "issue": "Derived from L2 text (no argmap). They have grasped something of Your devotion-nectar's essence who, though fallen into this mud of passion and the rest, are not smeared by it.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v24"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "They have grasped something of Your devotion-nectar's essence who, though fallen into this mud of passion and the rest, are not smeared by it.",
+  "passage_id": "sivastotravali:s01-v24"
+ },
+ "unresolved": "",
+ "argument_text": "They have grasped something of Your devotion-nectar's essence who, though fallen into this mud of passion and the rest, are not smeared by it.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v24",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -4,27 +4,27 @@
  "passage_id": "bhairavastava:bh-p01",
  "title": "bhairavastava — bh-p01",
  "kind": "entailment",
- "question": "bh-p01 — veneration",
- "issue": "Derived from L2 text (no argmap). ## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
+ "question": "Pervading the particular states of moving and unmoving — consciousness-made, one, endless, beginningless: Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate.",
+ "issue": "Derived from L2 text (no argmap). Pervading the particular states of moving and unmoving — consciousness-made, one, endless, beginningless: Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate.",
  "premises": [
   {
-   "text": "bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+   "text": "vyāptacarācarabhāvaviśeṣaṃ cinmayam ekam anantam anādim bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
    "label": "Sanskrit source",
    "passage_id": "bhairavastava:bh-p01"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "bh-p01 — veneration",
+  "text": "Pervading the particular states of moving and unmoving — consciousness-made, one, endless, beginningless: Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate.",
   "passage_id": "bhairavastava:bh-p01"
  },
  "unresolved": "",
- "argument_text": "## bh-p01 — veneration\nBhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee's stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.",
+ "argument_text": "Pervading the particular states of moving and unmoving — consciousness-made, one, endless, beginningless: Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "bhairavastava:bh-p01",
- "sanskrit": "bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+ "sanskrit": "vyāptacarācarabhāvaviśeṣaṃ cinmayam ekam anantam anādim bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
  "license": "CC BY-NC-SA 4.0"
 }

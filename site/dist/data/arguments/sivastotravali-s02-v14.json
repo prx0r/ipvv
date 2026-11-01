@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v14",
+ "title": "sivastotravali — s02-v14",
+ "kind": "entailment",
+ "question": "To You, the fathomless Hara-ocean — whose powers are gained by those wandering only its shores — bow.",
+ "issue": "Derived from L2 text (no argmap). To You, the fathomless Hara-ocean — whose powers are gained by those wandering only its shores — bow.",
+ "premises": [
+  {
+   "text": "taṭeṣv eva paribhrāntaiḥ labdhās tās tā vibhūtayaḥ yasya tasmai namas tubhyam agādhaharasindhave",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "To You, the fathomless Hara-ocean — whose powers are gained by those wandering only its shores — bow.",
+  "passage_id": "sivastotravali:s02-v14"
+ },
+ "unresolved": "",
+ "argument_text": "To You, the fathomless Hara-ocean — whose powers are gained by those wandering only its shores — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v14",
+ "sanskrit": "taṭeṣv eva paribhrāntaiḥ labdhās tās tā vibhūtayaḥ yasya tasmai namas tubhyam agādhaharasindhave",
+ "license": "CC BY-NC-SA 4.0"
+}

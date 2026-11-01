@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s15-v04",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s15-v04",
+ "title": "sivastotravali — s15-v04",
+ "kind": "entailment",
+ "question": "Not detached, not master, not liberation-desiring is Your worshipper — but drunk with soaring devotion-liquor-rasa.",
+ "issue": "Derived from L2 text (no argmap). Not detached, not master, not liberation-desiring is Your worshipper — but drunk with soaring devotion-liquor-rasa.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s15-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not detached, not master, not liberation-desiring is Your worshipper — but drunk with soaring devotion-liquor-rasa.",
+  "passage_id": "sivastotravali:s15-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Not detached, not master, not liberation-desiring is Your worshipper — but drunk with soaring devotion-liquor-rasa.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s15-v04",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

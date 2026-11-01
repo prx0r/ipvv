@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v11",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v11",
+ "title": "sivastotravali — s17-v11",
+ "kind": "entailment",
+ "question": "Standing in Your abode, consciousness-formed, with body-speech-mind acts of all 36 principles — I always worship You, Lord.",
+ "issue": "Derived from L2 text (no argmap). Standing in Your abode, consciousness-formed, with body-speech-mind acts of all 36 principles — I always worship You, Lord.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Standing in Your abode, consciousness-formed, with body-speech-mind acts of all 36 principles — I always worship You, Lord.",
+  "passage_id": "sivastotravali:s17-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Standing in Your abode, consciousness-formed, with body-speech-mind acts of all 36 principles — I always worship You, Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v11",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

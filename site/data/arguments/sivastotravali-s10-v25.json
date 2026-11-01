@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v25",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v25",
+ "title": "sivastotravali — s10-v25",
+ "kind": "entailment",
+ "question": "Śiva's slave, Śiva-selfed — what joy would he not reach? By whom even chief gods are sated with nectar-wine.",
+ "issue": "Derived from L2 text (no argmap). Śiva's slave, Śiva-selfed — what joy would he not reach? By whom even chief gods are sated with nectar-wine.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v25"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Śiva's slave, Śiva-selfed — what joy would he not reach? By whom even chief gods are sated with nectar-wine.",
+  "passage_id": "sivastotravali:s10-v25"
+ },
+ "unresolved": "",
+ "argument_text": "Śiva's slave, Śiva-selfed — what joy would he not reach? By whom even chief gods are sated with nectar-wine.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v25",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -2257,7 +2257,7 @@ def build_tools():
     import json as _j
     out = DIST / "tools"; out.mkdir(parents=True, exist_ok=True)
     entries = []
-    for f in (ROOT / "data").glob("works*.json"):
+    for f in (ROOT / "data").glob("works_*.json"):
         for w in _j.loads(f.read_text()):
             entries.append({"t": w.get("title", ""), "u": "", "k": "work"})
     for aid in MASTERS:

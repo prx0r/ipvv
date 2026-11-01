@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v13",
+ "title": "sivastotravali — s17-v13",
+ "kind": "entailment",
+ "question": "Greedy for Your worship-enjoyment-nectar — may it grow daily for me and fruit always.",
+ "issue": "Derived from L2 text (no argmap). Greedy for Your worship-enjoyment-nectar — may it grow daily for me and fruit always.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Greedy for Your worship-enjoyment-nectar — may it grow daily for me and fruit always.",
+  "passage_id": "sivastotravali:s17-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Greedy for Your worship-enjoyment-nectar — may it grow daily for me and fruit always.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v13",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

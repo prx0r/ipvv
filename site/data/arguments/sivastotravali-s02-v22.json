@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v22",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v22",
+ "title": "sivastotravali — s02-v22",
+ "kind": "entailment",
+ "question": "To You, husband-Lord of the ever-festival, whose three worlds brim with unbroken bliss-rasa — bow.",
+ "issue": "Derived from L2 text (no argmap). To You, husband-Lord of the ever-festival, whose three worlds brim with unbroken bliss-rasa — bow.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "To You, husband-Lord of the ever-festival, whose three worlds brim with unbroken bliss-rasa — bow.",
+  "passage_id": "sivastotravali:s02-v22"
+ },
+ "unresolved": "",
+ "argument_text": "To You, husband-Lord of the ever-festival, whose three worlds brim with unbroken bliss-rasa — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v22",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

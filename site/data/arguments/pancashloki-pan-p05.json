@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:pancashloki:pan-p05",
+ "work_id": "pancashloki",
+ "passage_id": "pancashloki:pan-p05",
+ "title": "pancashloki — pan-p05",
+ "kind": "entailment",
+ "question": "Much time dwelling with You has passed — alas, in this very moment! What, what has not been done by You for me, for the sake of serving the excellent guru! Again and again I, whose body has attained the incomparable divine plane — yet indeed I forget You. Therefore, by You let there be no further staying-away! *Fidelity: preserved (all 5 verses, full pāda coverage from T1). Added: connective phrasing only. Not resolved: the formation prāsuvatkāyaḥ (v. 5c) is obscure; glossed as \"whose body has a",
+ "issue": "Derived from L2 text (no argmap). Much time dwelling with You has passed — alas, in this very moment! What, what has not been done by You for me, for the sake of serving the excellent guru! Again and again I, whose body has attained the incomparable divine plane — yet indeed I forget You. Therefore, by You let there be no further staying-away! *Fidelity: preserved (all 5 verses, full pāda coverage from T1). Added: connective phrasing only. Not resolved: the formation prāsuvatkāyaḥ (v. 5c) is obscure; glossed as \"whose body has a",
+ "premises": [
+  {
+   "text": "yātastvatsahavāsato bahutaraḥ kālo vatāsmin kṣaṇe kiṃ kiṃ vā na kṛtaṃ tvayā varagurūpāsānimittena me | vāraṃ vāramahaṃ punarnirupamāṃ divyaṃ bhuvaṃ prāsuvatkāyastvāṃ kila vismarāmi yadataḥ stheyaṃ na bhūyastvayā",
+   "label": "Sanskrit source",
+   "passage_id": "pancashloki:pan-p05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Much time dwelling with You has passed — alas, in this very moment! What, what has not been done by You for me, for the sake of serving the excellent guru! Again and again I, whose body has attained the incomparable divine plane — yet indeed I forget You. Therefore, by You let there be no further staying-away! *Fidelity: preserved (all 5 verses, full pāda coverage from T1). Added: connective phrasing only. Not resolved: the formation prāsuvatkāyaḥ (v. 5c) is obscure; glossed as \"whose body has a",
+  "passage_id": "pancashloki:pan-p05"
+ },
+ "unresolved": "",
+ "argument_text": "Much time dwelling with You has passed — alas, in this very moment! What, what has not been done by You for me, for the sake of serving the excellent guru! Again and again I, whose body has attained the incomparable divine plane — yet indeed I forget You. Therefore, by You let there be no further staying-away! *Fidelity: preserved (all 5 verses, full pāda coverage from T1). Added: connective phrasing only. Not resolved: the formation prāsuvatkāyaḥ (v. 5c) is obscure; glossed as \"whose body has attained it\" and marked uncertain in the argmap.*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "pancashloki:pan-p05",
+ "sanskrit": "yātastvatsahavāsato bahutaraḥ kālo vatāsmin kṣaṇe kiṃ kiṃ vā na kṛtaṃ tvayā varagurūpāsānimittena me | vāraṃ vāramahaṃ punarnirupamāṃ divyaṃ bhuvaṃ prāsuvatkāyastvāṃ kila vismarāmi yadataḥ stheyaṃ na bhūyastvayā",
+ "license": "CC BY-NC-SA 4.0"
+}

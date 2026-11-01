@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:pancashloki:pan-p04",
+ "work_id": "pancashloki",
+ "passage_id": "pancashloki:pan-p04",
+ "title": "pancashloki — pan-p04",
+ "kind": "entailment",
+ "question": "From the guru's word — by the force that wipes away the fabric of heaped-up reasonings — and from the assurance told, fittingly, out of regard for scripture: when the cloud of doubt has dissolved, let me touch the feet of the Lord, whose splendor shines in the sky of the heart — like the sun, the conqueror of darkness.",
+ "issue": "Derived from L2 text (no argmap). From the guru's word — by the force that wipes away the fabric of heaped-up reasonings — and from the assurance told, fittingly, out of regard for scripture: when the cloud of doubt has dissolved, let me touch the feet of the Lord, whose splendor shines in the sky of the heart — like the sun, the conqueror of darkness.",
+ "premises": [
+  {
+   "text": "gurorvākyādyukti-pracaya-racana-unmārjana-vaśātsamāśvāsācchāstraṃ prati samucitādapi kathitam | vilīne śaṅkābhre hṛdayagaganodbhāsimahasaḥ prabhoḥ sūryasyeva spṛśatu caraṇān dhvāntajayinaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "pancashloki:pan-p04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From the guru's word — by the force that wipes away the fabric of heaped-up reasonings — and from the assurance told, fittingly, out of regard for scripture: when the cloud of doubt has dissolved, let me touch the feet of the Lord, whose splendor shines in the sky of the heart — like the sun, the conqueror of darkness.",
+  "passage_id": "pancashloki:pan-p04"
+ },
+ "unresolved": "",
+ "argument_text": "From the guru's word — by the force that wipes away the fabric of heaped-up reasonings — and from the assurance told, fittingly, out of regard for scripture: when the cloud of doubt has dissolved, let me touch the feet of the Lord, whose splendor shines in the sky of the heart — like the sun, the conqueror of darkness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "pancashloki:pan-p04",
+ "sanskrit": "gurorvākyādyukti-pracaya-racana-unmārjana-vaśātsamāśvāsācchāstraṃ prati samucitādapi kathitam | vilīne śaṅkābhre hṛdayagaganodbhāsimahasaḥ prabhoḥ sūryasyeva spṛśatu caraṇān dhvāntajayinaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

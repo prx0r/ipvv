@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v21",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v21",
+ "title": "sivastotravali — s05-v21",
+ "kind": "entailment",
+ "question": "Though wandering even through yogic states, though turned away from objects — may I be only heart-melted by Your-thought-liquor-madness.",
+ "issue": "Derived from L2 text (no argmap). Though wandering even through yogic states, though turned away from objects — may I be only heart-melted by Your-thought-liquor-madness.",
+ "premises": [
+  {
+   "text": "vicaran yogadaśāsv api viṣayavyāvṛttivartamāno 'pi tvaccintāmadirāmadataralīkṛtahṛdaya eva syām",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Though wandering even through yogic states, though turned away from objects — may I be only heart-melted by Your-thought-liquor-madness.",
+  "passage_id": "sivastotravali:s05-v21"
+ },
+ "unresolved": "",
+ "argument_text": "Though wandering even through yogic states, though turned away from objects — may I be only heart-melted by Your-thought-liquor-madness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v21",
+ "sanskrit": "vicaran yogadaśāsv api viṣayavyāvṛttivartamāno 'pi tvaccintāmadirāmadataralīkṛtahṛdaya eva syām",
+ "license": "CC BY-NC-SA 4.0"
+}

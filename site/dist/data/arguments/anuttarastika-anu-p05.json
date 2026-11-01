@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p05",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p05",
+ "title": "anuttarastika — anu-p05",
+ "kind": "entailment",
+ "question": "Passion, aversion, pleasure, displeasure, rise and fall, I-ness, misery and the rest — things shining forth, universe-bodied, are not different-natured. Whosever manifestation you suddenly see — having regarded it as one-self-natured consciousness-form — why do you not delight, full of contemplation?",
+ "issue": "Derived from L2 text (no argmap). Passion, aversion, pleasure, displeasure, rise and fall, I-ness, misery and the rest — things shining forth, universe-bodied, are not different-natured. Whosever manifestation you suddenly see — having regarded it as one-self-natured consciousness-form — why do you not delight, full of contemplation?",
+ "premises": [
+  {
+   "text": "rāgadveṣasukhāsukhodayalayāhaṅkāradainyādayo ye bhāvāḥ pravibhānti viśvavapuṣo bhinnasvabhāvā na te | vyaktiṃ paśyasi yasya yasya sahasā tattattadekātmatāsaṃvidrūpam avekṣya kiṃ na ramase tadbhāvanānirbharaḥ || AgAna_5",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Passion, aversion, pleasure, displeasure, rise and fall, I-ness, misery and the rest — things shining forth, universe-bodied, are not different-natured. Whosever manifestation you suddenly see — having regarded it as one-self-natured consciousness-form — why do you not delight, full of contemplation?",
+  "passage_id": "anuttarastika:anu-p05"
+ },
+ "unresolved": "",
+ "argument_text": "Passion, aversion, pleasure, displeasure, rise and fall, I-ness, misery and the rest — things shining forth, universe-bodied, are not different-natured. Whosever manifestation you suddenly see — having regarded it as one-self-natured consciousness-form — why do you not delight, full of contemplation?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p05",
+ "sanskrit": "rāgadveṣasukhāsukhodayalayāhaṅkāradainyādayo ye bhāvāḥ pravibhānti viśvavapuṣo bhinnasvabhāvā na te | vyaktiṃ paśyasi yasya yasya sahasā tattattadekātmatāsaṃvidrūpam avekṣya kiṃ na ramase tadbhāvanānirbharaḥ || AgAna_5",
+ "license": "CC BY-NC-SA 4.0"
+}

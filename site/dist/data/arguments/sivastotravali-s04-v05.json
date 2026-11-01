@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v05",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v05",
+ "title": "sivastotravali — s04-v05",
+ "kind": "entailment",
+ "question": "Those seated on Your foot-lotus-throne, making the world to taste — they laugh at Vir iñc, office-stained, not-self-ruled.",
+ "issue": "Derived from L2 text (no argmap). Those seated on Your foot-lotus-throne, making the world to taste — they laugh at Vir iñc, office-stained, not-self-ruled.",
+ "premises": [
+  {
+   "text": "tāvakāṅghrikamalāsanalīnā ye yathāruci jagad racayanti te viriñcim adhikāramalenāliptam asvavaśam īśa hasanti",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Those seated on Your foot-lotus-throne, making the world to taste — they laugh at Vir iñc, office-stained, not-self-ruled.",
+  "passage_id": "sivastotravali:s04-v05"
+ },
+ "unresolved": "",
+ "argument_text": "Those seated on Your foot-lotus-throne, making the world to taste — they laugh at Vir iñc, office-stained, not-self-ruled.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v05",
+ "sanskrit": "tāvakāṅghrikamalāsanalīnā ye yathāruci jagad racayanti te viriñcim adhikāramalenāliptam asvavaśam īśa hasanti",
+ "license": "CC BY-NC-SA 4.0"
+}

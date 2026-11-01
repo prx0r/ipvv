@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p08",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p08",
+ "title": "paramarthacarca — par-p08",
+ "kind": "entailment",
+ "question": "This septad of good conduct — dissolved other thoughts — those desiring the ultimate rightly remember in the heart. Those, O Bhairava's one, again enter the supreme abode, and know the ultimate-thing-discussion of the three worlds. *Fidelity: preserved (all 8 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: jñānadvibhinna read as dually distinct; śatam kept as printed (hundredfold) against tempting satatam; mukhura read as mukura (mirror); vadeśakālam obscure, glossed ",
+ "issue": "Derived from L2 text (no argmap). This septad of good conduct — dissolved other thoughts — those desiring the ultimate rightly remember in the heart. Those, O Bhairava's one, again enter the supreme abode, and know the ultimate-thing-discussion of the three worlds. *Fidelity: preserved (all 8 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: jñānadvibhinna read as dually distinct; śatam kept as printed (hundredfold) against tempting satatam; mukhura read as mukura (mirror); vadeśakālam obscure, glossed ",
+ "premises": [
+  {
+   "text": "sadvṛttasaptakam idaṃ galitānyacintāḥ samyak smaranti hṛdaye paramārthakāmāḥ | te bhairavīya paradhāma muhur viśanti jānanti ca trijagatīparamārthacarcām",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This septad of good conduct — dissolved other thoughts — those desiring the ultimate rightly remember in the heart. Those, O Bhairava's one, again enter the supreme abode, and know the ultimate-thing-discussion of the three worlds. *Fidelity: preserved (all 8 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: jñānadvibhinna read as dually distinct; śatam kept as printed (hundredfold) against tempting satatam; mukhura read as mukura (mirror); vadeśakālam obscure, glossed ",
+  "passage_id": "paramarthacarca:par-p08"
+ },
+ "unresolved": "",
+ "argument_text": "This septad of good conduct — dissolved other thoughts — those desiring the ultimate rightly remember in the heart. Those, O Bhairava's one, again enter the supreme abode, and know the ultimate-thing-discussion of the three worlds. *Fidelity: preserved (all 8 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: jñānadvibhinna read as dually distinct; śatam kept as printed (hundredfold) against tempting satatam; mukhura read as mukura (mirror); vadeśakālam obscure, glossed neutrally; bhairavīya read as vocative address.*",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p08",
+ "sanskrit": "sadvṛttasaptakam idaṃ galitānyacintāḥ samyak smaranti hṛdaye paramārthakāmāḥ | te bhairavīya paradhāma muhur viśanti jānanti ca trijagatīparamārthacarcām",
+ "license": "CC BY-NC-SA 4.0"
+}

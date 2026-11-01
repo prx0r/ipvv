@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v18",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v18",
+ "title": "sivastotravali — s01-v18",
+ "kind": "entailment",
+ "question": "No yoga is enjoined, no austerity, no procedure of worship at all. On this guileless path of Śiva, devotion alone is praised.",
+ "issue": "Derived from L2 text (no argmap). No yoga is enjoined, no austerity, no procedure of worship at all. On this guileless path of Śiva, devotion alone is praised.",
+ "premises": [
+  {
+   "text": "na yogo na tapo nārcākramaḥ ko 'pi pranīyate amāye śivamārge 'smin bhaktir ekā praśasyate",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "No yoga is enjoined, no austerity, no procedure of worship at all. On this guileless path of Śiva, devotion alone is praised.",
+  "passage_id": "sivastotravali:s01-v18"
+ },
+ "unresolved": "",
+ "argument_text": "No yoga is enjoined, no austerity, no procedure of worship at all. On this guileless path of Śiva, devotion alone is praised.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v18",
+ "sanskrit": "na yogo na tapo nārcākramaḥ ko 'pi pranīyate amāye śivamārge 'smin bhaktir ekā praśasyate",
+ "license": "CC BY-NC-SA 4.0"
+}

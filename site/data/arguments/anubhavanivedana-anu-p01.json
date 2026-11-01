@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anubhavanivedana:anu-p01",
+ "work_id": "anubhavanivedana",
+ "passage_id": "anubhavanivedana:anu-p01",
+ "title": "anubhavanivedana — anu-p01",
+ "kind": "entailment",
+ "question": "When the yogin abides with mind-wind dissolved in the inward aim — he, seeing yet not seeing outside with unmoving-pupil gaze — this indeed becomes the śāmbhavī mudrā, by your grace, O guru: devoid of void and non-void becomes that reality, the śāmbhava state.",
+ "issue": "Derived from L2 text (no argmap). When the yogin abides with mind-wind dissolved in the inward aim — he, seeing yet not seeing outside with unmoving-pupil gaze — this indeed becomes the śāmbhavī mudrā, by your grace, O guru: devoid of void and non-void becomes that reality, the śāmbhava state.",
+ "premises": [
+  {
+   "text": "antarlakṣyavilīnacittapavano yogī yadā vartate dṛṣṭyā niścalatārayā bahirasau paśyannapaśyannapi | mudreyaṃ khalu śāmbhavī bhavati sā yuṣmatprasādādguro śūnyāśūnyavivarjitaṃ bhavati yat tattvaṃ padaṃ śāmbhavam",
+   "label": "Sanskrit source",
+   "passage_id": "anubhavanivedana:anu-p01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "When the yogin abides with mind-wind dissolved in the inward aim — he, seeing yet not seeing outside with unmoving-pupil gaze — this indeed becomes the śāmbhavī mudrā, by your grace, O guru: devoid of void and non-void becomes that reality, the śāmbhava state.",
+  "passage_id": "anubhavanivedana:anu-p01"
+ },
+ "unresolved": "",
+ "argument_text": "When the yogin abides with mind-wind dissolved in the inward aim — he, seeing yet not seeing outside with unmoving-pupil gaze — this indeed becomes the śāmbhavī mudrā, by your grace, O guru: devoid of void and non-void becomes that reality, the śāmbhava state.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anubhavanivedana:anu-p01",
+ "sanskrit": "antarlakṣyavilīnacittapavano yogī yadā vartate dṛṣṭyā niścalatārayā bahirasau paśyannapaśyannapi | mudreyaṃ khalu śāmbhavī bhavati sā yuṣmatprasādādguro śūnyāśūnyavivarjitaṃ bhavati yat tattvaṃ padaṃ śāmbhavam",
+ "license": "CC BY-NC-SA 4.0"
+}

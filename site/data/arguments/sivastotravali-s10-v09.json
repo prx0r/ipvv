@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v09",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v09",
+ "title": "sivastotravali — s10-v09",
+ "kind": "entailment",
+ "question": "Apart from You the whole world looks same-eyed — but its Īśvara is You alone, the Uneven-eyed.",
+ "issue": "Derived from L2 text (no argmap). Apart from You the whole world looks same-eyed — but its Īśvara is You alone, the Uneven-eyed.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Apart from You the whole world looks same-eyed — but its Īśvara is You alone, the Uneven-eyed.",
+  "passage_id": "sivastotravali:s10-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Apart from You the whole world looks same-eyed — but its Īśvara is You alone, the Uneven-eyed.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v09",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

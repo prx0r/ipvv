@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s16-v29",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s16-v29",
+ "title": "sivastotravali — s16-v29",
+ "kind": "entailment",
+ "question": "With Śivā who eats, decks, celebrates the world, festival-hurried — hug tight, Śiva, I bow.",
+ "issue": "Derived from L2 text (no argmap). With Śivā who eats, decks, celebrates the world, festival-hurried — hug tight, Śiva, I bow.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s16-v29"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With Śivā who eats, decks, celebrates the world, festival-hurried — hug tight, Śiva, I bow.",
+  "passage_id": "sivastotravali:s16-v29"
+ },
+ "unresolved": "",
+ "argument_text": "With Śivā who eats, decks, celebrates the world, festival-hurried — hug tight, Śiva, I bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s16-v29",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

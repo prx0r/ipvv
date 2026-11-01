@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v41",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v41",
+ "title": "sivastotravali — s17-v41",
+ "kind": "entailment",
+ "question": "Spread by unbound mad devotion to the formless-seeming, it gains some foothold in You.",
+ "issue": "Derived from L2 text (no argmap). Spread by unbound mad devotion to the formless-seeming, it gains some foothold in You.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v41"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Spread by unbound mad devotion to the formless-seeming, it gains some foothold in You.",
+  "passage_id": "sivastotravali:s17-v41"
+ },
+ "unresolved": "",
+ "argument_text": "Spread by unbound mad devotion to the formless-seeming, it gains some foothold in You.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v41",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

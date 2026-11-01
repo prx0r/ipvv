@@ -1,0 +1,23 @@
+[
+ {
+  "chunk": "sand-p01",
+  "verses": "1",
+  "sanskrit": "sa jayati śiva ekaḥ spandavānsvapratiṣṭhaḥ yo'ntarvaktraṃ rasayati jayatyeṣa vīraḥ kulendraḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "no proof record"
+  ],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "",
+  "l2": "",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Mukhabodha M00084 (Spandasandoha)",
+   "source_lines": null
+  }
+ }
+]

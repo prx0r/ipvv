@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v01",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v01",
+ "title": "sivastotravali — s01-v01",
+ "kind": "entailment",
+ "question": "Of one who neither meditates nor chants, manifestation may come without any preparatory rule. Just so — O light of Śiva — we bow to him who possesses devotion.",
+ "issue": "Derived from L2 text (no argmap). Of one who neither meditates nor chants, manifestation may come without any preparatory rule. Just so — O light of Śiva — we bow to him who possesses devotion.",
+ "premises": [
+  {
+   "text": "na dhyāyato na japataḥ syād yasyāvidhipūrvakam evam eva śivabhāsas taṃ numo bhaktiśālinam",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of one who neither meditates nor chants, manifestation may come without any preparatory rule. Just so — O light of Śiva — we bow to him who possesses devotion.",
+  "passage_id": "sivastotravali:s01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Of one who neither meditates nor chants, manifestation may come without any preparatory rule. Just so — O light of Śiva — we bow to him who possesses devotion.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v01",
+ "sanskrit": "na dhyāyato na japataḥ syād yasyāvidhipūrvakam evam eva śivabhāsas taṃ numo bhaktiśālinam",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v30",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v30",
+ "title": "sivastotravali — s17-v30",
+ "kind": "entailment",
+ "question": "Victor, Your festival — even the 36 agitated by it — great day.",
+ "issue": "Derived from L2 text (no argmap). Victor, Your festival — even the 36 agitated by it — great day.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v30"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Victor, Your festival — even the 36 agitated by it — great day.",
+  "passage_id": "sivastotravali:s17-v30"
+ },
+ "unresolved": "",
+ "argument_text": "Victor, Your festival — even the 36 agitated by it — great day.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v30",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

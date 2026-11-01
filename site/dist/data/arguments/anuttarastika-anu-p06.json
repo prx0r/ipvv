@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p06",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p06",
+ "title": "anuttarastika — anu-p06",
+ "kind": "entailment",
+ "question": "Former non-being, being, action — things always, suddenly, in this existence: middle-formed, transformation-confused — whence their truth? In the non-true, unsteady, manifold, clever dream-delusion — transcending doubt, fear, stain, and reasoning's contriving: awakened, become.",
+ "issue": "Derived from L2 text (no argmap). Former non-being, being, action — things always, suddenly, in this existence: middle-formed, transformation-confused — whence their truth? In the non-true, unsteady, manifold, clever dream-delusion — transcending doubt, fear, stain, and reasoning's contriving: awakened, become.",
+ "premises": [
+  {
+   "text": "pūrvābhāvabhavakriyā hi sahasā bhāvāḥ sadā 'smin bhave madhyākāravikārasaṃkaravatāṃ teṣāṃ kutaḥ satyatā | niḥsatye capale prapañcanicaye svapnabhrame peśale śaṅkātaṅkakalaṅkayuktikalanātītaḥ prabuddho bhava || AgAna_6",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Former non-being, being, action — things always, suddenly, in this existence: middle-formed, transformation-confused — whence their truth? In the non-true, unsteady, manifold, clever dream-delusion — transcending doubt, fear, stain, and reasoning's contriving: awakened, become.",
+  "passage_id": "anuttarastika:anu-p06"
+ },
+ "unresolved": "",
+ "argument_text": "Former non-being, being, action — things always, suddenly, in this existence: middle-formed, transformation-confused — whence their truth? In the non-true, unsteady, manifold, clever dream-delusion — transcending doubt, fear, stain, and reasoning's contriving: awakened, become.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p06",
+ "sanskrit": "pūrvābhāvabhavakriyā hi sahasā bhāvāḥ sadā 'smin bhave madhyākāravikārasaṃkaravatāṃ teṣāṃ kutaḥ satyatā | niḥsatye capale prapañcanicaye svapnabhrame peśale śaṅkātaṅkakalaṅkayuktikalanātītaḥ prabuddho bhava || AgAna_6",
+ "license": "CC BY-NC-SA 4.0"
+}

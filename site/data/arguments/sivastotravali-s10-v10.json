@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v10",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v10",
+ "title": "sivastotravali — s10-v10",
+ "kind": "entailment",
+ "question": "Leave aside: without Your power there is no being at all — and those whose denials of You don't stand without You.",
+ "issue": "Derived from L2 text (no argmap). Leave aside: without Your power there is no being at all — and those whose denials of You don't stand without You.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Leave aside: without Your power there is no being at all — and those whose denials of You don't stand without You.",
+  "passage_id": "sivastotravali:s10-v10"
+ },
+ "unresolved": "",
+ "argument_text": "Leave aside: without Your power there is no being at all — and those whose denials of You don't stand without You.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v10",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -4,27 +4,27 @@
  "passage_id": "bhairavastava:bh-p04",
  "title": "bhairavastava — bh-p04",
  "kind": "entailment",
- "question": "bh-p04 — power-filled",
- "issue": "Derived from L2 text (no argmap). ## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
+ "question": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+ "issue": "Derived from L2 text (no argmap). O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
  "premises": [
   {
-   "text": "śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo'smi",
+   "text": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
    "label": "Sanskrit source",
    "passage_id": "bhairavastava:bh-p04"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "bh-p04 — power-filled",
+  "text": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
   "passage_id": "bhairavastava:bh-p04"
  },
  "unresolved": "",
- "argument_text": "## bh-p04 — power-filled\nBy Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.",
+ "argument_text": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "bhairavastava:bh-p04",
- "sanskrit": "śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo'smi",
+ "sanskrit": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
  "license": "CC BY-NC-SA 4.0"
 }

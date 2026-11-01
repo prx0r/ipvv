@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v02",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v02",
+ "title": "sivastotravali — s04-v02",
+ "kind": "entailment",
+ "question": "Having crossed the ladder-steps of various gods, reached Śiva's feet — yet on the lowest ground I stand even now; wonder, I do not quit it.",
+ "issue": "Derived from L2 text (no argmap). Having crossed the ladder-steps of various gods, reached Śiva's feet — yet on the lowest ground I stand even now; wonder, I do not quit it.",
+ "premises": [
+  {
+   "text": "ullaṅghya vividhadaivatasopānakramam upeya śivacaraṇān āśrityāpy adharatarāṃ bhūmiṃ nādyāpi citram ujjhāmi",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Having crossed the ladder-steps of various gods, reached Śiva's feet — yet on the lowest ground I stand even now; wonder, I do not quit it.",
+  "passage_id": "sivastotravali:s04-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Having crossed the ladder-steps of various gods, reached Śiva's feet — yet on the lowest ground I stand even now; wonder, I do not quit it.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v02",
+ "sanskrit": "ullaṅghya vividhadaivatasopānakramam upeya śivacaraṇān āśrityāpy adharatarāṃ bhūmiṃ nādyāpi citram ujjhāmi",
+ "license": "CC BY-NC-SA 4.0"
+}

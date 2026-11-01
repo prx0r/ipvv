@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v12",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v12",
+ "title": "sivastotravali — s01-v12",
+ "kind": "entailment",
+ "question": "Those to whom the great knowledge of Your devotion has come through practice — they alone know truth, both knowledge and its absence.",
+ "issue": "Derived from L2 text (no argmap). Those to whom the great knowledge of Your devotion has come through practice — they alone know truth, both knowledge and its absence.",
+ "premises": [
+  {
+   "text": "bhavadbhaktimahāvidyā yeṣām abhyāsam āgatā vidyāvidyobhayasyāpi tā ete tattvavedinaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v12"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Those to whom the great knowledge of Your devotion has come through practice — they alone know truth, both knowledge and its absence.",
+  "passage_id": "sivastotravali:s01-v12"
+ },
+ "unresolved": "",
+ "argument_text": "Those to whom the great knowledge of Your devotion has come through practice — they alone know truth, both knowledge and its absence.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v12",
+ "sanskrit": "bhavadbhaktimahāvidyā yeṣām abhyāsam āgatā vidyāvidyobhayasyāpi tā ete tattvavedinaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

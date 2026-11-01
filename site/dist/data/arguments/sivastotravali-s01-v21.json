@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v21",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v21",
+ "title": "sivastotravali — s01-v21",
+ "kind": "entailment",
+ "question": "In the calm-waved, cool, clear, sweet milk-ocean of devotion's nectar — in tasting its unworldly essence — who that stands firm there is counted low?",
+ "issue": "Derived from L2 text (no argmap). In the calm-waved, cool, clear, sweet milk-ocean of devotion's nectar — in tasting its unworldly essence — who that stands firm there is counted low?",
+ "premises": [
+  {
+   "text": "śāntakallolaśītācchasvādubhaktisudhāmbudhau alaukikarasāsvāde susthaiḥ ko 'nāma gaṇyate",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the calm-waved, cool, clear, sweet milk-ocean of devotion's nectar — in tasting its unworldly essence — who that stands firm there is counted low?",
+  "passage_id": "sivastotravali:s01-v21"
+ },
+ "unresolved": "",
+ "argument_text": "In the calm-waved, cool, clear, sweet milk-ocean of devotion's nectar — in tasting its unworldly essence — who that stands firm there is counted low?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v21",
+ "sanskrit": "śāntakallolaśītācchasvādubhaktisudhāmbudhau alaukikarasāsvāde susthaiḥ ko 'nāma gaṇyate",
+ "license": "CC BY-NC-SA 4.0"
+}

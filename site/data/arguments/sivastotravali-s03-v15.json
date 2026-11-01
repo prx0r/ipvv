@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s03-v15",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s03-v15",
+ "title": "sivastotravali — s03-v15",
+ "kind": "entailment",
+ "question": "Victorious, world-venerable, Your slaves, Lord — for whom this saṃsāra-ocean is a play-great-lake.",
+ "issue": "Derived from L2 text (no argmap). Victorious, world-venerable, Your slaves, Lord — for whom this saṃsāra-ocean is a play-great-lake.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s03-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Victorious, world-venerable, Your slaves, Lord — for whom this saṃsāra-ocean is a play-great-lake.",
+  "passage_id": "sivastotravali:s03-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Victorious, world-venerable, Your slaves, Lord — for whom this saṃsāra-ocean is a play-great-lake.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s03-v15",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s03-v09",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s03-v09",
+ "title": "sivastotravali — s03-v09",
+ "kind": "entailment",
+ "question": "Flooder alike of all joys and sorrows — Your meditation-nectar-flood, like lowlands filling.",
+ "issue": "Derived from L2 text (no argmap). Flooder alike of all joys and sorrows — Your meditation-nectar-flood, like lowlands filling.",
+ "premises": [
+  {
+   "text": "harṣāṇām atha śokānāṃ sarveṣāṃ plāvakaḥ samam bhavaddhyānāmṛtāpūro nimnāṇimnabhuvām iva",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s03-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Flooder alike of all joys and sorrows — Your meditation-nectar-flood, like lowlands filling.",
+  "passage_id": "sivastotravali:s03-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Flooder alike of all joys and sorrows — Your meditation-nectar-flood, like lowlands filling.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s03-v09",
+ "sanskrit": "harṣāṇām atha śokānāṃ sarveṣāṃ plāvakaḥ samam bhavaddhyānāmṛtāpūro nimnāṇimnabhuvām iva",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p05",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p05",
+ "title": "paramarthacarca — par-p05",
+ "kind": "entailment",
+ "question": "If, in a mirror's belly, the reflection-making with-prototype would be mind-proven — then in the interior of the mirror of free consciousness, among things there is no other cause besides.",
+ "issue": "Derived from L2 text (no argmap). If, in a mirror's belly, the reflection-making with-prototype would be mind-proven — then in the interior of the mirror of free consciousness, among things there is no other cause besides.",
+ "premises": [
+  {
+   "text": "ādarśakukṣau pratibimbakāri sabimbakaṃ syād yadi mānasiddham | svacchandasaṃvinmukhuraantarāle bhāveṣu hetvantaram asti nānyat",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If, in a mirror's belly, the reflection-making with-prototype would be mind-proven — then in the interior of the mirror of free consciousness, among things there is no other cause besides.",
+  "passage_id": "paramarthacarca:par-p05"
+ },
+ "unresolved": "",
+ "argument_text": "If, in a mirror's belly, the reflection-making with-prototype would be mind-proven — then in the interior of the mirror of free consciousness, among things there is no other cause besides.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p05",
+ "sanskrit": "ādarśakukṣau pratibimbakāri sabimbakaṃ syād yadi mānasiddham | svacchandasaṃvinmukhuraantarāle bhāveṣu hetvantaram asti nānyat",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v20",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v20",
+ "title": "sivastotravali — s17-v20",
+ "kind": "entailment",
+ "question": "Seen is the point of devotees' great worship-undertaking: that they taste impossible joy then.",
+ "issue": "Derived from L2 text (no argmap). Seen is the point of devotees' great worship-undertaking: that they taste impossible joy then.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Seen is the point of devotees' great worship-undertaking: that they taste impossible joy then.",
+  "passage_id": "sivastotravali:s17-v20"
+ },
+ "unresolved": "",
+ "argument_text": "Seen is the point of devotees' great worship-undertaking: that they taste impossible joy then.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v20",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s16-v19",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s16-v19",
+ "title": "sivastotravali — s16-v19",
+ "kind": "entailment",
+ "question": "Liberation's name is but Your ripe devotion — mounted on its first stage, we are near-free.",
+ "issue": "Derived from L2 text (no argmap). Liberation's name is but Your ripe devotion — mounted on its first stage, we are near-free.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s16-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Liberation's name is but Your ripe devotion — mounted on its first stage, we are near-free.",
+  "passage_id": "sivastotravali:s16-v19"
+ },
+ "unresolved": "",
+ "argument_text": "Liberation's name is but Your ripe devotion — mounted on its first stage, we are near-free.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s16-v19",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

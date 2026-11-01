@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v08",
+ "title": "sivastotravali — s07-v08",
+ "kind": "entailment",
+ "question": "By devotion-madness-born frenzy may I see with faculties unmaimed: the whole world as Śiva, and all acts as worship-stuff.",
+ "issue": "Derived from L2 text (no argmap). By devotion-madness-born frenzy may I see with faculties unmaimed: the whole world as Śiva, and all acts as worship-stuff.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By devotion-madness-born frenzy may I see with faculties unmaimed: the whole world as Śiva, and all acts as worship-stuff.",
+  "passage_id": "sivastotravali:s07-v08"
+ },
+ "unresolved": "",
+ "argument_text": "By devotion-madness-born frenzy may I see with faculties unmaimed: the whole world as Śiva, and all acts as worship-stuff.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v08",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

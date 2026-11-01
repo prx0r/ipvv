@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p01",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p01",
+ "title": "paramarthacarca — par-p01",
+ "kind": "entailment",
+ "question": "Distinct from the illumination of sun, moon, lamp and the rest, it does not shine — on account of over-pervasion; and hence: of the nature of light, just this much — illumined-illuminator named is mere convention.",
+ "issue": "Derived from L2 text (no argmap). Distinct from the illumination of sun, moon, lamp and the rest, it does not shine — on account of over-pervasion; and hence: of the nature of light, just this much — illumined-illuminator named is mere convention.",
+ "premises": [
+  {
+   "text": "arkendudīpādyavabhāsabhinnaṃ nābhātyativyāptatayā tataśca | prakāśarūpaṃ tadiyatprakāśyaprakāśatākhyā vyavahāra eva",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Distinct from the illumination of sun, moon, lamp and the rest, it does not shine — on account of over-pervasion; and hence: of the nature of light, just this much — illumined-illuminator named is mere convention.",
+  "passage_id": "paramarthacarca:par-p01"
+ },
+ "unresolved": "",
+ "argument_text": "Distinct from the illumination of sun, moon, lamp and the rest, it does not shine — on account of over-pervasion; and hence: of the nature of light, just this much — illumined-illuminator named is mere convention.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p01",
+ "sanskrit": "arkendudīpādyavabhāsabhinnaṃ nābhātyativyāptatayā tataśca | prakāśarūpaṃ tadiyatprakāśyaprakāśatākhyā vyavahāra eva",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p02",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p02",
+ "title": "paramarthacarca — par-p02",
+ "kind": "entailment",
+ "question": "No thing at all is dually distinct from knowledge; made of this and that, in consciousness there is no difference. From self-luminosity, hundredfold, in the one abode — the individual would not indeed be divided.",
+ "issue": "Derived from L2 text (no argmap). No thing at all is dually distinct from knowledge; made of this and that, in consciousness there is no difference. From self-luminosity, hundredfold, in the one abode — the individual would not indeed be divided.",
+ "premises": [
+  {
+   "text": "jñānadvibhinno na hi kaścidarthaḥ tattatkṛtaḥ saṃvidi nāsti bhedaḥ | svayamprakāśācchatam aikadhāmni prātisvikī nāpi vibheditā syāt",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "No thing at all is dually distinct from knowledge; made of this and that, in consciousness there is no difference. From self-luminosity, hundredfold, in the one abode — the individual would not indeed be divided.",
+  "passage_id": "paramarthacarca:par-p02"
+ },
+ "unresolved": "",
+ "argument_text": "No thing at all is dually distinct from knowledge; made of this and that, in consciousness there is no difference. From self-luminosity, hundredfold, in the one abode — the individual would not indeed be divided.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p02",
+ "sanskrit": "jñānadvibhinno na hi kaścidarthaḥ tattatkṛtaḥ saṃvidi nāsti bhedaḥ | svayamprakāśācchatam aikadhāmni prātisvikī nāpi vibheditā syāt",
+ "license": "CC BY-NC-SA 4.0"
+}

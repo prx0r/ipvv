@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s13-v11",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s13-v11",
+ "title": "sivastotravali — s13-v11",
+ "kind": "entailment",
+ "question": "At the moment of grace's descent You never deliberate, Lord, never — so what has come over You now, delaying the rite of Your self-revelation to me?",
+ "issue": "Derived from L2 text (no argmap). At the moment of grace's descent You never deliberate, Lord, never — so what has come over You now, delaying the rite of Your self-revelation to me?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s13-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "At the moment of grace's descent You never deliberate, Lord, never — so what has come over You now, delaying the rite of Your self-revelation to me?",
+  "passage_id": "sivastotravali:s13-v11"
+ },
+ "unresolved": "",
+ "argument_text": "At the moment of grace's descent You never deliberate, Lord, never — so what has come over You now, delaying the rite of Your self-revelation to me?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s13-v11",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

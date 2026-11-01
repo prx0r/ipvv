@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s03-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s03-v13",
+ "title": "sivastotravali — s03-v13",
+ "kind": "entailment",
+ "question": "Suddenly fled from them — hard, endless sorrows — whose speech forever holds the Śiva-sound.",
+ "issue": "Derived from L2 text (no argmap). Suddenly fled from them — hard, endless sorrows — whose speech forever holds the Śiva-sound.",
+ "premises": [
+  {
+   "text": "durjayānām anantānām duḥkhānāṃ sahasaiva te hastāt palāyitā yeṣāṃ vāci śaśvacchivadhvaniḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s03-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Suddenly fled from them — hard, endless sorrows — whose speech forever holds the Śiva-sound.",
+  "passage_id": "sivastotravali:s03-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Suddenly fled from them — hard, endless sorrows — whose speech forever holds the Śiva-sound.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s03-v13",
+ "sanskrit": "durjayānām anantānām duḥkhānāṃ sahasaiva te hastāt palāyitā yeṣāṃ vāci śaśvacchivadhvaniḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

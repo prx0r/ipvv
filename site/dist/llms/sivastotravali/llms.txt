@@ -1,14 +1,1809 @@
 # sivastotravali — LLM Discovery
 
 Work: sivastotravali
-Passages: 5 (0 PASS, 5 BLOCKED)
+Passages: 450 (450 PASS, 0 BLOCKED)
 Data: /data/translations/sivastotravali.json
 Page: /translations/sivastotravali.html
 
 ## Chunks
 
-- sivst-p01 (verses stotra 1-4) [BLOCKED]
-- sivst-p02 (verses stotra 5-8) [BLOCKED]
-- sivst-p03 (verses stotra 9-12) [BLOCKED]
-- sivst-p04 (verses stotra 13-16) [BLOCKED]
-- sivst-p05 (verses stotra 17-20) [BLOCKED]
+- s01-v01 (verses 1) [PASS]
+  L1: ## s01-v01 (1)
+not / of-one-meditating / not / of-one-chanting / may-there-be / of-whom / without-preceding-rule / thus 
+  L2: Of one who neither meditates nor chants, manifestation may come without any preparatory rule. Just so — O light of Śiva 
+- s01-v02 (verses 2) [PASS]
+  L1: ## s01-v02 (2)
+self / my / of-Your-devotion-nectar / by-drinking / young / though / being / of-world-journey / by-dust /
+  L2: My self stays young, drinking the nectar of Your devotion — though greyed as if with the dust of worldly journeying and 
+- s01-v03 (verses 3) [PASS]
+  L1: ## s01-v03 (3)
+of-those-who-have-gained / that / wealth / of-bhakti-possessors / in-Your-city / of-dwellers / movement /
+  L2: For those who have gained that wealth — the possessors of devotion dwelling in Your city — even movement along worldly p
+- s01-v04 (verses 4) [PASS]
+  L1: ## s01-v04 (4)
+directly / consisting-of-You / O-Lord / in-all / within-the-world / what / not / of-bhakti-possessors / f
+  L2: Lord — where the whole world within worlds directly consists of You, what is not the devotee's field, and whose mantra d
+- s01-v05 (verses 5) [PASS]
+  L1: ## s01-v05 (5)
+victorious / of-bhakti-nectar-rasa / with-the-best-wine / intoxicated / non-dual / though / always / Your
+  L2: Victory to those intoxicated with the finest wine of devotion's nectar-essence! Though non-dual, they are ever Your seco
+- s01-v06 (verses 6) [PASS]
+  L1: ## s01-v06 (6)
+of-endless-bliss / of-the-ocean / of-You / O-Lord / truth / know / they / such / indeed / those-who / in-
+  L2: Lord of the ocean of endless bliss — only they know Your truth who are densely drenched in blissful devotion's nectar.
+- s01-v07 (verses 7) [PASS]
+  L1: ## s01-v07 (7)
+You / indeed / O-Lord-of-self / of-all / all / and / in-self / attached / thus / as-self-established / Yo
+  L2: You alone, Lord of the self, are the nature of all, and all loves dwelling in the self. Knowing Your devotion as self-es
+- s01-v08 (verses 8) [PASS]
+  L1: ## s01-v08 (8)
+O-Lord / of-the-knowable / on-destruction / by-whom / not / seen / alone / standing / of-knower-and-knowa
+  L2: Lord — when the knowable is destroyed, by whom are You not seen, standing alone? Even amid the agitation of knower and k
+- s01-v09 (verses 9) [PASS]
+  L1: ## s01-v09 (9)
+of-endless-bliss / lake / goddess / beloved / as / inseparable / exists / from-You / thus / one / Your-de
+  L2: As the lake of endless bliss, the Goddess, the beloved, is inseparable from You — so may one devotion of mine be insepar
+- s01-v10 (verses 10) [PASS]
+  L1: ## s01-v10 (10)
+all / indeed / of-gaining-You / cause / of-bhakti-possessors / O-all-pervading / consciousness-path / th
+  L2: O All-pervading — for devotees of devotion, everything is a cause of gaining You. This path of consciousness stands thre
+- s01-v11 (verses 11) [PASS]
+  L1: ## s01-v11 (11)
+of-Your-devotion / nectar / by-tasting / of-knowledge / may-there-be / supreme / even / that / state / t
+  L2: What of knowledge — even its supreme state, from tasting Your devotion's nectar — is to me, O husband-Lord, like vinegar
+- s01-v12 (verses 12) [PASS]
+  L1: ## s01-v12 (12)
+of-Your-devotion / great-knowledge / of-those / to-practice / has-come / of-knowledge / of-non-knowledge
+  L2: Those to whom the great knowledge of Your devotion has come through practice — they alone know truth, both knowledge and
+- s01-v13 (verses 13) [PASS]
+  L1: ## s01-v13 (13)
+from-the-root / speech / creeper / this / unfolding-in-sequence / possessing-expansion / by-Your-devotio
+  L2: From the root, this creeper of speech, unfolding in due sequence — watered by the nectar of Your devotion, may it bear r
+- s01-v14 (verses 14) [PASS]
+  L1: ## s01-v14 (14)
+Śiva / having-become / let-him-worship / thus / devotee / having-become / thus / is-said / You / indeed 
+  L2: "Having become Śiva, let him worship" — so the devotee is said to have become. For You alone are the body's essence, pur
+- s01-v15 (verses 15) [PASS]
+  L1: ## s01-v15 (15)
+of-devotees / of-nonduality-with-You / for-accomplishment / what / not / proofs / for-its-non-accomplish
+  L2: For devotees, what is not a means to accomplishment of non-duality with You? And for the low, what obstructions could th
+- s01-v16 (verses 16) [PASS]
+  L1: ## s01-v16 (16)
+sometime / somewhere / attainable / you-are / by-yoga / thus / O-Lord / deceit / otherwise / in-all-stat
+  L2: That You are attained sometime, somewhere, by yoga, O Lord — that is the deceit. Otherwise, how would You shine in all s
+- s01-v17 (verses 17) [PASS]
+  L1: ## s01-v17 (17)
+by-withdrawal / etc. / untouched / distinction / exists / great / this / than-yogins / of-devotion-share
+  L2: Untouched by withdrawal and the rest — this is the great distinction: that sharers of devotion stay composed even in eme
+- s01-v18 (verses 18) [PASS]
+  L1: ## s01-v18 (18)
+not / yoga / not / austerity / not / worship-procedure / any / even / is-enjoined / in-guileless / on-Śi
+  L2: No yoga is enjoined, no austerity, no procedure of worship at all. On this guileless path of Śiva, devotion alone is pra
+- s01-v19 (verses 19) [PASS]
+  L1: ## s01-v19 (19)
+from-all-sides / by-shining / bhakti / light / of-shattered / covering / of-me / of-directly-faced / all
+  L2: My covering shattered by devotion's light shining from all sides — may even my thoughts, which face all real things, per
+- s01-v20 (verses 20) [PASS]
+  L1: ## s01-v20 (20)
+Śiva / thus / of-one-word / of-tongue / on-tip / standing / always / of-all / sense-objects / taste / in
+  L2: A wonder: that in devotees, with the single word "Śiva" standing always on the tongue's tip, there is the taste of every
+- s01-v21 (verses 21) [PASS]
+  L1: ## s01-v21 (21)
+in-calm-waved / cool / clear / sweet / bhakti-nectar / ocean / in-unworldly / rasa / taste / by-the-firm
+  L2: In the calm-waved, cool, clear, sweet milk-ocean of devotion's nectar — in tasting its unworldly essence — who that stan
+- s01-v22 (verses 22) [PASS]
+  L1: ## s01-v22 (22)
+by-equals / why / not / should-be-chewed / Your-devotion / great-medicine / such / O-Lord / of-which / l
+  L2: Why would people like me not chew Your devotion's great medicine — whose after-taste, O Lord, is called liberation?
+- s01-v23 (verses 23) [PASS]
+  L1: ## s01-v23 (23)
+those / indeed / is-valued-as-supreme / wealths / by-the-good / O-Lord / which / of-Your / bhakti-rasa /
+  L2: Those alone are ultimately wealth, O Lord, in the judgement of the good — which nourish confident enjoyment of the taste
+- s01-v24 (verses 24) [PASS]
+  L1: ## s01-v24 (24)
+of-Your-devotion-nectar / essence / by-them / what / even / grasped / who / not / in-passion / etc. / in
+  L2: They have grasped something of Your devotion-nectar's essence who, though fallen into this mud of passion and the rest, 
+- s01-v25 (verses 25) [PASS]
+  L1: ## s01-v25 (25)
+among-powers-beginning-with-aṇimā / ending-with-liberation / among-limbs / indeed / fruit / called / of-
+  L2: From supernormal powers to liberation — "fruit" is named as a mere limb of the ripened creeper of Your devotion, for som
+- s01-v26 (verses 26) [PASS]
+  L1: ## s01-v26 (26)
+wonder / by-nature / O-Lord / of-pain / seed / this / mind / by-Your-devotion-rasa / watered / of-libera
+  L2: A wonder, Lord: this mind, by nature pain's seed — watered by the essence of devotion to You, becomes liberation's great
+- s02-v01 (verses 1) [PASS]
+  L1: ## s02-v01 (1)
+of-fire-moon-sun-Brahmā-Viṣṇu-moving-unmoving / of-own-nature / to-many-formed / bow / of-consciousness-f
+  L2: To the many-formed, whose nature is consciousness — fire, moon, sun, Brahmā, Viṣṇu, moving and unmoving — bow.
+- s02-v02 (verses 2) [PASS]
+  L1: ## s02-v02 (2)
+of-universe-fuel-great-ash-smeared-pure-shining / to-great-fire / to-Becoming / of-world-sole-oblation / 
+  L2: To the great fire fed by the universe as fuel, smeared-pure with great ash, to the Becoming to whom the world is the sol
+- s02-v03 (verses 3) [PASS]
+  L1: ## s02-v03 (3)
+to-supreme-nectar-dense / to-cool / to-Śiva-fire / to-some / even / of-world-destroying-unequal / bow / b
+  L2: To Śiva-fire — cool, dense with supreme nectar — and to You, the unequalled devourer in the world's destruction — bow.
+- s02-v04 (verses 4) [PASS]
+  L1: ## s02-v04 (4)
+to-Mahādeva / to-Rudra / to-Śaṅkara / to-Śiva / to-You / to-Maheśvara-even / bow / to-which / indeed / ma
+  L2: To Mahādeva, to Rudra, to Śaṅkara, to Śiva, to You Maheśvara — and to someone mantra-bodied — bow.
+- s02-v05 (verses 5) [PASS]
+  L1: ## s02-v05 (5)
+bow / of-cut-dried-up-three-worlds-melted-fat-pouring-unequalled / to-auspicious / to-Śiva-fire
+  L2: To Śiva-fire — cut, dried up, the three worlds' melted fat the oblation — unequalled, yet auspicious — bow.
+- s02-v06 (verses 6) [PASS]
+  L1: ## s02-v06 (6)
+of-all-marks-meeting / indeed / of-which / mark / to-him / bow / be / to-god / to-some / indeed / to-Śamb
+  L2: To the god — to gracious someone — for whom the meeting of all marks is itself the mark — bow.
+- s02-v07 (verses 7) [PASS]
+  L1: ## s02-v07 (7)
+to-Veda-āgama-opposing / to-Veda-āgama-making / to-Veda-āgama-true-essence / to-hidden / to-master / bow
+  L2: To the hidden Lord — Veda-opposing, Veda-making, the Veda's true essence, secret master — bow.
+- s02-v08 (verses 8) [PASS]
+  L1: ## s02-v08 (8)
+of-saṃsāra-sole-cause / of-saṃsāra-sole-foe / bow / of-saṃsāra-formed / of-saṃsāra-free / to-Śambhu
+  L2: Sole cause of the wheel of births and deaths — and its sole opponent; saṃsāra-formed, saṃsāra-free — to gracious Śambhu,
+- s02-v09 (verses 9) [PASS]
+  L1: ## s02-v09 (9)
+to-root / to-middle / to-tip / to-root-middle-tip-formed / to-tip-middle-root-dissolved / bow / to-full /
+  L2: To root, to middle, to tip; embodied as root-middle-tip; with tip-middle-root exhausted — to the Full, gracious Śambhu —
+- s02-v10 (verses 10) [PASS]
+  L1: ## s02-v10 (10)
+bow / of-merit-heap-ripening / even-once / also / also / of-whom / by-name-taking / to-him / hard-to-fin
+  L2: Even once — whosever taking of the Name — ripened heaps of merit. To You, Śiva, hard to attain — bow.
+- s02-v11 (verses 11) [PASS]
+  L1: ## s02-v11 (11)
+bow / with-moving-unmoving-multitude-heaps / always / sporting / to-You-alone / one / to-consciousness-f
+  L2: To You alone — consciousness-formed, skull-bearing — ever sporting with heaped multitudes of moving-and-static forms — b
+- s02-v12 (verses 12) [PASS]
+  L1: ## s02-v12 (12)
+to-magician / to-pure / to-hidden / to-self-manifest / to-subtle / to-all-formed / bow / to-wondrous / t
+  L2: To the magician, the pure, the hidden, the self-manifest; the subtle, the all-formed — to wondrous Śambhu — bow.
+- s02-v13 (verses 13) [PASS]
+  L1: ## s02-v13 (13)
+by-Brahmā-Indra-Viṣṇu-arrayed / world-destroying-play / to-wonder-working / bow / to-You / O-all-power
+  L2: To all power — whose play destroys the Brahmā-Viṣṇu-arrayed world — wonder-working — bow.
+- s02-v14 (verses 14) [PASS]
+  L1: ## s02-v14 (14)
+on-shores / indeed / by-wandering / gained / those / those / powers / of-whom / to-him / bow / to-You / 
+  L2: To You, the fathomless Hara-ocean — whose powers are gained by those wandering only its shores — bow.
+- s02-v15 (verses 15) [PASS]
+  L1: ## s02-v15 (15)
+to-Māyā-made-world-dense-mud-dwelling / to-unsmeared / bow / O-Śambhu-lotus / to-shining
+  L2: To the lovely hundred-petalled Śambhu-lotus, dwelling mid mud of the Māyā-made dense world, unsmeared, shining — bow.
+- s02-v16 (verses 16) [PASS]
+  L1: ## s02-v16 (16)
+to-auspicious / to-pure / to-treasure / to-ornament-self / to-dear / to-supreme-real / to-highest / to-Y
+  L2: Auspicious, pure, treasure, self-ornamented; dear, ultimate-real, highest — to You — bow.
+- s02-v17 (verses 17) [PASS]
+  L1: ## s02-v17 (17)
+bow / to-ever-bound / to-ever-freedom-sharing / to-bondage-freedom-less / to-whomsoever / indeed / even 
+  L2: Ever bound, ever sharing liberation's portion; difference-free — to gracious someone Śambhu — bow.
+- s02-v18 (verses 18) [PASS]
+  L1: ## s02-v18 (18)
+in-mockery-essence-only / in-this / in-all-this / in-three-worlds / to-You-alone / indeed / to-non-dual 
+  L2: In these three worlds whose essence is mockery alone — to You alone, secondless, ever-bliss-seated — bow.
+- s02-v19 (verses 19) [PASS]
+  L1: ## s02-v19 (19)
+of-right-practice-essence / of-left-practice-desiring / to-all-practices / to-Śarva / to-practiceless / 
+  L2: Essence of right-observance yet desirer of left-observance; of all observances, to observance-free Śarva — bow.
+- s02-v20 (verses 20) [PASS]
+  L1: ## s02-v20 (20)
+as / however / who / worshipped / where / there / even / who / worshipped / who / even / or / he / even 
+  L2: Whoever is worshipped, however, wherever — and whoever, whatever god he be — to that god, bow.
+- s02-v21 (verses 21) [PASS]
+  L1: ## s02-v21 (21)
+by-liberation-seekers-served / of-all-burning-removing / bow / to-spread-loveliness-best / to-boon-givin
+  L2: Served by liberation-seekers, remover of all burning; of spread-out chosen loveliness — to You, boon-giver — bow.
+- s02-v22 (verses 22) [PASS]
+  L1: ## s02-v22 (22)
+always / of-unbroken-bliss-rasa-filled-all-three-worlds / bow / to-You / O-husband-Lord / of-ever-festiv
+  L2: To You, husband-Lord of the ever-festival, whose three worlds brim with unbroken bliss-rasa — bow.
+- s02-v23 (verses 23) [PASS]
+  L1: ## s02-v23 (23)
+of-pleasure-first / knowables-enjoying / worships / and / which / You / indeed / to-that / terrible / ho
+  L2: What enjoys You in pleasure-first knowables — to that terrible host of Your powers — bow.
+- s02-v24 (verses 24) [PASS]
+  L1: ## s02-v24 (24)
+of-sages / even / unknown / devotion-touched / gestures / embrace / even / whom / to-that / to-some / in
+  L2: Even sages cannot know Him — yet those whose gestures love connects embrace Him. To that someone Becoming — bow.
+- s02-v25 (verses 25) [PASS]
+  L1: ## s02-v25 (25)
+of-supreme-nectar / store / of-supreme-nectar / heap / of-all / of-beyond / of-non-beyond / to-be-reache
+  L2: To the supreme-nectar sheath, the supreme-nectar heap; reachable beyond far and near — to Becoming — bow.
+- s02-v26 (verses 26) [PASS]
+  L1: ## s02-v26 (26)
+made-of-great-mantra / I-praise / form / of-You / clear-cool / unprecedented-joy-fortunate / supreme-nec
+  L2: I praise Your mantra-formed, clear-cool, unprecedentedly joyful, supreme-nectar-juicy form.
+- s02-v27 (verses 27) [PASS]
+  L1: ## s02-v27 (27)
+of-autonomy-nectar-full / of-oneness-fame / in-great-cloth / wonder / not / is / indeed / where / O-Lord
+  L2: On oneness-fame's great cloth, full of immortality-nectar — where, Lord, there is no wonder — I praise Your teaching.
+- s02-v28 (verses 28) [PASS]
+  L1: ## s02-v28 (28)
+of-all-doubts-thunderbolt / of-all-fortunes-fire / likewise / of-all-inauspicious-ending / path / of-Mah
+  L2: Thunderbolt to all doubt, fire to all fortune, world's-end to all inauspiciousness — we bow the Māheśvara path.
+- s02-v29 (verses 29) [PASS]
+  L1: ## s02-v29 (29)
+victory / O-god / bow / bow / be / to-You / all / world / this / of-You / resting-on / of-worlds / O-sup
+  L2: Victory, god! Bow upon bow to You; this whole world rests on You; of worlds You are supreme Lord; I am come to You for r
+- s03-v01 (verses 1) [PASS]
+  L1: ## s03-v01 (1)
+being / by-non-being-ness / of-beings / endowed / which / twofold / course / that / having-leapt-beyond /
+  L2: Of things, the two courses that go by being and non-being — leaping over them — to the third, the wondrous Śambhu — bow.
+- s03-v02 (verses 2) [PASS]
+  L1: ## s03-v02 (2)
+of-gods / seer / from-men / in-this / in-the-unfree / world / in-triad / free / they / of-the-free / who 
+  L2: Among gods, seers, and men in this unfree triple world — free are Your dependents, O Free One.
+- s03-v03 (verses 3) [PASS]
+  L1: ## s03-v03 (3)
+whole / universe / inlaid / Your / body / remembrance / of-whom / of-becoming / of-pains / one / medicine
+  L2: Remembrance of Your body inlaid with the whole universe — the one medicine for world-pain; who have it sit happy.
+- s03-v04 (verses 4) [PASS]
+  L1: ## s03-v04 (4)
+white / umbrella / of-whom / moon / own / light / filled / fly-whisk / heaven-river / stream / he / alone
+  L2: Whose white umbrella is the self-lit moon, whose fly-whisk the heaven-river's stream — He alone is Supreme Lord.
+- s03-v05 (verses 5) [PASS]
+  L1: ## s03-v05 (5)
+luminous / cool / one / pure / moon / digit / as / glance / grant / to-me / O-Lord / some / even / nectar
+  L2: Grant me, Lord, a glance — luminous, cool, one, pure as a moon-digit, carrying nectar.
+- s03-v06 (verses 6) [PASS]
+  L1: ## s03-v06 (6)
+Your / consciousness / bliss / from-ocean / fallen / knowings / drops / these / why / for-me / O-Lord / n
+  L2: Fallen from Your consciousness-bliss ocean — these knowings, these drops — why are they not nectar-sweet-beautiful to me
+- s03-v07 (verses 7) [PASS]
+  L1: ## s03-v07 (7)
+in-You / love / in-rasa / O-Lord / not / merged / heart / O-ruler / of-whom / not / hearted / indeed / th
+  L2: In Your love-rasa, Lord, hearts unmelted — the heartless alone — such deserve contempt.
+- s03-v08 (verses 8) [PASS]
+  L1: ## s03-v08 (8)
+by-the-lord / by-You / whose / arisen / heart / meeting / of-ruling-goddesses / of-powers / supreme / alo
+  L2: Whose heart has met the Lord's — he alone is the vessel of ruling goddesses' powers.
+- s03-v09 (verses 9) [PASS]
+  L1: ## s03-v09 (9)
+of-joys / now / of-sorrows / of-all / flooder / alike / Your / meditation / nectar / flood / low / non-lo
+  L2: Flooder alike of all joys and sorrows — Your meditation-nectar-flood, like lowlands filling.
+- s03-v10 (verses 10) [PASS]
+  L1: ## s03-v10 (10)
+what / as-it-were / not / may-it-be / with-glance / of-them / happiness / provisions / full / of-whom / 
+  L2: What would their look not be, happiness-provisions-full — who never part from You, more than self, Lord?
+- s03-v11 (verses 11) [PASS]
+  L1: ## s03-v11 (11)
+I-roar / ah / I-dance / fulfilled / of-me / mind / chariots / lord / my / this / won / since / you / utt
+  L2: I roar, I dance — my wishes are fulfilled, for my Lord is won, utterly charming.
+- s03-v12 (verses 12) [PASS]
+  L1: ## s03-v12 (12)
+not / other / knowable / action / where / not / other / yoga / by-knowing / and / which / knowledge / ma
+  L2: Where no other knowable for action, no other yoga for knowing — yet what if knowledge? Consciousness alone, world-filled
+- s03-v13 (verses 13) [PASS]
+  L1: ## s03-v13 (13)
+hard / of-conquerable / of-endless / of-sorrows / suddenly / indeed / of-them / from-hand / fled / of-wh
+  L2: Suddenly fled from them — hard, endless sorrows — whose speech forever holds the Śiva-sound.
+- s03-v14 (verses 14) [PASS]
+  L1: ## s03-v14 (14)
+highest / person / other / is / You / by-remainder / distinguished / you / great / person / but / alone 
+  L2: Is there another, higher person, distinct by remaining Yours? You alone, great Person, support of all persons without re
+- s03-v15 (verses 15) [PASS]
+  L1: ## s03-v15 (15)
+they-conquer / they / world / venerable / servants / Your / of-worlds / O-pervader / transmigration / oc
+  L2: Victorious, world-venerable, Your slaves, Lord — for whom this saṃsāra-ocean is a play-great-lake.
+- s03-v16 (verses 16) [PASS]
+  L1: ## s03-v16 (16)
+let-sit / meanwhile / other / miseries / here / You / of-devotees / you / indeed / manifest / may-you-be
+  L2: Let other miseries sit — for Your devotees, "You manifest Yourself" — by this alone they are shamed.
+- s03-v17 (verses 17) [PASS]
+  L1: ## s03-v17 (17)
+than-me / beyond / not / is / therein / even / reciter / I-am / that / by-oneness / in-truth / recitatio
+  L2: "Nothing is beyond me" — yet therein I am a reciter, by that oneness; as truth, You point the rosary somewhere.
+- s03-v18 (verses 18) [PASS]
+  L1: ## s03-v18 (18)
+of-being / necessarily / supreme / being / being / and / than-that / beyond / O-ruler / you / and / from
+  L2: From being must come supreme being, and beyond that, Lord — and You are other than being and non-being both; hence You a
+- s03-v19 (verses 19) [PASS]
+  L1: ## s03-v19 (19)
+thousand / sun / ray / exceeding / pure / shining / even / you / all / worlds / pervading / even / not /
+  L2: Purer-shining than thousand-sun-ray-rise — yet You, all-worlds-pervading, are not seen.
+- s03-v20 (verses 20) [PASS]
+  L1: ## s03-v20 (20)
+in-the-inert / in-the-world / consciousness / formed / indeed / in-the-knowable / even / knower / mighty
+  L2: Conscious-formed in the inert world, knower even in the known; great in the measured — hence You are the highest.
+- s03-v21 (verses 21) [PASS]
+  L1: ## s03-v21 (21)
+enough / with-cries / with-others / this-much / indeed / before / of-the-Lord / sharply / I-cry-aloud / 
+  L2: Enough with other cries — this alone, before the Lord: I cry sharp, Lord, I am bewildered, even knowing thus.
+- s04-v01 (verses 1) [PASS]
+  L1: ## s04-v01 (1)
+fickle / you-are / since / even / O-mind / therein / even / you-are-praised / since / you-worship / of-re
+  L2: Mind — though fickle you are — even so you are praised, since you worship the refuge of refuges, the world's teacher, Am
+- s04-v02 (verses 2) [PASS]
+  L1: ## s04-v02 (2)
+having-crossed / various / gods / ladder / course / having-approached / Śiva / feet / having-resorted / e
+  L2: Having crossed the ladder-steps of various gods, reached Śiva's feet — yet on the lowest ground I stand even now; wonder
+- s04-v03 (verses 3) [PASS]
+  L1: ## s04-v03 (3)
+reveal / own / path / hide / fully / all / world / doings / while / I-am / O-Lord / of-You / quickly / ev
+  L2: Reveal Your own path, hide all world-ways thoroughly — while I am, Lord, quickly Your ever-risen servant.
+- s04-v04 (verses 4) [PASS]
+  L1: ## s04-v04 (4)
+Śiva / Śiva / O-Śambhu / O-Śaṅkara / refuge-come / loving / swiftly / make / pity / Your / feet / lotus /
+  L2: Śiva Śiva Śambhu Śaṅkara — swift pity on the refuge-seekers' lover! Fortune is near for whoever remembers Your lotus-fee
+- s04-v05 (verses 5) [PASS]
+  L1: ## s04-v05 (5)
+Your / foot / lotus / throne / seated / who / as / liking / world / they-create / they / Brahmā / office 
+  L2: Those seated on Your foot-lotus-throne, making the world to taste — they laugh at Vir iñc, office-stained, not-self-rule
+- s04-v06 (verses 6) [PASS]
+  L1: ## s04-v06 (6)
+Your / light / from-body / not / apart / divided / what / at-all / prevails / to-appear / that / ever / i
+  L2: Nothing appears apart from Your light-body; so You are always already gained, Lord — though far by nature.
+- s04-v07 (verses 7) [PASS]
+  L1: ## s04-v07 (7)
+foot / lotus / juice / of-You / some / indeed / difference / stale / conduct / endowed / some / at-all / 
+  L2: Some taste Your foot-lotus-juice as stale-difference-conduct; others instantly taste it as flawless, body-whole, duality
+- s04-v08 (verses 8) [PASS]
+  L1: ## s04-v08 (8)
+O-Lord / lightning / as / shines / at-dawn / which / when / at-all / of-me / nectar / smeared / she / if 
+  L2: Lord, like lightning at dawn gleams my nectar-smeared — if it stayed steadier, You are worshipped duly — what else?
+- s04-v09 (verses 9) [PASS]
+  L1: ## s04-v09 (9)
+all / of-this / beyond / is / not / what / indeed / thing / not / thing / if / or / thus / with-great / f
+  L2: Is there anything, thing or non-thing, apart from this? With great discernment decided here: as You are, so be plain to 
+- s04-v10 (verses 10) [PASS]
+  L1: ## s04-v10 (10)
+own / by-will / indeed / O-Lord / own / on-path / made-to-do / step / I / by-lord / indeed / that / how 
+  L2: By Your will alone, Lord, I was made to step on Your own path — then why do I behave just like a man, knowing nothing fi
+- s04-v11 (verses 11) [PASS]
+  L1: ## s04-v11 (11)
+some / even / god / in-heart / among-them / Yours / blooms / lovely / state / highest / Your / story / c
+  L2: Some god of Yours blooms in their hearts, a lovely supreme state — by whose story-thunder-cātakas they are long gladdene
+- s04-v12 (verses 12) [PASS]
+  L1: ## s04-v12 (12)
+You / of-devotees / in-You / by-some / even / play / love / this / to-fullness / arrived / since / separ
+  L2: For Your devotees, by some play in You, this love has grown fat — so that separation-ground talk and memory fruit in uni
+- s04-v13 (verses 13) [PASS]
+  L1: ## s04-v13 (13)
+who / strange / rasa / sprinkling / grown / Śaṅkara / thus / by-hundreds / even / uttered / word / enter
+  L2: The word, grown by strange-rasa-sprinkling, though uttered "Śaṅkara" hundreds of times — enters even sideways hearts, ev
+- s04-v14 (verses 14) [PASS]
+  L1: ## s04-v14 (14)
+they / conquer / face / on-orb / revolving / is / in-whom / ever / Śiva / sound / who / moon / as / spre
+  L2: Victorious are they on whose face-orbits the Śiva-sound ever revolves — which, moon-spread from nectar-source, trickles 
+- s04-v15 (verses 15) [PASS]
+  L1: ## s04-v15 (15)
+fully / finished / as / fierce / this / world / melted / not / sparse / of-mind / impurity / that / even
+  L2: The fierce world as if finished; mind's impurity thinned to none — and yet not even the smallest knocking at Your city-d
+- s04-v16 (verses 16) [PASS]
+  L1: ## s04-v16 (16)
+ever / blooming / Your / face / lotus / interior / gaze / eager / of-mind / what / even / that / do / O-
+  L2: Of minds eager for Your ever-blooming face-lotus-belly-gaze — do something, Lord, just a little, so You flash as facing 
+- s04-v17 (verses 17) [PASS]
+  L1: ## s04-v17 (17)
+You / non-difference / than-mind / other / pray / what / happiness / here / is / glory / or / other / th
+  L2: What happiness here apart from non-difference-mind, what other glory? So why does this servant's mind, abandoning her, g
+- s04-v18 (verses 18) [PASS]
+  L1: ## s04-v18 (18)
+moment / even / here / not / Your / serfdom / toward / may-I-be / I / indeed / vessel / being / non-diff
+  L2: May I never for a moment be unfit for Your serfdom — unless constantly, reverently tasting non-difference-wine.
+- s04-v19 (verses 19) [PASS]
+  L1: ## s04-v19 (19)
+not / indeed / sees / truly / this / person / of-You / body / duality / by-sight / dirtied / that / even
+  L2: These people truly do not see Your body, dirtied by duality-sight — and yet, all-knowing refuge-lover, do You not hear M
+- s04-v20 (verses 20) [PASS]
+  L1: ## s04-v20 (20)
+you-remember / O-Lord / when / indeed / even / desired / sense / pleasure / and / even / by-me / asked /
+  L2: Do You remember, Lord, any desired sense-pleasure I ever asked? Give instead, always, Your body-vision-nectar as the onl
+- s04-v21 (verses 21) [PASS]
+  L1: ## s04-v21 (21)
+indeed / when / indeed / Śiva / on-path / in-Yours / made / step / I-am / O-great-lord / Your / by-will 
+  L2: Since by Your will alone I stepped on Your Śiva-path, Lord — hundreds of good omens rose for me; what else should I seek
+- s04-v22 (verses 22) [PASS]
+  L1: ## s04-v22 (22)
+where / he / setting / this / goes / sun / moon / beginning-with / with / all / what / even / she / shin
+  L2: Where the sun sets with the moon and all — that unconquered Śiva-night shines, self-light-spread-lustrous.
+- s04-v23 (verses 23) [PASS]
+  L1: ## s04-v23 (23)
+even / won / I / in-three / in-worlds / overlordship / O-king-of-gods / I-count / without / rasa / that 
+  L2: Even won rule in three worlds, O king of gods, I count tasteless — lacking Your foot-touch-nectar-rasa.
+- s04-v24 (verses 24) [PASS]
+  L1: ## s04-v24 (24)
+alas / O-Lord / strong / this / self / bond / being / non-fame / formed / by-You / indeed / fashioned / 
+  L2: Alas, Lord, strong is this self-bond, made of Your un-fame, fashioned by You alone — first ignored by me, it never loose
+- s04-v25 (verses 25) [PASS]
+  L1: ## s04-v25 (25)
+of-the-great / O-king-of-gods / being-worshipped / even / not / night / you-stay / worshipper / one / fo
+  L2: Though worshipped by the great, O king of gods, You ever stay the one-worshipper-form — seen outside and in, You shine i
+- s05-v01 (verses 1) [PASS]
+  L1: ## s05-v01 (1)
+Your / foot / lotus / contact / mere / enjoyment / joined / in-neck / by-hold / O-Lord / me / own / house
+  L2: Joined in enjoyment by mere touch-contact of Your lotus-feet — bring me, Lord, by the neck into Your house.
+- s05-v02 (verses 2) [PASS]
+  L1: ## s05-v02 (2)
+being / foot / lotus / dust / redness / dyed / head-hair / boundless / frenzy / begun / dancing / may-I-b
+  L2: Head hair dyed by Your foot-lotus-dust-redness — when shall I frantically begin to dance?
+- s05-v03 (verses 3) [PASS]
+  L1: ## s05-v03 (3)
+You / sole-Lord / O-Lord / this-much / indeed / I-ask / always / You / within / dwelling / silent / may-I
+  L2: You my sole Lord — this alone I always ask: dwelling inside You, may I be silent; otherwise, wise.
+- s05-v04 (verses 4) [PASS]
+  L1: ## s05-v04 (4)
+ah / nectar / O-ocean / O-master / ah / sweet / O-three-eyed / ah / tasty / deformed / eyed / thus / inde
+  L2: Ah nectar-ocean master! Ah sweet three-eyed One! Ah tasty deformed-eyed One! — thus may I dance, shouting.
+- s05-v05 (verses 5) [PASS]
+  L1: ## s05-v05 (5)
+Your / foot / lotus / touch / half-closed / eyed / may-I-expand / being / devotion / liquor / madness / r
+  L2: Eyes half-closed by Your foot-lotus-touch — may I expand, reeling drunk on Your devotion-liquor-madness.
+- s05-v06 (verses 6) [PASS]
+  L1: ## s05-v06 (6)
+mind / mountain / on-earth / O-All-pervading / may-I-dwell / where / even / where / she / uninterrupted /
+  L2: May I dwell anywhere, O All-pervading, mind-mountain on earth, where that practice is — uninterrupted, great-rasa, made 
+- s05-v07 (verses 7) [PASS]
+  L1: ## s05-v07 (7)
+where / goddess / accompanied / you / from-palace / up-to / and / from-gate-tower / many / formed / stand
+  L2: Where You stand with the Goddess, many-formed, from palace to gate-tower — in that city may I dwell.
+- s05-v08 (verses 8) [PASS]
+  L1: ## s05-v08 (8)
+may-they-rejoice / O-Lord / being / sun / rays / may-bloom / this / until / of-me / heart / lotus / for-w
+  L2: May Your sun-rays rejoice, Lord, until my heart-lotus blooms — for Your worship.
+- s05-v09 (verses 9) [PASS]
+  L1: ## s05-v09 (9)
+be-gracious / O-Lord / by-which / Your / on-foot / fallen / always / mind / of-me / this / that / having-
+  L2: Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — melts like wax, flows like...
+- s05-v10 (verses 10) [PASS]
+  L1: ## s05-v10 (10)
+great / from-joy / or / and / sorrow / from / or / if / would-burst / from-pot / even / outer / from / a
+  L2: Whether from joy bursting pot-lids, or sorrow — from outside or inside feeling, appear to me, Lord.
+- s05-v11 (verses 11) [PASS]
+  L1: ## s05-v11 (11)
+outside / even / inner / even / that / streaming / always / may-it-be / for-me / being / foot / lotus / 
+  L2: Outside too, inside too — may that ever-streaming, Your coolest foot-lotus-touch-nectar, be mine always.
+- s05-v12 (verses 12) [PASS]
+  L1: ## s05-v12 (12)
+Your / foot / touch / nectar / from-lake / within / plunging / what / even / this / all / enjoyments / s
+  L2: Plunging inside Your touch-nectar-lake — may that pleasure beyond all pleasures be mine always.
+- s05-v13 (verses 13) [PASS]
+  L1: ## s05-v13 (13)
+offered / take / passion / beginning-with / O-Lord / by-me / forth / having-taken / and / nectar-ized / 
+  L2: Take what I offer — passion and the rest, Lord; make it nectar and eat it with devotees.
+- s05-v14 (verses 14) [PASS]
+  L1: ## s05-v14 (14)
+whole / world / food / ever / satisfied / happily / seated / O-master / accept / among-servants / grace 
+  L2: Ever-full on whole-world-food, happily seated — Master, cast Your grace-glance-moment on servants.
+- s05-v15 (verses 15) [PASS]
+  L1: ## s05-v15 (15)
+inner / devotion / wonder / chewing / half-closed / eyed / bow / to-me / to-Śiva / thus / worshipping / 
+  L2: Eyes half-closed, chewing inner devotion-wonder — "bow to me, to Śiva" — may I worship even straw.
+- s05-v16 (verses 16) [PASS]
+  L1: ## s05-v16 (16)
+even / gained / being / being / own / self / blaze / made-of / world / seeing / devotion / rasa / with-e
+  L2: Though I have gained Your being — seeing the world as my self-blaze — may I be unparted by devotion-rasa-enjoyments.
+- s05-v17 (verses 17) [PASS]
+  L1: ## s05-v17 (17)
+to-be-desired / other / by-which / O-Lord / not / is-found / of-You / therefore / of-secondless / fittin
+  L2: Since nothing else is to be desired, Lord — to You, the secondless, fullness is fitting.
+- s05-v18 (verses 18) [PASS]
+  L1: ## s05-v18 (18)
+it-is-laughed / it-is-danced / where / passion / aversion / beginning-with / is-eaten / is-drunk / devot
+  L2: Where there is laughter, dancing, where passion-aversion are eaten, devotion-nectar drunk — may I reach that place.
+- s05-v19 (verses 19) [PASS]
+  L1: ## s05-v19 (19)
+that / that / unprecedented / perfume / Your / thought / flower / perfume / firmness / may-it-attain / o
+  L2: May that unprecedented-joy-perfume of thought-flowers about You firm up in my mind — till bad-smell of bad-habit perishe
+- s05-v20 (verses 20) [PASS]
+  L1: ## s05-v20 (20)
+where / pray / passion / among-beginning-with / love / where / and / Hara / feet / among-lotuses / lovin
+  L2: Where is love among passions, and where is loving at Hari's lotus-feet — thus teach my contradiction-loving heart what i
+- s05-v21 (verses 21) [PASS]
+  L1: ## s05-v21 (21)
+wandering / yoga / in-states / even / objects / turned-away / abiding / even / Your / thought / liquor /
+  L2: Though wandering even through yogic states, though turned away from objects — may I be only heart-melted by Your-thought
+- s05-v22 (verses 22) [PASS]
+  L1: ## s05-v22 (22)
+in-speech / mind / in-thoughts / likewise / body / in-gestures / senses / made-by / all / here / all / t
+  L2: In speech, mind-thoughts, body-gestures made by senses — everywhere, always, may bhakti-rasa go before me as leader.
+- s05-v23 (verses 23) [PASS]
+  L1: ## s05-v23 (23)
+Śiva / Śiva / Śiva / thus / in-the-name / of-You / without / limit / O-Lord / being-chanted / in-this / 
+  L2: While Your name "Śiva Śiva Śiva" is chanted endlessly, Lord — may I taste some great unrepeatable rasa.
+- s05-v24 (verses 24) [PASS]
+  L1: ## s05-v24 (24)
+flashing / endless / consciousness / selfed / in-vastness / drunk-up / all / dull / on-path / un / count
+  L2: In the vastness flashing as endless consciousness-self, where all dull paths are drunk up — may I roam Your worship, cou
+- s05-v25 (verses 25) [PASS]
+  L1: ## s05-v25 (25)
+own / in-body / clear / shining / in-eternal / standing / for-made / not / what / even / is-of-use / thu
+  L2: For standing in self-body, clearly shining, eternal — nothing else is of use; firm be this thought — but dust of Your pu
+- s05-v26 (verses 26) [PASS]
+  L1: ## s05-v26 (26)
+what / even / O-Lord / when / at-all / in-mind / flashes / that / being / foot / sole / of-touchers / me
+  L2: Something flashes sometime in mind, touching Your feet — where this whole world melts — show it always, in the nectar-la
+- s06-v01 (verses 1) [PASS]
+  L1: ## s06-v01 (1)
+moment-only / O-Lord / parted / by-You / my / dense / burning / always / may-I-be / of-gaze / ground
+  L2: Even a moment parted from You, Lord — of me burning dense always — may I be the ground of Your gaze.
+- s06-v02 (verses 2) [PASS]
+  L1: ## s06-v02 (2)
+parting-essence / in-saṃsāra / by-dear / by-Lord / by-You / unparted / ever / may-I-be / though-from-worl
+  L2: In saṃsāra whose essence is parting — by You, dear Lord, may I be ever unparted, though parted from the world.
+- s06-v03 (verses 3) [PASS]
+  L1: ## s06-v03 (3)
+by-body-speech-mind / wherever / I-go / all / You / alone / that / thus / this / ultimate-truth / even / 
+  L2: Wherever I go by body, speech, mind — all that is You alone: may this ultimate truth stand ever full for me.
+- s06-v04 (verses 4) [PASS]
+  L1: ## s06-v04 (4)
+construction-free / great-bliss-full / as / You-are / so / praise-speech-of-You / may-it-become / just-fi
+  L2: As You are construction-free, great-bliss-full — so may my praise-speech become, just fitting.
+- s06-v05 (verses 5) [PASS]
+  L1: ## s06-v05 (5)
+by-Your-possession / seeing / thing / thing / consisting-of-You / may-I-roam / desireless / joy-filled
+  L2: Seeing thing after thing as consisting of You, by Your possession — may I roam desireless, joy-filled.
+- s06-v06 (verses 6) [PASS]
+  L1: ## s06-v06 (6)
+O-Lord-Your / full / may-I-see / whole / world / by-that-alone-I-am / content / then / not / toil
+  L2: May I see the whole world full of Your being, Lord — by that alone content; then do not toil.
+- s06-v07 (verses 7) [PASS]
+  L1: ## s06-v07 (7)
+melting / in-You / only / in-sky / cloud-particles / like / things / may-they-shine / for-me / always / g
+  L2: May things shine for me always, melting into You alone like cloud-bits in sky, moving toward ever-purer courses.
+- s06-v08 (verses 8) [PASS]
+  L1: ## s06-v08 (8)
+dispelling-dark-mass-to-end / continuously / may-it-blaze / for-me / some / from-Your-middle / Your-jewel
+  L2: May there blaze for me, from Your middle, some jewel of Being — its self-light-spread destroying the endless dark-series
+- s06-v09 (verses 9) [PASS]
+  L1: ## s06-v09 (9)
+what / ground / do-I-not-reach / what / that / would-be / which / not / Your / body / tired / by-effortle
+  L2: What stage do You not rule, what could there be that is not Your body? Tired — by effortlessness may I reach You everywh
+- s06-v10 (verses 10) [PASS]
+  L1: ## s06-v10 (10)
+embrace-of-Your-limbs-enjoyment / by-will-alone / for-me / may-it-happen / so-much / gained / what / Lor
+  L2: May limb-embrace-enjoyment with You happen to me by mere will — this much gained, Lord, what have I not won?
+- s06-v11 (verses 11) [PASS]
+  L1: ## s06-v11 (11)
+appear / not-with-other / prayers / toilings / we-do / to-You / Lord / fainting / You / alone / we-seek
+  L2: Appear! We make no other prayers miserable — we languish, seeking only You.
+- s07-v01 (verses 1) [PASS]
+  L1: ## s07-v01 (1)
+in-You / bliss-river / even-taste / having-come / O-Lord / my / mind / may-drop / at-once / this / differ
+  L2: Having come to even-taste in You, bliss-river — may my mind drop at once this difference-based great disaster.
+- s07-v02 (verses 2) [PASS]
+  L1: ## s07-v02 (2)
+this / mine / not / this / on-passion-aversion's / firm-nailed / root / axe / fall / inside
+  L2: "This is mine, not this" — on passion-aversion's firm-nailed root may the axe fall inside: the certainty of oneness-with
+- s07-v03 (verses 3) [PASS]
+  L1: ## s07-v03 (3)
+may-melt / thought-stain-line / may-blaze / in-heart / unbarredness / Lord / bliss-rasa-flooded / be / my
+  L2: May the thought-stain-line melt; may unbarredness blaze in heart; bliss-rasa-flooded be my consciousness-body, Lord.
+- s07-v04 (verses 4) [PASS]
+  L1: ## s07-v04 (4)
+rolled / in-passion-made / world-egg / devotion-thought-mother / with / rasas / feed-me / till-wing-grown
+  L2: Me, rolled in the passion-made world-egg — may devotion-thought-mother feed me with rasas, till, wing-grown, I am a bird
+- s07-v05 (verses 5) [PASS]
+  L1: ## s07-v05 (5)
+may-gain-skill-in-tasting-foot-thought-nectar-rasa-essence / may-it-gain / mind / this / ending-all-objec
+  L2: May this mind of mine gain skill in tasting the essence of Your foot-thought-nectar-rasa — ending all object-poison-clin
+- s07-v06 (verses 6) [PASS]
+  L1: ## s07-v06 (6)
+by-devotion-sun-ray-touch / my / far-away / mind-jewel / release-passion-kindled-fire-drops
+  L2: By devotion-sun-ray-touch, may this mind-jewel release far away passion-kindled fire-drops.
+- s07-v07 (verses 7) [PASS]
+  L1: ## s07-v07 (7)
+in-that / state / may-I-praise / constantly / aloud / where / Hari-Hara's-horse-Brahmā / also / where / o
+  L2: In that state may I praise You constantly, aloud — where even Hari, Hara's horse (?), Brahmā wait outside.
+- s07-v08 (verses 8) [PASS]
+  L1: ## s07-v08 (8)
+by-devotion-madness-born-frenzy / may-I-see / with-faculties-unmaimed / by-faculties / whole / world / as
+  L2: By devotion-madness-born frenzy may I see with faculties unmaimed: the whole world as Śiva, and all acts as worship-stuf
+- s07-v09 (verses 9) [PASS]
+  L1: ## s07-v09 (9)
+mind-boy-having-taken-devotion-family-maiden-bearing-aṇimā-etc-sons / having-born / firm-rooted / mine-th
+  L2: My mind-boy, having taken Your-devotion-family-maiden, having borne aṇimā-etc. sons — may she, firm-rooted, harden the m
+- s08-v01 (verses 1) [PASS]
+  L1: ## s08-v01 (1)
+yaḥ / prasādalava / īśvarasthito / yā / ca / bhaktir / iva / mām / upeyuṣī / tau / parasparasamanvitau / 
+  L2: The grace-drop stationed in the Lord, and devotion come as if to meet me — when will the pair, joined, take root in such
+- s08-v02 (verses 2) [PASS]
+  L1: ## s08-v02 (2)
+tvatprabhutvaparicarvaṇajanmā / ko / 'py / udetu / paritoṣaraso / 'ntaḥ / sarvakālam / iha / me / param /
+  L2: Born of chewing His lordship, may some inner joy-juice rise; here always be supreme for me — knowledge-yoga's glories fa
+- s08-v03 (verses 3) [PASS]
+  L1: ## s08-v03 (3)
+lokavadbhavatu / me / viṣayeṣu / sphīta / eva / bhagavanparitarṣaḥ / kevalaṃ / tava / śarīratayaitān+ / l
+  L2: Like the worldly, let my thirst for objects swell — only seeing them as Your body, unconstructed.
+- s08-v04 (verses 4) [PASS]
+  L1: ## s08-v04 (4)
+dehabhūmiṣu / tathā / manasi / tvaṃ / prāṇavartmani / ca / bhedam / upete / saṃvidaḥ / pathiṣu / teṣu / c
+  L2: In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths —
+- s08-v05 (verses 5) [PASS]
+  L1: ## s08-v05 (5)
+nijanijeṣu / padeṣu / patantv / imāḥ / karaṇavṛttaya / ullasitā / mama / kṣaṇamapīśa / manāg / api / maiv
+  L2: May these thrilled faculties fall into their own seats — never, Lord, even slightly, the daring of non-difference-ruptur
+- s08-v06 (verses 6) [PASS]
+  L1: ## s08-v06 (6)
+laghumasṛṇasitācchaśītalaṃ / bhavadāveśavaśena / bhāvayan / vapur / akhilapadārthapaddhater / vyavahārān 
+  L2: Light, soft, white-pure, cool — contemplating by possession-force a body — may I exceed those dealings of the all-thing-
+- s08-v07 (verses 7) [PASS]
+  L1: ## s08-v07 (7)
+vikasatu / svavapur / bhavadātmakaṃ / samupayāntu / jaganti / mamāṅgatām / vrajatu / sarvam / idaṃ / dvay
+  L2: May my self-body bloom as You; may worlds join my limbs; may all this duality-sport, even recalled, become untellable.
+- s08-v08 (verses 8) [PASS]
+  L1: ## s08-v08 (8)
+samudiyād / api / tādṛśatāvakānana / viloka / parāmṛtasamplavaḥ / mama / ghaṭeta / yathā / bhavadadvayāpr
+  L2: May there rise, looking at such Yours, a flood of supreme nectar — so my filling of non-duality's dread gorge happens.
+- s08-v09 (verses 9) [PASS]
+  L1: ## s08-v09 (9)
+api / kadācana / tāvakasaṅgamāmṛtakaṇācchuraṇena / tanīyasā / sakalalokasukheṣu / parāṅmukho / na / bhavi
+  L2: If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?
+- s08-v10 (verses 10) [PASS]
+  L1: ## s08-v10 (10)
+satatam / eva / bhavaccaraṇāmbujākaracarasya / hi / haṃsavarasya / me / upari / mūlatalād / api / cāntar
+  L2: Ever at Your lotus-feet, of me the best hamsa moving in the lake — above from root below, and from inside, may devotion'
+- s08-v11 (verses 11) [PASS]
+  L1: ## s08-v11 (11)
+upayāntu / vibho / samastavastūny / api / cintāviṣayaṃ / dṛśaḥ / padaṃ / ca / mama / darśanacintanaprakā
+  L2: May all things come under thought's scope and vision's footing for me; may vision-thought-light-nectar-essences blaze su
+- s08-v12 (verses 12) [PASS]
+  L1: ## s08-v12 (12)
+parameśvara / teṣu / teṣu / kṛcchreṣv / api / nāmopanamatsv / ahaṃ / bhaveyam / na / paraṃ / gatabhīs / 
+  L2: Lord, in crashing hardships, as names bend down, may I be — fear gone only while limb-joined, exceeding-joy-mad.
+- s08-v13 (verses 13) [PASS]
+  L1: ## s08-v13 (13)
+bhavadātmani / viśvam / umbhitaṃ / yad / bhavataivāpi / bahiḥ / prakāśyate / tat / iti / yad / dṛḍhaniśc
+  L2: The universe woven in Your self is shown outside by You alone — what stands firm-certain: may it now shine plain.
+- s09-v01 (verses 1) [PASS]
+  L1: ## s09-v01 (1)
+kadā / navarasārdrārdrasambhogāsvādanotsukam / pravarteta / vihāyānyan / mama / tvatsparśane / manaḥ
+  L2: When will my mind, eager to taste new-rasa-moist union, rush past all else to Your touch?
+- s09-v02 (verses 2) [PASS]
+  L1: ## s09-v02 (2)
+tvadekaraktas / tvatpādapūjāmātramahādhanaḥ / kadā / sākṣātkariṣyāmi / bhavantam / ayam / utsukaḥ
+  L2: You-loving, worship-wealthy — when shall I, the eager one, see You face to face?
+- s09-v03 (verses 3) [PASS]
+  L1: ## s09-v03 (3)
+gāḍhānurāgavaśato / nirapekṣībhūtamānaso / 'smi / kadā / paṭapaṭiti / vighaṭitākhilamahārgalas / tvām / u
+  L2: When, by thick love made needless-minded, shall I burst all great bolts with a crash and reach You?
+- s09-v04 (verses 4) [PASS]
+  L1: ## s09-v04 (4)
+svasaṃvitsārahṛdayādhiṣṭhānāḥ / sarvadevatāḥ / kadā / nātha / vaśīkuryāṃ / bhavadbhaktiprabhāvataḥ
+  L2: When, Lord, shall I subdue all gods — heart-seated in my own consciousness-essence — by devotion's power?
+- s09-v05 (verses 5) [PASS]
+  L1: ## s09-v05 (5)
+kadā / me / syād / vibho / bhūri / bhaktyānandarasotsavaḥ / yadālokasukhānandī / pṛthaṅ / nāmāpi / lapsya
+  L2: When will my vast devotion-bliss-rasa festival be — where even distinction gets a name from beholding-joy?
+- s09-v06 (verses 6) [PASS]
+  L1: ## s09-v06 (6)
+īśvaram / abhayam / udāraṃ / pūrṇam / akāraṇam / apahnutātmānaṃ / sahasābhijñāya / kadā / svāmijanaṃ / la
+  L2: Having suddenly recognized the fearless, generous, full, causeless, self-hidden Lord — when shall I shame Your people?
+- s09-v07 (verses 7) [PASS]
+  L1: ## s09-v07 (7)
+kadā / kām / api / tāṃ / nātha / tava / vallabhatām / iyām / yayā / māṃ / prati / na / kvāpi / yuktaṃ / t
+  L2: When, Lord, that beloved-ness of Yours by which it would not be fitting for You to flee from me anywhere?
+- s09-v08 (verses 8) [PASS]
+  L1: ## s09-v08 (8)
+tattvato / 'śeṣajantūnāṃ / bhavatpūjāmayātmanām / dṛṣṭyānumoditarasāplāvitaḥ / syāṃ / kadā / vibho
+  L2: When shall I be bathed by the approving sight of all beings whose selves are Your worship?
+- s09-v09 (verses 9) [PASS]
+  L1: ## s09-v09 (9)
+jñānasya / paramā / bhūmir / yogasya / paramā / daśā / tvadbhaktir / yā / vibho / karhi / pūrṇa / me / sy
+  L2: Devotion, the highest ground of knowledge, the highest state of yoga — when will my begging for it be full?
+- s09-v10 (verses 10) [PASS]
+  L1: ## s09-v10 (10)
+sahasaivasādya / kadā / gāḍham / avaṣṭabhya / harṣavivaśo / 'ham / tvaccaraṇavaranidhānaṃ / sarvasya / p
+  L2: Seizing suddenly, holding hard, joy-overwhelmed — when shall I proclaim Your foot-treasure to all?
+- s09-v11 (verses 11) [PASS]
+  L1: ## s09-v11 (11)
+paritaḥ / prasaracchuddhatvadālokamayaḥ / kadā / syāṃ / yatheśa / na / kiñcin / me / māyācchāyābilaṃ / b
+  L2: All-around pure-You-light-spread — when shall I so shine that no Māyā-shadow-cave is in me?
+- s09-v12 (verses 12) [PASS]
+  L1: ## s09-v12 (12)
+ātmasātkṛtaniḥśeṣamaṇḍalo / nirvyapekṣakaḥ / kadā / bhaveyaṃ / bhagavaṃs / tvadbhaktagaṇanāyakaḥ
+  L2: Having made all circles my own, need-free — when shall I be, Lord, leader of Your devotee-host?
+- s09-v13 (verses 13) [PASS]
+  L1: ## s09-v13 (13)
+nātha / lokābhimānānām / apūrvaṃ / tvaṃ / nibandhanam / mahābhimānaḥ / karhi / syāṃ / tvadbhaktirasapūri
+  L2: Lord, You are the unprecedented ground of world-prides — when shall I be greatly proud, filled with Your devotion-rasa?
+- s09-v14 (verses 14) [PASS]
+  L1: ## s09-v14 (14)
+aśeṣaviṣayāśūnyaśrīsamāśleṣasusthitaḥ / śayīyam / iva / śītāṅghrikuśeśayayuge / kadā
+  L2: Well-set in never-object-empty glory-embrace — when shall I lie like at cool lotus-feet?
+- s09-v15 (verses 15) [PASS]
+  L1: ## s09-v15 (15)
+bhaktyāsavasamṛddhāyās / tvatpūjābhogasampadaḥ / kadā / pāraṃ / gamiṣyāmi / bhaviṣyāmi / kadā / kṛtī
+  L2: Of worship-wealth grown rich on devotion-liquor — when shall I reach the far shore, when be apt?
+- s09-v16 (verses 16) [PASS]
+  L1: ## s09-v16 (16)
+ānandabāṣpapūraskhalitaparibhrāntagadgadākrandaḥ / hāsollāsitavadanas / tvatsparśarasaṃ / kadāpsyāmi
+  L2: Tears first, stumbling, wandering, choked crying — laughing-lit face: when shall I get Your touch-rasa?
+- s09-v17 (verses 17) [PASS]
+  L1: ## s09-v17 (17)
+paśujanasamānavṛttām / avadhūya / daśām / imāṃ / kadā / śambho / āsvādayeya / tāvakabhaktocitam / ātmano
+  L2: Shaking off this beast-people-like conduct — when shall I, O Śambhu, taste the self-form fit for Your devotion?
+- s09-v18 (verses 18) [PASS]
+  L1: ## s09-v18 (18)
+labdhāṇimādisiddhir / vigalitasakalopatāpasantrāsaḥ / tvadbhaktirasāyanapānakriḍhāniṣṭaḥ / kadāsīya
+  L2: Siddhis gained, all heat-fear melted — when shall I play, devoted to drinking Your devotion-rasa-medicine?
+- s09-v19 (verses 19) [PASS]
+  L1: ## s09-v19 (19)
+nātha / kadā / sa / tathāvidha / ākrando / me / samuccared / vāci / yat / samanantaram / eva / sphurati 
+  L2: Lord, when shall that cry of mine rise in speech — at which Your form flashes before me at once?
+- s09-v20 (verses 20) [PASS]
+  L1: ## s09-v20 (20)
+gāḍhagāḍhabhavadaṅghrisarojāliṅganavyasanatatparacetāḥ / vastv / avastv / idam / ayatnata / eva / tvāṃ /
+  L2: Mind set on hugging Your tight-tight lotus-feet — when shall I see You, thing or non-thing, without effort?
+- s10-v01 (verses 1) [PASS]
+  L1: ## s10-v01 (1)
+na / soḍhavyam / avaśyam / te / jagadekaprabhor / idam / māheśvarāś / ca / lokānām / itareṣāṃ / samāś / c
+  L2: Surely intolerable to You, sole world-Lord: Your Maheśvaras and other world-folk on one level.
+- s10-v02 (verses 2) [PASS]
+  L1: ## s10-v02 (2)
+ye / sadaivānurāgeṇa / bhavatpādānugāminaḥ / yatra / tatra / gatā / bhogāṃs / te / kāṃś / cid / upabhuñja
+  L2: Who always follow Your feet with love — wherever gone, they enjoy certain pleasures.
+- s10-v03 (verses 3) [PASS]
+  L1: ## s10-v03 (3)
+bhartā / kālāntako / yatra / bhavāṃs / tatra / kuto / rujaḥ / tatra / cetarabhogāśā / kā / lakṣmīr / yatr
+  L2: Where He is husband and death-ender, whence sickness? Where His fortune is, what other fortune?
+- s10-v04 (verses 4) [PASS]
+  L1: ## s10-v04 (4)
+kṣanamātrasukhenāpi / vibhur / yenāsi / labhyase / tadaiva / sarvaḥ / kālo / 'sya / tvadānandena / pūryat
+  L2: By whose moment-pleasure the All is gained — for him all time fills with Your bliss.
+- s10-v05 (verses 5) [PASS]
+  L1: ## s10-v05 (5)
+ānandarasabindus / te / candramā / galito / bhuvi / sūryas / tathā / te / prasṛtaḥ / saṃhārī / tejasaḥ / 
+  L2: Moon: Your bliss-rasa drop fallen to earth; sun: Your destroyer-heat's spread spark.
+- s10-v06 (verses 6) [PASS]
+  L1: ## s10-v06 (6)
+baliṃ / yāmas / tṛtīyāya / netrāyāsmai / tava / prabho / alaukikasya / kasyāpi / māhātmyasyaikalakṣmaṇe
+  L2: Offering to this third eye of Yours, Lord — sole mark of some unworldly greatness.
+- s10-v07 (verses 7) [PASS]
+  L1: ## s10-v07 (7)
+tenaiva / dṛṣṭo / 'si / bhavaddarśanādyo / 'tihṛṣyati / kathañcid / yasya / vā / harṣaḥ / ko / 'pi / tena
+  L2: Seen by Him alone, one joys in Your vision-etc.; or whose joy somehow — by it You are seen.
+- s10-v08 (verses 8) [PASS]
+  L1: ## s10-v08 (8)
+yeṣām / prasanno / 'si / vibho / yair / labdhaṃ / hṛdayaṃ / tava / ākṛṣya / tvatpurāttais / tu / bāhyam /
+  L2: Those You're pleased with, whose hearts You've won — dragging from Your city, they've made the outer inner.
+- s10-v09 (verses 9) [PASS]
+  L1: ## s10-v09 (9)
+tvad / ṛte / nikhilaṃ / viśvaṃ / samadṛgyātam / īkṣyatām / īśvaraḥ / punar / etasya / tvam / eko / viṣame
+  L2: Apart from You the whole world looks same-eyed — but its Īśvara is You alone, the Uneven-eyed.
+- s10-v10 (verses 10) [PASS]
+  L1: ## s10-v10 (10)
+āstāṃ / bhavatprabhāveṇa / vinā / sattaiva / nāsti / yat / tvaddūṣaṇakathā / yeṣām / tvad / ṛte / nopapa
+  L2: Leave aside: without Your power there is no being at all — and those whose denials of You don't stand without You.
+- s10-v11 (verses 11) [PASS]
+  L1: ## s10-v11 (11)
+bāhyāntarāntarāyālīkevale / cetasi / sthitiḥ / tvayi / cet / syān / mama / vibho / kim / anyad / upayujy
+  L2: If mind stood in You alone, barriers in-outside gone — what else would be needed, Lord?
+- s10-v12 (verses 12) [PASS]
+  L1: ## s10-v12 (12)
+anye / bhramanti / bhagavann / ātmany / evātiduḥsthitāḥ / anye / bhramanti / bhagavann / ātmany / evātis
+  L2: Others wander, Lord, in the self itself, ill-placed; others wander in the self itself, well-placed.
+- s10-v13 (verses 13) [PASS]
+  L1: ## s10-v13 (13)
+apītvāpi / bhavadbhaktisudhām / anavalokya / ca / tvām / īśa / tvatsamācāramātrāt / siddhyanti / jantava
+  L2: Even untasted Your devotion-nectar, unseen You — by mere conduct with You, beings perfect.
+- s10-v14 (verses 14) [PASS]
+  L1: ## s10-v14 (14)
+bhṛtyā / vayaṃ / tava / vibho / tena / trijagatāṃ / yathā / bibharṣy / ātmānam / evaṃ / te / bharttavyā 
+  L2: We are Your servants, Lord — so as You bear Yourself for three worlds, bear us too, fully.
+- s10-v15 (verses 15) [PASS]
+  L1: ## s10-v15 (15)
+parānandāmṛtamaye / dṛṣṭo / 'pi / jagadātmani / tvayi / sparśarase / 'tyantatarasutkaṇṭhito / 'smi / te
+  L2: Though seen in supreme-bliss-nectar, in the world-self — for touch-rasa with You I hunger exceedingly.
+- s10-v16 (verses 16) [PASS]
+  L1: ## s10-v16 (16)
+deva / duḥkhāny / aśeṣāṇi / yāni / saṃsāriṇām / api / ghṛtyākhyabhavadīyātmayutāny / āyānti / sahyatām
+  L2: All sorrows even of worldlings — joined to Your ghee-self, become bearable.
+- s10-v17 (verses 17) [PASS]
+  L1: ## s10-v17 (17)
+sarvajñe / sarvaśaktau / ca / tvayy / eva / sati / cinmaye / sarvathāpy / asato / nātha / yuktāsya / jag
+  L2: With You — omniscient, omnipotent, consciousness-formed — somehow the world's show, though unreal, is fitting.
+- s10-v18 (verses 18) [PASS]
+  L1: ## s10-v18 (18)
+tvatprāṇitāḥ / sphurantīme / guṇā / loṣṭopamā / api / nṛtyanti / pavanoddhūtāḥ / kārpāsāḥ / picavo / yat
+  L2: Breathed by You, qualities throb — even clod-like — dancing wind-tossed like cotton fluff.
+- s10-v19 (verses 19) [PASS]
+  L1: ## s10-v19 (19)
+yadi / nātha / guṇeṣv / ātmābhimāno / na / bhavet / tataḥ / kena / hīyeta / jagatas / tvadekātmatayā / p
+  L2: If self-pride in qualities were not — then by what would the world's show of sole-selfness with You stand?
+- s10-v20 (verses 20) [PASS]
+  L1: ## s10-v20 (20)
+vandyās / te / 'pi / mahīyāṃsaḥ / pralayopagatā / api / tvatkopapāvakasparśapūtā / ye / parameśvara
+  L2: Venerable even the dissolved great ones, purified by Your anger-fire-touch.
+- s10-v21 (verses 21) [PASS]
+  L1: ## s10-v21 (21)
+mahāprakāśavapuṣi / vispaṣṭe / bhavati / sthite / sarvato / 'pīśa / tat / kasmāt / tamasi / prasarāmy / 
+  L2: With Your broad-light body standing plain — Lord, why do I spread in darkness on all sides?
+- s10-v22 (verses 22) [PASS]
+  L1: ## s10-v22 (22)
+avibhāgo / bhavān / eva / svarūpam / amṛtaṃ / mama / tathāpi / martyadharmāṇām / aham / evaikam / āspada
+  L2: You alone undivided, my nectar-nature — yet of mortal natures I alone am the seat.
+- s10-v23 (verses 23) [PASS]
+  L1: ## s10-v23 (23)
+maheśvareti / yasyāsti / nāmakaṃ / vāgvibhūṣaṇam / praṇāmāṅkaś / ca / śirasi / sa / evaikaḥ / prabhāvita
+  L2: Whose speech-ornament is the name "Maheśvara," whose head bears the bow-mark — he alone is powerful.
+- s10-v24 (verses 24) [PASS]
+  L1: ## s10-v24 (24)
+sadasac / ca / bhavān / eva / yena / tenāprayāsataḥ / svarasenaiva / bhagavaṃs / tathā / siddhiḥ / katha
+  L2: Since You are being and non-being — then effortlessly, by own tune, Lord, why is accomplishment not mine?
+- s10-v25 (verses 25) [PASS]
+  L1: ## s10-v25 (25)
+śivadāsaḥ / śivaikātmā / kiṃ / yan / nāsādayet / sukham / tarpyo / 'smi / devamukhyānām / api / yenāmṛtā
+  L2: Śiva's slave, Śiva-selfed — what joy would he not reach? By whom even chief gods are sated with nectar-wine.
+- s10-v26 (verses 26) [PASS]
+  L1: ## s10-v26 (26)
+hṛnnābhyor / antarālasthaḥ / prāṇināṃ / pittavigrahaḥ / grasase / tvaṃ / mahāvahniḥ / sarvaṃ / sthāvaraj
+  L2: Between heart and navel, beings' bile-bodied — You devour, great fire, all moving-unmoving.
+- s11-v01 (verses 1) [PASS]
+  L1: ## s11-v01 (1)
+jagad / idam / athavā / suhṛdo / bandhujano / vā / na / bhavati / mama / kim / api / tvaṃ / punar / etat 
+  L2: This world, or friends, or kin — nothing is mine at all; but when You are all this, who else is mine?
+- s11-v02 (verses 2) [PASS]
+  L1: ## s11-v02 (2)
+svāmin / maheśvaras / tvaṃ / sākṣāt / sarvaṃ / jagat / tvam / eveti / vastv / eva / siddhim / etv / iti /
+  L2: "Master, Maheśvara, You directly — all the world is You alone" — may the thing itself succeed; and begging even in that 
+- s11-v03 (verses 3) [PASS]
+  L1: ## s11-v03 (3)
+tribhuvanādhipatitvam / apīha / yat / tṛṇam / iva / pratibhāti / bhavajjuṣaḥ / kim / iva / tasya / phalaṃ
+  L2: Even world-overlordship here seems straw to Your devotee; what fruit has good karma, Lord, without Your remembrance?
+- s11-v04 (verses 4) [PASS]
+  L1: ## s11-v04 (4)
+yena / naiva / bhavato / 'sti / vibhinnaṃ / kiñcanāpi / jagatāṃ / prabhavaś / ca / tvadvijṛmbhitam / ato 
+  L2: Since nothing at all is apart from You, world-cause — Your play is wondrous, yet praise never sticks.
+- s11-v05 (verses 5) [PASS]
+  L1: ## s11-v05 (5)
+tvanmayo / 'smi / bhavadarcananiṣṭhaḥ / sarvadāham / iti / cāpy / avirāmam / bhāvayann / api / vibho / sv
+  L2: "I am Yours, worship-bound" — always, unceasing, even by own tune, and in dream — why am I not so?
+- s11-v06 (verses 6) [PASS]
+  L1: ## s11-v06 (6)
+ye / manāg / api / bhavaccaraṇābjodbhūtasaurabhalavena / vimṛṣṭaḥ / teṣu / visram / iva / bhavati / samas
+  L2: Who are touched even slightly by Your lotus-foot-born fragrance-dust — for them all enjoyed things, gods-sought, become 
+- s11-v07 (verses 7) [PASS]
+  L1: ## s11-v07 (7)
+hṛdi / te / na / tu / vidyate / 'nyad / anyad / vacane / karmaṇi / cānyad / eva / śaṃbho / paramārthasato
+  L2: In heart no other, in word and deed wholly other, O Śambhu — yet grace or check from the truly real: one work only.
+- s11-v08 (verses 8) [PASS]
+  L1: ## s11-v08 (8)
+mūḍho / 'smi / duḥkhakalito / 'smi / jarādidoṣabhīto / 'smi / śaktirahito / 'smi / tavāśrito / 'smi / śam
+  L2: Fool am I, suffering-laden, aging-fearful, powerless — Yours am I: Śambhu, so arrange that, past sorrow's road, I mount 
+- s11-v09 (verses 9) [PASS]
+  L1: ## s11-v09 (9)
+tvatkarṇadeśama / dhiśayya / mahārghabhāvam / ākranditāni / mama / tucchatarāṇi / yānti / vaṃśāntarālapat
+  L2: Lying at Your ear-place, my cries, trifling — become like water-drops in bamboo-joints turning pearl.
+- s11-v10 (verses 10) [PASS]
+  L1: ## s11-v10 (10)
+kim / iva / ca / labhyate / bata / na / tair / api / nātha / janaiḥ / kṣaṇam / api / kaitavād / api / ca
+  L2: What is not gained, alas, even by those — Lord — who even by deceit delight a moment in Your name?
+- s11-v11 (verses 11) [PASS]
+  L1: ## s11-v11 (11)
+śambho / śarva / śaśaṅkaśekhara / śiva / tryakṣākṣamālādhara / śrīmann / ugrakapālalāñchana / lasadbhīma
+  L2: Śambhu Śarva moon-crested Śiva, three-eyed rosary-bearer, fierce-skulled, trident-armed, ocean of pity, world-builder by
+- s11-v12 (verses 12) [PASS]
+  L1: ## s11-v12 (12)
+tat / kiṃ / nātha / bhaven / na / yatra / bhagavān / nirmātṛtām / aśnute / bhāvaḥ / syāt / kim / u / tas
+  L2: What would there be where the Lord does not make? What would the knower Śaṅkara destroys be?
+- s11-v13 (verses 13) [PASS]
+  L1: ## s11-v13 (13)
+yady / apy / atra / varapradoddhatatamāḥ / pīḍājarāmṛtyava / ete / vā / kṣaṇam / āsatāṃ / bahumataḥ / śa
+  L2: Though pains, age, death here are boon-givers most haughty, and approved sounds unstable — yet I long, ever-pleasure-hun
+- s11-v14 (verses 14) [PASS]
+  L1: ## s11-v14 (14)
+he / nātha / praṇatārtināśanapaṭo / śreyonidhe / dhūrjaṭe / duḥkhaikāyatanasya / janmamaraṇatrastasya / 
+  L2: O Lord skilled at destroying the bowed-down's pain, treasure of good, matted one — act now so that, living, I win unshak
+- s11-v15 (verses 15) [PASS]
+  L1: ## s11-v15 (15)
+namo / mohamahādhvāntadhvaṃsanānanyakarmaṇe / sarvaprakāśātiśayaprakāśāyendulakṣmaṇe
+  L2: Bow to delusion-great-darkness-destroyer whose sole work is that, to over-bright light moon-marked.
+- s12-v01 (verses 1) [PASS]
+  L1: ## s12-v01 (1)
+sahakāri / na / kiñcid / iṣyate / bhavato / na / pratibandhakaṃ / dṛṣi / bhavataiva / hi / sarvam / āplut
+  L2: No helper is wanted at all, no hinderer is seen in Your vision — yet all is flooded by You alone: how is it even so that
+- s12-v02 (verses 2) [PASS]
+  L1: ## s12-v02 (2)
+api / bhāvagaṇād / apīndriyapracayād / apy / avabodhamadhyataḥ / prabhavantam / api / svataḥ / sadā / par
+  L2: From things, senses, awareness-middle, ever self-born — may I see Him, world-veiled.
+- s12-v03 (verses 3) [PASS]
+  L1: ## s12-v03 (3)
+kathaṃ / te / jāyeran / katham / api / ca / te / darśanapathaṃ / vrajeyuḥ / kenāpi / prakṛtimahatāṅkena /
+  L2: How could things come to be, and how reach Your path of vision, inlaid by what great nature-limb? Rising and rising, fro
+- s12-v04 (verses 4) [PASS]
+  L1: ## s12-v04 (4)
+sākṣatkṛta / bhavadrūpaprasṛtāmṛtatarpitāḥ / unmūlitatṛṣo / mattā / vicaranti / yathāruci
+  L2: Sated with Your form-nectar, thirst uprooted, drunk — they wander at will.
+- s12-v05 (verses 5) [PASS]
+  L1: ## s12-v05 (5)
+na / tadā / na / sadā / na / caikadety / api / sā / yatra / na / kāladhīr / bhavet / tad / idaṃ / bhavadī
+  L2: Not then, not always, not once — where no time-thought is: such is Your vision, neither eternal nor otherwise.
+- s12-v06 (verses 6) [PASS]
+  L1: ## s12-v06 (6)
+tvadvilokanasamutkacetaso / yogasiddhir / iyatī / sadāstu / me / yad / viśeyam / abhisandhimātratas / tva
+  L2: May my mind, risen to see You, gain this yoga-fruit always: to enter Your nectar-house by mere resolve, for Your worship
+- s12-v07 (verses 7) [PASS]
+  L1: ## s12-v07 (7)
+nirvikalpabhavadīyadarśanapraptiphullamanasāṃ / mahātmanām / ullasanti / vimalāni / helayā / ceṣṭitāni / 
+  L2: The clear-minded great ones' pure play and words shine plainly, playfully.
+- s12-v08 (verses 8) [PASS]
+  L1: ## s12-v08 (8)
+bhavanbhavadīyapādayor / nivasann / antara / eva / nirbhayaḥ / bhavabhūmiṣu / tāsu / tāsv / ahaṃ / prabhu
+  L2: Dwelling between Your feet, fearless — in those and those world-grounds may I worship the Lord, unbarred in act.
+- s12-v09 (verses 9) [PASS]
+  L1: ## s12-v09 (9)
+bhavadaṅghrisaroruhodare / parilīno / galitaparaiṣaṇaḥ / atimātramadhūpayogataḥ / paritṛpto / vicareyam /
+  L2: Dissolved in Your foot-lake, melted seeking, honey-drunk to excess — may I roam satisfied, at will.
+- s12-v10 (verses 10) [PASS]
+  L1: ## s12-v10 (10)
+yasya / dambhād / iva / bhavatpūjāsaṅkalpa / utthitaḥ / tasyāpy / avaśyam / uditaṃ / sannidhānaṃ / tavoc
+  L2: Whose resolve to worship arose even from pretense — his presence is assured, fitting.
+- s12-v11 (verses 11) [PASS]
+  L1: ## s12-v11 (11)
+bhagavann / itarān / apekṣiṇā / nitarām / ekarasena / cetasā / sulabhaṃ / sakalopaśāyinaṃ / prabhum / āt
+  L2: Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink to fullness: am I what?
+- s12-v12 (verses 12) [PASS]
+  L1: ## s12-v12 (12)
+tvayā / nirākṛtam / sarvaṃ / heyam / etat / tad / eva / tu / tvanmayaṃ / samupādeyam / ity / ayaṃ / sāra
+  L2: By You denied: all where You're absent is to be left; where it's You, to be taken — this is the essence-extract.
+- s12-v13 (verses 13) [PASS]
+  L1: ## s12-v13 (13)
+bhavato / 'ntaracāri / bhāvajātaṃ / prabhuvanmukhyatayaiva / pūjitaṃ / tat / bhavato / bahir / apy / abh
+  L2: The world-born worshipped as chief by being inside You — how, Lord, could non-being outside be worshipped, or by whom?
+- s12-v14 (verses 14) [PASS]
+  L1: ## s12-v14 (14)
+niḥśabdaṃ / nirvikalpaṃ / ca / nirvyākṣepam / athānisam / kṣobhe / 'py / adhyakṣamī / kṣeyaṃ / tryakṣa /
+  L2: Noiseless, thought-free, undistracted, always — in agitation too, face to face: I see You alone everywhere, Three-eyed.
+- s12-v15 (verses 15) [PASS]
+  L1: ## s12-v15 (15)
+prakaṭaya / nijadhāma / deva / yasmiṃs / tvam / asi / sadā / parameśvarīsametaḥ / prabhucaraṇarajaḥsamān
+  L2: Reveal Your abode where You ever are with the Goddess; foot-dust-ranked servants — why do they look faithless?
+- s12-v16 (verses 16) [PASS]
+  L1: ## s12-v16 (16)
+darśanapatham / upayāto / 'py / apasarasi / kuto / mameśa / bhṛtyasya / kṣaṇamātrakam / iha / na / bhava
+  L2: Come to path's seeing yet fled — whence, Lord, to me Your servant? Never for a moment here are You not every being's sig
+- s12-v17 (verses 17) [PASS]
+  L1: ## s12-v17 (17)
+aikyasaṃvidamṛtācchadhārayā / santataprasṛtayā / kadā / vibho / plāvanāt / paramabhedamānayaṃs / tvāṃ / 
+  L2: When with oneness-nectar's pure unbroken stream will You flood me, Lord — bringing past difference the measurer, gaining
+- s12-v18 (verses 18) [PASS]
+  L1: ## s12-v18 (18)
+aham / ity / amuto / 'varuddhalokād / bhavadīyāt / pratipattisārato / me / aṇumātrakam / eva / viśvaniṣṭ
+  L2: From my understanding fenced off from yonder world, a grain of world-establishment — that I be worshipped by You.
+- s12-v19 (verses 19) [PASS]
+  L1: ## s12-v19 (19)
+aparimitarūpam / ahaṃ / taṃ / taṃ / bhāvaṃ / pratikṣaṇaṃ / paśyan / tvām / eva / viśvarūpaṃ / nijanāthaṃ
+  L2: Seeing every thing each moment, O form beyond measure — may I see You well, my own Lord.
+- s12-v20 (verses 20) [PASS]
+  L1: ## s12-v20 (20)
+bhavadaṅgagataṃ / tam / eva / kasmān / na / manaḥ / paryaṭatīṣṭam / artham / artham / prakṛtikṣatir / as
+  L2: Why doesn't mind haunt what limbs love, the desired thing for desire? If no nature is harmed and my supreme wish is fill
+- s12-v21 (verses 21) [PASS]
+  L1: ## s12-v21 (21)
+śataśaḥ / kila / te / tavānubhāvād / bhagavan / ke / 'py / amunaiva / cakṣuṣā / ye / api / hālikaceṣṭayā
+  L2: Hundreds, they say, by Your power, with this very eye — even plough-walking — always see Your body ahead.
+- s12-v22 (verses 22) [PASS]
+  L1: ## s12-v22 (22)
+na / sā / matir / udeti / yā / na / bhavati / tvadicchāmayī / sadā / śubham / athetarad / bhagavataivam 
+  L2: No thought rises unstained by Your will; always good or else — thus I roam as Yours on earth, feast of Your foot unstopp
+- s12-v23 (verses 23) [PASS]
+  L1: ## s12-v23 (23)
+bhavadīyagabhīrabhāṣiteṣu / pratibhā / samyag / udetu / me / puro / 'taḥ / tadanuṣṭhitaśaktir / apy / at
+  L2: May insight rise well in Your deep sayings; then practiced power too, and unpausing worship-addiction.
+- s12-v24 (verses 24) [PASS]
+  L1: ## s12-v24 (24)
+vyavahārapade / 'pi / sarvadā / pratibhātv / arthakalāpa / eṣa / mām / bhavato / 'vayavo / yathā / na / 
+  L2: In dealings too, always, may this sense-heap appear to me as Your limb — not self-warranted.
+- s12-v25 (verses 25) [PASS]
+  L1: ## s12-v25 (25)
+manasi / svarasena / yatra / tatra / pracaraty / apy / aham / asya / gocareṣu / prasṛto / 'py / avilola 
+  L2: Mind roaming freely in its fields, unswerving — may I ever be worship-skilled toward You.
+- s12-v26 (verses 26) [PASS]
+  L1: ## s12-v26 (26)
+bhagavan / bhavadicchayaiva / dāsas / tava / jāto / 'smi / parasya / nātra / śaktiḥ / katham / eṣa / tat
+  L2: Lord, by Your will alone Your slave I was made — another's no power here — yet why never see Your face-moon?
+- s12-v27 (verses 27) [PASS]
+  L1: ## s12-v27 (27)
+samutsukās / tvāṃ / prati / ye / bhavantaṃ / pratyartharūpād / avalokayanti / teṣām / aho / kiṃ / tadupa
+  L2: The eager toward You who face You as counter-form — ah, what would befall them, what practice would fruit for them?
+- s12-v28 (verses 28) [PASS]
+  L1: ## s12-v28 (28)
+bhāvā / bhāvatayā / santu / bhavadbhāvena / me / bhava / tathā / na / kiñcid / apy / astu / na / kiñcid 
+  L2: May things be as things by Your being for me; thus may nothing be otherwise, nothing but You.
+- s12-v29 (verses 29) [PASS]
+  L1: ## s12-v29 (29)
+yan / na / kiñcid / api / tanna / kiñcid / apy / astu / kiñcid / api / kiñcid / eva / me / sarvathā / bh
+  L2: May nothing-at-all be nothing, something-at-all be something to me; in all ways may You be worship-received.
+- s13-v01 (verses 1) [PASS]
+  L1: ## s13-v01 (1)
+saṃgrahena / sukhaduḥkhalakṣaṇaṃ / māṃ / prati / sthitam / idaṃ / śṛṇu / prabho / saukhyam / eṣa / bhavat
+  L2: In brief, Lord, hear my definition of pleasure and pain, as they stand for me: union with You, my husband-Lord, is pleas
+- s13-v02 (verses 2) [PASS]
+  L1: ## s13-v02 (2)
+antar / apy / atitarām / aṇīyasī / yā / tvadaprathanakālikāsti / me / tām / apīśa / parimṛjya / sarvataḥ 
+  L2: Even the subtlest inward moment when You do not appear — wipe it out everywhere, Lord, and reveal Your own stainless for
+- s13-v03 (verses 3) [PASS]
+  L1: ## s13-v03 (3)
+tāvake / vapuṣi / viśvanirbhare / citsudhārasamaye / niratyaye / tiṣṭhataḥ / satatam / arcataḥ / prabhuṃ 
+  L2: May living, dying, or anything else be mine — abiding, always worshipping You in Your world-full body at the time of und
+- s13-v04 (verses 4) [PASS]
+  L1: ## s13-v04 (4)
+īśvaro / 'ham / aham / eva / rūpavān / paṇḍito / 'smi / subhago / 'smi / ko / 'paraḥ / matsamo / 'sti / j
+  L2: "I am the Lord, I alone am formed, learned, fortunate — who else is parallel to me in the world?" Such pride shines — su
+- s13-v05 (verses 5) [PASS]
+  L1: ## s13-v05 (5)
+devadeva / bhavadadvayāmṛtākhyātisaṃharaṇalabdhajanmanā / tad / yathāsthitapadārthasaṃvidā / māṃ / kuruṣv
+  L2: By the awareness of things exactly as they stand, make me fit for worshipping Your feet — me, born of telling non-dualit
+- s13-v06 (verses 6) [PASS]
+  L1: ## s13-v06 (6)
+dhyāyate / tad / anu / dṛśyate / tataḥ / spṛśyate / ca / parameśvaraḥ / svayam / yatra / pūjanamahotsavaḥ
+  L2: Meditated upon, then seen, then the Lord Himself is touched. May this worship-festival of Yours be always mine, by Your 
+- s13-v07 (verses 7) [PASS]
+  L1: ## s13-v07 (7)
+yady / athāsthitapadārthadarśanaṃ / yuṣmadarcanamahotsavaś / ca / yaḥ / yugmam / etad / itaretarāśrayaṃ /
+  L2: Seeing things as they stand, and Your worship-festival — this pair grounds each other, expanding always among devotees.
+- s13-v08 (verses 8) [PASS]
+  L1: ## s13-v08 (8)
+tattadindriyamukhena / santataṃ / yuṣmadarcanarasāyanāsavam / sarvabhāvacaṣakeṣu / pūriteṣv / āpibann / a
+  L2: Through every sense-door, constantly, may I drink the wine of Your worship-rasa in all-filled feeling-cups — and be mad.
+- s13-v09 (verses 9) [PASS]
+  L1: ## s13-v09 (9)
+anyavedyam / aṇumātram / asti / na / svaprakāśam / akhilaṃ / vijṛmbhate / yatra / nātha / bhavataḥ / pure
+  L2: Where not an atom is felt as other, and all expands self-shining — there, Lord, keep me standing, Your constant worshipp
+- s13-v10 (verses 10) [PASS]
+  L1: ## s13-v10 (10)
+dāsadhāmni / viniyojito / 'py / ahaṃ / svecchayaiva / parameśvara / tvayā / darśanena / na / kim / asmi 
+  L2: Though You posted even me to slaves' quarters by Your own will — am I not fit by seeing, even by foot-massage?
+- s13-v11 (verses 11) [PASS]
+  L1: ## s13-v11 (11)
+śaktipātasamaye / vicāraṇaṃ / prāptam / īśa / na / karoṣi / karhicit / adya / māṃ / prati / kim / āgataṃ
+  L2: At the moment of grace's descent You never deliberate, Lord, never — so what has come over You now, delaying the rite of
+- s13-v12 (verses 12) [PASS]
+  L1: ## s13-v12 (12)
+tatra / tatra / viṣaye / bahirvibhāty / antare / ca / parameśvarīyutam / tvāṃ / jagattritayanirbharaṃ / 
+  L2: In each object shining outside, and inside joined with the Goddess, may I always behold You, world-full — worshipped by 
+- s13-v13 (verses 13) [PASS]
+  L1: ## s13-v13 (13)
+svāmisaudham / abhisandhimātrato / nirvibandham / adhiruhya / sarvadā / syāṃ / prasāda / paramāmṛtāsavāp
+  L2: May I always mount the Master's palace-palace, unobstructed, by mere resolve — bliss-freed in the play of drinking supre
+- s13-v14 (verses 14) [PASS]
+  L1: ## s13-v14 (14)
+yatsamastasubhagārthavastuṣu / sparśamātravidhinā / camatkṛtim / tāṃ / samarpayati / tena / te / vapuḥ /
+  L2: Whatever wonder arises in all fair things by mere touch — by that the unwavering worship Your body.
+- s13-v15 (verses 15) [PASS]
+  L1: ## s13-v15 (15)
+sphārayasy / akhilam / ātmanā / sphuran / viśvam / āmṛśasi / rūpam / āmṛśan / yat / svayaṃ / nijarasena 
+  L2: Swelling all by self-shining, You touch the universe touching form; whatever swirls by its own juice — that is the swell
+- s13-v16 (verses 16) [PASS]
+  L1: ## s13-v16 (16)
+yo / 'vikalpam / idam / arthamaṇḍalaṃ / paśyatīśa / nikhilaṃ / bhavadvapuḥ / svātmapakṣaparipūrite / jag
+  L2: Who sees this whole object-circle without construction as Your body, Lord — the world filled with his own self's side — 
+- s13-v17 (verses 17) [PASS]
+  L1: ## s13-v17 (17)
+kaṇṭhakoṇaviniviṣṭam / īśa / te / kālakūṭam / api / me / mahāmṛtam / apy / upāttam / amṛtaṃ / bhavadvapu
+  L2: The kālakūṭa poison set in Your throat's corner is great nectar to me; even taken nectar would be Your body of poison to
+- s13-v18 (verses 18) [PASS]
+  L1: ## s13-v18 (18)
+tvatpralāpamayaraktagītikāni / tya / yuktavadanopaśobhitaḥ / syām / athāpi / bhavadarcanakriyāpreyasīpar
+  L2: Graced with song-mouths lovely with prattling of You, may I be — my heart forever gone to what Your worship-loving prefe
+- s13-v19 (verses 19) [PASS]
+  L1: ## s13-v19 (19)
+īhitaṃ / na / bata / pārameśvaraṃ / śakyate / gaṇayituṃ / tathā / ca / me / dattam / apy / amṛtanirbhara
+  L2: Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink as I will.
+- s13-v20 (verses 20) [PASS]
+  L1: ## s13-v20 (20)
+tvām / agādham / avikalpam / advayaṃ / svaṃ / svarūpam / akhilārthaghasmaram / āviśann / aham / umeśa / 
+  L2: Entering You — fathomless, construction-free, non-dual, devourer of all things' meaning — O Umā's Lord, may I always wor
+- s14-v01 (verses 1) [PASS]
+  L1: ## s14-v01 (1)
+jayalakṣmīnidhānasya / nijasya / svāminaḥ / puraḥ / jayodghoṣaṇapīyūṣarasam / āsvādaye / kṣaṇam
+  L2: Before my own master, treasure of victory-fortune — may I taste for a moment the nectar of victory-proclamation.
+- s14-v02 (verses 2) [PASS]
+  L1: ## s14-v02 (2)
+jayaikarudraikaśiva / mahādeva / maheśvara / pārvatīpraṇayiñ / śarva / sarvagīrvāṇapūrvaja
+  L2: Victory: one Rudra, one Śiva, great god, great Lord — Pārvatī's lover, Śarva, eldest of all gods.
+- s14-v03 (verses 3) [PASS]
+  L1: ## s14-v03 (3)
+jaya / trailokyanāthaikalāñchanālikalocana / jaya / pītartalokārtikālakūṭāṅkakandhara
+  L2: Victory: moon-mark-eyed sole mark of the three-worlds-Lord; victory: poison-mark-throated, who drank the black poison fo
+- s14-v04 (verses 4) [PASS]
+  L1: ## s14-v04 (4)
+jaya / mūrtatriśaktyātmiśataśūlollasatkara / jayecchāmātrasiddārthapūjārhacaraṇāmbuja
+  L2: Victory: whose self is the embodied three powers, hundred-spike-bright-handed; victory: whose lotus-feet are worshipped,
+- s14-v05 (verses 5) [PASS]
+  L1: ## s14-v05 (5)
+jaya / śobhaśatasyandilokottaravapurdhara / jayaikajaṭikākṣīṇagaṅgākṛtyāttabhasmaka
+  L2: Victory: bearer of a body beyond worlds, streaming a hundred beauties; victory: single-braided, Ganges-thinned, ash-seiz
+- s14-v06 (verses 6) [PASS]
+  L1: ## s14-v06 (6)
+jaya / kṣīrodaparyastajyotsnācchāyānulepana / jayeśvarāṅgasaṅgottharatnakāntāhimaṇḍana
+  L2: Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented with jewel-light risen from the Lord's
+- s14-v07 (verses 7) [PASS]
+  L1: ## s14-v07 (7)
+jayākṣayaikaśītāṃśukalāsadṛśasaṃśraya / jaya / gaṅgāsadārbdhaviśvaiśvaryābhiṣecana
+  L2: Victory: refuge like the one undying cool-rayed digit; victory: consecrated by ever-Ganges and universal lordship.
+- s14-v08 (verses 8) [PASS]
+  L1: ## s14-v08 (8)
+jayādharāṅgasaṃsparśapāvanīkṛtagokula / jaya / bhaktimadābaddhagoṣṭhīniyatasannidhe
+  L2: Victory: whose lowest-limb-touch purifies cowherds; victory: fixed-present where intoxicated devotees gather.
+- s14-v09 (verses 9) [PASS]
+  L1: ## s14-v09 (9)
+jaya / svecchātapodeśavipralambhitabāliśa / jaya / gaurīpariṣvaṅgayogyasaubhāgyabhājana
+  L2: Victory: who dupes the childish, showing a hot place of His own will; victory: fit vessel for Gauri-embrace-fortune.
+- s14-v10 (verses 10) [PASS]
+  L1: ## s14-v10 (10)
+jaya / bhaktirasārdrārdrabhāvopāyanalampaṭa / jaya / bhaktimadoddāmabhaktavāṅnṛttatoṣita
+  L2: Victory: greedy for love-gifts wet with devotion-rasa; victory: pleased by the speech-dance of devotees drunk with devot
+- s14-v11 (verses 11) [PASS]
+  L1: ## s14-v11 (11)
+jaya / brahmādideveśaprabhāvaprabhavavyaya / jayalokeśvaraśreṇiśirovidhṛtaśāsana
+  L2: Victory: whose rise-and-fall is the power of Brahmā-and-first-gods; victory: whose command world-lord-rows bear on heads
+- s14-v12 (verses 12) [PASS]
+  L1: ## s14-v12 (12)
+jayasarvajagannyastasvamudrāvyaktavaibhava / jayātmadānaparyantaviśveśvaramaheśvara
+  L2: Victory: whose manifest glory is His seal set on all worlds; victory: great Lord of all, down to giving the very self.
+- s14-v13 (verses 13) [PASS]
+  L1: ## s14-v13 (13)
+jaya / trailokyasargecchāvasarāsaddvitīyaka / jayaiśvaryabharodvāhadevīmātrasahāyaka
+  L2: Victory: secondless at the creation-wish moment; victory: with sole Goddess-helper bearing lordship's burden.
+- s14-v14 (verses 14) [PASS]
+  L1: ## s14-v14 (14)
+jayākramasamākrāntasamastabhuvanatraya / jayāvigītam / ābālagīyamāneśvaradhvane
+  L2: Victory: who seized all three worlds in one stride; victory: unbroken Lord-sound sung from childhood.
+- s14-v15 (verses 15) [PASS]
+  L1: ## s14-v15 (15)
+jayānukampādiguṇānapekṣasahajonnate / jaya / bhīṣmamahāmṛtyughaṭanāpūrvabhairava
+  L2: Victory: innately high, needing no pity and the rest; victory: Bhairava before whom great Death is made.
+- s14-v16 (verses 16) [PASS]
+  L1: ## s14-v16 (16)
+jaya / viśvakṣayoccaṇḍakriyāniṣparipanthika / jaya / śreyaḥśataguṇānuganāmānukīrtana
+  L2: Victory: unopposed in fierce world-ending acts; victory: hundredfold-good-named recitation-following.
+- s14-v17 (verses 17) [PASS]
+  L1: ## s14-v17 (17)
+jaya / helāvitīrnaitadamṛtākarasāgara / jaya / viśvakṣayakṣepikṣaṇakopāśuśukṣaṇe
+  L2: Victory: nectar-mine-ocean poured out in play; victory: whose instant anger dries the world-ending in a flash.
+- s14-v18 (verses 18) [PASS]
+  L1: ## s14-v18 (18)
+jaya / mohāndhakārāndhajīvalokaikadīpaka / jaya / prasuptajagatījāgarūkādhipūruṣa
+  L2: Victory: sole lamp of beings blind in delusion-darkness; victory: wakeful supreme Person while the sleeping world...
+- s14-v19 (verses 19) [PASS]
+  L1: ## s14-v19 (19)
+jaya / dehādrikuñjāntarnikūjañjīvajīvaka / jaya / sanmānasavyomavilāsivarasārasa
+  L2: Victory: life-of-life humming inside the body-mountain cave; victory: best rasa sporting in good minds' sky.
+- s14-v20 (verses 20) [PASS]
+  L1: ## s14-v20 (20)
+jaya / jāmbūnadodagradhātūdbhavagirīśvara / jaya / pāpiṣu / nindolkāpātanotpātacandramaḥ
+  L2: Victory: mountain-lord born of high gold-ore; victory: moon rising as calamity-portent over the wicked.
+- s14-v21 (verses 21) [PASS]
+  L1: ## s14-v21 (21)
+jaya / kaṣṭatapaḥkliṣṭamunidevadurāsada / jaya / sarvadaśārūḍhabhaktimallokalokita
+  L2: Victory: hard to reach by austerity-tormented sages and gods; victory: seen by the world of devotion-madmen mounted on e
+- s14-v22 (verses 22) [PASS]
+  L1: ## s14-v22 (22)
+jaya / svasampatprasarapatrīkṛtanijāśrita / jaya / prapannajanatālālanaikaprayojana
+  L2: Victory: who leafed His dependents spreading His own wealth; victory: whose sole purpose is fondling surrendered people.
+- s14-v23 (verses 23) [PASS]
+  L1: ## s14-v23 (23)
+jaya / sargasthitidhvaṃsakāraṇaikāvadānaka / jaya / bhaktimadālolalīlotpalamagotsava
+  L2: Victory: sole performer of creating-staying-destroying; victory: festival of the play-lotus blooming in drunken devotion
+- s14-v24 (verses 24) [PASS]
+  L1: ## s14-v24 (24)
+jaya / jayabhājana / jaya / jitajanmajarāmaraṇa / jaya / jagajjyeṣṭha / jaya / jaya / jaya / jaya / jaya
+  L2: Victory, worthy of victory! Victory, conqueror of birth, aging, dying! Victory, eldest of worlds... victory, victory... 
+- s15-v01 (verses 1) [PASS]
+  L1: ## s15-v01 (1)
+trimalakṣālino / granthāḥ / santi / tatpāragāstathā / yoginaḥ / paṇḍitāḥ / svasthās / tvadbhaktā / eva / 
+  L2: Stain-washing books exist, and their crossers too — yogins, scholars stand healthy — but devotees alone, in truth.
+- s15-v02 (verses 2) [PASS]
+  L1: ## s15-v02 (2)
+māyīyakālaniyatirāgādyāhāratarpitāḥ / caranti / sukhino / nātha / bhaktimanto / jagattaṭe
+  L2: Māyā-time-limit-passion and the rest as food, fully fed — devotees stroll happy, Lord, on the world's shore.
+- s15-v03 (verses 3) [PASS]
+  L1: ## s15-v03 (3)
+rudanto / vā / hasanto / vā / tvām / uccaiḥ / pralapanty / amī / bhaktāḥ / stutipadoccāropacārāḥ / pṛthag
+  L2: Laughing or crying, they babble You aloud — devotees, whose praise-word offerings are ornaments apart.
+- s15-v04 (verses 4) [PASS]
+  L1: ## s15-v04 (4)
+na / virakto / na / cāpīśo / mokṣākāṅkṣī / tvadarcakaḥ / bhaveyam / api / tūdriktabhaktyāsavarasonmadaḥ
+  L2: Not detached, not master, not liberation-desiring is Your worshipper — but drunk with soaring devotion-liquor-rasa.
+- s15-v05 (verses 5) [PASS]
+  L1: ## s15-v05 (5)
+bāhyaṃ / hṛdaya / evāntar / abhihṛtyaiva / yo / 'rcati / tvām / īśa / bhaktipīyūṣarasapūrair / namāmi / t
+  L2: Who worships by drawing the outer inside the heart alone — to him, in devotion-nectar floods, I bow.
+- s15-v06 (verses 6) [PASS]
+  L1: ## s15-v06 (6)
+dharmādharmātmanor / antaḥ / kriyayor / jñānayos / tathā / sukhaduḥkhātmanor / bhaktāḥ / kim / apy / āsvā
+  L2: Between dharma and adharma acts, knowledges, pleasure and pain selves — devotees taste SOMETHING — ah!
+- s15-v07 (verses 7) [PASS]
+  L1: ## s15-v07 (7)
+carācarapitaḥ / svāmin / apy / andhā / api / kuṣṭhinaḥ / śobhante / param / uddāmabhavadbhaktivibhūṣaṇāḥ
+  L2: Blind ones, lepers even — they shine, supreme, ornamented by blazing devotion to You.
+- s15-v08 (verses 8) [PASS]
+  L1: ## s15-v08 (8)
+śiloñchapicchakaśipuvicchāyāṅgā / api / prabho / bhavadbhaktimahoṣmaṇo / rājarājam / apīśate
+  L2: Gleaners, winnowers, enemies' shadows even — yet by devotion's heat they rule even the king of kings.
+- s15-v09 (verses 9) [PASS]
+  L1: ## s15-v09 (9)
+sudhārdrāyāṃ / bhavadbhaktau / luṭhatāpy / ārurukṣuṇā / cetasaiva / vibho / 'rcanti / kecit / tvām / abhi
+  L2: Though rolling in nectar-wet devotion, yet wanting to climb — some worship You with mind alone, standing all around.
+- s15-v10 (verses 10) [PASS]
+  L1: ## s15-v10 (10)
+rakṣaṇīyaṃ / vardhanīyaṃ / bahumānyam / idaṃ / prabho / saṃsāradurgatiharaṃ / bhavadbhaktimahādhanam
+  L2: To be guarded, grown, honored, Lord — this great wealth of devotion that ends bad rebirths.
+- s15-v11 (verses 11) [PASS]
+  L1: ## s15-v11 (11)
+nātha / te / bhaktajanatā / yady / api / tvayi / rāgiṇī / tathāpīrṣyāṃ / vihāyāsyās / tuṣṭāstu / svāminī
+  L2: Lord, though Your devotees love You — abandoning jealousy toward Her, may She always be pleased, the Mistress.
+- s15-v12 (verses 12) [PASS]
+  L1: ## s15-v12 (12)
+bhavadbhāvaḥ / puro / bhāvī / prāpte / tvadbhaktisambhave / labdhe / dugdhamahākumbhe / hatā / dadhani /
+  L2: Your future being first; when devotion's occasion comes and the milk-ocean is churned — curd-greed is killed.
+- s15-v13 (verses 13) [PASS]
+  L1: ## s15-v13 (13)
+kim / iyaṃ / na / siddhir / atulā / kiṃ / vā / mukhyaṃ / na / saukhyam / āsravati / bhaktir / upacīyamān
+  L2: Is this not attainment beyond compare — ever-growing devotion to Śambhu, always new? What happiness does it not stream?
+- s15-v14 (verses 14) [PASS]
+  L1: ## s15-v14 (14)
+manasi / maline / madīyemagnā / tvadbhaktimaṇilatā / kaṣṭam / na / nijān / api / tanute / tānapauruṣeyān
+  L2: Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own splendor's unfoldings.
+- s15-v15 (verses 15) [PASS]
+  L1: ## s15-v15 (15)
+bhaktir / bhagavati / bhavati / trilokanāthe / nanūttamā / siddhiḥ / kiṃ / tv / aṇimādikavirahāt / saiva
+  L2: Devotion to the Lord of three worlds IS supreme attainment — but lacking supernormal powers, is it not full? — that is m
+- s15-v16 (verses 16) [PASS]
+  L1: ## s15-v16 (16)
+bāhyato / 'ntar / api / cotkaṭonmiṣattryambakastavakasaurabhāḥ / śubhāḥ / vāsayanty / api / viruddhavāsa
+  L2: Outside and in, the fragrance of Your praise-blossoms' opening perfumes even hostile ascetics dwelling near.
+- s15-v17 (verses 17) [PASS]
+  L1: ## s15-v17 (17)
+jyotir / asti / kathayāpi / na / kiṃ / cid / viśvam / apy / atisuṣuptam / aśeṣam / yatra / nātha / śivar
+  L2: By no account is there any light; the whole world fast asleep — yet at Your Śivarātri post, devotees always worship You.
+- s15-v18 (verses 18) [PASS]
+  L1: ## s15-v18 (18)
+sattvaṃ / satyaguṇe / śive / bhagavati / sphārībhavatv / arcane / cūḍāyāṃ / vilasantu / śaṅkarapadaprody
+  L2: Let goodness expand in true worship of gracious Śiva; let Śaṅkara-foot-dust heaps sport on the crown — to cut even passi
+- s15-v19 (verses 19) [PASS]
+  L1: ## s15-v19 (19)
+saṃsārādhvā / sudūraḥ / kharataravividhavyādhidagdhāṅgayaṣṭiḥ / bhogā / naivopabhuktā / yad / api / sukh
+  L2: The world-road is long; limbs burnt by harsh diseases; pleasures unenjoyed; happiness never long — thus I have become us
+- s16-v01 (verses 1) [PASS]
+  L1: ## s16-v01 (1)
+na / kiñcid / eva / lokānāṃ / bhavadāvaraṇaṃ / prati / \var{yat / kiṃ / cid / eva / bhūtānāṃ\em / \cit / 
+  L2: Nothing blocks folk, nothing blocks devotees from Your veiling.
+- s16-v02 (verses 2) [PASS]
+  L1: ## s16-v02 (2)
+apy / upāyakramaprāpyaḥ / saṅkulo / 'pi / viśeṣaṇaiḥ / bhaktibhājāṃ / bhavān / ātmā / sakṛc / chuddho / '
+  L2: Though reached by method-ladders, crowded with attributes — to devotees the self appears at once, pure.
+- s16-v03 (verses 3) [PASS]
+  L1: ## s16-v03 (3)
+jayanto / 'pi / hasanty / ete / jitā / api / hasanti / ca / bhavadbhaktisudhāpānamattāḥ / ke / 'py / eva 
+  L2: Laughing victors, laughing conquered — drunk on His devotion-nectar, whoever they are, Lord.
+- s16-v04 (verses 4) [PASS]
+  L1: ## s16-v04 (4)
+śuṣkakaṃ / maiva / siddheya / maiva / mucyeya / vāpi / tu / svādiṣṭhaparakāṣṭāptatvadbhaktirasanirbharaḥ
+  L2: May I never dry up, never seek release — full of His devotion-rasa, best-liked, attained.
+- s16-v05 (verses 5) [PASS]
+  L1: ## s16-v05 (5)
+yathaivajñātapūrvo / 'yaṃ / bhavadbhaktiraso / mama / ghaṭitas / tadvad / īśāna / sa / eva / paripuṣyatu
+  L2: As unknown before was this devotion-rasa of Yours to me — so, Lord, may that same one grow.
+- s16-v06 (verses 6) [PASS]
+  L1: ## s16-v06 (6)
+satyena / bhagavan / nānyaḥ / prārthanāprasaro / 'sti / me / kevalaṃ / sa / tathā / ko / 'pi / bhaktyāveś
+  L2: Truly, Lord, I have no other prayer-course — only may such immersion-possession by devotion be mine always.
+- s16-v07 (verses 7) [PASS]
+  L1: ## s16-v07 (7)
+bhaktikṣīvo / 'pi / kupyeyaṃ / bhavāyānuśayīya / ca / tathā / haseyaṃ / udyāṃ / ca / raṭeyaṃ / ca / śivet
+  L2: Drunk on devotion I may rage, repent, leap, shout "Śiva" — enough.
+- s16-v08 (verses 8) [PASS]
+  L1: ## s16-v08 (8)
+viṣamastho / 'pi / svastho / 'pi / rudann / api / hasann / api / gambhīro / 'pi / vicitto / 'pi / bhaveya
+  L2: In crisis or at peace, weeping or laughing, deep or distracted — may I be, Lord, by devotion.
+- s16-v09 (verses 9) [PASS]
+  L1: ## s16-v09 (9)
+bhaktānāṃ / nāsti / saṃvedyaṃ / tvadantar / yadi / vā / bahiḥ / ciddharmā / yatra / na / bhavān / nirvika
+  L2: For devotees nothing to be known, inside You or out — where consciousness-natured You stand thought-free.
+- s16-v10 (verses 10) [PASS]
+  L1: ## s16-v10 (10)
+bhaktā / nindānukare / 'pi / tavāmṛtakaṇair / iva / hṛṣyanty / evāntarāviddhās / tīkṣṇaromāñcasūcibhiḥ
+  L2: Devotees rejoice even at abusers — pierced within, bristling with sharp horripilation, as if by nectar-drops.
+- s16-v11 (verses 11) [PASS]
+  L1: ## s16-v11 (11)
+duḥkhāpi / vedanā / bhaktimatāṃ / bhogāya / kalpate / yeṣāṃ / sudhārdrā / sarvaiva / saṃvit / tvaccandri
+  L2: Even pain-feeling ripens to enjoyment for devotees, whose all-awareness, moon-wet, is moonlight-made.
+- s16-v12 (verses 12) [PASS]
+  L1: ## s16-v12 (12)
+yatra / tatroparuddhānāṃ / bhaktānāṃ / bahirantare / nirvyājaṃ / tvadvapuḥsparśarasāsvādasukhaṃ / samam
+  L2: Wherever held, devotees — inside and out — unfeigned, Your body-touch-taste-joy the same.
+- s16-v13 (verses 13) [PASS]
+  L1: ## s16-v13 (13)
+taveśa / bhakter / arcāyāṃ / dainyāṃśaṃ / dvayasaṃśrayam / vilupyāsvādayanty / eke / vapur / acchaṃ / su
+  L2: In worship of Your devotion, duality's double-refuge meanness — tasting the clear nectar-body, some dissolve it.
+- s16-v14 (verses 14) [PASS]
+  L1: ## s16-v14 (14)
+bhrāntās / tīrthadṛśo / bhinnā / bhrānter / eva / hi / bhinnatā / niṣpratidvandvi / vastv / ekaṃ / bhakt
+  L2: Erring are pilgrim-eyes, divided — for division is just erring; but matchless, strifeless Being shines for devotees.
+- s16-v15 (verses 15) [PASS]
+  L1: ## s16-v15 (15)
+mānāvamānarāgādiniṣpākavimalaṃ / manaḥ / yasyāsau / bhaktimāṃl / lokatulyaśīlaḥ / kathaṃ / bhavet
+  L2: Mind ripened past honor, contempt, love and the rest into stainlessness — how could its bearer be world-mannered?
+- s16-v16 (verses 16) [PASS]
+  L1: ## s16-v16 (16)
+rāgadveṣandhakāro / 'pi / yeṣāṃ / bhaktitviṣā / jitaḥ / teṣāṃ / mahīyasām / agre / katame / jñānaśālinaḥ
+  L2: Passion-aversion-darkness conquered by devotion-light — who are the knowledge-rich before them?
+- s16-v17 (verses 17) [PASS]
+  L1: ## s16-v17 (17)
+yasya / bhaktisudhāsnānapānādividhisādhanam / tasya / prārabdhamadhyāntadaśāsūccaiḥ / sukhāsikā
+  L2: Whose rite is devotion-nectar-drink-and-bath — high joy from beginning through end.
+- s16-v18 (verses 18) [PASS]
+  L1: ## s16-v18 (18)
+kīrtyaś / cintāpadaṃ / mṛgyaḥ / pūjyo / yena / tvam / eva / tat / bhavadbhaktimatāṃ / ślāghyā / lokayātr
+  L2: Praised, sought, worshipped — for that alone devotees' world-life is praiseworthy.
+- s16-v19 (verses 19) [PASS]
+  L1: ## s16-v19 (19)
+muktisaṃjñā / vipakvāyā / bhakter / eva / tvayi / prabho / tasyām / ādyadaśārūḍhā / muktakalpā / vayaṃ /
+  L2: Liberation's name is but Your ripe devotion — mounted on its first stage, we are near-free.
+- s16-v20 (verses 20) [PASS]
+  L1: ## s16-v20 (20)
+duḥkhāgamo / 'pi / bhūyān / me / tvadbhaktibharitātmanaḥ / tvatparācī / vibho / mā / bhūd / api / saukhy
+  L2: May pain's coming be great for me, devotion-filled self — never turned from You, be even pleasure-line.
+- s16-v21 (verses 21) [PASS]
+  L1: ## s16-v21 (21)
+tvaṃ / bhaktyā / prīyase / bhaktiḥ / prīte / tvayi / ca / nātha / yat / tadanyonyāśrayaṃ / yuktaṃ / yath
+  L2: You are pleased by devotion; devotion, You pleased — this mutual dependence is fitting, as You alone know.
+- s16-v22 (verses 22) [PASS]
+  L1: ## s16-v22 (22)
+sākāro / vā / nirākaro / vāntar / vā / bahir / eva / vā / bhaktimattātmanāṃ / nātha / sarvathāsi / sudhā
+  L2: With form or formless, inside or out — to devotion-selves, always nectar, Lord.
+- s16-v23 (verses 23) [PASS]
+  L1: ## s16-v23 (23)
+asminn / eva / jagaty / antar / bhavadbhaktimataḥ / prati / harṣaprakāśanaphalam / anyad / eva / jagatst
+  L2: In this very world, for Your devotees, another world-stand exists — fruit of joy-showing.
+- s16-v24 (verses 24) [PASS]
+  L1: ## s16-v24 (24)
+guhye / bhaktiḥ / pare / bhaktir / bhaktir / viśvamaheśvare / tvayi / śambhau / śive / deva / bhaktir / 
+  L2: Devotion hidden, devotion supreme, devotion to the world-great Lord — devotion, ah, something in You, Śiva.
+- s16-v25 (verses 25) [PASS]
+  L1: ## s16-v25 (25)
+bhaktir / bhaktiḥ / pare / bhaktir / bhaktir / nāma / samutkaṭā / tāraṃ / viraumi / yat / tīvrā / bhakti
+  L2: Devotion, devotion, supreme devotion — I cry loud: let fierce devotion be mine supreme.
+- s16-v26 (verses 26) [PASS]
+  L1: ## s16-v26 (26)
+yato / 'smi / sarvaśobhānāṃ / prasavāvanir / īśa / tat / tvayi / lagnam / anarghaṃ / syād / ratnam / vā 
+  L2: Since I am the birth-ground of all beauties — stuck to You, jewel or straw becomes priceless.
+- s16-v27 (verses 27) [PASS]
+  L1: ## s16-v27 (27)
+āvedakād / ā / ca / vedyād / yeṣāṃ / saṃvedanādhvani / bhavatā / na / viyogo / 'sti / te / jayanti / bha
+  L2: From knower and from knowable, on whose knowing-road there is no parting from You — they win, Your devotees, ever fearle
+- s16-v28 (verses 28) [PASS]
+  L1: ## s16-v28 (28)
+saṃsārasadaso / bāhye / kaiś / cittvaṃ / parirabhyase / svāmin / parais / tu / tatraiva / tāmyadbhis / t
+  L2: Embraced in saṃsāra's hall by some, You — Lord, by others self-tormenting unreined.
+- s16-v29 (verses 29) [PASS]
+  L1: ## s16-v29 (29)
+pānāśanaprasādhanasambhuktasamastaviśvayā / śivayā / pralayotsavasarabhasayā / dṛḍham / upagūḍhaṃ / śiva
+  L2: With Śivā who eats, decks, celebrates the world, festival-hurried — hug tight, Śiva, I bow.
+- s16-v30 (verses 30) [PASS]
+  L1: ## s16-v30 (30)
+parameśvaratā / jayaty / apūrvā / tava / viśveśa / yadīśitavyaśūnyā / aparāpi / tathaiva / te / yayedaṃ 
+  L2: Peerless overlordship wins, world-Lord, being subject-free — and so does Your otherness, by which this world shines as i
+- s17-v01 (verses 1) [PASS]
+  L1: ## s17-v01 (1)
+aho / ko / 'pi / jayaty / eṣa / svāduḥ / pūjāmahotsavaḥ / yato / 'mṛtarasāsvādam / aśrūṇy / api / dadaty 
+  L2: Ah, this wins — sweet, this festival of worship — since tears give nectar-taste amply.
+- s17-v02 (verses 2) [PASS]
+  L1: ## s17-v02 (2)
+vyāpārāḥ / siddhidāḥ / sarve / ye / tvatpūjāpuraḥsarāḥ / bhaktānāṃ / tvanmayāḥ / sarve / svayaṃ / siddhay
+  L2: All acts with His worship vanguard are successes; devotees made of Him are themselves successes.
+- s17-v03 (verses 3) [PASS]
+  L1: ## s17-v03 (3)
+sarvadā / sarvabhāveṣu / yugapat / sarvarūpiṇam / tvām / arcayanty / aviśrantaṃ / ye / mamaite / 'dhideva
+  L2: In all beings, all states, at once, all-formed — worshipping You unceasing, they are my gods.
+- s17-v04 (verses 4) [PASS]
+  L1: ## s17-v04 (4)
+dhyānāyasatiraskārasiddhas / tvatsparśanotsavaḥ / pūjāvidhir / iti / khyāto / bhaktānāṃ / sa / sadās / tu
+  L2: Meditation-perfected touch-festival of You — thus famed as worship-rule — be mine always.
+- s17-v05 (verses 5) [PASS]
+  L1: ## s17-v05 (5)
+bhaktānāṃ / samatāsāraviṣuvatsamayaḥ / sadā / tvadbhāvarasapīyūṣarasennaiṣāṃ / sadārcanam
+  L2: Equanimity-essence equinox-moment of devotees is always — ever-worshipping with Your being-rasa-nectar.
+- s17-v06 (verses 6) [PASS]
+  L1: ## s17-v06 (6)
+yasyānārambhaparyantau / na / ca / kālakramaḥ / prabho / pūjātmāsau / kriyā / tasyāḥ / kartāras / tvajjuṣ
+  L2: Whose beginning and end are not, nor time-order — that deed is Yours, and its doers resort only to You.
+- s17-v07 (verses 7) [PASS]
+  L1: ## s17-v07 (7)
+brahmādīnām / apīśāste / te / ca / saubhāgyabhāginaḥ / yeṣāṃ / svapne / 'pi / mohe / 'pi / sthitas / tvat
+  L2: Brahmā and the rest are fortunate, lords — in whose dream, even delusion, stands Your worship-festival.
+- s17-v08 (verses 8) [PASS]
+  L1: ## s17-v08 (8)
+japatāṃ / juhvatāṃ / snātāṃ / dhyāyatāṃ / na / ca / kevalam / bhaktānāṃ / bhavadabhyarcāmaho / yāvad / ya
+  L2: Chanting, offering, bathing, meditating — and not only: ah, devotees' worshipping You — whenever, whatever, however much
+- s17-v09 (verses 9) [PASS]
+  L1: ## s17-v09 (9)
+bhavatpūjāsudhāsvādasambhogasukhinaḥ / sadā / indrādīnām / atha / brahmamukhyānām / asti / kaḥ / samaḥ
+  L2: Tasting Your worship-nectar-joy, enjoying — to Indra and the rest, to Brahmā-chiefs: is anyone equal?
+- s17-v10 (verses 10) [PASS]
+  L1: ## s17-v10 (10)
+jagatkṣobhaikajanake / bhavatpūjāmahotsave / yatprāpyaṃ / prāpyate / kiṃcid / bhaktā / eva / vidanti / t
+  L2: World-shaking, one-cause festival — what is got thereby, only devotees know who get it.
+- s17-v11 (verses 11) [PASS]
+  L1: ## s17-v11 (11)
+tvaddhāmni / cinmaye / sthitvā / ṣaṭtriṃśattattvakarmabhiḥ / kāyavākcittaceṣṭādyair / arcaye / tvāṃ / sa
+  L2: Standing in Your abode, consciousness-formed, with body-speech-mind acts of all 36 principles — I always worship You, Lo
+- s17-v12 (verses 12) [PASS]
+  L1: ## s17-v12 (12)
+bhavatpūjāmayāsaṅgasambhogasukhino / mama / prayātu / kālaḥ / sakalo / 'py / ananto / 'pīyadarthaye
+  L2: Of me, enjoying union with Your worship — may all time pass, even endless: this I pray.
+- s17-v13 (verses 13) [PASS]
+  L1: ## s17-v13 (13)
+bhavatpūjāmṛtarasābhogalampaṭata / vibho / vivardhatām / anudinaṃ / sadā / ca / phalatāṃ / mama
+  L2: Greedy for Your worship-enjoyment-nectar — may it grow daily for me and fruit always.
+- s17-v14 (verses 14) [PASS]
+  L1: ## s17-v14 (14)
+jagadvilayasañjātasudhaikarasanirbhare / tvadabdhau / tvāṃ / mahātmānam / arcannāsīya / sarvadā
+  L2: In Your ocean, nectar-one-rasa-full, worshipping You, great self, may I always sit.
+- s17-v15 (verses 15) [PASS]
+  L1: ## s17-v15 (15)
+aśeṣavāsanāgranthivicchedasaralaṃ / sadā / mano / nivedyate / bhaktaiḥ / svādu / pūjāvidhau / tava
+  L2: Mind offered as sweet in Your rite — knots ever cut simply.
+- s17-v16 (verses 16) [PASS]
+  L1: ## s17-v16 (16)
+adhiṣṭhāyaiva / viṣayānimāḥ / karaṇavṛttayaḥ / bhaktānāṃ / preṣayanti / svatpūjārtham / amṛtāsavam
+  L2: Having taken stand on objects — these sense-courses of devotees — send them for Your worship-nectar-wine.
+- s17-v17 (verses 17) [PASS]
+  L1: ## s17-v17 (17)
+bhaktānāṃ / bhaktisaṃvegamahoṣmavivaśātmanām / ko / 'nyo / nirvāṇahetuḥ / syāt / tvatpūjāmṛtamajjanāt
+  L2: Agitated by devotion-heat, self-mastered — what else could liberate but drowning in worship of You?
+- s17-v18 (verses 18) [PASS]
+  L1: ## s17-v18 (18)
+satataṃ / tvatpadābhyarcāsudhāpānamahotsavaḥ / tvatprasādaikasamprāptihetur / me / nātha / kalpatām
+  L2: Perpetual foot-worship-nectar-drinking festival — may it be my sole grace-getting cause, Lord.
+- s17-v19 (verses 19) [PASS]
+  L1: ## s17-v19 (19)
+anubhūyāsamīśāna / pratikarma / kṣaṇāt / kṣaṇam / bhavatpūjāmṛtāpānamadāsvādamahāmudam
+  L2: Experiencing, Lord, moment by moment — Your worship-nectar-drinking-madness-joy-great-joy.
+- s17-v20 (verses 20) [PASS]
+  L1: ## s17-v20 (20)
+dṛṣṭartha / eva / bhaktānāṃ / bhavatpūjāmahodyamaḥ / tadaiva / yad / asambhāvyaṃ / sukham / āsvādayanti 
+  L2: Seen is the point of devotees' great worship-undertaking: that they taste impossible joy then.
+- s17-v21 (verses 21) [PASS]
+  L1: ## s17-v21 (21)
+yāvan / na / labdhas / tvatpūjāsudhāsvādamahotsavaḥ / tāvan / nāsvādito / manye / lavo / 'pi / sukhasamp
+  L2: Till Your worship-nectar-taste-festival is got, I count no drop of fortune's happiness tasted.
+- s17-v22 (verses 22) [PASS]
+  L1: ## s17-v22 (22)
+bhaktānāṃ / viṣayanveṣābhāsāyāsād / vinaiva / sā / ayatnasiddhaṃ / tvaddhāmasthitiḥ / pūjāsu / jāyate
+  L2: Without sense-seeking strain, Your abode's abiding is born in devotees — no getting needed, only madness with worship.
+- s17-v23 (verses 23) [PASS]
+  L1: ## s17-v23 (23)
+na / prāpyam / asti / bhaktanāṃ / nāpy / eṣām / asti / durlabham / kevalaṃ / vicaranty / ete / bhavatpūj
+  L2: Nothing ungettable for devotees, nothing hard — they only roam, mad with worship.
+- s17-v24 (verses 24) [PASS]
+  L1: ## s17-v24 (24)
+aho / bhaktibharodāracetasāṃ / varada / tvayi / slāghyaḥ / pūjāvidhiḥ / ko / 'pi / yo / na / yācñākalaṃk
+  L2: Ah, the devotees' heart-heavy worship-rule: praised, unmarked by begging.
+- s17-v25 (verses 25) [PASS]
+  L1: ## s17-v25 (25)
+kā / na / śobhā / na / ko / hlādaḥ / kā / samṛddhir / na / vāparā / ko / vā / na / mokṣaḥ / ko / 'py / e
+  L2: What beauty is not, what joy not, what fortune not, what liberation not — this Mahādeva, since He is worshipped.
+- s17-v26 (verses 26) [PASS]
+  L1: ## s17-v26 (26)
+antarullasadacchācchabhaktipīyūṣapoṣitam / bhavatpūjopayogāya / śarīram / idam / astu / me
+  L2: In all-empty... may this body be nourished as Your worship-thing, always devoted.
+- s17-v27 (verses 27) [PASS]
+  L1: ## s17-v27 (27)
+tvatpādapūjāsambhogaparatantraḥ / sadā / vibho / bhūyāsaṃ / jagatām / īśa / ekaḥ / svacchandaceṣṭitaḥ
+  L2: Dependent on Your foot-worship-enjoyment — may I, O world-Lord, be the one self-willed in movement.
+- s17-v28 (verses 28) [PASS]
+  L1: ## s17-v28 (28)
+tvaddhyānadarśanasparśatṛṣi / keṣām / api / prabho / jāyate / śītalasvādu / bhavatpūjāmahāsaraḥ
+  L2: To quench vision-touch-thirst for You — arises the cool, sweet great lake of Your worship.
+- s17-v29 (verses 29) [PASS]
+  L1: ## s17-v29 (29)
+yathā / tvam / eva / jagataḥ / pūjāsambhogabhājanam / tatheśa / bhaktimān / eva / pūjāsambhogabhājanam
+  L2: As You alone are the world's worship-enjoyment-vessel — so, Lord, is the devotee a vessel of worship-enjoyment.
+- s17-v30 (verses 30) [PASS]
+  L1: ## s17-v30 (30)
+ko / 'py / asau / jayati / svāmin / bhavatpūjāmahotsavaḥ / ṣaṭtriṃśato / 'pi / tattvānāṃ / kṣobho / yatr
+  L2: Victor, Your festival — even the 36 agitated by it — great day.
+- s17-v31 (verses 31) [PASS]
+  L1: ## s17-v31 (31)
+namas / tebhyo / vibho / yeṣāṃ / bhaktipīyūṣavāriṇā / pūjyāny / eva / bhavanti / tvatpūjopakaraṇāny / ap
+  L2: Bow to those whose worship-things are themselves worshipped, by devotion-nectar-water.
+- s17-v32 (verses 32) [PASS]
+  L1: ## s17-v32 (32)
+pūjārambhe / vibho / dhyātvā / mantrādheyāṃ / tvadātmatām / svātmany / eva / pare / bhaktā / mānti / har
+  L2: At worship's start, meditating mantra-placed His selfhood — devotees rest in supreme self, nowhere roaming.
+- s17-v33 (verses 33) [PASS]
+  L1: ## s17-v33 (33)
+rājyalābhādivotphullaiḥ / kaiś / cit / pūjāmahotsave / sudhāsavena / sakalā / jagatī / saṃvibhajyate
+  L2: Kingdoms blooming, world shared out in nectar-wine by festival-goers.
+- s17-v34 (verses 34) [PASS]
+  L1: ## s17-v34 (34)
+pūjāmṛtāpānamayo / yeṣāṃ / bhogaḥ / pratikṣaṇam / kiṃ / devā / uta / muktās / te / kiṃ / vā / ke / 'py /
+  L2: Whose moment-drink is worship-nectar — are they gods, freed, or whatever people?
+- s17-v35 (verses 35) [PASS]
+  L1: ## s17-v35 (35)
+pūjopakaraṇībhūtaviśvaveśena / gauravam / aho / kim / api / bhaktānāṃ / kim / apy / eva / ca / lāghavam
+  L2: The world's dignity as worship-gear is theirs — ah, something of devotees, and just lightness!
+- s17-v36 (verses 36) [PASS]
+  L1: ## s17-v36 (36)
+pūjāmayākṣavikṣepakṣobhādevāmṛtodgamaḥ / bhaktānāṃ / kṣīrajaladhikṣobhād / iva / divaukasām
+  L2: From worship-made eye-throw agitation, nectar-rising for devotees — as from the gods' milk-ocean churning.
+- s17-v37 (verses 37) [PASS]
+  L1: ## s17-v37 (37)
+pūjāṃ / ke / cana / manyante / dhenuṃ / kāmadughām / iva / sudhādhārādhikarasāṃ / dhayanty / antarmukhāḥ
+  L2: Some take worship as the wish-cow; others, inward-turned, milk the nectar-stream.
+- s17-v38 (verses 38) [PASS]
+  L1: ## s17-v38 (38)
+bhaktānām / akṣavikṣepo / 'py / eṣa / saṃsārasaṃmataḥ / upanīya / kim / apy / antaḥ / puṣṇāty / arcāmaho
+  L2: Even eye-throws, world-approved, bring something within — may the festival grow.
+- s17-v39 (verses 39) [PASS]
+  L1: ## s17-v39 (39)
+bhaktikṣobhavaśād / īśa / svātmabhūte / 'rcanaṃ / tvayi / citraṃ / dainyāya / no / yāvad / dīnatāyāḥ / p
+  L2: By devotion-agitation, worship in self-become-Him — wonder: poverty's top fruit is lowliness' fruit.
+- s17-v40 (verses 40) [PASS]
+  L1: ## s17-v40 (40)
+upacārapadaṃ / pūjā / keṣāṃ / cit / tvatpadāptaye / bhaktānāṃ / bhavadaikātmyanirvṛttiprasaras / tu / sa
+  L2: For some, rite is upacāra-step to His feet; for devotees, non-duality-bliss-spread.
+- s17-v41 (verses 41) [PASS]
+  L1: ## s17-v41 (41)
+apy / asambaddharūpārcābhaktyunmādanirargalaiḥ / vitanyamānā / labhate / pratiṣṭhāṃ / tvayi / kām / api
+  L2: Spread by unbound mad devotion to the formless-seeming, it gains some foothold in You.
+- s17-v42 (verses 42) [PASS]
+  L1: ## s17-v42 (42)
+svādubhaktirasāsvādastabdhībhūtamanaś / cyutām / śambho / tvam / eva / lalitaḥ / pūjānāṃ / kila / bhājan
+  L2: Taste-stunned mind; He alone as worship's vessel, they say.
+- s17-v43 (verses 43) [PASS]
+  L1: ## s17-v43 (43)
+paripūrṇāni / śuddhāni / bhaktimanti / sthirāṇi / ca / bhavatpūjāvidhau / nātha / sādhanāni / bhavantu /
+  L2: Full, pure, steady, devoted means be mine for His worship, Lord.
+- s17-v44 (verses 44) [PASS]
+  L1: ## s17-v44 (44)
+aśeṣapūjāsatkośe / tvatpūjākarmaṇi / prabho / aho / karaṇavṛndasya / kāpi / lakṣmīr / vijṛmbhate
+  L2: In the whole worship-treasure, what fortune of the organ-host blooms?
+- s17-v45 (verses 45) [PASS]
+  L1: ## s17-v45 (45)
+eṣā / peśalimā / nātha / tavaiva / kila / dṛśyate / viśveśvaro / 'pi / bhṛtyair / yad / arcyase / yaś / 
+  L2: This prettiness is Yours alone, Lord: though Lord of all, worshipped by servants — and found.
+- s17-v46 (verses 46) [PASS]
+  L1: ## s17-v46 (46)
+sadāmurttād / amūrttādvā / bhāvād / yad / vāpy / abhāvataḥ / uttheyān / me / praśastasya / bhavatpūjāmah
+  L2: Rise from formed or formless, being or non-being — may my festival rise.
+- s17-v47 (verses 47) [PASS]
+  L1: ## s17-v47 (47)
+kāmakrodhābhimānais / tvām / upaharīkṛtaiḥ / sadā / ye / 'rcayanti / namas / tebhyas / teṣāṃ / tuṣṭo / '
+  L2: With lust, anger, pride made offering, who always worship — bow to them; of them I am pleased, in truth.
+- s17-v48 (verses 48) [PASS]
+  L1: ## s17-v48 (48)
+jayaty / eṣa / bhavadbhaktibhājāṃ / pūjāvidhiḥ / paraḥ / yas / tṛṇaiḥ / kriyamāno / 'pi / ratnair / evop
+  L2: Victor, Your festival of devotees' supreme rule — though made with straw, yet furnished with jewels.
+- s18-v01 (verses 1) [PASS]
+  L1: ## s18-v01 (1)
+jagato / 'ntarato / bhavantam / āptvā / punar / etad / bhavato / 'ntarāl / labhante / jagadīśa / tavaiva 
+  L2: Finding You inside the world, they get inside You — never far are Your devotees.
+- s18-v02 (verses 2) [PASS]
+  L1: ## s18-v02 (2)
+kvacid / eva / bhavān / kvacid / bhavānī / sakalārthakramagarbhiṇī / pradhānā / paramārthapade / tu / nai
+  L2: He here, She everywhere, pregnant with the order of all things, supreme — but at the ultimate step, no division of Her n
+- s18-v03 (verses 3) [PASS]
+  L1: ## s18-v03 (3)
+no / jānate / subhagam / apy / avalepavanto / lokāḥ / prayatnasubhagā / nikhila / hi / bhāvāḥ / cetaḥ / p
+  L2: The ungrateful know not the auspicious, though proud; all things, though effort-favored — but this mind, though risen, d
+- s18-v04 (verses 4) [PASS]
+  L1: ## s18-v04 (4)
+bhavanmayasvātmanivāsalabdhasampadbharābhyarcitayuṣmadaṅghriḥ / na / bhojanācchādanam / apy / ajasram / a
+  L2: Who has gained dwelling in the self made of You, Your feet worshipped with full wealth — needing neither food nor coveri
+- s18-v05 (verses 5) [PASS]
+  L1: ## s18-v05 (5)
+sadā / bhavaddehanivāsasvastho / 'py / antaḥ / paraṃ / dahyata / eṣa / lokaḥ / tavecchayā / tat / kuru / 
+  L2: Ever dwelling in Your body-abode yet inwardly supreme-burning, this world — by Your will make me here, of worship-joy-na
+- s18-v06 (verses 6) [PASS]
+  L1: ## s18-v06 (6)
+svarasoditayuṣmadaṅghripadmadvayapūjāmṛtapānasaktacittaḥ / sakārthacayeṣv / ahaṃ / bhaveyam / sukhasaṃspa
+  L2: Spontaneously risen, touching Your lotus-feet pair, drinking the worship-nectar — mind intent, may I be, in gathering my
+- s18-v07 (verses 7) [PASS]
+  L1: ## s18-v07 (7)
+sakalavyavahāragocare / sphuṭam / antaḥ / spurati / tvayi / prabho / upayānty / apayānti / cāniśam / mama
+  L2: In the whole field of dealings, plainly, while You throb inside, Lord — coming and going ever, may my things shine alway
+- s18-v08 (verses 8) [PASS]
+  L1: ## s18-v08 (8)
+satatam / eva / tavaiva / pure / 'thavāpy / arahito / vicareyam / ahaṃ / tvayā / kṣaṇalavo / 'py / atha /
+  L2: Ever in Your city, or parted and roaming — may I be, by You: never even a moment's defeat for me, where I am become of Y
+- s18-v09 (verses 9) [PASS]
+  L1: ## s18-v09 (9)
+bhavadaṅgaparisravatsuśītāmṛtapūrair / bharite / samantato / 'pi / bhavadarcanasampadeha / bhaktās / tava
+  L2: Filled all round with cool nectar-floods streaming from Your limbs — in the wealth of worshipping You here, Your devotee
+- s18-v10 (verses 10) [PASS]
+  L1: ## s18-v10 (10)
+mahāmantratarucchāyāśītale / tvanmahāvane / nijātmani / sadā / nātha / vaseyaṃ / tava / pūjakaḥ
+  L2: In the cool shade of the great-mantra tree, in Your great forest, in my own self always, Lord, may I dwell as Your worsh
+- s18-v11 (verses 11) [PASS]
+  L1: ## s18-v11 (11)
+prativastu / samastajīvataḥ / pratibhāsi / pratibhāmayo / yathā / mama / nātha / tathā / puraḥ / prathāṃ
+  L2: As everything living mirrors You, mirror-formed — so before me, Lord, come forth graced with three eyes and trident.
+- s18-v12 (verses 12) [PASS]
+  L1: ## s18-v12 (12)
+abhimānacarūpahārato / mamatābhaktibhareṇa / kalpitāt / paritoṣagataḥ / kadā / bhavān / mama / sarvatra 
+  L2: From pride-offering, love-held devotion-built — pleased, when will You be everywhere my eyes' ground?
+- s18-v13 (verses 13) [PASS]
+  L1: ## s18-v13 (13)
+nivasanparamāmṛtābdhimadhye / bhavadarcāvidhimātramagnacittaḥ / sakalaṃ / janavṛttam / ācareyaṃ / rasaya
+  L2: Dwelling in the nectar-ocean middle, mind drowned in Your worship-rite alone — may I do all people's business, tasting e
+- s18-v14 (verses 14) [PASS]
+  L1: ## s18-v14 (14)
+bhavadīyam / ihāstu / vastu / tattvaṃ / vivarītuṃ / ka / ivātra / pātram / arthe / idam / eva / hi / nām
+  L2: Your thing here, Your truth — who is fit to disclose the matter? This same name-form-sport-unequalled of Yours takes awa
+- s18-v15 (verses 15) [PASS]
+  L1: ## s18-v15 (15)
+śāntaye / na / sukhalipsutā / manāg / bhaktisambhṛtamadeṣu / taiḥ / prabhoḥ / mokṣamārgaṇaphalāpi / nārt
+  L2: For peace, no hankering for pleasure at all, among those drunk with devotion amassed — nor even begging the fruit of see
+- s18-v16 (verses 16) [PASS]
+  L1: ## s18-v16 (16)
+jāgaretaradaśāthavā / parā / yāpi / kācana / manāg / avasthiteḥ / bhaktibhājanajanasya / sākhilā / tvats
+  L2: Waking or other state, or any beyond, while slightly steady — for the devotee-people, all is Your festival in the ever-p
+- s18-v17 (verses 17) [PASS]
+  L1: ## s18-v17 (17)
+āmano / 'kṣavalayasya / vṛttayaḥ / sarvataḥ / śithilavṛttayo / 'pi / tāḥ / tvām / avāpya / dṛḍhadīrghasa
+  L2: Mind's eye-wheel courses, everywhere loosened yet still — reaching You, of firm-long awareness: Lord, how, by devotion-w
+- s18-v18 (verses 18) [PASS]
+  L1: ## s18-v18 (18)
+na / ca / vibhinnam / asṛjyata / kiñcid / asty / atha / sukhetarad / atra / na / nirmitam / atha / ca / 
+  L2: Nothing unmade, no unpleasure made — yet all suffers and divides: bow to the wonder-abode.
+- s18-v19 (verses 19) [PASS]
+  L1: ## s18-v19 (19)
+kharaniṣedhakhadāmṛtapūraṇocchalitadhautavikalpamalasya / me / dalitadurjayasaṃśayavairiṇas / tvadavalok
+  L2: Of me whose thought-stain is washed bright by hard-denier nectar-filling flood, whose unconquered-doubt-foe is crushed —
+- s18-v20 (verses 20) [PASS]
+  L1: ## s18-v20 (20)
+sphuṭam / aviśa / mām / athāviśeyaṃ / satataṃ / nātha / bhavantamasmi / yasmāt / rabhasena / vapus / tav
+  L2: Enter plainly, then I shall enter You — always, Lord, for I am Yours: with violent speed may I worship Your body face to
+- s18-v21 (verses 21) [PASS]
+  L1: ## s18-v21 (21)
+tvayi / na / stutiśaktir / asti / kasyāpy / athavāsty / eva / yato / 'tisundaro / 'si / satataṃ / punar 
+  L2: In You no one's is praise-power — yet it exists since You are so beautiful; my constant prayer again is this: that I beh
+- s19-v01 (verses 1) [PASS]
+  L1: ## s19-v01 (1)
+prārthanābhūmikātītavicitraphaladāyakaḥ / jayaty / apūrvavṛttāntaḥ / śivaḥ / satkalpapādapaḥ
+  L2: Beyond prayer-grounds, strange-fruit-giver — victorious, unprecedented in story, Śiva the true wish-tree.
+- s19-v02 (verses 2) [PASS]
+  L1: ## s19-v02 (2)
+sarvavastuni / ca / yaikanidhānāt / svātmanas / tvad / akhilaṃ / kila / labhyam / asya / me / punar / asa
+  L2: Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her
+- s19-v03 (verses 3) [PASS]
+  L1: ## s19-v03 (3)
+jñānakarmamayacidvapur / ātmā / sarvathaiṣa / parameśvara / eva / syād / vapus / tu / nikhileṣu / padārth
+  L2: The self, knowledge-action-formed consciousness-body, is in every way the Lord alone — but would there even be a body am
+- s19-v04 (verses 4) [PASS]
+  L1: ## s19-v04 (4)
+viṣamārtimuṣānena / phalena / tvaddṛgātmanā / abhilīya / pathā / nātha / mamāstu / tvanmayī / gatiḥ
+  L2: By unequalled fruit, stealing pain — melt into His sight-natured form; may my going be His-formed.
+- s19-v05 (verses 5) [PASS]
+  L1: ## s19-v05 (5)
+bhavadamalacaraṇacintāratnalatālaṅkṛtā / kadā / siddhiḥ / siddhajanamānasānāṃ / vismayajananī / ghaṭeta /
+  L2: When will foot-thought-jewel-creeper-fruition, amazing the perfected, befall me, from You?
+- s19-v06 (verses 6) [PASS]
+  L1: ## s19-v06 (6)
+karhi / nātha / vimalaṃ / mukhabimbaṃ / tāvakaṃ / samavalokayitāsmi / yatsravaty / amṛtapūram / apūrvaṃ /
+  L2: When, Lord, shall I fully see Your pure face-orb, from which streams unprecedented nectar-flood, which drowns the whole 
+- s19-v07 (verses 7) [PASS]
+  L1: ## s19-v07 (7)
+dhyātamātramuditaṃ / tava / rūpaṃ / karhi / nātha / paramāmṛtapūraiḥ / pūrayet / tvadavibhedavimokṣākhyāt
+  L2: Your form, risen at mere meditation — when, Lord, will it ever fill with supreme-nectar floods my far gaps named non-dua
+- s19-v08 (verses 8) [PASS]
+  L1: ## s19-v08 (8)
+tvadīyānuttararasāsaṅgasaṃtyaktacāpalam / nādyāpi / me / mano / nātha / karhi / syād / astu / śīghrataḥ
+  L2: By touch of Your peerless rasa, unroaming abandoned — not even now is my mind, Lord: when will it be? Let it be soon.
+- s19-v09 (verses 9) [PASS]
+  L1: ## s19-v09 (9)
+mā / śuṣkakaṭukāny / eva / paraṃ / sarvāṇi / sarvadā / tavopahṛtya / labdhāni / dvandvāny / apy / āpatant
+  L2: Not dry-bitter things only — bring on all, always, gained by offering to You; let even opposites befall me.
+- s19-v10 (verses 10) [PASS]
+  L1: ## s19-v10 (10)
+nātha / sāṃmukhyam / āyāntu / viśuddhās / tava / raśmayaḥ / yāvat / kāyamanastāpatamobhiḥ / parilupyatām
+  L2: Lord, may Your pure rays come face to face, as long as body-mind-heat-dark is wiped out.
+- s19-v11 (verses 11) [PASS]
+  L1: ## s19-v11 (11)
+deva / prasīda / yāvan / me / tvanmārgaparipanthikāḥ / paramārthamuṣo / vaśyā / bhūyāsur / guṇataskarāḥ
+  L2: God, be gracious till my path-blockers, truth-stealing, sense-thieves are tamed.
+- s19-v12 (verses 12) [PASS]
+  L1: ## s19-v12 (12)
+tvad / bhaktisudhāsārair / mānasam / āpūryatāṃ / mamāśu / vibho / yāvad / imā / uhyantāṃ / niḥśeṣāsāravā
+  L2: With Your devotion-nectar-essence fill my mind fast, Lord — till these are carried off, drowned: all sapless habits.
+- s19-v13 (verses 13) [PASS]
+  L1: ## s19-v13 (13)
+mokṣadaśāyāṃ / bhaktis / tvayi / kuta / iva / martyadharmiṇo / 'pi / na / sā / rājati / tato / 'nurūpām 
+  L2: In liberation-state, where is devotion to You — how could it shine even for the mortal-natured? So set me, Unborn, on a 
+- s19-v14 (verses 14) [PASS]
+  L1: ## s19-v14 (14)
+siddhilavalābhalubdhaṃ / mām / avalepena / mā / vibho / saṃsthāḥ / kṣāmas / tvadbhaktimukhe / prollasada
+  L2: Greedy for a siddhi-drop's gain, don't settle proud me — thin is liberation beside Your devotion-face's sprouting aṇimā-
+- s19-v15 (verses 15) [PASS]
+  L1: ## s19-v15 (15)
+dāsasya / me / prasīdatu / bhagavān / etāvad / eva / nanu / yāce / dātā / tribhuvananātho / yasya / na /
+  L2: May the Lord be pleased with me, His slave — I ask only this, since the three-worlds Giver exceeds my sight.
+- s19-v16 (verses 16) [PASS]
+  L1: ## s19-v16 (16)
+tvadvapuḥsmṛtisudhārasapūrṇe / mānase / tava / padāmbujayugmam / māmake / vikasad / astu / sadaiva / pra
+  L2: In mind full of Your body-mindfulness-nectar-rasa, may Your lotus-feet-pair bloom in mine, ever dripping honey, supramun
+- s19-v17 (verses 17) [PASS]
+  L1: ## s19-v17 (17)
+asti / me / prabhur / asau / janako / 'tha / tryambako / 'tha / jananī / ca / bhavānī / na / dvitīya / i
+  L2: I have a Lord, a father — Tryambaka — and a mother, Bhavānī; no second exists for me here — thus most-fulfilled may I ro
+- s20-v01 (verses 1) [PASS]
+  L1: ## s20-v01 (1)
+nathaṃ / tribhuvananāthaṃ / bhūtisitaṃ / trinayanaṃ / triśūladharam / upavītīkṛtabhoginam / indukalāśekha
+  L2: Bow to the three-worlds' Lord, ash-white, three-eyed, trident-bearing, snake-threaded, moon-crested.
+- s20-v02 (verses 2) [PASS]
+  L1: ## s20-v02 (2)
+naumi / nijatanuvinismaradaṃśukapariveṣadhavalaparidhānam / vilasatkapālamālākalpitanṛttotsavākalpam
+  L2: I praise, self-forgetting, white-robed in bite-torn cloth, dancing to the tune of the skull-garland.
+- s20-v03 (verses 3) [PASS]
+  L1: ## s20-v03 (3)
+vande / tān / daivataṃ / yeṣāṃ / haraś / ceṣṭā / harocitāḥ / haraikapravaṇāḥ / prāṇāḥ / sadā / saubhāgyas
+  L2: Bow to those whose god is Hara, whose acts are Hara-fit, whose lives lean wholly to Hara — the fortunate abodes.
+- s20-v04 (verses 4) [PASS]
+  L1: ## s20-v04 (4)
+krīḍitaṃ / tava / maheśvaratāyāḥ / pṛṣṭhato / 'nyad / idam / eva / yathaitat / iṣṭamātraghaṭiteṣv / avadā
+  L2: Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means.
+- s20-v05 (verses 5) [PASS]
+  L1: ## s20-v05 (5)
+tvaddhāmni / viśvavandye / 'sminn / iyati / krīḍane / sati / tava / nātha / kiyān / bhūyānn / ānandarasas
+  L2: In Your world-venerated abode, in this play — how great would my bliss-birth be?
+- s20-v06 (verses 6) [PASS]
+  L1: ## s20-v06 (6)
+kathaṃ / sa / subhago / mā / bhūdyo / gauryā / vallabho / haraḥ / haro / 'pi / mā / bhūd / atha / kiṃ / g
+  L2: How could He not be fortunate — Hara, Gauri's beloved? And how could Hara not be Gauri's supreme beloved?
+- s20-v07 (verses 7) [PASS]
+  L1: ## s20-v07 (7)
+dhyānāmṛtamayaṃ / yasya / svātmamūlam / anaśvaram / saṃvillatās / tathārūpās / tasya / kasyāpi / sattaroḥ
+  L2: Whose meditation-nectar is undying, self-rooted, ever-fresh consciousness-creepers, like some tree of being.
+- s20-v08 (verses 8) [PASS]
+  L1: ## s20-v08 (8)
+bhaktikaṇḍūsam / ullāsāvasare / parameśvara / mahānikaṣapāṣāṇasthūṇā / pūjaiva / jāyate
+  L2: At devotion-itch's showing, Lord's pillar-firmness arises — by it the world, great festival, is won.
+- s20-v09 (verses 9) [PASS]
+  L1: ## s20-v09 (9)
+sadā / srṣṭivinodāya / sadā / sthitisukhāsine / sadā / tribhuvanāhāratṛptāya / svāmine / namaḥ
+  L2: Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the husband, bow.
+- s20-v10 (verses 10) [PASS]
+  L1: ## s20-v10 (10)
+na / kvāpi / gatvā / hitvāpi / na / kiṃcid / idam / eva / ye / bhavyaṃ / tvaddhāma / paśyanti / bhavyās 
+  L2: Nowhere gone, nothing left — who see Your abode as to-be here, fortunate: bow to them.
+- s20-v11 (verses 11) [PASS]
+  L1: ## s20-v11 (11)
+bhaktilakṣmīsamṛddhānāṃ / kim / anyad / upayācitam / etayā / vā / daridraṇāṃ / kim / anyad / upayācitam
+  L2: For the devotion-fortuned, what else is begged; for the devotion-poor, what else is begged?
+- s20-v12 (verses 12) [PASS]
+  L1: ## s20-v12 (12)
+duḥkhāny / api / sukhāyante / viṣam / apy / amṛtāyate / mokṣāyate / ca / saṃsāro / yatra / mārgaḥ / sa /
+  L2: Where pains turn pleasures, poison turns nectar, saṃsāra turns liberation — that path is Śiva.
+- s20-v13 (verses 13) [PASS]
+  L1: ## s20-v13 (13)
+mūle / madhye / 'vasāne / ca / nāsti / duḥkhaṃ / bhavajjuṣāṃ / tathāpi / vayam / īśāna / sīdāmaḥ / katha
+  L2: At root, middle, end, no suffering for Your people — yet we sink, Lord: tell why.
+- s20-v14 (verses 14) [PASS]
+  L1: ## s20-v14 (14)
+jñānayogādinānyeṣām / apy / apekṣitum / arhati / prakāśaḥ / svairiṇām / iva / bhavān / bhaktimatāṃ / pra
+  L2: Light is worth begging even by others, beginners in knowledge-yoga — You, Lord of devotees, are like the light of the fr
+- s20-v15 (verses 15) [PASS]
+  L1: ## s20-v15 (15)
+bhaktānāṃ / nārtayo / nāpy / asty / ādhyānaṃ / svātmanas / tava / tathāpy / asti / śivety / etat / kim /
+  L2: Devotees have no prayers, no remembrance of You the self — yet this "Śiva" of theirs, something, on the lip.
+- s20-v16 (verses 16) [PASS]
+  L1: ## s20-v16 (16)
+sarvābhāsāvabhāso / yo / vimarśavalito / 'khilam / aham / etad / iti / staumi / tāṃ / kriyāśaktim / īśa 
+  L2: Who lights all appearances, wrapped in vimarśa — "I am this": I praise Your action-power, Lord.
+- s20-v17 (verses 17) [PASS]
+  L1: ## s20-v17 (17)
+vartante / jantavo / 'śeṣā / api / brahmendraviṣṇavaḥ / grasamānās / tato / vande / deva / viśvaṃ / bhav
+  L2: All beings, from Brahmā to Viṣṇu, being devoured — so I bow, God, to the world as Your-formed.
+- s20-v18 (verses 18) [PASS]
+  L1: ## s20-v18 (18)
+sato / vināśasambandhān / matparaṃ / nikhilaṃ / mṛṣā / evamevodyate / nātha / tvayā / saṃhāralīlayā
+  L2: All beyond Me is false, by relation to destruction — thus engaged, Lord, by Your destruction-play alone.
+- s20-v19 (verses 19) [PASS]
+  L1: ## s20-v19 (19)
+dhyātam / ātmupatiṣṭhata / eva / tvadvapur / varada / bhaktidhanānām / apy / acintyam / akhilādbhutacint
+  L2: Meditated, Your form stands present for devotion-rich — unconquered by unthinkable-wonder-makers.
+- s20-v20 (verses 20) [PASS]
+  L1: ## s20-v20 (20)
+tāvakabhaktirasāsavasekād / iva / sukhitamarmamaṇḍalasphuritaiḥ / nṛtyati / vīrajano / niśi / vetālakula
+  L2: By Your devotion-wine-taste nerves' thrill, night-heroes dance, roused by vetālas.
+- s20-v21 (verses 21) [PASS]
+  L1: ## s20-v21 (21)
+ārabdhā / bhavadabhinutir / amunā / yenāṅgakena / mama / śambho / tenāparyantam / imaṃ / kālaṃ / dṛḍham 
+  L2: The praise begun with this limb of mine — by it may all this time be firmly unending.

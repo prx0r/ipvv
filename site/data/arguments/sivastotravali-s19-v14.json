@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v14",
+ "title": "sivastotravali — s19-v14",
+ "kind": "entailment",
+ "question": "Greedy for a siddhi-drop's gain, don't settle proud me — thin is liberation beside Your devotion-face's sprouting aṇimā-wings.",
+ "issue": "Derived from L2 text (no argmap). Greedy for a siddhi-drop's gain, don't settle proud me — thin is liberation beside Your devotion-face's sprouting aṇimā-wings.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Greedy for a siddhi-drop's gain, don't settle proud me — thin is liberation beside Your devotion-face's sprouting aṇimā-wings.",
+  "passage_id": "sivastotravali:s19-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Greedy for a siddhi-drop's gain, don't settle proud me — thin is liberation beside Your devotion-face's sprouting aṇimā-wings.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v14",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v34",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v34",
+ "title": "sivastotravali — s17-v34",
+ "kind": "entailment",
+ "question": "Whose moment-drink is worship-nectar — are they gods, freed, or whatever people?",
+ "issue": "Derived from L2 text (no argmap). Whose moment-drink is worship-nectar — are they gods, freed, or whatever people?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v34"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whose moment-drink is worship-nectar — are they gods, freed, or whatever people?",
+  "passage_id": "sivastotravali:s17-v34"
+ },
+ "unresolved": "",
+ "argument_text": "Whose moment-drink is worship-nectar — are they gods, freed, or whatever people?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v34",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

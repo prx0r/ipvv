@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p07",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p07",
+ "title": "paramarthacarca — par-p07",
+ "kind": "entailment",
+ "question": "Thus — self-consciousness, primordially established, unaccomplishable; the self, non-lord, lord; whose place and time are full of own power — eternal, pervasive: Bhairava-Lord, I praise.",
+ "issue": "Derived from L2 text (no argmap). Thus — self-consciousness, primordially established, unaccomplishable; the self, non-lord, lord; whose place and time are full of own power — eternal, pervasive: Bhairava-Lord, I praise.",
+ "premises": [
+  {
+   "text": "itthaṃ svasaṃvedanam ādisiddham asādhyam ātmānam anīśam īśam | svaśaktisaṃpūrṇavadeśakālaṃ nityaṃ vibhuṃ bhairavanātham īḍe",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus — self-consciousness, primordially established, unaccomplishable; the self, non-lord, lord; whose place and time are full of own power — eternal, pervasive: Bhairava-Lord, I praise.",
+  "passage_id": "paramarthacarca:par-p07"
+ },
+ "unresolved": "",
+ "argument_text": "Thus — self-consciousness, primordially established, unaccomplishable; the self, non-lord, lord; whose place and time are full of own power — eternal, pervasive: Bhairava-Lord, I praise.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p07",
+ "sanskrit": "itthaṃ svasaṃvedanam ādisiddham asādhyam ātmānam anīśam īśam | svaśaktisaṃpūrṇavadeśakālaṃ nityaṃ vibhuṃ bhairavanātham īḍe",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavastava:bh-p02",
+ "work_id": "bhairavastava",
+ "passage_id": "bhairavastava:bh-p02",
+ "title": "bhairavastava — bh-p02",
+ "kind": "entailment",
+ "question": "All this, become of You, now appears to me by the power of Your grace. You, Maheśa, are always my self; by You all is mine.",
+ "issue": "Derived from L2 text (no argmap). All this, become of You, now appears to me by the power of Your grace. You, Maheśa, are always my self; by You all is mine.",
+ "premises": [
+  {
+   "text": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavastava:bh-p02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "All this, become of You, now appears to me by the power of Your grace. You, Maheśa, are always my self; by You all is mine.",
+  "passage_id": "bhairavastava:bh-p02"
+ },
+ "unresolved": "",
+ "argument_text": "All this, become of You, now appears to me by the power of Your grace. You, Maheśa, are always my self; by You all is mine.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavastava:bh-p02",
+ "sanskrit": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
+ "license": "CC BY-NC-SA 4.0"
+}

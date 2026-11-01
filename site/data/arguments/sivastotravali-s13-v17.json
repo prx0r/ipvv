@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s13-v17",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s13-v17",
+ "title": "sivastotravali — s13-v17",
+ "kind": "entailment",
+ "question": "The kālakūṭa poison set in Your throat's corner is great nectar to me; even taken nectar would be Your body of poison to me, if difference prevails.",
+ "issue": "Derived from L2 text (no argmap). The kālakūṭa poison set in Your throat's corner is great nectar to me; even taken nectar would be Your body of poison to me, if difference prevails.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s13-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The kālakūṭa poison set in Your throat's corner is great nectar to me; even taken nectar would be Your body of poison to me, if difference prevails.",
+  "passage_id": "sivastotravali:s13-v17"
+ },
+ "unresolved": "",
+ "argument_text": "The kālakūṭa poison set in Your throat's corner is great nectar to me; even taken nectar would be Your body of poison to me, if difference prevails.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s13-v17",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

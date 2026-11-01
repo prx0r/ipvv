@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v04",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v04",
+ "title": "sivastotravali — s07-v04",
+ "kind": "entailment",
+ "question": "Me, rolled in the passion-made world-egg — may devotion-thought-mother feed me with rasas, till, wing-grown, I am a bird.",
+ "issue": "Derived from L2 text (no argmap). Me, rolled in the passion-made world-egg — may devotion-thought-mother feed me with rasas, till, wing-grown, I am a bird.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Me, rolled in the passion-made world-egg — may devotion-thought-mother feed me with rasas, till, wing-grown, I am a bird.",
+  "passage_id": "sivastotravali:s07-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Me, rolled in the passion-made world-egg — may devotion-thought-mother feed me with rasas, till, wing-grown, I am a bird.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v04",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

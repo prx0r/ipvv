@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v05",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v05",
+ "title": "sivastotravali — s07-v05",
+ "kind": "entailment",
+ "question": "May this mind of mine gain skill in tasting the essence of Your foot-thought-nectar-rasa — ending all object-poison-clinging-longing.",
+ "issue": "Derived from L2 text (no argmap). May this mind of mine gain skill in tasting the essence of Your foot-thought-nectar-rasa — ending all object-poison-clinging-longing.",
+ "premises": [
+  {
+   "text": "tvaccaraṇabhāvanāmṛtarasasārāsvādanaipuṇaṃ labhatām cittam idaṃ niḥśeṣitaviṣayaviṣāsaṅgavāsanāvadhi me",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May this mind of mine gain skill in tasting the essence of Your foot-thought-nectar-rasa — ending all object-poison-clinging-longing.",
+  "passage_id": "sivastotravali:s07-v05"
+ },
+ "unresolved": "",
+ "argument_text": "May this mind of mine gain skill in tasting the essence of Your foot-thought-nectar-rasa — ending all object-poison-clinging-longing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v05",
+ "sanskrit": "tvaccaraṇabhāvanāmṛtarasasārāsvādanaipuṇaṃ labhatām cittam idaṃ niḥśeṣitaviṣayaviṣāsaṅgavāsanāvadhi me",
+ "license": "CC BY-NC-SA 4.0"
+}

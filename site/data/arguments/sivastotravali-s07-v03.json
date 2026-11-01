@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v03",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v03",
+ "title": "sivastotravali — s07-v03",
+ "kind": "entailment",
+ "question": "May the thought-stain-line melt; may unbarredness blaze in heart; bliss-rasa-flooded be my consciousness-body, Lord.",
+ "issue": "Derived from L2 text (no argmap). May the thought-stain-line melt; may unbarredness blaze in heart; bliss-rasa-flooded be my consciousness-body, Lord.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May the thought-stain-line melt; may unbarredness blaze in heart; bliss-rasa-flooded be my consciousness-body, Lord.",
+  "passage_id": "sivastotravali:s07-v03"
+ },
+ "unresolved": "",
+ "argument_text": "May the thought-stain-line melt; may unbarredness blaze in heart; bliss-rasa-flooded be my consciousness-body, Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v03",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

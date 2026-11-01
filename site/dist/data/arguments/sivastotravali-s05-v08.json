@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v08",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v08",
+ "title": "sivastotravali — s05-v08",
+ "kind": "entailment",
+ "question": "May Your sun-rays rejoice, Lord, until my heart-lotus blooms — for Your worship.",
+ "issue": "Derived from L2 text (no argmap). May Your sun-rays rejoice, Lord, until my heart-lotus blooms — for Your worship.",
+ "premises": [
+  {
+   "text": "samullasantu bhagavan bhavadbhānumarīcayaḥ vikasatveṣa yāvan me hṛtpadmaḥ pūjanāya te",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May Your sun-rays rejoice, Lord, until my heart-lotus blooms — for Your worship.",
+  "passage_id": "sivastotravali:s05-v08"
+ },
+ "unresolved": "",
+ "argument_text": "May Your sun-rays rejoice, Lord, until my heart-lotus blooms — for Your worship.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v08",
+ "sanskrit": "samullasantu bhagavan bhavadbhānumarīcayaḥ vikasatveṣa yāvan me hṛtpadmaḥ pūjanāya te",
+ "license": "CC BY-NC-SA 4.0"
+}

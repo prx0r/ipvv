@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s06-v02",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s06-v02",
+ "title": "sivastotravali — s06-v02",
+ "kind": "entailment",
+ "question": "In saṃsāra whose essence is parting — by You, dear Lord, may I be ever unparted, though parted from the world.",
+ "issue": "Derived from L2 text (no argmap). In saṃsāra whose essence is parting — by You, dear Lord, may I be ever unparted, though parted from the world.",
+ "premises": [
+  {
+   "text": "viyogasāre saṃsāre priyeṇa prabhuṇā tvayā aviyuktaḥ sadaiva syāṃ jagatāpi viyojitaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s06-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In saṃsāra whose essence is parting — by You, dear Lord, may I be ever unparted, though parted from the world.",
+  "passage_id": "sivastotravali:s06-v02"
+ },
+ "unresolved": "",
+ "argument_text": "In saṃsāra whose essence is parting — by You, dear Lord, may I be ever unparted, though parted from the world.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s06-v02",
+ "sanskrit": "viyogasāre saṃsāre priyeṇa prabhuṇā tvayā aviyuktaḥ sadaiva syāṃ jagatāpi viyojitaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

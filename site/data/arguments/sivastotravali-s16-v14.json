@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s16-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s16-v14",
+ "title": "sivastotravali — s16-v14",
+ "kind": "entailment",
+ "question": "Erring are pilgrim-eyes, divided — for division is just erring; but matchless, strifeless Being shines for devotees.",
+ "issue": "Derived from L2 text (no argmap). Erring are pilgrim-eyes, divided — for division is just erring; but matchless, strifeless Being shines for devotees.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s16-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Erring are pilgrim-eyes, divided — for division is just erring; but matchless, strifeless Being shines for devotees.",
+  "passage_id": "sivastotravali:s16-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Erring are pilgrim-eyes, divided — for division is just erring; but matchless, strifeless Being shines for devotees.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s16-v14",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

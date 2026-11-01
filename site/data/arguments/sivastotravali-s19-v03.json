@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v03",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v03",
+ "title": "sivastotravali — s19-v03",
+ "kind": "entailment",
+ "question": "The self, knowledge-action-formed consciousness-body, is in every way the Lord alone — but would there even be a body among all these things, or what else?",
+ "issue": "Derived from L2 text (no argmap). The self, knowledge-action-formed consciousness-body, is in every way the Lord alone — but would there even be a body among all these things, or what else?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The self, knowledge-action-formed consciousness-body, is in every way the Lord alone — but would there even be a body among all these things, or what else?",
+  "passage_id": "sivastotravali:s19-v03"
+ },
+ "unresolved": "",
+ "argument_text": "The self, knowledge-action-formed consciousness-body, is in every way the Lord alone — but would there even be a body among all these things, or what else?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v03",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

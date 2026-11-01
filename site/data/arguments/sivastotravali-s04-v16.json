@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v16",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v16",
+ "title": "sivastotravali — s04-v16",
+ "kind": "entailment",
+ "question": "Of minds eager for Your ever-blooming face-lotus-belly-gaze — do something, Lord, just a little, so You flash as facing me.",
+ "issue": "Derived from L2 text (no argmap). Of minds eager for Your ever-blooming face-lotus-belly-gaze — do something, Lord, just a little, so You flash as facing me.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of minds eager for Your ever-blooming face-lotus-belly-gaze — do something, Lord, just a little, so You flash as facing me.",
+  "passage_id": "sivastotravali:s04-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Of minds eager for Your ever-blooming face-lotus-belly-gaze — do something, Lord, just a little, so You flash as facing me.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v16",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

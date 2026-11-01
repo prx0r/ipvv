@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v11",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v11",
+ "title": "sivastotravali — s04-v11",
+ "kind": "entailment",
+ "question": "Some god of Yours blooms in their hearts, a lovely supreme state — by whose story-thunder-cātakas they are long gladdened.",
+ "issue": "Derived from L2 text (no argmap). Some god of Yours blooms in their hearts, a lovely supreme state — by whose story-thunder-cātakas they are long gladdened.",
+ "premises": [
+  {
+   "text": "ko 'pi deva hṛdi teṣu tāvako jṛmbhate subhagabhāva uttamaḥ tvatkathāmbudaninādacātakā yena te 'pi subhagīkṛtāś ciram",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Some god of Yours blooms in their hearts, a lovely supreme state — by whose story-thunder-cātakas they are long gladdened.",
+  "passage_id": "sivastotravali:s04-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Some god of Yours blooms in their hearts, a lovely supreme state — by whose story-thunder-cātakas they are long gladdened.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v11",
+ "sanskrit": "ko 'pi deva hṛdi teṣu tāvako jṛmbhate subhagabhāva uttamaḥ tvatkathāmbudaninādacātakā yena te 'pi subhagīkṛtāś ciram",
+ "license": "CC BY-NC-SA 4.0"
+}

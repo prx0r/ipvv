@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p08",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p08",
+ "title": "anuttarastika — anu-p08",
+ "kind": "entailment",
+ "question": "What true, what untrue, little-much, eternal, not eternal, what Māyā-stained, what self-pure — in the consciousness-mirror shines. That all, from own-grasping-consciousness-rise, form-light-natured, having known — own-experience-risen glory: Lordhood — worship.",
+ "issue": "Derived from L2 text (no argmap). What true, what untrue, little-much, eternal, not eternal, what Māyā-stained, what self-pure — in the consciousness-mirror shines. That all, from own-grasping-consciousness-rise, form-light-natured, having known — own-experience-risen glory: Lordhood — worship.",
+ "premises": [
+  {
+   "text": "yat satyaṃ yad asatyam alpabahulaṃ nityaṃ na nityaṃ ca yat yan māyāmalinaṃ yad ātmavimalaṃ ciddarpaṇe rājate | tat sarvaṃ svavimarśasaṃvidudayād rūpaprakāśātmakaṃ jñātvā svānubhavādhirūḍhamahimā viśveśvaratvaṃ bhaja || AgAna_8",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "What true, what untrue, little-much, eternal, not eternal, what Māyā-stained, what self-pure — in the consciousness-mirror shines. That all, from own-grasping-consciousness-rise, form-light-natured, having known — own-experience-risen glory: Lordhood — worship.",
+  "passage_id": "anuttarastika:anu-p08"
+ },
+ "unresolved": "",
+ "argument_text": "What true, what untrue, little-much, eternal, not eternal, what Māyā-stained, what self-pure — in the consciousness-mirror shines. That all, from own-grasping-consciousness-rise, form-light-natured, having known — own-experience-risen glory: Lordhood — worship.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p08",
+ "sanskrit": "yat satyaṃ yad asatyam alpabahulaṃ nityaṃ na nityaṃ ca yat yan māyāmalinaṃ yad ātmavimalaṃ ciddarpaṇe rājate | tat sarvaṃ svavimarśasaṃvidudayād rūpaprakāśātmakaṃ jñātvā svānubhavādhirūḍhamahimā viśveśvaratvaṃ bhaja || AgAna_8",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v18",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v18",
+ "title": "sivastotravali — s02-v18",
+ "kind": "entailment",
+ "question": "In these three worlds whose essence is mockery alone — to You alone, secondless, ever-bliss-seated — bow.",
+ "issue": "Derived from L2 text (no argmap). In these three worlds whose essence is mockery alone — to You alone, secondless, ever-bliss-seated — bow.",
+ "premises": [
+  {
+   "text": "upahāsaikasāre 'sminn etāvati jagattraye tubhyam evādvitīyāya namo nityasukhāsine",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In these three worlds whose essence is mockery alone — to You alone, secondless, ever-bliss-seated — bow.",
+  "passage_id": "sivastotravali:s02-v18"
+ },
+ "unresolved": "",
+ "argument_text": "In these three worlds whose essence is mockery alone — to You alone, secondless, ever-bliss-seated — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v18",
+ "sanskrit": "upahāsaikasāre 'sminn etāvati jagattraye tubhyam evādvitīyāya namo nityasukhāsine",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthacarca:par-p04",
+ "work_id": "paramarthacarca",
+ "passage_id": "paramarthacarca:par-p04",
+ "title": "paramarthacarca — par-p04",
+ "kind": "entailment",
+ "question": "That difference, and this — not different thence: of the free, most-perfectly-clear one-abode. Palace, elephant, horse, cloud, ocean, mountain and the rest — just as of jewel-mirror and the like.",
+ "issue": "Derived from L2 text (no argmap). That difference, and this — not different thence: of the free, most-perfectly-clear one-abode. Palace, elephant, horse, cloud, ocean, mountain and the rest — just as of jewel-mirror and the like.",
+ "premises": [
+  {
+   "text": "bhedaḥ sa cāyaṃ na tato vibhinnaḥ svacchandasusvacchatamaikadhāmnaḥ | prāsādahastyaśvapayodasindhugiryādi yadvanmaṇidarpaṇādeḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthacarca:par-p04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "That difference, and this — not different thence: of the free, most-perfectly-clear one-abode. Palace, elephant, horse, cloud, ocean, mountain and the rest — just as of jewel-mirror and the like.",
+  "passage_id": "paramarthacarca:par-p04"
+ },
+ "unresolved": "",
+ "argument_text": "That difference, and this — not different thence: of the free, most-perfectly-clear one-abode. Palace, elephant, horse, cloud, ocean, mountain and the rest — just as of jewel-mirror and the like.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthacarca:par-p04",
+ "sanskrit": "bhedaḥ sa cāyaṃ na tato vibhinnaḥ svacchandasusvacchatamaikadhāmnaḥ | prāsādahastyaśvapayodasindhugiryādi yadvanmaṇidarpaṇādeḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

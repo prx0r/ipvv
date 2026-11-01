@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s07-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s07-v07",
+ "title": "sivastotravali — s07-v07",
+ "kind": "entailment",
+ "question": "In that state may I praise You constantly, aloud — where even Hari, Hara's horse (?), Brahmā wait outside.",
+ "issue": "Derived from L2 text (no argmap). In that state may I praise You constantly, aloud — where even Hari, Hara's horse (?), Brahmā wait outside.",
+ "premises": [
+  {
+   "text": "tasmin pade bhavantaṃ satatam upaślokayeyam atyuccaiḥ hariharyaśvaviriñcā api yatra bahiḥ pratīkṣante",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s07-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In that state may I praise You constantly, aloud — where even Hari, Hara's horse (?), Brahmā wait outside.",
+  "passage_id": "sivastotravali:s07-v07"
+ },
+ "unresolved": "",
+ "argument_text": "In that state may I praise You constantly, aloud — where even Hari, Hara's horse (?), Brahmā wait outside.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s07-v07",
+ "sanskrit": "tasmin pade bhavantaṃ satatam upaślokayeyam atyuccaiḥ hariharyaśvaviriñcā api yatra bahiḥ pratīkṣante",
+ "license": "CC BY-NC-SA 4.0"
+}

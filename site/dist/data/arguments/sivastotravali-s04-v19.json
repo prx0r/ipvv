@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s04-v19",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s04-v19",
+ "title": "sivastotravali — s04-v19",
+ "kind": "entailment",
+ "question": "These people truly do not see Your body, dirtied by duality-sight — and yet, all-knowing refuge-lover, do You not hear MY cry?",
+ "issue": "Derived from L2 text (no argmap). These people truly do not see Your body, dirtied by duality-sight — and yet, all-knowing refuge-lover, do You not hear MY cry?",
+ "premises": [
+  {
+   "text": "na kila paśyati satyam ayaṃ janas tava vapur dvayadṛṣṭimalīmasaḥ tad api sarvavidāśritavatsalaḥ kim idam āraṭitaṃ na śṛṇoṣi me",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s04-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "These people truly do not see Your body, dirtied by duality-sight — and yet, all-knowing refuge-lover, do You not hear MY cry?",
+  "passage_id": "sivastotravali:s04-v19"
+ },
+ "unresolved": "",
+ "argument_text": "These people truly do not see Your body, dirtied by duality-sight — and yet, all-knowing refuge-lover, do You not hear MY cry?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s04-v19",
+ "sanskrit": "na kila paśyati satyam ayaṃ janas tava vapur dvayadṛṣṭimalīmasaḥ tad api sarvavidāśritavatsalaḥ kim idam āraṭitaṃ na śṛṇoṣi me",
+ "license": "CC BY-NC-SA 4.0"
+}

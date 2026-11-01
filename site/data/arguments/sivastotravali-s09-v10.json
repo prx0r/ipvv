@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s09-v10",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s09-v10",
+ "title": "sivastotravali — s09-v10",
+ "kind": "entailment",
+ "question": "Seizing suddenly, holding hard, joy-overwhelmed — when shall I proclaim Your foot-treasure to all?",
+ "issue": "Derived from L2 text (no argmap). Seizing suddenly, holding hard, joy-overwhelmed — when shall I proclaim Your foot-treasure to all?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s09-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Seizing suddenly, holding hard, joy-overwhelmed — when shall I proclaim Your foot-treasure to all?",
+  "passage_id": "sivastotravali:s09-v10"
+ },
+ "unresolved": "",
+ "argument_text": "Seizing suddenly, holding hard, joy-overwhelmed — when shall I proclaim Your foot-treasure to all?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s09-v10",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

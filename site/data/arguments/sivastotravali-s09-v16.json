@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s09-v16",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s09-v16",
+ "title": "sivastotravali — s09-v16",
+ "kind": "entailment",
+ "question": "Tears first, stumbling, wandering, choked crying — laughing-lit face: when shall I get Your touch-rasa?",
+ "issue": "Derived from L2 text (no argmap). Tears first, stumbling, wandering, choked crying — laughing-lit face: when shall I get Your touch-rasa?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s09-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Tears first, stumbling, wandering, choked crying — laughing-lit face: when shall I get Your touch-rasa?",
+  "passage_id": "sivastotravali:s09-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Tears first, stumbling, wandering, choked crying — laughing-lit face: when shall I get Your touch-rasa?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s09-v16",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

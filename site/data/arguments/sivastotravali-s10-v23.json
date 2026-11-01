@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v23",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v23",
+ "title": "sivastotravali — s10-v23",
+ "kind": "entailment",
+ "question": "Whose speech-ornament is the name \"Maheśvara,\" whose head bears the bow-mark — he alone is powerful.",
+ "issue": "Derived from L2 text (no argmap). Whose speech-ornament is the name \"Maheśvara,\" whose head bears the bow-mark — he alone is powerful.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v23"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whose speech-ornament is the name \"Maheśvara,\" whose head bears the bow-mark — he alone is powerful.",
+  "passage_id": "sivastotravali:s10-v23"
+ },
+ "unresolved": "",
+ "argument_text": "Whose speech-ornament is the name \"Maheśvara,\" whose head bears the bow-mark — he alone is powerful.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v23",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

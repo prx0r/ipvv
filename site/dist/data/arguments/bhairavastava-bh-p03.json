@@ -4,27 +4,27 @@
  "passage_id": "bhairavastava:bh-p03",
  "title": "bhairavastava — bh-p03",
  "kind": "entailment",
- "question": "bh-p03 — suffering acknowledged",
- "issue": "Derived from L2 text (no argmap). ## bh-p03 — suffering acknowledged\nEven though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.",
+ "question": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
+ "issue": "Derived from L2 text (no argmap). With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
  "premises": [
   {
-   "text": "satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
+   "text": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
    "label": "Sanskrit source",
    "passage_id": "bhairavastava:bh-p03"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "bh-p03 — suffering acknowledged",
+  "text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
   "passage_id": "bhairavastava:bh-p03"
  },
  "unresolved": "",
- "argument_text": "## bh-p03 — suffering acknowledged\nEven though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.",
+ "argument_text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "bhairavastava:bh-p03",
- "sanskrit": "satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
+ "sanskrit": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
  "license": "CC BY-NC-SA 4.0"
 }

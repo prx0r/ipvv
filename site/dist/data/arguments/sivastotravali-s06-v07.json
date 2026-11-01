@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s06-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s06-v07",
+ "title": "sivastotravali — s06-v07",
+ "kind": "entailment",
+ "question": "May things shine for me always, melting into You alone like cloud-bits in sky, moving toward ever-purer courses.",
+ "issue": "Derived from L2 text (no argmap). May things shine for me always, melting into You alone like cloud-bits in sky, moving toward ever-purer courses.",
+ "premises": [
+  {
+   "text": "vilīyamānās tvayy eva vyomni meghalavā iva bhāvā vibhāntu me śaśvat kramanairmalyagāminaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s06-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May things shine for me always, melting into You alone like cloud-bits in sky, moving toward ever-purer courses.",
+  "passage_id": "sivastotravali:s06-v07"
+ },
+ "unresolved": "",
+ "argument_text": "May things shine for me always, melting into You alone like cloud-bits in sky, moving toward ever-purer courses.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s06-v07",
+ "sanskrit": "vilīyamānās tvayy eva vyomni meghalavā iva bhāvā vibhāntu me śaśvat kramanairmalyagāminaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

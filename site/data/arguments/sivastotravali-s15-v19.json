@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s15-v19",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s15-v19",
+ "title": "sivastotravali — s15-v19",
+ "kind": "entailment",
+ "question": "The world-road is long; limbs burnt by harsh diseases; pleasures unenjoyed; happiness never long — thus I have become useless, moon-crest-foot-pressed, wholly Yours — so make me, quickly, long-and-rich in great fortune, as Your devotee.",
+ "issue": "Derived from L2 text (no argmap). The world-road is long; limbs burnt by harsh diseases; pleasures unenjoyed; happiness never long — thus I have become useless, moon-crest-foot-pressed, wholly Yours — so make me, quickly, long-and-rich in great fortune, as Your devotee.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s15-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The world-road is long; limbs burnt by harsh diseases; pleasures unenjoyed; happiness never long — thus I have become useless, moon-crest-foot-pressed, wholly Yours — so make me, quickly, long-and-rich in great fortune, as Your devotee.",
+  "passage_id": "sivastotravali:s15-v19"
+ },
+ "unresolved": "",
+ "argument_text": "The world-road is long; limbs burnt by harsh diseases; pleasures unenjoyed; happiness never long — thus I have become useless, moon-crest-foot-pressed, wholly Yours — so make me, quickly, long-and-rich in great fortune, as Your devotee.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s15-v19",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v37",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v37",
+ "title": "sivastotravali — s17-v37",
+ "kind": "entailment",
+ "question": "Some take worship as the wish-cow; others, inward-turned, milk the nectar-stream.",
+ "issue": "Derived from L2 text (no argmap). Some take worship as the wish-cow; others, inward-turned, milk the nectar-stream.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v37"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Some take worship as the wish-cow; others, inward-turned, milk the nectar-stream.",
+  "passage_id": "sivastotravali:s17-v37"
+ },
+ "unresolved": "",
+ "argument_text": "Some take worship as the wish-cow; others, inward-turned, milk the nectar-stream.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v37",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

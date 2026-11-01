@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s01-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s01-v07",
+ "title": "sivastotravali — s01-v07",
+ "kind": "entailment",
+ "question": "You alone, Lord of the self, are the nature of all, and all loves dwelling in the self. Knowing Your devotion as self-established (*svabhāvasiddhā*) — by immersion's means — may a person conquer.",
+ "issue": "Derived from L2 text (no argmap). You alone, Lord of the self, are the nature of all, and all loves dwelling in the self. Knowing Your devotion as self-established (*svabhāvasiddhā*) — by immersion's means — may a person conquer.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s01-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "You alone, Lord of the self, are the nature of all, and all loves dwelling in the self. Knowing Your devotion as self-established (*svabhāvasiddhā*) — by immersion's means — may a person conquer.",
+  "passage_id": "sivastotravali:s01-v07"
+ },
+ "unresolved": "",
+ "argument_text": "You alone, Lord of the self, are the nature of all, and all loves dwelling in the self. Knowing Your devotion as self-established (*svabhāvasiddhā*) — by immersion's means — may a person conquer.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s01-v07",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

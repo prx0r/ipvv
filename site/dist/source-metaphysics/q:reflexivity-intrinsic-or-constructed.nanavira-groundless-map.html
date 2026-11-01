@@ -119,7 +119,9 @@ main{max-width:100%}
 .vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
 article.verse{scroll-margin-top:80px}
 article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
-article.verse .w.lit{background:#f4ead3;border-radius:3px}
+article.verse .w{color:#cfc9be;transition:color .18s ease}
+article.verse .w.lit{color:#17140f}
+.kword{white-space:nowrap}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
 .recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}

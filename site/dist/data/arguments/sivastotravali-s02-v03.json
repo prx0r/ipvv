@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s02-v03",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s02-v03",
+ "title": "sivastotravali — s02-v03",
+ "kind": "entailment",
+ "question": "To Śiva-fire — cool, dense with supreme nectar — and to You, the unequalled devourer in the world's destruction — bow.",
+ "issue": "Derived from L2 text (no argmap). To Śiva-fire — cool, dense with supreme nectar — and to You, the unequalled devourer in the world's destruction — bow.",
+ "premises": [
+  {
+   "text": "paramāmṛtasāndrāya śītalāya śivāgnaye kasmai cid viśvasaṃploṣaviṣamāya namo 'stu te",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s02-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "To Śiva-fire — cool, dense with supreme nectar — and to You, the unequalled devourer in the world's destruction — bow.",
+  "passage_id": "sivastotravali:s02-v03"
+ },
+ "unresolved": "",
+ "argument_text": "To Śiva-fire — cool, dense with supreme nectar — and to You, the unequalled devourer in the world's destruction — bow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s02-v03",
+ "sanskrit": "paramāmṛtasāndrāya śītalāya śivāgnaye kasmai cid viśvasaṃploṣaviṣamāya namo 'stu te",
+ "license": "CC BY-NC-SA 4.0"
+}

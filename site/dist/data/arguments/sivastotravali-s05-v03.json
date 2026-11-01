@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s05-v03",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s05-v03",
+ "title": "sivastotravali — s05-v03",
+ "kind": "entailment",
+ "question": "You my sole Lord — this alone I always ask: dwelling inside You, may I be silent; otherwise, wise.",
+ "issue": "Derived from L2 text (no argmap). You my sole Lord — this alone I always ask: dwelling inside You, may I be silent; otherwise, wise.",
+ "premises": [
+  {
+   "text": "tvad ekanātho bhagavann iyad evārthaye sadā tvadantarvasatir mūko bhaveyaṃ mānyathā budhaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s05-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "You my sole Lord — this alone I always ask: dwelling inside You, may I be silent; otherwise, wise.",
+  "passage_id": "sivastotravali:s05-v03"
+ },
+ "unresolved": "",
+ "argument_text": "You my sole Lord — this alone I always ask: dwelling inside You, may I be silent; otherwise, wise.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s05-v03",
+ "sanskrit": "tvad ekanātho bhagavann iyad evārthaye sadā tvadantarvasatir mūko bhaveyaṃ mānyathā budhaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}
