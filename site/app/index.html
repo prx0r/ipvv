@@ -63,6 +63,24 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1
 #answer{background:#fbfaf7;border-left:2px solid var(--gold);padding:.8rem 1rem;margin:1rem 0;font-size:.98rem}
 #answer .who{font-family:Inter,system-ui,sans-serif;font-size:.72rem;color:var(--mut);letter-spacing:.08em;margin-bottom:.3rem}
 #answer .follow{color:var(--gold);cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.82rem;margin-top:.5rem;display:block}
+/* multi-view reader */
+.whead h1{font-weight:500;font-size:1.6rem;margin:.2rem 0 .1rem}
+.whead .sub{margin-bottom:.8rem}
+.vswitch{display:flex;gap:.4rem;margin:.6rem 0 1.4rem;flex-wrap:wrap}
+.vsw{font-family:Inter,system-ui,sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.4rem .9rem;cursor:pointer;color:var(--mut)}
+.vsw.on{border-color:var(--gold);color:var(--ink);box-shadow:0 0 0 1px var(--gold)}
+.vlab{font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:1.1rem 0 .3rem}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){.cmp{grid-template-columns:1fr}}
+.en.read{font-size:1.08rem;line-height:1.7}
+.c1 p{font-size:.97rem;line-height:1.65;margin:.5rem 0}
+.c1sec{margin:.7rem 0}
+.prov{font-family:Inter,system-ui,sans-serif;font-size:.7rem;color:var(--mut);letter-spacing:.06em;margin-top:1rem;border-top:1px solid var(--line);padding-top:.5rem}
+.en.yours{border-left:2px solid var(--gold);padding-left:.8rem}
+details.arg{margin:.8rem 0;border:1px solid var(--line);border-radius:.5rem;padding:.5rem .8rem}
+details.arg summary{cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;color:var(--mut)}
+.varbox textarea{width:100%;min-height:5rem;font:1rem Georgia,serif;padding:.6rem;border:1px solid var(--line);border-radius:.5rem;margin:.5rem 0}
+.addvar{margin-top:.6rem}
 </style>
 </head>
 <body>
