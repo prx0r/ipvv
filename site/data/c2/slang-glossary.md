@@ -1,7 +1,7 @@
 # Slang Glossary — the lore, the use, the Trika conversion
 
 Every term the gen-z C2 uses, with where it comes from, how to say it, what Trika payload it carries, and where it is banned. Refusals are craft, not gaps.
-New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek guide) + bliss-talk ladder. Same rule: payload or ban.
+New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek guide, MLE core) + bliss-talk ladder. Same rule: payload or ban.
 
 ## himothy
 *Verdict:* **USE — the identity word. Owner-minted, owner-kept.**
@@ -265,6 +265,18 @@ New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek gu
 *Lore:* 2020s youth: organized, sorted out ('get it patterned').
 *Use:* (observed, unmapped — no verse yet needs sorted-out-ness)
 *Trika:* No payload assigned. Candidate: vidhāna (arrangement)? Undecided — filed as observed, not used.
+
+## you get me
+*Verdict:* **USE — closers that check transmission.**
+*Lore:* MLE staple (Newsweek guide: 'akin to do you understand me?'). Comprehension check, constantly.
+*Use:* 'Just clocking what's already true — you get me?' (v1 closer alternative)
+*Trika:* Transmission check built into the line: the verse asks whether it landed. C2's whole test (did the reader get it) as a tag question.
+
+## bruv
+*Verdict:* **USE-careful — peers only.**
+*Lore:* London address term for brother/mate/friend — anyone you're warm with (Newsweek, roadman A–Z).
+*Use:* (peer address only — same cage as fam/brudda/mandem)
+*Trika:* Same ban as twin/fam upward: brotherhood keeps two standing. Never devotee→Lord.
 
 ## Bliss-talk ladder
 supremacy → lengest · taste → bussin · intensity → fire · disposition → sweetest. Rule: never stack two in one verse.
