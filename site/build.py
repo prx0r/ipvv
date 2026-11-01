@@ -1975,6 +1975,48 @@ def build_app():
         pass
     return len(works)
 
+def build_layers():
+    """Bilara-style cognates: one JSON per work keyed by chunk id.
+    Bundles translations + C1 + argmap + pushing pointers so readers
+    fetch once and work offline. C1/argmap ship as markdown; clients render lite."""
+    import json as _j
+    src = ROOT / "data/translations"
+    if not src.exists():
+        return 0
+    out = DIST / "data/layers"; out.mkdir(parents=True, exist_ok=True)
+    pushfiles = list((ROOT / "data/pushing").rglob("*.md")) if (ROOT / "data/pushing").exists() else []
+    n = 0
+    for f in sorted(src.glob("*.json")):
+        wid = f.stem
+        try:
+            items = _j.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not items:
+            continue
+        chunks = []
+        for it in items:
+            ch = it.get("chunk", "")
+            c1p = ROOT / "data/c1" / wid / f"{ch}.md"
+            amp = ROOT / "data/argmaps" / wid / f"{ch}.md"
+            chunks.append({
+                "chunk": ch, "verses": it.get("verses", ""), "gate": it.get("gate", "BLOCKED"),
+                "blocking": it.get("blocking", []), "model": it.get("model", ""), "date": it.get("date", ""),
+                "status": it.get("status", ""), "sanskrit": it.get("sanskrit", ""),
+                "l1": it.get("l1", ""), "l2": it.get("l2", ""),
+                "c1": c1p.read_text(encoding="utf-8", errors="replace") if c1p.exists() else None,
+                "argmap": amp.read_text(encoding="utf-8", errors="replace") if amp.exists() else None,
+            })
+        pushing = sorted(str(p.relative_to(ROOT / "data")).replace("\\", "/")
+                         for p in pushfiles if wid.lower() in p.stem.lower())
+        (out / f"{wid}.json").write_text(_j.dumps({
+            "work": wid, "n": len(chunks),
+            "n_pass": sum(1 for c in chunks if c["gate"] == "PASS"),
+            "pushing": pushing, "chunks": chunks,
+        }, ensure_ascii=False))
+        n += 1
+    return n
+
 def build_llms_txt():
     """Generate llm.txt (agent-native discovery) + per-work llms.txt."""
     import json as _json
@@ -2380,7 +2422,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices", "app"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices", "app", "layers"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2416,6 +2458,7 @@ def main():
     if "practices" in want: done["practices"] = build_practices()
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
     if "app" in want: done["app"] = build_app()
+    if "layers" in want: done["layers"] = build_layers()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")

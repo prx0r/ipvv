@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>read · svatantrya</title>
+<style>
+:root{--bg:#ffffff;--ink:#22242c;--ink2:#33363e;--mut:#6d7180;--faint:#a9a49c;--gold:#a86f14;--goldsoft:#f0e6cf;--line:#e7e3db}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,'Times New Roman',serif}
+#top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#top .in{max-width:46rem;margin:0 auto;padding:.6rem 1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+#top a.home{font-family:Inter,system-ui,sans-serif;font-size:.78rem;color:var(--mut);text-decoration:none}
+#top .wt{font-size:.95rem}
+#top .sub{font-family:Inter,system-ui,sans-serif;font-size:.72rem;color:var(--mut);width:100%}
+.vswitch{display:flex;gap:.4rem;flex-wrap:wrap;width:100%;margin-top:.2rem}
+.vsw{font-family:Inter,system-ui,sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .85rem;cursor:pointer;color:var(--mut)}
+.vsw.on{border-color:var(--gold);color:var(--ink);box-shadow:0 0 0 1px var(--gold)}
+#view{max-width:46rem;margin:0 auto;padding:2rem 1rem 9rem}
+.verse{margin:0;padding:2rem 0;border-top:1px solid var(--line)}
+.verse:first-child{border-top:0}
+.vnum{font-family:Inter,system-ui,sans-serif;font-size:.7rem;color:var(--gold);letter-spacing:.22em;margin-bottom:.5rem}
+.dline{font-family:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;font-size:1.75rem;line-height:1.8}
+.rline{font-size:.95rem;color:#76736e;margin:.15rem 0 .8rem;font-style:italic}
+.en{font-size:1rem;line-height:1.65}
+.en.read{font-size:1.06rem;line-height:1.75}
+.readc1 p{font-size:1.06rem;line-height:1.75;margin:.7rem 0}
+.vlab{font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:1.1rem 0 .3rem}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){.cmp{grid-template-columns:1fr}.dline{font-size:1.55rem}}
+.c1 p{font-size:.97rem;line-height:1.65;margin:.5rem 0}
+.c1sec{margin:.7rem 0}
+.prov{font-family:Inter,system-ui,sans-serif;font-size:.7rem;color:var(--mut);letter-spacing:.06em;margin-top:1rem;border-top:1px solid var(--line);padding-top:.5rem}
+.en.yours{border-left:2px solid var(--gold);padding-left:.8rem}
+details.arg{margin:.8rem 0;border:1px solid var(--line);border-radius:.5rem;padding:.5rem .8rem}
+details.arg summary{cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;color:var(--mut)}
+.varbox textarea{width:100%;min-height:5rem;font:1rem Georgia,serif;padding:.6rem;border:1px solid var(--line);border-radius:.5rem;margin:.5rem 0}
+.playbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.3rem .8rem;cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;margin:.2rem .3rem .2rem 0}
+.playbtn:hover{border-color:var(--gold)}
+.vclose{text-align:center;color:#c6bfae;margin:1.2rem 0 0;font-family:'Noto Serif Devanagari',serif}
+.rend{text-align:center;color:#c6bfae;letter-spacing:.5em;text-indent:.5em;margin:2rem 0 0}
+.kw{transition:background .3s;border-radius:.2em;padding:0 .08em}
+.kw.on{background:#fdf0d5}
+.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}
+#rcbar{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}
+#rcbar button:hover{background:#f4f1ea}
+#err{max-width:46rem;margin:0 auto;padding:4rem 1rem;color:var(--mut)}
+</style>
+</head>
+<body>
+<div id="top"><div class="in"><a class="home" href="./">‹ library</a><span class="wt" id="wtitle">…</span><span class="sub" id="wsub"></span><div class="vswitch" id="vsw"></div></div></div>
+<main id="view"><p style="color:#999">…</p></main>
+<div id="rcbar"><button id="rcPlay" title="recite">▶</button><button id="rcRead" title="read aloud">🔊</button><button id="rcStop" style="display:none" title="stop">■</button></div>
+<script src="read.js"></script>
+</body>
+</html>
