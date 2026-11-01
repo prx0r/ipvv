@@ -218,7 +218,7 @@ async function work(path){
         : `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`)
     ).join(' ') + `</div><div class="rline">${l.ro}</div>`).join('');
     const en = (it.gate==='PASS' && (it.l2||it.l1)) ? `<div class="en">${esc(cleanEN(it.l2||it.l1))}</div>` : '';
-    const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
+    const au = k ? `https://pub-87169194562a44fcb8279a799d626c62.r2.dev/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
     return {dev, ro:'', en, au, ix};
   });
   $('#view').innerHTML =

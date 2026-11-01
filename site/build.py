@@ -2321,6 +2321,16 @@ def deva_of(s):
         return s or ""
 
 AUDIO_ALIAS = {"anuttarastika": "anuttarashtika"}
+# Studio chant mp3s live in the public R2 bucket (not in git — 775 files bloated
+# every deploy past the 20k-file cap and the 20-min build timeout).
+# /audio/... paths in the audio-*.json files are rewritten to this prefix at build.
+AUDIO_BASE = "https://pub-87169194562a44fcb8279a799d626c62.r2.dev"
+
+
+def audio_url(p):
+    """Local /audio/... -> R2 public URL; anything already absolute passes through."""
+    p = p or ""
+    return AUDIO_BASE + p if p.startswith("/audio/") else p
 RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarashtika",
  "stavacintamani": "Stavacintāmaṇi", "dehastha": "Dehasthadevatācakra",
  "bodhapancadasika": "Bodhapañcadaśikā", "mahopadeshavimshatika": "Mahopadeśaviṃśatikā",
@@ -2346,12 +2356,7 @@ def build_recite():
     if (ROOT / "static-audio/sfx").exists():
         for sf in (ROOT / "static-audio/sfx").glob("*.wav"):
             shutil.copy(sf, sfx_dest / sf.name)
-    for adir in sorted((ROOT / "static-audio").iterdir()):
-        if adir.is_dir() and adir.name != "sfx":
-            dest = DIST / "audio" / adir.name
-            dest.mkdir(parents=True, exist_ok=True)
-            for mp3 in adir.glob("*.mp3"):
-                shutil.copy(mp3, dest / mp3.name)
+    # Chant mp3s are served from R2 (AUDIO_BASE) — never copied into dist.
     (DIST / "data").mkdir(parents=True, exist_ok=True)
     for aj in sorted((ROOT / "data").glob("audio-*.json")):
         shutil.copy(aj, DIST / "data" / aj.name)
@@ -2395,7 +2400,8 @@ def build_recite():
             iast = "<br/>".join(esc(x) for x in v.get("iast", []) if x)
             eng = f'<div class="eng">{esc(en[:4000])}</div>' if en else '<div class="panel missing"><b>English withheld.</b> This verse has no gate-PASS English yet — the chant stands alone until it passes.</div>'
             badge = "studio chant"
-            arts.append(f'<article class="verse" data-recite data-id="{v["id"]}" data-label="{esc(title)} &middot; verse {v["n"]}" data-sa="{esc(sa_deva)}" data-en="{esc(en[:4000])}" data-audio="{v["mp3"]}"><div class="vnum">{v["n"]}<br/><button class="vplay" data-play-idx="{i}">recite</button></div><div>{"".join(pdivs)}<div class="iast">{iast}</div>{eng}<div class="rnote"><span class="srcbadge">{badge}</span> &middot; {esc(v.get("meter",""))} &middot; align {v.get("mms","?")}</div></div></article>')
+            _mp3url = audio_url(v["mp3"])
+            arts.append(f'<article class="verse" data-recite data-id="{v["id"]}" data-label="{esc(title)} &middot; verse {v["n"]}" data-sa="{esc(sa_deva)}" data-en="{esc(en[:4000])}" data-audio="{_mp3url}"><div class="vnum">{v["n"]}<br/><button class="vplay" data-play-idx="{i}">recite</button></div><div>{"".join(pdivs)}<div class="iast">{iast}</div>{eng}<div class="rnote"><span class="srcbadge">{badge}</span> &middot; {esc(v.get("meter",""))} &middot; align {v.get("mms","?")}</div></div></article>')
         mm = sum(v.get("mms", 0) for v in A["verses"]) / max(1, len(A["verses"]))
         en_btn = "" if n_en else "disabled title=\"English withheld on every verse \u2014 gate pending\""
         tools = f'<div class="recitetools"><button class="vplay all" data-play-all>Recite all</button><span class="rmodes"><button data-mode="sa">Sanskrit only</button><button data-mode="en" {en_btn}>English only</button><button data-mode="verse" class="on">Verse SA \u2192 EN</button><button data-mode="line">Line SA \u2192 EN</button></span><span class="rnote">line mode: Sanskrit line-by-line, English follows each verse</span></div>'
