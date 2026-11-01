@@ -1,7 +1,7 @@
 # Slang Glossary — the lore, the use, the Trika conversion
 
 Every term the gen-z C2 uses, with where it comes from, how to say it, what Trika payload it carries, and where it is banned. Refusals are craft, not gaps.
-Registers: US gen-z + UK roadman (Top Boy transcripts, Cench, roadman A–Z, Newsweek, Believer, MLE core), kept separate. Same rule: payload or ban.
+Registers: US gen-z + UK roadman. Same rule: payload or ban.
 
 ## himothy
 *Verdict:* **USE — the identity word. Owner-minted, owner-kept.**
@@ -296,5 +296,11 @@ Registers: US gen-z + UK roadman (Top Boy transcripts, Cench, roadman A–Z, New
 *Use:* (no use — refused; inversion humor is a 2011 in-joke, not a payload)
 *Trika:* Cautionary entry: reclaimed violence-terms wobble. If shower means good only via irony, it carries no stable payload for veneration.
 
+## man (pronoun)
+*Verdict:* **USE — first-person slots in roadman; 'man don't' + base verb.**
+*Lore:* MLE grammar: man = I/me (also you/they by context), usually with 3rd-person verb forms — 'man don't', 'man's'. Toronto-shared marks mans as pronoun for I/you/we/them.
+*Use:* 'Man don't feel fear, innit.' (v5) — first-person without 'I'.
+*Trika:* The devotee speaking as everyman: man flattens I into anyone — precise for verses where the claim universalizes (fearlessness, identity).
+
 ## Bliss-talk ladder
-supremacy → lengest · taste → bussin · intensity → fire/nang · disposition → sweetest. Rule: never stack two in one verse.
+supremacy → lengest · taste → bussin · intensity → fire · disposition → sweetest. Rule: never stack two in one verse.
