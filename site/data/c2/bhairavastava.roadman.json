@@ -1,0 +1,325 @@
+{
+ "work": "bhairavastava",
+ "style": "roadman",
+ "kind": "c2-curated",
+ "version": "v1",
+ "label": "machine rendering — style demo over canonical stack, NOT canonical translation",
+ "model": "handcrafted by agent 2026-11-01 from layers + slang-glossary (roadman register, Cench-inflected, slop-trimmed: short, no throat-clearing)",
+ "glossary": "site/data/c2/slang-glossary.json",
+ "provenance": {
+  "source": "ipvv layers bh-p01..bh-p10, all gate PASS",
+  "date": "2026-11-01"
+ },
+ "items": [
+  {
+   "chunk": "bh-p01",
+   "gate": "PASS",
+   "sanskrit": "vyāptacarācarabhāvaviśeṣaṃ cinmayam ekam anantam anādim bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+   "style": "roadman",
+   "c2": "Look — He's in literally everything, you get me? Moving, still, all of it. Pure consciousness. One, no beginning, no end. That's Bhairava the Lord, shelter for mans with nowhere else to go. And my mind? Already His. Was before I opened my mouth. Dun know. So this bow, right here in the chest — I'm not asking for anything. Just clocking what's already true, innit.",
+   "rasa": "settled devotion — surrender as recognition, zero begging",
+   "choices": [
+    {
+     "term": "dun know",
+     "payload": "recognition as shared fact",
+     "why": "stronger than clocking: already-known, not newly-noticed"
+    },
+    {
+     "term": "mans",
+     "payload": "anātha everyman",
+     "why": "MLE pronoun as the precise everyman"
+    },
+    {
+     "term": "innit",
+     "payload": "closer",
+     "why": "solidarity tag; seals it, opens nothing"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p01",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p02",
+   "gate": "PASS",
+   "sanskrit": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
+   "style": "roadman",
+   "c2": "Everything I see right now? All His. Grace-tinted glasses, Bhairava all the way down, no filter. And the maddest part? It's not me and Him. It's just Him — I'm Him, always was, on God. Same self, zero distance. So through Him, everything's mine too. Locked in, permanently.",
+   "rasa": "owned identity — I-am-Him, not twoness",
+   "choices": [
+    {
+     "term": "maddest part",
+     "payload": "frame for the identity claim",
+     "why": "roadman superlative as spotlight, no content added"
+    },
+    {
+     "term": "on God",
+     "payload": "sadaiva oath",
+     "why": "heaviest sincerity marker, used once"
+    },
+    {
+     "term": "locked in",
+     "payload": "practitioner-state steadiness",
+     "why": "correct domain, never the Lord"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p02",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p03",
+   "gate": "PASS",
+   "sanskrit": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
+   "style": "roadman",
+   "c2": "He's all the way through my own self as Lord, so this whole scared-of-rebirth convo? Dead it. Allow that. And I'm not saying life ain't peak — the suffering's real, the delulu's real, my karma's on horror-movie stuff. It's all still standing. I'm just not flinching. At all.",
+   "rasa": "steel — suffering admitted, flinch refused",
+   "choices": [
+    {
+     "term": "dead it + allow that",
+     "payload": "discourse-kill doubled",
+     "why": "two verbs, one job; no filler between"
+    },
+    {
+     "term": "peak",
+     "payload": "duḥkha in one syllable",
+     "why": "concession without dwelling"
+    },
+    {
+     "term": "horror-movie stuff",
+     "payload": "trāsa",
+     "why": "terror-causing, vivid, no doctrine"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p03",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p04",
+   "gate": "PASS",
+   "sanskrit": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
+   "style": "roadman",
+   "c2": "Ayo Death — don't even look at me like that. Put the scary face away. I'm standing on business: serving Śaṅkara, contemplation locked in — so right now I'm soaked in His terrifying aura. You're barking up the wrong tree, unc.",
+   "rasa": "authority — talking back to Death",
+   "choices": [
+    {
+     "term": "standing on business",
+     "payload": "sevanā + cintanā + dhīra",
+     "why": "duty rendered as duty"
+    },
+    {
+     "term": "terrifying aura",
+     "payload": "bhīṣaṇabhairavaśakti",
+     "why": "presence-field + quality kept"
+    },
+    {
+     "term": "unc",
+     "payload": "dismissed authority",
+     "why": "gaze without jurisdiction"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p04",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p05",
+   "gate": "PASS",
+   "sanskrit": "ittham upoḍhabhavanmayasaṃviddīdhitidāritabhūritamisraḥ mṛtyuyamāntakakarmapiśācaiḥ nātha ! namo'stu na jātu bibhemi",
+   "style": "roadman",
+   "c2": "So yeah — lights on, darkness gone, awareness did that. Death, Yama, the Ender, my karma-ghosts pull up? Cooked. One bless up and they're done. I don't do fear. Ever. Like, at all.",
+   "rasa": "unbothered — categorical fearlessness",
+   "choices": [
+    {
+     "term": "cooked",
+     "payload": "defeat of all four threats",
+     "why": "finished, not killed"
+    },
+    {
+     "term": "bless up",
+     "payload": "namas as salutation-defense",
+     "why": "greeting that ends the fight"
+    },
+    {
+     "term": "tripled never",
+     "payload": "na jātu",
+     "why": "categorical kept categorical"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p05",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p06",
+   "gate": "PASS",
+   "sanskrit": "proditasatyavibodhamarīciprekṣitaviśvapadārthasatattvaḥ bhāvaparāmṛtanirbharapūrṇe tvayi aham ātmani nirvṛtim emi",
+   "style": "roadman",
+   "c2": "Real awakening finally clocked in and its light went and made everything bait — exposed for what it actually is. And me? All the way full — full of Him — and I just walked straight into bliss. Ate. No crumbs.",
+   "rasa": "arrival — fullness entered, not found",
+   "choices": [
+    {
+     "term": "went bait",
+     "payload": "prakāśa exposing essences",
+     "why": "hidden made obvious"
+    },
+    {
+     "term": "all the way full",
+     "payload": "pūrṇatā as condition",
+     "why": "fullness first, then entry"
+    },
+    {
+     "term": "ate, no crumbs",
+     "payload": "emi accomplished + total",
+     "why": "ballroom totality for entry totality"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p06",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p07",
+   "gate": "PASS",
+   "sanskrit": "mānasagocaram eti yadaiva kleśadaśā tanutāpavidhātrī nātha ! tadaiva mama tvadabhedas stotraparāmṛtavṛṣṭiḥ udeti",
+   "style": "roadman",
+   "c2": "When the canon event hits — bad days, head a little messed up? That's exactly the trigger. The me-and-Him separation dissolves, and this hymn starts raining straight nectar, and it's lengest. The song isn't describing the vibe. The song IS the vibe.",
+   "rasa": "the song IS the instrument",
+   "choices": [
+    {
+     "term": "canon event",
+     "payload": "kleśa as trigger",
+     "why": "unavoidable shaping moment fires tadaiva"
+    },
+    {
+     "term": "lengest",
+     "payload": "parāmṛta supremacy",
+     "why": "bliss ladder top rung"
+    },
+    {
+     "term": "a little messed up",
+     "payload": "tanutā slight",
+     "why": "scale honestly kept"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p07",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p08",
+   "gate": "PASS",
+   "sanskrit": "śaṅkara satyam idam vratadānasnānatapaḥ bhavatāpavidāri tāvakaśāstra parāmṛtacintā cetasi nirvṛtidhārām syandati",
+   "style": "roadman",
+   "c2": "Wallahi, the basics work. Vows, giving, cold baths, the hard graft — all of it cools the whole overheating situation. And staying tapped into Your lore like it's the sweetest thing ever? Bliss starts streaming through my mind on its own. I'm not producing it. It's flowing.",
+   "rasa": "effortless flow — bliss as spring water",
+   "choices": [
+    {
+     "term": "wallahi",
+     "payload": "satyam oath, roadman register",
+     "why": "single oath; no cap stood down (never stack)"
+    },
+    {
+     "term": "graft",
+     "payload": "tapas austerities",
+     "why": "hard work without glamour"
+    },
+    {
+     "term": "tapped into Your lore",
+     "payload": "tāvaka śāstra + cintā",
+     "why": "dwelling not studying"
+    },
+    {
+     "term": "on its own / flowing",
+     "payload": "syandati non-agential",
+     "why": "agency refused twice"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p08",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p09",
+   "gate": "PASS",
+   "sanskrit": "nṛtyati gāyati hṛṣyati gāḍham saṃvit iyam mama bhairavanātha tvāṃ priyam āpya sudarśanamekam durlabhamanyajanaiḥ samayajñam",
+   "style": "roadman",
+   "c2": "My whole consciousness is giving full festival right now — dancing, singing, joy with zero chill. Because I got Him: my dear, the most beautiful sight there is, the one nobody else can get to. Why me? Covenant. I'm locked in with the samaya and the samaya knows me back.",
+   "rasa": "joy with covenantal access",
+   "choices": [
+    {
+     "term": "giving full festival",
+     "payload": "emitted joy-state",
+     "why": "descriptive only, correct domain"
+    },
+    {
+     "term": "locked in with the samaya",
+     "payload": "covenant both directions",
+     "why": "bidirectional kept"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p09",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p10",
+   "gate": "PASS",
+   "sanskrit": "vasurasapauṣe kṛṣṇadaśamyām abhinavaguptaḥ stavam imam akarot yena vibhuḥ bhavati janasya arusantāpaṃ śamayati jhaṭiti dayāluḥ",
+   "style": "roadman",
+   "c2": "Fun fact to close this out: Abhinavagupta wrote this whole thing on a winter night, the dark tenth of Pauṣa. And the whole point? The Lord is everywhere, He's got a soft spot for the world, and He puts out its raging fever — not eventually, instantly. That's the tweet. That's the whole hymn.",
+   "rasa": "universal relief — the cosmic close",
+   "choices": [
+    {
+     "term": "straight colophon",
+     "payload": "date + authorship factual",
+     "why": "colophon verses stay clean"
+    },
+    {
+     "term": "soft spot",
+     "payload": "dayālu",
+     "why": "compassion warm and plain"
+    },
+    {
+     "term": "instantly",
+     "payload": "jhaṭiti",
+     "why": "no-delay doubled"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p10",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  }
+ ]
+}
