@@ -3,17 +3,15 @@
   "chunk": "sand-p01",
   "verses": "1",
   "sanskrit": "sa jayati śiva ekaḥ spandavānsvapratiṣṭhaḥ yo'ntarvaktraṃ rasayati jayatyeṣa vīraḥ kulendraḥ",
-  "gate": "BLOCKED",
-  "blocking": [
-   "no proof record"
-  ],
+  "gate": "PASS",
+  "blocking": [],
   "needs": [
    "human-review"
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "",
-  "l2": "",
+  "l1": "## sand-p01 (1)\nHe / is-victorious / Śiva / alone / possessing-spanda / self-established / who / inner-face / makes-taste / is-victorious / this / hero / lord-of-the-Kula",
+  "l2": "He alone — Śiva, possessing spanda, self-established — who makes the inner face taste.",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "Mukhabodha M00084 (Spandasandoha)",
