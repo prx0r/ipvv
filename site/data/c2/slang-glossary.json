@@ -1,0 +1,147 @@
+{
+ "kind": "slang-glossary",
+ "for": "c2 gen-z renderings",
+ "rule": "every slang term used in C2 must carry a defined doctrinal payload from this file; terms marked AVOID are documented with reason, never silently used",
+ "terms": [
+  {
+   "term": "twin",
+   "means": "one who shares your essence; soul sibling, closer than a bro",
+   "carries": "shared-essence intimacy (svātmamaya, abheda-adjacent). NOT romantic (twin-flame is a foreign doctrine — never import it)",
+   "limits": "only where the verse claims shared essence/identity. Never for I-Thou refuge verses (v1) or the Lord's transcendence",
+   "verdict": "USE in v2 (identity verses)"
+  },
+  {
+   "term": "unc",
+   "means": "an elder figure who is out of touch; outdated authority",
+   "carries": "defanged authority — someone whose power over you has expired",
+   "limits": "only for powers the verse itself dismisses (Death/Yama). Never for Bhairava, Śaṅkara, the devotee, or the teaching",
+   "verdict": "USE once (v4, Death)"
+  },
+  {
+   "term": "locked in",
+   "means": "steady, committed, undistracted; fully in the zone by choice",
+   "carries": "dhīra (firmness), sustained practice-state, covenantal commitment. The Śiva-conscious practitioner state",
+   "limits": "for the practitioner's steadiness/commitment — never for the Lord's nature (He doesn't 'lock in', He IS)",
+   "verdict": "USE (v2 always-ness, v4 steadiness, v9 covenant)"
+  },
+  {
+   "term": "standing on business",
+   "means": "handling your responsibilities, showing up properly",
+   "carries": "sevanā (service) + dhīra (steady practice) as concurrent discipline",
+   "limits": "practice verses only",
+   "verdict": "USE (v4 method line)"
+  },
+  {
+   "term": "no cap / fr",
+   "means": "truth-staking; I am being fully serious",
+   "carries": "satyam (truly!) and categorical claims (na jātu — never at all). Epistemic sincerity marker",
+   "limits": "only where the Sanskrit stakes truth or totality. Never as filler",
+   "verdict": "USE (v1 certainty, v8 satyam)"
+  },
+  {
+   "term": "canon event",
+   "means": "an unavoidable life-defining moment that shapes you",
+   "carries": "the affliction that triggers transformation (kleśadaśā as condition for tadaiva)",
+   "limits": "only as trigger, never as the goal; the verse's mechanism must stay intact",
+   "verdict": "USE (v7 affliction-as-trigger)"
+  },
+  {
+   "term": "cooked",
+   "means": "finished, done for, out of options",
+   "carries": "the defeat of death-powers (mṛtyu/Yama/antaka neutralized by namas alone)",
+   "limits": "for defeated threats only — never the devotee, never the Lord",
+   "verdict": "USE (v5 death-powers)"
+  },
+  {
+   "term": "ate / no crumbs",
+   "means": "executed flawlessly, complete accomplishment",
+   "carries": "emi (entry accomplished); arrival with nothing left undone",
+   "limits": "accomplishment moments only; 'no crumbs' = totality (aśeṣam-adjacent)",
+   "verdict": "USE (v6 entry into bliss)"
+  },
+  {
+   "term": "bussin",
+   "means": "excellent, chiefly of taste/food; top-tier sensory good",
+   "carries": "amṛta/parāmṛta (nectar) — the taste-domain maps exactly",
+   "limits": "taste-domain (nectar, bliss-as-flavor) only. Never for persons or doctrines",
+   "verdict": "USE (v7 nectar-rain)"
+  },
+  {
+   "term": "giving",
+   "means": "radiating a vibe; X is the energy present",
+   "carries": "manifest expressive state (dance/song/joy as emitted energy)",
+   "limits": "descriptive of emitted states only; never for metaphysical claims",
+   "verdict": "USE once (v9 consciousness)"
+  },
+  {
+   "term": "lore / tapped in",
+   "means": "the established canon; being connected to it",
+   "carries": "śāstra (scripture as the Lord's own expression) + cintā (dwelling in it)",
+   "limits": "scripture-contemplation contexts; 'lore' never replaces śāstra, it voices your relation to it",
+   "verdict": "USE (v8 scripture line)"
+  },
+  {
+   "term": "delulu",
+   "means": "delusional, out of touch with reality",
+   "carries": "moha (delusion) one-to-one",
+   "limits": "moha contexts only",
+   "verdict": "USE (v3)"
+  },
+  {
+   "term": "clocked / clocking",
+   "means": "recognized, noticed truly",
+   "carries": "pratyabhijñā-adjacent recognition (not petition, not inference)",
+   "limits": "recognition moments; never for discursive reasoning",
+   "verdict": "USE (v1 recognition, v6 awakening)"
+  },
+  {
+   "term": "aura",
+   "means": "real radiant presence someone carries",
+   "carries": "śakti as radiance — ONLY where the verse attributes genuine power",
+   "limits": "NEVER 'aura farming' (performative) for genuine states; never diminishes terror (bhīṣaṇa) into coolness",
+   "verdict": "HOLD — v4's power is terrifying, not radiant-cool; forcing aura would soften bhīṣaṇa. Documented, unused"
+  },
+  {
+   "term": "NPC",
+   "means": "background extra; someone who doesn't matter",
+   "carries": "nothing in this stotra — anyajanāḥ (others) areTA denied access (durlabham), never declared worthless",
+   "limits": "BANNED here: contempt is not in the verse",
+   "verdict": "AVOID with reason (v9)"
+  },
+  {
+   "term": "main character",
+   "means": "self-centered protagonist energy",
+   "carries": "nothing — the stotra's center is the Lord, and the devotee's joy is relational",
+   "limits": "BANNED: imports ego-doctrine foreign to the text",
+   "verdict": "AVOID with reason"
+  },
+  {
+   "term": "glow up / final form",
+   "means": "transformation into a better version",
+   "carries": "-maya (change of nature) is adjacent BUT implies upgrade-narrative; C1 stresses entry/state over self-improvement arc",
+   "limits": "BANNED: smuggles self-improvement doctrine",
+   "verdict": "AVOID with reason"
+  },
+  {
+   "term": "slaps",
+   "means": "excellent, of music",
+   "carries": "could voice stotra-praise (v7) but claims quality where the verse claims INSTRUMENTALITY — wrong payload",
+   "limits": "BANNED here: praises the song for slapping when the verse says the song WORKS",
+   "verdict": "AVOID with reason (v7)"
+  },
+  {
+   "term": "touch grass",
+   "means": "get real, go outside",
+   "carries": "nothing precise here — generic grounding advice with no Sanskrit counterpart",
+   "limits": "BANNED: filler slang with no payload",
+   "verdict": "AVOID with reason"
+  },
+  {
+   "term": "crash out",
+   "means": "big emotional blowup over something small",
+   "carries": "tanutāpa is SLIGHT anguish — crash out overshoots the scale 10x",
+   "limits": "BANNED here: violates the verse's own calibration (tanu)",
+   "verdict": "AVOID with reason (v7)"
+  }
+ ]
+}
