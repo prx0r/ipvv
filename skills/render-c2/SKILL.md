@@ -115,6 +115,22 @@ Rendition:
 (The silent rasa line is scaffolding — strip it before shipping. Output shape
 below carries no trace of it.)
 
+## House modes (conversational agents: match the mode to the moment)
+
+The style parameter is free text, but three modes are canonical — use them by name
+when a reader needs explaining, energy, or beauty:
+
+- **precise** — every proposition checkable against L1; slang only where the
+  slang-glossary maps a payload; zero decoration. The default for teaching.
+- **hype** — maximum energy, meaning locked; slang-dense but every Sanskrit term
+  translated in-line (never left standing); no filler transitions ("here's the
+  kicker" class); completed states stay completed ("was," never "becoming").
+- **beautiful** — devotional tenderness first; slang softens, never jokes at the
+  verse's expense; rasa forward, claims intact.
+
+Reference triple (bh-p01) lives at `site/data/c2/bhairavastava.gen-z.triple.json` —
+same verse in all three modes. Match new renders to its bar.
+
 ## Output shape
 
 ```json

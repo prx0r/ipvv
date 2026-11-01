@@ -328,6 +328,12 @@ export default {
         }
       } catch (e) { /* arguments packet optional — layers packet is the floor */ }
       const trim = (s, n) => String(s || '').replace(/^#+\s*[^\n]*\n/, '').replace(/\s+/g, ' ').trim().slice(0, n);
+      const MODES = {
+        precise: 'MODE precise: every proposition must stay checkable against L1. Slang only where mapped, zero decoration. The default for teaching.',
+        hype: 'MODE hype: maximum energy, meaning locked. Every Sanskrit term translated in-line, never left standing. No filler transitions. Completed states stay completed (was, never becoming).',
+        beautiful: 'MODE beautiful: devotional tenderness first. Slang softens, never jokes at the verse\'s expense. Rasa forward, claims intact.',
+      };
+      const modeLine = MODES[String(st).toLowerCase()] || '';
       const prompt = 'You render verses into a requested voice. Meaning is FIXED by the canonical packet below — every floor of the translation stack stands behind it. Change diction and rhythm only.\n\n'
         + 'Source (Sanskrit): ' + trim(packet.sanskrit, 600) + '\n'
         + 'Load-bearing propositions, L1 — every one must survive: ' + trim(packet.l1, 800) + '\n'
@@ -339,7 +345,8 @@ export default {
         + 'First, in one silent line, name this verse\'s rasa: what must the reader feel. That line never ships.\n'
         + 'Then render.\n\n'
         + 'Voice: ' + st + '\n'
-        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. Sanskrit technical terms keep their Sanskrit on first use. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly.\n\nRendition:';
+        + (modeLine ? modeLine + '\n' : '')
+        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. Sanskrit technical terms keep their Sanskrit on first use. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly. Never output the rasa line or any scaffolding — rendition only, no meta-commentary.\n\nRendition:';
       try {
         let c2 = '', used = '';
         try {
