@@ -113,7 +113,10 @@ async function main(){
   $('#vsw').innerHTML = labels.map(([v,l])=>`<button class="vsw${VIEW===v?' on':''}" data-v="${v}">${l}</button>`).join('');
   document.querySelectorAll('.vsw').forEach(b=>{ b.onclick = ()=>go(b.getAttribute('data-v')); });
 
-  const AUDIODIR = {anuttarastika:'anuttarashtika_trad'};
+  // AI (Vagdhenu) chant is the deliverable voice for every work, incl.
+  // anuttarastika. The Lakshmanjoo traditional recording is ear-reference
+  // only (PROCESS.md mistake #4) and lives under its own id.
+  const AUDIODIR = {};
   const audir = AUDIODIR[WID] || WID;
   let kar = null;
   try{ kar = await get(`/data/karaoke-${WID}.json`); }catch(e){}

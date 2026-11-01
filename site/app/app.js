@@ -190,7 +190,7 @@ async function work(path){
     $('#view').innerHTML = `<div class="verse"><div class="dev">· · ·</div></div><div id="answer" style="display:none"></div>`;
     return;
   }
-  const AUDIODIR = {anuttarastika:'anuttarashtika_trad'};
+  const AUDIODIR = {};  // AI chant is the deliverable; trad is ear-ref only
   const audir = AUDIODIR[wid] || wid;
   let kar = null;
   try{ kar = await get(`/data/karaoke-${wid}.json`); }catch(e){}
