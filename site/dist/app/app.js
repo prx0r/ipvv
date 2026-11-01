@@ -203,14 +203,19 @@ async function work(path){
       const padas=[[],[],[],[]];
       k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
       lines = padas.filter(p=>p.length).map(p=>({
-        words: p.map(w=>({sa: IAST_DEVA.convert(w.w), ro: w.r||'', t0: w.t_on, t1: w.t_off})),
+        words: p.map(w=>({sa: IAST_DEVA.convert(w.w), ro: w.r||'', t0: w.t_on, t1: w.t_off,
+          syls: (w.syls||[]).map(s=>({sa: s.d, t0: s.t0, t1: s.t1}))})),
         ro: p.map(w=>esc(w.r||'')).join(' ')
       }));
     } else if(raw){
       lines = [{words: raw.split(/\s+/).filter(Boolean).map(w=>({sa: IAST_DEVA.convert(w), ro: w, t0: null, t1: null})), ro: esc(raw)}];
     }
     const dev = lines.map(l=>`<div class="dline">` + l.words.map(w=>
-      `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`
+      (w.syls && w.syls.length
+        ? `<span class="kword">` + w.syls.map(s=>
+          `<span class="kw"${s.t0!=null?` data-t0="${s.t0}" data-t1="${s.t1}" data-v="${ix}"`:''}>${esc(s.sa)}</span>`
+        ).join('') + `</span>`
+        : `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`)
     ).join(' ') + `</div><div class="rline">${l.ro}</div>`).join('');
     const en = (it.gate==='PASS' && (it.l2||it.l1)) ? `<div class="en">${esc(cleanEN(it.l2||it.l1))}</div>` : '';
     const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
@@ -222,7 +227,7 @@ async function work(path){
     `<div id="answer" style="display:none"></div>`;
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
-  st.textContent = '#reader{max-width:46rem}.verse{margin:2.2rem 0}.verse:first-child{margin-top:1rem}.dline{font-size:1.75rem;line-height:1.75;color:var(--ink)}.rline{font-size:.98rem;color:#76736e;margin:.15rem 0 1rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em}.kw.on{background:#fdf0d5}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
+  st.textContent = '#reader{max-width:46rem}.verse{margin:2.2rem 0}.verse:first-child{margin-top:1rem}.dline{font-size:1.75rem;line-height:1.75;color:var(--ink)}.rline{font-size:.98rem;color:#76736e;margin:.15rem 0 1rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em}.kw.on{background:#fdf0d5}.kword .kw{padding:0;border-radius:0}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
   document.head.appendChild(st);
   function tick(){
     const t = audio.currentTime;
@@ -231,7 +236,7 @@ async function work(path){
     for(const w of all){
       if(+w.getAttribute('data-v') !== KAR.cur) continue;
       const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
-      if(t >= t0 && t <= t1){ w.classList.add('hl'); break; }
+      if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
     }
     if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
   }

@@ -138,6 +138,7 @@ RECITECSS = """
 article.verse{scroll-margin-top:80px}
 article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
 article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.kword{white-space:nowrap}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
 .recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
@@ -2366,7 +2367,16 @@ def build_recite():
             for pi in range(len(v["padas"])):
                 ws = byl.get(pi, [])
                 if ws: segs.append([ws[0]["on"], ws[-1]["off"]])
-                spans = " ".join(f'<span class="w" data-on="{w["on"]}" data-off="{w["off"]}">{esc(w["w"])}</span>' for w in ws)
+                parts = []
+                for w in ws:
+                    if w.get("syls"):
+                        inner = "".join(
+                            f'<span class="w" data-on="{s["on"]}" data-off="{s["off"]}">{esc(s["d"])}</span>'
+                            for s in w["syls"])
+                        parts.append(f'<span class="kword">{inner}</span>')
+                    else:
+                        parts.append(f'<span class="w" data-on="{w["on"]}" data-off="{w["off"]}">{esc(w["w"])}</span>')
+                spans = " ".join(parts)
                 pdivs.append(f'<div class="pada">{spans or esc(v["padas"][pi])}</div>')
             wt[v["id"]] = {"dur": v.get("dur", 0), "segs": segs}
             iast = "<br/>".join(esc(x) for x in v.get("iast", []) if x)

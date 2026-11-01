@@ -126,14 +126,19 @@ async function main(){
       const padas=[[],[],[],[]];
       k.words.forEach(w=>{ (padas[w.pada||0]=padas[w.pada||0]||[]).push(w); });
       lines = padas.filter(p=>p.length).map(p=>({
-        words: p.map(w=>({sa: IAST_DEVA.convert(w.w), ro: w.r||'', t0: w.t_on, t1: w.t_off})),
+        words: p.map(w=>({sa: IAST_DEVA.convert(w.w), ro: w.r||'', t0: w.t_on, t1: w.t_off,
+          syls: (w.syls||[]).map(s=>({sa: s.d, t0: s.t0, t1: s.t1}))})),
         ro: p.map(w=>esc(w.r||'')).join(' ')
       }));
     } else if(raw){
       lines = [{words: raw.split(/\s+/).filter(Boolean).map(w=>({sa: IAST_DEVA.convert(w), ro: w, t0: null, t1: null})), ro: esc(raw)}];
     }
     const sa = lines.map(l=>`<div class="dline">` + l.words.map(w=>
-      `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`
+      (w.syls && w.syls.length
+        ? `<span class="kword">` + w.syls.map(s=>
+          `<span class="kw"${s.t0!=null?` data-t0="${s.t0}" data-t1="${s.t1}" data-v="${ix}"`:''}>${esc(s.sa)}</span>`
+        ).join('') + `</span>`
+        : `<span class="kw"${w.t0!=null?` data-t0="${w.t0}" data-t1="${w.t1}" data-v="${ix}"`:''}>${esc(w.sa)}</span>`)
     ).join(' ') + `</div><div class="rline">${l.ro}</div>`).join('');
     const pass = it.gate==='PASS' && (it.l2||it.l1);
     const au = k ? `/audio/${audir}/${k.id||('v'+String(ix+1).padStart(2,'0'))}.mp3` : null;
