@@ -328,12 +328,21 @@ export default {
         }
       } catch (e) { /* arguments packet optional — layers packet is the floor */ }
       const trim = (s, n) => String(s || '').replace(/^#+\s*[^\n]*\n/, '').replace(/\s+/g, ' ').trim().slice(0, n);
+      // House modes × registers: style may name a mode (precise/hype/prayer) and/or a
+      // register (roadman/gen-z). Both are parsed and combined; registers never blend.
       const MODES = {
         precise: 'MODE precise: every proposition must stay checkable against L1. Slang only where mapped, zero decoration. The default for teaching.',
         hype: 'MODE hype: maximum energy, meaning locked. Every Sanskrit term translated in-line, never left standing. No filler transitions. Completed states stay completed (was, never becoming).',
-        beautiful: 'MODE beautiful: devotional tenderness first. Slang softens, never jokes at the verse\'s expense. Rasa forward, claims intact.',
+        prayer: 'MODE prayer: devotional tenderness first. Slang softens, never jokes at the verse\'s expense. Rasa forward, claims intact.',
       };
-      const modeLine = MODES[String(st).toLowerCase()] || '';
+      const REGISTERS = {
+        roadman: 'REGISTER roadman (UK): mandem/fam/bruv, wallahi or swear down for oaths (never both), innit/dun know tags, allow it/dead/peak/cook/bless up/lengest. US ballroom terms (ate/no crumbs, bussin as default, clocking as slang) stay OUT. Translate every Sanskrit term in-line.',
+        genz: 'REGISTER gen-z (US): no cap/fr, canon event, bussin, giving, delulu, ate/no crumbs, clocked. UK roadman terms (mandem, wallahi, innit, allow it, lengest, bless up, wasteman) stay OUT. Translate every Sanskrit term in-line.',
+      };
+      const slow = String(st).toLowerCase();
+      const modeLine = [MODES.precise && slow.includes('precise') ? MODES.precise : '', MODES.hype && slow.includes('hype') ? MODES.hype : '', MODES.prayer && slow.includes('prayer') ? MODES.prayer : ''].filter(Boolean).join('\n');
+      const regLine = [(slow.includes('roadman') ? REGISTERS.roadman : ''), (slow.includes('gen z') || slow.includes('genz')) ? REGISTERS.genz : ''].filter(Boolean).join('\n');
+      const styleLine = (modeLine + '\n' + regLine).trim();
       const prompt = 'You render verses into a requested voice. Meaning is FIXED by the canonical packet below — every floor of the translation stack stands behind it. Change diction and rhythm only.\n\n'
         + 'Source (Sanskrit): ' + trim(packet.sanskrit, 600) + '\n'
         + 'Load-bearing propositions, L1 — every one must survive: ' + trim(packet.l1, 800) + '\n'
@@ -346,7 +355,7 @@ export default {
         + 'Then render.\n\n'
         + 'Voice: ' + st + '\n'
         + (modeLine ? modeLine + '\n' : '')
-        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. No untranslated Sanskrit: every Sanskrit term must appear in English (names like Bhairava may stay). Translate, never transliterate-and-leave. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly. Never output the rasa line or any scaffolding — rendition only, no meta-commentary.\n\nRendition:';
+        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. NO SANSKRIT except these exact names: Bhairava, Śaṅkara, Maheśa, Abhinavagupta, Pauṣa, samaya, Śiva. Every other Sanskrit word must appear in English — never transliterate-and-leave, never Devanagari script. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly. Never output the rasa line or any scaffolding — rendition only, no meta-commentary.\n\nRendition:';
       try {
         let c2 = '', used = '';
         try {
@@ -416,11 +425,17 @@ export default {
         if (!m) throw new Error('no JSON from judge');
         const j = JSON.parse(m[0]);
         const words = String(c2).toLowerCase().replace(/[^a-z0-9' -]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+        const NAMES = new Set(['bhairava','śaṅkara','sankara','maheśa','mahesa','śiva','siva','abhinavagupta','pauṣa','pausa','samaya']);
+        const deva = /[\u0900-\u097F]/.test(c2);
+        const rawToks = String(c2).split(/\s+/).map(t => t.replace(/^["'“‘(\[]+|["'”’).,!?:;\]]+$/g, ''));
+        const leaked = [...new Set(rawToks.filter(t => /[āīūṛṝḷēōṃḥṅñṭḍṇśṣĀĪŪṚṜḶĒŌṀḤṄÑṬḌṆŚṢ]/.test(t) && !NAMES.has(t.toLowerCase()))))];
+        const leakFound = deva || leaked.length > 0;
         const glossaryHits = [...new Set(words.filter(w => VOICE_WHITELIST.has(w)))];
-        const verdict = (j.forward_pass && j.backward_pass) ? 'PASS' : 'FLAG';
+        const verdict = (j.forward_pass && j.backward_pass && !leakFound) ? 'PASS' : 'FLAG';
         return json({ verdict, forward_entails: !!j.forward_pass, backward_entails: !!j.backward_pass,
           added: j.added || [], missing: j.missing || [], note: j.note || '',
           voice_words: glossaryHits,
+          sanskrit_leak: leakFound ? { devanagari: deva, tokens: leaked } : null,
           provenance: { work, chunk, gate: packet.gate, date: new Date().toISOString().slice(0, 10) } }, 200, cors);
       } catch (e) {
         return json({ error: e.message }, 500, cors);

@@ -127,11 +127,13 @@ when a reader needs explaining, energy, or beauty:
 - **hype** — maximum energy, meaning locked; slang-dense but every Sanskrit term
   translated in-line (never left standing); no filler transitions ("here's the
   kicker" class); completed states stay completed ("was," never "becoming").
-- **beautiful** — devotional tenderness first; slang softens, never jokes at the
-  verse's expense; rasa forward, claims intact.
+- **prayer** — devotional tenderness first; slang softens, never jokes at the
+  verse's expense; rasa forward, claims intact. (Renamed from *beautiful* — same mode.)
 
-Reference triple (bh-p01) lives at `site/data/c2/bhairavastava.gen-z.triple.json` —
-same verse in all three modes. Match new renders to its bar.
+Reference triples: gen-z (`site/data/c2/bhairavastava.gen-z.triple.json`) and
+roadman (`site/data/c2/bhairavastava.roadman.triple.json`) — bh-p01 in precise /
+hype / prayer. Match new renders to their bar. Registers never blend: a render is
+wholly gen-z or wholly roadman (see skills/c2-voice-corpus for the validation chain).
 
 ## Verification (the loop is the layer)
 
