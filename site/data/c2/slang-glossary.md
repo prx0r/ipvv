@@ -143,8 +143,8 @@ New: UK roadman register + bliss-talk ladder. Same rule: payload or ban.
 *Trika:* tanutāpa is SLIGHT anguish — crash-out overshoots the verse's own calibration ~10x. Scale is doctrine here.
 
 ## leng / peng / lengest
-*Verdict:* **USE — taste/beauty supremes (amṛta, parama). Never persons.**
-*Lore:* UK roadman (Jamaican 'leng' via London streets): top-tier attractive/good. Superlative stacking ('lengest') is the grammar of the ends — agreement by escalation.
+*Verdict:* **USE-graded-only (lengest/proper leng) — NEW: weapon-sense ban near power verses**
+*Lore:* UK roadman, TWO senses. (1) peng/leng = top-tier attractive or excellent (drill lyrics, compliments). (2) leng = a weapon, usually a gun; 'he's leng' = he's dangerous (London Star A–Z, road usage). The ends decide which — and getting it wrong near power-verses is catastrophic.
 *Use:* 'That nectar-rain? Lengest thing ever.' (v7)
 *Trika:* parama- (supreme): the -est suffix IS the superlative Sanskrit already uses (paramāmṛta = supreme nectar). Lengest doesn't approximate parama, it performs it.
 > the lengest taste in the universe.
