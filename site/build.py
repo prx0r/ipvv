@@ -2326,7 +2326,7 @@ RECITE_TITLES = {"bhairavastava": "Bhairavastava", "anuttarashtika": "Anuttarash
  "bodhapancadasika": "Bodhapañcadaśikā", "mahopadeshavimshatika": "Mahopadeśaviṃśatikā",
  "rahasyapanchadashika": "Rahasyapañcadaśikā", "paramadvayadvadashika": "Paramārthadvādaśikā",
  "pancashloki": "Pañcaślokī", "kramastotra": "Kramastotra",
- "shivastotravali_1": "Śivastotrāvalī 1", "anubhavanivedana": "Anubhavanivedana",
+ "shivastotravali_1": "Śivastotrāvalī 1", "shivastotravali_2": "Śivastotrāvalī 2", "shivastotravali_3": "Śivastotrāvalī 3", "shivastotravali_4": "Śivastotrāvalī 4", "shivastotravali_5": "Śivastotrāvalī 5", "shivastotravali_6": "Śivastotrāvalī 6", "shivastotravali_7": "Śivastotrāvalī 7", "shivastotravali_8": "Śivastotrāvalī 8", "shivastotravali_9": "Śivastotrāvalī 9", "shivastotravali_10": "Śivastotrāvalī 10", "shivastotravali_11": "Śivastotrāvalī 11", "shivastotravali_12": "Śivastotrāvalī 12", "shivastotravali_13": "Śivastotrāvalī 13", "shivastotravali_14": "Śivastotrāvalī 14", "shivastotravali_15": "Śivastotrāvalī 15", "shivastotravali_16": "Śivastotrāvalī 16", "shivastotravali_17": "Śivastotrāvalī 17", "shivastotravali_18": "Śivastotrāvalī 18", "shivastotravali_19": "Śivastotrāvalī 19", "shivastotravali_20": "Śivastotrāvalī 20", "anubhavanivedana": "Anubhavanivedana",
  "bodhavilasa": "Bodhavilāsa", "bhairavanukarana": "Bhairavānukaraṇa",
  "ajadapramatrsiddhi": "Ajadapramātṛsiddhi", "paryantapancasika": "Paryantapañcāśikā",
  "pratyabhijnahrdaya": "Pratyabhijñāhṛdayam", "paramarthasara": "Paramārthasāra",
