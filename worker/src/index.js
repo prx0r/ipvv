@@ -428,14 +428,22 @@ export default {
         const NAMES = new Set(['bhairava','śaṅkara','sankara','maheśa','mahesa','śiva','siva','abhinavagupta','pauṣa','pausa','samaya']);
         const deva = /[\u0900-\u097F]/.test(c2);
         const rawToks = String(c2).split(/\s+/).map(t => t.replace(/^["'“‘(\[]+|["'”’).,!?:;\]]+$/g, ''));
-        const leaked = [...new Set(rawToks.filter(t => /[āīūṛṝḷēōṃḥṅñṭḍṇśṣĀĪŪṚṜḶĒŌṀḤṄÑṬḌṆŚṢ]/.test(t) && !NAMES.has(t.toLowerCase()))))];
-        const leakFound = deva || leaked.length > 0;
+        const leaked = [...new Set(rawToks.filter(t => /[āīūṛṝḷēōṃḥṅñṭḍṇśṣĀĪŪṚṜḶĒŌṀḤṄÑṬḌṆŚṢ]/.test(t) && !NAMES.has(t.toLowerCase())))];
+        // source-echo check: any long token from the Sanskrit span reappearing in C2
+        // (diacritics-insensitive) is untranslated Sanskrit, even in plain ascii.
+        const norm = w => String(w).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]/g, '');
+        const STOP = new Set(['that','this','with','from','your','have','what','when','they','them','then','than','about','into','over','under','there','their','been','were','will','would','could','should','mind','heart','still','every','never','always','where','while','which','whom','whose']);
+        const srcToks = [...new Set(String(packet.sanskrit || '').split(/\s+/).map(norm).filter(w => w.length >= 5))];
+        const c2norm = String(c2).split(/\s+/).map(t => norm(t.replace(/^["'“‘(\[]+|["'”’).,!?:;\]]+$/g, '')));
+        const echo = [...new Set(c2norm.filter(w => w.length >= 5 && !STOP.has(w) && !NAMES.has(w) && srcToks.some(st => st.includes(w) || w.includes(st) && Math.min(st.length, w.length) >= 5)))];
+        const allLeaked = [...new Set([...leaked, ...echo])];
+        const leakFound = deva || allLeaked.length > 0;
         const glossaryHits = [...new Set(words.filter(w => VOICE_WHITELIST.has(w)))];
         const verdict = (j.forward_pass && j.backward_pass && !leakFound) ? 'PASS' : 'FLAG';
         return json({ verdict, forward_entails: !!j.forward_pass, backward_entails: !!j.backward_pass,
           added: j.added || [], missing: j.missing || [], note: j.note || '',
           voice_words: glossaryHits,
-          sanskrit_leak: leakFound ? { devanagari: deva, tokens: leaked } : null,
+          sanskrit_leak: leakFound ? { devanagari: deva, tokens: allLeaked } : null,
           provenance: { work, chunk, gate: packet.gate, date: new Date().toISOString().slice(0, 10) } }, 200, cors);
       } catch (e) {
         return json({ error: e.message }, 500, cors);
