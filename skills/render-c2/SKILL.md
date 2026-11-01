@@ -6,7 +6,7 @@ author: Pāṭala
 metadata:
   hermes:
     tags: [c2, style, register, rendition, tantra, grounding, rasa, transmission, patala]
-    related_skills: [write-commentary, translate-work, lore-prime-argmap, validate-passage]
+    related_skills: [write-commentary, translate-work, lore-prime-argmap, validate-passage, c2-voice-corpus]
     checkpoint: CP4 (styled renderings over the audited stack)
 ---
 
