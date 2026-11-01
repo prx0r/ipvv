@@ -1,7 +1,7 @@
 # Slang Glossary — the lore, the use, the Trika conversion
 
 Every term the gen-z C2 uses, with where it comes from, how to say it, what Trika payload it carries, and where it is banned. Refusals are craft, not gaps.
-New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek guide, MLE core) + bliss-talk ladder. Same rule: payload or ban.
+Registers: US gen-z + UK roadman (Top Boy transcripts, Cench, roadman A–Z, Newsweek, Believer, MLE core), kept separate. Same rule: payload or ban.
 
 ## himothy
 *Verdict:* **USE — the identity word. Owner-minted, owner-kept.**
@@ -278,5 +278,23 @@ New: UK roadman register (Top Boy transcripts, Cench, roadman A–Z, Newsweek gu
 *Use:* (peer address only — same cage as fam/brudda/mandem)
 *Trika:* Same ban as twin/fam upward: brotherhood keeps two standing. Never devotee→Lord.
 
+## nang
+*Verdict:* **USE — third intensity option, documented provenance.**
+*Lore:* Hackney legend (Believer 2011: named for a Thai schoolgirl, late 90s) → grime superlative: excellent, wonderful.
+*Use:* 'That nectar-rain? Lengest. Actually, nang.' (v7 intensity alt)
+*Trika:* Bliss intensity via Hackney. Behind lengest (supreme) and bussin (taste) in the ladder; use when fire would confuse (heat contexts).
+
+## a lot / par
+*Verdict:* **USE-careful — polarity only.**
+*Lore:* Grim glossary polarity pair: 'a lot' = good (noun: 'it's a lot'), 'par' = anything unfortunate. One syllable each way.
+*Use:* 'The grind? Par. The bliss? A lot.' (evaluative polarity, v6-adjacent)
+*Trika:* Praise/blame as atoms. Use sparingly — polarity markers, not arguments.
+
+## shower (praise)
+*Verdict:* **AVOID with reason — irony is not a payload.**
+*Lore:* Jamaican Shower Posse (spraying bullets) → early grime inverted it: 'shower' = good. Bathrooms got involved (shower curtains, Radox).
+*Use:* (no use — refused; inversion humor is a 2011 in-joke, not a payload)
+*Trika:* Cautionary entry: reclaimed violence-terms wobble. If shower means good only via irony, it carries no stable payload for veneration.
+
 ## Bliss-talk ladder
-supremacy → lengest · taste → bussin · intensity → fire · disposition → sweetest. Rule: never stack two in one verse.
+supremacy → lengest · taste → bussin · intensity → fire/nang · disposition → sweetest. Rule: never stack two in one verse.
