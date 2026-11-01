@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v17",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v17",
+ "title": "sivastotravali — s10-v17",
+ "kind": "entailment",
+ "question": "With You — omniscient, omnipotent, consciousness-formed — somehow the world's show, though unreal, is fitting.",
+ "issue": "Derived from L2 text (no argmap). With You — omniscient, omnipotent, consciousness-formed — somehow the world's show, though unreal, is fitting.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With You — omniscient, omnipotent, consciousness-formed — somehow the world's show, though unreal, is fitting.",
+  "passage_id": "sivastotravali:s10-v17"
+ },
+ "unresolved": "",
+ "argument_text": "With You — omniscient, omnipotent, consciousness-formed — somehow the world's show, though unreal, is fitting.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v17",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s15-v13",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s15-v13",
+ "title": "sivastotravali — s15-v13",
+ "kind": "entailment",
+ "question": "Is this not attainment beyond compare — ever-growing devotion to Śambhu, always new? What happiness does it not stream?",
+ "issue": "Derived from L2 text (no argmap). Is this not attainment beyond compare — ever-growing devotion to Śambhu, always new? What happiness does it not stream?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s15-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Is this not attainment beyond compare — ever-growing devotion to Śambhu, always new? What happiness does it not stream?",
+  "passage_id": "sivastotravali:s15-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Is this not attainment beyond compare — ever-growing devotion to Śambhu, always new? What happiness does it not stream?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s15-v13",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

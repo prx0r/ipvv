@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v09",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v09",
+ "title": "sivastotravali — s19-v09",
+ "kind": "entailment",
+ "question": "Not dry-bitter things only — bring on all, always, gained by offering to You; let even opposites befall me.",
+ "issue": "Derived from L2 text (no argmap). Not dry-bitter things only — bring on all, always, gained by offering to You; let even opposites befall me.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not dry-bitter things only — bring on all, always, gained by offering to You; let even opposites befall me.",
+  "passage_id": "sivastotravali:s19-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Not dry-bitter things only — bring on all, always, gained by offering to You; let even opposites befall me.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v09",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

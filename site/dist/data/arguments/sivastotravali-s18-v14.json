@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s18-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s18-v14",
+ "title": "sivastotravali — s18-v14",
+ "kind": "entailment",
+ "question": "Your thing here, Your truth — who is fit to disclose the matter? This same name-form-sport-unequalled of Yours takes away — since You are Hara, the Taker.",
+ "issue": "Derived from L2 text (no argmap). Your thing here, Your truth — who is fit to disclose the matter? This same name-form-sport-unequalled of Yours takes away — since You are Hara, the Taker.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s18-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Your thing here, Your truth — who is fit to disclose the matter? This same name-form-sport-unequalled of Yours takes away — since You are Hara, the Taker.",
+  "passage_id": "sivastotravali:s18-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Your thing here, Your truth — who is fit to disclose the matter? This same name-form-sport-unequalled of Yours takes away — since You are Hara, the Taker.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s18-v14",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s11-v06",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s11-v06",
+ "title": "sivastotravali — s11-v06",
+ "kind": "entailment",
+ "question": "Who are touched even slightly by Your lotus-foot-born fragrance-dust — for them all enjoyed things, gods-sought, become rest.",
+ "issue": "Derived from L2 text (no argmap). Who are touched even slightly by Your lotus-foot-born fragrance-dust — for them all enjoyed things, gods-sought, become rest.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s11-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Who are touched even slightly by Your lotus-foot-born fragrance-dust — for them all enjoyed things, gods-sought, become rest.",
+  "passage_id": "sivastotravali:s11-v06"
+ },
+ "unresolved": "",
+ "argument_text": "Who are touched even slightly by Your lotus-foot-born fragrance-dust — for them all enjoyed things, gods-sought, become rest.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s11-v06",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

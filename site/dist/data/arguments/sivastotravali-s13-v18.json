@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s13-v18",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s13-v18",
+ "title": "sivastotravali — s13-v18",
+ "kind": "entailment",
+ "question": "Graced with song-mouths lovely with prattling of You, may I be — my heart forever gone to what Your worship-loving prefers.",
+ "issue": "Derived from L2 text (no argmap). Graced with song-mouths lovely with prattling of You, may I be — my heart forever gone to what Your worship-loving prefers.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s13-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Graced with song-mouths lovely with prattling of You, may I be — my heart forever gone to what Your worship-loving prefers.",
+  "passage_id": "sivastotravali:s13-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Graced with song-mouths lovely with prattling of You, may I be — my heart forever gone to what Your worship-loving prefers.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s13-v18",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

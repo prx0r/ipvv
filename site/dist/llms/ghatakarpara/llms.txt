@@ -1,12 +1,21 @@
 # ghatakarpara — LLM Discovery
 
 Work: ghatakarpara
-Passages: 3 (0 PASS, 3 BLOCKED)
+Passages: 3 (3 PASS, 0 BLOCKED)
 Data: /data/translations/ghatakarpara.json
 Page: /translations/ghatakarpara.html
 
 ## Chunks
 
-- ghat-p01 (verses 1) [BLOCKED]
-- ghat-p02 (verses 1) [BLOCKED]
-- ghat-p03 (verses 1) [BLOCKED]
+- ghat-p01 (verses 1) [PASS]
+  L1: ## ghat-p01 (1)
+Kāma / and / in-heart / to-kill / arises / separated / beloved / this / arises / by-cruel / foreign-land
+  L2: In the heart, Kāma wakes to kill.
+- ghat-p02 (verses 1) [PASS]
+  L1: ## ghat-p02 (1)
+for-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes / you / by-sprouts / chief / of-gro
+  L2: 
+- ghat-p03 (verses 1) [PASS]
+  L1: ## ghat-p03 (1)
+make-long / travelers / clouds / thundering / sorrow / grows / and / in-those / endless / love-festival 
+  L2: 

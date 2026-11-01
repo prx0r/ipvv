@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v36",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v36",
+ "title": "sivastotravali — s17-v36",
+ "kind": "entailment",
+ "question": "From worship-made eye-throw agitation, nectar-rising for devotees — as from the gods' milk-ocean churning.",
+ "issue": "Derived from L2 text (no argmap). From worship-made eye-throw agitation, nectar-rising for devotees — as from the gods' milk-ocean churning.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v36"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From worship-made eye-throw agitation, nectar-rising for devotees — as from the gods' milk-ocean churning.",
+  "passage_id": "sivastotravali:s17-v36"
+ },
+ "unresolved": "",
+ "argument_text": "From worship-made eye-throw agitation, nectar-rising for devotees — as from the gods' milk-ocean churning.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v36",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

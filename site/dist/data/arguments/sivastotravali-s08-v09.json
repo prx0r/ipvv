@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s08-v09",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s08-v09",
+ "title": "sivastotravali — s08-v09",
+ "kind": "entailment",
+ "question": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+ "issue": "Derived from L2 text (no argmap). If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s08-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+  "passage_id": "sivastotravali:s08-v09"
+ },
+ "unresolved": "",
+ "argument_text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s08-v09",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

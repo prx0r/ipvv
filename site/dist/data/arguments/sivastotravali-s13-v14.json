@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s13-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s13-v14",
+ "title": "sivastotravali — s13-v14",
+ "kind": "entailment",
+ "question": "Whatever wonder arises in all fair things by mere touch — by that the unwavering worship Your body.",
+ "issue": "Derived from L2 text (no argmap). Whatever wonder arises in all fair things by mere touch — by that the unwavering worship Your body.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s13-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whatever wonder arises in all fair things by mere touch — by that the unwavering worship Your body.",
+  "passage_id": "sivastotravali:s13-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Whatever wonder arises in all fair things by mere touch — by that the unwavering worship Your body.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s13-v14",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

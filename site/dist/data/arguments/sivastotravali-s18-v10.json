@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s18-v10",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s18-v10",
+ "title": "sivastotravali — s18-v10",
+ "kind": "entailment",
+ "question": "In the cool shade of the great-mantra tree, in Your great forest, in my own self always, Lord, may I dwell as Your worshipper.",
+ "issue": "Derived from L2 text (no argmap). In the cool shade of the great-mantra tree, in Your great forest, in my own self always, Lord, may I dwell as Your worshipper.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s18-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the cool shade of the great-mantra tree, in Your great forest, in my own self always, Lord, may I dwell as Your worshipper.",
+  "passage_id": "sivastotravali:s18-v10"
+ },
+ "unresolved": "",
+ "argument_text": "In the cool shade of the great-mantra tree, in Your great forest, in my own self always, Lord, may I dwell as Your worshipper.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s18-v10",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

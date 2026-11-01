@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s11-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s11-v07",
+ "title": "sivastotravali — s11-v07",
+ "kind": "entailment",
+ "question": "In heart no other, in word and deed wholly other, O Śambhu — yet grace or check from the truly real: one work only.",
+ "issue": "Derived from L2 text (no argmap). In heart no other, in word and deed wholly other, O Śambhu — yet grace or check from the truly real: one work only.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s11-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In heart no other, in word and deed wholly other, O Śambhu — yet grace or check from the truly real: one work only.",
+  "passage_id": "sivastotravali:s11-v07"
+ },
+ "unresolved": "",
+ "argument_text": "In heart no other, in word and deed wholly other, O Śambhu — yet grace or check from the truly real: one work only.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s11-v07",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s14-v15",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s14-v15",
+ "title": "sivastotravali — s14-v15",
+ "kind": "entailment",
+ "question": "Victory: innately high, needing no pity and the rest; victory: Bhairava before whom great Death is made.",
+ "issue": "Derived from L2 text (no argmap). Victory: innately high, needing no pity and the rest; victory: Bhairava before whom great Death is made.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s14-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Victory: innately high, needing no pity and the rest; victory: Bhairava before whom great Death is made.",
+  "passage_id": "sivastotravali:s14-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Victory: innately high, needing no pity and the rest; victory: Bhairava before whom great Death is made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s14-v15",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

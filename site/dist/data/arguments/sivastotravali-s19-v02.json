@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s19-v02",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s19-v02",
+ "title": "sivastotravali — s19-v02",
+ "kind": "entailment",
+ "question": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+ "issue": "Derived from L2 text (no argmap). Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s19-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+  "passage_id": "sivastotravali:s19-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s19-v02",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

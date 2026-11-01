@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v10",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v10",
+ "title": "sivastotravali — s17-v10",
+ "kind": "entailment",
+ "question": "World-shaking, one-cause festival — what is got thereby, only devotees know who get it.",
+ "issue": "Derived from L2 text (no argmap). World-shaking, one-cause festival — what is got thereby, only devotees know who get it.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "World-shaking, one-cause festival — what is got thereby, only devotees know who get it.",
+  "passage_id": "sivastotravali:s17-v10"
+ },
+ "unresolved": "",
+ "argument_text": "World-shaking, one-cause festival — what is got thereby, only devotees know who get it.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v10",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

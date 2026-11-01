@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v15",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v15",
+ "title": "sivastotravali — s17-v15",
+ "kind": "entailment",
+ "question": "Mind offered as sweet in Your rite — knots ever cut simply.",
+ "issue": "Derived from L2 text (no argmap). Mind offered as sweet in Your rite — knots ever cut simply.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Mind offered as sweet in Your rite — knots ever cut simply.",
+  "passage_id": "sivastotravali:s17-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Mind offered as sweet in Your rite — knots ever cut simply.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v15",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v07",
+ "title": "sivastotravali — s17-v07",
+ "kind": "entailment",
+ "question": "Brahmā and the rest are fortunate, lords — in whose dream, even delusion, stands Your worship-festival.",
+ "issue": "Derived from L2 text (no argmap). Brahmā and the rest are fortunate, lords — in whose dream, even delusion, stands Your worship-festival.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Brahmā and the rest are fortunate, lords — in whose dream, even delusion, stands Your worship-festival.",
+  "passage_id": "sivastotravali:s17-v07"
+ },
+ "unresolved": "",
+ "argument_text": "Brahmā and the rest are fortunate, lords — in whose dream, even delusion, stands Your worship-festival.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v07",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

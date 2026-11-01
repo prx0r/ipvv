@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s12-v18",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s12-v18",
+ "title": "sivastotravali — s12-v18",
+ "kind": "entailment",
+ "question": "From my understanding fenced off from yonder world, a grain of world-establishment — that I be worshipped by You.",
+ "issue": "Derived from L2 text (no argmap). From my understanding fenced off from yonder world, a grain of world-establishment — that I be worshipped by You.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s12-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From my understanding fenced off from yonder world, a grain of world-establishment — that I be worshipped by You.",
+  "passage_id": "sivastotravali:s12-v18"
+ },
+ "unresolved": "",
+ "argument_text": "From my understanding fenced off from yonder world, a grain of world-establishment — that I be worshipped by You.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s12-v18",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

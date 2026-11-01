@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v14",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v14",
+ "title": "sivastotravali — s17-v14",
+ "kind": "entailment",
+ "question": "In Your ocean, nectar-one-rasa-full, worshipping You, great self, may I always sit.",
+ "issue": "Derived from L2 text (no argmap). In Your ocean, nectar-one-rasa-full, worshipping You, great self, may I always sit.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In Your ocean, nectar-one-rasa-full, worshipping You, great self, may I always sit.",
+  "passage_id": "sivastotravali:s17-v14"
+ },
+ "unresolved": "",
+ "argument_text": "In Your ocean, nectar-one-rasa-full, worshipping You, great self, may I always sit.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v14",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

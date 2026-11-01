@@ -1,10 +1,13 @@
 # spandasandoha — LLM Discovery
 
 Work: spandasandoha
-Passages: 1 (0 PASS, 1 BLOCKED)
+Passages: 1 (1 PASS, 0 BLOCKED)
 Data: /data/translations/spandasandoha.json
 Page: /translations/spandasandoha.html
 
 ## Chunks
 
-- sand-p01 (verses 1) [BLOCKED]
+- sand-p01 (verses 1) [PASS]
+  L1: ## sand-p01 (1)
+He / is-victorious / Śiva / alone / possessing-spanda / self-established / who / inner-face / makes-tast
+  L2: He alone — Śiva, possessing spanda, self-established — who makes the inner face taste.

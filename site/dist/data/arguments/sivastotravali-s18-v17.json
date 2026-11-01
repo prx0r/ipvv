@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s18-v17",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s18-v17",
+ "title": "sivastotravali — s18-v17",
+ "kind": "entailment",
+ "question": "Mind's eye-wheel courses, everywhere loosened yet still — reaching You, of firm-long awareness: Lord, how, by devotion-wealth's heat?",
+ "issue": "Derived from L2 text (no argmap). Mind's eye-wheel courses, everywhere loosened yet still — reaching You, of firm-long awareness: Lord, how, by devotion-wealth's heat?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s18-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Mind's eye-wheel courses, everywhere loosened yet still — reaching You, of firm-long awareness: Lord, how, by devotion-wealth's heat?",
+  "passage_id": "sivastotravali:s18-v17"
+ },
+ "unresolved": "",
+ "argument_text": "Mind's eye-wheel courses, everywhere loosened yet still — reaching You, of firm-long awareness: Lord, how, by devotion-wealth's heat?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s18-v17",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

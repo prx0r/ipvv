@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s08-v07",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s08-v07",
+ "title": "sivastotravali — s08-v07",
+ "kind": "entailment",
+ "question": "May my self-body bloom as You; may worlds join my limbs; may all this duality-sport, even recalled, become untellable.",
+ "issue": "Derived from L2 text (no argmap). May my self-body bloom as You; may worlds join my limbs; may all this duality-sport, even recalled, become untellable.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s08-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May my self-body bloom as You; may worlds join my limbs; may all this duality-sport, even recalled, become untellable.",
+  "passage_id": "sivastotravali:s08-v07"
+ },
+ "unresolved": "",
+ "argument_text": "May my self-body bloom as You; may worlds join my limbs; may all this duality-sport, even recalled, become untellable.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s08-v07",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s10-v01",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s10-v01",
+ "title": "sivastotravali — s10-v01",
+ "kind": "entailment",
+ "question": "Surely intolerable to You, sole world-Lord: Your Maheśvaras and other world-folk on one level.",
+ "issue": "Derived from L2 text (no argmap). Surely intolerable to You, sole world-Lord: Your Maheśvaras and other world-folk on one level.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s10-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Surely intolerable to You, sole world-Lord: Your Maheśvaras and other world-folk on one level.",
+  "passage_id": "sivastotravali:s10-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Surely intolerable to You, sole world-Lord: Your Maheśvaras and other world-folk on one level.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s10-v01",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

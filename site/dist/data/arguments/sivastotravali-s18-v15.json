@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s18-v15",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s18-v15",
+ "title": "sivastotravali — s18-v15",
+ "kind": "entailment",
+ "question": "For peace, no hankering for pleasure at all, among those drunk with devotion amassed — nor even begging the fruit of seeking liberation remembered before the heart-thief.",
+ "issue": "Derived from L2 text (no argmap). For peace, no hankering for pleasure at all, among those drunk with devotion amassed — nor even begging the fruit of seeking liberation remembered before the heart-thief.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s18-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "For peace, no hankering for pleasure at all, among those drunk with devotion amassed — nor even begging the fruit of seeking liberation remembered before the heart-thief.",
+  "passage_id": "sivastotravali:s18-v15"
+ },
+ "unresolved": "",
+ "argument_text": "For peace, no hankering for pleasure at all, among those drunk with devotion amassed — nor even begging the fruit of seeking liberation remembered before the heart-thief.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s18-v15",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

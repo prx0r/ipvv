@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s12-v29",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s12-v29",
+ "title": "sivastotravali — s12-v29",
+ "kind": "entailment",
+ "question": "May nothing-at-all be nothing, something-at-all be something to me; in all ways may You be worship-received.",
+ "issue": "Derived from L2 text (no argmap). May nothing-at-all be nothing, something-at-all be something to me; in all ways may You be worship-received.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s12-v29"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "May nothing-at-all be nothing, something-at-all be something to me; in all ways may You be worship-received.",
+  "passage_id": "sivastotravali:s12-v29"
+ },
+ "unresolved": "",
+ "argument_text": "May nothing-at-all be nothing, something-at-all be something to me; in all ways may You be worship-received.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s12-v29",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

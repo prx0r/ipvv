@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s13-v05",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s13-v05",
+ "title": "sivastotravali — s13-v05",
+ "kind": "entailment",
+ "question": "By the awareness of things exactly as they stand, make me fit for worshipping Your feet — me, born of telling non-duality's nectar that swallows renown.",
+ "issue": "Derived from L2 text (no argmap). By the awareness of things exactly as they stand, make me fit for worshipping Your feet — me, born of telling non-duality's nectar that swallows renown.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s13-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By the awareness of things exactly as they stand, make me fit for worshipping Your feet — me, born of telling non-duality's nectar that swallows renown.",
+  "passage_id": "sivastotravali:s13-v05"
+ },
+ "unresolved": "",
+ "argument_text": "By the awareness of things exactly as they stand, make me fit for worshipping Your feet — me, born of telling non-duality's nectar that swallows renown.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s13-v05",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

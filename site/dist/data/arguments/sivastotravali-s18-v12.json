@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s18-v12",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s18-v12",
+ "title": "sivastotravali — s18-v12",
+ "kind": "entailment",
+ "question": "From pride-offering, love-held devotion-built — pleased, when will You be everywhere my eyes' ground?",
+ "issue": "Derived from L2 text (no argmap). From pride-offering, love-held devotion-built — pleased, when will You be everywhere my eyes' ground?",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s18-v12"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From pride-offering, love-held devotion-built — pleased, when will You be everywhere my eyes' ground?",
+  "passage_id": "sivastotravali:s18-v12"
+ },
+ "unresolved": "",
+ "argument_text": "From pride-offering, love-held devotion-built — pleased, when will You be everywhere my eyes' ground?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s18-v12",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

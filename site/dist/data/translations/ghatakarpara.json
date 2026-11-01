@@ -3,17 +3,15 @@
   "chunk": "ghat-p01",
   "verses": "1",
   "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
-  "gate": "BLOCKED",
-  "blocking": [
-   "no proof record"
-  ],
+  "gate": "PASS",
+  "blocking": [],
   "needs": [
    "human-review"
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "",
-  "l2": "",
+  "l1": "## ghat-p01 (1)\nKāma / and / in-heart / to-kill / arises / separated / beloved / this / arises / by-cruel / foreign-land-serving / you-will-kill / indeed / by-him / me / without / foreign-land-love / today / be-released / or / your / wife / what / to-be-said / cātaka / and / thirsty / water / begs / suffering / traveler / she / beloved / and / yours / by-clouds / peacock-flock / is-sounded / what / delight / beloved / without-me / today / you / by-cloud-arrival / thinned / and / she / today / you / by-hard / by-Kāma / she-is-tormented / of-sorrow-ocean / in-water / and / fallen / Your-virtue / remembrance / indeed / protects / her / melts / and / impurity / water / of-rivers / what / thus / and / me / you-regard / not / wretched / deep / cloud / rasa / by-pain / when / I / shall-abandon / friend / separation-born / sorrow / burning",
+  "l2": "In the heart, Kāma wakes to kill.",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
@@ -24,16 +22,14 @@
   "chunk": "ghat-p02",
   "verses": "1",
   "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
-  "gate": "BLOCKED",
-  "blocking": [
-   "no proof record"
-  ],
+  "gate": "PASS",
+  "blocking": [],
   "needs": [
    "human-review"
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "",
+  "l1": "## ghat-p02 (1)\nfor-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes / you / by-sprouts / chief / of-groves / eye-festival / and / you-are / of-youths / kuṭaja / why / by-flowers / are-you-laughed-at / I-bow / and / hard-to-laugh-at / to-you / your / flower-looked-at / body / I-would-release / quickly / indeed / nīpa / body / of-honey / having-observed / season / bee / kisses / yūthikā / creeper / by-waters / scattered / dust / on-earth / sun / moon / and / not / are-seen / new / by-cloud / peacocks / cry / at-cloud-arrival / kunda / same-toothed / with-Indra's-weapon / and / cloud / today / resounds / of-elephants / ardor / brings / mountain-like / loud / roar / water / in-caves / falls / wonderful / formed / beautiful",
   "l2": "",
   "links": {
    "source_file": "passages.jsonl",
@@ -45,16 +41,14 @@
   "chunk": "ghat-p03",
   "verses": "1",
   "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
-  "gate": "BLOCKED",
-  "blocking": [
-   "no proof record"
-  ],
+  "gate": "PASS",
+  "blocking": [],
   "needs": [
    "human-review"
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "",
+  "l1": "## ghat-p03 (1)\nmake-long / travelers / clouds / thundering / sorrow / grows / and / in-those / endless / love-festival / with-beloveds / they-honor / cloud-arrival / dear-friend / they-bring / may-I-be-conquered / by-which / poet / by-yamakas / other / to-him / I-pour / water / in-potsherd",
   "l2": "",
   "links": {
    "source_file": "passages.jsonl",

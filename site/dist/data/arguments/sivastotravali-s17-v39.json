@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v39",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v39",
+ "title": "sivastotravali — s17-v39",
+ "kind": "entailment",
+ "question": "By devotion-agitation, worship in self-become-Him — wonder: poverty's top fruit is lowliness' fruit.",
+ "issue": "Derived from L2 text (no argmap). By devotion-agitation, worship in self-become-Him — wonder: poverty's top fruit is lowliness' fruit.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v39"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By devotion-agitation, worship in self-become-Him — wonder: poverty's top fruit is lowliness' fruit.",
+  "passage_id": "sivastotravali:s17-v39"
+ },
+ "unresolved": "",
+ "argument_text": "By devotion-agitation, worship in self-become-Him — wonder: poverty's top fruit is lowliness' fruit.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v39",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ghatakarpara:ghat-p02",
+ "work_id": "ghatakarpara",
+ "passage_id": "ghatakarpara:ghat-p02",
+ "title": "ghatakarpara — ghat-p02",
+ "kind": "entailment",
+ "question": "ghat-p02 (1)",
+ "issue": "Derived from L2 text (no argmap). ## ghat-p02 (1)\nfor-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes / you / by-sprouts / chief / of-groves / eye-festival / and / you-are / of-youths / kuṭaja / why / by-flowers / are-you-laughed-at / I-bow / and / hard-to-laugh-at / to-you / your / flower-looked-at / body / I-would-release / quickly / indeed / nīpa / body / of-honey / having-observed / season / bee / kisses / yūthikā / creeper / by-waters / scattered / dust / on-earth / sun / moon / and / not / are-seen / new /",
+ "premises": [
+  {
+   "text": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+   "label": "Sanskrit source",
+   "passage_id": "ghatakarpara:ghat-p02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "ghat-p02 (1)",
+  "passage_id": "ghatakarpara:ghat-p02"
+ },
+ "unresolved": "",
+ "argument_text": "## ghat-p02 (1)\nfor-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes / you / by-sprouts / chief / of-groves / eye-festival / and / you-are / of-youths / kuṭaja / why / by-flowers / are-you-laughed-at / I-bow / and / hard-to-laugh-at / to-you / your / flower-looked-at / body / I-would-release / quickly / indeed / nīpa / body / of-honey / having-observed / season / bee / kisses / yūthikā / creeper / by-waters / scattered / dust / on-earth / sun / moon / and / not / are-seen / new / by-cloud / peacocks / cry / at-cloud-arrival / kunda / same-toothed / with-Indra's-weapon / and / cloud / today / resounds / of-elephants / ardor / brings / mountain-like / loud / roar / water / in-caves / falls / wonderful / formed / beautiful",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ghatakarpara:ghat-p02",
+ "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+ "license": "CC BY-NC-SA 4.0"
+}

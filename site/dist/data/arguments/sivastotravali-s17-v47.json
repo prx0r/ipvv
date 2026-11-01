@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s17-v47",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s17-v47",
+ "title": "sivastotravali — s17-v47",
+ "kind": "entailment",
+ "question": "With lust, anger, pride made offering, who always worship — bow to them; of them I am pleased, in truth.",
+ "issue": "Derived from L2 text (no argmap). With lust, anger, pride made offering, who always worship — bow to them; of them I am pleased, in truth.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s17-v47"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With lust, anger, pride made offering, who always worship — bow to them; of them I am pleased, in truth.",
+  "passage_id": "sivastotravali:s17-v47"
+ },
+ "unresolved": "",
+ "argument_text": "With lust, anger, pride made offering, who always worship — bow to them; of them I am pleased, in truth.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s17-v47",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sivastotravali:s16-v03",
+ "work_id": "sivastotravali",
+ "passage_id": "sivastotravali:s16-v03",
+ "title": "sivastotravali — s16-v03",
+ "kind": "entailment",
+ "question": "Laughing victors, laughing conquered — drunk on His devotion-nectar, whoever they are, Lord.",
+ "issue": "Derived from L2 text (no argmap). Laughing victors, laughing conquered — drunk on His devotion-nectar, whoever they are, Lord.",
+ "premises": [
+  {
+   "text": "",
+   "label": "Sanskrit source",
+   "passage_id": "sivastotravali:s16-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Laughing victors, laughing conquered — drunk on His devotion-nectar, whoever they are, Lord.",
+  "passage_id": "sivastotravali:s16-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Laughing victors, laughing conquered — drunk on His devotion-nectar, whoever they are, Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sivastotravali:s16-v03",
+ "sanskrit": "",
+ "license": "CC BY-NC-SA 4.0"
+}
