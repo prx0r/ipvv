@@ -1,0 +1,35 @@
+{
+ "dates": {
+  "flourished": "c. 900-950 CE (actif 930)",
+  "note": "dates per Wikipedia/BnF/Potter; endonym UdAKarasUnu (Utpala, son of Udayakara), IPK IV.18 Birth ~900 (approx).",
+  "birth": 900,
+  "approx": true
+ },
+ "id": "utpaladeva",
+ "lineage": [
+  {
+   "relation": "pupil of",
+   "who": "Somananda (author of Sivadrsti)"
+  },
+  {
+   "relation": "teacher in line to",
+   "who": "Laksman Gupta, teacher of Abhinavagupta"
+  }
+ ],
+ "name": "Utpaladeva (Utpalacarya)",
+ "name_iast": "Utpaladeva",
+ "place": "Kashmir",
+ "status": "historical",
+ "summary": "Founder of Pratyabhijna: IPK + Vrtti + lost Vivrti, Siddhitrayi theologian, Sivastotravali poet.",
+ "kind": "master",
+ "bio": "Son and pupil of Udayakara-line (Udayakara's son, SomAnanda's pupil): the Isvarapratyabhijnakarika founds Pratyabhijna (recognition without effort), with auto-Vrtti and the lost long Vivrti (fragments via Torella/Ratie); Siddhitrayi theologian of the knower; Sivastotravali bhakti poet. Teacher in line to Abhinavagupta through Lakshmanagupta.",
+ "image": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Somanand-Lineage.png",
+  "caption": "Lineage diagram placing Utpaladeva in Somananda’s line (CC BY-SA 3.0, via Wikimedia Commons). Diagram, not portrait.",
+  "credit": "Wikimedia Commons",
+  "credit_url": "https://commons.wikimedia.org/wiki/File:Somanand-Lineage.png",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+ },
+ "section": "masters"
+}

@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-dissociation-vs-contraction-differential",
+  "claim_packet": "content/information-packets/q17-dissociation-vs-contraction-differential.json",
+  "generated_by": "hermes_loop_007",
+  "source_role": "dissociation_vs_contraction_differential_layer",
+  "candidate_under_test": "cand:brain-as-appearance-only",
+  "central_reading": "This layer forces the two consciousness-first accounts (Kastrup's analytic idealism dissociation model and Trika's kañcuka-contraction model) to articulate differential empirical predictions for lesion phenomenology and DOC recovery. Both reject the view that the brain produces consciousness, but they disagree on the ontology of individuation: Kastrup treats individual minds as genuine dissociated alters with real boundaries, while Trika treats individuation as illusory limitation (māyā). This difference generates four specific differential predictions: (1) ontologies of individuation differ and this is empirically tractable, (2) recovery trajectory hierarchy vs. patient-specific variation, (3) content-elimination phenomenology (contentless witness vs. hybrid blend), and (4) agency-knowledge categorical dissociation vs. covariance. These predictions distinguish the two consciousness-first accounts from each other and from the PP/interface account. If they prove empirically equivalent, the two accounts should be merged or treated as terminological variants.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:dissociation-contraction-individuation-ontology-difference",
+      "source_span_id": "synthetic:q17-dissociation-vs-contraction",
+      "quoted_anchor": "Kastrup treats individual minds as genuine dissociative partitions of universal consciousness (alters with real boundaries), while Trika treats individuation as illusory limitation",
+      "nn_expr": "sambandha(kastrup_real_alters,trika_illusory_maya)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "individuation ontology in Kastrup vs. Trika",
+        "hetu": "both are consciousness-first but differ on whether individuation is real or illusory",
+        "sadhya": "the two accounts make empirically distinguishable predictions",
+        "vyapti": "If two accounts of individuation generate different observable predictions, the difference is empirically tractable."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:neural-correlation-direction",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that all empirical predictions of the dissociation model and the kañcuka model are identical for all possible lesion and DOC-recovery data."
+    },
+    {
+      "claim_id": "cl:dissociation-predicts-non-hierarchical-alter-restructuring",
+      "source_span_id": "synthetic:q17-dissociation-vs-contraction",
+      "quoted_anchor": "If individual minds are dissociated alters of universal consciousness, brain injury alters or collapses the dissociative boundary structure",
+      "nn_expr": "sambandha(alter_non_hierarchical,maya_hierarchical)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "recovery trajectory after brain injury",
+        "hetu": "dissociation model treats alters as individually structured; kañcuka model treats limitation dimensions as universally ordered",
+        "sadhya": "recovery trajectories distinguish the two accounts",
+        "vyapti": "If alters are individually constituted, recovery is patient-specific. If limitation dimensions are universally ordered, recovery follows consistent hierarchy."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that DOC recovery follows a consistent universal sequence across patients regardless of individual differences."
+    },
+    {
+      "claim_id": "cl:dissociation-predicts-hybrid-fragment-phenomenology",
+      "source_span_id": "synthetic:q17-dissociation-vs-contraction",
+      "quoted_anchor": "If a dissociative boundary partially collapses, two alters partially merge. The resulting phenomenology should show hybrid content",
+      "nn_expr": "virodha(kastrup_hybrid_blending_phenomenology,trika_dimension_specific_reduction)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "residual phenomenology in DOC states",
+        "hetu": "dissociation model predicts content-blending; kañcuka model predicts dimension-specific reduction",
+        "sadhya": "quality of residual experience distinguishes the two accounts",
+        "vyapti": "If alters are bounded content zones, partial collapse produces hybrid blend. If limitation dimensions are fixed reduction axes, partial collapse produces dimension-specific simplification."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that all residual experiential content in DOC states is best described as simple graded reduction, bare manifestness, or no detectable phenomenology."
+    },
+    {
+      "claim_id": "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+      "source_span_id": "synthetic:q17-dissociation-vs-contraction",
+      "quoted_anchor": "The witness consciousness (sākṣin) persists through all vṛtti modifications as their invariant ground",
+      "nn_expr": "virodha(kancuka_saksin_contentless_witness,dissociation_hybrid_blended_content)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "content-elimination phenomenology",
+        "hetu": "sākṣin is content-invariant witness; dissociation predicts hybrid blend from partial alter collapse",
+        "sadhya": "content-elimination distinguishes kañcuka model from dissociation model",
+        "vyapti": "If sākṣin is content-invariant witness, content-elimination produces contentless luminous awareness. If alters are bounded content zones, content-elimination produces hybrid blended content."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Demonstrate that content-elimination phenomenology always manifests as one specific type regardless of lesion location and individual differences."
+    },
+    {
+      "claim_id": "cl:agency-knowledge-boundary-differential",
+      "source_span_id": "synthetic:q17-dissociation-vs-contraction",
+      "quoted_anchor": "In Trika kañcuka ontology, kalā (limited agency/creativity) and vidyā (limited knowledge) are categorically distinct limitation dimensions",
+      "nn_expr": "virodha(kancuka_kala_vidya_categorical_dissociation,alter_boundary_covariance)",
+      "parse_status": "invalid",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "agency-knowledge relationship in lesion patients",
+        "hetu": "kañcuka model: categorical dissociation; dissociation model: covariance; PP: graded precision",
+        "sadhya": "agency-knowledge dissociations distinguish three accounts",
+        "vyapti": "If kalā and vidyā are distinct dimensions, selective neural damage produces categorical dissociations. If both are features of alter boundary integrity, they co-vary."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-interface-generative-model",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that agency and knowledge deficits in lesion patients always co-vary, or that all agency-knowledge dissociations are explained by PP precision-parameter variation."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:individuation-difference-supports-appearance-only-and-filter",
+      "source": "cl:dissociation-contraction-individuation-ontology-difference",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.22,
+      "rationale": "Frames the dissociation model as the preferred reading of the appearance candidate and distinguishes it from the filter candidate's kañcuka ontology."
+    },
+    {
+      "edge_id": "edge:individuation-difference-supports-filter",
+      "source": "cl:dissociation-contraction-individuation-ontology-difference",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.18,
+      "rationale": "By articulating the difference, provides the filter candidate with a distinct identity from analytic idealism — preventing merger of the two consciousness-first accounts."
+    },
+    {
+      "edge_id": "edge:individuation-difference-attacks-interface",
+      "source": "cl:dissociation-contraction-individuation-ontology-difference",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.08,
+      "rationale": "Both consciousness-first accounts agree against the interface/PP account — the individuation difference is relevant only within the shared consciousness-first space.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:recovery-hierarchy-supports-appearance",
+      "source": "cl:dissociation-predicts-non-hierarchical-alter-restructuring",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.20,
+      "rationale": "Gives the appearance candidate a novel, testable prediction about DOC recovery that differs from both filter and interface accounts."
+    },
+    {
+      "edge_id": "edge:recovery-hierarchy-attacks-filter",
+      "source": "cl:dissociation-predicts-non-hierarchical-alter-restructuring",
+      "target": "cand:brain-as-filter",
+      "edge_type": "attacks",
+      "strength": 0.18,
+      "rationale": "Challenges the filter account's universal hierarchy prediction by proposing an alternative patient-specific recovery model.",
+      "targets_core_commitment": true
+    },
+    {
+      "edge_id": "edge:hybrid-fragment-supports-appearance",
+      "source": "cl:dissociation-predicts-hybrid-fragment-phenomenology",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.18,
+      "rationale": "Provides specific, testable prediction about the quality of residual phenomenology in DOC that only the dissociation model makes."
+    },
+    {
+      "edge_id": "edge:hybrid-fragment-attacks-filter",
+      "source": "cl:dissociation-predicts-hybrid-fragment-phenomenology",
+      "target": "cand:brain-as-filter",
+      "edge_type": "attacks",
+      "strength": 0.15,
+      "rationale": "If hybrid-blend phenomenology is found, it challenges the kañcuka model's prediction of dimension-specific reduction.",
+      "targets_core_commitment": true
+    },
+    {
+      "edge_id": "edge:bare-witness-supports-filter",
+      "source": "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.22,
+      "rationale": "Articulates the kañcuka model's distinctive prediction (contentless luminous awareness as sākṣin) and distinguishes it from the dissociation model's predicted hybrid blend."
+    },
+    {
+      "edge_id": "edge:bare-witness-attacks-appearance",
+      "source": "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "attacks",
+      "strength": 0.15,
+      "rationale": "If content-elimination produces contentless luminous awareness rather than hybrid blended content, the dissociation model's prediction fails.",
+      "targets_core_commitment": true
+    },
+    {
+      "edge_id": "edge:agency-knowledge-supports-filter",
+      "source": "cl:agency-knowledge-boundary-differential",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.22,
+      "rationale": "Gives the filter account a novel, testable prediction distinguishing it from both the dissociation model and the PP account — categorical agency/knowledge dissociation."
+    },
+    {
+      "edge_id": "edge:agency-knowledge-supports-appearance",
+      "source": "cl:agency-knowledge-boundary-differential",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.10,
+      "rationale": "Even as a negative prediction (agency/knowledge co-variance), gives the appearance candidate a falsifiable commitment.",
+      "targets_core_commitment": true
+    },
+    {
+      "edge_id": "edge:agency-knowledge-attacks-interface",
+      "source": "cl:agency-knowledge-boundary-differential",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "attacks",
+      "strength": 0.12,
+      "rationale": "A three-way test: if a categorical dissociation is found, both PP (graded precision) and the dissociation model (covariance) are challenged. If covariance is found, the kañcuka model is challenged.",
+      "targets_core_commitment": false
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:dissociation-vs-contraction-ontological-individuation",
+      "bridge_probe_id": "bridge:kastrup-dissociation-trika-kancuka-contrast",
+      "left_term": "nn:analytic_idealism:dissociative_alters_real_boundaries",
+      "left_scope": "analytic_idealism",
+      "right_term": "nn:trika:kancuka_limitation_illusory_maya",
+      "right_scope": "trika_perennialism",
+      "shared_structure": "Both reject the production model and both are consciousness-first. Both agree that NCCs are not evidence of production. Both offer an ontology where the brain's role is non-generative.",
+      "important_difference": "The dissociation model treats alters as genuine dissociative partitions of universal consciousness with real boundaries; the kañcuka model treats individuation as illusory limitation through māyā. This difference generates divergent predictions about recovery trajectories (patient-specific vs. hierarchical), residual phenomenology (hybrid blend vs. contentless witness), and agency-knowledge relationships (covariance vs. categorical dissociation).",
+      "confidence_language": "convergent rejection of production but structurally divergent positive ontologies with testable differential predictions",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.2478/disp-2017-0025",
+        "doi:10.3390/philosophies2020010",
+        "text:tantraloka-kancukas",
+        "text:tantrasara-saksin"
+      ],
+      "negative_control_status": "prevents_merging_kastrup_and_trika_as_identical"
+    }
+  ],
+  "bridge_probe_logic": {
+    "candidate_pair": {
+      "left_term": "nn:analytic_idealism:dissociative_alters_real_boundaries",
+      "right_term": "nn:trika:kancuka_limitation_illusory_maya",
+      "surface_similarity": "Both are consciousness-first, reject production, and treat NCCs as non-evidence for production.",
+      "important_difference": "One treats individuation as real (dissociative boundaries between alters), the other as illusory (māyā as the appearance of separation). This is the core unresolved metaphysical question between analytic idealism and Trika perennialism."
+    },
+    "formal_tests": [
+      {
+        "test_id": "probe:dissociation-vs-contraction-contrast-01",
+        "probe": "analytic_idealism:dissociative_alters -> trika:kancuka_limitation",
+        "required_status_for_merge": "PROVED",
+        "actual_status": "UNPROVED",
+        "rationale": "Cannot merge until the empirical differential predictions collected in this packet are tested. If all four differential predictions fail to distinguish the two models empirically, the accounts may be merged as terminological variants. If any prediction succeeds, they are distinct empirical contenders."
+      }
+    ]
+  },
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:dissociation-to-contraction:individuation-realism",
+      "critic_lens": "analytic_idealism",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "The kañcuka model's claim that māyā is 'merely illusory' limitation faces a challenge: if the experience of being a separate self is entirely illusory, why does it have such robust neural correlates? The dissociation model provides a stronger answer — the dissociative boundary is real, and the brain is its extrinsic appearance. The kañcuka model must explain why māyā (if illusory) has such precise neural correlates, or accept that the individuation is real in some sense.",
+      "pressure_type": "individuation_realism",
+      "target_response_required": "The kañcuka model must clarify whether māyā-kañcuka produces a real or merely apparent separation, and whether its claim of 'illusory limitation' is compatible with the precision of neural correlates.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:dissociation-contraction-individuation-ontology-difference"
+      ],
+      "crux_ids": [
+        "crux:neural-correlation-direction"
+      ]
+    },
+    {
+      "pair_id": "critique:contraction-to-dissociation:alter-mechanism-gap",
+      "critic_lens": "trika_perennialism",
+      "target_lens": "analytic_idealism",
+      "reveals_about_target": "The dissociation model posits 'dissociative boundaries' between alters but does not specify the mechanism of dissociation or boundary formation. The kañcuka model provides a formal structure (six orthogonal limitation dimensions) that the dissociation model lacks. Without specifying what a dissociative boundary is or how it forms, the dissociation model's predictions about recovery and hybrid content remain underspecified.",
+      "pressure_type": "boundary_mechanism_gap",
+      "target_response_required": "The dissociation model must specify the mechanism by which dissociative boundaries form and dissolve, comparable to the kañcuka model's dimensional ontology.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+        "cl:agency-knowledge-boundary-differential"
+      ],
+      "crux_ids": [
+        "crux:filter-mechanism-requirement"
+      ]
+    },
+    {
+      "pair_id": "critique:combined-consciousness-first-to-interface:presence-prediction-gap",
+      "critic_lens": "combined_consciousness_first",
+      "target_lens": "predictive_processing",
+      "reveals_about_target": "Both consciousness-first accounts now have testable predictions about DOC phenomenology (recovery hierarchy vs. patient-specific, contentless witness vs. hybrid blend, categorical dissociation vs. covariance). The PP/interface account has no comparable predictions about the quality of residual phenomenology in DOC — it predicts only graded variation along known dimensions. If future DOC phenomenology research reveals features that only one of the consciousness-first accounts predicted, the absence of comparable PP predictions becomes a weakness.",
+      "pressure_type": "phenomenological_prediction_gap",
+      "target_response_required": "The PP/interface account must generate positive predictions about the quality of residual experienc in DOC states, or concede that consciousness-first accounts have a predictive advantage in this domain.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:dissociation-predicts-non-hierarchical-alter-restructuring",
+        "cl:dissociation-predicts-hybrid-fragment-phenomenology",
+        "cl:contraction-predicts-bare-witness-dissociable-from-hybrid",
+        "cl:agency-knowledge-boundary-differential"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "brain_as_appearance_only": "Strengthened by the dissociation model now having articulated differential predictions against the filter model. The appearance candidate is no longer a monolith — it must commit to either the dissociation model or justify compatibility with the kañcuka model. The articulation of testable predictions (non-hierarchical recovery, hybrid blend phenomenology, agency-knowledge covariance) gives the appearance candidate a distinct empirical programme that was entirely absent before.",
+    "brain_as_filter": "Strengthened by the kañcuka model now having its own distinctive predictions (hierarchical recovery, contentless witness, categorical agency-knowledge dissociation) that are distinct from the dissociation model. The filter candidate now has three differential predictions that compete directly with the appearance candidate, not just with PP.",
+    "brain_as_interface_generative_model": "Indirectly pressured: both consciousness-first accounts now have specific, testable predictions about DOC phenomenology that the PP account lacks. If future DOC research validates one set of predictions, the absence of PP counterparts becomes noticeable. However, PP is not directly falsified by the dissociation-vs-contraction debate — it remains live but less engaged in the DOC phenomenology domain.",
+    "current_best_answer": "Brain as generative model / interface remains the strongest local candidate by current graph score. However, the two consciousness-first accounts have now been forced apart — each has distinct testable predictions about DOC phenomenology that the other lacks. The dissociation-vs-contraction debate is now empirically tractable. The next sharpest question is: which set of predictions (dissociation's patient-specific hybrid-blend or kañcuka's hierarchical/contentless-witness) better matches existing and future DOC phenomenology data?",
+    "open_cruxes": [
+      "crux:neural-correlation-direction",
+      "crux:brain-damage-transformation",
+      "crux:filter-mechanism-requirement"
+    ]
+  },
+  "next_work": [
+    "Re-analyze existing DOC recovery data (Edlow, Giacino, Schiff cohorts) to test hierarchical vs. patient-specific recovery prediction.",
+    "Design structured phenomenological interview protocols for MCS patients that can distinguish contentless witness from hybrid blended content.",
+    "Design intentional binding vs. semantic accuracy experiment in prefrontal vs. temporal lesion patients to test agency-knowledge dissociation vs. covariance.",
+    "Review NDE literature (Parnia AWARE I+II, van Lommel) for evidence of contentless witness vs. hybrid blended content during extreme brain suppression.",
+    "Consider: if all four differential predictions fail to distinguish the two models, they should be merged in the benchmark as terminological variants."
+  ]
+}

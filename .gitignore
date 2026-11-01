@@ -9,3 +9,8 @@ __pycache__/
 !works/*/passages.jsonl
 !works/*/pushing.jsonl
 !works/*/c1-source.jsonl
+
+# Chant audio lives in R2 (public bucket), not git — keeps deploys under the
+# 20k-file cap and 20-min build timeout.
+site/static-audio/**/*.mp3
+site/dist/audio/**/*.mp3

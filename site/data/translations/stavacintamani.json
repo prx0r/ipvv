@@ -9,7 +9,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:a224bba3572d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 35% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 8,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p02",
@@ -21,7 +54,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:2934f494f7db",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 36% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 38,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p03",
@@ -33,7 +99,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:cb54ce55c931",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 32% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 69,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p04",
@@ -45,7 +144,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:2782730d7241",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 38% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 98,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p05",
@@ -57,7 +189,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:ba2af12bb217",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 37% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 128,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p06",
@@ -68,7 +233,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:24c41d4b997c",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 158,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p07",
@@ -80,7 +278,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:b329e5e5b51b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 37% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 188,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p08",
@@ -92,7 +323,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:6293ae819f43",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 34% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 218,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p09",
@@ -104,7 +368,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:28e45dc4f45b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 32% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 248,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p10",
@@ -116,7 +413,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:b558cfa45b93",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 36% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 278,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p11",
@@ -128,7 +458,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:5d27b0bb2ba5",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 38% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 308,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  },
  {
   "chunk": "stav-p12",
@@ -140,6 +503,39 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "stavacintamani",
+  "immutable_id": "pt:pid:stav:b55f76480b48",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 39% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "stavacintamani.txt",
+  "source_lines": 338,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS X (Ksemaraja comm. per ed.)",
+  "match_words": 12
  }
 ]

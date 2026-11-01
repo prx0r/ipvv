@@ -8,7 +8,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:c0c4ba77e1f4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 50,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 6
  },
  {
   "chunk": "sivs-p02",
@@ -19,7 +52,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:9c83be013ba0",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 345,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 9
  },
  {
   "chunk": "sivs-p03",
@@ -30,7 +96,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:e869db122fad",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 489,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 11
  },
  {
   "chunk": "sivs-p04",
@@ -41,7 +140,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:0f60a0afbdd1",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 808,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 8
  },
  {
   "chunk": "sivs-p05",
@@ -52,7 +184,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:523a2e37a41a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 978,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 12
  },
  {
   "chunk": "sivs-p06",
@@ -63,7 +228,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:1487dd0c074a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 1156,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 11
  },
  {
   "chunk": "sivs-p07",
@@ -74,7 +272,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:a63f683385c9",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 1389,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 10
  },
  {
   "chunk": "sivs-p08",
@@ -85,6 +316,39 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "sivasutra",
+  "immutable_id": "pt:pid:sivs:ea41c843beff",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "sivasutra-root.txt",
+  "source_lines": 1584,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Kaul Shastri 1925",
+  "match_words": 10
  }
 ]

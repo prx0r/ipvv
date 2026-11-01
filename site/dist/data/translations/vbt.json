@@ -9,7 +9,40 @@
    "TERM_CONSISTENCY"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:c1a27b8d2ddb",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'māyā': mixed renderings ['Maya', 'Māyā']"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 10,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p02",
@@ -20,7 +53,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:23b67c93ed56",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 43,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p03",
@@ -31,7 +97,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:2d955a3d5845",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 75,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p04",
@@ -42,7 +141,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:7c783d3e48dc",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 108,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p05",
@@ -53,7 +185,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:31ad8d3cd9d3",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 138,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p06",
@@ -64,7 +229,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:b85914732e12",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 169,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p07",
@@ -76,7 +274,40 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:dbf690f211b4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 199,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p08",
@@ -88,7 +319,40 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:98d72db52671",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 229,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p09",
@@ -99,7 +363,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:8e3c2a0ed6fa",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 259,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p10",
@@ -111,7 +408,40 @@
    "TERM_CONSISTENCY"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:1e539379aeb2",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    false,
+    "'māyā': mixed renderings ['Maya', 'Māyā']"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 289,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p11",
@@ -123,7 +453,40 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:02b323d3ea30",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 319,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p12",
@@ -134,7 +497,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:9fbc5bad3919",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 349,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p13",
@@ -145,7 +541,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:5ecec2b3360a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 379,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p14",
@@ -156,7 +585,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:39e60a84999a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 410,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p15",
@@ -167,7 +629,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:1c84524da827",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 440,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p16",
@@ -178,7 +673,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:51a836d05f57",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 476,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 12
  },
  {
   "chunk": "vbt-p17",
@@ -189,6 +717,39 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "vbt",
+  "immutable_id": "pt:pid:vbt:03d28b3a60bc",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "vbt-root.txt",
+  "source_lines": 509,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  }
 ]

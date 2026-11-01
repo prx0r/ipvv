@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:trika-vimarsa-nature",
+  "claim_packet": "content/information-packets/trika-vimarsa-nature-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "trika-vimarsa-nature",
+  "candidate_under_test": "all",
+  "central_reading": "Abhinavagupta distinguishes his view from the Buddhist svasa\u1e43vitti doctrine: self-awareness is the very nature (svabh\u0101va) of consciousness, not a result (phala) produced by cognition.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-svasamvedana-nature",
+      "source_span_id": "span:abh-svasamvedana-nature",
+      "quoted_anchor": "svasa\u1e41vedya\u1e41 svaprak\u0101\u015bam na tu svasa\u1e41vedan\u0101nyapram\u0101\u1e47aprameyam",
+      "nn_expr": "sambandha(abh_svasamvedana_nature,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "self-awareness is the nature of consciou",
+        "hetu": "consciousness is self-luminous and not dependent on any external means of knowledge",
+        "sadhya": "self-awareness is the nature of consciousness, not a result",
+        "vyapti": "If consciousness is self-luminous and its own object, then self-awareness is its"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that the Buddhist phala model of self-awareness is compatible with consciousness being self-luminous \u2014 i.e., that the result-of-cognition account does not undermine intrinsic self-awareness."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-svasamvedana-nature:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-svasamvedana-nature",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.75,
+      "relation_rationale": "Direct textual evidence that svasa\u1e43vedana is svabh\u0101va, not phala."
+    },
+    {
+      "edge_id": "edge:abh-svasamvedana-nature:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-svasamvedana-nature",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.55,
+      "relation_rationale": "If self-awareness is nature not result, the Buddhist phala model is challenged."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "Abhinavagupta distinguishes his view from the Buddhist svasa\u1e43vitti doctrine: self-awareness is the very nature (svabh\u0101va) of consciousness, not a result (phala) produced by cognition.",
+    "next_tests": []
+  }
+}

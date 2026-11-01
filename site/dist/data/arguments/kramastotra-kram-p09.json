@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p09",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p09",
+ "title": "kramastotra — kram-p09",
+ "kind": "entailment",
+ "question": "kram-p09 (9)",
+ "issue": "Derived from L2 text (no argmap). ## kram-p09 (9)\nBy such forms, varada, varied your body shines; in own-portion this world, difference-gone, Lord's. That same this hymn-to, heart and speech-outer-instrument-bonds would be mine, constant, unabandoned-rush. // AgKs_9",
+ "premises": [
+  {
+   "text": "tavaivaikasyāntaḥ sphuritamahaso bodhajaladher vicitrormivrātaprasaraṇaraso yaḥ svarasataḥ | ta evāmī sṛṣṭisthitilayamayasphūrjitarucāṃ śaśāṅkārkāgnīnāṃ yugapad udayāpāyavibhavāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "kram-p09 (9)",
+  "passage_id": "kramastotra:kram-p09"
+ },
+ "unresolved": "",
+ "argument_text": "## kram-p09 (9)\nBy such forms, varada, varied your body shines; in own-portion this world, difference-gone, Lord's. That same this hymn-to, heart and speech-outer-instrument-bonds would be mine, constant, unabandoned-rush. // AgKs_9",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p09",
+ "sanskrit": "tavaivaikasyāntaḥ sphuritamahaso bodhajaladher vicitrormivrātaprasaraṇaraso yaḥ svarasataḥ | ta evāmī sṛṣṭisthitilayamayasphūrjitarucāṃ śaśāṅkārkāgnīnāṃ yugapad udayāpāyavibhavāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

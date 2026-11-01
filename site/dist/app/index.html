@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>svatantrya</title>
+<style>
+:root{--bg:#ffffff;--ink:#22242c;--mut:#6d7180;--faint:#a9a49c;--gold:#a86f14;--line:#e7e3db}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,'Times New Roman',serif}
+#top{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#top nav{max-width:46rem;margin:0 auto;display:flex;gap:1.2rem;padding:.7rem 1rem;font-family:Inter,system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;overflow-x:auto;scrollbar-width:none}
+#top nav::-webkit-scrollbar{display:none}
+#top nav a{color:var(--mut);text-decoration:none;text-transform:uppercase;white-space:nowrap}
+#top nav a.on{color:var(--ink);border-bottom:2px solid var(--gold)}
+#view{max-width:46rem;margin:0 auto;padding:4.5rem 1rem 8rem}
+#view h1{font-weight:500;font-size:1.9rem;margin:.2rem 0 .4rem}
+#view h2{font-weight:500;font-size:1.35rem;margin:2rem 0 .3rem}
+#view .sub{color:var(--mut);font-size:.95rem;margin-bottom:1.5rem}
+#view a{color:var(--ink)}
+.idx a{display:block;color:var(--ink);text-decoration:none;font-size:1rem;padding:.45rem 0;border-bottom:1px solid var(--line);font-family:Inter,system-ui,sans-serif;font-size:.92rem}
+.idx a:hover{text-decoration:underline}
+.idx a small{color:var(--mut)}
+.dev{font-family:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;font-size:1.35rem;line-height:1.9}
+.gate{font-family:Inter,system-ui,sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.gate.pass{color:#1f7a6e}.gate.blocked{color:#b04a5a}
+#askbar{position:fixed;bottom:0;left:0;right:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+#askbar form{max-width:46rem;margin:0 auto;display:flex;gap:.5rem;padding:.7rem 1rem}
+#askbar input{flex:1;font:1rem Georgia,serif;padding:.55rem .8rem;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink)}
+#askbar input:focus{outline:none;border-color:var(--gold)}
+#askbar button{font-family:Inter,system-ui,sans-serif;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .8rem;cursor:pointer;font-size:1rem}
+#player{display:none;position:fixed;bottom:4.2rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.35rem .6rem .35rem 1rem;font-family:Inter,system-ui,sans-serif;font-size:.8rem;max-width:92vw;align-items:center;gap:.5rem}
+#player.on{display:flex}
+#player audio{max-width:40vw;height:32px}
+#player .x{border:0;background:none;cursor:pointer;font-size:1rem;color:var(--mut)}
+.playbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.3rem .8rem;cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.8rem;margin:.2rem .3rem .2rem 0}
+.playbtn:hover{border-color:var(--gold)}
+#menuBtn{position:fixed;z-index:30;left:.8rem;bottom:.8rem;width:52px;height:52px;border-radius:12px;border:1px solid var(--line);cursor:pointer;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink)}
+#menuBtn.on{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+#menu{position:fixed;z-index:20;top:0;left:0;bottom:0;width:min(84vw,320px);background:#fff;border-right:1px solid var(--line);padding:1rem .9rem 5rem;overflow:auto;display:none;font-family:Inter,system-ui,sans-serif;font-size:.86rem}
+#menu.open{display:block}
+#menu h3{margin:.8rem 0 .4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:400}
+#menu h3:first-child{margin-top:0}
+#menu .grid2{display:grid;grid-template-columns:1fr 1fr;gap:.3rem}
+#menu a{display:block;padding:.45rem .6rem;color:var(--ink);text-decoration:none;border-radius:.4rem}
+#menu a:hover{background:#f4f1ea}
+#menu a.on{background:#f4f1ea;font-weight:600}
+#menu .msec{margin:.5rem 0 .2rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+#menu details.mnav{border:0;margin:.2rem 0}
+#menu details.mnav summary{cursor:pointer;list-style:none;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:.45rem .6rem}
+#menu details.mnav summary::-webkit-details-marker{display:none}
+#menu details.mnav .sub a{padding-left:1.2rem;font-size:.8rem}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.4rem .8rem;margin:.5rem 0 1rem}
+.mgrid .mcard{display:block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;text-decoration:none;color:var(--ink);font-family:var(--sans);font-size:.86rem}
+.mgrid .mcard:hover{border-color:var(--gold)}
+#lib-works .mgrid{grid-template-columns:repeat(auto-fill,minmax(12rem,1fr))}
+#libwrap{flex-wrap:nowrap}
+@media (max-width:600px){
+  #libwrap{gap:.75rem}
+  #libwrap > div:first-child{min-width:7.5rem !important}
+  #libwrap .msec{font-size:.62rem}
+}
+#answer{background:#fbfaf7;border-left:2px solid var(--gold);padding:.8rem 1rem;margin:1rem 0;font-size:.98rem}
+#answer .who{font-family:Inter,system-ui,sans-serif;font-size:.72rem;color:var(--mut);letter-spacing:.08em;margin-bottom:.3rem}
+#answer .follow{color:var(--gold);cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:.82rem;margin-top:.5rem;display:block}
+</style>
+</head>
+<body>
+<main id="view"></main>
+<button id="menuBtn" aria-label="menu">···</button>
+<div id="menu"></div>
+<div id="askbar" style="display:none"><form id="ask"><button type="button" id="mic" title="speak">🎤</button><input id="askQ" placeholder="Ask or speak…" autocomplete="off"/><button type="button" id="spk" title="spoken replies">🔈</button><button type="submit">?</button></form></div>
+<div id="player"><span id="ptitle">—</span><audio id="paudio" controls preload="none"></audio><button class="x" id="pclose" aria-label="close">×</button></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

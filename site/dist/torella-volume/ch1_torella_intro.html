@@ -1,0 +1,817 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch1_torella_intro</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch1_torella_intro</h1><div class="skt"></div><div class="sub">3742 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch1_torella_intro.txt">source →</a></div><ul>
+<li>portance of Utpaladeva</li>
+</ul>
+<ul>
+<li> Introduction</li>
+</ul>
+<ul>
+<li>ffaele Torella</li>
+</ul>
+<ul>
+<li>e Pratyabhijñā provides non-dual Śaivism of Kashmir with a</li>
+<li>hilosophy”. A presentation of the Pratyabhijñā doctrines involves,</li>
+<li>rst and foremost, giving voice to one of the most original and</li>
+<li>culiar components of India’s philosophical and religious scenario from</li>
+<li>dieval times down to our own: what is known in the West as “Tantrism”.</li>
+<li> will be necessary to stretch a discreet veil over the incautious</li>
+<li>marks of a well-known scholar like Georg Feuerstein:1</li>
+</ul>
+<ul>
+<li>ntrism’s contribution to philosophy is negligible. Its unicity lies</li>
+<li>olly within the practical sphere, the sādhana. From a philosophical</li>
+<li>int of view, there is no hiatus between Tantrism and previous</li>
+<li>aditions. Buddhist Tantrism rests substantially on the foundations of</li>
+<li>e Mādhyamika school of Mahāyāna, and its Hindu counterpart on those of</li>
+<li>e cognate Advaita-Vedānta.</li>
+</ul>
+<ul>
+<li> actual fact, Pratyabhijñā, which provides the theoretical basis for</li>
+<li>l Hindu Tantrism, constitutes one of the highest and most original</li>
+<li>ments of Indian thought (it has, moreover, very little to do with</li>
+<li>dānta). The principal aim of the Pratyabhijñā philosophers was to</li>
+<li>low the Tantric Śaiva sects to emer­ge from the dimen­sion of</li>
+<li>stricted circles, often devoted to transgressive practices, and</li>
+<li>tablish themselves in the stratum of so­cial nor­mality, by</li>
+<li>ternalizing, or in any case cir­cumscrib­ing, their own specific</li>
+<li>f­ferences. Their main addressees were no more the ascetics, but,</li>
+<li>pically, the householders. As a consequence, the Pratyabhijñā engages</li>
+<li> a far-reaching dialogue with Indian philosophy of its time, accepting</li>
+<li>s modalities and rules. The initial nucleus comprises non-dualistic</li>
+<li>ivite scriptures, the Bhairava Tantras — Bhairava being the terrible</li>
+<li>rm of the God Śiva, in whom cruelty and violence are metaphors for</li>
+<li>mpant energy, far distant from the unmoving and bloodless deities of</li>
+<li>dānta. Bhairava coincides with the “I” of every creature. In first</li>
+<li>dressing the notion of “I”, so much disliked by Brāhmanic thought,</li>
+<li>n-dualist Śaivism and in primis Utpaladeva implicitly state the</li>
+<li>ntrality of free movement as against the always lurking reification</li>
+<li>nnected to the notion of ātman, the I as substance. As compared to the</li>
+<li>— the Supreme Consciousness — the flow of the phenomenal world is not</li>
+<li>(bad) dream from which one must awake as soon as possible, but the</li>
+<li>ontaneous manifestation of the Absolute itself. The concept of māyā,</li>
+<li>ntral to Vedānta, is not eliminated: māyā is taken to be the power of</li>
+<li>e Lord, even his highest power, otherwise known as svātantryaśakti</li>
+<li>ower of freedom), and svātantryavāda (doctrine of freedom) becomes one</li>
+<li> the favourite names for this school.</li>
+</ul>
+<ul>
+<li>paladeva inaugu­rates what was to be­come a salient fea­ture of the</li>
+<li>ole Trika in Abhinavagupta’s syn­thesis: name­ly, the ten­den­cy not</li>
+<li> con­stitute a monolithic doctrine and a world of religious</li>
+<li>­perience to op­pose en bloc everyth­ing that does not coin­cide with</li>
+<li> (as in the ekāntin “absolutistic” trends) but to dis­tin­guish</li>
+<li>anes, which are hierarchi­cal­ly or­dered but in which the “higher”</li>
+<li>es not automati­cal­ly can­cel the “lower” (as Somānanda had al­ready</li>
+<li>id, Śiva is everywhere, even in dif­feren­tia­tion, pain and hell).</li>
+<li>is is the perspec­tive of the Paramādvaita “Supreme Non-Duality”, such</li>
+<li> elevated view­point that it does not fear what is dif­ferent from</li>
+<li>­self, is not put in a criti­cal posi­tion by it, is not forced to</li>
+<li>ke a choice.</li>
+</ul>
+<ul>
+<li>ile Somānanda is considered the founder of the Pratyabhijñā, its</li>
+<li>ll-fledged elaboration is due to Utpaladeva and Abhinavagupta.</li>
+<li>mānanda’s Śivadr̥ṣṭi is to be considered the first philosophical work</li>
+<li> Kashmirian Śaiva Advaita,2 its only predecessor being the</li>
+<li>anda-Kārikā, in which however the experiential and scriptural approach</li>
+<li>rgely prevails over philosophical elaboration. The Śivadr̥ṣṭi is</li>
+<li>animously recognized as the first work of the Pratyabhijñā school,</li>
+<li>spite the fact that the word pratyabhijñā does not even occur in it</li>
+<li>t least in its pregnant meaning). Abhinavagupta at the beginning of</li>
+<li>s Vimarśinī on the Īśvarapratyabhijñā-Kārikā does not hesitate to say</li>
+<li>at Utpaladeva’s masterwork is in fact only a “reflected image” of the</li>
+<li>vadr̥ṣṭi.3 This is, of course, not to be taken literally, for, although</li>
+<li>e Śivadr̥ṣṭi was a powerful source of inspiration for Utpaladeva, it is</li>
+<li>ly with the Īśvarapratyabhijñā-Kārikā that the Pratyabhijñā becomes a</li>
+<li>ry original and elaborate philosophical system. In the</li>
+<li>mānanda–Utpaladeva –(Lakṣmaṇagupta)–Abhinavagupta triad it was the</li>
+<li>tter who largely overshadowed his predecessors. Among the Pratyabhijñā</li>
+<li>xts, Abhinavagupta’s Īśvarapratyabhijñā-Vimarśinī became by far the</li>
+<li>st “popular” — if I may use this adjective for one of the profoundest</li>
+<li>d most sophisticated worldviews that India has ever produced. The main</li>
+<li>ctim of the success of the Vimarśinī was the extraordinarily important</li>
+<li>vr̥ti or Ṭīkā by Utpaladeva, of which only fragments have survived.</li>
+</ul>
+<ul>
+<li>e works of Abhinavagupta are well known, and his</li>
+<li>varapratyabhijñā-Vimarśinī and the Īśvarapratyabhijñā-Vivr̥ti-Vimarśinī</li>
+<li> commentary on Utpaladeva’s Vivr̥ti on his own</li>
+<li>varapratyabhijñā-Kārikā and Vr̥tti) are generally considered the</li>
+<li>andard works of the Pratyabhijñā.4 However, the role of Utpaladeva’s</li>
+<li>vr̥ti as the real centre of gravity of Pratyabhijñā philosophy has</li>
+<li>come more and more evident, since my discovery of a long fragment of</li>
+<li>e Vivr̥ti, which I have edited and translated in a series of articles</li>
+<li>orella 2007a-d, 2012). Now that it is possible to look, however</li>
+<li>rtially, into the Vivr̥ti, we realize that most of Abhinavagupta’s</li>
+<li>eas are just the development of what Utpaladeva had already expounded</li>
+<li>ere. As a consequence, we are no longer allowed to consider Utpaladeva</li>
+<li>mere predecessor of Abhinavagupta, as being the latter the great</li>
+<li>ster of Pratyabhijñā, but we must rather take Utpaladeva, particularly</li>
+<li>th his Īśvarapratyabhijñā-Vivr̥ti, as the real centre of gravity of the</li>
+<li>stem (see Torella 2014a) and Abhinavagupta mainly as his brilliant</li>
+<li>mmentator.</li>
+</ul>
+<ul>
+<li>ghly interesting is Utpaladeva’s philosophical strategy, which the</li>
+<li>ter Pratyabhijñā authors will simply continue. Instead of dispersing</li>
+<li>atyabhijñā’s philosophical energies against an undifferentiated</li>
+<li>ltiplicity of opponents, he very lucidly selects one, the most</li>
+<li>estigious philosophical and religious tradition of the Kashmir of that</li>
+<li>me. For various reasons (the principal one probably being the will to</li>
+<li>esent the new Pratyabhijñā philosophers as the champions of the entire</li>
+<li>iva tradition against the main common antagonist), these privileged</li>
+<li>ponents are the Buddhists, especially those belonging to the so-called</li>
+<li>gical–epistemological school.5 While for Somānanda the Buddhists are</li>
+<li>ponents just like many others, they are given a special status in the</li>
+<li>rk of Utpaladeva, for whom they, admired and attacked in an equally</li>
+<li>rong way, are so to speak the most intimate enemies. The criticism of</li>
+<li>eir positions is to Utpaladeva of a substantial help in building and</li>
+<li>fining the Pratyabhijñā philosophy.</li>
+</ul>
+<ul>
+<li>e Buddhist epistemologists and Pratyabhijnā start from presuppositions</li>
+<li>at appear — and are — absolutely irreconcilable: an impersonal world</li>
+<li> events on the one hand and, on the other, a world permeated and</li>
+<li>vified even in its seemingly most inert crannies by the dynamism of</li>
+<li>e I (Śiva or Consciousness). Despite this, an undoubted fascination is</li>
+<li>erted by the rigour of the Buddhist epistemologists’ argumentation and</li>
+<li>eir dauntless critical capacity that uses its sharp and original</li>
+<li>struments on the doctrines of the most diverse opponents. The very air</li>
+<li> superiority that may sometimes be glimpsed in their opposition to all</li>
+<li>hers, though it does not fail occasionally to provoke a note of</li>
+<li>rcasm in the Śaiva masters, ends up by further enhancing their image.</li>
+<li>is contributes toward causing them to be adopted by the Pratyabhijnā</li>
+<li>thors, partly, so to speak, as a touchstone to test the soundness of</li>
+<li>eir theses, and partly as a whetstone to sharpen their dialectic arms.</li>
+</ul>
+<ul>
+<li>ddhist epistemology, in its struggle against realism (particularly of</li>
+<li>āya, but also of Mīmāṁsā and Sāṁkhya), is constantly concerned with</li>
+<li>owing the fundamental importance of the mind in structuring reality,</li>
+<li> contrast to those who, with the aim of underlining the independent</li>
+<li>ture of the external reality confronted by human experience, move in</li>
+<li>e opposite direction — reducing the creative and formative role of</li>
+<li>owledge as far as possible and making it into a mere mirror that</li>
+<li>cords readymade realities outside itself, resulting in an unending</li>
+<li>tification even of relations, qualities, etc. This reference to the</li>
+<li>ntrality of the mind must have been felt by Utpaladeva to be a strong</li>
+<li>ement of affinity, even though it was destined to have quite divergent</li>
+<li>velopments. After letting the Buddhist philosophers demolish the Nyāya</li>
+<li>tegories, he shows how the Buddhist alternative is in fact equally</li>
+<li>adequate. It does overcome Nyāya, but remains as though suspended in</li>
+<li>d-air, since it is proved — in the Buddhist fragmented and isolated</li>
+<li>iverse — to be incapable of accounting for the network and circularity</li>
+<li> human experience. The only way to save the Buddhist view from its</li>
+<li>eoretical failure is to include it in a different field of reference,</li>
+<li>presented by the omnipervasive dynamism of a free and “personal”</li>
+<li>nsciousness that coincides with the Supreme Lord, Śiva. In this way,</li>
+<li>paladeva achieves the result of both showing the superiority of</li>
+<li>atyabhijñā to Buddhism and warning the Naiyāyikas (among whom the</li>
+<li>iva faith was most prevalent) not to count too much on their forces</li>
+<li>one, detached from those of the new Śaiva philosophers.</li>
+</ul>
+<ul>
+<li>rough this subtle play of a declared basic disagreement with the</li>
+<li>ctrines of Buddhist philosophers, a limited acceptance and purely</li>
+<li>strumental (or thought to be such) use of them, the masters of the</li>
+<li>atyabhijñā end up being somehow drawn into their orbit. The</li>
+<li>chitecture of the Pratyabhijñā feels the effect of this. The very fact</li>
+<li>at many problems are posed, more or less unwittingly, in Buddhist</li>
+<li>rms to a certain extent prefigures their development and reduces</li>
+<li>ssible alternatives as regards solutions.</li>
+</ul>
+<ul>
+<li>so very interesting is Utpaladeva’s choice of the main ally, the</li>
+<li>ammarian-philosopher Bhartr̥hari, though the latter had been fiercely</li>
+<li>tacked precisely by Utpaladeva’s guru Somānanda (cf. Torella 2009).</li>
+<li>ch a change of attitude, which in a broader sense is also a paradigm</li>
+<li>ange proper, does invest the problematic aspects of taking distance</li>
+<li>om one’s own guru, and, at the same time, shows how the choice of the</li>
+<li>ponents and allies may be the outcome of a definite plan rather than a</li>
+<li>ct of mere liking or disliking some worldview.6 In order to undermine</li>
+<li>e discontinuous universe of the Buddhists, Utpaladeva decides to avail</li>
+<li>mself precisely of Bhartr̥hari’s doctrine, the language-imbued nature</li>
+<li> knowledge, which is meant to demolish Buddhism’s main foundation</li>
+<li>one, i.e. the unsurpassable gulf between the moment of sensation and</li>
+<li>at of conceptual elaboration, representing, as it were, the very</li>
+<li>chetype of the Buddhist segmented reality.</li>
+</ul>
+<ul>
+<li> far as the metaphysical background is concerned, there is nothing</li>
+<li>sentially new in this doctrine — the scriptural sarvaśaktivilolatā</li>
+<li>ffervescence of all powers (in any reality)” of the Śivadr̥ṣṭi (I.11b)</li>
+<li>plicitly already contained it. But what Utpaladeva wanted to resort to</li>
+<li>s not scriptural authority but an argument belonging to the shared</li>
+<li>ilosophical debate. Thus, the omnipervasiveness of language is the</li>
+<li>istemological version of the omnipervasiveness of Śiva, and at the</li>
+<li>me time calls for integration into the spiritually dynamic Śaiva</li>
+<li>iverse.</li>
+</ul>
+<ul>
+<li>us, some of the most famous, and crucial, verses of the</li>
+<li>varapratyabhijñā-Kārikā originate.</li>
+</ul>
+<ul>
+<li>e essential nature of light is reflective awareness; otherwise light,</li>
+<li>ough ‘coloured’ by objects, would be similar to an insentient reality,</li>
+<li>ch as the crystal and so on. — I.V.11; cf. Torella 2002: 118</li>
+</ul>
+<ul>
+<li>nsciousness has as its essential nature reflective awareness; it is</li>
+<li>e supreme Word that arises freely. It is freedom in the absolute</li>
+<li>nse, the sovereignty of the supreme Self. — I.V.13; cf. Torella 2002:</li>
+<li>0</li>
+</ul>
+<ul>
+<li>en at the moment of direct perception there is a reflective awareness.</li>
+<li>w otherwise could one account for such actions as running and so on,</li>
+<li> they were thought of as being devoid of determinate awareness? —</li>
+<li>V.19; cf. Torella 2002: 125</li>
+</ul>
+<ul>
+<li>­like what oc­curs here and there in Somānanda’s Śivadr̥ṣṭi, in the</li>
+<li>varapratyabhijñā-Kārikā any emo­tion­al colour­ing is banished. This</li>
+<li>es not mean that Utpaladeva was sole­ly a philosopher: the</li>
+<li>­traordi­nary in­ten­sity of his hymns, which were later to be</li>
+<li>l­lected in the Śiva-Stotrāvalī and are still re­cited daily by the</li>
+<li>ivas of Kash­mir, proves it.</li>
+</ul>
+<ul>
+<li>e Shimla seminar has duly emphasized the universalistic approach of</li>
+<li>e Pratyabhijñā philosophy: the Śaiva Āgama is just the culmination</li>
+<li>ak of the universal Āgama, which, unlike the Veda, is not separated</li>
+<li>om mankind by an unsurpassable gulf, but inhabits in the very heart of</li>
+<li>y creature. The idea of the universality of revelation as the</li>
+<li>terplay of four closely related concepts</li>
+<li>asiddhi–āgama–pratibhā–śabdana is developed by Abhinavagupta in the</li>
+<li>ntrāloka, Tantrasāra and Īśvarapratyabhijñā-Vivr̥ti-Vimarśinī (cf.</li>
+<li>rella 2013a). But once again this may be considered merely the</li>
+<li>velopment of what Utpaladeva says in his Vivr̥ti, while commenting upon</li>
+<li>o ślokas (we might even surmise Utpaladeva’s authorship of them). It</li>
+<li> worthwhile to delve at some length into this important, if</li>
+<li>mparatively less studied, aspect of Utpala’s thought.</li>
+</ul>
+<ul>
+<li>asiddhir āgamo loke yuktimān athavetaraḥ ।</li>
+</ul>
+<ul>
+<li>dyāyām apy avidyāyāṁ pramāṇam avigānataḥ ।।</li>
+</ul>
+<ul>
+<li>asiddhir avigītā hi satyā vāg aiśvarī matā ।</li>
+</ul>
+<ul>
+<li>yā yatra yadā siddhaṁ yat tad grāhyam aśaṅkitaiḥ ।।</li>
+</ul>
+<ul>
+<li>asiddhi is what we commonly call āgama, which may be either congruent</li>
+<li>th reason or not; it is a source of valid knowledge in the domain both</li>
+<li> vidyā and avidyā, provided that it is not contradicted. For the</li>
+<li>n-contradicted prasiddhi is to be considered the true Voice of the</li>
+<li>rd. What is established by virtue of this Voice, within a certain</li>
+<li>atial/temporal condition, is to be accepted by those who are</li>
+<li>ustful.7</li>
+</ul>
+<ul>
+<li> order to express such a concept, Utpaladeva needed a broader term</li>
+<li>an pratibhā and less connoted than pratibhā by typically “mysterious”</li>
+<li>ertones: prasiddhi, perhaps also because it furnished the occasion for</li>
+<li>itically addressing the Mīmāṁsā, was indeed the ideal candidate. A</li>
+<li>ntinuous line runs from the individually oriented prasiddhis which are</li>
+<li> work in the everyday experience of living beings and the</li>
+<li>ogressively higher prasiddhis, which give shape to the various</li>
+<li>rld-views, i.e. the various Āgamas — from the Veda to the Bauddha, the</li>
+<li>ñcarātra, the Śaiva — culminating in the all-encompassing eka āgama</li>
+<li>antrāloka XXXV.24a, 30a, 35a, 37a). Prasiddhi (in Abhinava’s</li>
+<li>aboration, based on the Vivr̥ti) is the paradox of something both</li>
+<li>ming from outside (ā-gama) and abiding in the depths of men’s</li>
+<li>teriority. It is a content of our individuality for which we are not</li>
+<li>sponsible, since it is already present in the new-born creature. It is</li>
+<li>t a fixed content, but a varying one, due to its interaction with the</li>
+<li>her factors of individuality. In a sense, then, prasiddhi is not even</li>
+<li>content, being instead more akin in its essence to a “container”. At</li>
+<li>e same time, rather than belonging to the “cognition” side it belongs</li>
+<li> the “action” side; it is the object of belief and the belief itself.</li>
+<li>ain, it is not bound to remain an inner belief, but enacts specific</li>
+<li>actical behaviours (Tantrāloka XXXV.15cd lokān vyavahārayet). In the</li>
+<li>ckground lies the common Indian awareness that cognition alone is</li>
+<li>sufficient to set humans in motion. Prasiddhi is belief in something,</li>
+<li>hesion to something; its most recurrent qualifications are dr̥ḍha</li>
+<li>irm), nirūḍha (deeply rooted). However, this “firmness” does not</li>
+<li>rive from a conscious effort, but is innate, spontaneous, just as</li>
+<li>ontaneous as the insightful intuition (pratibhā) that plays such a</li>
+<li>eat part in driving most of our actions. However, even this</li>
+<li>ontaneity does not belong to the creature individually, but to its</li>
+<li>ared background. Such a “background” of the creature is its being</li>
+<li>timately rooted in universal consciousness, Śiva. This active divine</li>
+<li>esence is what may also be called āgama, and has the form of the</li>
+<li>nate language principle which imbues all cognitions and actions. It is</li>
+<li>e divine Voice (vāc) of the Lord that speaks in living beings.</li>
+</ul>
+<ul>
+<li>om Utpaladeva–Abhinavagupta’s conception of āgama, any parochial bias</li>
+<li> banned as it comprises all the existing āgamas, from the Vaiṣṇava to</li>
+<li>e Buddhist (the Śaiva included). The immensely distant and</li>
+<li>decipherable āgama of Mīmāṁsā, the Veda, leaves here the place to the</li>
+<li>ternal and variegated āgamas of the Śaivas. Along with advaitācāra</li>
+<li>on-dual behaviour), such a far-reaching universalistic approach to</li>
+<li>velation constitutes the most insidious attack by Śaiva Tantrism to</li>
+<li>āhmanical hegemony.</li>
+</ul>
+<ul>
+<li>e work of Utpaladeva can be viewed as the very icon of the integration</li>
+<li> the rational and emotional sides of man: his extremely sophisticated</li>
+<li>ilosophical arguments are to be viewed side by side with his</li>
+<li>ssionate mystical poetry. His philosophy is characterized by this</li>
+<li>ique blend of epistemology, metaphysics, religious experience,</li>
+<li>nguistic philosophy and aesthetic speculation. Precisely to Utpaladeva</li>
+<li> do owe the entrance of aesthetics into philosophical–religious</li>
+<li>eculation. His concept of camatkāra (wondrous enjoyment) marks a</li>
+<li>gher level of experience, which leaves the reality and beauty of the</li>
+<li>nifested world intact, but at same time projects it into a totality</li>
+<li>ose centre is Supreme Consciousness. This will be later developed by</li>
+<li>hinavagupta into a full-fledged aesthetic system, destined to become</li>
+<li>e main stream of aesthetical speculation of pre-modern India as a</li>
+<li>ole.</li>
+</ul>
+<ul>
+<li>stly, Utpala’s work is a most conspicuous example of an essential</li>
+<li>ature of Indian philosophy as a whole, which, however, has hardly been</li>
+<li>ly highlighted: ceaseless interchange among the different schools,</li>
+<li>vely confrontation with the opposite theories, tireless capacity of</li>
+<li>lf-reshaping accordingly.</li>
+</ul>
+<ul>
+<li>ferences</li>
+</ul>
+<ul>
+<li>xts</li>
+</ul>
+<ul>
+<li>hinavagupta, Īśvarapratyabhijñāvimarśinī, ed. Mukund Ram Sha­stri,</li>
+<li>ls. I-II, KSTS XXII, XXXIII, Bombay, 1918-21.</li>
+</ul>
+<ul>
+<li>hinavagupta, Īśvarapratyabhijñāvivr̥tivimarśinī, ed. Madhusudan Kaul</li>
+<li>a­stri, vols. I-III, KSTS LX, LXII, LXV, Bombay 1938-43.</li>
+</ul>
+<ul>
+<li>hinavagupta, Tantrāloka with Commentary by Rājānaka Jayaratha, edited</li>
+<li>th notes by Madhusudan Kaul Shastri, vols. I-XII, KSTS XXIII, XXVIII,</li>
+<li>X, XXXVI, XXXV, XXIX, XLI, XLVII, LIX, LII, LVII, LVIII,</li>
+<li>lahabad-Srinagar-Bombay 1918-38.</li>
+</ul>
+<ul>
+<li>artṛhari, Vākyapadīya (mūlakārikās), Bhartr̥haris Vākyapadīya, ed. W.</li>
+<li>u, Abhandlungen für die Kunde des Morgenlandes, 42, Wiesbaden 1977.</li>
+</ul>
+<ul>
+<li>gnāga, Pramāṇasamuccaya, see Steinkellner 2005 and Jinendrabuddhi,</li>
+<li>śālāmalavatī Pramāṇasamuccayaṭīkā.</li>
+</ul>
+<ul>
+<li>nendrabuddhi, Viśālāmalavatī Pramāṇasamuccayaṭīkā, Chapter I. Part I:</li>
+<li>itical Edition, by E. Steinkellner, H. Krasser, H. Lasic, China</li>
+<li>betology Research Centre – Austrian Academy of Sciences,</li>
+<li>ijing-Vienna 2005.</li>
+</ul>
+<ul>
+<li>mānanda, Śivadr̥ṣṭi with the vr̥tti by Utpaladeva, ed. Pandit Madhusudan</li>
+<li>ul Shastri, KSTS LIV, Srinagar 1934.</li>
+</ul>
+<ul>
+<li>paladeva, Īśvarapratyabhijñākārikā with svavr̥tti (see Torella 2002).</li>
+</ul>
+<ul>
+<li>anslations and Studies</li>
+</ul>
+<ul>
+<li>hnemann, Gudrun, 1980 “Identifizierung von Sanskrittexten</li>
+<li>aṅkaranandanas”, Wiener Zeitschrift für die Kunde Südasiens 24: 191-98.</li>
+</ul>
+<ul>
+<li>tschinger, Vincent, 2006, “Les oeuvres de Śaṅkaranandana: nouvelles</li>
+<li>ssources manuscrites, chronologie relative et identité</li>
+<li>nfessionnelle”, Annali dell’Università degli studi di Napoli</li>
+<li>’Orientale”. Rivista del Dipartimento di Studi Asiatici e del</li>
+<li>partimento di Studi e Ricerche su Africa e Paesi Arabi, 66: 83-122.</li>
+</ul>
+<ul>
+<li>uerstein, George, 1974, The Essence of Yoga: A Contribution to the</li>
+<li>ychohistory of Indian Civilization. Delhi.</li>
+</ul>
+<ul>
+<li>asser, Helmut, 2001, “On the Date and Works of Śaṅkaranandana”. In</li>
+<li>ffaele Torella (ed.) Le Parole e i Marmi: Studi in Onore di Raniero</li>
+<li>oli nel suo 70° compleanno (Serie Orientale Roma 92), pp. 489-508.</li>
+</ul>
+<ul>
+<li>mec, John, 2011, The Ubiquitous Śiva: Somānanda’s Śivadr̥ṣṭi and his</li>
+<li>ntric Intelocutors, AAR Religion in Translation, New York: Oxford</li>
+<li>iversity Press.</li>
+</ul>
+<ul>
+<li>tié, Isabelle, 2011, Le Soi et l’Autre. Identité, différence et</li>
+<li>térité dans la philosophie de la Pratyabhijñā, Jerusalem Studies in</li>
+<li>ligion and Culture 13, Leiden: Brill.</li>
+</ul>
+<ul>
+<li>rella, Raffaele, 1992, “The Pratyabhijñā and the</li>
+<li>gical-Epistemological School of Buddhism”. In: Teun Goudriaan (ed.)</li>
+<li>tual and Speculation in Early Tantrism: Studies in Honor of André</li>
+<li>doux, Albany: SUNY Press, pp. 327-45.</li>
+</ul>
+<ul>
+<li>—, 2002, The Īśvarapratyabhijñākārikā of Utpaladeva with the Author’s</li>
+<li>̥tti. Critical Edition and Annotated Translation, Delhi: Motilal</li>
+<li>narsidass (Ist edn. Serie Orientale Roma 71, IsMEO, Roma, 1994), repr.</li>
+<li>14.</li>
+</ul>
+<ul>
+<li>—, 2004 “How is Verbal Signification Possible: understanding</li>
+<li>hinavagupta’s Reply”, Journal of Indian Philosophy 32(2-3): 173-88.</li>
+</ul>
+<ul>
+<li>—, 2007a, “Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part I.</li>
+<li>upalabdhi and apoha and in a Śaiva Garb”. In: Karin Preisendanz (ed.)</li>
+<li>panding and Merging Horizons: Contributions to South Asian and</li>
+<li>oss-cultural Studies in Commemoration of Wilhelm Halbfass, Vienna, pp.</li>
+<li>3-90.</li>
+</ul>
+<ul>
+<li>—, 2007b, “Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part II.</li>
+<li>at is Memory”, In: Indica et Tibetica. Festschrift für Michael Hahn</li>
+<li>m 65. Geburtstag von Freunden und Schülern überreicht, herausgegeben</li>
+<li>n Konrad Klaus und Jens-Uwe Hartmann, Wien, pp. 539-63.</li>
+</ul>
+<ul>
+<li>—, 2007c,“Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part III.</li>
+<li>n a Cognition become the Object of another Cognition?”. In: Dominic</li>
+<li>odall, André Padoux (eds.) Mélanges tantriques à la mémoire d’Hélène</li>
+<li>unner, Pondichéry, pp. 475-84.</li>
+</ul>
+<ul>
+<li>—, 2007d,“Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part IV.</li>
+<li>ght of the Subject-light of the Object”. In: Birgit Kellner et al.</li>
+<li>ds.) Pramāṇakīrtiḥ: Papers Dedicated to Ernst Steinkellner on the</li>
+<li>casion of his 70th Birthday, Wiener Studien zur Tibetologie und</li>
+<li>ddhismuskunde, Heft 70.1-2, Wien, pp. 925-39.</li>
+</ul>
+<ul>
+<li>—, 2009, “From an Adversary to the Main Ally: The Place of Bhartr̥hari</li>
+<li> the Kashmirian Śaivādvaita”. In: M. Chaturvedi (ed.) Bhartr̥hari:</li>
+<li>nguage, Thought and Reality, Delhi, pp. 343-54.</li>
+</ul>
+<ul>
+<li>—, 2011, The Philosophical Traditions of India: An Appraisal,</li>
+<li>ranasi: Indica Books.</li>
+</ul>
+<ul>
+<li>—, 2012, “Studies in Utpaladeva’s Īśvarapratyabhijñā-vivr̥ti. Part V.</li>
+<li>lf-awareness and Yogic Perception”. In: François Voegeli et al. (eds.)</li>
+<li>vadattīyam: Johannes Bronkhorst Felicitation Volume. Worlds of South</li>
+<li>d Inner Asia 5, Berne: Peter Lang, pp. 275-300.</li>
+</ul>
+<ul>
+<li>—, 2013a, Inherited Cognitions: Prasiddhi, Āgama, Pratibhā, Śabdana</li>
+<li>hartr̥hari, Utpaladeva, Abhinavagupta, Kumārila and Dharmakīrti in</li>
+<li>alogue). In: Vincent Eltschinger and Helmut Krasser (eds.) Scriptural</li>
+<li>thority, Reason and Action: Proceedings of a Panel at the XIV World</li>
+<li>nskrit Conference, Kyoto, September 1st-5th 2009, Wien:</li>
+<li>terreichische Akademie der Wissenschaften, Philosophisch-Historische</li>
+<li>asse, Sitzungsberichte, 847. Band, Wien, pp. 455-480.</li>
+</ul>
+<ul>
+<li>—, 2013b, “Pratyabhijñā and Philology”, Journal of the American</li>
+<li>iental Society, 133(4): 705-13.</li>
+</ul>
+<ul>
+<li>—, 2014a, “Utpaladeva’s Lost Vivr̥ti on the Īśvarapratya-bhijñākārikā”,</li>
+<li>urnal of Indian Philosophy, 42: 115-26.</li>
+</ul>
+<ul>
+<li>—, 2014b, “Notes on the Śivadr̥ṣṭi by Somānanda and its Commentary”,</li>
+<li>urnal of Indian Philosophy, 43: 551-601.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>Feuerstein 1974: 176-77. A very similar position is also maintained by</li>
+<li>rcea Eliade. For a detailed presentation of Pratyabhijñā philosophy,</li>
+<li>. Torella 1992; 2002: ix-xlv; 2009; Ratié 2011.</li>
+</ul>
+<ul>
+<li>A somewhat problematic book has recently been devoted to this</li>
+<li>portant work (Nemec 2011; on it, see a review article in Torella</li>
+<li>13b). A survey of the textual and translation problems of the</li>
+<li>vadr̥ṣṭi can be found in Torella 2014b.</li>
+</ul>
+<ul>
+<li>Vol. I, p. 2: śrīsomānandanāthasya vijñānapratibimbakam.</li>
+</ul>
+<ul>
+<li>Just to give an example, we can see that when Mādhava describes the</li>
+<li>atyabhijñā-Darśana in the Sarva-Darśana-Saṁgraha he presents passages</li>
+<li>ming only from Abhinava’s Vimarśinī.</li>
+</ul>
+<ul>
+<li>The main reference point for Utpaladeva is Dharmakīrti (then Dignāga</li>
+<li>d Dharmottara). Abhinavagupta gives a prominent place also to</li>
+<li>ṅkaranandana, a very interesting and peculiar post-Utpala thinker (see</li>
+<li>̈hnemann 1980; Krasser 2001; Eltschinger 2006; Torella 2011: 19 n. 12).</li>
+</ul>
+<ul>
+<li>Interestingly, though showing on all occasions to Bhartr̥hari the</li>
+<li>ghest respect and appreciation, Utpaladeva and Abhinavagupta do not</li>
+<li>cept the theory of sphoṭa, indeed one of the cardinal points of his</li>
+<li>ctrine. The reasons for this denial are investigated in Torella 2004.</li>
+</ul>
+<ul>
+<li>For an assessing of the correct text of the two ślokas and elaborate</li>
+<li>planation of their import, see Torella 2013a: 458-62.</li>
+</ul>
+<ul>
+<li></li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch1_torella_intro.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

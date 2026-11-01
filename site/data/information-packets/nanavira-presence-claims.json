@@ -1,0 +1,57 @@
+{
+  "packet_id": "ip:nanavira-presence",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:nanavira-presence",
+    "title": "Nanavira: consciousness is reflexive presence, not a thing requiring vimar\u015ba",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "nanavira_phenomenology"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:nanavira-presence-is-reflexive",
+      "source_type": "primary_text",
+      "source_id": "text:nanavira-vinnana",
+      "source_span": {
+        "locator": "Notes on Dhamma \u2014 Vi\u00f1\u00f1\u0101\u1e47a, \u00a7d on reflexive presence",
+        "quote": "eye-consciousness is present reflexively"
+      },
+      "claim_text": "Consciousness (vi\u00f1\u00f1\u0101\u1e47a) is the presence of a phenomenon, and that presence is reflexively given. 'There is eye-consciousness \u2014 eye-consciousness is present reflexively.' Consciousness is not an entity or thing that requires an added property (vimar\u015ba) to be sentient. It is the presence-of-phenomena, and presence as such is inherently reflexive. The immediate/reflexive presence distinction shows that reflexivity is built into the structure of experience, not added by a separate principle.",
+      "targets": [
+        {
+          "target_id": "cand:nanavira-structural-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "nanavira_phenomenology",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(nanavira_presence_is_reflexive,target)",
+      "hetu": "consciousness is presence of phenomena, not an entity; presence is reflexively given",
+      "sadhya": "reflexivity is structural to Nanavira's account, not an added property",
+      "vyapti_statement": "If consciousness is presence and presence is reflexively given, then reflexivity is built into the structure of experience.",
+      "vyapti_confidence": 0.76,
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.74,
+      "w_map": 0.66,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that Nanavira's 'reflexive presence' is compatible with a purely structural account that lacks sentience \u2014 i.e., that presence could be reflexively given without being experienced.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:nanavira-vinnana."
+    }
+  ]
+}

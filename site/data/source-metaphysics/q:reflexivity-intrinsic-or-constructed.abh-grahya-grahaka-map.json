@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abh-grahya-grahaka",
+  "claim_packet": "content/information-packets/abh-grahya-grahaka-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "abh-grahya-grahaka",
+  "candidate_under_test": "all",
+  "central_reading": "T\u0100 1/181-182 distinguishes two aspects of cognition \u2014 objective ascertainment (ni\u015bcaya: 'this has been perceived') and subjective awareness ('I perceive') \u2014 and argues the subjective aspect arises from a prior non-dual consciousness, not from cognition's intrinsic structure. This parallels Dign\u0101ga's two-appearance doctrine but with a fundamentally different ontology.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-ta1-181-two-aspects",
+      "source_span_id": "span:abh-ta1-181-two-aspects",
+      "quoted_anchor": "In T\u0100 1/181-182, Abhinavagupta distinguishes two aspects of ",
+      "nn_expr": "sambandha(abh_ta1_181_two_aspects,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "the two-appearance structure of cognitio",
+        "hetu": "the two aspects of cognition (objective ascertainment and subjective awareness) are distinguished but both arise from a pre-conceptual ground",
+        "sadhya": "the two-appearance structure of cognition is not self-grounding but depends on a prior non-dual consciousness",
+        "vyapti": "If the subjective awareness arises from oneness with thought-free consciousness,"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that Abhinavagupta's distinction between objective ascertainment and subjective awareness is merely a restatement of Dign\u0101ga's two-appearance doctrine with no substantive difference \u2014 i.e., that 'avikalpa' is equivalent to the co-arising of two appearances."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-ta1-181-two-aspects:support:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:abh-ta1-181-two-aspects",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "support",
+      "strength": 0.78,
+      "relation_rationale": "Shows Abhinavagupta has a positive account of the two-aspect structure of cognition that differs from Dign\u0101ga's."
+    },
+    {
+      "edge_id": "edge:abh-ta1-181-two-aspects:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:abh-ta1-181-two-aspects",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.55,
+      "relation_rationale": "If the two-aspect structure is grounded in a prior non-dual consciousness, Dign\u0101ga's account is incomplete."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "T\u0100 1/181-182 distinguishes two aspects of cognition \u2014 objective ascertainment (ni\u015bcaya: 'this has been perceived') and subjective awareness ('I perceive') \u2014 and argues the subjective aspect arises from a prior non-dual consciousness, not from cognition's intrinsic structure. This parallels Dign\u0101ga's two-appearance doctrine but with a fundamentally different ontology.",
+    "next_tests": []
+  }
+}

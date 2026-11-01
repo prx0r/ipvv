@@ -1,0 +1,31 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-crystal-refutes",
+  "title": "Abhinavagupta's crystal argument already addresses Buddhist self-awareness theory",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "The crystal argument (without vimarśa, consciousness is insentient like a crystal) applies to any account that treats self-awareness as derivative — including the Buddhist svasaṃvitti phala-model. If self-awareness is a result of cognition, it can be absent when cognition is absent; but consciousness cannot be absent from itself.",
+  "claims": [{
+    "id": "cl:abh-crystal-applies-to-phala-model",
+    "text": "Abhinavagupta's crystal argument — that without vimarśa consciousness would be insentient like a crystal — applies to any account where self-awareness is derivative rather than intrinsic. The Buddhist phala-model makes self-awareness a result of cognition: if cognition produces self-awareness, then before cognition there is no self-awareness, leaving consciousness insentient. The crystal argument refutes this by showing that consciousness cannot be insentient at any moment, therefore self-awareness must be intrinsic (svabhāva), not produced (phala).",
+    "source_id": "text:tantraloka-ahnika4",
+    "source_span": "Tantrāloka Ahnika 4, ahnika-04.txt lines 5765, 11133-11139",
+    "quote": "Without vimarśa, consciousness would be insentient, like a crystal",
+    "evidence": "textual",
+    "pramana": "anumana",
+    "hetu": "if self-awareness is produced by cognition, then before cognition there is no self-awareness",
+    "sadhya": "the crystal argument refutes any derivative account of self-awareness, including svasaṃvitti phala-model",
+    "vyapti": "If consciousness cannot be insentient at any moment, self-awareness must be intrinsic, not produced.",
+    "vyapti_confidence": 0.78,
+    "falsifier": "Show that the Buddhist phala-model does not imply periods without self-awareness — i.e., that cognition is continuous and self-awareness is co-extensive with it, making the result-as-nature distinction merely verbal.",
+    "falsifier_status": "untested",
+    "weight": 0.40,
+    "w_rel": 0.76,
+    "w_map": 0.68,
+    "w_aux": 0.72,
+    "targets": [
+      { "id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.72, "rationale": "Extends crystal argument to explicitly cover the Buddhist phala-model." },
+      { "id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.58, "rationale": "If crystal argument refutes the phala-model, the Buddhist response needs a different account of self-awareness." },
+      { "id": "crux:constructed-reflexivity-presupposes-manifestness", "type": "crux", "role": "attack", "strength": 0.50, "rationale": "Narrows the crux: the question becomes whether any derivative account of self-awareness is coherent." }
+    ]
+  }]
+}

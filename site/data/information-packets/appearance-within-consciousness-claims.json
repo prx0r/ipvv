@@ -1,0 +1,193 @@
+{
+  "packet_id": "ip:appearance-within-consciousness",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:appearance-within-consciousness",
+    "title": "Kastrup's analytic idealism: the brain is an appearance within consciousness, not its producer",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "analytic_idealism"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-27",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:kastrup-disputatio-idealism-refutes-production",
+      "source_type": "primary_text",
+      "source_id": "doi:10.2478/disp-2017-0025",
+      "source_span": {
+        "locator": "Disputatio 9(47), 2017 \u2014 entire essay, abstract and body",
+        "quote": "The ontology of idealism... entails that all physical structures are circumscribed by consciousness in that they exist solely as phenomenality in the first place."
+      },
+      "claim_text": "Physical structures do not circumscribe or produce consciousness; rather, all physical structures are circumscribed by consciousness, existing solely as phenomenality. The dependency of phenomenal experience on brain function does not refute idealism because the brain itself is an appearance within consciousness.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-appearance-within-consciousness",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "analytic_idealism",
+      "paradigm": "general",
+      "evidence_dimension": "textual (published peer-reviewed journal article)",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(kastrup_disputatio_idealism_refutes_production,target)",
+      "hetu": "Idealism is refuted by the dependency of phenomenal experience on brain function, but this objection is false because the brain itself is circumscribed by consciousness.",
+      "sadhya": "Idealism is a plausible ontology despite apparently contrary empirical observations about brain-dependence.",
+      "vyapti_statement": "If physical structures exist solely as phenomenality within consciousness, then the brain's correlation with experience does not imply that the brain produces consciousness \u2014 the brain is the extrinsic appearance of a dissociative process within consciousness.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.4,
+      "w_rel": 0.72,
+      "w_map": 0.65,
+      "w_aux": 0.68,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the brain produces consciousness in a way that cannot be explained as the extrinsic appearance of dissociative phenomenality \u2014 i.e., that the causal arrow runs from neural activity to experience in a way that is ontologically asymmetric and not reducible to appearance-within-consciousness.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from doi:10.2478/disp-2017-0025."
+    },
+    {
+      "claim_id": "cl:kastrup-philosophies-ontological-primitive",
+      "source_type": "primary_text",
+      "source_id": "doi:10.3390/philosophies2020010",
+      "source_span": {
+        "locator": "Philosophies 2(2), 2017 \u2014 entire essay",
+        "quote": "spatially unbound consciousness is posited to be nature's sole ontological primitive. We, as well as all other living organisms, are dissociated alters of this unbound consciousness. The universe we see around us is the extrinsic appearance of phenomenality surrounding\u2014but dissociated from\u2014our alter."
+      },
+      "claim_text": "Spatially unbound consciousness is nature's sole ontological primitive. Living organisms are dissociated alters of this unbound consciousness, and the physical universe \u2014 including brains \u2014 is the extrinsic appearance of phenomenality surrounding each alter.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-appearance-within-consciousness",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "analytic_idealism",
+      "paradigm": "general",
+      "evidence_dimension": "textual (published peer-reviewed journal article)",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(kastrup_philosophies_ontological_primitive,target)",
+      "hetu": "The hard problem of consciousness and the subject combination problem arise from assuming physicalism or bottom-up panpsychism; an idealist ontology resolves both.",
+      "sadhya": "Analytic idealism has greater explanatory power and parsimony than physicalism or bottom-up panpsychism.",
+      "vyapti_statement": "If consciousness is ontologically primitive and physical structures are extrinsic appearances of dissociated phenomenality, then the brain is not a producer of consciousness but a local appearance of a dissociated alter of universal consciousness.",
+      "vyapti_confidence": 0.65,
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.7,
+      "w_map": 0.63,
+      "w_aux": 0.66,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the dissociation model cannot account for the fine-grained neural correlates of specific experiential content \u2014 that NCCs track specific neural structures too precisely to be explained as 'extrinsic appearances' of dissociative processes.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from doi:10.3390/philosophies2020010."
+    },
+    {
+      "claim_id": "cl:kastrup-jcs-matter-within-mind",
+      "source_type": "primary_text",
+      "source_id": "jcs:2018-universe-in-consciousness",
+      "source_span": {
+        "locator": "Journal of Consciousness Studies 25(5-6), 2018, pp. 125-155",
+        "quote": "We do not know matter as we know mind and can never be sure of the former's existence. Mind, in turn, is a given: the matrix within which, and out of which, we construct the theoretical abstraction we call 'matter.'"
+      },
+      "claim_text": "The dichotomy between matter and mind is an artifact of conflating language with observation. Mind is the given matrix within which we construct the theoretical abstraction we call 'matter.' The universe (including the brain) exists in consciousness, not vice versa.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-appearance-within-consciousness",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "analytic_idealism",
+      "paradigm": "general",
+      "evidence_dimension": "textual (published peer-reviewed journal article with open peer commentary)",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(kastrup_jcs_matter_within_mind,target)",
+      "hetu": "We have direct knowledge of mind (experience) but only indirect, theory-mediated knowledge of matter; the epistemic asymmetry supports ontological idealism.",
+      "sadhya": "The universe \u2014 including all physical structures \u2014 exists within consciousness, not the reverse.",
+      "vyapti_statement": "If mind is the matrix within which the concept of matter is constructed, then the brain (being a material structure) is an abstraction constructed within mind \u2014 an appearance within consciousness, not an external producer of it.",
+      "vyapti_confidence": 0.6,
+      "log_bayes_factor": 0.35,
+      "w_rel": 0.68,
+      "w_map": 0.6,
+      "w_aux": 0.64,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that we have direct epistemic access to matter that is not theory-mediated in the way Kastrup claims, or that the epistemic primacy of mind does not entail the ontological primacy of consciousness.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from jcs:2018-universe-in-consciousness."
+    },
+    {
+      "claim_id": "cl:kastrup-metod-analytic-idealism-summary",
+      "source_type": "primary_text",
+      "source_id": "doi:10.31249/metod/2020.10.06",
+      "source_span": {
+        "locator": "METOD, 2020 \u2014 entire article",
+        "quote": "the ground of existence is phenomenal consciousness. Everything else - I maintain - is reducible to configurations and patterns of excitation of consciousness."
+      },
+      "claim_text": "The ground of existence is phenomenal consciousness; everything else is reducible to configurations and patterns of excitation of consciousness. This is the core thesis of analytic idealism.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-appearance-within-consciousness",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "analytic_idealism",
+      "paradigm": "general",
+      "evidence_dimension": "textual (published journal article)",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(kastrup_metod_analytic_idealism_summary,target)",
+      "hetu": "Physical structures are reducible to patterns of consciousness excitation, not the reverse.",
+      "sadhya": "All phenomena are configurations of consciousness; there is no ontologically fundamental matter separate from consciousness.",
+      "vyapti_statement": "If everything is reducible to patterns of excitation of consciousness, then the brain as a physical structure is a particular configuration of conscious excitation \u2014 not an independent substrate that generates consciousness.",
+      "vyapti_confidence": 0.65,
+      "log_bayes_factor": 0.32,
+      "w_rel": 0.65,
+      "w_map": 0.58,
+      "w_aux": 0.62,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that there is something ontologically fundamental about physical structure that cannot be accounted for as a configuration of consciousness excitation \u2014 e.g., that physical laws operate independently of any conscious observation.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from doi:10.31249/metod/2020.10.06."
+    },
+    {
+      "claim_id": "cl:albahari-perennial-idealism-preprint",
+      "source_type": "primary_text",
+      "source_id": "philpapers:ALBPIA-4",
+      "source_span": {
+        "locator": "PhilPapers preprint, 2019",
+        "quote": "[Perennial idealism offers] a mystical solution to the mind-body problem"
+      },
+      "claim_text": "Perennial idealism proposes that universal consciousness is the ground of reality, and the individual mind and its world \u2014 including the physical brain \u2014 are appearances within that universal consciousness. This draws on both analytic philosophy and contemplative traditions.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-appearance-within-consciousness",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "analytic_idealism",
+      "paradigm": "general",
+      "evidence_dimension": "textual (preprint, not yet confirmed as peer-reviewed journal publication)",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(albahari_perennial_idealism_preprint,target)",
+      "hetu": "Both analytic philosophy and contemplative traditions converge on the view that consciousness is ontologically fundamental.",
+      "sadhya": "A perennial (universal) idealism resolves the mind-body problem more satisfactorily than physicalism or panpsychism.",
+      "vyapti_statement": "If universal consciousness is the ground and individual minds are appearances within it, then the brain is an appearance within consciousness, not its cause.",
+      "vyapti_confidence": 0.45,
+      "log_bayes_factor": 0.15,
+      "w_rel": 0.4,
+      "w_map": 0.3,
+      "w_aux": 0.35,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Establish through peer-reviewed status that this argument has survived critical scrutiny; currently the paper exists only as a preprint.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from philpapers:ALBPIA-4."
+    }
+  ]
+}

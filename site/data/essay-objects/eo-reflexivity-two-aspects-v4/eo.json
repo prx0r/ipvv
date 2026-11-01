@@ -1,0 +1,109 @@
+{
+  "eo_id": "eo:reflexivity-two-aspects-v4",
+  "schema_version": 2,
+  "title": "Abhinavagupta and Dignāga both distinguish two aspects of cognition — objective and subjective — but Abhinavagupta grounds them in a prior non-dual consciousness",
+  "status": "draft",
+  "question": {
+    "question_id": "q:reflexivity-intrinsic-or-constructed",
+    "tension_point": "Does Abhinavagupta's two-aspect account (niścaya + pratipatti from avikalpa) genuinely differ from Dignāga's two-appearance account (grāhyākāra + grāhakākāra), or are they the same structure described in different frameworks?",
+    "why_it_matters": "If they converge on the structure of cognition while diverging on its ground, the reflexivity debate reduces to a single refined question: what grounds the two-aspect structure?",
+    "resolution_level": "local_argument"
+  },
+  "syllogism": {
+    "pratijna": {
+      "proposition": "Abhinavagupta (TĀ 1/181-182) and Dignāga (PS(V) 1.9ab) both distinguish objective and subjective aspects of cognition. They converge on the structure but diverge on its ground. This single refined question — what grounds the two-aspect structure? — is all that remains of the original reflexivity debate.",
+      "what_it_claims": "After four probes, the reflexivity debate has distilled to one question. Both traditions agree cognition has two aspects. They disagree on whether these aspects are self-grounding (Dignāga) or grounded in a prior non-dual consciousness (Abhinavagupta)."
+    },
+    "hetu": {
+      "evidence": [
+        {
+          "claim": "TĀ 1/181-182: objective ascertainment (niścaya: 'this has been perceived') and subjective awareness ('I perceive') are two aspects of cognition. The subjective aspect arises from oneness with thought-free consciousness (avikalpa).",
+          "pramana": "sabda",
+          "source_id": "text:tantraloka-ahnika1",
+          "target": "cand:abh-vimarsa-intrinsic"
+        },
+        {
+          "claim": "PS(V) 1.9ab: cognition arises with two appearances — self-appearance and object-appearance. Self-awareness is the result. No further ground is posited.",
+          "pramana": "sabda",
+          "source_id": "text:coseru-consciousness-causality",
+          "target": "cand:dharmakirti-conditioned-reflexivity"
+        },
+        {
+          "claim": "Neither Abhinavagupta nor Dignāga is named in connection with the other's two-aspect theory. The convergence may be independent development.",
+          "pramana": "anumana",
+          "source_id": "text:tantraloka-ahnika1",
+          "target": "bridge:convergence-assessment"
+        }
+      ],
+      "source_ids": [
+        "text:tantraloka-ahnika1",
+        "text:coseru-consciousness-causality"
+      ]
+    },
+    "udaharana": {
+      "examples": [
+        {
+          "scenario": "TĀ 1/181-182: 'the ascertainment that this has been perceived' is the objective aspect; 'I perceive' is the subjective aspect. Both arise from avikalpa.",
+          "what_it_shows": "Abhinavagupta distinguishes the same two aspects as Dignāga but adds a third term (avikalpa) as their ground."
+        },
+        {
+          "scenario": "PS(V) 1.9ab: cognition has self-appearance and object-appearance. No ground beyond cognition itself.",
+          "what_it_shows": "Dignāga posits the two aspects as intrinsic to cognition, with no further substrate."
+        }
+      ]
+    },
+    "upanaya": {
+      "application": "The four probes (scores → level distinction → original arguments → two-aspect convergence) have progressively refined the question. The only remaining disagreement is: is the two-aspect structure self-grounding or grounded in a prior non-dual consciousness?",
+      "cruxes": [
+        "Is the two-aspect structure evidence for an unconditioned ground, or does it exhaust what we can know about cognition?",
+        "Can the phenomenological convergence between the two accounts be resolved by argument, or does it require a decision between frameworks?"
+      ]
+    },
+    "nigamana": {
+      "best_current_answer": "The reflexivity debate between Abhinavagupta and Dignāga has converged on a single question: what grounds the two-aspect structure of cognition? Both describe the same phenomenon; they disagree on whether it points beyond itself. This is a genuinely metaphysical disagreement, not resolvable by additional textual analysis.",
+      "status": "structurally_suggestive",
+      "scope": "Phenomenology: convergence established. Ground: underdetermined by available texts."
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "cand:two-aspects-self-grounding",
+      "name": "The two-aspect structure is self-grounding (Dignāga)",
+      "tradition": "dharmakirti_buddhist",
+      "position": "Cognition presents itself as two-aspect. No further ground is needed or warranted. The burden of proof is on those who claim a ground beyond what cognition presents.",
+      "proponent": "Dignāga / Dharmakīrti tradition",
+      "source_ids": ["text:coseru-consciousness-causality"],
+      "hard_to_vary_core": ["Cognition's structure is given in cognition itself", "Inference to an unconditioned ground is not warranted"],
+      "current_problems": ["Cannot explain why cognition has two aspects rather than one"],
+      "falsifiers": ["A demonstration that cognition presents itself as grounded in something beyond itself"],
+      "status": "live"
+    },
+    {
+      "candidate_id": "cand:two-aspects-grounded",
+      "name": "The two-aspect structure is grounded in a prior non-dual consciousness (Abhinavagupta)",
+      "tradition": "trika_pratyabhijna",
+      "position": "The two aspects of cognition arise from oneness with thought-free consciousness (avikalpa). This is not an inference but the direct self-presence of consciousness.",
+      "proponent": "Abhinavagupta",
+      "source_ids": ["text:tantraloka-ahnika1"],
+      "hard_to_vary_core": ["The subjective aspect cannot arise from objective cognition alone", "A pre-conceptual ground is directly evident"],
+      "current_problems": ["Requires accepting that avikalpa is more than an absence of concepts"],
+      "falsifiers": ["A demonstration that the two-aspect structure can arise from cognition alone without a prior ground"],
+      "status": "live"
+    }
+  ],
+  "state_of_play": {
+    "summary": "The reflexivity question has been refined through four iterations. What began as a three-way debate between Abhinavagupta, Dharmakīrti, and Ñāṇavīra has distilled to a single refined question about what grounds the two-aspect structure of cognition. The phenomenological convergence is real; the metaphysical divergence is irreducible by textual analysis alone. The essay should trace this trajectory.",
+    "what_survives": "The phenomenological convergence between traditions. The finding that two-aspect structure is described independently in both. Abhinavagupta's original arguments for a ground.",
+    "what_is_weakened": "The framing as a zero-sum competition. The view that one tradition's account is simply wrong.",
+    "what_would_change_our_mind": "New textual evidence of direct engagement between the traditions. Or a decisive argument showing that ground/no-ground is resolvable by reason alone.",
+    "open_cruxes": ["Is the two-aspect structure self-grounding or grounded?"],
+    "next_tests": ["This question may not be resolvable by textual analysis. The essay should present both positions and the refined question."],
+    "implications": [{"condition": "If the ground question is not resolvable by textual analysis", "consequence": "The reflexivity essay becomes a case study in how comparative philosophy refines rather than resolves metaphysical questions"}]
+  },
+  "provenance": {
+    "parent_eo": "eo:reflexivity-original-arguments-v3",
+    "created_by": "agent/research",
+    "last_updated": "2026-07-26",
+    "supporting_artifacts": ["content/information-packets/abh-grahya-grahaka-claims.json"]
+  }
+}

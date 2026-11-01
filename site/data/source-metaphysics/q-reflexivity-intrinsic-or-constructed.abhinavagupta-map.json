@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:abhinavagupta-vimarsa-reflexivity",
+  "claim_packet": "content/information-packets/abhinavagupta-vimarsa-reflexivity-claims.json",
+  "generated_by": "manual_codex_review_from_clean_reflexivity_notes_plus_web_scholarship",
+  "source_role": "candidate_support_and_boundary",
+  "candidate_under_test": "cand:abh-vimarsa-intrinsic",
+  "central_reading": "Abhinavagupta's side of the contention is the intrinsic manifestness argument: prakasa is not inert presence, vimarsa is not a later reflection, and rivals must explain self-presence without smuggling it in. The universalization from local reflexivity to one consciousness remains an additional step.",
+  "review_status": "web_scholarly_secondary_reviewed_pending_primary_ro",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:abh-prakasa-manifestness",
+      "source_span_id": "span:clean-q-prakasa-best-answer",
+      "quoted_anchor": "prakasa as shining forth; vimarsa as self-reflexive active awareness",
+      "nn_expr": "sambandha(prakasa,manifestness)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "prakasa",
+        "hetu": "prakasa names the appearing of anything at all",
+        "sadhya": "manifestness is a primitive pressure point",
+        "vyapti": "Where appearance is at issue, the account must explain manifestness itself."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "asiddha",
+          "severity": "weak",
+          "reason": "Direct primary-source RO spans are pending."
+        }
+      ],
+      "falsifier": "Primary Trika passages show prakasa is only a metaphor for ordinary cognition and not a technical claim about manifestness."
+    },
+    {
+      "claim_id": "cl:abh-vimarsa-intrinsic-self-apprehension",
+      "source_span_id": "span:jstage-pratyabhijna-self-awareness",
+      "quoted_anchor": "knowledge is never separated from the self which is self-luminous",
+      "nn_expr": "vyapti(vimarsa,self_apprehension)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "vimarsa",
+        "hetu": "manifest presence would be inert without self-apprehension",
+        "sadhya": "recognition requires intrinsic self-manifestation",
+        "vyapti": "Where manifestation is intelligible, presence is self-disclosing rather than merely present."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "crux:recognition-requires-self-manifestation"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "satpratipaksa",
+          "severity": "moderate",
+          "reason": "Nanavira and Dharmakirti supply live counter-reconstructions of reflexivity."
+        }
+      ],
+      "falsifier": "Give a complete structural or cognitive account of recognition that explains self-presence without invoking intrinsic manifestness."
+    },
+    {
+      "claim_id": "cl:abh-prakasa-without-vimarsa-inert",
+      "source_span_id": "span:lawrence-vimarsa-essential-prakasa",
+      "quoted_anchor": "vimarsa as the essential nature of prakasa",
+      "nn_expr": "prasanga(not_vimarsa,inert_prakasa)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "prakasa without vimarsa",
+        "hetu": "mere shining without articulation cannot explain intelligibility",
+        "sadhya": "rivals must explain manifestness, not only structure",
+        "vyapti": "Where an account removes reflexive articulation, it must still explain how manifestation is intelligible."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "crux:constructed-reflexivity-presupposes-manifestness"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [],
+      "falsifier": "Show that manifestness plus non-reflexive structure is sufficient for intelligibility and recognition."
+    },
+    {
+      "claim_id": "cl:abh-local-to-universal-step",
+      "source_span_id": "span:tractatus-universalisation-gap",
+      "quoted_anchor": "To reach Siva, Abhinavagupta must add... that this principle is numerically one.",
+      "nn_expr": "prasanga(local_reflexivity,not_universal_consciousness)",
+      "parse_status": "parsed",
+      "tradition_scope": "trika_pratyabhijna",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "local reflexivity",
+        "hetu": "local structure does not entail numerical unity",
+        "sadhya": "universalization remains open",
+        "vyapti": "Where local reflexivity is established, a separate premise is needed to infer one universal consciousness."
+      },
+      "argument_role": "boundary",
+      "targets": [
+        "cand:abh-vimarsa-intrinsic",
+        "crux:local-to-universal"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [],
+      "falsifier": "Prove that intrinsic self-manifestation in any finite experience entails one universal self-manifesting ground."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:abh-vimarsa-supports-intrinsic-candidate",
+      "source": "cl:abh-vimarsa-intrinsic-self-apprehension",
+      "target": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "supports",
+      "strength": 0.42,
+      "rationale": "Intrinsic self-apprehension is the hard-to-vary core of the Abhinavagupta candidate."
+    },
+    {
+      "edge_id": "edge:abh-prakasa-pressures-constructed-reflexivity",
+      "source": "cl:abh-prakasa-manifestness",
+      "target": "crux:constructed-reflexivity-presupposes-manifestness",
+      "edge_type": "supports",
+      "strength": 0.34,
+      "rationale": "Manifestness pressure remains live against purely constructed accounts."
+    },
+    {
+      "edge_id": "edge:abh-inert-prakasa-pressures-rivals",
+      "source": "cl:abh-prakasa-without-vimarsa-inert",
+      "target": "crux:recognition-requires-self-manifestation",
+      "edge_type": "supports",
+      "strength": 0.32,
+      "rationale": "The inert-prakasa argument explains why Trika treats reflexivity as intrinsic rather than optional."
+    },
+    {
+      "edge_id": "edge:abh-universalization-boundary",
+      "source": "cl:abh-local-to-universal-step",
+      "target": "crux:local-to-universal",
+      "edge_type": "outside_formal",
+      "strength": 0.36,
+      "rationale": "The local-to-universal step is a boundary condition, not a settled inference."
+    }
+  ],
+  "structural_correspondences": [],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:abhinavagupta-to-dharmakirti:manifestness",
+      "critic_lens": "trika_pratyabhijna",
+      "target_lens": "dharmakirti_buddhist",
+      "reveals_about_target": "Dharmakirti can explain successful cognition and no-self pressure, but must still explain why cognition is manifest rather than merely efficacious.",
+      "pressure_type": "manifestness_gap",
+      "target_response_required": "Give a Dharmakirti-compatible account of manifestness that does not reintroduce intrinsic self-manifestation.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:abh-prakasa-manifestness",
+        "cl:abh-vimarsa-intrinsic-self-apprehension"
+      ],
+      "crux_ids": [
+        "crux:constructed-reflexivity-presupposes-manifestness",
+        "crux:recognition-requires-self-manifestation"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "abh_vimarsa_intrinsic": "Strengthened with explicit manifestness and vimarsa claims, but capped until primary Tantraloka/Pratyabhijna RO spans are added.",
+    "dharmakirti_candidate": "Pressured at manifestness, not defeated.",
+    "current_best_answer": "Abhinavagupta now has explicit source-backed pressure around manifestness, but universalization remains separate and underdetermined."
+  },
+  "next_work": [
+    "Create ro-tantraloka-reflection and ro-tantraloka-matter-of-wonder, then replace project-note spans with primary-source spans.",
+    "Run a five-member Nyaya reconstruction of the recognition-to-vimarsa argument.",
+    "Mark Trika support as textual-primary only after primary source spans are present."
+  ]
+}

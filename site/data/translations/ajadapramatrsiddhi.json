@@ -2,34 +2,133 @@
  {
   "chunk": "ajad-p01",
   "verses": "1-9",
-  "sanskrit": "yathā sadasatām naiva viśeṣo 'sti nijātmani jadājaḍānām apy evaṃ nāsty asāv iti niścayaḥ",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## ajad-p01 (1-9)\n[and]-just-as [and]-of-real-and-unreal [and]-not-indeed [and]-difference [and]-is [and]-in-own-self [and]-of-conscious-and-unconscious [and]-also [and]-thus [and]-not-is [and]-that [and]-thus [and]-certainty (yathā sadasatām naiva viśeṣo 'sti nijātmani jadājaḍānām apy evaṃ nāsty asāv iti niścayaḥ) // 1 //",
-  "l2": "## ajad-p01 — Real and Unreal, Conscious and Unconscious\n\nJust as there is no difference between real and unreal in their own self, so too there is no difference between conscious and unconscious. Illumination, reflection, and existence do not touch the essence of a thing, and objecthood dependent on another does not fit because of non-one-formness and transcendence of existence. Function distinguishes the existent from the nonexistent, yet establishment remains consciousness-dependent, so consciousness without reflection would be no different from the unconscious."
+  "sanskrit": "jadājaḍānām apy evaṃ % nāsty asāv iti niścayaḥ naitat svarūpaṃ spṛśati % vastuno jñātṛgāmy adaḥ parāpekṣitayā naika- % rūpatve sattvalaṅghanāt siddhyaty eva viśeṣo 'tra % tāvatā ca prayojanam tadapekṣāṃ vinā bhāvā- % bhāvayor aviśiṣṭatā kuryān nānyas tathāpy artho % nirviśeṣo nijātmani sann arthaḥ syāt svarūpeṇa % nāsatas tu viśiṣyate samam evānayos tena % pratiṣṭhā saṃvidāśrayā abhāvena jaḍenātha % tulyaiva prāgvad ātmani",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "jadapramatrsiddhi",
+  "immutable_id": "pt:pid:ajad:4f8fe0845102",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ajadapramatrsiddhi.txt",
+  "source_lines": 7,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 12
  },
  {
   "chunk": "ajad-p02",
   "verses": "10-18",
-  "sanskrit": "saivaṃ bhūtātmanā svenāpy alabdhapariniṣṭhitiḥ katham anyasya bhāvasya pratiṣṭhāspadatām iyāt",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## ajad-p02 (10-18)\n[and]-that [and]-thus [and]-being [and]-by-self [and]-too [and]-not-obtained [and]-finality [and]-how [and]-of-other's [and]-existence [and]-establishment-place [and]-would-go (saivaṃ bhūtātmanā svenāpy alabdhapariniṣṭhitiḥ katham anyasya bhāvasya pratiṣṭhāspadatām iyāt) // 10 //",
-  "l2": "## ajad-p02 — The \"I\"-Consciousness and the Unconscious\n\nConsciousness as \"I\" establishes the manifestation of other things in itself, while difference and non-difference determine the arrangement of unconscious selves. Unconscious things are merely imagined projections within self-manifestation, and no experience exists apart from connected manifestation. The self is twofold—limited and unlimited—yet one continuum grounds all object-consciousnesses, so nothing more unconscious than that end-residing manifestation can appear."
+  "sanskrit": "katham anyasya bhāvasya % pratiṣṭhāspadatām iyāt pratiṣṭhātmakatāṃ gacched % aham ity ātmanā punaḥ vyavasthitiḥ pratiṣṭhā ca % siddhir nirvṛttir ucyate jaḍāḥ prakāśa evāsti % svātmanaḥ svaparātmabhiḥ muktvānvayasya prakāśasya % vimarśarahitātmanaḥ yā svasvarūpe viśrāntir % vimarśaḥ so 'ham ity ayam prāṇādinā niruddho 'ṇuḥ % paramātmā tv akhaṇḍitaḥ eka evānusandhānād % ato 'nyo nopapadyate bhāti paryantavartinyāṃ % bhāsanād adhikaṃ jaḍam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "jadapramatrsiddhi",
+  "immutable_id": "pt:pid:ajad:7d49fa80ec2b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ajadapramatrsiddhi.txt",
+  "source_lines": 52,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 12
  },
  {
   "chunk": "ajad-p03",
   "verses": "19-27",
-  "sanskrit": "na siddho 'prathanād eva jñānādisamavāyy api tat prāṇādi prameyaṃ syān na pramātānyato bhramāt",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## ajad-p03 (19-27)\n[and]-not [and]-accomplished [and]-by-non-manifestation [and]-indeed [and]-though [and]-joined [and]-with-knowledge-etc [and]-that [and]-breath-etc [and]-knowable [and]-would-be [and]-not [and]-knower [and]-otherwise [and]-from-delusion (na siddho 'prathanād eva jñānādisamavāyy api tat prāṇādi prameyaṃ syān na pramātānyato bhramāt) // 19 //\n\n*T1 frozen 2026-10-31.*",
-  "l2": "## ajad-p03 — Breath, Body, and Supreme Self\n\nThe breath-body arrangement is not established by non-manifestation, but abides in the supreme self even when constrained in the living being. Restraint of the I-sense is not object-arrangement in breath and body; rather, that rest is freedom, authorship, and lordship, the māyā-power of the world-maker. The mother principle is one beginningless continuum, whose pervasion fits the conscious I-sense but not the unconscious, so the world proclaimed in recognition is non-dual.\n\nFidelity: L2 READ derived from T1 gloss; passages ajad-p01–ajad-p03 (verses 1–27) rendered as 2–4 sentence prose."
+  "sanskrit": "tat prāṇādi prameyaṃ syān % na pramātānyato bhramāt jīve niruddhā tatrāpi % paramātmani sā sthitā sādhitā pratyabhijñāyām % akhyāter jīvatā param prakāśasyātmaviśrāntir % ahaṃbhāvo hi kīrtitaḥ svātantryam atha kartṛtvaṃ % mukhyam īśvaratāpi ca tadakhyātimayaṃ hy etaj % jagannirmātṛteśitā svasaṃvedanaparyāya- % mātṛtattvam anādi tat vyāpitvam anusaṃdhānaṃ % taj jaḍasya na yujyate tenoktam pratyabhijñāyāṃ % tadadvayamayaṃ jagat",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "jadapramatrsiddhi",
+  "immutable_id": "pt:pid:ajad:5be692580269",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ajadapramatrsiddhi.txt",
+  "source_lines": 82,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 12
  }
 ]

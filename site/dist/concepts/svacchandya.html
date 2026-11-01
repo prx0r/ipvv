@@ -1,9 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>svācchandya · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<title>svācchandya</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
-:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
@@ -12,22 +14,34 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
 .brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
-.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
-.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
-.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
-.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
-.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
-.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
-.side a:hover{background:#f4f1ea}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
-.side .sub a{padding-left:1rem;color:#4a463c}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -40,6 +54,7 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
 .en{font-size:15px;max-width:72ch;line-height:1.6}
 .skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
 .stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
 .stats b{color:var(--ink);font-weight:600}
 /* verse grid */
@@ -51,8 +66,8 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
 .depth button.missing{opacity:.45}
 /* cards */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
-.panel.missing{opacity:.55;border-style:dashed}
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
 .idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
 .idx a:hover{text-decoration:underline}
 .ev{margin:.5rem 0;padding-left:1rem;position:relative}
@@ -83,27 +98,27 @@ main{max-width:100%}
 }
 
 /* recitation */
-.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
 .rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
-.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
 .rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
 .rbar .tbtn:disabled{opacity:.35;cursor:default}
 .rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
-.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
 .rmodes button.on{background:var(--ink);color:#fff}
 .rmodes button:disabled{opacity:.35}
 .rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
 .rlabel b{color:var(--ink);font-weight:600}
 .rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
 .rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
-.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
 .rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
 .rprog i{display:block;height:100%;width:0;background:var(--gold)}
-.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
 .vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
 .vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
 article.verse{scroll-margin-top:80px}
-article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
 article.verse .w.lit{background:#f4ead3;border-radius:3px}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
@@ -113,15 +128,15 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
-<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>svācchandya</h1><div class="skt"></div><div class="sub">concept · glossary</div><div class="panel">spontaneity) · prakāśābhedamaya (one with the manifestation) · vimarśa ·</div><h3>Occurs in</h3><div class="ev"><a href="/ipvv/chunkA-svatyandya.html">IPVV: chunkA-svatyandya</a></div><div class="sub">source: c1-keyterms · <a href="/data/glossary.json">machine-readable glossary</a></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/glossary.json">edit source →</a>. term lives here; mined by tools/build_glossary.py.</div><div class="pn"><a href="/concepts/spanda.html">← spanda</a><a href="/concepts/svatantrya.html">svātantrya →</a></div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
-<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
@@ -129,8 +144,27 @@ var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/")
 (function(){
 var b=document.getElementById('burger');
 if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
 var toc=document.getElementById('tocbody');
-if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
 toc.innerHTML=html||'<span style="color:#999">—</span>';
 var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
@@ -138,6 +172,112 @@ function spy(){var y=window.scrollY+120,cur=null;
 hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
-window.addEventListener('scroll',spy,{passive:true});spy();}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
 })();
-</script></body></html>
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

@@ -1,57 +1,179 @@
 [
  {
   "chunk": "phr-p01",
-  "verses": "1-4",
-  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## phr-p01 (1-4)\n[and]-consciousness (citiḥ) [and]-independent (svatantrā) [and]-cause-of-universe's-accomplishment (viśvasiddhihetuḥ) // 1 //",
-  "l2": "## phr-p01 — Independent Consciousness and the Universe\nConsciousness is independent and the cause of the universe's accomplishment. By its own will, it unfolds the universe on its own screen, and that universe becomes manifold through differences of suitable objects and subjects. Even so, a conscious being's nature is a contraction of consciousness, consisting of a contracted universe."
+  "verses": "1-5",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ | svecchayā svabhittau viśvam unmīlayati | tan nānā anurūpagrāhyagrāhakabhedāt | citisaṃkocātmā cetano 'pi saṃkucitaviśvamayaḥ | cittam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION",
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "phrdaya",
+  "immutable_id": "pt:pid:phr:e6ee21f43bbf",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "phrdaya.txt",
+  "source_lines": 22,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 6
  },
  {
   "chunk": "phr-p02",
-  "verses": "5-8",
-  "sanskrit": "cittam",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## phr-p02 (5-8)\n[and]-mind (cittam) // 5 //",
-  "l2": "## phr-p02 — Mind, Māyā, and Philosophical Stages\nThe mind consists of that contracted consciousness, and the māyā-knower is formed from it. Its nature is the seven pentads, and the stages based upon it become the positions of all philosophies."
+  "verses": "6-10",
+  "sanskrit": "tanmayo māyāpramātā | saptapañcakasvabhāvaḥ | tadbhūmikāḥ sarvadarśanasthitayaḥ | cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī | tathāpi tadvat pañcakṛtyāni karoti",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "phrdaya",
+  "immutable_id": "pt:pid:phr:ce634efafd42",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "phrdaya.txt",
+  "source_lines": 185,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "phr-p03",
-  "verses": "9-12",
-  "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## phr-p03 (9-12)\n[and]-like-consciousness (cidvat) [and]-that (tac) [and]-from-contraction-of-power (chaktisaṃkocāt) [and]-covered-by-impurity (malāvṛtaḥ) [and]-transmigrator (saṃsārī) // 9 //",
-  "l2": "## phr-p03 — Contraction, Impurity, and Transmigration\nLike consciousness, it becomes a transmigrator when its power contracts and is covered by impurity. Nevertheless, it still performs the five acts in that way, and this constitutes the state of transmigration."
+  "verses": "11-15",
+  "sanskrit": "tāni | saṃsāritvam | cetanapadādhyārohāt citiḥ | meyendhanaṃ pluṣyati | balalābhe viśvam ātmasātkaroti",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "phrdaya",
+  "immutable_id": "pt:pid:phr:279dd3640066",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "phrdaya.txt",
+  "source_lines": 451,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 5
  },
  {
   "chunk": "phr-p04",
-  "verses": "13-16",
-  "sanskrit": "cetanapadādhyārohāt citiḥ",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## phr-p04 (13-16)\n[and]-by-ascent-to-status-of-consciousness (cetanapadādhyārohāt) [and]-consciousness (citiḥ) // 13 //",
-  "l2": "## phr-p04 — Ascent to Consciousness and Liberation\nBy ascending to the status of consciousness, consciousness burns the fuel of objects. Gaining strength, it makes the universe its own, and firm realization of oneness with consciousness is liberation while living."
- },
- {
-  "chunk": "phr-p05",
-  "verses": "17-20",
-  "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## phr-p05 (17-20)\n[and]-from-expansion-of-the-middle (madhyavikāsāc) [and]-attainment-of-consciousness-bliss (cidānandalābhaḥ) // 17 //\n\n*T1 frozen 2026-10-31.*",
-  "l2": "## phr-p05 — Expansion, Means, and Śiva\nFrom expansion of the middle comes attainment of consciousness-bliss, and the means are given here. From recollection of oneness with consciousness comes attainment of ever-risen samādhi, and thus one becomes Śiva.\n\nFidelity: all 20 sutras are represented across the five passages."
+  "verses": "16-20",
+  "sanskrit": "cidaikātmyapratipattidārḍhyaṃ jīvanmuktiḥ | madhyavikāsāc cidānandalābhaḥ | iha upāyāḥ | cidaikyāmarśān nityoditasamādhilābhaḥ | bhavatīti śivam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "phrdaya",
+  "immutable_id": "pt:pid:phr:7fe454b727eb",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "phrdaya.txt",
+  "source_lines": 508,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL",
+  "match_words": 4
  }
 ]

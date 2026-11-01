@@ -8,7 +8,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ghatakarpara",
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ghatakarpara.txt",
+  "source_lines": 14,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
+  "match_words": 10
  },
  {
   "chunk": "ghat-p02",
@@ -19,7 +52,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ghatakarpara",
+  "immutable_id": "pt:pid:ghat:16a5384f807b",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ghatakarpara.txt",
+  "source_lines": 61,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
+  "match_words": 12
  },
  {
   "chunk": "ghat-p03",
@@ -30,6 +96,39 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "ghatakarpara",
+  "immutable_id": "pt:pid:ghat:9b6748de21b4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ghatakarpara.txt",
+  "source_lines": 113,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Parlier ed., Abhinavagupta vivrti)",
+  "match_words": 12
  }
 ]

@@ -1,0 +1,871 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Practices</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Interactive</div><h1>Practices</h1><div class="skt"></div><div class="sub">VBT dhāraṇās, ānāpānasati, Ajahn Lee — voice cues, timed steps, audio tones</div><div class="panel"><b>All 112 dhāraṇās as interactive sound practices.</b> Each has a voice intro, sound pattern designed for its category (breath tones, gap silences, shimmer lights, mantra drones, energy risers, recognition drops), step-by-step with TTS, and a timer. Sexual yoga skipped. Based on tantra112.app pattern + our own mapping.</div>
+<div class="idx"><h3 style="margin-top:1.5rem">Breath-Based (Āṇavopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 1</b> <span class="sub">v24 · breath</span></div>
+  <div><a href="/vbt/v24.html" style="font-size:.8rem;margin-right:.5rem">v24</a><button onclick="startDharaṇa(1)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Stop breath — feel the unfilled void</div>
+<div class="sub" style="margin-top:.2rem">Prāṇa withdrawal into suṣumṇā · TĀ: Āhnika 7 (Cakrodaya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 4</b> <span class="sub">v27 · breath</span></div>
+  <div><a href="/vbt/v27.html" style="font-size:.8rem;margin-right:.5rem">v27</a><button onclick="startDharaṇa(4)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Breathe in and out — watch the turn</div>
+<div class="sub" style="margin-top:.2rem">Awareness of the pause between breaths · TĀ: Āhnika 5 (prāṇoccāra)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 7</b> <span class="sub">v30 · breath</span></div>
+  <div><a href="/vbt/v30.html" style="font-size:.8rem;margin-right:.5rem">v30</a><button onclick="startDharaṇa(7)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Prāṇa as string — consciousness as pearl</div>
+<div class="sub" style="margin-top:.2rem">One-pointedness through prāṇa · TĀ: Āhnika 5 (karaṇa)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 13</b> <span class="sub">v36 · breath</span></div>
+  <div><a href="/vbt/v36.html" style="font-size:.8rem;margin-right:.5rem">v36</a><button onclick="startDharaṇa(13)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Suspend breath — feel the movement of Kuṇḍalinī</div>
+<div class="sub" style="margin-top:.2rem">Kuṇḍalinī awakening through kumbhaka · TĀ: Āhnika 5 (SAUḤ)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 14</b> <span class="sub">v37 · breath</span></div>
+  <div><a href="/vbt/v37.html" style="font-size:.8rem;margin-right:.5rem">v37</a><button onclick="startDharaṇa(14)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Watch breath go from heart to 12 fingers above</div>
+<div class="sub" style="margin-top:.2rem">Traversal of dvādaśānta · TĀ: Āhnika 5 (ten voids)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 31</b> <span class="sub">v54 · ambient</span></div>
+  <div><a href="/vbt/v54.html" style="font-size:.8rem;margin-right:.5rem">v54</a><button onclick="startDharaṇa(31)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Inhale with 50 phonemes, exhale with reverse</div>
+<div class="sub" style="margin-top:.2rem">Mātṛkā-cakra + prāṇa synchronization · TĀ: Āhnika 5 (varṇa-tattva)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 41</b> <span class="sub">v64 · shimmer</span></div>
+  <div><a href="/vbt/v64.html" style="font-size:.8rem;margin-right:.5rem">v64</a><button onclick="startDharaṇa(41)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Breathe as mantra without words</div>
+<div class="sub" style="margin-top:.2rem">Mantra-caitanya (living mantra) · TĀ: Āhnika 11 (mantrādhvan)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 56</b> <span class="sub">v81 · shimmer</span></div>
+  <div><a href="/vbt/v81.html" style="font-size:.8rem;margin-right:.5rem">v81</a><button onclick="startDharaṇa(56)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Stop breath — hear inner sound</div>
+<div class="sub" style="margin-top:.2rem">Anāhata (unstruck sound) · TĀ: Āhnika 5 (anāhata levels)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 68</b> <span class="sub">v93 · shimmer</span></div>
+  <div><a href="/vbt/v93.html" style="font-size:.8rem;margin-right:.5rem">v93</a><button onclick="startDharaṇa(68)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Breath awareness in daily activity</div>
+<div class="sub" style="margin-top:.2rem">Continuous practice (sahaja) · TĀ: Āhnika 6 (kālopāya)</div>
+</div><h3 style="margin-top:1.5rem">Void / Gap Awareness (Śāktopāya → Śāmbhavopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 3</b> <span class="sub">v26 · breath</span></div>
+  <div><a href="/vbt/v26.html" style="font-size:.8rem;margin-right:.5rem">v26</a><button onclick="startDharaṇa(3)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Rest in the gap between two perceptions</div>
+<div class="sub" style="margin-top:.2rem">Recognition of the interval (avakāśa) · TĀ: Āhnika 3 (pratibimbavāda)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 16</b> <span class="sub">v39 · ambient</span></div>
+  <div><a href="/vbt/v39.html" style="font-size:.8rem;margin-right:.5rem">v39</a><button onclick="startDharaṇa(16)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Gap between sleep and waking</div>
+<div class="sub" style="margin-top:.2rem">Turīya (the Fourth) · TĀ: Āhnika 10 (consciousness states)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 35</b> <span class="sub">v58 · ambient</span></div>
+  <div><a href="/vbt/v58.html" style="font-size:.8rem;margin-right:.5rem">v58</a><button onclick="startDharaṇa(35)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Gap between seeing and naming</div>
+<div class="sub" style="margin-top:.2rem">Pre-linguistic awareness · TĀ: Āhnika 11 (varṇa as pramā)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 37</b> <span class="sub">v60 · shimmer</span></div>
+  <div><a href="/vbt/v60.html" style="font-size:.8rem;margin-right:.5rem">v60</a><button onclick="startDharaṇa(37)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Void above, void below — where is the body?</div>
+<div class="sub" style="margin-top:.2rem">Dissolution of body-identification · TĀ: Āhnika 5 (ten voids)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 39</b> <span class="sub">v62 · shimmer</span></div>
+  <div><a href="/vbt/v62.html" style="font-size:.8rem;margin-right:.5rem">v62</a><button onclick="startDharaṇa(39)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Void in the sky — void in consciousness</div>
+<div class="sub" style="margin-top:.2rem">Śūnya-tattva realization · TĀ: Āhnika 8 (bhuvanādhvan)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 50</b> <span class="sub">v75 · shimmer</span></div>
+  <div><a href="/vbt/v75.html" style="font-size:.8rem;margin-right:.5rem">v75</a><button onclick="startDharaṇa(50)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Void of ajar door — gaze without blinking</div>
+<div class="sub" style="margin-top:.2rem">Śāmbhavopāya through sensory stilling · TĀ: Āhnika 2 (anupāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 67</b> <span class="sub">v92 · shimmer</span></div>
+  <div><a href="/vbt/v92.html" style="font-size:.8rem;margin-right:.5rem">v92</a><button onclick="startDharaṇa(67)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Void of sleep with awareness</div>
+<div class="sub" style="margin-top:.2rem">Sleep clear light (pra-bhāsvara) · TĀ: Āhnika 10 (suṣupti-turīya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 82</b> <span class="sub">v108 · drop</span></div>
+  <div><a href="/vbt/v108.html" style="font-size:.8rem;margin-right:.5rem">v108</a><button onclick="startDharaṇa(82)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Void without any support</div>
+<div class="sub" style="margin-top:.2rem">Pure Śāmbhavopāya · TĀ: Āhnika 13 (tīvratīvra śaktipāta)</div>
+</div><h3 style="margin-top:1.5rem">Light and Color (Śāktopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 6</b> <span class="sub">v29 · breath</span></div>
+  <div><a href="/vbt/v29.html" style="font-size:.8rem;margin-right:.5rem">v29</a><button onclick="startDharaṇa(6)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Fix on a point of light in darkness</div>
+<div class="sub" style="margin-top:.2rem">Dhāraṇā on bindu · TĀ: Āhnika 5 (bindu)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 9</b> <span class="sub">v32 · breath</span></div>
+  <div><a href="/vbt/v32.html" style="font-size:.8rem;margin-right:.5rem">v32</a><button onclick="startDharaṇa(9)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">See light of consciousness in all things</div>
+<div class="sub" style="margin-top:.2rem">Recognition of prakāśa · TĀ: Āhnika 11 (sarvādhāraśakti)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 33</b> <span class="sub">v56 · ambient</span></div>
+  <div><a href="/vbt/v56.html" style="font-size:.8rem;margin-right:.5rem">v56</a><button onclick="startDharaṇa(33)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Contemplate a lamp without the glass</div>
+<div class="sub" style="margin-top:.2rem">Direct perception of light-essence · TĀ: Āhnika 12 (divine body)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 36</b> <span class="sub">v59 · shimmer</span></div>
+  <div><a href="/vbt/v59.html" style="font-size:.8rem;margin-right:.5rem">v59</a><button onclick="startDharaṇa(36)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Blue light of Bhairava</div>
+<div class="sub" style="margin-top:.2rem">Ājñā-cakra activation · TĀ: Āhnika 11 (kalādhvan)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 38</b> <span class="sub">v61 · shimmer</span></div>
+  <div><a href="/vbt/v61.html" style="font-size:.8rem;margin-right:.5rem">v61</a><button onclick="startDharaṇa(38)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Light in the heart cakra</div>
+<div class="sub" style="margin-top:.2rem">Anāhata cakra visualization · TĀ: Āhnika 5 (Trika Liṅga)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 42</b> <span class="sub">v65 · shimmer</span></div>
+  <div><a href="/vbt/v65.html" style="font-size:.8rem;margin-right:.5rem">v65</a><button onclick="startDharaṇa(42)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Light of consciousness reflected in the world</div>
+<div class="sub" style="margin-top:.2rem">Pratibimbavāda (doctrine of reflection) · TĀ: Āhnika 2 (Doctrine of Reflection)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 89</b> <span class="sub">v115 · drop</span></div>
+  <div><a href="/vbt/v115.html" style="font-size:.8rem;margin-right:.5rem">v115</a><button onclick="startDharaṇa(89)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">White light at the crown</div>
+<div class="sub" style="margin-top:.2rem">Sahasrāra dissolution · TĀ: Āhnika 5 (Paramānanda)</div>
+</div><h3 style="margin-top:1.5rem">Sound and Mantra (Āṇavopāya → Śāktopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 2</b> <span class="sub">v25 · breath</span></div>
+  <div><a href="/vbt/v25.html" style="font-size:.8rem;margin-right:.5rem">v25</a><button onclick="startDharaṇa(2)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Recite a mantra — feel its meaning dissolve</div>
+<div class="sub" style="margin-top:.2rem">Madhyamā → parā · TĀ: Āhnika 3 (four levels of speech)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 8</b> <span class="sub">v31 · breath</span></div>
+  <div><a href="/vbt/v31.html" style="font-size:.8rem;margin-right:.5rem">v31</a><button onclick="startDharaṇa(8)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Vibrate a phoneme — feel its resonance in the nāḍīs</div>
+<div class="sub" style="margin-top:.2rem">Mātṛkā-cakra activation · TĀ: Āhnika 5 (varṇa as pramā)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 10</b> <span class="sub">v33 · breath</span></div>
+  <div><a href="/vbt/v33.html" style="font-size:.8rem;margin-right:.5rem">v33</a><button onclick="startDharaṇa(10)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Hear the unstruck sound (anāhata)</div>
+<div class="sub" style="margin-top:.2rem">Internal sound perception · TĀ: Āhnika 5 (daśa anāhata)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 11</b> <span class="sub">v34 · breath</span></div>
+  <div><a href="/vbt/v34.html" style="font-size:.8rem;margin-right:.5rem">v34</a><button onclick="startDharaṇa(11)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Listen to a musical instrument — follow the sound into silence</div>
+<div class="sub" style="margin-top:.2rem">Laya through sound · TĀ: Āhnika 4 (Twelve Kālīs)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 22</b> <span class="sub">v45 · ambient</span></div>
+  <div><a href="/vbt/v45.html" style="font-size:.8rem;margin-right:.5rem">v45</a><button onclick="startDharaṇa(22)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Chant the 50 phonemes as the body of the goddess</div>
+<div class="sub" style="margin-top:.2rem">Mātṛkā as subtle body · TĀ: Āhnika 11 (varṇādhvan)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 28</b> <span class="sub">v51 · ambient</span></div>
+  <div><a href="/vbt/v51.html" style="font-size:.8rem;margin-right:.5rem">v51</a><button onclick="startDharaṇa(28)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Bīja mantra as a seed that grows into the deity</div>
+<div class="sub" style="margin-top:.2rem">Mantra → Iṣṭadevatā · TĀ: Āhnika 5 (SAUḤ/KHPHREṀ)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 44</b> <span class="sub">v67 · shimmer</span></div>
+  <div><a href="/vbt/v67.html" style="font-size:.8rem;margin-right:.5rem">v67</a><button onclick="startDharaṇa(44)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Sound of the alphabet as the universe itself</div>
+<div class="sub" style="margin-top:.2rem">Varṇa as pramā · TĀ: Āhnika 11 (varṇa-samghāta)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 78</b> <span class="sub">v103 · drop</span></div>
+  <div><a href="/vbt/v103.html" style="font-size:.8rem;margin-right:.5rem">v103</a><button onclick="startDharaṇa(78)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Hūṃ as the weapon that pierces duality</div>
+<div class="sub" style="margin-top:.2rem">Vajra-jāpa (vajra repetition) · TĀ: Āhnika 7 (Cakrodaya)</div>
+</div><h3 style="margin-top:1.5rem">Perception and Senses (Śāktopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 5</b> <span class="sub">v28 · breath</span></div>
+  <div><a href="/vbt/v28.html" style="font-size:.8rem;margin-right:.5rem">v28</a><button onclick="startDharaṇa(5)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Taste without tongue — know the taster</div>
+<div class="sub" style="margin-top:.2rem">Recognition of the witness in sensation · TĀ: Āhnika 10 (pramātṛ)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 12</b> <span class="sub">v35 · breath</span></div>
+  <div><a href="/vbt/v35.html" style="font-size:.8rem;margin-right:.5rem">v35</a><button onclick="startDharaṇa(12)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">See without eyes — know the seer</div>
+<div class="sub" style="margin-top:.2rem">Witness consciousness · TĀ: Āhnika 10 (seven perceivers)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 15</b> <span class="sub">v38 · breath</span></div>
+  <div><a href="/vbt/v38.html" style="font-size:.8rem;margin-right:.5rem">v38</a><button onclick="startDharaṇa(15)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Touch without skin — feel the universal touch</div>
+<div class="sub" style="margin-top:.2rem">Śakti-cakra (wheel of senses) · TĀ: Āhnika 12 (divine body)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 18</b> <span class="sub">v41 · ambient</span></div>
+  <div><a href="/vbt/v41.html" style="font-size:.8rem;margin-right:.5rem">v41</a><button onclick="startDharaṇa(18)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Smell without nose — know the knower</div>
+<div class="sub" style="margin-top:.2rem">Discrimination of consciousness from its instruments · TĀ: Āhnika 9 (tattvādhvan)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 20</b> <span class="sub">v43 · ambient</span></div>
+  <div><a href="/vbt/v43.html" style="font-size:.8rem;margin-right:.5rem">v43</a><button onclick="startDharaṇa(20)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">All senses simultaneously active and still</div>
+<div class="sub" style="margin-top:.2rem">Integration of pratyāhāra · TĀ: Āhnika 2 (jīvanmukti)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 23</b> <span class="sub">v46 · ambient</span></div>
+  <div><a href="/vbt/v46.html" style="font-size:.8rem;margin-right:.5rem">v46</a><button onclick="startDharaṇa(23)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Knower and known are one</div>
+<div class="sub" style="margin-top:.2rem">Pramāṇa-prameya aikya · TĀ: Āhnika 9 (tattva-bheda)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 25</b> <span class="sub">v48 · ambient</span></div>
+  <div><a href="/vbt/v48.html" style="font-size:.8rem;margin-right:.5rem">v48</a><button onclick="startDharaṇa(25)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The world as a painting on consciousness</div>
+<div class="sub" style="margin-top:.2rem">Śuddhavidyā — pure knowledge · TĀ: Āhnika 9 (Śuddhavidyā)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 32</b> <span class="sub">v55 · ambient</span></div>
+  <div><a href="/vbt/v55.html" style="font-size:.8rem;margin-right:.5rem">v55</a><button onclick="startDharaṇa(32)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Breath and senses merge into one flow</div>
+<div class="sub" style="margin-top:.2rem">Samāna-vāyu integration · TĀ: Āhnika 6 (samāna)</div>
+</div><h3 style="margin-top:1.5rem">Energy and Kuṇḍalinī (Āṇavopāya)</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 17</b> <span class="sub">v40 · ambient</span></div>
+  <div><a href="/vbt/v40.html" style="font-size:.8rem;margin-right:.5rem">v40</a><button onclick="startDharaṇa(17)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Kuṇḍalinī as a serpent — feel its movement</div>
+<div class="sub" style="margin-top:.2rem">Kuṇḍalinī awareness · TĀ: Āhnika 5 (six blisses)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 21</b> <span class="sub">v44 · ambient</span></div>
+  <div><a href="/vbt/v44.html" style="font-size:.8rem;margin-right:.5rem">v44</a><button onclick="startDharaṇa(21)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Energy rising from mūlādhāra to brahmarandhra</div>
+<div class="sub" style="margin-top:.2rem">Cakra ascent · TĀ: Āhnika 5 (ten voids)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 24</b> <span class="sub">v47 · ambient</span></div>
+  <div><a href="/vbt/v47.html" style="font-size:.8rem;margin-right:.5rem">v47</a><button onclick="startDharaṇa(24)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Prāṇa and apāna united in the belly</div>
+<div class="sub" style="margin-top:.2rem">Samāna-prāṇa at navel · TĀ: Āhnika 6 (samāna-vāyu)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 26</b> <span class="sub">v49 · ambient</span></div>
+  <div><a href="/vbt/v49.html" style="font-size:.8rem;margin-right:.5rem">v49</a><button onclick="startDharaṇa(26)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The five prāṇas as one</div>
+<div class="sub" style="margin-top:.2rem">Prāṇa aikya · TĀ: Āhnika 6 (five prāṇas)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 27</b> <span class="sub">v50 · ambient</span></div>
+  <div><a href="/vbt/v50.html" style="font-size:.8rem;margin-right:.5rem">v50</a><button onclick="startDharaṇa(27)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Heat at the navel — nectar at the crown</div>
+<div class="sub" style="margin-top:.2rem">Tummo / SAUḤ practice · TĀ: Āhnika 5 (SAUḤ)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 29</b> <span class="sub">v52 · ambient</span></div>
+  <div><a href="/vbt/v52.html" style="font-size:.8rem;margin-right:.5rem">v52</a><button onclick="startDharaṇa(29)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Kuṇḍalinī as the supreme power (Parā-śakti)</div>
+<div class="sub" style="margin-top:.2rem">Cicchakti recognition · TĀ: Āhnika 3 (three Kuṇḍalinīs)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 30</b> <span class="sub">v53 · ambient</span></div>
+  <div><a href="/vbt/v53.html" style="font-size:.8rem;margin-right:.5rem">v53</a><button onclick="startDharaṇa(30)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The inner fire burns the dualities</div>
+<div class="sub" style="margin-top:.2rem">SAUḤ / KHPHREṀ absorption · TĀ: Āhnika 4 (Twelve Kālīs)</div>
+</div><h3 style="margin-top:1.5rem;opacity:.5">Sexual Yoga (Kaula — controversial) <span class="rsrc">(skipped)</span></h3><h3 style="margin-top:1.5rem">Direct Recognition — Śāmbhavopāya</h3><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 3</b> <span class="sub">v26 · breath</span></div>
+  <div><a href="/vbt/v26.html" style="font-size:.8rem;margin-right:.5rem">v26</a><button onclick="startDharaṇa(3)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Silence between thoughts</div>
+<div class="sub" style="margin-top:.2rem">Recognition of the gap · TĀ: Āhnika 2 (anupāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 36</b> <span class="sub">v59 · shimmer</span></div>
+  <div><a href="/vbt/v59.html" style="font-size:.8rem;margin-right:.5rem">v59</a><button onclick="startDharaṇa(36)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Suddenly turn to the &#x27;I&#x27; that is aware</div>
+<div class="sub" style="margin-top:.2rem">Ātma-vyāpti · TĀ: Āhnika 13 (pratibhā)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 40</b> <span class="sub">v63 · shimmer</span></div>
+  <div><a href="/vbt/v63.html" style="font-size:.8rem;margin-right:.5rem">v63</a><button onclick="startDharaṇa(40)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Rest in awareness without any object</div>
+<div class="sub" style="margin-top:.2rem">Nirvikalpa samādhi · TĀ: Āhnika 1 (Śāmbhavopāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 50</b> <span class="sub">v75 · shimmer</span></div>
+  <div><a href="/vbt/v75.html" style="font-size:.8rem;margin-right:.5rem">v75</a><button onclick="startDharaṇa(50)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Let go of all supports suddenly</div>
+<div class="sub" style="margin-top:.2rem">Lion&#x27;s leap · TĀ: Āhnika 1 (vv. 171-196)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 55</b> <span class="sub">v80 · shimmer</span></div>
+  <div><a href="/vbt/v80.html" style="font-size:.8rem;margin-right:.5rem">v80</a><button onclick="startDharaṇa(55)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Intense impulse of will — the &#x27;I&#x27; alone</div>
+<div class="sub" style="margin-top:.2rem">Icchā-śakti direct · TĀ: Āhnika 13 (tīvratīvra)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 59</b> <span class="sub">v84 · shimmer</span></div>
+  <div><a href="/vbt/v84.html" style="font-size:.8rem;margin-right:.5rem">v84</a><button onclick="startDharaṇa(59)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Recognize that consciousness is already free</div>
+<div class="sub" style="margin-top:.2rem">Jīvanmukti recognition · TĀ: Āhnika 2 (jīvanmukti)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 66</b> <span class="sub">v91 · shimmer</span></div>
+  <div><a href="/vbt/v91.html" style="font-size:.8rem;margin-right:.5rem">v91</a><button onclick="startDharaṇa(66)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Awareness without any content</div>
+<div class="sub" style="margin-top:.2rem">Parā-vāc abiding · TĀ: Āhnika 3 (parā-vāc)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 71</b> <span class="sub">v96 · drop</span></div>
+  <div><a href="/vbt/v96.html" style="font-size:.8rem;margin-right:.5rem">v96</a><button onclick="startDharaṇa(71)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Bhairava&#x27;s state — neither inside nor outside</div>
+<div class="sub" style="margin-top:.2rem">Mahābhairava · TĀ: Āhnika 4 (12th Kālī)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 76</b> <span class="sub">v101 · drop</span></div>
+  <div><a href="/vbt/v101.html" style="font-size:.8rem;margin-right:.5rem">v101</a><button onclick="startDharaṇa(76)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Intense longing — break through</div>
+<div class="sub" style="margin-top:.2rem">Bhakti as upāya · TĀ: Āhnika 13 (śaktipāta)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 82</b> <span class="sub">v108 · drop</span></div>
+  <div><a href="/vbt/v108.html" style="font-size:.8rem;margin-right:.5rem">v108</a><button onclick="startDharaṇa(82)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Pure recognition without any technique</div>
+<div class="sub" style="margin-top:.2rem">Anupāya exactly · TĀ: Āhnika 2 (anupāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 85</b> <span class="sub">v111 · drop</span></div>
+  <div><a href="/vbt/v111.html" style="font-size:.8rem;margin-right:.5rem">v111</a><button onclick="startDharaṇa(85)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Who is the doubter? — see the answer</div>
+<div class="sub" style="margin-top:.2rem">Self-inquiry (ātma-vicāra) · TĀ: Āhnika 13 (viveka)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 88</b> <span class="sub">v113-114 · drop</span></div>
+  <div><a href="#" style="font-size:.8rem;margin-right:.5rem">v113-114</a><button onclick="startDharaṇa(88)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Awareness of awareness itself</div>
+<div class="sub" style="margin-top:.2rem">Vimarśa abiding · TĀ: Āhnika 2 (prakāśa-vimarśa)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 90</b> <span class="sub">v116 · drop</span></div>
+  <div><a href="/vbt/v116.html" style="font-size:.8rem;margin-right:.5rem">v116</a><button onclick="startDharaṇa(90)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Stop — no support — no thought</div>
+<div class="sub" style="margin-top:.2rem">Śāmbhavopāya · TĀ: Āhnika 1 (Śāmbhavopāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 92</b> <span class="sub">v118 · drop</span></div>
+  <div><a href="/vbt/v118.html" style="font-size:.8rem;margin-right:.5rem">v118</a><button onclick="startDharaṇa(92)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The knower dissolves into knowing</div>
+<div class="sub" style="margin-top:.2rem">Pramātri → pramāṇa līna · TĀ: Āhnika 10 (turiya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 95</b> <span class="sub">v121 · drop</span></div>
+  <div><a href="/vbt/v121.html" style="font-size:.8rem;margin-right:.5rem">v121</a><button onclick="startDharaṇa(95)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Merge in the gap between two states</div>
+<div class="sub" style="margin-top:.2rem">Turīyātīta · TĀ: Āhnika 10 (beyond Fourth)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 101</b> <span class="sub">v127 · drop</span></div>
+  <div><a href="/vbt/v127.html" style="font-size:.8rem;margin-right:.5rem">v127</a><button onclick="startDharaṇa(101)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Bhairava&#x27;s roar — Haṃsa (I am That)</div>
+<div class="sub" style="margin-top:.2rem">Haṃsa-vidyā · TĀ: Āhnika 11 (haṃsoccāra)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 105</b> <span class="sub">v131 · drop</span></div>
+  <div><a href="/vbt/v131.html" style="font-size:.8rem;margin-right:.5rem">v131</a><button onclick="startDharaṇa(105)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">Sudden drop of all effort</div>
+<div class="sub" style="margin-top:.2rem">Sahaja samādhi · TĀ: Āhnika 6 (kālopāya)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 107</b> <span class="sub">v133 · drop</span></div>
+  <div><a href="/vbt/v133.html" style="font-size:.8rem;margin-right:.5rem">v133</a><button onclick="startDharaṇa(107)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The sun of consciousness — no object, only light</div>
+<div class="sub" style="margin-top:.2rem">Prakāśa mātra · TĀ: Āhnika 2 (prakāśa)</div>
+</div><div class="panel" style="margin:.3rem 0">
+<div style="display:flex;justify-content:space-between;align-items:start">
+  <div><b>Dhāraṇā 108</b> <span class="sub">v134 · drop</span></div>
+  <div><a href="/vbt/v134.html" style="font-size:.8rem;margin-right:.5rem">v134</a><button onclick="startDharaṇa(108)" style="padding:.2rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">Practice</button></div>
+</div>
+<div class="en" style="margin-top:.3rem;font-size:.9rem">The state of Bhairava in daily life</div>
+<div class="sub" style="margin-top:.2rem">Sahaja jīvanmukti · TĀ: Āhnika 14 (jñānena paripūrṇatā)</div>
+</div></div>
+<div id="practice-overlay" style="display:none;position:fixed;inset:0;background:rgba(10,8,6,.93);z-index:100;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:Inter,sans-serif;padding:2rem;text-align:center"></div>
+<script>
+var SOUND_DESIGNS = {"1": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "4": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "7": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "13": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "14": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "31": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "41": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "56": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "68": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "3": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "16": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "35": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "37": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "39": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "50": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "67": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "82": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "6": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "9": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "33": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "36": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "38": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "42": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "89": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "2": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "8": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "10": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "11": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "22": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "28": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "44": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "78": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "5": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "12": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "15": {"intro": "This is a foundation practice. A tone will sound with each breath. Follow it naturally.", "pattern": "breath", "freq": 220, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it mark your breath.", "cue": "voice"}, {"n": 3, "text": "Follow the tone. Inhale rising, exhale fading.", "cue": "silent"}, {"n": 4, "text": "Rest. The breath continues without you.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "18": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "20": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "23": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "25": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "32": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "17": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "21": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "24": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "26": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "27": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "29": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "30": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "40": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "55": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "59": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "66": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "71": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "76": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "85": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "88": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "90": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "92": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "95": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "101": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "105": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "107": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "108": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "19": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "34": {"intro": "A tone will sound. Notice the quality of sensation it evokes. Rest as the knower.", "pattern": "ambient", "freq": 175, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone will sound. Let it fill awareness.", "cue": "voice"}, {"n": 3, "text": "Notice what arises. Rest as the one who notices.", "cue": "silent"}, {"n": 4, "text": "The tone fades. You remain.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "43": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "45": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "46": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "47": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "48": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "49": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "51": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "52": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "53": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "54": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "57": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "58": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "60": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "61": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "62": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "63": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "64": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "65": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "69": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "70": {"intro": "A tone will sound, then fade. Rest in the space it opens.", "pattern": "shimmer", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "Listen. The sound is here.", "cue": "voice"}, {"n": 3, "text": "Let it fade. Notice what remains.", "cue": "silent"}, {"n": 4, "text": "Rest in the space.", "cue": "voice"}, {"n": 5, "text": "Gently return. Open your eyes.", "cue": "voice"}]}, "72": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "73": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "74": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "75": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "77": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "79": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "80": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "81": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "83": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "84": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "86": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "87": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "91": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "93": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "94": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "96": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "97": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "98": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "99": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "100": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "102": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "103": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "104": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "106": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "109": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "110": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "111": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}, "112": {"intro": "A tone will sound. Then silence. Rest in awareness. No technique needed.", "pattern": "drop", "freq": 440, "dur": 300, "steps": [{"n": 1, "text": "Sit comfortably. Close your eyes. Three slow breaths.", "cue": "voice"}, {"n": 2, "text": "A tone. Listen.", "cue": "voice"}, {"n": 3, "text": "Silence. What remains? Rest there.", "cue": "silent"}, {"n": 4, "text": "You are already here. Gently return.", "cue": "voice"}]}};
+var _audioCtx=null, _timerId=null, _stepIdx=0, _steps=[], _soundNodes=[];
+
+function getCtx(){ if(!_audioCtx){_audioCtx=new (window.AudioContext||window.webkitAudioContext)()} return _audioCtx }
+function stopSound(){ _soundNodes.forEach(n=>{try{n.stop()}catch(e){}}); _soundNodes=[] }
+function playPattern(pattern, freq, durSec) {
+  try {
+    var ctx=getCtx();
+    var o=ctx.createOscillator(), g=ctx.createGain();
+    o.type='sine'; o.frequency.value=freq;
+    var now=ctx.currentTime;
+    g.gain.setValueAtTime(0, now);
+    if(pattern==='breath') {
+      // rising and falling with each "breath" cycle (4s in, 6s out)
+      var cycle=10;
+      for(var t=0;t<durSec;t+=cycle){
+        g.gain.linearRampToValueAtTime(0.25, now+t+4);
+        g.gain.linearRampToValueAtTime(0.0, now+t+9);
+        g.gain.linearRampToValueAtTime(0.0, now+t+10);
+      }
+    } else if(pattern==='gap') {
+      // tone, silence, tone, silence
+      var gapCycle=8;
+      for(var t=0;t<durSec;t+=gapCycle){
+        g.gain.linearRampToValueAtTime(0.25, now+t+0.5);
+        g.gain.linearRampToValueAtTime(0.25, now+t+3);
+        g.gain.linearRampToValueAtTime(0.0, now+t+4);
+        g.gain.linearRampToValueAtTime(0.0, now+t+gapCycle);
+      }
+    } else if(pattern==='shimmer') {
+      // gentle tremolo
+      g.gain.linearRampToValueAtTime(0.15, now+2);
+      g.gain.linearRampToValueAtTime(0.1, now+4);
+      g.gain.linearRampToValueAtTime(0.18, now+6);
+      g.gain.linearRampToValueAtTime(0.12, now+8);
+      g.gain.linearRampToValueAtTime(0.15, now+10);
+      g.gain.linearRampToValueAtTime(0.0, now+durSec);
+    } else if(pattern==='drop') {
+      // tone fades fast — the "drop"
+      g.gain.linearRampToValueAtTime(0.3, now+0.3);
+      g.gain.linearRampToValueAtTime(0.25, now+2);
+      g.gain.linearRampToValueAtTime(0.0, now+6);
+    } else if(pattern==='ascending') {
+      // rising pitch over 30s
+      o.frequency.setValueAtTime(freq, now);
+      o.frequency.linearRampToValueAtTime(freq*2, now+30);
+      g.gain.linearRampToValueAtTime(0.2, now+2);
+      g.gain.linearRampToValueAtTime(0.0, now+30);
+    } else {
+      // default: smooth fade in and out
+      g.gain.linearRampToValueAtTime(0.2, now+2);
+      g.gain.linearRampToValueAtTime(0.2, now+durSec-4);
+      g.gain.linearRampToValueAtTime(0.0, now+durSec);
+    }
+    o.connect(g); g.connect(ctx.destination);
+    o.start(now); o.stop(now+durSec);
+    _soundNodes.push(o);
+  } catch(e) { console.log('audio error:', e) }
+}
+function speak(text, cb) {
+  if(!('speechSynthesis' in window)){ if(cb)cb(); return }
+  try{speechSynthesis.cancel()}catch(e){}
+  var u=new SpeechSynthesisUtterance(text);
+  u.rate=0.85;u.pitch=0.95;
+  u.onend=function(){if(cb)cb()};
+  u.onerror=function(){if(cb)cb()};
+  speechSynthesis.speak(u);
+}
+function startDharaṇa(dh) {
+  var sd=SOUND_DESIGNS[String(dh)];
+  if(!sd){alert('No design for dhāraṇā '+dh);return}
+  _steps=sd.steps; _stepIdx=0;
+  var overlay=document.getElementById('practice-overlay');
+  overlay.style.display='flex';
+  overlay.innerHTML='<div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a86f14">Sound Practice</div>'
+    +'<h2 style="font-family:serif;font-size:1.5rem;margin:.5rem 0">Dhāraṇā '+dh+'</h2>'
+    +'<div style="font-size:.8rem;color:#a86f14;margin-bottom:.5rem">'+sd.pattern+' pattern</div>'
+    +'<div style="max-width:560px;font-size:.95rem;line-height:1.7;min-height:4em" id="step-text"></div>'
+    +'<div id="step-indicator" style="font-size:.8rem;color:#a86f14;margin:.3rem 0"></div>'
+    +'<div id="practice-timer" style="font-size:2.5rem;margin:.8rem 0;font-variant-numeric:tabular-nums">5:00</div>'
+    +'<div style="display:flex;gap:.6rem;margin-top:1rem">'
+    +'<button onclick="nextStep()" style="padding:.5rem 1.2rem;background:#fff;color:#17140f;border:0;border-radius:4rem;cursor:pointer;font-size:.9rem">Next</button>'
+    +'<button onclick="stopPractice()" style="padding:.5rem 1.2rem;background:transparent;color:#fff;border:1px solid #555;border-radius:4rem;cursor:pointer;font-size:.9rem">End</button></div>';
+  // speak intro first, then start timer + sound
+  var SFX_BASE = "/audio/sfx/";
+  function playSfx(name, vol) { try { var a=new Audio(SFX_BASE+name); a.volume=vol||0.5; a.play().catch(function(){}); } catch(e) {} }
+  playSfx("bell_ding.wav", 0.6);
+  speak(sd.intro, function(){
+    startTimer(300);
+    playPattern(sd.pattern, sd.freq, Math.min(sd.dur, 300));
+    showStep(0);
+  });
+}
+function startTimer(dur) {
+  clearInterval(_timerId);
+  var t0=Date.now();
+  _timerId=setInterval(function(){
+    var el=Math.floor((Date.now()-t0)/1000);
+    var rem=dur-el;
+    if(rem<=0){clearInterval(_timerId);var e2=document.getElementById('step-text');if(e2)e2.textContent='Practice complete.';return}
+    var m=Math.floor(rem/60),s=rem%60;
+    var t=document.getElementById('practice-timer');
+    if(t) t.textContent=m+':'+(s<10?'0':'')+s;
+  },1000);
+}
+function showStep(i) {
+  if(i>=_steps.length){var el=document.getElementById('step-text');if(el)el.textContent='All steps complete. Rest a moment.';playSfx('long_break_bell.wav',0.5);return}
+  _stepIdx=i;
+  var s=_steps[i];
+  var el=document.getElementById('step-text');
+  var ind=document.getElementById('step-indicator');
+  if(el) el.textContent=s.text;
+  if(ind) ind.textContent='Step '+(i+1)+' of '+_steps.length+(s.cue==='voice'?' · voice':s.cue==='silent'?' · silent':'');
+  if(s.cue==='voice'){ playSfx('block_tick.wav',0.4); speak(s.text); }
+}
+function nextStep() { showStep(_stepIdx+1) }
+function stopPractice() {
+  clearInterval(_timerId); stopSound(); playSfx('bell_880.wav',0.5);
+  try{speechSynthesis.cancel()}catch(e){}
+  var o=document.getElementById('practice-overlay');
+  if(o) o.style.display='none';
+}
+</script><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script></body></html>

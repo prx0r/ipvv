@@ -1,0 +1,57 @@
+{
+  "packet_id": "ip:abh-self-grounding",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-self-grounding",
+    "title": "Claims: Abhinavagupta argues the two-aspect structure is self-ground",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-ta4-9-self-grounding",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantr\u0101loka 4/9 and 4/185cd-186ab, ahnika-04.txt lines 359-367 and 11146-11165",
+        "quote": "T\u0100 4/9: consciousness is by its very nature full (nirbhar\u0101), with nothing to sub"
+      },
+      "claim_text": "T\u0100 4/9: consciousness is by its very nature full (nirbhar\u0101), with nothing to subtract or add. There is nothing separate from it on which it depends. The two-aspect structure does not require an external ground \u2014 it is self-grounding through the Heart (vimar\u015ba) which is the foundation (prati\u1e63\u1e6dh\u0101) of consciousness itself.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(abh_ta4_9_self_grounding,target)",
+      "hetu": "consciousness is sv\u0101tmasa\u1e43vitti, full in itself, depending on nothing",
+      "sadhya": "the two-aspect structure is self-grounding through vimar\u015ba, not through a separate prior consciousness",
+      "vyapti_statement": "If consciousness needs nothing outside itself and its foundation is the Heart, then the ground is internal to the structure.",
+      "vyapti_confidence": 0.82,
+      "log_bayes_factor": 0.46,
+      "w_rel": 0.8,
+      "w_map": 0.75,
+      "w_aux": 0.78,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that Abhinavagupta posits Anuttara as a genuinely separate ontological ground beyond the two-aspect structure, not as the same reality under a different aspect.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika4."
+    }
+  ]
+}

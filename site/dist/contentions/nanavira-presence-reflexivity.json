@@ -1,0 +1,30 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "nanavira-presence",
+  "title": "Nanavira: consciousness is reflexive presence, not a thing requiring vimarśa",
+  "tradition": "nanavira_phenomenology",
+  "central_reading": "Nanavira's account treats consciousness as the presence of a phenomenon, reflexively given. The Trika criticism assumes consciousness is a 'thing' needing an extra property (vimarśa), but for Nanavira reflexivity is structural to presence itself.",
+  "claims": [{
+    "id": "cl:nanavira-presence-is-reflexive",
+    "text": "Consciousness (viññāṇa) is the presence of a phenomenon, and that presence is reflexively given. 'There is eye-consciousness — eye-consciousness is present reflexively.' Consciousness is not an entity or thing that requires an added property (vimarśa) to be sentient. It is the presence-of-phenomena, and presence as such is inherently reflexive. The immediate/reflexive presence distinction shows that reflexivity is built into the structure of experience, not added by a separate principle.",
+    "source_id": "text:nanavira-vinnana",
+    "source_span": "Notes on Dhamma — Viññāṇa, §d on reflexive presence",
+    "quote": "eye-consciousness is present reflexively",
+    "evidence": "textual",
+    "pramana": "sabda",
+    "hetu": "consciousness is presence of phenomena, not an entity; presence is reflexively given",
+    "sadhya": "reflexivity is structural to Nanavira's account, not an added property",
+    "vyapti": "If consciousness is presence and presence is reflexively given, then reflexivity is built into the structure of experience.",
+    "vyapti_confidence": 0.76,
+    "falsifier": "Show that Nanavira's 'reflexive presence' is compatible with a purely structural account that lacks sentience — i.e., that presence could be reflexively given without being experienced.",
+    "falsifier_status": "untested",
+    "weight": 0.38,
+    "w_rel": 0.74,
+    "w_map": 0.66,
+    "w_aux": 0.70,
+    "targets": [
+      { "id": "cand:nanavira-structural-reflexivity", "type": "candidate_explanation", "role": "support", "strength": 0.72, "rationale": "Direct account of reflexive presence from primary text." },
+      { "id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "attack", "strength": 0.48, "rationale": "Shows Trika's framing of the issue may misrepresent the Buddhist position." }
+    ]
+  }]
+}

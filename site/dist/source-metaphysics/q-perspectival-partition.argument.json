@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_dossier",
+  "question_id": "q:perspectival-partition",
+  "question": "What establishes the domains within which manifestation is jointly present and outside which it is absent?",
+  "why_it_matters": "Every theory of consciousness — naturalist, Pratyabhijñā, Buddhist, Nyāya, neutral monist — converges on the same missing object: Λ, the law that maps manifestation or organization into exclusive phenomenal domains. The universalization debate was a special case of this deeper problem.",
+  "status": "live_crux",
+  "resolution_level": "fundamental",
+  "parent_questions": [
+    "q:reflexivity-intrinsic-or-constructed",
+    "q:utpaladeva-universalization-validity"
+  ],
+  "candidate_explanations": [
+    {
+      "candidate_id": "cand:naturalist-emergent",
+      "tradition_scope": "western_phi_neuroscience",
+      "name": "Naturalist: organization → Λ → domain",
+      "best_case": "Recurrent integration, counterfactual depth, global availability and causal autonomy at a specific scale produce a maximally integrated phenomenal domain. IIT's exclusion axiom is the closest attempt.",
+      "hard_to_vary_core": [
+        "Phenomenal domains correlate with physical organization",
+        "Complexity and integration are necessary conditions"
+      ],
+      "current_problems": [
+        "Why is the relevant organization manifest rather than merely organized?",
+        "No settled criterion selects the subject scale"
+      ],
+      "falsifiers": [
+        {
+          "type": "empirical",
+          "condition": "Show that two systems with identical integration/complexity profiles have different phenomenal structures, or that one system produces two non-overlapping phenomenal fields.",
+          "status": "untested"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cand:siva-decombination",
+      "tradition_scope": "trika_pratyabhijna",
+      "name": "Pratyabhijñā: C∞ → Λ → Dᵢ via Māyā/kañcukas",
+      "best_case": "Universal manifest capacity contracts into local exclusion profiles through the five kañcukas. Finite subjects are locally exclusive articulations of unrestricted consciousness.",
+      "hard_to_vary_core": [
+        "Manifestation is prior to organization",
+        "Finite subjects are not independent substances"
+      ],
+      "current_problems": [
+        "Why does unrestricted manifestation produce genuinely private exclusion?",
+        "Contraction specifies what must be explained, not how it occurs"
+      ],
+      "falsifiers": [
+        {
+          "type": "prasanga",
+          "condition": "Show that a system with no kañcuka-like restrictions nevertheless possesses a phenomenal domain, or that kañcuka restriction alone fails to produce exclusivity.",
+          "status": "untested"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cand:buddhist-stream",
+      "tradition_scope": "dharmakirti_buddhist",
+      "name": "Buddhist: reflexive moments → causal stream → conventional domain",
+      "best_case": "Each cognition is reflexively manifest. Causal continuity, memory traces and affective appropriation produce conventionally individuated streams. No further owner required.",
+      "hard_to_vary_core": [
+        "Reflexivity does not entail a subject",
+        "Continuity can be causal without numerical identity"
+      ],
+      "current_problems": [
+        "Why do reflexive moments form one co-conscious field rather than isolated atoms?",
+        "Conventional ownership does not explain manifestness across a stream"
+      ],
+      "falsifiers": [
+        {
+          "type": "prasanga",
+          "condition": "Show that causal continuity between non-reflexive information states produces the same phenomenal features as a conscious stream.",
+          "status": "untested"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cand:nyaya-plural-substances",
+      "tradition_scope": "nyaya",
+      "name": "Nyāya: substance-bearer → Λ → domain",
+      "best_case": "Cognitive qualities inhere in an enduring individual self. Co-presence is explained by common inherence in one substance. Privacy is explained by different substances.",
+      "hard_to_vary_core": [
+        "Co-presence requires a common bearer",
+        "Plurality of substances explains privacy directly"
+      ],
+      "current_problems": [
+        "Why does inhering in one substance make qualities jointly manifest?",
+        "The substance itself is non-manifest — an additional relation is needed"
+      ],
+      "falsifiers": [
+        {
+          "type": "prasanga",
+          "condition": "Show that two qualities inhering in one non-conscious substance do not become co-conscious, disproving inherence as the criterion.",
+          "status": "untested"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cand:neutral-monist",
+      "tradition_scope": "western_phi",
+      "name": "Neutral monism: X → (Σ,D) domain pair",
+      "best_case": "The intrinsic nature of physical structure is phenomenal. Each structural node has an intrinsic aspect, and the organization determines how these intrinsic aspects compose into domains.",
+      "hard_to_vary_core": [
+        "The physical is not exhausted by its relational description",
+        "Intrinsic nature and extrinsic structure are dual aspects"
+      ],
+      "current_problems": [
+        "Why does one intrinsic-extrinsic pair map to THIS domain rather than overlapping or cosmic consciousness?",
+        "Relocates rather than solves the partition problem"
+      ],
+      "falsifiers": [
+        {
+          "type": "formal",
+          "condition": "Show that any neutral monist mapping from structure to phenomenal domain is underdetermined by the structure alone.",
+          "status": "untested"
+        }
+      ]
+    }
+  ]
+}

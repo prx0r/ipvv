@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-brain-lesion-empirical-claims",
+  "claim_packet": "content/information-packets/q17-brain-lesion-empirical-claims.json",
+  "generated_by": "codex_hermes_autonomous_loop",
+  "source_role": "direct_lesion_evidence_layer",
+  "candidate_under_test": "all",
+  "central_reading": "Direct lesion evidence strengthens mechanism-shaped brain-role accounts, especially at the levels of perceptual content and arousal, but it does not decide whether the brain produces consciousness, filters consciousness, or appears within consciousness. The honest state of play is stronger empirical constraint with the metaphysical crux still open.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:farah-feinberg-brain-damage-dissociations",
+      "source_span_id": "span:farah-feinberg-1997-dissociations",
+      "quoted_anchor": "brain damage dissociates perception and consciousness",
+      "nn_expr": "sambandha(brain_damage,perception_consciousness_dissociation)",
+      "parse_status": "parsed",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "nyaya_reading": {
+        "paksa": "brain damage syndromes",
+        "hetu": "lesions reveal separable conscious and nonconscious perceptual capacities",
+        "sadhya": "brain-role theories need content-specific transformation rules",
+        "vyapti": "Where focal damage dissociates processing from awareness, a viable theory must explain which content is lost, spared, or covertly processed."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-interface-generative-model",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "A systematic lesion review finds no stable dissociation between perceptual processing and conscious perception after controlling for task/report confounds."
+    },
+    {
+      "claim_id": "cl:silvanto-blindsight-local-global-dissociation",
+      "source_span_id": "span:silvanto-2014-blindsight",
+      "quoted_anchor": "local processing can remain without ordinary visual awareness",
+      "nn_expr": "sambandha(v1_lesion,local_processing_without_visual_awareness)",
+      "parse_status": "parsed",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "V1 lesion blindsight",
+        "hetu": "limited visual discrimination can survive without ordinary visual awareness",
+        "sadhya": "brain-role theories must distinguish information availability from manifest content",
+        "vyapti": "Where damage removes awareness while preserving limited discrimination, the explanatory target is the transformation of access/availability, not a simple production verdict."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:brain-as-interface-generative-model",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "weak",
+          "reason": "Blindsight has multiple interpretations and may involve residual or degraded awareness in some cases."
+        }
+      ],
+      "falsifier": "Robust evidence shows blindsight performance is fully explained by residual conscious vision or response bias rather than dissociated processing."
+    },
+    {
+      "claim_id": "cl:pmc-v1-awareness-conduit-boundary",
+      "source_span_id": "span:v1-awareness-conduit-boundary",
+      "quoted_anchor": "V1 may be conduit rather than direct awareness substrate",
+      "nn_expr": "prasanga(v1_lesion_proves_visual_awareness_generation)",
+      "parse_status": "parsed",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "V1 lesion interpretation",
+        "hetu": "the evidence permits conduit and direct-generator readings",
+        "sadhya": "lesion evidence should be represented as mechanism pressure with a metaphysical boundary",
+        "vyapti": "If the same lesion pattern is compatible with multiple mechanistic interpretations, the engine must keep the crux open rather than treating the lesion as decisive."
+      },
+      "argument_role": "boundary",
+      "targets": [
+        "cand:brain-as-interface-generative-model",
+        "cand:brain-as-appearance-only",
+        "crux:neural-correlation-direction"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [
+        {
+          "type": "asiddha",
+          "severity": "moderate",
+          "reason": "The move from focal lesion dependence to direct generation of awareness is under-established."
+        }
+      ],
+      "falsifier": "Convergent lesion, stimulation, and recovery evidence shows V1 is uniquely necessary as the direct generator of visual awareness rather than a major input pathway."
+    },
+    {
+      "claim_id": "cl:parvizi-damasio-brainstem-coma-arousal",
+      "source_span_id": "span:parvizi-damasio-2003-brainstem-coma",
+      "quoted_anchor": "upper pontine lesions can cause coma",
+      "nn_expr": "sambandha(brainstem_tegmentum_lesion,coma)",
+      "parse_status": "parsed",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "nyaya_reading": {
+        "paksa": "brainstem tegmental injury",
+        "hetu": "specific lesions are associated with loss of consciousness level",
+        "sadhya": "brain-role theories must explain arousal-level dependence as well as content transformation",
+        "vyapti": "Where localized injury reliably disrupts consciousness level, a viable nonproduction account must supply an operational dependence relation rather than a loose receiver analogy."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-interface-generative-model",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Large lesion-network studies fail to associate brainstem/arousal-network damage with impaired consciousness level after controlling for systemic injury severity."
+    },
+    {
+      "claim_id": "cl:edlow-doc-recovery-network-boundary",
+      "source_span_id": "span:edlow-2021-doc-recovery",
+      "quoted_anchor": "preserved brain networks can reveal covert consciousness",
+      "nn_expr": "sambandha(preserved_brain_networks,covert_consciousness_recovery)",
+      "parse_status": "parsed",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "disorders-of-consciousness recovery",
+        "hetu": "covert consciousness and recovery can depend on preserved or reactivated networks",
+        "sadhya": "lesion evidence should be modeled as network-level constraint rather than single-region proof",
+        "vyapti": "Where preserved network structure predicts covert consciousness or recovery, the brain-role question concerns dynamic organization and intervention response, not merely local damage."
+      },
+      "argument_role": "support_with_risk",
+      "targets": [
+        "cand:brain-as-interface-generative-model",
+        "cand:brain-as-appearance-only",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [
+        {
+          "type": "asiddha",
+          "severity": "weak",
+          "reason": "Network preservation predicts clinical recovery but does not identify the metaphysical ground of consciousness."
+        }
+      ],
+      "falsifier": "Covert consciousness and recovery predictions show no robust relation to preserved or reactivated neural networks in high-quality prospective cohorts."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:farah-feinberg-lesion-supports-interface-content",
+      "source": "cl:farah-feinberg-brain-damage-dissociations",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "supports",
+      "strength": 0.46,
+      "rationale": "Clinical dissociations favor accounts with content-specific transformation machinery."
+    },
+    {
+      "edge_id": "edge:farah-feinberg-lesion-supports-damage-crux",
+      "source": "cl:farah-feinberg-brain-damage-dissociations",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.5,
+      "rationale": "The crux becomes sharper because lesion syndromes split processing, report, awareness, and content."
+    },
+    {
+      "edge_id": "edge:silvanto-blindsight-supports-interface-access",
+      "source": "cl:silvanto-blindsight-local-global-dissociation",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "supports",
+      "strength": 0.38,
+      "rationale": "Local/global processing distinctions fit interface-style access and availability accounts."
+    },
+    {
+      "edge_id": "edge:silvanto-blindsight-keeps-filter-live",
+      "source": "cl:silvanto-blindsight-local-global-dissociation",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.22,
+      "rationale": "A filter account can survive if it makes filtering operational as access or availability restriction."
+    },
+    {
+      "edge_id": "edge:v1-boundary-attacks-production-overclaim",
+      "source": "cl:pmc-v1-awareness-conduit-boundary",
+      "target": "crux:neural-correlation-direction",
+      "edge_type": "outside_formal",
+      "strength": 0.34,
+      "rationale": "V1 lesion data constrains neural mechanism but does not force a direct-generation reading."
+    },
+    {
+      "edge_id": "edge:brainstem-coma-supports-interface-arousal",
+      "source": "cl:parvizi-damasio-brainstem-coma-arousal",
+      "target": "cand:brain-as-interface-generative-model",
+      "edge_type": "supports",
+      "strength": 0.54,
+      "rationale": "Arousal-level dependence is strong empirical pressure for a brain-role mechanism."
+    },
+    {
+      "edge_id": "edge:brainstem-coma-pressures-filter-mechanism",
+      "source": "cl:parvizi-damasio-brainstem-coma-arousal",
+      "target": "cand:brain-as-filter",
+      "edge_type": "attacks",
+      "strength": 0.2,
+      "rationale": "Filter views must explain why specific brainstem damage removes wakeful manifestation instead of merely changing contents.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:doc-recovery-pressures-appearance-only",
+      "source": "cl:edlow-doc-recovery-network-boundary",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "attacks",
+      "strength": 0.18,
+      "rationale": "Appearance-only views must explain why neural network preservation has clinical predictive power.",
+      "targets_core_commitment": false
+    },
+    {
+      "edge_id": "edge:doc-recovery-keeps-lesion-crux-open",
+      "source": "cl:edlow-doc-recovery-network-boundary",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.36,
+      "rationale": "Recovery and covert consciousness show that lesion evidence is network-sensitive and cannot be reduced to simple local destruction."
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:lesion-neuroscience-to-filter:arousal-mechanism-gap",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "Direct lesion evidence pressures filter accounts to specify how arousal-level dependence and content-specific losses arise under a nonproduction model.",
+      "pressure_type": "arousal_mechanism_gap",
+      "target_response_required": "State an operational filter prediction that distinguishes loss of content, loss of access, and loss of arousal without mapping kañcukas one-to-one onto brain regions.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:farah-feinberg-brain-damage-dissociations",
+        "cl:parvizi-damasio-brainstem-coma-arousal"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ]
+    }
+  ],
+  "state_of_play_delta": {
+    "brain_as_interface": "Strengthened locally because lesion syndromes and arousal-level injuries demand mechanism-shaped neural dependence explanations.",
+    "brain_as_filter": "Remains live but is more pressured: the filter relation must explain focal content losses and brainstem arousal dependence without staying at metaphor level.",
+    "brain_as_appearance_only": "Remains live only with a stronger account of why lesion/network appearances retain predictive and interventional utility.",
+    "current_best_answer": "Direct lesion evidence strengthens brain as generative model / interface as the strongest local empirical candidate, while keeping the production/filter/appearance metaphysical crux open.",
+    "open_cruxes": [
+      "crux:brain-damage-transformation",
+      "crux:filter-mechanism-requirement",
+      "crux:neural-correlation-direction"
+    ]
+  },
+  "next_work": [
+    "Create a filter-theory response packet that gives operational predictions for content, access, and arousal losses.",
+    "Separate focal content lesions from arousal-level lesions in a future benchmark dimension.",
+    "Add a radical-idealist response to lesion predictive utility rather than scoring appearance-only from neuroscience alone."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p16",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p16",
+ "title": "kramastotra — kram-p16",
+ "kind": "entailment",
+ "question": "kram-p16–p20 — dissolution and the three powers",
+ "issue": "Derived from L2 text (no argmap). ## kram-p16–p20 — dissolution and the three powers\nReleased, things-portion, outside extreme tasteless, when there you, by rush, raktimayatā; then red goddess, your all-things, indeed me, by action-raktāpāna-course-made gathering, make red. Outside-conduct abandoning, consciousness-ground dwelling, to dwell, when things-difference showing, waveless, stability-lost; of maintenance dissolution, goddess, your, maintenance-of-saṃsāra, my, always dissolve. World-dissolution wishing, by own-rush, own-",
+ "premises": [
+  {
+   "text": "bahir vṛttiṃ hātuṃ citibhuvam udārāṃ nivasituṃ yadā bhāvābhedaṃ prathayasi vinaṣṭormicapalaḥ | sthiter nāśaṃ devī kalayati tadā sā tava vibho sthiteḥ sāṃsārikyāḥ kalayatu vināśaṃ mama sadā",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "kram-p16–p20 — dissolution and the three powers",
+  "passage_id": "kramastotra:kram-p16"
+ },
+ "unresolved": "",
+ "argument_text": "## kram-p16–p20 — dissolution and the three powers\nReleased, things-portion, outside extreme tasteless, when there you, by rush, raktimayatā; then red goddess, your all-things, indeed me, by action-raktāpāna-course-made gathering, make red. Outside-conduct abandoning, consciousness-ground dwelling, to dwell, when things-difference showing, waveless, stability-lost; of maintenance dissolution, goddess, your, maintenance-of-saṃsāra, my, always dissolve. World-dissolution wishing, by own-rush, own-doubt-fear-named procedure then prohibition teaching; Yama created thus, then again doubt dissolving, great-goddess, that my world-fear she dissolve. Dissolved doubt-mass, instantly, full, Lord, power, all-knowable-host swallowing, by enjoyment-rush, Bhairava, dissolution-named, my heart, difference-portion, strike. Thus by goddesses, instantly, difference-power melted, thought-life-breath, shining, mother-standing, enough; hence dissolution-portion, own-heart reflected, standing, blissful, she be, goddess, my, death-dissolution-maker.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p16",
+ "sanskrit": "bahir vṛttiṃ hātuṃ citibhuvam udārāṃ nivasituṃ yadā bhāvābhedaṃ prathayasi vinaṣṭormicapalaḥ | sthiter nāśaṃ devī kalayati tadā sā tava vibho sthiteḥ sāṃsārikyāḥ kalayatu vināśaṃ mama sadā",
+ "license": "CC BY-NC-SA 4.0"
+}

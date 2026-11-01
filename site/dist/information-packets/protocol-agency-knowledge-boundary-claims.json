@@ -1,0 +1,96 @@
+{
+  "packet_id": "ip:protocol-agency-knowledge-boundary",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:protocol-agency-knowledge-boundary",
+    "title": "Claims: The filter account (Trika ka\u00f1cuka ontology) treats agency-li",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-27",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:kalavidya-categorical-vs-graded-distinction",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-kancuka-panchaka",
+      "source_span": {
+        "locator": "Tantr\u0101loka, K\u0101\u00f1cuka-pa\u00f1caka section: kal\u0101 limits universal agency (kart\u1e5btva) to limited efficacy; vidy\u0101 limits universal knowledge (j\u00f1\u0101natva) to limited cognition \u2014 described as distinct restriction axes, not as variations of a single parameter",
+        "quote": "The Trika ka\u00f1cuka ontology specifies kal\u0101 (agency-limitation) and vidy\u0101 (knowled"
+      },
+      "claim_text": "The Trika ka\u00f1cuka ontology specifies kal\u0101 (agency-limitation) and vidy\u0101 (knowledge-limitation) as categorically distinct orthogonal limitation dimensions, contra the Predictive Processing framework which models both agency and knowledge effects as graded variations in precision-weighting of prediction error. This generates testably different experimental predictions at the agency/knowledge boundary.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-filter",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(kalavidya_categorical_vs_graded_distinction,target)",
+      "hetu": "The six ka\u00f1cukas (kal\u0101, vidy\u0101, r\u0101ga, niyati, k\u0101la, m\u0101y\u0101) are described in Tantr\u0101loka as orthogonal limitation dimensions each constraining a distinct aspect of universal consciousness. If they were merely parametric variations of a single restriction mechanism, their distinctions would dissolve under factorial experimental manipulation that independently modulates agency and knowledge.",
+      "sadhya": "Independent factorial manipulation of agency and knowledge will produce dissociable behavioural signatures \u2014 agency effects on intentional binding and sense-of-causality without corresponding shifts in metacognitive efficiency, knowledge effects on metacognitive efficiency without corresponding sense-of-causality shifts \u2014 that cannot be captured by a single latent precision parameter within standard PP models.",
+      "vyapti_statement": "If kal\u0101 and vidy\u0101 are categorically distinct limitation dimensions (orthogonal restriction axes in ka\u00f1cuka ontology), then factorial manipulation of agency and knowledge should produce qualitatively distinct patterns of behavioural dissociation (main effects on different readouts, significant interaction term), whereas PP predicts that both manipulations modulate a unified precision-weighting parameter producing additive effects on whichever readout most sensitively indexes precision, with no residual variance requiring qualitatively distinct dimensions.",
+      "vyapti_confidence": 0.55,
+      "log_bayes_factor": 0.35,
+      "w_rel": 0.7,
+      "w_map": 0.6,
+      "w_aux": 0.6,
+      "falsifier": {
+        "type": "formal",
+        "condition": "All phenomenological and behavioural variance from a 2\u00d72 agency \u00d7 knowledge factorial design is adequately captured by a single latent dimension corresponding to precision-weighted prediction error, with no evidence of categorical boundaries between agency-dominant and knowledge-dominant conditions as determined by Bayesian model comparison (\u0394LOO-IC < 2 favouring the single-parameter model over a two-parameter categorical model), or the interaction term of the 2\u00d72 ANOVA falls below \u03b7\u00b2 = 0.06 with adequate power (N \u2265 64, 1\u2212\u03b2 = 0.80).",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-kancuka-panchaka."
+    },
+    {
+      "claim_id": "cl:agency-knowledge-factorial-protocol-specification",
+      "source_type": "primary_text",
+      "source_id": "doi:10.33735/phimisci.2020.II.64",
+      "source_span": {
+        "locator": "PP/active inference framework: agency beliefs correspond to precision of action-outcome predictions, knowledge beliefs to precision of perceptual/sensory priors \u2014 both modelled as precision-weighting on prediction error, a graded parameter that does not posit categorical boundaries between agency and knowledge domains",
+        "quote": "The Agency-Knowledge Dissociation Task (AKDT) \u2014 a 2\u00d72 within-subjects factorial "
+      },
+      "claim_text": "The Agency-Knowledge Dissociation Task (AKDT) \u2014 a 2\u00d72 within-subjects factorial design independently manipulating agency via action-outcome contingency (75% vs 25%) and knowledge via visual cue validity (80% vs 55%), with intentional binding magnitude and metacognitive efficiency (meta-d\u2032) as dual readouts, analysed by both frequentist ANOVA and Bayesian model comparison \u2014 provides a feasible and pre-registration-ready protocol for testing the categorical vs graded distinction at the agency/knowledge boundary.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-filter",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(agency_knowledge_factorial_protocol_specification,target)",
+      "hetu": "Standard PP models treat both agency (sense of control) and knowledge (perceptual certainty) as expressions of precision weighting on prediction error \u2014 the same computational parameter with different contextual applications. If they are categorically distinct dimensions (as per ka\u00f1cuka ontology), independently manipulating each while holding the other constant should produce dissociable effects beyond what a single precision parameter can capture, and this is testable with existing behavioural paradigms (intentional binding for agency, cue validity for perceptual precision) within a single factorial design.",
+      "sadhya": "The AKDT can distinguish categorical from graded accounts with N \u2265 64 participants, \u03b1 = 0.05, 1\u2212\u03b2 = 0.80 for the interaction term (anticipated f = 0.25), using meta-d\u2032 as the shared behavioural readout and \u0394LOO-IC decision thresholds for Bayesian model comparison (single-parameter PP model vs two-parameter categorical model), with pre-registered stopping rules for each outcome.",
+      "vyapti_statement": "If a 2\u00d72 factorial design with independent agency and knowledge manipulations (both converging on a shared behavioural readout in meta-d\u2032) produces a significant interaction or dissociable main-effect patterns that require a two-parameter categorical model (\u0394LOO-IC > 6) over a single-parameter graded model (\u0394LOO-IC < 2), this supports the ka\u00f1cuka filter account's claim that agency-limitation and knowledge-limitation are distinct metaphysical dimensions. If the single-parameter model fits equivalently or better (\u0394LOO-IC < 2), the PP graded-precision account is supported and the categorical claim is weakened.",
+      "vyapti_confidence": 0.5,
+      "log_bayes_factor": 0.25,
+      "w_rel": 0.7,
+      "w_map": 0.6,
+      "w_aux": 0.6,
+      "falsifier": {
+        "type": "formal",
+        "condition": "The agency manipulation (75% vs 25% contingency) fails to produce a measurable shift in intentional binding magnitude under the specified parameters, rendering the agency factor ineffective and the factorial design degenerate. Or: the best-fitting Bayesian model across all participants is the single-parameter model (\u0394LOO-IC < 2 relative to the two-parameter alternative), and the ANOVA interaction term is non-significant (\u03b7\u00b2 < 0.06, p > 0.05). Or: meta-d\u2032 proves insensitive to the knowledge manipulation under the 80/55% cue validity contrast, requiring a different readout that breaks the shared-measurement-space requirement.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from doi:10.33735/phimisci.2020.II.64."
+    }
+  ]
+}

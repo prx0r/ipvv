@@ -1,0 +1,347 @@
+{
+  "packet_id": "ip:q17-brain-role-web-claims",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "web_scholarly:q17-brain-role",
+    "title": "Paper-grounded claims for Q17: If consciousness is fundamental, what is the brain doing?",
+    "author": "Codex research pass",
+    "external_sources": [
+      {
+        "source_id": "pubmed:24033505",
+        "title": "Neural correlates of nondual awareness in meditation",
+        "author": "Zoran Josipovic",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24033505/",
+        "doi": "10.1111/nyas.12261",
+        "source_quality": "peer_reviewed_empirical_review"
+      },
+      {
+        "source_id": "doi:10.33735/phimisci.2020.II.64",
+        "title": "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
+        "author": "Jakob Hohwy and Anil Seth",
+        "url": "https://research.monash.edu/en/publications/predictive-processing-as-a-systematic-basis-for-identifying-the-n/",
+        "doi": "10.33735/phimisci.2020.II.64",
+        "source_quality": "peer_reviewed_theoretical_neuroscience"
+      },
+      {
+        "source_id": "doi:10.1080/17588928.2013.877880",
+        "title": "A predictive processing theory of sensorimotor contingencies: explaining the puzzle of perceptual presence and its absence in synesthesia",
+        "author": "Anil K. Seth",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24446823/",
+        "doi": "10.1080/17588928.2013.877880",
+        "source_quality": "peer_reviewed_theoretical_neuroscience"
+      },
+      {
+        "source_id": "doi:10.53765/20512201.32.11.159",
+        "title": "The Brain as a Filter: Introducing a Quantum Ground into Integrated Information Theory",
+        "author": "George R. Williams",
+        "url": "https://philpapers.org/rec/WILTBA-16",
+        "doi": "10.53765/20512201.32.11.159",
+        "source_quality": "peer_reviewed_philosophical_speculation"
+      },
+      {
+        "source_id": "doi:10.1111/nous.12552",
+        "title": "Predictive processing's flirt with transcendental idealism",
+        "author": "Tobias Schlicht",
+        "url": "https://doi.org/10.1111/nous.12552",
+        "doi": "10.1111/nous.12552",
+        "source_quality": "peer_reviewed_philosophy"
+      }
+    ],
+    "tradition_scope": "cross_disciplinary_consciousness_science"
+  },
+  "target_question_id": "q:brain-if-consciousness-fundamental",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-26",
+  "status": "web_scholarly_reviewed",
+  "claims": [
+    {
+      "claim_id": "cl:josipovic-nda-intrinsic-extrinsic-network-correlates",
+      "source_type": "peer_reviewed_empirical_review",
+      "source_id": "pubmed:24033505",
+      "source_span": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24033505/",
+        "locator": "abstract",
+        "quote": "influence of NDA on anticorrelated intrinsic and extrinsic networks"
+      },
+      "claim_text": "Nondual awareness practice is reported as modulating anticorrelated intrinsic and extrinsic brain networks, so nondual phenomenology is not currently independent of neural organization.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:neural-correlation-direction",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "nondual_neuroscience",
+      "paradigm": "contemplative_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "nn_expr": "sambandha(nondual_awareness,brain_network_modulation)",
+      "hetu": "reported nondual awareness is associated with network-level neural modulation",
+      "sadhya": "a consciousness-first view must explain lawful brain-experience coupling",
+      "vyapti_statement": "Where a phenomenological state has reliable neural modulation, a viable theory must explain the direction and specificity of that coupling.",
+      "vyapti_confidence": 0.66,
+      "log_bayes_factor": 0.34,
+      "w_rel": 0.78,
+      "w_map": 0.68,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Replicated nondual-awareness protocols under adequate controls show no reliable change in intrinsic/extrinsic network dynamics.",
+        "status": "untested"
+      },
+      "reasoning": "This supports the interface/generative-model candidate because it demands a lawful mapping between phenomenology and neural organization. It does not establish that the brain produces consciousness."
+    },
+    {
+      "claim_id": "cl:josipovic-nda-precuneus-minimal-content",
+      "source_type": "peer_reviewed_empirical_review",
+      "source_id": "pubmed:24033505",
+      "source_span": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24033505/",
+        "locator": "abstract",
+        "quote": "precuneus network as the putative neural correlate of the experience of consciousness-as-such"
+      },
+      "claim_text": "Preliminary data links minimized phenomenal content in nondual awareness to precuneus-network involvement.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:brain-damage-transformation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "nondual_neuroscience",
+      "paradigm": "contemplative_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "nn_expr": "sambandha(minimized_phenomenal_content,precuneus_network)",
+      "hetu": "minimal-content reports are linked to a specific neural network candidate",
+      "sadhya": "brain-role theories need lesion- and modulation-sensitive predictions",
+      "vyapti_statement": "Where specific content-minimization phenomenology maps to a specific neural network, theories should generate network-specific predictions.",
+      "vyapti_confidence": 0.54,
+      "log_bayes_factor": 0.22,
+      "w_rel": 0.72,
+      "w_map": 0.56,
+      "w_aux": 0.62,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Higher-powered studies find that minimized-content nondual awareness has no reproducible relation to precuneus-network dynamics.",
+        "status": "untested"
+      },
+      "reasoning": "Because the source frames the data as preliminary, the claim is useful pressure but capped. It should not defeat filter or appearance-only views."
+    },
+    {
+      "claim_id": "cl:hohwy-seth-pp-ncc-principled-foundation",
+      "source_type": "peer_reviewed_theoretical_neuroscience",
+      "source_id": "doi:10.33735/phimisci.2020.II.64",
+      "source_span": {
+        "url": "https://research.monash.edu/en/publications/predictive-processing-as-a-systematic-basis-for-identifying-the-n/",
+        "locator": "abstract",
+        "quote": "systematic, principled foundation"
+      },
+      "claim_text": "Predictive processing offers a principled way to map neural substrates to phenomenological structure in the search for neural correlates of consciousness.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:filter-mechanism-requirement",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:neural-correlation-direction",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "predictive_processing",
+      "paradigm": "predictive_processing",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nn_expr": "vyapti(predictive_processing,neural_phenomenological_mapping)",
+      "hetu": "predictive processing specifies mechanisms for expectation, error, and content-structure",
+      "sadhya": "brain-as-interface has the best current mechanistic bridge to neuroscience",
+      "vyapti_statement": "Where a theory gives detailed neural-phenomenological mappings, it better answers the mechanism crux than a merely analogical filter account.",
+      "vyapti_confidence": 0.78,
+      "log_bayes_factor": 0.48,
+      "w_rel": 0.84,
+      "w_map": 0.78,
+      "w_aux": 0.8,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Predictive-processing models fail to generate distinctive, reproducible mappings between neural dynamics and phenomenological structure beyond post-hoc description.",
+        "status": "untested"
+      },
+      "reasoning": "This is the strongest local support for the interface candidate, while remaining a claim about explanatory mapping rather than metaphysical production."
+    },
+    {
+      "claim_id": "cl:hohwy-seth-pp-not-consciousness-theory",
+      "source_type": "peer_reviewed_theoretical_neuroscience",
+      "source_id": "doi:10.33735/phimisci.2020.II.64",
+      "source_span": {
+        "url": "https://research.monash.edu/en/publications/predictive-processing-as-a-systematic-basis-for-identifying-the-n/",
+        "locator": "abstract",
+        "quote": "not itself a theory of consciousness"
+      },
+      "claim_text": "Predictive processing is not itself a theory of consciousness, so it cannot by itself decide whether consciousness is produced, filtered, or intrinsically present.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:neural-correlation-direction",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "predictive_processing",
+      "paradigm": "predictive_processing",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(predictive_processing_implies_metaphysical_verdict)",
+      "hetu": "predictive processing is offered as a framework for NCC search rather than a full metaphysics of consciousness",
+      "sadhya": "metaphysical overclaims from PP should be gated as outside-formal",
+      "vyapti_statement": "If a source explicitly brackets consciousness theory, then using it as a final metaphysical verdict commits overreach.",
+      "vyapti_confidence": 0.82,
+      "log_bayes_factor": 0.18,
+      "w_rel": 0.74,
+      "w_map": 0.82,
+      "w_aux": 0.8,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the predictive-processing framework entails one metaphysical answer to consciousness rather than only constraining NCC research.",
+        "status": "untested"
+      },
+      "reasoning": "This is a boundary claim. It prevents the engine from treating PP support as proof that the brain generates consciousness."
+    },
+    {
+      "claim_id": "cl:seth-presence-sensorimotor-predictive",
+      "source_type": "peer_reviewed_theoretical_neuroscience",
+      "source_id": "doi:10.1080/17588928.2013.877880",
+      "source_span": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24446823/",
+        "locator": "abstract",
+        "quote": "perceptual presence and its absence in synesthesia"
+      },
+      "claim_text": "Predictive processing can model perceptual presence and absence through sensorimotor contingencies, giving the brain-as-interface candidate a content-level mechanism.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:brain-damage-transformation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "predictive_processing",
+      "paradigm": "predictive_processing",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(sensorimotor_contingencies,perceptual_presence)",
+      "hetu": "presence/absence phenomena can be modeled by predictive sensorimotor structure",
+      "sadhya": "changes in neural generative structure can explain precise changes in appearing",
+      "vyapti_statement": "Where a model explains content-specific presence and absence, it addresses the precision demanded by brain-damage and modulation cases.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.38,
+      "w_rel": 0.76,
+      "w_map": 0.72,
+      "w_aux": 0.76,
+      "falsifier": {
+        "type": "empirical",
+        "condition": "Presence/absence phenomena are better predicted by a non-generative account with less ad hoc machinery.",
+        "status": "untested"
+      },
+      "reasoning": "This strengthens the interface account at the content-structure level while still not explaining manifestness itself."
+    },
+    {
+      "claim_id": "cl:williams-filter-iit-intrinsic-aspect",
+      "source_type": "peer_reviewed_philosophical_speculation",
+      "source_id": "doi:10.53765/20512201.32.11.159",
+      "source_span": {
+        "url": "https://philpapers.org/rec/WILTBA-16",
+        "locator": "abstract",
+        "quote": "supplement IIT's purely structural framework with an intrinsic aspect"
+      },
+      "claim_text": "A contemporary filter account can be built by supplementing IIT's structural framework with an intrinsic aspect that grounds conscious experience.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-filter",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:filter-mechanism-requirement",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "filter_iit_russellian",
+      "paradigm": "iiti_russellian_filter",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(iit_structure,intrinsic_aspect)",
+      "hetu": "IIT can be supplemented with Russellian intrinsic nature",
+      "sadhya": "filter theory has a possible mechanism-shaped research programme",
+      "vyapti_statement": "Where a filter account connects to a formal consciousness framework, it gains mechanism pressure but remains speculative until operationalized.",
+      "vyapti_confidence": 0.46,
+      "log_bayes_factor": 0.24,
+      "w_rel": 0.68,
+      "w_map": 0.5,
+      "w_aux": 0.52,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the intrinsic-aspect supplement makes no testable difference to IIT predictions or cannot distinguish filtering from production.",
+        "status": "untested"
+      },
+      "reasoning": "This keeps filter theory live but capped: it is closer to a programme sketch than an empirically discriminating mechanism."
+    },
+    {
+      "claim_id": "cl:schlicht-pp-transcendental-idealism-risk",
+      "source_type": "peer_reviewed_philosophy",
+      "source_id": "doi:10.1111/nous.12552",
+      "source_span": {
+        "url": "https://doi.org/10.1111/nous.12552",
+        "locator": "abstract",
+        "quote": "experiential content as the brain's currently best hypothesis"
+      },
+      "claim_text": "Predictive-processing descriptions of experience as the brain's best hypothesis can drift toward transcendental idealism and create tensions with naturalistic ambitions.",
+      "targets": [
+        {
+          "target_id": "cand:brain-as-interface-generative-model",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:brain-as-appearance-only",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:neural-correlation-direction",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "predictive_processing_critique",
+      "paradigm": "philosophy_of_cognitive_science",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "prasanga(predictive_processing_transcendental_idealism)",
+      "hetu": "best-hypothesis framing separates experienced world from world as it is",
+      "sadhya": "interface models need an explicit realism/idealism boundary condition",
+      "vyapti_statement": "If PP is interpreted as limiting access to appearances only, it supports appearance-oriented readings while pressuring naturalistic PP completeness.",
+      "vyapti_confidence": 0.62,
+      "log_bayes_factor": 0.26,
+      "w_rel": 0.7,
+      "w_map": 0.64,
+      "w_aux": 0.74,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show a PP interpretation that preserves realism, naturalism, and explanatory completeness without treating experience as appearance-only access.",
+        "status": "untested"
+      },
+      "reasoning": "This adds bidirectional pressure: it shows why PP is attractive to idealists, but also why PP cannot settle the idealist question without further commitments."
+    }
+  ]
+}

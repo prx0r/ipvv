@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p07",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p07",
+ "title": "isvarasiddhi — isva-p07",
+ "kind": "entailment",
+ "question": "isva-p07 — close",
+ "issue": "Derived from L2 text (no argmap). ## isva-p07 — close\n**SUMMARY.** Palāyate daivahatasya sanmaṇiḥ — flees, of god-struck, good gem. Bhāti vahnir niśīthe — shines, fire, at night.\n\n**FUNCTION.** Closes with imagery.\n\n**KEY TERMS.** daivahata (god-struck), sanmaṇi (good gem), vahni (fire), niśītha (night).\n\n**LOCAL CONTEXT.** Closes the text; follows p04–p06.\n\n**EXPLANATION.** The passage moves in one step. Close: flees, of god-struck, good gem; shines, fire, at night.\n\n**BOUNDARY / OPEN.** None major. Verses are terse; L2 expands",
+ "premises": [
+  {
+   "text": "palāyate daivahatasya sanmaṇiḥ bhāti vahnirniśīthe",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "isva-p07 — close",
+  "passage_id": "isvarasiddhi:isva-p07"
+ },
+ "unresolved": "",
+ "argument_text": "## isva-p07 — close\n**SUMMARY.** Palāyate daivahatasya sanmaṇiḥ — flees, of god-struck, good gem. Bhāti vahnir niśīthe — shines, fire, at night.\n\n**FUNCTION.** Closes with imagery.\n\n**KEY TERMS.** daivahata (god-struck), sanmaṇi (good gem), vahni (fire), niśītha (night).\n\n**LOCAL CONTEXT.** Closes the text; follows p04–p06.\n\n**EXPLANATION.** The passage moves in one step. Close: flees, of god-struck, good gem; shines, fire, at night.\n\n**BOUNDARY / OPEN.** None major. Verses are terse; L2 expands them.\n\n**RELATED.** A21 (prāmāṇya), spans TS1.55–1.56.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p07",
+ "sanskrit": "palāyate daivahatasya sanmaṇiḥ bhāti vahnirniśīthe",
+ "license": "CC BY-NC 4.0"
+}

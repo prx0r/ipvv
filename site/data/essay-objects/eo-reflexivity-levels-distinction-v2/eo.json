@@ -1,0 +1,162 @@
+{
+  "eo_id": "eo:reflexivity-levels-distinction-v2",
+  "schema_version": 2,
+  "title": "Abhinavagupta and Dignāga may be compatible at different levels: vyavahāra vs paramārtha",
+  "status": "draft",
+  "question": {
+    "question_id": "q:reflexivity-intrinsic-or-constructed",
+    "tension_point": "Does Abhinavagupta's crystal argument refute Dignāga's svasaṃvitti, or do they operate at different explanatory levels (empirical cognition vs ultimate nature)?",
+    "why_it_matters": "If they're compatible at different levels, the reflexivity debate is not a zero-sum competition between traditions but a domain-mapping problem: each account describes a different layer of the same phenomenon.",
+    "resolution_level": "philological"
+  },
+  "syllogism": {
+    "pratijna": {
+      "proposition": "Abhinavagupta's svasaṃvedana and Dignāga's svasaṃvitti are not directly competing claims — they describe self-awareness at different levels: Dignāga at the level of conditioned cognition (vyavahāra), Abhinavagupta at the level of the nature of consciousness itself (paramārtha).",
+      "what_it_claims": "The crystal argument refutes the view that consciousness could be without self-awareness. Dignāga holds that cognition IS self-aware (it has two appearances). So the crystal argument's target is not Dignāga's actual position but a weaker formulation where cognition lacks self-awareness entirely. Abhinavagupta implicitly accepts this — he doesn't reject Buddhist epistemology at its own level, but recontextualizes it within Pratyabhijñā's broader framework."
+    },
+    "hetu": {
+      "evidence": [
+        {
+          "claim": "Dignāga PS(V) 1.9ab: 'Cognition arises with two appearances: self-appearance and object-appearance. The self-awareness of this cognition is the result.' Self-awareness is invariable in every cognition.",
+          "pramana": "sabda",
+          "source_id": "text:coseru-consciousness-causality",
+          "target": "cand:dharmakirti-conditioned-reflexivity"
+        },
+        {
+          "claim": "Abhinavagupta TĀ 1.7739: 'It is its own object of awareness and is self-luminous; it is not an object of a means of knowledge that is other than its own self-awareness.' Self-awareness is the nature (svabhāva) of consciousness.",
+          "pramana": "sabda",
+          "source_id": "text:tantraloka-ahnika1",
+          "target": "cand:abh-vimarsa-intrinsic"
+        },
+        {
+          "claim": "Abhinavagupta on Dignāga's apoha (TĀ 1.17073-17087): 'This is accepted here as a method... the Pratyabhijñā also accepts the existence of this cognitive process, which it understands in the ambit of its own system.' He doesn't reject Buddhist epistemology; he recontextualizes it.",
+          "pramana": "sabda",
+          "source_id": "text:tantraloka-ahnika1",
+          "target": "cand:abh-vimarsa-intrinsic"
+        },
+        {
+          "claim": "The crystal argument (TĀ 4): Without vimarśa, consciousness would be insentient like a crystal. This refutes the view that consciousness could be without self-awareness — a view Dignāga does not hold.",
+          "pramana": "anumana",
+          "source_id": "text:tantraloka-ahnika4",
+          "target": "cand:abh-vimarsa-intrinsic"
+        }
+      ],
+      "source_ids": [
+        "text:coseru-consciousness-causality",
+        "text:tantraloka-ahnika1",
+        "text:tantraloka-ahnika4"
+      ]
+    },
+    "udaharana": {
+      "examples": [
+        {
+          "scenario": "Dignāga says every cognition has two aspects (self-appearance + object-appearance). Abhinavagupta says consciousness is inherently self-aware. Both affirm that experience includes self-awareness — they disagree on whether this self-awareness is produced (phala) or intrinsic (svabhāva).",
+          "what_it_shows": "The disagreement is not about whether self-awareness exists, but about its ontological status: conditioned or unconditioned."
+        },
+        {
+          "scenario": "Abhinavagupta explicitly accepts apoha as a valid description of conceptual determination (TĀ 1.17077). He says the Pratyabhijñā 'accepts this in the ambit of its own system.'",
+          "what_it_shows": "He's not rejecting Buddhist epistemology; he's locating it within a broader framework where consciousness's self-manifestation is the ultimate context."
+        },
+        {
+          "scenario": "The crystal argument says 'without vimarśa, consciousness would be insentient like a crystal.' Dignāga agrees — cognition IS self-aware. The target of the argument is anyone (e.g., the Mīmāṃsaka or the Cārvāka) who denies self-awareness to cognition entirely.",
+          "what_it_shows": "The crystal argument's target may not be Dignāga at all, but a position that neither Abhinavagupta nor Dignāga accepts."
+        }
+      ]
+    },
+    "upanaya": {
+      "application": "The level distinction (vyavahāra vs paramārtha) resolves the apparent contradiction between the two traditions on self-awareness. Dignāga describes how cognition operates at the empirical level — every cognition has self-awareness as its result. Abhinavagupta describes what consciousness ultimately is — self-luminous awareness that is not produced by anything. These are not competing claims about the same phenomenon; they are claims about different layers of the same phenomenon.",
+      "cruxes": [
+        "Does the empirical analysis of cognition constrain what can be said about the ultimate nature of consciousness?",
+        "Is the self-luminous nature of consciousness directly evident in every cognition, or is it an inference beyond what cognition presents?",
+        "Does Abhinavagupta's 'recontextualization' of Buddhist epistemology preserve or distort the original claims?"
+      ]
+    },
+    "nigamana": {
+      "best_current_answer": "The two traditions are compatible at different explanatory levels. The crystal argument does not refute Dignāga's svasaṃvitti because Dignāga already holds that cognition is self-aware. Abhinavagupta's system can absorb Buddhist epistemology as a description of conditioned cognition while maintaining that the ultimate nature of consciousness is unconditioned self-luminosity.",
+      "status": "structurally_suggestive",
+      "scope": "Philological: the two accounts are compatible at different levels. Metaphysical: the level distinction itself may be contested."
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "cand:level-distinction-reconciliation",
+      "name": "Level distinction: the traditions are compatible",
+      "tradition": "cross_tradition",
+      "position": "Abhinavagupta and Dignāga describe different layers of the same phenomenon. The crystal argument targets a position neither holds. The apparent conflict dissolves when the explanatory levels are distinguished.",
+      "proponent": "Hermes/Codex analysis",
+      "source_ids": ["text:tantraloka-ahnika1", "text:coseru-consciousness-causality"],
+      "hard_to_vary_core": [
+        "Dignāga holds cognition is self-aware (two appearances)",
+        "Abhinavagupta accepts apoha as valid at its own level",
+        "The crystal argument refutes absence of self-awareness, not a particular account of it"
+      ],
+      "current_problems": [
+        "Abhinavagupta might not accept the level distinction as a genuine reconciliation",
+        "Dignāga might reject any inference from conditioned cognition to unconditioned consciousness",
+        "The vyavahāra/paramārtha distinction itself may be contested between traditions"
+      ],
+      "falsifiers": [
+        "A passage in the Tantraloka where Abhinavagupta explicitly rejects svasaṃvitti as a valid account even at the empirical level",
+        "A passage in Dignāga where he explicitly denies that consciousness could be self-luminous at any level"
+      ],
+      "status": "live"
+    },
+    {
+      "candidate_id": "cand:genuine-disagreement",
+      "name": "Genuine disagreement: the empirical constrains the ultimate",
+      "tradition": "cross_tradition",
+      "position": "The level distinction is artificial. Dignāga's analysis shows that what we call 'consciousness' is always cognition-with-two-appearances — there is no evidence for an unconditioned self-luminous ground beyond this. The burden of proof is on Abhinavagupta to show that the empirical analysis is incomplete.",
+      "proponent": "Hermes/Codex analysis",
+      "source_ids": ["text:coseru-consciousness-causality"],
+      "hard_to_vary_core": [
+        "Analysis of cognition reveals only cognition-with-two-appearances",
+        "No inference from conditioned cognition to unconditioned ground is valid without additional evidence"
+      ],
+      "current_problems": [
+        "Can the Buddhist account explain the sense of continuous self-presence across cognitive moments?",
+        "Does the phenomenological evidence support the claim that cognition is always dual-aspect?"
+      ],
+      "falsifiers": [
+        "A demonstration that cognition presents itself as self-luminous in a way that exceeds the dual-aspect model"
+      ],
+      "status": "live"
+    }
+  ],
+  "state_of_play": {
+    "summary": "The level-distinction finding opens a new phase of the enquiry. The crystal argument doesn't refute Dignāga — they operate at different levels. But this raises a new question: does the level distinction resolve the disagreement or merely relocate it?",
+    "what_survives": "Both accounts of self-awareness survive — Dignāga's svasaṃvitti as phala and Abhinavagupta's svasaṃvedana as svabhāva. They may be compatible at different levels.",
+    "what_is_weakened": "The framing of the debate as a zero-sum competition is weakened. The choice is not 'which tradition is right' but 'which level of analysis is appropriate for which question.'",
+    "what_would_change_our_mind": "New textual evidence that Abhinavagupta explicitly rejected svasaṃvitti, or that Dignāga explicitly denied self-luminosity at any level, would break the level-distinction finding.",
+    "open_cruxes": [
+      "Does the empirical analysis of cognition constrain what can be said about the ultimate?",
+      "Is the self-luminous nature directly evident or inferential?",
+      "Does Abhinavagupta's 'recontextualization' preserve or distort Buddhist epistemology?"
+    ],
+    "next_tests": [
+      "Search Tantraloka Ahnika 1 for direct engagement with Dignāga's svasaṃvitti (not just apoha)",
+      "Search Dignāga's Pramāṇasamuccaya for any statement on self-luminosity or its denial",
+      "Check whether the Kāmikāgama passage (TĀ 1.7739) is Abhinavagupta's own view or a quotation he's interpreting"
+    ],
+    "implications": [
+      {
+        "condition": "If the level distinction holds",
+        "consequence": "The reflexivity debate reframes from 'who wins?' to 'how do the levels relate?'"
+      },
+      {
+        "condition": "If Abhinavagupta is found to have explicitly rejected svasaṃvitti",
+        "consequence": "Reconciliation fails; genuine disagreement remains"
+      }
+    ]
+  },
+  "provenance": {
+    "parent_ros": [],
+    "parent_dossier": "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+    "created_by": "agent/research",
+    "last_updated": "2026-07-26",
+    "parent_eo": "eo:reflexivity-structural-local-v1",
+    "supporting_artifacts": [
+      "content/information-packets/trika-vimarsa-manifestness-claims.json",
+      "content/information-packets/buddhist-response-crystal-argument-claims.json"
+    ]
+  }
+}

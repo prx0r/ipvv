@@ -1,0 +1,237 @@
+{
+  "packet_id": "ip:dharmakirti-pv3-reflexivity",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "sanskritree:ground_truth:dharmakirti_claims",
+    "title": "Dharmakirti PV III Ground Truth Claims",
+    "author": "Dharmakirti",
+    "source_files": [
+      "/mnt/HC_Volume_106427611/sanskritree/ground_truth/dharmakirti_claims.json",
+      "/mnt/HC_Volume_106427611/sanskritree/proof_engine/phase1_dharmakirti.py"
+    ],
+    "external_sources": [
+      {
+        "source_id": "sep:dharmakirti:apoha",
+        "title": "Dharmakirti",
+        "url": "https://plato.stanford.edu/archives/spr2026/entries/dharmakiirti/",
+        "section": "2.2 Aboutness: the theory of apoha",
+        "source_quality": "scholarly_secondary"
+      },
+      {
+        "source_id": "routledge:apoha:2023",
+        "title": "Apoha",
+        "url": "https://www.rep.routledge.com/articles/thematic/apoha/v-1",
+        "doi": "10.4324/9780415249126-ZB002R1-1",
+        "source_quality": "scholarly_secondary"
+      }
+    ],
+    "tradition_scope": "dharmakirti_buddhist"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-26",
+  "status": "draft_reviewed_from_sanskritree_ground_truth",
+  "claims": [
+    {
+      "claim_id": "cl:dharmakirti-pratyaksa-kalpanapodha",
+      "source_type": "sanskritree_ground_truth",
+      "source_id": "sanskritree:phase1_dharmakirti:pv3-3",
+      "source_span": {
+        "file": "/mnt/HC_Volume_106427611/sanskritree/proof_engine/phase1_dharmakirti.py",
+        "locator": "PHASE1_TERMS[pratyaksa]",
+        "quote": "pratyaksa (perception) of particulars (svalaksana) is free from conceptual construction (kalpanapodha)"
+      },
+      "claim_text": "Perception of particulars is free from conceptual construction; reflexive or recognitional structure must not be smuggled into bare perception as a conceptual owner-substance.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:recognition-requires-self-manifestation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nn_expr": "vyapti(pratyaksa,not_kalpana)",
+      "hetu": "direct perception is defined as kalpanapodha",
+      "sadhya": "bare cognition does not require conceptual self-ownership",
+      "vyapti_statement": "If perception is defined as free from conceptual construction, then a theory of cognition may resist importing a constructed self or universal subject into perceptual givenness.",
+      "vyapti_confidence": 0.66,
+      "log_bayes_factor": 0.32,
+      "w_rel": 0.78,
+      "w_map": 0.58,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that Dharmakirti's kalpanapodha definition logically entails intrinsic self-manifestation or an enduring owner-subject.",
+        "status": "untested"
+      },
+      "reasoning": "This is a textual/formal axiom in Sanskritree, not a Lean-proved theorem. It supports the Buddhist candidate by blocking a quick move from perception to owner-substance."
+    },
+    {
+      "claim_id": "cl:dharmakirti-svalaksana-ineffable-particular",
+      "source_type": "sanskritree_ground_truth",
+      "source_id": "sanskritree:ground_truth:dharmakirti_claims",
+      "source_span": {
+        "file": "/mnt/HC_Volume_106427611/sanskritree/ground_truth/dharmakirti_claims.json",
+        "locator": "claims[id=svalaksana]",
+        "quote": "The particular is the ineffable object of perception"
+      },
+      "claim_text": "The directly perceived particular is ineffable and pre-conceptual; conceptual identity is not the same as perceptual givenness.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:no-self-target",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(svalaksana,pratyaksa)",
+      "hetu": "svalaksana is the direct pre-conceptual object",
+      "sadhya": "identity/self claims are downstream constructions",
+      "vyapti_statement": "If particulars are directly given only pre-conceptually, then stable self-identity claims require additional constructive explanation.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.28,
+      "w_rel": 0.72,
+      "w_map": 0.62,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the direct particular itself contains a stable self-identity relation rather than only serving as a pre-conceptual object.",
+        "status": "untested"
+      },
+      "reasoning": "This gives the Dharmakirti candidate a source-backed route to no-self pressure without denying experience."
+    },
+    {
+      "claim_id": "cl:dharmakirti-arthakriya-causal-efficacy",
+      "source_type": "sanskritree_ground_truth",
+      "source_id": "sanskritree:ground_truth:dharmakirti_claims",
+      "source_span": {
+        "file": "/mnt/HC_Volume_106427611/sanskritree/ground_truth/dharmakirti_claims.json",
+        "locator": "claims[id=arthakriya]",
+        "quote": "x exists iff x has causal efficacy"
+      },
+      "claim_text": "Existence is tracked by causal efficacy; explanatory burden shifts from hidden essence to what cognition and objects do.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nn_expr": "vyapti(existence,arthakriya)",
+      "hetu": "to be is to have causal efficacy",
+      "sadhya": "cognition can be evaluated functionally rather than through substance metaphysics",
+      "vyapti_statement": "If being is tied to causal efficacy, then a cognition theory can ask what reflexivity does before positing what substance owns it.",
+      "vyapti_confidence": 0.74,
+      "log_bayes_factor": 0.3,
+      "w_rel": 0.7,
+      "w_map": 0.6,
+      "w_aux": 0.72,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show a reflexivity phenomenon that cannot be given any causal/functional role but still must be counted as established within the Dharmakirti framework.",
+        "status": "untested"
+      },
+      "reasoning": "This supports a functional no-self interpretation. It is not enough by itself to explain manifestness."
+    },
+    {
+      "claim_id": "cl:dharmakirti-pramana-arthakriya",
+      "source_type": "sanskritree_phase1",
+      "source_id": "sanskritree:phase1_dharmakirti:pramana",
+      "source_span": {
+        "file": "/mnt/HC_Volume_106427611/sanskritree/proof_engine/phase1_dharmakirti.py",
+        "locator": "PHASE1_TERMS[pramana]",
+        "quote": "Pramana (Dharmakirti): valid cognition defined by arthakriya of its object"
+      },
+      "claim_text": "Valid cognition is tied to successful causal engagement with its object, not to disclosure by a permanent subject.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "formal",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(pramana,arthakriya)",
+      "hetu": "valid cognition is defined through successful object-directed efficacy",
+      "sadhya": "validity does not require intrinsic self-manifesting subjecthood",
+      "vyapti_statement": "If pramana is grounded in successful object-directed efficacy, then epistemic validity can be reconstructed without invoking an enduring owner-subject.",
+      "vyapti_confidence": 0.62,
+      "log_bayes_factor": 0.22,
+      "w_rel": 0.65,
+      "w_map": 0.55,
+      "w_aux": 0.68,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that successful cognition is unintelligible unless cognition is intrinsically self-manifesting in Abhinavagupta's stronger sense.",
+        "status": "untested"
+      },
+      "reasoning": "Sanskritree flags this as coherentist/circular, so the claim is useful but capped."
+    },
+    {
+      "claim_id": "cl:dharmakirti-apoha-exclusion-no-universal",
+      "source_type": "scholarly_secondary",
+      "source_id": "sep:dharmakirti:apoha",
+      "source_span": {
+        "url": "https://plato.stanford.edu/archives/spr2026/entries/dharmakiirti/",
+        "locator": "section 2.2.2 Dharmakirti's causal version of apoha",
+        "quote": "anyapoha is there in the theory essentially to answer metaphysical worries"
+      },
+      "claim_text": "Dharmakirti's apoha explains conceptual grouping by exclusion without positing real universals; it is tied to causal chains from particulars through perception, thought, and word-use.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "bridge:nanavira-difference-dharmakirti-apoha",
+          "target_type": "bridge"
+        },
+        {
+          "target_id": "crux:no-self-target",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "dharmakirti_buddhist",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "vyapti(apoha,not_universal)",
+      "hetu": "conceptual grouping proceeds by exclusion of what is other",
+      "sadhya": "determination does not require a real universal or self-substance",
+      "vyapti_statement": "If conceptual determination works by excluding what is other, then shared identity can be explained without a real universal common essence.",
+      "vyapti_confidence": 0.76,
+      "log_bayes_factor": 0.36,
+      "w_rel": 0.82,
+      "w_map": 0.68,
+      "w_aux": 0.74,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that apoha requires a real universal or entails Nanavira-style transformation rather than only semantic/cognitive exclusion.",
+        "status": "untested"
+      },
+      "reasoning": "This is the missing first-class apoha claim. It strengthens Dharmakirti's no-universal account while keeping the Nanavira bridge at OVERLAPS because causal/semantic exclusion is not identical to Nanavira's transformation operation."
+    }
+  ]
+}

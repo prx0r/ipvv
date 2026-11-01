@@ -1,0 +1,171 @@
+{
+  "packet_id": "ip:perspectival-partition-sheaf-gluing",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "sanskritree:truth:checkpointcharlie",
+    "title": "Checkpoint 10 — From Universal Consciousness to the Law of Perspectival Partition",
+    "author": "Codex",
+    "source_files": [
+      "/root/projects/sanskritree/truth/checkpointcharlie"
+    ],
+    "external_sources": [
+      {
+        "source_id": "arxiv:1102.0264",
+        "title": "The Sheaf-Theoretic Structure of Non-Locality and Contextuality",
+        "source_quality": "scholarly_primary",
+        "url": "https://arxiv.org/abs/1102.0264"
+      },
+      {
+        "source_id": "sep:unity-of-consciousness",
+        "title": "The Unity of Consciousness",
+        "source_quality": "scholarly_secondary",
+        "url": "https://plato.stanford.edu/archives/fall2025/entries/consciousness-unity/"
+      }
+    ],
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:perspectival-partition",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft",
+  "claims": [
+    {
+      "claim_id": "cl:sheaf-local-coherence-not-global",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:IX",
+      "source_span": {
+        "locator": "Checkpoint 9 — Local agreement does not guarantee a global subject",
+        "quote": "local coherence does not entail global unifiability"
+      },
+      "claim_text": "In the Abramsky-Brandenburger sheaf-theoretic treatment of contextuality, locally consistent data need not admit a global section — contextuality corresponds to an obstruction to global gluing. This provides an exact formal warning for consciousness: the fact that all local phenomenal fields share the same formal character (reflexivity, first-personality) does not entail that they are restrictions of one globally experienced field. Informational privacy means local sections lack phenomenal overlaps: Uᵢ ∩ Uⱼ ≈ ∅ at the level of direct co-consciousness.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:naturalist-emergent",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:local-to-global-gluing",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "analytic_philosophy",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "virodha(local_agreement,global_section)",
+      "hetu": "locally coherent phenomenal fields lack phenomenal overlap",
+      "sadhya": "shared character does not establish one global field",
+      "vyapti_statement": "If local data sections agree where they overlap but the overlaps are empty, no global section can be inferred — the result is underdetermined.",
+      "vyapti_confidence": 0.8,
+      "log_bayes_factor": 0.6,
+      "w_rel": 0.85,
+      "w_map": 0.75,
+      "w_aux": 0.8,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that phenomenal fields DO overlap in a non-empty self-presence that constitutes a genuine global section, or that gluing does not require phenomenal overlap.",
+        "status": "untested"
+      },
+      "reasoning": "This is the formal core of Contention 6 from Checkpoint 10. The sheaf analogy does not prove anything about consciousness, but it supplies an exact formal warning: local coherence does not entail global unifiability. Pratyabhijñā's universalization claim requires a positive argument that all local fields are restrictions of one global field — not merely that they share a common character."
+    },
+    {
+      "claim_id": "cl:privacy-not-a-positive-boundary",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:XI",
+      "source_span": {
+        "locator": "Checkpoint 10 §XI — The absent-boundary argument has been surpassed",
+        "quote": "phenomenal separation need not appear as a positive boundary"
+      },
+      "claim_text": "Another person's experience is not ordinarily present as 'an experience located behind a wall.' It is simply absent. Therefore the Śaiva argument that 'every boundary appears within manifestation' cannot prove that subjects are not genuinely separate. Phenomenal exclusion may be privative: E(x,z) = ¬U(x,z). It need not be an object inside either field. Thus epistemic inclusion of every represented boundary does not eliminate unrepresented phenomenal non-co-presence.",
+      "targets": [
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:boundary-introspection-invalid",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "analytic_philosophy",
+      "evidence_dimension": "phenomenological",
+      "pramana": "pratyaksa",
+      "nn_expr": "sambandha(exclusion,absence_of_co-presence)",
+      "hetu": "other persons' experiences are not presented as bounded objects",
+      "sadhya": "phenomenal separation can be privative rather than positive",
+      "vyapti_statement": "If exclusion is merely the absence of co-presence, then the absence of a represented boundary does not entail the absence of separation.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.45,
+      "w_rel": 0.75,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "phenomenological",
+        "condition": "Show a case where phenomenal separation IS experienced as a positive boundary within the field, proving that all separation must appear as such.",
+        "status": "untested"
+      },
+      "reasoning": "This refutes the Śaiva argument that boundaries must appear within consciousness and therefore cannot separate subjects. If separation can be privative (simple absence), the argument collapses."
+    },
+    {
+      "claim_id": "cl:all-theories-same-gate",
+      "source_type": "comparative_analysis",
+      "source_id": "checkpointcharlie:XXVIII",
+      "source_span": {
+        "locator": "Checkpoint 10 §XXVIII — The exact surviving bind",
+        "quote": "Every theory reaches the same gate"
+      },
+      "claim_text": "Every major theory of consciousness converges on the same missing object: Λ, the law of perspectival partition. Naturalism must explain why nonphenomenal organization constitutes intrinsic co-manifestation. Pratyabhijñā must explain why unrestricted manifestation produces private exclusion profiles. Buddhism must explain why momentary events form one stream. Nyāya must explain why inherence makes qualities jointly manifest. Neutral monism must explain why one intrinsic-extrinsic structure maps to this domain rather than another. The universalization debate was a special case of this deeper problem.",
+      "targets": [
+        {
+          "target_id": "cand:naturalist-emergent",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:siva-decombination",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:buddhist-stream",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:nyaya-plural-substances",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:neutral-monist",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:the-law-lambda",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "comparative_philosophy",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nn_expr": "vyapti(every_theory,lambda_missing)",
+      "hetu": "all major theories can be expressed as requiring Λ but none supplies it",
+      "sadhya": "the partition problem is the common explanatory gap",
+      "vyapti_statement": "If every theory can be mapped to the schema {X → Λ → Dᵢ} where Λ is the partition function, and none can specify Λ, then Λ is the shared unsolved problem.",
+      "vyapti_confidence": 0.85,
+      "log_bayes_factor": 0.7,
+      "w_rel": 0.9,
+      "w_map": 0.8,
+      "w_aux": 0.85,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that some major theory of consciousness does not require a partition function to explain domain exclusivity, or has independently specified one.",
+        "status": "untested"
+      },
+      "reasoning": "This is the central theorem of Checkpoint 10. The project was about universalization, but that was a special case — Pratyabhijñā's version of the partition problem. The real finding is that ALL theories face the same gate."
+    }
+  ]
+}

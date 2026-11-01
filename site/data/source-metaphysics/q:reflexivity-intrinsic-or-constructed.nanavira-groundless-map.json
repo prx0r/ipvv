@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_packet_id": "ip:nanavira-groundless",
+  "claim_packet": "content/information-packets/nanavira-groundless-claims.json",
+  "generated_by": "codex_hermes_loop",
+  "source_role": "nanavira-groundless",
+  "candidate_under_test": "all",
+  "central_reading": "\u00d1\u0101\u1e47av\u012bra rejects both Dign\u0101ga's 'structure is self-grounding' and Abhinavagupta's 'awareness grounds the structure.' He offers a third position: the search for a ground IS the conceit 'I am' (asmim\u0101na). Reflexivity is groundless \u2014 consciousness is anidassana (non-indicative), pointing to no ground.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:nanavira-groundless-reflexivity",
+      "source_span_id": "span:nanavira-groundless-reflexivity",
+      "quoted_anchor": "\u00d1\u0101\u1e47av\u012bra's position on the self-grounding question: neither ",
+      "nn_expr": "sambandha(nanavira_groundless_reflexivity,target)",
+      "parse_status": "parsed",
+      "tradition_scope": "nanavira_phenomenology",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nyaya_reading": {
+        "paksa": "the self-grounding question is misposed ",
+        "hetu": "vi\u00f1\u00f1\u0101\u1e47a is negative as regards essence; the search for a ground is asmim\u0101na",
+        "sadhya": "the self-grounding question is misposed \u2014 reflexivity is groundless",
+        "vyapti": "If consciousness has no essence and points to no ground, then the question 'what"
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:nanavira-structural-reflexivity",
+        "cand:abh-vimarsa-intrinsic",
+        "cand:dharmakirti-conditioned-reflexivity"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show that \u00d1\u0101\u1e47av\u012bra's anidassana vi\u00f1\u00f1\u0101\u1e47a still presupposes a ground (e.g., the structure itself or the mere fact of presence), making his position a variant of Dign\u0101ga's self-grounding rather than a distinct third way."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:nanavira-groundless-reflexivity:support:cand-nanavira-structural-reflexivity",
+      "source_node_id": "cl:nanavira-groundless-reflexivity",
+      "target_node_id": "cand:nanavira-structural-reflexivity",
+      "edge_type": "support",
+      "strength": 0.8,
+      "relation_rationale": "Groundless reflexivity is \u00d1\u0101\u1e47av\u012bra's distinct position on the self-grounding question."
+    },
+    {
+      "edge_id": "edge:nanavira-groundless-reflexivity:attack:cand-abh-vimarsa-intrinsic",
+      "source_node_id": "cl:nanavira-groundless-reflexivity",
+      "target_node_id": "cand:abh-vimarsa-intrinsic",
+      "edge_type": "attack",
+      "strength": 0.55,
+      "relation_rationale": "If the search for a ground is asmim\u0101na, Abhinavagupta's vimar\u015ba-as-foundation is reframed as a subtle expression of the conceit 'I am.'"
+    },
+    {
+      "edge_id": "edge:nanavira-groundless-reflexivity:attack:cand-dharmakirti-conditioned-reflexivity",
+      "source_node_id": "cl:nanavira-groundless-reflexivity",
+      "target_node_id": "cand:dharmakirti-conditioned-reflexivity",
+      "edge_type": "attack",
+      "strength": 0.4,
+      "relation_rationale": "Dign\u0101ga's self-grounding structure is also a form of foundationalism that \u00d1\u0101\u1e47av\u012bra's groundless reflexivity rejects."
+    }
+  ],
+  "bridge_probe_logic": {},
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "current_best_answer": "\u00d1\u0101\u1e47av\u012bra rejects both Dign\u0101ga's 'structure is self-grounding' and Abhinavagupta's 'awareness grounds the structure.' He offers a third position: the search for a ground IS the conceit 'I am' (asmim\u0101na). Reflexivity is groundless \u2014 consciousness is anidassana (non-indicative), pointing to no ground.",
+    "next_tests": []
+  }
+}

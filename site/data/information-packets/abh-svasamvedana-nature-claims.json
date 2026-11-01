@@ -1,0 +1,57 @@
+{
+  "packet_id": "ip:abh-svasamvedana-nature",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-svasamvedana-nature",
+    "title": "Abhinavagupta: self-awareness is nature of consciousness, not result of cognition",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-svasamvedana-nature-not-phala",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika1",
+      "source_span": {
+        "locator": "Tantr\u0101loka 1, commentary on verse 59-60 (ahnika-01.txt:7739-7745)",
+        "quote": "svasa\u1e41vedya\u1e41 svaprak\u0101\u015bam na tu svasa\u1e41vedan\u0101nyapram\u0101\u1e47aprameyam"
+      },
+      "claim_text": "Self-awareness (svasa\u1e43vedana) is the nature (svabh\u0101va) of consciousness, not a result (phala) of cognition. Consciousness is self-luminous (svaprak\u0101\u015ba) and is its own object of awareness; it is not an object of a means of knowledge other than its own self-awareness. The Buddhist phala-model makes self-awareness dependent on cognition, contradicting its self-luminous nature.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(abh_svasamvedana_nature_not_phala,target)",
+      "hetu": "consciousness is self-luminous and its own object, not dependent on external means of knowledge",
+      "sadhya": "self-awareness is the nature of consciousness, not a produced result",
+      "vyapti_statement": "If consciousness is self-luminous and self-aware by nature, then self-awareness is its svabh\u0101va, not a phala of cognition.",
+      "vyapti_confidence": 0.8,
+      "log_bayes_factor": 0.42,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.74,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the Buddhist phala-model of svasa\u1e43vitti is compatible with svaprak\u0101\u015ba \u2014 that a result-of-cognition can also be the nature of consciousness without contradiction.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika1."
+    }
+  ]
+}

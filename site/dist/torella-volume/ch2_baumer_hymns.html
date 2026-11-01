@@ -1,0 +1,1339 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch2_baumer_hymns</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch2_baumer_hymns</h1><div class="skt"></div><div class="sub">4170 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch2_baumer_hymns.txt">source →</a></div><ul>
+<li>ṣam apy amr̥tāyate . . .</li>
+</ul>
+<ul>
+<li>ramādvaita in the Mystical Hymns</li>
+</ul>
+<ul>
+<li> the Śivastotrāvalī</li>
+</ul>
+<ul>
+<li>ttina Bäumer</li>
+</ul>
+<ul>
+<li>paladeva’s Śivastotrāvalī or collection of verses (muktaka) and hymns</li>
+<li>totra) is one of the most outstanding documents of mystical</li>
+<li>terature, not only in Sanskrit, but even in the context of mysticism</li>
+<li> any tradition. If Utpaladeva is the disciplined philosopher in his</li>
+<li>rikās and Siddhis, in these verses he enjoys the freedom of</li>
+<li>ontaneous expression of his most intimate experience and of his</li>
+<li>tense longing to be one with his Lord. If his bhakti is defined by his</li>
+<li>vaita, we could call the Stotrāvalī the laboratory of Recognition, a</li>
+<li>boratory in which he experiments with all the possible states of</li>
+<li>paration, union and the ever-achieved state of non-duality</li>
+<li>atatodita). The experiences he expresses in the Stotrāvalī are the</li>
+<li>econdition for his philosophy of Recognition:</li>
+</ul>
+<ul>
+<li>thaṁcid āsādya maheśvarasya dāsyam . . . — ĪPK I.1</li>
+</ul>
+<ul>
+<li>e purposeful vagueness and understatement of kathaṁcid undergoes all</li>
+<li>nds of variations in the Stotrāvalī. The humility expressed in dāsyam</li>
+<li>state of servanthood”) already shows the creative tension between</li>
+<li>akti and advaita that is so characteristic of Utpaladeva. And, as</li>
+<li>rella has pointed out, it is not only the recognition of the Lord</li>
+<li>ich is “the cause of the achievement of all spiritual wealth”</li>
+<li>amastasaṁpatsamavāptihetu), but also the state of servanthood of the</li>
+<li>rd (according to Abhinavagupta’s Vimarśinī). The other aspect of</li>
+<li>thaṁcid pointing to the importance of grace is already expressed in</li>
+<li>e Vr̥tti. All these aspects implied in the first kārikā will be fully</li>
+<li>folded in the Stotrāvalī.</li>
+</ul>
+<ul>
+<li> mentioned by Kṣemarāja in his Vivr̥ti, the collection of verses and</li>
+<li>e arrangement in twenty stotras is not the work of Utpaladeva but of</li>
+<li>s disciples, Śrī Rāma, ādityarāja and Śrī Viśvāvartta, who provided</li>
+<li>tles to the twenty stotras. He also mentions that only three hymns</li>
+<li>ve been composed by Utpala in the way they are handed down by</li>
+<li>adition: the Saṁgrahastotra, Jayastotra and Bhaktistotra (13, 14 and</li>
+<li>). Kṣemarāja mentions the same altruistic motif for their composition</li>
+<li> the first kārikā:</li>
+</ul>
+<ul>
+<li> order to bestow grace on those people who are eager to recognize</li>
+<li>eir own true nature (svaṁ rūpaṁ tathātvena parāmraṣṭum</li>
+<li>thijanānujighr̥kṣayā . . . , introductory part).</li>
+</ul>
+<ul>
+<li>d he calls Utpaladevācārya one who “has always the direct realization</li>
+<li> the supreme Lord as his own Self” (satatasākṣātkr̥ta svātma</li>
+<li>heśvaraḥ).</li>
+</ul>
+<ul>
+<li> the verses or hymns are called stotras, most of them do not conform</li>
+<li> the traditional style of stotra,1 and if they do, they not only</li>
+<li>aise the Lord, but, as in the very first verse of the entire text,</li>
+<li>ey also praise the bhaktas who have already achieved union with the</li>
+<li>rd and who do not need to practise meditation, japa, etc. (I.1). No</li>
+<li>nder, Kṣemarāja identifies their state with anupāya, the no-means, as</li>
+<li>pounded in the Tantrāloka (II). A similar praise is expressed to the</li>
+<li>votees “who in every state worship you always as having assumed the</li>
+<li>ture of all things — they indeed are my chosen deities”.2</li>
+</ul>
+<ul>
+<li>t the intention of this paper is not the literary form of the</li>
+<li>otrāvalī, nor a general survey, but an analysis of its content in</li>
+<li>gard to the topic of the overcoming of dualities and opposites in the</li>
+<li>ght of the experience of paramādvaita. Instead of finding a</li>
+<li>ntradiction between bhakti and advaita, it is, in the words of</li>
+<li>rella,</li>
+</ul>
+<ul>
+<li>e perspective of the paramādvaita, such an elevated viewpoint that it</li>
+<li>es not fear what is different from itself, and where the “higher” does</li>
+<li>t automatically cancel the “lower”. — ĪPK, Introduction, p. XXI</li>
+</ul>
+<ul>
+<li>rst I want to analyse a number of verses which describe opposites and</li>
+<li>eir overcoming in the mystical experience, belonging to different</li>
+<li>ntexts. We may start with a more philosophical verse:</li>
+</ul>
+<ul>
+<li>dasattvena bhāvānāṁ yuktā yā dvitayī gatiḥ ।</li>
+</ul>
+<ul>
+<li>m ullaṅghya tr̥tīyasmai namaś citrāya śambhave ।। — 2.1</li>
+</ul>
+<ul>
+<li>ere are two ways associated with existing things:</li>
+</ul>
+<ul>
+<li>ing and non-being.</li>
+</ul>
+<ul>
+<li>offer my homage to the wonderful Śambhu</li>
+</ul>
+<ul>
+<li>o transcends them, being the third.3</li>
+</ul>
+<ul>
+<li>va is praised as being beyond the duality of real and unreal, and</li>
+<li>nce as the “third” one, and he is wonderful on account of his</li>
+<li>anscending the two states.</li>
+</ul>
+<ul>
+<li> the same stotra he comes down to the level of experience from this</li>
+<li>ilosophical statement, by calling the fire of Śiva cool:</li>
+</ul>
+<ul>
+<li>ramāmr̥tasāndrāya śītalāya śivāgnaye ।</li>
+</ul>
+<ul>
+<li>smaicid viśvasaṁploṣaviṣamāya namo&#x27;stu te ।। — 2.3</li>
+</ul>
+<ul>
+<li>y you be glorified O Mild One,</li>
+</ul>
+<ul>
+<li>ooth and brimming with the finest nectar,</li>
+</ul>
+<ul>
+<li>fire of Śiva4 the cool one</li>
+</ul>
+<ul>
+<li>o burns away the entire universe.</li>
+</ul>
+<ul>
+<li> fact, the tone of this second stotra is one of the overcoming of</li>
+<li>posites:</li>
+</ul>
+<ul>
+<li>mastalakṣaṇāyoga eva yasyopalakṣaṇam।</li>
+</ul>
+<ul>
+<li>smai namo&#x27;stu devāya kasmaicid api śambhave ।। — 2.6</li>
+</ul>
+<ul>
+<li>y the Lord be glorified,</li>
+</ul>
+<ul>
+<li>e mysterious Śambhu</li>
+</ul>
+<ul>
+<li>ose only definition is that he is</li>
+</ul>
+<ul>
+<li>void of all definitions. — tr. Bailly</li>
+</ul>
+<ul>
+<li>ere is a whole series of praises to Śambhu as the coincidentia</li>
+<li>positorum, which leads up to verse 12:</li>
+</ul>
+<ul>
+<li>yāvine viśuddhāya guhyāya prakaṭātmane ।</li>
+</ul>
+<ul>
+<li>kṣmāya viśvarūpāya namaś citrāya śambhave ।।</li>
+</ul>
+<ul>
+<li>mage to the wondrous Śambhu,</li>
+</ul>
+<ul>
+<li>e Deluding One</li>
+</ul>
+<ul>
+<li>o is yet pure and clear;</li>
+</ul>
+<ul>
+<li>e Hidden One</li>
+</ul>
+<ul>
+<li>o has yet revealed himself;</li>
+</ul>
+<ul>
+<li>e subtle One</li>
+</ul>
+<ul>
+<li>ose form takes the form of the whole universe. — tr. Bailly</li>
+</ul>
+<ul>
+<li>t there are two verses which express affirmation, negation and their</li>
+<li>anscendence, in a kind of Nāgārjunian way. The first concerns the</li>
+<li>tinomy between Vedas and Āgamas:</li>
+</ul>
+<ul>
+<li>dāgamaviruddhāya vedāgamavidhāyine ।</li>
+</ul>
+<ul>
+<li>dāgamasatattvāya guhyāya svāmine namaḥ ।। — 2.7</li>
+</ul>
+<ul>
+<li>mage to the Lord, the mysterious One,</li>
+</ul>
+<ul>
+<li>o is opposed to the Vedas and Āgamas,</li>
+</ul>
+<ul>
+<li>o is the revealer of the Vedas and Āgamas,</li>
+</ul>
+<ul>
+<li>d who is the true essence of the Vedas and Āgamas.</li>
+</ul>
+<ul>
+<li>is shows both, his transcendence of all scriptures as well as their</li>
+<li>lativity in relation to their originator, as well as the relativity of</li>
+<li>e opposition of different schools and traditions.</li>
+</ul>
+<ul>
+<li>e same principle applies to the different schools of Tantrism:</li>
+</ul>
+<ul>
+<li>kṣiṇācārasārāya vāmācārābhilāṣiṇe ।</li>
+</ul>
+<ul>
+<li>rvācrāya śarvāya nirācārāya te namaḥ ।। — 2.19</li>
+</ul>
+<ul>
+<li>mage be to Śarva,</li>
+</ul>
+<ul>
+<li>e essence of the right-handed path</li>
+</ul>
+<ul>
+<li>e lover of the left-handed path,</li>
+</ul>
+<ul>
+<li>o belongs to all ways of practice</li>
+</ul>
+<ul>
+<li>d to none at all</li>
+</ul>
+<ul>
+<li>r: who transcends all traditions).</li>
+</ul>
+<ul>
+<li>e following verse concerns the opposition between saṁsāra and its</li>
+<li>anscendence:</li>
+</ul>
+<ul>
+<li>ṁsāraikanimittāya saṁsāraikavirodhine ।</li>
+</ul>
+<ul>
+<li>maḥ saṁsārarūpāya niḥsaṁsārāya śambhave । — 2.8</li>
+</ul>
+<ul>
+<li>ory be to Śambhu</li>
+</ul>
+<ul>
+<li>e sole cause of the world</li>
+</ul>
+<ul>
+<li>d its only destroyer,</li>
+</ul>
+<ul>
+<li>o has taken the form of the world</li>
+</ul>
+<ul>
+<li>d who transcends the world.</li>
+</ul>
+<ul>
+<li>re the opposites are saṁsāra and niḥsaṁsāra (unworldliness), which are</li>
+<li>sewhere taken as saṁsāra and mokṣa. What is a statement of Śiva being</li>
+<li>th opposites and transcending them is expressed as a process of</li>
+<li>ansformation in one of the key verses of Utpaladeva, describing the</li>
+<li>stical way of Śaṅkara:</li>
+</ul>
+<ul>
+<li>ḥkhāny api sukhāyante viṣam apy amr̥tāyate ।</li>
+</ul>
+<ul>
+<li>kṣāyate ca saṁsāro yatra mārgaḥ sa śāṅkaraḥ।। — 20.12</li>
+</ul>
+<ul>
+<li>ere even suffering is transformed into joy,</li>
+</ul>
+<ul>
+<li>ere even poison becomes nectar,</li>
+</ul>
+<ul>
+<li>ere the world itself is a way of liberation:</li>
+</ul>
+<ul>
+<li>ere is the way of Śiva</li>
+</ul>
+<ul>
+<li>r: this is the tradition of Śaivism).</li>
+</ul>
+<ul>
+<li>e conscious use of denominatives (sukhāyante, amr̥tāyate, mokṣāyate)</li>
+<li>ovides stress to this powerful statement, a kind of summary of the</li>
+<li>iva path. Kṣemarāja paraphrases mārga significantly by: paraṁ śāktaṁ</li>
+<li>dam (“the supreme state of Energyˮ) because it is Śakti who exercises</li>
+<li>r transforming power. The contrast of poison and nectar (viṣa and</li>
+<li>r̥ta) is one of the powerful metaphors in the Stotrāvalī, having the</li>
+<li>thical background of the churning of the milk ocean. This is alluded</li>
+<li> in a moving verse of the Saṁgrahastotra:</li>
+</ul>
+<ul>
+<li>ṇṭhakoṇaviniviṣṭam īśa te</li>
+</ul>
+<ul>
+<li>lakūṭamapi me mahāmr̥tam ।</li>
+</ul>
+<ul>
+<li>y upāttam amr̥taṁ bhavadvapur</li>
+</ul>
+<ul>
+<li>edavr̥tti yadi rocate na me ।। — 13.17</li>
+</ul>
+<ul>
+<li>en the deadly poison</li>
+</ul>
+<ul>
+<li>at rests in a corner of your throat, (O Lord,)</li>
+</ul>
+<ul>
+<li> supreme nectar to me.</li>
+</ul>
+<ul>
+<li>t even if I attain nectar,</li>
+</ul>
+<ul>
+<li>do not want it,</li>
+</ul>
+<ul>
+<li> it is separate from your body.</li>
+</ul>
+<ul>
+<li>is verse contains one way of interpreting the phrase viṣam apy</li>
+<li>r̥tāyate, the poison being the one associated with the Lord and hence</li>
+<li>ansformed as well as transforming (pain into joy).</li>
+</ul>
+<ul>
+<li>e ideal is not only transforming suffering into happiness, but</li>
+<li>aching a state of equality, equanimity or harmony (samatā) of both. It</li>
+<li> not achieved automatically but by an equalizing meditation. In a</li>
+<li>werful metaphor Utpaladeva compares this process to a devastating</li>
+<li>ood:</li>
+</ul>
+<ul>
+<li>rṣāṇām atha śokānāṁ sarveṣām plāvakaḥ samam ।</li>
+</ul>
+<ul>
+<li>avad-dhyānāmr̥tāpūr nimnānimnabhuvām iva ।। — 3.9</li>
+</ul>
+<ul>
+<li>ditation on you full of nectar</li>
+</ul>
+<ul>
+<li>kes all joys and sorrows equal</li>
+</ul>
+<ul>
+<li>ke a flood, levelling high and low lands.</li>
+</ul>
+<ul>
+<li> cannot be achieved by an ordinary meditation, but, as Kṣemarāja</li>
+<li>phasizes, by a state of absorption (samāveśa).</li>
+</ul>
+<ul>
+<li>e ideal of samatā is expressed by another cosmic metaphor: equinox</li>
+<li>iṣuvat, sometimes abhijit):</li>
+</ul>
+<ul>
+<li>aktānāṁ samatāsāraviṣuvatsamayaḥ sadā ।</li>
+</ul>
+<ul>
+<li>adbhāvarasapīyūṣarasenaiṣāṁ sadārcanam ।। — 17.5</li>
+</ul>
+<ul>
+<li>e time of the equinox,</li>
+</ul>
+<ul>
+<li>ose essence is equanimity,</li>
+</ul>
+<ul>
+<li> celebrated by the devotees continuously;</li>
+</ul>
+<ul>
+<li>r always does their worship consist</li>
+</ul>
+<ul>
+<li> the sweet bliss of your devotion. — tr. Bailly</li>
+</ul>
+<ul>
+<li>d yet, equanimity does not mean absence of emotions, on the contrary.</li>
+<li>paladeva’s bhakti is charged with emotions, often contrasting ones. In</li>
+<li>is respect he is completely in the tradition of Vijñāna-Bhairava,5</li>
+<li>anda-Kārikā6 and his own guru, Somānanda.</li>
+</ul>
+<ul>
+<li>e following verse contains a hint to some of the dhāraṇās of the</li>
+<li>jñāna-Bhairava:</li>
+</ul>
+<ul>
+<li>aharṣād vātha śokād vā yadi kuḍyādghaṭād api ।</li>
+</ul>
+<ul>
+<li>hyād athāntarādbhāvāt prakaṭībhava me prabho ।। — 5.10</li>
+</ul>
+<ul>
+<li>ether in great joy or in sorrow,</li>
+</ul>
+<ul>
+<li>om a wall or from an earthen pot,</li>
+</ul>
+<ul>
+<li>ether from external things or internal states —</li>
+</ul>
+<ul>
+<li>veal yourself, O Lord!</li>
+</ul>
+<ul>
+<li> is interesting to note that Kṣemarāja does not refer here to the</li>
+<li>jñāna-Bhairava7 to explain the wall and the earthen pot. He only</li>
+<li>mments on vā as meaning kutaścit sphuṭībhava (“manifest yourself from</li>
+<li>ereverˮ). The Stotrāvalī does not show many signs of a Tantric</li>
+<li>irituality, but in this verse the connection is clear. As in the</li>
+<li>jñāna-Bhairava, the experience of the Divine can happen either from</li>
+<li>ternal things or from inner states.</li>
+</ul>
+<ul>
+<li>e true devotees are given to strong emotions:</li>
+</ul>
+<ul>
+<li>danto vā hasanto vā tvām uccaiḥ pralapanty āmī ।</li>
+</ul>
+<ul>
+<li>aktāḥ stutipadoccāropacārāḥ pr̥thag eva te ।। — 15.3</li>
+</ul>
+<ul>
+<li>ether weeping or laughing,</li>
+</ul>
+<ul>
+<li>ey address you in loud, delirious speech.</li>
+</ul>
+<ul>
+<li>tering hymns of praise, the devoted</li>
+</ul>
+<ul>
+<li>e truly unique attendants. — tr. Bailly</li>
+</ul>
+<ul>
+<li>e devotee does not seek to avoid the emotions with a view to a state</li>
+<li> equanimity, on the contrary. In some of the most powerful verses</li>
+<li>paladeva prays for experiencing the extremes.</li>
+</ul>
+<ul>
+<li>aktikṣīvo &#x27;pi kupyeyaṁ bhavāyānuśayīya ca ।</li>
+</ul>
+<ul>
+<li>thā haseyaṁ rudyāṁ ca raṭeyaṁ ca śivety alam ।। — 16.7</li>
+</ul>
+<ul>
+<li>t me be enraged and yet</li>
+</ul>
+<ul>
+<li>mpassionate toward the world.</li>
+</ul>
+<ul>
+<li>d thus in the madness of devotion</li>
+</ul>
+<ul>
+<li>y I laugh and weep and chant</li>
+</ul>
+<ul>
+<li>va, thunderously. — tr. Bailly</li>
+</ul>
+<ul>
+<li>re the contrasting emotions are anger and compassion towards the</li>
+<li>rld. Utpaladeva throws to the winds even the ideal of equanimity</li>
+<li>amatā) and undistracted establishment in the Self (svastha).</li>
+</ul>
+<ul>
+<li>ṣamastho &#x27;pi svastho &#x27;pi rudann api hasann api ।</li>
+</ul>
+<ul>
+<li>mbhīro &#x27;pi vicitto &#x27;pi bhaveyaṁ bhaktitaḥ prabho ।। — 16.8</li>
+</ul>
+<ul>
+<li>t of Love, O Lord,</li>
+</ul>
+<ul>
+<li>t me be disturbed and yet at peace,</li>
+</ul>
+<ul>
+<li>eping or laughing,</li>
+</ul>
+<ul>
+<li> deep thought or distracted.</li>
+</ul>
+<ul>
+<li>ese two verses embracing the opposites are in a way summarized in the</li>
+<li>llowing:</li>
+</ul>
+<ul>
+<li>aktānāṁ nāsti saṁvedyaṁ tvadantar yadi vā bahiḥ ।</li>
+</ul>
+<ul>
+<li>ddharmā yatra na bhavān nirvikalpaḥ sthitaḥ svayam।। — 16.9</li>
+</ul>
+<ul>
+<li>r the devotees nothing else is to be known</li>
+</ul>
+<ul>
+<li>thin you or outside.</li>
+</ul>
+<ul>
+<li>r you are of the essence of consciousness</li>
+</ul>
+<ul>
+<li>tablished in your own thought-free state.</li>
+</ul>
+<ul>
+<li>re lies the justification for accepting all opposite states, because</li>
+<li>ch one shares in the pure Divine consciousness. Bhakti alone is the</li>
+<li>ndition for sharing in this all-inclusive and all-transcending</li>
+<li>nsciousness.8</li>
+</ul>
+<ul>
+<li>mbhu is praised as the very coincidentia oppositorum:</li>
+</ul>
+<ul>
+<li>maḥ satatabaddhāya nityanirmuktabhāgine ।</li>
+</ul>
+<ul>
+<li>ndhamokṣavihīnāya kasmaicid api śambhave ।। — 2.17</li>
+</ul>
+<ul>
+<li>mage be to Śambhu, who is ever bound,</li>
+</ul>
+<ul>
+<li>d who is eternally liberated,</li>
+</ul>
+<ul>
+<li>o is neither bondage nor liberation,</li>
+</ul>
+<ul>
+<li>cause he is indescribable.</li>
+</ul>
+<ul>
+<li>paladeva loves expressions of inexpressibility or indescribability,</li>
+<li>st like kathañcit and kasmaicit.</li>
+</ul>
+<ul>
+<li>e greatest opposition exists between the material, inert (jaḍa) and</li>
+<li>nscious reality (cit), corresponding also to subject and object</li>
+<li>edaka, vedya). But in the Lord even this pair of opposites is</li>
+<li>braced:</li>
+</ul>
+<ul>
+<li>ḍe jagati cidrūpaḥ kila vedye &#x27;pi vedakaḥ ।</li>
+</ul>
+<ul>
+<li>bhur mite ca yenāsi tena sarvottamo bhavān ।। — 3.20</li>
+</ul>
+<ul>
+<li> this unconscious world</li>
+</ul>
+<ul>
+<li>u are the form of consciousness.</li>
+</ul>
+<ul>
+<li>ong the knowable you are the knower.</li>
+</ul>
+<ul>
+<li>ong the limited you are all-pervasive,</li>
+</ul>
+<ul>
+<li>erefore you are the highest of all.</li>
+</ul>
+<ul>
+<li>is verse might well sum up the position of paramādvaita as defined by</li>
+<li>rella at the beginning. It is therefore no wonder that for the</li>
+<li>votees who are intoxicated by their love for the Lord, he is both,</li>
+<li>th form and formless, internal as well as external (16.22).</li>
+</ul>
+<ul>
+<li> the Lord is the union of opposites, his devotees can well realize him</li>
+<li> any opposite state:</li>
+</ul>
+<ul>
+<li>armādharmātmanor antaḥ kriyāyor jñānayos tathā ।</li>
+</ul>
+<ul>
+<li>khaduḥkhātmanor bhaktāḥ kimapy āsvādayanty aho ।। — 15.6</li>
+</ul>
+<ul>
+<li>tween activity and knowledge,</li>
+</ul>
+<ul>
+<li>ether righteous or unrighteous,</li>
+</ul>
+<ul>
+<li>ether full of happiness or suffering,</li>
+</ul>
+<ul>
+<li> the bhaktas taste something inexpressible.9</li>
+</ul>
+<ul>
+<li> course, the expression āsvādayanti is in tune with the sensible</li>
+<li>perience of the Lord, where Utpaladeva frequently uses the sense of</li>
+<li>ste, mostly connected with amr̥ta, sudhā, piyūṣa, etc. It is this</li>
+<li>nsible experience which embraces as well as transcends all opposites.</li>
+</ul>
+<ul>
+<li>wever, the mystic remains conscious of the contradictions experienced,</li>
+<li>en he uses the term virodharasika (attachment for contradictory</li>
+<li>jects), as in the following:</li>
+</ul>
+<ul>
+<li>a nu rāgādiṣu rāgaḥ kva ca haracaraṇāmbujeṣu rāgitvam ।</li>
+</ul>
+<ul>
+<li>thaṁ virodharasikaṁ bodhaya hitam amara me hr̥dayam ।। — 5.20</li>
+</ul>
+<ul>
+<li>at comparison is there between attachment for sense-objects</li>
+</ul>
+<ul>
+<li>d love for the lotus feet of Hara?</li>
+</ul>
+<ul>
+<li>us, O Immortal One, make me aware of contradictory tastes</li>
+</ul>
+<ul>
+<li>d awaken my heart to what is beneficial.10</li>
+</ul>
+<ul>
+<li>re it seems to be a matter of choice between two loves, but there is</li>
+<li>so a way of accepting and transforming the pair of attachment and</li>
+<li>ersion.</li>
+</ul>
+<ul>
+<li>veditam upādatsva rāgādi bhagavan mayā ।</li>
+</ul>
+<ul>
+<li>āya cāmr̥tīkr̥tya bhuṅkṣva bhaktajanaiḥ samam ।। — 5.13</li>
+</ul>
+<ul>
+<li>Lord! accept my offerings of attachment and aversion!</li>
+</ul>
+<ul>
+<li>ving received them and transformed them into immortal nectar,</li>
+</ul>
+<ul>
+<li>joy them together with your devotees.</li>
+</ul>
+<ul>
+<li>e metaphor of ritual offerings is here applied to the very disturbing</li>
+<li>rldly emotions which are divinized (“nectarized” in the words of Swami</li>
+<li>kshman Joo) and shared between the Lord and the devotees.</li>
+</ul>
+<ul>
+<li>e overcoming of opposites in the realm of mystical experience is also</li>
+<li>plied to time.</li>
+</ul>
+<ul>
+<li> tadā na sadā na caikadety api sā yatra na kāladhīr bhavet ।</li>
+</ul>
+<ul>
+<li>d idaṁ bhavadīyadarśanaṁ na ca nityaṁ na ca kathyate &#x27;nyathā ।। — 12.5</li>
+</ul>
+<ul>
+<li>ither “then” nor “always”</li>
+</ul>
+<ul>
+<li>r even “once”.</li>
+</ul>
+<ul>
+<li>ere no awareness of time exists</li>
+</ul>
+<ul>
+<li>at is verily your realization.</li>
+</ul>
+<ul>
+<li> can neither be called “eternal”</li>
+</ul>
+<ul>
+<li>r in any other way (i.e. temporal).</li>
+</ul>
+<ul>
+<li> a kind of Nāgārjunian negation of negation, any temporal category is</li>
+<li>cluded from the realm of mystical experience. This negation is so</li>
+<li>rceful because religious language again and again lands in the</li>
+<li>tegories of time and eternity.</li>
+</ul>
+<ul>
+<li>e richness of mystical experience contained in the verses quoted</li>
+<li>nnot be brought into any systematic order, but every one can</li>
+<li>timately be related to paramādvaita which includes as well as</li>
+<li>anscends all opposites. Apart from expressions related to the nature</li>
+<li> the Divine as containing all opposites, it is the mystical process</li>
+<li>at engages Utpaladeva. And in the final analysis, the greatest</li>
+<li>position which needs to be overcome is that between the limited ego</li>
+<li>d the Divine aham. Here, too, advaita is not the ending point but the</li>
+<li>arting point.</li>
+</ul>
+<ul>
+<li>tha lokābhimānānām apūrvaṁ tvaṁ nibandhanam ।</li>
+</ul>
+<ul>
+<li>hābhimānaḥ karhi syāṁ tvadbhaktirasapūritaḥ ।। — 9.13</li>
+</ul>
+<ul>
+<li>Lord! You are the sole cause</li>
+</ul>
+<ul>
+<li> all worldly egos —</li>
+</ul>
+<ul>
+<li>en shall I attain the great Ego</li>
+</ul>
+<ul>
+<li>lled with the bliss of your Love?</li>
+</ul>
+<ul>
+<li>e great abhimāna is nothing but the Divine I-consciousness without</li>
+<li>ich no individual ego could exist.</li>
+</ul>
+<ul>
+<li>paladeva also gives a grammatical justification to the pre-eminence of</li>
+<li>e first person, the Divine “I”:</li>
+</ul>
+<ul>
+<li>tamapuruṣo &#x27;nyo sti yuṣmaccheṣaviśeṣitaḥ ।</li>
+</ul>
+<ul>
+<li>am mahāpuruṣas tv eko niḥśeṣapuruṣāśrayaḥ ।। — 3.14</li>
+</ul>
+<ul>
+<li>e “first person”</li>
+</ul>
+<ul>
+<li> distinguished from the second person,</li>
+</ul>
+<ul>
+<li>d from the “third person” as well.</li>
+</ul>
+<ul>
+<li>u alone are the Great Person,</li>
+</ul>
+<ul>
+<li>e refuge of all persons.</li>
+</ul>
+<ul>
+<li>emarāja goes into the philosophical implications of this grammatical</li>
+<li>atement.</li>
+</ul>
+<ul>
+<li>me striking verses relate to the process of transformation which does</li>
+<li>volve the participation of the mystic.</li>
+</ul>
+<ul>
+<li> &#x27;vikalpam idam arthamaṇḍalam</li>
+</ul>
+<ul>
+<li>śyatīśa nikhilaṁ bhavadvapuḥ ।</li>
+</ul>
+<ul>
+<li>ātmapakṣaparipūrite jagat</li>
+</ul>
+<ul>
+<li>sya nityasukhinaḥ kuto bhayam ।। — 13.16</li>
+</ul>
+<ul>
+<li> who perceives this whole universe of objects</li>
+</ul>
+<ul>
+<li> a thought-free state as your divine body,</li>
+</ul>
+<ul>
+<li>d who fills the world with his own self —</li>
+</ul>
+<ul>
+<li> is ever blissful. Whence the fear?</li>
+</ul>
+<ul>
+<li>e process implied is a state of nirvikalpa which alone makes it</li>
+<li>ssible to experience the world as divine, but in a second (or third)</li>
+<li>ep to identify one’s self with this universal vision of the divine</li>
+<li>dy. The result is of course a blissful state free from fear.</li>
+<li>directly this experience contains not only advaita (between the</li>
+<li>iversal divine and the individual), but the coming together of all</li>
+<li>ree constituents of trika: śiva, śakti, nara (śakti being the</li>
+<li>iversal expansion).</li>
+</ul>
+<ul>
+<li>is verse expresses both an experience actually undergone by Utpaladeva</li>
+<li>d a practice of identification of the individual with the universal</li>
+<li>lf.</li>
+</ul>
+<ul>
+<li>e most extraordinary expression of a mystical experience — an</li>
+<li>perience of pratyabhijñā — as total identification with the Divine</li>
+<li>am is found in verse 5.15:</li>
+</ul>
+<ul>
+<li>tarbhakti-camatkāra-carvaṇāmīlitekṣaṇaḥ ।</li>
+</ul>
+<ul>
+<li>mo mahyaṁ śivāyeti pūjayan syāṁ tr̥ṇāny api ।।</li>
+</ul>
+<ul>
+<li>th my eyes closed</li>
+</ul>
+<ul>
+<li>lishing within the wonder of inner devotion,</li>
+</ul>
+<ul>
+<li>y I worship even the blades of grass thus:</li>
+</ul>
+<ul>
+<li>lory to Śiva, to myself”!</li>
+</ul>
+<ul>
+<li>e mantra namaḥ śivāya is applied to the mystic himself, as well as to</li>
+<li>e blades of grass in an ecstatic unity of all reality, the trika. The</li>
+<li>scription of the experience is based on the aesthetic enjoyment:</li>
+<li>matkāra, carvaṇā, transmuted into the inner devotion, as well as on</li>
+<li>e metaphor of worship with mantra. The philosophical implication is</li>
+<li>at there is no jaḍa, because even the blades of grass are suffused</li>
+<li>th consciousness. In this verse several levels of Utpaladeva’s</li>
+<li>sticism come together: the aesthetic, the bhakti, but all centred on</li>
+<li>e Divine “I”: namo mahyaṁ śivāya.</li>
+</ul>
+<ul>
+<li>om the extraordinary richness of Utpaladeva’s mystical hymns we have</li>
+<li>nsidered one central aspect which finds diverse expressions. The</li>
+<li>otrāvalī can in many ways be related to the philosophy of</li>
+<li>atyabhijñā, bathed in a spirit of bhakti, hence very different from</li>
+<li>hinavagupta. But this comparison is not my task here. At the end I</li>
+<li>ly want to throw light on the texts quoted from an analysis of</li>
+<li>stical language.</li>
+</ul>
+<ul>
+<li>am referring to two theories on mystical language which can well be</li>
+<li>plied to Utpaladeva. One question which arises while reading and</li>
+<li>stening to the Śivastotrāvalī is this: if these verses were expressed</li>
+<li> the author in a state of mystical intoxication (which he often refers</li>
+<li>) why do they also contain a number of stereotypes, traditional images</li>
+<li>d metaphors? First of all, the mystic cannot help but use language</li>
+<li>ich is also conventional (sāṅketika) and in a way unfit to the</li>
+<li>nguage-transcending experience.</li>
+</ul>
+<ul>
+<li>erre Hadot, great interpreter of Plotinus, has analysed mystical</li>
+<li>nguage and come to the following conclusion:</li>
+</ul>
+<ul>
+<li> is said — and rightly so — that one should not be misled by the</li>
+<li>nguage of the mystics. They, too, have their common places and their</li>
+<li>aditional images, in a word, their rhetoric . . . but the authentic</li>
+<li>perience gives a tone to the language which cannot deceive. . . .11</li>
+</ul>
+<ul>
+<li>e rhetoric and common places in the case of Utpaladeva are drawn from</li>
+<li>e world of ritual worship (pūjā, arcā), and from the devotion offered</li>
+<li> the guru or the deity by worshipping their lotus feet. All these</li>
+<li>cepted traditional images need to be interpreted in the light of the</li>
+<li>iginal experience. But, as Hadot says, the spontaneous experience</li>
+<li>nnot be overheard, it passes through even the conventional language</li>
+<li>s in the case of the last quoted verse).</li>
+</ul>
+<ul>
+<li>e mystic cannot help but use metaphors to express the inexpressible.</li>
+<li>ese metaphors are taken from the traditional background, but are</li>
+<li>nstantly in need to be transcended and made to explode. In another</li>
+<li>proach of interpreting mystical language, the expert on German</li>
+<li>sticism (Meister Eckhart in particular), Alois Haas, has taken up an</li>
+<li>pression coined by Hans Blumenberg, namely “explosive metaphors”.12</li>
+<li>is concept is applied mostly to the negative theology and mysticism of</li>
+<li>onysius Areopagite and other neo-Platonic mystics of the Christian</li>
+<li>adition, but it has universal implications. Mystical language being</li>
+</ul>
+<ul>
+<li>combination of the observable and more than observable. . . . By</li>
+<li>lowing the metaphor to deconstruct itself through paradox (I would</li>
+<li>d: and negation), it allows for the possibility of perceiving oneness</li>
+<li>d eternity. . . . (And) In the final analysis all metaphors can be</li>
+<li>garded as having an explosive effect.</li>
+</ul>
+<ul>
+<li>art. cit., p. 142</li>
+</ul>
+<ul>
+<li>e best illustration is a quotation from Meister Eckhart:</li>
+</ul>
+<ul>
+<li>have often said: The shell must break and whatever is inside must come</li>
+<li>rth; for if you want to have the nut, you must first crack the shell.</li>
+<li> the same way: if you want to find nature revealed, you must first</li>
+<li>ack all its parables, and the further you penetrate, the closer you</li>
+<li>ll get to true being. When the soul finds the One in which all is one,</li>
+<li>en it remains in this single Oneness.13</li>
+</ul>
+<ul>
+<li>paladeva uses another “explosive metaphor” where it is a question of</li>
+<li>eaking the shell:</li>
+</ul>
+<ul>
+<li>gādimayabhavāṇḍaka-</li>
+</ul>
+<ul>
+<li>ṭhitaṁ tvadbhaktibhāvanāmbikā tais taiḥ ।</li>
+</ul>
+<ul>
+<li>yāyayatu rasair māṁ</li>
+</ul>
+<ul>
+<li>avr̥ddhapakṣo yathā bhavāmi khagaḥ ।। — 7.4</li>
+</ul>
+<ul>
+<li>toss within the egg of the world</li>
+</ul>
+<ul>
+<li>nsisting of attachment (hatred, etc.).</li>
+</ul>
+<ul>
+<li>y the Mother, contemplative Love,</li>
+</ul>
+<ul>
+<li>urish me with sweet essence,</li>
+</ul>
+<ul>
+<li> that I grow into a bird</li>
+</ul>
+<ul>
+<li>th strong wings.</li>
+</ul>
+<ul>
+<li>is is one of the most powerful metaphors implying the breaking of the</li>
+<li>ell of worldly emotions and bondages in order to attain the freedom of</li>
+<li>beration. The word used for “bird” (khaga), also implies the movement</li>
+<li> the unlimited space of Consciousness (kha, cf. khecarī, khecara). The</li>
+<li>ndition for hatching this egg is not only bhakti, but bhakti-bhāvanā</li>
+<li>ich fulfils the role of the mother bird. A complex and multi-layered</li>
+<li>taphor.</li>
+</ul>
+<ul>
+<li>e theory of the “explosive metaphors” is precisely applicable in the</li>
+<li>se of the way Utpaladeva deals with opposites, first of all the one</li>
+<li>ven as the motto of this lecture: poison and nectar. He makes the</li>
+<li>nguage explode by negating them, transcending them, including and</li>
+<li>cepting them, and in this way revealing the inner core, the heart, the</li>
+<li>re consciousness, the divine body (vapus), and landing in the state of</li>
+<li>ramādvaita.</li>
+</ul>
+<ul>
+<li>ferences</li>
+</ul>
+<ul>
+<li>ārya Utpaladeva viracitā Śivastotrāvalī (mūlamātra), ed. Īśvarasvarūpa</li>
+<li>āmī Lakshman Joo, Srinagar: Ishvar Ashram Trust, 1997.</li>
+</ul>
+<ul>
+<li>illy, Constantina Rhodes, 1987, Shaiva Devotional Songs of Kashmir, a</li>
+<li>. and study of Utpaladeva’s Śivastotrāvalī, Albany: SUNY Press.</li>
+</ul>
+<ul>
+<li>e Īśvarapratyabhijñākārikā of Utpaladeva with the Author’s Vṛtti,</li>
+<li>itically edited and translated by Raffaele Torella, Delhi: Motilal</li>
+<li>narsidass, 1st edn., 1994 (3rd edn., 2013).</li>
+</ul>
+<ul>
+<li>vastotrāvalī of Utpaladeva: A Mystical Hymn of Kashmīr, Exposition by</li>
+<li>ami Lakshman Joo, New Delhi: D.K. Printworld, 2008.</li>
+</ul>
+<ul>
+<li>vastotrāvalī of Utpaladeva, Sanskrit text with Introduction, English</li>
+<li>. and Glossary, N.K. Kotru, Delhi: Motilal Banarsidass,1985.</li>
+</ul>
+<ul>
+<li>e Śivastotrāvalī of Utpaladevācārya, with the Sanskrit Commentary of</li>
+<li>emarāja, ed. with Hindi commentary by Rājānaka Lakṣmaṇa Varanasi:</li>
+<li>owkhambha Sanskrit Series Office, 1964 (2nd edn. 2008).</li>
+</ul>
+<ul>
+<li>andakārikās: The Divine Creative Pulsation, tr. Jaideva Singh, Delhi:</li>
+<li>tilal Banarsidass, 1st edn., 1980.</li>
+</ul>
+<ul>
+<li>e Stanzas on Vibration: The Spandakārikā with Four Commentaries, tr.</li>
+<li>rk S.G. Dyczkowski, Varanasi: Dilip Kumar Publishers, 1st Indian edn.,</li>
+<li>94.</li>
+</ul>
+<ul>
+<li>jñāna-Bhairava [VBh] with the Uddyota by Kṣemarāja up to verse 23 and</li>
+<li>th the Vivr̥ti by Śivopādhyāya thereafter, ed. M.R. Shastri, KSTS VIII,</li>
+<li>mbay, 1918.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>The Stavacintāmaṇi of Bhaṭṭa Nārāyaṇa is more in conformity with the</li>
+<li>mnic style.</li>
+</ul>
+<ul>
+<li>sarvadā sarvabhāveṣu yugapat-sarvarūpiṇam ।</li>
+</ul>
+<ul>
+<li>ām arcayanty aviśrāntaṁ ye mamaite ’dhidevatāḥ ।। — 17.3</li>
+</ul>
+<ul>
+<li>A more free translation by Bailly: “Homage to the miraculous Śambhu,</li>
+<li>o, transcending the two forms — the real and the unreal — of all that</li>
+<li>ists, constitute the Third Form.” (p. 39)</li>
+</ul>
+<ul>
+<li>Cf. śivāgnaye in 2.5.</li>
+</ul>
+<ul>
+<li>E.g. VBh. v. 101.</li>
+</ul>
+<ul>
+<li>SpKā 1.22.</li>
+</ul>
+<ul>
+<li>VBh. 59-60.</li>
+</ul>
+<ul>
+<li>Cf. also 16.10 and 11.</li>
+</ul>
+<ul>
+<li>Bailly 1987: 85: “Your devotees, in the face of all this, enjoy the</li>
+<li>iss of your devotion.”</li>
+</ul>
+<ul>
+<li> Translation combined with N.K. Kotru.</li>
+</ul>
+<ul>
+<li> Pierre Hadot, Plotin ou la simplicité du regard, Paris (Gallimard)</li>
+<li>97, pp. 87-88 (tr. from the French).</li>
+</ul>
+<ul>
+<li> “Sprengmetaphorik” in German. Cf. Alois Haas, 2005, “The Nothingness</li>
+<li> God and Its Explosive Metaphors”, in Void and Fullness in the</li>
+<li>ddhist, Hindu and Christian Traditions, ed. Bettina Bäumer and John</li>
+<li>puche, New Delhi: D.K. Printworld, pp. 121-43.</li>
+</ul>
+<ul>
+<li> Meister Eckhart, 1993, Werke, ed. N. Largier, Frankfurt a.M., vol. 1,</li>
+<li> 545, tr. in Haas, art. cit., p. 142.</li>
+</ul>
+<ul>
+<li></li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch2_baumer_hymns.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

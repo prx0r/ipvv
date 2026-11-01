@@ -1,0 +1,79 @@
+{
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_role": "protocol-design-agency-knowledge-boundary",
+  "title": "Experimental protocol: categorical agency/knowledge boundary test — kalā-vidyā kañcuka distinction vs PP graded precision",
+  "tradition": "cross_tradition",
+  "central_reading": "Filter theory (Trika kañcuka model) posits a categorical distinction between agency-limitation (kalā-kañcuka: limited creativity/power-to-effect) and knowledge-limitation (vidyā-kañcuka: limited knowledge/access-to-structure), mapping them as distinct limitation dimensions. Predictive processing treats both as variations in a single precision-weighting parameter — agency beliefs correspond to precision of action-outcome predictions, and knowledge beliefs to precision of sensory or perceptual predictions. A protocol that independently manipulates agency and knowledge while measuring a shared behavioural readout can distinguish categorical from graded accounts by testing whether the two manipulations produce qualitatively different signatures that cannot be reduced to a single precision continuum. This protocol is designed as a differential test between the filter/contraction candidate and the generative-model/interface candidate.",
+  "claims": [
+    {
+      "id": "cl:agency-knowledge-boundary-protocol-design",
+      "text": "A within-subjects factorial experiment can distinguish the categorical-distinction prediction (filter theory) from the graded-continuum prediction (predictive processing) at the agency/knowledge boundary. Factor 1 (Agency): high vs low sense of agency over action outcomes, operationalised via intentional binding in a temporal estimation task under varying degrees of action-outcome contingency (75% vs 25% congruent feedback). Factor 2 (Knowledge): high vs low perceptual precision, operationalised via visual cue validity in a metacognitive confidence task (80% vs 55% valid cues). The shared behavioural readout is the coupling strength between objective performance and subjective confidence (metacognitive efficiency, meta-d′). Filter theory predicts an interaction: agency manipulation will shift the baseline sense-of-causality independently of metacognitive coupling, producing a main effect of Agency on intentional binding magnitude with no corresponding modulation of meta-d′, while Knowledge manipulation will primarily shift metacognitive efficiency. Predictive processing predicts that both manipulations modulate a unified precision parameter, producing additive effects on whichever readout indexes precision most sensitively (both should shift meta-d′ in the same direction), with no residual interaction requiring qualitatively distinct agency and knowledge dimensions.",
+      "source_id": "synthetic:protocol-agency-knowledge-boundary-v1",
+      "source_span": "Designed as differential test between cl:kancuka-to-pp-differential-mapping-hypothesis (LBF 0.16, filter/kañcuka mapping claim) and PP null. Not source-extracted; synthetic protocol claim.",
+      "evidence": "formal (experimental protocol design, unfunded and unexecuted)",
+      "pramana": "anumana",
+      "hetu": "The filter theory maps kalā-kañcuka (agency-limitation) and vidyā-kañcuka (knowledge-limitation) to categorically distinct limitation dimensions, predicting dissociable effects of agency and precision manipulations on intentional binding and metacognitive efficiency respectively, whereas PP predicts both resolve to a single precision parameter with additive effects.",
+      "sadhya": "The categorical vs graded distinction at the agency/knowledge boundary is empirically testable via independently manipulable factors with a shared behavioural readout, and a significant interaction (or differential main-effect pattern) would support the filter account over the PP null.",
+      "vyapti": "If agency-limitation and knowledge-limitation are categorically distinct dimensions (kalā vs vidyā as separate kañcukas), then factorial manipulation of agency (intentional binding) and knowledge (cue precision) should produce dissociable behavioural signatures — agency effects on binding with no metacognitive shift, and precision effects on metacognitive efficiency — beyond what a single precision parameter can capture. If both are expressions of a unified precision-weighting mechanism (PP), the two manipulations should produce additive effects on a common precision-sensitive readout with no residual dissociation requiring qualitatively distinct dimensions.",
+      "vyapti_confidence": 0.55,
+      "falsifier": "The factorial experiment shows no significant interaction between Agency and Knowledge factors on the shared behavioural readouts, and the effects of both manipulations are fully captured by a single precision-weighting parameter in a hierarchical Bayesian PP model (e.g., the precision parameter in a HMM or active inference model of the task), with no residual variance requiring qualitatively distinct dimensions. Alternatively, the agency manipulation fails to produce any measurable shift in intentional binding under the specified parameters, rendering the factor ineffective.",
+      "falsifier_status": "untested",
+      "weight": 0.18,
+      "w_rel": 0.35,
+      "w_map": 0.30,
+      "w_aux": 0.35,
+      "targets": [
+        {
+          "id": "cand:brain-as-filter-contractive-mechanism",
+          "type": "candidate_explanation",
+          "role": "support",
+          "strength": 0.40,
+          "rationale": "Provides the experimental protocol that can operationalise the categorical kañcuka distinction against the PP graded-precision null. Passes the falsifier from cl:kancuka-to-pp-differential-mapping-hypothesis from speculative to testable by proposing a concrete experimental design with specified parameters (75/25% contingency, 80/55% cue validity, meta-d′ as readout)."
+        },
+        {
+          "id": "cand:brain-as-generative-model-interface",
+          "type": "candidate_explanation",
+          "role": "attack",
+          "strength": 0.30,
+          "rationale": "If the experiment yields no residual variance beyond a single precision parameter, PP survives this test and the categorical filter claim is weakened. If a dissociation is found, PP must either incorporate a categorical (not merely graded) distinction into its model space or concede that the agency/knowledge boundary is not fully captured by precision-weighting alone."
+        }
+      ]
+    },
+    {
+      "id": "cl:agency-knowledge-boundary-protocol-power-and-minimum-effect",
+      "text": "The factorial protocol specified in cl:agency-knowledge-boundary-protocol-design requires a minimum sample of N ≥ 64 participants (2×2 within-subjects, α = 0.05, 1−β = 0.80, expected effect f = 0.25 for the interaction term based on medium effect sizes in intentional-binding and metacognitive paradigms). The primary analysis is a 2×2 repeated-measures ANOVA on meta-d′ (metacognitive efficiency) with Agency and Knowledge as within-subject factors. The key test for the categorical-distinction hypothesis is the Agency × Knowledge interaction term: a significant interaction (or a pattern where Agency shows a main effect on intentional binding with no significant modulation of meta-d′, while Knowledge modulates meta-d′ but not binding) constitutes evidence against the single-precision-parameter null. The secondary analysis fits a hierarchical Bayesian model with a single precision parameter to both manipulations and computes the leave-one-out information criterion (LOO-IC) penalty; if the single-parameter model fits with ΔLOO-IC < 2 relative to a two-parameter model, the graded account is supported; if ΔLOO-IC > 6 favours the two-parameter model, the categorical account is supported.",
+      "source_id": "synthetic:protocol-power-analysis-agency-knowledge-v1",
+      "source_span": "Power analysis and analysis plan for the protocol in cl:agency-knowledge-boundary-protocol-design. Synthetic; derived from standard power-analysis conventions (Cohen, Faul-Erdfelder) and Bayesian model comparison standards (LOO-IC, Vehtari et al. 2017).",
+      "evidence": "formal (power analysis and pre-registration-specification conventions)",
+      "pramana": "anumana",
+      "hetu": "An underpowered protocol cannot distinguish categorical from graded accounts; a clear pre-registered analysis plan with specified minimum effects and Bayesian model-comparison thresholds prevents confirmation bias.",
+      "sadhya": "The protocol can distinguish the categorical and graded accounts with adequate statistical power and pre-specified decision criteria.",
+      "vyapti": "If the protocol has N ≥ 64, α = 0.05, β = 0.20, and pre-registered analysis with both frequentist interaction tests and Bayesian model comparison, then a non-significant interaction with ΔLOO-IC < 2 for the single-parameter model constitutes evidence for the graded (PP) account, while a significant interaction with ΔLOO-IC > 6 for the two-parameter model constitutes evidence for the categorical (filter) account.",
+      "vyapti_confidence": 0.60,
+      "falsifier": "Show that meta-d′ is not a valid readout for the agency manipulation (intentional binding does not modulate metacognitive efficiency in the expected direction) — i.e., that the chosen readout cannot dissociate agency and knowledge effects because the two factors do not converge on the same measurement space. Or show that N ≥ 64 is insufficient for the expected effect size, or that the ΔLOO-IC decision thresholds (2 and 6) are not standard in the Bayesian model-comparison literature and produce excessive error rates.",
+      "falsifier_status": "untested",
+      "weight": 0.12,
+      "w_rel": 0.25,
+      "w_map": 0.20,
+      "w_aux": 0.25,
+      "targets": [
+        {
+          "id": "cand:brain-as-filter-contractive-mechanism",
+          "type": "candidate_explanation",
+          "role": "support",
+          "strength": 0.25,
+          "rationale": "Specifies the stopping rule and evidential standards under which the filter account would be supported or weakened, making the protocol self-contained and actionable for IRB submission or pre-registration."
+        },
+        {
+          "id": "cand:brain-as-generative-model-interface",
+          "type": "candidate_explanation",
+          "role": "attack",
+          "strength": 0.25,
+          "rationale": "Similarly specifies the conditions under which the PP account would survive or be challenged — a symmetrical falsification architecture."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": "Synthetic (non-source-extracted) protocol claims. These do not constitute empirical confirmation of either candidate. Their value is in transforming the speculative differential mapping hypothesis (cl:kancuka-to-pp-differential-mapping-hypothesis, LBF 0.16) into an actionable experimental design with specified parameters, power analysis, and pre-registration-ready analysis standards. The protocol operationalises the correspondence 'nn:trika:categorical_dimension_distinction / nn:predictive_processing:graded_precision_parameterization' at the behavioural level. Next action: validate the protocol design against existing intentional-binding and metacognitive cueing datasets for feasibility; if datasets already exist that approximate the 2×2 factorial, a re-analysis using the pre-registered Bayesian model-comparison framework could produce provisional evidence without new data collection.",
+  "next_action": "Probe 3 of 6 submitted. Remaining next tests: (2) Validate māyā-scaffold hypothesis against DOC recovery prediction studies (parvizi & damasio, edlow datasets); (3) Add radical-idealist primary source response to lesion predictive utility. Split māyā-kañcuka (arousal/scaffold) from content-specific kañcukas is deferred; bridge probes for corr:filter-pp-differential-prediction-boundary and corr:filter-predictions-clinical-content-access-arousal remain pending."
+}

@@ -1,9 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>IPVV pushing · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<title>IPVV pushing</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
-:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
@@ -12,22 +14,34 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
 .brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
-.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
-.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
-.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
-.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
-.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
-.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
-.side a:hover{background:#f4f1ea}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
-.side .sub a{padding-left:1rem;color:#4a463c}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -40,6 +54,7 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
 .en{font-size:15px;max-width:72ch;line-height:1.6}
 .skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
 .stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
 .stats b{color:var(--ink);font-weight:600}
 /* verse grid */
@@ -51,8 +66,8 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
 .depth button.missing{opacity:.45}
 /* cards */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
-.panel.missing{opacity:.55;border-style:dashed}
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
 .idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
 .idx a:hover{text-decoration:underline}
 .ev{margin:.5rem 0;padding-left:1rem;position:relative}
@@ -83,27 +98,27 @@ main{max-width:100%}
 }
 
 /* recitation */
-.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
 .rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
-.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
 .rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
 .rbar .tbtn:disabled{opacity:.35;cursor:default}
 .rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
-.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
 .rmodes button.on{background:var(--ink);color:#fff}
 .rmodes button:disabled{opacity:.35}
 .rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
 .rlabel b{color:var(--ink);font-weight:600}
 .rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
 .rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
-.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
 .rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
 .rprog i{display:block;height:100%;width:0;background:var(--gold)}
-.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
 .vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
 .vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
 article.verse{scroll-margin-top:80px}
-article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
 article.verse .w.lit{background:#f4ead3;border-radius:3px}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
@@ -113,12 +128,40 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
-<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><div class="sub"><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a></div><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
-<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>Pushing</h1><div class="skt"></div><div class="sub">Q→GEM deep-dives at varying depth — hound the text with why, the text answers first</div><h3>IPVV probes</h3><div class="panel"><b>IPVV MEMORY vs. &quot;WHAT THE HECK IS MEMORY&quot; — the deep comparison</b> <span class="sub">IPVV-MEMORY-vs-whattheheckismemory · 186 lines</span><div class="en">*A side-by-side: the IPVV&#x27;s memory doctrine (read from the L2 chapters V1D/E/F, V2A/J/K/L/M/N)
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">This work</div><a href="/ipvv/index.html">Index</a><a href="/ipvv/themes.html">Themes</a><a href="/ipvv/pushing.html">Pushing</a><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel"></div><h1>Pushing</h1><div class="skt"></div><div class="sub">Q→GEM deep-dives at varying depth — hound the text with why, the text answers first</div><h3>IPVV probes</h3><div class="panel"><b>PUSHING-BHAIRAVASTAVA — hounding the 10 verses with the Logicvid method</b> <span class="sub">BHAIRAVASTAVA-push · 346 lines</span><div class="en">*2026-10-31. Full push. Method per PUSHING-TANTRALOKA: take the stotra&#x27;s asserted claims,
+turn each into a &quot;why?&quot; question, hound the TEXT itself (Sanskrit + Dyczkowski lecture +
+GRETIL translation) for its own reasoning. Stored passages, text-first, frameworks only
+after. Claim statuses per ochema truth-agent: stated → established → unstated premise →
+rival → unresolved.*
+**Primary sources:**
+- Sanskrit: Muktabodha M00505 (GRETIL, site/data/sanskrit/)
+- Dyczkowski: Bhairava Stava lecture transcript (tantraessays/transcripts/)
+- GRETIL machine translation: Sanskrit Voyager
+- Our L1/L2 + 10 argmaps + 10 C1s (site/data/argmaps/bhairavastava/)
+---
+## Sessions (the hounds)
+| # | Question | Verdict |
+|---|----------|---------|
+| Q1 | If svātmamaya = constitutively Bhairava&#x27;s, who bows? (v1 vs v2) | GEM + ROUND 2: prakāśa/vimarśa in bhakti grammar — the stotra perpetuates recognition, not describes it |
+| Q2 | How can suffering be acknowledged (v3) AND fear be absolutely absent (v5)? | RESOLVED: plenitude, not stoicism — fear cannot enter what is pūrṇa |
+| Q3 | If suffering present (v3) an…</div><div class="sub"><a href="/data/pushing/ipvv/BHAIRAVASTAVA-push.md">full probe text →</a></div></div><div class="panel"><b>LOGICVID SESSION — the stotra says grace is automatic. then what the hell do I do?</b> <span class="sub">BHAIRAVASTAVA-session-grace · 62 lines</span><div class="en">*The question that follows from the Bhairavastava&#x27;s own claim: v10 says the Lord pacifies
+the world&#x27;s heat &quot;instantly, by compassion&quot; — no method, no effort, just grace. And v7
+says the affliction itself triggers the nectar. So grace is automatic. Then what does the
+devotee DO? Is this a stotra telling you to do nothing? Or is the &quot;nothing&quot; actually the
+thing? Method: hound the stotra for what the devotee&#x27;s role IS, and push it until the
+text says something that surprises us.*
+---
+## ROUND 0 — what the stotra actually says about doing
+1. **v1:** the mind is already His (tvanmayacittatayā) — the transformation PRECEDES the bowing. You don&#x27;t bow to achieve; you bow because you already achieved.
+2. **v3:** suffering is present (satsvapi) — the stotra does NOT say suffering is absent. It says it&#x27;s present and the devotee doesn&#x27;t flinch.
+3. **v4:** method exists — śaṅkara-sevanā + cintanā → power-filled state. So there IS a doing.
+4. **v7:** the affliction comes to mind → the nectar springs. The text says tadaiva — &quot;at that very moment.&quot; The affliction IS the trigger.
+5. **v10:** the Lord…</div><div class="sub"><a href="/data/pushing/ipvv/BHAIRAVASTAVA-session-grace.md">full probe text →</a></div></div><div class="panel"><b>IPVV MEMORY vs. &quot;WHAT THE HECK IS MEMORY&quot; — the deep comparison</b> <span class="sub">IPVV-MEMORY-vs-whattheheckismemory · 186 lines</span><div class="en">*A side-by-side: the IPVV&#x27;s memory doctrine (read from the L2 chapters V1D/E/F, V2A/J/K/L/M/N)
 vs. our modern &quot;what the heck is memory&quot; essay. The point: does the IPVV&#x27;s memory argument align
 with the essay&#x27;s scientific decomposition? Where it does, where it diverges, and what each adds
 to the other. Method: lay the two side by side, claim by claim, honestly.*
@@ -257,7 +300,7 @@ commentary speak on its own terms before we bring anything of ours in.*
 | The L2 READ versions (the readable layer) | `sanskritree/translations/_stack/ipvv/pilot/` (V1-A…N, V2-A…S, V3-A…P — each with an ARGUMENT_MAP) |
 | The plain-English bridge plan | `research-library/recognition/IPVV-PLAIN-ENGLISH-BRIDGE.md` |
 | The progress tracker | `research-library/recognition/IPVV-PROGRESS-TRACKER.md` |
-| The freestyle lessons (the method) | `sanskritree/translations/_stack/ipvv/IPVV_FREESTYLE_LESSONS.md` …</div><div class="sub"><a href="/data/pushing/ipvv/PUSHING-IPVV-narrated.md">full probe text →</a></div></div><div class="panel"><b>PUSHING-IPVV — hounding the Īśvarapratyabhijñāvivṛtivimarśinī</b> <span class="sub">PUSHING-IPVV · 153 lines</span><div class="en">*The working scaffold for the IPVV (Abhinavagupta&#x27;s commentary on Utpaladeva&#x27;s ĪPK). The method is
+| The freestyle lessons (the method) | `sanskritree/translations/_stack/ipvv/IPVV_FREESTYLE_LESSONS.md` …</div><div class="sub"><a href="/data/pushing/ipvv/PUSHING-IPVV-narrated.md">full probe text →</a></div></div><div class="panel"><b>PUSHING-IPVV — hounding the Īśvarapratyabhijñāvivṛtivimarśinī</b> <span class="sub">PUSHING-IPVV · 154 lines</span><div class="en">*The working scaffold for the IPVV (Abhinavagupta&#x27;s commentary on Utpaladeva&#x27;s ĪPK). The method is
 the same as PUSHING-TANTRALOKA: hound the text with &quot;why,&quot; force its own reasoning, extract and
 document. But here we focus MORE on the IPVV&#x27;s own internal structure (the vimarśas, the nanu→āha
 dialectical skeleton, the three adhikāras) and LESS on our frameworks — letting Abhinavagupta&#x27;s
@@ -1149,10 +1192,299 @@ without it)? (In response,) it is said that, of what use can (any) means (of rea
 with regard to this Supreme Lord Who is self (luminous) Light and (our) own Self? īt
 (cannot bring about) the attainment of (His) own nature, because it is eternal, nor
 knowledge (of it), because it illumines itself, nor (can any means to realisation) remove a
-covering (that obscure…</div><div class="sub"><a href="/data/pushing/tantraloka/Q9-anupaya-deepest-extracted.txt">full probe text →</a></div></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/pushing/">edit source →</a>. probe prose vendored from volume research-library/recognition/; parsed pushing.py records next.</div><div class="pn" id="pnslot"></div></main>
+covering (that obscure…</div><div class="sub"><a href="/data/pushing/tantraloka/Q9-anupaya-deepest-extracted.txt">full probe text →</a></div></div><h3>Recognition research dossiers</h3><div class='sub'>The enquiry program behind the probes: transitions with verdicts, agent spec, comparative dossier, reading sequence, provisional Ajaḍapramātṛsiddhi translation.</div><div class="panel"><b>Executive Summary</b> <span class="sub">bigvisionpatala.md · 339 lines</span><div class="en">Building Pāṭala’s philosophy engine is ambitious but tractable by **leveraging existing argumentation infrastructure** and plugging in the missing pieces.  In practice, we will **own the scholarly IR and provenance layer** (propositions, commitments, frames, alignments, epistemic regimes, cruxes) and **delegate** established tasks to existing tools: structured argumentation via **ASPIC+ (py-aspic)**, abstract evaluation via **Dung frameworks (ALIAS)**, interchange via **AIF (xaif)**, and argument-mining pipelines via **oAMF** or LLM-based extractors.  Key research gaps remain in *semantic alignment*, *speaker commitment extraction*, *epistemic-regime reasoning*, and *minimal crux identification*. We propose concrete data schemas, algorithms and benchmark tasks to address these. The implementation will proceed in phases: first **encode a handful of gold-standard IPVV disputes** end-to-end in our IR to validate the schema; then build adapters for py-aspic and AIF, audit inferences, and only afterward integrate LLM-based extraction.  The roadmap spans ~12 months with milestones at 2–3 m…</div><div class="sub"><a href="/data/pushing/research/bigvisionpatala.md.md">full probe text →</a></div></div><div class="panel"><b>Existing frameworks for argumentation and IR</b> <span class="sub">deep-research-report(10).md · 75 lines</span><div class="en">Recent research has produced mature tools covering most of the Pāṭala pipeline.  For structured reasoning, **py-aspic** is a Python library implementing the ASPIC+ framework (strict/defeasible rules, preferences, contraries).  For interchange, **xAIF** provides JSON-based import/export of argument components and relations.  For argument mining, the **Open Argument Mining Framework (oAMF)** offers modular, xAIF-compatible pipelines and GUI interfaces.  For abstract semantics, **ALIAS** implements Dung’s AF with Python APIs for computing extensions.  These projects align directly with the 12 IR objects.  For example, an `InferenceApplication` in Pāṭala can be converted to a py-aspic rule (e.g. using `Rule.from_string`), or to an xAIF JSON rule node.  The epistemic regime and evaluation logic can be handled by invoking ASPIC+ and ALIAS: Pāṭala’s `Argument` graphs can be fed into py-aspic (for structured reasoning) and ALIAS (for abstract acceptability) rather than reimplementing them.
+Recent papers also describe exactly this split.  Freedman *et al.* (AAAI’25) propose **Argumentative LL…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(10).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(11).md · 40 lines</span><div class="en">Pāṭala’s architecture aligns with cutting-edge argument-mining research: tools like py-aspic, oAMF and ArgLLM match its ASPIC+, AIF/xAIF, and contestable reasoning components. Recent surveys highlight that LLMs now handle claim/premise detection, relations and stances, suggesting Pāṭala can leverage prompt-based pipelines (e.g. LangGraph) alongside formal engines.  
+**Research Gaps:** Semantic‐alignment is nontrivial – word‐sense disambiguation remains an open challenge across languages. “Commitment” annotation (who said what) has no existing NLP solution; it will require custom discourse parsing or manual curation. Multi‐regime semantics (Śaiva vs. Buddhist logics) have been formalized in Epistemic Argumentation Frameworks, but no off‐the‐shelf tool implements them – custom labelings or multi-agent runs will be needed. “Crux extraction” (minimal pivotal premises) is essentially a minimal-hitting-set or abductive inference problem; it is novel and potentially NP-hard. No existing library solves it, so prototype brute-force or graph‐explanation methods must be explored (e.g. related G…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(11).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(12).md · 247 lines</span><div class="en">This report outlines a “market-entry” and partnership strategy for Pāṭala’s philosophy-IR project.  We identify key **academic partners** at Banaras Hindu University (BHU) and abroad, **funding/fellowship** sources, **institutional partnership models**, and **outreach/community** strategies.  We emphasize concrete, low-cost pilots (e.g. a 5–argument annotated corpus with scholar input) and careful use of existing infrastructure (GPL/LGPL tools, open texts) to build credibility.  Key next steps include finalizing the 5 gold-case arguments, running an ASPIC+ evaluation test, and piloting a scholar-driven annotation sprint.  
+- **Academic partners:**  At BHU, the **Faculty of Arts** houses relevant departments (Sanskrit; Philosophy &amp; Religion).  For example, Prof. Sadashiv K. Dwivedi is a senior professor in Sanskrit literature at BHU, and Prof. Sachchidanand Mishra is a BHU professor of philosophy and religion specializing in Indian philosophy.  Globally, we target Indology and philosophy scholars (e.g. A.G. Sanderson [Oxford, Kashmir Shaivism], Sheldon Pollock [Columbia, Sanskrit lit.…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(12).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(13).md · 354 lines</span><div class="en">Pāṭala’s vision – a transparent, scholar-in-the-loop argument-under-interpretation engine for Indian philosophical texts – is ambitious but increasingly feasible given recent advances. On the **technical side**, we can leverage existing argumentation infrastructure: ARG-Tech’s libraries (py-aspic for structured ASPIC+ semantics, `xaif` for the Argument Interchange Format, oAMF for pipeline orchestration, and ALIAS for abstract Dung-style reasoning).  Public datasets (ARG-Tech’s AIF corpora) and new LLM-driven pipelines (e.g. Pirozelli et al. 2026’s multi-stage argument mining pipeline) demonstrate that LLMs can extract structured arguments in practice.  A Python integration plan would use `pip install` for libraries (e.g. `pip install xaif`, `pip install oamf`) and small adapters (e.g. converting our IR to xAIF JSON for ingestion by py-aspic).  We can prototype with one gold argument to validate ASPIC+ semantics on IPVV. 
+The **algorithmic risks** are real but tractable.  Crux extraction – identifying minimal premises whose removal flips an argument’s status – is essentially a minima…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(13).md.md">full probe text →</a></div></div><div class="panel"><b>Executive Summary</b> <span class="sub">deep-research-report(14).md · 265 lines</span><div class="en">To build the **fastest possible human-facing website** (with strong SEO) or a **low-latency API** (for agents and retrieval), modern best practices converge on static/edge rendering, lean runtimes, efficient protocols, and intelligent data handling. Static Site Generators (SSGs) and *islands*-style frameworks (Astro, Fresh/Deno, Qwik, etc.) delivered via a global CDN minimize payload and TTFB, yielding ~20–50ms response times on cache hits. For dynamic sites, **Edge SSR** (e.g. Next.js/Vercel Edge or SvelteKit on Cloudflare) brings servers close to users. 
+For **APIs**, compiled or high-performance runtimes (Rust, Go, Bun) with HTTP/3/gRPC yield the lowest latency. Benchmarks show Bun (JSC) ~2–3× faster in raw HTTP throughput than Node/Deno, while Rust/Go (native binaries) typically handle far higher RPS under load. Binary protocols (gRPC+Protobuf) can be ~7–10× faster than JSON/REST and reduce payload size significantly. Across the stack, leveraging **HTTP/3 (QUIC)** and global edge networks cuts network latency (Akamai measured ~6–12% better TTFB/throughput vs HTTP/2). 
+**Caching/C…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(14).md.md">full probe text →</a></div></div><div class="panel"><b>The 7-Fold Comparative Model in Kashmir Śaivism</b> <span class="sub">deep-research-report(5).md · 101 lines</span><div class="en">Each school of non-dual Kashmir Śaivism embodies a distinct stage of this seven-fold “anatomy.” Below we run through each school in turn, answering the seven questions (Being, Power, Manifestation, Limitation, Cognition, Value, Liberation) from that school’s perspective. The foregrounded stage is noted, and the others appear in the background.
+## Pratyabhijñā (Recognition)  
+*Foregrounds Stage 1 (Being) and Stage 5 (Cognition).* Pratyabhijñā holds that the fundamental reality is **one universal consciousness** (Śiva) that is self-aware.  Śiva is the innermost Self of all, *“embodi[ed]…as all things, full of unbroken awareness”*.  Every stage of experience is the Self knowing itself.  Thus:  
+- **Being (Stage 1):** Pure consciousness itself is fundamental.  As Kshemarāja says, *“Awareness, free and independent, is the cause of the performance of everything.”*  The one Divine is the ground of all existence.  
+- **Power (Stage 2):** Śiva’s **will** (svātantrya) is creative power.  The world is animated by Śiva’s own Śakti; *“She unfolds the universe through Her own will and on Her own c…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(5).md.md">full probe text →</a></div></div><div class="panel"><b>Existing frameworks for argumentation and IR</b> <span class="sub">deep-research-report(9).md · 75 lines</span><div class="en">Recent research has produced mature tools covering most of the Pāṭala pipeline.  For structured reasoning, **py-aspic** is a Python library implementing the ASPIC+ framework (strict/defeasible rules, preferences, contraries).  For interchange, **xAIF** provides JSON-based import/export of argument components and relations.  For argument mining, the **Open Argument Mining Framework (oAMF)** offers modular, xAIF-compatible pipelines and GUI interfaces.  For abstract semantics, **ALIAS** implements Dung’s AF with Python APIs for computing extensions.  These projects align directly with the 12 IR objects.  For example, an `InferenceApplication` in Pāṭala can be converted to a py-aspic rule (e.g. using `Rule.from_string`), or to an xAIF JSON rule node.  The epistemic regime and evaluation logic can be handled by invoking ASPIC+ and ALIAS: Pāṭala’s `Argument` graphs can be fed into py-aspic (for structured reasoning) and ALIAS (for abstract acceptability) rather than reimplementing them.
+Recent papers also describe exactly this split.  Freedman *et al.* (AAAI’25) propose **Argumentative LL…</div><div class="sub"><a href="/data/pushing/research/deep-research-report(9).md.md">full probe text →</a></div></div><div class="panel"><b>Recognition Enquiry across Pratyabhijñā, Its Rivals, and Contemporary Consciousness Research</b> <span class="sub">deep-research-report.md · 254 lines</span><div class="en">## Executive summary
+[T][R] The strongest textually grounded core of the Recognition Enquiry is **A**, not **C**: Utpaladeva’s most defensible arguments establish that consciousness is intrinsically self-present or reflexive (*prakāśa–vimarśa*), that determinate cognition requires exclusion and synthesis, and that episodic memory presupposes more than a bare causal trace; they do **not** yield an uncontested proof that all finite subjects are numerically one universal subject. citeturn10view0turn10view1turn12view0turn12view2turn23search3turn23search4
+[T][R] The decisive Utpaladevan materials for the present framework are: *ĪPK* 1.4.4–8 on memory and ownership, 1.5.11–14 on *vimarśa* and *svātantrya*, 1.6.3–8 on exclusion and finite ego-construction, 1.7.3–6 on synthesis and single-subject grounding, 2.4.14–19 on causal relation and the need for connective synthesis, plus *Ajaḍapramātṛsiddhi* 9–17 and 22–26 on why a non-reflexive light would be “crystal-like” and thus effectively inert. citeturn11view2turn10view0turn12view2turn12view0turn12view3turn9view0
+[R][C] Bhartṛ…</div><div class="sub"><a href="/data/pushing/research/deep-research-report.md.md">full probe text →</a></div></div><div class="panel"><b>Verdict</b> <span class="sub">finalword · 1384 lines</span><div class="en">[
+\boxed{
+\textbf{The synthesis contains a powerful insight, but it does not solve}
+}
+]
+[
+\boxed{
+\textbf{or dissolve the perspectival-partition problem.}
+}
+]
+It successfully identifies the **self-exemption error**:
+[
+O\text{ explains everything as conditioned}
+\quad\text{while treating }O\text{ as unconditioned}.
+]
+It also correctly distinguishes:
+[
+\text{description of a system}
+\neq
+\text{being that system},
+]
+and it offers a potentially valuable formal model of recognition as a change in structural self-positioning.
+But several central steps are invalid. Most importantly:
+[
+\boxed{
+\text{difference does not prove a common ontological substrate;}
+}</div><div class="sub"><a href="/data/pushing/research/finalword.md">full probe text →</a></div></div><div class="panel"><b>The material you named is useful, but in sharply different ways.</b> <span class="sub">finalwordexpansion1 · 1511 lines</span><div class="en">QRI and Tymoczko offer **formal machinery**. Campbell, Seth, and Selig offer **speculative models and phenomenological clues**. Channeling itself offers a research object: how a mind generates coherent speech experienced as originating from another agent.
+The correct method is:
+[
+\boxed{
+\text{extract the smallest testable claim from each system}
+}
+]
+rather than asking whether the whole cosmology is true.
+# 1. The new common hypothesis
+Campbell, Seth, Selig, QRI, and the geometry-of-music approach converge—despite their differences—on a structure like this:
+[
+\boxed{
+\text{a local world is selected or rendered from a larger}
+}
+]
+[
+\boxed{
+\text{space of possibilities through participant-specific constraints}.
+}
+]
+Formally:
+[
+D_i(t)
+======
+\mathcal R
+\left(
+\Omega,</div><div class="sub"><a href="/data/pushing/research/finalwordexpansion1.md">full probe text →</a></div></div><div class="panel"><b>[![Michael Levin | Department of Biology](https://images.openai.com/static-rsc-4/3fH1V7dYo742Ps1zuFbq0OoXJPeAXYwBqCwuW5UIpPkXRqMCs5GVs-kT83TqmA2c4K_OcT9qzJty9PtFcsADCsZ-Hlq8kQh1JFUBuD_03gGyxzhDJUpVKHmhX3QkH5Ac4lmRpcYJibqW98itk1IHOS7bXxUQUH-IdfTl-IQTxDM?purpose=inline)](https://as.tufts.edu/biology/people/faculty/michael-levin?utm_source=chatgpt.com)</b> <span class="sub">finalwordexpansion2 · 1158 lines</span><div class="en">Yes. The next step should be to derive **five tightly bounded research tracks** from the logical foundation, then use Levin, Wolfram, Deutsch, quantum biology, and anomalous cognition only where they directly pressure one of those tracks.
+The critical discipline is:
+[
+\boxed{
+\text{mathematical possibility}
+\neq
+\text{physical realization}
+\neq
+\text{biological use}
+\neq
+\text{phenomenal manifestation}.
+}
+]
+Much of the speculative literature becomes confused by silently moving across those four levels.
+I am assuming “Mae Hon Soe” refers to **Mae-Wan Ho**.
+# 1. What Levin’s “Platonic space” actually claims
+Levin’s recent proposal is much stronger than his established bioelectricity work. The empirical core of his laboratory programme is that cellular collectives can store and pursue anatomical target states, solve novel morphogenetic problems, and be reprogrammed through bioelectric signalling. His Platonic-space proposal then conjectures that mathematical, morphological, and cognitive patterns inhabit a structured nonphysical possibility space and that physical bodies act as “pointer…</div><div class="sub"><a href="/data/pushing/research/finalwordexpansion2.md">full probe text →</a></div></div><div class="panel"><b>Yes. After reading the current Hermes docs, I think there is a much deeper integration than “run Pāṭala agents through Hermes.”</b> <span class="sub">hermespatala2.md · 1077 lines</span><div class="en">Hermes can become the **agent execution substrate around Pāṭala&#x27;s epistemic graph**, while Pāṭala remains the authority about scholarly state.
+The useful mental separation is:
+```text
+PĀṬALA
+= epistemic state machine
+  objects / provenance / review / status /
+  dependencies / claims / transitions
+HERMES
+= cognitive execution fabric
+  sessions / skills / delegation / tools /
+  scheduling / hooks / messaging / trajectories
+```
+That division is important because Hermes already provides several pieces we were about to reinvent: isolated subagents, persistent searchable session history, self-maintaining procedural skills, scheduled fresh sessions, MCP tool filtering, event hooks, plugin lifecycle hooks, batch trajectories, and programmatic tool orchestration. ([Hermes Agent][1])
+Here are the **advanced recipes** I think are genuinely interesting for Pāṭala.
+---
+## 1. Make Pāṭala agents persistent Hermes identities, but keep their state OUT of Hermes memory
+This is subtle.
+Hermes has bounded `MEMORY.md`/`USER.md`, FTS5-backed `session_search`, optional external memory providers, and backgr…</div><div class="sub"><a href="/data/pushing/research/hermespatala2.md.md">full probe text →</a></div></div><div class="panel"><b>The dev plan should now be **integration-first, product-shaped, and aggressively stop infrastructure creep**. `25ee670` already freezes the right S0.1→S0.4 sequence and the six-item hard stop.</b> <span class="sub">toolintegration · 916 lines</span><div class="en">I would make the execution plan below the authoritative one.
+# S0 — Source Evidence Substrate
+## S0.0 — Freeze the contract
+Before touching more code, define one minimal end-to-end contract:
+```text
+RawSource
+→ BibliographicRecord
+→ Witness
+→ SourceSpan
+→ SourceAssertion
+→ CorroborationEvent
+→ downstream consumer
+```
+Pāṭala owns only:
+```text
+pt:source_id
+pt:witness_id
+pt:span_id
+SourceAssertion
+CorroborationEvent
+resolver()
+```
+External systems own the rest where possible.
+Acceptance criterion:
+&gt; replacing Zotero/GROBID/OpenAlex later must not invalidate Pāṭala IDs or epistemic objects.
+---
+# S0.1 — External-tool pilot</div><div class="sub"><a href="/data/pushing/research/toolintegration.md">full probe text →</a></div></div><div class="panel"><b>Yes. The point is **not** for you to build a translation engine before discovering whether the project contains anything worth translating.</b> <span class="sub">truthadvice · 565 lines</span><div class="en">I can do the comparative research here. Your useful work begins only where the existing English scholarship and translations stop.
+## The actual result so far
+The debate has now compressed to four distinct transitions:
+[
+\text{manifest cognition}
+\rightarrow
+\text{intrinsic reflexivity}
+\rightarrow
+\text{one diachronic subject}
+\rightarrow
+\text{one universal subject}
+\rightarrow
+\text{absolute freedom}.
+]
+These arrows are not equally supported.
+### 1. Manifest cognition → intrinsic reflexivity
+This is Utpaladeva’s strongest argument.
+A cognition cannot be equivalent to an inert crystal merely carrying a form. Conscious manifestation must somehow be non-objectively present in its own occurrence. The *Īśvarapratyabhijñākārikā* and *Vṛtti* explicitly define the project around self-manifest cognition, knowledge, action and recognition. The searchable Sanskrit is revised according to Torella’s critical edition.
+**Current verdict:** plausible and philosophically live.
+It corresponds closely to contemporary disputes over pre-reflective self-awareness or “for-me-ness,” but it does not estab…</div><div class="sub"><a href="/data/pushing/research/truthadvice.md">full probe text →</a></div></div><div class="panel"><b>The agent should not be instructed to “prove Pratyabhijñā” or “find the truth.” That would bias the entire process.</b> <span class="sub">truthagent · 642 lines</span><div class="en">It should be instructed to identify the **cheapest adequate explanation** of each phenomenon, preserve all viable countermodels, and only strengthen a metaphysical claim when rival explanations fail.
+# TRUTH-SEEKING RESEARCH AGENT
+## Mission
+Determine what each source actually establishes about:
+* manifestation;
+* reflexivity;
+* ownership;
+* memory;
+* diachronic unity;
+* determination;
+* agency;
+* other minds;
+* finite limitation;
+* recognition;
+* universal consciousness.
+The agent must distinguish:
+1. what the Sanskrit text explicitly states;
+2. what its argument validly establishes;
+3. what requires an unstated premise;
+4. what rival theories explain more cheaply;
+5. what remains genuinely unresolved.
+The goal is not doctrinal harmony.
+The goal is to reduce the live possibility space.
+---
+# 1. Governing principle
+For every proposed conclusion, ask:
+&gt; What is the weakest claim actually established?</div><div class="sub"><a href="/data/pushing/research/truthagent.md">full probe text →</a></div></div><div class="panel"><b>The first deep pass produces a cleaner result than the earlier unified framework: the traditions do not merely offer different answers to one question. They disagree about **what requires explanation in the first place**. The source-neutral framework is useful, but its nodes must remain contestable rather than functioning as hidden Pratyabhijñā premises. Your uploaded draft already establishes the right methodological discipline: separate textual claims, reconstructions, empirical findings, correspondences and hypotheses.</b> <span class="sub">truthanother · 862 lines</span><div class="en"># Recognition Enquiry — Comparative Research Dossier 01
+## Central question
+&gt; What, if anything, remains invariant through changing cognition, and what explanatory work does that invariant perform?
+This question divides into six progressively stronger contentions:
+1. Is conscious occurrence intrinsically self-manifest?
+2. Does self-manifestness include first-personality or ownership?
+3. Does ownership persist through temporally separated experiences?
+4. Does unity through change require one enduring subject?
+5. Does such a subject possess genuine freedom rather than complex causal flexibility?
+6. Why identify this subject with one universal consciousness?
+The chain must remain:
+[
+A\not\Rightarrow B\not\Rightarrow C\not\Rightarrow D\not\Rightarrow E\not\Rightarrow F.
+]
+No source is permitted to inherit a later conclusion merely by establishing an earlier one.
+---
+# 1. Utpaladeva — the most developed recognition argument
+## Textual target
+The *Īśvarapratyabhijñākārikā* and Utpaladeva’s own *Vṛtti* are the primary argument engine. The surviving digital text is revised against Torella’s …</div><div class="sub"><a href="/data/pushing/research/truthanother.md">full probe text →</a></div></div><div class="panel"><b>Go deeper into **specific Nyāya and Buddhist arguments first**, not Navya-Nyāya as a whole and not the whole tantric corpus.</b> <span class="sub">truthnext · 746 lines</span><div class="en">The immediate bottleneck is extremely precise:
+[
+\text{local synthesis}
+;\not\Rightarrow;
+\text{one universal subject}.
+]
+You need texts that either:
+1. supply Utpaladeva’s missing premise;
+2. explain the same phenomena with plural selves;
+3. explain them with no persisting self;
+4. replace the subject with relation, process, or holistic meaning.
+## 1. Best text sequence
+### Phase A — finish Utpaladeva’s proof
+#### 1. Selected *Īśvarapratyabhijñākārikā* with *Vṛtti*
+This is the highest-value source because GRETIL’s text is revised against Torella’s edition and preserves stable section numbering.
+Translate argument dossiers rather than the whole work initially:
+* **1.3.6–7:** whether mutually isolated cognitions can know or connect with one another;
+* **1.4:** memory and past ownership;
+* **1.5.11–19:** *prakāśa*, *vimarśa*, determination, direct perception and freedom;
+* **1.7:** the synthesizing subject;
+* **1.8:** absence, objectivity and manifestation;
+* **2.3–2.4:** relation, causal order and synthesis;
+* passages concerning other minds and inference from action.
+The task is to i…</div><div class="sub"><a href="/data/pushing/research/truthnext.md">full probe text →</a></div></div><div class="panel"><b>Yes. The limitation was not inability to translate the Sanskrit; it was the risk of presenting a rapid model translation as though it were a critical scholarly edition. For this text, however, we now possess enough material to move substantially further:</b> <span class="sub">truthtranslation · 1643 lines</span><div class="en">* the complete 27 root verses of Utpaladeva’s *Ajaḍapramātṛsiddhi*;
+* the Sanskrit *Vṛtti* transmitted in the 1921 Kashmir Series edition;
+* a searchable GRETIL transcription;
+* the existing enquiry framework distinguishing manifestness, reflexivity, ownership, continuity, agency and universalization.  
+What follows is a **provisional full translation and philosophical reconstruction**, not a substitute for checking the printed edition, manuscript variants and specialist translations.
+# Utpaladeva’s *Ajaḍapramātṛsiddhi*
+## Provisional complete translation and argument reconstruction
+### Translation protocol
+Status markers:
+* **[T]** directly represented in the Sanskrit root verse;
+* **[V]** clarified by the transmitted *Vṛtti*;
+* **[R]** philosophical reconstruction;
+* **[X]** point requiring further philological or comparative checking.
+The text can be divided into six argumentative movements:
+1. the Buddhist opponent’s challenge concerning existence;
+2. the dependence of existence upon manifestation;
+3. the insufficiency of non-reflexive consciousness;
+4. the grounding of “this” in…</div><div class="sub"><a href="/data/pushing/research/truthtranslation.md">full probe text →</a></div></div><h3>Rasa audit</h3><div class='sub'>Quote-validation of the rasa thesis against Dyczkowski's text — attribution corrections (PTv vs TĀ vs footnote), the traceability discipline applied.</div><div class="panel"><b>Rasa Inexternalism v0.2 — Corrected Thesis After Complete Audit</b> <span class="sub">RASA_THESIS · 305 lines</span><div class="en">## Statement
+**Consciousness may be intrinsically self-affective manifestation rather than affectively neutral presence. A phenomenal subject is the intrinsic, self-affective manifestation of one objectively individuated process. Its field possesses relational structure that may admit mathematical representation. Local valence is not identical with bare manifestation or basal self-affection — it is modulated by field organization, regulation, expectation, embodiment, history, and context.**
+This is not a proof. It is the strongest hypothesis surviving critical examination of four frameworks (Tantrāloka, Tymoczko, Doczi, QRI) and a complete audit. The audit removed: golden-ratio identity, naive symmetry theory, the five-bliss/log-valence mapping, goddess-color proportions, and the claim that contemplative texts supply experimental confirmation.
+**This is Rasa Inexternalism — not a symmetry or golden-ratio theory of consciousness.**
+---
+## The Argument
+### Premise 1 — Textual: Abhinavagupta characterizes consciousness as intrinsically self-relishing.
+**Source:** Abhinavagupta&#x27;s Parātrī…</div><div class="sub"><a href="/data/pushing/rasa/RASA_THESIS.md">full probe text →</a></div></div><div class="panel"><b>Rasa Rasa — Validated Quotes, Corrected Interpretations, and Music/Visual Findings in the Tantrāloka</b> <span class="sub">rasarasa · 334 lines</span><div class="en">## Preamble
+This document revisits the RASAANALYSIS quotes after re-reading the full Tantrāloka extraction (COMPENDIUM, REFERENCE, MASTER, VOLUMES 1-11, EXPANDED, RASA_DEEP_DIVE) and cross-referencing with the actual Dyczkowski translation text. It validates each quote&#x27;s source, corrects misinterpretations, and documents previously missed music and visual passages. Findings from Tymoczko, Doczi, and QRI are cross-referenced where convergence exists.
+---
+## Part 1: Quote Validation — RASAANALYSIS Source Audit
+### 1.1 The Core Identity Claim
+**RASAANALYSIS states:** &quot;Supreme consciousness itself is always by its very nature essentially the aesthetic relish of consciousness.&quot; (TĀ 1, PTv p. 19)
+**Validation:**
+The quote is REAL — it appears in Dyczkowski&#x27;s TĀ Vol 1 at line 1457-1459. The ATTRIBUTION needs correction:
+- The quote is from Abhinavagupta&#x27;s **Parātrīśikāvivaraṇa (PTv)** page 19
+- Dyczkowski is CITING the PTv in his TĀ commentary to explain the first meaning of Anuttara
+- It is NOT a direct verse from Tantrāloka Chapter 1
+- It IS an authentic Abhinavaguptan statement — the PTv…</div><div class="sub"><a href="/data/pushing/rasa/rasarasa.md">full probe text →</a></div></div><h3>Bodhapañcadaśikā probes</h3><div class='sub'>Abhinavagupta's 15-verse doctrinal hymn, pushed as a 5-session arc: forgetting → terror → grace → necessity → dissolution. Same method, new mountain.</div><div class="panel"><b>LOGICVID SESSION — is suffering actually seen as grace?</b> <span class="sub">LOGICVID-session-is-suffering-grace · 58 lines</span><div class="en">*The question that follows Session 2. If terror is what play-gripped feels like — and terror is what wakes you — then is the suffering itself doing grace&#x27;s work? v12 lists three ways in, grace first. Is the hurt the first one? Chain shape: Abstract → Felt-bridge (like TĀ direction-as-felt X).*
+---
+## ROUND 0 — what the text actually says
+1. `tatprasādarasād eva gurvāgamata eva vā | śāstrād vā parameśasya yasmāt kasmād upāgatam` (v12, PASS) — &quot;From that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which approached.&quot;
+2. `yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ` (v11, PASS) — non-knowledge = terrifying saṃsāra of fools.
+3. `yat tattvasya parijñānaṃ sa mokṣaḥ parameśataḥ | tat pūrṇatvaṃ prabuddhānāṃ jīvanmuktiś ca sā smṛtā` (v13, PASS) — full knowledge = liberation; living-liberation *remembered*.
+The tension: grace-sap comes first (v12), terror is real (v11), liberation is remembering (v13). Does the terror cause the remembering? Does grace hurt?
+---
+## ROUND 1 — the first penetration: what doe…</div><div class="sub"><a href="/data/pushing/bodhapancadasika/LOGICVID-session-is-suffering-grace.md">full probe text →</a></div></div><div class="panel"><b>LOGICVID SESSION — but in truth there is no liberation because there is no bondage :&#x27;) hahahah</b> <span class="sub">LOGICVID-session-no-bondage-no-liberation · 59 lines</span><div class="en">*The question that follows Session 4 — and dissolves it. After four sessions building bondage → terror → thirst → grace → remembering into a whole soteriology, v14 says: `etau bandhavimokṣau ca parameśasvarūpataḥ | na bhidyete na bhedo hi tattvataḥ parameśvare` — these two, bondage and liberation, from supreme-Lord-nature: they are not divided; for there is no difference in truth in the supreme Lord. (Sanskrit — v14 is BLOCKED, so no English rendering; the Sanskrit is the material.) So… was all of that pointless? Hahahah. Chain shape: Thread → Unification-inverted (masterkey synthesis, but dissolving instead of unifying).*
+---
+## ROUND 0 — what the text actually says
+1. `etau bandhavimokṣau ca parameśasvarūpataḥ | na bhidyete na bhedo hi tattvataḥ parameśvare` (v14, Sanskrit only — BLOCKED) — these-two bondage-and-liberation from-supreme-Lord-nature: not they-are-divided; not difference indeed in-truth in-supreme-Lord.
+2. `yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ` (v11, PASS) — non-knowledge = terrifying saṃsāra of fools.
+3. `yat ta…</div><div class="sub"><a href="/data/pushing/bodhapancadasika/LOGICVID-session-no-bondage-no-liberation.md">full probe text →</a></div></div><div class="panel"><b>LOGICVID SESSION — if you haven&#x27;t suffered there is no liberation?</b> <span class="sub">LOGICVID-session-no-suffering-no-liberation · 59 lines</span><div class="en">*The question that follows Session 3. Liberation is *smṛtā* — remembered (v13). Remembering structurally requires prior possession + interim loss + recovery. So: does liberation *require* bondage first? Is the never-lost excluded from the remembering? Chain shape: Gem → Honest crux (recovery-grammar pushed until it strains).*
+---
+## ROUND 0 — what the text actually says
+1. `yat tattvasya parijñānaṃ sa mokṣaḥ parameśataḥ | tat pūrṇatvaṃ prabuddhānāṃ jīvanmuktiś ca sā smṛtā` (v13, PASS) — &quot;What of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living-liberation that is remembered.&quot;
+2. `yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ` (v11, PASS) — non-knowledge = terrifying saṃsāra of fools.
+3. `tatprasādarasād eva gurvāgamata eva vā | śāstrād vā parameśasya yasmāt kasmād upāgatam` (v12, PASS) — three doors: grace-sap, teacher, scripture.
+The tension: liberation is *remembered* (smṛtā) — past tense, recovery grammar. v11&#x27;s fools are *in* it now. Who is remembering what, and must you lose it first?
+-…</div><div class="sub"><a href="/data/pushing/bodhapancadasika/LOGICVID-session-no-suffering-no-liberation.md">full probe text →</a></div></div><div class="panel"><b>LOGICVID SESSION — why would Śiva forget its liberated state in the first place?</b> <span class="sub">LOGICVID-session-why-forget · 58 lines</span><div class="en">*The question the text forces. v3 says śakti never even WANTS difference from śaktiman — identity eternal, like fire and burning. v11 says non-knowledge IS saṃsāra. So if the identity never wavers, who forgot? Chain shape: Extraction → Branch (like TĀ AY/BB qualified-monism crux).*
+---
+## ROUND 0 — what the text actually says
+1. `śaktiś ca śaktimadrūpād vyatirekam na vāñchati | tādātmyam anayor nityaṃ vahnidāhikayor iva` (v3, PASS) — &quot;Power too from power-possessor-form difference does not desire; identity of these two is eternal, as fire and burning.&quot;
+2. `yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ` (v11, PASS) — &quot;What of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying.&quot;
+3. `anastamitabhārūpas tejasāṃ tamasām api | ya eko &#x27;ntar yadantaś ca tejāṃsi ca tamāṃsi ca` (v1, Sanskrit) — one reality within, whose &quot;end&quot; are both the powers (light) and the darknesses.
+The tension the text gives us: identity is eternal and unwanting-difference (v3), yet non-knowledge = terrifying saṃsāra (v11). Both …</div><div class="sub"><a href="/data/pushing/bodhapancadasika/LOGICVID-session-why-forget.md">full probe text →</a></div></div><div class="panel"><b>LOGICVID SESSION — why would Śiva not veil it with something fun instead of suffering?</b> <span class="sub">LOGICVID-session-why-suffering-not-fun · 58 lines</span><div class="en">*The question that follows Session 1. If forgetting is freedom exercised all the way down — fine. But v6 says god + goddess are &quot;always play-joy-eager&quot; (krīḍārasotsukaḥ). Play. Eager. Joy. And v11 says saṃsāra is terrifying. So why is the game scary instead of fun? Chain shape: Mechanism → Theodicy (like TĀ karma-rebirth → theodicy).*
+---
+## ROUND 0 — what the text actually says
+1. `eṣa devo &#x27;nayā devyā nityaṃ krīḍārasotsukaḥ | vicitrān sṛṣṭisaṃhārān vidhatte yugapad vibhuḥ` (v6, PASS) — &quot;This god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-pervading.&quot;
+2. `sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ` (v11b, PASS) — &quot;it indeed saṃsāra of fools who is terrifying.&quot;
+3. `teṣu vaicitryam atyantam ūrdhvādhas tiryag eva yat | bhuvanāni tadaṃśāś ca sukhaduḥkhamatiś ca yā` (v10, PASS) — &quot;In them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what.&quot;
+The tension: play-joy-eager (v6) vs terrifying (v11). Both stated. And v10 says the variety includes *both* pleasure and pain (sukhaduḥkha).
+---
+## ROUND 1 — the first p…</div><div class="sub"><a href="/data/pushing/bodhapancadasika/LOGICVID-session-why-suffering-not-fun.md">full probe text →</a></div></div><div class="panel"><b>PUSHING-BODHAPANCADASIKA — hounding Abhinavagupta&#x27;s Bodhapañcadaśikā</b> <span class="sub">PUSHING-BODHAPANCADASIKA · 53 lines</span><div class="en">*15 verses + close. Abhinavagupta&#x27;s own doctrinal hymn: one reality, eternal identity (fire/burning), simultaneous creation-dissolution, terrifying saṃsāra, three doors (grace/teacher/scripture), liberation as remembering, non-difference in truth. Pushed as a 5-session arc: forgetting → terror → grace → necessity → dissolution. Each session starts from the user&#x27;s own question; each ends where the next begins.*
+*Method: same three formats (Tantrāloka passage-chain, IPVV verdict table, ochema claim statuses). ROUND 0 quotes Sanskrit always + PASS English only (v14 is BLOCKED — Sanskrit + user framing only, no English rendering). Chain shapes labeled per session (see process/PUSHING-QUESTION-CRAFT.md).*
+## Material state
+| Layer | State |
+|---|---|
+| T1 | frozen, GRETIL Marino Faliero input, 15+1 verses |
+| L0 | 149 tokens, 100% PARSED, 0 FAILED (works/bodhapancadasika/WORK.md) |
+| ARGMAP | full, per-verse real content (samples/bodhapancadasika/ARGMAP-full.md) |
+| C1 | 15/15, 250–400w passage-local (pipeline; C1-head in samples/) |
+| L1/L2 | L1-full, L2-full (samples/); 7/15 PASS in sit…</div><div class="sub"><a href="/data/pushing/bodhapancadasika/PUSHING-BODHAPANCADASIKA.md">full probe text →</a></div></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/pushing/">edit source →</a>. probe prose vendored from volume research-library/recognition/; parsed pushing.py records next.</div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
-<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
@@ -1160,8 +1492,27 @@ var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/")
 (function(){
 var b=document.getElementById('burger');
 if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
 var toc=document.getElementById('tocbody');
-if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
 toc.innerHTML=html||'<span style="color:#999">—</span>';
 var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
@@ -1169,6 +1520,112 @@ function spy(){var y=window.scrollY+120,cur=null;
 hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
-window.addEventListener('scroll',spy,{passive:true});spy();}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
 })();
-</script></body></html>
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

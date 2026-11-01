@@ -9,7 +9,7 @@ python3 tools/t1_extract.py --help >/dev/null 2>&1 || { echo "FAIL t1_extract"; 
 echo "== chunker present =="
 python3 tools/chunker.py --help >/dev/null 2>&1 || { echo "FAIL chunker"; fail=1; }
 echo "== no 145MB in git =="
-if find . -type f -size +20M | grep -q .; then echo "FAIL large file staged"; find . -type f -size +20M; fail=1; fi
+if find . -path ./.git -prune -o -type f -size +20M -print | grep -q .; then echo "FAIL large file staged"; find . -type f -size +20M; fail=1; fi
 echo "== C1 length (samples) =="
 python3 -c "from pathlib import Path; [print(p, len(Path(p).read_text().split())) for p in Path('samples').glob('*') if p.is_file()]" 2>&1 | head -n 20
 echo "== specs present =="

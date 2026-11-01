@@ -1,0 +1,441 @@
+let cachedVectors = null;
+
+async function dashscopeChat(env, messages, maxTokens = 512) {
+  const apiKey = env.DASHSCOPE_API_KEY;
+  if (!apiKey) throw new Error('no dashscope key');
+  const resp = await fetch('https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'qwen3.8-omni-flash',
+      messages,
+      max_tokens: maxTokens,
+      reasoning_effort: 'medium',
+    }),
+  });
+  if (!resp.ok) {
+    const err = await resp.text();
+    throw new Error(`dashscope ${resp.status}: ${err.slice(0, 200)}`);
+  }
+  const data = await resp.json();
+  return data.choices?.[0]?.message?.content || '';
+}
+
+async function getVectors(env) {
+  if (cachedVectors) return cachedVectors;
+  try {
+    const resp = await fetch('https://ipvv-a8u.pages.dev/data/vectors.json?v=' + Date.now());
+    if (!resp.ok) return null;
+    cachedVectors = await resp.json();
+    return cachedVectors;
+  } catch (e) {
+    return null;
+  }
+}
+
+function cosine(a, b) {
+  let dot = 0, na = 0, nb = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    na += a[i] * a[i];
+    nb += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-8);
+}
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const cors = {
+      'Access-Control-Allow-Origin': env.CORS_ORIGIN || '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    };
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { headers: cors });
+    }
+
+    const path = url.pathname;
+
+    // POST /api/profile
+    if (path === '/api/profile' && request.method === 'POST') {
+      const { email } = await request.json();
+      if (!email) return json({ error: 'email required' }, 400, cors);
+      const id = 'u:' + btoa(email).replace(/=/g, '');
+      await env.DB.prepare('INSERT OR IGNORE INTO profiles (id, email) VALUES (?, ?)').bind(id, email).run();
+      return json({ id, email }, 200, cors);
+    }
+
+    // POST /api/variants
+    if (path === '/api/variants' && request.method === 'POST') {
+      const { user_id, work, chunk, text, style } = await request.json();
+      if (!user_id || !work || !chunk || !text) return json({ error: 'missing fields' }, 400, cors);
+      const id = 'v:' + crypto.randomUUID();
+      await env.DB.prepare('INSERT INTO variants (id, user_id, work, chunk, text, style) VALUES (?, ?, ?, ?, ?, ?)')
+        .bind(id, user_id, work, chunk, text, style || 'owner').run();
+      return json({ id }, 200, cors);
+    }
+
+    // GET /api/variants/:work/:chunk
+    const vm = path.match(/^\/api\/variants\/([^/]+)\/([^/]+)$/);
+    if (vm && request.method === 'GET') {
+      const [, work, chunk] = vm;
+      const { results } = await env.DB.prepare('SELECT * FROM variants WHERE work = ? AND chunk = ? ORDER BY created_at DESC')
+        .bind(work, chunk).all();
+      return json({ variants: results }, 200, cors);
+    }
+
+    // POST /api/bookmarks
+    if (path === '/api/bookmarks' && request.method === 'POST') {
+      const { user_id, work, chunk } = await request.json();
+      if (!user_id || !work || !chunk) return json({ error: 'missing fields' }, 400, cors);
+      const id = 'b:' + crypto.randomUUID();
+      await env.DB.prepare('INSERT OR IGNORE INTO bookmarks (id, user_id, work, chunk) VALUES (?, ?, ?, ?)')
+        .bind(id, user_id, work, chunk).run();
+      return json({ id }, 200, cors);
+    }
+
+    // GET /api/bookmarks/:user_id
+    const bm = path.match(/^\/api\/bookmarks\/([^/]+)$/);
+    if (bm && request.method === 'GET') {
+      const [, userId] = bm;
+      const { results } = await env.DB.prepare('SELECT * FROM bookmarks WHERE user_id = ? ORDER BY created_at DESC')
+        .bind(userId).all();
+      return json({ bookmarks: results }, 200, cors);
+    }
+
+    // GET /api/debug/vectors — check vector loading
+    if (path === '/api/debug/vectors' && request.method === 'GET') {
+      const vecs = await getVectors(env);
+      if (!vecs) return json({ error: 'vectors not loaded' }, 500, cors);
+      const bh = vecs.filter(v => v.work === 'bhairavastava');
+      return json({ total: vecs.length, bh: bh.length, sample: bh[0] ? { id: bh[0].id, en: (bh[0].en||'').slice(0,100) } : null }, 200, cors);
+    }
+
+    // POST /api/chat/:work — RAG chat
+    const cm = path.match(/^\/api\/chat\/([^/]+)$/);
+    if (cm && request.method === 'POST') {
+      const [, workParam] = cm;
+      const works = workParam.split(',').map(w => w.trim()).filter(Boolean);
+      const { session_id, message, user_id } = await request.json();
+      if (!message) return json({ error: 'message required' }, 400, cors);
+
+      let sid = session_id;
+      if (!sid) {
+        sid = 's:' + crypto.randomUUID();
+        await env.DB.prepare('INSERT INTO chat_sessions (id, user_id, work) VALUES (?, ?, ?)')
+          .bind(sid, user_id || null, works[0]).run();
+      }
+      await env.DB.prepare('INSERT INTO chat_messages (id, session_id, role, content) VALUES (?, ?, ?, ?)')
+        .bind('m:' + crypto.randomUUID(), sid, 'user', message).run();
+
+      let reply = '';
+      let retrievedIds = '[]';
+      let retrievedGates = '[]';
+      try {
+        const qEmb = await env.AI.run('@cf/baai/bge-m3', { text: ['query: ' + message] });
+        const qVec = qEmb.data[0];
+
+        const vecs = await getVectors(env);
+        if (!vecs) throw new Error('vectors not loaded');
+
+        const gateWeight = { 'PUBLISHED': 1.0, 'PASS': 0.9, 'OWNER': 0.7, 'BLOCKED': 0.0 };
+        const candidates = vecs
+          .filter(v => works.includes(v.work) && (v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER'))
+          .map(v => ({ ...v, score: cosine(qVec, v.vec) * (gateWeight[v.gate] || 0.5) }))
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 20);
+
+        // Template match: best pushing probe (chain context for Qwen)
+        let chainCtx = '';
+        try {
+          const probes = vecs.filter(v => v.kind === 'probe');
+          let best = null;
+          for (const p of probes) {
+            const s = cosine(qVec, p.vec);
+            if (!best || s > best.score) best = { ...p, score: s };
+          }
+          if (best && best.score > 0.35) {
+            chainCtx = `\n\nPrior enquiry on this question:\n[${best.id}] ${(best.en || '').slice(0, 800)}`;
+          }
+        } catch (e) { /* template match is best-effort */ }
+
+        // Diverse pick: best 1-2 per work, then rerank
+        const byWork = {};
+        for (const c of candidates) { (byWork[c.work] = byWork[c.work] || []).push(c); }
+        let diverse = [];
+        Object.values(byWork).forEach(arr => { diverse = diverse.concat(arr.slice(0, 2)); });
+        diverse.sort((a, b) => b.score - a.score);
+        let top = diverse.slice(0, 5);
+        if (diverse.length > 5) {
+          const ctxs = diverse.map(c => ({ text: (c.en || c.sa || '').slice(0, 500) || 'passage' }));
+          const rerank = await env.AI.run('@cf/baai/bge-reranker-base', {
+            query: message,
+            contexts: ctxs,
+          });
+          const scores = rerank.results || rerank.data || [];
+          diverse.forEach((c, i) => {
+            c.rerank = (scores[i] && (scores[i].score || scores[i])) || c.score;
+          });
+          top = diverse.sort((a, b) => b.rerank - a.rerank).slice(0, 5);
+        }
+
+        // Graph traversal: follow argument packet edges
+        const argPackets = vecs.filter(v => v.kind === 'argument');
+        const gathered = new Set(top.map(t => t.id));
+        top.forEach(t => {
+          argPackets.forEach(a => {
+            if (a.ref === t.id || a.id.includes(t.id)) gathered.add(a.id);
+          });
+        });
+        top.forEach(t => {
+          argPackets.forEach(a => {
+            if (a.tension_id && gathered.has(a.id)) {
+              argPackets.forEach(a2 => {
+                if (a2.tension_id === a.tension_id && a2.id !== a.id) gathered.add(a2.id);
+              });
+            }
+          });
+        });
+
+        const gatheredRecs = vecs.filter(v => gathered.has(v.id));
+        const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
+        retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
+        retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
+        const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
+        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as such, never as source text.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}\n\nAnswer in plain speech, one paragraph plus citations. No academic name-dropping, no invented terms.`;
+        // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
+        try {
+          reply = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
+        } catch (qe) {
+          const gen = await env.AI.run('@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 512,
+          });
+          const deep = gen && gen.choices && gen.choices[0] && gen.choices[0].message;
+          reply = (deep && deep.content) || gen.response || (gen.result && gen.result.response) || 'No answer (both models failed).';
+        }
+      } catch (e) {
+        reply = `RAG error: ${e.message}. Vectors: ${cachedVectors ? cachedVectors.length : 'none'}.`;
+      }
+
+      await env.DB.prepare('INSERT INTO chat_messages (id, session_id, role, content) VALUES (?, ?, ?, ?)')
+        .bind('m:' + crypto.randomUUID(), sid, 'assistant', reply).run();
+      // store question record with reply (for pushing corpus growth)
+      try {
+        const qid = 'q:' + crypto.randomUUID();
+        await env.DB.prepare('INSERT INTO questions (id, session_id, work, message, reply, retrieved_ids, gate_labels) VALUES (?, ?, ?, ?, ?, ?, ?)')
+          .bind(qid, sid, works[0], message, reply, retrievedIds, retrievedGates).run();
+      } catch (e) { /* question storage is best-effort */ }
+      // proactive follow-up suggestion
+      let suggestion = '';
+      try {
+        const followup = await dashscopeChat(env, [{ role: 'user', content: `Given this Q&A about ${works.join(', ')}:\nQ: ${message}\nA: ${reply.slice(0,300)}\n\nSuggest one follow-up question in plain speech that the retrieved passages could answer or that opens their hardest unresolved tension. No scholar names, no academic jargon, just the question. Nothing else.` }], 64);
+        if (followup && followup.length > 5 && followup.length < 300) suggestion = followup.trim();
+      } catch (e) { /* proactive is best-effort */ }
+      return json({ session_id: sid, reply, suggestion }, 200, cors);
+    }
+
+    // GET /api/chat/:session_id/history
+    const ch = path.match(/^\/api\/chat\/([^/]+)\/history$/);
+    if (ch && request.method === 'GET') {
+      const [, sid] = ch;
+      const { results } = await env.DB.prepare('SELECT role, content, created_at FROM chat_messages WHERE session_id = ? ORDER BY created_at')
+        .bind(sid).all();
+      return json({ messages: results }, 200, cors);
+    }
+
+
+    // POST /api/themes/decide — accept/reject/merge/split a cluster
+    const td = path.match(/^\/api\/themes\/decide$/);
+    if (td && request.method === 'POST') {
+      const { cluster_id, decision, user_id, note } = await request.json();
+      if (!cluster_id || !decision) return json({ error: 'cluster_id and decision required' }, 400, cors);
+      const id = 'td:' + crypto.randomUUID();
+      // store in a simple key-value via D1 (we'll use a decisions table)
+      await env.DB.prepare('CREATE TABLE IF NOT EXISTS theme_decisions (id TEXT PRIMARY KEY, cluster_id TEXT, decision TEXT, user_id TEXT, note TEXT, created_at TEXT)').run();
+      await env.DB.prepare('INSERT INTO theme_decisions (id, cluster_id, decision, user_id, note) VALUES (?, ?, ?, ?, ?)')
+        .bind(id, cluster_id, decision, user_id || null, note || null).run();
+      return json({ id, cluster_id, decision }, 200, cors);
+    }
+
+    // GET /api/themes/decisions — list all decisions
+    if (path === '/api/themes/decisions' && request.method === 'GET') {
+      await env.DB.prepare('CREATE TABLE IF NOT EXISTS theme_decisions (id TEXT PRIMARY KEY, cluster_id TEXT, decision TEXT, user_id TEXT, note TEXT, created_at TEXT)').run();
+      const { results } = await env.DB.prepare('SELECT * FROM theme_decisions ORDER BY created_at DESC').all();
+      return json({ decisions: results }, 200, cors);
+    }
+
+    // POST /api/style/preview — A3S-style instant preview (prompt-based, free-tier)
+    if (path === '/api/style/preview' && request.method === 'POST') {
+      const { exemplars, source, model } = await request.json();
+      if (!exemplars || !source) return json({ error: 'exemplars and source required' }, 400, cors);
+      const ex = Array.isArray(exemplars) ? exemplars.join('\n---\n') : exemplars;
+      const prompt = `You are a style transfer engine. Given these example translations in the target style:\n\n${ex}\n\nRewrite the following Sanskrit passage in the same style. Preserve meaning exactly. Only change register/diction.\n\nSource (Sanskrit): ${source}\n\nStyled translation:`;
+      try {
+        let styled = '';
+        try {
+          styled = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
+        } catch (e2) {
+          const gen = await env.AI.run(model || '@cf/deepseek-ai/deepseek-v4-flash', {
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 512,
+          });
+          styled = gen.response || gen.result?.response || gen.choices?.[0]?.message?.content || '';
+        }
+        return json({ styled, model: 'qwen3.8-omni-flash' }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
+    }
+
+
+    // GET /api/questions/:work — list stored questions for a work
+    const qm = path.match(/^\/api\/questions\/([^/]+)$/);
+    if (qm && request.method === 'GET') {
+      const [, work] = qm;
+      const { results } = await env.DB.prepare('SELECT id, message, reply, retrieved_ids, gate_labels, created_at FROM questions WHERE work = ? ORDER BY created_at DESC LIMIT 50')
+        .bind(work).all();
+      return json({ questions: results }, 200, cors);
+    }
+
+    // GET /api/questions — list all questions
+    if (path === '/api/questions' && request.method === 'GET') {
+      const { results } = await env.DB.prepare('SELECT id, work, message, reply, created_at FROM questions ORDER BY created_at DESC LIMIT 100').all();
+      return json({ questions: results }, 200, cors);
+    }
+
+
+    // MCP server (JSON-RPC over HTTP)
+    if (path === '/mcp' && request.method === 'POST') {
+      const body = await request.json();
+      const { method, params, id } = body;
+      let result = null;
+
+      if (method === 'initialize') {
+        result = {
+          protocolVersion: '2024-11-05',
+          capabilities: { tools: {} },
+          serverInfo: { name: 'ipvv-mcp', version: '1.0.0' },
+        };
+      } else if (method === 'tools/list') {
+        result = { tools: [
+          { name: 'get_passage', description: 'Get a published IPVV passage (Sanskrit + L2 + C1)', inputSchema: { type: 'object', properties: { chunk: { type: 'string' } }, required: ['chunk'] } },
+          { name: 'get_translation', description: 'Get translation records for a work', inputSchema: { type: 'object', properties: { work: { type: 'string' } }, required: ['work'] } },
+          { name: 'get_argument', description: 'Get an argument truth-packet', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] } },
+          { name: 'search', description: 'Search across all content', inputSchema: { type: 'object', properties: { query: { type: 'string' }, work: { type: 'string' } } } },
+          { name: 'get_scholar', description: 'Get scholar bio + bibliography', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'] } },
+          { name: 'list_works', description: 'List all translated works', inputSchema: { type: 'object', properties: {} } },
+          { name: 'get_themes', description: 'Get theme proposals', inputSchema: { type: 'object', properties: {} } },
+          { name: 'chat', description: 'Chat about a text (RAG)', inputSchema: { type: 'object', properties: { work: { type: 'string' }, message: { type: 'string' } }, required: ['work', 'message'] } },
+        ]};
+      } else if (method === 'tools/call') {
+        const { name, arguments: args } = params;
+        if (name === 'get_passage') {
+          const id = args.chunk.replace('.md','').replace('chunk','').toLowerCase();
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/arguments/ipvv-${args.chunk.replace('.md','')}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'get_translation') {
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/translations/${args.work}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'work not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'get_argument') {
+          const id = args.id.startsWith('ipvv-') ? args.id : 'ipvv-' + args.id;
+          const resp = await fetch(`https://ipvv-a8u.pages.dev/data/arguments/${id}.json`);
+          if (!resp.ok) { result = { content: [{ type: 'text', text: JSON.stringify({ error: 'not found' }) }] }; }
+          else { const data = await resp.json(); result = { content: [{ type: 'text', text: JSON.stringify(data) }] }; }
+        } else if (name === 'search') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/search-index.json');
+          const idx = await resp.json();
+          const q = (args.query || '').toLowerCase();
+          const hits = idx.filter(e => e.t.toLowerCase().includes(q)).slice(0, 20);
+          if (args.work) {
+            const filtered = hits.filter(e => e.u.includes('/' + args.work + '/'));
+            result = { content: [{ type: 'text', text: JSON.stringify(filtered) }] };
+          } else {
+            result = { content: [{ type: 'text', text: JSON.stringify(hits) }] };
+          }
+        } else if (name === 'get_scholar') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/scholars.json');
+          const scholars = await resp.json();
+          const s = scholars.find(x => x.id === args.id);
+          result = { content: [{ type: 'text', text: JSON.stringify(s || { error: 'not found' }) }] };
+        } else if (name === 'list_works') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/search-index.json');
+          const idx = await resp.json();
+          const works = [...new Set(idx.filter(e => e.k === 'work').map(e => e.t))];
+          result = { content: [{ type: 'text', text: JSON.stringify(works) }] };
+        } else if (name === 'get_themes') {
+          const resp = await fetch('https://ipvv-a8u.pages.dev/data/themes/clusters.json');
+          const data = await resp.json();
+          result = { content: [{ type: 'text', text: JSON.stringify(data) }] };
+        } else if (name === 'chat') {
+          result = { content: [{ type: 'text', text: 'Use /api/chat/' + (args.work || 'ipvv') + ' directly for RAG chat. MCP chat tool disabled to avoid subrequest errors.' }] };
+        } else {
+          result = { content: [{ type: 'text', text: JSON.stringify({ error: 'unknown tool: ' + name }) }] };
+        }
+      } else {
+        result = { error: { code: -32601, message: 'Method not found' } };
+      }
+
+      return new Response(JSON.stringify({ jsonrpc: '2.0', id, result }), {
+        headers: { ...cors, 'Content-Type': 'application/json' },
+      });
+    }
+
+
+    // POST /api/screen — analyze a screenshot (vision via Qwen3.8-Omni-Flash)
+    if (path === '/api/screen' && request.method === 'POST') {
+      const { image, question } = await request.json();
+      if (!image) return json({ error: 'image required (base64)' }, 400, cors);
+      const q = question || 'Describe what you see on this screen. Be concise and helpful.';
+      try {
+        const resp = await fetch('https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${env.DASHSCOPE_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            model: 'qwen3.8-omni-flash',
+            messages: [{ role: 'user', content: [
+              { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${image}` } },
+              { type: 'text', text: q },
+            ]}],
+            max_tokens: 512,
+            reasoning_effort: 'medium',
+          }),
+        });
+        if (!resp.ok) throw new Error(`dashscope ${resp.status}`);
+        const data = await resp.json();
+        const reply = data.choices?.[0]?.message?.content || '';
+        return json({ reply }, 200, cors);
+      } catch (e) {
+        return json({ error: e.message }, 500, cors);
+      }
+    }
+
+
+    // POST /api/variants/:id/accept — accept a variant (publish grant)
+    const va = path.match(/^\/api\/variants\/([^/]+)\/accept$/);
+    if (va && request.method === 'POST') {
+      const [, vid] = va;
+      const { user_id } = await request.json();
+      await env.DB.prepare('UPDATE variants SET accepted = 1 WHERE id = ?').bind(vid).run();
+      return json({ id: vid, accepted: true }, 200, cors);
+    }
+
+    return json({ error: 'not found' }, 404, cors);
+  }
+};
+
+function json(data, status, cors) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { ...cors, 'Content-Type': 'application/json' },
+  });
+}

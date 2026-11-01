@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:perspectival-partition",
+  "source_packet_id": "ip:scientific-exclusion-principles",
+  "claim_packet": "content/information-packets/scientific-exclusion-principles-claims.json",
+  "generated_by": "codex",
+  "source_role": "empirical_constraint",
+  "central_reading": "Scientific evidence constrains Λ — the law of perspectival partition — without yet specifying it. IIT's exclusion axiom is the closest approximation. Lesion dissociations constrain the dimensional structure. Non-transitive unity constrains the formal structure.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:iit-exclusion-closest-approximation",
+      "source_span_id": "span:iit-exclusion",
+      "quoted_anchor": "IIT is the closest scientific theory",
+      "nn_expr": "vyapti(max_phi,exclusion_principle)",
+      "parse_status": "invalid",
+      "tradition_scope": "western_phi_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "argument_role": "constraint",
+      "targets": ["cand:naturalist-emergent", "crux:iit-exclusion-not-derived"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Derive manifestness from causal irreducibility without appealing to axioms that already assume the target."
+    },
+    {
+      "claim_id": "cl:lesion-exclusion-reveals-partition",
+      "source_span_id": "span:lesion-dissociations",
+      "quoted_anchor": "content, access, and arousal dissociations in brain damage",
+      "nn_expr": "virodha(phenomenal_dimensions,indivisibility)",
+      "parse_status": "invalid",
+      "tradition_scope": "clinical_neuroscience",
+      "evidence_dimension": "empirical",
+      "pramana": "pratyaksa",
+      "argument_role": "constraint",
+      "targets": ["cand:naturalist-emergent", "cand:siva-decombination", "crux:dissociation-constrains-lambda"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show lesion evidence affecting all phenomenal dimensions equally."
+    },
+    {
+      "claim_id": "cl:non-transitive-unity-constrains-lambda",
+      "source_span_id": "span:non-transitive-unity",
+      "quoted_anchor": "phenomenal unity may be non-transitive",
+      "nn_expr": "virodha(co_consciousness,transitivity)",
+      "parse_status": "invalid",
+      "tradition_scope": "cross_tradition",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "argument_role": "constraint",
+      "targets": ["cand:naturalist-emergent", "cand:siva-decombination", "cand:nyaya-plural-substances", "crux:transitivity-of-unity-unsettled"],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Show decisive evidence that phenomenal unity IS transitive."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:iit-closest-but-gap",
+      "source": "cl:iit-exclusion-closest-approximation",
+      "target": "cand:naturalist-emergent",
+      "edge_type": "supports",
+      "strength": 0.4,
+      "rationale": "IIT is the strongest naturalist candidate for Λ, but hasn't closed the manifestness gap."
+    },
+    {
+      "edge_id": "edge:iit-gap-pressures-naturalist",
+      "source": "cl:iit-exclusion-closest-approximation",
+      "target": "cand:naturalist-emergent",
+      "edge_type": "attacks",
+      "strength": 0.35,
+      "rationale": "The axiom-postulate gap means IIT has not solved the partition problem."
+    },
+    {
+      "edge_id": "edge:lesion-constrains-siva-partition",
+      "source": "cl:lesion-exclusion-reveals-partition",
+      "target": "cand:siva-decombination",
+      "edge_type": "supports",
+      "strength": 0.25,
+      "rationale": "Kañcuka-dimensional mapping onto clinical dissociations is suggestive."
+    },
+    {
+      "edge_id": "edge:non-transitive-pressures-nyaya",
+      "source": "cl:non-transitive-unity-constrains-lambda",
+      "target": "cand:nyaya-plural-substances",
+      "edge_type": "attacks",
+      "strength": 0.3,
+      "rationale": "Clean partition by substance is challenged by overlapping/non-transitive unity."
+    },
+    {
+      "edge_id": "edge:non-transitive-pressures-pratyabhijna",
+      "source": "cl:non-transitive-unity-constrains-lambda",
+      "target": "cand:siva-decombination",
+      "edge_type": "attacks",
+      "strength": 0.25,
+      "rationale": "One universal field faces issues if unity is non-transitive."
+    }
+  ],
+  "structural_correspondences": [],
+  "directional_critique_pairs": [],
+  "state_of_play_delta": {
+    "cand:naturalist-emergent": "IIT provides the strongest exclusion candidate but hasn't closed the manifestness gap. This limits the naturalist's claim to have specified Λ.",
+    "cand:siva-decombination": "Lesion dissociations suggest kañcuka dimensions may have empirical correlates, but this is correlational, not constitutive."
+  },
+  "next_work": [
+    "Connect IIT exclusion axioms to the Λ formalism from Checkpoint 10",
+    "Operationalize kañcuka dimensions for clinical testing",
+    "Incorporate split-brain non-transitivity data into the partition model"
+  ]
+}

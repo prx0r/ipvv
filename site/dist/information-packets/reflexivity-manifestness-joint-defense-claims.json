@@ -1,0 +1,237 @@
+{
+  "packet_id": "ip:reflexivity-manifestness-joint-defense",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "argument_fabric:joint_defense:reflexivity_manifestness",
+    "title": "Joint Defense: Structural Reflexivity + Apoha Account for Manifestness",
+    "author": "Argument Fabric (nanavira_phenomenology + dharmakirti_buddhist synthesis)",
+    "source_files": [
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.nanavira-map.json",
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.dharmakirti-map.json",
+      "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.abhinavagupta-map.json",
+      "content/information-packets/nanavira-fundamental-structure-claims.json",
+      "content/information-packets/dharmakirti-pv3-reflexivity-claims.json",
+      "content/information-packets/abhinavagupta-vimarsa-reflexivity-claims.json"
+    ],
+    "tradition_scope": "cross_tradition"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "argument_fabric_reasoning",
+  "extracted_at": "2026-07-26",
+  "status": "draft_pending_gate",
+  "review_note": "Joint defense claims are synthetic cross-tradition arguments, not extracted from a single source text. They rest on the already-gated claims in the Nanavira and Dharmakirti packets being accepted or accepted_with_penalty. The falsifiers for each claim must be tested against both traditions independently.",
+  "claims": [
+    {
+      "claim_id": "cl:joint-structural-reflexivity-form-of-self-presence",
+      "source_type": "argument_synthesis",
+      "source_id": "argument_fabric:joint_defense:manifestness",
+      "source_span": {
+        "file": "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+        "locator": "candidate:nanavira-structural-reflexivity",
+        "quote": "Structural reflexivity can include its own occurrence through recursive self-similar structure, giving experience a form of self-presence without requiring an owner-substance or intrinsic self-manifestation."
+      },
+      "claim_text": "Nanavira's structural reflexivity (self-similar reflexion across levels, invariance under transformation, contrastive determination) provides an account of the form of self-presence: experience can include its own occurrence through recursive structure without requiring an owner-substance or a second-order observer.",
+      "targets": [
+        {
+          "target_id": "cand:nanavira-structural-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:recognition-requires-self-manifestation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "nanavira_phenomenology",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "vyāpti(reflexion,self_presence_form)",
+      "hetu": "self-similar reflexion preserves structural form across levels without adding a hidden substance",
+      "sadhya": "structural reflexivity explains the form of self-presence without intrinsic self-manifestation",
+      "vyapti_statement": "If higher-order reflexion preserves the structural form of immediate presentation without requiring a new type of entity, then self-presence can be explained as a structural achievement rather than a primitive metaphysical property.",
+      "vyapti_confidence": 0.68,
+      "vyapti_violations": [
+        "Nanavira's account is phenomenological, not formal; the self-similarity claim may not hold under rigorous formalization.",
+        "The form of self-presence is not the same as manifestness itself — Trika could accept the form while denying it explains the appearing."
+      ],
+      "log_bayes_factor": 0.34,
+      "w_rel": 0.76,
+      "w_map": 0.62,
+      "w_aux": 0.58,
+      "falsifier": {
+        "type": "phenomenological",
+        "condition": "Show that self-similar reflexion across levels necessarily introduces a qualitative gap (e.g. between first-order and second-order experience) such that the form of self-presence cannot be preserved without intrinsic self-manifestation.",
+        "status": "untested"
+      },
+      "reasoning": "This claim extends the accepted Nanavira claims (especially cl:nanavira-structure-self-similar-reflexion, cl:nanavira-duration-invariance-abheda) into the manifestness domain. It does not assert that structure explains manifestness exhaustively, only that it accounts for the form of self-presence."
+    },
+    {
+      "claim_id": "cl:joint-apoha-determination-without-self",
+      "source_type": "argument_synthesis",
+      "source_id": "argument_fabric:joint_defense:manifestness",
+      "source_span": {
+        "file": "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+        "locator": "candidate:dharmakirti-conditioned-reflexivity",
+        "quote": "Apoha explains conceptual determination by exclusion, not by participation in a universal essence or self-substance."
+      },
+      "claim_text": "Dharmakirti's apoha explains conceptual determination and recognition through exclusion (anyapoha): a cognition recognizes its content by excluding what is other, without requiring a real universal, intrinsic self-manifestation, or enduring subject. This provides the mechanism by which manifest content is determinate rather than diffuse.",
+      "targets": [
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:nanavira-structural-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:no-self-target",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "dharmakirti_buddhist",
+      "evidence_dimension": "phenomenological",
+      "pramana": "sabda",
+      "nn_expr": "vyāpti(apoha,determination)",
+      "hetu": "conceptual determination proceeds by exclusion of what is other",
+      "sadhya": "recognition and determination can be explained without intrinsic self-manifestation",
+      "vyapti_statement": "If a cognition determines its content by excluding what is other, then the determinacy of manifest content can be accounted for by exclusion relations rather than by participation in a self-luminous essence.",
+      "vyapti_confidence": 0.64,
+      "vyapti_violations": [
+        "Apoha is primarily a semantic/cognitive theory; applying it to phenomenological manifestness may extend it beyond Dharmakirti's intended scope.",
+        "Exclusion may explain how content is structured without explaining why content appears at all."
+      ],
+      "log_bayes_factor": 0.30,
+      "w_rel": 0.72,
+      "w_map": 0.58,
+      "w_aux": 0.56,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that apoha-based determination either (a) entails a real universal/self against the Buddhist claim, or (b) cannot explain why determinate content appears at all, as opposed to merely being tracked functionally.",
+        "status": "untested"
+      },
+      "reasoning": "This claim extends the accepted Dharmakirti apoha claim (cl:dharmakirti-apoha-exclusion-no-universal) from semantic determination into the manifestness domain. The vyapti confidence is moderate because the scope extension is non-trivial."
+    },
+    {
+      "claim_id": "cl:joint-structure-plus-apoha-accounts-for-manifestness",
+      "source_type": "argument_synthesis",
+      "source_id": "argument_fabric:joint_defense:manifestness",
+      "source_span": {
+        "file": "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+        "locator": "crux:constructed-reflexivity-presupposes-manifestness",
+        "quote": "Joint defense: structural reflexivity supplies the form of self-presence; apoha supplies the mechanism of determination. Together they explain manifestness without intrinsic self-manifestation."
+      },
+      "claim_text": "Nanavira structural reflexivity and Dharmakirti apoha jointly account for manifestness: structural reflexivity explains how experience can include its own occurrence (the form of self-presence), while apoha explains how manifest content is determinate and recognizable (the mechanism of determination). Neither is sufficient alone — structure without determination would be empty; determination without structure would lack self-presence — but together they address both dimensions of the manifestness problem that Trika claims only intrinsic vimarsha can solve.",
+      "targets": [
+        {
+          "target_id": "cand:nanavira-structural-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:recognition-requires-self-manifestation",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:no-self-target",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(structure,apoha)",
+      "hetu": "structural reflexivity gives form to self-presence while apoha gives determinacy to content",
+      "sadhya": "the combination accounts for manifestness without intrinsic self-manifestation",
+      "vyapti_statement": "If self-presence is addressed by recursive structure and content determinacy is addressed by exclusion-based determination, then neither requires a primitive intrinsic self-manifestation to be explanatory — the joint account covers both dimensions of what manifestness requires.",
+      "vyapti_confidence": 0.52,
+      "vyapti_violations": [
+        "The joint defense is synthetic; each half is drawn from a different tradition with different ontological commitments. The combination may lack coherence unless a formal bridge is proved.",
+        "Trika could argue that manifestness includes dimensions (e.g. qualitative character, unity of apperception) that neither structural reflexivity nor apoha can reach separately or jointly.",
+        "The current bridge between Nanavira difference and Dharmakirti apoha remains at OVERLAPS, not PROVED."
+      ],
+      "log_bayes_factor": 0.22,
+      "w_rel": 0.65,
+      "w_map": 0.48,
+      "w_aux": 0.52,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that there is a dimension of manifestness (e.g. qualitative character, unity of apperception, self-luminosity) that neither structural reflexivity nor exclusion-based determination can explain either separately or jointly, and that this dimension requires intrinsic self-manifestation as per the Trika account.",
+        "status": "untested"
+      },
+      "reasoning": "This is the flagship joint defense claim. Its vyapti confidence is deliberately moderate because the cross-tradition bridge is not yet proved. It does not assert that the joint defense is complete, only that it covers enough of the manifestness problem to keep the constructed-reflexivity-presupposes-manifestness crux open rather than conceded."
+    },
+    {
+      "claim_id": "cl:joint-joint-defense-pressures-trika",
+      "source_type": "argument_synthesis",
+      "source_id": "argument_fabric:joint_defense:manifestness",
+      "source_span": {
+        "file": "content/source-metaphysics/q-reflexivity-intrinsic-or-constructed.argument.json",
+        "locator": "directional_critique_pairs:critique:abhinavagupta-to-nanavira:manifestness",
+        "quote": "If structural reflexivity + apoha jointly explain manifestness, Trika's critique that constructed accounts necessarily presuppose manifestness is weakened."
+      },
+      "claim_text": "The joint defense weakens Trika's manifestness critique (the claim that structural/constructed accounts necessarily presuppose manifestness rather than explaining it). If structural reflexivity gives the form of self-presence and apoha gives the mechanism of determination, then manifestness is at least partially explained by the combination — it is no longer an unanalyzed remainder that only intrinsic vimarsha can fill.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:constructed-reflexivity-presupposes-manifestness",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "crux:recognition-requires-self-manifestation",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "cross_tradition",
+      "paradigm": "cross_tradition",
+      "evidence_dimension": "phenomenological",
+      "pramana": "anumana",
+      "nn_expr": "vyāpti(joint_defense,weaken_manifestness_critique)",
+      "hetu": "joint defense covers form of self-presence and mechanism of determination",
+      "sadhya": "Trika's manifestness-gap critique is weakened (not refuted)",
+      "vyapti_statement": "If a rival account can explain both the structural form of self-presence and the determinacy of manifest content without intrinsic self-manifestation, then the claim that constructed reflexivity necessarily presupposes manifestness is no longer decisive — the burden shifts to Trika to show what dimension remains unexplained.",
+      "vyapti_confidence": 0.48,
+      "vyapti_violations": [
+        "This is a pressure claim, not a refutation. Trika could reply that manifestness has a qualitative or self-luminous character that neither structure nor exclusion reaches.",
+        "The joint defense is synthetic and bridge-dependent; if the Nanavira-Dharmakirti bridge fails, each half is individually weaker against the Trika critique.",
+        "Slight candidate_id typo ('bh-vimarsa-intrinsic' uses existing naming from the dossier)."
+      ],
+      "log_bayes_factor": 0.18,
+      "w_rel": 0.60,
+      "w_map": 0.42,
+      "w_aux": 0.50,
+      "falsifier": {
+        "type": "phenomenological",
+        "condition": "Produce a case of manifest experience whose manifestness is fully explained by intrinsic self-manifestation (as Trika describes it) but is not covered by any combination of structural reflexivity and apoha-based determination.",
+        "status": "untested"
+      },
+      "reasoning": "This is the pressure claim against Trika. It is deliberately modest (weakens, not refutes) and has the lowest LBF in the set. It keeps the crux open by showing the joint defense as a live alternative, not a proof."
+    }
+  ]
+}

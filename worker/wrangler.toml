@@ -1,0 +1,14 @@
+name = "ipvv-api"
+main = "src/index.js"
+compatibility_date = "2026-10-31"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ipvv"
+database_id = "aaefcfe9-5901-43a5-8a0f-4954356ae634"
+
+[ai]
+binding = "AI"
+
+[vars]
+CORS_ORIGIN = "https://ipvv-a8u.pages.dev"

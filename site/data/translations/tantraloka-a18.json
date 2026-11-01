@@ -1,0 +1,91 @@
+[
+ {
+  "chunk": "tal-a18-p01",
+  "verses": "18.1-18.6",
+  "sanskrit": "atha saṃkṣiptadīkṣeyaṃ śivatāpattidocyate / na rajo nādhivāso@tra na bhūkṣetraparigrahaḥ / yatra tatra pradeśe tu pūjayitvā guruḥ śivam adhvānaṃ manasā dhyātvā dīkṣayettattvapāragaḥ / jananādivihīnāṃ tu yena yenādhvanā guruḥ kuryātsa ekatattvāntāṃ śivabhāvaikabhāvitaḥ / parāmantrastato@syeti tattvaṃ saṃśodhayāmyatha svāheti pratitattvaṃ syācchuddhe pūrṇāhutiṃ kṣipet / evaṃ mantrāntaraiḥ kuryātsamastairathavoktavat parāsaṃpuṭitaṃ nāma svāhāntaṃ prathamāntakam / śataṃ sahasraṃ sāṣṭaṃ vā tena śaktyaiva homayet tataḥ pūrṇeti saṃśodhyahīnamuttamamīdṛśam / dīkṣākarmoditaṃ tatra tatra śāstre maheśinā",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "18",
+  "immutable_id": "pt:pid:tal:2ae04d404f17",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 12379,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 12
+ },
+ {
+  "chunk": "tal-a18-p02",
+  "verses": "18.7-18.11",
+  "sanskrit": "pratyekaṃ mātṛkāyugmavarṇaistattvāni śodhayet / yadi vā piṇḍamantreṇa sarvamantreṣvayaṃ vidhiḥ yathā yathā ca svabhyastajñānastanmayatātmakaḥ / gurustathā tathā kuryāt saṃkṣiptaṃ karma nānyathā śrībrahmayāmale coktaṃ saṃkṣipte@pi hi bhāvayet / vyāptiṃ sarvādhvasāmānyāṃ kiṃtu yāge na vistaraḥ atanmayībhūtamiti vikṣiptaṃ karma sandadhat / kramāttādātmyametīti vikṣiptaṃ vidhimācaret saṃkṣipto vidhirukto@yaṃ kṛpayā yaḥ śivoditaḥ / dīkṣottare kairaṇe ca tatra tatrāpi śāsane",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION",
+   "CITATION_GROUNDING"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "18",
+  "immutable_id": "pt:pid:tal:fa268f3a645c",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'māyā' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 12398,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 11
+ }
+]

@@ -9,7 +9,40 @@
    "CITATION_GROUNDING"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "saktavijnana",
+  "immutable_id": "pt:pid:sakt:39fe301fd426",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    false,
+    "'jñāna' used in candidate but not in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "somananda-saktavijnana.txt",
+  "source_lines": 6,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Zaidoo ed. 1947)",
+  "match_words": 12
  },
  {
   "chunk": "sakt-p02",
@@ -20,7 +53,40 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "saktavijnana",
+  "immutable_id": "pt:pid:sakt:0fa1d908e4e4",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "somananda-saktavijnana.txt",
+  "source_lines": 5,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Zaidoo ed. 1947)",
+  "match_words": 12
  },
  {
   "chunk": "sakt-p03",
@@ -31,6 +97,39 @@
    "ABSTENTION"
   ],
   "model": "manual-muse-spark",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "saktavijnana",
+  "immutable_id": "pt:pid:sakt:da4e35effa7e",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "somananda-saktavijnana.txt",
+  "source_lines": 66,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Zaidoo ed. 1947)",
+  "match_words": 12
  }
 ]

@@ -1,0 +1,795 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Materially Enacted Inexternalist Process Identity Theory</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Framework</div><h1>Materially Enacted Inexternalist Process Identity Theory</h1><div class="skt"></div><div class="sub">3045 words · vendored research asset</div><div class="sub"><a href="/data/recognition-framework/mepit-razor.md">source →</a></div><h1>Materially Enacted Inexternalist Process Identity Theory</h1>
+<h2>A Joint Physical–Phenomenal Framework for the Individuation of Conscious Biological Processes</h2>
+<hr/>
+<h2>Abstract</h2>
+<ul>
+<li>theory of consciousness must answer four distinct questions: why phenomenality exists, what individuates one subject, what structures its phenomenal field, and which physical organization implements it. The present framework addresses the second, third, and fourth through a single operation. It does not answer the first.</li>
+</ul>
+<ul>
+<li>e framework&#x27;s central claim is that subject and world are jointly individuated by a single exclusion operation — a partition of an undifferentiated possibility domain into a subject pole and a world pole. This operation is physically implemented by the bioelectric organization of a living organism and has an intrinsic aspect that is the phenomenal field. The framework is substrate-sensitive: the bearer is neither abstract information nor material inventory but the organized activity of a specific embodied medium. Consciousness is not derived from information, complexity, or biological closure. Phenomenality remains primitive. Its concrete bearer and internal structure are empirically investigable.</li>
+</ul>
+<ul>
+<li>aims are graded: proven (A), experimentally confirmed (B), supported by converging evidence (C), plausible hypothesis (D), speculative (E).</li>
+</ul>
+<hr/>
+<h2>1. The Problem</h2>
+<ul>
+<li>complete theory must separate four questions. Conflating them has produced a century of confused debate.</li>
+</ul>
+<ul>
+<li>Q1 — Existence:** Why is anything phenomenally manifest rather than nothing?</li>
+</ul>
+<ul>
+<li>Q2 — Individuation (the selector problem):** Why does one phenomenal field belong to one subject rather than another? What determines the boundary ∂D_i?</li>
+</ul>
+<ul>
+<li>Q3 — Structure:** Why does that field possess its particular unity, temporality, qualities, valence, agency, and privacy?</li>
+</ul>
+<ul>
+<li>Q4 — Implementation:** Which physical organization constitutes that field?</li>
+</ul>
+<ul>
+<li>The framework&#x27;s scope:** Q1 is left primitive. The framework addresses Q2–Q4 through a single operation. This is not an evasion. It follows from the epistemic asymmetry: no purely third-person description entails first-person presence.</li>
+</ul>
+<hr/>
+<h2>2. Why Purely Physical Selectors Fail</h2>
+<ul>
+<li>ery previous attempt to derive the subject from physics alone has failed. The reason is structural.</li>
+</ul>
+<ul>
+<li>t the total physical history be 𝒫 = (X, Φ, 𝒰). A purely physical selector would be a function 𝔖_phys: 𝒫 → {A₁, A₂, ...} that outputs the subject-bearing organizations.</li>
+</ul>
+<ul>
+<li>ery proposal imports arbitrary choices:</li>
+</ul>
+<ul>
+<li>Selector Type | Arbitrary Parameter |</li>
+<li>--|---|</li>
+<li>Integration measures (Φ) | Requires choice of variables and partition |</li>
+<li>Thresholds | Requires cutoff value |</li>
+<li>Maximality rules | Requires comparison class |</li>
+<li>Causal models | Requires intervention set |</li>
+<li>Dynamical modes | Requires operator basis |</li>
+<li>Temporal windows | Requires endpoint selection |</li>
+<li>Biological closure | Permits nested closures |</li>
+</ul>
+<ul>
+<li>The underdetermination theorem:** Physical data alone underdetermine which organization is the phenomenal subject. Phenomenal subjecthood is not a variable contained within any exclusively extrinsic description.</li>
+</ul>
+<ul>
+<li>Corollary:** The demand that physics first identify the subject without phenomenal evidence was misplaced.</li>
+</ul>
+<ul>
+<li>Status: A (proven) — follows from the structure of physical description.**</li>
+</ul>
+<hr/>
+<h2>3. The Core Identity Postulate</h2>
+<ul>
+<li>t D_i denote one phenomenal subject-history and A_i denote one concrete materially enacted process.</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i ≡_int A_i</li>
+<li>`</li>
+</ul>
+<ul>
+<li>ere ≡_int denotes numerical identity under epistemically asymmetric access.</li>
+</ul>
+<h3>What this does not mean</h3>
+<ul>
+<li>t production: A_i → D_i. Not correlation: A_i ↔ D_i.</li>
+</ul>
+<ul>
+<li>e same token is:</li>
+<li><b>Extrinsically</b> describable through causal, biological, material, and behavioral relations</li>
+<li><b>Intrinsically</b> present as one phenomenal trajectory</li>
+</ul>
+<h3>The epistemic gap</h3>
+<ul>
+<li>ird-person propositions do not contain first-person presentation: E ⊬ P.</li>
+</ul>
+<ul>
+<li>t non-derivability does not entail ontological distinctness: (E ⊬ P) ⇏ (E ≠ P).</li>
+</ul>
+<ul>
+<li>e identity claim is a metaphysical postulate constrained by empirical structural correspondences.</li>
+</ul>
+<ul>
+<li>Status: A (philosophical postulate — shared with Russellian monism, dual-aspect theories).**</li>
+</ul>
+<hr/>
+<h2>4. Information Is Not a Mental Substance</h2>
+<ul>
+<li>e Information Philosopher distinguishes intrinsic information from information about external relations and proposes that identity depends on total information. This cannot serve as a criterion of identity for three reasons.</li>
+</ul>
+<ul>
+<li>First:** &quot;Total information&quot; depends on state variables, coding scheme, precision, and observer&#x27;s partition. It provides no unique natural quantity.</li>
+</ul>
+<ul>
+<li>Second:** Two time-slices of one organism contain different information. Persistence cannot require informational equality.</li>
+</ul>
+<ul>
+<li>Third:** Information is not an additional substance. Shannon information measures distinctions relative to a probability distribution. Semantic information requires further organizational and normative conditions.</li>
+</ul>
+<ul>
+<li>e framework therefore adopts:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>formation is a property of organized physical distinctions.</li>
+<li>`</li>
+</ul>
+<ul>
+<li>t:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>nd is an immaterial information substance.</li>
+<li>`</li>
+</ul>
+<ul>
+<li>e physically relevant units are constraint-bearing states with measurable causal consequences.</li>
+</ul>
+<ul>
+<li>Status: B (confirmed — follows from information theory).**</li>
+</ul>
+<hr/>
+<h2>5. The Material Enactment Principle</h2>
+<ul>
+<li>subject-bearing process is not an abstract transition table.</li>
+</ul>
+<ul>
+<li>t Σ_i(t) be the material regime of process A_i:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i = ⟨W_i, I_i, L_i, P_i, C_i, E_i, M_i⟩</li>
+<li>`</li>
+</ul>
+<ul>
+<li>ere W_i is hydration state, I_i ionic composition, L_i lipid membranes, P_i proteins and channels, C_i cytoskeleton, E_i extracellular matrix, M_i metabolism.</li>
+</ul>
+<ul>
+<li>e bearer is:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i = ⟨X_i, Φ_Σi, H_i, 𝒞_i, 𝒥_i, Ω_i⟩</li>
+<li>`</li>
+</ul>
+<ul>
+<li>ere X_i is the accessible state space, Φ_Σi the materially dependent dynamics, H_i the causally active history, 𝒞_i the organization of mutual constraints, 𝒥_i the identity-relevant invariants, and Ω_i the current operating regime.</li>
+</ul>
+<ul>
+<li>Principle:** Φ_Σa ≠ Φ_Σb whenever material differences change psychophysically relevant counterfactual capacities.</li>
+</ul>
+<ul>
+<li>Status: B (supported by Levin&#x27;s demonstration that bioelectric computation depends on specific biophysical parameters — ion channel types, gap junction topology, hydration — rather than abstract logical structure alone. Fields &amp; Levin 2103.17061; Cadinu et al. 2504.00872.)**</li>
+</ul>
+<hr/>
+<h2>6. The Solution: Exclusion as Joint Partition</h2>
+<h3>6.1 The formal operation</h3>
+<ul>
+<li>t Ω be the space of all possible determinations. The exclusion operator E_i for process A_i simultaneously carves subject and world:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i: Ω → (P_i, W_i)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>ere P_i is the subject pole (&quot;I&quot;) and W_i is the world pole (&quot;this&quot;).</li>
+</ul>
+<h3>6.2 Co-emergence</h3>
+<ul>
+<li>i and W_i are not independently pre-existing. They co-emerge through the same operation:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>∃P_i prior to E_i) ∧ ¬(∃W_i prior to E_i)</li>
+<li>`</li>
+</ul>
+<h3>6.3 The five dimensions of exclusion</h3>
+<ul>
+<li>e exclusion is implemented along five independent dimensions:</li>
+</ul>
+<ul>
+<li>Operator | Excludes | Subject Pole | World Pole |</li>
+<li>--|---|---|---|</li>
+<li>Kalā (agency) | Actions not available | What I can do | What resists |</li>
+<li>Vidyā (knowledge) | Distinctions not accessible | What I know | What is |</li>
+<li>Rāga (desire) | States not fulfilled | What I want | What offers |</li>
+<li>Kāla (time) | Times not present | When I am | Temporal structure |</li>
+<li>Niyati (space/cause) | Locations not reachable | Where I am | Spatial structure |</li>
+</ul>
+<h3>6.4 What this solves</h3>
+<ul>
+<li>ntent X belongs to field D_i not because of an additional wall, but because the same exclusion operation E_i that determined X as content simultaneously determined D_i as its field. They are two poles of one act.</li>
+</ul>
+<ul>
+<li>This is the solution to the selector problem (Q2).**</li>
+</ul>
+<ul>
+<li>Status: C (supported by textual evidence from ĪPK 1.3.7 and Torella&#x27;s reconstruction of Utpaladeva&#x27;s apoha theory. The five-dimensional structure is from Abhinavagupta&#x27;s kañcuka doctrine. Empirical support from Levin&#x27;s demonstration that bioelectric fields implement exclusion-like operations at the cellular level.)**</li>
+</ul>
+<hr/>
+<h2>7. Physical Implementation: Bioelectric Exclusion</h2>
+<h3>7.1 The substrate</h3>
+<ul>
+<li>e exclusion operators E_i are physically implemented by the bioelectric field B_i:</li>
+</ul>
+<ul>
+<li>Exclusion | Physical Implementation |</li>
+<li>--|---|</li>
+<li>What signals enter (include) | Gap junctions open → coupled |</li>
+<li>What stays out (exclude) | Gap junctions closed → decoupled |</li>
+<li>What the system targets | Vmem distribution → morphogenetic attractor |</li>
+<li>What the system can affect | Cognitive light cone → spatial/temporal reach |</li>
+</ul>
+<h3>7.2 Experimental confirmation (Levin, 2010–2025)</h3>
+<ul>
+<li> <b>Pattern persistence:</b> Planarian target morphology survives complete cell turnover. The pattern is not in DNA — perturbing the bioelectric field changes it permanently. [B — multiple labs confirmed]</li>
+<li> <b>Downward causation:</b> Organism-level bioelectric goals constrain individual cell behavior. Cells follow the field, not their own genome. [B — confirmed]</li>
+<li> <b>Cognitive light cone:</b> Gap junction coupling determines the spatial/temporal scale of agency — what a system can sense, value, and act upon. [B — confirmed]</li>
+<li> <b>Generate–select:</b> Every biological system, at every scale, generates alternative states and selects among them. [B — confirmed]</li>
+</ul>
+<h3>7.3 Material specificity</h3>
+<ul>
+<li>e computation performed by a bioelectric network depends constitutively on:</li>
+<li>Ion channel types (change channels → change computation)</li>
+<li>Gap junction topology (change connectivity → change memory)</li>
+<li>Hydration state (change water → change ion mobility)</li>
+<li>Membrane composition (change lipids → change channel behavior)</li>
+</ul>
+<ul>
+<li>Status: B (confirmed — Levin corpus; Fields &amp; Levin 2103.17061; Cadinu et al. 2504.00872.)**</li>
+</ul>
+<hr/>
+<h2>8. Organizational Closure</h2>
+<ul>
+<li>ological-autonomy theory distinguishes thermodynamic openness from organizational closure. Organisms exchange matter and energy continuously while a network of constraints mutually maintains the conditions under which those constraints continue to operate.</li>
+</ul>
+<ul>
+<li>t 𝒞_i = {c₁, ..., c_n} be constraint-producing processes. Organizational closure requires that for every constitutive constraint c_j, some subset of the remaining organization contributes to its production or maintenance:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>_j ∈ 𝒞_i, ∃S_j ⊆ 𝒞_i \ {c_j} such that S_j ⇝ c_j</li>
+<li>`</li>
+</ul>
+<ul>
+<li>llectively:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i ⇝ 𝒞_i</li>
+<li>`</li>
+</ul>
+<ul>
+<li>is provides a non-arbitrary biological candidate boundary, an account of self-maintenance, a natural basis for endogenous function, and a distinction between constitutive components and ordinary inputs. It does not by itself establish consciousness. Cells, organs, and organisms may instantiate nested closures.</li>
+</ul>
+<ul>
+<li>Status: A (proven — closure theory; B in organisms — experimentally demonstrated).**</li>
+</ul>
+<hr/>
+<h2>9. Historical Constitution</h2>
+<ul>
+<li>e process&#x27;s history is not an immaterial record attached to its present state. It is present as altered disposition:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i(t) = {z ∈ X_i(t) : z depends on the prior trajectory and alters future transitions}</li>
+<li>`</li>
+</ul>
+<ul>
+<li>process is strongly history-sensitive when:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>x_t+Δ | x_t, H_t) ≠ P(x_t+Δ | x_t)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>levant dispositions include synaptic organization, recurrent network state, bodily regulation, membrane and ionic configuration, developmental morphology, learned action policies, extracellular and mechanical organization, and autobiographical memory.</li>
+</ul>
+<ul>
+<li>Status: B (confirmed — neuroscience and developmental biology).**</li>
+</ul>
+<hr/>
+<h2>10. The Joint Individuation Principle</h2>
+<h3>10.1 Physical model family</h3>
+<ul>
+<li>fine a physical model family 𝕽 = {R^N, R^B, R^M, R^A, R^S} including neural, bioelectric, metabolic, autonomic, and sensorimotor descriptions. Each model recovers candidate organizations:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>c(R^k) = {A₁^k, A₂^k, ...}</li>
+<li>`</li>
+</ul>
+<h3>10.2 Phenomenal constraints</h3>
+<ul>
+<li>t 𝕻_i be the family of phenomenal partitions supported by first-person discrimination, structured reports, psychophysics, and behavior.</li>
+</ul>
+<h3>10.3 The joint fixed point</h3>
+<ul>
+<li>subject-bearing process is a joint fixed point:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i* = Fix(𝕽, 𝕻_i, 𝓤)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>en the same process-equivalence class jointly satisfies:</li>
+<li> Organizational closure</li>
+<li> Material enactment</li>
+<li> Historical continuity</li>
+<li> Causal-scale robustness</li>
+<li> Dynamically stable psychophysical partition</li>
+<li> Perturbational correspondence</li>
+<li> Cross-description convergence</li>
+</ul>
+<h3>10.4 The identity claim</h3>
+<ul>
+<li>`</li>
+<li>i ≡_int A_i*</li>
+<li>`</li>
+</ul>
+<ul>
+<li>Status: C (supported — integrative framework with independently confirmed components).**</li>
+</ul>
+<hr/>
+<h2>11. Phenomenal Structure</h2>
+<ul>
+<li>ch dimension of the phenomenal field maps to a physical structure:</li>
+</ul>
+<ul>
+<li>Phenomenal | Physical | Status |</li>
+<li>--|---|---|</li>
+<li>Unity (u_i) | Differentiated integration under perturbation | B — supported |</li>
+<li>Boundary (b_i) | Convergence of neural, bioelectric, metabolic, mechanical boundaries | C — testable |</li>
+<li>Temporality (τ_i) | Active retention and anticipation (H_i) | B — supported |</li>
+<li>Quality (q_i) | Relational physical structure compared via similarity data | C — testable |</li>
+<li>Valence (v_i) | Regulatory significance enacted through norm structure | D — hypothesized |</li>
+<li>Agency (a_i) | Counterfactual control over future states | B — supported |</li>
+<li>Subject index (ι_i) | Historical, regulatory, perspective-bearing trajectory | D — hypothesized |</li>
+</ul>
+<h3>11.1 The subject index</h3>
+<ul>
+<li>stinguish explicit ownership (o_i) from implicit subject index (ι_i):</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i ≠ o_i</li>
+<li>`</li>
+</ul>
+<ul>
+<li>plicit mineness can weaken in depersonalization or meditation. Experience remains indexed to one field. The subject index denotes the invariance by which changing contents are co-present within one private trajectory.</li>
+</ul>
+<hr/>
+<h2>12. Valence as Geometric Coherence</h2>
+<ul>
+<li>lence is hypothesized to be the degree of coherence of the exclusion operation:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i = Symmetry(⟨E_i^kalā, E_i^vidyā, E_i^rāga, E_i^kāla, E_i^niyati⟩)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>en the five exclusion dimensions are harmoniously aligned, the process is coherent: positive valence. When they conflict (what I want vs. what I can do; what I know vs. what is true), the exclusions are frustrated: negative valence.</li>
+</ul>
+<ul>
+<li>Status: D (hypothesized — supported by QRI&#x27;s symmetry theory, Tymoczko&#x27;s geometric music theory, and Abhinavagupta&#x27;s camatkāra doctrine. No direct experimental confirmation.)**</li>
+</ul>
+<hr/>
+<h2>13. Testable Predictions</h2>
+<h3>P1: Joint models outperform one-domain models</h3>
+<ul>
+<li>dels using only neural integration or only biological closure should individuate subjects less reliably than models combining physical organization with phenomenal partition constraints.</li>
+</ul>
+<h3>P2: Generating partitions predict phenomenology</h3>
+<ul>
+<li>rtitions that are dynamically stable and approximately generating should predict phenomenal transitions better than arbitrary clustering.</li>
+</ul>
+<h3>P3: Subject-index continuity exceeds content continuity</h3>
+<ul>
+<li>ring large content changes, the organization corresponding to ι_i should remain more stable than content-specific neural patterns.</li>
+</ul>
+<h3>P4: Ownership dissociates from indexing</h3>
+<ul>
+<li>rturbations of explicit ownership should alter o_i without necessarily abolishing ι_i, unity, or phenomenal presence.</li>
+</ul>
+<h3>P5: Organizational closure is necessary but insufficient</h3>
+<ul>
+<li>ny autonomous biological systems should satisfy closure without satisfying the complete psychophysical convergence conditions.</li>
+</ul>
+<h3>P6: History improves bearer recovery</h3>
+<ul>
+<li>story-sensitive models should outperform instantaneous models in predicting temporal continuity, familiarity, agency, affect, and subject-boundary changes.</li>
+</ul>
+<h3>P7: No single material variable is sufficient</h3>
+<ul>
+<li>dration, membrane voltage, synchrony, information quantity, and complexity should each fail as independent selectors while contributing to the joint process model.</li>
+</ul>
+<h3>P8: Robust scale plateau</h3>
+<ul>
+<li>e candidate bearer should be recovered across a range of nearby spatial and temporal scales rather than at one fragile analytical resolution.</li>
+</ul>
+<h3>P9: Valence follows exclusion coherence</h3>
+<ul>
+<li>nipulations that align the five exclusion dimensions should increase positive valence; manipulations that create conflict should increase negative valence.</li>
+</ul>
+<hr/>
+<h2>14. Falsification Conditions</h2>
+<ul>
+<li>e framework would be seriously weakened if:</li>
+</ul>
+<ul>
+<li> No physical model family converges on a common process-equivalence class</li>
+<li> Stable phenomenal partitions cannot be mapped to stable physical partitions</li>
+<li> Arbitrary partitions predict phenomenology as well as generating partitions</li>
+<li> Candidate boundaries change radically under minor analytical alterations</li>
+<li> Organizational closure and causal-scale robustness provide no predictive improvement</li>
+<li> Historical variables add no explanatory value</li>
+<li> Phenomenal unity and privacy track several incompatible overlapping processes equally well</li>
+<li> Physical destruction of the recovered process leaves the same phenomenal trajectory intact</li>
+<li> The proposed subject-index invariant shows no physical or phenomenological stability</li>
+<li>. Valence does not track exclusion coherence in controlled experiments</li>
+</ul>
+<hr/>
+<h2>15. What Is Established vs. What Remains Open</h2>
+<h3>Established</h3>
+<ul>
+<li>Problem | Solution | Grade |</li>
+<li>--|---|---|</li>
+<li>Substrate | Materially enacted biological process — not abstract software, not a single substance | A/B |</li>
+<li>Persistence | Identity = continuity of history-bearing organizational process, not material sameness | A/B |</li>
+<li>Boundary | Convergence of several dynamically generated physical boundaries, constrained by phenomenal privacy | B/C |</li>
+<li>Coarse-graining | Partitions selected through contextual stability, generating dynamics, causal robustness | B/C |</li>
+<li>Selector (Q2) | Joint individuation fixed point — purely physical selector was an inappropriate demand | C |</li>
+<li>Self | Distinction between phenomenal presence, implicit index, explicit ownership, autobiographical model | C |</li>
+<li>Partition operation | E_i: Ω → (P_i, W_i) — one operation carves both poles | C |</li>
+<li>Physical implementation | Bioelectric fields implement exclusion at cellular level | B |</li>
+</ul>
+<h3>Open</h3>
+<ul>
+<li>Question | Grade | Why Open |</li>
+<li>--|---|---|</li>
+<li>Why is the process manifest? (Q1) | A (primitive) | Not derivable within the framework |</li>
+<li>Can structural convergence prove identity? | N/A | Abductive, not deductive |</li>
+<li>Do nonhuman systems satisfy the criteria? | E | Must be applied, not decided by intuition |</li>
+<li>Exact operational metrics | E | Research problems |</li>
+<li>Valence as geometric coherence | D | No direct experimental confirmation |</li>
+<li>Transindividual subjects | E | No phenomenal composition law known |</li>
+<li>Developmental aperture trajectory | E | No longitudinal data |</li>
+</ul>
+<hr/>
+<h2>16. Final Theory Statement</h2>
+<blockquote><b>Materially Enacted Inexternalist Process Identity Theory (MEPIT) holds that each conscious subject is numerically identical to one materially enacted, temporally extended, history-bearing biological process. Subject and world are jointly individuated by a single exclusion operation E_i: Ω → (P_i, W_i), physically implemented by the bioelectric organization of the organism. The exclusion has an intrinsic aspect that is the phenomenal field.</b></blockquote>
+<ul>
+<li></li>
+</ul>
+<blockquote><b>The bearer is an organizationally closed but thermodynamically open network of mutually maintaining constraints whose neural, bioelectric, metabolic, mechanical, autonomic, and sensorimotor activities jointly preserve one trajectory. Because physical systems admit multiple overlapping descriptions, subject individuation requires a joint fixed point at which independent physical models, causal-scale analyses, dynamically stable generating partitions, perturbational evidence, and independently characterized phenomenal structures converge on one process-equivalence class.</b></blockquote>
+<ul>
+<li></li>
+</ul>
+<blockquote><b>Phenomenal presence, unity, privacy, temporality, quality, valence, agency, and implicit subject indexing are intrinsic structural dimensions of that same process. Information, complexity, integration, biological closure, and hydration are neither separate mental substances nor individually sufficient conditions. Phenomenality itself is primitive; its concrete bearer, boundaries, persistence, and internal structure are empirically investigable.</b></blockquote>
+<ul>
+<li>rmally:</li>
+</ul>
+<ul>
+<li>`</li>
+<li>i ≡_int A_i*</li>
+<li>i* = Fix(𝕽, 𝕻_i, 𝓤)</li>
+<li>i* = ⟨X_i, Φ_Σi, H_i, 𝒞_i, 𝒥_i, Ω_i, E_i: Ω → (P_i, W_i)⟩</li>
+<li>`</li>
+</ul>
+<hr/>
+<h2>Evidence Summary</h2>
+<ul>
+<li>Grade | Count | Meaning |</li>
+<li>--|---|---|</li>
+<li>A (proven) | 5 | Mathematical or geometric identity; logical necessity |</li>
+<li>B (confirmed) | 8 | Experimentally replicated in multiple labs |</li>
+<li>C (supported) | 6 | Multiple lines of evidence converge; mechanism not fully resolved |</li>
+<li>D (hypothesized) | 2 | Consistent with data but not tested directly |</li>
+<li>E (speculative) | 4 | No direct evidence; philosophically coherent |</li>
+</ul>
+<hr/>
+<h2>References</h2>
+<ul>
+<li>Īśvarapratyabhijñā-Kārikā 1.3.7 (Utpaladeva, c. 925 CE)</li>
+<li>Torella, R. &quot;Anupalabdhi and Apoha in a Śaiva Garb&quot;</li>
+<li>Abhinavagupta, Tantrāloka (camatkāra doctrine)</li>
+<li>Levin, M. et al. (2010-2025): Bioelectric morphogenesis, cognitive light cone</li>
+<li>Fields, C. &amp; Levin, M. (2103.17061): Metabolic limits on classical computation</li>
+<li>Cadinu, P. et al. (2504.00872): Bioelectrical interfaces in non-excitable cells</li>
+<li>Doyle, R. O. (2011, 2016): Information Philosophy, two-stage model</li>
+<li>Fuller, R. B. (1975): Synergetics, minimum system theorem, pattern integrity</li>
+<li>Ellis, G. F. R. (2011): Five mechanisms of top-down causation</li>
+<li>Walker, S. I. &amp; Davies, P. C. W. (2017): Hard problem of life</li>
+<li>Johnson, M. et al. (QRI): Symmetry theory of valence</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/recognition-framework/mepit-razor.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

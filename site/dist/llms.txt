@@ -1,0 +1,156 @@
+# svatantrya — LLM Discovery File
+
+> Machine-readable index. All content is freely accessible.
+> Source: https://github.com/prx0r/ipvv | Live: https://ipvv-a8u.pages.dev
+
+## What this site contains
+
+A complete, auditable translation and commentary pipeline for Trika Śaivism:
+- Sanskrit roots (vendored, licensed, CC BY-NC-SA)
+- Translations (T1/L1/L2, gate-checked, source-traceable)
+- Argument truth-packets (conclusion → premises → passage → Sanskrit)
+- C1 passage commentaries (local hermeneutics)
+- Themes (machine-proposed clusters, adjudication pending)
+- Essays (22 recognition essays, 17 peer-reviewed)
+- Scholars (36 bios + bibliographies)
+- Recitation (studio chants + browser-voice readout)
+- Pushing probes (73 Q→GEM sessions)
+- Contentions (16 falsifiable claims with source spans)
+
+## Data endpoints (machine-readable)
+
+- /data/corpus.jsonl — 691 records (translations, passages, C1s, essays, arguments, probes)
+- /data/receipts.jsonl — 546 audit receipts (qprivately kernel, tamper-checked)
+- /data/vectors.json — 691 embeddings (bge-m3, contextual retrieval)
+- /data/translations/{work}.json — per-work translation records
+- /data/arguments/{id}.json — per-chunk argument truth-packets
+- /data/scholars.json — 36 scholar bios + bibliographies
+- /data/glossary.json — 100 concepts with occurrences
+- /data/authors/{id}.json — 15 master bios + works
+- /data/sections.json — taxonomy (Masters vs Modern)
+- /data/read_alongside.json — scholar ↔ master cross-links
+- /data/essay-links/links.json — essay ↔ argument links
+- /data/styles/{id}.json — style cards for translation rendering
+
+## Per-work data
+
+- /translations/ajadapramatrsiddhi.html — ajadapramatrsiddhi (translation + gate status)
+  data: /data/translations/ajadapramatrsiddhi.json
+- /translations/anuttarastika.html — anuttarastika (translation + gate status)
+  data: /data/translations/anuttarastika.json
+- /translations/bhairavanukarana.html — bhairavanukarana (translation + gate status)
+  data: /data/translations/bhairavanukarana.json
+- /translations/bhairavastava.html — bhairavastava (translation + gate status)
+  data: /data/translations/bhairavastava.json
+- /translations/bodhapancadasika.html — bodhapancadasika (translation + gate status)
+  data: /data/translations/bodhapancadasika.json
+- /translations/bodhavilasa.html — bodhavilasa (translation + gate status)
+  data: /data/translations/bodhavilasa.json
+- /translations/ghatakarpara.html — ghatakarpara (translation + gate status)
+  data: /data/translations/ghatakarpara.json
+- /translations/isvarasiddhi.html — isvarasiddhi (translation + gate status)
+  data: /data/translations/isvarasiddhi.json
+- /translations/kramastotra.html — kramastotra (translation + gate status)
+  data: /data/translations/kramastotra.json
+- /translations/paramarthasara.html — paramarthasara (translation + gate status)
+  data: /data/translations/paramarthasara.json
+- /translations/paratrimshika.html — paratrimshika (translation + gate status)
+  data: /data/translations/paratrimshika.json
+- /translations/paryantapancasika.html — paryantapancasika (translation + gate status)
+  data: /data/translations/paryantapancasika.json
+- /translations/phrdaya.html — phrdaya (translation + gate status)
+  data: /data/translations/phrdaya.json
+- /translations/ptvmadhyama.html — ptvmadhyama (translation + gate status)
+  data: /data/translations/ptvmadhyama.json
+- /translations/saktavijnana.html — saktavijnana (translation + gate status)
+  data: /data/translations/saktavijnana.json
+- /translations/sambandhasiddhi.html — sambandhasiddhi (translation + gate status)
+  data: /data/translations/sambandhasiddhi.json
+- /translations/sivastotravali.html — sivastotravali (translation + gate status)
+  data: /data/translations/sivastotravali.json
+- /translations/sivasutra.html — sivasutra (translation + gate status)
+  data: /data/translations/sivasutra.json
+- /translations/spanda.html — spanda (translation + gate status)
+  data: /data/translations/spanda.json
+- /translations/stavacintamani.html — stavacintamani (translation + gate status)
+  data: /data/translations/stavacintamani.json
+- /translations/svabodhasiddhi.html — svabodhasiddhi (translation + gate status)
+  data: /data/translations/svabodhasiddhi.json
+- /translations/tantraloka-a01.html — tantraloka-a01 (translation + gate status)
+  data: /data/translations/tantraloka-a01.json
+- /translations/tantraloka-a02.html — tantraloka-a02 (translation + gate status)
+  data: /data/translations/tantraloka-a02.json
+- /translations/tantraloka-a07.html — tantraloka-a07 (translation + gate status)
+  data: /data/translations/tantraloka-a07.json
+- /translations/tantraloka-a11.html — tantraloka-a11 (translation + gate status)
+  data: /data/translations/tantraloka-a11.json
+- /translations/tantraloka-a12.html — tantraloka-a12 (translation + gate status)
+  data: /data/translations/tantraloka-a12.json
+- /translations/tantraloka-a14.html — tantraloka-a14 (translation + gate status)
+  data: /data/translations/tantraloka-a14.json
+- /translations/tantraloka-a17.html — tantraloka-a17 (translation + gate status)
+  data: /data/translations/tantraloka-a17.json
+- /translations/tantraloka-a18.html — tantraloka-a18 (translation + gate status)
+  data: /data/translations/tantraloka-a18.json
+- /translations/tantraloka-a19.html — tantraloka-a19 (translation + gate status)
+  data: /data/translations/tantraloka-a19.json
+- /translations/tantraloka-a20.html — tantraloka-a20 (translation + gate status)
+  data: /data/translations/tantraloka-a20.json
+- /translations/tantraloka-a21.html — tantraloka-a21 (translation + gate status)
+  data: /data/translations/tantraloka-a21.json
+- /translations/tantraloka-a23.html — tantraloka-a23 (translation + gate status)
+  data: /data/translations/tantraloka-a23.json
+- /translations/tantraloka-a24.html — tantraloka-a24 (translation + gate status)
+  data: /data/translations/tantraloka-a24.json
+- /translations/tantraloka-a25.html — tantraloka-a25 (translation + gate status)
+  data: /data/translations/tantraloka-a25.json
+- /translations/tantraloka-a26.html — tantraloka-a26 (translation + gate status)
+  data: /data/translations/tantraloka-a26.json
+- /translations/tantraloka-a27.html — tantraloka-a27 (translation + gate status)
+  data: /data/translations/tantraloka-a27.json
+- /translations/tantraloka-a30.html — tantraloka-a30 (translation + gate status)
+  data: /data/translations/tantraloka-a30.json
+- /translations/tantraloka-a32.html — tantraloka-a32 (translation + gate status)
+  data: /data/translations/tantraloka-a32.json
+- /translations/tantraloka-a33.html — tantraloka-a33 (translation + gate status)
+  data: /data/translations/tantraloka-a33.json
+- /translations/tantraloka-a35.html — tantraloka-a35 (translation + gate status)
+  data: /data/translations/tantraloka-a35.json
+- /translations/tantraloka-a36.html — tantraloka-a36 (translation + gate status)
+  data: /data/translations/tantraloka-a36.json
+- /translations/tantrasara.html — tantrasara (translation + gate status)
+  data: /data/translations/tantrasara.json
+- /translations/vbt.html — vbt (translation + gate status)
+  data: /data/translations/vbt.json
+
+## API (Cloudflare Worker)
+
+- POST /api/chat/{work} — RAG chat (per-text or multi-text via comma-separated works)
+- POST /api/chat/{work1,work2} — multi-text chat
+- GET /api/variants/{work}/{chunk} — list saved variants
+- POST /api/variants — save a variant
+- POST /api/style/preview — A3S instant style preview
+- GET /api/questions/{work} — list stored questions
+- GET /api/themes/decisions — list theme adjudication decisions
+
+## Gate system
+
+Every translation chunk carries a gate status:
+- PASS: English shown (machine-proposed, needs human review)
+- BLOCKED: Sanskrit shown, English withheld (fail-closed)
+- PUBLISHED: full display (IPVV passages)
+
+Every chunk has a receipt in /data/receipts.jsonl with gate verdicts,
+evidence hashes, source file/line, license, model, and date.
+
+## License
+
+Sanskrit roots: CC BY-NC-SA 4.0 (GRETIL/Muktabodha).
+Our translations/essays/arguments: CC BY-NC-SA 4.0.
+Commercial use requires re-licensing.
+
+## MCP server
+
+MCP endpoint: https://ipvv-api.tradesprior.workers.dev/mcp
+Tools: get_passage, get_translation, get_argument, search, get_scholar,
+       get_work, list_works, get_themes, get_receipts, chat

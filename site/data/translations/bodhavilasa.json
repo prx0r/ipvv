@@ -1,57 +1,226 @@
 [
  {
   "chunk": "bodh-p01",
-  "verses": "1-10",
-  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## bodh-p01 (1-10)\n[and]-om (oṃ) [and]-salutation (namo) [and]-to-netra (netrāya) [and]-salutation (namaḥ) [and]-to-shiva (śivāya) [and]-constantly (satataṃ) [and]-to-maker-of-five-acts (pañcakṛtyavidhāyine) [and]-to-manifestation-of-supreme-self-bliss (cidānandaghanasvātmaparamārthāvabhāsine) [and]-consciousness (citiḥ) [and]-free (svatantrā) [and]-of-the-universe (viśvasya) [and]-cause (hetur) [and]-thus (ity) [and]-is-called (abhidhīyate) [and]-of-form-of-freedom (svātantryarūpā) [and]-knower (jñātā) [and]-and (ca) [and]-powers (siddhīr) [and]-or (vā) [and]-bestows (saṃprayacchate) [and]-she (sā) [and]-in-her-own-ground (svabhittau) [and]-by-her-own-will (svecchayaiva) [and]-for-unfolding-of-the-universe (viśvasyonmīlanāya) [and]-and (ca) [and]-from-various-corresponding-variety (nānānurūpavaicitryād) [and]-from-difference-of-object-and-subject (grāhyagrāhakabhedataḥ) [and]-of-the-universe (viśvasya) [and]-its (tasya) [and]-variety (vaicitryaṃ) [and]-by-difference-of-objects (grāhyabhedena) [and]-is-established (saṃsthitam) [and]-by-variety-of-varieties (nānāvaicitryayogena) [and]-and-by-number-of-high-and-low (cottamādhamasaṅkhyayā) [and]-from-contraction-of-consciousness (citisaṅkocanāc) [and]-mind (cittaṃ) [and]-consciousness (cetano) [and]-also ('pi) [and]-great-lord (maheśvaraḥ) [and]-like-a-banyan-seed (vaṭadhanikāvat) [and]-there (tatra) [and]-universal-form (viśvarūpaṃ) [and]-and (ca) [and]-that (tad) [and]-know (viduḥ) [and]-consciousness (caitanyam) [and]-of-self (ātmano) [and]-form (rūpaṃ) [and]-pure (śuddham) [and]-extremely-immaculate (atyantanirmalam) [and]-that (tad) [and]-indeed (eva) [and]-attached-to-rules (niyamāsaktaṃ) [and]-mind (cittaṃ) [and]-consciousness (cid) [and]-is-called (abhidhīyate) [and]-with-object-directedness (arthonmukhatayā) [and]-awareness (saṃvic) [and]-in-mind (citte) [and]-rest (viśrāntim) [and]-has-arrived (āgatā) [and]-from-contraction-as-self-predominance (saṅkocātmapradhānatvāc) [and]-consciousness (citiś) [and]-mind (cittaṃ) [and]-know (vidur) [and]-the-wise (budhāḥ) [and]-maya-knower (māyāpramātā) [and]-consciousness-formed (cidrūpas) [and]-as-identity-with-that (tanmayatvena) [and]-of-embodied-beings (dehinām) [and]-exists (vartate) [and]-attached-to-objects (viṣayāsaktaḥ) [and]-devoid-of-true-discrimination (sadvivekavivarjitaḥ) [and]-one-constant (sadaikaḥ) [and]-primary (pratithaś) [and]-mind (cittaṃ) [and]-by-kala-sattva-guna-etc (kalāsattvaguṇādibhiḥ) [and]-by-seven-knowerhood (saptapramatṛkatvena) [and]-by-thirty-six-principles (ṣaṭtriṃśattattvasaṅkhyayā) [and]-one (ekaḥ) [and]-all-pervading (sarvagataḥ) [and]-pure (śuddhaḥ) [and]-of-nature-of-supreme-awareness (sambodhātmā) [and]-great-lord (maheśvaraḥ) [and]-from-non-recognition-of-that-I-ness (saivāhantāparijñānān) [and]-liberation (muktiḥ) [and]-in-the-palm (karatale) [and]-is-situated (sthitā) // 10 //",
-  "l2": "## bodh-p01 — Consciousness as Free Cause and Its Contraction\nConsciousness is free and the cause of the universe, manifesting as supreme self-bliss, while in its own ground it unfolds variety by will and difference of subject and object. Contracted into mind and māyā-bound knowership, the same consciousness appears bound, yet liberation remains at hand through recognizing that I-ness."
+  "verses": "2-10",
+  "sanskrit": "citiḥ svatantrā viśvasya hetur ity abhidhīyate / svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca / nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam / nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ / vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam / tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā / saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām / vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ / saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ / saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:7e006946c8f5",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 12,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p02",
   "verses": "11-20",
-  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## bodh-p02 (11-20)\n[and]-by-seven-knowerhood (pramātṛsaptakatvena) [and]-by-thirty-six-principles (ṣaṭtriṃśattattvasaṅkhyayā) [and]-cultivated (bhāvitaḥ) [and]-he (sa) [and]-great-lord (maheśāno) [and]-liberation-glory (mokṣalakṣmīḥ) [and]-proceeds (pravartate) [and]-its-stages (tadbhūmikā) [and]-perceptions-etc (darśanādyās) [and]-all (sarvā) [and]-indeed (eva) [and]-not (na) [and]-doubt (saṃśayaḥ) [and]-stages (bhūmikāḥ) [and]-artificial (kṛtrimā) [and]-just-as (yadvan) [and]-actor (naṭo) [and]-assumes (gṛhṇāti) [and]-by-own-will (svecchayā) [and]-likewise (tadvad) [and]-indeed (eva) [and]-expanded-by-bliss-will (cidānandasvecchocchalitabṛṃhitaḥ) [and]-self (ātmā) [and]-assumes (gṛhṇāti) [and]-vast (vipulā) [and]-perceptions-etc (darśanādyā) [and]-powers (vibhūtayaḥ) [and]-self-bliss-exultant (cidānandasamullāsollasitātmā) [and]-shines (virājate) [and]-from-contraction-of-own-power (cidvatsvaśaktisaṅkocāt) [and]-in-samsara (saṃsāre) [and]-becomes-impure (malināyate) [and]-incomplete (apūrṇo) [and]-thus-I-am-incomplete (smīti) [and]-by-various (vividhair) [and]-impurities (malaiḥ) [and]-he (sa) [and]-is-defiled (malinīkṛtaḥ) [and]-named-maya-anava-karma (māyīyāṇavakārmākhyair) [and]-all-pervading (vyāpako) [and]-also ('pi) [and]-lord-of-world (jagadvibhuḥ) [and]-all-pervading (vyāpī) [and]-just-as (yadvan) [and]-great-god (mahādevaḥ) [and]-does (kroti) [and]-five-acts (pañcakṛtyatām) [and]-likewise (tadvad) [and]-this (evāyam) [and]-self-also (ātmāpi) [and]-does (kurute) [and]-deluded-by-power (śaktimohitaḥ) [and]-capable (śakto) [and]-from-expansion (vikāsāc) [and]-lord-of-powers (chaktīśo) [and]-is-said (gīyate) [and]-by-truth-teachers (tattvavādibhiḥ) [and]-from-contraction (saṅkocanāt) [and]-contracted (saṅkocitaḥ) [and]-as-samsarin (saṃsārīty) [and]-is-called (abhidhīyate) [and]-maya (māyā) [and]-form (rūpaṃ) [and]-indeed (hi) [and]-which (yat) [and]-somewhat (kiṃcid) [and]-to-perceive (ālokayitum) [and]-intent (udyatā) [and]-created-creation (sādhyasṛṣṭiṃ) [and]-should-know (vijānīyād) [and]-other (anyā) [and]-power (śaktiḥ) [and]-preservation (sthitir) [and]-is-considered (matā) [and]-from-dissolution (saṃhārāt) [and]-withdrawn (saṃhṛtā) [and]-goddess (devī) [and]-in-unity-of-consciousness (cidaikye) [and]-grace ('nugraho) [and]-is-considered (mataḥ) [and]-from-manifestation-of-that-essence (tadekasārāprathanāt) [and]-is-called-concealment (tirodhānābhidhīyate) [and]-thus (itthaṃ) [and]-always (sadā) [and]-present (saṃnihitaḥ) [and]-five-fold-process (pañcavāhavidhiḥ) [and]-in-order (kramāt) [and]-known (jñātaś) [and]-wish-jewel (cintāmaṇir) [and]-that (asāv) [and]-from-ignorance (ajñānāt) [and]-like-wood-and-clod (kāṣṭaloṣṭavat) // 20 //",
-  "l2": "## bodh-p02 — Five Acts, Impurity, and Concealment\nMaheśa performs the five acts through the seven knowers and thirty-six principles, while the self assumes vast powers or contracts into impurity. Māyā, preservation, dissolution, and concealment are recognized as powers of consciousness, though ignorance makes the wish-jewel seem like wood or clay."
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā / bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ / bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā cidānandasamullāsollasitātmā virājate / cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo 'smīti vividhair malaiḥ sa malinīkṛtaḥ / māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām / tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ / saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā / sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ / tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt / jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:6a003fa7ec89",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 27% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 39,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p03",
-  "verses": "21-30",
-  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## bodh-p03 (21-30)\n[and]-by-power-of-true-reflection-thus (sadvimarśabalenaivaṃ) [and]-always (nityaṃ) [and]-who (yaḥ) [and]-practices (pariśīlate) [and]-he (sa) [and]-liberated (muktaḥ) [and]-from-all-bonds (sarvabandhebhyo) [and]-full-of-eternal-bliss (nityānandamayo) [and]-becomes (bhavet) [and]-consciousness-fire (cidvahnir) [and]-swallows (grasate) [and]-that (so) [and]-this ('yaṃ) [and]-well-awakened (suprabuddho) [and]-is ('sty) [and]-that (asau) [and]-when (yadā) [and]-then-that (tadāsau) [and]-pure (vimalo) [and]-to-be-known (jñeyaś) [and]-consciousness-fire (cidvahniḥ) [and]-all-devouring (sarvabhakṣakaḥ) [and]-by-this-power (etadbalena) [and]-united (saṃyukto) [and]-yogi (yogī) [and]-marked-by-liberation (nirvāṇalakṣaṇaḥ) [and]-state (padaṃ) [and]-attains (prāpnoti) [and]-pure (vimalaṃ) [and]-that (so) [and]-soon ('cirān) [and]-no-here (nātra) [and]-doubt (saṃśayaḥ) [and]-consciousness-fire (cidvahnir) [and]-on-gaining-power (balalābhe) [and]-even ('pi) [and]-universe (viśvam) [and]-shines (ābhāti) [and]-consciousness-made (cinmayam) [and]-wave-of-self-bliss-nectar (svānandāmṛtakallolam) [and]-this (etad) [and]-risen (ucchalitaṃ) [and]-outside (bahiḥ) [and]-that (tad) [and]-indeed (eva) [and]-quiescence (śyānatāṃ) [and]-gone (yātaṃ) [and]-by-forms-of-being (bhāvarūpair) [and]-is-manifested (vibhāvyate) [and]-own-self (svātmā) [and]-great-lord (maheśvaro) [and]-god (devaḥ) [and]-plays (krīḍate) [and]-supreme-lord (parameśvaraḥ) [and]-thus (iti) [and]-who (yaḥ) [and]-constantly (satataṃ) [and]-knows (vetti) [and]-he (sa) [and]-liberated (mukto) [and]-liberates (mocayaty) [and]-also (api) [and]-multitude-of-beings (sattvavrātaṃ) [and]-in-an-instant (kṣaṇenaiva) [and]-from-terrible (ghorāt) [and]-from-samsara-bondage (saṃsārabandhanāt) [and]-who (yaḥ) [and]-someone (kaścit) [and]-bliss-powered (ānandabalaḥ) [and]-he (sa) [and]-established-in-own-state (svarūpapadasthitaḥ) [and]-thus (iti) [and]-whose (yasya) [and]-of-exultant-rising (samullāsollāsitodayaśālinaḥ) [and]-his (tasya) [and]-fixed-in-own-nature (svarūpaniṣṭhasya) [and]-in-distraction (vyutthāne) [and]-even ('pi) [and]-that (tad) [and]-is-desired (arthyate) [and]-this (etat) [and]-by-effort-power (prayatnasāmārthyāj) [and]-by-people (janair) [and]-is-attained (evādhigamyate) [and]-from-middle-center-expansion (madhyadhāmavikāsāc) [and]-and (ca) [and]-from-bliss-consciousness (cidānandāt) [and]-shines (prakāśate) [and]-from-its-light (tatprakāśād) [and]-divine-vision (divyadṛṣṭir) [and]-of-form-knowledge (jñānarūpā) [and]-is-manifested (vibhāvyate) [and]-immaculate (nirmalā) [and]-radiant (suprabhā) [and]-pure (śuddhā) [and]-full-of-eternal-bliss (nityānandamayī) [and]-supreme (parā) [and]-and-net-of-body-cutting (nirdehacchedajālāpi) [and]-knowledge-vision (jñānadṛṣṭir) [and]-expands (vijṛmbhate) // 30 //",
-  "l2": "## bodh-p03 — Liberation through True Reflection\nOne who constantly practices true reflection is liberated, and the consciousness-fire, when awakened, devours all and manifests the universe as consciousness-made. The knower of the supreme Lord liberates beings instantly, and the bliss-powered yogī remains established in his own state."
+  "verses": "21-29",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate / sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā / tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ / padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam / svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate / svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api / sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ / iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate / etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate / tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:02810260f916",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 69,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p04",
-  "verses": "31-40",
-  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## bodh-p04 (31-40)\n[and]-in-middle-center-expansion (madhyadhāmavikāse) [and]-but (tu) [and]-means (upāyo) [and]-powerful-state (balavatsthitiḥ) [and]-etc-of-thought-decay-contraction-expansion (vikalpakṣayasaṅkocavikāsādyā) [and]-in-many-ways (anekaśaḥ) [and]-from-thinking-of-nothing (akiñciccintanād) [and]-indeed (eva) [and]-of-thoughts (vikalpānāṃ) [and]-decay (kṣayo) [and]-may-be (bhavet) [and]-from-consciousness-awareness (cidbodhād) [and]-playful-power (vilasacchaktī) [and]-that-is-attached (raktāsau) [and]-in-realm-of-being (bhāvamaṇḍale) [and]-there-attached (tatrānuraktā) [and]-divine-stream (divyaughaṃ) [and]-sees (paśyate) [and]-of-pure-nature (vimalātmakam) [and]-contraction-of-power (śaktisaṅkocam) [and]-this (etad) [and]-indeed (dhi) [and]-is-said (procyate) [and]-by-brahma-teachers (brahmavādibhiḥ) [and]-etc-of-rest-in-bindu-nada-at-end-beginning (ādyantakoṭiviśrāmabindunādalayās) [and]-and (tathā) [and]-including-fear-anger-disgust-etc (aśaṅkitabhayakrodhabībhatsādiparigrahāḥ) [and]-thus (ity) [and]-this (etat) [and]-said (kathitaṃ) [and]-goddess (devi) [and]-middle-center-expansion (madhyadhāmavikāsakam) [and]-there (tatra) [and]-capable (śakto) [and]-in-days (dinair) [and]-thus (evaṃ) [and]-obtains (prapnoti) [and]-supreme-prosperity (parasampadam) [and]-who (yo) [and]-inner-samadhi-impression ('ntaḥsamādhisaṃskāraṃ) [and]-wanders (bhramate) [and]-of-pure-radiance (vimalatviṣām) [and]-he (sa) [and]-by-power-of-emission (visargabalād) [and]-indeed (eva) [and]-reflecting (vimṛśya) [and]-and (ca) [and]-again (punaḥ) [and]-again (punaḥ) [and]-in-distraction (vyutthāne) [and]-even ('pi) [and]-because (yatas) [and]-his (tasya) [and]-own-form (svarūpaṃ) [and]-fully-manifests (samprakāśate) [and]-of-yogi (yogino) [and]-fixed-in-awareness (bodhaniṣṭhasya) [and]-of-eternal-bliss-essence (nityānandarasasya) [and]-and (ca) [and]-that (tat) [and]-full-of-manifest-bliss (prakāśānandamayī) [and]-strengthened-by-mantra-power (mantravīryopabṛṃhitā) [and]-consciousness-of-full-I-ness (pūṛnāhantācid) [and]-thus (ity) [and]-of-inner-exultation-practitioner (antaḥsamullāsābhiyoginaḥ) [and]-there-that (tatrāsau) [and]-sporting (vilasan) [and]-yogi (yogī) [and]-in-status-of-mantra-lord (mantreśvarapade) [and]-situated (sthitaḥ) [and]-there (tatra) [and]-capable (śakto) [and]-lord (vibhur) [and]-just-as (yadvat) [and]-plays (krīḍate) [and]-expanded-by-power (śaktibṛṃhitaḥ) [and]-thus (evaṃ) [and]-freedom (svatantratā) [and]-his (tasya) [and]-of-all-pervading (vyāpakasya) [and]-of-world-lord (jagadvibhoḥ) [and]-of-enjoying-various-differences (nānābhedajuṣaś) [and]-unbroken-in-wondrous-state (citrapadasthitasyākhaṇḍitā) // 40 //",
-  "l2": "## bodh-p04 — Middle-Center Expansion and Mantra Lordship\nMiddle-center expansion is the means by which thoughts decay and divine vision arises, leading to the yogī’s state as mantra lord. Even in distraction, the eternal bliss essence fully manifests, and all-pervading freedom remains unbroken amid varied enjoyment."
+  "verses": "30-38",
+  "sanskrit": "nirmalā suprabhā śuddhā nityānandamayī parā / nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate madhyadhāmavikāse tu upāyo balavatsthitiḥ / vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet / cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam / śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā / aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam / tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām / sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate / yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā / pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:f50ae432da89",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 96,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  },
  {
   "chunk": "bodh-p05",
-  "verses": "41-42",
-  "sanskrit": "etad advayam ity uktaṃ jñānāmṛtam anuttamam yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam iti śrīkṣemarājakṛtaṃ bodhavilāsākhyaṃ yogaśāstram",
-  "gate": "PASS",
-  "blocking": [],
-  "model": "beam-free",
-  "date": "2026-10-31",
-  "l1": "## bodh-p05 (41-42)\n[and]-this (etad) [and]-non-dual (advayam) [and]-thus (ity) [and]-said (uktaṃ) [and]-nectar-of-knowledge (jñānāmṛtam) [and]-unsurpassed (anuttamam) [and]-who (yaḥ) [and]-may-drink (pibec) [and]-is-quenched (chāmyate) [and]-his (tasya) [and]-fever-of-samsara-poison (saṃsāraviṣamūrchanam) [and]-this-method-of-bliss-of-awareness (bodhollāsavidhāneyaṃ) [and]-for-attaining-shiva (śivaprāpyai) [and]-of-great-souls (mahātmanām) [and]-of-king (rājñaḥ) [and]-named-kshema (kṣemābhidhānasya) [and]-treatise (śāstram) [and]-extremely-pure (atyantanirmalam) [and]-thus (iti) [and]-composed-by-shri-kshemaraja (śrīkṣemarājakṛtaṃ) [and]-named-bodhavilasa (bodhavilāsākhyaṃ) [and]-yoga-treatise (yogaśāstram) // 42 //\n\n*T1 frozen 2026-10-31.*",
-  "l2": "## bodh-p05 — Non-Dual Nectar and Colophon\nThis non-dual nectar of knowledge, unsurpassed, quenches the fever of saṃsāra-poison for those who drink it. It is the extremely pure yoga treatise called Bodhavilāsa, composed by King Kṣemarāja for attaining Śiva.\n\n*Fidelity: preserved (all 42 verses). Added: none doctrinal. Not-resolved: none.*"
+  "verses": "39-42",
+  "sanskrit": "tatrāsau vilasan yogī mantreśvarapade sthitaḥ / tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ / nānābhedajuṣaś citrapadasthitasyākhaṇḍitā etad advayam ity uktaṃ jñānāmṛtam anuttamam / yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām / rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "bodhavilasa",
+  "immutable_id": "pt:pid:bodh:751e654a43c8",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "ksemaraja-bodhavilasa.txt",
+  "source_lines": 123,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Pensa ed.)",
+  "match_words": 12
  }
 ]

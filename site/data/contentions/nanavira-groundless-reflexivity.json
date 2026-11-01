@@ -1,0 +1,28 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "nanavira-groundless",
+  "tradition": "nanavira_phenomenology",
+  "central_reading": "Ñāṇavīra rejects both Dignāga's 'structure is self-grounding' and Abhinavagupta's 'awareness grounds the structure.' He offers a third position: the search for a ground IS the conceit 'I am' (asmimāna). Reflexivity is groundless — consciousness is anidassana (non-indicative), pointing to no ground.",
+  "claims": [{
+    "id": "cl:nanavira-groundless-reflexivity",
+    "text": "Ñāṇavīra's position on the self-grounding question: neither Dignāga's 'structure is self-grounding' nor Abhinavagupta's 'vimarśa grounds the structure' is accepted. Consciousness (viññāṇa) is 'negative as regards essence' — it has no svabhāva and cannot serve as a ground. The question 'what grounds the structure?' itself presupposes that a ground is needed, which is the conceit 'I am' (asmimāna). With the cessation of asmimāna, consciousness becomes anidassana (non-indicative) — there is just 'this is present,' without any ground. The arahant's experience is not self-grounding and not other-grounded; it is groundless.",
+    "source_id": "text:nanavira-vinnana",
+    "source_span": "Ñāṇavīra — Viññāṇa note, especially the immediate/reflexive presence distinction and anidassana viññāṇa",
+    "evidence": "textual",
+    "pramana": "sabda",
+    "hetu": "viññāṇa is negative as regards essence; the search for a ground is asmimāna",
+    "sadhya": "the self-grounding question is misposed — reflexivity is groundless",
+    "vyapti": "If consciousness has no essence and points to no ground, then the question 'what grounds the structure?' is a category mistake.",
+    "vyapti_confidence": 0.80,
+    "falsifier": "Show that Ñāṇavīra's anidassana viññāṇa still presupposes a ground (e.g., the structure itself or the mere fact of presence), making his position a variant of Dignāga's self-grounding rather than a distinct third way.",
+    "weight": 0.44,
+    "w_rel": 0.78,
+    "w_map": 0.72,
+    "w_aux": 0.75,
+    "targets": [
+      {"id": "cand:nanavira-structural-reflexivity", "type": "candidate_explanation", "role": "support", "strength": 0.80, "rationale": "Groundless reflexivity is Ñāṇavīra's distinct position on the self-grounding question."},
+      {"id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "attack", "strength": 0.55, "rationale": "If the search for a ground is asmimāna, Abhinavagupta's vimarśa-as-foundation is reframed as a subtle expression of the conceit 'I am.'"},
+      {"id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.40, "rationale": "Dignāga's self-grounding structure is also a form of foundationalism that Ñāṇavīra's groundless reflexivity rejects."}
+    ]
+  }]
+}

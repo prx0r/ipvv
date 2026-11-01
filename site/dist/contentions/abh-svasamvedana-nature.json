@@ -1,0 +1,30 @@
+{
+  "question_id": "q:reflexivity-intrinsic-or-constructed",
+  "source_role": "abh-svasamvedana-nature",
+  "title": "Abhinavagupta: self-awareness is nature of consciousness, not result of cognition",
+  "tradition": "trika_pratyabhijna",
+  "central_reading": "Self-awareness is the nature (svabhāva) of consciousness, not a result (phala) of cognition. The Buddhist svasaṃvitti doctrine treats self-awareness as the result of cognition; Abhinavagupta argues this makes it derivative rather than intrinsic.",
+  "claims": [{
+    "id": "cl:abh-svasamvedana-nature-not-phala",
+    "text": "Self-awareness (svasaṃvedana) is the nature (svabhāva) of consciousness, not a result (phala) of cognition. Consciousness is self-luminous (svaprakāśa) and is its own object of awareness; it is not an object of a means of knowledge other than its own self-awareness. The Buddhist phala-model makes self-awareness dependent on cognition, contradicting its self-luminous nature.",
+    "source_id": "text:tantraloka-ahnika1",
+    "source_span": "Tantrāloka 1, commentary on verse 59-60 (ahnika-01.txt:7739-7745)",
+    "quote": "svasaṁvedyaṁ svaprakāśam na tu svasaṁvedanānyapramāṇaprameyam",
+    "evidence": "textual",
+    "pramana": "sabda",
+    "hetu": "consciousness is self-luminous and its own object, not dependent on external means of knowledge",
+    "sadhya": "self-awareness is the nature of consciousness, not a produced result",
+    "vyapti": "If consciousness is self-luminous and self-aware by nature, then self-awareness is its svabhāva, not a phala of cognition.",
+    "vyapti_confidence": 0.80,
+    "falsifier": "Show that the Buddhist phala-model of svasaṃvitti is compatible with svaprakāśa — that a result-of-cognition can also be the nature of consciousness without contradiction.",
+    "falsifier_status": "untested",
+    "weight": 0.42,
+    "w_rel": 0.78,
+    "w_map": 0.72,
+    "w_aux": 0.74,
+    "targets": [
+      { "id": "cand:abh-vimarsa-intrinsic", "type": "candidate_explanation", "role": "support", "strength": 0.75, "rationale": "Direct textual evidence distinguishing svabhāva from phala models." },
+      { "id": "cand:dharmakirti-conditioned-reflexivity", "type": "candidate_explanation", "role": "attack", "strength": 0.55, "rationale": "The Buddhist phala-model makes self-awareness derivative." }
+    ]
+  }]
+}

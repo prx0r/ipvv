@@ -1,0 +1,96 @@
+{
+  "packet_id": "ip:abh-original-svasamvedana",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-original-svasamvedana",
+    "title": "Claims: Abhinavagupta makes original philosophical arguments (yukti)",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-26",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-ta4-8-9-original-argument",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantr\u0101loka 4.8-9, ahnika-04.txt lines 339-411",
+        "quote": "In T\u0100 4.8-9, Abhinavagupta presents an original p\u016brvapak\u1e63a-siddh\u0101nta argument: t"
+      },
+      "claim_text": "In T\u0100 4.8-9, Abhinavagupta presents an original p\u016brvapak\u1e63a-siddh\u0101nta argument: the objection that self-awareness would make consciousness an object (and thus insentient) fails because consciousness is by its very nature (svabh\u0101v\u0101t) self-aware (sv\u0101tmasa\u1e43vitti). Self-awareness is not objectification \u2014 it is non-objectifying self-presence. This is presented as Abhinava's own reasoning (yukti), not a scripture quotation.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(abh_ta4_8_9_original_argument,target)",
+      "hetu": "the objection that self-awareness would objectify consciousness fails because self-awareness is not objectification",
+      "sadhya": "svasa\u1e43vedana is the intrinsic nature of consciousness, not a second-order reflection",
+      "vyapti_statement": "If consciousness is by nature self-aware, then self-awareness is not a problem but the very condition for sentience.",
+      "vyapti_confidence": 0.82,
+      "log_bayes_factor": 0.44,
+      "w_rel": 0.8,
+      "w_map": 0.75,
+      "w_aux": 0.78,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that Abhinavagupta's argument in T\u0100 4.8-9 depends on scriptural authority rather than reason, or that the objection he refutes is a straw man not held by any actual Buddhist opponent.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika4."
+    },
+    {
+      "claim_id": "cl:abh-ta4-181-original-heart-argument",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika4",
+      "source_span": {
+        "locator": "Tantr\u0101loka 4.181cd-182ab, ahnika-04.txt lines 10897-10901",
+        "quote": "In T\u0100 4.181cd-182ab, Abhinavagupta argues in his own voice that consciousness IS"
+      },
+      "claim_text": "In T\u0100 4.181cd-182ab, Abhinavagupta argues in his own voice that consciousness IS reflective awareness (par\u0101mar\u015ba) by nature, and its spontaneous resonance (dhvani) is the supreme Heart (mah\u0101 h\u1e5bdaya). This is one of his most fundamental philosophical claims: the nature of consciousness is self-awareness, and this self-awareness has a spontaneous, creative dimension (the seed mantra SAU\u1e24). The argument is presented as a conclusion from reasoning, not an appeal to scripture.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:dharmakirti-conditioned-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "anumana",
+      "nn_expr": "sambandha(abh_ta4_181_original_heart_argument,target)",
+      "hetu": "consciousness is self-aware by nature, and this self-awareness is spontaneously creative",
+      "sadhya": "self-awareness is not static but dynamic \u2014 it is the creative Heart of reality",
+      "vyapti_statement": "If self-awareness is the nature of consciousness and is spontaneously creative, then svasa\u1e43vedana is not merely cognitive but generative.",
+      "vyapti_confidence": 0.78,
+      "log_bayes_factor": 0.42,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.74,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the mah\u0101 h\u1e5bdaya argument depends on a specific scriptural tradition that Abhinavagupta is merely transmitting, not extending.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika4."
+    }
+  ]
+}

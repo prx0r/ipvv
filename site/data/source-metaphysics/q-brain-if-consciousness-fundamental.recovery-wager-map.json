@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "artifact_type": "argument_fabric_source_map",
+  "question_id": "q:brain-if-consciousness-fundamental",
+  "source_packet_id": "ip:q17-recovery-trajectory-wager",
+  "claim_packet": "content/information-packets/q17-recovery-trajectory-wager.json",
+  "generated_by": "hermes_loop_008",
+  "source_role": "recovery_trajectory_hierarchy_experimental_wager",
+  "candidate_under_test": "cand:brain-as-appearance-only",
+  "central_reading": "This layer formalizes the recovery trajectory hierarchy differential prediction from Loop 007 as a concrete experimental wager with specific falsification criteria and analysis protocol. The four claims frame the test as capable of shifting research priority between Kastrup's dissociation model and Trika's kañcuka-contraction model (Claim 1), specify the kañcuka model's universal-hierarchy prediction (Claim 2), specify the dissociation model's patient-specific-variation prediction (Claim 3), and provide a minimum analysis protocol for conducting the test (Claim 4). This moves the differential from a theoretical prediction to an actionable research design. The wager does not claim to settle the ontology debate — it claims to produce actionable research-direction information. If the data supports consistent hierarchical ordering, future research should focus on the kañcuka model's dimension-specific intervention targets. If it supports patient-specific variation, research should focus on the dissociation model's boundary-reconstruction approach. If neither, both accounts are underspecified on this prediction.",
+  "nnexpr_mappings": [
+    {
+      "claim_id": "cl:recovery-hierarchy-test-framing",
+      "source_span_id": "synthetic:q17-recovery-trajectory-wager",
+      "quoted_anchor": "The recovery trajectory hierarchy test moves the dissociation-vs-contraction differential from a theoretical prediction to a falsifiable wager.",
+      "nn_expr": "sambandha(recovery_hierarchy_test,dissociation_kancuka_distinction)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "recovery trajectory hierarchy as differential test",
+        "hetu": "the two consciousness-first accounts disagree on individuation ontology and this generates different recovery ordering predictions",
+        "sadhya": "the test is tractable and produces actionable research-direction information",
+        "vyapti": "If the disagreement generates different predictions about recovery ordering, the test is a valid wager that can shift research priority."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that the recovery trajectory hierarchy test cannot in principle distinguish the two models because (a) both models can be adjusted post-hoc to accommodate any recovery ordering, (b) the models do not actually commit to specific predictions about recovery sequences, or (c) any observed ordering can be equally explained by both models without auxiliary assumptions."
+    },
+    {
+      "claim_id": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "source_span_id": "synthetic:q17-recovery-trajectory-wager",
+      "quoted_anchor": "The six kañcukas are not arbitrary; māyā (limitedness/arousal) is the foundational scaffolding that makes the other five dimensions appear as limitations.",
+      "nn_expr": "sambandha(maya_prathama_kancuka,universal_recovery_hierarchy)",
+      "parse_status": "parsed",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "DOC recovery ordering",
+        "hetu": "kañcukas form a dependent hierarchy with māyā as foundational; recovery is reverse of contraction",
+        "sadhya": "recovery follows consistent cross-patient hierarchy: arousal → content → spatiotemporal differentiation",
+        "vyapti": "If kañcukas form a dependent hierarchy, recovery as reversal of contraction should follow the reverse order universally."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-filter",
+        "cand:brain-as-appearance-only",
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Demonstrate that DOC recovery trajectories show patient-specific variation in recovery stage ordering that cannot be explained by lesion type or severity alone. Or: demonstrate that recovery consistently follows a different universal order."
+    },
+    {
+      "claim_id": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "source_span_id": "synthetic:q17-recovery-trajectory-wager",
+      "quoted_anchor": "If individual minds are dissociated alters with boundaries shaped by experiential history, brain injury does not reveal a universal hierarchy of consciousness limitation — it alters the specific boundary structure that constituted that individual's alter.",
+      "nn_expr": "virodha(alter_variable_recovery_order,universal_recovery_hierarchy)",
+      "parse_status": "invalid",
+      "parse_note": "virodha operator not in current NNExpr grammar; expression conveys counter-relation between the two predictions",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "empirical",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "DOC recovery ordering",
+        "hetu": "alter boundaries are constituted by experiential history, not universal hierarchy",
+        "sadhya": "recovery shows patient-specific ordering correlated with premorbid experiential profiles",
+        "vyapti": "If alters are constituted by experiential history with individually specific boundary structures, recovery should show patient-specific ordering."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation",
+        "crux:filter-mechanism-requirement"
+      ],
+      "gate_outcome": "accepted_with_penalty",
+      "fallacies_flagged": [
+        {
+          "type": "savyabhicara",
+          "severity": "moderate",
+          "reason": "Weak vyapti confidence; the reason does not reliably imply the target."
+        }
+      ],
+      "falsifier": "Show that all patient-specific variation in DOC recovery ordering disappears when controlling for lesion type, severity, age, education, and premorbid cognitive status — leaving only universal hierarchical patterns."
+    },
+    {
+      "claim_id": "cl:recovery-hierarchy-analysis-protocol",
+      "source_span_id": "synthetic:q17-recovery-trajectory-wager",
+      "quoted_anchor": "The wager requires longitudinal CRS-R subscale data from DOC recovery patients, with premorbid cognitive/experiential profiling where available.",
+      "nn_expr": "upaya(recovery_hierarchy_test,protocol_specification)",
+      "parse_status": "invalid",
+      "parse_note": "upaya operator not in current NNExpr grammar; expression conveys methodological specification relationship",
+      "tradition_scope": "analytic_idealism_trika_comparison",
+      "evidence_dimension": "formal",
+      "pramana": "anumana",
+      "nyaya_reading": {
+        "paksa": "operationalizability of recovery trajectory wager",
+        "hetu": "the wager requires specific data and analysis methods to be testable",
+        "sadhya": "the test is operationalizable with existing datasets and standard methods",
+        "vyapti": "If the wager has specified data requirements, analytical methods, and decisive criteria, it is actionable."
+      },
+      "argument_role": "support",
+      "targets": [
+        "cand:brain-as-appearance-only",
+        "cand:brain-as-filter",
+        "crux:brain-damage-transformation"
+      ],
+      "gate_outcome": "accepted",
+      "fallacies_flagged": [],
+      "falsifier": "Demonstrate that no existing or planned DOC recovery dataset can meet the minimum protocol requirements (N ≥ 50, ≥ 4 timepoints, ≥ 6 months, CRS-R subscale data)."
+    }
+  ],
+  "argument_edges": [
+    {
+      "edge_id": "edge:recovery-framing-supports-appearance-candidate",
+      "source": "cl:recovery-hierarchy-test-framing",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.45,
+      "rationale": "Framing the wager as a research-direction test strengthens the appearance candidate by providing a concrete experimental path, but does not directly confirm its ontology."
+    },
+    {
+      "edge_id": "edge:recovery-framing-supports-filter-candidate",
+      "source": "cl:recovery-hierarchy-test-framing",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "The wager indirectly supports the filter candidate by showing that consciousness-first accounts can generate testable predictions, but the filter account has different predictions."
+    },
+    {
+      "edge_id": "edge:recovery-kancuka-universal-supports-filter",
+      "source": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.55,
+      "rationale": "The kañcuka universal-hierarchy prediction — if confirmed — would uniquely support the filter/contractive mapping of consciousness limitation, giving the kañcuka model (which maps to the filter candidate) a distinctive empirical advantage."
+    },
+    {
+      "edge_id": "edge:recovery-kancuka-universal-supports-appearance",
+      "source": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.40,
+      "rationale": "The kañcuka model is one variant of consciousness-first; confirmation of its universal-hierarchy prediction would support the broader appearance-only family but specifically its Trika variant."
+    },
+    {
+      "edge_id": "edge:recovery-kancuka-universal-attacks-dissociation-variant",
+      "source": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "target": "crux:brain-damage-transformation",
+      "edge_type": "supports",
+      "strength": 0.50,
+      "rationale": "If recovery trajectories follow a universal hierarchy, the dissociation model's alter-boundary prediction is weakened. The brain-damage-transformation crux would be resolved in favour of hierarchical limitation."
+    },
+    {
+      "edge_id": "edge:recovery-dissociation-variable-supports-appearance",
+      "source": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.55,
+      "rationale": "If recovery trajectories show patient-specific variation after controlling for clinical covariates, the dissociation model's alter-boundary prediction is supported, uniquely strengthening the Kastrup variant of the appearance candidate."
+    },
+    {
+      "edge_id": "edge:recovery-dissociation-variable-attacks-filter-mechanism-requirement",
+      "source": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "target": "crux:filter-mechanism-requirement",
+      "edge_type": "attacks",
+      "strength": 0.35,
+      "rationale": "Patient-specific recovery variation suggests the limiting structure is individually constituted rather than universal — this indirectly pressures accounts (including the filter candidate) that require a single mechanism for all individuation."
+    },
+    {
+      "edge_id": "edge:recovery-dissociation-variable-supports-filter-by-predictive-demand",
+      "source": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "target": "cand:brain-as-filter",
+      "edge_type": "supports",
+      "strength": 0.20,
+      "rationale": "If recovery is patient-specific, the filter/contractive mechanism must accommodate individual variation — this increases the filter account's explanatory burden but also keeps it in the running."
+    },
+    {
+      "edge_id": "edge:recovery-protocol-operationalizes-wager",
+      "source": "cl:recovery-hierarchy-analysis-protocol",
+      "target": "cl:recovery-hierarchy-test-framing",
+      "edge_type": "supports",
+      "strength": 0.60,
+      "rationale": "The protocol specification directly supports the framing claim by demonstrating that the wager is operationalizable with existing data and methods."
+    },
+    {
+      "edge_id": "edge:recovery-protocol-supports-both-predictions",
+      "source": "cl:recovery-hierarchy-analysis-protocol",
+      "target": "cand:brain-as-appearance-only",
+      "edge_type": "supports",
+      "strength": 0.30,
+      "rationale": "By providing a concrete test protocol, the claim makes both variants of the appearance candidate empirically accessible, strengthening the overall consciousness-first programme."
+    },
+    {
+      "edge_id": "edge:recovery-kancuka-attacks-dissociation-prediction",
+      "source": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "target": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "rationale": "The kañcuka model's universal hierarchy prediction is the direct inverse of the dissociation model's patient-specific prediction — they are mutually exclusive for the same data."
+    },
+    {
+      "edge_id": "edge:recovery-dissociation-attacks-kancuka-prediction",
+      "source": "cl:recovery-hierarchy-dissociation-predicts-variable-order",
+      "target": "cl:recovery-hierarchy-kancuka-predicts-universal-order",
+      "edge_type": "attacks",
+      "strength": 0.50,
+      "rationale": "The dissociation model's patient-specific prediction directly contradicts the kañcuka model's universal-hierarchy prediction — the data cannot support both simultaneously at the same level of analysis."
+    }
+  ],
+  "structural_correspondences": [
+    {
+      "correspondence_id": "corr:recovery-hierarchy-dissociation-kancuka-mutual-incompatibility",
+      "bridge_probe_id": "bridge:kastrup-dissociation-kancuka-recovery-contrast",
+      "left_term": "nn:recovery_wager:kancuka_universal_hierarchy",
+      "left_scope": "trika_perennialism",
+      "right_term": "nn:recovery_wager:dissociation_patient_specific_variation",
+      "right_scope": "analytic_idealism",
+      "shared_structure": "Both predictions concern the ordering of recovery stages after severe brain injury. Both agree that recovery ordering is informative about the nature of individuation. Both reject the null hypothesis that recovery ordering is purely random or noise-driven.",
+      "important_difference": "The kañcuka model predicts a universal, cross-patient hierarchy (māyā-scaffold → content-dimensions → spatiotemporal differentiation) reflecting the logical dependence structure of the kañcuka system. The dissociation model predicts patient-specific ordering reflecting individual alter-boundary structure. These predictions are mutually exclusive for the same dataset at the same level of analysis.",
+      "confidence_language": "mutually exclusive empirical predictions with defined decisive criteria per protocol; both cannot simultaneously hold for the same data",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.1016/S1474-4422(14)70025-1",
+        "doi:10.1212/WNL.0000000000008122",
+        "text:pratyabhijnahrdayam-sankoca-vikasa",
+        "text:tantraloka-kancuka-order"
+      ],
+      "negative_control_status": "prevents_merging_kastrup_and_trika_as_identical_on_recovery_predictions"
+    },
+    {
+      "correspondence_id": "corr:recovery-hierarchy-kancuka-clinical-neuroscience-prediction",
+      "bridge_probe_id": "bridge:kancuka-hierarchy-neuroscience-patterns",
+      "left_term": "nn:recovery_wager:kancuka_universal_hierarchy",
+      "left_scope": "trika_perennialism",
+      "right_term": "nn:clinical_neuroscience:doc_recovery_patterns",
+      "right_scope": "clinical_neuroscience",
+      "shared_structure": "Both describe DOC recovery as ordered rather than random. Both expect that recovery of consciousness-level function precedes recovery of instrumentally useful cognition. Both use longitudinal assessment data (CRS-R, neuroimaging) to characterize recovery.",
+      "important_difference": "Standard clinical neuroscience explains recovery order via neuroanatomy (lesion location determines which functions are affected, neural plasticity determines which recover first). The kañcuka model predicts order from logical-dependence structure of limitation dimensions — which may align with neuroanatomy by coincidence or may diverge in specific ways (e.g., prediction that spatiotemporal differentiation precedes content-dimensions in the reverse of contraction order, which may not map to any known neuroanatomical sequence).",
+      "confidence_language": "potentially convergent on predictions but divergent on explanatory mechanism; divergence matters when the predicted order does not match neuroanatomical expectation",
+      "status": "OVERLAPS",
+      "source_ids": [
+        "doi:10.1016/S1474-4422(20)30209-8",
+        "doi:10.1016/S1474-4422(14)70025-1",
+        "text:tantraloka-kancuka-order"
+      ],
+      "negative_control_status": "prevents_treating_kancuka_predictions_as_neuroscience_common_knowledge"
+    }
+  ],
+  "directional_critique_pairs": [
+    {
+      "pair_id": "critique:recovery-kancuka-to-dissociation:universality-challenge",
+      "critic_lens": "trika_perennialism",
+      "target_lens": "analytic_idealism",
+      "reveals_about_target": "The dissociation model predicts patient-specific recovery ordering but does not specify what kind of patient-specific variation to expect or how much variation counts as confirming. The kañcuka model makes a bolder, more specific prediction (universal hierarchy with defined māyā → content → spatiotemporal order) that is more sharply falsifiable. The dissociation model's prediction is conservative (residual variance after covariate control) and may be harder to distinguish from the null hypothesis of 'clinical covariates explain everything.'",
+      "pressure_type": "prediction_specificity",
+      "target_response_required": "The dissociation model should specify the expected magnitude and structure of patient-specific recovery variation more precisely — e.g., what premorbid factors should predict cluster membership, and what effect size would be sufficient to confirm the alter-boundary explanation over standard clinical covariates.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:recovery-hierarchy-kancuka-predicts-universal-order"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation"
+      ]
+    },
+    {
+      "pair_id": "critique:recovery-dissociation-to-kancuka:falsifiability-asymmetry",
+      "critic_lens": "analytic_idealism",
+      "target_lens": "trika_perennialism",
+      "reveals_about_target": "The kañcuka model's universal hierarchy prediction is boldly falsifiable — any patient showing non-standard recovery order may disconfirm it. However, if most DOC patients show variable ordering (as current clinical literature suggests), the kañcuka prediction would be falsified trivially and routinely. This would not be an informative falsification — it would merely show that the kañcuka model's commitment to universal ordering does not match the empirical reality of DOC recovery. The dissociation model's conservative prediction (residual patient-specific variation) is more robust to the expected clinical heterogeneity.",
+      "pressure_type": "falsifiability_symmetry",
+      "target_response_required": "The kañcuka model must either (a) refine its universal hierarchy prediction to accommodate known DOC recovery variability (e.g., by specifying conditions under which the hierarchy breaks down), or (b) accept that its prediction is trivially falsifiable and therefore less informative for distinguishing the two accounts.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:recovery-hierarchy-dissociation-predicts-variable-order"
+      ],
+      "crux_ids": [
+        "crux:filter-mechanism-requirement"
+      ]
+    },
+    {
+      "pair_id": "critique:recovery-protocol-to-both:actionability-gap",
+      "critic_lens": "clinical_neuroscience",
+      "target_lens": "combined_consciousness_first",
+      "reveals_about_target": "The proposed analysis protocol requires longitudinal CRS-R subscale data with ≥ 4 timepoints over ≥ 6 months from ≥ 50 DOC patients — a dataset that may not exist in any single cohort. Track-TBI, EDICO, and COMBI archives have partial data but may lack the temporal granularity or subscale resolution needed. Both consciousness-first accounts are making predictions that may currently be untestable due to data limitations, not due to the intrinsic quality of the predictions. The wager is valuable as a research-design target but should not be treated as an active empirical discriminator until the data exists.",
+      "pressure_type": "empirical_accessibility",
+      "target_response_required": "Both accounts should specify whether their prediction is intended as (a) an empirical claim to be tested with existing data, (b) a design constraint for future DOC recovery studies, or (c) a purely philosophical distinction not intended for empirical testing. If (c), the wager collapses into a non-empirical distinction.",
+      "status": "open",
+      "supporting_claim_ids": [
+        "cl:recovery-hierarchy-analysis-protocol"
+      ],
+      "crux_ids": [
+        "crux:brain-damage-transformation"
+      ]
+    }
+  ],
+  "bridge_probe_stubs": [],
+  "state_of_play_delta": {
+    "summary": "This wager layer operationalizes the most concrete differential prediction from Loop 007. It does not change candidate scores directly — it provides a path for future empirical evidence to move the scores. The wager is designed to produce actionable information regardless of outcome: if universal hierarchy confirmed → kañcuka variant of consciousness-first gains predictive power; if patient-specific variation confirmed → dissociation variant gains; if neither → both variants underspecified on this dimension.",
+    "predictions_made": [
+      "Consistent cross-patient recovery hierarchy (arousal → content → spatiotemporal) → supports kañcuka model, weakens dissociation model",
+      "Patient-specific recovery variation (after clinical covariate control) → supports dissociation model, weakens kañcuka model",
+      "Neither pattern clearly → both models underspecified on recovery ordering; merge as terminological variants for this dimension"
+    ],
+    "required_data": "N ≥ 50 DOC patients, ≥ 4 CRS-R assessments over ≥ 6 months, lesion characterization, premorbid profiling where available"
+  }
+}

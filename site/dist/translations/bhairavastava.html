@@ -1,9 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Translation: bhairavastava · Trika Library</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<title>Translation: bhairavastava</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
-:root{--paper:#fff;--card:#fff;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
@@ -12,22 +14,34 @@ a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);t
 .topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
 .brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
 .brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
-.topnav{display:flex;gap:.15rem;flex-wrap:wrap;font-family:var(--sans);font-size:.86rem}
-.topnav a{padding:.4rem .6rem;border-radius:.5rem;color:var(--ink);text-decoration:none}
-.topnav a:hover{background:#f4f1ea;text-decoration:none}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
 .topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
-.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:#fff;min-width:180px;color:var(--ink)}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
 .topsearch input:focus{outline:none;border-color:var(--mut)}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
 /* shell */
 .shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
-.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.86rem;padding-right:.5rem}
-.side .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin:.9rem 0 .3rem}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
 .side .hd:first-child{margin-top:0}
-.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none}
-.side a:hover{background:#f4f1ea}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
 .side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
-.side .sub a{padding-left:1rem;color:#4a463c}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
 main{min-width:0;max-width:46rem}
 .crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
 .crumbs a{color:var(--mut)}
@@ -40,6 +54,7 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
 .en{font-size:15px;max-width:72ch;line-height:1.6}
 .skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
 .stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
 .stats b{color:var(--ink);font-weight:600}
 /* verse grid */
@@ -51,8 +66,8 @@ h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
 .depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
 .depth button.missing{opacity:.45}
 /* cards */
-.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:.7rem 0}
-.panel.missing{opacity:.55;border-style:dashed}
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
 .idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
 .idx a:hover{text-decoration:underline}
 .ev{margin:.5rem 0;padding-left:1rem;position:relative}
@@ -83,27 +98,27 @@ main{max-width:100%}
 }
 
 /* recitation */
-.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
 .rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
-.rbar .tbtn{border:1px solid var(--line);background:#fff;border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
 .rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
 .rbar .tbtn:disabled{opacity:.35;cursor:default}
 .rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
-.rmodes button{border:0;background:#fff;padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
 .rmodes button.on{background:var(--ink);color:#fff}
 .rmodes button:disabled{opacity:.35}
 .rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
 .rlabel b{color:var(--ink);font-weight:600}
 .rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
 .rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
-.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:#fff;color:var(--ink)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
 .rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
 .rprog i{display:block;height:100%;width:0;background:var(--gold)}
-.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
 .vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
 .vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
 article.verse{scroll-margin-top:80px}
-article.verse.on{border-left:2px solid var(--gold);background:#fffdf7}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
 article.verse .w.lit{background:#f4ead3;border-radius:3px}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
@@ -113,45 +128,793 @@ article.verse .w.lit{background:#f4ead3;border-radius:3px}
 </style></head><body>
 <header class="topbar"><div class="topbar-in">
 <button class="burger" id="burger" aria-label="menu">☰</button>
-<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom · trika library</small></a>
-<nav class="topnav"><a href="/support/index.html">Support</a><a href="/pushing/index.html">Pushing</a><a href="/essays/index.html">Essays</a><a href="/recite/index.html">Recite</a><a href="/masters/index.html">Masters</a><a href="/modern/index.html">Modern</a><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></nav>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
 <span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
 </div></header>
-<div class="shell"><aside class="side" id="sidenav"><div class="hd">Masters (chronological)</div><a href="/bhattanarayana/index.html">Bhattanarayana</a><a href="/vasugupta/index.html">Vasugupta</a><a href="/kallata/index.html">Bhatta Kallata</a><a href="/somananda/index.html">Somananda</a><a href="/utpaladeva/index.html">Utpaladeva (Utpalacarya)</a><a href="/bhutiraja/index.html">Bhutiraja (Bhuti)</a><a href="/induraja/index.html">Induraja</a><a href="/sambhunatha/index.html">Sambhunatha</a><a href="/lakshmanagupta/index.html">Lakshmanagupta</a><a href="/abhinavagupta/index.html">› Abhinavagupta</a><a href="/ksemaraja/index.html">Ksemaraja (Rajanaka Ksemaraja)</a><a href="/jayaratha/index.html">Jayaratha (Rajanaka)</a><a href="/lalla/index.html">Lalla (Lal Ded, Lalleshvari)</a><a href="/sivopadhyaya/index.html">Sivopadhyaya</a><a href="/yogaraja/index.html">Yogaraja</a><div class="hd">Abhinavagupta</div><a href="/abhinavagupta/index.html">Bio</a><a href="/abhinavagupta/works.html">Works map</a><div class="hd">Works (canonical list)</div><div class="sub"><a href="/abhinavagupta/bodhapanacadasika.html">Bodhapañcadaśikā (Prabodhapañcadaśikā)</a><a href="/abhinavagupta/anuttarastika.html">Anuttarāṣṭikā</a><a href="/abhinavagupta/bhairavastava.html">› Bhairavastava (Īśvarastava)</a><a href="/abhinavagupta/kramastotra.html">Kramastotra</a><a href="/abhinavagupta/paramarthacarca.html">Paramārthacarcā</a><a href="/abhinavagupta/paramarthadvadasika.html">Paramārthadvādaśikā (Advayadvādaśikā)</a><a href="/abhinavagupta/mahopadesavimsatika.html">Mahopadeśaviṃśatikā</a><a href="/abhinavagupta/anubhavanivedana.html">Anubhavanivedana</a><a href="/abhinavagupta/sivasaktyavinabhava.html">Śivaśaktyavinābhāvastotra</a><a href="/abhinavagupta/laghviprakriya.html">Laghvīprakriyā</a><a href="/abhinavagupta/dehastha.html">Dehasthadevatācakrastotra</a><a href="/abhinavagupta/paryantapancasika.html">Paryantapañcāśikā</a><a href="/abhinavagupta/rahasyapancadasika.html">Rahasyapañcadaśikā</a><a href="/abhinavagupta/paramarthasamgraha.html">Paramārthasaṃgraha</a><a href="/abhinavagupta/anuttarasataka.html">Anuttaraśataka</a><a href="/abhinavagupta/prakaranastotra.html">Prakaraṇastotra</a><a href="/abhinavagupta/tantraloka.html">Tantrāloka</a><a href="/abhinavagupta/tantrasara.html">Tantrasāra</a><a href="/abhinavagupta/tantroccaya.html">Tantroccaya</a><a href="/abhinavagupta/tantravatadhanika.html">Tantravaṭadhānikā (Seed of Tantra)</a><a href="/abhinavagupta/mvv.html">Mālinīvijayavārttika (Mālinīślokavārttika)</a><a href="/abhinavagupta/purvapancika.html">Pūrvapañcikā (comm. on Purvasastra/Malinivijaya)</a><a href="/abhinavagupta/ptv.html">Parātrīśikāvivaraṇa (long)</a><a href="/abhinavagupta/ptlaghu.html">Parātrīśikālaghuvṛtti (+ Anuttaratrimśikā laghuvṛtti)</a><a href="/abhinavagupta/devistotravivarana.html">Devīstotra­vivaraṇa</a><a href="/abhinavagupta/tattvadhvaprakasika.html">Tattvādhvaprakāśikā</a><a href="/abhinavagupta/ipv.html">Īśvarapratyabhijñāvimarśinī (laghvī)</a><a href="/abhinavagupta/ipvv.html">Īśvarapratyabhijñāvivṛtivimarśinī (bṛhatī)</a><a href="/abhinavagupta/sivadrstyalocana.html">Śivadṛṣṭyālocana</a><a href="/abhinavagupta/kathamukhatilaka.html">Kathāmukhatilaka</a><a href="/abhinavagupta/bhedavadavidarana.html">Bhedavādavidāraṇa</a><a href="/abhinavagupta/paramarthasara.html">Paramārthasāra</a><a href="/abhinavagupta/gitarthasamgraha.html">Bhagavadgītārthasaṃgraha</a><a href="/abhinavagupta/abhinavabharati.html">Abhinavabhāratī (Nāṭyaśāstravivṛti)</a><a href="/abhinavagupta/dhvanyalokalocana.html">Dhvanyālokalocana</a><a href="/abhinavagupta/kavyakautukavivarana.html">Kāvyakautukavivaraṇa (on Bhatta Tauta)</a><a href="/abhinavagupta/ghatakarpara.html">Ghaṭakarparakulakavivṛti</a><a href="/abhinavagupta/natyalocana.html">Nāṭyalocana</a><a href="/abhinavagupta/kramakeli.html">Kramakeli</a><a href="/abhinavagupta/prakirnakavivarana.html">Prakīrṇakavivaraṇa</a><a href="/abhinavagupta/padarthapravesa.html">Padārthapraveśanirṇayaṭīkā</a><a href="/abhinavagupta/prakaranavivarana.html">Prakaraṇavivaraṇa</a><a href="/abhinavagupta/parapravesika.html">Parāpraveśikā</a></div><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
 <main><div class="crumbs" id="crumbs"></div><div class="klabel">Pipeline translation</div><h1>Translation: bhairavastava</h1><div class="skt"></div><div class="sub">8/10 passages passed the gate — only those show English</div><div class="recitetools"><a class="vplay all" href="/recite/bhairavastava.html">Studio chant + recitation →</a></div><div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div><div class="stats"><span><b>10</b> passages</span><span><b>8</b> PASS</span><span><b>2</b> withheld</span></div><h3>bh-p01 · verses 1 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p01 (1)
 Bhairava-Lord, refuge of the helpless, by mind-become-Yours, in heart I venerate. // abhts_1</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p01 — veneration
-Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee&#x27;s stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p02 · verses 2 · WITHHELD</h3><div class="panel"><div class="dev skt">tvaṃ ca maheśa ! sadaiva mamā&#x27;tmā svātmamayaṃ mama tena samastam</div></div><div class="panel missing"><b>WITHHELD — pending review (CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>bh-p03 · verses 3 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p03 (3)
+Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee&#x27;s stance: total surrender of mind to Bhairava, who is the refuge of those without refuge.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 347 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v1: the devotional stance
+
+## 1. What is at issue
+
+How does a devotee approach Bhairava? The verse establishes the opening move of the entire
+stotra: total surrender of mind. The question is not &quot;who is Bhairava?&quot; but &quot;what is the
+devotee&#x27;s posture before Bhairava?&quot; — and the answer is ontological, not behavioral: the
+mind has *become* His (tvanmayacittatayā), it is not merely directed at Him.
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (the Lord&#x27;s status):** Bhairavanātha is anāthaśaraṇya — the refuge of those
+   without refuge. This is not an attribute but a definition: He is the one to whom the
+   helpless have nowhere else to turn.
+
+2. **Premise (the devotee&#x27;s state):** tvanmayacittatayā — &quot;by mind-become-Yours.&quot; The mind
+   is not seeking; it has already been transformed. The locative-with-causal force suggests
+   the transformation is complete before the veneration begins.
+
+3. **Inference:** If the mind is already His, then hṛdi vande (&quot;in heart, I venerate&quot;) is
+   not an action but a recognition — the heart recognizes what the mind has become.
+
+4. **Conclusion:** The stotra opens not with a request but with a statement of achieved
+   union. The devotee is already inside the relationship.
+
+**What is NOT argued:** The verse does not claim philosophical identity with Bhairava —
+it claims devotional identity (tvanmaya, &quot;made of You&quot;). The distinction matters: this is
+bhakti grammar, not vimarśa grammar.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. tvanmayacittatayā — literally &quot;by-mind-of-Your-substance-ness.&quot; Is this a state achieved
+   prior to the stotra, or the stotra&#x27;s own effect? The verse reads as achieved, but the
+   stotra genre implies the hymn performs the transformation.
+
+2. hṛdi (&quot;in heart&quot;) — the heart as the locus of veneration is conventional (hṛdaya = the
+   innermost). No anatomical claim is made, but the locative could be read as locative of
+   place or locative of instrument (by means of the heart).
+
+## 4. Decision for L2
+
+Proceed. The verse is devotional, not argumentative — the &quot;argument&quot; is the devotional
+stance itself. L2 should preserve the achieved-state reading (mind already His) without
+over-interpreting tvanmaya as philosophical identity.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p01.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 212 words</div><div class="en">**SUMMARY.** The devotee opens the Bhairavastava by bowing to Bhairava as the refuge of the
+helpless, with a mind that has already become His. The bowing is not a request but a
+recognition — the transformation (tvanmaya) is complete before the hymn begins.
+
+**FUNCTION.** Establishes the devotional posture that governs the entire stotra: total
+surrender, achieved state, no petition.
+
+**KEY TERMS.** tvanmaya (made of You) · anāthaśaraṇya (refuge of the helpless) · hṛdi (in heart) ·
+vande (I venerate/bow).
+
+**LOCAL CONTEXT.** Verse 1 of 10. Sets the ontological ground (mind already His) that makes
+the subsequent claims (fearlessness, bliss, nondifference) intelligible as consequences
+rather than requests.
+
+**EXPLANATION.** The verse inverts the expected structure of a stotra: instead of &quot;I bow so
+that You may X,&quot; it says &quot;I bow because You already are X to me.&quot; The locative-with-causal
+tvanmayacittatayā places the transformation before the action. This matters because every
+later claim (v5 fearlessness, v6 bliss, v7 nondifference) reads as an *elaboration* of
+this achieved state, not an aspiration.
+
+**BOUNDARY / OPEN.** Not claimed: philosophical identity with Bhairava (that is v2&#x27;s claim,
+which is BLOCKED). The distinction between tvanmaya (devotional kinship) and ahaṃ śiva
+(identity) is preserved.
+
+**RELATED.** v2 (ontological identity claim), v7 (nondifference through hymn), IPK 1.1
+(same surrender grammar in Utpaladeva).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p01.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p01" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p01" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p01" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p01" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p02 · verses 2 · WITHHELD</h3><div class="panel"><div class="dev skt">tvaṃ ca maheśa ! sadaiva mamā&#x27;tmā svātmamayaṃ mama tena samastam</div></div><div class="panel missing"><b>WITHHELD — pending review (CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><div class="panel"><div class="sub"><b>Argument map</b> · 331 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v2: You are my own-self, all is Yours
+
+## 1. What is at issue
+
+BLOCKED — no L1/L2 yet. The Sanskrit claims ontological identity: tvaṃ ca maheśa — &quot;You,
+O Lord&quot; — sadaiva mamā&#x27;tmā — &quot;always my own-self&quot; — svātmamayaṃ mama tena samastam — &quot;your-
+self-made, all of that is mine.&quot; The question: is this identity claim metaphysical (I am You)
+or devotional (You are mine)? And how does it square with the bowing in v1?
+
+## 2. The argument, reconstructed step by step (from Sanskrit)
+
+1. **Address:** tvaṃ ca maheśa — &quot;and You, O Lord.&quot; The ca (&quot;and&quot;) connects to v1 —
+   after bowing, the devotee now addresses Bhairava directly.
+
+2. **Claim:** sadaiva mamā&#x27;tmā — &quot;always my own-self.&quot; The sadaiva (&quot;always&quot;) is
+   temporal-universal — not sometimes, not eventually. The self-identification is
+   perennial.
+
+3. **Compound:** svātmamayaṃ — &quot;made of Your own-self.&quot; The devotee&#x27;s self is made
+   *of* Bhairava&#x27;s self. This is more than relationship — it&#x27;s constituent identity.
+
+4. **Possession:** mama tena samastam — &quot;mine, from that, all.&quot; Whatever is Bhairava&#x27;s
+   is the devotee&#x27;s — and vice versa. The relationship is bidirectional.
+
+5. **Conclusion:** The devotee claims ontological kinship with Bhairava — not as
+   philosophical realization (vimarśa) but as given condition (sadaiva, &quot;always&quot;).
+
+**What is NOT argued:** The verse does not claim the devotee IS Bhairava (aham śiva).
+It claims svātmamaya — the self is made of His self. The grammar preserves a subject-
+object distinction even while claiming constitutive identity.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. BLOCKED — needs L1/L2. The translation will determine whether samastam (&quot;all&quot;) refers
+   to all possessions or all reality.
+
+2. sadaiva (&quot;always&quot;) — does this mean the identity was always the case (metaphysical),
+   or the devotee&#x27;s recognition of it is always the case (epistemic)? The Sanskrit is
+   ambiguous.
+
+## 4. Decision for L2
+
+HOLD — cannot proceed without L1. The Sanskrit claim is significant (constitutive identity
++ bidirectional possession) and must not be translated without careful glossing of
+svātmamaya and samastam.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p02.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 220 words</div><div class="en">**SUMMARY.** BLOCKED — no L1/L2. The Sanskrit claims constitutive identity: the devotee&#x27;s
+self is &quot;made of&quot; Bhairava&#x27;s self (svātmamaya), always (sadaiva), with bidirectional
+possession (whatever is Bhairava&#x27;s is the devotee&#x27;s, and vice versa).
+
+**FUNCTION.** The stotra&#x27;s ontological climax — the identity claim that the devotional
+posture (v1) and the results (v5–v8) all presuppose.
+
+**KEY TERMS.** sadaiva (always) · mamā&#x27;tmā (my own-self) · svātmamaya (made of Your
+own-self) · samastam (all) · maheśa (the Great Lord).
+
+**LOCAL CONTEXT.** Verse 2 of 10. Follows the surrender (v1) and precedes the concession
+(suffering, v3). The identity claim is the pivot: surrender (v1) → identity (v2) →
+suffering acknowledged (v3) → method (v4).
+
+**EXPLANATION.** BLOCKED — requires L1 before English can be trusted. The Sanskrit claim
+is: the self is constitutively Bhairava&#x27;s (svātmamaya), and this is perennial (sadaiva).
+This is not philosophical identity (aham śiva) but devotional constitutiveness — the
+grammar preserves subject-object even while claiming composition. The bidirectional
+possession (mama tena samastam) means the relationship is not one-directional devotion
+but mutual indwelling.
+
+**BOUNDARY / OPEN.** BLOCKED — needs L1 for: (1) whether samastam means &quot;all possessions&quot;
+or &quot;all reality&quot;; (2) whether sadaiva is metaphysical (always the case) or epistemic
+(recognition is always available).
+
+**RELATED.** v1 (surrender), v7 (nondifference — the conditional version of this claim),
+IPK 1.1 (the same identity grammar in Utpaladeva).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p02.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p02" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p02" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p02" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p02" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p03 · verses 3 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p03 (3)
 Even though hard-to-bear suffering, delusion, terror-causing karma-hosts. // abhts_3</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p03 — suffering acknowledged
-Even though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p04 · verses 4 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo&#x27;smi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p04 (4)
+Even though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 362 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v3: suffering acknowledged
+
+## 1. What is at issue
+
+The verse confronts a direct tension: the devotee has just declared total surrender (v1),
+yet suffering is acknowledged as real — durdharaduḥkhavi (hard-to-bear suffering), moha
+(delusion), and bhayanāśa (terror-causing karma-hosts). Does devotion deny suffering? This
+verse says no: suffering is present, and the devotee does not flinch.
+
+Dyczkowski: &quot;When everything has entered into your own nature, then where is there any possible door of fear of this samsaric existence?&quot;
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise:** The conditions are real — satsvapi (&quot;even though present&quot;): hard suffering,
+   delusion, and terrifying karmic consequences exist and are acknowledged.
+
+2. **Premise:** The devotee&#x27;s response is not denial but non-flinching — the verse states
+   the conditions without qualifying them.
+
+3. **Inference:** Bhairavanātha&#x27;s refuge (from v1) does not remove the conditions; it
+   changes the devotee&#x27;s relationship to them. The refuge is not escape but orientation.
+
+4. **Conclusion:** Devotion is compatible with unflinching realism about suffering. The
+   stotra&#x27;s opening move (v1) is not wish-fulfillment — it&#x27;s a stance that holds both
+   surrender and acknowledged pain simultaneously.
+
+**What is NOT argued:** The verse does not claim suffering is illusory (māyā), nor that
+it will end. It claims only that the devotee does not flinch.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. The three conditions (duḥkha, moha, bhaya-karma) — are they a list (three separate
+   things) or a causal chain (suffering → delusion → karmic terror)? The verse lists them
+   without connectives; the grammar suggests simultaneity, not sequence.
+
+2. &quot;Even though present&quot; (satsvapi) — this particle does concessive work: &quot;despite X, not-Y.&quot;
+   The &quot;not-Y&quot; (non-flinching) is implied rather than stated. What exactly the devotee does
+   NOT do is left implicit.
+
+3. Dyczkowski (lecture) reads this against the Bṛhadāraṇyaka Upaniṣad: the self alone, afraid, realizes &quot;there is no second&quot; and the fear disappears. The Upaniṣadic parallel suggests the stotra is operating on the same insight — fear arises from duality, dissolves from nonduality.
+
+## 4. Decision for L2
+
+Proceed. The verse is a concession structure — suffering present, flinching absent. L2
+should preserve the concession (&quot;even though...&quot;) without adding a doctrinal claim about
+why non-flinching occurs.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p03.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 262 words</div><div class="en">**SUMMARY.** The devotee acknowledges suffering, delusion, and terror-causing karma as
+present — and does not flinch. Suffering is not denied; it is held within the devotional
+relationship established in v1.
+
+**FUNCTION.** Prevents the stotra from reading as wish-fulfillment. Grounds devotion in
+realism about pain.
+
+**KEY TERMS.** duḥkha (suffering) · moha (delusion) · karmapiśāca (karma-ghosts) ·
+satsvapi (even though present).
+
+**LOCAL CONTEXT.** Verse 3 of 10. Follows v1 (surrender) and v2 (identity, BLOCKED).
+Establishes the concession that makes v5 (fearlessness) meaningful — you cannot be fearless
+about something you don&#x27;t acknowledge.
+
+**EXPLANATION.** The particle satsvapi (&quot;even though present&quot;) does the whole work: it
+concedes the reality of the conditions (duḥkha, moha, bhaya) without qualifying them.
+The devotee&#x27;s non-flinching is implied, not stated — the verse lists what is present and
+stops. This is the stotra&#x27;s epistemology: suffering is real, and the devotee&#x27;s stance
+toward it is unflinching rather than denying. It is not māyā-philosophy (suffering is
+illusion) but śūnyatā-adjacent realism (suffering is present, and the response is not
+aversion).
+
+**Dyczkowski lecture.** Dyczkowski reads v3 against the Bṛhadāraṇyaka Upaniṣad: the self alone, afraid, realizes &quot;no second&quot; and fear disappears. The stotra&#x27;s non-flinching operates on the same insight — fear from duality, dissolved from nonduality.
+
+**BOUNDARY / OPEN.** Not claimed: that suffering ends, that it is illusory, or that the
+devotee is insensitive to it. The three conditions (duḥkha, moha, karmapiśāca) are listed
+without causal connectives — whether they form a sequence or a simultaneous set is
+unresolved.
+
+**RELATED.** v5 (fearlessness — the consequence of non-flinching), v10 (cosmic heat
+pacified — the same conditions, universalized).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p03.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p03" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p03" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p03" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p03" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p04 · verses 4 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo&#x27;smi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p04 (4)
 By Śaṅkara-service, contemplation-firm, I am terrifying-Bhairava-power-filled. // abhts_4</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p04 — power-filled
-By Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p05 · verses 5 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">mṛtyuyamāntakakarmapiśācairnātha ! namo&#x27;stu na jātu bibhemi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p05 (5)
+By Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 320 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v4: service and contemplation produce power
+
+## 1. What is at issue
+
+What is the mechanism of transformation? The verse names two practices — sevana (service
+of Śaṅkara) and cintanā (contemplation) — and claims they produce a specific result: the
+devotee becomes bhīṣaṇabhairavaśaktimaya (&quot;filled with terrifying Bhairava-power&quot;). The
+question is: how does service + contemplation yield power, and what kind of power is it?
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (first practice):** śaṅkarasevana — service of Śaṅkara. Not ritual alone
+   but a relationship of service (sevana implies ongoing, not one-time).
+
+2. **Premise (second practice):** cintanādhīra — firm in contemplation. The qualifier
+   &quot;firm&quot; (dhīra) suggests this is not casual reflection but stabilized meditation.
+
+3. **Premise (state):** The two practices are not sequential but simultaneous — the
+   ablative &quot;by Śaṅkara-service&quot; and the locative &quot;in contemplation-firm&quot; describe
+   concurrent conditions.
+
+4. **Inference:** From these concurrent practices, the devotee becomes bhīṣaṇabhairava-
+   śaktimaya — filled with the terrifying Bhairava-power. The power is not acquired;
+   the devotee becomes *made of it* (-maya suffix).
+
+5. **Conclusion:** Service and contemplation are not devotional ornament — they are the
+   mechanism by which the devotee&#x27;s substance transforms.
+
+**What is NOT argued:** The verse does not claim the devotee gains Bhairava&#x27;s powers
+(siddhis). It claims the devotee&#x27;s *substance* becomes power-filled — a change of nature,
+not a grant of capability.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. bhīṣaṇa (&quot;terrifying&quot;) — terrifying to whom? The verse does not specify. In Trika
+   context, bhīṣaṇa often refers to Bhairava&#x27;s fierce aspect that destroys obstacles
+   (āvaraṇas), but the verse is silent on this.
+
+2. The causal structure — does sevanā produce cintanā, or do both independently produce
+   the result? The grammar (two instrumentals, one result) is ambiguous.
+
+## 4. Decision for L2
+
+Proceed. The verse is methodological (practice → result). L2 should name the two practices
+and the specific result (power-filled substance), without over-specifying what &quot;terrifying
+power&quot; means doctrinally.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p04.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 222 words</div><div class="en">**SUMMARY.** Service to Śaṅkara and firm contemplation produce a state in which the devotee&#x27;s
+substance becomes terrifying Bhairava-power. The two practices are concurrent (not sequential)
+and the result is a change of nature (-maya), not a grant of capability.
+
+**FUNCTION.** Names the method: how transformation happens. Establishes sevanā + cintanā
+as the operative practices.
+
+**KEY TERMS.** sevanā (service) · cintanā (contemplation) · dhīra (firm/steady) ·
+bhīṣaṇabhairavaśaktimaya (made of terrifying Bhairava-power) · -maya (suffix: composed of).
+
+**LOCAL CONTEXT.** Verse 4 of 10. After the concession (v3: suffering present), v4 names
+the method that produces the state claimed in v5 (fearlessness) and v6 (bliss).
+
+**EXPLANATION.** The two instrumentals — śaṅkarasevanā (by Śaṅkara-service) and
+cintanādhīra (in contemplation-firm) — are grammatically concurrent: they describe the
+devotee&#x27;s condition, not a sequence. The result is bhīṣaṇabhairavaśaktimaya: the devotee
+becomes -maya (&quot;made of&quot;) power. This is not siddhi (acquired power) but svabhāva (nature
+transformation) — the substance of the devotee changes, not the devotee&#x27;s inventory of
+abilities.
+
+**BOUNDARY / OPEN.** Not claimed: that the devotee gains Bhairava&#x27;s powers or becomes
+Bhairava. The -maya suffix claims composition (&quot;made of power&quot;), not identity (&quot;is
+Bhairava&quot;). The causal structure (does sevanā produce cintanā, or do both independently
+produce the result?) is grammatically ambiguous.
+
+**RELATED.** v1 (the achieved-state reading of tvanmaya), v6 (bliss through fullness),
+Lakshmanjoo&#x27;s teaching on bhairava-śakti as nature not attribute.
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p04.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p04" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p04" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p04" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p04" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p05 · verses 5 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">mṛtyuyamāntakakarmapiśācairnātha ! namo&#x27;stu na jātu bibhemi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p05 (5)
 Death, Yama, ender, karma-ghosts — Lord, salutation; never I fear. // abhts_5</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p05 — fearlessness
-Death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p06 · verses 6 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">bhāvaparāmṛtanirbharapūrṇe tvayyahamātmani nirvṛtimemi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p06 (6)
+Death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 417 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v5: salutation removes fear
+
+## 1. What is at issue
+
+The devotee names the ultimate threats — mṛtyu (death), Yama (lord of death), antaka (the
+ender), and karmapiśāca (karma-ghosts) — and claims: namo&#x27;stu na jātu bibhemi (&quot;salutation
+to the Lord, never do I fear&quot;). The question is: how does salutation (namas) produce
+fearlessness? This is a claim about the efficacy of devotion against mortality.
+
+Dyczkowski: &quot;This expanding consciousness free of thought — when thought makes consciousness contract.&quot; The practice context: peaceful mind first, then fearlessness.
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (the threats):** Four named threats — death, Yama, the ender, karma-ghosts.
+   The list escalates: death (mṛtyu) is the event, Yama is its administrator, antaka is
+   its agent, karmapiśāca is its karmic residue. This is total coverage of mortality.
+
+2. **Premise (the response):** namo&#x27;stu — &quot;let salutation be.&quot; Not mantra, not yoga,
+   not ritual — namas (bowing, submission) is the named response.
+
+3. **Inference:** The particle na jātu (&quot;never at all&quot;) is absolute — the fearlessness
+   is not probabilistic but categorical. Namas, directed at nātha (the Lord), produces
+   total fearlessness against the full spectrum of mortality.
+
+4. **Conclusion:** Devotion (specifically namas) has ontological efficacy against death.
+   The claim is not that one survives death, but that one does not fear it.
+
+**What is NOT argued:** The verse does not claim immortality (amṛtatva) or liberation
+(mokṣa). It claims fearlessness — a psychological/soteriological state, not an ontological
+change. The distinction is precise: na bibhemi ≠ ahaṃ na mriye.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. Four threats or one? The list (mṛtyu, Yama, antaka, karmapiśāca) could be four
+   distinct entities or four names for death&#x27;s aspects. The verse treats them as
+   distinct (separate accusatives) but the tradition often collapses them.
+
+2. &quot;Never at all&quot; (na jātu) — this is strong. Does the devotee not fear death *in this
+   moment* (current state) or *ever* (permanent state)? The present tense of the verb
+   suggests current, but namas&#x27; efficacy implies permanence.
+
+3. Dyczkowski (lecture) cautions: &quot;Bhairava gives freedom from fear, BUT IT TAKES TIME&quot; — the fearlessness is not instant but develops through practice (mind free of thought). This tempers the absolute na jātu: the text claims it, the teacher notes it is a destination, not a starting point.
+
+## 4. Decision for L2
+
+Proceed. The verse is an efficacy claim about namas against mortality. L2 should preserve
+the absolute force of &quot;never at all fear&quot; without adding doctrinal claims about what
+follows (mokṣa, immortality).
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p05.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 295 words</div><div class="en">**SUMMARY.** Salutation to the Lord removes all fear of death. The devotee names four
+mortal threats — death, Yama, the ender, karma-ghosts — and claims categorical
+fearlessness (na jātu bibhemi, &quot;never at all do I fear&quot;) through namas alone.
+
+**FUNCTION.** The efficacy claim: devotion (namas) works against the ultimate threat
+(mortality). Makes explicit what v1 (surrender) and v3 (non-flinching) imply.
+
+**KEY TERMS.** namas (salutation/submission) · mṛtyu (death) · Yama (lord of death) ·
+antaka (the ender) · karmapiśāca (karma-ghosts) · na jātu bibhemi (never at all I fear).
+
+**LOCAL CONTEXT.** Verse 5 of 10. The consequence of v4 (method → power): power manifests
+as fearlessness against the full spectrum of death.
+
+**EXPLANATION.** The four threats are not decorative — they cover mortality exhaustively:
+mṛtyu (the event), Yama (the administrator), antaka (the agent), karmapiśāca (the karmic
+residue). The verb&#x27;s absolute force (na jātu = &quot;never at all&quot;) makes this categorical, not
+probabilistic. Critically, the verse claims fearlessness (na bibhemi), not immortality
+(na mriye). The distinction matters: the devotee will still die, but will not fear dying.
+This is the Trika soteriology of jīvanmukta applied to its most concrete case.
+
+**Dyczkowski lecture.** Dyczkowski cautions: &quot;freedom from fear, BUT IT TAKES TIME&quot; — mind free of thought comes first, fearlessness develops. The verse states the destination, not the starting point.
+
+**BOUNDARY / OPEN.** Not claimed: that the devotee survives death, or that namas produces
+liberation (mokṣa). The four threats may be four names for one thing (death&#x27;s aspects) or
+four distinct entities — the verse lists them as separate accusatives, but tradition
+often collapses them. Whether &quot;never at all&quot; is current-state or permanent is unresolved.
+
+**RELATED.** v3 (suffering acknowledged — the concession that makes fearlessness meaningful),
+v10 (cosmic heat pacified — the same mortality, universalized), Tantrāloka 1 (jīvanmukti).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p05.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p05" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p05" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p05" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p05" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p06 · verses 6 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">bhāvaparāmṛtanirbharapūrṇe tvayyahamātmani nirvṛtimemi</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p06 (6)
 In being-full in You, I, self, bliss I enter. // abhts_6</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p06 — bliss
-In being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p07 · verses 7 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p07 (7)
+In being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 336 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v6: bliss as entering the fullness of You
+
+## 1. What is at issue
+
+The verse claims: tvayi ahaṃ ātmani nirvṛtim emi — &quot;in You, I, the self, enter bliss
+(nirvṛti).&quot; What is nirvṛti here? Is it cessation (niḥ + vṛti, &quot;without movement&quot;), bliss,
+or liberation? And who enters what — does the self enter the Lord, or enter a state?
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (condition):** bhāvaparāmṛtanirbharapūrṇe — &quot;in the One full of the
+   supreme nectar of being.&quot; The condition is being-full (pūrṇatā) in the Lord&#x27;s bhāva
+   (state/being). This is the same ontological fullness claimed in v1.
+
+2. **Premise (subject):** tvayi aham ātmani — &quot;in You, I, in my self.&quot; The subject is
+   the devotional self, not the universal ātman — the possessive &quot;my&quot; (asmātman) keeps
+   it devotional.
+
+3. **Inference:** nirvṛtim emi — &quot;I enter nirvṛti.&quot; The verb emi (go/enter) implies
+   movement toward, not static being. The self *enters* a state it was not already in.
+
+4. **Conclusion:** Bliss is not discovered but entered — through the condition of
+   being-full in the Lord. The entrance is the result of the fullness (pūrṇatā), not
+   independent of it.
+
+**What is NOT argued:** The verse does not claim the self *is* the Lord (identity), nor
+that nirvṛti = mokṣa. It claims entry into a state conditioned by fullness-in-You.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. nirvṛti vs. ananda — the L1 glosses it &quot;bliss&quot; but niḥ+vṛti literally means
+   &quot;without movement&quot; (cessation). The Trika reading often equates the two, but the
+   verse&#x27;s grammar (entering, not abiding) complicates a static reading.
+
+2. ātmani — is this &quot;in my self&quot; (devotional self) or &quot;in the Self&quot; (universal)? The
+   asmātman in the compound suggests devotional, but Trika texts routinely operate on
+   both levels simultaneously.
+
+## 4. Decision for L2
+
+Proceed. The verse is a result-claim about entry into bliss through fullness-in-You.
+L2 should preserve the movement verb (enter) and the conditional structure (through
+fullness), without equating nirvṛti with a specific doctrine (mokṣa, kaivalya, etc.).
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p06.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 225 words</div><div class="en">**SUMMARY.** In being-full in the Lord, the self enters bliss (nirvṛti). The condition is
+pūrṇatā (fullness) in bhāva (the Lord&#x27;s state); the result is entry (emi, &quot;I enter&quot;) into
+a state the self was not already in.
+
+**FUNCTION.** The result of v4 (method) and v6 (nondifference): bliss as entered, not
+discovered. Names nirvṛti as the stotra&#x27;s central soteriological term.
+
+**KEY TERMS.** nirvṛti (entering-without-movement / bliss) · pūrṇatā (fullness) ·
+bhāva (state/being) · ātmani asmātman (in my self) · emi (I go/enter).
+
+**LOCAL CONTEXT.** Verse 6 of 10. The first result-claim after the method (v4) and
+fearlessness (v5): bliss enters through fullness.
+
+**EXPLANATION.** The verb emi (go/enter) is movement, not stasis — the self enters a
+state, it does not discover one it already occupies. The condition is pūrṇatā in bhāva
+(the Lord&#x27;s being-full), which links back to v1 (mind already His) and v4 (substance
+made of power). The compound asmātman (&quot;my self&quot;) keeps the subject devotional — this
+is not the universal ātman entering the universal Ānanda, but the devotee&#x27;s self entering
+bliss through fullness-in-You.
+
+**BOUNDARY / OPEN.** Not claimed: that nirvṛti = mokṣa, kaivalya, or any named liberation
+state. The grammatical ambiguity between &quot;in my self&quot; (devotional) and &quot;in the Self&quot;
+(universal) is preserved — both levels are operative in Trika.
+
+**RELATED.** v1 (achieved-state), v7 (nondifference through hymn), v4 (the method that
+produces pūrṇatā).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p06.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p06" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p06" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p06" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p06" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p07 · verses 7 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p07 (7)
 Lord, then alone my with-You-nondifference; hymn-supreme-nectar-rain arises. // abhts_7</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p07 — nondifference and hymn-rain
-Lord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p08 · verses 8 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">tāvakaśāstraparāmṛtacintā syandati cetasi nirvṛtidhārām</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p08 (8)
+Lord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 386 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v7: nondifference manifests through the hymn
+
+## 1. What is at issue
+
+The verse claims: tad eva mama tvadabhedam — &quot;that alone, my nondifference with You.&quot;
+But this nondifference is not claimed directly — it arrives through (or with) the hymn:
+stotraparāmṛtavṛṣṭir udeti — &quot;the supreme-nectar rain of the hymn rises.&quot; The question:
+does the hymn *cause* nondifference, or does nondifference *manifest when* the hymn arises?
+The verse says &quot;tadaiva&quot; — &quot;then alone&quot; — suggesting a condition, not a cause.
+
+Dyczkowski: &quot;When this trouble arises... it brings about in him a rain of nectar, that supreme nectar of consciousness.&quot;
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (condition):** tadaiva — &quot;then alone&quot; (only when). The nondifference is
+   conditional on the hymn&#x27;s arising. Without the hymn, the nondifference is not claimed.
+
+2. **Premise (the hymn):** stotraparāmṛtavṛṣṭi — &quot;supreme-nectar rain of the hymn.&quot;
+   The hymn is not a request but a substance (nectar-rain) — it has ontological weight.
+
+3. **Inference:** abheda (nondifference) is not a philosophical doctrine imported from
+   outside but an *effect* (or correlate) of the hymn&#x27;s arising. The stotra is the
+   condition under which the devotee&#x27;s nondifference-with-Bhairava becomes manifest.
+
+4. **Conclusion:** The hymn performs nondifference. It does not describe what is already
+   the case — it is the means by which the case becomes true for the devotee.
+
+**What is NOT argued:** The verse does not claim universal metaphysical nondifference
+(advaya). It claims the devotee&#x27;s nondifference with Bhairava as conditional on the hymn.
+This is bhakti-advaya, not viśiṣṭādvaya.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. &quot;Then alone&quot; (tadaiva) — does this mean the nondifference lasts only while the hymn
+   is arising (ephemeral), or that it *begins* then (permanent)? The verse&#x27;s tense
+   (udeti, present) suggests ongoing — the hymn-rain is continuous.
+
+2. The metaphor — is the hymn-rain a vehicle (it carries nondifference) or a catalyst
+   (it enables it)? Both readings fit &quot;udeti arisearises.&quot;
+
+3. Dyczkowski (lecture) reveals the MECHANISM: kleśa-dasha (affliction-state) is the TRIGGER, not the obstacle. &quot;The minute he fills this body of troubles, immediately inspires rain of nectar.&quot; Trouble springs grace — the affliction and the nectar are one movement.
+
+## 4. Decision for L2
+
+Proceed. The verse is conditional (nondifference through hymn). L2 should preserve
+&quot;then alone&quot; (the conditionality) and the hymn-as-substance reading, without universalizing
+the nondifference claim.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p07.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 261 words</div><div class="en">**SUMMARY.** The devotee&#x27;s nondifference with Bhairava arises &quot;then alone&quot; (tadaiva) —
+when the hymn&#x27;s supreme-nectar rain rises. The hymn performs nondifference: it does not
+describe it but is the condition under which it manifests.
+
+**FUNCTION.** The stotra becomes self-referential: the hymn itself is named as the
+instrument of its own claim. The devotional act and its result are the same movement.
+
+**KEY TERMS.** tadaiva (then alone) · tvadabheda (nondifference with You) ·
+stotraparāmṛtavṛṣṭi (supreme-nectar rain of the hymn) · udeti (arises).
+
+**LOCAL CONTEXT.** Verse 7 of 10. After fearlessness (v5) and bliss (v6), v7 names the
+mechanism: the hymn is not praise-ornament but ontological instrument.
+
+**EXPLANATION.** &quot;Then alone&quot; (tadaiva) makes nondifference conditional on the hymn —
+it is not a permanent metaphysical doctrine but a state that manifests through stotra.
+The hymn-rain metaphor gives the stotra substance (it falls, it nourishes) rather than
+mere description. This is bhakti-advaya: nondifference achieved through devotion, not
+through jñāna or philosophy. The present tense of udeti suggests the rain is continuous
+— the condition is ongoing, not one-time.
+
+**Dyczkowski lecture.** Dyczkowski reveals the mechanism: affliction (kleśa) TRIGGERS grace — &quot;the minute the body of troubles is filled, rain of nectar springs.&quot; Trouble and nectar are one movement, not sequential.
+
+**BOUNDARY / OPEN.** Not claimed: universal metaphysical nonduality (advaya in the
+philosophical sense). The nondifference is bhakti&#x27;s (devotee–Lord), conditional on the
+hymn. Whether it persists beyond the hymn&#x27;s arising is unresolved by the verse.
+
+**RELATED.** v1 (surrender — the precondition), v8 (scripture contemplation — a parallel
+instrument), IPVV&#x27;s reading of vimarśa as the hymn&#x27;s own nature.
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p07.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p07" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p07" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p07" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p07" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p08 · verses 8 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">tāvakaśāstraparāmṛtacintā syandati cetasi nirvṛtidhārām</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p08 (8)
 Your-scripture supreme-nectar-contemplation in mind, bliss-stream flows. // abhts_8</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p08 — scripture-contemplation
-Your scripture&#x27;s supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><h3>bh-p09 · verses 9 · WITHHELD</h3><div class="panel"><div class="dev skt">tvāṃ priyamāpya sudarśanamekaṃ durlabhamanyajanaiḥ samayajñam</div></div><div class="panel missing"><b>WITHHELD — pending review (CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><h3>bh-p10 · verses 10 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p10 (10)
+Your scripture&#x27;s supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind.</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 359 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v8: contemplating scripture produces the bliss-stream
+
+## 1. What is at issue
+
+The verse claims: tāvakaśāstra-parāmṛta-cintā syandati cetasi nirvṛtidhārām — &quot;contemplation
+of your scripture&#x27;s supreme nectar causes the bliss-stream to flow in the mind.&quot; What is
+the relationship between scripture (śāstra), contemplation (cintā), and the resulting bliss
+(nirvṛti-dhāra)? Is scripture the *source* of bliss, or the *occasion*?
+
+Dyczkowski: &quot;When you think of scripture, he doesn&#x27;t feel tired... it flows within the mind like a stream of peace.&quot;
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (the scripture):** tāvakaśāstra — &quot;Your scripture.&quot; The possessive tāvaka
+   (&quot;yours&quot;) links the scripture to Bhairava himself — it is not an external text but
+   His own expression.
+
+2. **Premise (the practice):** parāmṛta-cintā — &quot;contemplation of supreme nectar.&quot;
+   The contemplation is not of doctrine but of *nectar* (āmṛta) — the scripture is
+   tasted, not analyzed.
+
+3. **Inference:** syandati — &quot;flows.&quot; The bliss-stream (nirvṛtidhārā) *flows* — it is
+   not produced but released, as from a spring. The contemplation opens the channel.
+
+4. **Conclusion:** Scripture-contemplation (cintā, not adhyayana/study) produces the
+   flow of bliss. The verb syandati implies a natural, gravity-driven flow — the
+   scripture is the spring, not the pump.
+
+**What is NOT argued:** The verse does not claim scripture is the *only* source of bliss,
+nor that all scripture produces bliss. It claims contemplation (cintā) of *this* scripture
+(śāstra, &quot;yours&quot;) produces a specific result.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. &quot;Your scripture&quot; (tāvakaśāstra) — which scripture? The Āgama? The Tantrāloka? The
+   verse does not specify, and &quot;yours&quot; could mean &quot;the one belonging to Bhairava&quot; (i.e.,
+   the tantric canon) or &quot;the scripture that is You&quot; (i.e., the Lord as scripture).
+
+2. cintā (contemplation) vs. adhyayana (study) — the verse uses cintā, not adhyayana.
+   The distinction matters: contemplation implies absorption, not intellectual study.
+
+3. Dyczkowski (lecture) clarifies what śāstra-contemplation destroys: &quot;the suffering of vows, gifts, bathing, austerities&quot; — i.e., the suffering CAUSED BY spiritual discipline itself. Scripture replaces effort.
+
+## 4. Decision for L2
+
+Proceed. The verse is methodological (scripture-contemplation → bliss-flow). L2 should
+name the practice as contemplation (not study), preserve the &quot;your scripture&quot; possessive,
+and keep the flow metaphor intact.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p08.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 248 words</div><div class="en">**SUMMARY.** Contemplation (cintā) of the Lord&#x27;s scripture flows as the bliss-stream in
+the mind. Scripture is not studied (adhyayana) but contemplated (cintā); the result flows
+(syandati) rather than being produced.
+
+**FUNCTION.** Names a second instrument parallel to v7&#x27;s hymn: scripture-contemplation
+produces the same bliss-stream.
+
+**KEY TERMS.** śāstra (scripture) · tāvaka (Your/yours) · parāmṛta (supreme nectar) ·
+cintā (contemplation, not study) · syandati (flows) · nirvṛtidhārā (bliss-stream).
+
+**LOCAL CONTEXT.** Verse 8 of 10. The second instrument (scripture-contemplation)
+alongside v7&#x27;s hymn: both produce bliss, one through praise, one through contemplation.
+
+**EXPLANATION.** The possessive tāvaka (&quot;Your scripture&quot;) makes the scripture Bhairava&#x27;s
+own — it is not an external text but His expression. The verb syandati (flows, from a
+spring) is deliberately non-agential: the bliss is not produced by effort but released
+when the channel opens. The practice named is cintā (contemplation/tasting), not
+adhyayana (study) — the scripture is nectar (āmṛta) to be tasted, not doctrine to be
+analyzed. This aligns with the Trika view that scripture reveals through resonance,
+not inference.
+
+**Dyczkowski lecture.** Dyczkowski clarifies: śāstra-contemplation destroys the suffering CAUSED BY vows/gifts/bathing/austerities — spiritual discipline itself is the suffering scripture replaces.
+
+**BOUNDARY / OPEN.** Not claimed: that all scripture produces bliss, or that this is
+the only instrument. Which scripture &quot;tāvaka&quot; refers to (Āgama? Tantrāloka? the Lord&#x27;s
+own scripture?) is unspecified. The distinction between cintā and adhyayana matters
+and is not flattened.
+
+**RELATED.** v7 (hymn as instrument — parallel), v6 (bliss as result), Tantrāloka&#x27;s
+teaching on śabdarāśi and scripture as revelation.
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p08.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p08" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p08" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p08" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p08" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p09 · verses 9 · WITHHELD</h3><div class="panel"><div class="dev skt">tvāṃ priyamāpya sudarśanamekaṃ durlabhamanyajanaiḥ samayajñam</div></div><div class="panel missing"><b>WITHHELD — pending review (CITATION_GROUNDING).</b> English withheld until the gate passes — fail-closed.</div><div class="panel"><div class="sub"><b>Argument map</b> · 367 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v9: the Lord as unique and covenant-knowing
+
+## 1. What is at issue
+
+BLOCKED — no L1/L2 yet. The Sanskrit attributes qualities to Bhairava: priyam (dear),
+sudarśanam (beautiful/good to see), ekam (unique), durlabham (hard to obtain), anyajanaiḥ
+(by others), samayajñam (covenant-knowing). The question: is this praise (stotra register)
+or ontology (claiming real attributes of the Lord)?
+
+Dyczkowski: &quot;This is devotion... very elevated devotion.&quot; The colophon names Abhinavagupta as author within the hymn.
+
+## 2. The argument, reconstructed step by step (from Sanskrit)
+
+1. **Vocative:** tvāṃ priyam api — &quot;You, dear indeed.&quot; The api (&quot;indeed&quot;) intensifies —
+   You are *indeed* dear.
+
+2. **Attributes:** sudarśanam (beautiful to behold) + ekam (unique) — two qualities:
+   aesthetic (He is the one worth seeing) and metaphysical (there is no other).
+
+3. **Access:** durlabham anyajanaiḥ — &quot;hard to obtain by others.&quot; The uniqueness is
+   not just ontological but relational — others cannot reach Him. The devotee can.
+
+4. **Quality:** samayajñam — &quot;knowing the covenant/samaya.&quot; Samaya is the tantric
+   samaya — the ritual covenant between guru and disciple, or between deity and
+   devotee. The Lord *knows* the covenant — He is aware of the agreement.
+
+5. **Conclusion:** Bhairava is unique, beautiful, hard-to-reach, and covenant-knowing.
+   The devotee has access that others lack — not through merit but through the samaya.
+
+**What is NOT argued:** The verse does not claim exclusivity (only this devotee), nor
+that others are excluded from salvation. It claims access through samaya — a covenantal
+relationship, not a merit-based one.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. BLOCKED — needs L1/L2. The translation will determine whether samayajñam means
+   &quot;knowing the covenant&quot; (knowledge of the agreement) or &quot;knowing the appointed time&quot;
+   (kāla-samaya).
+
+2. &quot;Hard to obtain by others&quot; (durlabham anyajanaiḥ) — is this a factual claim about
+   others&#x27; inability, or a devotional intensification (&quot;so rare that others cannot&quot;)?
+   The Sanskrit allows both.
+
+3. Dyczkowski (lecture): the verse describes Abhinavagupta himself — &quot;my consciousness dances, sings, rejoices.&quot; Composed c. 997 AD (Vasura-saṃvatsara). The samaya is the guru-lineage covenant: Lakshmanjoo teaching this hymn on Sundays.
+
+## 4. Decision for L2
+
+HOLD — cannot proceed without L1. The key terms (svātmamaya in v2, samayajñam here)
+need careful glossing before L2 can be trusted.
+</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p09.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 269 words</div><div class="en">**SUMMARY.** BLOCKED — no L1/L2. The Sanskrit attributes four qualities to Bhairava:
+dear (priyam), beautiful (sudarśanam), unique (ekam), and hard-to-reach by others
+(durlabham anyajanaiḥ) — plus covenant-knowing (samayajñam). The devotee has access
+others lack, through the samaya (tantric covenant), not through merit.
+
+**FUNCTION.** Praise-verse that also makes a relational claim: the devotee&#x27;s access is
+covenantal, not earned. Bridges the identity claim (v2) and the cosmic close (v10).
+
+**KEY TERMS.** samaya (covenant/pact) · durlabham (hard to obtain) · sudarśanam
+(beautiful to behold) · ekam (unique) · samayajñam (knowing the covenant).
+
+**LOCAL CONTEXT.** Verse 9 of 10. The penultimate verse: after the personal arc
+(v1–v8), it names why this devotee specifically has access — through samaya — before
+the cosmic close (v10).
+
+**EXPLANATION.** BLOCKED — requires L1. The Sanskrit attributes priya (dear), sudarśana
+(beautiful), eka (unique), durlabha (rare/hard-to-reach) — a set of praises. The key
+term samayajñam (&quot;knowing the covenant&quot;) makes this relational: Bhairava knows the
+samaya (the tantric pact), and the devotee&#x27;s access is through that pact, not through
+merit or method. This distinguishes the stotra&#x27;s soteriology from karmic or jñānic
+frameworks: access is covenantal.
+
+**Dyczkowski lecture.** Dyczkowski: the verse describes Abhinavagupta himself (c. 997 AD). Samaya = guru-lineage covenant — Lakshmanjoo teaching this hymn on Sundays is the living samaya.
+
+**BOUNDARY / OPEN.** BLOCKED — needs L1 for: (1) whether samayajñam means &quot;covenant-
+knowing&quot; (knowledge of agreement) or &quot;time-knowing&quot; (kāla-samaya, knowing the appointed
+time); (2) whether &quot;hard to obtain by others&quot; is factual or devotional intensification.
+
+**RELATED.** v2 (identity — the covenant&#x27;s basis), v10 (the cosmic result of covenantal
+access), the stotra&#x27;s arc from personal (v1) to cosmic (v10).
+</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p09.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p09" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p09" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p09" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p09" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><h3>bh-p10 · verses 10 · PASS</h3><div class="depth" role="tablist"><button class="on" data-p="0">ORIGINAL</button><button class="" data-p="1">L1</button><button class="" data-p="2">READ</button><button class="" data-p="3">CRITICAL</button></div><div class="panel tpanel " data-p="0" style="display:block"><div class="dev skt">yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ</div></div><div class="panel tpanel " data-p="1" style="display:none"><div class="en">## bh-p10 (10)
 By whom the Lord becomes, world&#x27;s great-heat pacifies instantly, compassionate. // abhts_10
 
 *T1 frozen 2026-10-30.*</div></div><div class="panel tpanel " data-p="2" style="display:none"><div class="en">## bh-p10 — the compassionate Lord
 By whom the Lord becomes, the world&#x27;s great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world&#x27;s suffering instantly, compassionately.
 
-*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div data-recite data-id="bhairavastava-bh-p01" data-label="bhairavastava · bh-p01" data-sa="bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande" data-en="## bh-p01 — veneration
-Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee&#x27;s stance: total surrender of mind to Bhairava, who is the refuge of those without refuge." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p02" data-label="bhairavastava · bh-p02" data-sa="tvaṃ ca maheśa ! sadaiva mamā&#x27;tmā svātmamayaṃ mama tena samastam" data-en="" style="display:none"></div><div data-recite data-id="bhairavastava-bh-p03" data-label="bhairavastava · bh-p03" data-sa="satsvapi durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu" data-en="## bh-p03 — suffering acknowledged
-Even though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p04" data-label="bhairavastava · bh-p04" data-sa="śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo&#x27;smi" data-en="## bh-p04 — power-filled
-By Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p05" data-label="bhairavastava · bh-p05" data-sa="mṛtyuyamāntakakarmapiśācairnātha ! namo&#x27;stu na jātu bibhemi" data-en="## bh-p05 — fearlessness
-Death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p06" data-label="bhairavastava · bh-p06" data-sa="bhāvaparāmṛtanirbharapūrṇe tvayyahamātmani nirvṛtimemi" data-en="## bh-p06 — bliss
-In being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p07" data-label="bhairavastava · bh-p07" data-sa="nātha ! tadaiva mama tvadabhedastotraparāmṛtavṛṣṭirudeti" data-en="## bh-p07 — nondifference and hymn-rain
-Lord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p08" data-label="bhairavastava · bh-p08" data-sa="tāvakaśāstraparāmṛtacintā syandati cetasi nirvṛtidhārām" data-en="## bh-p08 — scripture-contemplation
-Your scripture&#x27;s supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p09" data-label="bhairavastava · bh-p09" data-sa="tvāṃ priyamāpya sudarśanamekaṃ durlabhamanyajanaiḥ samayajñam" data-en="" style="display:none"></div><div data-recite data-id="bhairavastava-bh-p10" data-label="bhairavastava · bh-p10" data-sa="yena vibhurbhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ" data-en="## bh-p10 — the compassionate Lord
+*Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*</div></div><div class="panel tpanel " data-p="3" style="display:none"><div class="en">gate: PASS · model manual-muse-spark · 2026-10-30 · machine-proposed, needs human review before doctrine use</div></div><script>document.querySelectorAll('.depth').forEach(function(d){d.querySelectorAll('button').forEach(function(b){b.onclick=function(){d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'})}})})</script><div class="panel"><div class="sub"><b>Argument map</b> · 473 words</div><pre style="white-space:pre-wrap;font-size:.85rem;font-family:var(--serif);color:var(--ink)"># Bhairavastava v10: the compassionate Lord pacifies the world&#x27;s heat instantly
+
+## 1. What is at issue
+
+The verse claims: yena vibhur bhavamarusantāpaṃ śamayati jhaṭiti janasya dayāluḥ — &quot;by whom
+the Lord, the world&#x27;s great heat, pacifies instantly, the compassionate one.&quot; This is an
+efficacy claim: the Lord&#x27;s compassion has immediate (jhaṭiti, &quot;in a flash&quot;) effect on the
+world&#x27;s suffering (aru-santāpa, &quot;terrible heat&quot;). The question: what makes this pacification
+instant, and what is the &quot;heat&quot; it pacifies?
+
+Dyczkowski: &quot;Abhinavagupta composed this hymn... by whom the Lord swiftly cools the scorching heat.&quot; The cave-entry tradition is the hymn&#x27;s legendary frame.
+
+## 2. The argument, reconstructed step by step
+
+1. **Premise (the world&#x27;s condition):** bhavamarusantāpa — &quot;the world&#x27;s great burning
+   heat.&quot; The metaphor is universal: saṃsāra as fever/heat. This is the most expansive
+   suffering-claim in the stotra (v3 named personal suffering; this is cosmic).
+
+2. **Premise (the Lord&#x27;s action):** śamayati — &quot;pacifies/soothes.&quot; Not destroys, not
+   transcends — soothes. The heat is not annihilated but cooled.
+
+3. **Premise (speed):** jhaṭiti — &quot;in a flash, instantly.&quot; The pacification is not
+   gradual. This is the stotra&#x27;s most radical temporal claim.
+
+4. **Premise (condition):** yena — &quot;by whom&quot; — the pacification occurs *by* the Lord&#x27;s
+   action. The causal agent is external (the Lord), not the devotee&#x27;s effort.
+
+5. **Inference:** dayāluḥ — &quot;compassionate&quot; — compassion is the *means* of pacification.
+   The Lord&#x27;s nature (compassion) produces the effect (pacification), not a ritual or
+   method.
+
+6. **Conclusion:** The Lord&#x27;s compassionate nature instantly pacifies cosmic suffering —
+   without method, without delay, without effort from the devotee. This closes the
+   stotra&#x27;s arc: from personal surrender (v1) to cosmic compassion (v10).
+
+**What is NOT argued:** The verse does not claim the world *will be* pacified eschatologically.
+The present tense (śamayati) and the immediacy (jhaṭiti) suggest a perennial present — the
+Lord is always pacifying, always compassionate.
+
+## 3. Unresolved / uncertain (not invented)
+
+1. bhavamarusantāpa — &quot;the world&#x27;s great heat&quot; — is this the heat of saṃsāra (suffering),
+   tapas (austerity), or moha (delusion)? The verse does not specify. The stotra&#x27;s context
+   (v3: suffering/delusion/terror) suggests saṃsāra-as-fever.
+
+2. &quot;Instantly&quot; (jhaṭiti) — instantaneous pacification of *cosmic* suffering seems to
+   contradict the stotra&#x27;s own acknowledgment of ongoing suffering (v3). Either the verse
+   means &quot;instantly available&quot; (a standing offer) or &quot;instantly effective when the devotee
+   is in the relationship established by v1-v9.&quot;
+
+3. Dyczkowski (lecture) gives the date: Vasura-saṃvatsara year, Pauṣa month, kṛṣṇadaśamī (dark tenth). Padyanavaka = nine verses (the colophon counts 9, not 10 — the opening vyāpta-verse is an invocation). Tradition: Abhinavagupta entered the Bhairava cave with 10,000 disciples, chantin</pre><div class="sub"><a href="/data/argmaps/bhairavastava/bh-p10.md">source →</a></div></div><div class="panel"><div class="sub"><b>C1 commentary</b> · 324 words</div><div class="en">**SUMMARY.** The compassionate Lord instantly pacifies the world&#x27;s great burning heat.
+This closes the stotra&#x27;s arc from personal surrender (v1) to cosmic compassion (v10):
+the Lord&#x27;s nature (dayā, compassion) produces the effect (śamana, pacification) without
+method or delay (jhaṭiti, in a flash).
+
+**FUNCTION.** Cosmic close. Universalizes the stotra&#x27;s personal claims: what was individual
+(fearlessness, bliss, nondifference) becomes world-pacification.
+
+**KEY TERMS.** arusantāpa (great burning heat of the world) · śamayati (pacifies/soothes) ·
+jhaṭiti (in a flash) · dayāluḥ (compassionate) · vibhuḥ (the Lord as all-pervading).
+
+**LOCAL CONTEXT.** Verse 10 of 10. The stotra&#x27;s final movement: from &quot;I bow&quot; (v1, personal)
+to &quot;the world&#x27;s heat is pacified&quot; (cosmic). Each verse has expanded the scope: personal
+surrender → personal fearlessness → personal bliss → personal nondifference → cosmic
+compassion.
+
+**EXPLANATION.** The causal agent is the Lord&#x27;s nature (dayā, compassion), not the devotee&#x27;s
+effort — this is the stotra&#x27;s closing theology: pacification happens by compassion, not by
+method. The adverb jhaṭiti (&quot;in a flash&quot;) is the most radical temporal claim in the text
+— instantaneous cosmic pacification. The tension with v3 (suffering acknowledged as present)
+is deliberate and unresolved: the heat is always present AND always being pacified. This
+is the perennial-present soteriology: the Lord is always cooling, the devotee is always
+being relieved — and the recognition of both is the stotra&#x27;s own claim.
+
+**Dyczkowski lecture.** Dyczkowski dates the colophon: Vasura-saṃvatsara, Pauṣa, kṛṣṇadaśamī. Padyanavaka = nine verses (colophon counts 9, the opening vyāpta-verse being invocation). Tradition: cave entry with 10,000 disciples, chanting this hymn, then disappearance.
+
+**BOUNDARY / OPEN.** Not claimed: eschatological final pacification (the world will end),
+nor that suffering is already gone (v3 contradicts). The present tense (śamayati) and
+jhaṭiti suggest a stand</div><div class="sub"><a href="/data/c1/bhairavastava/bh-p10.md">source →</a></div></div><div class="variant-switcher" data-work="bhairavastava" data-chunk="bh-p10" style="margin:.5rem 0;font-family:var(--sans);font-size:.8rem"><button onclick="loadVariants(this)" style="padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer">Show variants →</button><div class="vlist" style="margin-top:.4rem"></div><div style="margin-top:.4rem"><input id="variant-text-bhairavastava-bh-p10" placeholder="Paste your translation..." style="width:100%;padding:.4rem;border:1px solid var(--line);border-radius:.4rem;font-size:.8rem;margin-top:.3rem"/><button onclick="saveVariant(this)" data-work="bhairavastava" data-chunk="bh-p10" style="margin-top:.3rem;padding:.3rem .7rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.8rem">Save as variant →</button><div style="margin-top:.3rem"><button onclick="acceptVariant(this)" data-work="bhairavastava" data-chunk="bh-p10" style="padding:.3rem .7rem;border:1px solid #2e7d32;border-radius:.4rem;background:#e8f5e9;cursor:pointer;font-size:.8rem;color:#2e7d32">Accept best →</button></div></div></div><div data-recite data-id="bhairavastava-bh-p01" data-label="bhairavastava · bh-p01" data-sa="भैरवनाथम् अनाथशरण्यं त्वन्मयचित्ततया हृदि वन्दे" data-en="## bh-p01 — veneration
+Bhairava-Lord, refuge of the helpless — by mind become Yours, in heart I venerate. The stotra opens with the devotee&#x27;s stance: total surrender of mind to Bhairava, who is the refuge of those without refuge." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p02" data-label="bhairavastava · bh-p02" data-sa="त्वं च महेश ! सदैव ममाऽत्मा स्वात्ममयं मम तेन समस्तम्" data-en="" style="display:none"></div><div data-recite data-id="bhairavastava-bh-p03" data-label="bhairavastava · bh-p03" data-sa="सत्स्वपि दुर्धरदुःखविमोहत्रासविधायिषु कर्मगणेषु" data-en="## bh-p03 — suffering acknowledged
+Even though hard-to-bear suffering, delusion, and terror-causing karmas are present — the devotee does not flinch. The reality of suffering is acknowledged, not denied." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p04" data-label="bhairavastava · bh-p04" data-sa="शङ्करसेवनचिन्तनधीरो भीषणभैरवशक्तिमयोऽस्मि" data-en="## bh-p04 — power-filled
+By Śaṅkara-service, firm in contemplation, I am filled with terrifying Bhairava-power. Service and firm contemplation produce the power-filled state." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p05" data-label="bhairavastava · bh-p05" data-sa="मृत्युयमान्तककर्मपिशाचैर्नाथ ! नमोऽस्तु न जातु बिभेमि" data-en="## bh-p05 — fearlessness
+Death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear. Salutation to the Lord removes all fear of death and danger." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p06" data-label="bhairavastava · bh-p06" data-sa="भावपरामृतनिर्भरपूर्णे त्वय्यहमात्मनि निर्वृतिमेमि" data-en="## bh-p06 — bliss
+In being-full in You — I, the self, enter bliss. Bliss is entering the fullness of the Lord." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p07" data-label="bhairavastava · bh-p07" data-sa="नाथ ! तदैव मम त्वदभेदस्तोत्रपरामृतवृष्टिरुदेति" data-en="## bh-p07 — nondifference and hymn-rain
+Lord, then alone is my nondifference with You; the supreme-nectar-rain of the hymn arises. Nondifference manifests when the hymn-rain arises." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p08" data-label="bhairavastava · bh-p08" data-sa="तावकशास्त्रपरामृतचिन्ता स्यन्दति चेतसि निर्वृतिधाराम्" data-en="## bh-p08 — scripture-contemplation
+Your scripture&#x27;s supreme-nectar-contemplation in the mind — the bliss-stream flows. Contemplating scripture produces the bliss-stream in mind." style="display:none"></div><div data-recite data-id="bhairavastava-bh-p09" data-label="bhairavastava · bh-p09" data-sa="त्वां प्रियमाप्य सुदर्शनमेकं दुर्लभमन्यजनैः समयज्ञम्" data-en="" style="display:none"></div><div data-recite data-id="bhairavastava-bh-p10" data-label="bhairavastava · bh-p10" data-sa="येन विभुर्भवमरुसन्तापं शमयति झटिति जनस्य दयालुः" data-en="## bh-p10 — the compassionate Lord
 By whom the Lord becomes, the world&#x27;s great heat is pacified instantly — compassionate. The Lord, becoming, pacifies the world&#x27;s suffering instantly, compassionately.
 
 *Fidelity: preserved (all 10 verses). Added: none doctrinal. Not-resolved: none.*" style="display:none"></div><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/issues/new">propose a correction →</a>. English derives from R2 batch-t1 drafts (pipeline); corrections welcome here.</div><div class="pn" id="pnslot"></div></main>
 <aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
-<footer><div class="fin"><span>Trika Library — display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
-<script>var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
 var q=document.getElementById("q");
 if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
 var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
@@ -159,8 +922,27 @@ var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/")
 (function(){
 var b=document.getElementById('burger');
 if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
 var toc=document.getElementById('tocbody');
-if(toc){var hs=document.querySelectorAll('main h2, main h3');var html='';
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
 hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
 toc.innerHTML=html||'<span style="color:#999">—</span>';
 var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
@@ -168,7 +950,73 @@ function spy(){var y=window.scrollY+120,cur=null;
 hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
 links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 if(!cur&&links.length)links[0].classList.add('on');}
-window.addEventListener('scroll',spy,{passive:true});spy();}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
 })();
 </script><script>
 (function(){
@@ -331,4 +1179,85 @@ function init(){
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 window.__recite={setMode:setMode,play:pageQueue};
-})();</script></body></html>
+})();</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+window.acceptVariant=function(btn){
+  var work=btn.getAttribute('data-work');var chunk=btn.getAttribute('data-chunk');
+  var userId=prompt('Your profile id:');
+  if(!userId){return}
+  // fetch variants and accept the first one
+  fetch(window.API+'/api/variants/'+work+'/'+chunk).then(r=>r.json()).then(d=>{
+    if(!d.variants||!d.variants.length){alert('No variants to accept');return}
+    var v=d.variants[0];
+    // mark as accepted via a new endpoint
+    fetch(window.API+'/api/variants/'+v.id+'/accept',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:userId})})
+      .then(r=>r.json()).then(d=>alert('Accepted: '+d.id))
+      .catch(e=>alert('Error: '+e.message));
+  }).catch(e=>alert('Error: '+e.message));
+};
+window.saveVariant=function(btn){
+  var work=btn.getAttribute('data-work');var chunk=btn.getAttribute('data-chunk');
+  var textarea=document.getElementById('variant-text-'+work+'-'+chunk);
+  var text=textarea?textarea.value.trim():'';
+  if(!text){alert('Enter a translation first');return}
+  var userId=prompt('Your profile id (from /api/profile):');
+  if(!userId){return}
+  fetch(window.API+'/api/variants',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:userId,work:work,chunk:chunk,text:text,style:'owner'})})
+    .then(r=>r.json()).then(d=>{alert('Saved: '+d.id);textarea.value=''})
+    .catch(e=>alert('Error: '+e.message));
+};
+window.loadVariants=function(btn){
+  var c=btn.parentElement;var work=c.getAttribute('data-work');var chunk=c.getAttribute('data-chunk');
+  var list=c.querySelector('.vlist');
+  if(list.dataset.loaded){list.style.display=list.style.display==='none'?'block':'none';return}
+  list.innerHTML='<i>Loading...</i>';
+  fetch(window.API+'/api/variants/'+work+'/'+chunk)
+    .then(r=>r.json()).then(d=>{
+      if(!d.variants||!d.variants.length){list.innerHTML='<i>No saved variants yet.</i>';list.dataset.loaded='1';return}
+      list.innerHTML=d.variants.map(v=>'<div class="panel" style="margin:.3rem 0"><b>'+v.style+'</b> <span style="color:#76736e;font-size:.7rem">'+v.created_at+'</span><div style="margin-top:.3rem;white-space:pre-wrap">'+v.text.slice(0,500)+'</div></div>').join('');
+      list.dataset.loaded='1';
+    }).catch(e=>{list.innerHTML='<i>Error: '+e.message+'</i>'});
+};
+})();
+</script></body></html>

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p06",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p06",
+ "title": "bodhapancadasika — bod-p06",
+ "kind": "entailment",
+ "question": "bod-p06 (6)",
+ "issue": "Derived from L2 text (no argmap). ## bod-p06 (6)\nThis god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-pervading. // AgBpd_6",
+ "premises": [
+  {
+   "text": "eṣa devo 'nayā devyā nityaṃ krīḍārasotsukaḥ | vicitrān sṛṣṭisaṃhārān vidhatte yugapad vibhuḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "bod-p06 (6)",
+  "passage_id": "bodhapancadasika:bod-p06"
+ },
+ "unresolved": "",
+ "argument_text": "## bod-p06 (6)\nThis god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-pervading. // AgBpd_6",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p06",
+ "sanskrit": "eṣa devo 'nayā devyā nityaṃ krīḍārasotsukaḥ | vicitrān sṛṣṭisaṃhārān vidhatte yugapad vibhuḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

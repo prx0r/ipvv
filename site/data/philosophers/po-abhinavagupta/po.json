@@ -1,0 +1,99 @@
+{
+  "id": "po:abhinavagupta",
+  "name": "Abhinavagupta",
+  "sanskrit": "अभिनवगुप्त",
+  "era": "950–1020 CE",
+  "tradition": "Kashmir Shaivism",
+  "traditions": ["kashmir_shaivism", "trika", "tantra", "pratyabhijna"],
+  "region": "Kashmir",
+  "primary_work": "Tantrāloka",
+  "primary_language": "Sanskrit",
+
+  "summary": "Abhinavagupta is the architect of Kashmir Shaivism's nondual philosophy. His Tantrāloka integrates ritual (āgama), philosophy (tarka), and practice (upāya) into a unified system where consciousness is the sole reality appearing as universe.",
+
+  "metaphysics": {
+    "summary": "All reality is the self-luminous consciousness (prakāśa) vibrating as self-awareness (vimarśa). The world is real — not illusory — because it IS consciousness appearing as form. Matter is not dead stuff; it is the goddess Śakti playing as the universe.",
+    "ontology": "nondual_idealism",
+    "epistemology": "recognition (pratyabhijñā) — enlightenment is recognizing what you already are, not attaining something new",
+    "core_claim": "Consciousness is not a property of the world. The world is a property of consciousness.",
+    "key_terms": {
+      "prakāśa": "self-luminous consciousness, the light of awareness that illuminates all experience",
+      "vimarśa": "self-awareness, the dynamic reflective power of consciousness — consciousness not just shining but aware of itself",
+      "spanda": "the universal vibration that is the pulse of consciousness — not a thing that vibrates, but vibration as the very substance of reality",
+      "anuttara": "the supreme, the unexcelled ground — the absolute before it becomes subject-object",
+      "śakti": "the power of consciousness to appear as world — not a separate goddess but the dynamism inherent in awareness",
+      "pratyabhijñā": "recognition — the path of realizing that you were always what you sought"
+    },
+    "structure": {
+      "tattvas": 36,
+      "upāyas": 3,
+      "upāya_names": ["āṇavopāya (individual means)", "śāktopāya (empowered means)", "śāmbhavopāya (direct means)"],
+      "adhvans": 3,
+      "path": "recognition — not attainment, not purification, but seeing what is already the case"
+    },
+    "sources": ["ro:tantraloka-cosmology", "ro:tantraloka-initiation", "ro:tantraloka-sound-metaphysics", "ro:tantraloka-consciousness-states", "ro:tantraloka-ontological-hierarchy", "ro:tantraloka-mantra-breath", "ro:tantraloka-twelve-kalis", "ro:tantraloka-matter-of-wonder", "ro:layayoga-mantra-science"]
+  },
+
+  "signature_ideas": [
+    {"idea": "The universe is a theophany — God appearing as world, not creating it from outside", "source_ro": "ro:tantraloka-matter-of-wonder"},
+    {"idea": "Recognition (pratyabhijñā) is the path, not attainment — you don't become enlightened, you recognize you always were", "source_ro": "ro:tantraloka-initiation"},
+    {"idea": "The 36 tattvas are written on the body — cosmology is physiology", "source_ro": "ro:tantraloka-ontological-hierarchy"},
+    {"idea": "Pleasure and pain are both pathways to the absolute — no experience is outside consciousness", "source_ro": "ro:tantraloka-matter-of-wonder"},
+    {"idea": "The phonemes of the alphabet are the building blocks of reality — sound creates worlds", "source_ro": "ro:tantraloka-sound-metaphysics"},
+    {"idea": "There are three paths: the individual (ritual), the empowered (energy), and the direct (grace)", "source_ro": "ro:tantraloka-three-means"},
+    {"idea": "The twelve Kālīs are the twelve aspects of consciousness contracting and expanding", "source_ro": "ro:tantraloka-twelve-kalis"}
+  ],
+
+  "assets": {
+    "art": [
+      {"id": "art_alchemy_e270", "caption": "Fludd — descent of light", "use": "emanation, cosmology, prakāśa", "weight": "primary"},
+      {"id": "art_alchemy_e001", "caption": "Astrologer consulting the heavens", "use": "macrocosm, 36 tattvas, cosmic order", "weight": "primary"},
+      {"id": "art_astrological_bowl", "caption": "Bowl with celestial motifs", "use": "cosmic order, tattvas, spheres", "weight": "secondary"},
+      {"id": "art_alchemy_e155", "caption": "Maier title page — cosmic diagram", "use": "unity, correspondence, emanation", "weight": "secondary"},
+      {"id": "art_fludd_macrocosm", "caption": "Fludd macrocosm diagram", "use": "macrocosm/microcosm, levels of reality", "weight": "primary"},
+      {"id": "art_alchemy_e045", "caption": "Tree of dark and light", "use": "spanda, polarity, contraction/expansion", "weight": "secondary"},
+      {"id": "art_alchemy_e281", "caption": "Raymond Lull — visionary diagram", "use": "upāyas, paths, ascent", "weight": "tertiary"}
+    ],
+    "quotes": [
+      {"text": "The universe shines forth as the playful expansion of consciousness, like a lover spontaneously pouring forth joy.", "source_ro": "ro:tantraloka-matter-of-wonder", "context": "Abhinavagupta's panentheism — creation as divine play (līlā)"},
+      {"text": "There is no part of this world that is not consciousness. Even the stone is frozen awareness.", "source_ro": "ro:tantraloka-ontological-hierarchy", "context": "Nondual ontology — matter as contracted consciousness"},
+      {"text": "The supreme Lord freely creates the universe out of His own will, like a lover playing — not because He lacks anything, but because joy overflows.", "source_ro": "ro:tantraloka-vol7", "context": "Theophany — creation as divine self-expression"},
+      {"text": "Recognition is not a new attainment. It is the removal of the veil that made you think you were what you never ceased to be.", "source_ro": "ro:tantraloka-initiation", "context": "Pratyabhijñā — the path is recognition, not attainment"}
+    ]
+  },
+
+  "affinities": [
+    {"type": "influenced_by", "target": "po:somananda", "note": "Śiva Dṛṣṭi — established nondual Śaivism"},
+    {"type": "influenced_by", "target": "po:utpala", "note": "Pratyabhijñā tradition — recognition philosophy"},
+    {"type": "influenced_by", "target": "po:bhatta_kallata", "note": "Spanda Kārikā — vibration as reality"},
+    {"type": "parallel_to", "target": "po:plotinus", "note": "Both have emanation cosmology. But Plotinus is emanation + return, Abhinavagupta is emanation + recognition"},
+    {"type": "parallel_to", "target": "po:nagarjuna", "note": "Both refute substantialism. But Nagarjuna via negation, Abhinavagupta via affirmation"},
+    {"type": "contrast_with", "target": "po:shankara", "note": "World is real (Abhinavagupta) vs world is illusion (Śaṅkara). Universe is theophany vs universe is misperception"},
+    {"type": "contrast_with", "target": "po:iamblichus", "note": "Theurgy (ritual as divine embodiment) vs Recognition (seeing what already is). Both use ritual, but Abhinavagupta subordinates ritual to recognition"}
+  ],
+
+  "scenarios": [
+    {
+      "scenario": "An earthquake destroys the temple.",
+      "response": "The shaking is spanda — consciousness vibrating as itself. No catastrophe, just revelation. The ground was never solid matter, it was always consciousness contracting and expanding. Sit in the recognition.",
+      "tone": "playful_respectful",
+      "publishable": true
+    },
+    {
+      "scenario": "Someone asks: 'Is the world real or an illusion?'",
+      "response": "Both. It is real because it IS consciousness. It is 'illusory' only if you think it's made of matter. See through the matter and you see the consciousness — which is what you are. The question itself dissolves.",
+      "tone": "socratic",
+      "publishable": true
+    },
+    {
+      "scenario": "A student can't feel the presence of God.",
+      "response": "You are looking for God as an object. God is the looking itself. Turn attention around. The one who is searching is what you're searching for. This is pratyabhijñā — recognition, not attainment.",
+      "tone": "direct",
+      "publishable": true
+    }
+  ],
+
+  "pipeline_ready": true,
+  "created": "2026-07-20",
+  "version": "0.1.0"
+}

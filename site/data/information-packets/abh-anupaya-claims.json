@@ -1,0 +1,61 @@
+{
+  "packet_id": "ip:abh-anupaya",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "text:abh-anupaya",
+    "title": "Claims: T\u0100 2 (Anup\u0101ya): from the No Means perspective, the two-aspec",
+    "author": "Codex/Hermes loop",
+    "external_sources": [],
+    "tradition_scope": "trika_pratyabhijna"
+  },
+  "target_question_id": "q:reflexivity-intrinsic-or-constructed",
+  "extracted_by": "codex_hermes_loop",
+  "extracted_at": "2026-07-27",
+  "status": "generated",
+  "claims": [
+    {
+      "claim_id": "cl:abh-anupaya-meta",
+      "source_type": "primary_text",
+      "source_id": "text:tantraloka-ahnika3",
+      "source_span": {
+        "locator": "Tantr\u0101loka 2 (Anup\u0101ya), ahnika-03.txt lines 1-39",
+        "quote": "T\u0100 2 (Anup\u0101ya/No Means chapter): 'Of what use can any means of realization be wi"
+      },
+      "claim_text": "T\u0100 2 (Anup\u0101ya/No Means chapter): 'Of what use can any means of realization be with regard to this Supreme Lord Who is self-luminous Light and our own Self? It cannot bring about the attainment of His own nature, because it is eternal, nor knowledge of it, because it illumines itself.' From the Anup\u0101ya perspective, the two-aspect structure (subject/object, means/goal, ground/grounded) was never truly separate. The reflexivity debate \u2014 whether structure is self-grounding (Dign\u0101ga), vimar\u015ba-grounded (Abhinavagupta), or groundless (\u00d1\u0101\u1e47av\u012bra) \u2014 operates at the level where separation appears real. Anup\u0101ya is the perspective from which the question dissolves.",
+      "targets": [
+        {
+          "target_id": "cand:abh-vimarsa-intrinsic",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:self-grounding-structure",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "cand:groundless-reflexivity",
+          "target_type": "candidate_explanation"
+        }
+      ],
+      "tradition_scope": "trika_pratyabhijna",
+      "paradigm": "general",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "sambandha(abh_anupaya_meta,target)",
+      "hetu": "consciousness is self-luminous and requires no means \u2014 the distinction between ground and grounded does not arise at this level",
+      "sadhya": "the reflexivity debate presupposes a separation that Anup\u0101ya reveals as never having been actual",
+      "vyapti_statement": "If consciousness needs no means to itself because it IS self-luminous, then the question 'what grounds the two aspects?' is a question that only arises from within the separation it presupposes.",
+      "vyapti_confidence": 0.78,
+      "log_bayes_factor": 0.46,
+      "w_rel": 0.78,
+      "w_map": 0.72,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the Anup\u0101ya perspective still requires the two-aspect distinction (at least as something to be transcended), making it a position within the debate rather than a dissolution of it.",
+        "status": "untested"
+      },
+      "reasoning": "Extracted from text:tantraloka-ahnika3."
+    }
+  ]
+}

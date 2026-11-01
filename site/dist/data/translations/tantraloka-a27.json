@@ -1,0 +1,271 @@
+[
+ {
+  "chunk": "tal-a27-p01",
+  "verses": "27.1-27.10",
+  "sanskrit": "athocyate liṅgapūjā sūcitā mālinīmate // 1b eteṣāmūrdhvaśāstroktamantrāṇāṃ na pratiṣṭhitam / bahiṣkuryāttato hyete rahasyatvena siddhidāḥ svavīryānandamāhātmyapraveśavaśaśālinīm / ye siddhiṃ dadate teṣāṃ bāhyatvaṃ rūpavicyutiḥ kiṃca coktaṃ samāveśapūrṇo bhoktrātmakaḥ śivaḥ / bhogalāmpaṭyabhāgbhogavicchede nigrahātmakaḥ śāntatvanyakkriyodbhūtajighatsāvṛṃhitaṃ vapuḥ / svayaṃ pratiṣṭhitaṃ yena so@syābhoge vinaśyati uktaṃ jñānottarāyāṃ ca tadetatparameśinā / śivo yāgapriyo yasmādviśeṣānmātṛmadhyagaḥ tasmādrahasyaśāstreṣu ye mantrāstānbudho bahiḥ / na pratiṣṭhāpayejjātu viśeṣādvyaktarūpiṇaḥ ata eva mṛtasyārthe pratiṣṭhānyatra yoditā / sātra śāstreṣu no kāryā kāryā sādhāraṇī punaḥ ā tanmayatvasaṃsiddherā cābhīṣṭaphalodayāt / putrakaḥ sādhako vyaktamavyaktaṃ vā samāśrayet putrakairgururabhyarthyaḥ sādhakastu svayaṃ vidan / yadi tatsthāpayenno cettenāpyarthyo gururbhavet",
+  "gate": "BLOCKED",
+  "blocking": [
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:899816a5c119",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    true,
+    "candidate covers the source"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13663,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 9
+ },
+ {
+  "chunk": "tal-a27-p02",
+  "verses": "27.11-27.20",
+  "sanskrit": "guruścātra nirodhākhye kāla itthaṃ vibhau vadet / jīvatyasminphalāntaṃ tvaṃ tiṣṭherjīvāvadhīti vā liṅgaṃ ca bāṇaliṅgaṃ vā ratnajaṃ vātha mauktikam / pauṣpamānnamatho vāstraṃ gandhadravyakṛtaṃ ca vā natu pāṣāṇajaṃ liṅgaṃ śilpyutthaṃ parikalpayet / dhātūtthaṃ ca suvarṇotthavarjamanyadvivarjayet na cātra liṅgamānādi kvacidapyupayujyate / udāravīryairmantrairyadbhāsitaṃ phaladaṃ hi tat tasyāpi sthaṇḍilādyuktavidhinā śuddhimācaret / mantrārpaṇaṃ tathaiva syānnirodhastūktayuktitaḥ agnau ca tarpaṇaṃ bhūriviśeṣāddakṣiṇā guroḥ / dīnāditṛptirvibhavādyāga ityadhiko vidhiḥ sarveṣvavyaktaliṅgeṣu pradhānaṃ syādakalpitam / tathā ca tatra tatroktaṃ lakṣaṇe pārameśvare sūtre pātre dhvaje vastre svayambhūbāṇapūjite / nadīprasravaṇotthe ca nāhvānaṃ nāpi kalpanā pīṭhaprasādamantrāṃśavelādiniyamo naca / vyaktaṃ vā citrapustādau devadārusuvarṇajam atha dīkṣitasacchilpikṛtaṃ sthāpayate guruḥ / athavā lakṣaṇopetamūrdhatatkarparāśritam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:266d03847fe7",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 27% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13690,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 11
+ },
+ {
+  "chunk": "tal-a27-p03",
+  "verses": "27.21-27.30",
+  "sanskrit": "paṅkticakrakaśūlābjavidhinā tūramāśrayet / tallakṣaṇaṃ bruve śrīmatpicuśāstre nirūpitam tūre yogaḥ sadā śastaḥ siddhido doṣavarjite / jālakairjarjarai randhrairdantairūnādhikai rujā yukte ca tūre hāniḥ syāt taddhīne yāga uttamaḥ / kāmya eva bhavettūramiti kecitprapedire guravastu vidhau kāmye yatnāddoṣāṃstyajediti / vyācakṣate picuproktaṃ na nitye karmaṇītyadaḥ śrīsiddhātantra uktaṃ ca tūralakṣaṇamuttamam / ekādikacatuṣkhaṇḍe gomukhe pūrṇacandrake padmagorocanāmuktānīrasphaṭikasaṃnibhe / ekādipañcasadrandhravidyārekhānvite śubhe na rūkṣavakraśakaladīrghanimnasabinduke / ślakṣṇayā vajrasūcyātra sphuṭaṃ devīgaṇānvitam sarvaṃ samālikhetpūjyaṃ sarvāvayavasundaram / etadevānusartavyamarghapātre@pi lakṣaṇam śrībrahmayāmale@pyuktaṃ pātraṃ gomukhamuttamam / gajakūrmatalaṃ kumbhavṛttaśaktikajākṛti akṣasūtramatho kuryāttatraivābhyarcayetkramam / vīradhātujalodbhūtamuktāratnasuvarṇajam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:f376111a003a",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 28% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13720,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 12
+ },
+ {
+  "chunk": "tal-a27-p04",
+  "verses": "27.31-27.40",
+  "sanskrit": "akṣasūtraṃ kramotkṛṣṭaṃ raudrākṣaṃ vā viśeṣataḥ / śataṃ tithyuttaraṃ yadvā sāṣṭaṃ yadvā tadardhakam tadardhaṃ vātha pañcāśadyuktaṃ tatparikalpayet / vaktrāṇi pañca citspandajñānecchākṛtisaṃgateḥ pañcadhādyantagaṃ caikyamityupāntyākṣago vidhiḥ / śaktitadvatprabhedena tatra dvairūpyamucyate tato dviguṇamāne tu dvirūpaṃ nyāsamācaret / tato@pi dviguṇe sṛṣṭisaṃhṛtidvitayena tam mātṛkāṃ mālinīṃ vātha nyasyetkhaśarasaṃmite / uttame tu dvayīṃ nyasyennyasya pūrvaṃ pracoditān dīkṣāyāṃ mukhyato mantrāṃstānpañcadaśa daiśikaḥ / yadi vā tattvabhuvanakalāmantrapadārṇajaiḥ saṃkhyābhedaiḥ kṛte sūtre taṃ taṃ nyāsaṃ guruścaret / kṛtvākṣasūtraṃ tasyāpi sarvaṃ sthaṇḍilavadbhavet pūjitena ca tenaiva japaṃ kuryādatandritaḥ / vidhiruktastvayaṃ śrīmanmālinīvijayottare cakravadbhramayannetadyadvakti sa japo bhavet / yadīkṣate juhotyetadbodhāgnau saṃpraveśanāt athavārghamahāpātraṃ kuryāttaccottaraṃ param / nārikelamatho bailvaṃ sauvarṇaṃ rājataṃ ca vā",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:92d3ba52f1e1",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 21% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13750,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 11
+ },
+ {
+  "chunk": "tal-a27-p05",
+  "verses": "27.41-27.50",
+  "sanskrit": "tasyāpyeṣa vidhiḥ sarvaḥ pratiṣṭhādau prakīrtitaḥ / tanniṣkamparasaiḥ pūrṇaṃ kṛtvāsminpūjayetkramam adhomukhaṃ sadā sthāpyaṃ pūjitaṃ pūjane punaḥ / tatpātramunmukhaṃ tacca riktaṃ kuryānna tādṛśam pūjānte tadrasāpūrṇamātmānaṃ pravidhāya tat / adhomukhaṃ ca saṃpūjya sthāpayet vicakṣaṇaḥ khaṅgaṃ kṛpāṇikāṃ yadvā kartarīṃ makuraṃ ca vā / vimalaṃ tattathā kuryācchrīmatkālīmukhoditam śrībhairavakule@pyuktaṃ kulaparvaprapūjane / sthaṇḍile@gnau paṭe liṅge pātre padme@tha maṇḍale mūrtau ghaṭe@strasaṃghāte dhaṭe sūtre@tha pūjayet / svena svenopacāreṇa saṅkaraṃ varjayediti yathāpsu śāntaye mantrāstadvadastrādiṣu dhruvam / śatrucchedādikartāraḥ kāmyo@taḥ saṅkarojjhitaḥ akāmasya tu te tattatsthānopādhivaśāddhruvam / pāśakartanasaṃśuddhatattvāpyāyādikāriṇaḥ athavā pustakaṃ tādṛgrahaḥśāstrakramombhitam / suśuddhaṃ dīkṣitakṛtaṃ tatrāpyeṣa vidhiḥ smṛtaḥ itthaṃ svayaṃpratiṣṭheṣu yāvadyāvatsthitirbhavet / vibhavaistarpaṇaṃ śuddhistāvadvicchedavarjanam",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:bc99ca8fe9d3",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 24% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13780,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 12
+ },
+ {
+  "chunk": "tal-a27-p06",
+  "verses": "27.51-27.59",
+  "sanskrit": "ata eva yadā bhūridinaṃ maṇḍalakalpanam / tadā dine dine kuryādvibhavaistarpaṇaṃ bahu pratiṣṭhāyāṃ ca sarvatra guruḥ pūrvoditaṃ param / satattvamanusandhāya saṃnidhiṃ sphuṭamācaret siddhe tu tanmayībhāve phale putrakasādhakaiḥ / anyasmai taddvayādanyatarasmai tatsamarpyate tasyāpyeṣa vidhiḥ sarvastadalābhe tu sarvathā / agādhe@mbhasi tatkṣepyaṃ kṣamayitvā visṛjya ca ityeṣa svapratiṣṭhānavidhiḥ śivanirūpitaḥ / parapratiṣṭhite liṅge bāṇīye@tha svayaṃbhuvi sarvamāsanapakṣe prāṅnyasya saṃpūjayetkramam / śuddhāśuddhādhvajāḥ sarve mantrāḥ sarvaḥ śivāntakaḥ adhvā cehāsane proktastatsarvatrārcayedidam / āvāhanavisṛṣṭī tu tatra prāgvatsamācaret uktaṃ tantre@pyaghoreśe svacchande vibhunā tathā / athavā pratyahaṃ proktamānārdhārdhaniyogataḥ kṛtveṣṭaṃ maṇḍalaṃ tatra samastaṃ kramamarcayet / bahuprakārabhinnasya liṅgasyārcā nirūpitā",
+  "gate": "BLOCKED",
+  "blocking": [
+   "COVERAGE",
+   "ABSTENTION"
+  ],
+  "model": "manual-muse-spark",
+  "date": "2026-10-30",
+  "work_id": "tantrasara",
+  "ahnika": "27",
+  "immutable_id": "pt:pid:tal:219d8a64642d",
+  "status": "OK",
+  "checks": {
+   "SOURCE_BINDING": [
+    true,
+    "candidate within 3.5× source length"
+   ],
+   "COVERAGE": [
+    false,
+    "candidate only 33% of source units — dropped pādas"
+   ],
+   "ABSTENTION": [
+    false,
+    "candidate repeats source (no real translation) — abstain, don't guess"
+   ],
+   "TERM_CONSISTENCY": [
+    true,
+    "terms consistent"
+   ],
+   "CITATION_GROUNDING": [
+    true,
+    "all technical terms grounded in source"
+   ]
+  },
+  "en_variants": [],
+  "styles": [],
+  "source_file": "tantraloka.txt",
+  "source_lines": 13810,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 1918-38 (Jayaratha Viveka ed.)",
+  "match_words": 12
+ }
+]

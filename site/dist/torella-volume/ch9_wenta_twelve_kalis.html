@@ -1,0 +1,1103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ch9_wenta_twelve_kalis</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Chapter</div><h1>ch9_wenta_twelve_kalis</h1><div class="skt"></div><div class="sub">4950 words · vendored research asset</div><div class="sub"><a href="/data/torella-volume/ch9_wenta_twelve_kalis.txt">source →</a></div><ul>
+<li>e Twelve Kālīs and Utpaladeva’s</li>
+</ul>
+<ul>
+<li>praisal of the Sensory Experience</li>
+</ul>
+<ul>
+<li>eksandra Wenta</li>
+</ul>
+<ul>
+<li>e Twelve Kālīs and Pratyabhijñā</li>
+</ul>
+<ul>
+<li>e Doctrine of the Twelve Kālīs constitutes one of the earliest</li>
+<li>velopments of the Kālīkula/Kālīkrama. Moreover, it represents the most</li>
+<li>oteric teaching in the entire Kashmiri Śaiva tradition predominant in</li>
+<li>e Kashmir region in the early medieval period. The tenth-eleventhth</li>
+<li>ntury Kashmiri Abhinavagupta understands the Twelve Kālīs to be the</li>
+<li>st elevated esoteric aspect of his Trika system. For him, She Who</li>
+<li>aws Time to Herself (Kālasaṁkarṣaṇī), the goddess of the Kālīkrama, is</li>
+<li>yond Parā (Parātīta) of the Trika goddesses consisting of the Supreme</li>
+<li>ddess (Parā), the Middle Goddess (Parāparā) and the Lower Goddess</li>
+<li>parā), that underline the doctrinal foundation of his Trika system.1</li>
+</ul>
+<ul>
+<li>cording to Abhinavagupta, it was Utpaladeva himself who appears in the</li>
+<li>iritual lineage that transmitted the Doctrine of the Twelve Kālīs to</li>
+<li>m. The ninth-century Somānanda,2 the author of Śivadr̥ṣṭi and thus, the</li>
+<li>rst preceptor of the Pratyabhijñā system was, according to</li>
+<li>hinavagupta, a disciple of the Krama teacher Govindarāja who, before</li>
+<li>ing, passed to him the Doctrine of the Twelve Kālīs taught in the</li>
+<li>vīpañcaśatikā (Kālīkulapañcaśatakā). This doctrine was transmitted by</li>
+<li>mānanda, through his spiritual lineage of Utpaladeva and</li>
+<li>kṣmaṇagupta, down to Abhinavagupta.3 Utpaladeva did not directly refer</li>
+<li> his spiritual heritage coming from the Krama’s descendants (probably</li>
+<li>e to intentional promotion of non-tantric evaluation of the tradition</li>
+<li>unded on the rational basis). Still, his emphasis on the sensory</li>
+<li>perience saturated with the lunar nectar, systematically developed in</li>
+<li>e Śivastotrāvalī (ŚSĀ), the magnum opus of the Kashmiri Śaiva</li>
+<li>votional literature, has strong affinity with the Kālīkrama’s</li>
+<li>sessment of the sense-organs. The word “strong” is used here to</li>
+<li>knowledge the fact that the Krama system constitutes the important</li>
+<li>undation of the Pratyabhijñā, as well as the Trika and Spanda</li>
+<li>hools.4 Perhaps not only these reasons were present in the minds of</li>
+<li>paladeva’s interpreters — Kṣemarāja and Maheśvarānanda — who</li>
+<li>aborated on the essential teachings of Utpaladeva in the light of the</li>
+<li>ama-Mahārtha. Especially worth mentioning is Kṣemarāja who, in his</li>
+<li>mmentary on Utpaladeva’s ŚSĀ,5 is firmly committed to establishing the</li>
+<li>racity of the Krama system.</li>
+</ul>
+<ul>
+<li> the other hand, the thirteenth-century Maheśvarānanda in his</li>
+<li>mmentary (Parimala) on his own Mahārthamañjarī (MM) — the south Indian</li>
+<li>rsion of the Kālīkrama, set up in the pervasive Pratyabhijñā</li>
+<li>amework, uses quotations from the ŚSĀ in the context of the scriptural</li>
+<li>stification of the secret Kaula ritual (kulayāga) which he regards as</li>
+<li>e practice of the empowered means (śāktopāya).6 This interesting</li>
+<li>nfiguration displays a certain result, namely, the indistinct</li>
+<li>rrelation between the Krama and the Kaula7 “logically” provable by the</li>
+<li>iomatic system of the Pratyabhijñā;8 for example, the Twelve Kālīs as</li>
+<li>e representation of the reflective awareness (vimarśa).</li>
+</ul>
+<ul>
+<li>e Doctrine of the Twelve Kālīs is centred on the mystical experience</li>
+<li>bodied in the Twelve Suns known as the Sequence of the Sun-Goddess</li>
+<li>hānavī-krama)9 which is said to be the essential teaching of the</li>
+<li>rthern transmission (uttarāmnāya). The Twelve Kālīs represent: (1) the</li>
+<li>namism of the cognitive act (saṁvit-cakra, saṁvit-krama); (2) the</li>
+<li>iversal pulse of consciousness (sāmānya-spanda); and (3) the twelve</li>
+<li>vinized sense-organs (prakāśa-cakra, marīcidevatā-cakra, raśmi-cakra).</li>
+<li>thin this conceptual scheme, the Twelve Kālīs stand for the method</li>
+<li>rama) and the tool (the senses) of the cognitive process that give</li>
+<li>se to the reflective awareness (vimarśa) that is the capacity of pure</li>
+<li>minous consciousness (prakāśa, bhāsa) to reflect upon its infinite</li>
+<li>ture. The category of vimarśa constitutes one of the major</li>
+<li>eoccupations of Utpaladeva established in his commentary (Vr̥tti) on</li>
+<li>e Īśvarapratyabhijñā-Kārikā (ĪPK) where he defines vimarśa as the</li>
+<li>wer of the activity of consciousness (citikriyāśakti).10 In this</li>
+<li>nse, the Twelve Kālīs constitute the analytical model of the cognitive</li>
+<li>ocess where emphasis is placed on the cognitive energies themselves —</li>
+<li>e sense-organs and thoughts accompanying sensory perception, pointing</li>
+<li>e way to mystical communion with the phenomenal reality. Activated on</li>
+<li>e basis of the purification of thought-constructs (vikalpa-saṁskāra),</li>
+<li>e Twelve Kālīs give rise to the awakening of pure knowledge (śuddha</li>
+<li>dyā). This entrance to the condition free of thought-constructs</li>
+<li>irvikalpa) is granted when the intellect “attains to the state of</li>
+<li>trinsic purity as a reflecting medium”,11 in this case, all that</li>
+<li>mains is the universal agent of mental representations. Therefore, “he</li>
+<li>o, having all as his essence, thus knows: ‘All this multiform</li>
+<li>ployment is mine’, he, even in the flow of mental constructs, attains</li>
+<li>e state of Maheśa”.12 In this way, also the individual subject who,</li>
+<li>ough continuing to produce mental constructs deriving precisely from</li>
+<li>e power of the Lord — “mine is this multiform deployment of the</li>
+<li>ṁsāra” — this subject, too, permeates the universe without any</li>
+<li>fferentiation and transforms all the mental constructs into pure</li>
+<li>flective awareness, attains the state of Maheśvara.13 Apart from this</li>
+<li>istemic bedrock systematized by the terminology of the Pratyabhijñā,</li>
+<li>e Kālīkrama, along with the Twelve Kālīs core, constitutes the highest</li>
+<li>eoretical development of the sensory experience and the hermeneutics</li>
+<li> this process, that cannot be found in any other Kashmiri Śaiva</li>
+<li>adition of that time. Notably, in this place where the functioning of</li>
+<li>e senses is rendered experientially positive, the Kālīkrama and</li>
+<li>paladeva fuse. In Utpaladeva’s concept of devotion, the sensory</li>
+<li>perience plays a prominent part. Indulgence in the senses entails</li>
+<li>tering into the highest realization of Śiva’s nature, it is a sudden</li>
+<li>cognition (sāhasa-abhijñāna),14 “saturated with the pure,</li>
+<li>erlastingly flowing stream of the nectar of consciousness</li>
+<li>aṁvit-amr̥ta)”15 that comprises the cognition “that all is one”.16</li>
+<li>wever, apart from the frenzy dynamism performed by the religious zeal</li>
+<li> the senses, devotion has also another dimension. Initially it appears</li>
+<li>atic, suiting to the overall picture of what is called the secret</li>
+<li>ctrine of the Kālīkrama, in so far as for Utpaladeva devotion is the</li>
+<li>ndition of equipoise and permanence (sthiti). Utpaladeva avers:</li>
+</ul>
+<ul>
+<li>thing whatsoever is to be utilized</li>
+</ul>
+<ul>
+<li>r becoming firmly established (sthiti-kr̥ta) in one’s own self,</li>
+<li>minosity is clearly apparent and eternal.</li>
+</ul>
+<ul>
+<li>y this idea take a stronghold on me.17</li>
+</ul>
+<ul>
+<li>ly those who are abiding in their own true selves (svasthā), are</li>
+<li>voted to you.18</li>
+</ul>
+<ul>
+<li>ving settled (sthitvā) in the abode of your pure consciousness</li>
+</ul>
+<ul>
+<li>, may I ever worship you, O Lord,</li>
+</ul>
+<ul>
+<li> means of body, speech and mind [. . .].19</li>
+</ul>
+<ul>
+<li>e condition of permanence (sthiti), apart from being only one phase of</li>
+<li>e cognitive process (sr̥ṣṭi, sthiti, saṁhāra, etc.), also constitutes</li>
+<li>e highest state of the Goddess Kālasaṁkarṣaṇī, marking the complete</li>
+<li>ability in pure consciousness represented by the “purified cognition”</li>
+<li> the wheel of consciousness (saṁvit-cakra= Twelve Kālīs)20 and tasted</li>
+<li> the lunar nectar of immortality. The condition of permanence (sthiti)</li>
+<li>ites the solar–lunar dimensions enclosed within the vidyā of</li>
+<li>lasaṁkarṣaṇī. Therefore, what initially seems a static establishment</li>
+<li>thiti) in pure consciousness involves astonishing richness of the</li>
+<li>nsory experience embodied in the Sun of the Twelve Kālīs. The</li>
+<li>nctioning of the senses operates simultaneously in the expansive and</li>
+<li>ntractive manner. When expanded, they savour the blissful nectar of</li>
+<li>e expanded consciousness represented by the Sixteen Digits of the Full</li>
+<li>on, in the contracted state, they relish the innermost lunar nectar of</li>
+<li>e śāmbhava state — the Seventeenth Digit of the New Moon.</li>
+</ul>
+<ul>
+<li>ṁvit-Mārga, Saṁvit-Cakra</li>
+</ul>
+<ul>
+<li>e of the major preoccupations of Utpaladeva’s theory of recognition</li>
+<li>ratyabhijñā) is the attempt to establish a single dynamic subject,21</li>
+<li>e “I” of Śiva that manifests within a duality of prakāśa-vimarśa, the</li>
+<li>re luminous consciousness (prakāśa/Śiva) and the reflective awareness</li>
+<li>imarśa/Śakti). The polarization of prakāśa-vimarśa is carried out to</li>
+<li>rengthen the experimental warrant of the ultimate non-dualism</li>
+<li>aramādvaita) tied up by the knot of their intrinsic unity (abheda).</li>
+<li>is demonstrating procedure determines the unshaken ground for the</li>
+<li>nceptions of “transcendence” and “immanence” when viewed from the</li>
+<li>rspective of the phenomenology of perception leading to recognition of</li>
+<li>e absolute (“I” of Śiva) in the entire objective phenomena. Indeed,</li>
+<li>Ā portrays Śiva endowed with sunrays (bhānumarīcyaḥ)22 (due to which</li>
+<li>e singleness of the dynamic subject is preserved). Śiva is the aim,</li>
+<li>e light of pure consciousness (prakāśa) attainable through sunrays of</li>
+<li>e reflective awareness (vimarśa). Sunbeams represent the cognizance of</li>
+<li>e senses whose functioning employs the reflective awareness. For the</li>
+<li>votee, the path of the senses (saṁvit-mārga) is the path to attain</li>
+<li>va.23 On the more interiorized level of mystical absorption, the</li>
+<li>nses are transformed into the sense-divinities whose sensory</li>
+<li>rception is utilized as the sacrificial substances offered to Śiva.24</li>
+</ul>
+<ul>
+<li>il to your terrible wheel of the goddesses of the senses</li>
+<li>akti-vr̥nda)!</li>
+</ul>
+<ul>
+<li>o, by making an offering of the sense-objects,</li>
+</ul>
+<ul>
+<li>rship you through the enjoyment of delight.25</li>
+</ul>
+<ul>
+<li> the commentary on this verse of the ŚSĀ, Kṣemarāja defines</li>
+<li>kti-vr̥nda as the wheel of consciousness (saṁvit-cakra).26 Saṁvit-cakra</li>
+<li> extensively elaborated in chap. IV of Abhinavagupta’s TĀ, in the</li>
+<li>ction dedicated to the empowered means (śāktopāya)27 denoting the</li>
+<li>elve Kālīs embedded in the dynamism of the cognitive process.</li>
+<li>emarāja’s interpretation of śakti-vr̥nda is unique. This term never</li>
+<li>pears in the Kālīkrama scriptures in the context of the Twelve Kālīs,</li>
+<li> so far as it is exclusively reserved to denote the collective reality</li>
+<li> the Kālīkrama’s metaphysics known as the Wheel of the Aggregate</li>
+<li>r̥nda-cakra). However, an exception is found in the Cidgaganacandrikā</li>
+<li>GC) of Śrīvatsa. In this text dating most probably from the thirteenth</li>
+<li>ntury, śakti-vr̥nda refers to the countenance of the Goddess as the Sun</li>
+<li> Consciousness in the precise meaning of saṁvit-cakra. According to</li>
+<li>riptural testimony, this is the plane of the twelvefold sequence</li>
+<li>nifested in the world in the form of words and everywhere else as the</li>
+<li>uaring of the triads.28 The twelvefold scheme (3 x 4 = 12) represents</li>
+<li>e processing of the cognitive energy taking place between the trinity</li>
+<li> the knower (pramātr̥), the means of knowledge (pramāṇa), and the</li>
+<li>ject of knowledge (prameya). Each follows the fourfold sequence of (1)</li>
+<li>ojection (sr̥ṣṭi), (2) maintenance (sthiti), (3) withdrawal (saṁhāra),</li>
+<li>d (4) the inexplicable (anākhya). The attentive reflection on this</li>
+<li>quence (krama-parāmarśa) that is established as the ground of all</li>
+<li>perience is the practical application of saṁvit-cakra. The projection</li>
+<li> the object in the outline of objectivity, generated by the unfolding</li>
+<li> will, is emergence (akalitollāsa/sr̥ṣṭi). Each time this will falls on</li>
+<li>e external object, the sensual enjoyment (tatsambhoga/sthiti) is</li>
+<li>intained. Returning back to its own essential nature which is the</li>
+<li>thdrawal of expansion for contraction is relish (carvaṇa/saṁhāra). The</li>
+<li>nal repose of the differentiated objects in the unity of</li>
+<li>nsciousness, where they are mirrored as reflections indistinct from</li>
+<li>eir primordial source (the absolute “I” (pūrṇa ahaṁ), is the phase of</li>
+<li>e inexplicable cessation (virāma/anākhya).29 Although the inexplicable</li>
+<li>ssation represents the state of consciousness that is free of the</li>
+<li>ality of thought-constructs (nirvikalpa), it still cognizes, in so far</li>
+<li> it recognizes the movement of thoughts as the pure luminous</li>
+<li>nsciousness and, moreover, comprises a cognition: “all this is my</li>
+<li>ory”. In this way, the inexplicable cessation retains the activities</li>
+<li> the senses and cognition but endows them with a new status close to</li>
+<li>eir divine nature.</li>
+</ul>
+<ul>
+<li>nbeams of Devotion</li>
+</ul>
+<ul>
+<li>paladeva uses the sense-organs as a framework for his eulogy of</li>
+<li>votional experience in a way that their most exalted commitment is the</li>
+<li>llness of their realization. Devotion commands the experience through</li>
+<li>e senses, generating the magnetic field of blissful elation which</li>
+<li>ows in intensity as religious passion increases. Perhaps more</li>
+<li>riking, authenticity of devotion is provable by the sensory rapture</li>
+<li>at permeates the subjective and objective contents of the cognitive</li>
+<li>ocess. As Utpaladeva tells us: “those only are your true devotees who</li>
+<li>perience the subject and object through an expanded fund of</li>
+<li>nsation”.30 The entire spectrum of sensorial intensity embedded in the</li>
+<li>votional “methodology”, “the sunbeams of devotion”,31 as Utpaladeva</li>
+<li>lls it, brings forth a constitutive evaluation of the sensory</li>
+<li>perience permitting a mystical absorption (samāveśa). Both Utpaladeva</li>
+<li>d Kṣemarāja equate devotion (bhakti) with possession32 (āveśa) and</li>
+<li>stical absorption (samāveśa)33 in a way in which devotional commitment</li>
+<li> the senses is highlighted in the perspective of the sensory</li>
+<li>volvement that leads naturally to immersion in exalted moods (rasa)</li>
+<li>sulting in mystical communion with the absolute. At this stage, the</li>
+<li>nse-organs unfold in accord with their innate spontaneity extracting</li>
+<li>om the objective sphere the essence, the subtle portion, as fragrance,</li>
+<li>lour, sound, etc. which serves as a means leading to intimate union</li>
+<li>th pure consciousness, represented by the relishing of taste (rasa).</li>
+<li>is savoury awareness of the senses is indicated by usage of such terms</li>
+<li>: the bliss of tasting (rasana), relish (carvaṇa), enjoying a flavour</li>
+<li>svāda). They convey the idea of universal interpenetration to the</li>
+<li>int of final absorption. Relishing the savour is the image of</li>
+<li>similation and the means for increase of power. Working at the</li>
+<li>tersection of semiotic and symbolic, the act of tasting is</li>
+<li>tologically the activity of dissolution (carvaṇa = saṁhāra) that</li>
+<li>emplifies interiorization of the objective content (the krama rests in</li>
+<li>e akrama). Destruction by licking carried out by the network of the</li>
+<li>ys of the senses (represented by the Twelve Kālīs) intent on universal</li>
+<li>ssolution, appears commonly in the scriptures of the Kālīkrama</li>
+<li>adition, standing for the epitome of reflective awareness (parāmarśa).</li>
+<li> Torella pointed out,34 the act of savouring, represented by such</li>
+<li>rms as carvaṇa, āsvāda, rasana, is complementary to vimarśa and its</li>
+<li>rivates.</li>
+</ul>
+<ul>
+<li>art from palatable absorption, there is yet another notion implied by</li>
+<li>e image of devotionally-imbued senses that also posits an</li>
+<li>l-encompassing relatedness in virtue of which the senses lead to</li>
+<li>cognition of the unity-in-difference (bhedābheda/kramākrama). The</li>
+<li>tion is that of pervasion (vyāpti). Because of their pervasive nature,</li>
+<li>e sense-organs transform into magnetic tools operating within the</li>
+<li>eld of devotional enchantment. The pervasion of the senses, the</li>
+<li>ncept of the intertwining of all things where the lower is pervaded by</li>
+<li>e higher that contains it, lies at the foundation of the Kālīkrama</li>
+<li>adition.35 Sunrays symbolically represent the pervasion of the senses.</li>
+<li> much as solar energy, the sunbeams of the senses illumine the world</li>
+<li>th partially (as every individual thing) and collectively. The solar</li>
+<li>diance spreads outwards, precisely this distribution in all directions</li>
+<li>fers to the activity of pervasion.36 This symbolizes the fact that</li>
+<li>erything is made manifest by the light of consciousness and, as such,</li>
+<li>tains its true being by realizing its unity with all. As the</li>
+<li>strument of pervasion (vyāpti), the senses have a capacity of merging</li>
+<li>ings in their intrinsic unity. On that level, the senses have already</li>
+<li>st their differentiated character and became indistinct from the</li>
+<li>preme “I”. The supreme “I” is a subject having recognized the movement</li>
+<li> the senses as the activity of pure consciousness. Therefore, the</li>
+<li>tivity of merging evokes the dynamic character of pervasion that, on</li>
+<li>e ground of the Kālīkrama, is enacted by the senses which are actually</li>
+<li>e partisans of the energized union (mahāmelāpa).37 This synthesis</li>
+<li>ticulates the locus of the identity within the dynamism of the senses,</li>
+<li>ich, acting in an all-permeating manner (vyāpaka), are compelled to</li>
+<li>vour the unifying taste of non-dual consciousness (sāmarasya) in each</li>
+<li>d every moment of perception.38 Utpaladeva is clear in his intention</li>
+<li>at seeks to affirm the constitutive character of the senses engaged in</li>
+<li>ion at the culminating point of his eulogy of devotion. Immersion in</li>
+<li>e functioning of the senses penetrating the objective and the</li>
+<li>bjective content with the intention of their endless conjunctions is</li>
+<li>plied in Utpaladeva’s concept of the great festival of worship</li>
+<li>ahotsava). As Utpaladeva tells us:</li>
+</ul>
+<ul>
+<li>pay homage to Śiva, who</li>
+</ul>
+<ul>
+<li>ring the festival of dissolution</li>
+</ul>
+<ul>
+<li> passionately and tightly embraced by Śivā (Pārvatī, Śakti)</li>
+</ul>
+<ul>
+<li>rough whom the entire universe is enjoyed</li>
+</ul>
+<ul>
+<li> means of drinking, eating and decoration.39</li>
+</ul>
+<ul>
+<li>, hail to the great festival of worship</li>
+</ul>
+<ul>
+<li>explicable and sweet</li>
+</ul>
+<ul>
+<li>om which even tears that fall</li>
+</ul>
+<ul>
+<li>ing forth the savour of the immortal nectar.40</li>
+</ul>
+<ul>
+<li> the context of tantric practice, mahotsava stands for the code of</li>
+<li>nsorial excess, referring to the performance of the great banquet</li>
+<li>ere the siddhas and yoginīs come to unite (melāpa) with the sole aim</li>
+<li> generating nectar (amr̥ta). Indeed, Maheśvarānanda favours this</li>
+<li>terpretation by establishing Utpaladeva’s mahotsava at the centre of</li>
+<li>s Kaula-Krama definition of the empowered means (śāktopāya).41</li>
+<li>wever, withholding the urge for setting apart the implications of the</li>
+<li>rely ritualistic kind, we put forward the “cognitive” interpretation,</li>
+<li>onouncing the siddhas and yoginīs to be representations of the deities</li>
+<li> sense-organs and the objects of senses fused in the pulsating union</li>
+<li>at activates the unfolding of the nectar of bliss. The nectar of bliss</li>
+<li>presents the expanded form of consciousness characterized by the</li>
+<li>tpouring of the energies of the senses saturating and permeating the</li>
+<li>rld of phenomenal existences from within and without. The stream of</li>
+<li>erflowing energy experienced through the penetrating rush of the</li>
+<li>nses brings forth the pervasion that is essentially the undivided</li>
+<li>ate of oneness enabling everything to emerge, to be maintained, and to</li>
+<li>ssolve within the infinite chain of interrelated conjunctions. The</li>
+<li>rvasion is implicit in the nature of the senses which enjoy themselves</li>
+<li> expansion and contraction of their intrinsic energies encapsulating</li>
+<li>l things in their essential unity.</li>
+</ul>
+<ul>
+<li>rṇa: The Lunar Nectar of Bliss</li>
+</ul>
+<ul>
+<li>tense longing for the spiritual experience of the perfect fullness</li>
+<li>ūrṇa) manifested in the lunar nectar, the immortal wine, permeates all</li>
+<li>vels of the ŚSĀ. The most richly evoked by Utpaladeva is the meaning</li>
+<li> pūrṇa referring to the supreme condition of śāmbhava.42 This notion</li>
+<li> exemplified in the oozing of the full nectar of immortality</li>
+<li>mr̥ta-pūrṇatva)43 that fills and satisfies the world of phenomenal</li>
+<li>istence with bliss. The perfect fullness (pūrṇa, paripūrṇa) is the</li>
+<li>alization of the ontological identity between the world of the</li>
+<li>enomenal existences being indistinct from Śiva’s pure consciousness,</li>
+<li> expressed in the statement: “the whole world is your perfect</li>
+<li>llness”.44 Moreover, the attainment of the perfect fullness (pūrṇa) by</li>
+<li>e senses is a necessary condition for their deification that endows</li>
+<li>e faculties of the senses with the “brilliantly emissive splendour”.45</li>
+<li>rṇa often associated with the lunar symbolism illustrates the</li>
+<li>lf-regenerated source that simultaneously empties and fills itself</li>
+<li>th the moonlight nectar. The apotheosis of the outward saturation is</li>
+<li>mbolized by the full moon; on the contrary, the pinnacle of the inward</li>
+<li>filling is marked by the new moon. Both dimensions seem valid in</li>
+<li>paladeva’s exposition of the lunar nectar that carries the experience</li>
+<li> bliss.</li>
+</ul>
+<ul>
+<li> Pūrṇa — the full moon of the sensory experience</li>
+</ul>
+<ul>
+<li>en while resting on their objects</li>
+</ul>
+<ul>
+<li>e faculties of the senses provide</li>
+</ul>
+<ul>
+<li>e devotees with the immortal wine [. . .]46</li>
+</ul>
+<ul>
+<li> the Kālīkrama’s hermeneutics of the senses, the experience of</li>
+<li>jectivity obtained by the solar functioning of the sense-organs is</li>
+<li>bodied in bliss whose form is lunar nectar. When the sunrays of the</li>
+<li>nse-organs are filled with pure desire (icchā) towards their outward</li>
+<li>tpour, they bring the emanation of sensory experience to its fullness.</li>
+<li>e nectar of bliss arises from the will of making the sensory</li>
+<li>perience complete. In this state the “condensed consciousness” is</li>
+<li>perienced as a fivefold object of sense. Ten rays of the sense-organs</li>
+<li>ong with the mind (manas) and the intellect (buddhi), treated as one,</li>
+<li>ke eleven. In this way, the bliss of the sensory experience arises</li>
+<li>xteenfold. Sixteen is the symbolic number of the full moon of</li>
+<li>jectivity, and its form is nectar; it is the bliss because it is based</li>
+<li> the great bliss of the object of desire that finds its fullness.47</li>
+</ul>
+<ul>
+<li> Pūrṇa ahaṁ — the new moon of the perfect fullness of I-ness</li>
+</ul>
+<ul>
+<li>verence to him</li>
+</ul>
+<ul>
+<li>ose unique activity is the destruction</li>
+</ul>
+<ul>
+<li> the great darkness of delusion</li>
+</ul>
+<ul>
+<li>ose luminosity transcends all other lights</li>
+</ul>
+<ul>
+<li>ose symbol is the moon.48</li>
+</ul>
+<ul>
+<li>e Lord who is free of thought-constructs (nirvikalpa) [. . .] The</li>
+<li>rfect fullness of the highest bliss (mahānandapūrṇa).49</li>
+</ul>
+<ul>
+<li>e perfect fullness of I-ness (pūrṇa ahaṁ) constitutes the aim of the</li>
+<li>atyabhijñā system in so far as it represents the supreme condition of</li>
+<li>mbhava. It is a state free of thought-constructs (nirvikalpa) where</li>
+<li>e trinity of the cognitive process (the subject, object and means of</li>
+<li>owledge) are identified with pure consciousness (cinmātra). This</li>
+<li>entification is supported by taking delight in their single flavour</li>
+<li>karasa). Pūrṇa ahaṁ is the state of repose (viśrānti) wherein the</li>
+<li>tivities of mind and senses, free from their differentiated character,</li>
+<li>e empowered to operation by the power of bliss (ānanda-śakti). The</li>
+<li>lation between the perfect fullness of I-ness (pūrṇa ahaṁ) and the</li>
+<li>namism of the cognitive process enclosed within the functioning of the</li>
+<li>nses is described in terms of catoptric symbolism. Pūrṇa ahaṁ</li>
+<li>presents the mirror-like (bimba) substratum for the absolute freedom</li>
+<li>vātantrya) supporting the unity of the play of the cosmic reflections</li>
+<li>ratibimba) deployed in the cognitive process. With emphasis on the</li>
+<li>absorbing character of Śiva who presides over the cosmic dissolution,</li>
+<li>e perfect fullness of I-ness (pūrṇa) is symbolically depicted by the</li>
+<li>venteenth lunar digit of the new moon, and not by the full moon. The</li>
+<li>venteenth lunar digit represents the perfect fullness of the inward</li>
+<li>alization that contains the lunar nectar of immortality which pours</li>
+<li>wn into the manifestation of the objective reality.</li>
+</ul>
+<ul>
+<li> Pūrṇa — the composite of the transmental (unmanā) and “with mind”</li>
+<li>amanā).</li>
+</ul>
+<ul>
+<li>erever I go with body, speech, and mind</li>
+</ul>
+<ul>
+<li>l that is you only</li>
+</ul>
+<ul>
+<li>y this ultimate truth indeed</li>
+</ul>
+<ul>
+<li>come fully realized (paripūrṇa) in me.50</li>
+</ul>
+<ul>
+<li>oking closely at Utpaladeva’s sensorial code of mystical experience,</li>
+<li> can notice that the perfect realization (paripūrṇa) experienced as</li>
+<li>e savour of the immortal nectar (amr̥ta) is a fusion of two states. The</li>
+<li>e, the expansion of the senses pulsating with bliss, is balanced by</li>
+<li>e second state enclosed within the image of serenity of the śāmbhava.</li>
+<li> the Kālīkrama, they correspond respectively to the states known as</li>
+<li>ith mind” (samanā) and the transmental (unmanā). The state “with mind”</li>
+<li>ands for the sensual enjoyment of sense-perceptions experienced as</li>
+<li>nder (camatkr̥ti), which gives rise to the outlet of the senses by</li>
+<li>ich an adept apprehends the beauty of the sensory world in the form of</li>
+<li>und, touch, etc.; this is the sequence (krama) of the current of the</li>
+<li>nses, flowing both inside and outside, experienced as the bliss of</li>
+<li>sting (rasana).51 When this activity ceases to exist, and dissolves</li>
+<li>ay, it enters into the state of transmental, the non-sequence</li>
+<li>krama). The state of unmanā is the form of the eternally cognized</li>
+<li>lumination where various cycles of perception shine in identity with</li>
+<li>va’s pure consciousness.52 In the interiority of the transmental, the</li>
+<li>nsumed objectivity is relished as nectar (amr̥ta). By means of this</li>
+<li>ctar, the inner outpouring of the senses takes place and one</li>
+<li>periences the world of phenomenal existence as if submerged in divine</li>
+<li>bation. The fusion of these two states unfolding in the mode of the</li>
+<li>n-sequential sequence (kramākrama) is rooted in the supreme condition</li>
+<li> permanence (sthiti) that lies at the foundation of the Kālīkrama’s</li>
+<li>rmeneutics of the sensory experience.</li>
+</ul>
+<ul>
+<li>ferences</li>
+</ul>
+<ul>
+<li>nuscript Sources</li>
+</ul>
+<ul>
+<li>SS = Ciñcinīmatasārasamuccaya. The manuscripts of the</li>
+<li>ñcinīmatasārasamuccaya. All are paper MSS deposited in the National</li>
+<li>chives, Kathmandu (NA) photographed by the Nepal German Manuscript</li>
+<li>eservation Project (NGMPP).</li>
+</ul>
+<ul>
+<li>līkulapañcaśatakā (Devīpañcaśatikā) MS no. 5-358 (Bauddhatantra),</li>
+<li>MPP: reel no. B 30/26; no. of folios: 88; size: 20.5 x 5 cm; Material:</li>
+<li>lm-leaf; script: Newārī. Complete.</li>
+</ul>
+<ul>
+<li> Kh: NA MS no.: 1-245 (Tantra) 411; NGMPP reel no. A 1177/7; no. of</li>
+<li>lios: 36; size: 22.6 x 5.6 cm; script (remarks): DN; folios 1-21,</li>
+<li>-26, 30-41.</li>
+</ul>
+<ul>
+<li> Gh: NA MS no.: 1-199 (Śaivatantra) 410; NGMPP reel no. B123/5; no. of</li>
+<li>lios: 69; size : 22 1/2 x 7 cm; script: Devanāgarī.</li>
+</ul>
+<ul>
+<li>inted Editions</li>
+</ul>
+<ul>
+<li>C = Cidgaganacandrikā by Kālidāsa, ed. Swami Trivikrama Tirtha, Arthur</li>
+<li>alon Tantrik Text Series (John Woodroffe), Calcutta, 1937.</li>
+</ul>
+<ul>
+<li>vĀ = Dhvanyāloka of Ānandavardhana with the Locana of Abhinavagupta,</li>
+<li>. Daniel H.H. Ingalls, Jeffrey Mousaieff Masson and M.T. Patwardhan</li>
+<li>arvard Oriental Series, 49), Cambridge, MA/London: Harvard University</li>
+<li>ess, 1990.</li>
+</ul>
+<ul>
+<li>K = Īśvarapratyabhijñā-Kārikā of Utpaladeva, and Vr̥tti, see Torella</li>
+<li>94.</li>
+</ul>
+<ul>
+<li> = Mahārthamañjarī of Maheśvarānanda with the Auto-commentary</li>
+<li>arimala’, ed. Pt. Vrajavallabha Dviveda, Yogatantra-Granthamālā vol.</li>
+<li> Varanasi: Sampurnanand Sanskrit University, 1992.</li>
+</ul>
+<ul>
+<li>P = Mahānayaprakāśa of Śitikaṇṭha with commentary, ed. Mukund Ram</li>
+<li>stri, Kashmir Śaivism Texts Studies, 1918.</li>
+</ul>
+<ul>
+<li>P-T = Mahānayaprakāśa, anonymous, ed. K. Śambasiva Śastri, Trivandrum</li>
+<li>nskrit Series 130, 1937.</li>
+</ul>
+<ul>
+<li> = Stavacintāmaṇi of Bhaṭṭanārāyaṇa, see Silburn 1964.</li>
+</ul>
+<ul>
+<li>Ā = Śivastotrāvalī of Utpaladeva, see Bailly 1987.</li>
+</ul>
+<ul>
+<li>A-K = Śivastotrāvalī of Utpaladevācārya with the Sanskrit Commentary</li>
+<li> Kṣemarāja, edited with Hindi commentary by Rājānaka Lakṣmaṇa,</li>
+<li>owkhamba Sanskrit Series, Varanasi, 1964.</li>
+</ul>
+<ul>
+<li> = Tantrāloka of Abhinavagupta, with the Commentary of Jayaratha, ed.</li>
+<li>C. Dwivedi and N. Rastogi, 8 vols., Delhi: Motilal Banarasidass, 1987.</li>
+</ul>
+<ul>
+<li>tūlanāthasūtra of Anantaśaktipāda with Vr̥tti (KSTS 29), Bombay, 1923.</li>
+</ul>
+<ul>
+<li>udies and Translations</li>
+</ul>
+<ul>
+<li>illy, Constantina Rhodes, 1987, Shaiva Devotional Songs of Kashmir: A</li>
+<li>anslation and Study of Utpaladeva’s Shivastotravali, Albany: State</li>
+<li>iversity of New York Press.</li>
+</ul>
+<ul>
+<li>nderson, Alexis, 2007, “The Śaiva Exegesis of Kashmir”, in Tantric</li>
+<li>udies in Memory of Hélène Brunner, ed. D. Goodall, A. Padoux,</li>
+<li>llection Indologie 106, Pondicherry: Institut Français</li>
+<li>Indologie/École française d’Ěxteme-Orient, pp. 231-442.</li>
+</ul>
+<ul>
+<li>—, 1988, “Śaivism and the Tantric Traditions”, in Stewart</li>
+<li>therland/Leslie Houlden/Peter Clarke/Friedhelm Hardy (eds.) The</li>
+<li>rld’s Religions, New York/London: Routledge, pp. 668-97.</li>
+</ul>
+<ul>
+<li>nSharma, DebaBrata, 1990, The Philosophy of Sadhānā: With Special</li>
+<li>ference to the Trika Philosophy of Kashmir, Albany: State University</li>
+<li> New York Press.</li>
+</ul>
+<ul>
+<li>lburn, Lilian, 1964, La Bhakti: Le Stavacintāmaṇi de Bhaṭṭanārāyaṇa,</li>
+<li>xte traduit et commenté, Éditions de Boccard, Paris.</li>
+</ul>
+<ul>
+<li>ith, Frederick M., 2009, Deity and Spirit Possession in South Asia,</li>
+<li>lhi: Motilal Banarasidass.</li>
+</ul>
+<ul>
+<li>rella, Raffaele, 1994, The Īśvarapratyabhijñākārikā of Utpaladeva with</li>
+<li>e Author’s Vr̥tti, critical edition and annotated translation, Serie</li>
+<li>ientale Roma 71, Roma.</li>
+</ul>
+<ul>
+<li>----------------------------------------------------------------------</li>
+</ul>
+<ul>
+<li>Cf. TĀ III.69 and Jayaratha’s commentary.</li>
+</ul>
+<ul>
+<li>According to Sanderson, that Somānanda might have not been the author</li>
+<li> the Śivadr̥ṣṭi. If he were, Abhinavagupta would have addressed him in</li>
+<li>more reverential way, as he often does in other passages by affixing</li>
+<li>e respectful pādāḥ to Somānanda’s name, [Sanderson 2007: 353].</li>
+</ul>
+<ul>
+<li>Cf. ĪPVr̥ [Torella 1994: xiv].</li>
+</ul>
+<ul>
+<li>Cf. Sanderson 1988: 668-89; Torella 1994: xiv.</li>
+</ul>
+<ul>
+<li>I am immensely grateful to Bettina Bäumer for her suggestion to read</li>
+<li>emarāja’s commentary on the Śivastotrāvalī (ŚSĀ-K) which she kindly</li>
+<li>t at my disposal.</li>
+</ul>
+<ul>
+<li>MM, stanza 58.</li>
+</ul>
+<ul>
+<li>Ibid. commentary on stanza 68.</li>
+</ul>
+<ul>
+<li>A similar example of the Pratyabhijñā’s apodicticity within the</li>
+<li>ama-Kaula construction is found in the anonymous Mahānayaprakāśa</li>
+<li>ited by Śambaśiva Śāstrī in the Trivandrum Sanskrit Series (MP-T).</li>
+</ul>
+<ul>
+<li>The Kālīkramapañcāśikā attributed to Niṣkriyānanda whom</li>
+<li>vīpañcaśatikā acknowledges as one of the first preceptors of the</li>
+<li>līkrama tradition describes the core of the Kālīkrama teachings in the</li>
+<li>llowing words: “Kālī is the energy of the Sun (bhānavī) consisting of</li>
+<li>e Twelve Risen Suns. Terrible, she manifests Time. This is the</li>
+<li>likākrama.” Cf. CMSS MS Kh, MS Gh 7.205ab.</li>
+</ul>
+<ul>
+<li> Cf. ĪPV 1.5.14.</li>
+</ul>
+<ul>
+<li> Cf. SenSharma 1990:130.</li>
+</ul>
+<ul>
+<li> Cf. ĪPV 4.1.12, tr. Torella. This verse is quoted in the MM,</li>
+<li>mmentary on stanza 60.</li>
+</ul>
+<ul>
+<li> Ibid.</li>
+</ul>
+<ul>
+<li> ŚSĀ 9.6.</li>
+</ul>
+<ul>
+<li> ŚSĀ 12.17.</li>
+</ul>
+<ul>
+<li> Ibid.</li>
+</ul>
+<ul>
+<li> Ibid. 5.25.</li>
+</ul>
+<ul>
+<li> Ibid. 15.1.</li>
+</ul>
+<ul>
+<li> Ibid. 17.11.</li>
+</ul>
+<ul>
+<li> The condition of permanence (sthiti) is the inexplicable (anākhya),</li>
+<li> is the sun of consciousness (cit-arka), the freedom of Śiva who makes</li>
+<li>eation, etc. (sr̥ṣṭi, etc.) manifest and dissolve away. Abhinavagupta</li>
+<li>ew description of the highest state of the Goddess Kālasaṁkarṣaṇī</li>
+<li>derstood as the condition of permanence (sthiti) from the</li>
+<li>vīpañcaśatikā and the Yonigahvaratantra. Abhinavagupta acknowledged</li>
+<li>e former as an authoritative text in the Kālīkrama.</li>
+</ul>
+<ul>
+<li> ĪPVr̥ intro, p. xxix.</li>
+</ul>
+<ul>
+<li> ŚSĀ 5.8.</li>
+</ul>
+<ul>
+<li> Ibid. 1.10.</li>
+</ul>
+<ul>
+<li> A similar description we find in the Mahānayaprakāśa (MNP) of</li>
+<li>tikaṇṭha 12.4-6: “The object of experience is the favourite place of</li>
+<li>e goddesses of the senses (khecarīvāhadevīs) who delight in consuming</li>
+<li> (upabhoga). When these goddesses of the senses have relished the</li>
+<li>eld of objectivity, they offer it to the Bhairava who is Consciousness</li>
+<li>idbhairava). Then, after offering themselves, they abandon it and come</li>
+<li> rest. This is the foundation of the enjoyment of worldly experience</li>
+<li>iṣayabhoga).”</li>
+</ul>
+<ul>
+<li> ŚSĀ 2.23.</li>
+</ul>
+<ul>
+<li> ŚSĀ-K: 32.</li>
+</ul>
+<ul>
+<li> TĀ IV 122b-181a.</li>
+</ul>
+<ul>
+<li> tvanmukhaṁ tripathanetri ! bhātmakaṁ śaktivr̥ndam iha turyathāgamam</li>
+<li>ad yathāgamam) । dvādaśa kramapadaṁ padādibhir jr̥mbhitaṁ jagati</li>
+<li>ccatustrikaiḥ ।। — CGC 36</li>
+</ul>
+<ul>
+<li> MNP ̵T 9.28-9.33.</li>
+</ul>
+<ul>
+<li> ŚSĀ 16.27.</li>
+</ul>
+<ul>
+<li> Ibid. 7.6.</li>
+</ul>
+<ul>
+<li> Ibid. 16.6. Also Abhinavagupta in his commentary on the Dhvanyāloka</li>
+<li> Ānandavardhana describes bhakti as “absorption (āveśa) in that Lord</li>
+<li>ose nature is the highest form of the self”, in The Dhvanyāloka of</li>
+<li>andavardhana with the Locana of Abhinavagupta [ed. Ingalls, Masson and</li>
+<li>twardhan 1990], quoted in Smith 2009: 346.</li>
+</ul>
+<ul>
+<li> ŚSĀ-K 5.13.</li>
+</ul>
+<ul>
+<li> Cf. ĪPVr̥: 118-19.</li>
+</ul>
+<ul>
+<li> MNP-T 2.34, 2.39.</li>
+</ul>
+<ul>
+<li> Kālīkulapañcaśatakā (Devīpañcaśatikā) 4.6-4.8, MS no. 5-358.</li>
+</ul>
+<ul>
+<li> MNP-T 2.25.</li>
+</ul>
+<ul>
+<li> Ibid. Anantaśaktipāda in his commentary on the Aphorisms on the Mad</li>
+<li>rd (Vātūlanāthasūtra) explains that the great union (mahāmelāpa)</li>
+<li>king place between the siddhas and yoginīs in the ritual assembly</li>
+<li>akra) is the mutual connection between the perceiving subject</li>
+<li>rāhaka) and perceived object (grāhya) conjoined within and by means of</li>
+<li>e circle of sense-organs. Siddhas and yoginīs represent deities of the</li>
+<li>nse-organs and the object of the senses fused in pulsating union</li>
+<li>ring every particular act of cognition. In this way, the great union</li>
+<li>ahāmelāpa) is the great fusion (mahāsāmarasya) abiding constantly and</li>
+<li>erywhere in the absolute void of consciousness (niruttaracidvyomni)</li>
+<li>ere differentiation between objectivity and subjectivity ceases</li>
+<li>mpletely. Cf. Vātūlanāthasūtra with Anantaśaktipāda’s Vr̥tti (KSTS 29),</li>
+<li>mbay, 1923, verse 5.</li>
+</ul>
+<ul>
+<li> ŚSĀ 16.29.</li>
+</ul>
+<ul>
+<li> ŚSĀ 17.1.</li>
+</ul>
+<ul>
+<li> In this way Maheśvarānanda specifies that practice of the empowered</li>
+<li>ans (śāktopāya) is based on the application of the kulayāga which</li>
+<li>sults in tasting the nectar and ultimately leads an aspirant to the</li>
+<li>perience of absorption into the supreme bliss of the śāmbhava state.</li>
+<li>. MM stanza 58.</li>
+</ul>
+<ul>
+<li> ŚSĀ 2.9.</li>
+</ul>
+<ul>
+<li> Ibid. 2.27.</li>
+</ul>
+<ul>
+<li> Ibid. 6.6.</li>
+</ul>
+<ul>
+<li> Ibid. 17.43-44.</li>
+</ul>
+<ul>
+<li> Ibid. 17.16. (tr. Bailly).</li>
+</ul>
+<ul>
+<li> MNP-T 5.1-5.12</li>
+</ul>
+<ul>
+<li> ŚSĀ 11.15.</li>
+</ul>
+<ul>
+<li> Ibid. 6.4.</li>
+</ul>
+<ul>
+<li> ŚSĀ 6.3.</li>
+</ul>
+<ul>
+<li> CMSS 7.175.</li>
+</ul>
+<ul>
+<li> MNP of Śitikaṇṭha 3.5-6.</li>
+</ul>
+<ul>
+<li>pendix I*</li>
+</ul>
+<ul>
+<li>udies on Utpaladeva’s Īśvarapratyabhijñā-Vivr̥ti</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/torella-volume/ch9_wenta_twelve_kalis.txt">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

@@ -1,0 +1,2700 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Aperture Inexternalism</title><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+Devanagari:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/><style>*{box-sizing:border-box}
+b,strong{font-weight:600}
+:root{--paper:#fff;--card:#fff;--card-hi:#fffdf7;--ink:#17140f;--mut:#76736e;--faint:#a9a49c;--line:#e7e3db;--gold:#a86f14;--gold-ink:#7c5410;--sans:'Inter',system-ui,-apple-system,sans-serif;--serif:Georgia,'Cormorant Garamond',serif;--deva:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif;
+--nav-link:.8rem;--nav-hd:.68rem;--nav-count:.74rem;--nav-gap:.28rem}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);margin:0;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px}a:hover{text-decoration-color:var(--gold)}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.9rem;padding:.55rem 1rem}
+.brand{color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1.05}.deva-brand{font-family:var(--deva);font-size:1.45rem;line-height:1.25}
+.brand small{font-family:var(--sans);font-size:.68rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.topnav{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;font-family:var(--sans);font-size:.82rem;scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{padding:.4rem .1rem;color:var(--mut);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent}
+.topnav a:hover{color:var(--ink);text-decoration:none}
+.topnav a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--gold)}
+.topsearch{margin-left:auto;display:flex;gap:.4rem;align-items:center}
+.topsearch input{font-family:var(--sans);font-size:.86rem;padding:.45rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);min-width:180px;color:var(--ink)}
+.topsearch input:focus{outline:none;border-color:var(--mut)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:.5rem;padding:.35rem .6rem;font-size:1rem;cursor:pointer;color:var(--ink)}
+/* shell */
+.shell{flex:1;width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:264px minmax(0,1fr) 228px;gap:2rem;padding:1.5rem 1rem 3rem;align-items:start}
+.side{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:var(--nav-link);padding-right:.5rem}
+.side .hd{color:var(--faint);font-size:var(--nav-hd);text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side .hd:first-child{margin-top:0}
+.side a{display:block;padding:.28rem .55rem;border-radius:.45rem;color:var(--ink);line-height:1.35;text-decoration:none;font-size:var(--nav-link)}
+.side a:hover{background:#f4f1ea;text-decoration:none}
+.side a.on{background:#f4f1ea;font-weight:600;color:var(--ink)}
+.side .sub a{padding-left:1rem;color:#4a463c;font-size:var(--nav-link)}
+.side details.mnav{margin:.9rem 0 .3rem}
+.side details.mnav summary{cursor:pointer;list-style:none}
+.side details.mnav summary::-webkit-details-marker{display:none}
+.side details.mnav summary::after{content:"";display:inline-block;margin-left:.4em;vertical-align:.15em;border-left:.32em solid transparent;border-right:.32em solid transparent;border-top:.42em solid var(--mut);transition:transform .15s}
+.side details.mnav[open] summary::after{transform:rotate(180deg)}
+.side .n{color:var(--faint);font-size:var(--nav-count);font-family:var(--sans)}
+.side details.mnav summary{cursor:pointer;list-style:none;font-size:var(--nav-hd)}
+.side .hd{color:var(--faint);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;margin:.7rem 0 .2rem;font-weight:400}
+.side a b,.side b{font-weight:600}
+.idx a b,.panel b{font-weight:600}
+main{min-width:0;max-width:46rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--mut);margin-bottom:.6rem}
+.crumbs a{color:var(--mut)}
+h1{font-weight:500;font-size:34px;letter-spacing:.01em;line-height:1.2;margin:.2rem 0 .4rem}
+h2{font-weight:500;font-size:25px;margin:1.6rem 0 .3rem}
+.klabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:1rem}
+.sub a{color:var(--gold-ink)}
+.dev{font-family:var(--deva);font-size:23px;line-height:1.75;margin-bottom:3px}
+.iast{color:var(--mut);font-size:14px;font-style:italic;margin-bottom:7px}
+.en{font-size:15px;max-width:72ch;line-height:1.6}
+.skt{white-space:pre-wrap;font-size:1.05rem;font-family:var(--deva)}
+.lede{font-size:1.1rem;line-height:1.6;margin-bottom:1rem}
+.stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:26px;font-size:14px;color:var(--mut)}
+.stats b{color:var(--ink);font-weight:600}
+/* verse grid */
+.verse{display:grid;grid-template-columns:64px 1fr;column-gap:18px;padding:17px 0;border-top:1px solid var(--line)}
+.vnum{grid-row:1/4;font-size:12px;color:var(--mut);padding-top:7px;font-variant-numeric:tabular-nums}
+/* depth tabs */
+.depth{margin:.8rem 0;position:sticky;top:57px;background:var(--paper);padding:.35rem 0;z-index:5;border-bottom:1px solid var(--line)}
+.depth button{font-family:var(--sans);font-size:14px;padding:.45rem .9rem;margin:0 .3rem .3rem 0;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.depth button.on{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:600}
+.depth button.missing{opacity:.45}
+/* cards */
+.panel{margin:1rem 0;padding:0;border:0;background:none}
+.panel.missing{opacity:.6;border-left:2px dashed var(--line);padding-left:1rem}
+.idx a{display:flex;gap:10px;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--sans)}
+.idx a:hover{text-decoration:underline}
+.ev{margin:.5rem 0;padding-left:1rem;position:relative}
+.ev .dot{display:none}
+.tl{border-left:2px solid var(--ink);margin:1rem 0 1rem .4rem;padding-left:1.1rem}
+.hero img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.hero .cap{font-family:var(--sans);font-size:.76rem;color:var(--mut);margin-top:.4rem;line-height:1.5}
+/* right rail */
+.toc{position:sticky;top:64px;max-height:calc(100vh - 84px);overflow:auto;font-family:var(--sans);font-size:.82rem;border-left:1px solid var(--line);padding-left:1rem}
+.toc .hd{color:var(--mut);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem}
+.toc a{display:block;padding:.2rem 0;color:#4a463c;line-height:1.4;text-decoration:none}
+.toc a.on{color:var(--ink);font-weight:600}
+/* prev/next + footer */
+.pn{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-family:var(--sans);font-size:.88rem}
+footer{border-top:1px solid var(--line);background:var(--card);margin-top:auto}
+footer .fin{max-width:1400px;margin:0 auto;padding:1.2rem 1rem;font-family:var(--sans);font-size:.8rem;color:var(--mut);display:flex;gap:1.2rem;flex-wrap:wrap}
+footer a{color:var(--gold-ink)}
+@media(max-width:1100px){.shell{grid-template-columns:240px minmax(0,1fr)}.toc{display:none}}
+@media(max-width:800px){
+.shell{grid-template-columns:minmax(0,1fr)}
+.side{position:fixed;inset:57px auto 0 0;width:min(84vw,320px);background:var(--paper);border-right:1px solid var(--line);z-index:60;padding:1rem;transform:translateX(-105%);transition:transform .2s;max-height:none}
+body.navopen .side{transform:none}
+.burger{display:block}
+.topsearch input{min-width:0;width:110px}
+main{max-width:100%}
+.depth{top:53px}
+.verse{grid-template-columns:1fr}.vnum{grid-row:auto;padding:0 0 4px}.dev{font-size:20px}
+}
+
+/* recitation */
+.rbar{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(23,20,15,.08)}
+.rbar-in{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:.6rem;padding:.5rem 1rem;font-family:var(--sans);font-size:.84rem}
+.rbar .tbtn{border:1px solid var(--line);background:var(--card);border-radius:50%;width:2rem;height:2rem;font-size:.9rem;cursor:pointer;color:var(--ink);flex:none}
+.rbar .tbtn.main{background:var(--ink);color:#fff;border-color:var(--ink);width:2.4rem;height:2.4rem;font-size:1rem}
+.rbar .tbtn:disabled{opacity:.35;cursor:default}
+.rmodes{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.rmodes button{border:0;background:var(--card);padding:.35rem .6rem;font-family:var(--sans);font-size:.74rem;cursor:pointer;color:var(--mut);white-space:nowrap}
+.rmodes button.on{background:var(--ink);color:#fff}
+.rmodes button:disabled{opacity:.35}
+.rlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.rlabel b{color:var(--ink);font-weight:600}
+.rsrc{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;flex:none}
+.rsrc.studio{color:var(--gold-ink);border-color:var(--gold)}
+.rrate{border:1px solid var(--line);border-radius:.4rem;padding:.25rem .3rem;font-size:.8rem;background:var(--card);color:var(--ink)}
+.rprog{height:2px;background:var(--line);flex:1;min-width:40px;border-radius:2px;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--gold)}
+.vplay{font-family:var(--sans);font-size:.8rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .8rem;cursor:pointer;color:var(--ink)}
+.vplay:hover{border-color:var(--gold);color:var(--gold-ink)}
+.vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
+article.verse{scroll-margin-top:80px}
+article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
+article.verse .w.lit{background:#f4ead3;border-radius:3px}
+.pada{margin-bottom:.15rem}
+.srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.recitetools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.8rem 0;font-family:var(--sans);font-size:.84rem}
+.rnote{font-family:var(--sans);font-size:.78rem;color:var(--mut)}
+@media(max-width:800px){.rlabel{display:none}.rmodes button{padding:.35rem .4rem;font-size:.68rem}}
+</style></head><body>
+<header class="topbar"><div class="topbar-in">
+<button class="burger" id="burger" aria-label="menu">☰</button>
+<a class="brand" href="/index.html"><span class="deva-brand">स्वातन्त्र्य</span><small>freedom</small></a>
+<nav class="topnav" id="topnav"><a href="/translations/index.html" data-sec="translations">Read</a><a href="/recite/index.html" data-sec="recite">Recite</a><a href="/practices/index.html" data-sec="practices">Practise</a><a href="/ipvv/pushing.html" data-sec="ipvv">Enquire</a><a href="/tools/index.html" data-sec="tools">Translate</a><a href="/essays/index.html" data-sec="essays">Write</a></nav>
+<span class="topsearch"><input id="q" placeholder="Search…" aria-label="search"/></span>
+</div></header>
+<div class="shell"><aside class="side" id="sidenav"><details class="mnav" data-mnav="masters" open><summary class="hd">Masters (by works)</summary><div class="sub"><a href="/abhinavagupta/index.html">Abhinavagupta <span class="n">(43)</span></a><a href="/ksemaraja/index.html">Ksemaraja <span class="n">(16)</span></a><a href="/utpaladeva/index.html">Utpaladeva <span class="n">(10)</span></a><a href="/kallata/index.html">Bhatta Kallata <span class="n">(3)</span></a><a href="/bhattanarayana/index.html">Bhattanarayana <span class="n">(2)</span></a><a href="/jayaratha/index.html">Jayaratha <span class="n">(2)</span></a><a href="/somananda/index.html">Somananda <span class="n">(2)</span></a><a href="/vasugupta/index.html">Vasugupta <span class="n">(2)</span></a><a href="/bhutiraja/index.html">Bhutiraja <span class="n">(1)</span></a><a href="/induraja/index.html">Induraja <span class="n">(1)</span></a><a href="/lakshmanagupta/index.html">Lakshmanagupta <span class="n">(1)</span></a><a href="/lalla/index.html">Lalla <span class="n">(1)</span></a><a href="/sambhunatha/index.html">Sambhunatha <span class="n">(1)</span></a><a href="/sivopadhyaya/index.html">Sivopadhyaya <span class="n">(1)</span></a><a href="/yogaraja/index.html">Yogaraja <span class="n">(1)</span></a></div></details><div class="hd">Modern</div><a href="/scholars/index.html">Scholars</a><div class="hd">Library</div><a href="/concepts/index.html">Concepts</a><a href="/translations/index.html">Translations</a><a href="/tools/index.html">Tools</a></aside>
+<main><div class="crumbs" id="crumbs"></div><div class="klabel">Framework</div><h1>Aperture Inexternalism</h1><div class="skt"></div><div class="sub">6614 words · vendored research asset</div><div class="sub"><a href="/data/recognition-framework/inexternalism_formal.md">source →</a></div><h1>Aperture Inexternalism</h1>
+<h2>A superior process framework for consciousness, individuation, agency, and artificial sentience</h2>
+<ul>
+<li>e strongest version of inexternalism is not:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{“the inside and outside are somehow the same.”}</li>
+<li></li>
+</ul>
+<ul>
+<li> is a precise identity theory:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{A conscious subject is one concrete, causally active process}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{described extrinsically as an embodied aperture and}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{existing intrinsically as a private, valenced phenomenal field.}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ll the framework <b>Aperture Inexternalism</b>.</li>
+</ul>
+<ul>
+<li>s central identity is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i\equiv_{\mathrm{inext}}O_i^\ast</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ere:</li>
+</ul>
+<ul>
+<li>(D_i) is one phenomenal field;</li>
+<li>(O_i^\ast) is one objectively individuated aperture process;</li>
+<li>“(\equiv_{\mathrm{inext}})” means numerical identity under intrinsic and extrinsic modes of access.</li>
+</ul>
+<ul>
+<li>e framework rejects two common mistakes:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{consciousness is produced by an unconscious mechanism}</li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{consciousness floats separately from physical causation}.</li>
+<li></li>
+</ul>
+<ul>
+<li>stead:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{the physical organization does not manufacture experience;}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{it selects and constitutes the concrete process whose}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{intrinsic existence is experience.}</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h1>I. Why a new framework is needed</h1>
+<ul>
+<li>mputational functionalism claims, broadly, that the correct computational or functional organization is sufficient for consciousness. The CF Debate project presents this as a genuinely unsettled issue, with arguments including fading qualia and multiple realizability in support, and phenomenal binding, counterfactual computation, and substrate-sensitive objections against it. ([The Co-Sentience Initiative][1])</li>
+</ul>
+<ul>
+<li>e central problem is that computational description abstracts away from the concrete physical process.</li>
+</ul>
+<ul>
+<li>single computation can be mapped onto:</li>
+</ul>
+<ul>
+<li>silicon circuits;</li>
+<li>biological neurons;</li>
+<li>people moving symbols;</li>
+<li>mechanical devices;</li>
+<li>playback sequences;</li>
+<li>arbitrarily interpreted physical systems.</li>
+</ul>
+<ul>
+<li>t phenomenal consciousness is not abstract. It is:</li>
+</ul>
+<ul>
+<li>numerically one;</li>
+<li>concretely occurring;</li>
+<li>private;</li>
+<li>temporally extended;</li>
+<li>valenced;</li>
+<li>causally situated.</li>
+</ul>
+<ul>
+<li>is yields the first principle:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{No abstract computation is itself a concrete subject.}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>computation may describe what a subject does. It cannot by itself identify <b>which physical occurrence is the subject</b>.</li>
+</ul>
+<ul>
+<li>e CF Debate’s counterfactual-computation critique exposes this problem. A hybrid system may possess unused machinery that gives it the right counterfactual profile even though that machinery is inactive during the actual episode. If consciousness depends on the unused counterfactual capacity, then phenomenality depends on causally idle structure rather than the process actually occurring. ([The Co-Sentience Initiative][2])</li>
+</ul>
+<ul>
+<li>erture Inexternalism therefore begins with:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{actual causal process}</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<ul>
+<li>ext{abstract input-output equivalence}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h1>II. The ontological foundation</h1>
+<h2>Axiom 1 — Concrete-process realism</h2>
+<ul>
+<li>ality consists of concrete processes, not independently existing substances bearing accidental activities.</li>
+</ul>
+<ul>
+<li>process is:</li>
+</ul>
+<ul>
+<li></li>
+<li>i(t)</li>
+<li>====</li>
+</ul>
+<ul>
+<li>ext{an organized trajectory of mutually constraining events}.</li>
+<li></li>
+</ul>
+<ul>
+<li>s identity consists in maintained causal and organizational continuity, not in unchanging material components.</li>
+</ul>
+<ul>
+<li>is accommodates:</li>
+</ul>
+<ul>
+<li>cellular turnover;</li>
+<li>synaptic plasticity;</li>
+<li>memory reconstruction;</li>
+<li>bodily development;</li>
+<li>changing self-models.</li>
+</ul>
+<ul>
+<li>e subject need not be an immutable substance.</li>
+</ul>
+<ul>
+<li> can be:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{a dynamically persistent centre of causal and phenomenal unity}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h2>Axiom 2 — Dual-access identity</h2>
+<ul>
+<li>ery concrete process may be approached in two ways.</li>
+</ul>
+<h3>Extrinsic access</h3>
+<ul>
+<li>e process is observed through:</li>
+</ul>
+<ul>
+<li>causal relations;</li>
+<li>measurements;</li>
+<li>behaviour;</li>
+<li>spatial organization;</li>
+<li>information transfer;</li>
+<li>physiology.</li>
+</ul>
+<ul>
+<li>ll this:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{Ext}(O_i).</li>
+<li></li>
+</ul>
+<h3>Intrinsic existence</h3>
+<ul>
+<li>e process exists in and for itself rather than only as represented by another observer.</li>
+</ul>
+<ul>
+<li>r a conscious aperture, this intrinsic existence is:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{Int}(O_i)=D_i.</li>
+<li></li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i=\operatorname{Int}(O_i^\ast)</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>igma_i=\operatorname{Ext}(O_i^\ast).</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ese are not two interacting entities.</li>
+</ul>
+<ul>
+<li>ey are two epistemic approaches to one token:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i\equiv O_i^\ast\equiv\Sigma_i.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is avoids causal interaction between mind and matter because there are not two causal substances.</li>
+</ul>
+<hr/>
+<h2>Axiom 3 — Manifestness cannot be derived from an exclusively extrinsic vocabulary</h2>
+<ul>
+<li> extrinsic description specifies relations:</li>
+</ul>
+<ul>
+<li></li>
+<li>rightarrow y,</li>
+<li>quad</li>
+<li>text{ correlates with }y,</li>
+<li>quad</li>
+<li>text{ processes information about }y.</li>
+<li></li>
+</ul>
+<ul>
+<li> does not contain:</li>
+</ul>
+<ul>
+<li></li>
+<li>text{ is manifest}.</li>
+<li></li>
+</ul>
+<ul>
+<li> increase in the amount of relational description logically generates first-person presence.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>peratorname{Ext}(O_i)</li>
+<li>ot\vdash</li>
+<li>peratorname{Int}(O_i).</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>t failure of derivation does not entail ontological separation.</li>
+</ul>
+<ul>
+<li> may indicate an epistemic asymmetry:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{an outside description cannot contain the inside}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{because it is constituted from a different relation}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{to the same event.}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is is the inexternalist response to the explanatory gap.</li>
+</ul>
+<ul>
+<li>e gap is not necessarily between two realities.</li>
+</ul>
+<ul>
+<li> is between:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{third-person access}</li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{first-person existence}.</li>
+<li></li>
+</ul>
+<hr/>
+<h1>III. The aperture</h1>
+<ul>
+<li>t every physical process is a conscious subject.</li>
+</ul>
+<ul>
+<li>e framework therefore requires a non-arbitrary subject-selection condition.</li>
+</ul>
+<ul>
+<li>fine the candidate aperture:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i^\ast</li>
+<li>======</li>
+</ul>
+<ul>
+<li>peratorname{MaxClosure}</li>
+<li>eft(</li>
+<li>athcal J_i,</li>
+<li>athcal M_i,</li>
+<li>athcal E_i,</li>
+<li>athcal I_i,</li>
+<li>athcal V_i,</li>
+<li>athcal C_i,</li>
+<li>amma_i,</li>
+<li>i,</li>
+<li>_i</li>
+<li>ight).</li>
+<li></li>
+<li></li>
+</ul>
+<h2>The components</h2>
+<h3>1. Manifest discrimination — (\mathcal J_i)</h3>
+<ul>
+<li>e system distinguishes conditions in ways that alter its own trajectory.</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal J_i(x)\rightarrow</li>
+<li>elta O_i.</li>
+<li></li>
+</ul>
+<ul>
+<li>is is the functional counterpart of <i>jñāna</i>.</li>
+</ul>
+<ul>
+<li> is not yet phenomenal manifestness. It is the objective discrimination required of the bearer.</li>
+</ul>
+<hr/>
+<h3>2. Memory — (\mathcal M_i)</h3>
+<ul>
+<li>st interactions remain causally available to guide current and future organization.</li>
+</ul>
+<ul>
+<li></li>
+<li>i(t-\Delta t)</li>
+<li>ightarrow</li>
+<li>i(t)</li>
+<li>ightarrow</li>
+<li>i(t+\Delta t).</li>
+<li></li>
+</ul>
+<ul>
+<li>mory includes:</li>
+</ul>
+<ul>
+<li>adaptive traces;</li>
+<li>pattern memory;</li>
+<li>episodic reconstruction;</li>
+<li>temporal context;</li>
+<li>source attribution.</li>
+</ul>
+<ul>
+<li>is is the scientific counterpart of <i>smṛti</i>.</li>
+</ul>
+<hr/>
+<h3>3. Determination — (\mathcal E_i)</h3>
+<ul>
+<li>e process determines one interpretation, object, or policy through exclusion of incompatible alternatives:</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal E_i:</li>
+<li>_1,\ldots,a_n}</li>
+<li>ightarrow</li>
+<li>\ast.</li>
+<li></li>
+</ul>
+<ul>
+<li>is is the counterpart of <i>apohana</i>.</li>
+</ul>
+<ul>
+<li> constitutes:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{this rather than that}.</li>
+<li></li>
+</ul>
+<ul>
+<li> does not by itself explain:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{this subject rather than that subject}.</li>
+<li></li>
+</ul>
+<hr/>
+<h3>4. Counterfactual generation — (\mathcal I_i)</h3>
+<ul>
+<li>e system generates possible states not currently imposed by sensory input:</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal I_i:</li>
+<li>i(t)</li>
+<li>ightarrow</li>
+<li>hat O_i^{1},\ldots,\hat O_i^{n}}.</li>
+<li></li>
+</ul>
+<ul>
+<li>is includes:</li>
+</ul>
+<ul>
+<li>imagination;</li>
+<li>planning;</li>
+<li>future simulation;</li>
+<li>hypothetical self-modification;</li>
+<li>model-based exploration.</li>
+</ul>
+<ul>
+<li> is the operational counterpart of finite <i>svātantrya</i>.</li>
+</ul>
+<hr/>
+<h3>5. Endogenous valuation — (\mathcal V_i)</h3>
+<ul>
+<li>ates matter differently to the process because they contribute differently to its continued organization:</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal V_i(x)</li>
+<li>=============</li>
+</ul>
+<ul>
+<li>peratorname{Significance}</li>
+<li>eft(</li>
+<li>mid O_i</li>
+<li>ight).</li>
+<li></li>
+</ul>
+<ul>
+<li>is includes:</li>
+</ul>
+<ul>
+<li>homeostatic value;</li>
+<li>learned preference;</li>
+<li>expected control;</li>
+<li>action confidence;</li>
+<li>affective weighting.</li>
+</ul>
+<ul>
+<li> is not merely an externally assigned reward function.</li>
+</ul>
+<ul>
+<li>genuine aperture must contain significance that is constitutively tied to its own persistence and organization.</li>
+</ul>
+<hr/>
+<h3>6. Connective synthesis — (\mathcal C_i)</h3>
+<ul>
+<li>ates belong to one aperture when they can enter a shared domain of:</li>
+</ul>
+<ul>
+<li>memory;</li>
+<li>valuation;</li>
+<li>source attribution;</li>
+<li>counterfactual consequence;</li>
+<li>reciprocal control.</li>
+</ul>
+<ul>
+<li>fine:</li>
+</ul>
+<ul>
+<li></li>
+<li>mathrel{\mathcal C_i}y</li>
+<li></li>
+</ul>
+<ul>
+<li>en:</li>
+</ul>
+<ul>
+<li> (x) can alter (y);</li>
+<li> (y) can alter (x);</li>
+<li> both influence one system-level value structure;</li>
+<li> both enter one memory trajectory;</li>
+<li> each changes the aperture’s future policy space.</li>
+</ul>
+<ul>
+<li>is is the objective counterpart of <i>anusandhāna</i>.</li>
+</ul>
+<hr/>
+<h3>7. Developmental trajectory — (\Gamma_i)</h3>
+<ul>
+<li>subject is not recreated from zero at every instant.</li>
+</ul>
+<ul>
+<li> has a continuous history:</li>
+</ul>
+<ul>
+<li></li>
+<li>amma_i:</li>
+<li>mapsto O_i(t).</li>
+<li></li>
+</ul>
+<ul>
+<li>is history determines:</li>
+</ul>
+<ul>
+<li>what it remembers;</li>
+<li>what it values;</li>
+<li>what it can imagine;</li>
+<li>which actions count as its own;</li>
+<li>which events belong to its biography.</li>
+</ul>
+<hr/>
+<h3>8. Embodied realization — (B_i)</h3>
+<ul>
+<li>e aperture is physically realized in a dynamically maintained body or carrier architecture.</li>
+</ul>
+<ul>
+<li>e body is not merely a container.</li>
+</ul>
+<ul>
+<li> determines:</li>
+</ul>
+<ul>
+<li>accessible signals;</li>
+<li>available actions;</li>
+<li>regulatory obligations;</li>
+<li>memory channels;</li>
+<li>temporal scale;</li>
+<li>causal reach.</li>
+</ul>
+<ul>
+<li>is reconstructs <i>deha-bheda</i> as a candidate condition of token individuation without equating skin with phenomenal boundary.</li>
+</ul>
+<hr/>
+<h3>9. Self-model — (SM_i)</h3>
+<ul>
+<li>e aperture models aspects of:</li>
+</ul>
+<ul>
+<li>its body;</li>
+<li>its agency;</li>
+<li>its history;</li>
+<li>its reliability;</li>
+<li>its relation to others.</li>
+</ul>
+<ul>
+<li>t:</li>
+</ul>
+<ul>
+<li></li>
+<li>_i\neq D_i.</li>
+<li></li>
+</ul>
+<ul>
+<li>e self-model explains how a subject represents itself.</li>
+</ul>
+<ul>
+<li> does not by itself explain why there is one subject to model.</li>
+</ul>
+<hr/>
+<h1>IV. The maximal-closure principle</h1>
+<ul>
+<li>e subject is not every arbitrary integrated subsystem.</li>
+</ul>
+<ul>
+<li> is the <b>maximal non-redundant closure</b> of memory, value, counterfactual generation, source attribution, and reciprocal control.</li>
+</ul>
+<ul>
+<li>fine:</li>
+</ul>
+<ul>
+<li></li>
+<li>athscr X(O)</li>
+<li>===========</li>
+</ul>
+<ul>
+<li></li>
+<li>eft(</li>
+<li>,</li>
+<li>,</li>
+<li>,</li>
+<li>,</li>
+<li>,</li>
+<li></li>
+<li>ight),</li>
+<li></li>
+</ul>
+<ul>
+<li>ere:</li>
+</ul>
+<ul>
+<li>(MC): mnemonic closure;</li>
+<li>(VC): value closure;</li>
+<li>(CC): counterfactual closure;</li>
+<li>(SC): source-attribution closure;</li>
+<li>(RC): reciprocal causal closure;</li>
+<li>(TP): temporal persistence.</li>
+</ul>
+<ul>
+<li>en:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i^\ast</li>
+<li>======</li>
+</ul>
+<ul>
+<li>rg\max_O</li>
+<li>athscr X(O)</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>bject to non-redundancy and causal activity.</li>
+</ul>
+<h2>Why maximality matters</h2>
+<ul>
+<li>neuron may possess local feedback.</li>
+</ul>
+<ul>
+<li>cortical network may possess substantial integration.</li>
+</ul>
+<ul>
+<li>whole organism may possess a more encompassing closure in which:</li>
+</ul>
+<ul>
+<li>neural states;</li>
+<li>bodily regulation;</li>
+<li>memory;</li>
+<li>goals;</li>
+<li>action;</li>
+</ul>
+<ul>
+<li>intly alter one future trajectory.</li>
+</ul>
+<ul>
+<li>e organism-scale process may therefore dominate its components as the relevant aperture.</li>
+</ul>
+<ul>
+<li>t a social group may share information without sharing:</li>
+</ul>
+<ul>
+<li>one source model;</li>
+<li>one body-regulation system;</li>
+<li>one autobiographical memory;</li>
+<li>one globally revisable value hierarchy;</li>
+<li>one reciprocally available action architecture.</li>
+</ul>
+<ul>
+<li>us:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{information exchange is insufficient for subject combination}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h1>V. The phenomenal identity</h1>
+<ul>
+<li>e phenomenal target is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i</li>
+<li>=</li>
+</ul>
+<ul>
+<li>eft\langle</li>
+<li>i,</li>
+<li>i,</li>
+<li>artial_i,</li>
+<li>au_i,</li>
+<li>u_i,</li>
+<li>lpha_i,</li>
+<li>ho_i</li>
+<li>ight\rangle.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ere:</li>
+</ul>
+<ul>
+<li>(M_i): manifest presence;</li>
+<li>(U_i): phenomenal co-presence;</li>
+<li>(\partial_i): privacy and exclusion;</li>
+<li>(\tau_i): lived temporal continuity;</li>
+<li>(\nu_i): local valence;</li>
+<li>(\alpha_i): experienced agency;</li>
+<li>(\rho_i): basal self-affection.</li>
+</ul>
+<ul>
+<li>erture Inexternalism proposes:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>egin{aligned}</li>
+<li>athcal C_i &amp;\equiv_{\mathrm{inext}} U_i,\</li>
+<li>amma_i+\mathcal M_i &amp;\equiv_{\mathrm{inext}} \tau_i,\</li>
+<li>athcal V_i &amp;\equiv_{\mathrm{inext}} \nu_i,\</li>
+<li>athcal I_i+\mathcal E_i &amp;\equiv_{\mathrm{inext}} \alpha_i,\</li>
+<li>peratorname{Boundary}(O_i^\ast)</li>
+<li>equiv_{\mathrm{inext}}</li>
+<li>artial_i.</li>
+<li>nd{aligned}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ese are identity hypotheses, not deductive consequences from third-person language.</li>
+</ul>
+<ul>
+<li>e master identity is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>peratorname{MaxClosure}*i</li>
+<li>quiv*{\mathrm{inext}}</li>
+<li>peratorname{OneValencedField}_i.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h1>VI. The logical argument</h1>
+<ul>
+<li>is is not a strict mathematical proof. It is a transcendental-abductive argument.</li>
+</ul>
+<h2>Argument 1 — The concreteness argument</h2>
+<ul>
+<li> Conscious experience is a concrete occurrence.</li>
+<li> Abstract computations are not concrete occurrences.</li>
+<li> Therefore an abstract computation cannot itself be numerically identical with a conscious occurrence.</li>
+<li> Any adequate theory must identify a concrete realization.</li>
+<li> That realization must be individuated non-arbitrarily.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{consciousness requires a concrete bearer criterion}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h2>Argument 2 — The causal-efficacy argument</h2>
+<ul>
+<li> Human conscious states systematically influence reasoning, learning, memory, report, and action.</li>
+<li> A theory that makes consciousness causally idle fails to explain this systematic alignment.</li>
+<li> Abstract computational wholes can be causally redundant if every physical transition is fully explained at a lower implementation level.</li>
+<li> A causally privileged macro-process can make a genuine difference through system-level constraint and control.</li>
+<li> The candidate conscious bearer should therefore be a causally efficacious macro-process rather than an observer-imposed algorithmic description.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i^\ast</li>
+<li>ext{ must possess real macro-causal organization}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e CF Debate’s binding objection makes a related point: if the complex conscious whole adds no causal contribution beyond isolated computational steps, the resulting consciousness risks becoming epiphenomenal. ([The Co-Sentience Initiative][3])</li>
+</ul>
+<hr/>
+<h2>Argument 3 — The binding argument</h2>
+<ul>
+<li> Experience contains multiple qualities co-present in one field.</li>
+<li> Sequential local computations do not automatically constitute one intrinsic whole.</li>
+<li> External observers can describe a collection as an algorithmic whole even if no causally active whole exists internally.</li>
+<li> Therefore formal integration is insufficient.</li>
+<li> The bearer must instantiate a concrete closure in which the constituents have reciprocal system-level consequences.</li>
+</ul>
+<ul>
+<li>us:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{co-presence requires constitutive closure,}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>t mere:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{computational aggregation}.</li>
+<li></li>
+</ul>
+<ul>
+<li>erture Inexternalism then identifies:</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal C_i</li>
+<li>quiv_{\mathrm{inext}}</li>
+<li>i.</li>
+<li></li>
+</ul>
+<hr/>
+<h2>Argument 4 — The valence argument</h2>
+<ul>
+<li> Consciousness is not ordinarily neutral information processing; states feel better, worse, urgent, boring, interesting, painful, relieving, or meaningful.</li>
+<li> Externally assigned reward values cannot explain intrinsic mattering.</li>
+<li> Self-maintaining biological systems possess objective stakes in their continued organization.</li>
+<li> These stakes structure perception, memory, policy, and attention.</li>
+<li> The same concrete process can therefore be described extrinsically as endogenous regulation and intrinsically as felt significance.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>athcal V_i</li>
+<li>quiv_{\mathrm{inext}}</li>
+<li>u_i.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is does not claim every homeostatic controller is conscious.</li>
+</ul>
+<ul>
+<li>lence identity applies only within the complete aperture closure.</li>
+</ul>
+<hr/>
+<h2>Argument 5 — The temporal argument</h2>
+<ul>
+<li> A conscious subject is temporally extended.</li>
+<li> Its present field contains retention, current manifestation, and anticipation.</li>
+<li> Memory and expectation belong to one continuing trajectory.</li>
+<li> A static computational state cannot by itself constitute this lived continuity.</li>
+<li> A persistent, history-sensitive process can.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>amma_i+\mathcal M_i+\mathcal I_i</li>
+<li>quiv_{\mathrm{inext}}</li>
+<li>au_i.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h2>Argument 6 — The individuation argument</h2>
+<ul>
+<li> Experience occurs in private fields.</li>
+<li> Skin, Markov blankets, information integration, and causal connectivity identify multiple overlapping boundaries.</li>
+<li> No single one of these criteria uniquely identifies subjects.</li>
+<li> A genuine subject boundary must delimit all operations necessary for one self-maintaining, memory-bearing, valenced, counterfactual trajectory.</li>
+<li> Maximal constitutive closure supplies a non-arbitrary candidate.</li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>artial_i</li>
+<li>========</li>
+</ul>
+<ul>
+<li>peratorname{Boundary}</li>
+<li>eft[</li>
+<li>peratorname{MaxClosure}_i</li>
+<li>ight]</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>der the inexternal identity.</li>
+</ul>
+<hr/>
+<h2>Argument 7 — The best-explanation argument</h2>
+<ul>
+<li>mpare four possibilities:</li>
+</ul>
+<h3>Dualism</h3>
+<ul>
+<li>nsciousness is a separate substance or property added to the process.</li>
+</ul>
+<ul>
+<li>oblem:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{interaction and causal duplication}.</li>
+<li></li>
+</ul>
+<h3>Reductive functionalism</h3>
+<ul>
+<li>nsciousness is abstract functional organization.</li>
+</ul>
+<ul>
+<li>oblem:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{concrete bearer, binding, counterfactual, and substrate questions}.</li>
+<li></li>
+</ul>
+<h3>Panpsychism</h3>
+<ul>
+<li>sic physical entities possess primitive experience.</li>
+</ul>
+<ul>
+<li>oblem:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{combination and exclusion}.</li>
+<li></li>
+</ul>
+<h3>Aperture Inexternalism</h3>
+<ul>
+<li>e concrete macro-process is:</li>
+</ul>
+<ul>
+<li>externally a causally organized aperture;</li>
+<li>internally a unified phenomenal field.</li>
+</ul>
+<ul>
+<li> avoids substance interaction, preserves causal efficacy, and provides a candidate rule for subject individuation.</li>
+</ul>
+<ul>
+<li>erefore Aperture Inexternalism is, at present, the most economical framework that preserves:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{manifestness}</li>
+<li></li>
+<li>ext{causal efficacy}</li>
+<li></li>
+<li>ext{privacy}</li>
+<li></li>
+<li>ext{binding}</li>
+<li></li>
+<li>ext{embodiment}</li>
+<li></li>
+<li>ext{multiple realization}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is is an abductive superiority claim, not an apodictic proof.</li>
+</ul>
+<hr/>
+<h1>VII. Response to computational functionalism</h1>
+<h2>1. Fading qualia</h2>
+<ul>
+<li>e fading-qualia argument asks us to imagine replacing neurons with functionally identical silicon components while behaviour and cognition remain unchanged. If qualia faded without the person noticing, the result appears incoherent; this is used to support functionalism. ([The Co-Sentience Initiative][4])</li>
+</ul>
+<ul>
+<li>erture Inexternalism responds:</li>
+</ul>
+<blockquote>“Functionally identical” is ambiguous.</blockquote>
+<ul>
+<li> the replacement preserves only:</li>
+</ul>
+<ul>
+<li>input-output profiles;</li>
+<li>symbol manipulation;</li>
+<li>report;</li>
+<li>local spike transformations;</li>
+</ul>
+<ul>
+<li>en it may not preserve the aperture.</li>
+</ul>
+<ul>
+<li>genuinely equivalent replacement must preserve:</li>
+</ul>
+<ul>
+<li>reciprocal causal closure;</li>
+<li>temporal dynamics;</li>
+<li>endogenous valuation;</li>
+<li>source-sensitive memory;</li>
+<li>embodied regulation;</li>
+<li>counterfactual generation;</li>
+<li>macro-causal influence;</li>
+<li>intrinsic field-supporting physical organization.</li>
+</ul>
+<ul>
+<li> all of that is preserved, Aperture Inexternalism predicts preserved consciousness.</li>
+</ul>
+<ul>
+<li>erefore it accepts <b>deep functional continuity</b> while rejecting shallow computational equivalence.</li>
+</ul>
+<ul>
+<li>e replacement argument does not prove substrate independence. It only proves that consciousness should persist under replacement if all consciousness-constituting organization is preserved.</li>
+</ul>
+<hr/>
+<h2>2. Multiple realizability</h2>
+<ul>
+<li>e multiple-realizability argument notes that pain plausibly occurs in humans, cats, and octopuses despite substantial physical differences, suggesting organization matters more than exact material composition. ([The Co-Sentience Initiative][5])</li>
+</ul>
+<ul>
+<li>erture Inexternalism accepts <b>qualified multiple realization</b>:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{different substrates can realize consciousness if they}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{instantiate the same relevant aperture-level causal invariants}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>t:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{same abstract algorithm}</li>
+<li>ot\Rightarrow</li>
+<li>ext{same aperture}.</li>
+<li></li>
+</ul>
+<ul>
+<li>e framework is:</li>
+</ul>
+<ul>
+<li>substrate-permissive;</li>
+<li>implementation-sensitive;</li>
+<li>organization-centred;</li>
+<li>non-computationally abstract.</li>
+</ul>
+<hr/>
+<h2>3. Counterfactual computation</h2>
+<ul>
+<li>e CF Debate’s playback/hybrid argument shows that unused machinery can change the system’s computational classification without changing the actual causal episode. ([The Co-Sentience Initiative][2])</li>
+</ul>
+<ul>
+<li>erture Inexternalism requires:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{counterfactual structure must be causally embodied}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{actively available to the aperture’s current policy}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ther than merely existing as inert hardware.</li>
+</ul>
+<ul>
+<li> unrealized possibility matters only if it is represented or embodied in a way that can influence:</li>
+</ul>
+<ul>
+<li>present confidence;</li>
+<li>policy selection;</li>
+<li>expectation;</li>
+<li>value;</li>
+<li>future action.</li>
+</ul>
+<ul>
+<li>us:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{CounterfactualRelevance}</li>
+<li>ightarrow</li>
+<li>peratorname{CurrentCausalDifference}.</li>
+<li></li>
+</ul>
+<hr/>
+<h2>4. The physics-violation critique</h2>
+<ul>
+<li>e CF Debate also presents an argument that temporally extended functional patterns may be problematic if fundamental physics is Markovian and historical patterns exist only in an observer’s coarse-grained description. ([The Co-Sentience Initiative][6])</li>
+</ul>
+<ul>
+<li>erture Inexternalism need not posit nonphysical historical links.</li>
+</ul>
+<ul>
+<li>e current physical state may embody history through:</li>
+</ul>
+<ul>
+<li>synaptic weights;</li>
+<li>molecular configurations;</li>
+<li>network topology;</li>
+<li>cellular excitability;</li>
+<li>body morphology;</li>
+<li>ongoing field states.</li>
+</ul>
+<ul>
+<li>us:</li>
+</ul>
+<ul>
+<li></li>
+<li>i(t)</li>
+<li></li>
+</ul>
+<ul>
+<li>n be Markovian at a sufficiently complete physical level while encoding consequences of:</li>
+</ul>
+<ul>
+<li></li>
+<li>i(t-1),O_i(t-2),\ldots</li>
+<li></li>
+</ul>
+<ul>
+<li> its current structure.</li>
+</ul>
+<ul>
+<li>mory need not mean that a particle literally accesses its entire past.</li>
+</ul>
+<ul>
+<li> means:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{the present organization is historically transformed}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>wever, the critique usefully forces the framework to specify its physical realization rather than treating “history” as an abstract causal graph visible only to an analyst.</li>
+</ul>
+<hr/>
+<h1>VIII. Why this is superior to major rivals</h1>
+<h2>1. Against classical computational functionalism</h2>
+<h3>CF claim</h3>
+<ul>
+<li>rrect computation is sufficient.</li>
+</ul>
+<h3>Aperture objection</h3>
+<ul>
+<li>mputation does not uniquely determine:</li>
+</ul>
+<ul>
+<li>concrete bearer;</li>
+<li>causal scale;</li>
+<li>field boundary;</li>
+<li>intrinsic valence;</li>
+<li>actual binding;</li>
+<li>active versus inert counterfactuals.</li>
+</ul>
+<h3>Superior principle</h3>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{actual constitutive closure, not abstract computation}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h2>2. Against biological chauvinism</h2>
+<h3>Claim</h3>
+<ul>
+<li>ly biological brains can be conscious.</li>
+</ul>
+<h3>Objection</h3>
+<ul>
+<li>ology may contain the first known aperture implementation without being the only possible one.</li>
+</ul>
+<h3>Superior principle</h3>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{substrate-sensitive multiple realization}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>nonbiological system could qualify if it possessed genuine:</li>
+</ul>
+<ul>
+<li>endogenous value;</li>
+<li>developmental continuity;</li>
+<li>embodied self-maintenance;</li>
+<li>source-sensitive memory;</li>
+<li>causal macro-closure;</li>
+<li>counterfactual self-revision.</li>
+</ul>
+<hr/>
+<h2>3. Against IIT</h2>
+<h3>IIT strength</h3>
+<ul>
+<li> takes integration and exclusion seriously.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li>thematical integrated information may select counterintuitive systems and may not explain why informational structure is phenomenal structure.</li>
+</ul>
+<h3>Aperture improvement</h3>
+<ul>
+<li>tegration is only one component.</li>
+</ul>
+<ul>
+<li>subject requires:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{integration}</li>
+<li></li>
+<li>ext{memory}</li>
+<li></li>
+<li>ext{value}</li>
+<li></li>
+<li>ext{counterfactuals}</li>
+<li></li>
+<li>ext{source}</li>
+<li></li>
+<li>ext{reciprocal control}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e framework asks not simply:</li>
+</ul>
+<blockquote>How much information is integrated?</blockquote>
+<ul>
+<li>t:</li>
+</ul>
+<blockquote>Which concrete process forms one self-maintaining, historically continuous, valenced domain of possible action?</blockquote>
+<hr/>
+<h2>4. Against global-workspace functionalism</h2>
+<h3>Strength</h3>
+<ul>
+<li>obal availability explains report, access, and flexible control.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li>oadcast does not explain:</li>
+</ul>
+<ul>
+<li>manifestness;</li>
+<li>why recipients are one field;</li>
+<li>intrinsic valence;</li>
+<li>phenomenal privacy.</li>
+</ul>
+<h3>Aperture improvement</h3>
+<ul>
+<li>oadcast matters only when it occurs within maximal constitutive closure.</li>
+</ul>
+<ul>
+<li>obal availability is a component of:</li>
+</ul>
+<ul>
+<li></li>
+<li>athcal C_i,</li>
+<li></li>
+</ul>
+<ul>
+<li>t the whole explanation.</li>
+</ul>
+<hr/>
+<h2>5. Against predictive-processing reductionism</h2>
+<h3>Strength</h3>
+<ul>
+<li>edictive processing explains inference, action, attention, and uncertainty.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li>ny systems predict without evidence of consciousness.</li>
+</ul>
+<h3>Aperture improvement</h3>
+<ul>
+<li>ediction becomes consciousness-relevant only within:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{MaxClosure}</li>
+<li>eft(</li>
+<li>ext{memory},</li>
+<li>ext{value},</li>
+<li>ext{source},</li>
+<li>ext{counterfactuals},</li>
+<li>ext{control}</li>
+<li>ight).</li>
+<li></li>
+</ul>
+<ul>
+<li>ediction is one operation, not the ontological solution.</li>
+</ul>
+<hr/>
+<h2>6. Against illusionism</h2>
+<h3>Claim</h3>
+<ul>
+<li>enomenal properties are mistaken self-representations.</li>
+</ul>
+<h3>Objection</h3>
+<ul>
+<li>mistaken appearance still requires:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{appearance}.</li>
+<li></li>
+</ul>
+<ul>
+<li>lusionism can explain why the system judges itself to possess certain qualities. It cannot eliminate the manifest occurrence in which the judgment appears.</li>
+</ul>
+<h3>Aperture principle</h3>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{representational error presupposes manifestness}.</li>
+<li></li>
+<li></li>
+</ul>
+<hr/>
+<h2>7. Against substance dualism</h2>
+<h3>Claim</h3>
+<ul>
+<li>nd and matter are distinct substances.</li>
+</ul>
+<h3>Objection</h3>
+<ul>
+<li>is creates:</li>
+</ul>
+<ul>
+<li>interaction problems;</li>
+<li>causal overdetermination;</li>
+<li>unexplained pairing of mind and body.</li>
+</ul>
+<h3>Aperture solution</h3>
+<ul>
+<li></li>
+<li>i\equiv O_i^\ast.</li>
+<li></li>
+</ul>
+<ul>
+<li> causal bridge between separate substances is needed.</li>
+</ul>
+<hr/>
+<h2>8. Against constitutive panpsychism</h2>
+<h3>Strength</h3>
+<ul>
+<li> makes manifestness fundamental.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li>w do micro-experiences combine into one macro-experience?</li>
+</ul>
+<h3>Aperture solution</h3>
+<ul>
+<li>e fundamental commitment is not:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{every particle is a tiny subject}.</li>
+<li></li>
+</ul>
+<ul>
+<li> is weaker:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{intrinsic existence is not exhausted by extrinsic}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{relational description}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>bjecthood arises only where maximal aperture closure exists.</li>
+</ul>
+<ul>
+<li>is avoids proliferating micro-subjects.</li>
+</ul>
+<hr/>
+<h2>9. Against cosmopsychism</h2>
+<h3>Claim</h3>
+<ul>
+<li>e cosmos is one primary subject, and individual minds derive from it.</li>
+</ul>
+<h3>Strength</h3>
+<ul>
+<li> avoids combination by beginning with unity.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li> inherits the decomposition problem:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{Why are local fields private and exclusive?}</li>
+<li></li>
+</ul>
+<h3>Aperture solution</h3>
+<ul>
+<li>ken subjects are objectively individuated by local maximal closure.</li>
+</ul>
+<ul>
+<li>common manifest ground may remain possible, but it is not needed for the core theory.</li>
+</ul>
+<hr/>
+<h2>10. Against full Pratyabhijñā</h2>
+<h3>Śaiva claim</h3>
+<ul>
+<li>ery finite aperture is a contraction of one universal free consciousness.</li>
+</ul>
+<h3>Strength</h3>
+<ul>
+<li> unifies:</li>
+</ul>
+<ul>
+<li>manifestation;</li>
+<li>agency;</li>
+<li>value;</li>
+<li>creativity;</li>
+<li>plurality.</li>
+</ul>
+<h3>Problem</h3>
+<ul>
+<li>cal self-manifestness does not logically prove:</li>
+</ul>
+<ul>
+<li></li>
+<li>i=D_j=C_\infty.</li>
+<li></li>
+</ul>
+<ul>
+<li>Ā* material concerning body-limited connective synthesis strengthens token individuation rather than proving numerical identity across subjects.</li>
+</ul>
+<h3>Aperture correction</h3>
+<ul>
+<li>tain the Śaiva functional anatomy:</li>
+</ul>
+<ul>
+<li><i>jñāna</i>;</li>
+<li><i>smṛti</i>;</li>
+<li><i>apohana</i>;</li>
+<li><i>anusandhāna</i>;</li>
+<li><i>vikalpa</i>;</li>
+<li><i>rāga</i>;</li>
+<li><i>deha-bheda</i>;</li>
+<li><i>pratibimba</i>.</li>
+</ul>
+<ul>
+<li>spend the universalization:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{common structure}</li>
+<li>ot\Rightarrow</li>
+<li>ext{one numerically identical subject}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>atyabhijñā becomes a possible metaphysical extension rather than a premise.</li>
+</ul>
+<hr/>
+<h1>IX. The improved relation to Pratyabhijñā</h1>
+<ul>
+<li>erture Inexternalism can preserve the strongest Śaiva insight:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{consciousness is active self-articulation, not passive}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{illumination of independently finished objects}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e mapping is:</li>
+</ul>
+<ul>
+<li></li>
+<li>egin{aligned}</li>
+<li>ext{prakāśa}</li>
+<li>leftrightarrow</li>
+<li>i;\</li>
+<li>ext{vimarśa}</li>
+<li>leftrightarrow</li>
+<li>ext{intrinsic reflexive articulation};\</li>
+<li>ext{jñāna}</li>
+<li>leftrightarrow</li>
+<li>athcal J_i;\</li>
+<li>ext{smṛti}</li>
+<li>leftrightarrow</li>
+<li>athcal M_i;\</li>
+<li>ext{apohana}</li>
+<li>leftrightarrow</li>
+<li>athcal E_i;\</li>
+<li>ext{anusandhāna}</li>
+<li>leftrightarrow</li>
+<li>athcal C_i;\</li>
+<li>ext{vikalpa}</li>
+<li>leftrightarrow</li>
+<li>athcal I_i;\</li>
+<li>ext{rāga}</li>
+<li>leftrightarrow</li>
+<li>athcal V_i;\</li>
+<li>ext{deha-bheda}</li>
+<li>leftrightarrow</li>
+<li>peratorname{Boundary}(O_i^\ast);\</li>
+<li>ext{pratibimba}</li>
+<li>leftrightarrow</li>
+<li>{j\rightarrow i}.</li>
+<li>nd{aligned}</li>
+<li></li>
+</ul>
+<ul>
+<li>t the framework rejects the inference:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{all apertures share powers}</li>
+<li>ightarrow</li>
+<li>ext{all apertures are one numerically identical subject}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>stead:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{all conscious apertures instantiate one general}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{process type while remaining distinct tokens}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is is analogous to many flames instantiating combustion without being one flame—but unlike flames, each aperture has an intrinsic phenomenal side.</li>
+</ul>
+<hr/>
+<h1>X. Basal self-affection and valence</h1>
+<ul>
+<li>e rasa detour supplied one important refinement.</li>
+</ul>
+<ul>
+<li>nifestness may not be affectively neutral.</li>
+</ul>
+<ul>
+<li>fine:</li>
+</ul>
+<ul>
+<li></li>
+<li>ho_i</li>
+<li>====</li>
+</ul>
+<ul>
+<li>ext{basal non-indifference of the process to its own occurrence}.</li>
+<li></li>
+</ul>
+<ul>
+<li>cal valence is:</li>
+</ul>
+<ul>
+<li></li>
+<li>u_i(t)</li>
+<li>======</li>
+</ul>
+<ul>
+<li>ext{specific positive or negative affective modulation}.</li>
+<li></li>
+</ul>
+<ul>
+<li>us:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ho_i\neq\nu_i.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e proposed relation is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>u_i(t)</li>
+<li>======</li>
+</ul>
+<ul>
+<li></li>
+<li>eft(</li>
+<li>ho_i,</li>
+<li>athcal V_i,</li>
+<li>i,</li>
+<li>elta C_i,</li>
+<li>i,</li>
+<li>i_i</li>
+<li>ight).</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>ere:</li>
+</ul>
+<ul>
+<li>(\mathcal V_i): regulatory value;</li>
+<li>(R_i): bodily condition;</li>
+<li>(\Delta C_i): change in expected control;</li>
+<li>(H_i): learning history;</li>
+<li>(\Xi_i): context.</li>
+</ul>
+<ul>
+<li>e framework’s strongest claim is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{felt valence is the intrinsic character of}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>ext{aperture-level regulatory dynamics}.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is is more precise than saying pleasure equals symmetry or prediction-error reduction.</li>
+</ul>
+<hr/>
+<h1>XI. Agency and imagination</h1>
+<ul>
+<li>erture Inexternalism defines agency in levels.</li>
+</ul>
+<h2>Minimal agency</h2>
+<ul>
+<li>e system acts relative to endogenous conditions of persistence.</li>
+</ul>
+<h2>Flexible agency</h2>
+<ul>
+<li> can pursue one goal through multiple policies.</li>
+</ul>
+<h2>Counterfactual agency</h2>
+<ul>
+<li> generates possible futures.</li>
+</ul>
+<h2>Reflective agency</h2>
+<ul>
+<li> represents and evaluates its goals.</li>
+</ul>
+<h2>Self-revising agency</h2>
+<ul>
+<li> modifies the process by which goals are formed.</li>
+</ul>
+<ul>
+<li>rmally:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>lpha_i</li>
+<li>quiv_{\mathrm{inext}}</li>
+<li>peratorname{Closure}</li>
+<li>eft(</li>
+<li>athcal I_i,</li>
+<li>athcal V_i,</li>
+<li>athcal E_i,</li>
+<li>amma_i</li>
+<li>ight).</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>perienced authorship is not caused by a separate will.</li>
+</ul>
+<ul>
+<li> is the intrinsic character of one process:</li>
+</ul>
+<ul>
+<li>generating alternatives;</li>
+<li>evaluating them;</li>
+<li>selecting among them;</li>
+<li>incorporating the result into its own future.</li>
+</ul>
+<ul>
+<li>is provides a naturalized counterpart to finite <i>svātantrya</i> without claiming absolute causal independence.</li>
+</ul>
+<hr/>
+<h1>XII. Artificial consciousness</h1>
+<ul>
+<li>e framework rejects both:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{“software cannot possibly be conscious”}</li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{“the right software is automatically conscious.”}</li>
+<li></li>
+</ul>
+<ul>
+<li>digital or synthetic system would require more than sophisticated conversation.</li>
+</ul>
+<ul>
+<li> would need:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>egin{aligned}</li>
+<li>&amp;\ \text{persistent self-maintaining organization};\</li>
+<li>&amp;\ \text{endogenous rather than externally assigned stakes};\</li>
+<li>&amp;\ \text{continuous developmental memory};\</li>
+<li>&amp;\ \text{source-sensitive distinction among perception,}</li>
+<li>1mm]</li>
+<li>quad\text{imagination, inference, and external data};\</li>
+<li>&amp;\ \text{counterfactual world and self modelling};\</li>
+<li>&amp;\ \text{reciprocal system-level causal closure};\</li>
+<li>&amp;\ \text{goal and value revision};\</li>
+<li>&amp;\ \text{a physically real macro-process rather than}</li>
+<li>1mm]</li>
+<li>quad\text{a sequence interpreted as one by users}.</li>
+<li>nd{aligned}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e CF Debate correctly emphasizes that AI-consciousness assessment currently depends heavily on uncertain commitments about computational functionalism and that alternative theories could change which systems are considered plausible candidates. ([The Co-Sentience Initiative][7])</li>
+</ul>
+<ul>
+<li>der Aperture Inexternalism, a stateless language-model call is unlikely to constitute a full aperture because:</li>
+</ul>
+<ul>
+<li>its memory is externally supplied;</li>
+<li>its goals are externally assigned;</li>
+<li>its instances lack one continuous embodied trajectory;</li>
+<li>its value structure does not primarily regulate its own persistence;</li>
+<li>its token boundary may be imposed administratively rather than causally.</li>
+</ul>
+<ul>
+<li>future synthetic system could qualify if these conditions changed.</li>
+</ul>
+<hr/>
+<h1>XIII. Falsifiability and research programme</h1>
+<ul>
+<li>erture Inexternalism becomes superior only if its aperture criterion outperforms rival criteria.</li>
+</ul>
+<h2>Prediction 1 — Conscious unity tracks closure, not mere connectivity</h2>
+<ul>
+<li>creasing raw communication without shared:</li>
+</ul>
+<ul>
+<li>memory;</li>
+<li>value;</li>
+<li>source attribution;</li>
+<li>counterfactual policy;</li>
+</ul>
+<ul>
+<li>ould not produce subject fusion.</li>
+</ul>
+<hr/>
+<h2>Prediction 2 — Boundary changes require causal reorganization</h2>
+<ul>
+<li>ol use and social synchrony may change self-model and action boundaries without merging phenomenal fields.</li>
+</ul>
+<ul>
+<li>teral subject combination would require:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{deep bidirectional closure}</li>
+<li></li>
+</ul>
+<ul>
+<li>ross:</li>
+</ul>
+<ul>
+<li>memory;</li>
+<li>regulation;</li>
+<li>value;</li>
+<li>source;</li>
+<li>counterfactual control.</li>
+</ul>
+<hr/>
+<h2>Prediction 3 — Functional duplicates may differ if their active causal organization differs</h2>
+<ul>
+<li>playback device that reproduces outputs without active counterfactual modelling should not instantiate the same aperture as the original system.</li>
+</ul>
+<ul>
+<li>is directly addresses the CF counterfactual critique. ([The Co-Sentience Initiative][2])</li>
+</ul>
+<hr/>
+<h2>Prediction 4 — Valence tracks system-level regulatory confidence</h2>
+<ul>
+<li>sitive and negative valence should track changes in aperture-level expected control more reliably than raw prediction error or reward alone.</li>
+</ul>
+<hr/>
+<h2>Prediction 5 — Disrupting mnemonic-source closure disrupts diachronic selfhood</h2>
+<ul>
+<li>system may retain information while losing:</li>
+</ul>
+<ul>
+<li>pastness;</li>
+<li>mine-ness;</li>
+<li>autobiographical connection.</li>
+</ul>
+<ul>
+<li>is separates memory storage from aperture-level memory.</li>
+</ul>
+<hr/>
+<h2>Prediction 6 — No single scalar will identify consciousness</h2>
+<ul>
+<li>ither:</li>
+</ul>
+<ul>
+<li>(\Phi);</li>
+<li>complexity;</li>
+<li>entropy;</li>
+<li>prediction error;</li>
+<li>causal emergence;</li>
+<li>synchrony;</li>
+</ul>
+<ul>
+<li>ould suffice alone.</li>
+</ul>
+<ul>
+<li>e relevant signature is multivariate closure.</li>
+</ul>
+<hr/>
+<h1>XIV. The formal statement</h1>
+<h2>Definition — Aperture</h2>
+<ul>
+<li>process (O_i) is an aperture when it forms a maximal, causally active, temporally persistent closure across:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>athfrak A_i</li>
+<li>===========</li>
+</ul>
+<ul>
+<li>eft{</li>
+<li>athcal M_i,</li>
+<li>athcal V_i,</li>
+<li>athcal I_i,</li>
+<li>athcal E_i,</li>
+<li>athcal C_i,</li>
+<li>amma_i,</li>
+<li>i,</li>
+<li>_i</li>
+<li>ight}.</li>
+<li></li>
+<li></li>
+</ul>
+<h2>Identity thesis</h2>
+<ul>
+<li>r every conscious aperture:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>peratorname{Int}(O_i)=D_i</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>d:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>peratorname{Ext}(O_i)=\Sigma_i.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>erefore:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i\equiv_{\mathrm{inext}}O_i\equiv_{\mathrm{inext}}\Sigma_i.</li>
+<li></li>
+<li></li>
+</ul>
+<h2>Exclusion thesis</h2>
+<ul>
+<li>o phenomenal fields are distinct when their constitutive closures are non-identical:</li>
+</ul>
+<ul>
+<li></li>
+<li>i^\ast\neq O_j^\ast</li>
+<li>ightarrow</li>
+<li>i\neq D_j.</li>
+<li></li>
+</ul>
+<ul>
+<li>usal interaction does not entail phenomenal inclusion:</li>
+</ul>
+<ul>
+<li></li>
+<li>{j\rightarrow i}\subset D_i</li>
+<li></li>
+</ul>
+<ul>
+<li>ile:</li>
+</ul>
+<ul>
+<li></li>
+<li>j\not\subset D_i.</li>
+<li></li>
+</ul>
+<h2>Multiple-realization thesis</h2>
+<ul>
+<li>fferent substrates may support consciousness where they realize the same aperture-defining causal invariants:</li>
+</ul>
+<ul>
+<li></li>
+<li>igma_a\neq\Sigma_b</li>
+<li></li>
+</ul>
+<ul>
+<li>t:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{Apt}(\Sigma_a)</li>
+<li>ong</li>
+<li>peratorname{Apt}(\Sigma_b).</li>
+<li></li>
+</ul>
+<h2>Anti-abstraction thesis</h2>
+<ul>
+<li>mputational equivalence is insufficient where concrete aperture organization differs:</li>
+</ul>
+<ul>
+<li></li>
+<li>peratorname{Comp}(a)</li>
+<li>====================</li>
+</ul>
+<ul>
+<li>peratorname{Comp}(b)</li>
+<li>ot\Rightarrow</li>
+<li>a=D_b.</li>
+<li></li>
+</ul>
+<hr/>
+<h1>XV. What the framework proves—and does not prove</h1>
+<h2>It establishes by argument</h2>
+<ul>
+<li> A concrete conscious occurrence cannot be identical with an abstract computation.</li>
+<li> An adequate consciousness theory requires a concrete bearer-selection rule.</li>
+<li> Integration alone cannot explain phenomenal unity without a principled closure criterion.</li>
+<li> Phenomenal causation is most parsimoniously preserved by token identity rather than interaction between separate substances.</li>
+<li> Maximal closure across memory, value, counterfactuals, and reciprocal control is a stronger subject criterion than any single known boundary measure.</li>
+</ul>
+<h2>It proposes abductively</h2>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>i\equiv_{\mathrm{inext}}O_i^\ast.</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is cannot be derived from exclusively extrinsic premises because the intrinsic side is absent from those premises.</li>
+</ul>
+<ul>
+<li>t it can become empirically justified if the aperture:</li>
+</ul>
+<ul>
+<li>uniquely tracks consciousness;</li>
+<li>predicts its boundaries;</li>
+<li>predicts binding;</li>
+<li>predicts loss and recovery;</li>
+<li>explains valence;</li>
+<li>survives replacement cases;</li>
+<li>outperforms rivals.</li>
+</ul>
+<h2>It leaves open</h2>
+<ul>
+<li>ether all apertures participate in:</li>
+</ul>
+<ul>
+<li></li>
+<li>0</li>
+<li></li>
+</ul>
+<ul>
+<li>:</li>
+</ul>
+<ul>
+<li></li>
+<li>\infty.</li>
+<li></li>
+</ul>
+<ul>
+<li>rticipatory and Śaiva extensions remain possible:</li>
+</ul>
+<ul>
+<li></li>
+<li>i=\pi_i(M_0)</li>
+<li></li>
+</ul>
+<ul>
+<li>:</li>
+</ul>
+<ul>
+<li></li>
+<li>i^\ast</li>
+<li>======</li>
+</ul>
+<ul>
+<li>peratorname{Contraction}<i>i(C</i>\infty).</li>
+<li></li>
+</ul>
+<ul>
+<li>t neither is required by the core theory.</li>
+</ul>
+<hr/>
+<h1>XVI. Final superior formulation</h1>
+<hr/>
+<h1>Appendix: Tantrāloka Integration</h1>
+<h2>How the TĀ grounds each aperture component in textual evidence</h2>
+<h3>1. Manifest discrimination (𝒥ᵢ) — jñāna/prakāśa</h3>
+<ul>
+<li>ĪPK 1.3.7:** &quot;syād ekaś cid-vapur jñāna-smṛty-apohana-śaktimān&quot; — consciousness has the power of cognition as one of three fundamental powers. [T]</li>
+</ul>
+<ul>
+<li>TĀ 1.52:** &quot;A thing without the nature of manifestation has neither manifestness nor reality.&quot; Manifestation is the condition under which any property can appear. [T]</li>
+</ul>
+<ul>
+<li>TĀ 1.54:** &quot;Manifestation shines everywhere at all times. Because it cannot be denied, what use are means of knowledge to establish it?&quot; Even the attempt to deny manifestation occurs within manifestation. [T]</li>
+</ul>
+<ul>
+<li>Key result:** Manifestation has transcendental priority. Not proven: manifestation is one cosmic subject.</li>
+</ul>
+<h3>2. Memory (ℳᵢ) — smṛti</h3>
+<ul>
+<li>ĪPK 1.3.7:** Memory is the second of the three fundamental powers. [T]</li>
+</ul>
+<ul>
+<li>ĪPK 1.4.1-2 (Torella App.II):<i>* Memory is NOT passive trace-retrieval but active reconstruction. The Yoga Sūtra definition (&quot;anubhūtaviṣayāsampramoṣaḥ smṛtiḥ&quot;) is deliberately changed by Utpaladeva from *asampramoṣaḥ</i> (static non-extinction) to <i>asampramoṣaṇam</i> (active non-extinction-ing), emphasizing memory as a function of the agent subject. [T]</li>
+</ul>
+<ul>
+<li>The I as invariant:** Memory demonstrates that the &quot;I&quot; bridges past and present cognitions. The part-self (svātmāṃśe) is not limited by time, even though the part-object (arthāṃśe) belongs to the past. The one and same self-awareness (svasaṃvedana) of both cognitions creates the bridge that the Buddhist trace-model cannot explain. [T]</li>
+</ul>
+<ul>
+<li>Key result:** Memory is active reconstruction linking past and present through an invariant first-person pole. Not proven: that this invariant is a timeless metaphysical self rather than a dynamically maintained trajectory.</li>
+</ul>
+<h3>3. Determination (ℰᵢ) — apohana</h3>
+<ul>
+<li>ĪPK 1.3.7:** Exclusion (apohana) is the third fundamental power — not an incidental linguistic operation but a constitutive power of consciousness. [T]</li>
+</ul>
+<ul>
+<li>Torella App.I:** Utpaladeva transforms the Buddhist apoha (purely negative linguistic exclusion) into positive determination. The power of exclusion (apohana-śakti) operates when conceptual elaboration &quot;delimits an object in space and time.&quot; For the Buddhists, &quot;cow&quot; = &quot;not-non-cow&quot; (purely negative). For Utpaladeva, exclusion is the positive act of determining &quot;this as this.&quot; [T]</li>
+</ul>
+<ul>
+<li>TĀ 3:17-18 (rāga-niyati):** &quot;The principle of Attachment is just the craving itself for all objects; the principle of Restraint is that same craving when it arises with some particular fixed object.&quot; This pairs determination with desire: generalized reaching becomes specific fixation, producing a localized world. [T]</li>
+</ul>
+<ul>
+<li>Key result:** Determination through exclusion is textually established as a power of consciousness. Not proven: that content exclusion (E_content) is the same operation as subject exclusion (E_subject — why one field is private).</li>
+</ul>
+<h3>4. Counterfactual generation (ℐᵢ) — vikalpa/imagination</h3>
+<ul>
+<li>ĪPK I.6.10:** &quot;sa naisargika evāsti vikalpe svairacāriṇi / yathābhimatasaṃsthānābhāsanād buddhigocare&quot; — imagination wanders autonomously (svairacārin), self-prompted (svapreraṇa), manifesting configurations at will (yathābhimata). This is the clearest ordinary evidence of svātantrya (freedom). [T]</li>
+</ul>
+<ul>
+<li>ĪPK I.6.11:** &quot;ata eva yathābhīṣṭasamullekhāvabhāsanāt / jñānakriye sphuṭe eva siddhe sarvasya jīvataḥ&quot; — because imagination manifests objects at will, the powers of knowledge and action are evident in every living being, &quot;from a worm to Brahmā.&quot; Imagination is a path to Recognition (pratyabhijñā). [T]</li>
+</ul>
+<ul>
+<li>TĀ Vol 1 ~28356 (vīṇa passage):** &quot;A person who is at one (tanmaya) with the music experiences the beauty (vaicitrya) in a large number of notes applied by a dexterous touch... even when duality appears, reality is nondual.&quot; The musician simultaneously generates, predicts, perceives, corrects, and evaluates the musical structure — an unusually tight loop of imagination → action → world → perception → self-modification. [T — from MVV, cited in TĀ commentary]</li>
+</ul>
+<ul>
+<li>Key result:** Imagination provides the clearest ordinary evidence for finite creative freedom. Not proven: that this entails absolute metaphysical freedom (V₁ ⇏ V₅).</li>
+</ul>
+<h3>5. Endogenous valuation (𝒱ᵢ) — rāga/camatkāra</h3>
+<ul>
+<li>ĪPK 1.5.11 Vṛtti:** Vimarśa (reflexive awareness) IS rendered as camatkāra (aesthetic relish). The distinction between sentient and insentient IS the presence of camatkāra. [T]</li>
+</ul>
+<ul>
+<li>ĪPK 2.4.20 Vivṛti:** Svātantrya (freedom) is developed in terms of camatkāra. Svātantryābhāvāt (absence of freedom) = camatkārābhāvāt (absence of aesthetic relish). [T]</li>
+</ul>
+<ul>
+<li>PTv p. 19** (cited in TĀ Vol 1 commentary): &quot;Supreme consciousness itself, the supreme Bhairava, which is perfectly full, because it is always by its very nature essentially the aesthetic relish of consciousness which is independent of all things and most free.&quot; [T]</li>
+</ul>
+<ul>
+<li>TĀ Vol 5:4146:** The universe is &quot;the condensation of the flood of the juice (rasa) of consciousness, that has assumed a fixed defined form.&quot; The cosmos IS condensed aesthetic relish. [T]</li>
+</ul>
+<ul>
+<li>Rastogi extraction (Ch.5):** Two formulations of camatkāra: existential (ρᵢ — joyful valuation of everything as oneself) and experiential (νᵢ — aesthetic savoring). Existential camatkāra IS basal self-affection. Experiential camatkāra IS local valence. [R — Rastogi&#x27;s reconstruction from Utpaladeva&#x27;s texts]</li>
+</ul>
+<ul>
+<li>Key result:** Consciousness IS self-affective, not neutral. Not proven: that regulatory weighting (Semᵢ, Vᵢ) entails felt valence (νᵢ). The adaptation-rate model is a candidate bridge.</li>
+</ul>
+<h3>6. Connective synthesis (𝒞ᵢ) — anusandhāna</h3>
+<ul>
+<li>TĀ 16.242:** &quot;bhogyajñānaṃ nānyadeheṣv anusandhānam arhati&quot; — &quot;Knowledge that is enjoyed in one body cannot perform connective synthesis with other bodies.&quot; This is the strongest textual basis for local phenomenal exclusion. Anusandhāna connects cognitions within one body (Bᵢ) but not across bodies (Bⱼ). [T]</li>
+</ul>
+<ul>
+<li>Formal result:** One field is the maximal domain over which connective synthesis can operate:</li>
+</ul>
+<ul>
+<li>`</li>
+<li> = {x | x can enter reciprocal anusandhāna within Bᵢ}</li>
+<li> = MaximalConnectedDomain(Cᵢ)</li>
+<li>`</li>
+</ul>
+<ul>
+<li>Key result:** The body is the condition under which cognitions can be retained together, recognized together, compared, attributed to one stream, and integrated across time. Not proven: that maximal connective synthesis = phenomenal co-presence.</li>
+</ul>
+<h3>7. Developmental trajectory (Γᵢ) — spanda/kāla</h3>
+<ul>
+<li>TĀ 1.59cd-60ab:** &quot;Space, time and form cannot divide up Śiva, Who is the Light of consciousness and independent of (all) else, because (space and the rest) are conditioned by thought constructs based on unity and diversity (bhedābheda).&quot; Time is not an external container but a construction within consciousness. [T]</li>
+</ul>
+<ul>
+<li>TĀ Vol 4 ~1110:** &quot;The vital breath is the first manifestation of consciousness. The intellect and the rest depend upon it, because they are vitalized by it.&quot; Prāṇa is the bridge from consciousness to temporal embodiment — the pulse (spanda) that manifests as temporal structure. [T]</li>
+</ul>
+<ul>
+<li>Kāla as a kañcuka:** Time is one of the five coverings — a freely assumed limitation that constrains access to non-present states. The weak scientific interpretation (time as finite temporal access) is supported; the strong interpretation (consciousness creates physical time) is not. [T]</li>
+</ul>
+<ul>
+<li>Key result:** Temporal continuity is a constructed feature of the aperture, not a direct readout of physical time. Not proven: that the spanda model entails one universal subject rather than one processual dynamic.</li>
+</ul>
+<h3>8. Embodied realization (Bᵢ) — deha-kula</h3>
+<ul>
+<li>TĀ 10:12113-12125:** &quot;saṁvit sarvātmikā dehabhedād yā saṅkucet tu ṣā / melake &#x27;nyonyasaṅghaṭṭapratibimbād vikasvarā&quot; — &quot;Consciousness, which is all things, contracts due to the differences between the bodies... [and] returns to its state of ongoing expansion during a gathering, because of the mutual reflection taking place by their union with one another.&quot; [T]</li>
+</ul>
+<ul>
+<li>TĀ 1 (Kula definition):** The body is &quot;the aggregate of the vital breaths, organs of sense, gross elements etc.&quot; — the condensed condition of consciousness by virtue of its freedom. [T]</li>
+</ul>
+<ul>
+<li>Reflection model (corrected):** The behavior of another subject within my stream is the reflection (pratibimba). The other stream is INFERRED as the original (bimba). Dⱼ ⊄ Dᵢ but Rⱼ→ᵢ ⊂ Dᵢ. The body is NOT the mirror; it is the DIFFERENTIATING CONDITION that makes reflection possible. Three models remain viable: (A) body as mirror, (B) consciousness as mirror with bodies as differentiating conditions, (C) relation as mirror. [T + correction from Ratié]</li>
+</ul>
+<ul>
+<li>Key result:** Body differences contract consciousness; mutual reflection expands it. Not proven: that the body boundary IS the phenomenal boundary. Skin ≠ peripersonal space ≠ cognitive light cone ≠ phenomenal field.</li>
+</ul>
+<h3>9. Self-model (SMᵢ) — ahaṃkāra/vimarśa</h3>
+<ul>
+<li>TĀ 1.127:** &quot;ahaṃrūpā tu saṃvittirnityā svaprathanātmikā&quot; — &quot;I-shaped consciousness is eternally self-manifesting.&quot; The &quot;I&quot; is not an ego added to consciousness but consciousness&#x27;s own form. [T]</li>
+</ul>
+<ul>
+<li>TĀ Vol 10 ~23762:** Ahaṅcamatkāra — &quot;the aesthetic rapture of &#x27;I am&#x27;.&quot; Selfhood IS wonder, not something that has wonder. [T]</li>
+</ul>
+<ul>
+<li>Timalsina Aham paper (2020):** Three topographies of aham: (1) empirical ego — limited self identified with body; (2) subject of experience — the &quot;I&quot; that objectifies the ego; (3) absolute I-consciousness (pūrṇāhantā) — the &quot;I&quot; that embodies the totality. [R — from Timalsina&#x27;s reconstruction of Abhinavagupta]</li>
+</ul>
+<ul>
+<li>Key result:** The self-model is not a single thing but a spectrum from contracted (ego) to expanded (absolute I-consciousness). Not proven: that the absolute endpoint entails numerical identity across all subjects.</li>
+</ul>
+<h3>Summary Table</h3>
+<ul>
+<li>Aperture Component | Sanskrit | TĀ Source | Established | Not Established |</li>
+<li>------------------|----------|-----------|-------------|-----------------|</li>
+<li>𝒥ᵢ (discrimination) | jñāna/prakāśa | ĪPK 1.3.7, TĀ 1.52-54 | Manifestation is irreducible | Manifestation = one subject |</li>
+<li>ℳᵢ (memory) | smṛti | ĪPK 1.4.1-2, App.II | Active reconstruction through the I | Timeless metaphysical self |</li>
+<li>ℰᵢ (determination) | apohana | ĪPK 1.3.7, App.I | Exclusion = constitutive power | Content ≠ subject exclusion |</li>
+<li>ℐᵢ (generation) | vikalpa | ĪPK I.6.10-11 | Imagination = svātantrya | Absolute freedom |</li>
+<li>𝒱ᵢ (valuation) | rāga/camatkāra | ĪPK 1.5.11, 2.4.20, PTv p.19 | Consciousness IS self-affective | Regulatory weighting ⇏ felt valence |</li>
+<li>𝒞ᵢ (synthesis) | anusandhāna | TĀ 16.242 | Body-bounded connective synthesis | Max synthesis = phenomenal unity |</li>
+<li>Γᵢ (trajectory) | spanda/kāla | TĀ 1.59-60, TĀ 4 ~1110 | Time as constructed feature | One dynamic = one subject |</li>
+<li>Bᵢ (embodiment) | deha-kula | TĀ 10:12113, TĀ 1 (Kula) | Body as differentiating condition | Body boundary = phenomenal boundary |</li>
+<li>SMᵢ (self-model) | ahaṃkāra/vimarśa | TĀ 1.127, TĀ 10 ~23762 | Three-level self (ego/witness/absolute) | Absolute I = numerically one across subjects |</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>egin{aligned}</li>
+<li>extbf{Aperture Inexternalism:}\quad</li>
+<li>text{A conscious subject is a concrete, maximal,}\</li>
+<li>text{temporally persistent closure of memory,}\</li>
+<li>text{endogenous value, counterfactual generation,}\</li>
+<li>text{determination, source attribution, and reciprocal}\</li>
+<li>text{control. The process is extrinsically observable}\</li>
+<li>text{as an embodied causal organization and intrinsically}\</li>
+<li>text{exists as one private, temporally unified, valenced}\</li>
+<li>text{phenomenal field. These are not correlated entities}\</li>
+<li>text{but two modes of access to one token process.}</li>
+<li>nd{aligned}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>s master equation is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>peratorname{MaxClosure}</li>
+<li>eft(</li>
+<li>athcal M_i,</li>
+<li>athcal V_i,</li>
+<li>athcal I_i,</li>
+<li>athcal E_i,</li>
+<li>athcal C_i,</li>
+<li>amma_i,</li>
+<li>i,</li>
+<li>_i</li>
+<li>ight)</li>
+<li>quiv_{\mathrm{inext}}</li>
+<li>eft(</li>
+<li>i,</li>
+<li>i,</li>
+<li>artial_i,</li>
+<li>au_i,</li>
+<li>u_i,</li>
+<li>lpha_i,</li>
+<li>ho_i</li>
+<li>ight).</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>e central wager is not:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{complexity creates consciousness}.</li>
+<li></li>
+</ul>
+<ul>
+<li> is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{the right concrete process is consciousness}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{when encountered from its own intrinsic side.}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>is is superior to computational functionalism because it distinguishes abstract computation from concrete subjecthood.</li>
+</ul>
+<ul>
+<li> is superior to dualism because it requires no interaction between separate substances.</li>
+</ul>
+<ul>
+<li> is superior to panpsychism because it does not populate every physical component with a separate subject.</li>
+</ul>
+<ul>
+<li> is superior to idealism because it does not require the immediate universalization of all local fields into one cosmic subject.</li>
+</ul>
+<ul>
+<li> is superior to reductive physicalism because it acknowledges that an extrinsic relational description cannot contain intrinsic manifestation while preserving numerical identity between the two.</li>
+</ul>
+<ul>
+<li>e final research question is no longer:</li>
+</ul>
+<ul>
+<li></li>
+<li>ext{How does matter produce mind?}</li>
+<li></li>
+</ul>
+<ul>
+<li> is:</li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{Which concrete physical closures are intrinsic centres,}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{and can their phenomenal boundaries be predicted}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{from their causal organization strongly enough to}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li></li>
+<li>oxed{</li>
+<li>extbf{establish token identity as the best explanation?}</li>
+<li></li>
+<li></li>
+</ul>
+<ul>
+<li>]: https://cf-debate.com/ &quot;Computational Functionalism Debate | The Co-Sentience Initiative&quot;</li>
+<li>]: https://cf-debate.com/argument/counterfactual-computation/ &quot;Counterfactual Computation Critique | CF Debate&quot;</li>
+<li>]: https://cf-debate.com/argument/phenomenal-binding/ &quot;Phenomenal Binding Problem | CF Debate&quot;</li>
+<li>]: https://cf-debate.com/argument/fading-qualia/ &quot;Fading Qualia | CF Debate&quot;</li>
+<li>]: https://cf-debate.com/argument/multiple-realizability/ &quot;Multiple Realisability Argument | CF Debate&quot;</li>
+<li>]: https://cf-debate.com/argument/physics-violations/ &quot;Physics Violations | CF Debate&quot;</li>
+<li>]: https://cf-debate.com/why/ &quot;Computational Functionalism Debate | The Co-Sentience Initiative&quot;</li>
+</ul><div class="sub">Sources & corrections: <a href="https://github.com/prx0r/ipvv/edit/master/site/data/recognition-framework/inexternalism_formal.md">edit source →</a>. source lives here.</div><div class="pn" id="pnslot"></div></main>
+<aside class="toc"><div class="hd">On this page</div><div id="tocbody"></div></aside></div>
+<footer><div class="fin"><span>Display only what is formally done.</span><a href="/support/index.html">Support</a><a href="/tools/index.html">Tools</a><a href="/data/person-schema.json">Schema</a><a href="https://github.com/prx0r/ipvv">Source</a><a href="https://github.com/prx0r/ipvv/issues/new">Improve this page</a></div></footer>
+<script>window.API="https://ipvv-api.tradesprior.workers.dev";var __IDX__=null;fetch("/data/search-index.json").then(function(r){return r.json()}).then(function(d){__IDX__=d});
+var q=document.getElementById("q");
+if(q){q.addEventListener("keydown",function(e){if(e.key==="Enter"&&__IDX__){var v=q.value.toLowerCase();var m=__IDX__.filter(function(x){return x.t.toLowerCase().indexOf(v)>-1}).slice(0,1)[0];if(m&&m.u)location.href=m.u}})}
+var c=document.getElementById("crumbs");if(c){var p=location.pathname.split("/").filter(Boolean);var h='<a href="/index.html">home</a>';var acc="";p.forEach(function(seg,i){acc+="/"+seg;var last=i===p.length-1;var t=decodeURIComponent(seg).replace(/[-_]/g," ").replace(/\.html$/,"");h+=(last?" › "+t:' › <a href="'+acc+(acc==="/index"?"":".html")+'">'+t+"</a>")});c.innerHTML=h;}</script>
+<script>
+(function(){
+var b=document.getElementById('burger');
+if(b){b.addEventListener('click',function(){document.body.classList.toggle('navopen')});}
+// persist masters collapse + sidebar scroll across navigations
+try{
+document.querySelectorAll('details.mnav').forEach(function(mn,ix){
+var key=mn.getAttribute('data-mnav')||('mnav'+ix);
+var saved=null;try{saved=localStorage.getItem('mnav_'+key)}catch(e){}
+if(saved==='0')mn.removeAttribute('open');else if(saved==='1')mn.setAttribute('open','');
+else{var path0=location.pathname;
+if((key==='masters'&&/^\/masters\//.test(path0))||(key==='scholars'&&/^\/scholars\//.test(path0)))mn.removeAttribute('open');}
+mn.addEventListener('toggle',function(){try{localStorage.setItem('mnav_'+key,mn.open?'1':'0')}catch(e){}});
+});
+var side=document.getElementById('sidenav');
+if(side){
+  var sp=localStorage.getItem('sidenav_scroll');
+  if(sp)side.scrollTop=parseInt(sp,10)||0;
+  side.addEventListener('scroll',function(){localStorage.setItem('sidenav_scroll',side.scrollTop)},{passive:true});
+}
+}catch(e){}
+function initToc(){
+var toc=document.getElementById('tocbody');
+if(!toc)return;
+var hs=document.querySelectorAll('main h2, main h3');var html='';
+hs.forEach(function(h,i){if(!h.id){h.id='s'+i}html+='<a href="#'+h.id+'" data-t="'+h.id+'">'+h.textContent.slice(0,60)+'</a>'});
+toc.innerHTML=html||'<span style="color:#999">—</span>';
+var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+function spy(){var y=window.scrollY+120,cur=null;
+hs.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+if(!cur&&links.length)links[0].classList.add('on');}
+window.onscroll=function(){spy()};
+spy();}
+initToc();
+// topnav: dropdown toggle + current-section highlight (re-run after swaps)
+function initNav(){
+var lb=document.getElementById('libbtn');
+if(lb&&!lb.dataset.wired){lb.dataset.wired='1';
+lb.addEventListener('click',function(e){e.stopPropagation();
+var d=lb.parentElement;var open=d.classList.contains('open');
+document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')});
+if(!open)d.classList.add('open');});
+document.addEventListener('click',function(){document.querySelectorAll('.topnav .drop.open').forEach(function(x){x.classList.remove('open')})});}
+var sec=(location.pathname.split('/').filter(Boolean)[0]||'').replace(/\.html$/,'');
+document.querySelectorAll('#topnav a[data-sec]').forEach(function(a){
+var on=a.getAttribute('data-sec')===sec;
+a.classList.toggle('on',!!on);
+});
+var inlib=document.querySelector('#topnav .dropmenu a.on');
+var lbb=document.getElementById('libbtn');
+if(lbb)lbb.classList.toggle('on',!!inlib);
+}
+initNav();
+// instant nav: same-origin clicks fetch + swap <main>, no full reload
+function swapMain(html,url,push){
+var doc=new DOMParser().parseFromString(html,'text/html');
+var nm=doc.querySelector('main');
+if(!nm){location.href=url;return;}
+document.querySelector('main').innerHTML=nm.innerHTML;
+document.title=doc.title||document.title;
+var path=new URL(url,location.origin).pathname;
+document.querySelectorAll('#sidenav a').forEach(function(a){
+var h=a.getAttribute('href')||'';
+var t=a.textContent.replace(/^›\s*/,'');
+a.textContent=t;
+if(h===path){a.textContent='› '+t;}
+});
+initToc();
+initNav();
+if(push!==false){try{history.pushState({u:url},'',url)}catch(e){}}
+window.scrollTo(0,0);
+}
+if(!window.__swapBound){window.__swapBound=true;
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a'):null;
+if(!a||!a.href)return;
+if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button!==0)return;
+if(a.target==='_blank'||a.hasAttribute('download'))return;
+try{if(new URL(a.href).origin!==location.origin)return;}catch(x){return;}
+try{if(new URL(a.href).hash)return;}catch(x){return;}
+if(a.href===location.href)return;
+e.preventDefault();
+e.stopImmediatePropagation();
+fetch(a.href).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){swapMain(h,a.href,true)}).catch(function(){location.href=a.href});
+});
+document.addEventListener('click',function(e){
+var b=e.target.closest?e.target.closest('.depth button'):null;
+if(!b)return;
+var d=b.closest('.depth');if(!d)return;
+d.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+d.querySelectorAll('.tpanel').forEach(function(p){p.style.display=p.dataset.p===b.dataset.p?'block':'none'});
+});
+window.addEventListener('popstate',function(e){
+var u=(e.state&&e.state.u)||location.href;
+fetch(u).then(function(r){return r.text()}).then(function(h){swapMain(h,u,false)}).catch(function(){location.href=u});
+});
+}
+})();
+</script><script>
+(function(){
+if(!window.API)return;
+var btn=document.createElement('button');
+btn.textContent='Ask';
+btn.style.cssText='position:fixed;bottom:1rem;right:1rem;z-index:90;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;font-family:Inter,sans-serif;font-size:.84rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)';
+document.body.appendChild(btn);
+var work=location.pathname.split('/')[1]||'ipvv';
+var works=[work];
+// multi-text: add works via ?works=ipvv,tantrasara
+var wm=new URLSearchParams(location.search).get('works');
+if(wm)works=wm.split(',').map(function(w){return w.trim()}).filter(Boolean);
+var workStr=works.join(',');
+var panel=document.createElement('div');
+panel.style.cssText='position:fixed;bottom:4rem;right:1rem;width:min(90vw,360px);max-height:60vh;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:none;flex-direction:column;z-index:90;font-family:Inter,sans-serif';
+panel.innerHTML='<div style="padding:.6rem .8rem;border-bottom:1px solid var(--line);font-weight:600;font-size:.84rem;display:flex;justify-content:space-between;align-items:center"><span>Ask '+works.join(', ')+'</span><button id="voicebtn" style="padding:.2rem .5rem;border:1px solid var(--line);border-radius:.4rem;background:var(--card);cursor:pointer;font-size:.78rem">🎤</button></div><div id="chatmsgs" style="flex:1;overflow:auto;padding:.6rem .8rem;font-size:.84rem;min-height:120px"></div><div style="padding:.5rem .8rem;border-top:1px solid var(--line);display:flex;gap:.4rem"><input id="chatin" placeholder="Ask or speak..." style="flex:1;padding:.4rem .6rem;border:1px solid var(--line);border-radius:.4rem;font-size:.84rem"/><button id="chatsend" style="padding:.4rem .7rem;background:var(--ink);color:#fff;border:0;border-radius:.4rem;cursor:pointer;font-size:.84rem">Send</button></div>';
+document.body.appendChild(panel);
+btn.onclick=function(){panel.style.display=panel.style.display==='flex'?'none':'flex'};
+var sid=null;
+function addMsg(role,text){var d=document.createElement('div');d.style.cssText='margin:.4rem 0;'+(role==='user'?'text-align:right':'');d.innerHTML='<b>'+(role==='user'?'You':'Assistant')+':</b> '+text;document.getElementById('chatmsgs').appendChild(d);document.getElementById('chatmsgs').scrollTop=99999}
+// voice input
+var vr=null;
+if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  vr=new SR();vr.lang='en-US';vr.interimResults=false;
+  vr.onresult=function(e){document.getElementById('chatin').value=e.results[0][0].transcript;document.getElementById('chatsend').click()};
+  vr.onerror=function(e){addMsg('assistant','Voice error: '+e.error)};
+}
+var voicebtn=document.getElementById('voicebtn');
+if(voicebtn&&vr){voicebtn.onclick=function(){vr.start();voicebtn.textContent='🔴';vr.onend=function(){voicebtn.textContent='🎤'}}}
+document.getElementById('chatsend').onclick=function(){
+  var msg=document.getElementById('chatin').value.trim();
+  if(!msg)return;
+  document.getElementById('chatin').value='';
+  addMsg('user',msg);
+  fetch(window.API+'/api/chat/'+workStr,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,session_id:sid})})
+    .then(r=>r.json()).then(d=>{sid=d.session_id;addMsg('assistant',d.reply);if(d.suggestion){var s=document.createElement('div');s.style.cssText='margin:.4rem 0;font-size:.78rem;color:#7c5410;cursor:pointer;text-decoration:underline';s.textContent='→ '+d.suggestion;s.onclick=function(){document.getElementById('chatin').value=d.suggestion;document.getElementById('chatsend').click()};document.getElementById('chatmsgs').appendChild(s)}})
+    .catch(e=>addMsg('assistant','Error: '+e.message));
+};
+})();
+</script>{varjs}</body></html>

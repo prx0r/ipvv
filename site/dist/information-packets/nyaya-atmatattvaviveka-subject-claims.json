@@ -1,0 +1,116 @@
+{
+  "packet_id": "ip:nyaya-atmatattvaviveka-subject",
+  "schema_version": 2,
+  "artifact_type": "argument_fabric_claim_packet",
+  "source": {
+    "source_id": "sanskritree:truth:truthanother",
+    "title": "Nyāya Control: Udayana's Ātmatattvaviveka on Plural Selves vs Universal Subject",
+    "author": "Udayana",
+    "source_files": [
+      "/root/projects/sanskritree/truth/truthanother"
+    ],
+    "external_sources": [
+      {
+        "source_id": "gretil:nyayasutra",
+        "title": "Nyāyasūtra (GRETIL)",
+        "source_quality": "primary_text"
+      },
+      {
+        "source_id": "gretil:tarkasamgraha",
+        "title": "Tarkasaṃgraha (GRETIL)",
+        "source_quality": "primary_text"
+      }
+    ],
+    "tradition_scope": "nyaya"
+  },
+  "target_question_id": "q:utpaladeva-universalization-validity",
+  "extracted_by": "codex",
+  "extracted_at": "2026-07-28",
+  "status": "draft_from_comparative_dossier",
+  "claims": [
+    {
+      "claim_id": "cl:nyaya-plural-selves-explain-without-universal",
+      "source_type": "comparative_analysis",
+      "source_id": "truthanother:nyaya-udayana",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthanother",
+        "locator": "lines 326-391",
+        "quote": "Memory, recognition, desire, effort and cognition belong to enduring individual selves. Other minds are inferred from embodied behaviour. Objects exist independently and cause cognitions. No universal consciousness is required."
+      },
+      "claim_text": "Nyāya supplies the strongest pluralist realist alternative to Pratyabhijñā's universal subject: enduring individual selves explain memory, recognition, desire, effort, cognition, and other-minds inference without requiring one numerically universal consciousness. Udayana's Ātmatattvaviveka systematically defends plural enduring selves against Buddhist momentariness and idealist pressures, arguing that causal efficacy does not require instantaneous destruction and that momentariness destabilizes causality, universals, identification, memory, error correction, and determinate individuals.",
+      "targets": [
+        {
+          "target_id": "cand:nyaya-plural-selves",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:numerical-identity-of-finite-and-unlimited-self",
+          "target_type": "crux"
+        },
+        {
+          "target_id": "bridge:utpaladeva-subject-nyaya-plural-self",
+          "target_type": "bridge"
+        }
+      ],
+      "tradition_scope": "nyaya",
+      "paradigm": "nyaya",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "vyapti(atman_bahutva,sarvartha_samvit_eka_pramatr)",
+      "hetu": "plural enduring selves explain memory, recognition, desire, effort and cognition as completely as one universal subject would",
+      "sadhya": "universal consciousness is not uniquely required; plural selves are a cheaper explanation",
+      "vyapti_statement": "If plural enduring selves can explain every cognitive phenomenon that a universal subject would explain, then the universal subject is not proven by cognitive phenomena alone — an additional argument is required to show why plurality is insufficient.",
+      "vyapti_confidence": 0.75,
+      "log_bayes_factor": 0.6,
+      "w_rel": 0.8,
+      "w_map": 0.7,
+      "w_aux": 0.75,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that a specifically universal (rather than plural-individual) subject is required to explain some cognitive phenomenon that plural selves cannot — e.g., transpersonal synthesis, shared memory, or cross-subject unity of consciousness.",
+        "status": "untested"
+      },
+      "reasoning": "This is the decisive control (truthanother line 391: 'Nyāya pays the substance-self cost but avoids the universal-consciousness leap'). If Nyāya can explain ownership, memory, action, recognition, and other minds with plural enduring subjects, Pratyabhijñā must show why one universal subject is explanatorily necessary. The Ātmatattvaviveka is the essential control text."
+    },
+    {
+      "claim_id": "cl:nyaya-momentariness-destabilizes-identity",
+      "source_type": "comparative_analysis",
+      "source_id": "truthanother:nyaya-udayana-momentariness",
+      "source_span": {
+        "file": "/root/projects/sanskritree/truth/truthanother",
+        "locator": "lines 342-353",
+        "quote": "Udayana argues that causal efficacy does not require instantaneous destruction. A condition may persist while awaiting cooperating conditions before producing an effect. He also argues that momentariness destabilizes causality, universals, identification, memory, error correction, and determinate individuals."
+      },
+      "claim_text": "Udayana argues against Buddhist momentariness: a condition may persist while awaiting cooperating conditions — causal efficacy does not require instantaneous destruction. Momentariness destabilizes causality, universals, identification, memory, error correction, and determinate individuals. This provides Nyāya's positive argument for enduring subjects: persistence through change is required for cognition to be intelligible, and this persistence is sufficiently explained by plural individual selves without requiring one universal self.",
+      "targets": [
+        {
+          "target_id": "cand:nyaya-plural-selves",
+          "target_type": "candidate_explanation"
+        },
+        {
+          "target_id": "crux:transpersonal-synthesis-unobserved",
+          "target_type": "crux"
+        }
+      ],
+      "tradition_scope": "nyaya",
+      "paradigm": "nyaya",
+      "evidence_dimension": "textual",
+      "pramana": "sabda",
+      "nn_expr": "virodha(ksanikatva,atma_sthiratva)",
+      "hetu": "momentariness undermines the conditions for cognition (causality, universals, memory, identification)",
+      "sadhya": "cognition requires an enduring substrate, but this substrate need only be individual, not universal",
+      "vyapti_statement": "If cognition requires persistence and momentariness is unintelligible, then an enduring substrate is required — but the argument for endurance does not by itself select a universal rather than plural substrate.",
+      "vyapti_confidence": 0.7,
+      "log_bayes_factor": 0.45,
+      "w_rel": 0.75,
+      "w_map": 0.65,
+      "w_aux": 0.7,
+      "falsifier": {
+        "type": "formal",
+        "condition": "Show that the endurance required for cognition is specifically the endurance of one universal consciousness rather than the endurance of each individual self.",
+        "status": "untested"
+      },
+      "reasoning": "Udayana's argument against momentariness is shared ground with Pratyabhijñā — both reject anonymous momentary streams. The question is whether the endurance required is individual (Nyāya) or universal (Pratyabhijñā). This claim supports Nyāya's plural-self candidate by providing a positive argument for endurance without requiring universality."
+    }
+  ]
+}
