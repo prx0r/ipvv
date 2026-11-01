@@ -208,12 +208,12 @@ function tick(){
   const audio = KAR.audio;
   if(!audio) return;
   const t = audio.currentTime;
-  document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+  // CUMULATIVE, like the video cards: a syllable stays ink once its onset
+  // passes (video uses on = t >= t_on and never clears mid-page).
   const all = Array.prototype.slice.call(document.querySelectorAll('.kw[data-t0]'));
   for(const w of all){
     if(+w.getAttribute('data-v') !== KAR.cur) continue;
-    const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
-    if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
+    if(t >= parseFloat(w.getAttribute('data-t0'))) w.classList.add('on');
   }
   if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
 }

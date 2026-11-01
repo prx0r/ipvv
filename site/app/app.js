@@ -227,16 +227,15 @@ async function work(path){
     `<div id="answer" style="display:none"></div>`;
   const audio = new Audio(); audio.preload='auto'; KAR.audio = audio;
   const st = document.createElement('style');
-  st.textContent = '#reader{max-width:46rem}.verse{margin:2.2rem 0}.verse:first-child{margin-top:1rem}.dline{font-size:1.75rem;line-height:1.75;color:var(--ink)}.rline{font-size:.98rem;color:#76736e;margin:.15rem 0 1rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:background .3s;border-radius:.2em;padding:0 .08em}.kw.on{background:#fdf0d5}.kword .kw{padding:0;border-radius:0}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
+  st.textContent = '#reader{max-width:46rem}.verse{margin:2.2rem 0}.verse:first-child{margin-top:1rem}.dline{font-size:1.75rem;line-height:1.75;color:var(--ink)}.rline{font-size:.98rem;color:#76736e;margin:.15rem 0 1rem}.en{font-size:1rem;line-height:1.65}#rcbar{position:fixed;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:11;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;display:flex;gap:.2rem;box-shadow:0 4px 16px rgba(0,0,0,.08)}#rcbar button{border:0;background:none;cursor:pointer;font-size:1.1rem;padding:.3rem .6rem;border-radius:999px}#rcbar button:hover{background:#f4f1ea}.kw{transition:color .18s ease;color:#cfc9be;padding:0 .02em}.kw.on{color:#17140f}.kword .kw{padding:0}.vnow{box-shadow:-3px 0 0 var(--gold);padding-left:.8rem}';
   document.head.appendChild(st);
   function tick(){
     const t = audio.currentTime;
-    document.querySelectorAll('.kw.on').forEach(w=>w.classList.remove('on'));
+    // CUMULATIVE like the video cards (on = t >= t_on, never cleared mid-page)
     const all = Array.prototype.slice.call(document.querySelectorAll('.kw[data-t0]'));
     for(const w of all){
       if(+w.getAttribute('data-v') !== KAR.cur) continue;
-      const t0 = parseFloat(w.getAttribute('data-t0')), t1 = parseFloat(w.getAttribute('data-t1'));
-      if(t >= t0 && t <= t1){ w.classList.add('on'); break; }
+      if(t >= parseFloat(w.getAttribute('data-t0'))) w.classList.add('on');
     }
     if(!audio.paused && !audio.ended) KAR.timer = requestAnimationFrame(tick);
   }

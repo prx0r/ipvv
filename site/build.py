@@ -137,7 +137,8 @@ RECITECSS = """
 .vplay.all{background:var(--ink);color:#fff;border-color:var(--ink);font-size:.88rem;padding:.5rem 1.1rem}
 article.verse{scroll-margin-top:80px}
 article.verse.on{border-left:2px solid var(--gold);background:var(--card-hi)}
-article.verse .w.lit{background:#f4ead3;border-radius:3px}
+article.verse .w{color:#cfc9be;transition:color .18s ease}
+article.verse .w.lit{color:#17140f}
 .kword{white-space:nowrap}
 .pada{margin-bottom:.15rem}
 .srcbadge{font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
@@ -222,8 +223,9 @@ function clearLit(it){if(!it||!it.el)return;Array.prototype.forEach.call(it.el.q
 function litAt(it,t){
   if(!it||!it.el||!it.el.querySelectorAll)return;
   Array.prototype.forEach.call(it.el.querySelectorAll(".w[data-on]"),function(x){
-    var on=parseFloat(x.getAttribute("data-on")),off=parseFloat(x.getAttribute("data-off"));
-    if(t>=on&&t<=off)x.classList.add("lit");else x.classList.remove("lit");
+    var on=parseFloat(x.getAttribute("data-on"));
+    // CUMULATIVE like the video cards: once sung, stays ink.
+    if(t>=on)x.classList.add("lit");
   });
 }
 function playStep(){
