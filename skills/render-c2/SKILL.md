@@ -34,7 +34,8 @@ floor                        what C2 takes from it
 ───────────────────────────── ──────────────────────────────────────────────
 Sanskrit (source span)        the anchor; the verse as uttered, nothing else
 L0 / canonical T1 gloss      the technical terms (śakti, spanda, vimarśa…);
-                             terms keep their Sanskrit on first use, then voice freely
+                             all rendered in English — translate, never
+                             transliterate-and-leave (names may stay)
 L1 (close, prop-faithful)    the load-bearing propositions — EVERY one must
                              survive the rendering, in any voice
 R1 cruxes / T2 rival         (where present, e.g. IPVV passages) the contested
@@ -75,8 +76,9 @@ claim, never add doctrine, never add examples or morals the packet lacks.
    packet does not name. No modern comparisons beyond diction itself.
 3. **Open stays open.** Unresolved points and OPEN cruxes are hedged in-voice
    ("maybe", "the verse leaves it there") or omitted — never settled.
-4. **Terms anchored.** Sanskrit technical terms appear in Sanskrit on first use,
-   then in whatever voice fits. Nothing load-bearing is lost to slang.
+4. **Terms translated, never stranded.** No untranslated Sanskrit in the output
+   (names like Bhairava may stay). Every term appears in English — translate,
+   never transliterate-and-leave.
 5. **Verse-scale.** One verse in, one short interpretation out. Never summarize
    the work; never continue into the next verse.
 6. **Voice, not persona.** The voice may joke; it may not preach, flatter the
@@ -105,8 +107,8 @@ First, in one silent line, name this verse's rasa: what must the reader feel.
 Then render.
 
 Voice: <style, max 60 chars>
-Rules: 2–6 sentences. Same claims, same savor, new voice. Sanskrit terms keep
-their Sanskrit on first use. No new doctrine, no new names, no preaching, no
+Rules: 2–6 sentences. Same claims, same savor, new voice. No untranslated
+Sanskrit (names may stay). No new doctrine, no new names, no preaching, no
 second verse. If a claim won't fit the voice, say it plainly.
 
 Rendition:

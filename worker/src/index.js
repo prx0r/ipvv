@@ -346,7 +346,7 @@ export default {
         + 'Then render.\n\n'
         + 'Voice: ' + st + '\n'
         + (modeLine ? modeLine + '\n' : '')
-        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. Sanskrit technical terms keep their Sanskrit on first use. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly. Never output the rasa line or any scaffolding — rendition only, no meta-commentary.\n\nRendition:';
+        + 'Rules: 2–6 sentences. Same claims, same savor, new voice. No untranslated Sanskrit: every Sanskrit term must appear in English (names like Bhairava may stay). Translate, never transliterate-and-leave. No new doctrine, no new names, no preaching, no second verse. If a claim won\'t fit the voice, say it plainly. Never output the rasa line or any scaffolding — rendition only, no meta-commentary.\n\nRendition:';
       try {
         let c2 = '', used = '';
         try {
