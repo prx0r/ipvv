@@ -1,4 +1,15 @@
 let cachedVectors = null;
+let cachedPushIndex = null;
+
+async function getPushIndex(env) {
+  if (cachedPushIndex) return cachedPushIndex;
+  try {
+    const resp = await fetch('https://ipvv-a8u.pages.dev/data/pushing/INDEX.json');
+    if (!resp.ok) return null;
+    cachedPushIndex = await resp.json();
+    return cachedPushIndex;
+  } catch (e) { return null; }
+}
 
 async function dashscopeChat(env, messages, maxTokens = 512) {
   const apiKey = env.DASHSCOPE_API_KEY;
@@ -165,6 +176,28 @@ export default {
             chainCtx = `\n\nPrior enquiry on this question:\n[${best.id}] ${(best.en || '').slice(0, 800)}`;
           }
         } catch (e) { /* template match is best-effort */ }
+        // Recorded hound verdicts (pushing INDEX): if the user asks something
+        // a hound already asked, bring its verdict in as prior enquiry.
+        try {
+          const pidx = await getPushIndex(env);
+          if (pidx && Array.isArray(pidx.records)) {
+            const fold2 = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+            const stop2 = new Set('what,which,who,whom,whose,when,where,why,does,doing,done,have,this,that,these,those,with,from,your,their,about,there,would,could,there,their,them,they,then,than,also,into,doesn,don,about,there,is,are,was,were,the,a,an,and,of,to,in,for,is,it,as,at,by,be,on,that,this'.split(','));
+            const qt = new Set(fold2(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop2.has(w)));
+            let bestV = null;
+            const flat = [];
+            for (const r of pidx.records) for (const q of (r.questions || [])) flat.push({ r, q });
+            for (const { r, q } of flat) {
+              const qt2 = new Set(fold2(q.q || '').split(/[^a-z]+/).filter(w => w.length >= 5 && !stop2.has(w)));
+              let n = 0; for (const t of qt) if (qt2.has(t)) n++;
+              if (r.file && works.some(w => r.file.toLowerCase().includes(String(w).toLowerCase()))) n += 3;
+              if (n >= 4 && (!bestV || n > bestV.n)) bestV = { n, r, q };
+            }
+            if (bestV) {
+              chainCtx += `\n\nPrior hound verdict [pushing:${bestV.r.file}#${bestV.q.id}]: Q: ${bestV.q.q} / Verdict: ${bestV.q.verdict || 'open'} (commentary from a pushing session, not scripture)`;
+            }
+          }
+        } catch (e) { /* verdict match is best-effort */ }
 
         // Diverse pick: best 1-2 per work, then rerank
         const byWork = {};
@@ -195,7 +228,10 @@ export default {
         try {
           const fold = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
           const stop = new Set(('what','which','who','whom','whose','when','where','why','does','doing','done','have','this','that','these','those','with','from','your','their','about','there','would','could','there','their','them','they','then','than','also','into','doesn','don','about').split(','));
-          const toks = [...new Set(fold(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop.has(w)))];
+          // work names never discriminate (the works filter already scopes by work);
+          // matching them only lets 'bhairavastava' hit every 'bhairava' in the text
+          const workToks = new Set(works.flatMap(w => fold(w).split(/[^a-z]+/).filter(Boolean)));
+          const toks = [...new Set(fold(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop.has(w) && ![...workToks].some(k => k && (w === k || w.includes(k)))))];
           if (toks.length) {
             const scored = [];
             for (const v of vecs) {
@@ -210,7 +246,7 @@ export default {
               if (n > 0) scored.push({ v, n });
             }
             scored.sort((a, b) => (b.n - a.n));
-            for (const s of scored.slice(0, 3)) gathered.add(s.v.id);
+            for (const s of scored.slice(0, 5)) gathered.add(s.v.id);
           }
         } catch (e) { /* lexical fallback is best-effort */ }
         top.forEach(t => {
@@ -227,6 +263,15 @@ export default {
             }
           });
         });
+        // Work-matched pushing sessions ride along as prior enquiry: a hound
+        // session that names this work is relevant even when cosine is shy.
+        // (Gated like everything else; cited as commentary, never as source.)
+        try {
+          const wprobes = vecs.filter(v => v.kind === 'probe' && works.some(w => (v.id || '').toLowerCase().includes(String(w).toLowerCase())));
+          const wscored = wprobes.map(p => ({ p, s: cosine(qVec, p.vec) }));
+          wscored.sort((a, b) => b.s - a.s);
+          for (const w of wscored.slice(0, 2)) gathered.add(w.p.id);
+        } catch (e) { /* work-matched probes are best-effort */ }
 
         const gatheredRecs = vecs.filter(v => gathered.has(v.id));
         // Direct references: if the question names chunk ids, include those
@@ -252,7 +297,7 @@ export default {
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => { const txt = t.l3 || t.en || t.sa || ''; return `[${t.id}] (work: ${t.work}, gate: ${t.gate}${t.l3 ? ', final translation' : ''}) ${txt}`; }).join('\n\n');
-        const prompt = `You are a Trika Śaivism scholar answering inside a scripture reader. Never say 'the passages you've given me', 'supplied text', or anything that reveals retrieval; just answer.\n\nAnswer using ONLY the provided passages. Cite records by their [id] exactly as written (e.g. [bhairavastava:bh-p07]) — never by bare § numbers, never invent ids. If the answer is not in the passages, say so in one sentence and stop. If the passages partly address it, say what they do establish and mark the remainder open \u2014 never fill gaps. Colophon verses (dates, authorship, composition circumstances) answer who/when questions — weigh them when present. Match Sanskrit terms across transliteration variants (\u00f1/n, \u015b/s, \u1e63/s, \u1e43/m, \u0101/a, \u012b/i, \u016b/u, \u1e25/h): a passage mentioning the term counts as addressing it even when the spelling differs.\n\nGate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as experienced commentary, never as source text.\n\nKeep it short: at most 4 short sentences. Plain speech, no academic jargon, no invented terms. No headers, no bold section labels, no bullet lists — plain sentences, then citations on their own final line.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}`;
+        const prompt = `You are a Trika Śaivism scholar answering inside a scripture reader. Never say 'the passages you've given me', 'supplied text', or anything that reveals retrieval; just answer.\n\nAnswer using ONLY the provided passages. Cite records by their [id] exactly as written (e.g. [bhairavastava:bh-p07]) — never by bare § numbers, never invent ids. If the answer is not in the passages: first, say what the passages DO establish that bears on it (one sentence, cited). Then, if it is stable background knowledge \u2014 authorship, dates, well-known figures, plain Sanskrit glosses, general Trika context \u2014 answer briefly from general knowledge, marked plainly as 'From general knowledge, not these verses:' and closed with 'Verify it against the texts.'. Never present general knowledge as coming from the passages. Never translate or interpret a verse whose English is withheld (gated/BLOCKED): for those, say the translation is not published here and stop. If the passages partly address it, say what they do establish and mark the remainder open \u2014 never fill gaps. Colophon verses (dates, authorship, composition circumstances) answer who/when questions — weigh them when present. Match Sanskrit terms across transliteration variants (\u00f1/n, \u015b/s, \u1e63/s, \u1e43/m, \u0101/a, \u012b/i, \u016b/u, \u1e25/h): a passage mentioning the term counts as addressing it even when the spelling differs.\n\nGate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as experienced commentary, never as source text.\n\nWrite as long as the question needs and no longer: plain speech, no academic jargon, no invented terms, no padding. No headers, no bold section labels, no bullet lists — plain sentences, then citations on their own final line. Never name the KIND of record you are using \u2014 no 'the C1', 'the NOTE', 'the commentary', 'the gloss', 'the argument', 'the pushing record', 'the note says'. Write as if you know the text directly ('Verse 1 bows with...'). The bracket citations carry all provenance; prose must contain zero source-talk. Reason step by step from the passages when the question is a why/how question; quote the key Sanskrit or English phrase you are standing on.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}`;
         // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
         try {
           reply = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
