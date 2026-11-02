@@ -10,12 +10,14 @@
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "## sand-p01 (1)\nHe / is-victorious / Śiva / alone / possessing-spanda / self-established / who / inner-face / makes-taste / is-victorious / this / hero / lord-of-the-Kula",
+  "l1": "## sand-p01 (1)\nHe / is-victorious / Śiva / alone / possessing-spanda / self-established / who / inner-face / makes-taste / is-victorious / this / hero / lord-of-the-Kula // sand-p01",
   "l2": "He alone — Śiva, possessing spanda, self-established — who makes the inner face taste.",
+  "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "Mukhabodha M00084 (Spandasandoha)",
    "source_lines": null
-  }
+  },
+  "immutable_id": "pt:pid:sand:855664071220"
  }
 ]
