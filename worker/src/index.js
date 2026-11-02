@@ -1,4 +1,15 @@
 let cachedVectors = null;
+let cachedPushIndex = null;
+
+async function getPushIndex(env) {
+  if (cachedPushIndex) return cachedPushIndex;
+  try {
+    const resp = await fetch('https://ipvv-a8u.pages.dev/data/pushing/INDEX.json');
+    if (!resp.ok) return null;
+    cachedPushIndex = await resp.json();
+    return cachedPushIndex;
+  } catch (e) { return null; }
+}
 
 async function dashscopeChat(env, messages, maxTokens = 512) {
   const apiKey = env.DASHSCOPE_API_KEY;
@@ -165,6 +176,28 @@ export default {
             chainCtx = `\n\nPrior enquiry on this question:\n[${best.id}] ${(best.en || '').slice(0, 800)}`;
           }
         } catch (e) { /* template match is best-effort */ }
+        // Recorded hound verdicts (pushing INDEX): if the user asks something
+        // a hound already asked, bring its verdict in as prior enquiry.
+        try {
+          const pidx = await getPushIndex(env);
+          if (pidx && Array.isArray(pidx.records)) {
+            const fold2 = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+            const stop2 = new Set('what,which,who,whom,whose,when,where,why,does,doing,done,have,this,that,these,those,with,from,your,their,about,there,would,could,there,their,them,they,then,than,also,into,doesn,don,about,there,is,are,was,were,the,a,an,and,of,to,in,for,is,it,as,at,by,be,on,that,this'.split(','));
+            const qt = new Set(fold2(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop2.has(w)));
+            let bestV = null;
+            const flat = [];
+            for (const r of pidx.records) for (const q of (r.questions || [])) flat.push({ r, q });
+            for (const { r, q } of flat) {
+              const qt2 = new Set(fold2(q.q || '').split(/[^a-z]+/).filter(w => w.length >= 5 && !stop2.has(w)));
+              let n = 0; for (const t of qt) if (qt2.has(t)) n++;
+              if (r.file && works.some(w => r.file.toLowerCase().includes(String(w).toLowerCase()))) n += 3;
+              if (n >= 4 && (!bestV || n > bestV.n)) bestV = { n, r, q };
+            }
+            if (bestV) {
+              chainCtx += `\n\nPrior hound verdict [pushing:${bestV.r.file}#${bestV.q.id}]: Q: ${bestV.q.q} / Verdict: ${bestV.q.verdict || 'open'} (commentary from a pushing session, not scripture)`;
+            }
+          }
+        } catch (e) { /* verdict match is best-effort */ }
 
         // Diverse pick: best 1-2 per work, then rerank
         const byWork = {};
