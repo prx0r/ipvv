@@ -2010,6 +2010,7 @@ def build_layers():
                 "blocking": it.get("blocking", []), "model": it.get("model", ""), "date": it.get("date", ""),
                 "status": it.get("status", ""), "sanskrit": it.get("sanskrit", ""),
                 "l1": it.get("l1", ""), "l2": it.get("l2", ""),
+                "l3": it.get("l3", ""),
                 "c1": c1p.read_text(encoding="utf-8", errors="replace") if c1p.exists() else None,
                 "argmap": amp.read_text(encoding="utf-8", errors="replace") if amp.exists() else None,
             })
