@@ -1,0 +1,5 @@
+## ghat-p01 — C1
+
+**SUMMARY.** Śṛṅgāra is performed, not described: the separated beloved's voice, her appeal to the cloud, and the landscape's answering her are all determinants (vibhāva) of the rasa. The cloud is never told to carry a message — that is dhvani, and it is what makes it the genre's first instance. The voice closes not in despair but in sustaining memory: the sthāyibhāva (love) transforms the sorrow (vyabhicāri) into something relishable. Kāma arises in the heart to kill; the beloved who is absent arises with him; the cātaka, thirsty for rain alone, begs water; the peacock-flock sounds at the clouds; she is protected only by remembrance of his virtue.
+
+*Rasa: śṛṅgāra (erotic love-in-separation) — The sthāyibhāva is love (rati), made relishable by separation (viyoga) as vibhāva; sorrow (śoka) is vyabhicāri, integrated not dissolved. The cloud is never told to carry a message — dhvani. Abhinava's vivṛti makes the sandeśa device explicit; the poem leaves it implicit. Application, not attribution.*
