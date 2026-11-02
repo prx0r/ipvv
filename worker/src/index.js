@@ -230,6 +230,15 @@ export default {
             }
           });
         });
+        // Work-matched pushing sessions ride along as prior enquiry: a hound
+        // session that names this work is relevant even when cosine is shy.
+        // (Gated like everything else; cited as commentary, never as source.)
+        try {
+          const wprobes = vecs.filter(v => v.kind === 'probe' && works.some(w => (v.id || '').toLowerCase().includes(String(w).toLowerCase())));
+          const wscored = wprobes.map(p => ({ p, s: cosine(qVec, p.vec) }));
+          wscored.sort((a, b) => b.s - a.s);
+          for (const w of wscored.slice(0, 2)) gathered.add(w.p.id);
+        } catch (e) { /* work-matched probes are best-effort */ }
 
         const gatheredRecs = vecs.filter(v => gathered.has(v.id));
         // Direct references: if the question names chunk ids, include those
