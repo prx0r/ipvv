@@ -1451,6 +1451,29 @@ def build_receipts():
     return len(out)
 
 
+def build_sitedata():
+    """Sync reader/ChAT-facing raw files into DIST (they are fetched live):
+    per-verse C1 + scholar NOTEs, the pushing INDEX, and per-verse argmaps."""
+    import shutil as _sh
+    n = 0
+    for f in sorted((ROOT / "data/c1").rglob("*.md")):
+        d = DIST / "data/c1" / f.relative_to(ROOT / "data/c1").parent
+        d.mkdir(parents=True, exist_ok=True)
+        _sh.copy(f, d / f.name)
+        n += 1
+    pi = ROOT / "data/pushing/INDEX.json"
+    if pi.exists():
+        (DIST / "data/pushing").mkdir(parents=True, exist_ok=True)
+        _sh.copy(pi, DIST / "data/pushing/INDEX.json")
+        n += 1
+    for f in sorted((ROOT / "data/argmaps").glob("*/*.md")):
+        d = DIST / "data/argmaps" / f.parent.name
+        d.mkdir(parents=True, exist_ok=True)
+        _sh.copy(f, d / f.name)
+        n += 1
+    return n
+
+
 def build_corpus():
     """Embeddings-ready corpus: one JSONL, stable ids, gate labels, all layers.
     This file is the input to any embedding run (bge-m3/Qwen3-Embedding + rerank, per nibbanahelp relay)."""
@@ -2487,7 +2510,7 @@ def build_recite():
 
 def main():
     DIST.mkdir(parents=True, exist_ok=True)
-    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices", "app", "layers"]
+    want = sys.argv[1].split(",") if len(sys.argv) > 1 else ["ipvv", "vbt", "tantrasara", "authors", "scholars", "translations", "concepts", "tools", "sections", "recite", "support", "essays", "pushinghub", "corpus", "receipts", "workbooks", "contentions", "essay-objects", "source-metaphysics", "information-packets", "ochema-methods", "philosophers", "ratier-chapters", "torella-volume", "recognition-framework", "arguments", "stylelab", "llmstxt", "screen", "meditate", "vbtmap", "practices", "app", "layers", "sitedata"]
     done = {}
     if "ipvv" in want: done["ipvv"] = build_ipvv()
     if "vbt" in want: done["vbt"] = build_vbt()
@@ -2524,6 +2547,7 @@ def main():
     if "llmstxt" in want: done["llmstxt"] = build_llms_txt()
     if "app" in want: done["app"] = build_app()
     if "layers" in want: done["layers"] = build_layers()
+    if "sitedata" in want: done["sitedata"] = build_sitedata()
 
     ship_translations()
     shutil.copy(ROOT / "data/latest.json", DIST / "data/latest.json")
