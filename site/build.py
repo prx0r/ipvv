@@ -1487,6 +1487,35 @@ def build_corpus():
             recs.append({"id": f"pushing:{sub}/{f.name}", "work": "pushing", "ref": f"{sub}/{f.stem}",
                 "sa": "", "en": f.read_text(encoding="utf-8", errors="replace")[:6000], "en_gate": "OWNER", "kind": "probe",
                 "license": "CC BY-NC-SA 4.0"})
+    # site C1 display files + scholar NOTEs (translation-work canon, incl. song essays).
+    # Verse files take their chunk gate (fail-closed); song essays take their song's gate.
+    _gates = {}
+    for tf in sorted((ROOT / "data/translations").glob("*.json")):
+        try:
+            _items = _json.loads(tf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for _it in (_items if isinstance(_items, list) else _items.get("chunks", [])):
+            _gates[f"{tf.stem}:{_it.get('chunk','')}"] = _it.get("gate", "BLOCKED")
+    for f in sorted((ROOT / "data/c1").rglob("*.md")):
+        wid = f.parent.name
+        stem = f.stem
+        if stem.endswith(".NOTE"):
+            base, kind = stem[:-len(".NOTE")], "note"
+        else:
+            base, kind = stem, "site-c1"
+        if base.startswith("C1-"):
+            song = base.split("-", 1)[1]
+            sg = [g for k, g in _gates.items() if k.startswith(f"{wid}:{song}")]
+            gate = "PASS" if sg and all(g == "PASS" for g in sg) else "BLOCKED"
+        else:
+            gate = _gates.get(f"{wid}:{base}", "BLOCKED")
+        body = f.read_text(encoding="utf-8", errors="replace")
+        if not body.strip():
+            continue
+        recs.append({"id": f"c1:{wid}/{stem}", "work": wid, "ref": stem,
+            "sa": "", "en": body[:6000], "en_gate": gate, "kind": kind,
+            "license": "CC BY-NC-SA 4.0"})
     for af in sorted((ROOT / "data/arguments").glob("*.json")):
         pkt = _json.loads(af.read_text())
         recs.append({"id": pkt.get("id", ""), "work": pkt.get("work_id", ""),
