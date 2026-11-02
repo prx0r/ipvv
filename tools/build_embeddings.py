@@ -72,7 +72,7 @@ for i in range(0, len(corpus), batch_size):
                             'en': (r.get('en','') or '')[:500],
                             'l3': (r.get('l3','') or '')[:800],
                             'sa': (r.get('sa','') or '')[:500],
-                            'vec': embs[j]})
+                            'vec': [round(x, 4) for x in embs[j]]})  # 4dp keeps vectors.json under Pages' 25MB/file cap
         print(f'  embedded {min(i+batch_size, len(corpus))}/{len(corpus)}')
     except Exception as e:
         print(f'  ERROR at {i}: {str(e)[:100]}')
