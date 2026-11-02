@@ -1,26 +1,5 @@
-**SUMMARY.** The devotee opens the Bhairavastava by bowing to Bhairava as the refuge of the
-helpless, with a mind that has already become His. The bowing is not a request but a
-recognition — the transformation (tvanmaya) is complete before the hymn begins.
+## bh-p01 — C1
 
-**FUNCTION.** Establishes the devotional posture that governs the entire stotra: total
-surrender, achieved state, no petition.
+**SUMMARY.** The Lord is established as all-pervading conscious reality — one, endless, beginningless — then venerated as refuge of the helpless by a mind become His.
 
-**KEY TERMS.** tvanmaya (made of You) · anāthaśaraṇya (refuge of the helpless) · hṛdi (in heart) ·
-vande (I venerate/bow).
-
-**LOCAL CONTEXT.** Verse 1 of 10. Sets the ontological ground (mind already His) that makes
-the subsequent claims (fearlessness, bliss, nondifference) intelligible as consequences
-rather than requests.
-
-**EXPLANATION.** The verse inverts the expected structure of a stotra: instead of "I bow so
-that You may X," it says "I bow because You already are X to me." The locative-with-causal
-tvanmayacittatayā places the transformation before the action. This matters because every
-later claim (v5 fearlessness, v6 bliss, v7 nondifference) reads as an *elaboration* of
-this achieved state, not an aspiration.
-
-**BOUNDARY / OPEN.** Not claimed: philosophical identity with Bhairava (that is v2's claim,
-which is BLOCKED). The distinction between tvanmaya (devotional kinship) and ahaṃ śiva
-(identity) is preserved.
-
-**RELATED.** v2 (ontological identity claim), v7 (nondifference through hymn), IPK 1.1
-(same surrender grammar in Utpaladeva).
+*Rasa: śānta (tranquility) with adbhuta (wonder) — The sthāyibhāva is devotion (bhakti) in the mode of veneration (vandana); the vyabhicāri is wonder (camatkāra) at consciousness pervading all. The rasa is not erotic or heroic but the tranquility of recognition beginning: the Absolute named, the devotee absorbed. Abhinava's own rasa theory (rasadhvani) is here the frame, not decoration — the verse aims at relish (camatkāra) of the Absolute, and the C1 names that relish.*

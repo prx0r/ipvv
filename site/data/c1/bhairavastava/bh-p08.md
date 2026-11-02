@@ -1,30 +1,5 @@
-**SUMMARY.** Contemplation (cintā) of the Lord's scripture flows as the bliss-stream in
-the mind. Scripture is not studied (adhyayana) but contemplated (cintā); the result flows
-(syandati) rather than being produced.
+## bh-p08 — C1
 
-**FUNCTION.** Names a second instrument parallel to v7's hymn: scripture-contemplation
-produces the same bliss-stream.
+**SUMMARY.** Rites relativized — vow, giving, bathing, austerity dispel heat — while scripture contemplated as nectar irrigates the mind with a bliss-stream.
 
-**KEY TERMS.** śāstra (scripture) · tāvaka (Your/yours) · parāmṛta (supreme nectar) ·
-cintā (contemplation, not study) · syandati (flows) · nirvṛtidhārā (bliss-stream).
-
-**LOCAL CONTEXT.** Verse 8 of 10. The second instrument (scripture-contemplation)
-alongside v7's hymn: both produce bliss, one through praise, one through contemplation.
-
-**EXPLANATION.** The possessive tāvaka ("Your scripture") makes the scripture Bhairava's
-own — it is not an external text but His expression. The verb syandati (flows, from a
-spring) is deliberately non-agential: the bliss is not produced by effort but released
-when the channel opens. The practice named is cintā (contemplation/tasting), not
-adhyayana (study) — the scripture is nectar (āmṛta) to be tasted, not doctrine to be
-analyzed. This aligns with the Trika view that scripture reveals through resonance,
-not inference.
-
-**Dyczkowski lecture.** Dyczkowski clarifies: śāstra-contemplation destroys the suffering CAUSED BY vows/gifts/bathing/austerities — spiritual discipline itself is the suffering scripture replaces.
-
-**BOUNDARY / OPEN.** Not claimed: that all scripture produces bliss, or that this is
-the only instrument. Which scripture "tāvaka" refers to (Āgama? Tantrāloka? the Lord's
-own scripture?) is unspecified. The distinction between cintā and adhyayana matters
-and is not flattened.
-
-**RELATED.** v7 (hymn as instrument — parallel), v6 (bliss as result), Tantrāloka's
-teaching on śabdarāśi and scripture as revelation.
+*Rasa: śānta (tranquility) — The sthāyibhāva is devotion (bhakti) in the mode of contemplation (cintā); the vyabhicāri is peace (śānti) of the bliss-streamed mind. The rasa is the tranquility of contemplation, not the austerity of rites.*

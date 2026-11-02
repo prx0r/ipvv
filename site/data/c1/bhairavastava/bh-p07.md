@@ -1,28 +1,5 @@
-**SUMMARY.** The devotee's nondifference with Bhairava arises "then alone" (tadaiva) —
-when the hymn's supreme-nectar rain rises. The hymn performs nondifference: it does not
-describe it but is the condition under which it manifests.
+## bh-p07 — C1
 
-**FUNCTION.** The stotra becomes self-referential: the hymn itself is named as the
-instrument of its own claim. The devotional act and its result are the same movement.
+**SUMMARY.** Affliction's arrival is the occasion, not the obstacle: with it comes nondifference, and nectar arises.
 
-**KEY TERMS.** tadaiva (then alone) · tvadabheda (nondifference with You) ·
-stotraparāmṛtavṛṣṭi (supreme-nectar rain of the hymn) · udeti (arises).
-
-**LOCAL CONTEXT.** Verse 7 of 10. After fearlessness (v5) and bliss (v6), v7 names the
-mechanism: the hymn is not praise-ornament but ontological instrument.
-
-**EXPLANATION.** "Then alone" (tadaiva) makes nondifference conditional on the hymn —
-it is not a permanent metaphysical doctrine but a state that manifests through stotra.
-The hymn-rain metaphor gives the stotra substance (it falls, it nourishes) rather than
-mere description. This is bhakti-advaya: nondifference achieved through devotion, not
-through jñāna or philosophy. The present tense of udeti suggests the rain is continuous
-— the condition is ongoing, not one-time.
-
-**Dyczkowski lecture.** Dyczkowski reveals the mechanism: affliction (kleśa) TRIGGERS grace — "the minute the body of troubles is filled, rain of nectar springs." Trouble and nectar are one movement, not sequential.
-
-**BOUNDARY / OPEN.** Not claimed: universal metaphysical nonduality (advaya in the
-philosophical sense). The nondifference is bhakti's (devotee–Lord), conditional on the
-hymn. Whether it persists beyond the hymn's arising is unresolved by the verse.
-
-**RELATED.** v1 (surrender — the precondition), v8 (scripture contemplation — a parallel
-instrument), IPVV's reading of vimarśa as the hymn's own nature.
+*Rasa: śānta (tranquility) with adbhuta (wonder) — The sthāyibhāva is devotion (bhakti) in the mode of nondifference (abheda); the vyabhicāri is joy (harṣa) that affliction is the occasion. The rasa is the tranquility of recognition in suffering — not the joy of pain but the peace that suffering is not other.*
