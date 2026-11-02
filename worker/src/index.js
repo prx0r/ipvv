@@ -189,6 +189,30 @@ export default {
         // Graph traversal: follow argument packet edges
         const argPackets = vecs.filter(v => v.kind === 'argument');
         const gathered = new Set(top.map(t => t.id));
+        // Lexical fallback: a distinctive query term in IAST or plain spelling
+        // must hit records containing it, diacritics aside (bge can miss
+        // samayajnam vs samayajñam). Gated the same as everything else.
+        try {
+          const fold = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          const stop = new Set(('what','which','who','whom','whose','when','where','why','does','doing','done','have','this','that','these','those','with','from','your','their','about','there','would','could','there','their','them','they','then','than','also','into','doesn','don','about').split(','));
+          const toks = [...new Set(fold(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop.has(w)))];
+          if (toks.length) {
+            const scored = [];
+            for (const v of vecs) {
+              if (!works.includes(v.work)) continue;
+              if (!(v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER')) continue;
+              const hay = fold((v.l3 || '') + ' ' + (v.en || '') + ' ' + (v.sa || ''));
+              const hw = new Set(hay.split(/[^a-z]+/).filter(w => w.length >= 5));
+              let n = 0;
+              for (const t of toks) {
+                for (const w of hw) { if (w.includes(t) || t.includes(w)) { n++; break; } }
+              }
+              if (n > 0) scored.push({ v, n });
+            }
+            scored.sort((a, b) => (b.n - a.n));
+            for (const s of scored.slice(0, 3)) gathered.add(s.v.id);
+          }
+        } catch (e) { /* lexical fallback is best-effort */ }
         top.forEach(t => {
           argPackets.forEach(a => {
             if (a.ref === t.id || a.id.includes(t.id)) gathered.add(a.id);
@@ -228,7 +252,7 @@ export default {
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => { const txt = t.l3 || t.en || t.sa || ''; return `[${t.id}] (work: ${t.work}, gate: ${t.gate}${t.l3 ? ', final translation' : ''}) ${txt}`; }).join('\n\n');
-        const prompt = `You are a Trika Śaivism scholar answering inside a scripture reader. Never say 'the passages you've given me', 'supplied text', or anything that reveals retrieval; just answer.\n\nAnswer using ONLY the provided passages. Cite records by their [id] exactly as written (e.g. [bhairavastava:bh-p07]) — never by bare § numbers, never invent ids. If the answer is not in the passages, say so in one sentence and stop. Colophon verses (dates, authorship, composition circumstances) answer who/when questions — weigh them when present.\n\nGate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as experienced commentary, never as source text.\n\nKeep it short: at most 4 short sentences. Plain speech, no academic jargon, no invented terms. No headers, no bold section labels, no bullet lists — plain sentences, then citations on their own final line.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}`;
+        const prompt = `You are a Trika Śaivism scholar answering inside a scripture reader. Never say 'the passages you've given me', 'supplied text', or anything that reveals retrieval; just answer.\n\nAnswer using ONLY the provided passages. Cite records by their [id] exactly as written (e.g. [bhairavastava:bh-p07]) — never by bare § numbers, never invent ids. If the answer is not in the passages, say so in one sentence and stop. If the passages partly address it, say what they do establish and mark the remainder open \u2014 never fill gaps. Colophon verses (dates, authorship, composition circumstances) answer who/when questions — weigh them when present. Match Sanskrit terms across transliteration variants (\u00f1/n, \u015b/s, \u1e63/s, \u1e43/m, \u0101/a, \u012b/i, \u016b/u, \u1e25/h): a passage mentioning the term counts as addressing it even when the spelling differs.\n\nGate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as experienced commentary, never as source text.\n\nKeep it short: at most 4 short sentences. Plain speech, no academic jargon, no invented terms. No headers, no bold section labels, no bullet lists — plain sentences, then citations on their own final line.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}`;
         // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
         try {
           reply = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
