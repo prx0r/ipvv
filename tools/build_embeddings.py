@@ -53,7 +53,9 @@ for i in range(0, len(corpus), batch_size):
     texts = []
     for r in batch:
         ctx = argmap_qs.get(r.get('id',''), '') or argmap_qs.get(r.get('ref',''), '')
-        en = r.get('en','')[:500] or r.get('sa','')[:500]
+        # L3 (final translation) leads where present — it is the quotable text
+        en = r.get('l3','') or r.get('en','')
+        en = en[:800] or r.get('sa','')[:500]
         if ctx:
             texts.append(f"passage: {ctx} {en}")
         else:
@@ -66,10 +68,11 @@ for i in range(0, len(corpus), batch_size):
         embs = embed_batch(texts)
         for j, r in enumerate(batch):
             vectors.append({'id': r['id'], 'work': r['work'], 'kind': r['kind'],
-                           'gate': r.get('en_gate', ''), 'ref': r.get('ref', ''),
-                           'en': (r.get('en','') or '')[:500],
-                           'sa': (r.get('sa','') or '')[:500],
-                           'vec': embs[j]})
+                            'gate': r.get('en_gate', ''), 'ref': r.get('ref', ''),
+                            'en': (r.get('en','') or '')[:500],
+                            'l3': (r.get('l3','') or '')[:800],
+                            'sa': (r.get('sa','') or '')[:500],
+                            'vec': [round(x, 4) for x in embs[j]]})  # 4dp keeps vectors.json under Pages' 25MB/file cap
         print(f'  embedded {min(i+batch_size, len(corpus))}/{len(corpus)}')
     except Exception as e:
         print(f'  ERROR at {i}: {str(e)[:100]}')
