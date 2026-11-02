@@ -205,7 +205,26 @@ export default {
         });
 
         const gatheredRecs = vecs.filter(v => gathered.has(v.id));
-        const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
+        // Direct references: if the question names chunk ids, include those
+        // records — similarity alone can miss an explicitly named verse.
+        try {
+          const want = [...new Set((message.match(/[a-z0-9]+(?:-[a-z]+\d+(?:-v\d+)?)/gi) || []).map(s => s.toLowerCase()))].slice(0, 4);
+          const norm = id => String(id || '').toLowerCase().split(/[:/]/).pop().replace(/\.(note|md)$/, '');
+          if (want.length) {
+            for (const v of vecs) {
+              if (!works.includes(v.work)) continue;
+              if (!(v.gate === 'PASS' || v.gate === 'PUBLISHED' || v.gate === 'OWNER')) continue;
+              const cid = norm(v.id);
+              if (cid && want.some(w => w === cid || w.endsWith(cid) || cid.endsWith(w))) gathered.add(v.id);
+            }
+            for (const t of [...gathered]) {
+              for (const a of argPackets) {
+                if (a.ref === t || a.id.includes(t)) gathered.add(a.id);
+              }
+            }
+          }
+        } catch (e) { /* direct-reference is best-effort */ }
+        const contextRecs = vecs.filter(v => gathered.has(v.id));
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => { const txt = t.l3 || t.en || t.sa || ''; return `[${t.id}] (work: ${t.work}, gate: ${t.gate}${t.l3 ? ', final translation' : ''}) ${txt}`; }).join('\n\n');
