@@ -208,7 +208,7 @@ export default {
         const contextRecs = gatheredRecs.length > 0 ? gatheredRecs : top;
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
-        const context = contextRecs.map(t => `[${t.id}] (work: ${t.work}, gate: ${t.gate}) ${t.en || t.sa || ''}`).join('\n\n');
+        const context = contextRecs.map(t => { const txt = t.l3 || t.en || t.sa || ''; return `[${t.id}] (work: ${t.work}, gate: ${t.gate}${t.l3 ? ', final translation' : ''}) ${txt}`; }).join('\n\n');
         const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as such, never as source text.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}\n\nAnswer in plain speech, one paragraph plus citations. No academic name-dropping, no invented terms.`;
         // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
         try {

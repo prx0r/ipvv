@@ -1460,6 +1460,7 @@ def build_corpus():
         for it in _json.loads(f.read_text()):
             recs.append({"id": f"{f.stem}:{it.get('chunk','')}", "work": f.stem, "ref": str(it.get("verses","")),
                 "sa": it.get("sanskrit",""), "en": (it.get("l2") or it.get("l1") or ""),
+                "l3": it.get("l3","") or "",
                 "en_gate": it.get("gate",""), "kind": "translation",
                 "license": it.get("source_license",""), "source_file": it.get("source_file",""),
                 "source_lines": it.get("source_lines"), "immutable_id": it.get("immutable_id",""),
