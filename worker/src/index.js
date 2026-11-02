@@ -195,7 +195,10 @@ export default {
         try {
           const fold = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
           const stop = new Set(('what','which','who','whom','whose','when','where','why','does','doing','done','have','this','that','these','those','with','from','your','their','about','there','would','could','there','their','them','they','then','than','also','into','doesn','don','about').split(','));
-          const toks = [...new Set(fold(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop.has(w)))];
+          // work names never discriminate (the works filter already scopes by work);
+          // matching them only lets 'bhairavastava' hit every 'bhairava' in the text
+          const workToks = new Set(works.flatMap(w => fold(w).split(/[^a-z]+/).filter(Boolean)));
+          const toks = [...new Set(fold(message).split(/[^a-z]+/).filter(w => w.length >= 5 && !stop.has(w) && ![...workToks].some(k => k && (w === k || w.includes(k)))))];
           if (toks.length) {
             const scored = [];
             for (const v of vecs) {
@@ -210,7 +213,7 @@ export default {
               if (n > 0) scored.push({ v, n });
             }
             scored.sort((a, b) => (b.n - a.n));
-            for (const s of scored.slice(0, 3)) gathered.add(s.v.id);
+            for (const s of scored.slice(0, 5)) gathered.add(s.v.id);
           }
         } catch (e) { /* lexical fallback is best-effort */ }
         top.forEach(t => {
