@@ -170,7 +170,7 @@ export default {
         const byWork = {};
         for (const c of candidates) { (byWork[c.work] = byWork[c.work] || []).push(c); }
         let diverse = [];
-        Object.values(byWork).forEach(arr => { diverse = diverse.concat(arr.slice(0, 2)); });
+        Object.values(byWork).forEach(arr => { diverse = diverse.concat(arr.slice(0, 4)); });
         diverse.sort((a, b) => b.score - a.score);
         let top = diverse.slice(0, 5);
         if (diverse.length > 5) {
@@ -209,7 +209,7 @@ export default {
         retrievedIds = JSON.stringify(contextRecs.map(t => t.id));
         retrievedGates = JSON.stringify(contextRecs.map(t => t.gate));
         const context = contextRecs.map(t => { const txt = t.l3 || t.en || t.sa || ''; return `[${t.id}] (work: ${t.work}, gate: ${t.gate}${t.l3 ? ', final translation' : ''}) ${txt}`; }).join('\n\n');
-        const prompt = `You are a Trika Śaivism scholar. Answer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so. Gate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as such, never as source text.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}\n\nAnswer in plain speech, one paragraph plus citations. No academic name-dropping, no invented terms.`;
+        const prompt = `You are a Trika Śaivism scholar answering inside a scripture reader. The reader is looking at the work's verses right now — refer to a verse as §N (its number in the passages given, starting at 1). Never say 'the passages you've given me', 'supplied text', or anything that reveals retrieval; just answer.\n\nAnswer using ONLY the provided passages. Cite passage IDs and which work each comes from. If the answer is not in the passages, say so in one sentence and stop. Colophon verses (dates, authorship, composition circumstances) answer who/when questions — weigh them when present.\n\nGate labels indicate trust level (PUBLISHED > PASS > OWNER). OWNER records are prior enquiries, not scripture — cite them as experienced commentary, never as source text.\n\nKeep it short: at most 4 short sentences. Plain speech, no academic jargon, no invented terms. No headers, no bold section labels, no bullet lists — plain sentences, then citations on their own final line.\n\nPassages:\n${context}${chainCtx}\n\nQuestion: ${message}`;
         // Primary: Qwen3.8-Omni-Flash via DashScope. Fallback: deepseek via Workers AI.
         try {
           reply = await dashscopeChat(env, [{ role: 'user', content: prompt }], 512);
