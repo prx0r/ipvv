@@ -52,9 +52,10 @@ test('account to signed translation and essay on a real local Git remote',async(
     const target=rows[3].verse_id,originals={t1:{[target]:{}},l0:{[target]:[{id:'token'}]},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}};
     const projection={work:'paramarthasara',originals,source_verses:{[target]:{text:'śiva'}},
       l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]},projection_sha256:'a'.repeat(64)};
-    globalThis.fetch=async (url,options)=>{
+    let lastPrompt='';globalThis.fetch=async (url,options)=>{
       if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projection);
-      if(String(url).includes('dashscope'))return Response.json({choices:[{message:{content:'A distinct grounded rendering.'}}]});
+      if(String(url).includes('dashscope')){lastPrompt=JSON.parse(options.body).messages[0].content;
+        return Response.json({choices:[{message:{content:'A distinct grounded rendering.'}}]});}
       return oldFetch(url,options);
     };
     for(let i=0;i<3;i++){
@@ -77,10 +78,30 @@ test('account to signed translation and essay on a real local Git remote',async(
     assert.equal(reviews.at(-1).review_target.object_ref,version.version_id);assert.equal(reviews.at(-1).conflict_of_interest,'AUTHOR');
     const essay={expected_revision:0,kind:'essay',work:'paramarthasara',target,layer:'l3',title:'My essay',content:{text:'A considered essay.'}};
     assert.equal((await call('/api/scholar/documents/essay-1','PUT',essay,cookie)).status,200);
-    response=await call('/api/scholar/signoffs','POST',{document_id:'essay-1',revision:1,rights:'cc-by-4.0',confirmed:true},cookie);
+    assert.equal((await call('/api/scholar/documents/essay-1','PUT',{...essay,expected_revision:1,content:{text:'A carefully revised essay.'}},cookie)).status,200);
+    response=await call('/api/scholar/style-examples','POST',{document_id:'essay-1',before_revision:1,after_revision:2,confirmed:true},cookie);
+    assert.equal(response.status,201);const style=(await response.json()).id;
+    response=await call('/api/auth/access','POST',{email:'reviewer@example.org',password:'strong-password',name:'Reviewer'});
+    const reviewerCookie=response.headers.get('Set-Cookie').split(';')[0],reviewer=(await response.json()).profile;
+    response=await call('/api/scholar/reviews','POST',{document_id:'essay-1',revision:2,reviewer_id:reviewer.id},cookie);
+    assert.equal(response.status,201);const review=await response.json();
+    response=await call('/api/scholar/reviews/'+review.id+'/decision','POST',
+      {decision:'REQUEST_CHANGES',reasoning:'Private reviewer recommendation.',rubric:{evidence:'Check the Sanskrit.'},ai_consent:true},reviewerCookie);
+    assert.equal(response.status,200);
+    response=await call('/api/scholar/assist','POST',{kind:'essay_revision',document_id:'essay-1',revision:2,work:'paramarthasara',target,layer:'l3',
+      instruction:'Address the evidence.',use_style:true,style_example_ids:[style],review_ids:[review.id],consent_to_ai:true},cookie);
+    assert.equal(response.status,200);const essayAgent=(await response.json()).document;
+    assert.match(lastPrompt,/Private reviewer recommendation/);assert.match(lastPrompt,/A carefully revised essay/);
+    assert.equal((await call('/api/scholar/documents/essay-1','PUT',{...essay,expected_revision:2,
+      content:{text:essayAgent.content.text,assisted:true,model:essayAgent.content.model}},cookie)).status,200);
+    response=await call('/api/scholar/signoffs','POST',{document_id:'essay-1',revision:3,rights:'cc-by-4.0',confirmed:true},cookie);
     const essayApproval=await response.json();response=await call('/api/scholar/submit','POST',{signoff_id:essayApproval.id,confirm_submission:true},cookie);
     const essayResult=await response.json();assert.equal(response.status,201,JSON.stringify(essayResult));
     assert.match(essayResult.branch,/^scholar\/essay-/);assert.equal(essayResult.status,'SUBMITTED_PUBLIC_BRANCH');
+    const digest=essayResult.branch.slice('scholar/essay-'.length);
+    const published=gitshow(essayResult.branch,`paramarthasara/scholar/essays/${digest}.json`),paper=JSON.parse(published);
+    assert.equal(paper.assisted,true);assert.equal(paper.snapshot.content.text,essayAgent.content.text);
+    assert.doesNotMatch(published,/Private reviewer recommendation|style:/);
   }finally{
     globalThis.fetch=oldFetch;if(db)db.close();if(server){server.kill();await once(server,'exit').catch(()=>{});}await rm(temp,{recursive:true,force:true});
   }

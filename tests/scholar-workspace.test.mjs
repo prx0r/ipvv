@@ -158,6 +158,54 @@ test('authors can explicitly save and revoke private before-and-after style exam
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_style_examples').get().n,0);db.close();
 });
 
+test('essay revision uses only selected, permitted feedback and author-owned style edits',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+    SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'10',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'20'};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
+    return {cookie:response.headers.get('Set-Cookie').split(';')[0],profile:(await response.json()).profile};}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
+  const essay={expected_revision:0,kind:'essay',work:'testwork',target:'test-p01-v01',layer:'l3',title:'Essay',content:{text:'My first wording'}};
+  assert.equal((await call('/api/scholar/documents/a','PUT',essay,alice.cookie)).status,200);
+  assert.equal((await call('/api/scholar/documents/a','PUT',{...essay,expected_revision:1,content:{text:'My edited wording'}},alice.cookie)).status,200);
+  let response=await call('/api/scholar/style-examples','POST',{document_id:'a',before_revision:1,after_revision:2,confirmed:true},alice.cookie);
+  const own=(await response.json()).id;
+  assert.equal((await call('/api/scholar/documents/b','PUT',{...essay,content:{text:'Bob secret first'}},bob.cookie)).status,200);
+  assert.equal((await call('/api/scholar/documents/b','PUT',{...essay,expected_revision:1,content:{text:'Bob secret edited'}},bob.cookie)).status,200);
+  response=await call('/api/scholar/style-examples','POST',{document_id:'b',before_revision:1,after_revision:2,confirmed:true},bob.cookie);
+  const other=(await response.json()).id;
+  response=await call('/api/scholar/reviews','POST',{document_id:'a',revision:2,reviewer_id:bob.profile.id},alice.cookie);
+  const review=await response.json(),reviewPath='/api/scholar/reviews/'+review.id;
+  assert.equal((await call(reviewPath+'/decision','POST',{decision:'REQUEST_CHANGES',reasoning:'Explain the evidence.',rubric:{evidence:'Give a precise source.'},ai_consent:false},bob.cookie)).status,200);
+  assert.equal((await call(reviewPath+'/messages','POST',{text:'Private discussion never sent automatically.'},bob.cookie)).status,201);
+  const original=globalThis.fetch;let prompt='',modelCalls=0;
+  globalThis.fetch=async (url,options)=>{
+    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json({work:'testwork',projection_sha256:'a'.repeat(64),
+      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+    if(String(url).includes('dashscope')){modelCalls++;prompt=JSON.parse(options.body).messages[0].content;
+      return Response.json({choices:[{message:{content:'Draft with citation gaps.'}}]});}
+    throw new Error('Unexpected request');
+  };
+  const task={kind:'essay_revision',document_id:'a',revision:2,work:'testwork',target:'test-p01-v01',layer:'l3',
+    instruction:'Improve the argument',use_style:true,style_example_ids:[own],review_ids:[review.id],consent_to_ai:true};
+  try{
+    assert.equal((await call('/api/scholar/assist','POST',task,alice.cookie)).status,409);assert.equal(modelCalls,0);
+    assert.equal((await call(reviewPath+'/ai-consent','POST',{allow:true},bob.cookie)).status,200);
+    assert.equal((await call('/api/scholar/assist','POST',{...task,style_example_ids:[other]},alice.cookie)).status,409);assert.equal(modelCalls,0);
+    response=await call('/api/scholar/assist','POST',{...task,use_style:false,style_example_ids:[],review_ids:[]},alice.cookie);
+    assert.equal(response.status,200);assert.doesNotMatch(prompt,/Explain the evidence|My first wording|Private discussion/);
+    response=await call('/api/scholar/assist','POST',task,alice.cookie);assert.equal(response.status,200);
+    const agent=(await response.json()).document;assert.equal(agent.content.task,'essay_revision');assert.equal(agent.content.source_revision,2);
+    assert.match(prompt,/My first wording/);assert.match(prompt,/My edited wording/);assert.match(prompt,/Explain the evidence/);
+    assert.match(prompt,/Give a precise source/);assert.doesNotMatch(prompt,/Bob secret|Private discussion/);
+    assert.equal((await call(reviewPath+'/ai-consent','POST',{allow:false},bob.cookie)).status,200);
+    assert.equal((await call('/api/scholar/assist','POST',task,alice.cookie)).status,409);
+    assert.equal((await call('/api/scholar/documents/a','PUT',{...essay,expected_revision:2,content:{text:'A newer version'}},alice.cookie)).status,200);
+    assert.equal((await call('/api/scholar/assist','POST',{...task,review_ids:[]},alice.cookie)).status,409);
+  }finally{globalThis.fetch=original;db.close();}
+});
+
 test('Qwen needs consent, a free-tier configuration and only the scholar’s own style examples',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',

@@ -26,7 +26,7 @@ secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store
 | `POST /api/scholar/reviews/<id>/ai-consent` | The reviewer can grant or revoke permission for their report to be sent to an AI provider |
 | `POST /api/scholar/signoffs` | Author approves exact saved revision and declares rights; record remains private |
 | `POST /api/scholar/submit` | Explicitly submit an unchanged signed revision to the authenticated Git bridge |
-| `POST /api/scholar/assist` | With explicit consent, request a grounded Qwen draft; optionally use only the account's own examples |
+| `POST /api/scholar/assist` | With explicit consent, request a grounded Qwen draft or revise a saved essay using selected style edits and eligible reviews |
 | `GET /api/scholar/voice` | Authenticated WebSocket relay for grounded push-to-talk; disabled until separately configured |
 
 Private records live in D1, not public Git. A review snapshot remains with its
@@ -52,6 +52,18 @@ Style examples point to two exact private revisions, record their hashes and req
 the author's explicit selection. They are deleted with the private document and are
 not themselves a model fine-tune. Sending examples to a provider requires a separate
 per-request consent; using reviewer comments requires the reviewer's permission too.
+
+For `kind: essay_revision`, supply the author's `document_id` and exact saved
+`revision`. The author may select up to six `style_example_ids` from their own
+revision pairs and up to five `review_ids`. A review must target the same revision
+and snapshot hash, have a submitted report and the reviewer's current AI consent.
+The provider receives only those selected reports, not discussion messages. Selected
+style pairs may come from the author's other works; the kind must match. Excerpts
+over 3,500 characters are marked as truncated. The resulting agent draft retains
+private provenance about the source revision and selected IDs; the author must copy,
+review, save, sign off and explicitly submit before any public Git branch is created.
+Reusing these examples is retrieval, not model weight training. The essay validator
+checks object structure and source linkage, not the truth of scholarly claims.
 
 Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true`, the dedicated
 server-side secret `SCHOLAR_DASHSCOPE_API_KEY` is available, and the numeric
