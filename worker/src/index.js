@@ -65,6 +65,7 @@ export default {
     const allowed = new Set([env.CORS_ORIGIN || '', 'https://svread.pages.dev', 'https://ipvv-a8u.pages.dev'].filter(Boolean));
     const cors = {
       'Access-Control-Allow-Origin': allowed.has(reqOrigin) ? reqOrigin : (env.CORS_ORIGIN || '*'),
+      'Access-Control-Allow-Credentials': 'true',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     };
@@ -548,6 +549,93 @@ export default {
     }
 
     // GET /api/questions — list all questions
+    // ---- scholar auth: local signup/login + signed session cookie (phase 1) ----
+    const COOKIE = 'svsess=';
+    const b64u = b => btoa(String.fromCharCode(...new Uint8Array(b)))
+      .replace(/=+$/,'').replace(/\+/g,'-').replace(/\//g,'_');
+    const unb64u = s => { s=s.replace(/-/g,'+').replace(/_/g,'/');
+      const bin=atob(s.padEnd(s.length+(4-s.length%4)%4,'='));
+      return new Uint8Array([...bin].map(c=>c.charCodeAt(0))); };
+    const hex = u8 => [...u8].map(b=>b.toString(16).padStart(2,'0')).join('');
+    const unhex = h => new Uint8Array((h.match(/../g)||[]).map(x=>parseInt(x,16)));
+    async function pwHash(pw, saltHex){
+      const salt = saltHex ? unhex(saltHex) : crypto.getRandomValues(new Uint8Array(16));
+      const bits = await crypto.subtle.deriveBits(
+        {name:'PBKDF2', salt, iterations:100000, hash:'SHA-256'},
+        await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']), 256);
+      return {hash: b64u(bits), salt: hex(salt)};
+    }
+    async function signTok(uid, exp){
+      const body = btoa(JSON.stringify({u:uid, e:exp}));
+      const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['sign']);
+      return body + '.' + b64u(await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(body)));
+    }
+    async function sessUid(request){
+      try{
+        const ck = request.headers.get('Cookie')||'';
+        const tok = ck.split(';').map(x=>x.trim()).find(x=>x.startsWith(COOKIE));
+        if(!tok) return null;
+        const [body, sig] = tok.slice(COOKIE.length).split('.');
+        const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['verify']);
+        const ok = await crypto.subtle.verify('HMAC', key, unb64u(sig), new TextEncoder().encode(body));
+        if(!ok) return null;
+        const p = JSON.parse(atob(body));
+        if(p.e < Date.now()) return null;
+        return p.u;
+      }catch(e){ return null; }
+    }
+
+    // POST /api/auth/access — one door: join, sign in, or set password on an email-only row
+    if (path === '/api/auth/access' && request.method === 'POST') {
+      let b = {}; try { b = await request.json(); } catch(e) {}
+      const email = String(b.email||'').trim().toLowerCase();
+      const pw = String(b.password||'');
+      const name = String(b.name||'').trim().slice(0,80);
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({error:'valid email required'}, 400, cors);
+      if(pw.length < 8) return json({error:'password must be at least 8 characters'}, 400, cors);
+      let row = (await env.DB.prepare('SELECT * FROM profiles WHERE email = ?').bind(email).first());
+      if(row && row.password_hash){
+        const {hash} = await pwHash(pw, row.salt);
+        if(hash !== row.password_hash) return json({error:'wrong password'}, 401, cors);
+      } else {
+        const {hash, salt} = await pwHash(pw, null);
+        if(row){
+          if(name){
+            await env.DB.prepare('UPDATE profiles SET password_hash=?, salt=?, display_name=?, provider=? WHERE id=?')
+              .bind(hash, salt, name, 'local', row.id).run();
+          } else {
+            await env.DB.prepare('UPDATE profiles SET password_hash=?, salt=?, provider=? WHERE id=?')
+              .bind(hash, salt, 'local', row.id).run();
+          }
+        } else {
+          const uid = crypto.randomUUID();
+          await env.DB.prepare('INSERT INTO profiles (id, email, password_hash, salt, display_name, provider) VALUES (?,?,?,?,?,?)')
+            .bind(uid, email, hash, salt, name || email.split('@')[0], 'local').run();
+          row = {id: uid, display_name: name || email.split('@')[0]};
+        }
+      }
+      const exp = Date.now() + 7*24*3600*1000;
+      const tok = await signTok(row.id, exp);
+      const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(row.id).first();
+      return new Response(JSON.stringify({profile: prof}), {status: 200, headers: {
+        ...cors, 'Content-Type': 'application/json',
+        'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${7*24*3600}`}});
+    }
+
+    // GET /api/auth/me
+    if (path === '/api/auth/me' && request.method === 'GET') {
+      const uid = await sessUid(request);
+      if(!uid) return json({profile: null}, 200, cors);
+      const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(uid).first();
+      return json({profile: prof || null}, 200, cors);
+    }
+
+    // POST /api/auth/logout
+    if (path === '/api/auth/logout' && request.method === 'POST') {
+      return new Response('{}', {status: 200, headers: {...cors, 'Content-Type': 'application/json',
+        'Set-Cookie': 'svsess=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0'}});
+    }
+
     // POST /api/read — verse-by-verse TTS render (fish s2.1-pro-free, $0),
     // stored in R2 read/<work>/<verse>_<lang>.mp3. Same verse unit as recitation;
     // first tap renders + stores, later taps hit the cache.

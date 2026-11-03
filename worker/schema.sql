@@ -1,7 +1,12 @@
 CREATE TABLE IF NOT EXISTS profiles (
   id TEXT PRIMARY KEY,
   email TEXT UNIQUE,
-  created_at TEXT DEFAULT (datetime('now'))
+  created_at TEXT DEFAULT (datetime('now')),
+  password_hash TEXT,          -- PBKDF2-SHA256, 100000 iters (worker cap), b64url bits
+  salt TEXT,                   -- hex16
+  display_name TEXT,
+  orcid TEXT,                  -- filled by the ORCID OAuth leg (AUTH-SETUP.md)
+  provider TEXT DEFAULT 'local'  -- local | orcid | google
 );
 
 CREATE TABLE IF NOT EXISTS variants (
