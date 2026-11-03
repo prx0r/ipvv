@@ -41,5 +41,6 @@ not establish that a production deployment or the missing suite works.
 
 The later commit on this branch adds a private account API for drafts, snapshot-bound
 reviews, self-attested sign-offs, consented Qwen assistance and a disabled-by-default
-realtime voice relay. It is not a Git publication bridge. See `worker/SCHOLAR-WORKSPACE.md` for API,
+realtime voice relay. A separate translation-work branch supplies the Git submission
+bridge; neither component is deployed. See `worker/SCHOLAR-WORKSPACE.md` for API,
 migration, privacy and rollout details. It has not been deployed.

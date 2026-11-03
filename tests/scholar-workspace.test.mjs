@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {DatabaseSync} from 'node:sqlite';
+import {createHash,createHmac} from 'node:crypto';
 
 const suite=await readFile(new URL('../worker/src/scholar-workspace.js',import.meta.url),'utf8');
 const url=`data:text/javascript;base64,${Buffer.from(suite).toString('base64')}`;
@@ -48,8 +49,26 @@ test('private drafts, version-specific reviews and signoffs use the signed-in ac
   assert.equal(response.status,201);const signoff=await response.json();
   assert.equal(signoff.identity_state,'SELF_ATTESTED');
   assert.equal(signoff.snapshot_sha256,'67fd702bdecc7bb1f7b04ea1de724d716ddbac813d8e9e2991a6df945243f7bf');
-  assert.equal((await call('/api/scholar/documents/draft:1','DELETE',{expected_revision:2},bob.cookie)).status,409);
-  assert.equal((await call('/api/scholar/documents/draft:1','DELETE',{expected_revision:2},alice.cookie)).status,200);
+  env.SCHOLAR_BRIDGE_URL='https://bridge.example';env.SCHOLAR_BRIDGE_SECRET='x'.repeat(40);
+  const oldFetch=globalThis.fetch;
+  globalThis.fetch=async (url,options)=>{
+    assert.equal(String(url),'https://bridge.example/v1/scholar/account-submissions');
+    const raw=options.body,stamp=options.headers['X-Scholar-Time'];
+    const hash=createHash('sha256').update(raw).digest('hex');
+    assert.equal(options.headers['X-Scholar-Signature'],createHmac('sha256',env.SCHOLAR_BRIDGE_SECRET)
+      .update(`scholar-bridge/v1\n${stamp}\n${hash}`).digest('hex'));
+    const payload=JSON.parse(raw);assert.equal(payload.account_id,alice.profile.id);
+    assert.equal(payload.signoff.snapshot_sha256,signoff.snapshot_sha256);
+    return Response.json({branch:'scholar/submission-test',commit:'a'.repeat(40),remote_pushed:true});
+  };
+  try{
+    response=await call('/api/scholar/submit','POST',{signoff_id:signoff.id,confirm_submission:true},alice.cookie);
+    assert.equal(response.status,201);assert.equal((await response.json()).status,'SUBMITTED_PUBLIC_BRANCH');
+  }finally{globalThis.fetch=oldFetch;}
+  assert.equal((await call('/api/scholar/documents/draft:1','PUT',{...data,expected_revision:2,content:{text:'Later edit'}},alice.cookie)).status,200);
+  assert.equal((await call('/api/scholar/submit','POST',{signoff_id:signoff.id,confirm_submission:true},alice.cookie)).status,409);
+  assert.equal((await call('/api/scholar/documents/draft:1','DELETE',{expected_revision:3},bob.cookie)).status,409);
+  assert.equal((await call('/api/scholar/documents/draft:1','DELETE',{expected_revision:3},alice.cookie)).status,200);
   response=await call('/api/scholar/reviews','GET',undefined,bob.cookie);
   assert.equal((await response.json()).reviews[0].snapshot.content.text,'Alice draft');db.close();
 });
@@ -66,7 +85,12 @@ test('Qwen needs consent, a free-tier configuration and only the scholar’s own
     assert.equal((await call(`/api/scholar/documents/a-${i}`,'PUT',payload,alice)).status,200);
     assert.equal((await call(`/api/scholar/documents/b-${i}`,'PUT',{...payload,content:{text:`Bob secret ${i}`}},bob)).status,200);
   }
-  const target='test-p01-v04', originals={t1:{[target]:{}},l0:{[target]:[{id:'token'}]},l3:{},l4:{},l2:{},c1:{},c2:{},argmap:{}};
+  const target='test-p01-v04', originals={t1:{[target]:{}},l0:{[target]:[{id:'token'}],
+    'test-p01-v01':[{id:'l0-token',surface:'cit',chosen_index:0,options:[{gloss:'consciousness'},{gloss:'awareness',grounds:'context'}]}]},
+    l3:{},l4:{},l2:{},c1:{},c2:{},argmap:{}};
+  const lexical={expected_revision:0,kind:'translation',work:'testwork',target:'test-p01-v01',layer:'l0',title:'',
+    content:{text:JSON.stringify([{id:'l0-token',surface:'cit',chosen_index:1,options:[{gloss:'consciousness'},{gloss:'awareness',grounds:'context'}]}])}};
+  assert.equal((await call('/api/scholar/documents/l0-draft','PUT',lexical,alice)).status,200);
   const projection={work:'testwork',originals,source_verses:{[target]:{text:'śiva'}},
     l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]},projection_sha256:'a'.repeat(64)};
   const original=globalThis.fetch;let prompt='';
@@ -84,6 +108,7 @@ test('Qwen needs consent, a free-tier configuration and only the scholar’s own
     const response=await call('/api/scholar/assist','POST',task,alice);assert.equal(response.status,200);
     const draft=(await response.json()).document;assert.equal(draft.content.author_kind,'agent');
     assert.match(prompt,/Keep the turn/);assert.match(prompt,/Alice example 1/);assert.doesNotMatch(prompt,/Bob secret/);
+    assert.match(prompt,/"chosen":"awareness"/);
     assert.match(prompt,/śiva/);
   }finally{globalThis.fetch=original;db.close();}
 });
