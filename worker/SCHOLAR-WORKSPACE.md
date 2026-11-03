@@ -1,5 +1,8 @@
 # Scholar account workspace: review branch
 
+For the other agent's release sequence, feature-by-feature status, and remaining
+gates, start with `SCHOLAR-RELEASE-HANDOFF.md` in this directory.
+
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
 reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
