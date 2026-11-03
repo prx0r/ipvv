@@ -68,3 +68,9 @@ test('new account session is cross-site compatible and rejects untrusted origins
   const blocked = await worker.fetch(request('/api/auth/logout', 'POST', undefined, {Origin:'https://untrusted.example'}), env);
   assert.equal(blocked.status, 403);
 });
+
+test('legacy unauthenticated variant acceptance fails closed', async () => {
+  const res = await worker.fetch(request('/api/variants/v:example/accept','POST',{user_id:'someone-else'}),{});
+  assert.equal(res.status,503);
+  assert.match((await res.json()).error,/authenticated review/);
+});
