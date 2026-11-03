@@ -1,0 +1,94 @@
+{
+ "work": "phrdaya",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work phrdaya/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "dcrafted; siddhi-triple gloss revised with reason; QA NEEDS_WITNESS | 2026-11-04: L4 5/5 songs, 20/20v (per-song DRAFT+data), aphoristic couplets/monostichs, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "phr-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Free consciousness causes, unborrowing opens, divides by fitness, veils by tightening — descent promised.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Free consciousness causes everything — and it borrows nothing to do it. It opens the world without taking anything in. It divides things up by fitness, and it veils itself by tightening. All of that is the descent, promised.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Free consciousness causes everything — and it borrows nothing to do it. It opens the world without taking anything in. It divides things up by fitness, and it veils itself by tightening. All of that is the descent, promised."
+  },
+  {
+   "chunk": "phr-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Mind tightened, knower measured, pentads stationed, schools seated on the descent.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "On the way down: mind gets tightened, the knower gets measured, the fives get stationed, and all the schools get seated. Every level takes its place on the descent.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "On the way down: mind gets tightened, the knower gets measured, the fives get stationed, and all the schools get seated. Every level takes its place on the descent."
+  },
+  {
+   "chunk": "phr-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Stained likeness keeps divine office: five acts done small is wandering.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is the wonder: even stained, even shrunk small, the likeness keeps its divine office. Five great acts, done tiny — that doing-small is exactly what wandering is.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is the wonder: even stained, even shrunk small, the likeness keeps its divine office. Five great acts, done tiny — that doing-small is exactly what wandering is."
+  },
+  {
+   "chunk": "phr-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Return climbs, burns, owns, holds fast — freedom alive.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The way back: climb, burn, own, hold fast. Climb to knowing, burn up every knowable as fuel, make the world your own, and grip oneness with knowing so tight it never slips. That grip is freedom — alive, right now.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The way back: climb, burn, own, hold fast. Climb to knowing, burn up every knowable as fuel, make the world your own, and grip oneness with knowing so tight it never slips. That grip is freedom — alive, right now."
+  },
+  {
+   "chunk": "phr-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Opening middle, given means, recalled oneness, become Śiva.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The middle opens. Means are given. Oneness is remembered. And then — become Shiva. Opening, given, recalled, become: the whole Heart in four breaths.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The middle opens. Means are given. Oneness is remembered. And then — become Shiva. Opening, given, recalled, become: the whole Heart in four breaths."
+  }
+ ]
+}

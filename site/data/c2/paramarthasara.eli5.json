@@ -1,0 +1,214 @@
+{
+ "work": "paramarthasara",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work paramarthasara/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=12",
+  "approval": ", L4 couplets handcrafted verse-by-verse with craft_notes+reads_against in DRAFT files; L3 diacritic backlog fixed in L4; first-verse voice set by owner verdict (v01-v02); qa NEEDS_WITNESS 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "param-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Refuge in all-abiding Śambhu; whirled student asks, teacher answers in verses. [1] Fourfold egg manifested by Lord's power-weight; enjoyer embodied is Śiva fettered. [2] Lord holds all forms as crystal takes colors; self moves/rests with world-mass. [3] Everywhere-self shines in mind-mirror; grace-pure mind mirrors light-formed self, will-knowing-acting replete.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The song opens with taking shelter: refuge in Shambhu, who abides in everything. A student comes spinning with questions, and the teacher answers — in verses. That question-and-answer is the frame holding everything that follows.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the world gets built in three quick strokes. First, the fourfold egg — everything that exists — is manifested by nothing but the weight of the Lords power; and the enjoyer who gets embodied inside it is Shiva Himself, in fetters. Second, the Lord holds every form the way a crystal takes on whatever color is put next to it; the self moves with the moving world-mass and rests with the resting one. Third, the everywhere-self shines inside the mirror of the mind; and when grace purifies that mind, it mirrors back a self made of light, complete with will, knowing, and acting.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "text": "The song opens with taking shelter: refuge in Shambhu, who abides in everything. A student comes spinning with questions, and the teacher answers — in verses. That question-and-answer is the frame holding everything that follows.\n\nThen the world gets built in three quick strokes. First, the fourfold egg — everything that exists — is manifested by nothing but the weight of the Lords power; and the enjoyer who gets embodied inside it is Shiva Himself, in fetters. Second, the Lord holds every form the way a crystal takes on whatever color is put next to it; the self moves with the moving world-mass and rests with the resting one. Third, the everywhere-self shines inside the mirror of the mind; and when grace purifies that mind, it mirrors back a self made of light, complete with will, knowing, and acting."
+  },
+  {
+   "chunk": "param-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Thought-free principle shines the thirty-six like mirror-towns; freedom effects the hard, Māyā veils; grasped knowing stains sixfold; the atom knows little now; husk-separate yet one, purified by path; mere proceedings ordered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The thought-free principle shines all thirty-six levels the way a mirror holds whole towns inside it. Freedom pulls off the hard thing; illusion puts on the veil. Knowing, once grasped, stains things six ways. The little atom-self knows almost nothing yet. Husk-separate, still one — and the path purifies it. Mere goings-on get ordered.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The thought-free principle shines all thirty-six levels the way a mirror holds whole towns inside it. Freedom pulls off the hard thing; illusion puts on the veil. Knowing, once grasped, stains things six ways. The little atom-self knows almost nothing yet. Husk-separate, still one — and the path purifies it. Mere goings-on get ordered."
+  },
+  {
+   "chunk": "param-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Five knowing, five doing organs; subtle division-free objects; mixture grossifies; creation husks consciousness; three sheaths wrap; one self manifold-perceived; one juice many sweets; selves conventional; delusion undiscriminable.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Count the instruments: five for knowing, five for doing. Their objects start subtle and undivided — then mixing makes them gross. Creation husks consciousness over. Three sheaths wrap it. And yet: one self, perceived as many. One juice, tasting like many sweets. Selves are conventional labels. Delusion cannot tell them apart.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Count the instruments: five for knowing, five for doing. Their objects start subtle and undivided — then mixing makes them gross. Creation husks consciousness over. Three sheaths wrap it. And yet: one self, perceived as many. One juice, tasting like many sweets. Selves are conventional labels. Delusion cannot tell them apart."
+  },
+  {
+   "chunk": "param-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unreal orders arise by delusion; shining-things darkness takes non-self for self, burst upon burst; self nets itself spider-like; unwrapped, supreme Śiva spreads bondage-release play; states shine in the fourth unveiled; three states told, fourth beyond; sky unsoiled, jars unsoiled.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unreal orders of things arise, and the mechanism is delusion: shining things get darkened, and the not-self gets taken for the self, burst upon burst. The self nets itself the way a spider nets itself in its own web. But unwrapped, the supreme Shiva spreads out the play of bondage and release. States of waking, dreaming, sleeping shine inside a fourth that stays unveiled — the three told, the fourth beyond telling. Sky unsoiled, jars unsoiled.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unreal orders of things arise, and the mechanism is delusion: shining things get darkened, and the not-self gets taken for the self, burst upon burst. The self nets itself the way a spider nets itself in its own web. But unwrapped, the supreme Shiva spreads out the play of bondage and release. States of waking, dreaming, sleeping shine inside a fourth that stays unveiled — the three told, the fourth beyond telling. Sky unsoiled, jars unsoiled."
+  },
+  {
+   "chunk": "param-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Seeming follows states, Lord truly not; mirroring removed, delusion shattered; rooted done, no duty; triad remainders into being; difference left, being shines; brahman rests in power; untouched sky-flowered; all emitted in Śiva-name; three eggs created.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Seeming just follows whatever state you are in; the Lord Himself never does. Take the mirroring away and delusion shatters. What was rooted is done with; there is no duty left. The three leftovers resolve into being; difference gets left behind and being shines. Brahman rests in power. Untouched, like a flower in the sky. Everything gets emitted in Shivas name; three eggs created.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Seeming just follows whatever state you are in; the Lord Himself never does. Take the mirroring away and delusion shatters. What was rooted is done with; there is no duty left. The three leftovers resolve into being; difference gets left behind and being shines. Brahman rests in power. Untouched, like a flower in the sky. Everything gets emitted in Shivas name; three eggs created."
+  },
+  {
+   "chunk": "param-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] I drive the play-wheel pure-formed; in-me shining, from-me spreading; universe-formed shining in all; senseless seer composing systems; crossed Māyā dissolved as water-in-water; Śiva-made beyond sorrow; fruits from contact, company hard; fools cycle bound; heaped deeds burn as cotton.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "I drive the play-wheel, pure-formed. Everything shines in me; everything spreads out from me. The universe-formed shines in all things. The senseless seer just sits there composing systems about it. Cross Maya and she dissolves like water poured into water. Made of Shiva means beyond sorrow. Fruits come from contact, and company is hard — fools keep cycling, bound. Heaped-up deeds burn away like cotton in a flame.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "I drive the play-wheel, pure-formed. Everything shines in me; everything spreads out from me. The universe-formed shines in all things. The senseless seer just sits there composing systems about it. Cross Maya and she dissolves like water poured into water. Made of Shiva means beyond sorrow. Fruits come from contact, and company is hard — fools keep cycling, bound. Heaped-up deeds burn away like cotton in a flame."
+  },
+  {
+   "chunk": "param-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Done fruitless ends birth; freed seed unsprouting; own-formed all fearless griefless; jewel-heaped I-Lord misfortune-free; no-abode no-journey knot-cut manifestation; knotted cut freed though bodied; burnt seed unbirthing deed; limited mind contracts knowing to body; stainless vow stated.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Get things done and let the fruit go — that ends being born again. The freed seed never sprouts. Own-formed, all fearless, all griefless; I, the jewel-heaped Lord, free of misfortune. No abode, no journey: manifestation with the knot cut. Knotted, then cut: freed while still in the body. The burnt seed cannot un-birth a deed. The limited mind contracts knowing down into the body. The stainless vow, stated.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Get things done and let the fruit go — that ends being born again. The freed seed never sprouts. Own-formed, all fearless, all griefless; I, the jewel-heaped Lord, free of misfortune. No abode, no journey: manifestation with the knot cut. Knotted, then cut: freed while still in the body. The burnt seed cannot un-birth a deed. The limited mind contracts knowing down into the body. The stainless vow, stated."
+  },
+  {
+   "chunk": "param-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Beyond touch firm Lord hosts-making; Śiva-made awakened wanders not; not-mine affirmed fruitless; thoughts sacrificed flame-become; covered calmed anywhere freed; extremes done untouched; dull-moving opinion-free; delusion-host touches not; nothing separate praise-needless.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Beyond touch, the firm Lord keeps making hosts — worlds, beings, all of it. Awake and Shiva-made, you do not wander anymore. Say not-mine and mean it, and the fruit drops off. Sacrifice your thoughts and they turn to flame. Covered, calmed: free anywhere. Extremes finished, untouched. Moving slowly, free of opinions. The host of delusion cannot touch you. Nothing is separate, so praise is needless.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Beyond touch, the firm Lord keeps making hosts — worlds, beings, all of it. Awake and Shiva-made, you do not wander anymore. Say not-mine and mean it, and the fruit drops off. Sacrifice your thoughts and they turn to flame. Covered, calmed: free anywhere. Extremes finished, untouched. Moving slowly, free of opinions. The host of delusion cannot touch you. Nothing is separate, so praise is needless."
+  },
+  {
+   "chunk": "param-p09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bodied temple god-housed; Bhairavī worshipped with pure gifts; difference-seeds offered effortless; creating is meditating; worlds turned inward muttering; even-glanced burning-ground body; skull-bowl tasted hard-easy; got truth done-done standing; knowing told all-self made-of-that.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The body is a temple with God housed in it. Bhairavi gets worshipped with pure gifts; the seeds of difference get offered, and it costs no effort. Creating is just meditating. Worlds get turned inward and muttered. With an even glance, the burning-ground body. The skull-bowl gets tasted — hard and easy both. Got truth, done done, standing. Knowing told: all is self, made of that.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The body is a temple with God housed in it. Bhairavi gets worshipped with pure gifts; the seeds of difference get offered, and it costs no effort. Creating is just meditating. Worlds get turned inward and muttered. With an even glance, the burning-ground body. The skull-bowl gets tasted — hard and easy both. Got truth, done done, standing. Knowing told: all is self, made of that."
+  },
+  {
+   "chunk": "param-p10",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Place-indifferent dying goes isolation; rites useless to stainless; separated unrejoined; staying though touch-free; condition cut gem-clear; teacher-purified Śiva-formed; faith-got before fates; moment helper not cause; beast-knowing goes right.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Dying does not care about place: go into isolation. Rites are useless to the stainless. What got separated does not get rejoined. Stay put, though untouched and free of touch. Cut the condition till it is gem-clear. Teacher-purified, Shiva-formed. Got by faith before the fates decide. The moment helps but is not the cause. Even beast-knowing goes right.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Dying does not care about place: go into isolation. Rites are useless to the stainless. What got separated does not get rejoined. Stay put, though untouched and free of touch. Cut the condition till it is gem-clear. Teacher-purified, Shiva-formed. Got by faith before the fates decide. The moment helps but is not the cause. Even beast-knowing goes right."
+  },
+  {
+   "chunk": "param-p11",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Between-bodies fit-yoked; once-shone stays same; death-signs listed; yoked yet unfallen; taught quickly Śiva at once; stepped resorting ends Śiva-made; mid-way death allowed; fallen rests returns Śiva; missing yet rejoicing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Between bodies, fitly yoked. What shone once stays the same. The signs of death get listed. Yoked, yet unfallen. Taught quickly: Shiva, all at once. Having stepped, resorting, it ends Shiva-made. Mid-way death is allowed. Fallen, rests, returns: Shiva. Missing, yet rejoicing.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Between bodies, fitly yoked. What shone once stays the same. The signs of death get listed. Yoked, yet unfallen. Taught quickly: Shiva, all at once. Having stepped, resorting, it ends Shiva-made. Mid-way death is allowed. Fallen, rests, returns: Shiva. Missing, yet rejoicing."
+  },
+  {
+   "chunk": "param-p12",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Fallen honored as king; long-returned getting deathless; devoted going yet striving; meditated brief soon entering; hundred-verse essence sealed by feet-kindled me.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The fallen one gets honored like a king. Long gone, long returned, getting the deathless. Devoted in going, yet still striving. Meditated briefly, soon entering. And with that, the hundred verses seal their essence — kindled by feet, by me.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The fallen one gets honored like a king. Long gone, long returned, getting the deathless. Devoted in going, yet still striving. Meditated briefly, soon entering. And with that, the hundred verses seal their essence — kindled by feet, by me."
+  }
+ ]
+}

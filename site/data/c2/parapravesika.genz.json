@@ -1,0 +1,158 @@
+{
+ "work": "parapravesika",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work parapravesika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=9",
+  "approval": "smission handcrafted; QA NEEDS_WITNESS; Sauḥ/etad sharpenings from Pradipaka | 2026-11-04: L4 9/9 songs (per-song DRAFT+data), length-follows-argument forms, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "par-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The vow binds deity to doctrine in one compound and predicates contraries together — world-shaped yet world-surpassing consciousness, throbbing as supreme power.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Vow binds deity to doctrine in one compound. Contraries predicated together: world-shaped yet world-surpassing, throbbing as supreme power. Paradox is the program.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Vow binds deity to doctrine in one compound. Contraries predicated together: world-shaped yet world-surpassing, throbbing as supreme power. Paradox is the program."
+  },
+  {
+   "chunk": "par-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Light-nature entails awareness-nature: specified twofold and three-functioned as unmade-I flashing, the calm-brahman alternative refused, absence entailing lordlessness and deadness.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Light-nature entails awareness-nature. Twofold, three-functioned, unmade-I flashing. Calm-brahman refused. Remove awareness: lordlessness plus deadness follow.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Light-nature entails awareness-nature. Twofold, three-functioned, unmade-I flashing. Calm-brahman refused. Remove awareness: lordlessness plus deadness follow."
+  },
+  {
+   "chunk": "par-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Ten scriptural names, one awareness-primacy: each name denotes by its office — chief-form, speech, ground-fullness, join-loose-lower, no-other-needed, yogin-like raising, mine-flashing, untrifling, rest-ground, still-shimmer.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Ten names, one primacy, each earned by office: chief-form, speech, ground-fullness, join-loose-lower, no-other-needed, yogin-raising, mine-flashing, untrifling, rest-ground, still-shimmer. Many dialects, one throb.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Ten names, one primacy, each earned by office: chief-form, speech, ground-fullness, join-loose-lower, no-other-needed, yogin-raising, mine-flashing, untrifling, rest-ground, still-shimmer. Many dialects, one throb."
+  },
+  {
+   "chunk": "par-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Self-lit Lord shines by the Lady as śiva-to-earth world; that shining constitutes both making and aliveness; effecthood resolved as shining-dependence, veiling impossible.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Self-lit Lord shines by Lady as shiva-to-earth world. Shining equals making plus aliveness. Made means shining-dependent, period. Veiling: impossible.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Self-lit Lord shines by Lady as shiva-to-earth world. Shining equals making plus aliveness. Made means shining-dependent, period. Veiling: impossible."
+  },
+  {
+   "chunk": "par-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The prover proved before proof: indicators cannot touch, questions answer themselves, proof demoted to illusion's traffic, outlived by the further Life.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Prover proved before proof. Indicators cannot touch; questions self-answer; proof demoted to illusion-traffic. Beyond all life-drawing proofs stands further Life: Him.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Prover proved before proof. Indicators cannot touch; questions self-answer; proof demoted to illusion-traffic. Beyond all life-drawing proofs stands further Life: Him."
+  },
+  {
+   "chunk": "par-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Full-I-grasp woven of a-to-ha sound-mass grounds identity: Śiva Himself the thirty-six-leveled display; level defined as undivided shine familying the divided; roll bare.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Full-I-grasp woven of a-to-ha sound-mass grounds identity: Shiva the thirty-six-leveled display. Level equals undivided shine familying the divided. Then the roll, bare.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Full-I-grasp woven of a-to-ha sound-mass grounds identity: Shiva the thirty-six-leveled display. Level equals undivided shine familying the divided. Then the roll, bare."
+  },
+  {
+   "chunk": "par-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Pure bliss-nature throbbing with hundred-thousand reflections wills emission; will-first, knowing-first, doing-first dim by this-portion faintness; illusion spreads difference, stuffs art-to-earth, and veils by freedom's synonym into personhood — deemed-bound, wandering. The mask never touches the wearer (magician). Recognition restores sovereignty: dense-conscious, free-bodied, Śiva at fall. Five glories, uncontracted, accept contraction into five littles on robbed-king terms.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bliss-nature throbbing hundred-thousand reflections wills emission; will-knowing-doing dim by faintness; illusion spreads, stuffs, veils into personhood: deemed-bound, wandering. Mask never touches wearer — magician clause. Recognition restores: dense-conscious, free-bodied, Shiva-at-fall. Five unshrunk glories take five littles, robbed-king terms.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Bliss-nature throbbing hundred-thousand reflections wills emission; will-knowing-doing dim by faintness; illusion spreads, stuffs, veils into personhood: deemed-bound, wandering. Mask never touches wearer — magician clause. Recognition restores: dense-conscious, free-bodied, Shiva-at-fall. Five unshrunk glories take five littles, robbed-king terms."
+  },
+  {
+   "chunk": "par-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Doing-a-little, knowing-a-little, clinging in may-I-grow-never-cease shape, sequence-cutting was-am-will, must in mine-to-do shape — five functions, one veil over full consciousness, distinct-yet-undistinct. Nature poises the three strands past telling apart. Deciding, prideing, resolving organ; ten senses ordered; five commons defined by having-nothing-more; five element-offices: room, life, burn-cook, refresh-flow, uphold.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Five functions, one veil: doing-little, knowing-little, clinging may-I-grow-never-cease, sequence-cutting was-am-will, must in mine-to-do shape. Distinct-yet-undistinct over full consciousness. Nature poises three strands past telling-apart. Organ decides-prides-resolves; ten senses ordered; five commons by having-nothing-more; five offices: room, life, burn-cook, refresh-flow, uphold.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Five functions, one veil: doing-little, knowing-little, clinging may-I-grow-never-cease, sequence-cutting was-am-will, must in mine-to-do shape. Distinct-yet-undistinct over full consciousness. Nature poises three strands past telling-apart. Organ decides-prides-resolves; ten senses ordered; five commons by having-nothing-more; five offices: room, life, burn-cook, refresh-flow, uphold."
+  },
+  {
+   "chunk": "par-p09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Seed-contained world proved by similes and clay/water proofs; sat involuted to bare sa (31) and assent-au (pure levels, Sauḥ-heart-mantra); oblationless knowing-entering initiates — living-free, Śiva at fall.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Seed-contained world proved: similes, then clay, then water, then the word stripped to bare sa holding thirty-one with assent-au beyond (pure levels, Sauh-heart-mantra). Oblationless knowing-entering initiates: living-free, Shiva-at-fall. Proofs done, freedom opened.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Seed-contained world proved: similes, then clay, then water, then the word stripped to bare sa holding thirty-one with assent-au beyond (pure levels, Sauh-heart-mantra). Oblationless knowing-entering initiates: living-free, Shiva-at-fall. Proofs done, freedom opened."
+  }
+ ]
+}

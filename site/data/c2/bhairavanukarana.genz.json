@@ -1,0 +1,177 @@
+{
+ "work": "bhairavanukarana",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bhairavanukarana/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": " x5, L3 couplets handcrafted+reviewed; Gnoli ed. authority; QA NEEDS_WITNESS | 2026-11-04: L4 5/5 songs, 48/48v (per-song DRAFT+data), iconographic couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bhair-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Salute, shelter, wander-not; grace conquers. [1] Alone supreme nectar-one ablaze, all-swallowed: venerated. [2] Three-undiffering endure by knowing-shape becoming. [3] Melted bliss-mass; principle likened in form venerated. [4] Script-outlines man; shape reveals varied You. [5] Entered concept-free; reflected never fancy-caught. [6] Light-goddess-flowers arranged; guru unfolded, heart entered. [7] Reflecting praise in body-temple, bonds outpoured. [8] Five-named conquer; splits gained, mouths called. [9] Limbs to Sadāśiva; corpse-self seat.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Salute, shelter, wander-not; grace conquers. Door, path, victory.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Alone supreme nectar-one ablaze, all-swallowed: venerated. Three-undiffering endure by knowing-shape becoming. Melted bliss-mass; principle likened in form venerated. Script-outlines man; shape reveals varied You. Entered concept-free; reflected never fancy-caught. Light-goddess-flowers arranged; guru unfolded, heart entered. Reflecting praise in body-temple, bonds outpoured. Five-named conquer; splits gained, mouths called. Limbs to SadASiva; corpse-self seat. Full array, bowed limb by limb.",
+     "maps_to": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Salute, shelter, wander-not; grace conquers. Door, path, victory.\n\nAlone supreme nectar-one ablaze, all-swallowed: venerated. Three-undiffering endure by knowing-shape becoming. Melted bliss-mass; principle likened in form venerated. Script-outlines man; shape reveals varied You. Entered concept-free; reflected never fancy-caught. Light-goddess-flowers arranged; guru unfolded, heart entered. Reflecting praise in body-temple, bonds outpoured. Five-named conquer; splits gained, mouths called. Limbs to SadASiva; corpse-self seat. Full array, bowed limb by limb."
+  },
+  {
+   "chunk": "bhair-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Her spread: Brahmī-led all. [1] Borne pointed; opposed unopposed in me. [2] Thread-loosed sapless shown garlanded as-if. [3] Doubled look commands; gut-as-if appears. [4] Impassioned cloth cast; bloodied hide told. [5] Dagger bared splitting; taken-world heroes best. [6] Slayer standing lorded; shield pointing. [7] Noosed time counted; death's death shown. [8] Hurled to unmake; goad makes plain. [9] Bow shown, lords arrayed; cause-deer deer-pierced.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Her spread: BrahmI-led all. Borne pointed; opposed unopposed in me. Thread-loosed sapless shown garlanded as-if. Doubled look commands; gut-as-if appears. Impassioned cloth cast; bloodied hide told. Dagger bared splitting; taken-world heroes best.",
+     "maps_to": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Slayer standing lorded; shield pointing — fear not. Noosed time counted; death’s death shown. Hurled to unmake; goad makes plain. Bow shown, lords arrayed; cause-deer deer-pierced.",
+     "maps_to": [
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Her spread: BrahmI-led all. Borne pointed; opposed unopposed in me. Thread-loosed sapless shown garlanded as-if. Doubled look commands; gut-as-if appears. Impassioned cloth cast; bloodied hide told. Dagger bared splitting; taken-world heroes best.\n\nSlayer standing lorded; shield pointing — fear not. Noosed time counted; death’s death shown. Hurled to unmake; goad makes plain. Bow shown, lords arrayed; cause-deer deer-pierced."
+  },
+  {
+   "chunk": "bhair-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Boon-hand glory-giving; unstained principle-fixed. [1] Fearlessness uproots; grace palmed. [2] Shattered Māyā-skull borne waking shown. [3] Taken rest in mass; pretext commands. [4] Played triple sound heard standing. [5] Triple-lovely imitated outside trident-held always. [6] Lower-three shown; thunderbolt six-spoked borne. [7] Tamed held; staff-revealed to us. [8] Borne bent splitting; pointed. [9] Assumed various, proclaimed, abode everywhere.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Boon-hand glory-giving; unstained principle-fixed. Fearlessness uproots; grace palmed. Shattered MAyA-skull borne waking shown. Taken rest in mass; pretext commands.",
+     "maps_to": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Played triple sound heard standing. Triple-lovely imitated outside trident-held always. Lower-three shown; thunderbolt six-spoked borne. Tamed held; staff-revealed to us.",
+     "maps_to": [
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    {
+     "text": "Borne bent splitting; pointed. Assumed various, proclaimed, abode everywhere.",
+     "maps_to": [
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Boon-hand glory-giving; unstained principle-fixed. Fearlessness uproots; grace palmed. Shattered MAyA-skull borne waking shown. Taken rest in mass; pretext commands.\n\nPlayed triple sound heard standing. Triple-lovely imitated outside trident-held always. Lower-three shown; thunderbolt six-spoked borne. Tamed held; staff-revealed to us.\n\nBorne bent splitting; pointed. Assumed various, proclaimed, abode everywhere."
+  },
+  {
+   "chunk": "bhair-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Egg-middled saps drunk; shown within as-if. [1] Crested uprooters lotus-shown held. [2] Seed-ground mirrored; pomegranate-played. [3] Rosary held turns world within by letters. [4] Gore-decked teaches Brahma-pure. [5] Bubbles jar; brow-eye burning taught supreme-fire. [6] Aimed inward expanding shows unstained self all-states. [7] Sky-clad speaks bare; veil questioned covering. [8] Destroyer shown gleaming-bodied from dark ground. [9] Form-worn shown; parted-freed sealed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Egg-middled saps drunk; shown within as-if. Crested uprooters lotus-shown held. Seed-ground mirrored; pomegranate-played.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "Rosary held turns world within by letters. Gore-decked teaches Brahma-pure. Bubbles jar; brow-eye burning taught supreme-fire.",
+     "maps_to": [
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Aimed inward expanding shows unstained self all-states. Sky-clad speaks bare; veil questioned covering. Destroyer shown gleaming-bodied from dark ground. Form-worn shown; parted-freed sealed.",
+     "maps_to": [
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Egg-middled saps drunk; shown within as-if. Crested uprooters lotus-shown held. Seed-ground mirrored; pomegranate-played.\n\nRosary held turns world within by letters. Gore-decked teaches Brahma-pure. Bubbles jar; brow-eye burning taught supreme-fire.\n\nAimed inward expanding shows unstained self all-states. Sky-clad speaks bare; veil questioned covering. Destroyer shown gleaming-bodied from dark ground. Form-worn shown; parted-freed sealed."
+  },
+  {
+   "chunk": "bhair-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Ghoul-girt measuring shown; Bhairava-am-I. [1] Nectar-knower life shining heartward. [2] Sound-bodied eightfold outer-led. [3] Sealed all delighted throng by fullness-shown. [4] Loosed-melted sealed wealth seal-called. [5] Conquering draught dwells clearly; stain known. [6] Momently rising below-flashing; glory-formed known. [7] In-me flashing sealed; rite complete effortless.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Ghoul-girt measuring shown; Bhairava am I. Nectar-knower life shining heartward. Sound-bodied eightfold outer-led.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "Sealed all delighted throng by fullness-shown. Loosed-melted sealed wealth seal-called. Conquering draught dwells clearly; stain known.",
+     "maps_to": [
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Momently rising below-flashing; glory-formed known. In-me flashing sealed; rite complete effortless.",
+     "maps_to": [
+      6,
+      7
+     ]
+    }
+   ],
+   "text": "Ghoul-girt measuring shown; Bhairava am I. Nectar-knower life shining heartward. Sound-bodied eightfold outer-led.\n\nSealed all delighted throng by fullness-shown. Loosed-melted sealed wealth seal-called. Conquering draught dwells clearly; stain known.\n\nMomently rising below-flashing; glory-formed known. In-me flashing sealed; rite complete effortless."
+  }
+ ]
+}

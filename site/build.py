@@ -1461,6 +1461,12 @@ def build_sitedata():
         d.mkdir(parents=True, exist_ok=True)
         _sh.copy(f, d / f.name)
         n += 1
+    # C2 approved renders (translation-work/tools/emit_c2.py) — fetchable like layers
+    c2src = ROOT / "data/c2"
+    if c2src.exists():
+        d2 = DIST / "data/c2"; d2.mkdir(parents=True, exist_ok=True)
+        for f in sorted(c2src.glob("*.json")):
+            _sh.copy(f, d2 / f.name); n += 1
     pi = ROOT / "data/pushing/INDEX.json"
     if pi.exists():
         (DIST / "data/pushing").mkdir(parents=True, exist_ok=True)

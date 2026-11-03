@@ -1,0 +1,344 @@
+{
+ "work": "bodhapancadasika",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bodhapancadasika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=15",
+  "approval": "PASS x15, L3 couplets handcrafted; QA NEEDS_WITNESS; Academy/Mahānaya witnesses compared | 2026-11-04: L4 15/15 songs (per-song DRAFT+data), stotra couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bod-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unsetting light holds bright and dark alike; one inward reality bounds both.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Light that never sets, holding bright and dark the same. One inward reality bounds both — that is the whole picture.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "No sunset. No exceptions. Bright and dark alike, inside one inward bound.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Light that never sets, holding bright and dark the same. One inward reality bounds both — that is the whole picture.\n\nNo sunset. No exceptions. Bright and dark alike, inside one inward bound."
+  },
+  {
+   "chunk": "bod-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] He alone beings' own-nature; the world's abundance power cast as sovereignty.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Only Him. He alone is the own-nature of all beings, and the entire world-show is His power in Lord-shape.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "No seconds. He alone, plus His power running the whole abundance as sovereignty.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Only Him. He alone is the own-nature of all beings, and the entire world-show is His power in Lord-shape.\n\nNo seconds. He alone, plus His power running the whole abundance as sovereignty."
+  },
+  {
+   "chunk": "bod-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Power refuses parting; eternal identity, fire-sealed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Power will not leave its bearer. Ever. The two are eternally identical, sealed the way fire and burning are one thing.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "No separation, no negotiation. Eternal identity, fire-sealed.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Power will not leave its bearer. Ever. The two are eternally identical, sealed the way fire and burning are one thing.\n\nNo separation, no negotiation. Eternal identity, fire-sealed."
+  },
+  {
+   "chunk": "bod-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] World-bearing His mark; whole mirrored by power in self-seeing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "World-bearing is His signature. The all shows up mirrored inside His own self-seeing, and power does the mirroring.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Mark: bears the world. Manner: mirrors it in self-seeing, by power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "World-bearing is His signature. The all shows up mirrored inside His own self-seeing, and power does the mirroring.\n\nMark: bears the world. Manner: mirrors it in self-seeing, by power."
+  },
+  {
+   "chunk": "bod-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] His goddess, grasp-eager, fills all exactly — never short, never over.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "She is His, and she is hungry for exactly one thing: holding His nature tight. She fills all of it perfectly — no shortage, no overflow.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Hungry only to grasp Him. Filling all exactly. Never short, never over.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "She is His, and she is hungry for exactly one thing: holding His nature tight. She fills all of it perfectly — no shortage, no overflow.\n\nHungry only to grasp Him. Filling all exactly. Never short, never over."
+  },
+  {
+   "chunk": "bod-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Play-eager pair make-unmake varied worlds simultaneously, everywhere.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "God plus goddess, forever game to play. They build varied worlds and wreck them in the same instant, everywhere simultaneously.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Play-first pair. Make-unmake at once, all kinds, everywhere.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "God plus goddess, forever game to play. They build varied worlds and wreck them in the same instant, everywhere simultaneously.\n\nPlay-first pair. Make-unmake at once, all kinds, everywhere."
+  },
+  {
+   "chunk": "bod-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Hardest deed, unsurpassed: autonomy, lordship, awareness-form in one.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Hardest deed going, and nothing tops it: freedom, lordship, and awareness-form all in one package.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Unsurpassed degree of difficulty. Autonomy, lordship, awareness: one thing.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Hardest deed going, and nothing tops it: freedom, lordship, and awareness-form all in one package.\n\nUnsurpassed degree of difficulty. Autonomy, lordship, awareness: one thing."
+  },
+  {
+   "chunk": "bod-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Partial shining marks inert; measure-evading awareness differs.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Inert test: shines only partly. Awareness test: evades every measure. Run the test and sort accordingly.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Partial: dead. Unmeasurable: aware. Mark and difference, done.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Inert test: shines only partly. Awareness test: evades every measure. Run the test and sort accordingly.\n\nPartial: dead. Unmeasurable: aware. Mark and difference, done."
+  },
+  {
+   "chunk": "bod-p09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Change self-abides: stood as nature, arrived without departing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Change stays in. Makings and unmakings rest in His own self as His nature — arrived, never departed.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Self-abiding change. Stood, not made. Arrived, never left.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Change stays in. Makings and unmakings rest in His own self as His nature — arrived, never departed.\n\nSelf-abiding change. Stood, not made. Arrived, never left."
+  },
+  {
+   "chunk": "bod-p10",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Variety totalized: extremes, three directions, outer-inner one list.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The catalogue is total: top, bottom, all three directions, outer and inner as one list. No abridgment.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Extremes plus directions plus outer-inner, one list. All of variety, itemized.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The catalogue is total: top, bottom, all three directions, outer and inner as one list. No abridgment.\n\nExtremes plus directions plus outer-inner, one list. All of variety, itemized."
+  },
+  {
+   "chunk": "bod-p11",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Mis-knowing described as freedom; bondage dreadful-to-fools, nothing second.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Call mis-knowing His freedom if you like — that is its name. And that same mis-knowing is bondage itself: dreadful, but only if you are a fool about it. No second thing involved.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Freedom is mis-knowing described. Bondage is that same mis-knowing, scary-to-fools only. Monism, no sequel.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Call mis-knowing His freedom if you like — that is its name. And that same mis-knowing is bondage itself: dreadful, but only if you are a fool about it. No second thing involved.\n\nFreedom is mis-knowing described. Bondage is that same mis-knowing, scary-to-fools only. Monism, no sequel."
+  },
+  {
+   "chunk": "bod-p12",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Three doors unranked; whichever arrival counts.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Three entries, zero ranking. Grace, teacher, scripture — pick any door; getting in is getting in.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Unranked trio. Whichever door you walk through, it counts as arrival.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Three entries, zero ranking. Grace, teacher, scripture — pick any door; getting in is getting in.\n\nUnranked trio. Whichever door you walk through, it counts as arrival."
+  },
+  {
+   "chunk": "bod-p13",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Knowing-through is release from the Lord: fullness, living freedom, remembered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Know it through and you are free — freed by the supreme Lord. Fullness of the awake: living free, just like the remembered teaching says.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Through-knowing is release. Living-free fullness, lineage-remembered.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Know it through and you are free — freed by the supreme Lord. Fullness of the awake: living free, just like the remembered teaching says.\n\nThrough-knowing is release. Living-free fullness, lineage-remembered."
+  },
+  {
+   "chunk": "bod-p14",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bondage-release undivided in nature and Lord, in truth.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Both bondage and release are the Lords own nature. They do not divide — in truth, in Him, zero split.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Pair undivided. Nature one, Lord one, truth one.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Both bondage and release are the Lords own nature. They do not divide — in truth, in Him, zero split.\n\nPair undivided. Nature one, Lord one, truth one."
+  },
+  {
+   "chunk": "bod-p15",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Trident-lotus emblem bearing four powers; Bhairava all-nature, to be dwelt upon.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Meditation object issued: trident with a lotus, four powers on board. Bhairava, who is everything by nature — dwell there.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Four-powered trident-lotus. All-nature Bhairava. Dwell.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Meditation object issued: trident with a lotus, four powers on board. Bhairava, who is everything by nature — dwell there.\n\nFour-powered trident-lotus. All-nature Bhairava. Dwell."
+  }
+ ]
+}

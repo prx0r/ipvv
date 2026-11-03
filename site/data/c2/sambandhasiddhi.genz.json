@@ -1,0 +1,86 @@
+{
+ "work": "sambandhasiddhi",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work sambandhasiddhi/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=3",
+  "approval": "01-p03 canonical (vv1-23, validate+proof PASS x3, L3 handcrafted); 23 slokas (2 mangala+21 karikas) | 2026-11-04: L4 3/3 songs, 23/23v (per-song DRAFT+data), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "samb-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Relation's counterfeits are refused one by one — awaiting, two-seatedness, uninterruptedness need a consciousness they deny — until form-fusion stands: the many's one-selfhood (vv1-5). [1] The Buddhist proof-text is turned against its makers: unmixed things thought-joined is no mere thought but unwardable shining-clinging, warrantable in recognition's path (vv6-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Counterfeit relations, refused one by one: awaiting smuggles in the mind it needs; two-seatedness describes addresses, not bonds; uninterruptedness would marry iron bars. All declined.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "What stands: form-fusion, the manys one-selfhood. And the opponents proof-text testifies against itself — unmixed things thought-joined turns out to be unwardable shining-clinging, warrantable inside recognition. Their own verse convicts them.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Counterfeit relations, refused one by one: awaiting smuggles in the mind it needs; two-seatedness describes addresses, not bonds; uninterruptedness would marry iron bars. All declined.\n\nWhat stands: form-fusion, the manys one-selfhood. And the opponents proof-text testifies against itself — unmixed things thought-joined turns out to be unwardable shining-clinging, warrantable inside recognition. Their own verse convicts them."
+  },
+  {
+   "chunk": "samb-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unity without strain for the consciousness-bodied; the worldly one's reflection-object fixed as difference-pithed non-difference-shining (vv10-11). [1] Mechanics: one thought un-touched, one word uniting many, helping relation admitted, twoness in manyness, two facings, three thinkings, genitive settling unself-lost (vv12-18).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unity costs the consciousness-bodied nothing. The worldly ones reflection-object is locked: difference-pithed non-difference-shining. That is the setup.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the joinery: one thought, un-touched by others. One word — pot-cloth — uniting many. A helping qualifier-qualified relation, admitted because it serves knowledge. Twoness inside manyness, double-reflection-born, like the kings retinue.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Two facings, king and man. Three thinkings. The genitive settles in the qualifier, reaches qualified-oneness, keeps its own form. Nothing lost in the joining.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Unity costs the consciousness-bodied nothing. The worldly ones reflection-object is locked: difference-pithed non-difference-shining. That is the setup.\n\nThen the joinery: one thought, un-touched by others. One word — pot-cloth — uniting many. A helping qualifier-qualified relation, admitted because it serves knowledge. Twoness inside manyness, double-reflection-born, like the kings retinue.\n\nTwo facings, king and man. Three thinkings. The genitive settles in the qualifier, reaches qualified-oneness, keeps its own form. Nothing lost in the joining."
+  },
+  {
+   "chunk": "samb-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Secondaries measured against chiefs — king's man, brahmin's; other chiefs, other unities — king's horse, man (vv19-20). [1] Course told, delusion denied, seal spoken: Māyā-knower-resting intellects drive transaction, moment-grounded in self-awareness; told, proved, unrefuted, useful, full apparatus besides (vv21-23).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Secondaries measured against chiefs: kings man, brahmins man; other chiefs, other unities: kings horse, man. Rank is the relation.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Course told: illusion-knower-resting minds drive all transaction, moment-grounded in self-awareness. Delusion denied. Seal spoken: told, proved, unrefuted, useful — full apparatus besides. Case closed.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Secondaries measured against chiefs: kings man, brahmins man; other chiefs, other unities: kings horse, man. Rank is the relation.\n\nCourse told: illusion-knower-resting minds drive all transaction, moment-grounded in self-awareness. Delusion denied. Seal spoken: told, proved, unrefuted, useful — full apparatus besides. Case closed."
+  }
+ ]
+}

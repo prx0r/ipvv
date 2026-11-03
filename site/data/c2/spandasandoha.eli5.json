@@ -1,0 +1,42 @@
+{
+ "work": "spandasandoha",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work spandasandoha/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=1",
+  "approval": "2026-11-04: L4 1/1 songs, 2/2v (DRAFT+data), schema+subset validated, owner-approved both verses, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "sand-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Śiva alone, possessing spanda, self-established, makes the inner face taste; this hero, lord of the Kula, is victorious. Kṣemarāja's commentary: whose greatness is unmeasured, who measures the world from earth to Sadāśiva in the heart, who displays creation-dissolution plays — he alone, of non-dual nature, endowed with his own autonomy-power, established in his own nature, like an ocean unmoved by world-waves, shines supreme. Recognition (pratyabhijñā) is tasting this spanda in one's own inner face.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "There is exactly one winner: Shiva. He throbs with his own aliveness, stands on nothing but himself, and tastes everything from the inside.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "He is the lord of the whole Kula, the whole family of all things. He himself cannot be measured, but he measures the entire world — from the earth under your feet all the way up — inside his own heart. He puts on creation and destruction the way a stage puts on plays, and he stays steady through all of it, the way the deep ocean stays steady while waves move on top.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And here is the part about you: recognizing means tasting that very same throb inside your own inward face. That tasting is the whole win.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "There is exactly one winner: Shiva. He throbs with his own aliveness, stands on nothing but himself, and tastes everything from the inside.\n\nHe is the lord of the whole Kula, the whole family of all things. He himself cannot be measured, but he measures the entire world — from the earth under your feet all the way up — inside his own heart. He puts on creation and destruction the way a stage puts on plays, and he stays steady through all of it, the way the deep ocean stays steady while waves move on top.\n\nAnd here is the part about you: recognizing means tasting that very same throb inside your own inward face. That tasting is the whole win."
+  }
+ ]
+}

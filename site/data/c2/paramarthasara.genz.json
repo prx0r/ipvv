@@ -1,0 +1,214 @@
+{
+ "work": "paramarthasara",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work paramarthasara/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=12",
+  "approval": ", L4 couplets handcrafted verse-by-verse with craft_notes+reads_against in DRAFT files; L3 diacritic backlog fixed in L4; first-verse voice set by owner verdict (v01-v02); qa NEEDS_WITNESS 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "param-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Refuge in all-abiding Śambhu; whirled student asks, teacher answers in verses. [1] Fourfold egg manifested by Lord's power-weight; enjoyer embodied is Śiva fettered. [2] Lord holds all forms as crystal takes colors; self moves/rests with world-mass. [3] Everywhere-self shines in mind-mirror; grace-pure mind mirrors light-formed self, will-knowing-acting replete.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Refuge in all-abiding Shambhu; whirled student asks, teacher answers in verses. Frame set: shelter, question, verse-answer.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Fourfold egg manifested by Lords power-weight; enjoyer embodied is Shiva fettered. Lord holds all forms as crystal takes colors; self moves-rests with world-mass. Everywhere-self shines in mind-mirror; grace-pure mind mirrors light-formed self, will-knowing-acting replete. World built in three strokes.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "text": "Refuge in all-abiding Shambhu; whirled student asks, teacher answers in verses. Frame set: shelter, question, verse-answer.\n\nFourfold egg manifested by Lords power-weight; enjoyer embodied is Shiva fettered. Lord holds all forms as crystal takes colors; self moves-rests with world-mass. Everywhere-self shines in mind-mirror; grace-pure mind mirrors light-formed self, will-knowing-acting replete. World built in three strokes."
+  },
+  {
+   "chunk": "param-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Thought-free principle shines the thirty-six like mirror-towns; freedom effects the hard, Māyā veils; grasped knowing stains sixfold; the atom knows little now; husk-separate yet one, purified by path; mere proceedings ordered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Thirty-six levels mirrored, freedom doing the impossible, illusion veiling, knowledge staining sixfold, the atom barely knowing — separate-husked yet one, path-purified, proceedings ordered. The inventory of how it stands now.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Thirty-six levels mirrored, freedom doing the impossible, illusion veiling, knowledge staining sixfold, the atom barely knowing — separate-husked yet one, path-purified, proceedings ordered. The inventory of how it stands now."
+  },
+  {
+   "chunk": "param-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Five knowing, five doing organs; subtle division-free objects; mixture grossifies; creation husks consciousness; three sheaths wrap; one self manifold-perceived; one juice many sweets; selves conventional; delusion undiscriminable.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Five knowing, five doing organs; subtle division-free objects; mixture grossifies; creation husks consciousness; three sheaths wrap; one self manifold-perceived; one juice many sweets; selves conventional; delusion undiscriminable. Counted, wrapped, one underneath.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Five knowing, five doing organs; subtle division-free objects; mixture grossifies; creation husks consciousness; three sheaths wrap; one self manifold-perceived; one juice many sweets; selves conventional; delusion undiscriminable. Counted, wrapped, one underneath."
+  },
+  {
+   "chunk": "param-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unreal orders arise by delusion; shining-things darkness takes non-self for self, burst upon burst; self nets itself spider-like; unwrapped, supreme Śiva spreads bondage-release play; states shine in the fourth unveiled; three states told, fourth beyond; sky unsoiled, jars unsoiled.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unreal orders by delusion; shining-things darkness takes non-self for self, burst on burst; self nets itself spider-like. Unwrapped, supreme Shiva spreads bondage-release play; states shine in the fourth unveiled. Sky unsoiled, jars unsoiled.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unreal orders by delusion; shining-things darkness takes non-self for self, burst on burst; self nets itself spider-like. Unwrapped, supreme Shiva spreads bondage-release play; states shine in the fourth unveiled. Sky unsoiled, jars unsoiled."
+  },
+  {
+   "chunk": "param-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Seeming follows states, Lord truly not; mirroring removed, delusion shattered; rooted done, no duty; triad remainders into being; difference left, being shines; brahman rests in power; untouched sky-flowered; all emitted in Śiva-name; three eggs created.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Seeming follows states, Lord truly not; mirroring removed, delusion shattered; rooted done, no duty; triad remainders into being; difference left, being shines; brahman rests in power; untouched sky-flowered; all emitted in Shiva-name; three eggs created. Stripped to shining.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Seeming follows states, Lord truly not; mirroring removed, delusion shattered; rooted done, no duty; triad remainders into being; difference left, being shines; brahman rests in power; untouched sky-flowered; all emitted in Shiva-name; three eggs created. Stripped to shining."
+  },
+  {
+   "chunk": "param-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] I drive the play-wheel pure-formed; in-me shining, from-me spreading; universe-formed shining in all; senseless seer composing systems; crossed Māyā dissolved as water-in-water; Śiva-made beyond sorrow; fruits from contact, company hard; fools cycle bound; heaped deeds burn as cotton.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "I drive the play-wheel pure-formed; in-me shining, from-me spreading; universe-formed shining in all; senseless seer composing systems; crossed Maya dissolved as water-in-water; Shiva-made beyond sorrow; fruits from contact, company hard; fools cycle bound; heaped deeds burn as cotton. First-person cosmos, then the warning and the burning.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "I drive the play-wheel pure-formed; in-me shining, from-me spreading; universe-formed shining in all; senseless seer composing systems; crossed Maya dissolved as water-in-water; Shiva-made beyond sorrow; fruits from contact, company hard; fools cycle bound; heaped deeds burn as cotton. First-person cosmos, then the warning and the burning."
+  },
+  {
+   "chunk": "param-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Done fruitless ends birth; freed seed unsprouting; own-formed all fearless griefless; jewel-heaped I-Lord misfortune-free; no-abode no-journey knot-cut manifestation; knotted cut freed though bodied; burnt seed unbirthing deed; limited mind contracts knowing to body; stainless vow stated.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Done fruitless ends birth; freed seed unsprouting; own-formed all fearless griefless; jewel-heaped I-Lord misfortune-free; no-abode no-journey knot-cut manifestation; knotted cut freed though bodied; burnt seed unbirthing deed; limited mind contracts knowing to body; stainless vow stated. Freedom itemized.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Done fruitless ends birth; freed seed unsprouting; own-formed all fearless griefless; jewel-heaped I-Lord misfortune-free; no-abode no-journey knot-cut manifestation; knotted cut freed though bodied; burnt seed unbirthing deed; limited mind contracts knowing to body; stainless vow stated. Freedom itemized."
+  },
+  {
+   "chunk": "param-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Beyond touch firm Lord hosts-making; Śiva-made awakened wanders not; not-mine affirmed fruitless; thoughts sacrificed flame-become; covered calmed anywhere freed; extremes done untouched; dull-moving opinion-free; delusion-host touches not; nothing separate praise-needless.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Beyond touch firm Lord hosts-making; Shiva-made awakened wanders not; not-mine affirmed fruitless; thoughts sacrificed flame-become; covered calmed anywhere freed; extremes done untouched; dull-moving opinion-free; delusion-host touches not; nothing separate praise-needless. Settled, covered, free.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Beyond touch firm Lord hosts-making; Shiva-made awakened wanders not; not-mine affirmed fruitless; thoughts sacrificed flame-become; covered calmed anywhere freed; extremes done untouched; dull-moving opinion-free; delusion-host touches not; nothing separate praise-needless. Settled, covered, free."
+  },
+  {
+   "chunk": "param-p09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bodied temple god-housed; Bhairavī worshipped with pure gifts; difference-seeds offered effortless; creating is meditating; worlds turned inward muttering; even-glanced burning-ground body; skull-bowl tasted hard-easy; got truth done-done standing; knowing told all-self made-of-that.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bodied temple god-housed; Bhairavi worshipped with pure gifts; difference-seeds offered effortless; creating is meditating; worlds turned inward muttering; even-glanced burning-ground body; skull-bowl tasted hard-easy; got truth done-done standing; knowing told all-self made-of-that. Worship as world-technique.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Bodied temple god-housed; Bhairavi worshipped with pure gifts; difference-seeds offered effortless; creating is meditating; worlds turned inward muttering; even-glanced burning-ground body; skull-bowl tasted hard-easy; got truth done-done standing; knowing told all-self made-of-that. Worship as world-technique."
+  },
+  {
+   "chunk": "param-p10",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Place-indifferent dying goes isolation; rites useless to stainless; separated unrejoined; staying though touch-free; condition cut gem-clear; teacher-purified Śiva-formed; faith-got before fates; moment helper not cause; beast-knowing goes right.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Place-indifferent dying goes isolation; rites useless to stainless; separated unrejoined; staying though touch-free; condition cut gem-clear; teacher-purified Shiva-formed; faith-got before fates; moment helper not cause; beast-knowing goes right. Dying well, itemized.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Place-indifferent dying goes isolation; rites useless to stainless; separated unrejoined; staying though touch-free; condition cut gem-clear; teacher-purified Shiva-formed; faith-got before fates; moment helper not cause; beast-knowing goes right. Dying well, itemized."
+  },
+  {
+   "chunk": "param-p11",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Between-bodies fit-yoked; once-shone stays same; death-signs listed; yoked yet unfallen; taught quickly Śiva at once; stepped resorting ends Śiva-made; mid-way death allowed; fallen rests returns Śiva; missing yet rejoicing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Between-bodies fit-yoked; once-shone stays same; death-signs listed; yoked yet unfallen; taught quickly Shiva at once; stepped resorting ends Shiva-made; mid-way death allowed; fallen rests returns Shiva; missing yet rejoicing. Transit mapped.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Between-bodies fit-yoked; once-shone stays same; death-signs listed; yoked yet unfallen; taught quickly Shiva at once; stepped resorting ends Shiva-made; mid-way death allowed; fallen rests returns Shiva; missing yet rejoicing. Transit mapped."
+  },
+  {
+   "chunk": "param-p12",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Fallen honored as king; long-returned getting deathless; devoted going yet striving; meditated brief soon entering; hundred-verse essence sealed by feet-kindled me.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Fallen honored as king; long-returned getting deathless; devoted going yet striving; meditated brief soon entering; hundred-verse essence sealed by feet-kindled me. Seal and signature.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Fallen honored as king; long-returned getting deathless; devoted going yet striving; meditated brief soon entering; hundred-verse essence sealed by feet-kindled me. Seal and signature."
+  }
+ ]
+}

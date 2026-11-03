@@ -1,0 +1,245 @@
+{
+ "work": "bhairavastava",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bhairavastava/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=10",
+  "approval": "2026-11-04: L4 10/10 songs (per-song DRAFT+data), stotra-address couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bh-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bhairava is established as all-pervading conscious reality: one, endless, beginningless — the Absolute that pervades moving and unmoving states. [1] The Lord is then venerated as refuge of the helpless by a mind become His — veneration as mental absorption, not ritual offering. [2] The nirukta of Bhairava (bearing/supporting, the Roar of AHAM, benefactor of the terrified) is here performed, not stated: the name is lived. [3] Total surrender is sized to its object — the all-pervading consciousness is venerated by absorption into it.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "First the song establishes who Bhairava is: consciousness itself, spread through everything that moves and everything that stands still — one, without end, without beginning. That is the Absolute.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then it bows to Him — but not with flowers or rituals. The worship here is becoming: your mind turns into His, and that is how a helpless person takes refuge. The old unpacking of His name — the Bearer, the great Roar of I, the friend of the frightened — is not explained, it is lived. And the surrender fits its object exactly: only absorption is big enough for the all-pervading.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "text": "First the song establishes who Bhairava is: consciousness itself, spread through everything that moves and everything that stands still — one, without end, without beginning. That is the Absolute.\n\nThen it bows to Him — but not with flowers or rituals. The worship here is becoming: your mind turns into His, and that is how a helpless person takes refuge. The old unpacking of His name — the Bearer, the great Roar of I, the friend of the frightened — is not explained, it is lived. And the surrender fits its object exactly: only absorption is big enough for the all-pervading."
+  },
+  {
+   "chunk": "bh-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Grace first discloses the world as His, without remainder, now — then identity is declared outright: Maheśa, always my self, and all mine through Him. [1] Appearance, then ownership: grace showing the world as His before identity claims it. [2] The non-dual recognition (pratyabhijñā) is here performed as a two-step: disclosure, then declaration.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Grace moves first: it shows you the whole world as already His — all of it, with nothing left out, right now. Only then comes the second move, said out loud and flat: Maheśa is always my own self, and through Him everything is mine.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "So the order matters: appearance first, ownership second. Grace shows the world as His before identity dares to claim it. That two-step — disclosure, then declaration — is exactly what non-dual recognition is.",
+     "maps_to": [
+      1,
+      2
+     ]
+    }
+   ],
+   "text": "Grace moves first: it shows you the whole world as already His — all of it, with nothing left out, right now. Only then comes the second move, said out loud and flat: Maheśa is always my own self, and through Him everything is mine.\n\nSo the order matters: appearance first, ownership second. Grace shows the world as His before identity dares to claim it. That two-step — disclosure, then declaration — is exactly what non-dual recognition is."
+  },
+  {
+   "chunk": "bh-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Fear-talk is denied while suffering is conceded: with You as Lord pervading own self, no talk of transmigration-fear. [1] Even though hard-to-bear suffering, delusion, terror-causing karmas stand — no-fear and full-suffering together, resolved within it, not deferred. [2] The non-dual recognition does not deny affliction; it denies fear of it.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is a strange combination the song insists on: there is to be no talk of fear about being reborn — because You, Lord, pervade my very self. And at the same time, nobody denies the hard stuff: suffering that is hard to bear, delusion, karmas that cause terror — all of them still standing.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Both together, resolved right here, not postponed to later. That is the point: non-dual recognition does not pretend pain is not there. It denies fear of pain, not pain itself.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Here is a strange combination the song insists on: there is to be no talk of fear about being reborn — because You, Lord, pervade my very self. And at the same time, nobody denies the hard stuff: suffering that is hard to bear, delusion, karmas that cause terror — all of them still standing.\n\nBoth together, resolved right here, not postponed to later. That is the point: non-dual recognition does not pretend pain is not there. It denies fear of pain, not pain itself."
+  },
+  {
+   "chunk": "bh-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Death's gaze is turned aside by prayer: O Ender, do not direct this wrathful-terrible gaze toward me. [1] The ground of the prayer: firm in Śaṅkara-service and contemplation, filled with terrifying Bhairava-power — asmi (I am). [2] Power first invoked against death's gaze, then declared as state. Śaṅkara here is Śiva, not Śaṅkarācārya.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Death is looking this way, and the song prays straight at it: O Ender, turn that wrathful, terrible gaze somewhere else — not at me. That is the prayer.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And here is what the prayer stands on: I am steady in serving Śaṅkara and in sitting still with Him in mind, and I am filled to the brim with terrifying Bhairava-power. I am — that is the whole ground. Power gets called in first against deaths stare, and then gets declared as simply the state things are in. (And Śaṅkara here means Shiva, not the philosopher with the similar name.)",
+     "maps_to": [
+      1,
+      2
+     ]
+    }
+   ],
+   "text": "Death is looking this way, and the song prays straight at it: O Ender, turn that wrathful, terrible gaze somewhere else — not at me. That is the prayer.\n\nAnd here is what the prayer stands on: I am steady in serving Śaṅkara and in sitting still with Him in mind, and I am filled to the brim with terrifying Bhairava-power. I am — that is the whole ground. Power gets called in first against deaths stare, and then gets declared as simply the state things are in. (And Śaṅkara here means Shiva, not the philosopher with the similar name.)"
+  },
+  {
+   "chunk": "bh-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Darkness already burned away by awareness; four terrors then met with salutation alone, yielding absolute fearlessness. [1] Awareness burned the dark before the terrors were named; salutation finishes what light began. [2] It moves from accomplished fact (darkness dispelled) to catalogue (terrors) to response (salutation) to result (no fear).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The order of events matters. First, awareness already burned the darkness away — before any terrors even get named. Only then do the four horrors show up: death, the ender, and the rest. And they get met with nothing but a bow.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Salutation finishes what light began. The path runs: accomplished fact, then the catalogue, then the response, then the result — absolute fearlessness, no fear at all.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "The order of events matters. First, awareness already burned the darkness away — before any terrors even get named. Only then do the four horrors show up: death, the ender, and the rest. And they get met with nothing but a bow.\n\nSalutation finishes what light began. The path runs: accomplished fact, then the catalogue, then the response, then the result — absolute fearlessness, no fear at all."
+  },
+  {
+   "chunk": "bh-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] True awakening discloses things as they are: its rays reveal the true essence of world-objects. [1] In You, being-full, I the self enter bliss — ingress, not feeling. [2] Awakening discloses; entry is bliss; pūrṇa (full/complete) is the Lord's nature.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "True waking-up shows things exactly as they are: its rays reveal the real essence hiding inside ordinary world-objects. And then the second half: inside You — You who are fullness itself — I, the self, walk into bliss. Note that bliss here is a place you enter, not a feeling you feel.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Put together: awakening discloses, and entry is bliss. And fullness — being full, complete — is simply what the Lord is like by nature.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "True waking-up shows things exactly as they are: its rays reveal the real essence hiding inside ordinary world-objects. And then the second half: inside You — You who are fullness itself — I, the self, walk into bliss. Note that bliss here is a place you enter, not a feeling you feel.\n\nPut together: awakening discloses, and entry is bliss. And fullness — being full, complete — is simply what the Lord is like by nature."
+  },
+  {
+   "chunk": "bh-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Affliction's arrival is the occasion, not the obstacle: with it comes nondifference, and nectar arises. [1] Affliction's arrival dated as nondifference's occasion: with it, not after it, the nectar rains. [2] It inverts the expected: suffering is not the enemy of recognition but its trigger.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Suffering arriving is not the obstacle — it is the occasion. Right along with affliction comes non-difference from the Lord, and nectar starts to fall. Not after the pain is over, but with it, at the same time.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "That flips the whole expectation upside down: suffering is not recognitions enemy. It is recognitions trigger.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Suffering arriving is not the obstacle — it is the occasion. Right along with affliction comes non-difference from the Lord, and nectar starts to fall. Not after the pain is over, but with it, at the same time.\n\nThat flips the whole expectation upside down: suffering is not recognitions enemy. It is recognitions trigger."
+  },
+  {
+   "chunk": "bh-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Rites are relativized: vow, giving, bathing, austerity dispel becoming's heat — while scripture contemplated as nectar irrigates the mind with a bliss-stream. [1] Heat dispelled by rites; bliss streamed by contemplation. Two means, two results. [2] Rites are not despised; they are relativized, then the higher means offered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Religious duties get put in their place — not thrown out, just ranked. Vows, giving, bathing, sitting through austerities: all they do is cool down the heat of becoming. But thinking about scripture as if it were nectar waters the mind with a streaming bliss-river.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "So there are two tools with two different jobs, and the song is honest about both: rites are not despised, they are relativized — and then the higher means gets offered.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Religious duties get put in their place — not thrown out, just ranked. Vows, giving, bathing, sitting through austerities: all they do is cool down the heat of becoming. But thinking about scripture as if it were nectar waters the mind with a streaming bliss-river.\n\nSo there are two tools with two different jobs, and the song is honest about both: rites are not despised, they are relativized — and then the higher means gets offered."
+  },
+  {
+   "chunk": "bh-p09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Consciousness dances and sings; obtaining the Lord is defined as rare vision — fenced to the initiated. [1] Joy first, then its cause named: obtaining = vision, rare by structure. [2] It moves from rejoicing to the definition of obtaining as vision, fenced to the knower of the samaya.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "It starts with joy itself: consciousness dancing and singing. Then it names what getting the Lord actually means — seeing Him, and rarely: a vision fenced in for those who know the way in. Joy comes first in the verse, and only then its cause gets named: obtaining equals vision, rare by its very structure.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "The direction never reverses: from rejoicing to definition, from dancing to the fenced vision of the covenant-knowers.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "It starts with joy itself: consciousness dancing and singing. Then it names what getting the Lord actually means — seeing Him, and rarely: a vision fenced in for those who know the way in. Joy comes first in the verse, and only then its cause gets named: obtaining equals vision, rare by its very structure.\n\nThe direction never reverses: from rejoicing to definition, from dancing to the fenced vision of the covenant-knowers."
+  },
+  {
+   "chunk": "bh-p10",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Dated and signed, it turns outward: the compassionate Lord pacifies the world's heat instantly. [1] What began in the heart ends in the world: private recognition cools the world. [2] The colophon dates the composition (Pauṣa, Kṛṣṇa Daśamī) and signs it (Abhinavagupta), then turns to the world.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "At the end the song does something new: it dates itself and signs its name — composed in the month of Pausha, on the dark tenth, by Abhinavagupta — and then it turns outward. The compassionate Lord cools the whole worlds heat in an instant.",
+     "maps_to": [
+      0,
+      2
+     ]
+    },
+    {
+     "text": "See the arc: what began inside one heart ends out in the world. Private recognition cools public heat.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "At the end the song does something new: it dates itself and signs its name — composed in the month of Pausha, on the dark tenth, by Abhinavagupta — and then it turns outward. The compassionate Lord cools the whole worlds heat in an instant.\n\nSee the arc: what began inside one heart ends out in the world. Private recognition cools public heat."
+  }
+ ]
+}
