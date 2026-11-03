@@ -1,0 +1,266 @@
+{
+ "work": "paryantapancasika",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work paryantapancasika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=8",
+  "approval": "ouplets handcrafted+reviewed; no-43-marker + invocation scoped; QA NEEDS_WITNESS | 2026-11-04: L4 8/8 songs, 52/52v (per-song DRAFT+data), hermetic couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "pary-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Rest-filled unspeakable studied as heart. [1] All god-made; being-nonbeing goddess-made. [2] Knowing-unknowing, school-foe: all made. [3] Six-one abiding system-end, unsayable goal. [4] Merged heart, gods'-god's, undivided ground. [5] Reflecting gains stages unattached-to-ends. [6] Throbbed three, road sixfold.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Study this: a speech so full of rest it cannot be spoken out loud. That unsayable, rest-filled speech is studied as the very heart of the Lord.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Now the rule underneath everything: gods are god-made, every one of them. Being and non-being alike are goddess-made. Knowing and unknowing, your own school and even its enemies — all of it is made. And where does it all land? In oneness: six paths abiding as one, at the end of every system, a goal that cannot be said.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "text": "The ground it lands on: a merged heart — the god of gods — undivided ground. Reflect on it and you gain real stages, without getting stuck on ends. Throbbed three, road sixfold: three throbs, six roads.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Study this: a speech so full of rest it cannot be spoken out loud. That unsayable, rest-filled speech is studied as the very heart of the Lord.\n\nNow the rule underneath everything: gods are god-made, every one of them. Being and non-being alike are goddess-made. Knowing and unknowing, your own school and even its enemies — all of it is made. And where does it all land? In oneness: six paths abiding as one, at the end of every system, a goal that cannot be said.\n\nThe ground it lands on: a merged heart — the god of gods — undivided ground. Reflect on it and you gain real stages, without getting stuck on ends. Throbbed three, road sixfold: three throbs, six roads."
+  },
+  {
+   "chunk": "pary-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Sundered knowings varied-shine for knower. [1] Both-wayed; outcast-purity dived in I-ness. [2] Sunken-stained unresting; countless graded between-states. [3] Shared showing; split knower-known. [4] Unthought-clear held; self means in self-making. [5] Five thread cause; gained stage re-becomes. [6] Fancies cut-cut; when-doing left open.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Knowings get sundered apart — and that very sundering makes them shine differently for the knower. Then both ways at once: purity that follows the rules, and outcast purity that has dived down into I-ness.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "In between there are states that never rest: sunken, stained, countless, graded step by step. And through it all one shared showing with a split inside it — knower over here, known over there.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "But some things hold still: unthought clarity, held fast, with the self itself as the means in self-making. Five threads do the causing; the stage once gained gets re-become. And fancies? Cut, cut. As for when to act — that question stays open.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Knowings get sundered apart — and that very sundering makes them shine differently for the knower. Then both ways at once: purity that follows the rules, and outcast purity that has dived down into I-ness.\n\nIn between there are states that never rest: sunken, stained, countless, graded step by step. And through it all one shared showing with a split inside it — knower over here, known over there.\n\nBut some things hold still: unthought clarity, held fast, with the self itself as the means in self-making. Five threads do the causing; the stage once gained gets re-become. And fancies? Cut, cut. As for when to act — that question stays open."
+  },
+  {
+   "chunk": "pary-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Limited called bound; willed measured. [1] Limited follows; stations gained contracted. [2] Particular fancy arisen; purified trace holding. [3] Fashioned knower undistracted stays in thought-free self. [4] Behold one known made world; else trifling unreal. [5] Way unothered; self-way called.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "When the unlimited gets called limited, that is what bound means — measured out by will. The limited one follows along, and gains real stations, but gained from a tightened, contracted state.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Inside that state, particular little fantasies keep arising — this-and-that teasing the mind. What purifies them is holding on to a trace that has already been cleaned. And the knower who is properly fashioned just stays there, undistracted, inside a thought-free self.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Then the turn outward, spoken to a child: look — the world you know, made as one. Everything else is trifling and unreal. And the way there needs no other way: unothered means, self-way called.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "When the unlimited gets called limited, that is what bound means — measured out by will. The limited one follows along, and gains real stations, but gained from a tightened, contracted state.\n\nInside that state, particular little fantasies keep arising — this-and-that teasing the mind. What purifies them is holding on to a trace that has already been cleaned. And the knower who is properly fashioned just stays there, undistracted, inside a thought-free self.\n\nThen the turn outward, spoken to a child: look — the world you know, made as one. Everything else is trifling and unreal. And the way there needs no other way: unothered means, self-way called."
+  },
+  {
+   "chunk": "pary-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Withdrawn tending attains face-to-face. [1] Boundless welcomed entered; imagine-not vowed. [2] Streamed lakes dived; inert stirred. [3] Five-doing trusted Śiva-I. [4] Guru-counted weighed accomplished. [5] Dreamt fire-flamed sun-shone. [6] Measurer-measured fourteen-formed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Pull back from everything and tend inward: that is how you arrive face to face. Welcome the boundless, enter it, and take one vow — imagine nothing.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Dive the streamed lakes and watch the inert stuff get stirred. Trust the five doings as Shiva-I. Get yourself counted and weighed by the teachers word, and you count as accomplished. Dream yourself fire-flamed and you shine like the sun.",
+     "maps_to": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Last measure: the measurer and the measured are one, fourteen-formed.",
+     "maps_to": [
+      6
+     ]
+    }
+   ],
+   "text": "Pull back from everything and tend inward: that is how you arrive face to face. Welcome the boundless, enter it, and take one vow — imagine nothing.\n\nDive the streamed lakes and watch the inert stuff get stirred. Trust the five doings as Shiva-I. Get yourself counted and weighed by the teachers word, and you count as accomplished. Dream yourself fire-flamed and you shine like the sun.\n\nLast measure: the measurer and the measured are one, fourteen-formed."
+  },
+  {
+   "chunk": "pary-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Measured-unmeasured contemplated; supreme freedom trusted. [1] Timeless sequence held self-independent. [2] Supreme pair unioned between other powers. [3] Bliss-willed vague-clear flashed by difference. [4] Joined feeling lives; full body. [5] Flashed abiding grossly fivefolds.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Think through both the measured and the unmeasured, then trust supreme freedom to do the going. Inside and outside, hold the timeless sequence as self-standing, needing nothing else.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "At the center, the supreme pair in union, with the other powers ranged between. Bliss wills indistinctness, then flashes distinct by difference — vague, then clear.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Joined feeling lives on; the body is full. Flash, abide, go gross — and the gross goes fivefold.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "Think through both the measured and the unmeasured, then trust supreme freedom to do the going. Inside and outside, hold the timeless sequence as self-standing, needing nothing else.\n\nAt the center, the supreme pair in union, with the other powers ranged between. Bliss wills indistinctness, then flashes distinct by difference — vague, then clear.\n\nJoined feeling lives on; the body is full. Flash, abide, go gross — and the gross goes fivefold."
+  },
+  {
+   "chunk": "pary-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Subtle-five tooled ten by touch. [1] Veiled-shown depends; ebb-flow conditions. [2] Longed union arose; else supreme. [3] Four bear inside triśaṅku-hung. [4] Three became emission, clear-created widely. [5] Mixed may-stir within, never without.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Take the subtle five and tool them into ten by touch. Then know the dependency: the veiled and the shown depend on each other, and ebb and flow set the conditions for everything.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Longed-for union arose — and anything else is just supreme. Four powers bear the inside, hung like Triśaṅku between knowing and inert. Three became emission, then created widely and clearly.",
+     "maps_to": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "text": "Last rule: self-powers mixed may stir — but only within, never without.",
+     "maps_to": [
+      5
+     ]
+    }
+   ],
+   "text": "Take the subtle five and tool them into ten by touch. Then know the dependency: the veiled and the shown depend on each other, and ebb and flow set the conditions for everything.\n\nLonged-for union arose — and anything else is just supreme. Four powers bear the inside, hung like Triśaṅku between knowing and inert. Three became emission, then created widely and clearly.\n\nLast rule: self-powers mixed may stir — but only within, never without."
+  },
+  {
+   "chunk": "pary-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Rested-rested emitted indeed. [1] Hidden mirror speaks pure publishing once. [2] Triple time self-drawn out and in. [3] Split-whole beheld; seeing agency lord-standing. [4] Sequenced-gross fancied undivided; breath split. [5] Self-stamped two-states; measure limits seeing subtly. [6] Two-entered stilled perceives expanding wonder.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rest, rest — and then emitted, indeed. That is the whole movement. Hidden inside, a mirror of boundless meaning reflects the supreme knowing — and once, in a single flood, this mantra-knowing speech speaks purely, publishing itself.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Time draws itself: triple-coursed, triple-pathed, triple-seated, pulling itself outside and then back inside — glorious supreme time-drawing. Then beholding: split yet whole, higher and lower both watched, with agency itself doing the seeing, standing on the Lord.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Finer still: sequenced grossness fancied as undivided inwardly, breath split off; self-stamped two-states where measure itself limits seeing, subtly sequenced. And at the end, the entered two grow still in thought and perceive, wonderfully, the expanding.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Rest, rest — and then emitted, indeed. That is the whole movement. Hidden inside, a mirror of boundless meaning reflects the supreme knowing — and once, in a single flood, this mantra-knowing speech speaks purely, publishing itself.\n\nTime draws itself: triple-coursed, triple-pathed, triple-seated, pulling itself outside and then back inside — glorious supreme time-drawing. Then beholding: split yet whole, higher and lower both watched, with agency itself doing the seeing, standing on the Lord.\n\nFiner still: sequenced grossness fancied as undivided inwardly, breath split off; self-stamped two-states where measure itself limits seeing, subtly sequenced. And at the end, the entered two grow still in thought and perceive, wonderfully, the expanding."
+  },
+  {
+   "chunk": "pary-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Place-struck natured being; heard Vaikharī doings. [1] Handed each-to-each; bookish straitened. [2] Speech-spread host unenjoying waking. [3] Ungrasping way; all-ways entered. [4] First-last mystery brimming attained unsurpassed. [5] Undivided conquer unfallen-absorbed endowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Sound starts where place strikes: natured being, heard as the doings of Vaikhari, the goddess of outward speech. Then exchange: handed from each to each, worldly talk first, then bookish talk — straitened, narrowed, contracted.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "In between, a strange grief: the whole host spread by speech, yet unenjoying — even wide awake. The way through is ungrasping: a way that grasps nothing, and thereby enters all ways, and knows the self directly.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "At the end, mystery from first to last, brimming and attained, unsurpassed. The undivided conquer, unfallen and absorbed, endowed with everything.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "Sound starts where place strikes: natured being, heard as the doings of Vaikhari, the goddess of outward speech. Then exchange: handed from each to each, worldly talk first, then bookish talk — straitened, narrowed, contracted.\n\nIn between, a strange grief: the whole host spread by speech, yet unenjoying — even wide awake. The way through is ungrasping: a way that grasps nothing, and thereby enters all ways, and knows the self directly.\n\nAt the end, mystery from first to last, brimming and attained, unsurpassed. The undivided conquer, unfallen and absorbed, endowed with everything."
+  }
+ ]
+}

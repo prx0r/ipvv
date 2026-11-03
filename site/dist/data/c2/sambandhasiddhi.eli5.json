@@ -1,0 +1,86 @@
+{
+ "work": "sambandhasiddhi",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work sambandhasiddhi/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=3",
+  "approval": "01-p03 canonical (vv1-23, validate+proof PASS x3, L3 handcrafted); 23 slokas (2 mangala+21 karikas) | 2026-11-04: L4 3/3 songs, 23/23v (per-song DRAFT+data), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "samb-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Relation's counterfeits are refused one by one — awaiting, two-seatedness, uninterruptedness need a consciousness they deny — until form-fusion stands: the many's one-selfhood (vv1-5). [1] The Buddhist proof-text is turned against its makers: unmixed things thought-joined is no mere thought but unwardable shining-clinging, warrantable in recognition's path (vv6-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "People keep proposing what a relation between things could be, and each proposal gets refused. Is it waiting around for each other? No — waiting secretly needs a mind to do the waiting. Is it sitting in two places at once? No — that describes where things are, not what links them. Is it just never being interrupted? No — two iron bars side by side are uninterrupted and unrelated.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "What survives is this: the many things share one fused form — many-ness with one selfhood. And the fun part: the Buddhists own proof-verse, which said unmixed things are only joined by thought, gets turned against them — because that joining cannot be pushed away or argued out of happening, which means it is real shining sticking to things, and it can be properly stated on the path of recognition.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "People keep proposing what a relation between things could be, and each proposal gets refused. Is it waiting around for each other? No — waiting secretly needs a mind to do the waiting. Is it sitting in two places at once? No — that describes where things are, not what links them. Is it just never being interrupted? No — two iron bars side by side are uninterrupted and unrelated.\n\nWhat survives is this: the many things share one fused form — many-ness with one selfhood. And the fun part: the Buddhists own proof-verse, which said unmixed things are only joined by thought, gets turned against them — because that joining cannot be pushed away or argued out of happening, which means it is real shining sticking to things, and it can be properly stated on the path of recognition."
+  },
+  {
+   "chunk": "samb-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unity without strain for the consciousness-bodied; the worldly one's reflection-object fixed as difference-pithed non-difference-shining (vv10-11). [1] Mechanics: one thought un-touched, one word uniting many, helping relation admitted, twoness in manyness, two facings, three thinkings, genitive settling unself-lost (vv12-18).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "First the easy part: for beings made of consciousness, being one takes no effort at all. And the thing an ordinary person reflects on is fixed: a knower whose very pith is difference, shining inside non-difference.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the mechanics, piece by piece. One reflection never touches another thought, or knowers would multiply. Many things reach oneness through a single shared word, like pot-cloth covering both. A second, helping relation is allowed in — qualifier with qualified — because it serves knowing. Even inside manyness there is twoness, born of double reflection, like a kings whole retinue moving as one and two at once.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "King faces his own kind, man faces the masters kind: two facings, one bond. There are three thinkings in play, and the of-relation settles into the qualifier, reaches oneness with what it qualifies, and never loses its own shape.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "First the easy part: for beings made of consciousness, being one takes no effort at all. And the thing an ordinary person reflects on is fixed: a knower whose very pith is difference, shining inside non-difference.\n\nThen the mechanics, piece by piece. One reflection never touches another thought, or knowers would multiply. Many things reach oneness through a single shared word, like pot-cloth covering both. A second, helping relation is allowed in — qualifier with qualified — because it serves knowing. Even inside manyness there is twoness, born of double reflection, like a kings whole retinue moving as one and two at once.\n\nKing faces his own kind, man faces the masters kind: two facings, one bond. There are three thinkings in play, and the of-relation settles into the qualifier, reaches oneness with what it qualifies, and never loses its own shape."
+  },
+  {
+   "chunk": "samb-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Secondaries measured against chiefs — king's man, brahmin's; other chiefs, other unities — king's horse, man (vv19-20). [1] Course told, delusion denied, seal spoken: Māyā-knower-resting intellects drive transaction, moment-grounded in self-awareness; told, proved, unrefuted, useful, full apparatus besides (vv21-23).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Smaller things are measured against bigger ones. A kings man and a brahmins man count as secondaries next to their chiefs. And other chiefs bring other unities with them — the kings horse, the kings man.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the course gets told: minds resting on knowers wrapped in illusion are what actually run the worlds business, grounded moment by moment in self-awareness. Delusion is denied — nobody here is fooled. And the seal: told, proved, never refuted, useful — with the full toolkit standing by besides.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Smaller things are measured against bigger ones. A kings man and a brahmins man count as secondaries next to their chiefs. And other chiefs bring other unities with them — the kings horse, the kings man.\n\nThen the course gets told: minds resting on knowers wrapped in illusion are what actually run the worlds business, grounded moment by moment in self-awareness. Delusion is denied — nobody here is fooled. And the seal: told, proved, never refuted, useful — with the full toolkit standing by besides."
+  }
+ ]
+}

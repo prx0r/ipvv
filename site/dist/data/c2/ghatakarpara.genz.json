@@ -1,0 +1,80 @@
+{
+ "work": "ghatakarpara",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work ghatakarpara/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=3",
+  "approval": "e 3/3 songs, 21/21v, merged + pushed (standing approval). p01 L2 realigned to T1/argmap/L0 grouping (verbatim re-partition, span-verified vs source; no-share rewordings x1, gate-verified). 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "ghat-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Śṛṅgāra is performed, not described: the separated beloved's voice, her appeal to the cloud, and the landscape's answering her are all determinants (vibhāva) of the rasa. The cloud is never told to carry a message — that is dhvani, and it is what makes it the genre's first instance. The voice closes not in despair but in sustaining memory: the sthāyibhāva (love) transforms the sorrow (vyabhicāri) into something relishable. Kāma arises in the heart to kill; the beloved who is absent arises with him; the cātaka, thirsty for rain alone, begs water; the peacock-flock sounds at the clouds; she is protected only by remembrance of his virtue.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Srngara performed, not described: the separated beloved’s voice, her appeal to the cloud, and the landscape answering her — all vibhAva. The cloud is never told to carry a message: dhvani, and the genre’s first instance.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Voice closes not in despair but sustaining memory: sthAyibhAva love transforms vyabhicAri sorrow into relish. KAma rises to kill; the absent beloved rises with him; cAtaka begs rain alone; peacocks sound; remembrance alone protects.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Srngara performed, not described: the separated beloved’s voice, her appeal to the cloud, and the landscape answering her — all vibhAva. The cloud is never told to carry a message: dhvani, and the genre’s first instance.\n\nVoice closes not in despair but sustaining memory: sthAyibhAva love transforms vyabhicAri sorrow into relish. KAma rises to kill; the absent beloved rises with him; cAtaka begs rain alone; peacocks sound; remembrance alone protects."
+  },
+  {
+   "chunk": "ghat-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Beauty is not decoration but cause: the groves shine for Kāma's sake, not the reverse. The grove is the vibhāva (determinant) of śṛṅgāra; the rasa overwhelms perception — dust of passion obscures sun and moon, new-cloud-drunk peacocks cry. The kuṭaja's mockery and the nīpa's release are consequents (anubhāva), not ornament: the poet sides with the humble tree over showy flowers. The bee kisses the yūthikā creeper. The rasa is aesthetic: the rasa IS the point.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Beauty not decoration but cause: groves shine for KAma’s sake, not the reverse. Grove is vibhAva; rasa overwhelms perception — passion-dust veils sun and moon, new-cloud-drunk peacocks cry.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "KuTaja mockery and nIpa release are anubhAva, not ornament: the poet sides with the humble tree. Bee kisses yUthikA. Rasa is aesthetic: rasa IS the point.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Beauty not decoration but cause: groves shine for KAma’s sake, not the reverse. Grove is vibhAva; rasa overwhelms perception — passion-dust veils sun and moon, new-cloud-drunk peacocks cry.\n\nKuTaja mockery and nIpa release are anubhAva, not ornament: the poet sides with the humble tree. Bee kisses yUthikA. Rasa is aesthetic: rasa IS the point."
+  },
+  {
+   "chunk": "ghat-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The rasa shifts from śṛṅgāra to vira/adbhuta: love and landscape are framed by the poet's skill, not by love alone. Clouds thundering make travelers long; sorrow grows, endless. Lovers honor the love-festival; cloud-arrival, dear friend, they bring. Then the tribute: may I be conquered by which poet, by yamakas; to him I pour water in ghaṭakarpara. The sthāyibhāva (love) resolves into the poet's own delight (camatkāra) at his craft. The potsherd is both vessel and namesake — the potsherd names itself at its close.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rasa shifts SringAra to vIra/adbhuta: love and landscape framed by skill, not love alone. Thundering clouds make travelers long; sorrow grows, endless. Lovers honor the festival; cloud-arrival brought, dear friend.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Tribute: conquered by whichever poet, by yamakas; to him I pour water in ghaTakarpara. SthAyibhAva resolves into craft-camatkAra. Vessel and namesake: the potsherd names itself at its close.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Rasa shifts SringAra to vIra/adbhuta: love and landscape framed by skill, not love alone. Thundering clouds make travelers long; sorrow grows, endless. Lovers honor the festival; cloud-arrival brought, dear friend.\n\nTribute: conquered by whichever poet, by yamakas; to him I pour water in ghaTakarpara. SthAyibhAva resolves into craft-camatkAra. Vessel and namesake: the potsherd names itself at its close."
+  }
+ ]
+}

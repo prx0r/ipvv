@@ -1,0 +1,94 @@
+{
+ "work": "phrdaya",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work phrdaya/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "dcrafted; siddhi-triple gloss revised with reason; QA NEEDS_WITNESS | 2026-11-04: L4 5/5 songs, 20/20v (per-song DRAFT+data), aphoristic couplets/monostichs, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "phr-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Free consciousness causes, unborrowing opens, divides by fitness, veils by tightening — descent promised.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Free consciousness causes, unborrowing opens, divides by fitness, veils by tightening. Descent promised, cause unborrowed.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Free consciousness causes, unborrowing opens, divides by fitness, veils by tightening. Descent promised, cause unborrowed."
+  },
+  {
+   "chunk": "phr-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Mind tightened, knower measured, pentads stationed, schools seated on the descent.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Mind tightened, knower measured, pentads stationed, schools seated on the descent. Inventory of the fall.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Mind tightened, knower measured, pentads stationed, schools seated on the descent. Inventory of the fall."
+  },
+  {
+   "chunk": "phr-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Stained likeness keeps divine office: five acts done small is wandering.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Stained likeness keeps divine office: five acts done small is wandering. Smallness is still godhood.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Stained likeness keeps divine office: five acts done small is wandering. Smallness is still godhood."
+  },
+  {
+   "chunk": "phr-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Return climbs, burns, owns, holds fast — freedom alive.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Return climbs, burns, owns, holds fast. Climb knowing, burn knowables, own the world, grip oneness. That grip: freedom, alive.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Return climbs, burns, owns, holds fast. Climb knowing, burn knowables, own the world, grip oneness. That grip: freedom, alive."
+  },
+  {
+   "chunk": "phr-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Opening middle, given means, recalled oneness, become Śiva.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Opening middle, given means, recalled oneness, become Shiva. Four breaths; the treatise lands in a name.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Opening middle, given means, recalled oneness, become Shiva. Four breaths; the treatise lands in a name."
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "work": "pancashloki",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work pancashloki/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "2026-11-04: L4 5/5 songs (per-song DRAFT+data), intimate-address couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "pan-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The whole duty is one act: pride offered on the Lord's feet; all else denied, and only immediate pleasure asked.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "One act is the whole duty: pride on His feet, everything else refused, immediate pleasure the only ask.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "One act is the whole duty: pride on His feet, everything else refused, immediate pleasure the only ask."
+  },
+  {
+   "chunk": "pan-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Speech becomes the offering: the word crying victory at the threshold is itself to become bliss-giving; having Maheśa as protector is to become being protected.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Speech itself goes up as the offering: Victory, victory at the threshold, turning bliss-giving. Have Maheśa as protector, be protected. Done deal.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Speech itself goes up as the offering: Victory, victory at the threshold, turning bliss-giving. Have Maheśa as protector, be protected. Done deal."
+  },
+  {
+   "chunk": "pan-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Five refusals charged — speak, see, hear, come, support — and scripture converts the charge into doctrine: the Lord is sense-free.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Five charges filed: no speech, no look, no hearing, no coming, no support. Then scripture flips the charge sheet into doctrine: sense-free is what He is. Complaint becomes teaching.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Five charges filed: no speech, no look, no hearing, no coming, no support. Then scripture flips the charge sheet into doctrine: sense-free is what He is. Complaint becomes teaching."
+  },
+  {
+   "chunk": "pan-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Against the silence stand two testimonies — the guru's word and fitting scriptural assurance — whose force wipes away piled-up reasonings; with doubt dissolved, the feet of the heart-sky Lord.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Two testimonies versus the silence: the guru’s word plus fitting scripture. Their combined force wipes stacked-up reasonings clean. Doubt-cloud melts; what remains is feet-touching the heart-sky Lord, sun-bright against dark.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Two testimonies versus the silence: the guru’s word plus fitting scripture. Their combined force wipes stacked-up reasonings clean. Doubt-cloud melts; what remains is feet-touching the heart-sky Lord, sun-bright against dark."
+  },
+  {
+   "chunk": "pan-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Long dwelling-with and total grace received, yet repeated forgetting; the only request is no more absence.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Long dwelling, total grace, repeated forgetting anyway. One request left, and it is negative: no more absence. That is the whole prayer.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Long dwelling, total grace, repeated forgetting anyway. One request left, and it is negative: no more absence. That is the whole prayer."
+  }
+ ]
+}

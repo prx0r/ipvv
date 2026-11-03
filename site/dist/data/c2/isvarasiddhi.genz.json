@@ -1,0 +1,162 @@
+{
+ "work": "isvarasiddhi",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work isvarasiddhi/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=7",
+  "approval": " gap fixed in workcfg; taye variant + v37/38 sentence recorded | 2026-11-04: L4 7/7 songs, 56/56v (per-song DRAFT+data), lacunae sung as gaps, L3 rhyme kept, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "isva-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bodies bespeak a conscious maker, like pots: the design inference stated through lacunae (vv1-2). [1] Variety marks wisdom; matter can't arrange; makers proved prove the Lord — answering neither-potter-nor-Lord with conscious-only pervasion shown (vv5-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Design inference, stated through holes in the manuscript: bodies bespeak a conscious maker, like pots. Gaps kept visible; nothing restored.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Variety marks wisdom; matter can’t arrange. Makers proved prove the Lord. Neither-potter-nor-Lord dilemma answered minimalist: conscious-only pervasion shown, and that suffices — some wise one grasped.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Design inference, stated through holes in the manuscript: bodies bespeak a conscious maker, like pots. Gaps kept visible; nothing restored.\n\nVariety marks wisdom; matter can’t arrange. Makers proved prove the Lord. Neither-potter-nor-Lord dilemma answered minimalist: conscious-only pervasion shown, and that suffices — some wise one grasped."
+  },
+  {
+   "chunk": "isva-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Stock examples turned: eye-fitness shows the higher self; smoke-fire proves khadira-wood by mere knowing (vv10-11). [1] The hetu fenced, others sifting, the whole Lord-made; helpers' strange way opened, pictured, and bounded; fancied spread refused (vv12-18).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Stock examples turned: eye-fitness shows higher self; smoke-fire proves khadira-wood by mere knowing.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Hetu stated as locus-form alone and fenced. Others sift too; whole comes out Lord-made. Helpers strange way opened, pictured, bounded: entering-as-other, matter-formed, yet unequal to yoking variety. Fancied spread refused: name-alone orders nothing.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Stock examples turned: eye-fitness shows higher self; smoke-fire proves khadira-wood by mere knowing.\n\nHetu stated as locus-form alone and fenced. Others sift too; whole comes out Lord-made. Helpers strange way opened, pictured, bounded: entering-as-other, matter-formed, yet unequal to yoking variety. Fancied spread refused: name-alone orders nothing."
+  },
+  {
+   "chunk": "isva-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Sāṅkhya stated at full strength: pradhāna proved by presence, purposed by denying self-aims; change easy; only striving moves; nature faces down (vv19-22). [1] The page turns on admitted karma: where is His business? Let His triggering be conceived; seed imaged; Sāṅkhya godless; conditional close (vv23-27).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Sankhya at full strength: pradhana proved by presence, purposed by denying self-aims; change easy; only striving moves; nature faces down.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Page turns on admitted karma: then where is His business? Conceive His triggering instead; seed-kitchen imaged; Sankhya godless. Conditional close: puruSArtha-natured acts conceived efficient by pradhana.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Sankhya at full strength: pradhana proved by presence, purposed by denying self-aims; change easy; only striving moves; nature faces down.\n\nPage turns on admitted karma: then where is His business? Conceive His triggering instead; seed-kitchen imaged; Sankhya godless. Conditional close: puruSArtha-natured acts conceived efficient by pradhana."
+  },
+  {
+   "chunk": "isva-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Potter necessary, nature watching, helpers insufficient, wisdom and will required, sufficiency tested (vv28-33). [1] Array excels by ends; Lord and un-Lord fenced off atomically; pradhāna will-less yet person-aim-ness stands (vv34-36).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Potter necessary, nature watching, helpers insufficient, wisdom and will required, sufficiency tested. Workshop disputation, ends-first.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Array excels by ends; Lord and un-Lord fenced off atomically; pradhAna will-less yet person-aim-ness stands.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Potter necessary, nature watching, helpers insufficient, wisdom and will required, sufficiency tested. Workshop disputation, ends-first.\n\nArray excels by ends; Lord and un-Lord fenced off atomically; pradhAna will-less yet person-aim-ness stands."
+  },
+  {
+   "chunk": "isva-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unperceived buddhi grounds no purpose; generic will forces omniscience on each; perception-by-all mixes appearances unless One holds them (vv37-41). [1] Nature's kit needs no purpose and purpose is courtesy-speech — yet the root-cause would never cease, so no liberation without a perceiving maker (vv42-45).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unperceived buddhi grounds no purpose; generic will forces omniscience on each; perception-by-all mixes appearances unless One holds them. Reductio pressed to the turn.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Nature-alone needs no purpose; purpose is courtesy-speech. Yet root-cause would never cease churning — so no liberation without a perceiving maker.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Unperceived buddhi grounds no purpose; generic will forces omniscience on each; perception-by-all mixes appearances unless One holds them. Reductio pressed to the turn.\n\nNature-alone needs no purpose; purpose is courtesy-speech. Yet root-cause would never cease churning — so no liberation without a perceiving maker."
+  },
+  {
+   "chunk": "isva-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The svabhāva-view's consequences pressed: desired-by-all yet body-changes by nature; occurrence without union; needlessness fitting neither spirit nor mind; no reunion yet rebirth; mokṣa collapsed into nature; compassion-acts forcing passion-exhaustion doctrine (vv46-51). [1] The siddhānta sealed: nature-view abandoned as unjust, bodies famously sentient-maker-prior, arrangement-difference the flawless proof, the hetu aimed at Parameśvara unshaken (vv52-54).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "SvabhAva-view consequences pressed to breaking: desired-yet-nature-changed, occurrence-without-union, needlessness-fitting-neither, no-reunion-yet-rebirth, mokSa-into-nature, compassion betraying passion.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "View abandoned unjust; bodies sentient-maker-prior, famously. Patterned difference: flawless proof. Hetu aimed at ParameSvara, unshaken by any fault or rival. Only this said; disputation closed.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "SvabhAva-view consequences pressed to breaking: desired-yet-nature-changed, occurrence-without-union, needlessness-fitting-neither, no-reunion-yet-rebirth, mokSa-into-nature, compassion betraying passion.\n\nView abandoned unjust; bodies sentient-maker-prior, famously. Patterned difference: flawless proof. Hetu aimed at ParameSvara, unshaken by any fault or rival. Only this said; disputation closed."
+  },
+  {
+   "chunk": "isva-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Proof needs fitness: thousand-proved, it fails the deluded; the palm-held Jewel flees the fate-struck (v55). Self flashes as Īśvara within all breathers, maker and knower; recognition to be effected, joining made elsewhere; the proof stands even in duality — midnight fire (v56).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Thousand-proved yet failing the deluded; palm-held Jewel fleeing the fate-struck. Self flashes ISvara in every breather, maker and knower; recognition to be effected, joining made elsewhere; proof standing even in duality. Midnight fire.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Thousand-proved yet failing the deluded; palm-held Jewel fleeing the fate-struck. Self flashes ISvara in every breather, maker and knower; recognition to be effected, joining made elsewhere; proof standing even in duality. Midnight fire."
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "work": "tantrasara-a02",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work tantrasara-a02/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=1",
+  "approval": "2026-11-04: full gold pipeline (T1/L0 72 tokens/argmap/L2/C1/L3/L4 4/4), validate+proof PASS x1, L3 diacritics-rule-14 clean, L4 song handcrafted w/ craft_notes; NEEDS_WITNESS 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "tsa-a02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The way with no way: when grace has struck firm, one word from the teacher and the immersion is ever-risen — no means required. [1] Four impossibilities: no nature to attain, nothing to notify, no covering to remove, no one to enter; the means itself impossible. [2] All is one consciousness-only reality — unmeasured, unbounded, unfaded, uncontrolled, unindicated, unelaborated — autonomous, bliss-dense; I am that, with the universe mirrored in me. [3] No mantra, worship, meditation, or conduct binds one who sees this steadily.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "[0, 1] No-way way: grace-struck, one word, ever-risen immersion; four impossibilities — nothing to attain, notify, uncover, enter; means itself impossible.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "[2, 3] All is one consciousness-only: unmeasured through unelaborated, autonomous, bliss-dense; I am that, universe mirrored in me; no rite binds the steady seer.",
+     "maps_to": [
+      2,
+      3
+     ]
+    }
+   ],
+   "text": "[0, 1] No-way way: grace-struck, one word, ever-risen immersion; four impossibilities — nothing to attain, notify, uncover, enter; means itself impossible.\n\n[2, 3] All is one consciousness-only: unmeasured through unelaborated, autonomous, bliss-dense; I am that, universe mirrored in me; no rite binds the steady seer."
+  }
+ ]
+}

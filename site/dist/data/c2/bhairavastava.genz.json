@@ -1,0 +1,245 @@
+{
+ "work": "bhairavastava",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bhairavastava/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=10",
+  "approval": "2026-11-04: L4 10/10 songs (per-song DRAFT+data), stotra-address couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bh-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bhairava is established as all-pervading conscious reality: one, endless, beginningless — the Absolute that pervades moving and unmoving states. [1] The Lord is then venerated as refuge of the helpless by a mind become His — veneration as mental absorption, not ritual offering. [2] The nirukta of Bhairava (bearing/supporting, the Roar of AHAM, benefactor of the terrified) is here performed, not stated: the name is lived. [3] Total surrender is sized to its object — the all-pervading consciousness is venerated by absorption into it.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "All-pervading conscious reality first: one, endless, beginningless, moving and unmoving both pervaded. Absolute established.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then veneration as absorption, not offering: mind become His, refuge of the helpless. Nirukta performed, not stated. Surrender sized to object.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "text": "All-pervading conscious reality first: one, endless, beginningless, moving and unmoving both pervaded. Absolute established.\n\nThen veneration as absorption, not offering: mind become His, refuge of the helpless. Nirukta performed, not stated. Surrender sized to object."
+  },
+  {
+   "chunk": "bh-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Grace first discloses the world as His, without remainder, now — then identity is declared outright: Maheśa, always my self, and all mine through Him. [1] Appearance, then ownership: grace showing the world as His before identity claims it. [2] The non-dual recognition (pratyabhijñā) is here performed as a two-step: disclosure, then declaration.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Grace discloses the world as His, without remainder, now. Then identity declared outright: Maheśa always my self, all mine through Him.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Appearance, then ownership. Two-step recognition performed: disclosure, then declaration.",
+     "maps_to": [
+      1,
+      2
+     ]
+    }
+   ],
+   "text": "Grace discloses the world as His, without remainder, now. Then identity declared outright: Maheśa always my self, all mine through Him.\n\nAppearance, then ownership. Two-step recognition performed: disclosure, then declaration."
+  },
+  {
+   "chunk": "bh-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Fear-talk is denied while suffering is conceded: with You as Lord pervading own self, no talk of transmigration-fear. [1] Even though hard-to-bear suffering, delusion, terror-causing karmas stand — no-fear and full-suffering together, resolved within it, not deferred. [2] The non-dual recognition does not deny affliction; it denies fear of it.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Fear-talk denied while suffering conceded: You pervading own self, no transmigration-fear talk. Hard suffering, delusion, terror-karmas standing anyway.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "No-fear plus full-suffering together, resolved within, not deferred. Recognition denies fear of affliction, never affliction.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Fear-talk denied while suffering conceded: You pervading own self, no transmigration-fear talk. Hard suffering, delusion, terror-karmas standing anyway.\n\nNo-fear plus full-suffering together, resolved within, not deferred. Recognition denies fear of affliction, never affliction."
+  },
+  {
+   "chunk": "bh-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Death's gaze is turned aside by prayer: O Ender, do not direct this wrathful-terrible gaze toward me. [1] The ground of the prayer: firm in Śaṅkara-service and contemplation, filled with terrifying Bhairava-power — asmi (I am). [2] Power first invoked against death's gaze, then declared as state. Śaṅkara here is Śiva, not Śaṅkarācārya.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Death’s gaze turned aside by prayer: O Ender, not toward me with that wrathful-terrible look.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Ground: Śaṃkara-service firm, contemplation steady, terrifying Bhairava-power filling — asmi, I am. Power invoked, then declared as state. Śaṃkara is Śiva here.",
+     "maps_to": [
+      1,
+      2
+     ]
+    }
+   ],
+   "text": "Death’s gaze turned aside by prayer: O Ender, not toward me with that wrathful-terrible look.\n\nGround: Śaṃkara-service firm, contemplation steady, terrifying Bhairava-power filling — asmi, I am. Power invoked, then declared as state. Śaṃkara is Śiva here."
+  },
+  {
+   "chunk": "bh-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Darkness already burned away by awareness; four terrors then met with salutation alone, yielding absolute fearlessness. [1] Awareness burned the dark before the terrors were named; salutation finishes what light began. [2] It moves from accomplished fact (darkness dispelled) to catalogue (terrors) to response (salutation) to result (no fear).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Darkness already burned away by awareness; four terrors then met with salutation alone. Result: absolute fearlessness.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Accomplished fact to catalogue to response to result. Awareness burned first; salutation finishes. No fear.",
+     "maps_to": [
+      1,
+      2
+     ]
+    }
+   ],
+   "text": "Darkness already burned away by awareness; four terrors then met with salutation alone. Result: absolute fearlessness.\n\nAccomplished fact to catalogue to response to result. Awareness burned first; salutation finishes. No fear."
+  },
+  {
+   "chunk": "bh-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] True awakening discloses things as they are: its rays reveal the true essence of world-objects. [1] In You, being-full, I the self enter bliss — ingress, not feeling. [2] Awakening discloses; entry is bliss; pūrṇa (full/complete) is the Lord's nature.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "True awakening discloses things as they are: rays reveal world-objects’ true essence. In You, being-full, I the self enter bliss — ingress, not feeling.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Awakening discloses; entry is bliss; pUrNa is the Lord’s nature.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "True awakening discloses things as they are: rays reveal world-objects’ true essence. In You, being-full, I the self enter bliss — ingress, not feeling.\n\nAwakening discloses; entry is bliss; pUrNa is the Lord’s nature."
+  },
+  {
+   "chunk": "bh-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Affliction's arrival is the occasion, not the obstacle: with it comes nondifference, and nectar arises. [1] Affliction's arrival dated as nondifference's occasion: with it, not after it, the nectar rains. [2] It inverts the expected: suffering is not the enemy of recognition but its trigger.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Affliction’s arrival is the occasion, not the obstacle: with it comes nondifference, and nectar arises. With it, not after it.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Inversion: suffering triggers recognition; never its enemy.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Affliction’s arrival is the occasion, not the obstacle: with it comes nondifference, and nectar arises. With it, not after it.\n\nInversion: suffering triggers recognition; never its enemy."
+  },
+  {
+   "chunk": "bh-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Rites are relativized: vow, giving, bathing, austerity dispel becoming's heat — while scripture contemplated as nectar irrigates the mind with a bliss-stream. [1] Heat dispelled by rites; bliss streamed by contemplation. Two means, two results. [2] Rites are not despised; they are relativized, then the higher means offered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rites relativized: vow, giving, bathing, austerity dispel becoming’s heat; scripture-as-nectar irrigates bliss-stream. Two means, two results.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Rites not despised; relativized, then higher means offered. Ranked, not rejected.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Rites relativized: vow, giving, bathing, austerity dispel becoming’s heat; scripture-as-nectar irrigates bliss-stream. Two means, two results.\n\nRites not despised; relativized, then higher means offered. Ranked, not rejected."
+  },
+  {
+   "chunk": "bh-p09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Consciousness dances and sings; obtaining the Lord is defined as rare vision — fenced to the initiated. [1] Joy first, then its cause named: obtaining = vision, rare by structure. [2] It moves from rejoicing to the definition of obtaining as vision, fenced to the knower of the samaya.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Consciousness dances and sings; obtaining defined as rare vision, fenced to the initiated. Joy first, cause named second: obtaining equals vision.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Rejoicing to definition: obtaining-as-vision, fenced to samaya-knowers.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Consciousness dances and sings; obtaining defined as rare vision, fenced to the initiated. Joy first, cause named second: obtaining equals vision.\n\nRejoicing to definition: obtaining-as-vision, fenced to samaya-knowers."
+  },
+  {
+   "chunk": "bh-p10",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Dated and signed, it turns outward: the compassionate Lord pacifies the world's heat instantly. [1] What began in the heart ends in the world: private recognition cools the world. [2] The colophon dates the composition (Pauṣa, Kṛṣṇa Daśamī) and signs it (Abhinavagupta), then turns to the world.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Dated and signed — PauSa, dark tenth, Abhinavagupta — then turned outward: compassionate Lord pacifies world-heat instantly.",
+     "maps_to": [
+      0,
+      2
+     ]
+    },
+    {
+     "text": "Heart-begun ends world-ended: private recognition cools the world.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Dated and signed — PauSa, dark tenth, Abhinavagupta — then turned outward: compassionate Lord pacifies world-heat instantly.\n\nHeart-begun ends world-ended: private recognition cools the world."
+  }
+ ]
+}

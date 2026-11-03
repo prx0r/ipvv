@@ -1,0 +1,175 @@
+{
+ "work": "bodhavilasa",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bodhavilasa/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "aṅgala+colophon scoped), validate+proof PASS x5, L3 couplets handcrafted+reviewed; QA NEEDS_WITNESS | 2026-11-04: L4 5/5 songs, 41/41v (per-song DRAFT+data), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bodh-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Double invocation: Netra, five-act Śiva. [1] Free cause so-called; powers bestowed. [2] Own ground-will-purpose; fitness divides. [3] Variety arranged high-to-low by difference. [4] Tightening makes mind; banyan-seed contains world-form. [5] Pure knowing rule-bound named mind. [6] Awareness rests object-faced; wise know mind-as-knowing. [7] Knowing-formed yet object-bound, discernment-void. [8] Ever-one established by enumerated means. [9] Everywhere pure Lord; palm-close freedom via mis-knowing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The song opens by bowing twice: first to Netra, the Lord as the Eye, and then to Shiva in His five-act form — the God who creates, keeps, dissolves, hides, and gives grace.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then it lays out how everything works. Consciousness is free, and that freedom is the cause of everything; powers get handed out from it. That same free awareness unfolds the world without ever leaving its own ground, moved by its own will and purpose — and fitness decides what appears where. Variety gets arranged from high to low, purely by difference.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Tightening is how mind gets made: consciousness squeezes itself and becomes mind — like a whole world contained in a banyan seed. Pure knowing, once it accepts rules, gets the name mind. Awareness can rest with its face toward objects, and the wise recognize that mind as knowing itself. But the bound knower, though shaped of knowing, stays glued to objects with no discernment. What keeps mind ever-one is a whole counted list of means. And freedom sits close — palm-close — reachable through the very mis-knowing of I-ness.",
+     "maps_to": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "The song opens by bowing twice: first to Netra, the Lord as the Eye, and then to Shiva in His five-act form — the God who creates, keeps, dissolves, hides, and gives grace.\n\nThen it lays out how everything works. Consciousness is free, and that freedom is the cause of everything; powers get handed out from it. That same free awareness unfolds the world without ever leaving its own ground, moved by its own will and purpose — and fitness decides what appears where. Variety gets arranged from high to low, purely by difference.\n\nTightening is how mind gets made: consciousness squeezes itself and becomes mind — like a whole world contained in a banyan seed. Pure knowing, once it accepts rules, gets the name mind. Awareness can rest with its face toward objects, and the wise recognize that mind as knowing itself. But the bound knower, though shaped of knowing, stays glued to objects with no discernment. What keeps mind ever-one is a whole counted list of means. And freedom sits close — palm-close — reachable through the very mis-knowing of I-ness."
+  },
+  {
+   "chunk": "bodh-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Tended means; Lord tends; release-glory proceeds. [1] Doubtless yet made-up stages, actor-assumed. [2] Assumed vast shines; tightened impures. [3] Incomplete confessed, defiled, all-pervading nonetheless. [4] God's five, self's five; delusion the difference. [5] Expansion sung capable; contraction called wanderer. [6] Māyā glimpse-willing; keeping/loosing deemed powers. [7] Withdrawn grace in oneness; manifesting named veiling. [8] Present course jewel-known; ignorance timber-cloddish.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Means get tended, the Lord does the tending, and the glory of release is what comes out. The stages of the world are certain, no doubt about it — and yet they are made up, put on like an actor puts on roles.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Vastness assumed shines bright; but where power tightens itself, things turn impure as they wander. The incomplete one confesses: defiled, stained — and still, underneath, all-pervading Lord. God does five acts; the self does the same five. The only difference between them is delusion.",
+     "maps_to": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "text": "Expansion gets sung as capable; contraction gets called wanderer. Maya wills only glimpses, and keeping and loosing get deemed as powers. Grace withdraws into oneness, and manifesting gets named as veiling. The present course is known like a jewel in the hand; ignorance beside it is timber, is clods.",
+     "maps_to": [
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "text": "Means get tended, the Lord does the tending, and the glory of release is what comes out. The stages of the world are certain, no doubt about it — and yet they are made up, put on like an actor puts on roles.\n\nVastness assumed shines bright; but where power tightens itself, things turn impure as they wander. The incomplete one confesses: defiled, stained — and still, underneath, all-pervading Lord. God does five acts; the self does the same five. The only difference between them is delusion.\n\nExpansion gets sung as capable; contraction gets called wanderer. Maya wills only glimpses, and keeping and loosing get deemed as powers. Grace withdraws into oneness, and manifesting gets named as veiling. The present course is known like a jewel in the hand; ignorance beside it is timber, is clods."
+  },
+  {
+   "chunk": "bodh-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Always-practice frees to bliss-fullness. [1] Awake fire swallows; all-devouring to be known. [2] Joined attains pure soon, doubtless. [3] Grown fire shines knowing-made; nectar outside. [4] Stillness shown; self plays supreme. [5] Constant knower freed frees scores flash-fast. [6] Bliss-powered standing; rising joy thus. [7] Nature-fixed desired in distraction; effort-attained. [8] Middle-opening shines; divine vision shown. [9] Spotless expands bodiless vision.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Practice always, and it frees you all the way to bliss-fullness. Stay awake and the fire of awareness swallows everything — that all-devouring fire is the thing to know. Get joined to it and you arrive at the pure state soon, with no doubt about it.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "The grown fire shines and everything turns knowing-made; nectar breaks outside. Stillness gets shown, and the self plays supreme inside it. The knower who stays constant gets freed — and then frees scores of others in a single flash.",
+     "maps_to": [
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Stand bliss-powered and joy rises, just like that. What your nature is fixed on stays desirable even in distraction, and effort is how people get there. The middles opening shines and shows divine vision. Spotless, it expands into bodiless seeing-knowing.",
+     "maps_to": [
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Practice always, and it frees you all the way to bliss-fullness. Stay awake and the fire of awareness swallows everything — that all-devouring fire is the thing to know. Get joined to it and you arrive at the pure state soon, with no doubt about it.\n\nThe grown fire shines and everything turns knowing-made; nectar breaks outside. Stillness gets shown, and the self plays supreme inside it. The knower who stays constant gets freed — and then frees scores of others in a single flash.\n\nStand bliss-powered and joy rises, just like that. What your nature is fixed on stays desirable even in distraction, and effort is how people get there. The middles opening shines and shows divine vision. Spotless, it expands into bodiless seeing-knowing."
+  },
+  {
+   "chunk": "bodh-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Middle-opening means powerful thought-decay, many ways. [1] Nothing-thinking decays thoughts; play-power enamoured in being. [2] Attached sees bright flood; tightening brahma-called. [3] Rests listed: bindu-nāda and passion-grasps. [4] Goddess speaks; strong win reward in days. [5] Impressed roamer reflects again and again. [6] Distraction-proof shining for fixed yogi. [7] Mantra-strong full-I-knowing of inward devotee. [8] Sporting yogi mantra-stayed, strong playing power-swollen. [9] Freedom unbroken tasting all difference.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The way in runs through the middles opening: a powerful stand where thoughts decay by thinking nothing, and there are many ways to do it. Think nothing and thoughts rot away on their own; play-power stays in love with being itself. Stay fixed and you see the bright flood; the tightening gets its name from the old brahma-teachers.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "Then the resting places, listed whole: point-bindu, hum-nada, and the grasps of passion. The goddess herself speaks: the strong win their reward in days. The stamped wanderer keeps reflecting, again and again, by the power that sends things out. Even in distraction, things shine for the fixed yogi — distraction-proof.",
+     "maps_to": [
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "text": "Mantra-strong full-I-knowing belongs to the inward devotee. The sporting yogi stays put in mantra, strong and playing, power-swollen. And freedom stays unbroken while tasting every difference there is.",
+     "maps_to": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "The way in runs through the middles opening: a powerful stand where thoughts decay by thinking nothing, and there are many ways to do it. Think nothing and thoughts rot away on their own; play-power stays in love with being itself. Stay fixed and you see the bright flood; the tightening gets its name from the old brahma-teachers.\n\nThen the resting places, listed whole: point-bindu, hum-nada, and the grasps of passion. The goddess herself speaks: the strong win their reward in days. The stamped wanderer keeps reflecting, again and again, by the power that sends things out. Even in distraction, things shine for the fixed yogi — distraction-proof.\n\nMantra-strong full-I-knowing belongs to the inward devotee. The sporting yogi stays put in mantra, strong and playing, power-swollen. And freedom stays unbroken while tasting every difference there is."
+  },
+  {
+   "chunk": "bodh-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Non-dual nectar drunk quenches fever. [1] Pure method-treatise for winning Śiva.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Drink the non-dual nectar and your fever goes out. That is the whole medicine: one draught and the burning stops.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And the manual for it is pure method, named for winning Shiva — a clean treatise with nothing mixed in.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Drink the non-dual nectar and your fever goes out. That is the whole medicine: one draught and the burning stops.\n\nAnd the manual for it is pure method, named for winning Shiva — a clean treatise with nothing mixed in."
+  }
+ ]
+}

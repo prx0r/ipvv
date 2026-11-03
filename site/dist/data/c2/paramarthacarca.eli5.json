@@ -1,0 +1,142 @@
+{
+ "work": "paramarthacarca",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work paramarthacarca/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=8",
+  "approval": "2026-11-04: L4 8/8 songs (per-song DRAFT+data), śānta couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "par-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Distinct from every lit thing, light itself does not shine as an object — too pervasive to appear; illumined-vs-illuminator is mere convention.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Light itself is different from every lit-up thing: lamps and suns get seen, but light itself never shows up as an object, because it is everywhere already — too spread out to appear. And all our talk of things-that-light-up versus the-lighting itself is just a convenient name we made up.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Light itself is different from every lit-up thing: lamps and suns get seen, but light itself never shows up as an object, because it is everywhere already — too spread out to appear. And all our talk of things-that-light-up versus the-lighting itself is just a convenient name we made up."
+  },
+  {
+   "chunk": "par-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] No thing stands dually apart from knowledge; in consciousness there is no difference; the individual, in the one abode of self-luminosity, stays undivided.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Nothing at all stands apart from knowing, doubled up and separate. Inside consciousness there are no splits. And you, the individual person, living in the one house of self-shining light — you stay whole, never divided.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Nothing at all stands apart from knowing, doubled up and separate. Inside consciousness there are no splits. And you, the individual person, living in the one house of self-shining light — you stay whole, never divided."
+  },
+  {
+   "chunk": "par-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Dense, one own-consciousness is Śiva himself, the universe's supreme light — yet grasper-grasped division still shines within variegated power.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Thick, single, your-own consciousness — that is Shiva Himself, the brightest light in the whole universe. And yet, right there inside all that oneness, the split between the grabber and the grabbed still shines, scattered through many-colored power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Thick, single, your-own consciousness — that is Shiva Himself, the brightest light in the whole universe. And yet, right there inside all that oneness, the split between the grabber and the grabbed still shines, scattered through many-colored power."
+  },
+  {
+   "chunk": "par-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Difference is not cut off from its ground — free, most-clear, one-abode — then the bare list against the jewel-mirror: palace through mountain, just as from jewel-mirror and the like.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Being different does not cut you off from what you come from — the ground is free, perfectly clear, and all one house. Then just look at the plain list: palace, elephant, horse, cloud, ocean, mountain — the same way things show up in a jewel or a mirror.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Being different does not cut you off from what you come from — the ground is free, perfectly clear, and all one house. Then just look at the plain list: palace, elephant, horse, cloud, ocean, mountain — the same way things show up in a jewel or a mirror."
+  },
+  {
+   "chunk": "par-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] If even a common mirror shows prototype-with-reflection as mind-established, the free-consciousness mirror needs no other cause among things.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Think about an ordinary mirror: the image and the original appear together in it, and everyone agrees your mind is what makes that so. Now scale that up: the mirror of free consciousness needs no second cause at all for anything in it.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Think about an ordinary mirror: the image and the original appear together in it, and everyone agrees your mind is what makes that so. Now scale that up: the mirror of free consciousness needs no second cause at all for anything in it."
+  },
+  {
+   "chunk": "par-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] O consciousness-dense one: you indeed are supreme; in you the universes shine at once, flashing by glory-power; you stand as both their maker and their supreme Lord.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Hey, you made of packed consciousness: You are the highest, no contest. Inside You all the worlds shine at the same instant, flashing with the power of Your glory. And You are both things at once: the one who made them and their supreme Lord.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Hey, you made of packed consciousness: You are the highest, no contest. Inside You all the worlds shine at the same instant, flashing with the power of Your glory. And You are both things at once: the one who made them and their supreme Lord."
+  },
+  {
+   "chunk": "par-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Established yet unaccomplishable, non-lord yet lord, place-and-time full of own power — eternal, pervasive: Bhairava-Lord, I praise.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is a knot that stays tied: consciousness set down from the very start, yet never finishable. The self, no master and yet Master. Its place and time stuffed full with its own power — lasting forever, spread everywhere. Bhairava the Lord: I praise Him.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is a knot that stays tied: consciousness set down from the very start, yet never finishable. The self, no master and yet Master. Its place and time stuffed full with its own power — lasting forever, spread everywhere. Bhairava the Lord: I praise Him."
+  },
+  {
+   "chunk": "par-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The conduct-septad remembered in the heart; the abode entered again; the discussion itself known — it names its own close.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "This seven-part good conduct — remember it in your heart once other thoughts have melted away. If you long for the ultimate, you will enter the highest home again and again. And you will come to know the very discussion we are having right now, about the most real thing in all three worlds. Notice what just happened: the song named its own ending.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "This seven-part good conduct — remember it in your heart once other thoughts have melted away. If you long for the ultimate, you will enter the highest home again and again. And you will come to know the very discussion we are having right now, about the most real thing in all three worlds. Notice what just happened: the song named its own ending."
+  }
+ ]
+}
