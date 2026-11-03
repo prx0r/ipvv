@@ -636,6 +636,73 @@ export default {
         'Set-Cookie': 'svsess=; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=0'}});
     }
 
+    // ---- ORCID phase 2 (AUTH-SETUP.md): sign-in with ORCID, profile autofill ----
+    // 503 until ORCID_CLIENT_ID / ORCID_CLIENT_SECRET are set (owner: Developer Tools).
+    const ORCID_CB = "https://ipvv-api.tradesprior.workers.dev/api/auth/orcid/callback";
+    const orcCreds = () => (env.ORCID_CLIENT_ID && env.ORCID_CLIENT_SECRET)
+      ? {id: env.ORCID_CLIENT_ID, sec: env.ORCID_CLIENT_SECRET} : null;
+
+    if (path === '/api/auth/orcid/start' && request.method === 'GET') {
+      const creds = orcCreds();
+      if(!creds) return json({error:'ORCID not configured — see worker/AUTH-SETUP.md (Developer Tools step)'}, 503, cors);
+      const u = new URL(request.url);
+      const back = (u.searchParams.get('redirect') || '/').slice(0, 120);
+      const st = await (async()=>{
+        const body = btoa(JSON.stringify({b: back, e: Date.now() + 10*60*1000}));
+        const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['sign']);
+        const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(body));
+        return body + '.' + btoa(String.fromCharCode(...new Uint8Array(mac))).replace(/=+$/,'').replace(/\+/g,'-').replace(/\//g,'_');
+      })();
+      const authz = 'https://orcid.org/oauth/authorize?' + new URLSearchParams({
+        client_id: creds.id, response_type: 'code', scope: '/authenticate',
+        redirect_uri: ORCID_CB, state: st}).toString();
+      return Response.redirect(authz, 302);
+    }
+
+    if (path === '/api/auth/orcid/callback' && request.method === 'GET') {
+      const creds = orcCreds();
+      if(!creds) return json({error:'ORCID not configured'}, 503, cors);
+      const u = new URL(request.url);
+      const code = u.searchParams.get('code') || '';
+      const st = u.searchParams.get('state') || '';
+      try {
+        const [body, sig] = st.split('.');
+        const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['verify']);
+        const raw = Uint8Array.from(atob(sig.replace(/-/g,'+').replace(/_/g,'/')), c=>c.charCodeAt(0));
+        const okSig = await crypto.subtle.verify('HMAC', key, raw, new TextEncoder().encode(body));
+        const okExp = okSig && JSON.parse(atob(body)).e > Date.now();
+        if(!okExp) return json({error:'bad or expired state'}, 400, cors);
+        const back = JSON.parse(atob(body)).b || '/';
+        const tok = await fetch('https://orcid.org/oauth/token', {method:'POST',
+          headers:{'Content-Type':'application/x-www-form-urlencoded'},
+          body: new URLSearchParams({grant_type:'authorization_code', code,
+            redirect_uri: ORCID_CB, client_id: creds.id, client_secret: creds.sec})}).then(r=>r.json());
+        if(!tok.access_token) return json({error:'orcid token exchange failed'}, 502, cors);
+        const ui = await fetch('https://api.orcid.org/oauth/userinfo',
+          {headers:{Authorization: `Bearer ${tok.access_token}`}}).then(r=>r.json());
+        const sub = String(ui.sub || '').replace(/[^0-9Xx-]/g, '');
+        if(!sub) return json({error:'no orcid iD in userinfo'}, 502, cors);
+        // link-or-create: identity keyed by ORCID iD (verified via OAuth, never typed)
+        let row = await env.DB.prepare('SELECT * FROM profiles WHERE orcid = ?').bind(sub).first();
+        const email = `${sub.replace(/-/g,'')}@orcid.svread`;
+        if(!row){
+          const uid = crypto.randomUUID();
+          await env.DB.prepare('INSERT INTO profiles (id, email, display_name, orcid, provider) VALUES (?,?,?,?,?)')
+            .bind(uid, email, (ui.name || sub).slice(0,80), sub, 'orcid').run();
+          row = {id: uid};
+        }
+        const exp = Date.now() + 7*24*3600*1000;
+        const sb = btoa(JSON.stringify({u: row.id, e: exp}));
+        const skey = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['sign']);
+        const mac = b64u(await crypto.subtle.sign('HMAC', skey, new TextEncoder().encode(sb)));
+        return new Response(null, {status: 302, headers: {
+          ...cors, 'Location': back,
+          'Set-Cookie': `svsess=${sb}.${mac}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`}});
+      } catch(e) {
+        return json({error: 'orcid flow failed: ' + String(e).slice(0,120)}, 502, cors);
+      }
+    }
+
     // POST /api/read — verse-by-verse TTS render (fish s2.1-pro-free, $0),
     // stored in R2 read/<work>/<verse>_<lang>.mp3. Same verse unit as recitation;
     // first tap renders + stores, later taps hit the cache.

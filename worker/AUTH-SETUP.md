@@ -47,3 +47,15 @@ Rotate: generate hex32 → write the file (chmod 600) → pipe the same value to
 The service resolves the display name from `GET /api/auth/me` (attribution comes
 from the worker, never the client); its `GET /v1/scholar/whoami` returns the
 unified identity for UIs. Legacy bearer tokens still work.
+
+## Phase 2 — ORCID sign-in (endpoints LIVE, awaiting creds)
+
+Deployed endpoints (`worker/src/index.js`):
+- `GET /api/auth/orcid/start?redirect=/path` — 302 to ORCID authorize (`scope=/authenticate`), HMAC-signed short-lived state
+- `GET /api/auth/orcid/callback?code&state` — token exchange → `oauth/userinfo` → link-or-create profile keyed by **verified ORCID iD** (`profiles.orcid`), sets `svsess`, redirects back
+- Without `ORCID_CLIENT_ID` / `ORCID_CLIENT_SECRET` both return **503** ("not configured") — by design
+
+To turn on (owner, Developer Tools at https://developer.orcid.org):
+1. Register a client (sign-in API), redirect URI: `https://ipvv-api.tradesprior.workers.dev/api/auth/orcid/callback`
+2. `wrangler secret put ORCID_CLIENT_ID` / `ORCID_CLIENT_SECRET` — then start/callback go live, no redeploy
+3. Note: email is synthesized (`<iD>@orcid.svread`) until we request the email claim — ORCID best practice is to ask for it manually on first sign-in; a follow-up task
