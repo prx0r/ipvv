@@ -45,6 +45,10 @@ async function hmac(secret,message){const key=await crypto.subtle.importKey('raw
   {name:'HMAC',hash:'SHA-256'},false,['sign']);const sig=await crypto.subtle.sign('HMAC',key,new TextEncoder().encode(message));
   return [...new Uint8Array(sig)].map(x=>x.toString(16).padStart(2,'0')).join('');}
 async function document(env,uid,id){return env.DB.prepare('SELECT * FROM scholar_documents WHERE user_id=? AND id=?').bind(uid,id).first();}
+async function historicalDocument(env,uid,id,revision){
+  return env.DB.prepare('SELECT document_id AS id,kind,work,target,layer,title,content_json,revision,updated_at FROM scholar_document_history WHERE user_id=? AND document_id=? AND revision=?')
+    .bind(uid,id,revision).first();
+}
 // A single conditional INSERT makes both daily and concurrent reservations atomic
 // across Worker isolates. A short lease releases slots if a Worker disappears.
 async function reserveAi(env,uid){
@@ -209,6 +213,35 @@ export async function handleScholar(request,env,uid,cors,callModel){
       if(!Number.isInteger(d.expected_revision)||d.expected_revision<1)return json({error:'Choose a saved revision.'},400,cors);
       const result=await env.DB.prepare('DELETE FROM scholar_documents WHERE user_id=? AND id=? AND revision=?').bind(uid,dm[1],d.expected_revision).run();
       if(!result.meta?.changes)return json({error:'Draft not found or changed.'},409,cors);
+      return json({deleted:true},200,cors);
+    }
+    if(path==='/api/scholar/style-examples'&&request.method==='GET'){
+      const {results}=await env.DB.prepare('SELECT id,document_id,work,kind,layer,before_revision,after_revision,created_at FROM scholar_style_examples WHERE user_id=? ORDER BY created_at DESC,id DESC LIMIT 200').bind(uid).all();
+      return json({examples:results||[]},200,cors);
+    }
+    if(path==='/api/scholar/style-examples'&&request.method==='POST'){
+      const d=await body(request);
+      if(!ID.test(d.document_id||'')||!Number.isInteger(d.before_revision)||!Number.isInteger(d.after_revision)||
+          d.before_revision<1||d.after_revision<=d.before_revision||d.confirmed!==true)
+        return json({error:'Confirm two saved revisions of your own work.'},400,cors);
+      const before=await historicalDocument(env,uid,d.document_id,d.before_revision),after=await historicalDocument(env,uid,d.document_id,d.after_revision);
+      if(!before||!after||!['translation','essay'].includes(after.kind)||
+          ['work','kind','target','layer'].some(key=>before[key]!==after[key]))
+        return json({error:'Matching private revisions were not found.'},404,cors);
+      if(JSON.parse(before.content_json).text===JSON.parse(after.content_json).text)
+        return json({error:'Select revisions with a text change.'},400,cors);
+      const id='style:'+crypto.randomUUID(),now=new Date().toISOString();
+      const result=await env.DB.prepare(`INSERT OR IGNORE INTO scholar_style_examples
+        (id,user_id,document_id,work,kind,layer,before_revision,after_revision,before_sha256,after_sha256,created_at)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)`).bind(id,uid,d.document_id,after.work,after.kind,after.layer,
+          before.revision,after.revision,await sha(snapshot(before)),await sha(snapshot(after)),now).run();
+      if(!result.meta?.changes)return json({error:'This revision pair is already saved.'},409,cors);
+      return json({id,document_id:d.document_id,before_revision:before.revision,after_revision:after.revision},201,cors);
+    }
+    const style=path.match(/^\/api\/scholar\/style-examples\/([A-Za-z0-9_.:-]{1,160})$/);
+    if(style&&request.method==='DELETE'){
+      const result=await env.DB.prepare('DELETE FROM scholar_style_examples WHERE id=? AND user_id=?').bind(style[1],uid).run();
+      if(!result.meta?.changes)return json({error:'Style example not found.'},404,cors);
       return json({deleted:true},200,cors);
     }
     if(path==='/api/scholar/reviews'&&request.method==='GET'){

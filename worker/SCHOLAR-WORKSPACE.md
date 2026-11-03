@@ -6,7 +6,8 @@ gates, start with `SCHOLAR-RELEASE-HANDOFF.md` in this directory.
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
 reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
-`migrations/0004_scholar_ai_limits.sql` and `migrations/0005_scholar_peer_review.sql`
+`migrations/0004_scholar_ai_limits.sql`, `migrations/0005_scholar_peer_review.sql`
+and `migrations/0006_scholar_style_examples.sql`
 afterwards; all are additive and repeatable.
 Authenticated calls use the existing `svsess` cookie, require a strong session
 secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store`.
@@ -17,6 +18,8 @@ secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store
 | `PUT /api/scholar/documents/<id>` | Create/update a document using `expected_revision`; concurrent edits return 409 |
 | `DELETE /api/scholar/documents/<id>` | Delete that account's specified revision; shared reviews remain |
 | `GET /api/scholar/documents/<id>/history?before=<revision>` | Account-private revision snapshots, newest first, 50 per page |
+| `GET/POST /api/scholar/style-examples` | List or explicitly mark two revisions of the author's own document as a private style example |
+| `DELETE /api/scholar/style-examples/<id>` | Revoke a selected example for future use |
 | `GET/POST /api/scholar/reviews` | List or privately share an immutable saved snapshot with another account ID |
 | `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records one decision, reasoning and optional structured rubric |
 | `GET/POST /api/scholar/reviews/<id>/messages` | Private discussion between the author and the invited reviewer |
@@ -45,6 +48,10 @@ invalidates an earlier sign-off. Deleting the private document deletes its histo
 previously shared review snapshots and separately submitted Git objects remain.
 The migration can backfill only the current revision of existing documents, not
 previously overwritten saves. Private histories never enter Git automatically.
+Style examples point to two exact private revisions, record their hashes and require
+the author's explicit selection. They are deleted with the private document and are
+not themselves a model fine-tune. Sending examples to a provider requires a separate
+per-request consent; using reviewer comments requires the reviewer's permission too.
 
 Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true`, the dedicated
 server-side secret `SCHOLAR_DASHSCOPE_API_KEY` is available, and the numeric

@@ -134,6 +134,30 @@ test('essay peer reviews have a structured report and participant-only discussio
   db.close();
 });
 
+test('authors can explicitly save and revoke private before-and-after style examples',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const migration=await readFile(new URL('../worker/migrations/0006_scholar_style_examples.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32)};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
+    return response.headers.get('Set-Cookie').split(';')[0];}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
+  const essay={expected_revision:0,kind:'essay',work:'testwork',target:'test-p01-v01',layer:'l3',title:'Essay',content:{text:'First wording'}};
+  assert.equal((await call('/api/scholar/documents/essay:1','PUT',essay,alice)).status,200);
+  assert.equal((await call('/api/scholar/documents/essay:1','PUT',{...essay,expected_revision:1,content:{text:'Revised wording',assisted:true}},alice)).status,200);
+  const pair={document_id:'essay:1',before_revision:1,after_revision:2,confirmed:true};
+  assert.equal((await call('/api/scholar/style-examples','POST',{...pair,confirmed:false},alice)).status,400);
+  assert.equal((await call('/api/scholar/style-examples','POST',pair,bob)).status,404);
+  let response=await call('/api/scholar/style-examples','POST',pair,alice);assert.equal(response.status,201);const example=await response.json();
+  assert.equal((await call('/api/scholar/style-examples','POST',pair,alice)).status,409);
+  response=await call('/api/scholar/style-examples','GET',undefined,bob);assert.deepEqual((await response.json()).examples,[]);
+  response=await call('/api/scholar/style-examples','GET',undefined,alice);const examples=(await response.json()).examples;
+  assert.equal(examples[0].id,example.id);assert.equal(JSON.stringify(examples).includes('Revised wording'),false);
+  assert.equal((await call('/api/scholar/style-examples/'+example.id,'DELETE',undefined,bob)).status,404);
+  assert.equal((await call('/api/scholar/documents/essay:1','DELETE',{expected_revision:2},alice)).status,200);
+  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_style_examples').get().n,0);db.close();
+});
+
 test('Qwen needs consent, a free-tier configuration and only the scholar’s own style examples',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
