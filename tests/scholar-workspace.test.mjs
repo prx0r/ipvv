@@ -73,6 +73,36 @@ test('private drafts, version-specific reviews and signoffs use the signed-in ac
   assert.equal((await response.json()).reviews[0].snapshot.content.text,'Alice draft');db.close();
 });
 
+test('private revision history is atomic, account-scoped, backfilled and deleted with the draft',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  // Simulate an existing deployment before the history migration.
+  db.exec('DROP TRIGGER scholar_history_insert; DROP TRIGGER scholar_history_update; DROP TRIGGER scholar_history_delete; DROP TABLE scholar_document_history;');
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32)};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
+    return response.headers.get('Set-Cookie').split(';')[0];}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
+  const path='/api/scholar/documents/private:1';
+  const draft={kind:'translation',work:'testwork',target:'test-p01-v01',layer:'l3',title:'',content:{text:'First'},expected_revision:0};
+  assert.equal((await call(path,'PUT',draft,alice)).status,200);
+  assert.equal((await call(path,'PUT',{...draft,expected_revision:1,content:{text:'Before migration'}},alice)).status,200);
+  const migration=await readFile(new URL('../worker/migrations/0003_scholar_history.sql',import.meta.url),'utf8');
+  db.exec(migration);db.exec(migration);
+  assert.equal((await call(path,'PUT',{...draft,expected_revision:2,content:{text:'New snapshot'}},alice)).status,200);
+  assert.equal((await call(path,'PUT',{...draft,expected_revision:2,content:{text:'Conflicting edit'}},alice)).status,409);
+  let response=await call(path+'/history','GET',undefined,alice);
+  assert.equal(response.status,200);assert.equal(response.headers.get('Cache-Control'),'no-store');
+  let history=(await response.json()).revisions;
+  assert.deepEqual(history.map(x=>[x.revision,x.content.text]),[[3,'New snapshot'],[2,'Before migration']]);
+  response=await call(path+'/history?before=3','GET',undefined,alice);
+  assert.deepEqual((await response.json()).revisions.map(x=>x.revision),[2]);
+  assert.equal((await call(path+'/history?before=bad','GET',undefined,alice)).status,400);
+  assert.equal((await call(path+'/history','GET',undefined,bob)).status,404);
+  assert.equal((await call(path,'DELETE',{expected_revision:3},alice)).status,200);
+  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_document_history').get().n,0);
+  assert.equal((await call(path+'/history','GET',undefined,alice)).status,404);db.close();
+});
+
 test('Qwen needs consent, a free-tier configuration and only the scholar’s own style examples',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true'};

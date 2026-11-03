@@ -2,7 +2,8 @@
 
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
-reviewed rollout and after a backup. The migration is additive and repeatable.
+reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
+afterwards; both migrations are additive and repeatable.
 Authenticated calls use the existing `svsess` cookie, require a strong session
 secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store`.
 
@@ -11,6 +12,7 @@ secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store
 | `GET /api/scholar/documents?work=...&offset=...` | Account's private paginated documents |
 | `PUT /api/scholar/documents/<id>` | Create/update a document using `expected_revision`; concurrent edits return 409 |
 | `DELETE /api/scholar/documents/<id>` | Delete that account's specified revision; shared reviews remain |
+| `GET /api/scholar/documents/<id>/history?before=<revision>` | Account-private revision snapshots, newest first, 50 per page |
 | `GET/POST /api/scholar/reviews` | List or privately share an immutable saved snapshot with another account ID |
 | `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records one decision and reasoning |
 | `POST /api/scholar/signoffs` | Author approves exact saved revision and declares rights; record remains private |
@@ -26,6 +28,13 @@ ReviewEvent/PromotionEvent Scheme B in translation-work `SCHOLAR.md`. Rights are
 contributor declaration, not proof of ownership or legal copyright.
 Private peer-review decisions remain in D1 and are not automatically exported into
 Git; the bridge records the author's own approval only.
+
+Successful private saves create a snapshot atomically using D1 triggers. Restoring
+an older snapshot is an ordinary new revision: it does not replace history and it
+invalidates an earlier sign-off. Deleting the private document deletes its history;
+previously shared review snapshots and separately submitted Git objects remain.
+The migration can backfill only the current revision of existing documents, not
+previously overwritten saves. Private histories never enter Git automatically.
 
 Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true` and the existing
 server-side DashScope key is available. This flag is an **operator assertion**, not a

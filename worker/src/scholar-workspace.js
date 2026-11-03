@@ -160,6 +160,16 @@ export async function handleScholar(request,env,uid,cors,callModel){
       const {results}=await env.DB.prepare('SELECT * FROM scholar_documents WHERE user_id=? AND work=? ORDER BY updated_at DESC,id DESC LIMIT 200 OFFSET ?').bind(uid,work,offset).all();
       const rows=results||[];return json({documents:rows.map(cleaned),next_offset:rows.length===200?offset+200:null},200,cors);
     }
+    const history=path.match(/^\/api\/scholar\/documents\/([A-Za-z0-9_.:-]{1,160})\/history$/);
+    if(history&&request.method==='GET'){
+      const before=Number(url.searchParams.get('before')||Number.MAX_SAFE_INTEGER);
+      if(!ID.test(history[1])||!Number.isSafeInteger(before)||before<1)return json({error:'Invalid history page.'},400,cors);
+      if(!await document(env,uid,history[1]))return json({error:'Document not found.'},404,cors);
+      const {results}=await env.DB.prepare('SELECT document_id AS id,kind,work,target,layer,title,content_json,revision,updated_at FROM scholar_document_history WHERE user_id=? AND document_id=? AND revision<? ORDER BY revision DESC LIMIT 51')
+        .bind(uid,history[1],before).all();
+      const rows=results||[],page=rows.slice(0,50);
+      return json({revisions:page.map(cleaned),next_before:rows.length>50?page.at(-1).revision:null},200,cors);
+    }
     const dm=path.match(/^\/api\/scholar\/documents\/([A-Za-z0-9_.:-]{1,160})$/);
     if(dm&&request.method==='PUT'){
       const d=await body(request), revision=d.expected_revision;
