@@ -75,6 +75,14 @@ export default {
 
     const path = url.pathname;
 
+    // Account sessions are cross-origin between the reader and the worker.
+    // Reject unexpected browser origins and never sign with an empty secret.
+    if (path.startsWith('/api/auth/')) {
+      if (reqOrigin && !allowed.has(reqOrigin)) return json({error:'origin not allowed'}, 403, cors);
+      if (typeof env.SESSION_SECRET !== 'string' || env.SESSION_SECRET.length < 32)
+        return json({error:'authentication temporarily unavailable'}, 503, cors);
+    }
+
     // POST /api/profile
     if (path === '/api/profile' && request.method === 'POST') {
       const { email } = await request.json();
@@ -585,7 +593,8 @@ export default {
       }catch(e){ return null; }
     }
 
-    // POST /api/auth/access — one door: join, sign in, or set password on an email-only row
+    // POST /api/auth/access — join or sign in. Legacy email-only profiles need
+    // an ownership-verification flow before a password can be attached.
     if (path === '/api/auth/access' && request.method === 'POST') {
       let b = {}; try { b = await request.json(); } catch(e) {}
       const email = String(b.email||'').trim().toLowerCase();
@@ -598,28 +607,19 @@ export default {
         const {hash} = await pwHash(pw, row.salt);
         if(hash !== row.password_hash) return json({error:'wrong password'}, 401, cors);
       } else {
+        if(row) return json({error:'This existing profile requires email verification before it can be claimed.'}, 409, cors);
         const {hash, salt} = await pwHash(pw, null);
-        if(row){
-          if(name){
-            await env.DB.prepare('UPDATE profiles SET password_hash=?, salt=?, display_name=?, provider=? WHERE id=?')
-              .bind(hash, salt, name, 'local', row.id).run();
-          } else {
-            await env.DB.prepare('UPDATE profiles SET password_hash=?, salt=?, provider=? WHERE id=?')
-              .bind(hash, salt, 'local', row.id).run();
-          }
-        } else {
-          const uid = crypto.randomUUID();
-          await env.DB.prepare('INSERT INTO profiles (id, email, password_hash, salt, display_name, provider) VALUES (?,?,?,?,?,?)')
-            .bind(uid, email, hash, salt, name || email.split('@')[0], 'local').run();
-          row = {id: uid, display_name: name || email.split('@')[0]};
-        }
+        const uid = crypto.randomUUID();
+        await env.DB.prepare('INSERT INTO profiles (id, email, password_hash, salt, display_name, provider) VALUES (?,?,?,?,?,?)')
+          .bind(uid, email, hash, salt, name || email.split('@')[0], 'local').run();
+        row = {id: uid, display_name: name || email.split('@')[0]};
       }
       const exp = Date.now() + 7*24*3600*1000;
       const tok = await signTok(row.id, exp);
       const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(row.id).first();
       return new Response(JSON.stringify({profile: prof}), {status: 200, headers: {
         ...cors, 'Content-Type': 'application/json',
-        'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${7*24*3600}`}});
+        'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`}});
     }
 
     // GET /api/auth/me
@@ -633,7 +633,7 @@ export default {
     // POST /api/auth/logout
     if (path === '/api/auth/logout' && request.method === 'POST') {
       return new Response('{}', {status: 200, headers: {...cors, 'Content-Type': 'application/json',
-        'Set-Cookie': 'svsess=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0'}});
+        'Set-Cookie': 'svsess=; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=0'}});
     }
 
     // POST /api/read — verse-by-verse TTS render (fish s2.1-pro-free, $0),
