@@ -64,6 +64,26 @@ CREATE TABLE IF NOT EXISTS scholar_review_messages (
   FOREIGN KEY(review_id) REFERENCES scholar_reviews(id)
 );
 CREATE INDEX IF NOT EXISTS scholar_review_messages_thread ON scholar_review_messages(review_id,created_at,id);
+-- Keep in sync with migrations/0007_scholar_review_versions.sql.
+CREATE TABLE IF NOT EXISTS scholar_review_report_versions (
+  review_id TEXT NOT NULL, revision INTEGER NOT NULL, reviewer_id TEXT NOT NULL,
+  decision TEXT NOT NULL, summary TEXT NOT NULL, rubric_json TEXT NOT NULL,
+  created_at TEXT NOT NULL, PRIMARY KEY(review_id,revision),
+  FOREIGN KEY(review_id) REFERENCES scholar_reviews(id)
+);
+CREATE TRIGGER IF NOT EXISTS scholar_report_version_insert AFTER INSERT ON scholar_review_reports
+BEGIN
+  INSERT OR IGNORE INTO scholar_review_report_versions
+  VALUES (NEW.review_id,1,NEW.reviewer_id,NEW.decision,NEW.summary,NEW.rubric_json,NEW.created_at);
+END;
+CREATE TRIGGER IF NOT EXISTS scholar_report_version_update AFTER UPDATE OF decision,summary,rubric_json ON scholar_review_reports
+WHEN NEW.decision<>OLD.decision OR NEW.summary<>OLD.summary OR NEW.rubric_json<>OLD.rubric_json
+BEGIN
+  INSERT INTO scholar_review_report_versions
+  SELECT NEW.review_id,COALESCE(MAX(revision),0)+1,NEW.reviewer_id,NEW.decision,NEW.summary,NEW.rubric_json,NEW.consent_updated_at
+  FROM scholar_review_report_versions WHERE review_id=NEW.review_id;
+  UPDATE scholar_reviews SET decision=NEW.decision,reasoning=NEW.summary,decided_at=NEW.consent_updated_at WHERE id=NEW.review_id;
+END;
 CREATE TABLE IF NOT EXISTS scholar_signoffs (
   id TEXT PRIMARY KEY, user_id TEXT NOT NULL, document_id TEXT NOT NULL, revision INTEGER NOT NULL,
   snapshot_sha256 TEXT NOT NULL, rights TEXT NOT NULL, created_at TEXT NOT NULL,

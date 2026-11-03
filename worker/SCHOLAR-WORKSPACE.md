@@ -6,8 +6,8 @@ gates, start with `SCHOLAR-RELEASE-HANDOFF.md` in this directory.
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
 reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
-`migrations/0004_scholar_ai_limits.sql`, `migrations/0005_scholar_peer_review.sql`
-and `migrations/0006_scholar_style_examples.sql`
+`migrations/0004_scholar_ai_limits.sql`, `migrations/0005_scholar_peer_review.sql`,
+`migrations/0006_scholar_style_examples.sql` and `migrations/0007_scholar_review_versions.sql`
 afterwards; all are additive and repeatable.
 Authenticated calls use the existing `svsess` cookie, require a strong session
 secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store`.
@@ -21,7 +21,9 @@ secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store
 | `GET/POST /api/scholar/style-examples` | List or explicitly mark two revisions of the author's own document as a private style example |
 | `DELETE /api/scholar/style-examples/<id>` | Revoke a selected example for future use |
 | `GET/POST /api/scholar/reviews` | List or privately share an immutable saved snapshot with another account ID |
-| `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records one decision, reasoning and optional structured rubric |
+| `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records an initial decision, reasoning and optional structured rubric |
+| `POST /api/scholar/reviews/<id>/revise` | Reviewer amends their report using the expected report revision and explicit AI permission |
+| `GET /api/scholar/reviews/<id>/report-history` | Author and reviewer can inspect earlier report versions |
 | `GET/POST /api/scholar/reviews/<id>/messages` | Private discussion between the author and the invited reviewer |
 | `POST /api/scholar/reviews/<id>/ai-consent` | The reviewer can grant or revoke permission for their report to be sent to an AI provider |
 | `POST /api/scholar/signoffs` | Author approves exact saved revision and declares rights; record remains private |
@@ -41,6 +43,10 @@ Reviewers may separately opt in to AI use of their report and later revoke that
 permission. Discussion messages are never included automatically. A review concerns
 the exact snapshot hash shared with the reviewer; it does not assert independently
 verified identity, independence, or academic endorsement.
+Report revisions preserve earlier decisions and use optimistic concurrency. They
+remain attached to the same essay snapshot; a newly edited essay requires a new
+review invitation. AI draft provenance records the selected report revision and
+content hash, not an independent reviewer signature.
 
 Successful private saves create a snapshot atomically using D1 triggers. Restoring
 an older snapshot is an ordinary new revision: it does not replace history and it

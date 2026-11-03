@@ -33,6 +33,11 @@ function valid(d){
 function cleaned(r){return r&&{id:r.id,kind:r.kind,work:r.work,target:r.target,layer:r.layer,
   title:r.title,content:JSON.parse(r.content_json),revision:r.revision,updated_at:r.updated_at};}
 function snapshot(r){return {kind:r.kind,work:r.work,target:r.target,layer:r.layer,title:r.title,content:JSON.parse(r.content_json)};}
+function validReviewReport(d){const rubric=d?.rubric||{};
+  return ['ACCEPT','REQUEST_CHANGES','COMMENT'].includes(d?.decision)&&typeof d.reasoning==='string'&&!!d.reasoning.trim()&&d.reasoning.length<=10000&&
+    rubric&&typeof rubric==='object'&&!Array.isArray(rubric)&&
+    !Object.entries(rubric).some(([key,value])=>!['strengths','argument','evidence','clarity','suggestions'].includes(key)||typeof value!=='string'||value.length>4000)&&
+    (d.ai_consent===undefined||typeof d.ai_consent==='boolean');}
 // Scheme A, matching translation-work's compact sorted UTF-8 JSON for this schema.
 function canonical(v){if(Array.isArray(v))return '['+v.map(canonical).join(',')+']';
   if(v&&typeof v==='object')return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}';
@@ -261,7 +266,8 @@ export async function handleScholar(request,env,uid,cors,callModel){
       return json({deleted:true},200,cors);
     }
     if(path==='/api/scholar/reviews'&&request.method==='GET'){
-      const {results}=await env.DB.prepare(`SELECT r.*,p.rubric_json,COALESCE(p.ai_consent,0) AS ai_consent
+      const {results}=await env.DB.prepare(`SELECT r.*,p.rubric_json,COALESCE(p.ai_consent,0) AS ai_consent,
+        COALESCE((SELECT MAX(v.revision) FROM scholar_review_report_versions v WHERE v.review_id=r.id),0) AS report_revision
         FROM scholar_reviews r LEFT JOIN scholar_review_reports p ON p.review_id=r.id
         WHERE r.owner_id=? OR r.reviewer_id=? ORDER BY r.created_at DESC LIMIT 200`).bind(uid,uid).all();
       return json({reviews:(results||[]).map(r=>({...r,snapshot:JSON.parse(r.snapshot_json),snapshot_json:undefined,
@@ -282,11 +288,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
     const rm=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/decision$/);
     if(rm&&request.method==='POST'){
       const d=await body(request), rubric=d.rubric||{};
-      if(!['ACCEPT','REQUEST_CHANGES','COMMENT'].includes(d.decision)||typeof d.reasoning!=='string'||!d.reasoning.trim()||d.reasoning.length>10000)
-        return json({error:'A decision and reasoning are required.'},400,cors);
-      if(!rubric||typeof rubric!=='object'||Array.isArray(rubric)||
-          Object.entries(rubric).some(([key,value])=>!['strengths','argument','evidence','clarity','suggestions'].includes(key)||typeof value!=='string'||value.length>4000)||
-          (d.ai_consent!==undefined&&typeof d.ai_consent!=='boolean'))
+      if(!validReviewReport(d))
         return json({error:'Invalid review report.'},400,cors);
       const now=new Date().toISOString();
       const result=await env.DB.prepare(`INSERT OR IGNORE INTO scholar_review_reports
@@ -295,6 +297,24 @@ export async function handleScholar(request,env,uid,cors,callModel){
         .bind(d.decision,d.reasoning,JSON.stringify(rubric),d.ai_consent?1:0,now,now,rm[1],uid).run();
       if(!result.meta?.changes)return json({error:'Review not found or already decided.'},404,cors);
       return json({id:rm[1],decision:d.decision},200,cors);
+    }
+    const revise=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/revise$/);
+    if(revise&&request.method==='POST'){
+      const d=await body(request);
+      if(!validReviewReport(d)||!Number.isInteger(d.expected_revision)||d.expected_revision<1||typeof d.ai_consent!=='boolean')
+        return json({error:'Choose the current report revision and confirm your AI permission.'},400,cors);
+      const result=await env.DB.prepare(`UPDATE scholar_review_reports SET decision=?,summary=?,rubric_json=?,ai_consent=?,consent_updated_at=?
+        WHERE review_id=? AND reviewer_id=? AND ?=(SELECT COALESCE(MAX(revision),0) FROM scholar_review_report_versions WHERE review_id=?)`)
+        .bind(d.decision,d.reasoning,JSON.stringify(d.rubric||{}),d.ai_consent?1:0,new Date().toISOString(),revise[1],uid,d.expected_revision,revise[1]).run();
+      if(!result.meta?.changes)return json({error:'Review report changed or is unavailable.'},409,cors);
+      return json({id:revise[1],decision:d.decision},200,cors);
+    }
+    const reportHistory=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/report-history$/);
+    if(reportHistory&&request.method==='GET'){
+      const review=await env.DB.prepare('SELECT owner_id,reviewer_id FROM scholar_reviews WHERE id=?').bind(reportHistory[1]).first();
+      if(!review||(review.owner_id!==uid&&review.reviewer_id!==uid))return json({error:'Review not found.'},404,cors);
+      const {results}=await env.DB.prepare('SELECT revision,decision,summary,rubric_json,created_at FROM scholar_review_report_versions WHERE review_id=? ORDER BY revision DESC LIMIT 200').bind(reportHistory[1]).all();
+      return json({reports:(results||[]).map(r=>({...r,rubric:JSON.parse(r.rubric_json),rubric_json:undefined}))},200,cors);
     }
     const consent=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/ai-consent$/);
     if(consent&&request.method==='POST'){
@@ -377,7 +397,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
         return json({error:'Choose valid style examples and reviews.'},400,cors);
       if(env.SCHOLAR_QWEN_FREE_TIER_CONFIRMED!=='true'||!env.SCHOLAR_DASHSCOPE_API_KEY)
         return json({error:'Scholar Qwen is disabled until the operator confirms a free-tier quota.'},503,cors);
-      let essay=null,essayHash=null,feedback=[];
+      let essay=null,essayHash=null,feedback=[],feedbackVersions=[];
       if(d.kind==='essay_revision'){
         if(!ID.test(d.document_id||'')||!Number.isInteger(d.revision))return json({error:'Choose a saved essay revision.'},400,cors);
         essay=await document(env,uid,d.document_id);
@@ -385,11 +405,13 @@ export async function handleScholar(request,env,uid,cors,callModel){
           return json({error:'The saved essay changed or was not found.'},409,cors);
         essayHash=await sha(snapshot(essay));
         for(const id of reviewIds){
-          const report=await env.DB.prepare(`SELECT r.*,p.rubric_json,p.ai_consent FROM scholar_reviews r
+          const report=await env.DB.prepare(`SELECT r.*,p.rubric_json,p.ai_consent,
+            (SELECT MAX(v.revision) FROM scholar_review_report_versions v WHERE v.review_id=r.id) AS report_revision FROM scholar_reviews r
             JOIN scholar_review_reports p ON p.review_id=r.id WHERE r.id=? AND r.owner_id=?`).bind(id,uid).first();
-          if(!report||report.document_id!==essay.id||report.revision!==essay.revision||report.snapshot_sha256!==essayHash||!report.ai_consent)
+          if(!report||report.document_id!==essay.id||report.revision!==essay.revision||report.snapshot_sha256!==essayHash||!report.ai_consent||!report.report_revision)
             return json({error:'A selected review is stale, unavailable, or lacks reviewer permission for AI use.'},409,cors);
-          feedback.push({decision:report.decision,reasoning:report.reasoning,rubric:JSON.parse(report.rubric_json)});
+          const item={decision:report.decision,reasoning:report.reasoning,rubric:JSON.parse(report.rubric_json)};
+          feedback.push(item);feedbackVersions.push({id,revision:report.report_revision,sha256:await sha(item)});
         }
       }
       const {data,context}=await evidence(d.work,d.target);
@@ -412,7 +434,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
       if(typeof text!=='string'||!text.trim()||text.length>60000)return json({error:'Qwen returned no usable draft.'},502,cors);
       const id='agent:'+crypto.randomUUID(), entry={kind:'agent-draft',work:d.work,target:d.target,layer:d.layer,title:'Qwen '+d.kind,
         content:{text,assisted:true,model:'qwen3.8-omni-flash',task:d.kind,used_style:!!examples.length,
-          projection_sha256:context.projection_sha256,author_kind:'agent',style_example_ids:styleIds,review_ids:reviewIds,
+          projection_sha256:context.projection_sha256,author_kind:'agent',style_example_ids:styleIds,review_ids:reviewIds,review_versions:feedbackVersions,
           ...(essay?{source_document_id:essay.id,source_revision:essay.revision,source_snapshot_sha256:essayHash}:{})}};
       await save(env,uid,id,entry,0);
       return json({document:cleaned(await document(env,uid,id)),message:'Agent draft saved privately; check the evidence before sign-off.'},200,cors);

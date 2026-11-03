@@ -106,6 +106,7 @@ test('private revision history is atomic, account-scoped, backfilled and deleted
 test('essay peer reviews have a structured report and participant-only discussion',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const migration=await readFile(new URL('../worker/migrations/0005_scholar_peer_review.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const versionMigration=await readFile(new URL('../worker/migrations/0007_scholar_review_versions.sql',import.meta.url),'utf8');db.exec(versionMigration);db.exec(versionMigration);
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32)};
   const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
   async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
@@ -129,9 +130,34 @@ test('essay peer reviews have a structured report and participant-only discussio
   assert.equal((await call(path+'/messages','GET',undefined,eve.cookie)).status,404);
   assert.equal((await call(path+'/messages','POST',{text:'Intrusion'},eve.cookie)).status,404);
   const thread=await call(path+'/messages','GET',undefined,bob.cookie);assert.equal((await thread.json()).messages.length,2);
+  const revised={expected_revision:1,decision:'ACCEPT',reasoning:'Evidence now clear.',rubric:{evidence:'Source checked.'},ai_consent:true};
+  assert.equal((await call(path+'/revise','POST',revised,alice.cookie)).status,409);
+  assert.equal((await call(path+'/revise','POST',revised,bob.cookie)).status,200);
+  assert.equal((await call(path+'/revise','POST',revised,bob.cookie)).status,409);
+  const reports=await call(path+'/report-history','GET',undefined,alice.cookie),versions=(await reports.json()).reports;
+  assert.deepEqual(versions.map(v=>v.revision),[2,1]);assert.equal(versions[1].summary,'Strengthen the evidence.');
+  assert.equal((await call(path+'/report-history','GET',undefined,eve.cookie)).status,404);
+  listed=await call('/api/scholar/reviews','GET',undefined,alice.cookie);visible=(await listed.json()).reviews[0];
+  assert.equal(visible.report_revision,2);assert.equal(visible.decision,'ACCEPT');assert.equal(visible.snapshot_sha256,review.snapshot_sha256);
   assert.equal((await call(path+'/ai-consent','POST',{allow:false},bob.cookie)).status,200);
   listed=await call('/api/scholar/reviews','GET',undefined,alice.cookie);assert.equal((await listed.json()).reviews[0].ai_consent,false);
   db.close();
+});
+
+test('ordered migrations preserve earlier review decisions without granting AI permission',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec("CREATE TABLE profiles (id TEXT PRIMARY KEY); INSERT INTO profiles VALUES ('alice'),('bob');");
+  const read=async file=>readFile(new URL('../worker/migrations/'+file,import.meta.url),'utf8');
+  const names=['0002_scholar_workspace.sql','0003_scholar_history.sql','0004_scholar_ai_limits.sql',
+    '0005_scholar_peer_review.sql','0006_scholar_style_examples.sql','0007_scholar_review_versions.sql'];
+  db.exec(await read(names[0]));
+  db.exec(`INSERT INTO scholar_reviews (id,owner_id,reviewer_id,work,document_id,revision,snapshot_json,snapshot_sha256,decision,reasoning,created_at,decided_at)
+    VALUES ('old-review','alice','bob','testwork','essay',1,'{}','hash','COMMENT','Earlier review','2026-01-01','2026-01-02')`);
+  for(const name of names.slice(1))db.exec(await read(name));
+  for(const name of names)db.exec(await read(name));
+  const report=db.prepare("SELECT * FROM scholar_review_reports WHERE review_id='old-review'").get();
+  const versions=db.prepare("SELECT * FROM scholar_review_report_versions WHERE review_id='old-review'").all();
+  assert.equal(report.ai_consent,0);assert.equal(report.summary,'Earlier review');
+  assert.equal(versions.length,1);assert.equal(versions[0].revision,1);assert.equal(versions[0].summary,'Earlier review');db.close();
 });
 
 test('authors can explicitly save and revoke private before-and-after style examples',async()=>{
@@ -197,6 +223,7 @@ test('essay revision uses only selected, permitted feedback and author-owned sty
     assert.equal(response.status,200);assert.doesNotMatch(prompt,/Explain the evidence|My first wording|Private discussion/);
     response=await call('/api/scholar/assist','POST',task,alice.cookie);assert.equal(response.status,200);
     const agent=(await response.json()).document;assert.equal(agent.content.task,'essay_revision');assert.equal(agent.content.source_revision,2);
+    assert.equal(agent.content.review_versions[0].revision,1);assert.match(agent.content.review_versions[0].sha256,/^[a-f0-9]{64}$/);
     assert.match(prompt,/My first wording/);assert.match(prompt,/My edited wording/);assert.match(prompt,/Explain the evidence/);
     assert.match(prompt,/Give a precise source/);assert.doesNotMatch(prompt,/Bob secret|Private discussion/);
     assert.equal((await call(reviewPath+'/ai-consent','POST',{allow:false},bob.cookie)).status,200);
