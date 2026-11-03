@@ -1191,7 +1191,12 @@ def build_translations():
             en_r = (it.get("l2") or it.get("l1") or "") if it["gate"] == "PASS" else ""
             rdis.append(f'<div data-recite data-id="{wid}-{esc(it.get("chunk",""))}" data-label="{esc(wid)} · {esc(it.get("chunk",""))}" data-sa="{esc(deva_of(it.get("sanskrit","")))}" data-en="{esc(en_r[:4000])}" style="display:none"></div>')
         abase = AUDIO_ALIAS.get(wid, wid)
-        chant = f'<div class="recitetools"><a class="vplay all" href="/recite/{abase}.html">Studio chant + recitation →</a></div>' if (ROOT / f"data/audio-{abase}.json").exists() else ""
+        if wid == "sivastotravali":   # studio chant is chapterized: 20 recite pages, no combined manifest
+            chant = '<div class="recitetools"><a class="vplay all" href="/recite/shivastotravali_1.html">Studio chant + recitation (20 parts) →</a></div>'
+        elif (ROOT / f"data/audio-{abase}.json").exists():
+            chant = f'<div class="recitetools"><a class="vplay all" href="/recite/{abase}.html">Studio chant + recitation →</a></div>'
+        else:
+            chant = ""
         (out / f"{wid}.html").write_text(TF(ATmpl,title=f"Translation: {wid}",
             h1=f"Translation: {wid}", kicker="Pipeline translation", sub=f"{n_pass}/{len(items)} passages passed the gate — only those show English",
             sidenav=work_sidenav(""), body=chant + '<div class="recitetools"><button class="vplay" data-play-all>Recite this work</button><span class="rnote">browser-voice readout · four modes in the player bar</span></div>' + f'<div class="stats"><span><b>{len(items)}</b> passages</span><span><b>{n_pass}</b> PASS</span><span><b>{len(items)-n_pass}</b> withheld</span></div>'+"".join(blocks) + "".join(rdis) + srclink("https://github.com/prx0r/ipvv/issues/new", "English derives from R2 batch-t1 drafts (pipeline); corrections welcome here."), recitejs=RECITEJS, varjs=VARJS))
@@ -2392,7 +2397,7 @@ def deva_of(s):
     except Exception:
         return s or ""
 
-AUDIO_ALIAS = {"anuttarastika": "anuttarashtika"}
+AUDIO_ALIAS = {"anuttarastika": "anuttarashtika", "phrdaya": "pratyabhijnahrdaya", "spanda": "spandakarika"}
 # Studio chant mp3s live in the public R2 bucket (not in git — 775 files bloated
 # every deploy past the 20k-file cap and the 20-min build timeout).
 # /audio/... paths in the audio-*.json files are rewritten to this prefix at build.
