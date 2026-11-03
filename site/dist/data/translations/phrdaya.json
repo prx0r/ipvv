@@ -1,179 +1,502 @@
 [
  {
-  "chunk": "phr-p01",
-  "verses": "1-5",
-  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ | svecchayā svabhittau viśvam unmīlayati | tan nānā anurūpagrāhyagrāhakabhedāt | citisaṃkocātmā cetano 'pi saṃkucitaviśvamayaḥ | cittam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION",
-   "CITATION_GROUNDING"
+  "chunk": "phr-p01-v01",
+  "verses": "1",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "phrdaya",
-  "immutable_id": "pt:pid:phr:e6ee21f43bbf",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    false,
-    "'māyā' used in candidate but not in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p01-v01 (1)\nconsciousness / independent / cause-of-universe's-proving threefold // phr-p01",
+  "l2": "Consciousness stands free — cause of the world's proving.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    21,
+    22
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "phrdaya.txt",
-  "source_lines": 22,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 6
+  "immutable_id": "pt:pid:phrdaya:001",
+  "l3": "Knowing stands free — the world's threefold turning\ncomes from it alone: arising, abiding, returning."
  },
  {
-  "chunk": "phr-p02",
-  "verses": "6-10",
-  "sanskrit": "tanmayo māyāpramātā | saptapañcakasvabhāvaḥ | tadbhūmikāḥ sarvadarśanasthitayaḥ | cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī | tathāpi tadvat pañcakṛtyāni karoti",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
+  "chunk": "phr-p01-v02",
+  "verses": "2",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "phrdaya",
-  "immutable_id": "pt:pid:phr:ce634efafd42",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p01-v02 (2)\nby-own-will / on-own-screen / universe / unfolds // phr-p01",
+  "l2": "By her own will, on her own ground, she opens the world.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    68,
+    69
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "phrdaya.txt",
-  "source_lines": 185,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 5
+  "immutable_id": "pt:pid:phrdaya:001",
+  "l3": "By her own will she blooms it, on her own ground —\nno borrowed hands, no borrowed earth, in the opening."
  },
  {
-  "chunk": "phr-p03",
-  "verses": "11-15",
-  "sanskrit": "tāni | saṃsāritvam | cetanapadādhyārohāt citiḥ | meyendhanaṃ pluṣyati | balalābhe viśvam ātmasātkaroti",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
+  "chunk": "phr-p01-v03",
+  "verses": "3",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "phrdaya",
-  "immutable_id": "pt:pid:phr:279dd3640066",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p01-v03 (3)\nthat / manifold / from-difference-of-suitable-objects-and-subjects // phr-p01",
+  "l2": "That grows manifold through fit perceivers and perceived dividing.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    80,
+    81
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "phrdaya.txt",
-  "source_lines": 451,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 5
+  "immutable_id": "pt:pid:phrdaya:001",
+  "l3": "One, yet many — where fit seer meets fit seen,\nthe same light breaks into shares."
  },
  {
-  "chunk": "phr-p04",
-  "verses": "16-20",
-  "sanskrit": "cidaikātmyapratipattidārḍhyaṃ jīvanmuktiḥ | madhyavikāsāc cidānandalābhaḥ | iha upāyāḥ | cidaikyāmarśān nityoditasamādhilābhaḥ | bhavatīti śivam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
+  "chunk": "phr-p01-v04",
+  "verses": "4",
+  "sanskrit": "citiḥ svatantrā viśvasiddhihetuḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "phrdaya",
-  "immutable_id": "pt:pid:phr:7fe454b727eb",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p01-v04 (4)\nwhose-nature-is-contraction-of-consciousness / even-conscious-being / consisting-of-contracted-universe // phr-p01",
+  "l2": "A contraction of knowing, yet a knower even so, clothed in a contracted world.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    108,
+    109
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "phrdaya.txt",
-  "source_lines": 508,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL",
-  "match_words": 4
+  "immutable_id": "pt:pid:phrdaya:001",
+  "l3": "A knot of knowing, yet a knower —\nwearing a world shrunk to fit."
+ },
+ {
+  "chunk": "phr-p02-v05",
+  "verses": "5",
+  "sanskrit": "cittam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p02-v05 (5)\nmind // phr-p02",
+  "l2": "Mind.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    155,
+    156
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:002",
+  "l3": "Mind —\nknowing tightened into thought."
+ },
+ {
+  "chunk": "phr-p02-v06",
+  "verses": "6",
+  "sanskrit": "cittam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p02-v06 (6)\nconsisting-of-that / māyā-knower // phr-p02",
+  "l2": "Made of that — the māyā-knower.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    184,
+    185
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:002",
+  "l3": "Made of that tightening — the māyā-measurer,\nfit to a world of measures."
+ },
+ {
+  "chunk": "phr-p02-v07",
+  "verses": "7",
+  "sanskrit": "cittam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p02-v07 (7)\nhaving-nature-of-seven-pentads // phr-p02",
+  "l2": "Seven pentads its nature.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    198,
+    199
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:002",
+  "l3": "Seven fives —\nthirty-five rungs of the descent."
+ },
+ {
+  "chunk": "phr-p02-v08",
+  "verses": "8",
+  "sanskrit": "cittam",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p02-v08 (8)\nstages-based-on-that / positions-of-all-philosophies // phr-p02",
+  "l2": "Stages on that — every philosophy's standing-ground.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    218,
+    219
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:002",
+  "l3": "Every school stands somewhere\non those rungs."
+ },
+ {
+  "chunk": "phr-p03-v09",
+  "verses": "9",
+  "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p03-v09 (9)\nlike-consciousness / that / from-contraction-of-power / covered-by-impurity / transmigrator // phr-p03",
+  "l2": "Like knowing, yet by tightened power impure — stained, it wanders.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    289,
+    290
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:003",
+  "l3": "Almost knowing — but power drawn tight has stained it;\nlook: a wanderer."
+ },
+ {
+  "chunk": "phr-p03-v10",
+  "verses": "10",
+  "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p03-v10 (10)\nnevertheless / in-that-way / five-acts / performs // phr-p03",
+  "l2": "Yet even so, likewise, it does the five acts.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    310,
+    311
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:003",
+  "l3": "Chained, yet it keeps the fivefold office —\nmaking, keeping, loosing, veiling, blessing."
+ },
+ {
+  "chunk": "phr-p03-v11",
+  "verses": "11",
+  "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p03-v11 (11)\nthose // phr-p03",
+  "l2": "Those — the fivefold doing.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    344,
+    345
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:003",
+  "l3": "Those very acts —\ndone small."
+ },
+ {
+  "chunk": "phr-p03-v12",
+  "verses": "12",
+  "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p03-v12 (12)\nstate-of-transmigration // phr-p03",
+  "l2": "Wanderinghood.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    370,
+    371
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:003",
+  "l3": "That doing-small\nis called wandering."
+ },
+ {
+  "chunk": "phr-p04-v13",
+  "verses": "13",
+  "sanskrit": "cetanapadādhyārohāt citiḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p04-v13 (13)\nby-ascent-to-status-of-consciousness / consciousness // phr-p04",
+  "l2": "By climbing to knowing's seat — knowing.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    450,
+    451
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:004",
+  "l3": "Climb to knowing's seat —\nand the climber is knowing."
+ },
+ {
+  "chunk": "phr-p04-v14",
+  "verses": "14",
+  "sanskrit": "cetanapadādhyārohāt citiḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p04-v14 (14)\nfuel-of-objects / burns // phr-p04",
+  "l2": "It burns knowables for fuel.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    466,
+    467
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:004",
+  "l3": "Feed it every knowable —\nwatch it burn."
+ },
+ {
+  "chunk": "phr-p04-v15",
+  "verses": "15",
+  "sanskrit": "cetanapadādhyārohāt citiḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p04-v15 (15)\non-gaining-strength / universe / makes-one's-own // phr-p04",
+  "l2": "Grown strong, it makes the world its own.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    482,
+    483
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:004",
+  "l3": "Grow strong —\nand call the world your own."
+ },
+ {
+  "chunk": "phr-p04-v16",
+  "verses": "16",
+  "sanskrit": "cetanapadādhyārohāt citiḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p04-v16 (16)\nfirmness-of-realization-of-oneness-with-consciousness / liberation-while-living // phr-p04",
+  "l2": "Holding oneness with knowing fast — freedom while living.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    507,
+    508
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:004",
+  "l3": "Grip oneness with knowing and never let go —\nthat grip is freedom, alive."
+ },
+ {
+  "chunk": "phr-p05-v17",
+  "verses": "17",
+  "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p05-v17 (17)\nfrom-expansion-of-the-middle / attainment-of-consciousness-bliss // phr-p05",
+  "l2": "From the middle's opening — knowing-bliss won.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    523,
+    524
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:005",
+  "l3": "The middle opens —\nbliss of knowing floods."
+ },
+ {
+  "chunk": "phr-p05-v18",
+  "verses": "18",
+  "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p05-v18 (18)\nhere / means // phr-p05",
+  "l2": "Here — the means.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    543,
+    544
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:005",
+  "l3": "Here —\nways are given."
+ },
+ {
+  "chunk": "phr-p05-v19",
+  "verses": "19",
+  "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p05-v19 (19)\nfrom-recollection-of-oneness-with-consciousness / attainment-of-ever-risen-samādhi // phr-p05",
+  "l2": "From recalling oneness with knowing — samādhi ever risen.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    655,
+    656
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:005",
+  "l3": "Remember oneness with knowing —\nsamādhi that never set, and never will."
+ },
+ {
+  "chunk": "phr-p05-v20",
+  "verses": "20",
+  "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## phr-p05-v20 (20)\nbecomes-thus / Śiva // phr-p05",
+  "l2": "And so it becomes — Śiva.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    688,
+    689
+   ]
+  },
+  "immutable_id": "pt:pid:phrdaya:005",
+  "l3": "Become, then —\nŚiva."
  }
 ]

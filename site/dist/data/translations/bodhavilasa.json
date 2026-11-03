@@ -1,226 +1,1027 @@
 [
  {
-  "chunk": "bodh-p01",
-  "verses": "2-10",
-  "sanskrit": "citiḥ svatantrā viśvasya hetur ity abhidhīyate / svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca / nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam / nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ / vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam / tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā / saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām / vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ / saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ / saivāhantāparijñānān muktiḥ karatale sthitā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
+  "chunk": "bodh-p01-v01",
+  "verses": "1",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bodhavilasa",
-  "immutable_id": "pt:pid:bodh:7e006946c8f5",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    false,
-    "candidate only 33% of source units — dropped pādas"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v01 (1)\nom / salutation / to-netra / salutation / to-shiva / constantly / to-maker-of-five-acts / to-manifestation-of-supreme-self-bliss // bodh-p01",
+  "l2": "Oṃ. Salutation to Netra. Salutation to Śiva constantly — maker of the five acts, manifest as supreme-self bliss.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    7,
+    10
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ksemaraja-bodhavilasa.txt",
-  "source_lines": 12,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Pensa ed.)",
-  "match_words": 12
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Oṃ — bow to Netra. Bow to Śiva, always —\nfive-act maker, supreme-self bliss made plain."
  },
  {
-  "chunk": "bodh-p02",
-  "verses": "11-20",
-  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā / bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ / bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā cidānandasamullāsollasitātmā virājate / cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo 'smīti vividhair malaiḥ sa malinīkṛtaḥ / māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām / tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ / saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā / sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ / tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt / jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
+  "chunk": "bodh-p01-v02",
+  "verses": "2",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bodhavilasa",
-  "immutable_id": "pt:pid:bodh:6a003fa7ec89",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    false,
-    "candidate only 27% of source units — dropped pādas"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v02 (2)\nconsciousness / free / of-the-universe / cause / thus / is-called / of-form-of-freedom / knower / and / powers / or / bestows // bodh-p01",
+  "l2": "Consciousness is free, the universe's cause — so called; freedom-formed, the knower — and powers too she bestows.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    11,
+    13
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ksemaraja-bodhavilasa.txt",
-  "source_lines": 39,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Pensa ed.)",
-  "match_words": 12
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Free stands knowing — the world's cause, so called;\nfreedom-formed knower — and powers bestowed."
  },
  {
-  "chunk": "bodh-p03",
-  "verses": "21-29",
-  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate / sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā / tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ / padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam / svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate / svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api / sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ / iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate / etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate / tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
+  "chunk": "bodh-p01-v03",
+  "verses": "3",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bodhavilasa",
-  "immutable_id": "pt:pid:bodh:02810260f916",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    false,
-    "candidate only 33% of source units — dropped pādas"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v03 (3)\nshe / in-her-own-ground / by-her-own-will / for-unfolding-of-the-universe / and / from-various-corresponding-variety / from-difference-of-object-and-subject // bodh-p01",
+  "l2": "She — on her own ground, by her own will, for the world's unfolding — from varied fit variety, from subject-object difference.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    14,
+    16
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ksemaraja-bodhavilasa.txt",
-  "source_lines": 69,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Pensa ed.)",
-  "match_words": 12
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "She, on her own ground, by her own will — for worlds unfolding;\nfrom fit variety, from seer-seen division."
  },
  {
-  "chunk": "bodh-p04",
-  "verses": "30-38",
-  "sanskrit": "nirmalā suprabhā śuddhā nityānandamayī parā / nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate madhyadhāmavikāse tu upāyo balavatsthitiḥ / vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet / cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam / śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā / aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam / tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām / sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate / yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā / pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ",
-  "gate": "BLOCKED",
-  "blocking": [
-   "COVERAGE",
-   "ABSTENTION"
+  "chunk": "bodh-p01-v04",
+  "verses": "4",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bodhavilasa",
-  "immutable_id": "pt:pid:bodh:f50ae432da89",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    false,
-    "candidate only 33% of source units — dropped pādas"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v04 (4)\nof-the-universe / its / variety / by-difference-of-objects / is-established / by-variety-of-varieties / and-by-number-of-high-and-low // bodh-p01",
+  "l2": "That world's variety stands through object-difference — manifold-variety-yoked, high-and-low-numbered.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    17,
+    19
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ksemaraja-bodhavilasa.txt",
-  "source_lines": 96,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Pensa ed.)",
-  "match_words": 12
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "This world's variety stands on object-difference;\nmanifold-yoked, high and low in number."
  },
  {
-  "chunk": "bodh-p05",
-  "verses": "39-42",
-  "sanskrit": "tatrāsau vilasan yogī mantreśvarapade sthitaḥ / tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ / nānābhedajuṣaś citrapadasthitasyākhaṇḍitā etad advayam ity uktaṃ jñānāmṛtam anuttamam / yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām / rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
+  "chunk": "bodh-p01-v05",
+  "verses": "5",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
   ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "tantrasara",
-  "ahnika": "bodhavilasa",
-  "immutable_id": "pt:pid:bodh:751e654a43c8",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v05 (5)\nfrom-contraction-of-consciousness / mind / consciousness / also / great-lord / like-a-banyan-seed / there / universal-form / and / that / know // bodh-p01",
+  "l2": "From consciousness-tightening comes mind — though knower, even the great Lord. Like a banyan seed, there the world-form — that the wise know.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    20,
+    22
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "ksemaraja-bodhavilasa.txt",
-  "source_lines": 123,
-  "source_license": "CC BY-NC-SA 4.0",
-  "source_origin": "GRETIL (Pensa ed.)",
-  "match_words": 12
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "From knowing tightened, mind — knower still, great Lord;\nbanyan-seed-like, the world-form there — so the wise know."
+ },
+ {
+  "chunk": "bodh-p01-v06",
+  "verses": "6",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v06 (6)\nconsciousness / of-self / form / pure / extremely-immaculate / that / indeed / attached-to-rules / mind / consciousness / is-called // bodh-p01",
+  "l2": "Knowing is the self's pure form — stainless, utterly stainless. That same, rule-bound, is called mind — knowing.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    23,
+    25
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Knowing, the self's pure stainless form —\nthat same, rule-bound, is called mind."
+ },
+ {
+  "chunk": "bodh-p01-v07",
+  "verses": "7",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v07 (7)\nwith-object-directedness / awareness / in-mind / rest / has-arrived / from-contraction-as-self-predominance / consciousness / mind / know / the-wise // bodh-p01",
+  "l2": "Object-faced, awareness has come to rest in mind. From tightening-dominant-self, the wise know knowing as mind.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    26,
+    28
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Object-turned, awareness rests in mind;\nfrom tightening-rule the wise know mind as knowing."
+ },
+ {
+  "chunk": "bodh-p01-v08",
+  "verses": "8",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v08 (8)\nmaya-knower / consciousness-formed / as-identity-with-that / of-embodied-beings / exists / attached-to-objects / devoid-of-true-discrimination // bodh-p01",
+  "l2": "The māyā-knower, knowing-formed, one with that, abides among embodied beings — clinging to objects, void of true discernment.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    29,
+    31
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Māyā's knower, knowing-shaped, one with that, abides —\nobject-clinging, cut from true discernment."
+ },
+ {
+  "chunk": "bodh-p01-v09",
+  "verses": "9",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v09 (9)\none-constant / primary / mind / by-kala-sattva-guna-etc / by-seven-knowerhood / by-thirty-six-principles // bodh-p01",
+  "l2": "Ever one, the established mind — by kalā, sattva, guṇa and the rest, by seven-knowerhood, by thirty-six count.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    32,
+    34
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "Ever one, mind established — by kalā, sattva-strand, and the rest,\nby seven knowers, by thirty-six in count."
+ },
+ {
+  "chunk": "bodh-p01-v10",
+  "verses": "10",
+  "sanskrit": "oṃ namo netrāya namaḥ śivāya satataṃ pañcakṛtyavidhāyine cidānandaghanasvātmaparamārthāvabhāsine citiḥ svatantrā viśvasya hetur ity abhidhīyate svātantryarūpā jñātā ca siddhīr vā saṃprayacchate sā svabhittau svecchayaiva viśvasyonmīlanāya ca nānānurūpavaicitryād grāhyagrāhakabhedataḥ viśvasya tasya vaicitryaṃ grāhyabhedena saṃsthitam nānāvaicitryayogena cottamādhamasaṅkhyayā citisaṅkocanāc cittaṃ cetano 'pi maheśvaraḥ vaṭadhanikāvat tatra viśvarūpaṃ ca tad viduḥ caitanyam ātmano rūpaṃ śuddham atyantanirmalam tad eva niyamāsaktaṃ cittaṃ cid abhidhīyate arthonmukhatayā saṃvic citte viśrāntim āgatā saṅkocātmapradhānatvāc citiś cittaṃ vidur budhāḥ māyāpramātā cidrūpas tanmayatvena dehinām vartate viṣayāsaktaḥ sadvivekavivarjitaḥ sadaikaḥ pratithaś cittaṃ kalāsattvaguṇādibhiḥ saptapramatṛkatvena ṣaṭtriṃśattattvasaṅkhyayā ekaḥ sarvagataḥ śuddhaḥ sambodhātmā maheśvaraḥ saivāhantāparijñānān muktiḥ karatale sthitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p01-v10 (10)\none / all-pervading / pure / of-nature-of-supreme-awareness / great-lord / from-non-recognition-of-that-I-ness / liberation / in-the-palm / is-situated // bodh-p01",
+  "l2": "One, everywhere, pure, awareness-selfed, the great Lord. From mis-knowing that I-ness, freedom sits in the palm.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    35,
+    37
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:001",
+  "l3": "One, everywhere, pure, awareness itself, great Lord —\nmis-know that I-ness, and freedom sits palm-close."
+ },
+ {
+  "chunk": "bodh-p02-v11",
+  "verses": "11",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v11 (11)\nby-seven-knowerhood / by-thirty-six-principles / cultivated / he / great-lord / liberation-glory / proceeds // bodh-p02",
+  "l2": "Cultivated by seven-knowerhood, by thirty-six count — he, the great Lord: glory-of-release proceeds.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    38,
+    40
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Tended by seven knowers, by thirty-six in count —\nhe, great Lord: freedom's glory proceeds."
+ },
+ {
+  "chunk": "bodh-p02-v12",
+  "verses": "12",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v12 (12)\nits-stages / perceptions-etc / all / indeed / not / doubt / stages / artificial / just-as / actor / assumes / by-own-will / likewise / indeed / expanded-by-bliss-will / self / assumes / vast / perceptions-etc / powers // bodh-p02",
+  "l2": "Its stages — views and the rest, all of them, no doubt. Made-up are stages: as an actor assumes by his own will, so the bliss-will-spread self assumes vast views-and-powers.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    41,
+    46
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Its stages — views and the rest, all, no doubt;\nmade-up stages: as an actor takes his part by will, so bliss-spread self takes vast views-powers."
+ },
+ {
+  "chunk": "bodh-p02-v13",
+  "verses": "13",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v13 (13)\nself-bliss-exultant / shines / from-contraction-of-own-power / in-samsara / becomes-impure // bodh-p02",
+  "l2": "Bliss-spread self, having assumed vast views-and-powers, shines. From tightening of own power, in wandering, it becomes impure.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    47,
+    49
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Bliss-spread self, vast views-powers assumed, shines;\ntightened own power in wandering — impure it grows."
+ },
+ {
+  "chunk": "bodh-p02-v15",
+  "verses": "15",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v15 (15)\nincomplete / thus-I-am-incomplete / by-various / impurities / he / is-defiled / named-maya-anava-karma / all-pervading / also / lord-of-world // bodh-p02",
+  "l2": "Incomplete — 'thus am I incomplete' — by various impurities defiled; named of-māyā-inoffensive-karma; all-pervading too, world-Lord.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    50,
+    52
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Incomplete — 'so I am, incomplete' — by assorted stains defiled,\nmāyā's, atom's, deed's by name — yet all-pervading too, world-Lord."
+ },
+ {
+  "chunk": "bodh-p02-v16",
+  "verses": "16",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v16 (16)\nall-pervading / just-as / great-god / does / five-acts / likewise / this / self-also / does / deluded-by-power // bodh-p02",
+  "l2": "All-pervading — just as the great god does five acts, so this self too does — deluded by power.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    53,
+    55
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "All-pervading — as great god does five, so this self does too —\npower-deluded the only difference."
+ },
+ {
+  "chunk": "bodh-p02-v17",
+  "verses": "17",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v17 (17)\ncapable / from-expansion / lord-of-powers / is-said / by-truth-teachers / from-contraction / contracted / as-samsarin / is-called // bodh-p02",
+  "l2": "Capable — from expansion, power-Lord is sung by truth-teachers. From contraction, contracted, as wanderer is called.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    56,
+    58
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Strong from expanse — power-Lord sung by truth-tellers;\ntightened from tightening — called wanderer."
+ },
+ {
+  "chunk": "bodh-p02-v18",
+  "verses": "18",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v18 (18)\nmaya / form / indeed / which / somewhat / to-perceive / intent / created-creation / should-know / other / power / preservation / is-considered // bodh-p02",
+  "l2": "Māyā — form indeed — which, somewhat intent to perceive, should know as made-creation. The other power — preservation is considered; from dissolution, the withdrawn goddess is considered.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    59,
+    61
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Māyā — form indeed — bent to glimpse a little, know made-making;\nother power — keeping deemed; from loosing, withdrawn goddess deemed."
+ },
+ {
+  "chunk": "bodh-p02-v19",
+  "verses": "19",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v19 (19)\nfrom-dissolution / withdrawn / goddess / in-unity-of-consciousness / grace / is-considered / from-manifestation-of-that-essence / is-called-concealment // bodh-p02",
+  "l2": "From dissolution, the withdrawn goddess — in unity-of-consciousness, grace is considered. From manifesting that essence, concealment is called.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    62,
+    64
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Loosed away, withdrawn goddess — in knowing-oneness, grace deemed;\nshowing that essence — veiling named."
+ },
+ {
+  "chunk": "bodh-p02-v20",
+  "verses": "20",
+  "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p02-v20 (20)\nthus / always / present / five-fold-process / in-order / known / wish-jewel / that / from-ignorance / like-wood-and-clod // bodh-p02",
+  "l2": "Thus always present five-course, in order known — wish-jewel. That from ignorance — like wood and clod.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    65,
+    67
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:002",
+  "l3": "Thus ever near, five-coursed, known in order — wish-jewel;\nthat, from unknowing — like timber and clods."
+ },
+ {
+  "chunk": "bodh-p03-v21",
+  "verses": "21",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v21 (21)\nby-power-of-true-reflection-thus / always / who / practices / he / liberated / from-all-bonds / full-of-eternal-bliss / becomes // bodh-p03",
+  "l2": "By power of true reflection thus, always, who practices — he, liberated from all bonds, full of eternal bliss, becomes.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    68,
+    70
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "By true reflection's power, always, who walks —\nfreed from every bond, full of endless bliss, becomes."
+ },
+ {
+  "chunk": "bodh-p03-v22",
+  "verses": "22",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v22 (22)\nconsciousness-fire / swallows / that / this / well-awakened / is / that / when / then-that / pure / to-be-known / consciousness-fire / all-devouring // bodh-p03",
+  "l2": "Consciousness-fire swallows that — this, well-awakened, is. When that, then-that, pure, to-be-known — consciousness-fire, all-devouring.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    71,
+    73
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "Knowing-fire swallows that — this, well awake, it is;\nwhen that, then that, pure, to-be-known — fire all-devouring."
+ },
+ {
+  "chunk": "bodh-p03-v23",
+  "verses": "23",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v23 (23)\nby-this-power / united / yogi / marked-by-liberation / state / attains / pure / that / soon / no-here / doubt // bodh-p03",
+  "l2": "By this power united, liberation-marked yogi attains the pure state. That soon — no doubt here.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    74,
+    76
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "By this power joined, marked with freedom — the yogi attains\nthe pure state. That, soon — here no doubt."
+ },
+ {
+  "chunk": "bodh-p03-v24",
+  "verses": "24",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v24 (24)\nconsciousness-fire / on-gaining-power / even / universe / shines / consciousness-made / wave-of-self-bliss-nectar / this / risen / outside // bodh-p03",
+  "l2": "Consciousness-fire, on gaining power, even the universe shines — consciousness-made. Self-bliss-nectar wave, this risen, outside.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    77,
+    79
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "Knowing-fire, grown in power — even the world shines, knowing-made;\nself-bliss nectar-wave, risen, breaks outside."
+ },
+ {
+  "chunk": "bodh-p03-v25",
+  "verses": "25",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v25 (25)\nthat / indeed / quiescence / gone / by-forms-of-being / is-manifested / own-self / great-lord / god / plays / supreme-lord // bodh-p03",
+  "l2": "That indeed gone to quiescence, by being-forms manifested — own self, great Lord, god plays, supreme Lord.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    80,
+    82
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "That, to stillness gone, shown by being-forms —\nown self, great Lord, god at play, supreme Lord."
+ },
+ {
+  "chunk": "bodh-p03-v26",
+  "verses": "26",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v26 (26)\nthus / who / constantly / knows / he / liberated / liberates / also / multitude-of-beings / in-an-instant / from-terrible / from-samsara-bondage // bodh-p03",
+  "l2": "Thus who constantly knows — he, liberated, liberates too the multitude of beings, in an instant, from terrible saṃsāra-bondage.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    83,
+    85
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "Who knows always — freed, frees others too, beings by the score,\nin a flash, from terrible bondage."
+ },
+ {
+  "chunk": "bodh-p03-v27",
+  "verses": "27",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v27 (27)\nwho / someone / bliss-powered / he / established-in-own-state / thus / whose / of-exultant-rising // bodh-p03",
+  "l2": "Who — someone bliss-powered — established in own state. Thus — whose exultant-rising joy ...",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    86,
+    88
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "Who — some bliss-powered one — standing in own state —\nthus, whose rising joy exults ... ."
+ },
+ {
+  "chunk": "bodh-p03-v28",
+  "verses": "28",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v28 (28)\nhis / fixed-in-own-nature / in-distraction / even / that / is-desired / this / by-effort-power / by-people / is-attained // bodh-p03",
+  "l2": "His, fixed-in-own-nature — in distraction even — that is desired. This by effort-power by people is attained.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    89,
+    91
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "His, nature-fixed — in distraction even — that is desired;\nthis, by effort's power, by people is attained."
+ },
+ {
+  "chunk": "bodh-p03-v29",
+  "verses": "29",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v29 (29)\nfrom-middle-center-expansion / and / from-bliss-consciousness / shines / from-its-light / divine-vision / of-form-knowledge / is-manifested // bodh-p03",
+  "l2": "From middle-center expansion, and from bliss-consciousness, shines. From its light, divine vision of form-knowledge is manifested.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    92,
+    94
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "From the middle's opening — and from bliss-knowing — it shines;\nfrom its light, divine vision, knowledge-formed, is shown."
+ },
+ {
+  "chunk": "bodh-p03-v30",
+  "verses": "30",
+  "sanskrit": "sadvimarśabalenaivaṃ nityaṃ yaḥ pariśīlate sa muktaḥ sarvabandhebhyo nityānandamayo bhavet cidvahnir grasate so 'yaṃ suprabuddho 'sty asau yadā tadāsau vimalo jñeyaś cidvahniḥ sarvabhakṣakaḥ etadbalena saṃyukto yogī nirvāṇalakṣaṇaḥ padaṃ prāpnoti vimalaṃ so 'cirān nātra saṃśayaḥ cidvahnir balalābhe 'pi viśvam ābhāti cinmayam svānandāmṛtakallolam etad ucchalitaṃ bahiḥ tad eva śyānatāṃ yātaṃ bhāvarūpair vibhāvyate svātmā maheśvaro devaḥ krīḍate parameśvaraḥ iti yaḥ satataṃ vetti sa mukto mocayaty api sattvavrātaṃ kṣaṇenaiva ghorāt saṃsārabandhanāt yaḥ kaścit ānandabalaḥ sa svarūpapadasthitaḥ iti yasya samullāsollāsitodayaśālinaḥ tasya svarūpaniṣṭhasya vyutthāne 'pi tad arthyate etat prayatnasāmārthyāj janair evādhigamyate madhyadhāmavikāsāc ca cidānandāt prakāśate tatprakāśād divyadṛṣṭir jñānarūpā vibhāvyate nirmalā suprabhā śuddhā nityānandamayī parā nirdehacchedajālāpi jñānadṛṣṭir vijṛmbhate",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p03-v30 (30)\nimmaculate / radiant / pure / full-of-eternal-bliss / supreme / and-net-of-body-cutting / knowledge-vision / expands // bodh-p03",
+  "l2": "Immaculate, radiant, pure, full-of-eternal-bliss, supreme — and-net-of-body-cutting too — knowledge-vision expands.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    95,
+    97
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:003",
+  "l3": "Spotless, radiant, pure, bliss-full, supreme — bodiless-netted too —\nknowing-vision expands."
+ },
+ {
+  "chunk": "bodh-p04-v31",
+  "verses": "31",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v31 (31)\nin-middle-center-expansion / but / means / powerful-state / etc-of-thought-decay-contraction-expansion / in-many-ways // bodh-p04",
+  "l2": "In middle-center expansion — but the means: powerful state, thought-decay-tightening-opening and the rest, in many ways.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    98,
+    100
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "In the middle's opening — yet the means: a powerful stand,\nthoughts decaying, tightening, opening, and the rest, in many ways."
+ },
+ {
+  "chunk": "bodh-p04-v32",
+  "verses": "32",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v32 (32)\nfrom-thinking-of-nothing / indeed / of-thoughts / decay / may-be / from-consciousness-awareness / playful-power / that-is-attached / in-realm-of-being // bodh-p04",
+  "l2": "From thinking-of-nothing indeed, thoughts' decay may be. From knowing-awareness, playful power, attached-therein, in being's realm.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    101,
+    103
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "From thinking nothing, thoughts decay — so may it be;\nfrom knowing-awareness, play-power, enamoured there, in being's field."
+ },
+ {
+  "chunk": "bodh-p04-v33",
+  "verses": "33",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v33 (33)\nthere-attached / divine-stream / sees / of-pure-nature / contraction-of-power / this / indeed / is-said / by-brahma-teachers // bodh-p04",
+  "l2": "There-attached, the divine stream sees the pure-natured; power-tightening — this indeed, it is said by brahma-teachers.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    104,
+    106
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "Fixed there, the bright flood sees the pure in nature;\npower's tightening — fie, so say the brahma-teachers."
+ },
+ {
+  "chunk": "bodh-p04-v34",
+  "verses": "34",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v34 (34)\netc-of-rest-in-bindu-nada-at-end-beginning / and / including-fear-anger-disgust-etc // bodh-p04",
+  "l2": "End-beginning-point-rest-bindu-nāda-dwellings, and fear-anger-disgust-graspings.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    107,
+    109
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "Point-rests at end and start — bindu, nāda — and grasps\nof dread, fear, anger, loathing."
+ },
+ {
+  "chunk": "bodh-p04-v35",
+  "verses": "35",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v35 (35)\nthus / this / said / goddess / middle-center-expansion / there / capable / in-days / thus / obtains / supreme-prosperity // bodh-p04",
+  "l2": "Thus this said: goddess, middle-center-expansion — there capable, in days thus obtains supreme prosperity.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    110,
+    112
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "'Thus,' she said: goddess, middle's opening —\nthere the strong in days thus win supreme reward."
+ },
+ {
+  "chunk": "bodh-p04-v36",
+  "verses": "36",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v36 (36)\nwho / inner-samadhi-impression / wanders / of-pure-radiance / he / by-power-of-emission / indeed / reflecting / and / again / again // bodh-p04",
+  "l2": "Who inner-samādhi-impressed wanders, of pure radiance — by emission-power indeed reflecting, and again, again.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    113,
+    115
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "Who roams impressed with inner samādhi, pure-rayed —\nby emission-power reflecting — again, and again."
+ },
+ {
+  "chunk": "bodh-p04-v37",
+  "verses": "37",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v37 (37)\nin-distraction / even / because / his / own-form / fully-manifests / of-yogi / fixed-in-awareness / of-eternal-bliss-essence / and // bodh-p04",
+  "l2": "In distraction even — for his own form fully manifests — of the yogi fixed in awareness, of eternal-bliss-essence.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    116,
+    118
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "In distraction even — his own form fully shines —\nthe yogi's, awareness-fixed, eternal-bliss-essenced."
+ },
+ {
+  "chunk": "bodh-p04-v38",
+  "verses": "38",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v38 (38)\nthat / full-of-manifest-bliss / strengthened-by-mantra-power / consciousness-of-full-I-ness / thus / of-inner-exultation-practitioner // bodh-p04",
+  "l2": "That full-of-manifest-bliss, mantra-power-strengthened, full-I-ness knowing — thus of inner-exultation-practitioner.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    119,
+    121
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "That — bliss-made-manifest, mantra-strong, full-I knowing —\nso, of the inward-exulting devotee."
+ },
+ {
+  "chunk": "bodh-p04-v39",
+  "verses": "39",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v39 (39)\nthere-that / sporting / yogi / in-status-of-mantra-lord / situated / there / capable / lord / just-as / plays / expanded-by-power // bodh-p04",
+  "l2": "There-that sporting yogi, in mantra-lord-status situated — there capable lord, as plays power-expanded.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    122,
+    124
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "There — that sporting yogi, mantra-Lord-status stayed —\nthere strong, a lord, as he plays, power-swollen."
+ },
+ {
+  "chunk": "bodh-p04-v40",
+  "verses": "40",
+  "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p04-v40 (40)\nthus / freedom / his / of-all-pervading / of-world-lord / of-enjoying-various-differences / unbroken-in-wondrous-state // bodh-p04",
+  "l2": "Thus freedom — his, all-pervading, world-Lord's, various-difference-enjoying — unbroken in wondrous state.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    125,
+    127
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:004",
+  "l3": "Thus freedom — his, everywhere-going, world-Lord's, tasting all difference —\nunbroken in the wonder-state."
+ },
+ {
+  "chunk": "bodh-p05-v41",
+  "verses": "41",
+  "sanskrit": "etad advayam ity uktaṃ jñānāmṛtam anuttamam yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam iti śrīkṣemarājakṛtaṃ bodhavilāsākhyaṃ yogaśāstram",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p05-v41 (41)\nthis / non-dual / thus / said / nectar-of-knowledge / unsurpassed / who / may-drink / is-quenched / his / fever-of-samsara-poison // bodh-p05",
+  "l2": "This non-dual thus said — nectar-of-knowledge unsurpassed — who may drink is quenched. His fever-of-saṃsāra-poison.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    128,
+    130
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:005",
+  "l3": "This non-dual, thus told — knowledge-nectar past compare —\nwho drinks is quenched: his saṃsāra-poison fever."
+ },
+ {
+  "chunk": "bodh-p05-v42",
+  "verses": "42",
+  "sanskrit": "etad advayam ity uktaṃ jñānāmṛtam anuttamam yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam iti śrīkṣemarājakṛtaṃ bodhavilāsākhyaṃ yogaśāstram",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## bodh-p05-v42 (42)\nthis-method-of-bliss-of-awareness / for-attaining-shiva / of-great-souls / of-king / named-kshema / treatise / extremely-pure // bodh-p05",
+  "l2": "This bliss-of-awareness-method for attaining Śiva — of great souls, of king Kṣema-named — treatise extremely pure.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL KSTS",
+   "source_lines": [
+    131,
+    133
+   ]
+  },
+  "immutable_id": "pt:pid:bodha:005",
+  "l3": "This knowing-bliss method for winning Śiva — great souls', Kṣema-named king's —\ntreatise past-pure."
  }
 ]

@@ -1,6 +1,6 @@
 [
  {
-  "chunk": "ghat-p01",
+  "chunk": "ghat-p01-v01",
   "verses": "1",
   "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
   "gate": "PASS",
@@ -10,19 +10,214 @@
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "## ghat-p01 (1)\nKāma / and / in-heart / to-kill / arises / separated / beloved / this / arises / by-cruel / foreign-land-serving / you-will-kill / indeed / by-him / me / without / foreign-land-love / today / be-released / or / your / wife / what / to-be-said / cātaka / and / thirsty / water / begs / suffering / traveler / she / beloved / and / yours / by-clouds / peacock-flock / is-sounded / what / delight / beloved / without-me / today / you / by-cloud-arrival / thinned / and / she / today / you / by-hard / by-Kāma / she-is-tormented / of-sorrow-ocean / in-water / and / fallen / Your-virtue / remembrance / indeed / protects / her / melts / and / impurity / water / of-rivers / what / thus / and / me / you-regard / not / wretched / deep / cloud / rasa / by-pain / when / I / shall-abandon / friend / separation-born / sorrow / burning // ghat-p01",
-  "l2": "In the heart, Kāma wakes to kill.\n\nThis — the separated beloved — arises.\n\nBy that cruel one who serves a foreign land, you will kill me — without him.\n\nRelease your foreign love today — or your wife: what more is there to say?\n\nThe cātaka, gasping, begs for rain — and nothing else.\n\nThe suffering traveler — she is your beloved.\n\nBy clouds the peacock-flock is sounded; what delight, beloved, without me today?\n\nThinned by cloud-arrival, she today; tormented by hard Kāma.\n\nDrowned in sorrow-ocean's water; remembrance of your virtue alone keeps her afloat. The rivers' water melts the impurity. Why do you regard me, wretched as I am? Pained by deep cloud-rasa — when, friend, shall I be free of this burning, born of separation from my beloved?",
+  "l1": "## ghat-p01-v01 (1)\nKāma / and / in-heart / to-kill / arises / separated / beloved / this / arises // ghat-p01",
+  "l2": "In the heart, Kāma wakes to kill.",
   "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
-   "source_lines": null
+   "source_lines": [
+    14,
+    14
+   ]
   },
   "immutable_id": "pt:pid:ghat:f4aa6b121a08"
  },
  {
-  "chunk": "ghat-p02",
-  "verses": "1",
+  "chunk": "ghat-p01-v02",
+  "verses": "2",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v02 (2)\nby-cruel / foreign-land-serving / you-will-kill / indeed / by-him / me / without // ghat-p01",
+  "l2": "This — the separated beloved — arises.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    19,
+    19
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v03",
+  "verses": "3",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v03 (3)\nforeign-land-love / today / be-released / or / your / wife / what / to-be-said // ghat-p01",
+  "l2": "By that cruel one who serves a foreign land, you will kill me — without him.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    26,
+    26
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v04",
+  "verses": "4",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v04 (4)\ncātaka / and / thirsty / water / begs / suffering / traveler / she / beloved / and / yours // ghat-p01",
+  "l2": "Release your foreign love today — or your wife: what more is there to say?",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    31,
+    31
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v05",
+  "verses": "5",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v05 (5)\nby-clouds / peacock-flock / is-sounded / what / delight / beloved / without-me / today / you // ghat-p01",
+  "l2": "The cātaka, gasping, begs for rain — and nothing else.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    36,
+    36
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v06",
+  "verses": "6",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v06 (6)\nby-cloud-arrival / thinned / and / she / today / you / by-hard / by-Kāma / she-is-tormented // ghat-p01",
+  "l2": "The suffering traveler — she is your beloved.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    41,
+    41
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v07",
+  "verses": "7",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v07 (7)\nof-sorrow-ocean / in-water / and / fallen / Your-virtue / remembrance / indeed / protects / her // ghat-p01",
+  "l2": "By clouds the peacock-flock is sounded; what delight, beloved, without me today?",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    46,
+    46
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v08",
+  "verses": "8",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v08 (8)\nmelts / and / impurity / water / of-rivers / what / thus / and / me / you-regard / not / wretched // ghat-p01",
+  "l2": "Thinned by cloud-arrival, she today; tormented by hard Kāma.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    51,
+    51
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p01-v09",
+  "verses": "9",
+  "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate nirdayena paradeśasevinā māriṣyatha hi tena māṃ vinā anyadeśaratir adya mucyatāṃ sāthavā tava vadhūḥ kim ucyatām cātakaś ca tṛṣito 'mbu yācate duḥkhitā pathika sā priyā ca te ambudaiḥ śikhigaṇo vinādyate kā ratiḥ priya mayā vinādya te toyadāgamakṛśā ca sādya te durdhareṇa madanena sādyate śokasāgarajale ca pātitāṃ tvadguṇasmaraṇam eva pāti tām dravati ca kaluṣaṃ jalaṃ nadīnāṃ kim iti ca māṃ samavekṣase na dīnām gambhīramegharasitavyathitā kadāhaṃ jahyāṃ sakhi priyaviyogajaśokadāhaṃ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p01-v09 (9)\ndeep / cloud / rasa / by-pain / when / I / shall-abandon / friend / separation-born / sorrow / burning // ghat-p01",
+  "l2": "Drowned in sorrow-ocean's water; remembrance of your virtue alone keeps her afloat. The rivers' water melts the impurity. Why do you regard me, wretched as I am? Pained by deep cloud-rasa — when, friend, shall I be free of this burning, born of separation from my beloved?",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    56,
+    56
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:f4aa6b121a08"
+ },
+ {
+  "chunk": "ghat-p02-v10",
+  "verses": "10",
   "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
   "gate": "PASS",
   "blocking": [],
@@ -31,19 +226,214 @@
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "## ghat-p02 (1)\nfor-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes / you / by-sprouts / chief / of-groves / eye-festival / and / you-are / of-youths / kuṭaja / why / by-flowers / are-you-laughed-at / I-bow / and / hard-to-laugh-at / to-you / your / flower-looked-at / body / I-would-release / quickly / indeed / nīpa / body / of-honey / having-observed / season / bee / kisses / yūthikā / creeper / by-waters / scattered / dust / on-earth / sun / moon / and / not / are-seen / new / by-cloud / peacocks / cry / at-cloud-arrival / kunda / same-toothed / with-Indra's-weapon / and / cloud / today / resounds / of-elephants / ardor / brings / mountain-like / loud / roar / water / in-caves / falls / wonderful / formed / beautiful // ghat-p02",
-  "l2": "For Kāma's sake, today the groves of abodes shine.\n\nYou are chief of groves by sprouts, eye-festival of youths.\n\nKuṭaja, why are you laughed at by flowers? I bow — hard to laugh at you.\n\nYour flower-looked-at body — I would release it quickly, nīpa, body.\n\nHaving observed honey's season, the bee kisses the yūthikā creeper.\n\nBy waters scattered, dust on earth; sun and moon are not seen.\n\nNew-cloud-drunk, peacocks cry at cloud-arrival.\n\nWith Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.\n\nLoud roar — water in caves falls, wonderful-formed beauties.",
+  "l1": "## ghat-p02-v10 (10)\nfor-Kāma / for-sake / of-abodes / shine / today / groves / of-abodes // ghat-p02",
+  "l2": "For Kāma's sake, today the groves of abodes shine.",
   "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
-   "source_lines": null
+   "source_lines": [
+    61,
+    61
+   ]
   },
   "immutable_id": "pt:pid:ghat:16a5384f807b"
  },
  {
-  "chunk": "ghat-p03",
-  "verses": "1",
+  "chunk": "ghat-p02-v11",
+  "verses": "11",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v11 (11)\nyou / by-sprouts / chief / of-groves / eye-festival / and / you-are / of-youths // ghat-p02",
+  "l2": "You are chief of groves by sprouts, eye-festival of youths.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    66,
+    66
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v12",
+  "verses": "12",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v12 (12)\nkuṭaja / why / by-flowers / are-you-laughed-at / I-bow / and / hard-to-laugh-at / to-you // ghat-p02",
+  "l2": "Kuṭaja, why are you laughed at by flowers? I bow — hard to laugh at you.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    71,
+    71
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v13",
+  "verses": "13",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v13 (13)\nyour / flower-looked-at / body / I-would-release / quickly / indeed / nīpa / body // ghat-p02",
+  "l2": "Your flower-looked-at body — I would release it quickly, nīpa, body.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    76,
+    76
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v14",
+  "verses": "14",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v14 (14)\nof-honey / having-observed / season / bee / kisses / yūthikā / creeper // ghat-p02",
+  "l2": "Having observed honey's season, the bee kisses the yūthikā creeper.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    81,
+    81
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v15",
+  "verses": "15",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v15 (15)\nby-waters / scattered / dust / on-earth / sun / moon / and / not / are-seen // ghat-p02",
+  "l2": "By waters scattered, dust on earth; sun and moon are not seen.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    89,
+    89
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v16",
+  "verses": "16",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v16 (16)\nnew / by-cloud / peacocks / cry / at-cloud-arrival / kunda / same-toothed // ghat-p02",
+  "l2": "New-cloud-drunk, peacocks cry at cloud-arrival.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    94,
+    94
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v17",
+  "verses": "17",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v17 (17)\nwith-Indra's-weapon / and / cloud / today / resounds / of-elephants / ardor / brings / mountain-like // ghat-p02",
+  "l2": "With Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    103,
+    103
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p02-v18",
+  "verses": "18",
+  "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p02-v18 (18)\nloud / roar / water / in-caves / falls / wonderful / formed / beautiful // ghat-p02",
+  "l2": "Loud roar — water in caves falls, wonderful-formed beauties.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    108,
+    108
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:16a5384f807b"
+ },
+ {
+  "chunk": "ghat-p03-v19",
+  "verses": "19",
   "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
   "gate": "PASS",
   "blocking": [],
@@ -52,13 +442,64 @@
   ],
   "model": "crystal-v1",
   "date": "2026-11-01",
-  "l1": "## ghat-p03 (1)\nmake-long / travelers / clouds / thundering / sorrow / grows / and / in-those / endless / love-festival / with-beloveds / they-honor / cloud-arrival / dear-friend / they-bring / may-I-be-conquered / by-which / poet / by-yamakas / other / to-him / I-pour / water / in-potsherd // ghat-p03",
-  "l2": "Clouds thundering make travelers long; sorrow grows in those, endless.\n\nThey honor the love-festival with beloveds; cloud-arrival, dear friend, they bring.\n\nMay I be conquered by which poet, by yamakas, other; to him I pour water in ghaṭakarpara.",
+  "l1": "## ghat-p03-v19 (19)\nmake-long / travelers / clouds / thundering / sorrow / grows / and / in-those / endless // ghat-p03",
+  "l2": "Clouds thundering make travelers long; sorrow grows in those, endless.",
   "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
-   "source_lines": null
+   "source_lines": [
+    113,
+    113
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:9b6748de21b4"
+ },
+ {
+  "chunk": "ghat-p03-v20",
+  "verses": "20",
+  "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p03-v20 (20)\nlove-festival / with-beloveds / they-honor / cloud-arrival / dear-friend / they-bring // ghat-p03",
+  "l2": "They honor the love-festival with beloveds; cloud-arrival, dear friend, they bring.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    120,
+    120
+   ]
+  },
+  "immutable_id": "pt:pid:ghat:9b6748de21b4"
+ },
+ {
+  "chunk": "ghat-p03-v21",
+  "verses": "21",
+  "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ghat-p03-v21 (21)\nmay-I-be-conquered / by-which / poet / by-yamakas / other / to-him / I-pour / water / in-potsherd // ghat-p03",
+  "l2": "May I be conquered by which poet, by yamakas, other; to him I pour water in ghaṭakarpara.",
+  "source_file": "passages.jsonl",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL (Abhinavagupta Ghatakarpara commentary)",
+   "source_lines": [
+    128,
+    128
+   ]
   },
   "immutable_id": "pt:pid:ghat:9b6748de21b4"
  }
