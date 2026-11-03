@@ -1,4 +1,4 @@
-# works/saktavijnana — DONE (T1→GATE + L200 + C1)
+# works/saktavijnana — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 

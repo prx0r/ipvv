@@ -8,6 +8,7 @@ import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 fails, warns = [], []
+_legacy_c1 = []   # whole-ahnika C1 essays: catalogued once, band n/a (see check 8)
 
 def fail(m): fails.append(m)
 def warn(m): warns.append("WARN " + m)
@@ -173,6 +174,11 @@ if os.path.exists(dix) and os.path.getmtime(bpy) > os.path.getmtime(dix):
 # 8. samples C1 band (pipeline-owned — WARN only)
 for f in glob.glob(os.path.join(ROOT, 'samples/*/C1-*.md')):
     txt = open(f, encoding='utf-8', errors='replace').read()
+    # C1-full.md = legacy WHOLE-AHNIKA essays (sections span an ahnika by design):
+    # one accurate note per file instead of N permanent band-noise warns.
+    if os.path.basename(f) == 'C1-full.md':
+        _legacy_c1.append(os.path.relpath(f, ROOT))
+        continue
     for m in re.finditer(r'^## (.+)$', txt, re.M):
         start = m.end()
         nxt = txt.find('\n## ', start)
@@ -209,6 +215,8 @@ for f in glob.glob(os.path.join(ROOT, 'works/*/WORK.md')):
 
 for w in warns:
     print(w)
+if _legacy_c1:
+    print(f'INFO legacy whole-ahnika C1 essays (passage band n/a): {len(_legacy_c1)} files in samples/*/C1-full.md')
 if fails:
     print(f'SITE GATES FAILED ({len(fails)}):')
     for m in fails:

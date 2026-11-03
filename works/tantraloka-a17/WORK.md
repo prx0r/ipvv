@@ -1,4 +1,4 @@
-# works/tantraloka-a17 — DONE (T1→GATE + L200 + C1)
+# works/tantraloka-a17 — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 
