@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v16",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v16",
+ "title": "sambandhasiddhi — samb-p02-v16",
+ "kind": "entailment",
+ "question": "Reflection 'of king' is one, facing own-generality; the other — 'man,' this, with master-generality-relation.",
+ "issue": "Derived from L2 text (no argmap). Reflection 'of king' is one, facing own-generality; the other — 'man,' this, with master-generality-relation.",
+ "premises": [
+  {
+   "text": "vimarśo rājña ityekaḥ svasāmānyonmukhaḥ paraḥ svāmisāmānyasaṃbandhasahaḥ puruṣa ityayam",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Reflection 'of king' is one, facing own-generality; the other — 'man,' this, with master-generality-relation.",
+  "passage_id": "sambandhasiddhi:samb-p02-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Reflection 'of king' is one, facing own-generality; the other — 'man,' this, with master-generality-relation.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v16",
+ "sanskrit": "vimarśo rājña ityekaḥ svasāmānyonmukhaḥ paraḥ svāmisāmānyasaṃbandhasahaḥ puruṣa ityayam",
+ "license": "CC BY-NC-SA 4.0"
+}

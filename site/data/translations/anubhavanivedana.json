@@ -12,19 +12,17 @@
   "date": "2026-11-01",
   "l1": "## anu-p01 (1)\nwhose-mind-wind-is-dissolved-in-the-inward-aim / the-yogin / when / abides / with-gaze / of-unmoving-pupil / outside / he / seeing / not-seeing / even / this-mudrā / indeed / śāmbhavī / becomes / that / by-your-grace / O-guru / devoid-of-void-and-non-void / becomes / which / reality / state / śāmbhava // anu-p01",
   "l2": "When the yogin abides with mind-wind dissolved in the inward aim — he, seeing yet not seeing outside with unmoving-pupil gaze — this indeed becomes the śāmbhavī mudrā, by your grace, O guru: devoid of void and non-void becomes that reality, the śāmbhava state.",
-  "source_file": "tantrasara.txt",
+  "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)",
    "source_lines": null
   },
   "immutable_id": "pt:pid:anubhavanivedana:001",
-  "l3": "When the yogin rests, mind and breath dissolved in the inward aim — seeing, yet unseeing, outward with motionless gaze —\nthis indeed becomes śāmbhavī mudrā, by your grace, O guru: reality free of void and non-void becomes the śāmbhava state.",
-  "source_lines": 450,
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
-  "match_words": 4,
-  "license": "FREE"
+  "license": "FREE",
+  "l3": "When the yogin rests, mind and breath dissolved in the inward aim — seeing, yet unseeing, outward with motionless gaze —\nthis indeed becomes śāmbhavī mudrā, by your grace, O guru: reality free of void and non-void becomes the śāmbhava state."
  },
  {
   "chunk": "anu-p02",
@@ -46,10 +44,10 @@
    "source_lines": null
   },
   "immutable_id": "pt:pid:anubhavanivedana:002",
-  "l3": "Eyes half-open, mind steady, gaze set on the nose-tip — moon and sun themselves dissolved within the triple throb —\na form of light, free of all outside, the one supreme Person: reality attains that state, the highest Real. so it stands, past saying.",
   "source_license": "SanskritDocuments (Ruma Dewan) - no explicit source licence",
+  "source_origin": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)",
   "license": "FREE",
-  "source_origin": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)"
+  "l3": "Eyes half-open, mind steady, gaze set on the nose-tip — moon and sun themselves dissolved within the triple throb —\na form of light, free of all outside, the one supreme Person: reality attains that state, the highest Real. so it stands, past saying."
  },
  {
   "chunk": "anu-p03",
@@ -71,10 +69,10 @@
    "source_lines": null
   },
   "immutable_id": "pt:pid:anubhavanivedana:003",
-  "l3": "Whatever sound rises from the mouth — that mantra is beyond the world; whatever stance this pleasure-pain-born body takes — that itself is mudrā.\nWhatever flowing of breath in its own rhythm — that itself is wondrous yoga; and the supreme śākta abode — as I experience it, what would not shine?",
   "source_license": "SanskritDocuments (Ruma Dewan) - no explicit source licence",
+  "source_origin": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)",
   "license": "FREE",
-  "source_origin": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)"
+  "l3": "Whatever sound rises from the mouth — that mantra is beyond the world; whatever stance this pleasure-pain-born body takes — that itself is mudrā.\nWhatever flowing of breath in its own rhythm — that itself is wondrous yoga; and the supreme śākta abode — as I experience it, what would not shine?"
  },
  {
   "chunk": "anu-p04",
@@ -89,18 +87,16 @@
   "date": "2026-11-01",
   "l1": "## anu-p04 (4)\nmantra / that / shines-forth / of-letters / arrangement / in-which / not / is-distinguished / mudrā / that / arises / in-which / dissolved / entire / action / bodily / yoga / that / spreads-forth / from-which / flowing / of-breath / is-exhausted / in-the-festivals-of-attaining-your-abode / of-the-wise / what / what / not / indeed / wonderful // anu-p04",
   "l2": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful?",
-  "source_file": "dhvanyaloka.txt",
+  "source_file": "passages.jsonl",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)",
    "source_lines": null
   },
   "immutable_id": "pt:pid:anubhavanivedana:004",
-  "l3": "That mantra shines where no pattern of letters can be traced; that mudrā rises where every bodily act has melted away.\nThat yoga spreads where the breath’s flowing is spent; in the festivals of attaining Your abode, of the wise — what, what is not wonderful?",
-  "source_lines": 7327,
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL (Locana embedded)",
-  "match": "spaceless",
-  "license": "FREE"
+  "license": "FREE",
+  "l3": "That mantra shines where no pattern of letters can be traced; that mudrā rises where every bodily act has melted away.\nThat yoga spreads where the breath’s flowing is spent; in the festivals of attaining Your abode, of the wise — what, what is not wonderful?"
  }
 ]

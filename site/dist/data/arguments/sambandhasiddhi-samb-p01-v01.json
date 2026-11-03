@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v01",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v01",
+ "title": "sambandhasiddhi — samb-p01-v01",
+ "kind": "entailment",
+ "question": "With relation whose self is difference-and-non-difference — by whom all things are proved, whose work is world-traffic — him, Śiva, by own will, we praise.",
+ "issue": "Derived from L2 text (no argmap). With relation whose self is difference-and-non-difference — by whom all things are proved, whose work is world-traffic — him, Śiva, by own will, we praise.",
+ "premises": [
+  {
+   "text": "bhedābhedātmasaṃbandhasahasarvārthasādhitā lokayātrā kṛtiryasya svecchayā taṃ stumaḥ śivam",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With relation whose self is difference-and-non-difference — by whom all things are proved, whose work is world-traffic — him, Śiva, by own will, we praise.",
+  "passage_id": "sambandhasiddhi:samb-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "With relation whose self is difference-and-non-difference — by whom all things are proved, whose work is world-traffic — him, Śiva, by own will, we praise.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v01",
+ "sanskrit": "bhedābhedātmasaṃbandhasahasarvārthasādhitā lokayātrā kṛtiryasya svecchayā taṃ stumaḥ śivam",
+ "license": "CC BY-NC-SA 4.0"
+}

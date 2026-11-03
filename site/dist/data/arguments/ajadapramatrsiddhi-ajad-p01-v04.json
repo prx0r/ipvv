@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v04",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v04",
+ "title": "ajadapramatrsiddhi — ajad-p01-v04",
+ "kind": "entailment",
+ "question": "Granted, let there be no difference; still, from the presence and absence of appearing, a difference does get established here — and that much serves the purpose.",
+ "issue": "Derived from L2 text (no argmap). Granted, let there be no difference; still, from the presence and absence of appearing, a difference does get established here — and that much serves the purpose.",
+ "premises": [
+  {
+   "text": "mā bhūd viśeṣaḥ prakhyādibhāvābhāvau tataḥ punaḥ siddhyaty eva viśeṣo 'tra tāvatā ca prayojanam",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Granted, let there be no difference; still, from the presence and absence of appearing, a difference does get established here — and that much serves the purpose.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v04"
+ },
+ "unresolved": "",
+ "argument_text": "Granted, let there be no difference; still, from the presence and absence of appearing, a difference does get established here — and that much serves the purpose.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v04",
+ "sanskrit": "mā bhūd viśeṣaḥ prakhyādibhāvābhāvau tataḥ punaḥ siddhyaty eva viśeṣo 'tra tāvatā ca prayojanam",
+ "license": "CC BY-NC-SA 4.0"
+}

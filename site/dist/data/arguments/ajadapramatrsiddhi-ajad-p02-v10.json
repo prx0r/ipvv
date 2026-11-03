@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p02-v10",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p02-v10",
+ "title": "ajadapramatrsiddhi — ajad-p02-v10",
+ "kind": "entailment",
+ "question": "If she — by her become self-nature — has never won final grounding, how could she become the standing-place of establishment for another existent?",
+ "issue": "Derived from L2 text (no argmap). If she — by her become self-nature — has never won final grounding, how could she become the standing-place of establishment for another existent?",
+ "premises": [
+  {
+   "text": "saivaṃ bhūtātmanā svenāpy alabdhapariniṣṭhitiḥ katham anyasya bhāvasya pratiṣṭhāspadatām iyāt",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p02-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If she — by her become self-nature — has never won final grounding, how could she become the standing-place of establishment for another existent?",
+  "passage_id": "ajadapramatrsiddhi:ajad-p02-v10"
+ },
+ "unresolved": "",
+ "argument_text": "If she — by her become self-nature — has never won final grounding, how could she become the standing-place of establishment for another existent?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p02-v10",
+ "sanskrit": "saivaṃ bhūtātmanā svenāpy alabdhapariniṣṭhitiḥ katham anyasya bhāvasya pratiṣṭhāspadatām iyāt",
+ "license": "CC BY-NC-SA 4.0"
+}

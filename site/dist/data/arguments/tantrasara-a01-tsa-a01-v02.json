@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a01:tsa-a01-v02",
+ "work_id": "tantrasara-a01",
+ "passage_id": "tantrasara-a01:tsa-a01-v02",
+ "title": "tantrasara-a01 — tsa-a01-v02",
+ "kind": "entailment",
+ "question": "The Tantrāloka is vast, and no one at all can dive it; so hear this Tantrasāra, composed in plain words.",
+ "issue": "Derived from L2 text (no argmap). The Tantrāloka is vast, and no one at all can dive it; so hear this Tantrasāra, composed in plain words.",
+ "premises": [
+  {
+   "text": "vitatas tantrāloko vigāhituṃ naiva śakyate sarvaiḥ | ṛjuvacanaviracitam idaṃ tu tantrasāraṃ tataḥ śṛṇuta",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a01:tsa-a01-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The Tantrāloka is vast, and no one at all can dive it; so hear this Tantrasāra, composed in plain words.",
+  "passage_id": "tantrasara-a01:tsa-a01-v02"
+ },
+ "unresolved": "",
+ "argument_text": "The Tantrāloka is vast, and no one at all can dive it; so hear this Tantrasāra, composed in plain words.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a01:tsa-a01-v02",
+ "sanskrit": "vitatas tantrāloko vigāhituṃ naiva śakyate sarvaiḥ | ṛjuvacanaviracitam idaṃ tu tantrasāraṃ tataḥ śṛṇuta",
+ "license": "CC BY-NC-SA 4.0"
+}

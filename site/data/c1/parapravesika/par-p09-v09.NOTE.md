@@ -19,6 +19,28 @@ Kṣemarāja siddhāntin landing; tradition-verse voiced; colophon ascribing K�
 * **tilājyāhutivarjita** — oblation-void: initiation without rite is the punch.
 * **water ≠ ghee** — jalādi (liquids) and tilājyāhuti (oblation) are distinct passages; do not conflate.
 
+Full line: hṛdayabīja (heart-seed) · āmnāyanīti (tradition-way) · sat→sa involution (primary-nature, not tattva 13) · aukāra-anuttaraśakti (assent-au unsurpassed-power; Sauḥ heart-mantra) · visarga emission · tilājyāhutivarjita (oblation-void) · jīvanmukta/dehapāta (living-free/body-fall)
+
 ## CRUXES
 
 31/au partition untabulated; visarga-closure noted; colophon supports Kṣemarāja ascription.
+
+## FUNCTION
+
+Similes → tradition-verse → proofs → involution → double-seed → fruit → colophon.
+
+## LOCAL CONTEXT
+
+Passage 9 of 9: bīja doctrine with āmnāya verse, proofs, involution, phala, colophon.
+
+## EXPLANATION
+
+Containment shown, seated, proved, involuted, breathed out; seat is Śiva; knowing is initiation.
+
+## BOUNDARY
+
+31/au partition untabulated; visarga as closure.
+
+## RELATED
+
+p02 (emission arc opened); p06 (word-mass); Mālinīvijaya-adjacent involution.

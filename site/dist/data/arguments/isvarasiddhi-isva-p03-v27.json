@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v27",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v27",
+ "title": "isvarasiddhi — isva-p03-v27",
+ "kind": "entailment",
+ "question": "If puruṣārtha-natured in all function-acts — by pradhāna it is conceived as efficient.",
+ "issue": "Derived from L2 text (no argmap). If puruṣārtha-natured in all function-acts — by pradhāna it is conceived as efficient.",
+ "premises": [
+  {
+   "text": "puruṣārthasvabhāvatvaṃ samastārthakriyāsu cet nimittakāraṇatvena pradhānasyopakalpyate",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If puruṣārtha-natured in all function-acts — by pradhāna it is conceived as efficient.",
+  "passage_id": "isvarasiddhi:isva-p03-v27"
+ },
+ "unresolved": "",
+ "argument_text": "If puruṣārtha-natured in all function-acts — by pradhāna it is conceived as efficient.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v27",
+ "sanskrit": "puruṣārthasvabhāvatvaṃ samastārthakriyāsu cet nimittakāraṇatvena pradhānasyopakalpyate",
+ "license": "CC BY-NC-SA 4.0"
+}

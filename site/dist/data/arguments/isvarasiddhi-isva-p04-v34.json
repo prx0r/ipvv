@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v34",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v34",
+ "title": "isvarasiddhi — isva-p04-v34",
+ "kind": "entailment",
+ "question": "Never body etc. — long clay-lump or else — hence arrangement excels by being led to ends.",
+ "issue": "Derived from L2 text (no argmap). Never body etc. — long clay-lump or else — hence arrangement excels by being led to ends.",
+ "premises": [
+  {
+   "text": "na syājjātu śarīrādi dīrghamṛtpiṇḍa eva vā ata evārthanīyatvātsaṃniveśo viśiṣyate",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v34"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Never body etc. — long clay-lump or else — hence arrangement excels by being led to ends.",
+  "passage_id": "isvarasiddhi:isva-p04-v34"
+ },
+ "unresolved": "",
+ "argument_text": "Never body etc. — long clay-lump or else — hence arrangement excels by being led to ends.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v34",
+ "sanskrit": "na syājjātu śarīrādi dīrghamṛtpiṇḍa eva vā ata evārthanīyatvātsaṃniveśo viśiṣyate",
+ "license": "CC BY-NC-SA 4.0"
+}

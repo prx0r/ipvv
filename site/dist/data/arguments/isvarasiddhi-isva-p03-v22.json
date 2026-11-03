@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v22",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v22",
+ "title": "isvarasiddhi — isva-p03-v22",
+ "kind": "entailment",
+ "question": "Own-nature indeed — and this of this — from seeing the root-cause on; below mind-ground, toward body-ordaining.",
+ "issue": "Derived from L2 text (no argmap). Own-nature indeed — and this of this — from seeing the root-cause on; below mind-ground, toward body-ordaining.",
+ "premises": [
+  {
+   "text": "svabhāva eva caiṣo'sya mūlahetostathekṣaṇāt cittabhūmeradharataḥ śarīrādividhiṃ prati",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Own-nature indeed — and this of this — from seeing the root-cause on; below mind-ground, toward body-ordaining.",
+  "passage_id": "isvarasiddhi:isva-p03-v22"
+ },
+ "unresolved": "",
+ "argument_text": "Own-nature indeed — and this of this — from seeing the root-cause on; below mind-ground, toward body-ordaining.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v22",
+ "sanskrit": "svabhāva eva caiṣo'sya mūlahetostathekṣaṇāt cittabhūmeradharataḥ śarīrādividhiṃ prati",
+ "license": "CC BY-NC-SA 4.0"
+}

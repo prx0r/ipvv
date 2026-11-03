@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v24",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v24",
+ "title": "isvarasiddhi — isva-p03-v24",
+ "kind": "entailment",
+ "question": "Protecting the inner-organ-rangers in root-nature, of secret nature — let Īśvara's change-causality be conceived.",
+ "issue": "Derived from L2 text (no argmap). Protecting the inner-organ-rangers in root-nature, of secret nature — let Īśvara's change-causality be conceived.",
+ "premises": [
+  {
+   "text": "raha(natva)sya mūlaprakṛtāvantaḥ karaṇacāriṇaḥ īśvarasyopakalpyeta pariṇāmanimittatā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v24"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Protecting the inner-organ-rangers in root-nature, of secret nature — let Īśvara's change-causality be conceived.",
+  "passage_id": "isvarasiddhi:isva-p03-v24"
+ },
+ "unresolved": "",
+ "argument_text": "Protecting the inner-organ-rangers in root-nature, of secret nature — let Īśvara's change-causality be conceived.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v24",
+ "sanskrit": "raha(natva)sya mūlaprakṛtāvantaḥ karaṇacāriṇaḥ īśvarasyopakalpyeta pariṇāmanimittatā",
+ "license": "CC BY-NC-SA 4.0"
+}

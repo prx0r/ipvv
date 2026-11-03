@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v32",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v32",
+ "title": "isvarasiddhi — isva-p04-v32",
+ "kind": "entailment",
+ "question": "So without desiring-to-make, no wondrous-making arising — there'd be mere grossness, not world-useful.",
+ "issue": "Derived from L2 text (no argmap). So without desiring-to-make, no wondrous-making arising — there'd be mere grossness, not world-useful.",
+ "premises": [
+  {
+   "text": "tathā cikīrṣāṃ ca vinā vicitraracanodbhavaḥ sthūlatāmātrameva syānna tu lokopayoginī",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v32"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So without desiring-to-make, no wondrous-making arising — there'd be mere grossness, not world-useful.",
+  "passage_id": "isvarasiddhi:isva-p04-v32"
+ },
+ "unresolved": "",
+ "argument_text": "So without desiring-to-make, no wondrous-making arising — there'd be mere grossness, not world-useful.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v32",
+ "sanskrit": "tathā cikīrṣāṃ ca vinā vicitraracanodbhavaḥ sthūlatāmātrameva syānna tu lokopayoginī",
+ "license": "CC BY-NC-SA 4.0"
+}

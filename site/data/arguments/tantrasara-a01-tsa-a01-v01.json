@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a01:tsa-a01-v01",
+ "work_id": "tantrasara-a01",
+ "passage_id": "tantrasara-a01:tsa-a01-v01",
+ "title": "tantrasara-a01 — tsa-a01-v01",
+ "kind": "entailment",
+ "question": "Mother — stainless art's abode, great new creation, full-bodied; Father — his five faces' splendor hidden: may the Heart, born of the surging nature of their embrace, the deathless kin beyond the highest, flash forth for me.",
+ "issue": "Derived from L2 text (no argmap). Mother — stainless art's abode, great new creation, full-bodied; Father — his five faces' splendor hidden: may the Heart, born of the surging nature of their embrace, the deathless kin beyond the highest, flash forth for me.",
+ "premises": [
+  {
+   "text": "vimalakalāśrayābhinavasṛṣṭimahā jananī bharitatanuś ca pañcamukhaguptarucir janakaḥ | tadubhayayāmalasphuritabhāvavisargamayaṃ hṛdayam anuttarāmṛtakulaṃ mama saṃsphuratāt",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a01:tsa-a01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Mother — stainless art's abode, great new creation, full-bodied; Father — his five faces' splendor hidden: may the Heart, born of the surging nature of their embrace, the deathless kin beyond the highest, flash forth for me.",
+  "passage_id": "tantrasara-a01:tsa-a01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Mother — stainless art's abode, great new creation, full-bodied; Father — his five faces' splendor hidden: may the Heart, born of the surging nature of their embrace, the deathless kin beyond the highest, flash forth for me.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a01:tsa-a01-v01",
+ "sanskrit": "vimalakalāśrayābhinavasṛṣṭimahā jananī bharitatanuś ca pañcamukhaguptarucir janakaḥ | tadubhayayāmalasphuritabhāvavisargamayaṃ hṛdayam anuttarāmṛtakulaṃ mama saṃsphuratāt",
+ "license": "CC BY-NC-SA 4.0"
+}

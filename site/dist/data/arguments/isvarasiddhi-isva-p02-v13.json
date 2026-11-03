@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v13",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v13",
+ "title": "isvarasiddhi — isva-p02-v13",
+ "kind": "entailment",
+ "question": "By others too, of reasons, in pot-self-sifting — locus-form alone … even … causehood of the conscious one.",
+ "issue": "Derived from L2 text (no argmap). By others too, of reasons, in pot-self-sifting — locus-form alone … even … causehood of the conscious one.",
+ "premises": [
+  {
+   "text": "paraistairapi hetūnāṃ ghaṭātmapravivecane saṃsthānamātra eva............ hetutvaṃ buddhiśālinaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By others too, of reasons, in pot-self-sifting — locus-form alone … even … causehood of the conscious one.",
+  "passage_id": "isvarasiddhi:isva-p02-v13"
+ },
+ "unresolved": "",
+ "argument_text": "By others too, of reasons, in pot-self-sifting — locus-form alone … even … causehood of the conscious one.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v13",
+ "sanskrit": "paraistairapi hetūnāṃ ghaṭātmapravivecane saṃsthānamātra eva............ hetutvaṃ buddhiśālinaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v05",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v05",
+ "title": "isvarasiddhi — isva-p01-v05",
+ "kind": "entailment",
+ "question": "In the varied, the conscious alone is marked — as among pots. The maker, wise, resolved on varied use.",
+ "issue": "Derived from L2 text (no argmap). In the varied, the conscious alone is marked — as among pots. The maker, wise, resolved on varied use.",
+ "premises": [
+  {
+   "text": "vicitre buddhimāneva ghaṭādiṣviva lakṣyate kartā vijño vicitraitadupayogābhisaṃdhimān",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the varied, the conscious alone is marked — as among pots. The maker, wise, resolved on varied use.",
+  "passage_id": "isvarasiddhi:isva-p01-v05"
+ },
+ "unresolved": "",
+ "argument_text": "In the varied, the conscious alone is marked — as among pots. The maker, wise, resolved on varied use.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v05",
+ "sanskrit": "vicitre buddhimāneva ghaṭādiṣviva lakṣyate kartā vijño vicitraitadupayogābhisaṃdhimān",
+ "license": "CC BY-NC-SA 4.0"
+}

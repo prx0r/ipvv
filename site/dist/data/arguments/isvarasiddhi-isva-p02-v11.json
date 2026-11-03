@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v11",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v11",
+ "title": "isvarasiddhi — isva-p02-v11",
+ "kind": "entailment",
+ "question": "As from afar, from smoke, proving in a khadira-grove — fire is proved by just knowing it, as khadira-wood.",
+ "issue": "Derived from L2 text (no argmap). As from afar, from smoke, proving in a khadira-grove — fire is proved by just knowing it, as khadira-wood.",
+ "premises": [
+  {
+   "text": "yathā vā dūrato dhūmātsiddhiḥ khadirakānane vahnistatpratipattyaiva khādiratvena siddhyati",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "As from afar, from smoke, proving in a khadira-grove — fire is proved by just knowing it, as khadira-wood.",
+  "passage_id": "isvarasiddhi:isva-p02-v11"
+ },
+ "unresolved": "",
+ "argument_text": "As from afar, from smoke, proving in a khadira-grove — fire is proved by just knowing it, as khadira-wood.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v11",
+ "sanskrit": "yathā vā dūrato dhūmātsiddhiḥ khadirakānane vahnistatpratipattyaiva khādiratvena siddhyati",
+ "license": "CC BY-NC-SA 4.0"
+}

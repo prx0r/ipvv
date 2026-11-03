@@ -18,6 +18,28 @@ Kṣemarāja siddhāntin expounding descent and return.
 * **rājanyāya** — king-logic: contraction as compensated dealing.
 * **glory→sheath pairing** — kalā←doership, vidyā←knowingness, rāga←fullness, kāla←eternity, niyati←pervasion (standard).
 
+Full line: dhyāmala/adhyāmala (dim/undim) · māyāśakti as svātantrya-synonym · aindrajālika (magician) · vidyābhijñāpitaiśvarya (recognition-brought sovereignty) · ciddhana (consciousness-dense) · rājanyāya (king-logic)
+
 ## CRUXES
 
 * Ladder variable literal; two phases kept; pairing standard doctrine.
+
+## FUNCTION
+
+Ladder → veil → person → bondsman → immunity → recognition → dealt-back powers.
+
+## LOCAL CONTEXT
+
+Passage 7 of 9: lakṣaṇas śiva→māyā, puruṣa/saṃsārī/mukta, kañcuka origin.
+
+## EXPLANATION
+
+Single-variable ladder (aham constant, idam faintness); bondage in deeming; two-phase mukta; contraction as compensated dealing.
+
+## BOUNDARY
+
+dhyāmala literal; two-phase release; respective glory-sheath pairing.
+
+## RELATED
+
+p06 (bare list); p08 (sheaths defined).

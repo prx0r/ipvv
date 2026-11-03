@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v08",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v08",
+ "title": "isvarasiddhi — isva-p01-v08",
+ "kind": "entailment",
+ "question": "Neither potter nor Lord shows agreement here — for him, opposition would follow, or agreement unproved.",
+ "issue": "Derived from L2 text (no argmap). Neither potter nor Lord shows agreement here — for him, opposition would follow, or agreement unproved.",
+ "premises": [
+  {
+   "text": "na kulālena neśenāpyanvayo'tra pradarśyate yato viruddhatāsya syādasiddhānvayatāpi vā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Neither potter nor Lord shows agreement here — for him, opposition would follow, or agreement unproved.",
+  "passage_id": "isvarasiddhi:isva-p01-v08"
+ },
+ "unresolved": "",
+ "argument_text": "Neither potter nor Lord shows agreement here — for him, opposition would follow, or agreement unproved.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v08",
+ "sanskrit": "na kulālena neśenāpyanvayo'tra pradarśyate yato viruddhatāsya syādasiddhānvayatāpi vā",
+ "license": "CC BY-NC-SA 4.0"
+}

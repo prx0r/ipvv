@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v39",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v39",
+ "title": "isvarasiddhi — isva-p05-v39",
+ "kind": "entailment",
+ "question": "Will, indeed — how could it serve all spirits' purposes? But [if] it belongs to generic pradhāna, for all…",
+ "issue": "Derived from L2 text (no argmap). Will, indeed — how could it serve all spirits' purposes? But [if] it belongs to generic pradhāna, for all…",
+ "premises": [
+  {
+   "text": "icchā nāma kathaṃ sarvapuruṣārthopayoginī",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v39"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Will, indeed — how could it serve all spirits' purposes? But [if] it belongs to generic pradhāna, for all…",
+  "passage_id": "isvarasiddhi:isva-p05-v39"
+ },
+ "unresolved": "",
+ "argument_text": "Will, indeed — how could it serve all spirits' purposes? But [if] it belongs to generic pradhāna, for all…",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v39",
+ "sanskrit": "icchā nāma kathaṃ sarvapuruṣārthopayoginī",
+ "license": "CC BY-NC-SA 4.0"
+}

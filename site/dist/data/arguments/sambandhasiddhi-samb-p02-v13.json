@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v13",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v13",
+ "title": "sambandhasiddhi — samb-p02-v13",
+ "kind": "entailment",
+ "question": "Abiding in that-one-reflection, by one-word-superimposition force — the many too would reach unity — as pot-cloth means.",
+ "issue": "Derived from L2 text (no argmap). Abiding in that-one-reflection, by one-word-superimposition force — the many too would reach unity — as pot-cloth means.",
+ "premises": [
+  {
+   "text": "tadekāmarśavartyekaśabdādhyāsavaśādbrajet aneko'pyekatāmartho yathā ghaṭapaṭāviti",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Abiding in that-one-reflection, by one-word-superimposition force — the many too would reach unity — as pot-cloth means.",
+  "passage_id": "sambandhasiddhi:samb-p02-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Abiding in that-one-reflection, by one-word-superimposition force — the many too would reach unity — as pot-cloth means.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v13",
+ "sanskrit": "tadekāmarśavartyekaśabdādhyāsavaśādbrajet aneko'pyekatāmartho yathā ghaṭapaṭāviti",
+ "license": "CC BY-NC-SA 4.0"
+}

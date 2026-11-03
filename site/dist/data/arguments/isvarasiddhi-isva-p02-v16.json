@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v16",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v16",
+ "title": "isvarasiddhi — isva-p02-v16",
+ "kind": "entailment",
+ "question": "Helpers, entering as others, reaching material-form — picture effects indeed — like earth-water-juices.",
+ "issue": "Derived from L2 text (no argmap). Helpers, entering as others, reaching material-form — picture effects indeed — like earth-water-juices.",
+ "premises": [
+  {
+   "text": "hetumantaḥpraviśyānye prāpyopādānarūpatām citrayanti hi kāryāṇi bhaumodakarasā iva",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Helpers, entering as others, reaching material-form — picture effects indeed — like earth-water-juices.",
+  "passage_id": "isvarasiddhi:isva-p02-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Helpers, entering as others, reaching material-form — picture effects indeed — like earth-water-juices.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v16",
+ "sanskrit": "hetumantaḥpraviśyānye prāpyopādānarūpatām citrayanti hi kāryāṇi bhaumodakarasā iva",
+ "license": "CC BY-NC-SA 4.0"
+}

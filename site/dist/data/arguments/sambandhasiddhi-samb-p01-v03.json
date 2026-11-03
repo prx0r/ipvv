@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v03",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v03",
+ "title": "sambandhasiddhi — samb-p01-v03",
+ "kind": "entailment",
+ "question": "Awaiting and dependence are no relation for the two inert ones: impossible — even where selfhood is won, they are metaphor, not definition.",
+ "issue": "Derived from L2 text (no argmap). Awaiting and dependence are no relation for the two inert ones: impossible — even where selfhood is won, they are metaphor, not definition.",
+ "premises": [
+  {
+   "text": "apekṣā pāratantryaṃ ca na saṃbandho jaḍātmanoḥ asaṃbhavādātmalābhe'pyupacāro na lakṣaṇā",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Awaiting and dependence are no relation for the two inert ones: impossible — even where selfhood is won, they are metaphor, not definition.",
+  "passage_id": "sambandhasiddhi:samb-p01-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Awaiting and dependence are no relation for the two inert ones: impossible — even where selfhood is won, they are metaphor, not definition.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v03",
+ "sanskrit": "apekṣā pāratantryaṃ ca na saṃbandho jaḍātmanoḥ asaṃbhavādātmalābhe'pyupacāro na lakṣaṇā",
+ "license": "CC BY-NC-SA 4.0"
+}

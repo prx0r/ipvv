@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v03",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v03",
+ "title": "isvarasiddhi — isva-p01-v03",
+ "kind": "entailment",
+ "question": "Conscious-urged — or … […] as pot from [tha]t.",
+ "issue": "Derived from L2 text (no argmap). Conscious-urged — or … […] as pot from [tha]t.",
+ "premises": [
+  {
+   "text": "buddhimatprorito vā.......................................... ..............................................ṭato ghaṭo yathā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Conscious-urged — or … […] as pot from [tha]t.",
+  "passage_id": "isvarasiddhi:isva-p01-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Conscious-urged — or … […] as pot from [tha]t.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v03",
+ "sanskrit": "buddhimatprorito vā.......................................... ..............................................ṭato ghaṭo yathā",
+ "license": "CC BY-NC-SA 4.0"
+}

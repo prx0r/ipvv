@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v21",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v21",
+ "title": "isvarasiddhi — isva-p03-v21",
+ "kind": "entailment",
+ "question": "Hence indeed, for ever-becoming pradhāna, no efficient cause but person-aim-striving.",
+ "issue": "Derived from L2 text (no argmap). Hence indeed, for ever-becoming pradhāna, no efficient cause but person-aim-striving.",
+ "premises": [
+  {
+   "text": "ata eva pradhānasya mahattvapariṇāminaḥ nimittakāraṇaṃ nānyatpuruṣārthodyamādṛte",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Hence indeed, for ever-becoming pradhāna, no efficient cause but person-aim-striving.",
+  "passage_id": "isvarasiddhi:isva-p03-v21"
+ },
+ "unresolved": "",
+ "argument_text": "Hence indeed, for ever-becoming pradhāna, no efficient cause but person-aim-striving.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v21",
+ "sanskrit": "ata eva pradhānasya mahattvapariṇāminaḥ nimittakāraṇaṃ nānyatpuruṣārthodyamādṛte",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v43",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v43",
+ "title": "isvarasiddhi — isva-p05-v43",
+ "kind": "entailment",
+ "question": "What is born, fit — the wise man joins to one another; by this courtesy, puruṣārthatva is spoken of it.",
+ "issue": "Derived from L2 text (no argmap). What is born, fit — the wise man joins to one another; by this courtesy, puruṣārthatva is spoken of it.",
+ "premises": [
+  {
+   "text": "yojayed buddhimāñ janas tenopacāreṇa puruṣārthatvam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v43"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "What is born, fit — the wise man joins to one another; by this courtesy, puruṣārthatva is spoken of it.",
+  "passage_id": "isvarasiddhi:isva-p05-v43"
+ },
+ "unresolved": "",
+ "argument_text": "What is born, fit — the wise man joins to one another; by this courtesy, puruṣārthatva is spoken of it.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v43",
+ "sanskrit": "yojayed buddhimāñ janas tenopacāreṇa puruṣārthatvam",
+ "license": "CC BY-NC-SA 4.0"
+}

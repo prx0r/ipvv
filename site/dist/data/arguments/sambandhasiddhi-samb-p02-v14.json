@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v14",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v14",
+ "title": "sambandhasiddhi — samb-p02-v14",
+ "kind": "entailment",
+ "question": "So there is also another — qualifier-qualified relation, for helping; it serves for knowing.",
+ "issue": "Derived from L2 text (no argmap). So there is also another — qualifier-qualified relation, for helping; it serves for knowing.",
+ "premises": [
+  {
+   "text": "ityasti tāvadanyaśca viśeṣaṇaviśeṣyayoḥ saṃbandha upakārārthaḥ sa jñātumupayujyate",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So there is also another — qualifier-qualified relation, for helping; it serves for knowing.",
+  "passage_id": "sambandhasiddhi:samb-p02-v14"
+ },
+ "unresolved": "",
+ "argument_text": "So there is also another — qualifier-qualified relation, for helping; it serves for knowing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v14",
+ "sanskrit": "ityasti tāvadanyaśca viśeṣaṇaviśeṣyayoḥ saṃbandha upakārārthaḥ sa jñātumupayujyate",
+ "license": "CC BY-NC-SA 4.0"
+}

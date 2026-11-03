@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v15",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v15",
+ "title": "sambandhasiddhi — samb-p02-v15",
+ "kind": "entailment",
+ "question": "Even in manyness there'd be twoness — from double-reflection birth — as the king's horses, chariots, men.",
+ "issue": "Derived from L2 text (no argmap). Even in manyness there'd be twoness — from double-reflection birth — as the king's horses, chariots, men.",
+ "premises": [
+  {
+   "text": "bahutve'pi bhaveddvitvaṃ viśeṣaṇaviśeṣyayoḥ dvivimarśabhuvo yadvadrājño'śvarathapattayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Even in manyness there'd be twoness — from double-reflection birth — as the king's horses, chariots, men.",
+  "passage_id": "sambandhasiddhi:samb-p02-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Even in manyness there'd be twoness — from double-reflection birth — as the king's horses, chariots, men.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v15",
+ "sanskrit": "bahutve'pi bhaveddvitvaṃ viśeṣaṇaviśeṣyayoḥ dvivimarśabhuvo yadvadrājño'śvarathapattayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

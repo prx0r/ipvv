@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v04",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v04",
+ "title": "sambandhasiddhi — samb-p01-v04",
+ "kind": "entailment",
+ "question": "From the teaching that non-beings obtain selfhood, two-seatedness too is abandoned: form-fusion alone thus stands as relation's meaning.",
+ "issue": "Derived from L2 text (no argmap). From the teaching that non-beings obtain selfhood, two-seatedness too is abandoned: form-fusion alone thus stands as relation's meaning.",
+ "premises": [
+  {
+   "text": "asatāmātmalābhokterdviṣṭhataivaṃ ca hīyate rūpasaṃśleṣa evaivaṃ saṃbandhārthaḥ sthitaḥ sa ca",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From the teaching that non-beings obtain selfhood, two-seatedness too is abandoned: form-fusion alone thus stands as relation's meaning.",
+  "passage_id": "sambandhasiddhi:samb-p01-v04"
+ },
+ "unresolved": "",
+ "argument_text": "From the teaching that non-beings obtain selfhood, two-seatedness too is abandoned: form-fusion alone thus stands as relation's meaning.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v04",
+ "sanskrit": "asatāmātmalābhokterdviṣṭhataivaṃ ca hīyate rūpasaṃśleṣa evaivaṃ saṃbandhārthaḥ sthitaḥ sa ca",
+ "license": "CC BY-NC-SA 4.0"
+}

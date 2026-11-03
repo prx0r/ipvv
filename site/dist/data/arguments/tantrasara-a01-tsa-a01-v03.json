@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a01:tsa-a01-v03",
+ "work_id": "tantrasara-a01",
+ "passage_id": "tantrasara-a01:tsa-a01-v03",
+ "title": "tantrasara-a01 — tsa-a01-v03",
+ "kind": "entailment",
+ "question": "This lotus-heart of Abhinavagupta, its narrowness gone by the light shed from the falling feet of Śambhunātha the Sun — gather it for the sake of the Great Lord's worship.",
+ "issue": "Derived from L2 text (no argmap). This lotus-heart of Abhinavagupta, its narrowness gone by the light shed from the falling feet of Śambhunātha the Sun — gather it for the sake of the Great Lord's worship.",
+ "premises": [
+  {
+   "text": "śrīśambhunāthabhāskaracaraṇanipātaprabhāpagatasaṃkocam | abhinavaguptahṛdambujam etad vicinuta maheśapūjanahetoḥ",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a01:tsa-a01-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This lotus-heart of Abhinavagupta, its narrowness gone by the light shed from the falling feet of Śambhunātha the Sun — gather it for the sake of the Great Lord's worship.",
+  "passage_id": "tantrasara-a01:tsa-a01-v03"
+ },
+ "unresolved": "",
+ "argument_text": "This lotus-heart of Abhinavagupta, its narrowness gone by the light shed from the falling feet of Śambhunātha the Sun — gather it for the sake of the Great Lord's worship.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a01:tsa-a01-v03",
+ "sanskrit": "śrīśambhunāthabhāskaracaraṇanipātaprabhāpagatasaṃkocam | abhinavaguptahṛdambujam etad vicinuta maheśapūjanahetoḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

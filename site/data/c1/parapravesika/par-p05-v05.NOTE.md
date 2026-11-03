@@ -17,6 +17,28 @@ Kṣemarāja siddhāntin; asker refutes himself.
 * **pramāṇavarāka** — poor proof (Pradipaka: miserable; rationale: ephemeral/new each moment vs ever-present Knower).
 * **deha-prāṇa-nīla-sukha** — proof's remaining office: body-breath-blue-pleasure knowables.
 
+Full line: pūrvasiddha (pre-proved) · tādrūpya (likeness-form) · svasaṃvedana (self-feeling) · pramāṇavarāka (poor proof) · abhinavābhāsa (fresh flash) · viśrānti (coming-to-rest)
+
 ## CRUXES
 
 * Asker-as-evidence unargued; varāka polemic kept as color.
+
+## FUNCTION
+
+Already-proved → self-answering questions → demotion → Life enthroned.
+
+## LOCAL CONTEXT
+
+Passage 5 of 9: mūla 4 with vṛtti (pramāṇa section; taduktam verse).
+
+## EXPLANATION
+
+Object and subject of proving both removed; questioner turned evidence; jaḍa-asymmetry demotes jurisdiction; ever-lit knower leaves flashes nowhere to rest.
+
+## BOUNDARY
+
+svasaṃvedana unargued; varāka color kept.
+
+## RELATED
+
+p04 (self-shining established); p06 (word-mass I-ness).

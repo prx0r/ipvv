@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v01",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v01",
+ "title": "ajadapramatrsiddhi — ajad-p01-v01",
+ "kind": "entailment",
+ "question": "Just as there is no difference between the real and the unreal in their own nature, so too — this is certain — there is no such difference between the inert and the non-inert.",
+ "issue": "Derived from L2 text (no argmap). Just as there is no difference between the real and the unreal in their own nature, so too — this is certain — there is no such difference between the inert and the non-inert.",
+ "premises": [
+  {
+   "text": "yathā sadasatām naiva viśeṣo 'sti nijātmani jadājaḍānām apy evaṃ nāsty asāv iti niścayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Just as there is no difference between the real and the unreal in their own nature, so too — this is certain — there is no such difference between the inert and the non-inert.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Just as there is no difference between the real and the unreal in their own nature, so too — this is certain — there is no such difference between the inert and the non-inert.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v01",
+ "sanskrit": "yathā sadasatām naiva viśeṣo 'sti nijātmani jadājaḍānām apy evaṃ nāsty asāv iti niścayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

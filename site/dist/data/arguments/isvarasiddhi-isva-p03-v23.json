@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v23",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v23",
+ "title": "isvarasiddhi — isva-p03-v23",
+ "kind": "entailment",
+ "question": "As efficient cause, karma could be original-natured even. Then here — where is Īśvara's business to be conceived?",
+ "issue": "Derived from L2 text (no argmap). As efficient cause, karma could be original-natured even. Then here — where is Īśvara's business to be conceived?",
+ "premises": [
+  {
+   "text": "nimittakāraṇaṃ karma syādapyādyasvabhāvataḥ tato'tra kutra vyāpāra īśvarasyopakalpyatām",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v23"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "As efficient cause, karma could be original-natured even. Then here — where is Īśvara's business to be conceived?",
+  "passage_id": "isvarasiddhi:isva-p03-v23"
+ },
+ "unresolved": "",
+ "argument_text": "As efficient cause, karma could be original-natured even. Then here — where is Īśvara's business to be conceived?",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v23",
+ "sanskrit": "nimittakāraṇaṃ karma syādapyādyasvabhāvataḥ tato'tra kutra vyāpāra īśvarasyopakalpyatām",
+ "license": "CC BY-NC-SA 4.0"
+}

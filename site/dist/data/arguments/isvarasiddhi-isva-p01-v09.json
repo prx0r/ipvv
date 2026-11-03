@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v09",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v09",
+ "title": "isvarasiddhi — isva-p01-v09",
+ "kind": "entailment",
+ "question": "Merely showing pervasion with the conscious alone — by thesis-force, somewhere, someone wise is understood.",
+ "issue": "Derived from L2 text (no argmap). Merely showing pervasion with the conscious alone — by thesis-force, somewhere, someone wise is understood.",
+ "premises": [
+  {
+   "text": "kevalaṃ buddhimanmātravyāptisaṃdarśanādapi pakṣadharmabalāddhīmānkvacitkaścitpratīyate",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Merely showing pervasion with the conscious alone — by thesis-force, somewhere, someone wise is understood.",
+  "passage_id": "isvarasiddhi:isva-p01-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Merely showing pervasion with the conscious alone — by thesis-force, somewhere, someone wise is understood.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v09",
+ "sanskrit": "kevalaṃ buddhimanmātravyāptisaṃdarśanādapi pakṣadharmabalāddhīmānkvacitkaścitpratīyate",
+ "license": "CC BY-NC-SA 4.0"
+}

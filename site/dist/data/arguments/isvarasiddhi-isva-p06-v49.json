@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v49",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v49",
+ "title": "isvarasiddhi — isva-p06-v49",
+ "kind": "entailment",
+ "question": "With need gone, no meeting with spirit again would be; this too is unjust, once body-dwelling mind is born.",
+ "issue": "Derived from L2 text (no argmap). With need gone, no meeting with spirit again would be; this too is unjust, once body-dwelling mind is born.",
+ "premises": [
+  {
+   "text": "arthitvavigamān na syād bhūyaḥ puṃsā samāgamaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v49"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With need gone, no meeting with spirit again would be; this too is unjust, once body-dwelling mind is born.",
+  "passage_id": "isvarasiddhi:isva-p06-v49"
+ },
+ "unresolved": "",
+ "argument_text": "With need gone, no meeting with spirit again would be; this too is unjust, once body-dwelling mind is born.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v49",
+ "sanskrit": "arthitvavigamān na syād bhūyaḥ puṃsā samāgamaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

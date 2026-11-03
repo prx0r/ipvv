@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v06",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v06",
+ "title": "isvarasiddhi — isva-p01-v06",
+ "kind": "entailment",
+ "question": "There is, in function-yoking, among bodies and worlds, this distinct array — never from mere matter.",
+ "issue": "Derived from L2 text (no argmap). There is, in function-yoking, among bodies and worlds, this distinct array — never from mere matter.",
+ "premises": [
+  {
+   "text": "asti cārthakriyāyoge śarīrabhuvanādiṣu saṃniveśaviśeṣo'yamanupādānasaṃbhavī",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "There is, in function-yoking, among bodies and worlds, this distinct array — never from mere matter.",
+  "passage_id": "isvarasiddhi:isva-p01-v06"
+ },
+ "unresolved": "",
+ "argument_text": "There is, in function-yoking, among bodies and worlds, this distinct array — never from mere matter.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v06",
+ "sanskrit": "asti cārthakriyāyoge śarīrabhuvanādiṣu saṃniveśaviśeṣo'yamanupādānasaṃbhavī",
+ "license": "CC BY-NC-SA 4.0"
+}

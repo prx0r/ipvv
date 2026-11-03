@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p03-v20",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p03-v20",
+ "title": "sambandhasiddhi — samb-p03-v20",
+ "kind": "entailment",
+ "question": "So by another chief — what other unity, or by still another — relation-called of the secondary would be — as the king's horse, man.",
+ "issue": "Derived from L2 text (no argmap). So by another chief — what other unity, or by still another — relation-called of the secondary would be — as the king's horse, man.",
+ "premises": [
+  {
+   "text": "tathānyena pradhānena yaikatānyāpareṇa vā saṃbandhākhyā guṇasya syādrājño'śvaḥ puruṣo",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p03-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So by another chief — what other unity, or by still another — relation-called of the secondary would be — as the king's horse, man.",
+  "passage_id": "sambandhasiddhi:samb-p03-v20"
+ },
+ "unresolved": "",
+ "argument_text": "So by another chief — what other unity, or by still another — relation-called of the secondary would be — as the king's horse, man.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p03-v20",
+ "sanskrit": "tathānyena pradhānena yaikatānyāpareṇa vā saṃbandhākhyā guṇasya syādrājño'śvaḥ puruṣo",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v12",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v12",
+ "title": "isvarasiddhi — isva-p02-v12",
+ "kind": "entailment",
+ "question": "Thus the cause: locus-form alone, here distinguished — not by mere variety as svalakṣaṇa-mark.",
+ "issue": "Derived from L2 text (no argmap). Thus the cause: locus-form alone, here distinguished — not by mere variety as svalakṣaṇa-mark.",
+ "premises": [
+  {
+   "text": "evaṃ ca hetuḥ saṃsthānamātramatra viśeṣitam tathā vaicitryamātreṇa na svalakṣaṇalakṣmaṇā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v12"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus the cause: locus-form alone, here distinguished — not by mere variety as svalakṣaṇa-mark.",
+  "passage_id": "isvarasiddhi:isva-p02-v12"
+ },
+ "unresolved": "",
+ "argument_text": "Thus the cause: locus-form alone, here distinguished — not by mere variety as svalakṣaṇa-mark.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v12",
+ "sanskrit": "evaṃ ca hetuḥ saṃsthānamātramatra viśeṣitam tathā vaicitryamātreṇa na svalakṣaṇalakṣmaṇā",
+ "license": "CC BY-NC-SA 4.0"
+}

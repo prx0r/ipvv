@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v19",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v19",
+ "title": "isvarasiddhi — isva-p03-v19",
+ "kind": "entailment",
+ "question": "And of this proved pradhāna there is, by anvaya and the rest — by denial of self-aims and the like, person-aim-ness is proved.",
+ "issue": "Derived from L2 text (no argmap). And of this proved pradhāna there is, by anvaya and the rest — by denial of self-aims and the like, person-aim-ness is proved.",
+ "premises": [
+  {
+   "text": "asti cāsya pradhānasya prasiddhasyānvayādinā svārthatādiniṣedhena sādhitā puruṣārthatā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "And of this proved pradhāna there is, by anvaya and the rest — by denial of self-aims and the like, person-aim-ness is proved.",
+  "passage_id": "isvarasiddhi:isva-p03-v19"
+ },
+ "unresolved": "",
+ "argument_text": "And of this proved pradhāna there is, by anvaya and the rest — by denial of self-aims and the like, person-aim-ness is proved.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v19",
+ "sanskrit": "asti cāsya pradhānasya prasiddhasyānvayādinā svārthatādiniṣedhena sādhitā puruṣārthatā",
+ "license": "CC BY-NC-SA 4.0"
+}

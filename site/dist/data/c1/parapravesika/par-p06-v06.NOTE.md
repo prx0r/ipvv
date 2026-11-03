@@ -16,6 +16,28 @@ Kṣemarāja siddhāntin grounding.
 * **pūrṇāhantāparāmarśa** — full-I-grasp: essence-cause of plurality.
 * **vargīkaraṇanimitta** — family-making-cause: definition's engine.
 
+Full line: śabdarāśi (sound-mass) · pūrṇāhantāparāmarśa (full-I-grasp) · vargīkaraṇanimitta (family-making-cause) · ṣaṭtriṃśat (thirty-six)
+
 ## CRUXES
 
 * mātṛkā assumed; promissory list honored in p07–p08.
+
+## FUNCTION
+
+Ground → definition → bare list.
+
+## LOCAL CONTEXT
+
+Passage 6 of 9: mūla 5 with vṛtti (śabdarāśi; tattva definition) + 36-name list.
+
+## EXPLANATION
+
+Phonemic fullness as essence-cause; freedom as facelessness; double example defines; list defers marks.
+
+## BOUNDARY
+
+mātṛkā assumed; list promissory (paid in p07–p08).
+
+## RELATED
+
+p05 (I-ness); p07–p08 (marks paid).

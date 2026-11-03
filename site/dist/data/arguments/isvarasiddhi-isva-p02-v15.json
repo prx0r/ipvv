@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v15",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v15",
+ "title": "isvarasiddhi — isva-p02-v15",
+ "kind": "entailment",
+ "question": "Here is the reply: a strange way of helpers is seen — some would somehow join with materials — a joining.",
+ "issue": "Derived from L2 text (no argmap). Here is the reply: a strange way of helpers is seen — some would somehow join with materials — a joining.",
+ "premises": [
+  {
+   "text": "atrocyate gatiścitrā dṛśyate sahakāriṇām kecitkathaṃcideveyurupādānaiḥ samāgamam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Here is the reply: a strange way of helpers is seen — some would somehow join with materials — a joining.",
+  "passage_id": "isvarasiddhi:isva-p02-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Here is the reply: a strange way of helpers is seen — some would somehow join with materials — a joining.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v15",
+ "sanskrit": "atrocyate gatiścitrā dṛśyate sahakāriṇām kecitkathaṃcideveyurupādānaiḥ samāgamam",
+ "license": "CC BY-NC-SA 4.0"
+}

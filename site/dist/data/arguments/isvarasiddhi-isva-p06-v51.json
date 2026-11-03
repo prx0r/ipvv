@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v51",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v51",
+ "title": "isvarasiddhi — isva-p06-v51",
+ "kind": "entailment",
+ "question": "There'd be acts even of spirit-distinction-knowers, from compassion; if not from passion — thus mokṣa from passion's exhaustion.",
+ "issue": "Derived from L2 text (no argmap). There'd be acts even of spirit-distinction-knowers, from compassion; if not from passion — thus mokṣa from passion's exhaustion.",
+ "premises": [
+  {
+   "text": "syur jñātapuṃvivekānāṃ karmāṇy api kṛpāditaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v51"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "There'd be acts even of spirit-distinction-knowers, from compassion; if not from passion — thus mokṣa from passion's exhaustion.",
+  "passage_id": "isvarasiddhi:isva-p06-v51"
+ },
+ "unresolved": "",
+ "argument_text": "There'd be acts even of spirit-distinction-knowers, from compassion; if not from passion — thus mokṣa from passion's exhaustion.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v51",
+ "sanskrit": "syur jñātapuṃvivekānāṃ karmāṇy api kṛpāditaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

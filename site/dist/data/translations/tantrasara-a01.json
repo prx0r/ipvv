@@ -1,0 +1,157 @@
+[
+ {
+  "chunk": "tsa-a01-v01",
+  "verses": "1",
+  "sanskrit": "vimalakalāśrayābhinavasṛṣṭimahā jananī bharitatanuś ca pañcamukhaguptarucir janakaḥ | tadubhayayāmalasphuritabhāvavisargamayaṃ hṛdayam anuttarāmṛtakulaṃ mama saṃsphuratāt",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## tsa-a01-v01 (1)\nstainless-art-abode-new-creation-great / mother / full-bodied / and / five-faced-hidden-splendor / father / of-the-two-their-yamal-burst-forth-being-emission-natured / heart / unsurpassed-deathless-family / for-me / may-it-flash // tsa-a01",
+  "l2": "Mother — stainless art's abode, great new creation, full-bodied; Father — his five faces' splendor hidden: may the Heart, born of the surging nature of their embrace, the deathless kin beyond the highest, flash forth for me.",
+  "source_file": "tantrasara.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "gretil_tantrasara_clean.txt (Nirnaya Sagara 1918, GRETIL)",
+   "source_lines": [
+    6,
+    7
+   ]
+  },
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "license": "FREE",
+  "l3": "Mother of stainless art, of new great making, full-bodied one,\nfive-faced Father, splendor hidden: may the Heart — deathless kin beyond all — flash forth for me.",
+  "l4": "Mother of stainless art, of new great making, full-bodied one —\nfive-faced Father, splendor hidden — may the Heart flash forth, deathless kin beyond all, for me.",
+  "source_lines": 6,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 8
+ },
+ {
+  "chunk": "tsa-a01-v02",
+  "verses": "2",
+  "sanskrit": "vitatas tantrāloko vigāhituṃ naiva śakyate sarvaiḥ | ṛjuvacanaviracitam idaṃ tu tantrasāraṃ tataḥ śṛṇuta",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## tsa-a01-v02 (2)\nvast / Tantrāloka / to-be-plunged / not-possible / by-all / in-plain-words-composed / this / but / Tantrasāra / therefore / listen // tsa-a01",
+  "l2": "The Tantrāloka is vast, and no one at all can dive it; so hear this Tantrasāra, composed in plain words.",
+  "source_file": "tantrasara.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "gretil_tantrasara_clean.txt (Nirnaya Sagara 1918, GRETIL)",
+   "source_lines": [
+    9,
+    10
+   ]
+  },
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "license": "FREE",
+  "l3": "The Tantrāloka spreads wide, and none at all can dive it —\nso hear this Tantrasāra, in plain words composed.",
+  "l4": "Wide spreads the Tantrāloka — and none at all can dive;\nso hear this Tantrasāra, in plain words composed.",
+  "source_lines": 9,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 7
+ },
+ {
+  "chunk": "tsa-a01-v03",
+  "verses": "3",
+  "sanskrit": "śrīśambhunāthabhāskaracaraṇanipātaprabhāpagatasaṃkocam | abhinavaguptahṛdambujam etad vicinuta maheśapūjanahetoḥ",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## tsa-a01-v03 (3)\nof-Śambhunātha-Bhāskara / By-the-fall-of-the-feet's-splendor / with-gone-contraction / Abhinavagupta's-heart-lotus / this / pick / for-Maheśa-worship's-sake // tsa-a01",
+  "l2": "This lotus-heart of Abhinavagupta, its narrowness gone by the light shed from the falling feet of Śambhunātha the Sun — gather it for the sake of the Great Lord's worship.",
+  "source_file": "tantrasara.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "gretil_tantrasara_clean.txt (Nirnaya Sagara 1918, GRETIL)",
+   "source_lines": [
+    12,
+    13
+   ]
+  },
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "license": "FREE",
+  "l3": "Heart-lotus of Abhinavagupta, uncontracted\nby Śambhunātha Sun's feet-fall light — gather it for Maheśa-worship.",
+  "l4": "Heart-lotus of Abhinavagupta, uncontracted —\nby Śambhunātha Sun's feet-fall light: gather it for Maheśa-worship.",
+  "source_lines": 12,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 4
+ },
+ {
+  "chunk": "tsa-a01-v04",
+  "verses": "4",
+  "sanskrit": "iha jñānaṃ mokṣakāraṇaṃ bandhanimittasya ajñānasya virodhakatvāt dvividhaṃ ca ajñānaṃ buddhigataṃ pauruṣaṃ ca tatra buddhigatam aniścayasvabhāvaṃ viparītaniścayātmakaṃ ca | pauruṣaṃ tu vikalpasvabhāvaṃ saṃkucitaprathātmakaṃ tad eva ca mūlakāraṇaṃ saṃsārasya iti vakṣyāmo malanirṇaye | tatra pauruṣam ajñānaṃ dīkṣādinā nivartetāpi kiṃ tu dīkṣāpi buddhigate anadhyavasāyātmake ajñāne sati na sambhavati heyopādeyaniścayapūrvakatvāt tattvaśuddhiśivayojanārūpāyā dīkṣāyā iti | tatra adhyavasāyātmakaṃ buddhiniṣṭham eva jñānaṃ pradhānam tad eva ca abhyasyamānaṃ pauruṣam api ajñānaṃ nihanti vikalpasaṃvidabhyāsasya avikalpāntatāparyavasānāt | vikalpāsaṃkucitasaṃvitprakāśarūpo hy ātmā śivasvabhāva iti sarvathā samastavastuniṣṭhaṃ samyaṅniścayātmakaṃ jñānam upādeyam | tac ca śāstrapūrvakam | śāstraṃ ca parameśvarabhāṣitam eva pramāṇam | aparaśāstroktānām arthānāṃ tatra vaiviktyena abhyupagamāt tadarthātiriktayuktisiddhanirūpaṇāc ca tena aparāgamoktaṃ jñānaṃ tāvata eva bandhāt vimocakam na sarvasmāt sarvasmāt tu vimocakaṃ parameśvaraśāstraṃ pañcasrotomayaṃ daśāṣṭādaśavasvaṣṭabhedabhinnam | tato 'pi sarvasmāt sāraṃ ṣaḍardhaśāstrāṇi | tebhyo 'pi mālinīvijayam | tadantargataś cārthaḥ saṃkalayyāśakyo nirūpayitum | na ca anirūpitavastutattvasya muktatvaṃ mocakatvaṃ vā śuddhasya jñānasyaiva tathārūpatvāt iti | svabhyastajñānamūlatvāt parapuruṣārthasya tatsiddhaye idam ārabhyate | ajñānaṃ kila bandhahetur uditaḥ śāstre malaṃ tat smṛtaṃ pūrṇajñānakalodaye tad akhilaṃ nirmūlatāṃ gacchati | dhvastāśeṣamalātmasaṃvidudaye mokṣaś ca tenāmunā śāstreṇa prakaṭīkaromi nikhilaṃ yaj jñeyatattvaṃ bhavet",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## tsa-a01-v04 (4)\nHere / knowledge / liberation's-cause / the-cause-of-bondage / of-ignorance / through-being-the-opponent / Twofold / and / ignorance / intellect-located / personal / Therein / the-intellect-located / doubt-natured / wrong-conviction-natured / The-personal / thought-natured / contracted-manifestation-natured / that-itself / the-root-cause / of-saṃsāra / as / we-shall-teach / under-stain-determination / Therein / personal-ignorance / by-initiation-and-the-rest / may-be-removed / but / initiation-itself / intellect-located-non-determination-natured-ignorance / while-there-is / is-not-possible / since-initiation-is-preceded-by-determination-of-shun-and-take / of-the-form-of-principle-purification-and-Śiva-joining / Hence / therein / determinative / intellect-abiding / knowledge / principal / that-itself / being-practiced / personal-ignorance-too / kills / since-thought-consciousness-practice-ends-in-thought-free / thought-uncontracted-consciousness-light-natured / For-the-self / Śiva-natured / Hence / in-all-cases / all-thing-directed / right-determination-natured / knowledge / to-be-adopted / And-that / scripture-preceded / Scripture / and / only-as-Lord-spoken / authority / since-others'-scripture-taught-things-are-accepted-there-discriminatively / since-there-is-reason-proved-exposition-beyond-their-content / Hence / other-āgama-taught-knowledge / only-so-far / from-bondage / liberates / not-from-all / from-all / liberating / the-Lord's-scripture / five-streamed / ten-eighteen-eight-etc.-differentiated / Than-all-that / the-essence / the-sixfold-scriptures / than-those / Mālinīvijaya / its-contained-content / gathered / impossible-to-expound / Nor / freedom / or-liberating-power / for-one-whose-thing-nature-is-unexpounded / since-only-pure-knowledge-is-so-natured / Since-the-supreme-goal-is-rooted-in-well-practiced-knowledge / for-its-success / this-is-begun / Ignorance / indeed / bondage-cause / declared / in-scripture / that / called-stain / at-the-rise-of-the-digit-of-full-knowledge / that-entire / goes-to-rootlessness / When-self-consciousness-rises-with-destroyed-remainder-less-stains / liberation / hence / by-this-man / with-scripture / I-reveal / entirely / whatever-is-knowable-reality // tsa-a01",
+  "l2": "Here knowledge is the cause of liberation, since it opposes ignorance, the cause of bondage. Ignorance is twofold: located in the intellect, and personal. The intellect-located is doubt-natured and wrong-conviction-natured. The personal is thought-natured and contracted-manifestation-natured — and that itself is the root cause of saṃsāra, as will be taught under the determination of the stains. There, personal ignorance may be removed by initiation and the rest — but initiation itself is impossible while intellect-located, determination-less ignorance persists, since initiation is preceded by determination of shun-and-take and takes the form of principle-purification and Śiva-joining. Hence determinative, intellect-abiding knowledge is principal; practiced, that itself kills personal ignorance too, since thought-consciousness-practice ends in thought-free. For the self — consciousness-light uncontracted by thought — is Śiva-natured. Hence in all cases adopt all-thing-directed right-determination knowledge. And that is scripture-led: scripture authoritative only as Lord-spoken, since others' scripture-taught things are accepted there discriminatively and since there is reason-proved exposition beyond their content. Hence other-āgama-taught knowledge liberates only so far from bondage, not from all; from all liberates the Lord's scripture, five-streamed, ten-eighteen-eight-differentiated. Than all that, the essence is the sixfold scriptures; than those, the Mālinīvijaya — whose contained content, gathered, is impossible to expound. Nor is there freedom or liberating power for one whose thing-nature is unexpounded, since only pure knowledge is so-natured. Since the supreme goal is rooted in well-practiced knowledge, for its success this is begun. Ignorance, declared bondage-cause in scripture, is called stain; at the rise of the digit of full knowledge, all that goes rootless. When self-consciousness rises with remainderless destroyed stains — liberation too. Hence by this man, with scripture, I reveal entirely whatever knowable reality there may be.",
+  "source_file": "tantrasara.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "gretil_tantrasara_clean.txt (Nirnaya Sagara 1918, GRETIL)",
+   "source_lines": [
+    15,
+    30
+   ]
+  },
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "license": "FREE",
+  "l3": "Knowledge frees, opposing bondage-cause ignorance, twofold:\nintellect-seated doubt and wrong-conviction, person-seated churning thought —\nthat last, saṃsāra's root. Initiation may wash the personal,\nbut needs decided shun-and-take; so deciding knowledge leads,\nand practiced, kills the personal too — practice ends thought-free.\nPure knowing only: Lord-spoken scripture frees altogether.",
+  "l4": "Knowledge frees — opposing bondage-cause ignorance, twofold:\nintellect-seated doubt and wrong-conviction, person-seated churning thought —\nthat last, saṃsāra's root. Initiation may wash the personal —\nbut needs decided shun-and-take; so deciding knowledge leads,\nand practiced, kills the personal too — practice ends thought-free.\nPure knowing only — Lord-spoken scripture frees altogether.",
+  "source_lines": 15,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
+ },
+ {
+  "chunk": "tsa-a01-v05",
+  "verses": "5",
+  "sanskrit": "tatra iha svabhāva eva paramopādeyaḥ sa ca sarvabhāvānāṃ prakāśarūpa eva aprakāśasya svabhāvatānupapatteḥ sa ca nānekaḥ prakāśasya taditarasvabhāvānupraveśāyoge svabhāvabhedābhāvāt deśakālāv api ca asya na bhedakau tayor api tatprakāśasvabhāvatvāt iti eka eva prakāśaḥ sa eva ca saṃvit arthaprakāśarūpā hi saṃvit iti sarveṣām atra avivāda eva | sa ca prakāśo na paratantraḥ prakāśyataiva hi pāratantryam prakāśyatā ca prakāśāntarāpekṣitaiva na ca prakāśāntaraṃ kiṃcit asti iti svatantra ekaḥ prakāśaḥ svātantryād eva ca deśakālākārāvacchedavirahāt vyāpako nityaḥ sarvākāranirākārasvabhāvaḥ tasya ca svātantryam ānandaśaktiḥ taccamatkāra icchāśaktiḥ prakāśarūpatā cicchaktiḥ āmarśātmakatā jñānaśaktiḥ sarvākārayogitvaṃ kriyāśaktiḥ ity evaṃ mukhyābhiḥ śaktibhiḥ yukto 'pi vastuta icchājñānakriyāśaktiyuktaḥ anavacchinnaḥ prakāśo nijānandaviśrāntaḥ śivarūpaḥ sa eva svātantryāt ātmānaṃ saṃkucitam avabhāsayan aṇur iti ucyate | punar api ca svātmānaṃ svatantratayā prakāśayati yena anavacchinnaprakāśaśivarūpatayaiva prakāśate | tatrāpi svātantryavaśāt anupāyam eva svātmānaṃ prakāśayati sopāyaṃ vā sopāyatve 'pi icchā vā jñānaṃ vā kriyā vā abhyupāya iti traividhyaṃ śāmbhavaśāktāṇavabhedena samāveśasya tatra caturvidham api etad rūpaṃ krameṇa atra upadiśyate | ātmā prakāśavapur eṣa śivaḥ svatantraḥ svātantryanarmarabhasena nijaṃ svarūpam | saṃchādya yat punar api prathayeta pūrṇaṃ tac ca kramākramavaśād athavā tribhedāt",
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## tsa-a01-v05 (5)\nTherein-here / own-nature-alone / supremely-adoptable / it / light-nature / of-all-things / since-non-light-cannot-be-nature / And-it / not-many / since-no-entry-of-other-natures-into-light / since-no-difference-of-nature / Place-and-time-too / of-it not-dividers / since-they-too-are-light-natured / Hence / one-light-alone / it-alone / consciousness / since-consciousness-is-of-the-nature-of-thing-manifestation / for-all / no-dispute / And-that-light / not-dependent / since-being-illumined-is-dependence / since-illuminedness-needs-another-light / since-no-other-light-at-all-exists / Hence / autonomous / one-light / through-autonomy-alone / free-from-limitation-by-place-time-form / all-pervading / eternal / all-form-formless-natured / Of-it / autonomy / bliss-power / its-wonder / will-power / light-nature / consciousness-power / grasp-nature / knowledge-power / all-form-fitness / action-power / Thus / though-endowed-with-chief-powers / really / will-knowledge-action-powered / unlimited / light / resting-in-own-bliss / Śiva-natured / He-alone / through-autonomy / manifesting-self-contracted / is-called / atom / Again / own-self / autonomously / manifests / whereby / as-unlimited-light-Śiva-nature-itself / shines / There-too / through-autonomy / without-means / own-self / manifests / or-with-means / even-with-means / will / knowledge / action / approach / hence / threefoldness / by-śāmbhava-śākta-āṇava-distinction / of-immersion / Therein / all-four-forms-too / in-order / here / are-taught / The-self / light-bodied / this / Śiva / autonomous / by-autonomy-play's-force / own-nature / having-hidden / which / again / would-spread-forth / full / that / by-sequence-nosequence-force / or / by-threefoldness // tsa-a01",
+  "l2": "Here own-nature alone is supremely adoptable: light-nature of all things, since non-light cannot be nature. And it is not many, since no other natures enter light and natures do not differ; place and time too do not divide it, since they too are light-natured. Hence one light alone — and it is consciousness, since consciousness is of the nature of thing-manifestation; here for all there is no dispute. And that light is not dependent, since being-illumined is dependence, since illuminedness needs another light, and since no other light at all exists. Hence autonomous is the one light, and through autonomy alone, free from limitation by place, time, and form, all-pervading, eternal, of all-form-formless-nature. Of it autonomy is bliss-power; its wonder is will-power; light-nature is consciousness-power; grasp is knowledge-power; all-form-fitness is action-power. Thus though endowed with chief powers, really will-knowledge-action-powered, unlimited, the light resting in its own bliss is Śiva-natured. He alone, through autonomy manifesting self contracted, is called atom. And again he manifests own self autonomously — whereby he shines as unlimited-light-Śiva-nature itself. There too, through autonomy, he manifests own self without means or with means; and with means — will, knowing, or action as approach: hence threefoldness of immersion by śāmbhava-śākta-āṇava distinction. Therein all four forms too, in order, here are taught. The self, light-bodied, this Śiva, autonomous — by autonomy-play's force having hidden own nature, which again would spread forth full, that by sequence-nosequence force or threefold.",
+  "source_file": "tantrasara.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "gretil_tantrasara_clean.txt (Nirnaya Sagara 1918, GRETIL)",
+   "source_lines": [
+    32,
+    38
+   ]
+  },
+  "immutable_id": "pt:pid:ts:a01:3e3fa21b6ac3",
+  "license": "FREE",
+  "l3": "Own-nature alone most adoptable: light-nature of all, since non-light cannot be nature — one, autonomous, everywhere.\nIts freedom is bliss, its wonder will, its light awareness, its grasp knowing, all-form-fitness action;\nresting in own bliss, Śiva — contracting, called atom; showing again, with means or without,\nwill, knowing, action: three immersions, four forms here taught — hiding his own nature, to spread it full.",
+  "l4": "Own-nature alone most adoptable — light-nature of all, since non-light cannot be nature;\none, autonomous, everywhere. Its freedom bliss, its wonder will,\nits light awareness, its grasp knowing, all-form-fitness action —\nresting in own bliss, Śiva — contracting, called atom; showing again, with means or without, threefold, fourfold, to spread it full.",
+  "source_lines": 15,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL Nirnaya Sagara 1918 KSTS 17",
+  "match_words": 12
+ }
+]

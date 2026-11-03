@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p03-v22",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p03-v22",
+ "title": "sambandhasiddhi — samb-p03-v22",
+ "kind": "entailment",
+ "question": "Not — but those, though called so erred — all even — moment by moment grounded in endless-awareness reflection called self-awareness.",
+ "issue": "Derived from L2 text (no argmap). Not — but those, though called so erred — all even — moment by moment grounded in endless-awareness reflection called self-awareness.",
+ "premises": [
+  {
+   "text": "na paraṃ tāstathā bhrāntāḥ sarvā api pratikṣaṇāt svasaṃvitsaṃjñakānantacidvimarśapratiṣṭhitāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p03-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not — but those, though called so erred — all even — moment by moment grounded in endless-awareness reflection called self-awareness.",
+  "passage_id": "sambandhasiddhi:samb-p03-v22"
+ },
+ "unresolved": "",
+ "argument_text": "Not — but those, though called so erred — all even — moment by moment grounded in endless-awareness reflection called self-awareness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p03-v22",
+ "sanskrit": "na paraṃ tāstathā bhrāntāḥ sarvā api pratikṣaṇāt svasaṃvitsaṃjñakānantacidvimarśapratiṣṭhitāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v33",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v33",
+ "title": "isvarasiddhi — isva-p04-v33",
+ "kind": "entailment",
+ "question": "Making by rule would be wondrous, kind-formed — if from potter-helping-mereness a pot is born.",
+ "issue": "Derived from L2 text (no argmap). Making by rule would be wondrous, kind-formed — if from potter-helping-mereness a pot is born.",
+ "premises": [
+  {
+   "text": "racanā niyamena syādvicitrā jātirūpiṇī kulālasahakāritvamātrāccejjāyate ghaṭaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v33"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Making by rule would be wondrous, kind-formed — if from potter-helping-mereness a pot is born.",
+  "passage_id": "isvarasiddhi:isva-p04-v33"
+ },
+ "unresolved": "",
+ "argument_text": "Making by rule would be wondrous, kind-formed — if from potter-helping-mereness a pot is born.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v33",
+ "sanskrit": "racanā niyamena syādvicitrā jātirūpiṇī kulālasahakāritvamātrāccejjāyate ghaṭaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

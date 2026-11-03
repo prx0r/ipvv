@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p02-v16",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p02-v16",
+ "title": "ajadapramatrsiddhi — ajad-p02-v16",
+ "kind": "entailment",
+ "question": "Twofold is this same self: measured and unmeasured — by breath and the rest restrained, an atom; as supreme self, unbroken.",
+ "issue": "Derived from L2 text (no argmap). Twofold is this same self: measured and unmeasured — by breath and the rest restrained, an atom; as supreme self, unbroken.",
+ "premises": [
+  {
+   "text": "dvidhā sa eṣa evātmā mito 'parimitas tathā prāṇādinā niruddho 'ṇuḥ paramātmā tv akhaṇḍitaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p02-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Twofold is this same self: measured and unmeasured — by breath and the rest restrained, an atom; as supreme self, unbroken.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p02-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Twofold is this same self: measured and unmeasured — by breath and the rest restrained, an atom; as supreme self, unbroken.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p02-v16",
+ "sanskrit": "dvidhā sa eṣa evātmā mito 'parimitas tathā prāṇādinā niruddho 'ṇuḥ paramātmā tv akhaṇḍitaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

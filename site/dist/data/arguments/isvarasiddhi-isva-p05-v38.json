@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v38",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v38",
+ "title": "isvarasiddhi — isva-p05-v38",
+ "kind": "entailment",
+ "question": "Even of spirit, even of pradhāna, it would be unspeakable — of the mere; yet mind's function, or intellect's, is individually conditioned.",
+ "issue": "Derived from L2 text (no argmap). Even of spirit, even of pradhāna, it would be unspeakable — of the mere; yet mind's function, or intellect's, is individually conditioned.",
+ "premises": [
+  {
+   "text": "avācyā sā kevalasya tu ekaikasaṃskṛtā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v38"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Even of spirit, even of pradhāna, it would be unspeakable — of the mere; yet mind's function, or intellect's, is individually conditioned.",
+  "passage_id": "isvarasiddhi:isva-p05-v38"
+ },
+ "unresolved": "",
+ "argument_text": "Even of spirit, even of pradhāna, it would be unspeakable — of the mere; yet mind's function, or intellect's, is individually conditioned.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v38",
+ "sanskrit": "avācyā sā kevalasya tu ekaikasaṃskṛtā",
+ "license": "CC BY-NC-SA 4.0"
+}

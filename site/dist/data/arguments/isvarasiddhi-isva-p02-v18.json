@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v18",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v18",
+ "title": "isvarasiddhi — isva-p02-v18",
+ "kind": "entailment",
+ "question": "There, if the conscious one's spread is imagined in name — not by that alone does order hold everywhere. So it stands.",
+ "issue": "Derived from L2 text (no argmap). There, if the conscious one's spread is imagined in name — not by that alone does order hold everywhere. So it stands.",
+ "premises": [
+  {
+   "text": "tatra buddhimato nāma prasaro yadi kalpyate na tāvataiva sarvatra vyavasthā ghaṭate tathā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "There, if the conscious one's spread is imagined in name — not by that alone does order hold everywhere. So it stands.",
+  "passage_id": "isvarasiddhi:isva-p02-v18"
+ },
+ "unresolved": "",
+ "argument_text": "There, if the conscious one's spread is imagined in name — not by that alone does order hold everywhere. So it stands.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v18",
+ "sanskrit": "tatra buddhimato nāma prasaro yadi kalpyate na tāvataiva sarvatra vyavasthā ghaṭate tathā",
+ "license": "CC BY-NC-SA 4.0"
+}

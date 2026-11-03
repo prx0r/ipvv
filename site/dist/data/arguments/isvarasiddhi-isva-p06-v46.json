@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v46",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v46",
+ "title": "isvarasiddhi — isva-p06-v46",
+ "kind": "entailment",
+ "question": "From change, that One is longed for, for all spirits — and yet body's and earth's and the rest's change is by nature.",
+ "issue": "Derived from L2 text (no argmap). From change, that One is longed for, for all spirits — and yet body's and earth's and the rest's change is by nature.",
+ "premises": [
+  {
+   "text": "pariṇāmāt tad ekaṃ hi sarvān puṃsaḥ pratīṣyate",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v46"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From change, that One is longed for, for all spirits — and yet body's and earth's and the rest's change is by nature.",
+  "passage_id": "isvarasiddhi:isva-p06-v46"
+ },
+ "unresolved": "",
+ "argument_text": "From change, that One is longed for, for all spirits — and yet body's and earth's and the rest's change is by nature.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v46",
+ "sanskrit": "pariṇāmāt tad ekaṃ hi sarvān puṃsaḥ pratīṣyate",
+ "license": "CC BY-NC-SA 4.0"
+}
