@@ -212,8 +212,11 @@ export async function handleScholar(request,env,uid,cors,callModel){
       return json({deleted:true},200,cors);
     }
     if(path==='/api/scholar/reviews'&&request.method==='GET'){
-      const {results}=await env.DB.prepare('SELECT * FROM scholar_reviews WHERE owner_id=? OR reviewer_id=? ORDER BY created_at DESC LIMIT 200').bind(uid,uid).all();
-      return json({reviews:(results||[]).map(r=>({...r,snapshot:JSON.parse(r.snapshot_json),snapshot_json:undefined}))},200,cors);
+      const {results}=await env.DB.prepare(`SELECT r.*,p.rubric_json,COALESCE(p.ai_consent,0) AS ai_consent
+        FROM scholar_reviews r LEFT JOIN scholar_review_reports p ON p.review_id=r.id
+        WHERE r.owner_id=? OR r.reviewer_id=? ORDER BY r.created_at DESC LIMIT 200`).bind(uid,uid).all();
+      return json({reviews:(results||[]).map(r=>({...r,snapshot:JSON.parse(r.snapshot_json),snapshot_json:undefined,
+        rubric:r.rubric_json?JSON.parse(r.rubric_json):{},rubric_json:undefined,ai_consent:!!r.ai_consent}))},200,cors);
     }
     if(path==='/api/scholar/reviews'&&request.method==='POST'){
       const d=await body(request);
@@ -229,13 +232,45 @@ export async function handleScholar(request,env,uid,cors,callModel){
     }
     const rm=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/decision$/);
     if(rm&&request.method==='POST'){
-      const d=await body(request);
+      const d=await body(request), rubric=d.rubric||{};
       if(!['ACCEPT','REQUEST_CHANGES','COMMENT'].includes(d.decision)||typeof d.reasoning!=='string'||!d.reasoning.trim()||d.reasoning.length>10000)
         return json({error:'A decision and reasoning are required.'},400,cors);
-      const result=await env.DB.prepare('UPDATE scholar_reviews SET decision=?,reasoning=?,decided_at=? WHERE id=? AND reviewer_id=? AND decision IS NULL')
-        .bind(d.decision,d.reasoning,new Date().toISOString(),rm[1],uid).run();
+      if(!rubric||typeof rubric!=='object'||Array.isArray(rubric)||
+          Object.entries(rubric).some(([key,value])=>!['strengths','argument','evidence','clarity','suggestions'].includes(key)||typeof value!=='string'||value.length>4000)||
+          (d.ai_consent!==undefined&&typeof d.ai_consent!=='boolean'))
+        return json({error:'Invalid review report.'},400,cors);
+      const now=new Date().toISOString();
+      const result=await env.DB.prepare(`INSERT OR IGNORE INTO scholar_review_reports
+        (review_id,reviewer_id,decision,summary,rubric_json,ai_consent,created_at,consent_updated_at)
+        SELECT id,reviewer_id,?,?,?,?,?,? FROM scholar_reviews WHERE id=? AND reviewer_id=? AND decision IS NULL`)
+        .bind(d.decision,d.reasoning,JSON.stringify(rubric),d.ai_consent?1:0,now,now,rm[1],uid).run();
       if(!result.meta?.changes)return json({error:'Review not found or already decided.'},404,cors);
       return json({id:rm[1],decision:d.decision},200,cors);
+    }
+    const consent=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/ai-consent$/);
+    if(consent&&request.method==='POST'){
+      const d=await body(request);if(typeof d.allow!=='boolean')return json({error:'Choose a consent setting.'},400,cors);
+      const result=await env.DB.prepare('UPDATE scholar_review_reports SET ai_consent=?,consent_updated_at=? WHERE review_id=? AND reviewer_id=?')
+        .bind(d.allow?1:0,new Date().toISOString(),consent[1],uid).run();
+      if(!result.meta?.changes)return json({error:'Review not found.'},404,cors);
+      return json({id:consent[1],ai_consent:d.allow},200,cors);
+    }
+    const thread=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/messages$/);
+    if(thread&&['GET','POST'].includes(request.method)){
+      const review=await env.DB.prepare('SELECT owner_id,reviewer_id FROM scholar_reviews WHERE id=?').bind(thread[1]).first();
+      if(!review||(review.owner_id!==uid&&review.reviewer_id!==uid))return json({error:'Review not found.'},404,cors);
+      if(request.method==='GET'){
+        const offset=Number(url.searchParams.get('offset')||0);
+        if(!Number.isSafeInteger(offset)||offset<0)return json({error:'Invalid discussion page.'},400,cors);
+        const {results}=await env.DB.prepare('SELECT id,author_id,body,created_at FROM scholar_review_messages WHERE review_id=? ORDER BY created_at,id LIMIT 201 OFFSET ?').bind(thread[1],offset).all();
+        const rows=results||[];return json({messages:rows.slice(0,200),next_offset:rows.length>200?offset+200:null},200,cors);
+      }
+      const d=await body(request);
+      if(typeof d.text!=='string'||!d.text.trim()||d.text.length>10000)return json({error:'Write a message of at most 10000 characters.'},400,cors);
+      const id='message:'+crypto.randomUUID(),now=new Date().toISOString();
+      await env.DB.prepare('INSERT INTO scholar_review_messages (id,review_id,author_id,body,created_at) VALUES (?,?,?,?,?)')
+        .bind(id,thread[1],uid,d.text,now).run();
+      return json({id,created_at:now},201,cors);
     }
     if(path==='/api/scholar/signoffs'&&request.method==='POST'){
       const d=await body(request);

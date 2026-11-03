@@ -6,7 +6,8 @@ gates, start with `SCHOLAR-RELEASE-HANDOFF.md` in this directory.
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
 reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
-and `migrations/0004_scholar_ai_limits.sql` afterwards; all are additive and repeatable.
+`migrations/0004_scholar_ai_limits.sql` and `migrations/0005_scholar_peer_review.sql`
+afterwards; all are additive and repeatable.
 Authenticated calls use the existing `svsess` cookie, require a strong session
 secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store`.
 
@@ -17,7 +18,9 @@ secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store
 | `DELETE /api/scholar/documents/<id>` | Delete that account's specified revision; shared reviews remain |
 | `GET /api/scholar/documents/<id>/history?before=<revision>` | Account-private revision snapshots, newest first, 50 per page |
 | `GET/POST /api/scholar/reviews` | List or privately share an immutable saved snapshot with another account ID |
-| `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records one decision and reasoning |
+| `POST /api/scholar/reviews/<id>/decision` | Selected reviewer records one decision, reasoning and optional structured rubric |
+| `GET/POST /api/scholar/reviews/<id>/messages` | Private discussion between the author and the invited reviewer |
+| `POST /api/scholar/reviews/<id>/ai-consent` | The reviewer can grant or revoke permission for their report to be sent to an AI provider |
 | `POST /api/scholar/signoffs` | Author approves exact saved revision and declares rights; record remains private |
 | `POST /api/scholar/submit` | Explicitly submit an unchanged signed revision to the authenticated Git bridge |
 | `POST /api/scholar/assist` | With explicit consent, request a grounded Qwen draft; optionally use only the account's own examples |
@@ -31,6 +34,10 @@ ReviewEvent/PromotionEvent Scheme B in translation-work `SCHOLAR.md`. Rights are
 contributor declaration, not proof of ownership or legal copyright.
 Private peer-review decisions remain in D1 and are not automatically exported into
 Git; the bridge records the author's own approval only.
+Reviewers may separately opt in to AI use of their report and later revoke that
+permission. Discussion messages are never included automatically. A review concerns
+the exact snapshot hash shared with the reviewer; it does not assert independently
+verified identity, independence, or academic endorsement.
 
 Successful private saves create a snapshot atomically using D1 triggers. Restoring
 an older snapshot is an ordinary new revision: it does not replace history and it

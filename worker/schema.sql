@@ -46,6 +46,24 @@ CREATE TABLE IF NOT EXISTS scholar_reviews (
   FOREIGN KEY(owner_id) REFERENCES profiles(id), FOREIGN KEY(reviewer_id) REFERENCES profiles(id)
 );
 CREATE INDEX IF NOT EXISTS scholar_reviews_participants ON scholar_reviews(owner_id,reviewer_id);
+-- Keep in sync with migrations/0005_scholar_peer_review.sql.
+CREATE TABLE IF NOT EXISTS scholar_review_reports (
+  review_id TEXT PRIMARY KEY, reviewer_id TEXT NOT NULL, decision TEXT NOT NULL,
+  summary TEXT NOT NULL, rubric_json TEXT NOT NULL, ai_consent INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL, consent_updated_at TEXT NOT NULL,
+  FOREIGN KEY(review_id) REFERENCES scholar_reviews(id)
+);
+CREATE TRIGGER IF NOT EXISTS scholar_review_report_decide AFTER INSERT ON scholar_review_reports
+BEGIN
+  UPDATE scholar_reviews SET decision=NEW.decision,reasoning=NEW.summary,decided_at=NEW.created_at
+  WHERE id=NEW.review_id AND reviewer_id=NEW.reviewer_id AND decision IS NULL;
+END;
+CREATE TABLE IF NOT EXISTS scholar_review_messages (
+  id TEXT PRIMARY KEY, review_id TEXT NOT NULL, author_id TEXT NOT NULL,
+  body TEXT NOT NULL, created_at TEXT NOT NULL,
+  FOREIGN KEY(review_id) REFERENCES scholar_reviews(id)
+);
+CREATE INDEX IF NOT EXISTS scholar_review_messages_thread ON scholar_review_messages(review_id,created_at,id);
 CREATE TABLE IF NOT EXISTS scholar_signoffs (
   id TEXT PRIMARY KEY, user_id TEXT NOT NULL, document_id TEXT NOT NULL, revision INTEGER NOT NULL,
   snapshot_sha256 TEXT NOT NULL, rights TEXT NOT NULL, created_at TEXT NOT NULL,

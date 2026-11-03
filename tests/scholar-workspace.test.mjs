@@ -103,6 +103,37 @@ test('private revision history is atomic, account-scoped, backfilled and deleted
   assert.equal((await call(path+'/history','GET',undefined,alice)).status,404);db.close();
 });
 
+test('essay peer reviews have a structured report and participant-only discussion',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const migration=await readFile(new URL('../worker/migrations/0005_scholar_peer_review.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32)};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
+    return {cookie:response.headers.get('Set-Cookie').split(';')[0],profile:(await response.json()).profile};}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org'),eve=await login('eve@example.org');
+  const essay={expected_revision:0,kind:'essay',work:'testwork',target:'test-p01-v01',layer:'l3',title:'My argument',content:{text:'Essay under review.'}};
+  assert.equal((await call('/api/scholar/documents/essay:1','PUT',essay,alice.cookie)).status,200);
+  const invite=await call('/api/scholar/reviews','POST',{document_id:'essay:1',revision:1,reviewer_id:bob.profile.id},alice.cookie);
+  const review=await invite.json(),path='/api/scholar/reviews/'+review.id;
+  const report={decision:'REQUEST_CHANGES',reasoning:'Strengthen the evidence.',rubric:{argument:'Claim needs support.',evidence:'Cite the source.'},ai_consent:false};
+  assert.equal((await call(path+'/decision','POST',report,eve.cookie)).status,404);
+  assert.equal((await call(path+'/decision','POST',{...report,rubric:{evil:'unexpected'}},bob.cookie)).status,400);
+  assert.equal((await call(path+'/decision','POST',report,bob.cookie)).status,200);
+  let listed=await call('/api/scholar/reviews','GET',undefined,alice.cookie);let visible=(await listed.json()).reviews[0];
+  assert.equal(visible.snapshot_sha256,review.snapshot_sha256);assert.equal(visible.rubric.evidence,'Cite the source.');assert.equal(visible.ai_consent,false);
+  assert.equal((await call(path+'/ai-consent','POST',{allow:true},alice.cookie)).status,404);
+  assert.equal((await call(path+'/ai-consent','POST',{allow:true},bob.cookie)).status,200);
+  listed=await call('/api/scholar/reviews','GET',undefined,alice.cookie);assert.equal((await listed.json()).reviews[0].ai_consent,true);
+  assert.equal((await call(path+'/messages','POST',{text:'Which source would strengthen it?'},alice.cookie)).status,201);
+  assert.equal((await call(path+'/messages','POST',{text:'Check the quoted passage.'},bob.cookie)).status,201);
+  assert.equal((await call(path+'/messages','GET',undefined,eve.cookie)).status,404);
+  assert.equal((await call(path+'/messages','POST',{text:'Intrusion'},eve.cookie)).status,404);
+  const thread=await call(path+'/messages','GET',undefined,bob.cookie);assert.equal((await thread.json()).messages.length,2);
+  assert.equal((await call(path+'/ai-consent','POST',{allow:false},bob.cookie)).status,200);
+  listed=await call('/api/scholar/reviews','GET',undefined,alice.cookie);assert.equal((await listed.json()).reviews[0].ai_consent,false);
+  db.close();
+});
+
 test('Qwen needs consent, a free-tier configuration and only the scholar’s own style examples',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
