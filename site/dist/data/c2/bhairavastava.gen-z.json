@@ -1,0 +1,343 @@
+{
+ "work": "bhairavastava",
+ "style": "gen-z",
+ "kind": "c2-curated",
+ "label": "machine rendering — style demo over canonical stack, NOT canonical translation",
+ "model": "handcrafted by agent 2026-11-01 from layers (L1/L2/C1/argmap) + turnitgenz/kym2025 exemplar packs",
+ "provenance": {
+  "source": "ipvv layers bh-p01..bh-p10, all gate PASS",
+  "date": "2026-11-01"
+ },
+ "items": [
+  {
+   "chunk": "bh-p01",
+   "gate": "PASS",
+   "sanskrit": "vyāptacarācarabhāvaviśeṣaṃ cinmayam ekam anantam anādim bhairavanātham anāthaśaraṇyaṃ tvanmayacittatayā hṛdi vande",
+   "style": "gen-z",
+   "c2": "No cap, He runs through literally everything — moving, still, all of it — pure consciousness, one, no beginning, no end. That's Bhairava the Lord — shelter for everyone with nowhere else to go. My mind's already His, so this bow isn't me asking for anything — it's me clocking what's already true, right here in my chest.",
+   "rasa": "settled devotion — surrender as recognition, zero begging",
+   "choices": [
+    {
+     "use": "runs through",
+     "carries": "vyāpta (pervading)",
+     "why": "active voice keeps the all-pervading claim without sounding like a textbook"
+    },
+    {
+     "use": "No cap",
+     "carries": "declarative stack of L2",
+     "why": "stakes truthfulness up front, matching the verse's certainty, not hedging"
+    },
+    {
+     "use": "nowhere else to go",
+     "carries": "anātha (helpless)",
+     "why": "plain rendering of helplessness; no pity framing added"
+    },
+    {
+     "use": "clocking what's already true",
+     "carries": "tvanmaya + C1 recognition-not-petition",
+     "why": "the verse's whole inversion (bow because, not bow so that) lives in this line"
+    },
+    {
+     "use": "kept Bhairava, consciousness untranslated",
+     "carries": "technical terms",
+     "why": "skill rule — Sanskrit terms keep first-use form; 'consciousness' is already the L2 term"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p01",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p02",
+   "gate": "PASS",
+   "sanskrit": "tvanmayam etad aśeṣam idānīṃ bhāti mama tvadanugrahaśaktyā tvaṃ ca maheśa sadaiva mamātmā svātmamayaṃ mama tena samastam",
+   "style": "gen-z",
+   "c2": "Everything I see right now? It's all His — I'm looking through grace-tinted glasses and it's Bhairava all the way down, no filter. Maheśa isn't just my Lord, He's my actual self, and that's not new, that's always. So through Him, everything's mine too. Locked in, permanently.",
+   "rasa": "owned identity — certainty that was always true",
+   "choices": [
+    {
+     "use": "no filter",
+     "carries": "aśeṣam (without remainder) + idānīm (now)",
+     "why": "unmediated immediacy; nothing between seer and seen"
+    },
+    {
+     "use": "grace-tinted glasses",
+     "carries": "tvadanugrahaśaktyā (by grace-power)",
+     "why": "keeps the mechanism (grace does the showing), playful but accurate"
+    },
+    {
+     "use": "Locked in, permanently",
+     "carries": "sadaiva (always)",
+     "why": "the always-ness is the load-bearing claim; doubled for emphasis without adding meaning"
+    },
+    {
+     "use": "kept Maheśa",
+     "carries": "proper name",
+     "why": "names don't get voiced away"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p02",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p03",
+   "gate": "PASS",
+   "sanskrit": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
+   "style": "gen-z",
+   "c2": "He's all the way through my own self as Lord, so this whole scared-of-rebirth convo? Dead. And I'm not saying life isn't brutal — the suffering's real, the delusion's real, my karma's out here doing horror-movie stuff. It's all still standing. I'm just not flinching.",
+   "rasa": "steel — suffering fully admitted, flinch refused",
+   "choices": [
+    {
+     "use": "convo's dead",
+     "carries": "na saṃsṛtibhītikathā asti (no fear-talk exists)",
+     "why": "the verse kills the discourse, not the feeling — 'dead' lands exactly that"
+    },
+    {
+     "use": "horror-movie stuff",
+     "carries": "trāsa (terror-causing karmas)",
+     "why": "vivid without inventing new doctrine; stays inside the listed threats"
+    },
+    {
+     "use": "still standing / just not flinching",
+     "carries": "satsvapi (even though present)",
+     "why": "the concession structure IS the verse's work per C1 — preserved as two balanced beats"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p03",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p04",
+   "gate": "PASS",
+   "sanskrit": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
+   "style": "gen-z",
+   "c2": "Ayo Death — don't even look at me like that. Put the scary face away. I'm locked in on serving Śaṅkara and my contemplation game is steady, so right now I'm literally made of terrifying Bhairava-power. You're barking up the wrong tree, unc.",
+   "rasa": "authority — talking back to Death itself",
+   "choices": [
+    {
+     "use": "barking up the wrong tree, unc",
+     "carries": "mā dṛśam enāṃ vinidhehi (don't direct this gaze)",
+     "why": "dismissive confidence IS the proposition; 'unc' frames Death as outdated — His scare tactics don't work here anymore"
+    },
+    {
+     "use": "locked in / game is steady",
+     "carries": "dhīra (firm) + concurrent sevanā/cintanā",
+     "why": "steadiness as ongoing state, matching the grammatically concurrent practices"
+    },
+    {
+     "use": "literally made of",
+     "carries": "-maya suffix",
+     "why": "C1: change of nature, not grant of capability — 'made of' keeps the ontology exact"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p04",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p05",
+   "gate": "PASS",
+   "sanskrit": "ittham upoḍhabhavanmayasaṃviddīdhitidāritabhūritamisraḥ mṛtyuyamāntakakarmapiśācaiḥ nātha ! namo'stu na jātu bibhemi",
+   "style": "gen-z",
+   "c2": "So yeah — lights on, darkness gone, awareness did that. Death, Yama, the Ender, my karma-ghosts pulling up? They get a respectful nod and that's it. I don't do fear. Ever. Like, at all.",
+   "rasa": "unbothered — categorical fearlessness",
+   "choices": [
+    {
+     "use": "lights on, darkness gone",
+     "carries": "dīdhitidārita-tamisra (darkness dispelled by rays)",
+     "why": "compact image; awareness as the agent, matching the instrumental"
+    },
+    {
+     "use": "pulling up / respectful nod",
+     "carries": "namas (salutation) as sole response",
+     "why": "C1: namas alone does the work — the nod is the whole defense, nothing added"
+    },
+    {
+     "use": "don't. Ever. Like, at all",
+     "carries": "na jātu bibhemi (never at all I fear)",
+     "why": "tripled negation mirrors the categorical Sanskrit; emphasis, not new content"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p05",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p06",
+   "gate": "PASS",
+   "sanskrit": "proditasatyavibodhamarīciprekṣitaviśvapadārthasatattvaḥ bhāvaparāmṛtanirbharapūrṇe tvayi aham ātmani nirvṛtim emi",
+   "style": "gen-z",
+   "c2": "Real awakening finally clocked in and its light just exposed everything for what it actually is. And me? I'm all the way full — full of Him — and I just walked straight into bliss. Not found it. Entered it.",
+   "rasa": "arrival — fullness entered, not found",
+   "choices": [
+    {
+     "use": "clocked in",
+     "carries": "prodita (arisen)",
+     "why": "awakening as active arrival, not abstract dawn"
+    },
+    {
+     "use": "all the way full",
+     "carries": "pūrṇatā (fullness) as condition",
+     "why": "the entry condition per C1; fullness stated before entry, preserving the logic"
+    },
+    {
+     "use": "walked into, not found",
+     "carries": "emi (enter) vs discovery",
+     "why": "C1's key distinction made explicit — the verse claims movement, so the rendering says so"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p06",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p07",
+   "gate": "PASS",
+   "sanskrit": "mānasagocaram eti yadaiva kleśadaśā tanutāpavidhātrī nātha ! tadaiva mama tvadabhedas stotraparāmṛtavṛṣṭiḥ udeti",
+   "style": "gen-z",
+   "c2": "Here's the thing — when the bad days actually hit and my head's a little messed up? That's exactly when it happens. The me-and-Him separation just dissolves and this hymn starts raining straight nectar. The song isn't describing the vibe. The song IS the vibe.",
+   "rasa": "the song IS the instrument — practice and result as one movement",
+   "choices": [
+    {
+     "use": "head's a little messed up",
+     "carries": "kleśadaśā tanutāpa (slight anguish)",
+     "why": "'slight' honestly kept — no inflation of the affliction, per the Sanskrit tanu"
+    },
+    {
+     "use": "exactly when",
+     "carries": "tadaiva (then alone)",
+     "why": "the conditional exclusivity is the verse's engine; kept as the pivot word"
+    },
+    {
+     "use": "song IS the vibe",
+     "carries": "stotra as ontological instrument (C1)",
+     "why": "the self-referential mechanism rendered as the punchline it is"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p07",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p08",
+   "gate": "PASS",
+   "sanskrit": "śaṅkara satyam idam vratadānasnānatapaḥ bhavatāpavidāri tāvakaśāstra parāmṛtacintā cetasi nirvṛtidhārām syandati",
+   "style": "gen-z",
+   "c2": "Real talk, Śaṅkara — the basics work. Showing up, giving, the disciplines, all of it cools down the whole overheating-existence situation. And just sitting with Your words like they're the sweetest thing ever? That has bliss literally streaming through my mind on its own. I'm not producing it. It's flowing.",
+   "rasa": "effortless flow — bliss as spring water, not product",
+   "choices": [
+    {
+     "use": "overheating-existence situation",
+     "carries": "bhavatāpa (becoming's heat)",
+     "why": "vivid, physical, no doctrine added"
+    },
+    {
+     "use": "sitting with",
+     "carries": "cintā (contemplation, not study)",
+     "why": "C1 distinction kept — this is dwelling, not analyzing"
+    },
+    {
+     "use": "on its own / It's flowing",
+     "carries": "syandati (flows, non-agential)",
+     "why": "the verse's crux: bliss streams like spring water; the rendering refuses agency twice to match"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p08",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p09",
+   "gate": "PASS",
+   "sanskrit": "nṛtyati gāyati hṛṣyati gāḍham saṃvit iyam mama bhairavanātha tvāṃ priyam āpya sudarśanamekam durlabhamanyajanaiḥ samayajñam",
+   "style": "gen-z",
+   "c2": "My whole consciousness is literally dancing right now — singing, full joy, no holding back. Because I got Him, my dear, the most beautiful sight there is, the one nobody else can get to. Why me? Covenant. I'm locked in with the samaya and the samaya knows me back.",
+   "rasa": "joy with insider certainty — access by covenant, not merit",
+   "choices": [
+    {
+     "use": "locked in with the samaya / knows me back",
+     "carries": "samaya + samayajña (covenant-knower)",
+     "why": "bidirectional kept: knower and known; Sanskrit retained on first use per rule"
+    },
+    {
+     "use": "nobody else can get to",
+     "carries": "durlabham anyajanaiḥ",
+     "why": "exclusivity stated plainly; 'covenant not merit' implied by the samaya line, not preached"
+    },
+    {
+     "use": "no holding back",
+     "carries": "gāḍham (deeply)",
+     "why": "depth as totality of expression, matching dance+song+rejoice triple"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p09",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  },
+  {
+   "chunk": "bh-p10",
+   "gate": "PASS",
+   "sanskrit": "vasurasapauṣe kṛṣṇadaśamyām abhinavaguptaḥ stavam imam akarot yena vibhuḥ bhavati janasya arusantāpaṃ śamayati jhaṭiti dayāluḥ",
+   "style": "gen-z",
+   "c2": "Fun fact to close this out: Abhinavagupta wrote this whole thing on a winter night, dark tenth of Pauṣa. And the whole point? The Lord is everywhere, He's got a soft spot for the world, and He puts out its raging fever — not eventually, instantly. That's the tweet. That's the whole hymn.",
+   "rasa": "universal relief — the personal arc opens onto the world",
+   "choices": [
+    {
+     "use": "Fun fact / winter night, dark tenth",
+     "carries": "colophon (Pauṣa, kṛṣṇadaśamī, authorship)",
+     "why": "facts kept factual and dated; 'fun fact' voices the colophon genre without touching it"
+    },
+    {
+     "use": "soft spot",
+     "carries": "dayālu (compassionate)",
+     "why": "warm and plain; no theological inflation"
+    },
+    {
+     "use": "raging fever / not eventually, instantly",
+     "carries": "arusantāpa + jhaṭiti",
+     "why": "heat kept physical; instantaneity doubled because the verse's shock is the no-delay"
+    },
+    {
+     "use": "That's the tweet",
+     "carries": "closing function",
+     "why": "meta-signoff only — summarizes nothing new, signals the arc is complete"
+    }
+   ],
+   "provenance": {
+    "work": "bhairavastava",
+    "chunk": "bh-p10",
+    "gate": "PASS"
+   },
+   "label": "machine rendering — style demo over canonical stack, NOT canonical translation"
+  }
+ ]
+}

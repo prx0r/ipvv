@@ -1,0 +1,94 @@
+{
+ "work": "pancashloki",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work pancashloki/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "2026-11-04: L4 5/5 songs (per-song DRAFT+data), intimate-address couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "pan-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The whole duty is one act: pride offered on the Lord's feet; all else denied, and only immediate pleasure asked.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Your entire duty fits in one act: take your pride — the feeling that you are somebody — and lay it down at the Lord's feet. Say no to everything else. And ask for just one thing, right now: His pleasure.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Your entire duty fits in one act: take your pride — the feeling that you are somebody — and lay it down at the Lord's feet. Say no to everything else. And ask for just one thing, right now: His pleasure."
+  },
+  {
+   "chunk": "pan-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Speech becomes the offering: the word crying victory at the threshold is itself to become bliss-giving; having Maheśa as protector is to become being protected.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Your own speech can become the gift you give. Stand at His door and cry out Victory, victory to the Lord who is greater than all — and let that very word turn into something that gives bliss. If you have the Great Lord as your protector, then you get to be someone who is protected.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Your own speech can become the gift you give. Stand at His door and cry out Victory, victory to the Lord who is greater than all — and let that very word turn into something that gives bliss. If you have the Great Lord as your protector, then you get to be someone who is protected."
+  },
+  {
+   "chunk": "pan-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Five refusals charged — speak, see, hear, come, support — and scripture converts the charge into doctrine: the Lord is sense-free.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is the complaint, five times over: You do not speak to me. You do not look at me. You do not hear my begging. You do not come into my mind. You do not hold me up when I fall. And here is the twist: the holy books take that whole complaint and turn it into a teaching — of course He does none of those things. He has no speech, no sight, no hearing, no feet to come with.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is the complaint, five times over: You do not speak to me. You do not look at me. You do not hear my begging. You do not come into my mind. You do not hold me up when I fall. And here is the twist: the holy books take that whole complaint and turn it into a teaching — of course He does none of those things. He has no speech, no sight, no hearing, no feet to come with."
+  },
+  {
+   "chunk": "pan-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Against the silence stand two testimonies — the guru's word and fitting scriptural assurance — whose force wipes away piled-up reasonings; with doubt dissolved, the feet of the heart-sky Lord.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Two witnesses stand up against the silence. First, what your teacher told you. Second, what the scriptures fittingly promise. Together they are strong enough to wipe out a whole pile of clever arguments. And once the cloud of doubt melts away, all that is left is this: touching the feet of the Lord whose splendor blazes in the sky of your heart, bright as the sun that beats the dark.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Two witnesses stand up against the silence. First, what your teacher told you. Second, what the scriptures fittingly promise. Together they are strong enough to wipe out a whole pile of clever arguments. And once the cloud of doubt melts away, all that is left is this: touching the feet of the Lord whose splendor blazes in the sky of your heart, bright as the sun that beats the dark."
+  },
+  {
+   "chunk": "pan-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Long dwelling-with and total grace received, yet repeated forgetting; the only request is no more absence.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "I have lived close to You for so long, and You have done everything for me — and still I keep forgetting You, over and over. So I am not asking for anything fancy. Just this: from here on, no more going away.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "I have lived close to You for so long, and You have done everything for me — and still I keep forgetting You, over and over. So I am not asking for anything fancy. Just this: from here on, no more going away."
+  }
+ ]
+}

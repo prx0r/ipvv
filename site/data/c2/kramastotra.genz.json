@@ -1,0 +1,494 @@
+{
+ "work": "kramastotra",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work kramastotra/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=30",
+  "approval": "TNESS | 2026-11-04: L4 30/30 songs (per-song DRAFT+data), sings handcrafted restored L3 (retransmission reverted 2a45bbc); v26 live-fork noted not litigated, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "kram-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Completion-rite amid sorrow; mirrored mind drops fear.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Completion-rite amid sorrow; the foul day sweetens; mirrored mind drops fear. Do the rite; fear drops.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Completion-rite amid sorrow; the foul day sweetens; mirrored mind drops fear. Do the rite; fear drops."
+  },
+  {
+   "chunk": "kram-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Redoubled self-scrutiny: effortless standing in hymn.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Examine, re-examine, set forth in hymn: effortless standing. Scrutiny redoubled; standing free.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Examine, re-examine, set forth in hymn: effortless standing. Scrutiny redoubled; standing free."
+  },
+  {
+   "chunk": "kram-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unscrutinized sterility vs shining Śiva one-sapped: bliss follows scrutiny.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unscrutinized: knows nothing, is nothing. Scrutinized: Shiva shining, one sap — hence bliss in Your hymn, always.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unscrutinized: knows nothing, is nothing. Scrutinized: Shiva shining, one sap — hence bliss in Your hymn, always."
+  },
+  {
+   "chunk": "kram-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Omniscience effortlessly gained; heart bidden to speak the hymn.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Omniscience effortlessly gained; heart bidden to speak the hymn. Won without strain; now say it.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Omniscience effortlessly gained; heart bidden to speak the hymn. Won without strain; now say it."
+  },
+  {
+   "chunk": "kram-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bond-conceit shaken, difference burnt, glory drunk: madness-bliss.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bond-roads shaken, difference burnt, glory drunk: madness-bliss. Shake, drink deep, go mad with it.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Bond-roads shaken, difference burnt, glory drunk: madness-bliss. Shake, drink deep, go mad with it."
+  },
+  {
+   "chunk": "kram-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unhymnable held, hymned sudden: bowing first means.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unhymnable held, hymned sudden: bowing first means. Impossible, yet done — bow first.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unhymnable held, hymned sudden: bowing first means. Impossible, yet done — bow first."
+  },
+  {
+   "chunk": "kram-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Fire-unburning nobodies; knowing-rays praised each-owned.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Fire minus burning holds nobodies. Praise knowing-rays instead, each-owned: none else becomes His power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Fire minus burning holds nobodies. Praise knowing-rays instead, each-owned: none else becomes His power."
+  },
+  {
+   "chunk": "kram-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Unpartitioned taste, unopposed floods, priceless knowing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unpartitioned taste, unopposed floods, priceless knowing. Melted rules; unequalled fullness.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unpartitioned taste, unopposed floods, priceless knowing. Melted rules; unequalled fullness."
+  },
+  {
+   "chunk": "kram-p09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Difference-fled form; heart-and-speech vowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Difference-fled form; heart-and-speech vowed. Rush unabandoned, evermore.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Difference-fled form; heart-and-speech vowed. Rush unabandoned, evermore."
+  },
+  {
+   "chunk": "kram-p10",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Inner ocean; triple lights rise-set at once.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Inner ocean; triple lights rise-set at once. Creation, keeping, loosing: one gleam, at once.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Inner ocean; triple lights rise-set at once. Creation, keeping, loosing: one gleam, at once."
+  },
+  {
+   "chunk": "kram-p11",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Power undivided walking; heart one-pointed on still ground.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Power undivided walking; heart one-pointed on still ground. Never parting: fix there.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Power undivided walking; heart one-pointed on still ground. Never parting: fix there."
+  },
+  {
+   "chunk": "kram-p12",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Whole-to-difference by will; praise melts fear Śiva-made.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Whole-to-difference by will; praise melts fear Shiva-made. Descend, praise, melt, become.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Whole-to-difference by will; praise melts fear Shiva-made. Descend, praise, melt, become."
+  },
+  {
+   "chunk": "kram-p13",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Thisness-form; sequencelessness melts time; all instruments at once.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Thisness-form; sequencelessness melts time; all instruments at once. Mind, speech, senses, pots: stand that form now.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Thisness-form; sequencelessness melts time; all instruments at once. Mind, speech, senses, pots: stand that form now."
+  },
+  {
+   "chunk": "kram-p14",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Swelled sequence shown; triple-becoming prayed for overlaying.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Swelled sequence shown; triple-becoming prayed for overlaying. Doing-knowing-willing: make me triple.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Swelled sequence shown; triple-becoming prayed for overlaying. Doing-knowing-willing: make me triple."
+  },
+  {
+   "chunk": "kram-p15",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Dissolved emission questioned; moon-answer; ever-sport in mind prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Dissolved emission questioned; moon-answer; ever-sport in mind prayed. Where would it shine? Here: playing within.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Dissolved emission questioned; moon-answer; ever-sport in mind prayed. Where would it shine? Here: playing within."
+  },
+  {
+   "chunk": "kram-p16",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Rush-to-redness resorted; past-loathing prayed in red conclave.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rush-to-redness resorted; past-loathing prayed in red conclave. Rush red; join the rite; get past loathing.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Rush-to-redness resorted; past-loathing prayed in red conclave. Rush red; join the rite; get past loathing."
+  },
+  {
+   "chunk": "kram-p17",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Outer quit, noble dwelt, undivided shown; ends grasped.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Outer quit, noble dwelt, undivided shown; ends grasped. Grasp maintenance-end, then grasp my wandering-undone.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Outer quit, noble dwelt, undivided shown; ends grasped. Grasp maintenance-end, then grasp my wandering-undone."
+  },
+  {
+   "chunk": "kram-p18",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Rule-ban shown, Yama emitted, doubt split: grind prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rule-ban shown, Yama emitted, doubt split: grind prayed. Show rule, show ban, split doubt, grind fear.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Rule-ban shown, Yama emitted, doubt split: grind prayed. Show rule, show ban, split doubt, grind fear."
+  },
+  {
+   "chunk": "kram-p19",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Melted all but hunger; strike prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Melted all but hunger; strike prayed. All gone but appetite: strike the split part.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Melted all but hunger; strike prayed. All gone but appetite: strike the split part."
+  },
+  {
+   "chunk": "kram-p20",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Split difference shines thought; considered maker gracious.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Split difference shines thought; considered maker gracious. Enough considered: gracious be she.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Split difference shines thought; considered maker gracious. Enough considered: gracious be she."
+  },
+  {
+   "chunk": "kram-p21",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Three obtained ordain unfolding; fear-gone prayed by them.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Three obtained ordain unfolding; fear-gone prayed by them. Ordained by three; fearless through them.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Three obtained ordain unfolding; fear-gone prayed by them. Ordained by three; fearless through them."
+  },
+  {
+   "chunk": "kram-p22",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Dread-ground held; as-pleased conduct sporting prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Dread-ground held; as-pleased conduct sporting prayed. Hold, melt, wipe: sport in my heart.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Dread-ground held; as-pleased conduct sporting prayed. Hold, melt, wipe: sport in my heart."
+  },
+  {
+   "chunk": "kram-p23",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Sun-sap forcibly drawn; difference thinned prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Sun-sap forcibly drawn; difference thinned prayed. Sap the sun dry; thin me free.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Sun-sap forcibly drawn; difference thinned prayed. Sap the sun dry; thin me free."
+  },
+  {
+   "chunk": "kram-p24",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Garland re-entered; gracious adornment prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Garland re-entered; gracious adornment prayed. Entered again and ever: adorn the heart-path.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Garland re-entered; gracious adornment prayed. Entered again and ever: adorn the heart-path."
+  },
+  {
+   "chunk": "kram-p25",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Proof merged, measure stood; time met: Śiva-made shining.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Proof merged, measure stood; time met: Shiva-made shining. Melted, measured, met: Hers, shining, Shiva-made.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Proof merged, measure stood; time met: Shiva-made shining. Melted, measured, met: Hers, shining, Shiva-made."
+  },
+  {
+   "chunk": "kram-p26",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Cover spread without; time made within.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Cover spread without; time made within. Spreading cover outside; rush-melted within: great time-making Kali.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Cover spread without; time made within. Spreading cover outside; rush-melted within: great time-making Kali."
+  },
+  {
+   "chunk": "kram-p27",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Sequence cut in fullness; all embraced; resort prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Sequence cut in fullness; all embraced; resort prayed. Cut short, quick: embrace all, resort here.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Sequence cut in fullness; all embraced; resort prayed. Cut short, quick: embrace all, resort here."
+  },
+  {
+   "chunk": "kram-p28",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Powers abiding unhindered; churn-essence bowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Powers abiding unhindered; churn-essence bowed. Abide wide; bow the churn-named.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Powers abiding unhindered; churn-essence bowed. Abide wide; bow the churn-named."
+  },
+  {
+   "chunk": "kram-p29",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Heard bonds; grace coming; all-folk bidden allayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Heard bonds; grace coming; all-folk bidden allayed. Heard: come, grace, allay all.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Heard bonds; grace coming; all-folk bidden allayed. Heard: come, grace, allay all."
+  },
+  {
+   "chunk": "kram-p30",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Dated authorial seal, 991 CE.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Dated authorial seal, 991 CE. Sixty-sixth year, dark ninth, Margashirsha: Abhinavagupta praised Shiva.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Dated authorial seal, 991 CE. Sixty-sixth year, dark ninth, Margashirsha: Abhinavagupta praised Shiva."
+  }
+ ]
+}

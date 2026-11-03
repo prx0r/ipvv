@@ -1,0 +1,158 @@
+{
+ "work": "parapravesika",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work parapravesika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=9",
+  "approval": "smission handcrafted; QA NEEDS_WITNESS; Sauḥ/etad sharpenings from Pradipaka | 2026-11-04: L4 9/9 songs (per-song DRAFT+data), length-follows-argument forms, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "par-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The vow binds deity to doctrine in one compound and predicates contraries together — world-shaped yet world-surpassing consciousness, throbbing as supreme power.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The opening makes a promise that ties God and teaching together in a single knot — and then it says two opposite things at once, on purpose. The consciousness we are talking about wears the whole world as its body, and at the same time stands completely beyond the world. And it pulses, throbbing like a heartbeat made of supreme power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The opening makes a promise that ties God and teaching together in a single knot — and then it says two opposite things at once, on purpose. The consciousness we are talking about wears the whole world as its body, and at the same time stands completely beyond the world. And it pulses, throbbing like a heartbeat made of supreme power."
+  },
+  {
+   "chunk": "par-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Light-nature entails awareness-nature: specified twofold and three-functioned as unmade-I flashing, the calm-brahman alternative refused, absence entailing lordlessness and deadness.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "If something is made of light, then it must also be made of awareness — you cannot have one without the other. Awareness comes in two sizes, bounded and boundless, and it works three jobs: making, keeping, and withdrawing. Each job is just the flash of an I that was never put together by anyone. The rival idea — a calm, blank knowing with nothing in it — is refused. And take awareness away, and two things follow: no lordship, and deadness.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "If something is made of light, then it must also be made of awareness — you cannot have one without the other. Awareness comes in two sizes, bounded and boundless, and it works three jobs: making, keeping, and withdrawing. Each job is just the flash of an I that was never put together by anyone. The rival idea — a calm, blank knowing with nothing in it — is refused. And take awareness away, and two things follow: no lordship, and deadness."
+  },
+  {
+   "chunk": "par-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Ten scriptural names, one awareness-primacy: each name denotes by its office — chief-form, speech, ground-fullness, join-loose-lower, no-other-needed, yogin-like raising, mine-flashing, untrifling, rest-ground, still-shimmer.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Ten different holy books give awareness ten different names, but they all mean one supremacy. Each name is earned by the job it does. It is called chief-form because awareness is the selfs own shape. It is called speech because it talks the world into being by grasping it back. It is called ground-fullness because it underlies every smaller grasping. It binds the cast-out this back home, looses it, lays it low. It needs nothing else when the world begins. It raises the world the way a yogi makes things. Its flashing is always someones. It is untrifling. It is where the world rests. It is stillness stirring.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Ten different holy books give awareness ten different names, but they all mean one supremacy. Each name is earned by the job it does. It is called chief-form because awareness is the selfs own shape. It is called speech because it talks the world into being by grasping it back. It is called ground-fullness because it underlies every smaller grasping. It binds the cast-out this back home, looses it, lays it low. It needs nothing else when the world begins. It raises the world the way a yogi makes things. Its flashing is always someones. It is untrifling. It is where the world rests. It is stillness stirring."
+  },
+  {
+   "chunk": "par-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Self-lit Lord shines by the Lady as śiva-to-earth world; that shining constitutes both making and aliveness; effecthood resolved as shining-dependence, veiling impossible.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The Lord, lit by Himself, shines through the Lady as the whole world from Shiva down to clay. That shining is two things at once: it is how He makes the world, and it is also the worlds being alive. So what does made mean here? It means depending on His shining — nothing more. And nothing can cover Him up: veiling is impossible.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The Lord, lit by Himself, shines through the Lady as the whole world from Shiva down to clay. That shining is two things at once: it is how He makes the world, and it is also the worlds being alive. So what does made mean here? It means depending on His shining — nothing more. And nothing can cover Him up: veiling is impossible."
+  },
+  {
+   "chunk": "par-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The prover proved before proof: indicators cannot touch, questions answer themselves, proof demoted to illusion's traffic, outlived by the further Life.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is a strange situation: the one who would prove things was already proved before any proof got going. Clues and causes cannot even touch Him. Questions about Him answer themselves — the asker is the answer. Proof gets demoted to a tool for handling illusions. And beyond every proof that draws out the life of things, there stands a further Life — and He is it.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is a strange situation: the one who would prove things was already proved before any proof got going. Clues and causes cannot even touch Him. Questions about Him answer themselves — the asker is the answer. Proof gets demoted to a tool for handling illusions. And beyond every proof that draws out the life of things, there stands a further Life — and He is it."
+  },
+  {
+   "chunk": "par-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Full-I-grasp woven of a-to-ha sound-mass grounds identity: Śiva Himself the thirty-six-leveled display; level defined as undivided shine familying the divided; roll bare.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The whole I — grasped complete — is woven out of the mass of sounds from a to ha, and that weaving is what makes Shiva Himself identical with the entire display in thirty-six levels. What is a level? It is one undivided shining that gathers divided things into families — the way hills and trees and towns all show the shape of earth. Then comes the bare roll call, all thirty-six, no decoration.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The whole I — grasped complete — is woven out of the mass of sounds from a to ha, and that weaving is what makes Shiva Himself identical with the entire display in thirty-six levels. What is a level? It is one undivided shining that gathers divided things into families — the way hills and trees and towns all show the shape of earth. Then comes the bare roll call, all thirty-six, no decoration."
+  },
+  {
+   "chunk": "par-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Pure bliss-nature throbbing with hundred-thousand reflections wills emission; will-first, knowing-first, doing-first dim by this-portion faintness; illusion spreads difference, stuffs art-to-earth, and veils by freedom's synonym into personhood — deemed-bound, wandering. The mask never touches the wearer (magician). Recognition restores sovereignty: dense-conscious, free-bodied, Śiva at fall. Five glories, uncontracted, accept contraction into five littles on robbed-king terms.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Pure bliss-nature, throbbing, holds a hundred thousand reflections and decides to send the world out. First will leads, then knowing, then doing — each dimming a little, like light through faint glass. Difference spreads like a stain. Illusion stuffs everything from art down to clay, then veils itself by freedom under another name, and becomes a person: fooled by illusion, chained by deeds, wandering. But here is the twist that saves it: the mask never touches the wearer, the way a magicians trick fools the crowd but never the magician. When knowing shows Him His own shape again, sovereignty comes back: thick with consciousness, free while still in the body — and when the body falls, Shiva Himself. Even His five glories, which never narrow, agree to narrow into five littles — the way a robbed king gets dealt back a pittance to live on.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Pure bliss-nature, throbbing, holds a hundred thousand reflections and decides to send the world out. First will leads, then knowing, then doing — each dimming a little, like light through faint glass. Difference spreads like a stain. Illusion stuffs everything from art down to clay, then veils itself by freedom under another name, and becomes a person: fooled by illusion, chained by deeds, wandering. But here is the twist that saves it: the mask never touches the wearer, the way a magicians trick fools the crowd but never the magician. When knowing shows Him His own shape again, sovereignty comes back: thick with consciousness, free while still in the body — and when the body falls, Shiva Himself. Even His five glories, which never narrow, agree to narrow into five littles — the way a robbed king gets dealt back a pittance to live on."
+  },
+  {
+   "chunk": "par-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Doing-a-little, knowing-a-little, clinging in may-I-grow-never-cease shape, sequence-cutting was-am-will, must in mine-to-do shape — five functions, one veil over full consciousness, distinct-yet-undistinct. Nature poises the three strands past telling apart. Deciding, prideing, resolving organ; ten senses ordered; five commons defined by having-nothing-more; five element-offices: room, life, burn-cook, refresh-flow, uphold.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Each of the five veils is just one littleness. Doing-a-little instead of doing all. Knowing-a-little instead of knowing all. Clinging to things in the shape of may this serve me, may I grow, may I never stop. Cutting time into was-am-will. Holding to must in the shape of this is mine to do. Five jobs, one veil over the full consciousness underneath — different from it, yet not different. Under that, nature balances its three strands so evenly they cannot be told apart. Then the instruments: deciding, prideing, resolving — the inner organ. Ten senses in their order. Five subtle elements defined by having nothing more. And five element-jobs: room-giving, life-stirring, burning-and-cooking, freshening-and-flowing, upholding.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Each of the five veils is just one littleness. Doing-a-little instead of doing all. Knowing-a-little instead of knowing all. Clinging to things in the shape of may this serve me, may I grow, may I never stop. Cutting time into was-am-will. Holding to must in the shape of this is mine to do. Five jobs, one veil over the full consciousness underneath — different from it, yet not different. Under that, nature balances its three strands so evenly they cannot be told apart. Then the instruments: deciding, prideing, resolving — the inner organ. Ten senses in their order. Five subtle elements defined by having nothing more. And five element-jobs: room-giving, life-stirring, burning-and-cooking, freshening-and-flowing, upholding."
+  },
+  {
+   "chunk": "par-p09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Seed-contained world proved by similes and clay/water proofs; sat involuted to bare sa (31) and assent-au (pure levels, Sauḥ-heart-mantra); oblationless knowing-entering initiates — living-free, Śiva at fall.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The whole world fits inside a seed — the heart-seed — and here are the proofs. Similes first: as the banyan seed somehow holds the whole tree, as peacock-egg juice somehow holds every feather. Then the clay proof: pots and bowls, examined, turn out to be just clay. Then the water proof: watery kinds settle into water-in-common. Then the word proof: strip the word being down to its bare letter s, and inside it stand thirty-one levels; past it, pure knowing, the Lord, and eternal Shiva enter the syllable au, shaped as assent, formed of unsurpassed power. So supreme emission happens, creation above and below. And whoever truly knows such a heart-seed and enters it is initiated in the highest sense — no sesame, no ghee, no fire needed. Still breathing, living like everyone else, free while living; and when the body falls, the Lord Himself.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The whole world fits inside a seed — the heart-seed — and here are the proofs. Similes first: as the banyan seed somehow holds the whole tree, as peacock-egg juice somehow holds every feather. Then the clay proof: pots and bowls, examined, turn out to be just clay. Then the water proof: watery kinds settle into water-in-common. Then the word proof: strip the word being down to its bare letter s, and inside it stand thirty-one levels; past it, pure knowing, the Lord, and eternal Shiva enter the syllable au, shaped as assent, formed of unsurpassed power. So supreme emission happens, creation above and below. And whoever truly knows such a heart-seed and enters it is initiated in the highest sense — no sesame, no ghee, no fire needed. Still breathing, living like everyone else, free while living; and when the body falls, the Lord Himself."
+  }
+ ]
+}

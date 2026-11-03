@@ -1,0 +1,568 @@
+{
+ "work": "sivastotravali",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work sivastotravali/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=20",
+  "approval": "res, pushed; site-layer rebuild pending | 2026-11-04: L4 20/20 songs, 450/450v (per-song DRAFT+data), stotra registers (establishment/salutation/feast/seal), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "s01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Devotion stands rule-free and self-young: undawned by method, unaged by road-dust, at home in the Lord's city, thriving on every ground (vv1-6). [1] Its ground proved: all beings love the self, the self is consciousness — so love stands on its own nature; knowing this by drowning is conquest (v7). [2] Consequences drawn: the world turns ritual ground, joy/sorrow/bewilderment all become the road, special-state localization is the one cheat — closing with the pain-seed mind ripened to freedom's fruit (vv8-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Devotion rule-free, self-young: undawned by method, unaged by road-dust, at home in His city, thriving on every ground.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Ground proved: all beings love self, self is consciousness — love stands on own nature; knowing by drowning is conquest.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Consequences drawn: world turns ritual ground, joy/sorrow/bewilderment all road, special-state localization the one cheat; pain-seed mind ripens to freedom-fruit.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Devotion rule-free, self-young: undawned by method, unaged by road-dust, at home in His city, thriving on every ground.\n\nGround proved: all beings love self, self is consciousness — love stands on own nature; knowing by drowning is conquest.\n\nConsequences drawn: world turns ritual ground, joy/sorrow/bewilderment all road, special-state localization the one cheat; pain-seed mind ripens to freedom-fruit."
+  },
+  {
+   "chunk": "s02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Twenty-nine salutations perform the all-self: every stuff of the world — fire, moon, gods, still, moving — named as His, every verse landing bowed (whole song). [1] Each bow names Him by paradox pairs — cool fire and devourer, Veda-foe and Veda-maker, round's cause and foe, ever-bound and ever-free, all rites and rite-free — the namaḥ holding both poles (vv1-22). [2] The litany turns to close: from Him to His dread power-ring (v23), from knowing to embracing (v24), from victory-cries to shelter-surrender (vv25-29).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Twenty-nine salutations perform the all-self: fire, moon, gods, still, moving — every stuff named His, every verse landing bowed.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Each bow names Him by paradox pairs — cool fire/devourer, Veda-foe/Veda-maker, round-cause/foe, ever-bound/ever-free, all-rites/rite-free — namaH holding both poles.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Litany turns to close: dread power-ring, knowing-to-embracing, victory-cries to shelter-surrender.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Twenty-nine salutations perform the all-self: fire, moon, gods, still, moving — every stuff named His, every verse landing bowed.\n\nEach bow names Him by paradox pairs — cool fire/devourer, Veda-foe/Veda-maker, round-cause/foe, ever-bound/ever-free, all-rites/rite-free — namaH holding both poles.\n\nLitany turns to close: dread power-ring, knowing-to-embracing, victory-cries to shelter-surrender."
+  },
+  {
+   "chunk": "s03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] The third beyond being and non-being: leap the two-yoked course; freedom contagious among the unfree — Thy hangers-on live free (vv01-02, v18). [1] Love's instruments: remembrance-medicine, begged moon-glance, heart-union vessel, flooding meditation, Śiva-din that routs pain — arrival roared and danced (vv03-11, v13). [2] Supremacy without second: moon-crowned high Lord, cancelled yogas, play-lake ocean, shamed miseries, beads told inside oneness, knower in known — closing keen and swoon (vv04, v12, vv14-17, vv19-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Third beyond being/non-being: leap the two-yoked course; freedom contagious among the unfree — hangers-on live free.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Love’s instruments: remembrance-medicine, begged moon-glance, heart-union vessel, flooding meditation, Shiva-din routing pain; arrival roared and danced.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Supremacy without second: moon-crowned high Lord, cancelled yogas, play-lake ocean, shamed miseries, beads told inside oneness, knower in known — keen-and-swoon close.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Third beyond being/non-being: leap the two-yoked course; freedom contagious among the unfree — hangers-on live free.\n\nLove’s instruments: remembrance-medicine, begged moon-glance, heart-union vessel, flooding meditation, Shiva-din routing pain; arrival roared and danced.\n\nSupremacy without second: moon-crowned high Lord, cancelled yogas, play-lake ocean, shamed miseries, beads told inside oneness, knower in known — keen-and-swoon close."
+  },
+  {
+   "chunk": "s04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Confession and approach: fickle mind praised for refuge-worship, low ground kept past gods' stairs, one road begged with world-doings shuttered (vv1-3). [1] Praise and petition: name-cries, foot-lotus throne and sap, light-body nearness, nectar-smeared mind, will-set walking, heart-blooms, fattened love, fresh hundredfold Name (vv4-13). [2] Longing's triumph and paradox: Śiva-din winners, bolted city unknocked, face-lotus hunger, serfdom fitness, unheard wail, omens, Śiva-night, sapless overlordship, tough self-bond, worshiper-shaped God (vv14-25).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Confession and approach: fickle mind praised for refuge-worship, low ground kept past gods’ stairs, one road begged with world-doings shuttered.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Praise and petition: name-cries, foot-lotus throne and sap, light-body nearness, nectar-smeared mind, will-set walking, heart-blooms, fattened love, fresh hundredfold Name.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Longing’s triumph and paradox: Shiva-din winners, bolted city unknocked, face-lotus hunger, serfdom fitness, unheard wail, omens, Shiva-night, sapless overlordship, tough self-bond, worshiper-shaped God.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Confession and approach: fickle mind praised for refuge-worship, low ground kept past gods’ stairs, one road begged with world-doings shuttered.\n\nPraise and petition: name-cries, foot-lotus throne and sap, light-body nearness, nectar-smeared mind, will-set walking, heart-blooms, fattened love, fresh hundredfold Name.\n\nLonging’s triumph and paradox: Shiva-din winners, bolted city unknocked, face-lotus hunger, serfdom fitness, unheard wail, omens, Shiva-night, sapless overlordship, tough self-bond, worshiper-shaped God."
+  },
+  {
+   "chunk": "s05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Approaching touches: foot-brush joined, dust-dyed hair, dumb dwelling, shouted dance, half-shut gaping, mountain-mind, Her town, opening heart-lotus (vv1-8). [1] Tasting deepens: wax mind, bursting pot, oozing cool, lake-diving, offered passions, sated glance, straw worship, unparted feasting, secondless fullness (vv9-17). [2] Vows and vastness: foot-place won, perfume hardened, clash taught, frenzy willed, vanguard run, unre-said sap, vast roamed, dust-kept thought, sole-touchers shown (vv18-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Approaching touches: foot-brush joined, dust-dyed hair, dumb dwelling, shouted dance, half-shut gaping, mountain-mind, Her town, opening heart-lotus.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Tasting deepens: wax mind, bursting pot, oozing cool, lake-diving, offered passions, sated glance, straw worship, unparted feasting, secondless fullness.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Vows and vastness: foot-place won, perfume hardened, clash taught, frenzy willed, vanguard run, unre-said sap, vast roamed, dust-kept thought, sole-touchers shown.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Approaching touches: foot-brush joined, dust-dyed hair, dumb dwelling, shouted dance, half-shut gaping, mountain-mind, Her town, opening heart-lotus.\n\nTasting deepens: wax mind, bursting pot, oozing cool, lake-diving, offered passions, sated glance, straw worship, unparted feasting, secondless fullness.\n\nVows and vastness: foot-place won, perfume hardened, clash taught, frenzy willed, vanguard run, unre-said sap, vast roamed, dust-kept thought, sole-touchers shown."
+  },
+  {
+   "chunk": "s06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Separation held in nearness: parted instants, pithed passing, held longing, and the final hunt — love kept unparted through parting (vv1-2, v5, v11). [1] Truth shown and won: body-speech-mind oneness, matched praise, melting clouds, jewel-light, ground everywhere, limb-embrace joy (vv3-4, vv6-10).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Separation held in nearness: parted instants, pithed passing, held longing, final hunt — love kept unparted through parting.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Truth shown and won: body-speech-mind oneness, matched praise, melting clouds, jewel-light, ground everywhere, limb-embrace joy. Plus the addressed vow: Show plain, no other prayers; fainting, Thee alone hunted.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Separation held in nearness: parted instants, pithed passing, held longing, final hunt — love kept unparted through parting.\n\nTruth shown and won: body-speech-mind oneness, matched praise, melting clouds, jewel-light, ground everywhere, limb-embrace joy. Plus the addressed vow: Show plain, no other prayers; fainting, Thee alone hunted."
+  },
+  {
+   "chunk": "s07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Melting and entry: same-sap minds dropping disaster, axes of certainty on passion's root, melting stain-strings (vv1-3). [1] Mother and ripening: wallowing fed sap on sap to sky-going, connoisseurship won, mind-jewel spark-shed (vv4-6). [2] Station won: full-throated hymning past waiting gods, whole-sensed seeing, wed mind-lad hardening mine-thought (vv7-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Melting and entry: same-sap minds dropping disaster, axes of certainty on passion’s root, melting stain-strings.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Mother and ripening: wallowing fed sap on sap to sky-going, connoisseurship won, mind-jewel spark-shed.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Station won: full-throated hymning past waiting gods, whole-sensed seeing, wed mind-lad hardening mine-thought.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Melting and entry: same-sap minds dropping disaster, axes of certainty on passion’s root, melting stain-strings.\n\nMother and ripening: wallowing fed sap on sap to sky-going, connoisseurship won, mind-jewel spark-shed.\n\nStation won: full-throated hymning past waiting gods, whole-sensed seeing, wed mind-lad hardening mine-thought."
+  },
+  {
+   "chunk": "s08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Grace nears: grace-drop and nearing devotion rooting each in other, chewed mastery raising contentment, worldlike thirst (vv1-3). [1] Senses gathered: body-grounds, thrill-seats, possession-pictured striding (vv4-6). [2] Blooming and union: Thou-natured bloom, dread gorge filled, dusted turning, lotus-lake wading, supreme shimmer, joy-mad limbs, plain-shining resolve (vv7-13).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Grace nears: grace-drop and nearing devotion rooting each in other, chewed mastery raising contentment, worldlike thirst.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Senses gathered: body-grounds, thrill-seats, possession-pictured striding.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Blooming and union: Thou-natured bloom, dread gorge filled, dusted turning, lotus-lake wading, supreme shimmer, joy-mad limbs, plain-shining resolve.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Grace nears: grace-drop and nearing devotion rooting each in other, chewed mastery raising contentment, worldlike thirst.\n\nSenses gathered: body-grounds, thrill-seats, possession-pictured striding.\n\nBlooming and union: Thou-natured bloom, dread gorge filled, dusted turning, lotus-lake wading, supreme shimmer, joy-mad limbs, plain-shining resolve."
+  },
+  {
+   "chunk": "s09",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Twenty when-questions that are really one: when will longing become meeting — asked of mind, face, gods, world, yoga, pride, tears, beast-life, play, speech (vv1-19). [1] Answered once, in the last verse: by hugging hard and seeing without effort — strainless full beholding (v20).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Twenty when-questions really one: when will longing become meeting — mind, face, gods, world, yoga, pride, tears, beast-life, play, speech.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Answered once, in the last verse: by hugging hard and seeing without effort — strainless full beholding.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Twenty when-questions really one: when will longing become meeting — mind, face, gods, world, yoga, pride, tears, beast-life, play, speech.\n\nAnswered once, in the last verse: by hugging hard and seeing without effort — strainless full beholding."
+  },
+  {
+   "chunk": "s10",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Complaint and nearness: Great-One's men levelled, trailers tasting, husband ending death, wink-won All (vv1-4). [1] Vision's catalogue: moon-drop, sun-spark, third-eye badge, seen joys, city in-making, uneven eyes, might-less being, stayed mind, roaming selves, company-ripened, slave-borne, hunger past-past, ghee-joined pains (vv5-16). [2] Paradox and seal: fit unreality-show, breathed strands, I-less world, dissolving great, dark range, nectar-nature, speech-jewel, effortless ripening, slave's drink, devouring fire (vv17-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Complaint and nearness: Great-One’s men levelled, trailers tasting, husband ending death, wink-won All.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Vision’s catalogue: moon-drop, sun-spark, third-eye badge, seen joys, city in-making, uneven eyes, might-less being, stayed mind, roaming selves, company-ripened, slave-borne, hunger past-past, ghee-joined pains.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Paradox and seal: fit unreality-show, breathed strands, I-less world, dissolving great, dark range, nectar-nature, speech-jewel, effortless ripening, slave’s drink, devouring fire.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Complaint and nearness: Great-One’s men levelled, trailers tasting, husband ending death, wink-won All.\n\nVision’s catalogue: moon-drop, sun-spark, third-eye badge, seen joys, city in-making, uneven eyes, might-less being, stayed mind, roaming selves, company-ripened, slave-borne, hunger past-past, ghee-joined pains.\n\nParadox and seal: fit unreality-show, breathed strands, I-less world, dissolving great, dark range, nectar-nature, speech-jewel, effortless ripening, slave’s drink, devouring fire."
+  },
+  {
+   "chunk": "s11",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Begging ground: world unowned, outright begging, straw-lordship, unwoven praise, dream-question (vv1-5). [1] Self-confessed lowliness: scent-speck, heart-word split, dull litany, ear-pearls, death-wounded power-seeking (vv6-10). [2] High praise and rescue: vocative catalogue, makerhood questioned, life-drink hankered, smasher begged, gloom-smasher bowed (vv11-15).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Begging ground: world unowned, outright begging, straw-lordship, unwoven praise, dream-question.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Self-confessed lowliness: scent-speck, heart-word split, dull litany, ear-pearls, death-wounded power-seeking.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "High praise and rescue: vocative catalogue, makerhood questioned, life-drink hankered, smasher begged, gloom-smasher bowed.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Begging ground: world unowned, outright begging, straw-lordship, unwoven praise, dream-question.\n\nSelf-confessed lowliness: scent-speck, heart-word split, dull litany, ear-pearls, death-wounded power-seeking.\n\nHigh praise and rescue: vocative catalogue, makerhood questioned, life-drink hankered, smasher begged, gloom-smasher bowed."
+  },
+  {
+   "chunk": "s12",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Seeing opened: no helper, no bar — flooded all, self-arising beheld, creation trickled, nectar tasted, timeless seeing, yoga ripened, sported words, feet-dwelt (vv1-8). [1] Dwelling deepened: foot-lotus belly, sham resolve, drunk Lord, pith-gist taken, indwelling births, soundless churn, Goddess seat, slipping mark, nectar current, grain of groundedness (vv9-18). [2] Beholding sealed: measured beholding, limb-going, plough-gait seeing, unstopped feast, sayings, limb-dawn, strayed ranges, born slavery, counter-stance keenness, things-as-things, naught-asserted won (vv19-29).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Seeing opened: no helper, no bar — flooded all, self-arising beheld, creation trickled, nectar tasted, timeless seeing, yoga ripened, sported words, feet-dwelt.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Dwelling deepened: foot-lotus belly, sham resolve, drunk Lord, pith-gist taken, indwelling births, soundless churn, Goddess seat, slipping mark, nectar current, grain of groundedness.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Beholding sealed: measured beholding, limb-going, plough-gait seeing, unstopped feast, sayings, limb-dawn, strayed ranges, born slavery, counter-stance keenness, things-as-things, naught-asserted won.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Seeing opened: no helper, no bar — flooded all, self-arising beheld, creation trickled, nectar tasted, timeless seeing, yoga ripened, sported words, feet-dwelt.\n\nDwelling deepened: foot-lotus belly, sham resolve, drunk Lord, pith-gist taken, indwelling births, soundless churn, Goddess seat, slipping mark, nectar current, grain of groundedness.\n\nBeholding sealed: measured beholding, limb-going, plough-gait seeing, unstopped feast, sayings, limb-dawn, strayed ranges, born slavery, counter-stance keenness, things-as-things, naught-asserted won."
+  },
+  {
+   "chunk": "s13",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Mark and frame: pain-joy mark heard, unshowing black wiped, live-die-or-else in His frame (vv1-3). [1] Work's fabric: lovers' pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish (vv4-13). [2] Widening close: all-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised (vv14-20).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Mark and frame: pain-joy mark heard, unshowing black wiped, live-die-or-else in His frame.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Work’s fabric: lovers’ pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Widening close: all-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Mark and frame: pain-joy mark heard, unshowing black wiped, live-die-or-else in His frame.\n\nWork’s fabric: lovers’ pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish.\n\nWidening close: all-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised."
+  },
+  {
+   "chunk": "s14",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Faces hailed: taste, Rudra-One, brow-eye, powers-body, other-world dress, milk-sea shade, cool-digit shelter, hallowing touch (vv1-8). [1] Deeds hailed: duping sillies, love-gifts, Brahmā-might, sealed glory, creation-wish, striding worlds, inborn height, burn-work, nectar-sea, delusion-lamp (vv9-18). [2] Nearness and finale: life's-life warbling, gold-vein mountain, pain-unneared, leafed dependents, bright deed, victory-vessel and thirteenfold hail to Three-eyed (vv19-24).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Faces hailed: treasure, Rudra-One, brow-eye, powers-body, other-world, milk-shade, digit-shelter, hallowing touch.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Deeds hailed: duping sillies, love-gifts, Brahma-might, sealed glory, wish-moment, striding worlds, inborn height, burn-work, nectar-sea, delusion-lamp.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Nearness and finale: warbling life, gold-vein mountain, unneared, leafed dependents, bright deed, victory-vessel and thirteenfold Hail to Three-eyed.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Faces hailed: treasure, Rudra-One, brow-eye, powers-body, other-world, milk-shade, digit-shelter, hallowing touch.\n\nDeeds hailed: duping sillies, love-gifts, Brahma-might, sealed glory, wish-moment, striding worlds, inborn height, burn-work, nectar-sea, delusion-lamp.\n\nNearness and finale: warbling life, gold-vein mountain, unneared, leafed dependents, bright deed, victory-vessel and thirteenfold Hail to Three-eyed."
+  },
+  {
+   "chunk": "s15",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Lovers against the qualified: books and far-siders set beside lover-truth; Māyā-food strollers, babblers past praise-words, masterless, dragging, selved, blind-shining, gleaner-ruling, wallowing climbers (vv1-9). [1] Kept and questioned: guarded hoard, dropped envy, milk-jar won, past-compare attainment, sunk gem-creeper, wonderless worry (vv10-15). [2] Pervasion and road: cross-scented scents, Śiva-night worship, goodness widened, far-far road walked moon-crowned (vv16-19).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Lovers against the qualified: books and far-siders set beside lover-truth; MAyA-food strollers, babblers past praise-words, masterless, dragging, selved, blind-shining, gleaner-ruling, wallowing climbers.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Kept and questioned: guarded hoard, dropped envy, milk-jar won, past-compare attainment, sunk gem-creeper, wonderless worry.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Pervasion and road: cross-scented scents, Shiva-night worship, goodness widened, far-far road walked moon-crowned.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Lovers against the qualified: books and far-siders set beside lover-truth; MAyA-food strollers, babblers past praise-words, masterless, dragging, selved, blind-shining, gleaner-ruling, wallowing climbers.\n\nKept and questioned: guarded hoard, dropped envy, milk-jar won, past-compare attainment, sunk gem-creeper, wonderless worry.\n\nPervasion and road: cross-scented scents, Shiva-night worship, goodness widened, far-far road walked moon-crowned."
+  },
+  {
+   "chunk": "s16",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Veil and youth: unveiled veiling, laddered method, laughed winning, undrying sap, unmet befalling, no-other-prayer (vv1-6). [1] Frenzy catalogue: raging Śiva-yells, pit-weeping-laughing-scatter, unfelt feeling, thrill-needles, ripened feasting, held ranges, wiped duality, straying splits, stainless minds, conquered gloom, bath-drink rites, praised world-faring (vv7-18). [2] Freedom and seal: ripe-love freedom named, pain-welcomed, mutual gladdening, nectar-shaped selves, shown worlds, hidden-high love cried, beauty-ground, knower-road wins, hall-clasping, dissolution feast, commanded-free lordship (vv19-30).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Veil and youth: unveiled veiling, laddered method, laughed winning, undrying sap, unmet befalling, no-other-prayer.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Frenzy catalogue: raging Shiva-yells, pit-weeping-laughing-scatter, unfelt feeling, thrill-needles, ripened feasting, held ranges, wiped duality, straying splits, stainless minds, conquered gloom, bath-drink rites, praised world-faring.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Freedom and seal: ripe-love freedom named, pain-welcomed, mutual gladdening, nectar-shaped selves, shown worlds, hidden-high love cried, beauty-ground, knower-road wins, hall-clasping, dissolution feast, commanded-free lordship.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Veil and youth: unveiled veiling, laddered method, laughed winning, undrying sap, unmet befalling, no-other-prayer.\n\nFrenzy catalogue: raging Shiva-yells, pit-weeping-laughing-scatter, unfelt feeling, thrill-needles, ripened feasting, held ranges, wiped duality, straying splits, stainless minds, conquered gloom, bath-drink rites, praised world-faring.\n\nFreedom and seal: ripe-love freedom named, pain-welcomed, mutual gladdening, nectar-shaped selves, shown worlds, hidden-high love cried, beauty-ground, knower-road wins, hall-clasping, dissolution feast, commanded-free lordship."
+  },
+  {
+   "chunk": "s17",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Feast announced: somehow-won sweetness, success dealings, all-state worship, touch-feasts, equinox tides, startless deeds, dreaming rulers, chanter grades, nectar-weddings, churn-born winnings (vv1-10). [1] Feast entered: pure-shine rounds, woven weddings, waxing greed, ocean sitting, knot severing, sense-field sending, helpless heats, grace-causes, deed-frenzies, ventured fruits (vv11-22). [2] Feast deepened: roaming madness, open hearts, unfound beauties, clear-fed frames, wedding-bonds, thirsting lakes, sole bowls, somehow-wins, bowed gear, mantra-laid starts, blooming kingdoms (vv23-34). [3] Feast sealed: god-or-freed feasters, weighted guises, churned nectar, wish-cow deeming, tossing glances, churned worship, treading courtesy, unbarred love, stilled minds, ruled means, treasuried senses, pretty thralls, formed feasts, lust-offerings, straw-and-jewel close (vv35-48).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Feast announced: somehow-won sweetness, success dealings, all-state worship, touch-feasts, equinox tides, startless deeds, dreaming rulers, chanter grades, nectar-weddings, churn-born winnings.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Feast entered: pure-shine rounds, woven weddings, waxing greed, ocean sitting, knot severing, sense-field sending, helpless heats, grace-causes, deed-frenzies, ventured fruits.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Feast deepened: roaming madness, open hearts, unfound beauties, clear-fed frames, wedding-bonds, thirsting lakes, sole bowls, somehow-wins, bowed gear, mantra-laid starts, blooming kingdoms.",
+     "maps_to": [
+      2
+     ]
+    },
+    {
+     "text": "Feast sealed: god-or-freed feasters, weighted guises, churned nectar, wish-cow deeming, tossing glances, churned worship, treading courtesy, unbarred love, stilled minds, ruled means, treasuried senses, pretty thralls, formed feasts, lust-offerings, straw-and-jewel close.",
+     "maps_to": [
+      3
+     ]
+    }
+   ],
+   "text": "Feast announced: somehow-won sweetness, success dealings, all-state worship, touch-feasts, equinox tides, startless deeds, dreaming rulers, chanter grades, nectar-weddings, churn-born winnings.\n\nFeast entered: pure-shine rounds, woven weddings, waxing greed, ocean sitting, knot severing, sense-field sending, helpless heats, grace-causes, deed-frenzies, ventured fruits.\n\nFeast deepened: roaming madness, open hearts, unfound beauties, clear-fed frames, wedding-bonds, thirsting lakes, sole bowls, somehow-wins, bowed gear, mantra-laid starts, blooming kingdoms.\n\nFeast sealed: god-or-freed feasters, weighted guises, churned nectar, wish-cow deeming, tossing glances, churned worship, treading courtesy, unbarred love, stilled minds, ruled means, treasuried senses, pretty thralls, formed feasts, lust-offerings, straw-and-jewel close."
+  },
+  {
+   "chunk": "s18",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Inside and outside winning: world-inside won, Bhavānī-facing station unsplit, smug slain, honoured feet, frame-dwelt burning (vv1-5). [1] Dwelling images: glued minds at aim-meets, pastured dealings, city roving, oozed nectar-floods, chant-tree woods, dawning shows, cake-built gladdening, honoured-rule seas (vv6-13). [2] Paradox and entry: bared truth unvesselled, calm unwanting, bowled minds, ring-turned winning, unsundered making, stained denial, plain entering, praiseless praise (vv14-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Inside and outside winning: world-inside won, BhavAnI-facing station unsplit, smug slain, honoured feet, frame-dwelt burning.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Dwelling images: glued minds at aim-meets, pastured dealings, city roving, oozed nectar-floods, chant-tree woods, dawning shows, cake-built gladdening, honoured-rule seas.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Paradox and entry: bared truth unvesselled, calm unwanting, bowled minds, ring-turned winning, unsundered making, stained denial, plain entering, praiseless praise.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Inside and outside winning: world-inside won, BhavAnI-facing station unsplit, smug slain, honoured feet, frame-dwelt burning.\n\nDwelling images: glued minds at aim-meets, pastured dealings, city roving, oozed nectar-floods, chant-tree woods, dawning shows, cake-built gladdening, honoured-rule seas.\n\nParadox and entry: bared truth unvesselled, calm unwanting, bowled minds, ring-turned winning, unsundered making, stained denial, plain entering, praiseless praise."
+  },
+  {
+   "chunk": "s19",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Prayer grounds: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings (vv1-4). [1] Face and melting: jewel-creeper blooming, face-orb drowning, glad shapes, unexcelled touches, bitter offerings, ray-licked fevers, blocked strands, brimmed piths (vv5-12). [2] Freedom and Master: death-lawed shining, speck-starved wings, clear begging, brimmed mindfulness, yonder father-eyed mother-roamed Master (vv13-17).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Prayer grounds: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Face and melting: jewel-creeper blooming, face-orb drowning, glad shapes, unexcelled touches, bitter offerings, ray-licked fevers, blocked strands, brimmed piths.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Freedom and Master: death-lawed shining, speck-starved wings, clear begging, brimmed mindfulness, yonder father-eyed mother-roamed Master.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Prayer grounds: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings.\n\nFace and melting: jewel-creeper blooming, face-orb drowning, glad shapes, unexcelled touches, bitter offerings, ray-licked fevers, blocked strands, brimmed piths.\n\nFreedom and Master: death-lawed shining, speck-starved wings, clear begging, brimmed mindfulness, yonder father-eyed mother-roamed Master."
+  },
+  {
+   "chunk": "s20",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Bow catalogue: catalogued Lord, dance-ready praise, Hara-housed fortunes, played lordship, honoured seat (vv1-5). [1] Paradox middle: Gauri-lover favoured, being-tree creepers, itch-born worship, gone roamings, begged riches, pang-joys, rooted sinking, speech-jewel, effortless ripening (vv6-13). [2] Closing seal: awaited light, slave-mouth Śiva, lit showings, guzzled breathers, sham ruin-ties, self-standing frames, night-dancing heroes, begun endless praise (vv14-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bow catalogue: catalogued Lord, dance-ready praise, Hara-housed fortunes, played lordship, honoured seat.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Paradox middle: Gauri-lover favoured, being-tree creepers, itch-born worship, gone roamings, begged riches, pang-joys, rooted sinking, speech-jewel, effortless ripening.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Closing seal: awaited light, slave-mouth Shiva, lit showings, guzzled breathers, sham ruin-ties, self-standing frames, night-dancing heroes, begun endless praise.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Bow catalogue: catalogued Lord, dance-ready praise, Hara-housed fortunes, played lordship, honoured seat.\n\nParadox middle: Gauri-lover favoured, being-tree creepers, itch-born worship, gone roamings, begged riches, pang-joys, rooted sinking, speech-jewel, effortless ripening.\n\nClosing seal: awaited light, slave-mouth Shiva, lit showings, guzzled breathers, sham ruin-ties, self-standing frames, night-dancing heroes, begun endless praise."
+  }
+ ]
+}

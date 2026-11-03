@@ -1,0 +1,102 @@
+{
+ "work": "anubhavanivedana",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work anubhavanivedana/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=4",
+  "approval": "2026-11-04: L4 4/4 songs (DRAFT+data), full-process w/ rejected-options, v1 approved by owner then standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "anu-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Mind-wind dissolved in the inward aim; seeing yet not seeing with steady gaze — this is śāmbhavī mudrā by the guru's grace alone: reality free of void and non-void.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Eyes open, pupils frozen, mind melted inward: seeing and unseeing at once. That is the whole practice, and it is not a technique you do.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "It only lands as grace. Your teacher gives it, and what it opens is reality past both void and non-void. No forcing it. Ever.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Eyes open, pupils frozen, mind melted inward: seeing and unseeing at once. That is the whole practice, and it is not a technique you do.\n\nIt only lands as grace. Your teacher gives it, and what it opens is reality past both void and non-void. No forcing it. Ever."
+  },
+  {
+   "chunk": "anu-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Four outer strokes — half-open eyes, steady mind, nose-tip gaze, moon-sun dissolved — then the vision: light-form without exterior, one supreme person attained; after which speech ends.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Set the body: half-open eyes, steady mind, gaze on the nose-tip, moon and sun dissolved. That is only the setup.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then it happens: a person of pure light, no outside anywhere. After that, words are done. What more is there to say?",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Set the body: half-open eyes, steady mind, gaze on the nose-tip, moon and sun dissolved. That is only the setup.\n\nThen it happens: a person of pure light, no outside anywhere. After that, words are done. What more is there to say?"
+  },
+  {
+   "chunk": "anu-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] No technique enjoined: whatever sounds is already transcendent mantra, whatever the body postures is already mudrā, whatever the breath's flow is already wonderful yoga — so, in the experienced śākta abode, what would not shine?",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "No methods. Whatever you say is already mantra. Whatever your body does is already mudra. Whatever your breath does is already yoga.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Live inside that charged ground and everything shines. What exactly would stay dark?",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "No methods. Whatever you say is already mantra. Whatever your body does is already mudra. Whatever your breath does is already yoga.\n\nLive inside that charged ground and everything shines. What exactly would stay dark?"
+  },
+  {
+   "chunk": "anu-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Each sacred form defined by a vanishing: mantra where letters unnoticed, mudrā where all bodily action dissolved, yoga where breath-flow exhausted — then the festival: for the wise attaining Your abode, everything wonderful.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Mantra is what remains when letters drop out. Mudra is what remains when effort drops out. Yoga is what remains when breath drops out. Each holy thing is defined by its vanishing.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the punchline: for those who get there, everything is wonderful. All of it. That is the celebration.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Mantra is what remains when letters drop out. Mudra is what remains when effort drops out. Yoga is what remains when breath drops out. Each holy thing is defined by its vanishing.\n\nThen the punchline: for those who get there, everything is wonderful. All of it. That is the celebration."
+  }
+ ]
+}

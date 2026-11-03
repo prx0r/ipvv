@@ -1,0 +1,162 @@
+{
+ "work": "isvarasiddhi",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work isvarasiddhi/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=7",
+  "approval": " gap fixed in workcfg; taye variant + v37/38 sentence recorded | 2026-11-04: L4 7/7 songs, 56/56v (per-song DRAFT+data), lacunae sung as gaps, L3 rhyme kept, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "isva-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bodies bespeak a conscious maker, like pots: the design inference stated through lacunae (vv1-2). [1] Variety marks wisdom; matter can't arrange; makers proved prove the Lord — answering neither-potter-nor-Lord with conscious-only pervasion shown (vv5-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is the proof, stated plainly even though parts of the old manuscript are missing: bodies and everything else have a conscious maker behind them — the way pots point back to a potter. The gaps in the text are left as gaps; nothing gets filled in by guessing.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the proof tightens. Variety itself is the mark of wisdom: dead matter could never arrange things on purpose. Makers once proved prove something bigger — the Lords own act. And when someone objects that neither a potter nor the Lord fits the logic, the answer goes minimalist: just showing that pervasion runs with the conscious alone is enough, and somewhere, someone wise gets grasped by it.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Here is the proof, stated plainly even though parts of the old manuscript are missing: bodies and everything else have a conscious maker behind them — the way pots point back to a potter. The gaps in the text are left as gaps; nothing gets filled in by guessing.\n\nThen the proof tightens. Variety itself is the mark of wisdom: dead matter could never arrange things on purpose. Makers once proved prove something bigger — the Lords own act. And when someone objects that neither a potter nor the Lord fits the logic, the answer goes minimalist: just showing that pervasion runs with the conscious alone is enough, and somewhere, someone wise gets grasped by it."
+  },
+  {
+   "chunk": "isva-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Stock examples turned: eye-fitness shows the higher self; smoke-fire proves khadira-wood by mere knowing (vv10-11). [1] The hetu fenced, others sifting, the whole Lord-made; helpers' strange way opened, pictured, and bounded; fancied spread refused (vv12-18).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The old stock examples get turned to new use. The eye and the rest show the higher self, because eyes are fit for someone’s sake — combination exists for another. And just as smoke proves fire, and proves it specifically as khadira-wood fire, by mere knowing from far away: that is how the fitness-proof works.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the fencing and the bounding. The reason for inferring gets stated in its locus-form alone, and fenced off: not bare variety, not some particulars private mark. Others get to sift reasons too, and the whole world comes out Lord-made. Helpers get their strange way opened, pictured, and then bounded: they enter materials as others, reach material form, but outward changers in matter cannot yoke variety into effects. And a merely fancied spread of the conscious, in name only, does not order everything by itself.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "The old stock examples get turned to new use. The eye and the rest show the higher self, because eyes are fit for someone’s sake — combination exists for another. And just as smoke proves fire, and proves it specifically as khadira-wood fire, by mere knowing from far away: that is how the fitness-proof works.\n\nThen the fencing and the bounding. The reason for inferring gets stated in its locus-form alone, and fenced off: not bare variety, not some particulars private mark. Others get to sift reasons too, and the whole world comes out Lord-made. Helpers get their strange way opened, pictured, and then bounded: they enter materials as others, reach material form, but outward changers in matter cannot yoke variety into effects. And a merely fancied spread of the conscious, in name only, does not order everything by itself."
+  },
+  {
+   "chunk": "isva-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Sāṅkhya stated at full strength: pradhāna proved by presence, purposed by denying self-aims; change easy; only striving moves; nature faces down (vv19-22). [1] The page turns on admitted karma: where is His business? Let His triggering be conceived; seed imaged; Sāṅkhya godless; conditional close (vv23-27).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "First the other side gets its strongest hearing. Matter-nature, says the Sankhya school, is proved just by showing up everywhere and doing the work; it has no aims of its own, so everything it does must be for spirits enjoyment. Change comes easy to it, again and again. Nothing moves it except the striving of a person aiming at something. And its own nature faces downward, toward making bodies.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the page turns on one admitted point. Fine, says our side — let karma count as a mover, even an original-natured one. But in that case, where exactly is the Lords business supposed to be? Let His triggering be conceived instead, guarding the inner rangers in root-nature. Picture a seed-kitchen that works on its own, the way sprouts do. Verdict on Sankhya: three-stranded root stuff, and therefore a godless school. Conditional close: if acts are aimed at spirit, let primal stuff be conceived as their mover.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "First the other side gets its strongest hearing. Matter-nature, says the Sankhya school, is proved just by showing up everywhere and doing the work; it has no aims of its own, so everything it does must be for spirits enjoyment. Change comes easy to it, again and again. Nothing moves it except the striving of a person aiming at something. And its own nature faces downward, toward making bodies.\n\nThen the page turns on one admitted point. Fine, says our side — let karma count as a mover, even an original-natured one. But in that case, where exactly is the Lords business supposed to be? Let His triggering be conceived instead, guarding the inner rangers in root-nature. Picture a seed-kitchen that works on its own, the way sprouts do. Verdict on Sankhya: three-stranded root stuff, and therefore a godless school. Conditional close: if acts are aimed at spirit, let primal stuff be conceived as their mover."
+  },
+  {
+   "chunk": "isva-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Potter necessary, nature watching, helpers insufficient, wisdom and will required, sufficiency tested (vv28-33). [1] Array excels by ends; Lord and un-Lord fenced off atomically; pradhāna will-less yet person-aim-ness stands (vv34-36).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Back to the workshop. No pot without a potter — how else could there be one? Clay-lump nature watches the potter, looking his way. Helpers crawling inside the material cannot arrange anything, capable though they be. Wisdom linked to the worlds traffic is required, and it is never found missing. No will to make means no wonders made — just grossness, never anything world-good. Test sufficiency: would mere potter-helping, all by itself, bear a pot? Rule-wondrous making says what it says.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the array and the fences. Never bodies from long clay-lumps or otherwise — hence arrangement excels, led by ends. Lord and un-Lord both fenced off at atomic scale: neither taken as the atom-marked. And primal stuff gets no desire-arising of its own — yet person-aim-ness stands.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Back to the workshop. No pot without a potter — how else could there be one? Clay-lump nature watches the potter, looking his way. Helpers crawling inside the material cannot arrange anything, capable though they be. Wisdom linked to the worlds traffic is required, and it is never found missing. No will to make means no wonders made — just grossness, never anything world-good. Test sufficiency: would mere potter-helping, all by itself, bear a pot? Rule-wondrous making says what it says.\n\nThen the array and the fences. Never bodies from long clay-lumps or otherwise — hence arrangement excels, led by ends. Lord and un-Lord both fenced off at atomic scale: neither taken as the atom-marked. And primal stuff gets no desire-arising of its own — yet person-aim-ness stands."
+  },
+  {
+   "chunk": "isva-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unperceived buddhi grounds no purpose; generic will forces omniscience on each; perception-by-all mixes appearances unless One holds them (vv37-41). [1] Nature's kit needs no purpose and purpose is courtesy-speech — yet the root-cause would never cease, so no liberation without a perceiving maker (vv42-45).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unperceived mind-stuff grounds no purpose: if no spirit sees it, it is for nothing. Try to escape by saying will belongs to nature-in-general, and the escape explodes — every soul would have to be omniscient. Perceived-by-all mixes every appearance together, unless some One holds them all apart — and that One is the turn toward the Lord.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "The other side tries nature alone: seeds need no purpose to sprout, purpose-talk is just courtesy-speech. But then the root-cause would churn out effects forever and never stop — so nothing would ever be released, and there could be no liberation without a perceiving maker.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Unperceived mind-stuff grounds no purpose: if no spirit sees it, it is for nothing. Try to escape by saying will belongs to nature-in-general, and the escape explodes — every soul would have to be omniscient. Perceived-by-all mixes every appearance together, unless some One holds them all apart — and that One is the turn toward the Lord.\n\nThe other side tries nature alone: seeds need no purpose to sprout, purpose-talk is just courtesy-speech. But then the root-cause would churn out effects forever and never stop — so nothing would ever be released, and there could be no liberation without a perceiving maker."
+  },
+  {
+   "chunk": "isva-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The svabhāva-view's consequences pressed: desired-by-all yet body-changes by nature; occurrence without union; needlessness fitting neither spirit nor mind; no reunion yet rebirth; mokṣa collapsed into nature; compassion-acts forcing passion-exhaustion doctrine (vv46-51). [1] The siddhānta sealed: nature-view abandoned as unjust, bodies famously sentient-maker-prior, arrangement-difference the flawless proof, the hetu aimed at Parameśvara unshaken (vv52-54).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Now press every consequence of the nature-alone view until it breaks. Desired by all spirits, yet bodies change by nature anyway. Occurrence without any union to explain it. Needlessness that fits neither spirit nor mind. No reunion allowed, yet rebirth happens. Liberation collapsed into mere nature. Compassion-acts that smuggle passion back in, turning the doctrine into passion-exhaustion.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then drop that view as unjust and seal the proof instead: bodies famously have a sentient maker before them. Patterned difference is the flawless proof — this setup, nothing else. The reason stands aimed at the Supreme Lord, and no fault of logic shakes it, nor any rival’s. Only this is said, and the disputation closes.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Now press every consequence of the nature-alone view until it breaks. Desired by all spirits, yet bodies change by nature anyway. Occurrence without any union to explain it. Needlessness that fits neither spirit nor mind. No reunion allowed, yet rebirth happens. Liberation collapsed into mere nature. Compassion-acts that smuggle passion back in, turning the doctrine into passion-exhaustion.\n\nThen drop that view as unjust and seal the proof instead: bodies famously have a sentient maker before them. Patterned difference is the flawless proof — this setup, nothing else. The reason stands aimed at the Supreme Lord, and no fault of logic shakes it, nor any rival’s. Only this is said, and the disputation closes."
+  },
+  {
+   "chunk": "isva-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Proof needs fitness: thousand-proved, it fails the deluded; the palm-held Jewel flees the fate-struck (v55). Self flashes as Īśvara within all breathers, maker and knower; recognition to be effected, joining made elsewhere; the proof stands even in duality — midnight fire (v56).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "A proof, even one proved a thousand blazing times, still fails for minds gone astray — the Jewel sits in the palm yet flees the fate-struck. But your own Self flashes forth as the Lord inside every breather: maker and knower both. Recognition of what lies beyond is still to be effected, and the joining was made elsewhere. Even standing inside duality, the proof stands — like midnight fire, burning brighter in the dark.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "A proof, even one proved a thousand blazing times, still fails for minds gone astray — the Jewel sits in the palm yet flees the fate-struck. But your own Self flashes forth as the Lord inside every breather: maker and knower both. Recognition of what lies beyond is still to be effected, and the joining was made elsewhere. Even standing inside duality, the proof stands — like midnight fire, burning brighter in the dark."
+  }
+ ]
+}

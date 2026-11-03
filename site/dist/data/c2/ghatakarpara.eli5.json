@@ -1,0 +1,80 @@
+{
+ "work": "ghatakarpara",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work ghatakarpara/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=3",
+  "approval": "e 3/3 songs, 21/21v, merged + pushed (standing approval). p01 L2 realigned to T1/argmap/L0 grouping (verbatim re-partition, span-verified vs source; no-share rewordings x1, gate-verified). 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "ghat-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Śṛṅgāra is performed, not described: the separated beloved's voice, her appeal to the cloud, and the landscape's answering her are all determinants (vibhāva) of the rasa. The cloud is never told to carry a message — that is dhvani, and it is what makes it the genre's first instance. The voice closes not in despair but in sustaining memory: the sthāyibhāva (love) transforms the sorrow (vyabhicāri) into something relishable. Kāma arises in the heart to kill; the beloved who is absent arises with him; the cātaka, thirsty for rain alone, begs water; the peacock-flock sounds at the clouds; she is protected only by remembrance of his virtue.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "This is a love poem where nobody describes love — instead, love gets performed. A separated woman speaks. She appeals to a passing cloud. And the landscape answers her mood: peacocks cry when clouds come, and that is not decoration, it is part of what makes the feeling real. Literary theory calls these the determinants of the mood.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Here is the device that made this poem the first of its genre: the cloud is never actually told to carry any message. That meaning hangs unsaid — and the unsaid part is the whole point. The voice does not end in despair either. It ends in sustaining memory: her love is kept alive by remembering his goodness. So love, the abiding feeling, transforms sorrow — which is only passing through — into something you can actually savor. Meanwhile the events: desire wakes in the heart to kill, and the absent beloved rises right along with it. The cAtaka bird, who drinks only rain, begs water. The peacocks sound at the clouds. And she is protected by nothing but remembrance of his virtue.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "This is a love poem where nobody describes love — instead, love gets performed. A separated woman speaks. She appeals to a passing cloud. And the landscape answers her mood: peacocks cry when clouds come, and that is not decoration, it is part of what makes the feeling real. Literary theory calls these the determinants of the mood.\n\nHere is the device that made this poem the first of its genre: the cloud is never actually told to carry any message. That meaning hangs unsaid — and the unsaid part is the whole point. The voice does not end in despair either. It ends in sustaining memory: her love is kept alive by remembering his goodness. So love, the abiding feeling, transforms sorrow — which is only passing through — into something you can actually savor. Meanwhile the events: desire wakes in the heart to kill, and the absent beloved rises right along with it. The cAtaka bird, who drinks only rain, begs water. The peacocks sound at the clouds. And she is protected by nothing but remembrance of his virtue."
+  },
+  {
+   "chunk": "ghat-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Beauty is not decoration but cause: the groves shine for Kāma's sake, not the reverse. The grove is the vibhāva (determinant) of śṛṅgāra; the rasa overwhelms perception — dust of passion obscures sun and moon, new-cloud-drunk peacocks cry. The kuṭaja's mockery and the nīpa's release are consequents (anubhāva), not ornament: the poet sides with the humble tree over showy flowers. The bee kisses the yūthikā creeper. The rasa is aesthetic: the rasa IS the point.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is the thesis of the whole passage: beauty is not decoration, it is the cause. The groves do not just happen to be pretty while love happens nearby. They shine specifically for love’s sake — the other way round from what you would expect. The grove is what sets the mood off; the dust of passion gets so thick it blots out the sun and the moon; peacocks drunk on new clouds cry out.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "The details are not ornaments either, they are responses to the mood. The kuTaja tree gets mocked by showy flowers, and the poet sides with the humble tree. The nIpa tree lets its body go to the bees — a release. The bee kisses the yUthikA creeper. The point of all of it is aesthetic: the feeling itself is what everything is for.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is the thesis of the whole passage: beauty is not decoration, it is the cause. The groves do not just happen to be pretty while love happens nearby. They shine specifically for love’s sake — the other way round from what you would expect. The grove is what sets the mood off; the dust of passion gets so thick it blots out the sun and the moon; peacocks drunk on new clouds cry out.\n\nThe details are not ornaments either, they are responses to the mood. The kuTaja tree gets mocked by showy flowers, and the poet sides with the humble tree. The nIpa tree lets its body go to the bees — a release. The bee kisses the yUthikA creeper. The point of all of it is aesthetic: the feeling itself is what everything is for."
+  },
+  {
+   "chunk": "ghat-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The rasa shifts from śṛṅgāra to vira/adbhuta: love and landscape are framed by the poet's skill, not by love alone. Clouds thundering make travelers long; sorrow grows, endless. Lovers honor the love-festival; cloud-arrival, dear friend, they bring. Then the tribute: may I be conquered by which poet, by yamakas; to him I pour water in ghaṭakarpara. The sthāyibhāva (love) resolves into the poet's own delight (camatkāra) at his craft. The potsherd is both vessel and namesake — the potsherd names itself at its close.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "In the last movement the feeling itself changes. Love and landscape get reframed as the poets skill, not just loves own doing. Clouds thunder and travelers start longing; sorrow grows and does not stop. Lovers honor the love-festival, and the clouds arrival — dear friend — they bring it on. Then the tribute: may I be conquered by whichever poet does this with yamakas, those echoing sound-twists. To him I pour water — in a broken pot. A potsherd.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "So the abiding love-feeling resolves into something else: the poets own delight in his craft. And the potsherd is both things at once: the vessel the water is poured in, and the namesake the whole poem is named for. It names itself at its close.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "In the last movement the feeling itself changes. Love and landscape get reframed as the poets skill, not just loves own doing. Clouds thunder and travelers start longing; sorrow grows and does not stop. Lovers honor the love-festival, and the clouds arrival — dear friend — they bring it on. Then the tribute: may I be conquered by whichever poet does this with yamakas, those echoing sound-twists. To him I pour water — in a broken pot. A potsherd.\n\nSo the abiding love-feeling resolves into something else: the poets own delight in his craft. And the potsherd is both things at once: the vessel the water is poured in, and the namesake the whole poem is named for. It names itself at its close."
+  }
+ ]
+}

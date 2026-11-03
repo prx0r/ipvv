@@ -1,0 +1,175 @@
+{
+ "work": "bodhavilasa",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bodhavilasa/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=5",
+  "approval": "aṅgala+colophon scoped), validate+proof PASS x5, L3 couplets handcrafted+reviewed; QA NEEDS_WITNESS | 2026-11-04: L4 5/5 songs, 41/41v (per-song DRAFT+data), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bodh-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Double invocation: Netra, five-act Śiva. [1] Free cause so-called; powers bestowed. [2] Own ground-will-purpose; fitness divides. [3] Variety arranged high-to-low by difference. [4] Tightening makes mind; banyan-seed contains world-form. [5] Pure knowing rule-bound named mind. [6] Awareness rests object-faced; wise know mind-as-knowing. [7] Knowing-formed yet object-bound, discernment-void. [8] Ever-one established by enumerated means. [9] Everywhere pure Lord; palm-close freedom via mis-knowing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Double bow opens: Netra, then five-act Shiva. That is the door.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Free cause so-called; powers bestowed. Own ground-will-purpose; fitness divides. Variety arranged high-to-low by difference.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Tightening makes mind; banyan-seed contains world-form. Pure knowing rule-bound named mind. Awareness rests object-faced; wise know mind-as-knowing. Knowing-formed yet object-bound, discernment-void. Ever-one established by enumerated means. Everywhere pure Lord; palm-close freedom via mis-knowing.",
+     "maps_to": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Double bow opens: Netra, then five-act Shiva. That is the door.\n\nFree cause so-called; powers bestowed. Own ground-will-purpose; fitness divides. Variety arranged high-to-low by difference.\n\nTightening makes mind; banyan-seed contains world-form. Pure knowing rule-bound named mind. Awareness rests object-faced; wise know mind-as-knowing. Knowing-formed yet object-bound, discernment-void. Ever-one established by enumerated means. Everywhere pure Lord; palm-close freedom via mis-knowing."
+  },
+  {
+   "chunk": "bodh-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Tended means; Lord tends; release-glory proceeds. [1] Doubtless yet made-up stages, actor-assumed. [2] Assumed vast shines; tightened impures. [3] Incomplete confessed, defiled, all-pervading nonetheless. [4] God's five, self's five; delusion the difference. [5] Expansion sung capable; contraction called wanderer. [6] Māyā glimpse-willing; keeping/loosing deemed powers. [7] Withdrawn grace in oneness; manifesting named veiling. [8] Present course jewel-known; ignorance timber-cloddish.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Tended means; Lord tends; release-glory proceeds. Doubtless yet made-up stages, actor-assumed.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Assumed vast shines; tightened impures in wandering. Incomplete confessed, defiled, all-pervading nonetheless. God’s five, self’s five; delusion the difference.",
+     "maps_to": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "text": "Expansion sung capable; contraction called wanderer. Maya glimpse-willing; keeping/loosing deemed powers. Withdrawn grace in oneness; manifesting named veiling. Present course jewel-known; ignorance timber-cloddish.",
+     "maps_to": [
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "text": "Tended means; Lord tends; release-glory proceeds. Doubtless yet made-up stages, actor-assumed.\n\nAssumed vast shines; tightened impures in wandering. Incomplete confessed, defiled, all-pervading nonetheless. God’s five, self’s five; delusion the difference.\n\nExpansion sung capable; contraction called wanderer. Maya glimpse-willing; keeping/loosing deemed powers. Withdrawn grace in oneness; manifesting named veiling. Present course jewel-known; ignorance timber-cloddish."
+  },
+  {
+   "chunk": "bodh-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Always-practice frees to bliss-fullness. [1] Awake fire swallows; all-devouring to be known. [2] Joined attains pure soon, doubtless. [3] Grown fire shines knowing-made; nectar outside. [4] Stillness shown; self plays supreme. [5] Constant knower freed frees scores flash-fast. [6] Bliss-powered standing; rising joy thus. [7] Nature-fixed desired in distraction; effort-attained. [8] Middle-opening shines; divine vision shown. [9] Spotless expands bodiless vision.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Always-practice frees to bliss-fullness. Awake fire swallows; all-devouring to be known. Joined attains pure soon, doubtless.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "Grown fire shines knowing-made; nectar outside. Stillness shown; self plays supreme. Constant knower freed frees scores flash-fast.",
+     "maps_to": [
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "Bliss-powered standing; rising joy thus. Nature-fixed desired in distraction; effort-attained. Middle-opening shines; divine vision shown. Spotless expands bodiless vision.",
+     "maps_to": [
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Always-practice frees to bliss-fullness. Awake fire swallows; all-devouring to be known. Joined attains pure soon, doubtless.\n\nGrown fire shines knowing-made; nectar outside. Stillness shown; self plays supreme. Constant knower freed frees scores flash-fast.\n\nBliss-powered standing; rising joy thus. Nature-fixed desired in distraction; effort-attained. Middle-opening shines; divine vision shown. Spotless expands bodiless vision."
+  },
+  {
+   "chunk": "bodh-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Middle-opening means powerful thought-decay, many ways. [1] Nothing-thinking decays thoughts; play-power enamoured in being. [2] Attached sees bright flood; tightening brahma-called. [3] Rests listed: bindu-nāda and passion-grasps. [4] Goddess speaks; strong win reward in days. [5] Impressed roamer reflects again and again. [6] Distraction-proof shining for fixed yogi. [7] Mantra-strong full-I-knowing of inward devotee. [8] Sporting yogi mantra-stayed, strong playing power-swollen. [9] Freedom unbroken tasting all difference.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Middle-opening means powerful thought-decay, many ways. Nothing-thinking decays thoughts; play-power enamoured in being. Attached sees bright flood; tightening brahma-called.",
+     "maps_to": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "text": "Rests listed whole: bindu-nada and passion-grasps. Goddess speaks; strong win reward in days. Impressed roamer reflects again and again. Distraction-proof shining for fixed yogi.",
+     "maps_to": [
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "text": "Mantra-strong full-I-knowing of inward devotee. Sporting yogi mantra-stayed, strong playing power-swollen. Freedom unbroken tasting all difference.",
+     "maps_to": [
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "text": "Middle-opening means powerful thought-decay, many ways. Nothing-thinking decays thoughts; play-power enamoured in being. Attached sees bright flood; tightening brahma-called.\n\nRests listed whole: bindu-nada and passion-grasps. Goddess speaks; strong win reward in days. Impressed roamer reflects again and again. Distraction-proof shining for fixed yogi.\n\nMantra-strong full-I-knowing of inward devotee. Sporting yogi mantra-stayed, strong playing power-swollen. Freedom unbroken tasting all difference."
+  },
+  {
+   "chunk": "bodh-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Non-dual nectar drunk quenches fever. [1] Pure method-treatise for winning Śiva.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Non-dual nectar drunk quenches fever. Drink up; burn out.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Pure method-treatise for winning Shiva. Clean manual, no additives.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Non-dual nectar drunk quenches fever. Drink up; burn out.\n\nPure method-treatise for winning Shiva. Clean manual, no additives."
+  }
+ ]
+}

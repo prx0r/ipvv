@@ -1,0 +1,92 @@
+{
+ "work": "ajadapramatrsiddhi",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work ajadapramatrsiddhi/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=3",
+  "approval": "p/L2/C1/L3 27/27), validate+proof PASS x3, L3 handcrafted couplets reviewed | 2026-11-04: L4 3/3 songs, 27/27v (per-song DRAFT+data), śāstra-hammer couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "ajad-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Every candidate seat of distinction — predicates, objecthood, conceded difference, free-standing being, function — collapses into knower-dependence; the opponent's no-difference is granted, then outflanked from inside (vv1-8). [1] Grasping-less awareness is declared inert, and the proof turns: only self-reflective consciousness can stand as ground (v9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The opponent opens strong: no differences anywhere. The proof says: cool, granted — then demolishes every hiding spot for difference, one by one. Predicates, objects, concessions, free-standing being, function: all of them secretly rent their meaning from a knower.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then it turns the knife on itself: awareness that merely shines without grasping is just as inert as a rock. Only self-reflective consciousness can hold the ground. That reversal is the whole proof.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "The opponent opens strong: no differences anywhere. The proof says: cool, granted — then demolishes every hiding spot for difference, one by one. Predicates, objects, concessions, free-standing being, function: all of them secretly rent their meaning from a knower.\n\nThen it turns the knife on itself: awareness that merely shines without grasping is just as inert as a rock. Only self-reflective consciousness can hold the ground. That reversal is the whole proof."
+  },
+  {
+   "chunk": "ajad-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] What never stood cannot stand another: consciousness fits itself to this and I, orders inert selves by double certainty, and completes severed grasping in self-rest (vv10-15). [1] The same self twofold — breath-bound atom, unbroken whole — gathers in one continuous end-ground where nothing shows more inert than shining (vv16-18).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Nothing ungrounded can ground anything else. So how does consciousness do it? By playing both sides: this for showing you the world, I for being itself.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "It orders everything inert by a double test — what is ruled in, what is ruled out — and every severed grasping completes itself by resting back home in its own form.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Two-in-one: atom-small by breath, unbroken as the supreme self. One continuous ground holds both, and in it nothing outshines shining.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Nothing ungrounded can ground anything else. So how does consciousness do it? By playing both sides: this for showing you the world, I for being itself.\n\nIt orders everything inert by a double test — what is ruled in, what is ruled out — and every severed grasping completes itself by resting back home in its own form.\n\nTwo-in-one: atom-small by breath, unbroken as the supreme self. One continuous ground holds both, and in it nothing outshines shining."
+  },
+  {
+   "chunk": "ajad-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Breath, body, and the eightfold city are demoted to knowables: no ordering lies in breath, no restraint touches the self, and living-ness stands beyond non-showing (vv19-22). [1] Rest unfolds into freedom, doership, lordship; Māyā named from power alone; the beginningless mother-principle proclaimed; pervasion fenced to I-sharers; the world verdict that-nondual-made (vv23-27).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Breath demoted. Body demoted. The whole eightfold city demoted to knowable stuff. Ordering is not in breath, restraint cannot touch the self, and aliveness stands past anything unshown.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then rest unfolds upward: freedom, then doership, then lordship. Maya is named from power alone. The beginningless mother-principle of all awarenesses gets proclaimed out loud. Pervasion is fenced: I-sharers only.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Final verdict: the world keeps differing and shining, and recognition calls it that-nondual-made.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Breath demoted. Body demoted. The whole eightfold city demoted to knowable stuff. Ordering is not in breath, restraint cannot touch the self, and aliveness stands past anything unshown.\n\nThen rest unfolds upward: freedom, then doership, then lordship. Maya is named from power alone. The beginningless mother-principle of all awarenesses gets proclaimed out loud. Pervasion is fenced: I-sharers only.\n\nFinal verdict: the world keeps differing and shining, and recognition calls it that-nondual-made."
+  }
+ ]
+}

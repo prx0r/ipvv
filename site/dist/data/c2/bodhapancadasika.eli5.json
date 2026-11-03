@@ -1,0 +1,344 @@
+{
+ "work": "bodhapancadasika",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work bodhapancadasika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=15",
+  "approval": "PASS x15, L3 couplets handcrafted; QA NEEDS_WITNESS; Academy/Mahānaya witnesses compared | 2026-11-04: L4 15/15 songs (per-song DRAFT+data), stotra couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "bod-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unsetting light holds bright and dark alike; one inward reality bounds both.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "There is a kind of light that never sets. It holds bright things and dark things equally, and one inward reality wraps around both of them.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Nothing sets on it, ever. Bright, dark: held alike, bounded by one inward real.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "There is a kind of light that never sets. It holds bright things and dark things equally, and one inward reality wraps around both of them.\n\nNothing sets on it, ever. Bright, dark: held alike, bounded by one inward real."
+  },
+  {
+   "chunk": "bod-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] He alone beings' own-nature; the world's abundance power cast as sovereignty.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "He alone is what every being most deeply is. And everything in the world, all its abundance, is just His own power wearing the shape of a ruler.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Nobody else qualifies. He alone is every beings nature, and the worlds plenty is His power cast as sovereignty.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "He alone is what every being most deeply is. And everything in the world, all its abundance, is just His own power wearing the shape of a ruler.\n\nNobody else qualifies. He alone is every beings nature, and the worlds plenty is His power cast as sovereignty."
+  },
+  {
+   "chunk": "bod-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Power refuses parting; eternal identity, fire-sealed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Power refuses to be parted from the one who holds it — never, not once. The two are one forever, the way fire is one with its burning.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Power says no to parting, permanently. One with its bearer eternally, fire-sealed like flame to fire.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Power refuses to be parted from the one who holds it — never, not once. The two are one forever, the way fire is one with its burning.\n\nPower says no to parting, permanently. One with its bearer eternally, fire-sealed like flame to fire."
+  },
+  {
+   "chunk": "bod-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] World-bearing His mark; whole mirrored by power in self-seeing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Carrying the whole world is simply what marks Him out. And the entire world stands reflected — mirrored by His own power — inside His seeing of Himself.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "His mark: world-bearing. His mirror: self-seeing, with the whole reflected in it by power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Carrying the whole world is simply what marks Him out. And the entire world stands reflected — mirrored by His own power — inside His seeing of Himself.\n\nHis mark: world-bearing. His mirror: self-seeing, with the whole reflected in it by power."
+  },
+  {
+   "chunk": "bod-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] His goddess, grasp-eager, fills all exactly — never short, never over.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "His goddess belongs to Him, and she wants one thing only: to get a grip on exactly what He is. And she fills everything completely — never too little, never too much.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Grasp-eager, exact-filling: never short, never over. Hers, His, all.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "His goddess belongs to Him, and she wants one thing only: to get a grip on exactly what He is. And she fills everything completely — never too little, never too much.\n\nGrasp-eager, exact-filling: never short, never over. Hers, His, all."
+  },
+  {
+   "chunk": "bod-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Play-eager pair make-unmake varied worlds simultaneously, everywhere.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "This god and this goddess are always up for the fun of playing. Together they make worlds and unmake them — all different kinds — at the very same moment, everywhere at once.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Play-eager pair, making-unmaking simultaneously, everywhere. That is the whole deed.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "This god and this goddess are always up for the fun of playing. Together they make worlds and unmake them — all different kinds — at the very same moment, everywhere at once.\n\nPlay-eager pair, making-unmaking simultaneously, everywhere. That is the whole deed."
+  },
+  {
+   "chunk": "bod-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Hardest deed, unsurpassed: autonomy, lordship, awareness-form in one.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The hardest thing there is to do belongs to Him, and nothing outranks it. That hardest thing is itself three things in one: being free, being Lord, and being made of awareness.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Hardest deed, unsurpassed: autonomy plus lordship plus awareness-form, counted once.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "The hardest thing there is to do belongs to Him, and nothing outranks it. That hardest thing is itself three things in one: being free, being Lord, and being made of awareness.\n\nHardest deed, unsurpassed: autonomy plus lordship plus awareness-form, counted once."
+  },
+  {
+   "chunk": "bod-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Partial shining marks inert; measure-evading awareness differs.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is how you tell a dead thing from awareness: a dead thing only shines a little bit, in patches. Awareness is the opposite — no measuring cup can hold it.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Partial shine means inert. Uncontainable by measure means aware. That is the test.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is how you tell a dead thing from awareness: a dead thing only shines a little bit, in patches. Awareness is the opposite — no measuring cup can hold it.\n\nPartial shine means inert. Uncontainable by measure means aware. That is the test."
+  },
+  {
+   "chunk": "bod-p09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Change self-abides: stood as nature, arrived without departing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Change does not go anywhere else to happen — it stays home. Makings and unmakings rest inside His own self, standing there as His very nature, arrived without ever departing.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Change self-abides: stood as nature, arrived without departing. Nothing leaves.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Change does not go anywhere else to happen — it stays home. Makings and unmakings rest inside His own self, standing there as His very nature, arrived without ever departing.\n\nChange self-abides: stood as nature, arrived without departing. Nothing leaves."
+  },
+  {
+   "chunk": "bod-p10",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Variety totalized: extremes, three directions, outer-inner one list.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Variety gets listed in full, nothing left out: the highest and the lowest, the three directions, and the outer and inner worlds all on one single list.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Total inventory: extremes, three ways, outer-inner undivided. Completeness is the point.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Variety gets listed in full, nothing left out: the highest and the lowest, the three directions, and the outer and inner worlds all on one single list.\n\nTotal inventory: extremes, three ways, outer-inner undivided. Completeness is the point."
+  },
+  {
+   "chunk": "bod-p11",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Mis-knowing described as freedom; bondage dreadful-to-fools, nothing second.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Not knowing the truth gets called His freedom — that is just what it is named. And that very not-knowing is the round of rebirth itself, which is terrifying, but only to fools. There is nothing second here.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Mis-knowing named freedom; bondage dreadful-to-fools; nothing second. Read carefully.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Not knowing the truth gets called His freedom — that is just what it is named. And that very not-knowing is the round of rebirth itself, which is terrifying, but only to fools. There is nothing second here.\n\nMis-knowing named freedom; bondage dreadful-to-fools; nothing second. Read carefully."
+  },
+  {
+   "chunk": "bod-p12",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Three doors unranked; whichever arrival counts.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "There are three doors in, and nobody ranks them. The grace-route, the teacher-route, the scripture-route: whichever one you arrive by, arrival counts.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Three doors, no hierarchy: grace-sap, handed word, Lord-scripture. Whichever arrival counts.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "There are three doors in, and nobody ranks them. The grace-route, the teacher-route, the scripture-route: whichever one you arrive by, arrival counts.\n\nThree doors, no hierarchy: grace-sap, handed word, Lord-scripture. Whichever arrival counts."
+  },
+  {
+   "chunk": "bod-p13",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Knowing-through is release from the Lord: fullness, living freedom, remembered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Knowing reality all the way through is what freedom is, and it comes from the supreme Lord. That is the fullness of someone awake: free while still alive, exactly as the old teaching remembers it.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Knowing-through equals release-from-Lord: awakened fullness, living freedom, as remembered.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Knowing reality all the way through is what freedom is, and it comes from the supreme Lord. That is the fullness of someone awake: free while still alive, exactly as the old teaching remembers it.\n\nKnowing-through equals release-from-Lord: awakened fullness, living freedom, as remembered."
+  },
+  {
+   "chunk": "bod-p14",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bondage-release undivided in nature and Lord, in truth.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bondage and freedom both come out of the Lords own nature, and the two never split apart. In truth, inside the Lord, there is no split at all.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Bondage-release undivided: in nature, in Lord, in truth. No split anywhere.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Bondage and freedom both come out of the Lords own nature, and the two never split apart. In truth, inside the Lord, there is no split at all.\n\nBondage-release undivided: in nature, in Lord, in truth. No split anywhere."
+  },
+  {
+   "chunk": "bod-p15",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Trident-lotus emblem bearing four powers; Bhairava all-nature, to be dwelt upon.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Here is the emblem to settle on: a lotus growing out of a trident, carrying four powers — will, art, knowledge, and one more. Bhairava, whose very nature is all things, is to be dwelt upon there.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Trident-lotus emblem, four powers aboard; Bhairava all-natured, to-be-dwelt-upon. That is the seat.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Here is the emblem to settle on: a lotus growing out of a trident, carrying four powers — will, art, knowledge, and one more. Bhairava, whose very nature is all things, is to be dwelt upon there.\n\nTrident-lotus emblem, four powers aboard; Bhairava all-natured, to-be-dwelt-upon. That is the seat."
+  }
+ ]
+}

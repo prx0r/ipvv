@@ -1,0 +1,105 @@
+{
+ "kind": "rasa-phrasebook",
+ "for": "C2 style engine — every savor with a roadman line and a gen-z line. Registers kept separate; pick one per rendering, never blend.",
+ "label": "reference for renderers (human or agent), NOT canonical translation",
+ "entries": [
+  {
+   "rasa": "settled devotion",
+   "plain": "surrender as recognition; the mind already His, zero begging",
+   "roadman": "Already His. Was before I opened my mouth, innit.",
+   "genz": "My mind's already His, so this bow isn't me asking for anything.",
+   "verse": "bh-p01"
+  },
+  {
+   "rasa": "owned identity",
+   "plain": "nondual certainty — I-am-Him, not twoness",
+   "roadman": "It's not me and Him. It's just Him.",
+   "genz": "I'm Him, always was, on God.",
+   "verse": "bh-p02"
+  },
+  {
+   "rasa": "steel",
+   "plain": "suffering fully admitted, flinch refused",
+   "roadman": "It's all still standing. Allow that.",
+   "genz": "The suffering's real, the delulu's real. I'm just not flinching.",
+   "verse": "bh-p03"
+  },
+  {
+   "rasa": "authority",
+   "plain": "talking back to Death itself",
+   "roadman": "Scary face. Wrong audience, unc.",
+   "genz": "Ayo Death — don't even look at me like that.",
+   "verse": "bh-p04"
+  },
+  {
+   "rasa": "unbothered",
+   "plain": "categorical fearlessness",
+   "roadman": "Cooked. One bless up and they're done. Bow.",
+   "genz": "I don't do fear. Ever. Like, at all.",
+   "verse": "bh-p05"
+  },
+  {
+   "rasa": "arrival",
+   "plain": "fullness entered, not found",
+   "roadman": "Walked straight into the lengest bliss. Sorted.",
+   "genz": "Ate. No crumbs.",
+   "verse": "bh-p06"
+  },
+  {
+   "rasa": "song-is-instrument",
+   "plain": "practice and result as one movement",
+   "roadman": "Press play and separation ends.",
+   "genz": "The song isn't describing the vibe. The song IS the vibe.",
+   "verse": "bh-p07"
+  },
+  {
+   "rasa": "effortless flow",
+   "plain": "bliss as spring water, not product",
+   "roadman": "Bliss does the rest. Sorted.",
+   "genz": "Tapped into Your lore like it's the sweetest thing ever.",
+   "verse": "bh-p08"
+  },
+  {
+   "rasa": "covenantal joy",
+   "plain": "access by covenant, not merit",
+   "roadman": "Bliss has a password. Mine's samaya.",
+   "genz": "Locked in with the samaya and the samaya knows me back.",
+   "verse": "bh-p09"
+  },
+  {
+   "rasa": "universal relief",
+   "plain": "the personal arc opens onto the world",
+   "roadman": "The world's on fire. He's the water. Instantly.",
+   "genz": "Puts out its raging fever — not eventually, instantly.",
+   "verse": "bh-p10"
+  },
+  {
+   "rasa": "hunger",
+   "plain": "desperate want for the real thing (general)",
+   "roadman": "Starving for it, fam. Peak hunger.",
+   "genz": "Desperate for the real thing, no cap.",
+   "verse": "general"
+  },
+  {
+   "rasa": "stillness",
+   "plain": "noise dropped, rest (general)",
+   "roadman": "Dead the noise. Sit still, innit.",
+   "genz": "Quiet in my chest, fr.",
+   "verse": "general"
+  },
+  {
+   "rasa": "vertigo",
+   "plain": "awe at scale (general)",
+   "roadman": "Too big. Shook — in a good way.",
+   "genz": "Lowkey terrifying how big this is.",
+   "verse": "general"
+  },
+  {
+   "rasa": "recognition",
+   "plain": "the already-known clicking (general)",
+   "roadman": "Dun know. Always knew.",
+   "genz": "Clocking what's already true.",
+   "verse": "general"
+  }
+ ]
+}

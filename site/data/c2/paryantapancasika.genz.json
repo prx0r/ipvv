@@ -1,0 +1,266 @@
+{
+ "work": "paryantapancasika",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work paryantapancasika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=8",
+  "approval": "ouplets handcrafted+reviewed; no-43-marker + invocation scoped; QA NEEDS_WITNESS | 2026-11-04: L4 8/8 songs, 52/52v (per-song DRAFT+data), hermetic couplets, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "pary-p01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Rest-filled unspeakable studied as heart. [1] All god-made; being-nonbeing goddess-made. [2] Knowing-unknowing, school-foe: all made. [3] Six-one abiding system-end, unsayable goal. [4] Merged heart, gods'-god's, undivided ground. [5] Reflecting gains stages unattached-to-ends. [6] Throbbed three, road sixfold.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rest-filled, unsayable, studied as heart. That is the textbook.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "All god-made. Being-nonbeing goddess-made. Knowing-unknowing, school-foe: all made. Six-one abiding past every system-end: unsayable goal.",
+     "maps_to": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Merged heart, gods-god, undivided ground. Reflect and gain stages, unattached to ends. Throbbed three, road sixfold.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Rest-filled, unsayable, studied as heart. That is the textbook.\n\nAll god-made. Being-nonbeing goddess-made. Knowing-unknowing, school-foe: all made. Six-one abiding past every system-end: unsayable goal.\n\nMerged heart, gods-god, undivided ground. Reflect and gain stages, unattached to ends. Throbbed three, road sixfold."
+  },
+  {
+   "chunk": "pary-p02",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Sundered knowings varied-shine for knower. [1] Both-wayed; outcast-purity dived in I-ness. [2] Sunken-stained unresting; countless graded between-states. [3] Shared showing; split knower-known. [4] Unthought-clear held; self means in self-making. [5] Five thread cause; gained stage re-becomes. [6] Fancies cut-cut; when-doing left open.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Sundered knowings varied-shine. Both-wayed purity; outcast purity dived in I-ness.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Sunken-stained unresting; countless graded between-states. Shared showing; split knower-known.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Unthought-clear held; self means in self-making. Five thread cause; gained stage re-becomes. Fancies cut-cut; when-doing left open.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Sundered knowings varied-shine. Both-wayed purity; outcast purity dived in I-ness.\n\nSunken-stained unresting; countless graded between-states. Shared showing; split knower-known.\n\nUnthought-clear held; self means in self-making. Five thread cause; gained stage re-becomes. Fancies cut-cut; when-doing left open."
+  },
+  {
+   "chunk": "pary-p03",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Limited called bound; willed measured. [1] Limited follows; stations gained contracted. [2] Particular fancy arisen; purified trace holding. [3] Fashioned knower undistracted stays in thought-free self. [4] Behold one known made world; else trifling unreal. [5] Way unothered; self-way called.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Limited called bound; willed measured. Limited follows; stations gained contracted.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Particular fancy arisen; purified trace holding. Fashioned knower undistracted stays in thought-free self.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Behold one known made world; else trifling unreal. Way unothered; self-way called.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "Limited called bound; willed measured. Limited follows; stations gained contracted.\n\nParticular fancy arisen; purified trace holding. Fashioned knower undistracted stays in thought-free self.\n\nBehold one known made world; else trifling unreal. Way unothered; self-way called."
+  },
+  {
+   "chunk": "pary-p04",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Withdrawn tending attains face-to-face. [1] Boundless welcomed entered; imagine-not vowed. [2] Streamed lakes dived; inert stirred. [3] Five-doing trusted Śiva-I. [4] Guru-counted weighed accomplished. [5] Dreamt fire-flamed sun-shone. [6] Measurer-measured fourteen-formed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Withdrawn tending attains face-to-face. Boundless welcomed entered; imagine-not vowed.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Streamed lakes dived; inert stirred. Five-doing trusted Shiva-I. Guru-counted weighed accomplished. Dreamt fire-flamed sun-shone.",
+     "maps_to": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "text": "One measurer-measured fourteen-formed.",
+     "maps_to": [
+      6
+     ]
+    }
+   ],
+   "text": "Withdrawn tending attains face-to-face. Boundless welcomed entered; imagine-not vowed.\n\nStreamed lakes dived; inert stirred. Five-doing trusted Shiva-I. Guru-counted weighed accomplished. Dreamt fire-flamed sun-shone.\n\nOne measurer-measured fourteen-formed."
+  },
+  {
+   "chunk": "pary-p05",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Measured-unmeasured contemplated; supreme freedom trusted. [1] Timeless sequence held self-independent. [2] Supreme pair unioned between other powers. [3] Bliss-willed vague-clear flashed by difference. [4] Joined feeling lives; full body. [5] Flashed abiding grossly fivefolds.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Measured-unmeasured contemplated; supreme freedom trusted. Timeless sequence held self-independent.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Supreme pair unioned between other powers. Bliss-willed vague-clear flashed by difference.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Joined feeling lives; full body. Flashed abiding grossly fivefolds.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "Measured-unmeasured contemplated; supreme freedom trusted. Timeless sequence held self-independent.\n\nSupreme pair unioned between other powers. Bliss-willed vague-clear flashed by difference.\n\nJoined feeling lives; full body. Flashed abiding grossly fivefolds."
+  },
+  {
+   "chunk": "pary-p06",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Subtle-five tooled ten by touch. [1] Veiled-shown depends; ebb-flow conditions. [2] Longed union arose; else supreme. [3] Four bear inside triśaṅku-hung. [4] Three became emission, clear-created widely. [5] Mixed may-stir within, never without.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Subtle-five tooled ten by touch. Veiled-shown depends; ebb-flow conditions.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Longed union arose; else supreme. Four bear inside triśaṅku-hung. Three became emission, clear-created widely.",
+     "maps_to": [
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "text": "Mixed may-stir within, never without.",
+     "maps_to": [
+      5
+     ]
+    }
+   ],
+   "text": "Subtle-five tooled ten by touch. Veiled-shown depends; ebb-flow conditions.\n\nLonged union arose; else supreme. Four bear inside triśaṅku-hung. Three became emission, clear-created widely.\n\nMixed may-stir within, never without."
+  },
+  {
+   "chunk": "pary-p07",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Rested-rested emitted indeed. [1] Hidden mirror speaks pure publishing once. [2] Triple time self-drawn out and in. [3] Split-whole beheld; seeing agency lord-standing. [4] Sequenced-gross fancied undivided; breath split. [5] Self-stamped two-states; measure limits seeing subtly. [6] Two-entered stilled perceives expanding wonder.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Rested-rested emitted indeed. Hidden mirror speaks pure publishing once.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Triple time self-drawn out and in. Split-whole beheld; seeing agency lord-standing.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "Sequenced-gross fancied undivided; breath split. Self-stamped two-states; measure limits seeing subtly. Two-entered stilled perceives expanding wonder.",
+     "maps_to": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "text": "Rested-rested emitted indeed. Hidden mirror speaks pure publishing once.\n\nTriple time self-drawn out and in. Split-whole beheld; seeing agency lord-standing.\n\nSequenced-gross fancied undivided; breath split. Self-stamped two-states; measure limits seeing subtly. Two-entered stilled perceives expanding wonder."
+  },
+  {
+   "chunk": "pary-p08",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Place-struck natured being; heard Vaikharī doings. [1] Handed each-to-each; bookish straitened. [2] Speech-spread host unenjoying waking. [3] Ungrasping way; all-ways entered. [4] First-last mystery brimming attained unsurpassed. [5] Undivided conquer unfallen-absorbed endowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Place-struck natured being; heard Vaikharī doings. Handed each-to-each; bookish straitened.",
+     "maps_to": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "Speech-spread host unenjoying waking. Ungrasping way; all-ways entered.",
+     "maps_to": [
+      2,
+      3
+     ]
+    },
+    {
+     "text": "First-last mystery brimming attained unsurpassed. Undivided conquer unfallen-absorbed endowed.",
+     "maps_to": [
+      4,
+      5
+     ]
+    }
+   ],
+   "text": "Place-struck natured being; heard Vaikharī doings. Handed each-to-each; bookish straitened.\n\nSpeech-spread host unenjoying waking. Ungrasping way; all-ways entered.\n\nFirst-last mystery brimming attained unsurpassed. Undivided conquer unfallen-absorbed endowed."
+  }
+ ]
+}

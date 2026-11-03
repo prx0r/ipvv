@@ -1,0 +1,494 @@
+{
+ "work": "kramastotra",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work kramastotra/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=30",
+  "approval": "TNESS | 2026-11-04: L4 30/30 songs (per-song DRAFT+data), sings handcrafted restored L3 (retransmission reverted 2a45bbc); v26 live-fork noted not litigated, standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "kram-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Completion-rite amid sorrow; mirrored mind drops fear.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Amid a crowd of sorrows there is a finishing rite to perform, and it happens inside the spreading taste of bliss-essence: even a foul day turns sweet. Because the hymn works both ways — the singer sings it and it sings the singer — the mind looks at itself reflected and drops its fear.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Amid a crowd of sorrows there is a finishing rite to perform, and it happens inside the spreading taste of bliss-essence: even a foul day turns sweet. Because the hymn works both ways — the singer sings it and it sings the singer — the mind looks at itself reflected and drops its fear."
+  },
+  {
+   "chunk": "kram-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Redoubled self-scrutiny: effortless standing in hymn.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Look at yourself, then look again at the ways you act, and set what you find into this hymn. The examined self just stands there in the hymn, at every moment of knowing anything — always, and without any effort.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Look at yourself, then look again at the ways you act, and set what you find into this hymn. The examined self just stands there in the hymn, at every moment of knowing anything — always, and without any effort."
+  },
+  {
+   "chunk": "kram-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unscrutinized sterility vs shining Śiva one-sapped: bliss follows scrutiny.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Without scrutiny the self never gets to share in knowing things, and without the grasping path it is nothing at all. But Shiva — the self shining, one sap running through all things — is the exception: so I, with my heart devoted to Your hymn, am ever blissful.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Without scrutiny the self never gets to share in knowing things, and without the grasping path it is nothing at all. But Shiva — the self shining, one sap running through all things — is the exception: so I, with my heart devoted to Your hymn, am ever blissful."
+  },
+  {
+   "chunk": "kram-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Omniscience effortlessly gained; heart bidden to speak the hymn.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Through the gears of birth and wandering, omniscience gets won, and it costs no effort because of You. So heart — once the teaching has made things clear and put them into words — show forth the Lords hymn now, out loud.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Through the gears of birth and wandering, omniscience gets won, and it costs no effort because of You. So heart — once the teaching has made things clear and put them into words — show forth the Lords hymn now, out loud."
+  },
+  {
+   "chunk": "kram-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bond-conceit shaken, difference burnt, glory drunk: madness-bliss.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Shake off every road that bondage ever built you, and drink deep of things with difference burnt away in praise-fire. Mad with the rush of swelling glory, drunk on it all — O giver — bliss is mine.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Shake off every road that bondage ever built you, and drink deep of things with difference burnt away in praise-fire. Mad with the rush of swelling glory, drunk on it all — O giver — bliss is mine."
+  },
+  {
+   "chunk": "kram-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unhymnable held, hymned sudden: bowing first means.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "If your heart already holds everything the Lord ever did, then singing about Him should be impossible — so how could hymning ever happen? And yet it does happen, all at once, suddenly: bow to oneness with Shiva first, because that bowing is how.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "If your heart already holds everything the Lord ever did, then singing about Him should be impossible — so how could hymning ever happen? And yet it does happen, all at once, suddenly: bow to oneness with Shiva first, because that bowing is how."
+  },
+  {
+   "chunk": "kram-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Fire-unburning nobodies; knowing-rays praised each-owned.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Take fire and strip the burning away from it: what body is left that could hold anything? None at all — nobodies. So I praise the rays of knowing instead, each one owned by whoever it was praised by: if each owns his own, then nothing else gets to be the Lords power.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Take fire and strip the burning away from it: what body is left that could hold anything? None at all — nobodies. So I praise the rays of knowing instead, each one owned by whoever it was praised by: if each owns his own, then nothing else gets to be the Lords power."
+  },
+  {
+   "chunk": "kram-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Unpartitioned taste, unopposed floods, priceless knowing.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Where beginnings vary and rules have melted, what taste could there possibly be — unpartitioned, beyond all measure, fuller than compare? When the selfs light unites with everything that is, floods of blessing run unopposed: supreme knowing, past all price.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Where beginnings vary and rules have melted, what taste could there possibly be — unpartitioned, beyond all measure, fuller than compare? When the selfs light unites with everything that is, floods of blessing run unopposed: supreme knowing, past all price."
+  },
+  {
+   "chunk": "kram-p09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Difference-fled form; heart-and-speech vowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Your form, giver, shines varied — portioned to this world, with difference gone from it, O Lord. And to praise that, may my heart and my singing songs keep belonging to You, rushing forward without ever holding back.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Your form, giver, shines varied — portioned to this world, with difference gone from it, O Lord. And to praise that, may my heart and my singing songs keep belonging to You, rushing forward without ever holding back."
+  },
+  {
+   "chunk": "kram-p10",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Inner ocean; triple lights rise-set at once.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Deep inside You alone — You throbbing with glory, an ocean of knowing, tasting wave-masses of variety spreading free — they rise and set at once: moons, suns, fires, creation, keeping, and loosing, all one gleam.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Deep inside You alone — You throbbing with glory, an ocean of knowing, tasting wave-masses of variety spreading free — they rise and set at once: moons, suns, fires, creation, keeping, and loosing, all one gleam."
+  },
+  {
+   "chunk": "kram-p11",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Power undivided walking; heart one-pointed on still ground.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "So His power walks on — varied, unvaried, beyond every difference — and it never splits apart, not ever. So on this ground that never shakes — and the step you feel is His — may my hearts ground grow one-pointed right here, Bhairava, on Your step.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "So His power walks on — varied, unvaried, beyond every difference — and it never splits apart, not ever. So on this ground that never shakes — and the step you feel is His — may my hearts ground grow one-pointed right here, Bhairava, on Your step."
+  },
+  {
+   "chunk": "kram-p12",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Whole-to-difference by will; praise melts fear Śiva-made.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Out of the brimming Whole — oh, taste spilling over with joy — You lead Your own power down into difference, just by spreading Your will. Freedom like that has no price. So praising this, praising Your power that keeps becoming wonders: fear melts, and I am made of Shiva.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Out of the brimming Whole — oh, taste spilling over with joy — You lead Your own power down into difference, just by spreading Your will. Freedom like that has no price. So praising this, praising Your power that keeps becoming wonders: fear melts, and I am made of Shiva."
+  },
+  {
+   "chunk": "kram-p13",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Thisness-form; sequencelessness melts time; all instruments at once.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Just thisness — Your form, Lord, full of power-juice. Where sequence fails, time-reckoning melts by sheer force. By mind, by speech, by the senses outside, even by pots and pans — may I stand in that form all at once, without stopping.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Just thisness — Your form, Lord, full of power-juice. Where sequence fails, time-reckoning melts by sheer force. By mind, by speech, by the senses outside, even by pots and pans — may I stand in that form all at once, without stopping."
+  },
+  {
+   "chunk": "kram-p14",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Swelled sequence shown; triple-becoming prayed for overlaying.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "You swell sequence up on that ground, and You measure out how Your powers differ from each other — and You keep showing Yourself, right inside Yourself, O god. Then triple-named — doing, knowing, willing — may I become triple too, heart eager to lay myself over it all.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "You swell sequence up on that ground, and You measure out how Your powers differ from each other — and You keep showing Yourself, right inside Yourself, O god. Then triple-named — doing, knowing, willing — may I become triple too, heart eager to lay myself over it all."
+  },
+  {
+   "chunk": "kram-p15",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Dissolved emission questioned; moon-answer; ever-sport in mind prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Once dissolved, that fire-formed emission — where would it shine, facing out past all joy? But look: moon-touched, lovely, powered by fire and moon both. Bhairava, Lord — may Your emission always sport and play inside my mind.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Once dissolved, that fire-formed emission — where would it shine, facing out past all joy? But look: moon-touched, lovely, powered by fire and moon both. Bhairava, Lord — may Your emission always sport and play inside my mind."
+  },
+  {
+   "chunk": "kram-p16",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Rush-to-redness resorted; past-loathing prayed in red conclave.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "When, out in the emitted world, in utmost bliss-taste, You rush toward redness by Your own rush — then, red goddess, Yours in all things — make me past all loathing by joining the red-drinking rite.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "When, out in the emitted world, in utmost bliss-taste, You rush toward redness by Your own rush — then, red goddess, Yours in all things — make me past all loathing by joining the red-drinking rite."
+  },
+  {
+   "chunk": "kram-p17",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Outer quit, noble dwelt, undivided shown; ends grasped.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "To leave outer work behind, to dwell in noble knowing-ground: when You show that things are undivided, waves gone fickle — then grasp, goddess, the end of maintenance itself. And then may You grasp ever, Lord, the undoing of my wandering state.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "To leave outer work behind, to dwell in noble knowing-ground: when You show that things are undivided, waves gone fickle — then grasp, goddess, the end of maintenance itself. And then may You grasp ever, Lord, the undoing of my wandering state."
+  },
+  {
+   "chunk": "kram-p18",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Rule-ban shown, Yama emitted, doubt split: grind prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "To still the world by loosing it — first the rule about doubt-fear, then the ban. That is what You show, having sent out Yama himself. So split doubt again and again, great goddess, and grind my world-fear fine.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "To still the world by loosing it — first the rule about doubt-fear, then the ban. That is what You show, having sent out Yama himself. So split doubt again and again, great goddess, and grind my world-fear fine."
+  },
+  {
+   "chunk": "kram-p19",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Melted all but hunger; strike prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Doubt melted to nothing, conduct gone, glory gone, rule gone — and left is this: to gulp the endless feast all around, greedy-juiced, O Lord named dissolution — strike my hearts split portion.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Doubt melted to nothing, conduct gone, glory gone, rule gone — and left is this: to gulp the endless feast all around, greedy-juiced, O Lord named dissolution — strike my hearts split portion."
+  },
+  {
+   "chunk": "kram-p20",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Split difference shines thought; considered maker gracious.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "So by goddesses, all at once, in split-apart glory-difference: the living-one of thought shines forth, knower-standing. Enough. And in my own heart weighed, dissolution-formed, standing firm: gracious be she — my death-dissolution-maker, blessed Lady.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "So by goddesses, all at once, in split-apart glory-difference: the living-one of thought shines forth, knower-standing. Enough. And in my own heart weighed, dissolution-formed, standing firm: gracious be she — my death-dissolution-maker, blessed Lady."
+  },
+  {
+   "chunk": "kram-p21",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Three obtained ordain unfolding; fear-gone prayed by them.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "So Your three — gotten by Your own powers spread — six-wheeled, stationed steps. By order, by unfolding, they ordain the varied world-state. And by them, devoted-hearted, may I be wholly without fear.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "So Your three — gotten by Your own powers spread — six-wheeled, stationed steps. By order, by unfolding, they ordain the varied world-state. And by them, devoted-hearted, may I be wholly without fear."
+  },
+  {
+   "chunk": "kram-p22",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Dread-ground held; as-pleased conduct sporting prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "This ground she holds, dreadful in splitting world-fear. This wakefulness, single, melted-tasting, ordained too. So holding, melting, wiping the foul stretches away — conduct as it pleases, resorted to — may she sport and play inside my heart.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "This ground she holds, dreadful in splitting world-fear. This wakefulness, single, melted-tasting, ordained too. So holding, melting, wiping the foul stretches away — conduct as it pleases, resorted to — may she sport and play inside my heart."
+  },
+  {
+   "chunk": "kram-p23",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Sun-sap forcibly drawn; difference thinned prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Where doing and measuring fail, on the narrow step — spreading wide, then drawing back in by its own gleams — she who saps the stationed day-sun entire: draw hard, thin my difference, free me from world-fear.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Where doing and measuring fail, on the narrow step — spreading wide, then drawing back in by its own gleams — she who saps the stationed day-sun entire: draw hard, thin my difference, free me from world-fear."
+  },
+  {
+   "chunk": "kram-p24",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Garland re-entered; gracious adornment prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "O whole garland, without sequence, entered into the self again and again — ray-heaped within, without any end. Supreme, divine, bliss to grasp, eager, noble: gracious to me may she be. Come adorn the hearts path.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "O whole garland, without sequence, entered into the self again and again — ray-heaped within, without any end. Supreme, divine, bliss to grasp, eager, noble: gracious to me may she be. Come adorn the hearts path."
+  },
+  {
+   "chunk": "kram-p25",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Proof merged, measure stood; time met: Śiva-made shining.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "When proof has melted, by Shiva-step-shining glory and force — body-breath measured into knower-standing — when times frame meets Your dissolving step: then she who shines, mine, would be Shiva-made.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "When proof has melted, by Shiva-step-shining glory and force — body-breath measured into knower-standing — when times frame meets Your dissolving step: then she who shines, mine, would be Shiva-made."
+  },
+  {
+   "chunk": "kram-p26",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Cover spread without; time made within.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Called manifestation, knowing — sequenceless, merged from voids step into the outside — spreading sheer as cover. Then too, within, in inner essence, by melted rush, sequence-free: great Kali, making all time, mine.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Called manifestation, knowing — sequenceless, merged from voids step into the outside — spreading sheer as cover. Then too, within, in inner essence, by melted rush, sequence-free: great Kali, making all time, mine."
+  },
+  {
+   "chunk": "kram-p27",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Sequence cut in fullness; all embraced; resort prayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Then in her — the goddess in whom standing, enjoying, fullness holds — cut sequence short, quickly. As standing-minded taste, reflecting: proof, knower, measure, then the whole world standing embraced here. May my mind resort to this knowing.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Then in her — the goddess in whom standing, enjoying, fullness holds — cut sequence short, quickly. As standing-minded taste, reflecting: proof, knower, measure, then the whole world standing embraced here. May my mind resort to this knowing."
+  },
+  {
+   "chunk": "kram-p28",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Powers abiding unhindered; churn-essence bowed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Unhindered, in the self-made Lord, great Lord, wide powers abide. That power-bearer I venerate: god, churn-named, the worlds one sap.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Unhindered, in the self-made Lord, great Lord, wide powers abide. That power-bearer I venerate: god, churn-named, the worlds one sap."
+  },
+  {
+   "chunk": "kram-p29",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Heard bonds; grace coming; all-folk bidden allayed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Thus — these praise-bonds of Your powers mass, heard — Lord, if You come to grace: by that, quickly, by Your rule-rays: make all folk, darkness-masses allayed, bid them be.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Thus — these praise-bonds of Your powers mass, heard — Lord, if You come to grace: by that, quickly, by Your rule-rays: make all folk, darkness-masses allayed, bid them be."
+  },
+  {
+   "chunk": "kram-p30",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Dated authorial seal, 991 CE.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "In the sixty-sixth year, on the ninth of the dark fortnight, in Margashirsha — by me, Abhinavagupta, was Shiva praised. Dated, signed, delivered: 991 CE.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "In the sixty-sixth year, on the ninth of the dark fortnight, in Margashirsha — by me, Abhinavagupta, was Shiva praised. Dated, signed, delivered: 991 CE."
+  }
+ ]
+}

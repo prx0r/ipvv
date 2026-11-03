@@ -1,0 +1,42 @@
+{
+ "work": "tantrasara-a01",
+ "style": "genz",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work tantrasara-a01/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=1",
+  "approval": "L3/L4 5/5), validate+proof PASS, L3 diacritics-rule-14 clean, L4 song handcrafted w/ craft_notes; fork tsa-a01-v04-p045 resolved (asaṃkucita vs T1, OG+Chakravarty witnesses); NEEDS_WITNESS 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "tsa-a01",
+   "gate": "PASS",
+   "prompt": "Render the argument of this song in a Gen-Z voice: direct, a little feral, zero cringe, no slang overload. Keep every doctrinal claim intact — voice changes, content does not. No new doctrines, no comparisons, no meta-commentary, no quoted terms. ESSENCE: [0] Mother of stainless art and new creation, five-faced Father hidden in splendor: may their yamal-burst Heart, deathless kin beyond all, flash forth; the unplungeable ocean condensed to plain essence — hear it; the heart-lotus uncontracted by the master's feet gathered for worship. [1] Knowledge frees as opponent of bondage-cause ignorance, twofold: doubt-natured and wrong-conviction-natured in the intellect, thought-natured and contracted in the person — root of saṃsāra; initiation washes the personal but needs prior shun-and-take determination, impossible while intellect cannot decide; hence determinative intellect-dwelling knowledge is principal, and practiced kills the personal too, ending in thought-free; only Lord-spoken scripture fully authorizes and fully frees, five streams to sixfold books to inexhaustible Mālinīvijaya. [2] Own-nature alone is adoptable: one autonomous light-consciousness, all-pervading, eternal, form and formless; autonomy is bliss, wonder is will, light is consciousness, grasp is knowing, all-fitness is action; resting in own bliss it is Śiva, contracting itself called atom, re-manifesting with or without means — will, knowing, action, three immersions plus a fourth taught here in order.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "[0] Invocation: Mother, Father, Heart flash forth; ocean condensed to essence — hear it; heart-lotus gathered.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "[1] Knowledge frees vs twofold ignorance; determination first, initiation second; intellect-dwelling knowing principal; Lord-spoken scripture alone fully frees.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "[2] Own-nature alone adoptable: autonomy-bliss, wonder-will, light-consciousness, grasp-knowing, all-fitness-action; resting bliss = Shiva; contraction = atom; re-manifesting with or without means.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "[0] Invocation: Mother, Father, Heart flash forth; ocean condensed to essence — hear it; heart-lotus gathered.\n\n[1] Knowledge frees vs twofold ignorance; determination first, initiation second; intellect-dwelling knowing principal; Lord-spoken scripture alone fully frees.\n\n[2] Own-nature alone adoptable: autonomy-bliss, wonder-will, light-consciousness, grasp-knowing, all-fitness-action; resting bliss = Shiva; contraction = atom; re-manifesting with or without means."
+  }
+ ]
+}

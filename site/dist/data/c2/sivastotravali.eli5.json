@@ -1,0 +1,568 @@
+{
+ "work": "sivastotravali",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work sivastotravali/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=20",
+  "approval": "res, pushed; site-layer rebuild pending | 2026-11-04: L4 20/20 songs, 450/450v (per-song DRAFT+data), stotra registers (establishment/salutation/feast/seal), standing approval, gate green. 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "s01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Devotion stands rule-free and self-young: undawned by method, unaged by road-dust, at home in the Lord's city, thriving on every ground (vv1-6). [1] Its ground proved: all beings love the self, the self is consciousness — so love stands on its own nature; knowing this by drowning is conquest (v7). [2] Consequences drawn: the world turns ritual ground, joy/sorrow/bewilderment all become the road, special-state localization is the one cheat — closing with the pain-seed mind ripened to freedom's fruit (vv8-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Devotion does not wait for permission. Nobody has to meditate first, chant first, or finish any preparation: it can dawn for anyone, right away. And it keeps you young — drinking love’s nectar washes off the grey dust that the worlds roads leave on you.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Why is that legitimate? Because every being loves its own self, and the self simply is consciousness. So love aimed at the Lord stands on its own nature — nothing else needed. And knowing this, really drowning in it, is itself the conquest.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then follow the consequences. The whole world turns into ritual ground. Joy, sorrow and bewilderment all become the road. The only scam is thinking God lives only in special states. And the mind that started out as a mere seed of pain ripens, watered by devotion, into the great fruit of freedom.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Devotion does not wait for permission. Nobody has to meditate first, chant first, or finish any preparation: it can dawn for anyone, right away. And it keeps you young — drinking love’s nectar washes off the grey dust that the worlds roads leave on you.\n\nWhy is that legitimate? Because every being loves its own self, and the self simply is consciousness. So love aimed at the Lord stands on its own nature — nothing else needed. And knowing this, really drowning in it, is itself the conquest.\n\nThen follow the consequences. The whole world turns into ritual ground. Joy, sorrow and bewilderment all become the road. The only scam is thinking God lives only in special states. And the mind that started out as a mere seed of pain ripens, watered by devotion, into the great fruit of freedom."
+  },
+  {
+   "chunk": "s02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Twenty-nine salutations perform the all-self: every stuff of the world — fire, moon, gods, still, moving — named as His, every verse landing bowed (whole song). [1] Each bow names Him by paradox pairs — cool fire and devourer, Veda-foe and Veda-maker, round's cause and foe, ever-bound and ever-free, all rites and rite-free — the namaḥ holding both poles (vv1-22). [2] The litany turns to close: from Him to His dread power-ring (v23), from knowing to embracing (v24), from victory-cries to shelter-surrender (vv25-29).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "This whole song is twenty-nine bows, and every bow names everything as Him: fire, moon, sun, gods, things that move and things that stand still — all of it His stuff. Consciousness-shaped, many-shaped: bow.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And each bow holds two opposite things at once. Cool fire and world-devourer. Against the Veda and maker of the Veda. Sole cause of the world-round and its sole unmaker. Ever bound and ever free. Every rite and no rite at all. The word bowed with is what holds both poles together.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Near the end the litany turns: from Him to the dread ring of His powers, from merely knowing to actually embracing, from shouting victory to coming in for shelter and surrender.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "This whole song is twenty-nine bows, and every bow names everything as Him: fire, moon, sun, gods, things that move and things that stand still — all of it His stuff. Consciousness-shaped, many-shaped: bow.\n\nAnd each bow holds two opposite things at once. Cool fire and world-devourer. Against the Veda and maker of the Veda. Sole cause of the world-round and its sole unmaker. Ever bound and ever free. Every rite and no rite at all. The word bowed with is what holds both poles together.\n\nNear the end the litany turns: from Him to the dread ring of His powers, from merely knowing to actually embracing, from shouting victory to coming in for shelter and surrender."
+  },
+  {
+   "chunk": "s03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] The third beyond being and non-being: leap the two-yoked course; freedom contagious among the unfree — Thy hangers-on live free (vv01-02, v18). [1] Love's instruments: remembrance-medicine, begged moon-glance, heart-union vessel, flooding meditation, Śiva-din that routs pain — arrival roared and danced (vv03-11, v13). [2] Supremacy without second: moon-crowned high Lord, cancelled yogas, play-lake ocean, shamed miseries, beads told inside oneness, knower in known — closing keen and swoon (vv04, v12, vv14-17, vv19-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Leap clean over the two-yoked course of being and not-being, and bow to the Third: wonderful Shambhu. And here is the contagion part — gods, seers and men in this unfree triple world may be bound, but His hangers-on, the ones who live off Him alone, are free. Freedom spreads by contact.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then loves instruments, one by one. Remembering His body, gem-set with the whole world: the one medicine for existence-pain — hold it and sit easy. Begging Him for one moon-sliver glance, luminous, cool, nectar-flowing. Hearts meeting His in union, the one high vessel of the ruling Ladies. Meditation-nectar flooding over low ground like water finding it. The ever-ringing Shiva-din that makes hard pains flee. Roaring and dancing when the Master is won — since He utterly delights.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "And the supremacy with no second: the moon-crowned high Lord alone. No other yoga to do, no other knowing to get — Thou, all-one full Knowing, unfold. A great Person, shelter of persons, none left out. A play-lake for an ocean. Miseries shamed by His plain appearing. Beads told inside oneness, the knower inside the known — closing keen and swooning.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Leap clean over the two-yoked course of being and not-being, and bow to the Third: wonderful Shambhu. And here is the contagion part — gods, seers and men in this unfree triple world may be bound, but His hangers-on, the ones who live off Him alone, are free. Freedom spreads by contact.\n\nThen loves instruments, one by one. Remembering His body, gem-set with the whole world: the one medicine for existence-pain — hold it and sit easy. Begging Him for one moon-sliver glance, luminous, cool, nectar-flowing. Hearts meeting His in union, the one high vessel of the ruling Ladies. Meditation-nectar flooding over low ground like water finding it. The ever-ringing Shiva-din that makes hard pains flee. Roaring and dancing when the Master is won — since He utterly delights.\n\nAnd the supremacy with no second: the moon-crowned high Lord alone. No other yoga to do, no other knowing to get — Thou, all-one full Knowing, unfold. A great Person, shelter of persons, none left out. A play-lake for an ocean. Miseries shamed by His plain appearing. Beads told inside oneness, the knower inside the known — closing keen and swooning."
+  },
+  {
+   "chunk": "s04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Confession and approach: fickle mind praised for refuge-worship, low ground kept past gods' stairs, one road begged with world-doings shuttered (vv1-3). [1] Praise and petition: name-cries, foot-lotus throne and sap, light-body nearness, nectar-smeared mind, will-set walking, heart-blooms, fattened love, fresh hundredfold Name (vv4-13). [2] Longing's triumph and paradox: Śiva-din winners, bolted city unknocked, face-lotus hunger, serfdom fitness, unheard wail, omens, Śiva-night, sapless overlordship, tough self-bond, worshiper-shaped God (vv14-25).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "It starts low and honest. Mind, fickle as you are, you still get praised — because you court the refuge of refuges, the worlds teacher, Ambika’s husband. I climbed past the stairs of all the lesser gods and reached Shiva’s feet — and I still have not quit the low ground. Strange, but true. So the only prayer is: show me Your road, and shutter all world-doings tight, while I am Your ever-risen servant.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then praise and petition, rapid-fire. Four names cried out: Shiva, Shiva, Shambhu, Shankara. Dissolved in His foot-lotus seat, making even the world taste good — laughing at Viriñchi, office-smeared and unmastered. Nothing shows apart from His light-body, so He is always already won, though far by nature. His foot-sap tastes stale to some, fresh-poured to others — shining, whole-bodied, void of two. My mind glints like lightning at dawn; if it would only hold steadier, worship would be complete. Thing or unthing — is anything beyond this? As You are, be bare to me. Set walking on His own road, why do I walk so ordinarily, knowing nothing worthy of His feet? Some god of His blooms in their hearts; His story-cloud thunders and its birds sing long. Love grows fat on play in Him, till parting-grounds fruit a union-feast. His word, watered by strange sap, slips even into slant hearts, its errand ever fresh.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then longing wins out, paradox and all. They win on whose faces the Shiva-din circles. The fierce world as good as done, mind-stain thinned to nothing — yet not one atom of knocking at His city door. Hungry for one gaze into His ever-blooming face-lotus heart: flash facing me, just a little. Why does this slave go the wrong road, forsaking her — thought of His undifference, the only glory? Never unfit for His serfdom, unless sipping undifference-wine forever. Folk truly do not see His body, dirtied by two-sight — yet shelter-tender, do You not hear my wail? Remember any sense-joy I ever asked for? No — give only body-beholding nectar, my one wish. Give it. Hundreds of fair omens rose when I stepped on His road — what more could I hunt? What a Shiva-night reigns where sun goes down with moon. Three worlds’ overlordship I count sapless without His foot-touch nectar. Tough, this self-bond, tied by You alone — scorning You first, it slackens not one jot. And God-king, worshipped by the great, still stands worshiper-shaped alone, flashing in seers’ bodies, ever.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "It starts low and honest. Mind, fickle as you are, you still get praised — because you court the refuge of refuges, the worlds teacher, Ambika’s husband. I climbed past the stairs of all the lesser gods and reached Shiva’s feet — and I still have not quit the low ground. Strange, but true. So the only prayer is: show me Your road, and shutter all world-doings tight, while I am Your ever-risen servant.\n\nThen praise and petition, rapid-fire. Four names cried out: Shiva, Shiva, Shambhu, Shankara. Dissolved in His foot-lotus seat, making even the world taste good — laughing at Viriñchi, office-smeared and unmastered. Nothing shows apart from His light-body, so He is always already won, though far by nature. His foot-sap tastes stale to some, fresh-poured to others — shining, whole-bodied, void of two. My mind glints like lightning at dawn; if it would only hold steadier, worship would be complete. Thing or unthing — is anything beyond this? As You are, be bare to me. Set walking on His own road, why do I walk so ordinarily, knowing nothing worthy of His feet? Some god of His blooms in their hearts; His story-cloud thunders and its birds sing long. Love grows fat on play in Him, till parting-grounds fruit a union-feast. His word, watered by strange sap, slips even into slant hearts, its errand ever fresh.\n\nThen longing wins out, paradox and all. They win on whose faces the Shiva-din circles. The fierce world as good as done, mind-stain thinned to nothing — yet not one atom of knocking at His city door. Hungry for one gaze into His ever-blooming face-lotus heart: flash facing me, just a little. Why does this slave go the wrong road, forsaking her — thought of His undifference, the only glory? Never unfit for His serfdom, unless sipping undifference-wine forever. Folk truly do not see His body, dirtied by two-sight — yet shelter-tender, do You not hear my wail? Remember any sense-joy I ever asked for? No — give only body-beholding nectar, my one wish. Give it. Hundreds of fair omens rose when I stepped on His road — what more could I hunt? What a Shiva-night reigns where sun goes down with moon. Three worlds’ overlordship I count sapless without His foot-touch nectar. Tough, this self-bond, tied by You alone — scorning You first, it slackens not one jot. And God-king, worshipped by the great, still stands worshiper-shaped alone, flashing in seers’ bodies, ever."
+  },
+  {
+   "chunk": "s05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Approaching touches: foot-brush joined, dust-dyed hair, dumb dwelling, shouted dance, half-shut gaping, mountain-mind, Her town, opening heart-lotus (vv1-8). [1] Tasting deepens: wax mind, bursting pot, oozing cool, lake-diving, offered passions, sated glance, straw worship, unparted feasting, secondless fullness (vv9-17). [2] Vows and vastness: foot-place won, perfume hardened, clash taught, frenzy willed, vanguard run, unre-said sap, vast roamed, dust-kept thought, sole-touchers shown (vv18-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Approaching happens in touches. Wedded in joy by the mere brush of His lotus-feet: take me by the scruff into Your house. Hair dyed red with His foot-lotus dust: when do I break into boundless frenzied dance? This much I beg and nothing else: dumb, dwelling inside You I may be — never otherwise, O Wise One. Ah nectar-hoard, ah sweet Three-eyed, ah tasty Deformed-eyed: so may I dance, yelling. Eyes half-shut with His foot-lotus touch: may I gape wide, reeling with His love-wine’s drunkenness. Mind-mountain on earth, may I dwell anywhere where that practice runs unbroken, deep-sapped, made of His babble. Where He stands with the Lady, many-shaped, from palace to gate-tower: in that town may I dwell. May His sun-rays sport, Lord, till this heart-lotus of mine opens — for His worship.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then tasting deepens. Be gracious: may my mind, ever fallen at His feet, tasting this and that, melt as wax, run. From joy though it blow pot-lids, or from sorrow — from outward feeling, inward feeling — show plain to me, Master. Without within: may that ever-oozing be mine, His foot-lotus-touch nectar, cool past cool. Dived deep in His touch-nectar lake: O what a joy past joys, leaping all enjoyment — be mine, ever. Take the laid offering, passions and the rest, take, nectarize, and feast — with lover-folk together. Ever sated on whole-world food, easy-seated: take among servants one grace-glance-instant, Master. Half-eyed chewing inner love-wonder — bow to me, to Shiva — worshiping, may I be even straws. Though His state be won, seeing the world my self-blaze, by love-sap feastings may I stay unparted. Since naught else is to be longed for: His, secondless — fullness is but fit.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then vows and vastness. Where laughter and dancing happen, where hates-and-loves are eaten and love-nectar drunk: may I win that foot-place. That unheard perfume, His-thought-blossoms’ scent, harden in my mind till ill-habit’s stink is eaten. Where, pray, love among passions — and where love among His foot-lotuses? Teach my clash-fond heart its good, Deathless One. Roaming yoga-states even, turned from sense-things even: His-thought-wine’s frenzy liquifying my heart, only that may I be. Speech, mind-thoughts, sense-wrought body-moves: everywhere, ever, may love-sap run vanguard before me. Shiva Shiva Shiva muttered without end: tasting may I be some unrepeatable sap. Vast flashing endless knowing-self, dull roads all drunk dry: honored, may I roam ramparts uncounted, knowing-made. Standing in self-body, clear-shining, everlasting: naught else avails. Firm be this thought — yet His foot-lotus dust, O Pure. Something, Lord, sometime flashes in mind: touchers of His foot-sole, where this whole melts — in nectar’s lake show me this world, ever.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Approaching happens in touches. Wedded in joy by the mere brush of His lotus-feet: take me by the scruff into Your house. Hair dyed red with His foot-lotus dust: when do I break into boundless frenzied dance? This much I beg and nothing else: dumb, dwelling inside You I may be — never otherwise, O Wise One. Ah nectar-hoard, ah sweet Three-eyed, ah tasty Deformed-eyed: so may I dance, yelling. Eyes half-shut with His foot-lotus touch: may I gape wide, reeling with His love-wine’s drunkenness. Mind-mountain on earth, may I dwell anywhere where that practice runs unbroken, deep-sapped, made of His babble. Where He stands with the Lady, many-shaped, from palace to gate-tower: in that town may I dwell. May His sun-rays sport, Lord, till this heart-lotus of mine opens — for His worship.\n\nThen tasting deepens. Be gracious: may my mind, ever fallen at His feet, tasting this and that, melt as wax, run. From joy though it blow pot-lids, or from sorrow — from outward feeling, inward feeling — show plain to me, Master. Without within: may that ever-oozing be mine, His foot-lotus-touch nectar, cool past cool. Dived deep in His touch-nectar lake: O what a joy past joys, leaping all enjoyment — be mine, ever. Take the laid offering, passions and the rest, take, nectarize, and feast — with lover-folk together. Ever sated on whole-world food, easy-seated: take among servants one grace-glance-instant, Master. Half-eyed chewing inner love-wonder — bow to me, to Shiva — worshiping, may I be even straws. Though His state be won, seeing the world my self-blaze, by love-sap feastings may I stay unparted. Since naught else is to be longed for: His, secondless — fullness is but fit.\n\nThen vows and vastness. Where laughter and dancing happen, where hates-and-loves are eaten and love-nectar drunk: may I win that foot-place. That unheard perfume, His-thought-blossoms’ scent, harden in my mind till ill-habit’s stink is eaten. Where, pray, love among passions — and where love among His foot-lotuses? Teach my clash-fond heart its good, Deathless One. Roaming yoga-states even, turned from sense-things even: His-thought-wine’s frenzy liquifying my heart, only that may I be. Speech, mind-thoughts, sense-wrought body-moves: everywhere, ever, may love-sap run vanguard before me. Shiva Shiva Shiva muttered without end: tasting may I be some unrepeatable sap. Vast flashing endless knowing-self, dull roads all drunk dry: honored, may I roam ramparts uncounted, knowing-made. Standing in self-body, clear-shining, everlasting: naught else avails. Firm be this thought — yet His foot-lotus dust, O Pure. Something, Lord, sometime flashes in mind: touchers of His foot-sole, where this whole melts — in nectar’s lake show me this world, ever."
+  },
+  {
+   "chunk": "s06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Separation held in nearness: parted instants, pithed passing, held longing, and the final hunt — love kept unparted through parting (vv1-2, v5, v11). [1] Truth shown and won: body-speech-mind oneness, matched praise, melting clouds, jewel-light, ground everywhere, limb-embrace joy (vv3-4, vv6-10).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Being parted and being near happen at once. Though parted from the Ruler, though it be a mere instant, I burn thickly all the while: may I be ground for His glance. In parting-pithed passing — by You, dear Master — may I be ever unparted, though parted from the world.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And here is the truth that gets shown and won. Body, speech, mind: wherever I go with them, all is You alone — may this highest truth stand full for me, ever. Thought-free as You, great-bliss-full as You: so may my praise-making match, and only match. Held by You, seeing thing and thing made by You: may I roam longing-free, joy-brimmed. Lord, may I see the all-world full of Your being — with that alone content. Then no more wearing out. Melting in You alone like cloud-shreds in sky: may things shine for me, ever, step by step stainless. Self-light outspread, shattering the endless dark-train: shine for me ever, some jewel of Your being, from Your middle. What ground do You not rule? What could there be that is not Your body? Weary — thereby, by no effort, may I win You everywhere.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Being parted and being near happen at once. Though parted from the Ruler, though it be a mere instant, I burn thickly all the while: may I be ground for His glance. In parting-pithed passing — by You, dear Master — may I be ever unparted, though parted from the world.\n\nAnd here is the truth that gets shown and won. Body, speech, mind: wherever I go with them, all is You alone — may this highest truth stand full for me, ever. Thought-free as You, great-bliss-full as You: so may my praise-making match, and only match. Held by You, seeing thing and thing made by You: may I roam longing-free, joy-brimmed. Lord, may I see the all-world full of Your being — with that alone content. Then no more wearing out. Melting in You alone like cloud-shreds in sky: may things shine for me, ever, step by step stainless. Self-light outspread, shattering the endless dark-train: shine for me ever, some jewel of Your being, from Your middle. What ground do You not rule? What could there be that is not Your body? Weary — thereby, by no effort, may I win You everywhere."
+  },
+  {
+   "chunk": "s07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Melting and entry: same-sap minds dropping disaster, axes of certainty on passion's root, melting stain-strings (vv1-3). [1] Mother and ripening: wallowing fed sap on sap to sky-going, connoisseurship won, mind-jewel spark-shed (vv4-6). [2] Station won: full-throated hymning past waiting gods, whole-sensed seeing, wed mind-lad hardening mine-thought (vv7-9).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Melting first, then entry. Come to same-sap in You, bliss-river: may my mind drop in one go this great disaster of difference-dependence. Mine this, not that: on passion-hate’s fetter-hard root, may the axe fall within — certainty of Thee-made oneness. Melt, thought-stain-string; sport, unboltedness, in heart. Bliss-sap-flooded be my knowing-made form.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then mother, then ripening. Me, wallowing in passion’s world-egg: O Your-love-thought Mother, plump me with sap on sap, that wing-grown I turn sky-goer. May this mind of mine win connoisseurship — savoring Your-foot-thought-nectar-sap’s pith — till sense-poison-clinging hankers no more. By Your-love-sun’s ray-touch may this mind-jewel of mine shed far off passion-kindled fire-sparks.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then the station, won. In that station may I hymn You ever, full-throated — where Vishnu, Indra, Brahma wait outside. By whirl born of love’s whirl may I see, senses whole: the all-world Shiva-made, all doings worship-made. My mind-lad has wed Your-love-clan’s lady; she has borne him power-sons. Firm-rooted, may she harden the mine-thought.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Melting first, then entry. Come to same-sap in You, bliss-river: may my mind drop in one go this great disaster of difference-dependence. Mine this, not that: on passion-hate’s fetter-hard root, may the axe fall within — certainty of Thee-made oneness. Melt, thought-stain-string; sport, unboltedness, in heart. Bliss-sap-flooded be my knowing-made form.\n\nThen mother, then ripening. Me, wallowing in passion’s world-egg: O Your-love-thought Mother, plump me with sap on sap, that wing-grown I turn sky-goer. May this mind of mine win connoisseurship — savoring Your-foot-thought-nectar-sap’s pith — till sense-poison-clinging hankers no more. By Your-love-sun’s ray-touch may this mind-jewel of mine shed far off passion-kindled fire-sparks.\n\nThen the station, won. In that station may I hymn You ever, full-throated — where Vishnu, Indra, Brahma wait outside. By whirl born of love’s whirl may I see, senses whole: the all-world Shiva-made, all doings worship-made. My mind-lad has wed Your-love-clan’s lady; she has borne him power-sons. Firm-rooted, may she harden the mine-thought."
+  },
+  {
+   "chunk": "s08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Grace nears: grace-drop and nearing devotion rooting each in other, chewed mastery raising contentment, worldlike thirst (vv1-3). [1] Senses gathered: body-grounds, thrill-seats, possession-pictured striding (vv4-6). [2] Blooming and union: Thou-natured bloom, dread gorge filled, dusted turning, lotus-lake wading, supreme shimmer, joy-mad limbs, plain-shining resolve (vv7-13).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Grace nears from both sides at once: a grace-drop, Lord-abiding, and devotion as if nearing to meet me — the two, each in other. When will they take root in such a body? Born of chewing Your mastery whole, may some contentment-sap rise within. Here, always, be highest for me: knowledge, yoga, glories far off. Worldlike be my thirst among sense-things, swollen full, utter, Lord. Only as Your body may I behold them — I, thought-unbuilt.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the senses get gathered. In body-grounds, in mind, Lord, where breath’s run has met difference, and on those knowing-paths: thereby, by Your own self, be plain to me. May these thrilled sense-plays of mine fall each to its own seat — never, Lord, not an instant, not a jot, the outrage: wounding Your undifference-sap. Light, soft, white, clear, cool: by Your possession-force picturing a body, may I stride past those dealings of the all-things’ road.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then blooming and union. Bloom, my body, Thou-natured; come, worlds, to my limbhood. Pass, all this two-sport — though on memory’s road it come — to untellability. Rise, O glance at such a face of Thine: highest-nectar deluge, befall me, till filled the dread gorge of Your unshown oneness. If ever, dusted thinnest with Your meeting-nectar-drops, I turn not from all world-joys — or fallen from both — what then? I, choice hamsa, ever wading Your foot-lotus-lake: above, from root-depth, from within, bend up, love’s lotus-stalk, O Unborn. Come, All, all things: under thought’s reach, under sight’s footing for me; sight-thought-shine-nectar-piths, shimmer supreme. High-Lord, in strait on strait, when names themselves bow down: may I be not merely fear-gone but, Your limbs lending, joy-mad past measure. Woven in Your self, the world — by You alone shown outside. What hard resolve holds: now may it shine plain.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Grace nears from both sides at once: a grace-drop, Lord-abiding, and devotion as if nearing to meet me — the two, each in other. When will they take root in such a body? Born of chewing Your mastery whole, may some contentment-sap rise within. Here, always, be highest for me: knowledge, yoga, glories far off. Worldlike be my thirst among sense-things, swollen full, utter, Lord. Only as Your body may I behold them — I, thought-unbuilt.\n\nThen the senses get gathered. In body-grounds, in mind, Lord, where breath’s run has met difference, and on those knowing-paths: thereby, by Your own self, be plain to me. May these thrilled sense-plays of mine fall each to its own seat — never, Lord, not an instant, not a jot, the outrage: wounding Your undifference-sap. Light, soft, white, clear, cool: by Your possession-force picturing a body, may I stride past those dealings of the all-things’ road.\n\nThen blooming and union. Bloom, my body, Thou-natured; come, worlds, to my limbhood. Pass, all this two-sport — though on memory’s road it come — to untellability. Rise, O glance at such a face of Thine: highest-nectar deluge, befall me, till filled the dread gorge of Your unshown oneness. If ever, dusted thinnest with Your meeting-nectar-drops, I turn not from all world-joys — or fallen from both — what then? I, choice hamsa, ever wading Your foot-lotus-lake: above, from root-depth, from within, bend up, love’s lotus-stalk, O Unborn. Come, All, all things: under thought’s reach, under sight’s footing for me; sight-thought-shine-nectar-piths, shimmer supreme. High-Lord, in strait on strait, when names themselves bow down: may I be not merely fear-gone but, Your limbs lending, joy-mad past measure. Woven in Your self, the world — by You alone shown outside. What hard resolve holds: now may it shine plain."
+  },
+  {
+   "chunk": "s09",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Twenty when-questions that are really one: when will longing become meeting — asked of mind, face, gods, world, yoga, pride, tears, beast-life, play, speech (vv1-19). [1] Answered once, in the last verse: by hugging hard and seeing without effort — strainless full beholding (v20).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Twenty questions that are really one question, asked of everything in turn. When will my mind, keen to taste the wet-and-wet wedding of fresh sap, rush past all else to Your touch? Dyed with You alone, rich only in Your foot-worship: when shall I see You face to face, I, keen? By thick love grown past caring: when, crash, all great bolts burst, shall I near You? Heart-throned in Your knowing’s pith, all gods: when, by Your love’s might, shall I bring them neath my spell? When be my love-bliss-sap teeming feast, where apartness itself takes name from beholding-joy? The Lord, fearless, lavish, full, causeless, self-denied, known in a flash: when shall I shame the Master’s men? When, Lord, shall I win that belovedness of Yours whereby from me nowhere flight were fit for You? All breathing things, truth-told, Your-worship-made selves: by their applauding-glance-sap flooded may I be — when, All? Knowing’s highest ground, yoga’s highest pitch, Your love: when be my begging full? Seizing sudden, gripping hard, joy-helpless I: when shall Your foot-treasure-choice to all be shown? Round about Your-shine-spread: when be I so, Ruler, no Maya-shade-pit in me may be? All circles made my own, past needing: when, Lord, be I Your lover-host’s head? Lord, of world-prides the unheard ground: great-pride when be I, Your love-sap-filled? Well-set in never-empty glory-embrace: may I lie as at Your cool foot-lotus pair — when? Your worship-joy-wealth, rich with love-wine: when fare I to its far shore, when be done? Tears first, tripping, reeling, choked-wailing, laughter-lit face: Your touch-sap when win I? This beast-folk-like state shaken off: when, Kind One, taste I my self-shape, worthy Your lovers? Powers won, all fever-fear melted: on Your love-elixir-drink-play bent, when be I? Lord, when shall that wail of mine ring so in speech — Your shape straightway flashing before me?",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Answered once, in the last verse. Mind set on clasping Your foot-lotuses hard, passion-bent: thing, unthing, this — strainless, when full-behold I You? Hug hard, see without effort: strainless full beholding.",
+     "maps_to": [
+      1
+     ]
+    }
+   ],
+   "text": "Twenty questions that are really one question, asked of everything in turn. When will my mind, keen to taste the wet-and-wet wedding of fresh sap, rush past all else to Your touch? Dyed with You alone, rich only in Your foot-worship: when shall I see You face to face, I, keen? By thick love grown past caring: when, crash, all great bolts burst, shall I near You? Heart-throned in Your knowing’s pith, all gods: when, by Your love’s might, shall I bring them neath my spell? When be my love-bliss-sap teeming feast, where apartness itself takes name from beholding-joy? The Lord, fearless, lavish, full, causeless, self-denied, known in a flash: when shall I shame the Master’s men? When, Lord, shall I win that belovedness of Yours whereby from me nowhere flight were fit for You? All breathing things, truth-told, Your-worship-made selves: by their applauding-glance-sap flooded may I be — when, All? Knowing’s highest ground, yoga’s highest pitch, Your love: when be my begging full? Seizing sudden, gripping hard, joy-helpless I: when shall Your foot-treasure-choice to all be shown? Round about Your-shine-spread: when be I so, Ruler, no Maya-shade-pit in me may be? All circles made my own, past needing: when, Lord, be I Your lover-host’s head? Lord, of world-prides the unheard ground: great-pride when be I, Your love-sap-filled? Well-set in never-empty glory-embrace: may I lie as at Your cool foot-lotus pair — when? Your worship-joy-wealth, rich with love-wine: when fare I to its far shore, when be done? Tears first, tripping, reeling, choked-wailing, laughter-lit face: Your touch-sap when win I? This beast-folk-like state shaken off: when, Kind One, taste I my self-shape, worthy Your lovers? Powers won, all fever-fear melted: on Your love-elixir-drink-play bent, when be I? Lord, when shall that wail of mine ring so in speech — Your shape straightway flashing before me?\n\nAnswered once, in the last verse. Mind set on clasping Your foot-lotuses hard, passion-bent: thing, unthing, this — strainless, when full-behold I You? Hug hard, see without effort: strainless full beholding."
+  },
+  {
+   "chunk": "s10",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Complaint and nearness: Great-One's men levelled, trailers tasting, husband ending death, wink-won All (vv1-4). [1] Vision's catalogue: moon-drop, sun-spark, third-eye badge, seen joys, city in-making, uneven eyes, might-less being, stayed mind, roaming selves, company-ripened, slave-borne, hunger past-past, ghee-joined pains (vv5-16). [2] Paradox and seal: fit unreality-show, breathed strands, I-less world, dissolving great, dark range, nectar-nature, speech-jewel, effortless ripening, slave's drink, devouring fire (vv17-26).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "It opens with complaint braided into nearness. Surely past bearing for You, sole world-Lord: Your Great One’s men levelled with other world-folk. Who trail Your feet ever with love: go where they go, certain joys they savor. Where You are husband, death-ender: whence ache? Where Your fortune stands, what care for other joys? By whom through a wink’s joy the All is won: at once all his time with Your bliss is filled.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the vision’s catalogue, item by item. Moon: Your bliss-sap drop, fallen earthward. Likewise sun: Your forth-fared spark of world-burning heat. Offering we bear to this third eye of Yours: sole badge of some unworldly greatness. Seen by Him alone, who overjoys in Your vision and the rest. Or by whatever joy of His, somehow: thereby are You seen. Whom You favor, All, who have won Your heart: dragging from Your city, the outside they in-make. Without You, let the all-world be seen gone same-eyed — but this world’s Ruler, You alone: Uneven-eyed. Leave be: without Your might, being itself is not — and whose Thee-blaming talk without You holds not. Stood my mind in You alone, lonely, outer-inner-hindrance-free: what else, All, avails? Others roam, Lord, in the self itself, ill-placed past measure. Others roam, Lord, in the self itself, well-placed past measure. Your love-nectar undrunk, Yourself unseen even, Ruler: by mere Your company alone souls ripen. Your slaves are we, All: as You bear Yourself for three worlds, to-be-borne by You are we too, fully. Seen even in You, high-bliss-nectar, world-self: for touch-sap I hunger past-past, Thine. God — all pains, even the passing-through’s: yoked to Your ghee-named self, grow bearable.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then paradox, then seal. All-knowing, all-mighty, knowing-made: somehow, Lord, this world’s unreality-show is fit. By You breathed, these strands throb — clod-like even — dancing wind-lifted, as cotton-fluff. If, Lord, no I-pride in strands were: whereby would the world lose its Thou-alone-self-show? Praised, even the great ones gone to dissolving: Your-anger-fire-touch-pure, High-Lord. Your great-light body standing plain: on all sides, Ruler, why in dark range I? Undivided, You alone: my nectar-nature. Yet to mortal ways I am the one seat. Whose speech-jewel is Great-Lord, bow-brand on brow: he alone is mighty. Being, unbeing, You alone. So effortless, by own sap alone, Lord: why is ripening not mine? Shiva’s slave, Shiva-one-self: what joy wins he not? Chief gods themselves I sate with drink, nectar-wines. Heart-navel-between, breathers’ bile-bodied: You eat, great fire, all still, all moving.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "It opens with complaint braided into nearness. Surely past bearing for You, sole world-Lord: Your Great One’s men levelled with other world-folk. Who trail Your feet ever with love: go where they go, certain joys they savor. Where You are husband, death-ender: whence ache? Where Your fortune stands, what care for other joys? By whom through a wink’s joy the All is won: at once all his time with Your bliss is filled.\n\nThen the vision’s catalogue, item by item. Moon: Your bliss-sap drop, fallen earthward. Likewise sun: Your forth-fared spark of world-burning heat. Offering we bear to this third eye of Yours: sole badge of some unworldly greatness. Seen by Him alone, who overjoys in Your vision and the rest. Or by whatever joy of His, somehow: thereby are You seen. Whom You favor, All, who have won Your heart: dragging from Your city, the outside they in-make. Without You, let the all-world be seen gone same-eyed — but this world’s Ruler, You alone: Uneven-eyed. Leave be: without Your might, being itself is not — and whose Thee-blaming talk without You holds not. Stood my mind in You alone, lonely, outer-inner-hindrance-free: what else, All, avails? Others roam, Lord, in the self itself, ill-placed past measure. Others roam, Lord, in the self itself, well-placed past measure. Your love-nectar undrunk, Yourself unseen even, Ruler: by mere Your company alone souls ripen. Your slaves are we, All: as You bear Yourself for three worlds, to-be-borne by You are we too, fully. Seen even in You, high-bliss-nectar, world-self: for touch-sap I hunger past-past, Thine. God — all pains, even the passing-through’s: yoked to Your ghee-named self, grow bearable.\n\nThen paradox, then seal. All-knowing, all-mighty, knowing-made: somehow, Lord, this world’s unreality-show is fit. By You breathed, these strands throb — clod-like even — dancing wind-lifted, as cotton-fluff. If, Lord, no I-pride in strands were: whereby would the world lose its Thou-alone-self-show? Praised, even the great ones gone to dissolving: Your-anger-fire-touch-pure, High-Lord. Your great-light body standing plain: on all sides, Ruler, why in dark range I? Undivided, You alone: my nectar-nature. Yet to mortal ways I am the one seat. Whose speech-jewel is Great-Lord, bow-brand on brow: he alone is mighty. Being, unbeing, You alone. So effortless, by own sap alone, Lord: why is ripening not mine? Shiva’s slave, Shiva-one-self: what joy wins he not? Chief gods themselves I sate with drink, nectar-wines. Heart-navel-between, breathers’ bile-bodied: You eat, great fire, all still, all moving."
+  },
+  {
+   "chunk": "s11",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Begging ground: world unowned, outright begging, straw-lordship, unwoven praise, dream-question (vv1-5). [1] Self-confessed lowliness: scent-speck, heart-word split, dull litany, ear-pearls, death-wounded power-seeking (vv6-10). [2] High praise and rescue: vocative catalogue, makerhood questioned, life-drink hankered, smasher begged, gloom-smasher bowed (vv11-15).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The ground floor is begging, and the beggar owns nothing. This world, or friends, or kin: naught of mine. But You are all this again — then who else be mine? Master, Great-Lord, You outright, all the world You alone: may the thing itself ripen. This the begging, and in that begging, begging alone. Even three-worlds-lordship seems straw to Your devotee; what fruit has fair deed, Lord, parted from remembering You? Since naught of worlds nor world-birth is parted from You: Your unfolding, marvel-deeds even, rises with no praise-weaving of You. Thine-made am I, Thy-worship-bound: ever, unceasing, by own sap, dream-goer even — why am I not so?",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "One floor down: self-confessed lowliness. Brushed by a jot, Your foot-lotus-born fragrance-speck: for them rest-like turns all joy-kind, gods-hunted even. Heart: naught but You. Word and deed: wholly else, Kind One. From the truly Real, grace or curb: one alone be wrought. Dull am I, pain-laden am I, age-fearing am I, power-bare am I. Thine-sheltered am I. Kind One, so ordain: swift I near the highest yoke, sorrow-road-forsaken. Crouched at Your ear-place, my wails, most trifling, take high worth: as reed-joint-fallen water-specks wear pearlhood. What, pray, is unwon, even by such as dote a wink, by cheat even, on Your name? Cool-ray-crested, so act that I, death-wounded, may reach minuteness-and-the-rest as glory.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then high praise, then rescue. Kind One! ShArva! Moon-crested! Shiva! Three-eyed rosary-wearing! Glorious! Fierce-skull-signed! Grim-trident-flashing! Pity-sea! Worlds-weaving-natured! Fierce-power-formed! Fair-throated! Swift destroy ill-luck’s loads; lay on high Your own ripening. What, Lord, would not be, where the Lord wins not makerhood? What being had the knower, unmade by Kind-Maker? Thus ever sheltered in You, unwaning great power’s High-Lord: here in passing, pang-thickened, I ail, alone. Though pains, age, death here, haughtiest boon-lords, bide a wink; approved, sounds and the rest, unstable ever: yet I hanker, ever-joy-hungering, to stand long for life-drink — joy-taste-yoked Thy foot-lotus-thought, first. O Lord, skilled smasher of the bent one’s pangs, weal-hoard, Matted-haired: of me, pain’s sole seat, birth-death-frighted, now so act that, living even, Thy-worship-bound, I win unshaken ripenings, sweet-sense-taste-yielding, high. Bow to delusion’s great-gloom-smasher of no other work: to all-light outshining light, moon-badged.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "The ground floor is begging, and the beggar owns nothing. This world, or friends, or kin: naught of mine. But You are all this again — then who else be mine? Master, Great-Lord, You outright, all the world You alone: may the thing itself ripen. This the begging, and in that begging, begging alone. Even three-worlds-lordship seems straw to Your devotee; what fruit has fair deed, Lord, parted from remembering You? Since naught of worlds nor world-birth is parted from You: Your unfolding, marvel-deeds even, rises with no praise-weaving of You. Thine-made am I, Thy-worship-bound: ever, unceasing, by own sap, dream-goer even — why am I not so?\n\nOne floor down: self-confessed lowliness. Brushed by a jot, Your foot-lotus-born fragrance-speck: for them rest-like turns all joy-kind, gods-hunted even. Heart: naught but You. Word and deed: wholly else, Kind One. From the truly Real, grace or curb: one alone be wrought. Dull am I, pain-laden am I, age-fearing am I, power-bare am I. Thine-sheltered am I. Kind One, so ordain: swift I near the highest yoke, sorrow-road-forsaken. Crouched at Your ear-place, my wails, most trifling, take high worth: as reed-joint-fallen water-specks wear pearlhood. What, pray, is unwon, even by such as dote a wink, by cheat even, on Your name? Cool-ray-crested, so act that I, death-wounded, may reach minuteness-and-the-rest as glory.\n\nThen high praise, then rescue. Kind One! ShArva! Moon-crested! Shiva! Three-eyed rosary-wearing! Glorious! Fierce-skull-signed! Grim-trident-flashing! Pity-sea! Worlds-weaving-natured! Fierce-power-formed! Fair-throated! Swift destroy ill-luck’s loads; lay on high Your own ripening. What, Lord, would not be, where the Lord wins not makerhood? What being had the knower, unmade by Kind-Maker? Thus ever sheltered in You, unwaning great power’s High-Lord: here in passing, pang-thickened, I ail, alone. Though pains, age, death here, haughtiest boon-lords, bide a wink; approved, sounds and the rest, unstable ever: yet I hanker, ever-joy-hungering, to stand long for life-drink — joy-taste-yoked Thy foot-lotus-thought, first. O Lord, skilled smasher of the bent one’s pangs, weal-hoard, Matted-haired: of me, pain’s sole seat, birth-death-frighted, now so act that, living even, Thy-worship-bound, I win unshaken ripenings, sweet-sense-taste-yielding, high. Bow to delusion’s great-gloom-smasher of no other work: to all-light outshining light, moon-badged."
+  },
+  {
+   "chunk": "s12",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Seeing opened: no helper, no bar — flooded all, self-arising beheld, creation trickled, nectar tasted, timeless seeing, yoga ripened, sported words, feet-dwelt (vv1-8). [1] Dwelling deepened: foot-lotus belly, sham resolve, drunk Lord, pith-gist taken, indwelling births, soundless churn, Goddess seat, slipping mark, nectar current, grain of groundedness (vv9-18). [2] Beholding sealed: measured beholding, limb-going, plough-gait seeing, unstopped feast, sayings, limb-dawn, strayed ranges, born slavery, counter-stance keenness, things-as-things, naught-asserted won (vv19-29).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Seeing opens with nothing needed and nothing blocking. No helper wanted for finding You, no bar to sight — yet by You alone all is flooded. How then, even now, are You still unseen? From thing-throng, sense-heap, thought’s middle even: the ever self-arising may I full-behold, world-doffed. How be things born, how walk Your seeing-road — inlaid with what great nature-limb? Rising and rising, from land, water, grass on, You scatter creation’s trickle-nectar-floods over all. Faced with Your form-nectar, sated: thirst uprooted, heady, they roam to taste. Not then, not ever, not once even: where no time-thought be, that, this Your seeing is — nor told eternal, nor else. Mind risen to see You: be this much my yoga-ripe, ever: that by bare resolve I enter Your nectar-house, to worship You. Mind-blown by winning Your doubt-free seeing: great souls’ sport stainless deeds and words, lightly, plain. Dwelling between Your feet, within indeed, fearless: on being-grounds those and those may I worship the Lord, unbolted in deed.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then dwelling deepens. In Your foot-lotus’s belly dissolved, melted of other-longing: honey-overmuch, sated, may I roam at will. Whose resolve to worship You rose from sham even: for him needs must dawn Your fit nearness. Lord: mind past others-hoping, one-sapped utterly — the easy, all-outlying Lord to sating may I drink. What am I? By You unmade: all where You are not, leave it. You-made: take it up. This, the pith-gist. Your in-dwelling thing-born, worshiped as chief by coming-forth: outside You, mere unbeing — how, Ruler, could it be, or be worshiped? Soundless, doubtless, distractionless, ever. In churn even, face to face: Three-eyed, You alone, everywhere. Show Your seat, God, where You are ever Goddess-joined. Foot-dust-ranked with the Lord, why seem slaves unbelief’s ground? Come to seeing’s road, yet You slip: whence from me, my Ruler, Your slave? Not a wink here are You not each breather’s sight-object. By oneness-knowing-nectar’s clear unbroken current: when, All? From the flood, past it, undifference fetching: Thee and my own frame may I win, glad. I, from the fenced-off world, from Your realization-pith: a grain even of world-groundedness befall me, whereby worshiped by You may I be.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then beholding sealed. Measureless-shaped, thing and thing, wink by wink beholding: Thee alone, world-shaped, my own Lord, may I well behold. Gone to Your limbs: why roams mind after liked thing for thing? Nature unwronged, and my wish filled wholly supreme. Hundreds, they say, by Your might, Lord: who with this very eye, even plough-gaited roaming, full-behold Your body ever before. No thought rises unmade of Your will; fair ever, or else, by the Lord so tis wrought. So Yours-natured, earth-roaming as may be, standing ever at Your unstopped stainless-foot-feast. Mid Your deep sayings may insight rise for me full, first; then wrought power too, and Your-worship-passion unpausing. On dealing-ground even, ever, may this thing-heap dawn for me as Your limb — not as self-worthy come. Mind by own sap roaming where-go: I in its ranges, strayed even, unswerving still, Your-tending-skilled may I ever be. Lord, by Your will alone Your slave am I born: no other’s force here. How then Your face-orb see I never? Strange, this. The keen toward You who behold You from counter-stance: ah, what has drawn near them, what practice fruited? Things be as things by Your being, for me. So be naught elsewise: naught but Thine. What is naught at all, be naught at all; something at all, be something indeed for me. In all ways be: thereby You everywhere are won-and-worshiped.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Seeing opens with nothing needed and nothing blocking. No helper wanted for finding You, no bar to sight — yet by You alone all is flooded. How then, even now, are You still unseen? From thing-throng, sense-heap, thought’s middle even: the ever self-arising may I full-behold, world-doffed. How be things born, how walk Your seeing-road — inlaid with what great nature-limb? Rising and rising, from land, water, grass on, You scatter creation’s trickle-nectar-floods over all. Faced with Your form-nectar, sated: thirst uprooted, heady, they roam to taste. Not then, not ever, not once even: where no time-thought be, that, this Your seeing is — nor told eternal, nor else. Mind risen to see You: be this much my yoga-ripe, ever: that by bare resolve I enter Your nectar-house, to worship You. Mind-blown by winning Your doubt-free seeing: great souls’ sport stainless deeds and words, lightly, plain. Dwelling between Your feet, within indeed, fearless: on being-grounds those and those may I worship the Lord, unbolted in deed.\n\nThen dwelling deepens. In Your foot-lotus’s belly dissolved, melted of other-longing: honey-overmuch, sated, may I roam at will. Whose resolve to worship You rose from sham even: for him needs must dawn Your fit nearness. Lord: mind past others-hoping, one-sapped utterly — the easy, all-outlying Lord to sating may I drink. What am I? By You unmade: all where You are not, leave it. You-made: take it up. This, the pith-gist. Your in-dwelling thing-born, worshiped as chief by coming-forth: outside You, mere unbeing — how, Ruler, could it be, or be worshiped? Soundless, doubtless, distractionless, ever. In churn even, face to face: Three-eyed, You alone, everywhere. Show Your seat, God, where You are ever Goddess-joined. Foot-dust-ranked with the Lord, why seem slaves unbelief’s ground? Come to seeing’s road, yet You slip: whence from me, my Ruler, Your slave? Not a wink here are You not each breather’s sight-object. By oneness-knowing-nectar’s clear unbroken current: when, All? From the flood, past it, undifference fetching: Thee and my own frame may I win, glad. I, from the fenced-off world, from Your realization-pith: a grain even of world-groundedness befall me, whereby worshiped by You may I be.\n\nThen beholding sealed. Measureless-shaped, thing and thing, wink by wink beholding: Thee alone, world-shaped, my own Lord, may I well behold. Gone to Your limbs: why roams mind after liked thing for thing? Nature unwronged, and my wish filled wholly supreme. Hundreds, they say, by Your might, Lord: who with this very eye, even plough-gaited roaming, full-behold Your body ever before. No thought rises unmade of Your will; fair ever, or else, by the Lord so tis wrought. So Yours-natured, earth-roaming as may be, standing ever at Your unstopped stainless-foot-feast. Mid Your deep sayings may insight rise for me full, first; then wrought power too, and Your-worship-passion unpausing. On dealing-ground even, ever, may this thing-heap dawn for me as Your limb — not as self-worthy come. Mind by own sap roaming where-go: I in its ranges, strayed even, unswerving still, Your-tending-skilled may I ever be. Lord, by Your will alone Your slave am I born: no other’s force here. How then Your face-orb see I never? Strange, this. The keen toward You who behold You from counter-stance: ah, what has drawn near them, what practice fruited? Things be as things by Your being, for me. So be naught elsewise: naught but Thine. What is naught at all, be naught at all; something at all, be something indeed for me. In all ways be: thereby You everywhere are won-and-worshiped."
+  },
+  {
+   "chunk": "s13",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Mark and frame: pain-joy mark heard, unshowing black wiped, live-die-or-else in His frame (vv1-3). [1] Work's fabric: lovers' pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish (vv4-13). [2] Widening close: all-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised (vv14-20).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "First the mark and the frame. In brief, Ruler: hear my pain-joy-mark. Joy is this: meeting You. Pain is this: parted from the Master. Even the subtlest inward spell when You do not appear — the Thee-unshowing spell inside even — her too, Ruler, wipe from all sides, and show Your own stainless shape. In Your frame — world-filled, knowing-nectar-sapped, unending — abiding, ever worshiping the Lord: live, die, else — be mine.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the works fabric, item by item. Lovers’ pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then the widening close. All-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "First the mark and the frame. In brief, Ruler: hear my pain-joy-mark. Joy is this: meeting You. Pain is this: parted from the Master. Even the subtlest inward spell when You do not appear — the Thee-unshowing spell inside even — her too, Ruler, wipe from all sides, and show Your own stainless shape. In Your frame — world-filled, knowing-nectar-sapped, unending — abiding, ever worshiping the Lord: live, die, else — be mine.\n\nThen the works fabric, item by item. Lovers’ pride shining, birth from nectar-telling, thought-seen-touched chain, grounded pair, sense-wine madness, known unknowns, quartered service, unweighed power-fall, shining beholding, palace rest, offered relish.\n\nThen the widening close. All-widening flashing, whirling thing-ring, poison-nectar, prattle ditties, unwilled will, bottomless devouring entered and praised."
+  },
+  {
+   "chunk": "s14",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Faces hailed: taste, Rudra-One, brow-eye, powers-body, other-world dress, milk-sea shade, cool-digit shelter, hallowing touch (vv1-8). [1] Deeds hailed: duping sillies, love-gifts, Brahmā-might, sealed glory, creation-wish, striding worlds, inborn height, burn-work, nectar-sea, delusion-lamp (vv9-18). [2] Nearness and finale: life's-life warbling, gold-vein mountain, pain-unneared, leafed dependents, bright deed, victory-vessel and thirteenfold hail to Three-eyed (vv19-24).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Faces first, hailed one by one. Hail: victory-fortune’s treasure — may I taste a wink the victory-shout’s nectar-sap. Hail: Rudra the One, Shiva the One, Great God, Great Lord — PArvatI’s lover, Sharva, first-born of all gods. Hail: brow-eyed sole badge of the three-worlds’ Lord. Hail: black-poison-throated — who drank the pain-struck world’s pain. Hail: three-powers-bodied self, hundred-pike-bright-handed. Hail: lotus-feet worship-worthy, aims ripened by will alone. Hail: other-world-body-bearer, streaming hundred beauties. Hail: single-topknotted, unwasting Ganges, rite-ash-seized. Hail: smeared with milk-sea moonlight shade. Hail: jewel-darling-snow-decked, risen from the Lord’s limb-touch. Hail: shelter like the undying cool-rayed digit. Hail: all-lordship-anointed, ever-damp with Ganges. Hail: whose low-limb-touch hallows cowherds. Hail, ever-present where love-drunk gather.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then deeds hailed. Hail: who dupes the sillies, showing hot places at will. Hail: fit vessel of Gauri-embrace-fortune. Hail: greedy for love-gifts wet-and-wet with love-sap. Hail: gladdened by lovers’ word-dance, love-drunk and wild. Hail: BrahmA-and-first-gods’ might, rise and fall. Hail: whose edict world-lord-rows bear on heads. Hail: glory shown by self-seal set on all worlds. Hail: All-Lord, Great Lord, down to self-gift. Hail: matchless at three-worlds’ creation-wish-moment. Hail: with Goddess alone helping bear lordship’s load. Hail: who seized all three worlds with no step. Hail, unsatirized Lord-din, sung from childhood. Hail, inborn-high, past pity and the rest. Hail, Bhairava before whom dread great Death is wrought. Hail, unrivalled in world-burn’s raging work. Hail, hundred-weal praised name-chant. Hail, nectar-mine-sea spilt in play. Hail, whose wink-anger parches the world-burn dry. Hail, sole lamp of delusion-dark-blind breathing-folk. Hail, wakeful high Person of the sleeping world.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then nearness and finale. Hail, life’s-life warbling in the body-mountain-bower. Hail, mountain-lord born of high gold-vein. Hail, unneared by pain-burnt sages and gods. Hail, seen by love-mad-folk mounted on every state. Hail, who leafs his own dependents, spreading Your wealth. Hail, whose one use is petting surrender-folk. Hail, sole bright deed of making, staying, unmaking. Hail, high feast of play-lotuses swaying in love’s headiness. Hail, victory’s vessel. Hail, birth-age-death-conqueror. Hail, world’s eldest. Hail hail hail hail hail hail hail hail hail hail hail hail hail — Three-eyed.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Faces first, hailed one by one. Hail: victory-fortune’s treasure — may I taste a wink the victory-shout’s nectar-sap. Hail: Rudra the One, Shiva the One, Great God, Great Lord — PArvatI’s lover, Sharva, first-born of all gods. Hail: brow-eyed sole badge of the three-worlds’ Lord. Hail: black-poison-throated — who drank the pain-struck world’s pain. Hail: three-powers-bodied self, hundred-pike-bright-handed. Hail: lotus-feet worship-worthy, aims ripened by will alone. Hail: other-world-body-bearer, streaming hundred beauties. Hail: single-topknotted, unwasting Ganges, rite-ash-seized. Hail: smeared with milk-sea moonlight shade. Hail: jewel-darling-snow-decked, risen from the Lord’s limb-touch. Hail: shelter like the undying cool-rayed digit. Hail: all-lordship-anointed, ever-damp with Ganges. Hail: whose low-limb-touch hallows cowherds. Hail, ever-present where love-drunk gather.\n\nThen deeds hailed. Hail: who dupes the sillies, showing hot places at will. Hail: fit vessel of Gauri-embrace-fortune. Hail: greedy for love-gifts wet-and-wet with love-sap. Hail: gladdened by lovers’ word-dance, love-drunk and wild. Hail: BrahmA-and-first-gods’ might, rise and fall. Hail: whose edict world-lord-rows bear on heads. Hail: glory shown by self-seal set on all worlds. Hail: All-Lord, Great Lord, down to self-gift. Hail: matchless at three-worlds’ creation-wish-moment. Hail: with Goddess alone helping bear lordship’s load. Hail: who seized all three worlds with no step. Hail, unsatirized Lord-din, sung from childhood. Hail, inborn-high, past pity and the rest. Hail, Bhairava before whom dread great Death is wrought. Hail, unrivalled in world-burn’s raging work. Hail, hundred-weal praised name-chant. Hail, nectar-mine-sea spilt in play. Hail, whose wink-anger parches the world-burn dry. Hail, sole lamp of delusion-dark-blind breathing-folk. Hail, wakeful high Person of the sleeping world.\n\nThen nearness and finale. Hail, life’s-life warbling in the body-mountain-bower. Hail, mountain-lord born of high gold-vein. Hail, unneared by pain-burnt sages and gods. Hail, seen by love-mad-folk mounted on every state. Hail, who leafs his own dependents, spreading Your wealth. Hail, whose one use is petting surrender-folk. Hail, sole bright deed of making, staying, unmaking. Hail, high feast of play-lotuses swaying in love’s headiness. Hail, victory’s vessel. Hail, birth-age-death-conqueror. Hail, world’s eldest. Hail hail hail hail hail hail hail hail hail hail hail hail hail — Three-eyed."
+  },
+  {
+   "chunk": "s15",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Lovers against the qualified: books and far-siders set beside lover-truth; Māyā-food strollers, babblers past praise-words, masterless, dragging, selved, blind-shining, gleaner-ruling, wallowing climbers (vv1-9). [1] Kept and questioned: guarded hoard, dropped envy, milk-jar won, past-compare attainment, sunk gem-creeper, wonderless worry (vv10-15). [2] Pervasion and road: cross-scented scents, Śiva-night worship, goodness widened, far-far road walked moon-crowned (vv16-19).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Lovers set against the qualified, and the lovers win every round. Stain-washing books there are, and their far-siders too; yogins, pundits stand hale — but Thy lovers alone, in truth. Sated with MAyA-time-limit-passion-and-the-rest for food, they stroll glad, Lord, love-ful, on the world’s shore. Weeping or laughing, Thee aloud they babble; these lovers: praise-word-lift-offerings apart indeed are they. No passionless one, no master either, no freedom-hungerer is Thy worshipper. May I be: but brimming-love-wine-sap-mad. Who, dragging the outside into heart’s inside itself, worships Thee, Ruler: with love-nectar-sap-floods him I bow. Between right and unright selves, between doings, between knowings: so between joy-and-pain selves, lovers taste some. Ah! Stir-and-still’s Lord, Master: though blind, though leprous, they shine past measure, wild-Thy-love-jeweled. Gleaners, grain-pickers, foes’ shadow-limbed even, Ruler: by Thy-love’s great heat the king of kings even they lord. In nectar-wet Thy-love though wallowing, yet climb-hungering: with mind alone, All, some worship Thee, standing round about.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Kept and questioned next. To be guarded, to be grown, to be honored: this, Ruler, passing’s ill-faring-smasher, Thy love’s great hoard. Lord, though Thy lover-folk love Thee: yet envy dropped toward Her, gladdened ever be the Mistress. Thy state first, to be: when Thy love’s birth-time comes, won the milk-great jar; slain, in curds, greed. What, is this not attainment past compare? What chief joy streams it not? Love, ever-waxing: this, the Kind One’s, ever-new. In Thy stained mind sunk, Thy-love’s gem-creeper: hard! spreads not even its own, those unmanned own-hoard-blossomings. Love in the Lord, in three-worlds’ Master: is it not highest attainment? Yet for want of wonder-powers, is it not full? This, my worry.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then pervasion and road. Without, within too: keen-blooming Three-eyed’s-bouquet-scents, fair, scent even cross-scented yogins, near-dwelling, all. Light is there, by no tale, none; the world even, all past-sleep. Where, Lord, at Shiva-night’s post, ever lover-folk worship Thee. Goodness, in true mood, in kindly Lord, widen in worship. On the crown sport Kind-Maker’s-foot-dust-risen-heaps. To sever passion-and-the-rest mind-scents even, gloom gape, Kind One, be mine: or in Thy-self-loss, the three-strand-throng. Passing’s road far-far; limb-stalk burnt with keen-and-sundry ills; joys nowise tasted; what joy was, never long was ours. Thus vain am I grown: moon-bearer’s-foot-pressed-fair-crowned, and Thy lover. So make me now: high-fortuned, long-long.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Lovers set against the qualified, and the lovers win every round. Stain-washing books there are, and their far-siders too; yogins, pundits stand hale — but Thy lovers alone, in truth. Sated with MAyA-time-limit-passion-and-the-rest for food, they stroll glad, Lord, love-ful, on the world’s shore. Weeping or laughing, Thee aloud they babble; these lovers: praise-word-lift-offerings apart indeed are they. No passionless one, no master either, no freedom-hungerer is Thy worshipper. May I be: but brimming-love-wine-sap-mad. Who, dragging the outside into heart’s inside itself, worships Thee, Ruler: with love-nectar-sap-floods him I bow. Between right and unright selves, between doings, between knowings: so between joy-and-pain selves, lovers taste some. Ah! Stir-and-still’s Lord, Master: though blind, though leprous, they shine past measure, wild-Thy-love-jeweled. Gleaners, grain-pickers, foes’ shadow-limbed even, Ruler: by Thy-love’s great heat the king of kings even they lord. In nectar-wet Thy-love though wallowing, yet climb-hungering: with mind alone, All, some worship Thee, standing round about.\n\nKept and questioned next. To be guarded, to be grown, to be honored: this, Ruler, passing’s ill-faring-smasher, Thy love’s great hoard. Lord, though Thy lover-folk love Thee: yet envy dropped toward Her, gladdened ever be the Mistress. Thy state first, to be: when Thy love’s birth-time comes, won the milk-great jar; slain, in curds, greed. What, is this not attainment past compare? What chief joy streams it not? Love, ever-waxing: this, the Kind One’s, ever-new. In Thy stained mind sunk, Thy-love’s gem-creeper: hard! spreads not even its own, those unmanned own-hoard-blossomings. Love in the Lord, in three-worlds’ Master: is it not highest attainment? Yet for want of wonder-powers, is it not full? This, my worry.\n\nThen pervasion and road. Without, within too: keen-blooming Three-eyed’s-bouquet-scents, fair, scent even cross-scented yogins, near-dwelling, all. Light is there, by no tale, none; the world even, all past-sleep. Where, Lord, at Shiva-night’s post, ever lover-folk worship Thee. Goodness, in true mood, in kindly Lord, widen in worship. On the crown sport Kind-Maker’s-foot-dust-risen-heaps. To sever passion-and-the-rest mind-scents even, gloom gape, Kind One, be mine: or in Thy-self-loss, the three-strand-throng. Passing’s road far-far; limb-stalk burnt with keen-and-sundry ills; joys nowise tasted; what joy was, never long was ours. Thus vain am I grown: moon-bearer’s-foot-pressed-fair-crowned, and Thy lover. So make me now: high-fortuned, long-long."
+  },
+  {
+   "chunk": "s16",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Veil and youth: unveiled veiling, laddered method, laughed winning, undrying sap, unmet befalling, no-other-prayer (vv1-6). [1] Frenzy catalogue: raging Śiva-yells, pit-weeping-laughing-scatter, unfelt feeling, thrill-needles, ripened feasting, held ranges, wiped duality, straying splits, stainless minds, conquered gloom, bath-drink rites, praised world-faring (vv7-18). [2] Freedom and seal: ripe-love freedom named, pain-welcomed, mutual gladdening, nectar-shaped selves, shown worlds, hidden-high love cried, beauty-ground, knower-road wins, hall-clasping, dissolution feast, commanded-free lordship (vv19-30).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The veil and the youth first. Naught of folk stands toward Your veiling. Naught of lovers either. Though won by method-ladder-steps, though thick with epithets: to love-sharers, Thou, the self, at once, pure, dawns. Winning even, laugh too; won even, laugh too: muddy, drinking Thy love-nectar, whoever indeed, Lord. May I never dry up, never seek release: brimmed with Thy-love-sap, best-tasted, past-topped. As unmet before, this Thy-love-sap of mine befell: so, Ruler, may that same fatten. Truly, Lord: no other prayer’s reach is mine. Only be that, somehow some, love’s seizure mine, ever.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the frenzy catalogue, letting everything in. Love-drunk even: may I rage, for Becoming rue, laugh, up leap, yell Shiva. Enough. Pit-standing even, hale even, weeping even, laughing even: deep even, scatter-minded even, may I be, by love, Ruler. For lovers naught to be felt: in Thee within, or without — where Thou, knowing-natured, doubtfree standest, Thyself. Lovers, at blame-mimicked even, thrill: by Thy nectar-drops, as if, inward-pierced by keen thrill-needles. Pain-feeling even, for lovers, ripens to feasting: whose knowing, all of it, nectar-wet, is Thy-moonshine-made. Where-go held, of lovers, without-within: guileless, Thy-frame-touch-sap-taste-joy same. Lord, in Thy love’s worship, the abject share that leans on two wiped out, some savor a frame clear, nectar-made. Astray, ford-seers, split: for split is but straying’s. Foeless, thing one: for lovers Thou shinest. Mind stainless-ripe past honor, scorn, love and the rest: whose is he, the lover? World-like-mannered how could he be? Love-hate-gloom even, whose love-shine conquered: before those great ones, which are the knowing-rich? Whose rite-and-means is love-nectar-bath-and-drink: his, in begun-middle-end states, high ease-seat. Praised be, sought be, worshiped be: whereby Thou alone, of Thy lovers, praised be world-faring, Thee-made.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then freedom, then seal. Freedom’s name is but ripe love in Thee, Lord. Thereon, first-stage-mounted, freed-like are we. Pain’s coming even, great be mine, love-brimmed-souled. From-Thee-turned, All, never: joy’s train even. Thou by love art gladdened; love, gladdened in Thee: and, Lord, since that mutual-ground is fit, as Thou alone knowest it. Shaped or shapeless, in or out even: to lover-selves, Ruler, ever art Thou nectar-made. In this world itself, within, toward Thy lover: joy-showing-fruited, another world-stand stands. In the hidden, love; in the high, love; in the world’s Great Lord, love: in Thee, Kind One, in Shiva — love, forsooth, some! Ah! Love, love: high love, fierce love indeed! Loud I wail: let fierce love be mine, high love, in Thee. Since I am all beauties’ birth-ground, Ruler: in Thee stuck, priceless be jewel or straw. From knower to known, on whose feeling-road by Thee no parting is: they win, Thy partakers. Outside passing’s hall, by some art Thou clasped: Master. But by others, right there, drooping, rein-dropped. With BhavAnI — drinking, eating, decking, feasting the all-world whole — dissolution-feast-hurried, hard-clasped Shiva I bow.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "The veil and the youth first. Naught of folk stands toward Your veiling. Naught of lovers either. Though won by method-ladder-steps, though thick with epithets: to love-sharers, Thou, the self, at once, pure, dawns. Winning even, laugh too; won even, laugh too: muddy, drinking Thy love-nectar, whoever indeed, Lord. May I never dry up, never seek release: brimmed with Thy-love-sap, best-tasted, past-topped. As unmet before, this Thy-love-sap of mine befell: so, Ruler, may that same fatten. Truly, Lord: no other prayer’s reach is mine. Only be that, somehow some, love’s seizure mine, ever.\n\nThen the frenzy catalogue, letting everything in. Love-drunk even: may I rage, for Becoming rue, laugh, up leap, yell Shiva. Enough. Pit-standing even, hale even, weeping even, laughing even: deep even, scatter-minded even, may I be, by love, Ruler. For lovers naught to be felt: in Thee within, or without — where Thou, knowing-natured, doubtfree standest, Thyself. Lovers, at blame-mimicked even, thrill: by Thy nectar-drops, as if, inward-pierced by keen thrill-needles. Pain-feeling even, for lovers, ripens to feasting: whose knowing, all of it, nectar-wet, is Thy-moonshine-made. Where-go held, of lovers, without-within: guileless, Thy-frame-touch-sap-taste-joy same. Lord, in Thy love’s worship, the abject share that leans on two wiped out, some savor a frame clear, nectar-made. Astray, ford-seers, split: for split is but straying’s. Foeless, thing one: for lovers Thou shinest. Mind stainless-ripe past honor, scorn, love and the rest: whose is he, the lover? World-like-mannered how could he be? Love-hate-gloom even, whose love-shine conquered: before those great ones, which are the knowing-rich? Whose rite-and-means is love-nectar-bath-and-drink: his, in begun-middle-end states, high ease-seat. Praised be, sought be, worshiped be: whereby Thou alone, of Thy lovers, praised be world-faring, Thee-made.\n\nThen freedom, then seal. Freedom’s name is but ripe love in Thee, Lord. Thereon, first-stage-mounted, freed-like are we. Pain’s coming even, great be mine, love-brimmed-souled. From-Thee-turned, All, never: joy’s train even. Thou by love art gladdened; love, gladdened in Thee: and, Lord, since that mutual-ground is fit, as Thou alone knowest it. Shaped or shapeless, in or out even: to lover-selves, Ruler, ever art Thou nectar-made. In this world itself, within, toward Thy lover: joy-showing-fruited, another world-stand stands. In the hidden, love; in the high, love; in the world’s Great Lord, love: in Thee, Kind One, in Shiva — love, forsooth, some! Ah! Love, love: high love, fierce love indeed! Loud I wail: let fierce love be mine, high love, in Thee. Since I am all beauties’ birth-ground, Ruler: in Thee stuck, priceless be jewel or straw. From knower to known, on whose feeling-road by Thee no parting is: they win, Thy partakers. Outside passing’s hall, by some art Thou clasped: Master. But by others, right there, drooping, rein-dropped. With BhavAnI — drinking, eating, decking, feasting the all-world whole — dissolution-feast-hurried, hard-clasped Shiva I bow."
+  },
+  {
+   "chunk": "s17",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Feast announced: somehow-won sweetness, success dealings, all-state worship, touch-feasts, equinox tides, startless deeds, dreaming rulers, chanter grades, nectar-weddings, churn-born winnings (vv1-10). [1] Feast entered: pure-shine rounds, woven weddings, waxing greed, ocean sitting, knot severing, sense-field sending, helpless heats, grace-causes, deed-frenzies, ventured fruits (vv11-22). [2] Feast deepened: roaming madness, open hearts, unfound beauties, clear-fed frames, wedding-bonds, thirsting lakes, sole bowls, somehow-wins, bowed gear, mantra-laid starts, blooming kingdoms (vv23-34). [3] Feast sealed: god-or-freed feasters, weighted guises, churned nectar, wish-cow deeming, tossing glances, churned worship, treading courtesy, unbarred love, stilled minds, ruled means, treasuried senses, pretty thralls, formed feasts, lust-offerings, straw-and-jewel close (vv35-48).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The feast gets announced first: somehow wins — ah! — this sweet worship-high-feast, since nectar-sap-taste tears even give amply. Dealings success-giving, all, whose vanguard is Your worship. Lovers, Thee-made, themselves ripe attainments. Ever, in all states, at once, all-shaped: they worship restless, and they are my gods. Touch-Thee-feast, ripe by scorning thought-strain: worship’s rule, so famed, be mine ever. Lovers’ evenness-pith-equinox-tide, ever: by Thy-state-sap-nectar-sap, their ever-worship. Whose start-and-end are not, nor time-rank, Ruler: worship-selved is that deed; its doers, Thy partakers, merely. BrahmA-and-first ones even, rulers, fortune-sharers: in whose dream even, swoon even, stands Thy worship-feast. Mutterers, offerers, bathers, thinkers — and not barely: lovers’ Thee-worship, ah, as-far, when, then. Tasting Your worship-nectar-joy-wedding, glad, ever: mid Indra-and-first, ay, BrahmA-chiefs — is who their match? At Thy worship-high-feast, sole-born of world-churn: what won is won, some; lovers alone ken it.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then the feast gets entered. In Thy knowing-made seat standing, by six-and-thirty-principle-deeds: by body-speech-mind-stirs and the rest, worship I Thee ever, All. Glad in Thy-worship-woven-clinging-wedding, of me: fare, time, all, ay, endless. This I pray. Greed for Thy-worship-nectar-sap-feasting: All! Wax day on day, and ever fruit, for me. In Thine ocean, brimmed with world-play-nectar-one-sap: Thee, high-souled, worshiping may I sit, ever. Ever plain by all-hankering-knot-severing: may mind be laid before Thee by lovers, sweet, in Thy worship-rule. Standing upon these sense-fields, sense-plays of lovers send: for Thy-worship-sake, nectar-wine. Lovers, love-surge-great-heat-helpless-souled: what other freedom-cause, but drowning in Thy-worship-nectar? Ever, Thy-foot-honoring-nectar-drink-high-feast: my Thy-grace-one-winning cause, may it avail. May I feel, Ruler, deed by deed, wink by wink: Thy-worship-nectar-drink-frenzy-taste-high-glee. Seen-fruited indeed is lovers’ Thy-worship-high-venture: at once, unthinkable joy they taste. While unwon, Thy-worship-high-feast: while, untasted I deem a speck even of joy’s hoard. Lovers’, without sense-hunt-shine-strain even: strain-free-ripe, Thy seat-standing in worship is born.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then the feast deepens. Naught to win is there for lovers, nor aught scarce to them. Merely roam they: Thy-worship-wine-frenzy-mad. Ah! love-heavy-open-hearted: love, Ruler! Toward Thee: praised, the worship-rule, somehow — by begging unstained. What beauty is not, what glee not, what thrive not, or else: what freedom not, since this Great God is worshiped? Inward-sporting-clear-fed, Thy love-fed: for Thy-worship’s use be mine this frame. Thy-foot-worship-wedding-bound ever, All: may I be, worlds’ Ruler, alone, free-stirring. Thy-thought-seeing-touch-thirst: of some even, Ruler, is born cool-sweet Thy-worship-high-lake. As Thou alone art the world’s worship-wedding-bowl: so, Ruler, the lover alone is worship-wedding-bowl. Somehow wins, Master: Thy worship-high-feast, where of six-and-thirty principles even churn sports amply. Bow to them, All: whose, by love-nectar-water, hallowed themselves turn Thy worship-gear even. At worship’s start, All: thought on, mantra-laid Thy selfness, in self alone, high, lovers shine with glee — nowhither. By kingdom-winning-and-the-rest-blooming ones at Thy worship-high-feast: with nectar-wine the all-earth is shared out. Worship-nectar-drink-made, whose feasting wink by wink: are they gods? Are they freed? Or whatever folk indeed?",
+     "maps_to": [
+      2
+     ]
+    },
+    {
+     "text": "Then the feast gets sealed. By world-turned-worship-gear-guise, weight. Ah! some of lovers and some indeed lightness. From worship-made-glance-toss-churn alone, nectar-upcoming: for lovers; as milk-sea-churn for sky-dwellers. Worship some deem a wish-cow. Nectar-stream-over-sapped, suck the inward-faced others. Lovers’ glance-toss even — this, passing-approved — fetching some within, fattens the worship-high-feast. By love-churn’s force, Ruler, worship in Thee, self-become. Strange: for abjectness’ high fruit. Courtesy-tread is worship, for some, to win Thy feet. For lovers, Thine-one-self-bliss-spread is it. By unbound-mad-love’s unbarred — worship of unjoined-shape even — spread out, it wins a stand in Thee, some. Mind stilled by tasting sweet-love-sap: fallen, beauteous. Kind One: Thou alone, lovely, art worship’s bowl, they say. Brimmed, pure, loving, steady: in Thy worship-rule, Ruler, means be mine. In all-worship’s true-treasury, in Thy worship-work, Ruler: ah! sense-throng’s some fortune unfolds. This prettiness, Ruler: Thine alone, they say, is seen: All-Lord even, by slaves art Thou worshiped and won. From ever-formed or formless, being or even unbeing: may rise, mine, of the praised, Thy worship-high-feast. With lust, anger, pride made offering ever: who worship — bow to them. Of them pleased am I, in truth. Wins, this, Thy-love-sharers’ worship-rule, high: with straws wrought even, with jewels fitted.",
+     "maps_to": [
+      3
+     ]
+    }
+   ],
+   "text": "The feast gets announced first: somehow wins — ah! — this sweet worship-high-feast, since nectar-sap-taste tears even give amply. Dealings success-giving, all, whose vanguard is Your worship. Lovers, Thee-made, themselves ripe attainments. Ever, in all states, at once, all-shaped: they worship restless, and they are my gods. Touch-Thee-feast, ripe by scorning thought-strain: worship’s rule, so famed, be mine ever. Lovers’ evenness-pith-equinox-tide, ever: by Thy-state-sap-nectar-sap, their ever-worship. Whose start-and-end are not, nor time-rank, Ruler: worship-selved is that deed; its doers, Thy partakers, merely. BrahmA-and-first ones even, rulers, fortune-sharers: in whose dream even, swoon even, stands Thy worship-feast. Mutterers, offerers, bathers, thinkers — and not barely: lovers’ Thee-worship, ah, as-far, when, then. Tasting Your worship-nectar-joy-wedding, glad, ever: mid Indra-and-first, ay, BrahmA-chiefs — is who their match? At Thy worship-high-feast, sole-born of world-churn: what won is won, some; lovers alone ken it.\n\nThen the feast gets entered. In Thy knowing-made seat standing, by six-and-thirty-principle-deeds: by body-speech-mind-stirs and the rest, worship I Thee ever, All. Glad in Thy-worship-woven-clinging-wedding, of me: fare, time, all, ay, endless. This I pray. Greed for Thy-worship-nectar-sap-feasting: All! Wax day on day, and ever fruit, for me. In Thine ocean, brimmed with world-play-nectar-one-sap: Thee, high-souled, worshiping may I sit, ever. Ever plain by all-hankering-knot-severing: may mind be laid before Thee by lovers, sweet, in Thy worship-rule. Standing upon these sense-fields, sense-plays of lovers send: for Thy-worship-sake, nectar-wine. Lovers, love-surge-great-heat-helpless-souled: what other freedom-cause, but drowning in Thy-worship-nectar? Ever, Thy-foot-honoring-nectar-drink-high-feast: my Thy-grace-one-winning cause, may it avail. May I feel, Ruler, deed by deed, wink by wink: Thy-worship-nectar-drink-frenzy-taste-high-glee. Seen-fruited indeed is lovers’ Thy-worship-high-venture: at once, unthinkable joy they taste. While unwon, Thy-worship-high-feast: while, untasted I deem a speck even of joy’s hoard. Lovers’, without sense-hunt-shine-strain even: strain-free-ripe, Thy seat-standing in worship is born.\n\nThen the feast deepens. Naught to win is there for lovers, nor aught scarce to them. Merely roam they: Thy-worship-wine-frenzy-mad. Ah! love-heavy-open-hearted: love, Ruler! Toward Thee: praised, the worship-rule, somehow — by begging unstained. What beauty is not, what glee not, what thrive not, or else: what freedom not, since this Great God is worshiped? Inward-sporting-clear-fed, Thy love-fed: for Thy-worship’s use be mine this frame. Thy-foot-worship-wedding-bound ever, All: may I be, worlds’ Ruler, alone, free-stirring. Thy-thought-seeing-touch-thirst: of some even, Ruler, is born cool-sweet Thy-worship-high-lake. As Thou alone art the world’s worship-wedding-bowl: so, Ruler, the lover alone is worship-wedding-bowl. Somehow wins, Master: Thy worship-high-feast, where of six-and-thirty principles even churn sports amply. Bow to them, All: whose, by love-nectar-water, hallowed themselves turn Thy worship-gear even. At worship’s start, All: thought on, mantra-laid Thy selfness, in self alone, high, lovers shine with glee — nowhither. By kingdom-winning-and-the-rest-blooming ones at Thy worship-high-feast: with nectar-wine the all-earth is shared out. Worship-nectar-drink-made, whose feasting wink by wink: are they gods? Are they freed? Or whatever folk indeed?\n\nThen the feast gets sealed. By world-turned-worship-gear-guise, weight. Ah! some of lovers and some indeed lightness. From worship-made-glance-toss-churn alone, nectar-upcoming: for lovers; as milk-sea-churn for sky-dwellers. Worship some deem a wish-cow. Nectar-stream-over-sapped, suck the inward-faced others. Lovers’ glance-toss even — this, passing-approved — fetching some within, fattens the worship-high-feast. By love-churn’s force, Ruler, worship in Thee, self-become. Strange: for abjectness’ high fruit. Courtesy-tread is worship, for some, to win Thy feet. For lovers, Thine-one-self-bliss-spread is it. By unbound-mad-love’s unbarred — worship of unjoined-shape even — spread out, it wins a stand in Thee, some. Mind stilled by tasting sweet-love-sap: fallen, beauteous. Kind One: Thou alone, lovely, art worship’s bowl, they say. Brimmed, pure, loving, steady: in Thy worship-rule, Ruler, means be mine. In all-worship’s true-treasury, in Thy worship-work, Ruler: ah! sense-throng’s some fortune unfolds. This prettiness, Ruler: Thine alone, they say, is seen: All-Lord even, by slaves art Thou worshiped and won. From ever-formed or formless, being or even unbeing: may rise, mine, of the praised, Thy worship-high-feast. With lust, anger, pride made offering ever: who worship — bow to them. Of them pleased am I, in truth. Wins, this, Thy-love-sharers’ worship-rule, high: with straws wrought even, with jewels fitted."
+  },
+  {
+   "chunk": "s18",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Inside and outside winning: world-inside won, Bhavānī-facing station unsplit, smug slain, honoured feet, frame-dwelt burning (vv1-5). [1] Dwelling images: glued minds at aim-meets, pastured dealings, city roving, oozed nectar-floods, chant-tree woods, dawning shows, cake-built gladdening, honoured-rule seas (vv6-13). [2] Paradox and entry: bared truth unvesselled, calm unwanting, bowled minds, ring-turned winning, unsundered making, stained denial, plain entering, praiseless praise (vv14-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Inside and outside, winning both ways. From the world’s inside, winning You — again, from Thine inside, we win this. World-Lord: Thine alone, love-sharers: for naught of theirs here is from afar. Here Thou, there BhavAnI — all-things’-rank-pregnant, first. But at truth’s station, neither Hers nor Thine, nor triple world’s, is split. The smug know not the lovely even; though try-favored, all things indeed. But mind, risen this even, kens not self-shape here. Ah! then — ah! — I am slain. Thy feet honored with full wealth, won by dwelling in Thee-made self: who needs neither food nor cloak ever — to him bowed am I. Ever in Thy-frame-dwelling hale, yet inside supremely burns this world. By Thy will, so do for me that here, Thy-worship-joy-made, I be.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Dwelling images, one after another. By own sap risen: Thy-lotus-feet-pair-worship-nectar-drink-glued-mind — in all-aims’-gatherings may I be: touch-joy alone for world-faring. In the whole field of dealings, plainly, while You throb inside, Lord: coming and going ever, may my things shine always. Ever in Thine own city — or cityless, roaming with Thee: not a wink’s crumb even be mine of defeat, forsooth, where Thee-made. In Thy-limb-oozed well-cool-nectar-floods brimmed, all round even: in Thy-worship-wealth here, Thy lovers in passing’s lake within roam. In great-chant-tree-shade-cool, in Thy high woods, in mine own self ever, Ruler: may I dwell, Thy honorer. To each thing of all breathers Thou dawnest, dawn-made, as. So, my Ruler, forth to show fare: three-eyes-trident-graced. From pride-cake-offering, by mine-love’s weight built: gladdened, when wilt Thou be my eyes’ ground everywhere? Dwelling in high-nectar-sea’s middle, in Thy-honor-rule alone sunk-mind: all folk-faring may I ply, savoring, everything indeed, aught even.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then paradox, then entry. Thine here, be thing, be truth: to bare it, who here is vessel fit? This alone: name-shape-stir-and-the-rest-unequalled of Thine — takes. Taker art Thou, since. For calm, no joy-hunger a jot, in love-heaped frenzies. Freedom-wooing fruit even: no begging minded, before the heart-thief. Wake-or-other-state, or high even: whatever even, a jot of standing — for love-bowl-folk, all is Thou-lorded-mind’s high feast. Mind: eye-ring courses, everywhere loosened yet still — Thee winning, hard-long-knowing, Ruler: by love-hoard’s heat, how? Nor sundered was unmade aught, yet unjoy was never built. Yet pained and parted in all ways: O matchless-wonder-home, bow be to Thee. Thought-stain washed bright by splashed denial-blade-nectar-flood: doubt-foe unconquered crushed — Thy beholding be unbroken. Plain, enter me: then may I enter, ever, Ruler — Thine am I, since. With rush Thy frame itself: outright, high-neared, may I honor. In Thee no praise-might is any one’s — or is indeed, since passing fair art Thou. Ever again my begging is this: that restless I behold the Ruler.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Inside and outside, winning both ways. From the world’s inside, winning You — again, from Thine inside, we win this. World-Lord: Thine alone, love-sharers: for naught of theirs here is from afar. Here Thou, there BhavAnI — all-things’-rank-pregnant, first. But at truth’s station, neither Hers nor Thine, nor triple world’s, is split. The smug know not the lovely even; though try-favored, all things indeed. But mind, risen this even, kens not self-shape here. Ah! then — ah! — I am slain. Thy feet honored with full wealth, won by dwelling in Thee-made self: who needs neither food nor cloak ever — to him bowed am I. Ever in Thy-frame-dwelling hale, yet inside supremely burns this world. By Thy will, so do for me that here, Thy-worship-joy-made, I be.\n\nDwelling images, one after another. By own sap risen: Thy-lotus-feet-pair-worship-nectar-drink-glued-mind — in all-aims’-gatherings may I be: touch-joy alone for world-faring. In the whole field of dealings, plainly, while You throb inside, Lord: coming and going ever, may my things shine always. Ever in Thine own city — or cityless, roaming with Thee: not a wink’s crumb even be mine of defeat, forsooth, where Thee-made. In Thy-limb-oozed well-cool-nectar-floods brimmed, all round even: in Thy-worship-wealth here, Thy lovers in passing’s lake within roam. In great-chant-tree-shade-cool, in Thy high woods, in mine own self ever, Ruler: may I dwell, Thy honorer. To each thing of all breathers Thou dawnest, dawn-made, as. So, my Ruler, forth to show fare: three-eyes-trident-graced. From pride-cake-offering, by mine-love’s weight built: gladdened, when wilt Thou be my eyes’ ground everywhere? Dwelling in high-nectar-sea’s middle, in Thy-honor-rule alone sunk-mind: all folk-faring may I ply, savoring, everything indeed, aught even.\n\nThen paradox, then entry. Thine here, be thing, be truth: to bare it, who here is vessel fit? This alone: name-shape-stir-and-the-rest-unequalled of Thine — takes. Taker art Thou, since. For calm, no joy-hunger a jot, in love-heaped frenzies. Freedom-wooing fruit even: no begging minded, before the heart-thief. Wake-or-other-state, or high even: whatever even, a jot of standing — for love-bowl-folk, all is Thou-lorded-mind’s high feast. Mind: eye-ring courses, everywhere loosened yet still — Thee winning, hard-long-knowing, Ruler: by love-hoard’s heat, how? Nor sundered was unmade aught, yet unjoy was never built. Yet pained and parted in all ways: O matchless-wonder-home, bow be to Thee. Thought-stain washed bright by splashed denial-blade-nectar-flood: doubt-foe unconquered crushed — Thy beholding be unbroken. Plain, enter me: then may I enter, ever, Ruler — Thine am I, since. With rush Thy frame itself: outright, high-neared, may I honor. In Thee no praise-might is any one’s — or is indeed, since passing fair art Thou. Ever again my begging is this: that restless I behold the Ruler."
+  },
+  {
+   "chunk": "s19",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Prayer grounds: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings (vv1-4). [1] Face and melting: jewel-creeper blooming, face-orb drowning, glad shapes, unexcelled touches, bitter offerings, ray-licked fevers, blocked strands, brimmed piths (vv5-12). [2] Freedom and Master: death-lawed shining, speck-starved wings, clear begging, brimmed mindfulness, yonder father-eyed mother-roamed Master (vv13-17).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Prayer grounds first: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings. Beyond prayer-grounds, strange-fruit-giver: victorious, unprecedented-storied, Shiva the wish-tree.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Then face and melting. When will foot-thought-jewel-creeper-fruition, amazing the perfected, befall me, from You? When, Lord, shall I fully see Your pure face-orb, from which streams unprecedented-nectar-flood, drowning the world whole? Your form, risen at mere meditation — when, Lord, will it ever fill my far gaps with unprecedented-nectar floods? By touch of Your peerless rasa, unroaming abandoned: not now is my mind, Lord. When will it be? Let it be soon. Not dry-bitter things only: nay, all, always — to You offered, gained: even opposites rush me. Lord, may Your pure rays come face to face, as long as body-mind-heat-dark is wiped out. God, be gracious till my path-blockers, truth-stealing, sense-thieves are tamed. With Your devotion-nectar-essence fill my mind fast, Lord: till these are carried off, drowned — all sapless hankerings.",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "Then freedom and Master. In liberation-state, where is devotion to You — how could it even shine for the mortal-natured? Nay. So me, Unborn, on a fitting attainment-ground raise. Greedy for a siddhi-drop’s gain, with smugness settle me not: starved, before Your devotion-face, is freedom; sprouting wonder-wings. May the Lord be pleased with me, His slave — this much alone I beg. In mind brimmed with Your frame-mindfulness-nectar-sap: Your lotus-feet-pair in mine, blooming be ever — honey-oozing, beyond the world. Mine is the Master, yonder: father, then Three-eyed, then mother BhavAnI. No second here, whoever is mine: thus most-fulfilled may I roam.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "Prayer grounds first: past-grounds, one-hoard selves, knowing-frames, pain-thieved farings. Beyond prayer-grounds, strange-fruit-giver: victorious, unprecedented-storied, Shiva the wish-tree.\n\nThen face and melting. When will foot-thought-jewel-creeper-fruition, amazing the perfected, befall me, from You? When, Lord, shall I fully see Your pure face-orb, from which streams unprecedented-nectar-flood, drowning the world whole? Your form, risen at mere meditation — when, Lord, will it ever fill my far gaps with unprecedented-nectar floods? By touch of Your peerless rasa, unroaming abandoned: not now is my mind, Lord. When will it be? Let it be soon. Not dry-bitter things only: nay, all, always — to You offered, gained: even opposites rush me. Lord, may Your pure rays come face to face, as long as body-mind-heat-dark is wiped out. God, be gracious till my path-blockers, truth-stealing, sense-thieves are tamed. With Your devotion-nectar-essence fill my mind fast, Lord: till these are carried off, drowned — all sapless hankerings.\n\nThen freedom and Master. In liberation-state, where is devotion to You — how could it even shine for the mortal-natured? Nay. So me, Unborn, on a fitting attainment-ground raise. Greedy for a siddhi-drop’s gain, with smugness settle me not: starved, before Your devotion-face, is freedom; sprouting wonder-wings. May the Lord be pleased with me, His slave — this much alone I beg. In mind brimmed with Your frame-mindfulness-nectar-sap: Your lotus-feet-pair in mine, blooming be ever — honey-oozing, beyond the world. Mine is the Master, yonder: father, then Three-eyed, then mother BhavAnI. No second here, whoever is mine: thus most-fulfilled may I roam."
+  },
+  {
+   "chunk": "s20",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bow catalogue: catalogued Lord, dance-ready praise, Hara-housed fortunes, played lordship, honoured seat (vv1-5). [1] Paradox middle: Gauri-lover favoured, being-tree creepers, itch-born worship, gone roamings, begged riches, pang-joys, rooted sinking, speech-jewel, effortless ripening (vv6-13). [2] Closing seal: awaited light, slave-mouth Śiva, lit showings, guzzled breathers, sham ruin-ties, self-standing frames, night-dancing heroes, begun endless praise (vv14-21).",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "The bow catalogue opens it. Bow to the three-worlds’ Lord, ash-pale, three-eyed, trident-wielding, snake-threaded, moon-crested: I bow. I praise, self-forgetting, white-robed in bite-torn cloth, dancing to the tune of the skull-garland: feast-ready. Bow to those whose god is Hara, whose stirs are Hara-fit, Hara-alone-bent breaths ever: fortune’s houses. Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means. In Your world-venerated abode, in this play: how great would my bliss-birth be?",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "The paradox middle. How could He not be fortunate — who is Gauri’s lover, Hara? And how could Hara not be Gauri’s supreme beloved? Whose meditation-nectar is undying, self-rooted, ever-fresh: consciousness-creepers, like some being-tree. At devotion-itch’s showing, Lord’s pillar-firmness arises: by it the world, great festival, is won. Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated: to the Master, bow. Nowhere gone, nothing left: who just this, see Your abode as to-be here — fortunate: to them bow, bow. For the devotion-fortuned, what else is begged; for the devotion-poor, what else is begged? Where pains turn pleasures, poison turns nectar, saṃsāra turns liberation: that path is He, Kind-Maker. At root, middle, end: no suffering for Your people — yet we sink, Lord: tell why?",
+     "maps_to": [
+      1
+     ]
+    },
+    {
+     "text": "The closing seal. Light is worth begging even by beginners in knowledge-yoga: You, Lord of devotees, are like the light of the free. Devotees have no prayers, no remembrance of You the self — yet this Shiva of theirs, something, on the lip. Who lights all appearances, wrapped in vimarsha: I am this — so I praise Your action-power, Lord. All beings, from BrahmA to Vishnu, being devoured: so I bow, God, to the world as Your-formed. All beyond me is false, by relation to destruction: thus engaged, Lord, by Your destruction-play alone. Meditated, Your form stands present for devotion-rich: unconquered by unthinkable-wonder-makers. By Your devotion-wine-taste nerves’ thrill, night-heroes dance, roused by vetAlas. The praise begun with this limb of mine: by it may all this time be firmly unending.",
+     "maps_to": [
+      2
+     ]
+    }
+   ],
+   "text": "The bow catalogue opens it. Bow to the three-worlds’ Lord, ash-pale, three-eyed, trident-wielding, snake-threaded, moon-crested: I bow. I praise, self-forgetting, white-robed in bite-torn cloth, dancing to the tune of the skull-garland: feast-ready. Bow to those whose god is Hara, whose stirs are Hara-fit, Hara-alone-bent breaths ever: fortune’s houses. Your play, behind lordship — and this too, as wished-fulfilled in gifts, by self I reach the supreme means. In Your world-venerated abode, in this play: how great would my bliss-birth be?\n\nThe paradox middle. How could He not be fortunate — who is Gauri’s lover, Hara? And how could Hara not be Gauri’s supreme beloved? Whose meditation-nectar is undying, self-rooted, ever-fresh: consciousness-creepers, like some being-tree. At devotion-itch’s showing, Lord’s pillar-firmness arises: by it the world, great festival, is won. Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated: to the Master, bow. Nowhere gone, nothing left: who just this, see Your abode as to-be here — fortunate: to them bow, bow. For the devotion-fortuned, what else is begged; for the devotion-poor, what else is begged? Where pains turn pleasures, poison turns nectar, saṃsāra turns liberation: that path is He, Kind-Maker. At root, middle, end: no suffering for Your people — yet we sink, Lord: tell why?\n\nThe closing seal. Light is worth begging even by beginners in knowledge-yoga: You, Lord of devotees, are like the light of the free. Devotees have no prayers, no remembrance of You the self — yet this Shiva of theirs, something, on the lip. Who lights all appearances, wrapped in vimarsha: I am this — so I praise Your action-power, Lord. All beings, from BrahmA to Vishnu, being devoured: so I bow, God, to the world as Your-formed. All beyond me is false, by relation to destruction: thus engaged, Lord, by Your destruction-play alone. Meditated, Your form stands present for devotion-rich: unconquered by unthinkable-wonder-makers. By Your devotion-wine-taste nerves’ thrill, night-heroes dance, roused by vetAlas. The praise begun with this limb of mine: by it may all this time be firmly unending."
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "work": "anuttarastika",
+ "style": "eli5",
+ "kind": "c2-song-renders",
+ "label": "prompt-reproducible render over the canonical stack — NOT canonical translation",
+ "provenance": {
+  "source": "translation-work anuttarastika/data/*.c2.json (DATATYPES c2-render, schemas/c2.py)",
+  "registry": "REGISTRY status=gold c2_songs=8",
+  "approval": "1/p05-p08 L3 essence_maps exceed C1 range (upstream mismatch; L4 mirrors L3 subset-valid); anu-* verse_ids collide corpus-wide with anubhavanivedana (work-scoped files; owner eyes needed). 2026-11-04: C2 eli5+genz tagged+merged, gate green.",
+  "generated": "2026-11-03T10:08:14Z"
+ },
+ "items": [
+  {
+   "chunk": "anu-p01",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] No method is enjoined: contemplation, speech-connection, discussion, visualization, steadying, japa-practice-effort — all denied. The question replaces the hunt for method: what stands well-decided? Speak it, hear it. The answer is two refusals and one command: not renouncer, not possessor — enjoy happiness, wholly, as staying. Staying (yathāvasthita) is the method that is no method — anupāya named by performance, not by label.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "No method is enjoined here — not thinking hard about it, not connecting it to words, not debating it, not picturing it, not holding still, not straining at mantra practice. Every method gets denied. So the hunt for a method gets replaced by a question instead: what actually stands well decided? Say it out loud. Hear it said.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And the answer is two refusals plus one command. Not someone who gave everything up. Not someone who owns everything either. Just this: enjoy happiness — all of it — by staying exactly as you are. Staying put is the method that is no method. It never gets a label; it only gets performed.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "No method is enjoined here — not thinking hard about it, not connecting it to words, not debating it, not picturing it, not holding still, not straining at mantra practice. Every method gets denied. So the hunt for a method gets replaced by a question instead: what actually stands well decided? Say it out loud. Hear it said.\n\nAnd the answer is two refusals plus one command. Not someone who gave everything up. Not someone who owns everything either. Just this: enjoy happiness — all of it — by staying exactly as you are. Staying put is the method that is no method. It never gets a label; it only gets performed."
+  },
+  {
+   "chunk": "anu-p02",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Saṃsāra is unreal for the embodied; bondage never truly is for anyone, so the liberation-rite is false. The error is a fourfold delusion-heap — rope, snake, shadow, ghost. Abandon nothing, grasp nothing; live healthy, staying.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Samsara — the whole round of rebirth — is not real for embodied beings like us. Bondage never truly belongs to anyone, so the whole ceremony of getting liberated is based on nothing. The mistake is a heap of four delusions piled together: mistaking a rope for a snake, a shadow for a ghost, and so on.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "So the rule has two halves, both negative: abandon nothing, and grasp nothing either. Just live healthy — which means standing in your own nature — and stay as you are.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Samsara — the whole round of rebirth — is not real for embodied beings like us. Bondage never truly belongs to anyone, so the whole ceremony of getting liberated is based on nothing. The mistake is a heap of four delusions piled together: mistaking a rope for a snake, a shadow for a ghost, and so on.\n\nSo the rule has two halves, both negative: abandon nothing, and grasp nothing either. Just live healthy — which means standing in your own nature — and stay as you are."
+  },
+  {
+   "chunk": "anu-p03",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Worship, worshipper, worshipped — what difference-course in the unsurpassed? Transition: of whom, by whom effected, who enters? Māyā, not different from consciousness-nonduality, stands as other — alas. All is pure own-experience-nature; vain thought, do not.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Worship, the worshipper, and the worshipped: what sense does it make to talk about differences between them, up in the unsurpassed? Transition — by whom is it effected, for whom, and who exactly is entering what? Here is the stranger part: Maya, which is not different from non-dual consciousness, still stands there as something other. Alas.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "And yet all of it is pure, made of nothing but your own experience. So when thoughts come along in vain — don’t.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Worship, the worshipper, and the worshipped: what sense does it make to talk about differences between them, up in the unsurpassed? Transition — by whom is it effected, for whom, and who exactly is entering what? Here is the stranger part: Maya, which is not different from non-dual consciousness, still stands there as something other. Alas.\n\nAnd yet all of it is pure, made of nothing but your own experience. So when thoughts come along in vain — don’t."
+  },
+  {
+   "chunk": "anu-p04",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Bliss is neither wealth-intoxication nor lamp-sun-moon splendour. Joy with gathered-difference-liberation-bliss-ground, like burden-lowering, is the attainment of the forgotten treasure of the all-nonduality state — the light-rise. Bliss = prakāśodaya: difference gathered, burden set down, treasure remembered.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Bliss is not what you think. It is not getting intoxicated on wealth, and it is not lamp-light or sunlight or moonlight piled up into splendour. Joy is something else: difference gathered up, freedom settled into bliss-ground — like setting down a heavy load you have been carrying. And that is how you attain the forgotten treasure of the all-nonduality state.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Bliss equals the light-rise itself: difference gathered, burden set down, treasure remembered.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Bliss is not what you think. It is not getting intoxicated on wealth, and it is not lamp-light or sunlight or moonlight piled up into splendour. Joy is something else: difference gathered up, freedom settled into bliss-ground — like setting down a heavy load you have been carrying. And that is how you attain the forgotten treasure of the all-nonduality state.\n\nBliss equals the light-rise itself: difference gathered, burden set down, treasure remembered."
+  },
+  {
+   "chunk": "anu-p05",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Passions through misery — the whole catalogue of feeling-states, universe-bodied — are not different-natured. Whatever manifestation you suddenly see, regard as one-self-natured consciousness-form: why not delight, contemplation-full? Variety is one nature; the only consistent response to seeing it as consciousness-form is delight.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Walk through the whole catalogue of feelings — wanting things, hating things, pleasure, pain, the sense of I, misery, all of it — and every one of them has a body made of universe. None of them has a different nature from the rest. So whatever shows up in front of you, suddenly, see it as consciousness with one self-nature. Then ask yourself: why would I not delight in it, full of contemplation?",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Variety has one nature underneath, so delight is the only response that makes sense — seeing it all as consciousness-form and rejoicing.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Walk through the whole catalogue of feelings — wanting things, hating things, pleasure, pain, the sense of I, misery, all of it — and every one of them has a body made of universe. None of them has a different nature from the rest. So whatever shows up in front of you, suddenly, see it as consciousness with one self-nature. Then ask yourself: why would I not delight in it, full of contemplation?\n\nVariety has one nature underneath, so delight is the only response that makes sense — seeing it all as consciousness-form and rejoicing."
+  },
+  {
+   "chunk": "anu-p06",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Former non-being, being, action — things always, suddenly here, middle-formed and confused: whence their truth? In the non-true, unsteady, manifold, clever dream-delusion — transcend doubt, fear, stain, reasoning's contriving: awakened, become. Things lack truth; the only response is awakening.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Things used to not-be, then they are, then they act — always, suddenly, right here, half-formed and confused. So where is the truth in them? Look closer and it is all a dream-delusion: not true, unsteady, all over the place, clever. The only move is to get past doubting, past fear, past stains, past the scheming of reason — and wake up. Become awakened.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Things lack truth; the response is not analysis but awakening.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Things used to not-be, then they are, then they act — always, suddenly, right here, half-formed and confused. So where is the truth in them? Look closer and it is all a dream-delusion: not true, unsteady, all over the place, clever. The only move is to get past doubting, past fear, past stains, past the scheming of reason — and wake up. Become awakened.\n\nThings lack truth; the response is not analysis but awakening."
+  },
+  {
+   "chunk": "anu-p07",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] Of things no arising; naturally they shine by your contemplation, even the non-true borrowing momentary truth. This universe-glory is will-born from you, birth from elsewhere denied; hence you shine in worlds — one, yet many-selfed. Nonduality without cancelling multiplicity: one, yet many-selfed.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Things do not arise at all. They shine naturally, just by being contemplated by You — and even what is not true gets to borrow a little truth for a moment, through the delusion of experience. This glory of a universe is born from Your will alone; it was never born from anywhere else. That is why You shine through all the worlds — one, and yet many-selved at the same time. Nonduality without cancelling the many.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "One, yet many-selfed: held together without contradiction.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Things do not arise at all. They shine naturally, just by being contemplated by You — and even what is not true gets to borrow a little truth for a moment, through the delusion of experience. This glory of a universe is born from Your will alone; it was never born from anywhere else. That is why You shine through all the worlds — one, and yet many-selved at the same time. Nonduality without cancelling the many.\n\nOne, yet many-selfed: held together without contradiction."
+  },
+  {
+   "chunk": "anu-p08",
+   "gate": "PASS",
+   "prompt": "Explain the argument of this song as if to a bright 10-year-old. Use ONLY the claims in the ESSENCE list below; every paragraph must correspond to at least one essence item (record indices). Do not add doctrines, comparisons, meta-commentary, or quoted terms. ESSENCE: [0] All opposites shine in the consciousness-mirror: true/untrue, little/much, eternal/non-eternal, Māyā-stained/self-pure. That all, from own-grasping-consciousness-rise, form-light-natured, having known — own-experience-risen glory: Lordhood — worship. Knowing that all opposites shine in the mirror from one's own grasping consciousness = glory = Lordhood; its last word is the imperative it opened with the stance for.",
+   "model": "translator-hand",
+   "date": "2026-11-04",
+   "paragraphs": [
+    {
+     "text": "Everything opposite shines in one place: the mirror of consciousness. True things and untrue things. Little things and big things. What lasts and what does not. What is stained by illusion and what is pure by itself. Now know this: all of that rises from your own grasping consciousness, is made of form-and-light, and knowing it turns into glory that rises out of your own experience. That glory is Lordhood itself — so worship.",
+     "maps_to": [
+      0
+     ]
+    },
+    {
+     "text": "Knowing that every opposite shines in the mirror from your own grasping = glory = Lordhood. The last word is the same as the first stance: worship.",
+     "maps_to": [
+      0
+     ]
+    }
+   ],
+   "text": "Everything opposite shines in one place: the mirror of consciousness. True things and untrue things. Little things and big things. What lasts and what does not. What is stained by illusion and what is pure by itself. Now know this: all of that rises from your own grasping consciousness, is made of form-and-light, and knowing it turns into glory that rises out of your own experience. That glory is Lordhood itself — so worship.\n\nKnowing that every opposite shines in the mirror from your own grasping = glory = Lordhood. The last word is the same as the first stance: worship."
+  }
+ ]
+}
