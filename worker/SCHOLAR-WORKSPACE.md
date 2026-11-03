@@ -24,6 +24,8 @@ self-attested, not a cryptographic signature or independent peer review. The SHA
 snapshot hash uses compact sorted-key Scheme A; do not interchange it with the
 ReviewEvent/PromotionEvent Scheme B in translation-work `SCHOLAR.md`. Rights are a
 contributor declaration, not proof of ownership or legal copyright.
+Private peer-review decisions remain in D1 and are not automatically exported into
+Git; the bridge records the author's own approval only.
 
 Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true` and the existing
 server-side DashScope key is available. This flag is an **operator assertion**, not a
@@ -45,6 +47,8 @@ rejects client instruction changes, caps input and closes sessions after two min
 The browser must request explicit microphone and provider consent. Audio and its
 associated text can both count against provider quota; the configuration flag does
 not enforce billing limits. Live provider testing is still required.
+Before a public rollout, also enforce account-level request and concurrency limits
+and verify that the provider cannot bill above the intended free quota.
 
 The matching translation-work bridge branch accepts HMAC-SHA256 requests authenticated
 with `SCHOLAR_BRIDGE_SECRET`, validates the exact sign-off and translation layers,
