@@ -49,7 +49,9 @@ def ingest(s3, key, work):
             "blocking": blocking,
             "model": r.get("model", ""),
             "date": r.get("date", ""),
-            "work_id": r.get("work_id", ""),
+            # work identity comes from THIS batch's group key, never the record
+            # (batch files stamped work_id:"tantrasara" everywhere — CLAIMS 2026-11-03)
+            "work_id": work or r.get("work_id", ""),
             "ahnika": r.get("ahnika", ""),
             "immutable_id": r.get("immutable_id", ""),
             "status": r.get("status", ""),
