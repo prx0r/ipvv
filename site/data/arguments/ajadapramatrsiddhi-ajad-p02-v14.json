@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p02-v14",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p02-v14",
+ "title": "ajadapramatrsiddhi — ajad-p02-v14",
+ "kind": "entailment",
+ "question": "And there is no experience apart from distinct-and-indistinct certainty — apart from connected shining, grasp-less in its self.",
+ "issue": "Derived from L2 text (no argmap). And there is no experience apart from distinct-and-indistinct certainty — apart from connected shining, grasp-less in its self.",
+ "premises": [
+  {
+   "text": "na caivānubhavo 'py asti bhinnābhinnaviniścayam muktvānvayasya prakāśasya vimarśarahitātmanaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p02-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "And there is no experience apart from distinct-and-indistinct certainty — apart from connected shining, grasp-less in its self.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p02-v14"
+ },
+ "unresolved": "",
+ "argument_text": "And there is no experience apart from distinct-and-indistinct certainty — apart from connected shining, grasp-less in its self.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p02-v14",
+ "sanskrit": "na caivānubhavo 'py asti bhinnābhinnaviniścayam muktvānvayasya prakāśasya vimarśarahitātmanaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

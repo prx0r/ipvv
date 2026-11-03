@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v08",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v08",
+ "title": "ajadapramatrsiddhi — ajad-p01-v08",
+ "kind": "entailment",
+ "question": "But even there, function is not what is described in a thing whose existence is already established; the two are exactly on par — hence their grounding rests on consciousness.",
+ "issue": "Derived from L2 text (no argmap). But even there, function is not what is described in a thing whose existence is already established; the two are exactly on par — hence their grounding rests on consciousness.",
+ "premises": [
+  {
+   "text": "tatrāpy arthakriyā siddhasattākārthe na varṇitā samam evānayos tena pratiṣṭhā saṃvidāśrayā",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "But even there, function is not what is described in a thing whose existence is already established; the two are exactly on par — hence their grounding rests on consciousness.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v08"
+ },
+ "unresolved": "",
+ "argument_text": "But even there, function is not what is described in a thing whose existence is already established; the two are exactly on par — hence their grounding rests on consciousness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v08",
+ "sanskrit": "tatrāpy arthakriyā siddhasattākārthe na varṇitā samam evānayos tena pratiṣṭhā saṃvidāśrayā",
+ "license": "CC BY-NC-SA 4.0"
+}

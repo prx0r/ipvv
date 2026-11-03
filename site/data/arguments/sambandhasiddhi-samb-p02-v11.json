@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v11",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v11",
+ "title": "sambandhasiddhi — samb-p02-v11",
+ "kind": "entailment",
+ "question": "Therein too, what is reflection's object for the worldly — that same: of the knower whose pith is difference of non-difference-shining form.",
+ "issue": "Derived from L2 text (no argmap). Therein too, what is reflection's object for the worldly — that same: of the knower whose pith is difference of non-difference-shining form.",
+ "premises": [
+  {
+   "text": "tatrāpi yaḥ parāmarśaviṣayo laukikasya saḥ cidabhedaprathārūpabhedasārasya vedituḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Therein too, what is reflection's object for the worldly — that same: of the knower whose pith is difference of non-difference-shining form.",
+  "passage_id": "sambandhasiddhi:samb-p02-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Therein too, what is reflection's object for the worldly — that same: of the knower whose pith is difference of non-difference-shining form.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v11",
+ "sanskrit": "tatrāpi yaḥ parāmarśaviṣayo laukikasya saḥ cidabhedaprathārūpabhedasārasya vedituḥ",
+ "license": "CC BY-NC 4.0"
+}

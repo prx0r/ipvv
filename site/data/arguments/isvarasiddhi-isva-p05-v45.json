@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v45",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v45",
+ "title": "isvarasiddhi — isva-p05-v45",
+ "kind": "entailment",
+ "question": "From own-effect-change the root-cause would not cease; oh — it does not cease, this beyond, in the seven of nature.",
+ "issue": "Derived from L2 text (no argmap). From own-effect-change the root-cause would not cease; oh — it does not cease, this beyond, in the seven of nature.",
+ "premises": [
+  {
+   "text": "na viramen mūlakāraṇam āho na viramati",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v45"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From own-effect-change the root-cause would not cease; oh — it does not cease, this beyond, in the seven of nature.",
+  "passage_id": "isvarasiddhi:isva-p05-v45"
+ },
+ "unresolved": "",
+ "argument_text": "From own-effect-change the root-cause would not cease; oh — it does not cease, this beyond, in the seven of nature.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v45",
+ "sanskrit": "na viramen mūlakāraṇam āho na viramati",
+ "license": "CC BY-NC 4.0"
+}

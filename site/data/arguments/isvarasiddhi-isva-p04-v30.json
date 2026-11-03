@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v30",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v30",
+ "title": "isvarasiddhi — isva-p04-v30",
+ "kind": "entailment",
+ "question": "Not indeed — by entering inside the material cause with helpers — could arrangement be made, says he — capable though they be.",
+ "issue": "Derived from L2 text (no argmap). Not indeed — by entering inside the material cause with helpers — could arrangement be made, says he — capable though they be.",
+ "premises": [
+  {
+   "text": "naivopādanahetvantaḥ praveśātsahakāribhiḥ saṃniveśaviśeṣo'pi śakyaḥ kartumiti kṣamam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v30"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not indeed — by entering inside the material cause with helpers — could arrangement be made, says he — capable though they be.",
+  "passage_id": "isvarasiddhi:isva-p04-v30"
+ },
+ "unresolved": "",
+ "argument_text": "Not indeed — by entering inside the material cause with helpers — could arrangement be made, says he — capable though they be.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v30",
+ "sanskrit": "naivopādanahetvantaḥ praveśātsahakāribhiḥ saṃniveśaviśeṣo'pi śakyaḥ kartumiti kṣamam",
+ "license": "CC BY-NC 4.0"
+}

@@ -1,0 +1,5 @@
+## samb-p02-v10 — C1
+
+**SUMMARY.** Even Māyā-differenced beings take unity without strain — the consciousness-bodied need no forcing. The worldly one's reflection-object is the knower whose pith is difference inside non-difference's shine. One reflection's business touches no other thought, or knowers multiply. The many still reach oneness through one-word superimposition — pot-cloth says it. A second relation stands, qualifier with qualified, for helping's sake: it serves to know. Even in many, twoness holds — double-grasp-begot, like the king's horses, chariots, men. Grasp 'of king' stands one, toward its own kind; 'man' the other, sharing the master-kind's bond. 'The king's man' — thought after, in relation's field, by this; or the first two thought — all three, always. Spoken by the sixth, relation settles in the qualifier — reaching oneness with the qualified, yet keeping its own shape.
+
+*Rasa: vīra (triumph) of fitted joinery — The sthāyibhāva is exultation: each fitting holds — twoness in manyness, oneness in twoness, shape kept in settling. The vyabhicāri is grammarian wonder that counting thinks. Joinery relished.*

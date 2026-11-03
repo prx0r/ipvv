@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v03",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v03",
+ "title": "ajadapramatrsiddhi — ajad-p01-v03",
+ "kind": "entailment",
+ "question": "Nor can a thing's very self be \"being an object of appearing and describing\" — for that would make it depend on something else, give it no single form, and break past existence itself.",
+ "issue": "Derived from L2 text (no argmap). Nor can a thing's very self be \"being an object of appearing and describing\" — for that would make it depend on something else, give it no single form, and break past existence itself.",
+ "premises": [
+  {
+   "text": "prakhyopākhyāviṣayatāpy arthasyātmā na yujyate parāpekṣitayā naikarūpatve sattvalaṅghanāt",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Nor can a thing's very self be \"being an object of appearing and describing\" — for that would make it depend on something else, give it no single form, and break past existence itself.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Nor can a thing's very self be \"being an object of appearing and describing\" — for that would make it depend on something else, give it no single form, and break past existence itself.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v03",
+ "sanskrit": "prakhyopākhyāviṣayatāpy arthasyātmā na yujyate parāpekṣitayā naikarūpatve sattvalaṅghanāt",
+ "license": "CC BY-NC-SA 4.0"
+}

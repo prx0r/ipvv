@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v04",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v04",
+ "title": "isvarasiddhi — isva-p01-v04",
+ "kind": "entailment",
+ "question": "… devoid of locus-form. Fixed is its meaning in place — in that action-heaped …",
+ "issue": "Derived from L2 text (no argmap). … devoid of locus-form. Fixed is its meaning in place — in that action-heaped …",
+ "premises": [
+  {
+   "text": ".....................................................ksaṃsthānavarjitaḥ niścito'rtho'sya saṃsthāne tasminnarthakriyācite",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "… devoid of locus-form. Fixed is its meaning in place — in that action-heaped …",
+  "passage_id": "isvarasiddhi:isva-p01-v04"
+ },
+ "unresolved": "",
+ "argument_text": "… devoid of locus-form. Fixed is its meaning in place — in that action-heaped …",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v04",
+ "sanskrit": ".....................................................ksaṃsthānavarjitaḥ niścito'rtho'sya saṃsthāne tasminnarthakriyācite",
+ "license": "CC BY-NC 4.0"
+}

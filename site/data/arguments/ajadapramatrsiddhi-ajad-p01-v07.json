@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v07",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v07",
+ "title": "ajadapramatrsiddhi — ajad-p01-v07",
+ "kind": "entailment",
+ "question": "So the existent thing, having taken on the limiting condition of appearing-as-functional, would exist by its own essence — yet it is not distinguished from the nonexistent.",
+ "issue": "Derived from L2 text (no argmap). So the existent thing, having taken on the limiting condition of appearing-as-functional, would exist by its own essence — yet it is not distinguished from the nonexistent.",
+ "premises": [
+  {
+   "text": "evam arthakriyābhāsopādhisaṃbhedam āgataḥ sann arthaḥ syāt svarūpeṇa nāsatas tu viśiṣyate",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So the existent thing, having taken on the limiting condition of appearing-as-functional, would exist by its own essence — yet it is not distinguished from the nonexistent.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v07"
+ },
+ "unresolved": "",
+ "argument_text": "So the existent thing, having taken on the limiting condition of appearing-as-functional, would exist by its own essence — yet it is not distinguished from the nonexistent.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v07",
+ "sanskrit": "evam arthakriyābhāsopādhisaṃbhedam āgataḥ sann arthaḥ syāt svarūpeṇa nāsatas tu viśiṣyate",
+ "license": "CC BY-NC-SA 4.0"
+}

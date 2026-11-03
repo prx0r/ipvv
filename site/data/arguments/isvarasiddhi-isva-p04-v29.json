@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v29",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v29",
+ "title": "isvarasiddhi — isva-p04-v29",
+ "kind": "entailment",
+ "question": "From the pradhāna-made clay-lump indeed, of such nature — now own-nature, this of this, looking to potter and the rest.",
+ "issue": "Derived from L2 text (no argmap). From the pradhāna-made clay-lump indeed, of such nature — now own-nature, this of this, looking to potter and the rest.",
+ "premises": [
+  {
+   "text": "pradhānamayamṛtpiṇḍādeva tādṛksvabhāvataḥ atha svabhāva eṣo'sya yatkulālādyapekṣaṇam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v29"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From the pradhāna-made clay-lump indeed, of such nature — now own-nature, this of this, looking to potter and the rest.",
+  "passage_id": "isvarasiddhi:isva-p04-v29"
+ },
+ "unresolved": "",
+ "argument_text": "From the pradhāna-made clay-lump indeed, of such nature — now own-nature, this of this, looking to potter and the rest.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v29",
+ "sanskrit": "pradhānamayamṛtpiṇḍādeva tādṛksvabhāvataḥ atha svabhāva eṣo'sya yatkulālādyapekṣaṇam",
+ "license": "CC BY-NC 4.0"
+}

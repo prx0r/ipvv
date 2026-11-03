@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v02",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v02",
+ "title": "ajadapramatrsiddhi — ajad-p01-v02",
+ "kind": "entailment",
+ "question": "Appearing (prakhyā) and describing (upākhyā), existence and its opposite, non-existence — none of this touches a thing's essence; that essence is what faces the knower.",
+ "issue": "Derived from L2 text (no argmap). Appearing (prakhyā) and describing (upākhyā), existence and its opposite, non-existence — none of this touches a thing's essence; that essence is what faces the knower.",
+ "premises": [
+  {
+   "text": "prakhyopākhyā ca sattā yad yad asattā viparyayaḥ naitat svarūpaṃ spṛśati vastuno jñātṛgāmy adaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Appearing (prakhyā) and describing (upākhyā), existence and its opposite, non-existence — none of this touches a thing's essence; that essence is what faces the knower.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Appearing (prakhyā) and describing (upākhyā), existence and its opposite, non-existence — none of this touches a thing's essence; that essence is what faces the knower.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v02",
+ "sanskrit": "prakhyopākhyā ca sattā yad yad asattā viparyayaḥ naitat svarūpaṃ spṛśati vastuno jñātṛgāmy adaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

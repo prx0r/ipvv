@@ -1,140 +1,1753 @@
 [
  {
-  "chunk": "ajad-p01",
-  "verses": "1-9",
-  "sanskrit": "jadājaḍānām apy evaṃ % nāsty asāv iti niścayaḥ naitat svarūpaṃ spṛśati % vastuno jñātṛgāmy adaḥ parāpekṣitayā naika- % rūpatve sattvalaṅghanāt siddhyaty eva viśeṣo 'tra % tāvatā ca prayojanam tadapekṣāṃ vinā bhāvā- % bhāvayor aviśiṣṭatā kuryān nānyas tathāpy artho % nirviśeṣo nijātmani sann arthaḥ syāt svarūpeṇa % nāsatas tu viśiṣyate samam evānayos tena % pratiṣṭhā saṃvidāśrayā abhāvena jaḍenātha % tulyaiva prāgvad ātmani",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "ajadapramatrsiddhi",
-  "ahnika": "jadapramatrsiddhi",
-  "immutable_id": "pt:pid:ajad:4f8fe0845102",
-  "status": "OK",
+  "chunk": "ajad-p01-v01",
+  "verses": "1",
+  "sanskrit": "yathā sadasatām naiva viśeṣo 'sti nijātmani jadājaḍānām apy evaṃ nāsty asāv iti niścayaḥ",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "101 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.889"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v01 (1)\njust-as / of-real-and-unreal / not-indeed / distinction / is / in-own-self / of-inert-and-uninert / also / thus / not-is / that / thus / certainty // ajad-p01",
+  "l2": "Just as there is no difference between the real and the unreal in their own nature, so too — this is certain — there is no such difference between the inert and the non-inert.",
   "source_file": "ajadapramatrsiddhi.txt",
-  "source_lines": 7,
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    6,
+    7
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "As real and unreal carry no mark between them, in own self —\nso inert and non-inert carry none. This stands certain.",
+  "l4": "As real and unreal carry no mark between them, in own self —\nso inert and non-inert carry none. This stands certain.",
+  "source_lines": 6,
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL KSTS 34",
-  "match_words": 12,
-  "license": "FREE",
-  "l4": "As real and unreal carry no mark between them, in own self —\nso inert and non-inert carry none. This stands certain.\nAppearing, describing — being, and non-being its reverse —\nnone of it touches own-form. That essence faces the knower.\nA thing's self can never be mere object of showing-telling:\nit leans on another, keeps no single form, oversteps being.\nGranted — let no mark stand. Yet here a difference succeeds,\nfrom appearing's coming and going — and that much serves the end.\nEven so, being fits only as bound to appearing —\ncut from that tie, thing and unthing stay one blur.\nBut how keep they one, when the existent performs its function,\nand the other does not? — Yet the thing, in own self, stays without mark.\nSteeped in the working-shine dye, the existent would subsist\nby its own form — yet differ from the non-existent nowhere.\nBut even there, no working is declared of the already-proven thing —\nthe two run level. So their ground stands on awareness.\nAnd were awareness ungrasping in its very form,\nit too would rank with non-being, with the inert — as before."
+  "match_words": 4
  },
  {
-  "chunk": "ajad-p02",
-  "verses": "10-18",
-  "sanskrit": "katham anyasya bhāvasya % pratiṣṭhāspadatām iyāt pratiṣṭhātmakatāṃ gacched % aham ity ātmanā punaḥ vyavasthitiḥ pratiṣṭhā ca % siddhir nirvṛttir ucyate jaḍāḥ prakāśa evāsti % svātmanaḥ svaparātmabhiḥ muktvānvayasya prakāśasya % vimarśarahitātmanaḥ yā svasvarūpe viśrāntir % vimarśaḥ so 'ham ity ayam prāṇādinā niruddho 'ṇuḥ % paramātmā tv akhaṇḍitaḥ eka evānusandhānād % ato 'nyo nopapadyate bhāti paryantavartinyāṃ % bhāsanād adhikaṃ jaḍam",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "ajadapramatrsiddhi",
-  "ahnika": "jadapramatrsiddhi",
-  "immutable_id": "pt:pid:ajad:7d49fa80ec2b",
-  "status": "OK",
+  "chunk": "ajad-p01-v02",
+  "verses": "2",
+  "sanskrit": "prakhyopākhyā ca sattā yad yad asattā viparyayaḥ naitat svarūpaṃ spṛśati vastuno jñātṛgāmy adaḥ",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "101 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.889"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v02 (2)\nshining-and-telling / and / being / which / which / non-being / opposite / not-this / own-form / touches / of-thing / knower-going / this // ajad-p01",
+  "l2": "Appearing (prakhyā) and describing (upākhyā), existence and its opposite, non-existence — none of this touches a thing's essence; that essence is what faces the knower.",
   "source_file": "ajadapramatrsiddhi.txt",
-  "source_lines": 52,
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    11,
+    12
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "Appearing, describing — being, and non-being its reverse —\nnone of it touches own-form. That essence faces the knower.",
+  "l4": "Appearing, describing — being, and non-being its reverse —\nnone of it touches own-form. That essence faces the knower.",
+  "source_lines": 11,
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL KSTS 34",
-  "match_words": 12,
-  "license": "FREE",
-  "l4": "Unwon in final grounding, even by her become self-nature —\nhow would she bear another being's ground, its standing-place?\nSaying 'this,' awareness grows fit to ground another's shine —\nsaying 'I,' it grounds itself.\nBy parting and by pairing both, assurance stands declared —\nfixed order, ground, attainment, full close — of the other inert selves.\nSo these inert ones, near-unreal in themselves, are shining's —\nshining alone is — of its own self, through selves both own and other.\nApart from distinct-and-indistinct assurance, no experience stands —\nnone apart from linked shining, whose self is ungrasping.\nCut off, this 'this'-grasping finds fulfillment thus:\nrest in own form — that grasp, 'I am this,' is this itself.\nOne self, twofold: measured and unmeasured —\nbreath-bound, an atom; supreme self, unbroken.\nFor both, this one end-ground of all thing-awarenesses —\none through linking alone. So no other can stand.\nAnd in I-knowing whose self is non-parting grasp, limit-dwelling —\nnothing inert past shining shows."
+  "match_words": 6
  },
  {
-  "chunk": "ajad-p03",
-  "verses": "19-27",
-  "sanskrit": "tat prāṇādi prameyaṃ syān % na pramātānyato bhramāt jīve niruddhā tatrāpi % paramātmani sā sthitā sādhitā pratyabhijñāyām % akhyāter jīvatā param prakāśasyātmaviśrāntir % ahaṃbhāvo hi kīrtitaḥ svātantryam atha kartṛtvaṃ % mukhyam īśvaratāpi ca tadakhyātimayaṃ hy etaj % jagannirmātṛteśitā svasaṃvedanaparyāya- % mātṛtattvam anādi tat vyāpitvam anusaṃdhānaṃ % taj jaḍasya na yujyate tenoktam pratyabhijñāyāṃ % tadadvayamayaṃ jagat",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "ajadapramatrsiddhi",
-  "ahnika": "jadapramatrsiddhi",
-  "immutable_id": "pt:pid:ajad:5be692580269",
-  "status": "OK",
+  "chunk": "ajad-p01-v03",
+  "verses": "3",
+  "sanskrit": "prakhyopākhyāviṣayatāpy arthasyātmā na yujyate parāpekṣitayā naikarūpatve sattvalaṅghanāt",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "101 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.889"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v03 (3)\nshining-telling-objecthood-too / of-object-self / not / fits / by-other-dependence / in-non-one-formedness / by-being-transgression // ajad-p01",
+  "l2": "Nor can a thing's very self be \"being an object of appearing and describing\" — for that would make it depend on something else, give it no single form, and break past existence itself.",
   "source_file": "ajadapramatrsiddhi.txt",
-  "source_lines": 82,
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    16,
+    17
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "A thing's self can never be mere object of showing-telling:\nit leans on another, keeps no single form, oversteps being.",
+  "l4": "A thing's self can never be mere object of showing-telling:\nit leans on another, keeps no single form, oversteps being.",
+  "source_lines": 16,
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL KSTS 34",
-  "match_words": 12,
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p01-v04",
+  "verses": "4",
+  "sanskrit": "mā bhūd viśeṣaḥ prakhyādibhāvābhāvau tataḥ punaḥ siddhyaty eva viśeṣo 'tra tāvatā ca prayojanam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v04 (4)\nlet-not / be / distinction / shining-etc-being-nonbeing / then / again / succeeds / indeed / distinction / here / by-that-much / and / purpose // ajad-p01",
+  "l2": "Granted, let there be no difference; still, from the presence and absence of appearing, a difference does get established here — and that much serves the purpose.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    21,
+    22
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
   "license": "FREE",
-  "l4": "Unproved by never spreading — though knowing-clad and all —\nbreath and kin rank knowable, never knower. Else, straying.\nThough things stand locked in the living,\nby breath and eightfold-city curbed — even there, in the supreme self it dwells.\nHow could breath ever prove its hold on that self-nature?\nIn recognition — by living-ness, past non-showing.\nNo ordering of things lies in breath by I-blocking —\nshining's self-rest is sung as I-ness.\nRest, already told — that very rest, all dependence barred:\nfreedom, foremost doing, and lordship in its train.\nMāyā by name, from his power only — no other proved:\nthis world-maker lordship is made of non-showing.\nThrough linking alone is she proclaimed — of all awarenesses\nthe mother-reality, self-feeling's own name — beginningless.\nWhatever grounds thing-ordering — pervasion and linking\nof the I-sharer — fits nothing inert.\nSo within difference, shining's shining holds good —\nhence recognition's word: this world is that-nondual-made."
+  "l3": "Granted — let no mark stand. Yet here a difference succeeds,\nfrom appearing's coming and going — and that much serves the end.",
+  "l4": "Granted — let no mark stand. Yet here a difference succeeds,\nfrom appearing's coming and going — and that much serves the end.",
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "source_lines": null
+ },
+ {
+  "chunk": "ajad-p01-v05",
+  "verses": "5",
+  "sanskrit": "evam apy avabhāsānuṣaktā sattocitā bhavet tadapekṣāṃ vinā bhāvābhāvayor aviśiṣṭatā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v05 (5)\nthus / even / appearance-attached / being-proper / would-be / that-dependence / without / of-being-nonbeing / non-distinction // ajad-p01",
+  "l2": "Even so, existence would only be fitting as tied to appearing; without reference to that, existent and nonexistent are indistinguishable.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    26,
+    27
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "Even so, being fits only as bound to appearing —\ncut from that tie, thing and unthing stay one blur.",
+  "l4": "Even so, being fits only as bound to appearing —\ncut from that tie, thing and unthing stay one blur.",
+  "source_lines": 26,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 4
+ },
+ {
+  "chunk": "ajad-p01-v06",
+  "verses": "6",
+  "sanskrit": "kathaṃ syād aviśeṣo 'tra yāvatārthakriyāṃ hi san kuryān nānyas tathāpy artho nirviśeṣo nijātmani",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v06 (6)\nhow / would-be / non-distinction / here / since-function / indeed / being / would-do / and-not-other / yet / object / undistinguished / in-own-self // ajad-p01",
+  "l2": "But how could they be indistinguishable here, when the existent performs a function (arthakriyā) and the other does not? And yet the thing, in its own self, remains without distinction.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    31,
+    32
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "But how keep they one, when the existent performs its function,\nand the other does not? — Yet the thing, in own self, stays without mark.",
+  "l4": "But how keep they one, when the existent performs its function,\nand the other does not? — Yet the thing, in own self, stays without mark.",
+  "source_lines": 31,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p01-v07",
+  "verses": "7",
+  "sanskrit": "evam arthakriyābhāsopādhisaṃbhedam āgataḥ sann arthaḥ syāt svarūpeṇa nāsatas tu viśiṣyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v07 (7)\nthus / function-shine-condition-mixture / arrived / being / object / would-be / by-own-form / not-from-nonbeing / but / is-distinguished // ajad-p01",
+  "l2": "So the existent thing, having taken on the limiting condition of appearing-as-functional, would exist by its own essence — yet it is not distinguished from the nonexistent.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    36,
+    37
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "Steeped in the working-shine dye, the existent would subsist\nby its own form — yet differ from the non-existent nowhere.",
+  "l4": "Steeped in the working-shine dye, the existent would subsist\nby its own form — yet differ from the non-existent nowhere.",
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "source_lines": null
+ },
+ {
+  "chunk": "ajad-p01-v08",
+  "verses": "8",
+  "sanskrit": "tatrāpy arthakriyā siddhasattākārthe na varṇitā samam evānayos tena pratiṣṭhā saṃvidāśrayā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v08 (8)\nthere-too / function / in-preestablished-being-object / not / described / equal / indeed-of-these-two / hence / standing / consciousness-based // ajad-p01",
+  "l2": "But even there, function is not what is described in a thing whose existence is already established; the two are exactly on par — hence their grounding rests on consciousness.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    41,
+    42
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "But even there, no working is declared of the already-proven thing —\nthe two run level. So their ground stands on awareness.",
+  "l4": "But even there, no working is declared of the already-proven thing —\nthe two run level. So their ground stands on awareness.",
+  "source_lines": 41,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p01-v09",
+  "verses": "9",
+  "sanskrit": "saṃvid apy aparāmarśarūpā cet tad asāv api abhāvena jaḍenātha tulyaiva prāgvad ātmani",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.889"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p01-v09 (9)\nconsciousness / even / non-grasping-formed / if / then / that / too / by-nonbeing / by-inert-then / equal-indeed / as-before / in-self // ajad-p01",
+  "l2": "And if consciousness itself were of the form of non-grasping (aparāmarśa), then it too, in itself, would be exactly equal to the inert non-being, as before.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    46,
+    47
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:001",
+  "license": "FREE",
+  "l3": "And were awareness ungrasping in its very form,\nit too would rank with non-being, with the inert — as before.",
+  "l4": "And were awareness ungrasping in its very form,\nit too would rank with non-being, with the inert — as before.",
+  "source_lines": 14,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 4
+ },
+ {
+  "chunk": "ajad-p02-v10",
+  "verses": "10",
+  "sanskrit": "saivaṃ bhūtātmanā svenāpy alabdhapariniṣṭhitiḥ katham anyasya bhāvasya pratiṣṭhāspadatām iyāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v10 (10)\nshe-thus / by-become-self / by-own-even / unwon-finality / how / of-other / of-being / standing-placehood / would-go // ajad-p02",
+  "l2": "If she — by her become self-nature — has never won final grounding, how could she become the standing-place of establishment for another existent?",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    51,
+    52
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "Unwon in final grounding, even by her become self-nature —\nhow would she bear another being's ground, its standing-place?",
+  "l4": "Unwon in final grounding, even by her become self-nature —\nhow would she bear another being's ground, its standing-place?",
+  "source_lines": 51,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p02-v11",
+  "verses": "11",
+  "sanskrit": "idam ity ucitaḥ saṃvit prakāśe 'nyasya vastunaḥ pratiṣṭhātmakatāṃ gacched aham ity ātmanā punaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v11 (11)\nthis / thus / proper / consciousness / in-shining / of-other / of-thing / standing-naturehood / would-go / I / thus / by-self / again // ajad-p02",
+  "l2": "Consciousness, apt to ground another thing's showing by saying 'this,' would take that grounding nature — and again, by itself, by saying 'I.'",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    56,
+    57
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "Saying 'this,' awareness grows fit to ground another's shine —\nsaying 'I,' it grounds itself.",
+  "l4": "Saying 'this,' awareness grows fit to ground another's shine —\nsaying 'I,' it grounds itself.",
+  "source_lines": 56,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 4
+ },
+ {
+  "chunk": "ajad-p02-v12",
+  "verses": "12",
+  "sanskrit": "vyatireketarābhyām hi niścayo 'nyajaḍātmanoḥ vyavasthitiḥ pratiṣṭhā ca siddhir nirvṛttir ucyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v12 (12)\nby-difference-and-nondifference / indeed / certainty / of-other-inert-selves / arrangement / standing / and / proving / completion / is-called // ajad-p02",
+  "l2": "For certainty — by exclusion and inclusion both — is called the fixed order, the foundation, the attainment, the completion of the other, inert selves.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    61,
+    62
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "By parting and by pairing both, assurance stands declared —\nfixed order, ground, attainment, full close — of the other inert selves.",
+  "l4": "By parting and by pairing both, assurance stands declared —\nfixed order, ground, attainment, full close — of the other inert selves.",
+  "source_lines": 61,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 7
+ },
+ {
+  "chunk": "ajad-p02-v13",
+  "verses": "13",
+  "sanskrit": "evam ātmany asatkalpāḥ prakāśasyaiva santy amī jaḍāḥ prakāśa evāsti svātmanaḥ svaparātmabhiḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v13 (13)\nthus / in-self / unreal-imagined / of-shining-alone / are / these / inert-ones / shining / indeed-is / of-own-self / by-own-and-other-selves // ajad-p02",
+  "l2": "So these inert ones, near-unreal in themselves, belong to shining alone; shining alone is — of its own self, through selves both own and other.",
+  "source_file": "ipvv-vol2.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    66,
+    67
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "So these inert ones, near-unreal in themselves, are shining's —\nshining alone is — of its own self, through selves both own and other.",
+  "l4": "So these inert ones, near-unreal in themselves, are shining's —\nshining alone is — of its own self, through selves both own and other.",
+  "source_lines": 2421,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00021",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p02-v14",
+  "verses": "14",
+  "sanskrit": "na caivānubhavo 'py asti bhinnābhinnaviniścayam muktvānvayasya prakāśasya vimarśarahitātmanaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v14 (14)\nnot / and-indeed-experience / even / is / difference-nondifference-certainty / excepting-the-connected / of-shining / of-grasping-less-nature // ajad-p02",
+  "l2": "And there is no experience apart from distinct-and-indistinct certainty — apart from connected shining, grasp-less in its self.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    71,
+    72
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "Apart from distinct-and-indistinct assurance, no experience stands —\nnone apart from linked shining, whose self is ungrasping.",
+  "l4": "Apart from distinct-and-indistinct assurance, no experience stands —\nnone apart from linked shining, whose self is ungrasping.",
+  "source_lines": 71,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p02-v15",
+  "verses": "15",
+  "sanskrit": "idam ity asya vicchinnavimarśasya kṛtārthatā yā svasvarūpe viśrāntir vimarśaḥ so 'ham ity ayam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v15 (15)\nthis / thus / of-this / of-cut-off-grasping / done-ness / which / in-own-form / rest / grasping / that / I / thus / this // ajad-p02",
+  "l2": "For this 'this'-grasping, cut off, fulfillment is rest in its own form — and that grasping, 'I am this,' is this itself.",
+  "source_file": "ptv-gretil.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    76,
+    77
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "Cut off, this 'this'-grasping finds fulfillment thus:\nrest in own form — that grasp, 'I am this,' is this itself.",
+  "l4": "Cut off, this 'this'-grasping finds fulfillment thus:\nrest in own form — that grasp, 'I am this,' is this itself.",
+  "source_lines": 300,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Abhinavagupta vivarana witness)",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p02-v16",
+  "verses": "16",
+  "sanskrit": "dvidhā sa eṣa evātmā mito 'parimitas tathā prāṇādinā niruddho 'ṇuḥ paramātmā tv akhaṇḍitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v16 (16)\ntwofold / that / this / indeed-self / limited / unlimited / and / by-breath-etc. / restrained / atom / supreme-self / but / unbroken // ajad-p02",
+  "l2": "Twofold is this same self: measured and unmeasured — by breath and the rest restrained, an atom; as supreme self, unbroken.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    81,
+    82
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "One self, twofold: measured and unmeasured —\nbreath-bound, an atom; supreme self, unbroken.",
+  "l4": "One self, twofold: measured and unmeasured —\nbreath-bound, an atom; supreme self, unbroken.",
+  "source_lines": 81,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p02-v17",
+  "verses": "17",
+  "sanskrit": "ubhayo 'py eṣa paryantabhūmiḥ sarvārthasaṃvidām eka evānusandhānād ato 'nyo nopapadyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v17 (17)\nof-both / too / this / end-ground / of-all-object-consciousnesses / one / by-alone-continuity / hence / other / not-is-possible // ajad-p02",
+  "l2": "For both, this is the end-ground of all object-awarenesses — one alone through continuity. So no other is possible.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    86,
+    87
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "For both, this one end-ground of all thing-awarenesses —\none through linking alone. So no other can stand.",
+  "l4": "For both, this one end-ground of all thing-awarenesses —\none through linking alone. So no other can stand.",
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "source_lines": null
+ },
+ {
+  "chunk": "ajad-p02-v18",
+  "verses": "18",
+  "sanskrit": "na cāpy avyatirekātmavimarśātmany ahaṃvidi bhāti paryantavartinyāṃ bhāsanād adhikaṃ jaḍam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "96 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.933"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p02-v18 (18)\nnot / and-even / in-non-difference-self-grasping-self / in-I-knower / shines / in-end-abiding / from-shining / more / inert // ajad-p02",
+  "l2": "And in the I-knowing whose self is non-separation grasp, limit-dwelling — nothing inert beyond shining appears.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    91,
+    92
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:002",
+  "license": "FREE",
+  "l3": "And in I-knowing whose self is non-parting grasp, limit-dwelling —\nnothing inert past shining shows.",
+  "l4": "And in I-knowing whose self is non-parting grasp, limit-dwelling —\nnothing inert past shining shows.",
+  "source_lines": 91,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 4
+ },
+ {
+  "chunk": "ajad-p03-v19",
+  "verses": "19",
+  "sanskrit": "na siddho 'prathanād eva jñānādisamavāyy api tat prāṇādi prameyaṃ syān na pramātānyato bhramāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v19 (19)\nnot / proved / by-non-spreading / indeed / though-joined / even / that / breath-etc. / knowable / would-be / not / knower-otherwise / from-delusion // ajad-p03",
+  "l2": "Never proved by non-spreading — though joined with knowing and the rest — breath and kin would be knowables, never knowers. Otherwise, delusion.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    96,
+    97
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Unproved by never spreading — though knowing-clad and all —\nbreath and kin rank knowable, never knower. Else, straying.",
+  "l4": "Unproved by never spreading — though knowing-clad and all —\nbreath and kin rank knowable, never knower. Else, straying.",
+  "source_lines": 96,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p03-v20",
+  "verses": "20",
+  "sanskrit": "yady apy arthasthitiḥ prāṇapuryaṣṭakaniyantrite jīve niruddhā tatrāpi paramātmani sā sthitā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v20 (20)\nthough / even / object-standing / in-breath-body-eight-controlled / in-the-living / restrained / there-too / in-supreme-self / that / abides // ajad-p03",
+  "l2": "Though the abiding of things stands locked in the living, curbed by breath and the eightfold city — even there, in the supreme self it abides.",
+  "source_file": "ipvv-vol2.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    101,
+    102
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Though things stand locked in the living,\nby breath and eightfold-city curbed — even there, in the supreme self it dwells.",
+  "l4": "Though things stand locked in the living,\nby breath and eightfold-city curbed — even there, in the supreme self it dwells.",
+  "source_lines": 1837,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00021",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p03-v21",
+  "verses": "21",
+  "sanskrit": "tadātmanaiva tasya syāt kathaṃ prāṇena yantraṇā sādhitā pratyabhijñāyām akhyāter jīvatā param",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v21 (21)\nby-that-self-indeed / of-him / would-be / how / by-breath / restraint / proved / in-recognition / of-non-manifestation / living / beyond // ajad-p03",
+  "l2": "How could restraint by breath of that self-nature ever be proved — in recognition? By living-ness, beyond non-showing.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    106,
+    107
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "How could breath ever prove its hold on that self-nature?\nIn recognition — by living-ness, past non-showing.",
+  "l4": "How could breath ever prove its hold on that self-nature?\nIn recognition — by living-ness, past non-showing.",
+  "source_lines": 106,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p03-v22",
+  "verses": "22",
+  "sanskrit": "nārthavyavasthā prāṇādāv ahaṃbhāvanirodhataḥ prakāśasyātmaviśrāntir ahaṃbhāvo hi kīrtitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v22 (22)\nnot-object-standing / in-breath-etc. / by-I-being-blocking / of-shining-self-rest / I-being / indeed / is-sung // ajad-p03",
+  "l2": "No ordering of things lies in breath and the rest through blocking of I-ness; shining's self-rest is sung as I-ness, indeed.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    111,
+    112
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "No ordering of things lies in breath by I-blocking —\nshining's self-rest is sung as I-ness.",
+  "l4": "No ordering of things lies in breath by I-blocking —\nshining's self-rest is sung as I-ness.",
+  "source_lines": 111,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p03-v23",
+  "verses": "23",
+  "sanskrit": "uktā saiva ca viśrāntiḥ sarvāpekṣānirodhataḥ svātantryam atha kartṛtvaṃ mukhyam īśvaratāpi ca",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v23 (23)\nsaid / that-indeed / and / rest / by-all-dependence-blocking / freedom / then / doership / chief / lordship-too / and // ajad-p03",
+  "l2": "Told already — that very rest, by blocking of all dependence: freedom, then doership foremost, and lordship too.",
+  "source_file": "ipvv-vol2.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    114,
+    115
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Rest, already told — that very rest, all dependence barred:\nfreedom, foremost doing, and lordship in its train.",
+  "l4": "Rest, already told — that very rest, all dependence barred:\nfreedom, foremost doing, and lordship in its train.",
+  "source_lines": 4169,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00021",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p03-v24",
+  "verses": "24",
+  "sanskrit": "māyābhidās tacchakter eva cānyāprasiddhitaḥ tadakhyātimayaṃ hy etaj jagannirmātṛteśitā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v24 (24)\nmāyā-called / that-of-power / indeed / and-other-by-non-establishment / that-non-manifest-made / indeed / this / world-maker-lordship // ajad-p03",
+  "l2": "Called Māyā, of his power alone — with no other proven; this world-maker lordship is made of non-showing.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    119,
+    120
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Māyā by name, from his power only — no other proved:\nthis world-maker lordship is made of non-showing.",
+  "l4": "Māyā by name, from his power only — no other proved:\nthis world-maker lordship is made of non-showing.",
+  "source_lines": 119,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 5
+ },
+ {
+  "chunk": "ajad-p03-v25",
+  "verses": "25",
+  "sanskrit": "ekaiva cānusaṃdhānāt sā proktā sarvasaṃvidām svasaṃvedanaparyāyamātṛtattvam anādi tat",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v25 (25)\nalone / by-continuity / she / said / of-all-consciousnesses / self-feeling-synonym-knower-principle / beginningless / that // ajad-p03",
+  "l2": "One alone through linking, proclaimed: of all awarenesses the mother-principle, self-feeling's synonym — beginningless.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    124,
+    125
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Through linking alone is she proclaimed — of all awarenesses\nthe mother-reality, self-feeling's own name — beginningless.",
+  "l4": "Through linking alone is she proclaimed — of all awarenesses\nthe mother-reality, self-feeling's own name — beginningless.",
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "source_lines": null
+ },
+ {
+  "chunk": "ajad-p03-v26",
+  "verses": "26",
+  "sanskrit": "bhāvavyavasthā yan niṣṭhā tasyāhaṃbhāvabhāginaḥ vyāpitvam anusaṃdhānaṃ taj jaḍasya na yujyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v26 (26)\nthing-standing / which / resting / of-him-of-I-being-sharer / pervasion / continuity / that / of-inert / not / fits // ajad-p03",
+  "l2": "Whatever grounds the ordering of things — pervasion and linking of the I-sharer — fits nothing inert.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    129,
+    130
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "Whatever grounds thing-ordering — pervasion and linking\nof the I-sharer — fits nothing inert.",
+  "l4": "Whatever grounds thing-ordering — pervasion and linking\nof the I-sharer — fits nothing inert.",
+  "source_lines": 129,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
+ },
+ {
+  "chunk": "ajad-p03-v27",
+  "verses": "27",
+  "sanskrit": "tato bhede tu bhāsasya ghaṭate bhāsamānatā tenoktam pratyabhijñāyāṃ tadadvayamayaṃ jagat",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.946"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## ajad-p03-v27 (27)\nthen / in-difference / but / of-shining / holds / shiningness / hence-said / in-recognition / that-nondual-made / world // ajad-p03",
+  "l2": "So within difference, shining's shining holds good — hence recognition's word: this world is that-nondual-made.",
+  "source_file": "ajadapramatrsiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "GRETIL",
+   "source_lines": [
+    134,
+    135
+   ]
+  },
+  "immutable_id": "pt:pid:ajadapramatrsiddhi:003",
+  "license": "FREE",
+  "l3": "So within difference, shining's shining holds good —\nhence recognition's word: this world is that-nondual-made.",
+  "l4": "So within difference, shining's shining holds good —\nhence recognition's word: this world is that-nondual-made.",
+  "source_lines": 134,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL KSTS 34",
+  "match_words": 6
  }
 ]

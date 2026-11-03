@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v52",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v52",
+ "title": "isvarasiddhi — isva-p06-v52",
+ "kind": "entailment",
+ "question": "Thus view-abandoned — that nature-view is unjust; hence body-and-rest, famously, have sentient-maker as prior.",
+ "issue": "Derived from L2 text (no argmap). Thus view-abandoned — that nature-view is unjust; hence body-and-rest, famously, have sentient-maker as prior.",
+ "premises": [
+  {
+   "text": "tasmāt prasiddhaṃ tanvādi buddhimatkartṛpūrvakam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v52"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus view-abandoned — that nature-view is unjust; hence body-and-rest, famously, have sentient-maker as prior.",
+  "passage_id": "isvarasiddhi:isva-p06-v52"
+ },
+ "unresolved": "",
+ "argument_text": "Thus view-abandoned — that nature-view is unjust; hence body-and-rest, famously, have sentient-maker as prior.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v52",
+ "sanskrit": "tasmāt prasiddhaṃ tanvādi buddhimatkartṛpūrvakam",
+ "license": "CC BY-NC 4.0"
+}

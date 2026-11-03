@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v17",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v17",
+ "title": "isvarasiddhi — isva-p02-v17",
+ "kind": "entailment",
+ "question": "Others again, in matter, outward-changing — for yoking form-variety in effects, they are not so capable.",
+ "issue": "Derived from L2 text (no argmap). Others again, in matter, outward-changing — for yoking form-variety in effects, they are not so capable.",
+ "premises": [
+  {
+   "text": "anye punarupādāne bahirviparivartinaḥ rūpavaicitryayogāya kāryeṣu na tathā kṣamāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Others again, in matter, outward-changing — for yoking form-variety in effects, they are not so capable.",
+  "passage_id": "isvarasiddhi:isva-p02-v17"
+ },
+ "unresolved": "",
+ "argument_text": "Others again, in matter, outward-changing — for yoking form-variety in effects, they are not so capable.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v17",
+ "sanskrit": "anye punarupādāne bahirviparivartinaḥ rūpavaicitryayogāya kāryeṣu na tathā kṣamāḥ",
+ "license": "CC BY-NC 4.0"
+}

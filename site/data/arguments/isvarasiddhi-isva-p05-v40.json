@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v40",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v40",
+ "title": "isvarasiddhi — isva-p05-v40",
+ "kind": "entailment",
+ "question": "Even unperceived by spirit, could it be? Not will — and perceived, by whom would it be? If by all — omniscience of each and every one follows.",
+ "issue": "Derived from L2 text (no argmap). Even unperceived by spirit, could it be? Not will — and perceived, by whom would it be? If by all — omniscience of each and every one follows.",
+ "premises": [
+  {
+   "text": "sārvajñyam ekaikasya prasajyate",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v40"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Even unperceived by spirit, could it be? Not will — and perceived, by whom would it be? If by all — omniscience of each and every one follows.",
+  "passage_id": "isvarasiddhi:isva-p05-v40"
+ },
+ "unresolved": "",
+ "argument_text": "Even unperceived by spirit, could it be? Not will — and perceived, by whom would it be? If by all — omniscience of each and every one follows.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v40",
+ "sanskrit": "sārvajñyam ekaikasya prasajyate",
+ "license": "CC BY-NC 4.0"
+}

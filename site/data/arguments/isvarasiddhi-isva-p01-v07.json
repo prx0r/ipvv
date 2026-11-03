@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v07",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v07",
+ "title": "isvarasiddhi — isva-p01-v07",
+ "kind": "entailment",
+ "question": "Here then — conscious makers proved, the Lord's act proved: for such-variety-knowers, lordlessness is impossible.",
+ "issue": "Derived from L2 text (no argmap). Here then — conscious makers proved, the Lord's act proved: for such-variety-knowers, lordlessness is impossible.",
+ "premises": [
+  {
+   "text": "tadatra buddhimatkartṛsiddhyā siddheśvarakriyā na hi tādṛśavaicitryaviduṣaḥ syādanīśitā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Here then — conscious makers proved, the Lord's act proved: for such-variety-knowers, lordlessness is impossible.",
+  "passage_id": "isvarasiddhi:isva-p01-v07"
+ },
+ "unresolved": "",
+ "argument_text": "Here then — conscious makers proved, the Lord's act proved: for such-variety-knowers, lordlessness is impossible.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v07",
+ "sanskrit": "tadatra buddhimatkartṛsiddhyā siddheśvarakriyā na hi tādṛśavaicitryaviduṣaḥ syādanīśitā",
+ "license": "CC BY-NC 4.0"
+}

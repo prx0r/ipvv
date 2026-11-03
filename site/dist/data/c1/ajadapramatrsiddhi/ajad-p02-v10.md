@@ -1,0 +1,5 @@
+## ajad-p02-v10 — C1
+
+**SUMMARY.** What never stood cannot stand another: unwon herself, grasp-less awareness grounds no other being. Consciousness fits to ground another's showing by saying this — and again, itself, by saying I. By exclusion and inclusion both, certainty orders inert selves: fixed order, ground, winning, winding-up. Near-unreal in self, inert ones are shining's own; shining alone is, through selves own and other. No experience stands apart from distinct-and-indistinct assurance, apart from linked ungrasping shining. Cut-off this-grasping completes in self-rest: I-am-this is this. One self twofold — breath-bound atom, unbroken whole. Both gather in one end-ground through linking alone. At the limit, in no-parting I-knowing, nothing shows more inert than shining.
+
+*Rasa: śānta (rest) with adbhuta (wonder) — The sthāyibhāva is rest itself (viśrānti, kṛtārthatā): the passage lands twice in settling — grasping completed (v15), both measures gathered (v17). The vyabhicāri is wonder at the twofold one (v16): atom and unbroken, same self. Abhinava's śānta as the relish of recognition completed — homecoming after demolition.*

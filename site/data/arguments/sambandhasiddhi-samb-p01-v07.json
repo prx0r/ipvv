@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v07",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v07",
+ "title": "sambandhasiddhi — samb-p01-v07",
+ "kind": "entailment",
+ "question": "Since this is no mere thought — it cannot be dismissed: like the snake-error, it resists remedy by clinging to a shining.",
+ "issue": "Derived from L2 text (no argmap). Since this is no mere thought — it cannot be dismissed: like the snake-error, it resists remedy by clinging to a shining.",
+ "premises": [
+  {
+   "text": "yato na kalpanāmātraṃ tāvadetadavāraṇāt sarpabhrānterivābhāsalagnatvāttannivāraṇam",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v07"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Since this is no mere thought — it cannot be dismissed: like the snake-error, it resists remedy by clinging to a shining.",
+  "passage_id": "sambandhasiddhi:samb-p01-v07"
+ },
+ "unresolved": "",
+ "argument_text": "Since this is no mere thought — it cannot be dismissed: like the snake-error, it resists remedy by clinging to a shining.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v07",
+ "sanskrit": "yato na kalpanāmātraṃ tāvadetadavāraṇāt sarpabhrānterivābhāsalagnatvāttannivāraṇam",
+ "license": "CC BY-NC 4.0"
+}

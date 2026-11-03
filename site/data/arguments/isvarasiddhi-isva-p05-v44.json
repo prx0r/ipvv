@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v44",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v44",
+ "title": "isvarasiddhi — isva-p05-v44",
+ "kind": "entailment",
+ "question": "If thus — even on completion, even in purpose, toward him [the freed spirit]…",
+ "issue": "Derived from L2 text (no argmap). If thus — even on completion, even in purpose, toward him [the freed spirit]…",
+ "premises": [
+  {
+   "text": "iti cet tatsamāptau api puruṣārthe api taṃ prati",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v44"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If thus — even on completion, even in purpose, toward him [the freed spirit]…",
+  "passage_id": "isvarasiddhi:isva-p05-v44"
+ },
+ "unresolved": "",
+ "argument_text": "If thus — even on completion, even in purpose, toward him [the freed spirit]…",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v44",
+ "sanskrit": "iti cet tatsamāptau api puruṣārthe api taṃ prati",
+ "license": "CC BY-NC 4.0"
+}

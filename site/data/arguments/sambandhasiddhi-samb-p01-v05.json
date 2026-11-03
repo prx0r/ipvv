@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v05",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v05",
+ "title": "sambandhasiddhi — samb-p01-v05",
+ "kind": "entailment",
+ "question": "Not uninterruptedness — for it misses relation: if it were so, it would hold of iron bars. Hence fusion of the many's form — that alone is one-selfhood.",
+ "issue": "Derived from L2 text (no argmap). Not uninterruptedness — for it misses relation: if it were so, it would hold of iron bars. Hence fusion of the many's form — that alone is one-selfhood.",
+ "premises": [
+  {
+   "text": "nānantaryamasaṃbandhāttathātve'yaḥśalākayoḥ tenānekasya rūpasya śleṣa aikātmyameva saḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not uninterruptedness — for it misses relation: if it were so, it would hold of iron bars. Hence fusion of the many's form — that alone is one-selfhood.",
+  "passage_id": "sambandhasiddhi:samb-p01-v05"
+ },
+ "unresolved": "",
+ "argument_text": "Not uninterruptedness — for it misses relation: if it were so, it would hold of iron bars. Hence fusion of the many's form — that alone is one-selfhood.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v05",
+ "sanskrit": "nānantaryamasaṃbandhāttathātve'yaḥśalākayoḥ tenānekasya rūpasya śleṣa aikātmyameva saḥ",
+ "license": "CC BY-NC 4.0"
+}

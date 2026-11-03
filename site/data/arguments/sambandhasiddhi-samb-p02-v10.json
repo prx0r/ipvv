@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v10",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v10",
+ "title": "sambandhasiddhi — samb-p02-v10",
+ "kind": "entailment",
+ "question": "Thus, of beings, of consciousness-bodied beings — even of Māyā-difference-made, unity is not hard to effect.",
+ "issue": "Derived from L2 text (no argmap). Thus, of beings, of consciousness-bodied beings — even of Māyā-difference-made, unity is not hard to effect.",
+ "premises": [
+  {
+   "text": "evaṃ ca sati vastūnāṃ cinmātravapuṣāṃ satām māyānirmitabhedānāmapyekatvamadurghaṭam",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus, of beings, of consciousness-bodied beings — even of Māyā-difference-made, unity is not hard to effect.",
+  "passage_id": "sambandhasiddhi:samb-p02-v10"
+ },
+ "unresolved": "",
+ "argument_text": "Thus, of beings, of consciousness-bodied beings — even of Māyā-difference-made, unity is not hard to effect.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v10",
+ "sanskrit": "evaṃ ca sati vastūnāṃ cinmātravapuṣāṃ satām māyānirmitabhedānāmapyekatvamadurghaṭam",
+ "license": "CC BY-NC 4.0"
+}

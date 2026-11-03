@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v50",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v50",
+ "title": "isvarasiddhi — isva-p06-v50",
+ "kind": "entailment",
+ "question": "If from perceptible-only-nature of that, not from karma's waning — mokṣa would be mere nature, resting on karma's waning.",
+ "issue": "Derived from L2 text (no argmap). If from perceptible-only-nature of that, not from karma's waning — mokṣa would be mere nature, resting on karma's waning.",
+ "premises": [
+  {
+   "text": "saṃvedyaikasvabhāvatvāt tasya karmakṣayān na cet",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v50"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If from perceptible-only-nature of that, not from karma's waning — mokṣa would be mere nature, resting on karma's waning.",
+  "passage_id": "isvarasiddhi:isva-p06-v50"
+ },
+ "unresolved": "",
+ "argument_text": "If from perceptible-only-nature of that, not from karma's waning — mokṣa would be mere nature, resting on karma's waning.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v50",
+ "sanskrit": "saṃvedyaikasvabhāvatvāt tasya karmakṣayān na cet",
+ "license": "CC BY-NC 4.0"
+}

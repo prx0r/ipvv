@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p02-v18",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p02-v18",
+ "title": "sambandhasiddhi — samb-p02-v18",
+ "kind": "entailment",
+ "question": "Genitive-stated relation, settled in the qualifier — reaching qualified-oneness, yet not abandoning own form.",
+ "issue": "Derived from L2 text (no argmap). Genitive-stated relation, settled in the qualifier — reaching qualified-oneness, yet not abandoning own form.",
+ "premises": [
+  {
+   "text": "ṣaṣṭhyādivācyaḥ saṃbandho viniviṣṭo viśeṣaṇe viśeṣyaikatvamāpanne svaṃ ca rūpamanujjhati",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p02-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Genitive-stated relation, settled in the qualifier — reaching qualified-oneness, yet not abandoning own form.",
+  "passage_id": "sambandhasiddhi:samb-p02-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Genitive-stated relation, settled in the qualifier — reaching qualified-oneness, yet not abandoning own form.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p02-v18",
+ "sanskrit": "ṣaṣṭhyādivācyaḥ saṃbandho viniviṣṭo viśeṣaṇe viśeṣyaikatvamāpanne svaṃ ca rūpamanujjhati",
+ "license": "CC BY-NC 4.0"
+}

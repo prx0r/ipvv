@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p04-v31",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p04-v31",
+ "title": "isvarasiddhi — isva-p04-v31",
+ "kind": "entailment",
+ "question": "World-traffic-linking-having wisdom — without — never indeed.",
+ "issue": "Derived from L2 text (no argmap). World-traffic-linking-having wisdom — without — never indeed.",
+ "premises": [
+  {
+   "text": "lokayātrānusaṃdhānavatīṃ prajñāṃ vinā nahi",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p04-v31"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "World-traffic-linking-having wisdom — without — never indeed.",
+  "passage_id": "isvarasiddhi:isva-p04-v31"
+ },
+ "unresolved": "",
+ "argument_text": "World-traffic-linking-having wisdom — without — never indeed.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p04-v31",
+ "sanskrit": "lokayātrānusaṃdhānavatīṃ prajñāṃ vinā nahi",
+ "license": "CC BY-NC 4.0"
+}

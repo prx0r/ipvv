@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v37",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v37",
+ "title": "isvarasiddhi — isva-p05-v37",
+ "kind": "entailment",
+ "question": "Since intellect's arising, actual or not, stands unperceived by any spirit — puruṣārthatā in such a case [is unspeakable: v38].",
+ "issue": "Derived from L2 text (no argmap). Since intellect's arising, actual or not, stands unperceived by any spirit — puruṣārthatā in such a case [is unspeakable: v38].",
+ "premises": [
+  {
+   "text": "vinā saṃvedyatāṃ puṃsas tathātve puruṣārthatā",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v37"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Since intellect's arising, actual or not, stands unperceived by any spirit — puruṣārthatā in such a case [is unspeakable: v38].",
+  "passage_id": "isvarasiddhi:isva-p05-v37"
+ },
+ "unresolved": "",
+ "argument_text": "Since intellect's arising, actual or not, stands unperceived by any spirit — puruṣārthatā in such a case [is unspeakable: v38].",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v37",
+ "sanskrit": "vinā saṃvedyatāṃ puṃsas tathātve puruṣārthatā",
+ "license": "CC BY-NC 4.0"
+}
