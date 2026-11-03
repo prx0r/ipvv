@@ -51,11 +51,15 @@ unified identity for UIs. Legacy bearer tokens still work.
 ## Phase 2 — ORCID sign-in (endpoints LIVE, awaiting creds)
 
 Deployed endpoints (`worker/src/index.js`):
-- `GET /api/auth/orcid/start?redirect=/path` — 302 to ORCID authorize (`scope=/authenticate`), HMAC-signed short-lived state
-- `GET /api/auth/orcid/callback?code&state` — token exchange → `oauth/userinfo` → link-or-create profile keyed by **verified ORCID iD** (`profiles.orcid`), sets `svsess`, redirects back
+- `GET /api/auth/orcid/start?redirect=/path` — 302 to ORCID authorize (`scope=/authenticate`), HMAC-signed short-lived state bound to an HttpOnly browser cookie. Redirects must be reader-relative paths.
+- `GET /api/auth/orcid/callback?code&state` — verifies browser-bound state → token exchange → uses the authenticated iD in the token response → link-or-create profile keyed by **verified ORCID iD** (`profiles.orcid`), sets `svsess`, redirects back to the reader. The ORCID userinfo endpoint requires a different `openid` scope and is not used by this flow.
 - Without `ORCID_CLIENT_ID` / `ORCID_CLIENT_SECRET` both return **503** ("not configured") — by design
 
 To turn on (owner, Developer Tools at https://developer.orcid.org):
 1. Register a client (sign-in API), redirect URI: `https://ipvv-api.tradesprior.workers.dev/api/auth/orcid/callback`
 2. `wrangler secret put ORCID_CLIENT_ID` / `ORCID_CLIENT_SECRET` — then start/callback go live, no redeploy
 3. Note: email is synthesized (`<iD>@orcid.svread`) until we request the email claim — ORCID best practice is to ask for it manually on first sign-in; a follow-up task
+
+The browser-bound state and redirect restrictions must be deployed and tested against
+the ORCID sandbox before setting production credentials. Existing sessions are not
+linked automatically to an ORCID identity; explicit account linking is future work.
