@@ -3,13 +3,17 @@
 Owner: **ORCID 0009-0008-1635-5355** (https://orcid.org/0009-0008-1635-5355)
 
 ## Phase 1 — LIVE (local signup/login, free, zero deps)
-- Endpoints: `POST /api/auth/access` {email, name, password ≥8} (join or sign in; also claims
-  old email-only rows), `GET /api/auth/me`, `POST /api/auth/logout`.
+- Endpoints: `POST /api/auth/access` {email, name, password ≥8} (join or sign in),
+  `GET /api/auth/me`, `POST /api/auth/logout`. Existing email-only rows cannot be
+  claimed until an email-ownership verification flow is implemented.
 - Session = HMAC-SHA256 signed HttpOnly cookie `svsess` (7d), secret = wrangler
-  `SESSION_SECRET` (rotate: `wrangler secret put SESSION_SECRET`). Passwords =
+  `SESSION_SECRET` (at least 32 characters; rotate: `wrangler secret put SESSION_SECRET`). Passwords =
   PBKDF2-SHA256 100k (worker WebCrypto hard-caps >100k), per-user hex salt, 120k→100k NOTE.
 - UI: svread Scholar hub → "Scholar account" widget (credentials:'include'; worker CORS
   echoes svread origin + Allow-Credentials).
+- Cookie = `SameSite=None; Secure` for the cross-site worker. Browsers that block
+  third-party cookies may still need a same-site worker route. Account email and name
+  are self-attested until verification exists; profile login is not an ORCID verification.
 - D1 migration already applied: `ALTER TABLE profiles ADD password_hash,salt,display_name,orcid,provider`
   (schema.sql carries it for fresh installs).
 
