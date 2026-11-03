@@ -1,3 +1,5 @@
+import {handleScholar} from './scholar-workspace.js';
+
 let cachedVectors = null;
 let cachedPushIndex = null;
 
@@ -66,7 +68,7 @@ export default {
     const cors = {
       'Access-Control-Allow-Origin': allowed.has(reqOrigin) ? reqOrigin : (env.CORS_ORIGIN || '*'),
       'Access-Control-Allow-Credentials': 'true',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     };
     if (request.method === 'OPTIONS') {
@@ -593,6 +595,16 @@ export default {
       }catch(e){ return null; }
     }
 
+    if (path.startsWith('/api/scholar/')) {
+      if (reqOrigin && !allowed.has(reqOrigin)) return json({error:'origin not allowed'},403,cors);
+      if (typeof env.SESSION_SECRET !== 'string' || env.SESSION_SECRET.length < 32)
+        return json({error:'authentication temporarily unavailable'},503,cors);
+      const uid=await sessUid(request);
+      if (!uid) return new Response(JSON.stringify({error:'sign in required'}),{status:401,
+        headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
+      return handleScholar(request,env,uid,cors,(messages,maxTokens)=>dashscopeChat(env,messages,maxTokens));
+    }
+
     // POST /api/auth/access — join or sign in. Legacy email-only profiles need
     // an ownership-verification flow before a password can be attached.
     if (path === '/api/auth/access' && request.method === 'POST') {
@@ -618,21 +630,21 @@ export default {
       const tok = await signTok(row.id, exp);
       const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(row.id).first();
       return new Response(JSON.stringify({profile: prof}), {status: 200, headers: {
-        ...cors, 'Content-Type': 'application/json',
+        ...cors, 'Content-Type': 'application/json', 'Cache-Control': 'no-store',
         'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`}});
     }
 
     // GET /api/auth/me
     if (path === '/api/auth/me' && request.method === 'GET') {
       const uid = await sessUid(request);
-      if(!uid) return json({profile: null}, 200, cors);
+      if(!uid) return new Response(JSON.stringify({profile:null}),{status:200,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
       const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(uid).first();
-      return json({profile: prof || null}, 200, cors);
+      return new Response(JSON.stringify({profile:prof||null}),{status:200,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
     }
 
     // POST /api/auth/logout
     if (path === '/api/auth/logout' && request.method === 'POST') {
-      return new Response('{}', {status: 200, headers: {...cors, 'Content-Type': 'application/json',
+      return new Response('{}', {status: 200, headers: {...cors, 'Content-Type': 'application/json', 'Cache-Control':'no-store',
         'Set-Cookie': 'svsess=; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=0'}});
     }
 

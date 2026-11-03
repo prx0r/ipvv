@@ -3,7 +3,10 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {DatabaseSync} from 'node:sqlite';
 
-const source=await readFile(new URL('../worker/src/index.js',import.meta.url),'utf8');
+const suite=await readFile(new URL('../worker/src/scholar-workspace.js',import.meta.url),'utf8');
+const suiteUrl=`data:text/javascript;base64,${Buffer.from(suite).toString('base64')}`;
+const source=(await readFile(new URL('../worker/src/index.js',import.meta.url),'utf8'))
+  .replace("'./scholar-workspace.js'",JSON.stringify(suiteUrl));
 const worker=(await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)).default;
 const origin='https://svread.pages.dev';
 function d1(db){return {prepare(sql){return {bind(...args){return {
