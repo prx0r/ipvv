@@ -12,3 +12,8 @@ binding = "AI"
 
 [vars]
 CORS_ORIGIN = "https://ipvv-a8u.pages.dev"
+
+# chant + verse-read audio (stored verse-by-verse; audio lives in R2, never git)
+[[r2_buckets]]
+binding = "AUDIO"
+bucket_name = "svread-audio"

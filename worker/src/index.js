@@ -548,6 +548,45 @@ export default {
     }
 
     // GET /api/questions — list all questions
+    // POST /api/read — verse-by-verse TTS render (fish s2.1-pro-free, $0),
+    // stored in R2 read/<work>/<verse>_<lang>.mp3. Same verse unit as recitation;
+    // first tap renders + stores, later taps hit the cache.
+    if (path === '/api/read' && request.method === 'POST') {
+      let b = {}; try { b = await request.json(); } catch (e) {}
+      const work = String(b.work || '').replace(/[^a-z0-9_-]/g, '');
+      const vid = String(b.verse || '').replace(/[^a-z0-9_.:-]/g, '');
+      const lang = b.lang === 'en' ? 'en' : 'sa';
+      const text = String(b.text || '').slice(0, 4000);
+      const ref = lang === 'en'
+        ? '614f8afd83f841048c040b2c6234d2c1'   // Granny British
+        : '4e873c37d4cb439e9bccc4dc1f633290';  // Andlig Sanskrit Rost
+      if (!work || !vid || !text.trim()) return json({ error: 'work/verse/text required' }, 400, cors);
+      const key = `read/${work}/${vid}_${lang}.mp3`;
+      const pub = `https://pub-87169194562a44fcb8279a799d626c62.r2.dev/${key}`;
+      try {
+        const cached = await env.AUDIO.head(key);
+        if (cached) return json({ url: pub, cached: true }, 200, cors);
+      } catch (e) { /* no cache */ }
+      if (!env.FISH_API_KEY) return json({ error: 'FISH_API_KEY not configured' }, 503, cors);
+      try {
+        const fr = await fetch('https://api.fish.audio/v1/tts', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${env.FISH_API_KEY}`,
+            'model': 's2.1-pro-free',            // $0 developer tier — never a paid model here
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ text, reference_id: ref, format: 'mp3' }),
+        });
+        if (!fr.ok) return json({ error: 'tts http ' + fr.status, detail: (await fr.text()).slice(0, 200) }, 502, cors);
+        const buf = await fr.arrayBuffer();
+        await env.AUDIO.put(key, buf, { httpMetadata: { contentType: 'audio/mpeg' } });
+        return json({ url: pub, cached: false, bytes: buf.byteLength }, 200, cors);
+      } catch (e) {
+        return json({ error: String(e).slice(0, 200) }, 502, cors);
+      }
+    }
+
     if (path === '/api/questions' && request.method === 'GET') {
       const { results } = await env.DB.prepare('SELECT id, work, message, reply, created_at FROM questions ORDER BY created_at DESC LIMIT 100').all();
       return json({ questions: results }, 200, cors);
