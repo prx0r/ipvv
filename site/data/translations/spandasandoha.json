@@ -3,6 +3,40 @@
   "chunk": "sand-p01-v01",
   "verses": "1",
   "sanskrit": "saḥ jayati śivaḥ ekaḥ spandavān svapratiṣṭhaḥ | yaḥ antarvaktram rasayati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "13 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "2 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -31,6 +65,40 @@
   "chunk": "sand-p01-v02",
   "verses": "2",
   "sanskrit": "jayati eṣaḥ vīraḥ kulendraḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "13 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "2 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

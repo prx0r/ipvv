@@ -3,6 +3,40 @@
   "chunk": "par-p01-v01",
   "verses": "1",
   "sanskrit": "oṃ namaḥ śivāya nikhilatattvātmane | atha parāprāveśikā śrīmanmahāmāheśvarācāryavaryakṣemarājaviracitā | viśvātmikāṃ taduttirṇāṃ hṛdayaṃ parameśituḥ | parādiśaktirūpeṇa sphurantīṃ saṃvidaṃ numaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "15 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.994"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -31,6 +65,40 @@
   "chunk": "par-p02-v02",
   "verses": "2",
   "sanskrit": "iha khalu parameśvaraḥ prakāśātmā, prakāśaśca vimarśasvabhāvaḥ, vimarśo nāma viśvākāreṇa viśvaprakāśena viśvasaṃharaṇena ca akṛtrimāham iti visphuraṇam | yadi nirvimarśaḥ syāt anīśvaro jaḍaśca prasajyeta",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "67 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.934"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -59,6 +127,40 @@
   "chunk": "par-p03-v03",
   "verses": "3",
   "sanskrit": "eṣa eva ca vimarśaḥ - cit, caitanyaṃ, svarasoditāparāvāk, svātantryaṃ, paramātmano mukhyamaiśvaryaṃ, kartṛtvaṃ, sphurattā, sāro, hṛdayaṃ, spandaḥ ityādiśabdairāgameṣūddhoṣyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "135 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.928"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -87,6 +189,40 @@
   "chunk": "par-p04-v04",
   "verses": "4",
   "sanskrit": "ata eva akṛtrimāhamiti satattvaḥ svayaṃprakāśarūpaḥ parameśvaraḥ pārameśvaryā śaktyā śivādi-dharaṇyantajagadātmanā sphurati prakāśate ca | etadeva asya jagataḥ kartṛtvamajaḍatvaṃ ca | jagataḥ kāryatvamapi etadadhīnaprakāśatvameva | prakāśarūpāt karturmaheśvarādabhinnameva | na kadācit tirodhīyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "144 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.988"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -115,6 +251,40 @@
   "chunk": "par-p05-v05",
   "verses": "5",
   "sanskrit": "pūrvasiddhasya maheśvarasya svayaṃprakāśatvaṃ sarvasya svasaṃvedanasiddham | pramāṇānyapi vastūnāṃ jīvitaṃ yāni tanvate | teṣāmapi paro jīvaḥ sa eva parameśvaraḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "128 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.959"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -143,6 +313,40 @@
   "chunk": "par-p06-v06",
   "verses": "6",
   "sanskrit": "śabdarāśimayapūrṇāhantāparāmarśasāratvāt paramaśiva eva ṣaṭtriṃśattattvātmakaḥ prapañcaḥ | 1 śiva 2 śakti 3 sadāśiva 4 īśvara 5 śuddhavidyā 6 māyā 7 kalā 8 vidyā 9 rāga 10 kāla 11 niyati 12 puruṣa 13 prakṛti 14 buddhi 15 ahaṃkāra 16 manaḥ 17-21 jñānendriyāṇi 22-26 karmendriyāṇi 27-31 tanmātrāṇi 32-36 bhūtāni",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "120 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.985"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -171,6 +375,40 @@
   "chunk": "par-p07-v07",
   "verses": "7",
   "sanskrit": "athaiṣāṃ lakṣaṇāni | tatra śivatattvaṃ nāma icchājñānakriyātmakakevalapūrṇānandasvabhāvarūpaḥ paramaśiva eva | sadāśivatattvam | sthitamīśvaratattvam | ahantedantayoraikyapratipattiḥ śuddhavidyā | svasvarūpeṣu bhāveṣu bhedaprathā māyā | yadā tu parameśvaraḥ pārameśvaryā māyāśaktyā svarūpaṃ gṛhayitvā saṃkucitagrāhakatāmaśnute tadā puruṣasaṃjñaḥ | ciddhano muktaḥ paramaśiva eva | śaktayo'saṃkucitā api saṃkocagrahaṇena kalāvidyārāgakālaniyatirūpatayā bhavanti",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "208 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.988"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -199,6 +437,40 @@
   "chunk": "par-p08-v08",
   "verses": "8",
   "sanskrit": "kalā kiṃcitkartṛtāhetuḥ | vidyā kiṃcijjñatvakāraṇam | rāgo viṣayeṣvabhiṣvaṅgaḥ | kālo bhūtādiḥ | niyatiḥ mamedaṃ kartavyaṃ nedaṃ kartavyam iti niyamanahetuḥ | etat pañcakam kañcukam | prakṛtiḥ sattvarajastamasāṃ sāmyāvasthā | buddhiḥ | ahaṃkāro | manaḥ | pañca jñānendriyāṇi | pañca karmendriyāṇi | pañca tanmātrāṇi | ākāśamavakāśapradam | vāyuḥ saṃjīvanaḥ | agnirdāhakaḥ pācakaśca | salilamāpyāyakaṃ dravarūpaṃ ca | bhūmirdhārikā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "185 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.802"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -227,6 +499,40 @@
   "chunk": "par-p09-v09",
   "verses": "9",
   "sanskrit": "yathā nyagrodhabījasthaḥ śaktirūpo mahādrumaḥ | tathā hṛdayabījasthaṃ viśvametaccarācaram | hṛdayabīje'ntarbhūtametajjagat | tadantargatamekatriṃśattattvam | viśvamayo viśvottīrṇaḥ paramaśiva eva | īdṛśaṃ hṛdayabījaṃ tattvato yo veda samāviśati ca sa paramārthato dīkṣitaḥ | jīvanmukta eva bhavati, dehapāte paramaśivabhaṭṭāraka eva bhavati | iti parāprāveśikā samāptā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "114 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.988"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

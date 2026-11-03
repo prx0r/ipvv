@@ -3,6 +3,40 @@
   "chunk": "kram-p01-v01",
   "verses": "1",
   "sanskrit": "ayaṃ duḥkhavrātavrataparigame pāraṇavidhir mahāsaukhyāsāraprasaraṇarase durdinam idam | yad anyanyakkṛtyā viṣamaviśikhaploṣaṇaguror vibhoḥ stotre śaśvat pratiphalati ceto gatabhayam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "15 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.985"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -31,6 +65,40 @@
   "chunk": "kram-p02-v02",
   "verses": "2",
   "sanskrit": "anāmṛṣṭaḥ svātmā na hi bhavati bhāvapramitibhāj anāmṛṣṭaḥ svātmety api hi na vinā 'marśanavidheḥ | śivaś cāsau svātmā sphurad akhilabhāvaikasarasas tato 'ham tvatstotre pravaṇahṛdayo nityasukhitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "20 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.982"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -59,6 +127,40 @@
   "chunk": "kram-p03-v03",
   "verses": "3",
   "sanskrit": "vicitrair jātyādibhramaṇaparipāṭīparikarair avāptam sārvajñaṃ hṛdaya yad ayatnena bhavatā | tad antas tvadbodhaprasarasaraṇībhūtamahasi sphuṭam vāci prāpya prakaṭaya vibhoḥ stotram adhunā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "25 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.943"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -87,6 +189,40 @@
   "chunk": "kram-p04-v04",
   "verses": "4",
   "sanskrit": "vidhunvāno bandhābhimatabhavamārgasthitim imāṃ rasīkṛtyānantastutihutavahaploṣitabhedām | vicitrasvasphārasphuritamahimārambharabhasāt piban bhāvān etān varada madamatto 'smi sukhitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "18 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -109,12 +245,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Through birth-wandering gears, omniscience won — O heart, no strain;\ncaught clear in speech, show the Lord's hymn — now."
+  "l3": "Through birth-wandering gears, omniscience is won. O heart, no strain;\ncaught clear in speech, show the Lord's hymn — now."
  },
  {
   "chunk": "kram-p05-v05",
   "verses": "5",
   "sanskrit": "bhava prājyaiśvaryaprathitabahuśakter bhagavato vicitraṃ cāritraṃ hṛdayam adhiśete yadi tataḥ | kathaṃ stotraṃ kuryād atha ca kurute tena sahasā śivaikātmyaprāptau śivanatir upāyaḥ prathamakaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "13 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.968"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -143,6 +313,40 @@
   "chunk": "kram-p06-v06",
   "verses": "6",
   "sanskrit": "jvaladrūpaṃ bhāsvatpacanam atha dāhaṃ prakaṭanam vimucyānyad vahneḥ kim api ghaṭate naiva hi vapuḥ | stuve saṃvidraśmīn yadi nijanijāṃs tena sa nuto bhaven nānyaḥ kaścid bhavati parameśasya vibhavaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "21 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.979"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -165,12 +369,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "If the heart already holds His conduct — how hymn at all?\nYet hymned it is, sudden: bow to Śiva-oneness — first means."
+  "l3": "If the heart already holds His conduct, how sing at all?\nYet it is hymned, suddenly: bow to Śiva-oneness, the first means."
  },
  {
   "chunk": "kram-p07-v07",
   "verses": "7",
   "sanskrit": "vicitrārambhatve galitaniyame yaḥ kila rasaḥ paricchedābhāvāt paramaparipūrṇatvam asamam | svayaṃ bhāsāṃ yogaḥ sakalabhavabhāvaikamayatāviruddhair dharmaughaiḥ paracitir anarghocitaguṇā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "29 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.945"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -199,6 +437,40 @@
   "chunk": "kram-p08-v08",
   "verses": "8",
   "sanskrit": "itīdṛkṣair rūpair varada vividhaṃ te kila vapur vibhāti svāṃśe 'smin jagati gatabhedaṃ bhagavataḥ | tad evaitatstotuṃ hṛdayam atha gīrbāhyakaraṇaprabandhāś ca syur me satatam aparityaktarabhasaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "16 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.997"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -221,12 +493,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Where beginnings vary and rules have melted — what taste, unpartitioned,\nfull past compare? Self's light-yoke, one with all that is — floods unopposed, knowing supreme, past price."
+  "l3": "Where beginnings vary and rules have melted, what taste is there, unpartitioned,\nfull past compare? Self's light-yoke is one with all that is; floods unopposed, knowing supreme, past price."
  },
  {
   "chunk": "kram-p09-v09",
   "verses": "9",
   "sanskrit": "tavaivaikasyāntaḥ sphuritamahaso bodhajaladher vicitrormivrātaprasaraṇaraso yaḥ svarasataḥ | ta evāmī sṛṣṭisthitilayamayasphūrjitarucāṃ śaśāṅkārkāgnīnāṃ yugapad udayāpāyavibhavāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "23 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.962"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -255,6 +561,40 @@
   "chunk": "kram-p10-v10",
   "verses": "10",
   "sanskrit": "ataś citrācitrakramataditarādisthitijuṣo vibhoḥ śaktiḥ śaśvad vrajati na vibhedaṃ katham api | tad etasyāṃ bhūmāv akulam iti te yat kila padaṃ tadekāgrībhūyān mama hṛdayabhūr bhairava vibho",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "14 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -277,12 +617,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Deep within You-alone — glory throbbing, ocean knowing, waves tasting free —\nthey rise-set at once: moon, sun, fire — creation, keeping, loosing — one gleam."
+  "l3": "Deep within You alone, glory throbbing, ocean knowing, waves tasting free,\nthey rise and set at once: moon, sun, fire, creation, keeping, loosing, one gleam."
  },
  {
   "chunk": "kram-p11-v11",
   "verses": "11",
   "sanskrit": "amuṣmāt saṃpūrnāt vata rasamahollāsasarasān nijāṃ śaktiṃ bhedaṃ gamayasi nijecchāprasarataḥ | anarghaṃ svātantryaṃ tava tadidam atyadbhutamayīṃ bhavacchaktiṃ stunvan vigalitabhayo 'haṃ śivamayaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "23 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.982"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -311,6 +685,40 @@
   "chunk": "kram-p12-v12",
   "verses": "12",
   "sanskrit": "idantāvad rūpaṃ tava bhagavataḥ śaktisarasaṃ kramābhāvād eva prasabhavigalat kālakalanam | manaḥśaktyā vācāpy atha karaṇacakrair bahir atho ghaṭādyais tadrūpaṃ yugapad adhitiṣṭheyam aniśam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "20 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.974"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -339,6 +747,40 @@
   "chunk": "kram-p13-v13",
   "verses": "13",
   "sanskrit": "kramollāsaṃ tasyāṃ bhuvi viracayan bhedakalanāṃ svaśaktīnāṃ deva prathayasi sadā svātmani tataḥ | kriyājñānecchākhyāṃ sthitilayamahāsṛṣṭivibhavāṃ trirūpaṃ bhūyāsaṃ samadhiśayituṃ vyagrahṛdayaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "21 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.973"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -367,6 +809,40 @@
   "chunk": "kram-p14-v14",
   "verses": "14",
   "sanskrit": "purā sṛṣṭir līnā hutavahamayī yātra vilaset parollāsaunmukhyaṃ vrajati śaśisaṃsparśasubhagā | hutāśendusphārobhayavibhavabhāg bhairavavibho taveyaṃ sṛṣṭyākhyā mama manasi nityaṃ vilasatām",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "17 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.994"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -395,6 +871,40 @@
   "chunk": "kram-p15-v15",
   "verses": "15",
   "sanskrit": "visṛṣṭe bhāvāṃśe bahir atiśayāsvādavirase yadā tatraiva tvaṃ bhajasi rabhasād raktimayatām | tadā raktā devī tava sakalabhāveṣu nanu māṃ kriyād raktāpānakramaghaṭitagoṣṭhīgataghṛṇam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "17 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -423,6 +933,40 @@
   "chunk": "kram-p16-v16",
   "verses": "16",
   "sanskrit": "bahir vṛttiṃ hātuṃ citibhuvam udārāṃ nivasituṃ yadā bhāvābhedaṃ prathayasi vinaṣṭormicapalaḥ | sthiter nāśaṃ devī kalayati tadā sā tava vibho sthiteḥ sāṃsārikyāḥ kalayatu vināśaṃ mama sadā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "20 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.981"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -451,6 +995,40 @@
   "chunk": "kram-p17-v17",
   "verses": "17",
   "sanskrit": "jagatsaṃhāreṇa praśamayitukāmaḥ svarabhasāt svaśaṅkātaṅkākhyaṃ vidhim atha niṣedhaṃ prathayasi | yamaṃ sṛṣṭvetthaṃ tvaṃ punar api ca śaṅkāṃ vidalayan mahādevī seyaṃ mama bhavabhayaṃ saṃdalayatām",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "24 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.994"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -479,6 +1057,40 @@
   "chunk": "kram-p18-v18",
   "verses": "18",
   "sanskrit": "vilīne śaṅkaughe sapadi paripūrṇe ca vibhave gate lokācāre galitavibhave śāstraniyame | anantaṃ bhogyaughaṃ grasitum abhito laṃpaṭarasā vibho saṃhārākhyā mama hṛdi bhidāṃśaṃ praharatu",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "21 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -507,6 +1119,40 @@
   "chunk": "kram-p19-v19",
   "verses": "19",
   "sanskrit": "taditthaṃ devībhiḥ sapadi dalite bhedavibhave vikalpaprāṇāsau pravilasati mātṛsthitir alam | ataḥ saṃhārāṃśam nijahṛdi vimṛśya sthitimayī prasannā syān mṛtyupralayakaraṇī me bhagavatī",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "21 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.991"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -535,6 +1181,40 @@
   "chunk": "kram-p20-v20",
   "verses": "20",
   "sanskrit": "taditthaṃ te tisro nijavibhavavisphāraṇavaśād avāptāḥ ṣaṭcakrakramakṛtapadaṃ śaktaya imāḥ | kramād unmeṣeṇa pravidadhati citrāṃ bhavadaśām imābhyo devībhyaḥ pravaṇahṛdayaḥ syāṃ gatabhayaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "19 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.994"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -563,6 +1243,40 @@
   "chunk": "kram-p21-v21",
   "verses": "21",
   "sanskrit": "imāṃ rundhe bhūmiṃ bhavabhayabhidātaṅkakaraṇīm imāṃ bodhaikāntadrutirasamayīm cāpi vidadhe | taditthaṃ saṃrodhaṃ drutim atha vilupyāśubhatatīr yatheṣṭaṃ cācāraṃ bhajati lasatāṃ sā mama hṛdi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "18 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.976"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -585,12 +1299,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "So Your three — by own power's spread obtained, six-wheeled, stationed —\nordain by order, by opening, the varied world-state; by them, devoted-hearted, fear gone may I be."
+  "l3": "So Your three — by own power's spread obtained, six-wheeled, stationed —\nthey ordain by order, by opening, the varied world-state; by them, devoted-hearted, fear gone may I be."
  },
  {
   "chunk": "kram-p22-v22",
   "verses": "22",
   "sanskrit": "kriyābuddhyakṣādeḥ parimitapade mānapadavīm avāptasya sphāraṃ nijanijarucā saṃharati yā | iyaṃ mārta.ṅdasya sthitipadayujaḥ sāram akhilam haṭhād ākarṣantī kṛśatu mama bhedaṃ bhavabhayāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "23 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.973"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -613,12 +1361,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "This ground she holds — dread to world-fear's splitting;\nthis wake-fixed melted taste — ordained too. Holding, melting, wiping the foul stretches, conduct at pleasure — sporting in my heart."
+  "l3": "This ground she holds, dreadful in splitting world fear;\nthis wake-fixed melted taste — ordained too. Holding, melting, wiping the foul stretches, conduct at pleasure — sporting in my heart."
  },
  {
   "chunk": "kram-p23-v23",
   "verses": "23",
   "sanskrit": "samagrām akṣālīṃ kramavirahitā sātmani muhur niveśyānantāntarbahalitamahāraśminivahā | parā divyānandaṃ kalayitum udārādaravatī prasannā me bhūyāt hṛdayapadavīṃ bhūṣayatu ca",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "19 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.973"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -647,6 +1429,40 @@
   "chunk": "kram-p24-v24",
   "verses": "24",
   "sanskrit": "pramāṇe saṃlīne śivapadalasadvaibhavavaśāt śarīraprāṇādir mitakṛtakamātṛsthitimayaḥ | yadā kālopādhiḥ pralayapadam āsādayati te tadā devī yāsau lasati mama sā syāc chivamayī",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "17 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.971"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -669,12 +1485,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Whole garland, sequenceless — entered in self again and again,\nray-heaped within without end. Supreme, bliss to grasp, eager, noble — gracious to me be she; adorn the heart-path."
+  "l3": "O whole garland, sequenceless, entered in self again and again,\nray-heaped within without end. Supreme, bliss to grasp, eager, noble — gracious to me be she; adorn the heart-path."
  },
  {
   "chunk": "kram-p25-v25",
   "verses": "25",
   "sanskrit": "prakāśākhyā saṃvit kramavirahitā śūnyapadato bahirlīnātyantam prasarati samācchādakatayā | tato 'py antaḥsāre galitarabhasād akramatayā mahākālī seyaṃ mama kalayatāṃ kālam akhilam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "18 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.99"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -703,6 +1553,40 @@
   "chunk": "kram-p26-v26",
   "verses": "26",
   "sanskrit": "tato devyāṃ yasyāṃ paramaparipūrṇasthitijuṣi kramaṃ vicchidyāśu sthitimatirasāt saṃvidadhati | pramāṇaṃ mātāraṃ mitim atha samagraṃ jagad idaṃ sthitāṃ kroḍīkṛtya śrayatu mama cittaṃ citim imām",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "19 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.941"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -725,12 +1609,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Called manifestation, knowing — sequenceless, from void's step merged without —\nspreading sheer as cover. Then within, rush melted, sequence-free — great Time-goddess, making all time, mine."
+  "l3": "Called manifestation, knowing — sequenceless, from void's step merged without —\nspreading sheer as cover. Then within, rush melted, sequence-free: great Kālī, making all time, mine."
  },
  {
   "chunk": "kram-p27-v27",
   "verses": "27",
   "sanskrit": "anargalasvātmamaye maheśe tiṣṭhanti yasmin vibhuśaktayas tāḥ | taṃ śaktimantaṃ praṇamāmi devaṃ manthānasaṃjñaṃ jagadekasāram",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "23 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.965"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -759,6 +1677,40 @@
   "chunk": "kram-p28-v28",
   "verses": "28",
   "sanskrit": "itthaṃ svaśaktikiraṇaughanutiprabandhān ākarṇya deva yadi me vrajasi prasādam | tenāśu sarvajanatāṃ nijaśāsanāṃśusaṃśāntitākhilatamaḥpaṭalāṃ vidheyāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "13 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.991"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -781,12 +1733,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Unhindered, in the self-made Lord, great Lord — abide, wide powers;\nthat power-bearer I bow — god, churn-named, the world's one sap."
+  "l3": "Unhindered, in the self-made Lord, great Lord, wide powers abide;\nthat power-bearer I bow — god, churn-named, the world's one sap."
  },
  {
   "chunk": "kram-p29-v29",
   "verses": "29",
   "sanskrit": "ṣaṭṣaṣṭinām eke varṣe navamyām asite 'hani | mayā 'bhinavaguptena mārgaśīrṣe stutaḥ śivaḥ || iti śrī abhinavaguptapādācāryakṛtaṃ kramastotraṃ sampūrṇam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "14 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.989"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -809,12 +1795,46 @@
   "source_license": "CC BY-NC-SA 4.0",
   "source_origin": "GRETIL",
   "license": "FREE",
-  "l3": "Thus — these praise-bonds of Your power's ray-mass heard — Lord, if grace comes —\nquickly by Your rule-rays make all folk darkness-allayed."
+  "l3": "Thus — these praise-bonds of Your power's ray-mass heard — Lord, if grace comes —\nquickly by Your rule-rays make all folk, darkness allayed."
  },
  {
   "chunk": "kram-p30-v30",
   "verses": "30",
   "sanskrit": "ṣaṭṣaṣṭinām eke varṣe navamyām asite 'hani | mayā 'bhinavaguptena mārgaśīrṣe stutaḥ śivaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "11 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.98"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

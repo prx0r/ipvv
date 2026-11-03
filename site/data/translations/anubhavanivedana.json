@@ -3,6 +3,40 @@
   "chunk": "anu-p01",
   "verses": "1",
   "sanskrit": "antarlakṣyavilīnacittapavano yogī yadā vartate dṛṣṭyā niścalatārayā bahirasau paśyannapaśyannapi | mudreyaṃ khalu śāmbhavī bhavati sā yuṣmatprasādādguro śūnyāśūnyavivarjitaṃ bhavati yat tattvaṃ padaṃ śāmbhavam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "24 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -28,6 +62,40 @@
   "chunk": "anu-p02",
   "verses": "2",
   "sanskrit": "ardhoddhāṭitalocanaḥ sthiramanā nāsāgradattekṣaṇaḥ candrārkāvapi līnatāmupagatau trispandabhāvāntare | jyotīrūpamaśeṣabāhyarahitaṃ caikaṃ pumāṃsaṃ paraṃ tattvaṃ tatpadameti vastu paramam vācyaṃ kimatrādhikam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "24 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -53,6 +121,40 @@
   "chunk": "anu-p03",
   "verses": "3",
   "sanskrit": "śabdaḥ kaścana yo mukhādudayate mantraḥ sa lokottaraḥ saṃsthānaṃ sukhaduḥkhajanmavapuṣo yatkāpi mudraiva sā | prāṇasya svarasena yatpravahaṇaṃ yogaḥ sa evādbhutaḥ śāktaṃ dhāma paraṃ mamānubhavataḥ kinnāma na bhrājate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "31 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -78,6 +180,40 @@
   "chunk": "anu-p04",
   "verses": "4",
   "sanskrit": "mantraḥ sa pratibhāti varṇaracanā yasminna saṃlakṣyate mudrā sā samudeti yatra galitā kṛtsnā kriyā kāyikī | yogaḥ sa prathate yataḥ pravahaṇaṃ prāṇasya saṃkṣīyate tvaddhāmādhigamotsaveṣu sudhiyāṃ kiṃ kiṃ na nāmādbhutaṃ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "30 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

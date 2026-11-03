@@ -3,6 +3,40 @@
   "chunk": "anu-p01",
   "verses": "1",
   "sanskrit": "saṃkrāmo 'tra na bhāvanā na ca kathāyuktir na carcā na ca dhyānaṃ vā na ca dhāraṇā na ca japābhyāsaprayāso na ca | tat kiṃ nāma suniścitaṃ vada paraṃ satyaṃ ca tac chrūyatām: na tyāgī na parigrahī — bhaja sukhaṃ sarvam yathāvasthitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "33 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -28,6 +62,40 @@
   "chunk": "anu-p02",
   "verses": "2",
   "sanskrit": "saṃsāro 'sti na tattvatas tanubhṛtāṃ bandhasya vārtaiva kā bandho yasya na jātu tasya vitathā muktasya muktikriyā | mithyāmohakṛd eṣa rajjubhujagacchāyāpiśācabhramo mā kiṃcit tyaja mā gṛhāṇa vihara svastho yathāvasthitaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "24 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -52,6 +120,40 @@
   "chunk": "anu-p03",
   "verses": "3",
   "sanskrit": "pūjapūjakapūjyabhedasaraṇiḥ keyaṃ kathānuttare saṃkrāmaḥ kila kasya kena vidadhe ko vā praveśakramaḥ | māyeyam na cidadvayāt paratayā bhinnāpy aho vartate sarvaṃ svānubhavasvabhāvavimalaṃ cintāṃ vṛthā mā kṛthāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "25 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -76,6 +178,40 @@
   "chunk": "anu-p04",
   "verses": "4",
   "sanskrit": "ānando 'tra na vittamadhyamadavan naivāṅganāsaṅgavat dīpārkendukṛtaprabhāprakaravan naiva prakāśodayaḥ | harṣaḥ saṃbhṛtabhedamuktisukhabhūr bhārāvatāropamaḥ sarvādvaitapadasya vismṛtanidheḥ prāptiḥ prakāśodayaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "16 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -100,6 +236,40 @@
   "chunk": "anu-p05",
   "verses": "5",
   "sanskrit": "rāgadveṣasukhāsukhodayalayāhaṅkāradainyādayo ye bhāvāḥ pravibhānti viśvavapuṣo bhinnasvabhāvā na te | vyaktiṃ paśyasi yasya yasya sahasā tattattadekātmatāsaṃvidrūpam avekṣya kiṃ na ramase tadbhāvanānirbharaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "27 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.997"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -125,6 +295,40 @@
   "chunk": "anu-p06",
   "verses": "6",
   "sanskrit": "pūrvābhāvabhavakriyā hi sahasā bhāvāḥ sadā 'smin bhave madhyākāravikārasaṃkaravatāṃ teṣāṃ kutaḥ satyatā | niḥsatye capale prapañcanicaye svapnabhrame peśale śaṅkātaṅkakalaṅkayuktikalanātītaḥ prabuddho bhava",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "24 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -150,6 +354,40 @@
   "chunk": "anu-p07",
   "verses": "7",
   "sanskrit": "bhāvānāṃ na samudbhavo 'sti sahajas tvadbhāvitā bhānty amī niḥsatyā api satyatām anubhavabhrāntyā bhajanti kṣaṇam | tvatsaṅkalpaja eṣa viśvamahimā nāsty asya janmānyataḥ tasmāt tvaṃ vibhavena bhāsi bhuvaneṣv ekopy anekātmakaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "25 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -175,6 +413,40 @@
   "chunk": "anu-p08",
   "verses": "8",
   "sanskrit": "yat satyaṃ yad asatyam alpabahulaṃ nityaṃ na nityaṃ ca yat yan māyāmalinaṃ yad ātmavimalaṃ ciddarpaṇe rājate | tat sarvaṃ svavimarśasaṃvidudayād rūpaprakāśātmakaṃ jñātvā svānubhavādhirūḍhamahimā viśveśvaratvaṃ bhaja",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "23 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

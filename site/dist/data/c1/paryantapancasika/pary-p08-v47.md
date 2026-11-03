@@ -1,0 +1,5 @@
+## pary-p08-v47 — C1
+
+**SUMMARY.** Place-means-shocked spirited natured being; Vaikharī doings heard. Handed mutual knowing; common then bookish, straitened narrow. Speech-spread knowing host goddesses Maheśvarī-led unenjoying even waking. Way ungrasping to-do-to-gain Bhairavī-standing; own-knowing all-ways entered. Beginning-end-inner-boundless said-saying-full mystery of chant-seal attained unsurpassed. Shambhu's undivided hearts conquer of old, riseless-absorbed, end-endowed.
+
+*Rasa: nāda-vīra of heard doings; vīra of straitened exchange; karuṇa-adbhuta of unenjoying goddesses; vīra of all-ways entering; vīra of attained mystery; jaya-śānta of conquering close — The sthāyibhāva is exultation: struck, natured, heard. Sounding relished. The sthāyibhāva is exultation: handed each-to-each, straitened. Exchanging relished. The sthāyibhāva is compassion-wonder: spread knowing, unenjoying waking. Unenjoying relished. The sthāyibhāva is exultation: ungrasping way, all-ways entered. Entering relished. The sthāyibhāva is exultation: full, mystery, attained. Attaining relished. The sthāyibhāva is victory-peace: undivided, conquering, endowed. Closing relished.*

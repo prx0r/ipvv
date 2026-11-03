@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a02:tsa-a02-v02",
+ "work_id": "tantrasara-a02",
+ "passage_id": "tantrasara-a02:tsa-a02-v02",
+ "title": "tantrasara-a02 — tsa-a02-v02",
+ "kind": "entailment",
+ "question": "When grace has struck firm, a person hears the teacher's word once — and then discriminates for himself. From that point his immersion needs nothing and never sets.",
+ "issue": "Derived from L2 text (no argmap). When grace has struck firm, a person hears the teacher's word once — and then discriminates for himself. From that point his immersion needs nothing and never sets.",
+ "premises": [
+  {
+   "text": "yadā khalu dṛḍhaśaktipātāviddhaḥ svayam eva itthaṃ vivecayati sakṛd eva guruvacanam avadhārya tadā punar upāyavirahito nityoditaḥ asya samāveśaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a02:tsa-a02-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "When grace has struck firm, a person hears the teacher's word once — and then discriminates for himself. From that point his immersion needs nothing and never sets.",
+  "passage_id": "tantrasara-a02:tsa-a02-v02"
+ },
+ "unresolved": "",
+ "argument_text": "When grace has struck firm, a person hears the teacher's word once — and then discriminates for himself. From that point his immersion needs nothing and never sets.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a02:tsa-a02-v02",
+ "sanskrit": "yadā khalu dṛḍhaśaktipātāviddhaḥ svayam eva itthaṃ vivecayati sakṛd eva guruvacanam avadhārya tadā punar upāyavirahito nityoditaḥ asya samāveśaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

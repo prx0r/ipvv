@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a02:tsa-a02-v03",
+ "work_id": "tantrasara-a02",
+ "passage_id": "tantrasara-a02:tsa-a02-v03",
+ "title": "tantrasara-a02 — tsa-a02-v03",
+ "kind": "entailment",
+ "question": "Here \"yoga-limb\" means one thing only: thinking it through. But what is there to think? The Lord, who is self-shining, is yourself. So what could a means do? It can't get you your nature — you have it eternally. It can't inform you — you shine already. It can't strip a covering — there is none. It can't take you inside — there's no outsider to go in.",
+ "issue": "Derived from L2 text (no argmap). Here \"yoga-limb\" means one thing only: thinking it through. But what is there to think? The Lord, who is self-shining, is yourself. So what could a means do? It can't get you your nature — you have it eternally. It can't inform you — you shine already. It can't strip a covering — there is none. It can't take you inside — there's no outsider to go in.",
+ "premises": [
+  {
+   "text": "atra ca tarka eva yogāṅgam iti kathaṃ vivecayati iti cet ucyate yo 'yaṃ parameśvaraḥ svaprakāśarūpaḥ svātmā tatra kim upāyena kriyate na svarūpalābho nityatvāt na jñaptiḥ svayaṃprakāśamānatvāt nāvaraṇavigamaḥ āvaraṇasya kasyacid api asaṃbhavāt na tadanupraveśaḥ anupraveṣṭuḥ vyatiriktasya abhāvāt",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a02:tsa-a02-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Here \"yoga-limb\" means one thing only: thinking it through. But what is there to think? The Lord, who is self-shining, is yourself. So what could a means do? It can't get you your nature — you have it eternally. It can't inform you — you shine already. It can't strip a covering — there is none. It can't take you inside — there's no outsider to go in.",
+  "passage_id": "tantrasara-a02:tsa-a02-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Here \"yoga-limb\" means one thing only: thinking it through. But what is there to think? The Lord, who is self-shining, is yourself. So what could a means do? It can't get you your nature — you have it eternally. It can't inform you — you shine already. It can't strip a covering — there is none. It can't take you inside — there's no outsider to go in.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a02:tsa-a02-v03",
+ "sanskrit": "atra ca tarka eva yogāṅgam iti kathaṃ vivecayati iti cet ucyate yo 'yaṃ parameśvaraḥ svaprakāśarūpaḥ svātmā tatra kim upāyena kriyate na svarūpalābho nityatvāt na jñaptiḥ svayaṃprakāśamānatvāt nāvaraṇavigamaḥ āvaraṇasya kasyacid api asaṃbhavāt na tadanupraveśaḥ anupraveṣṭuḥ vyatiriktasya abhāvāt",
+ "license": "CC BY-NC-SA 4.0"
+}

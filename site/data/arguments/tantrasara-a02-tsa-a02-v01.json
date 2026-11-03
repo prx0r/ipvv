@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:tantrasara-a02:tsa-a02-v01",
+ "work_id": "tantrasara-a02",
+ "passage_id": "tantrasara-a02:tsa-a02-v01",
+ "title": "tantrasara-a02 — tsa-a02-v01",
+ "kind": "entailment",
+ "question": "First of the four ways in: the way with no way. We shall expound it.",
+ "issue": "Derived from L2 text (no argmap). First of the four ways in: the way with no way. We shall expound it.",
+ "premises": [
+  {
+   "text": "atha anupāyam eva tāvat vyākhyāsyāmaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "tantrasara-a02:tsa-a02-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "First of the four ways in: the way with no way. We shall expound it.",
+  "passage_id": "tantrasara-a02:tsa-a02-v01"
+ },
+ "unresolved": "",
+ "argument_text": "First of the four ways in: the way with no way. We shall expound it.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "tantrasara-a02:tsa-a02-v01",
+ "sanskrit": "atha anupāyam eva tāvat vyākhyāsyāmaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

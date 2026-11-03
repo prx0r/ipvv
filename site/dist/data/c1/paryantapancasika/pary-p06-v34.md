@@ -1,0 +1,5 @@
+## pary-p06-v34 — C1
+
+**SUMMARY.** Subtle-five by fineness, ten senses by touch-tooling. Knowability veiled, knower shown sequentially; mind-I first undivided; ebb-flow dependent. Desired union arose double-selved will-natured opening; else supreme. Four inward powers bear inside, hung triśaṅku-like between knowing-space and inert Māyā-ground. Three-formed will-power bore three; emission clear-created widely. Self-powers made mixed may stir within, never from this outpour outside.
+
+*Rasa: vīra of tooled ten; vīra of dependent ebb-flow; adbhuta of desired arising; adbhuta of triśaṅku-hung; vīra of widely created; śānta of within-kept — The sthāyibhāva is exultation: subtle five, touch ten. Tooling relished. The sthāyibhāva is exultation: veiled, shown, depended. Depending relished. The sthāyibhāva is wonder: desired, double, arose. Arising relished. The sthāyibhāva is wonder: four bearing, hung between. Bearing relished. The sthāyibhāva is exultation: became three, created wide. Creating relished. The sthāyibhāva is peace: mixed, may-stir, kept within. Keeping relished.*

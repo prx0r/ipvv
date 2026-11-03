@@ -3,6 +3,40 @@
   "chunk": "bhair-p01-v01",
   "verses": "1",
   "sanskrit": "oṃ namaś cidbhairavāya | citibhūtiṃ śrayata mā mudhā bhramata",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -31,6 +65,40 @@
   "chunk": "bhair-p01-v02",
   "verses": "2",
   "sanskrit": "cidbhairavam eva paraṃ paramāmṛtarūpam | ekam atidīptam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -59,6 +127,40 @@
   "chunk": "bhair-p01-v03",
   "verses": "3",
   "sanskrit": "stutyaḥ stotā stutir iti yad api vibhinnaṃ | mṛṣati yathā yad rūpaṃ cidrūpatayā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -87,6 +189,40 @@
   "chunk": "bhair-p01-v04",
   "verses": "4",
   "sanskrit": "vigalitasarvavibhedaṃ sarvavibhedātma cidghanānandam | tasyānukṛtiṃ tvadākṛtiṃ vande",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -115,6 +251,40 @@
   "chunk": "bhair-p01-v05",
   "verses": "5",
   "sanskrit": "rekhāpuruṣaḥ puruṣaṃ varṇalipir varṇasaṃcayaṃ yadvat | tadvat vicitrarūpaṃ tvām ākāro vyanakti paramātman",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -143,6 +313,40 @@
   "chunk": "bhair-p01-v06",
   "verses": "6",
   "sanskrit": "tatrāvikalpam eva tvāṃ cidrūpaṃ samāviśya | vimṛśāmaḥ kim api manāṅ na hi tattvaṃ kalpanāviṣayaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -171,6 +375,40 @@
   "chunk": "bhair-p01-v07",
   "verses": "7",
   "sanskrit": "svātmaprabhāṃ vidhāya vāgdevīṃ | prathamonmeṣaṃ gurum atha vanditvā hṛdayam āviśya",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -199,6 +437,40 @@
   "chunk": "bhair-p01-v08",
   "verses": "8",
   "sanskrit": "staumi vimṛśan maheśvaram ātmānaṃ svaṃ cidekaghanam | srāvitapāśakadambakam etasmin dehadevagṛhe",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -227,6 +499,40 @@
   "chunk": "bhair-p01-v09",
   "verses": "9",
   "sanskrit": "cityānandecchāvitkaraṇākhyāḥ śaktayo jayanti | sūkṣmasthūlabhidāptā vaktratvaṃ brahmamuṇḍabhidhā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -255,6 +561,40 @@
   "chunk": "bhair-p01-v10",
   "verses": "10",
   "sanskrit": "sarvajñatādiviṣayaṃ hṛdayādikam aṅgaṣaṭkaṃ te | sakalaṃ sadāśivāntaṃ pretātmatayā tavāsanaṃ svāmin",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "112 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.97"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -283,6 +623,40 @@
   "chunk": "bhair-p02-v11",
   "verses": "11",
   "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -311,6 +685,40 @@
   "chunk": "bhair-p02-v12",
   "verses": "12",
   "sanskrit": "dahanajalāmṛtalekhāviṣādi bibhrat tvam ādiśasy etat | viśvaṃ viruddham api saccidrūpe mayi virudhyate naitat",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -339,6 +747,40 @@
   "chunk": "bhair-p02-v13",
   "verses": "13",
   "sanskrit": "saṃvitsūtranilīno niḥsāro mātṛnivaho 'yam | karaṇamuṇḍamālabhārin darśayasītīva naḥ svāmin",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -367,6 +809,40 @@
   "chunk": "bhair-p02-v14",
   "verses": "14",
   "sanskrit": "paśyata paśyata pāśā viṣamās ta ime bahiṣkṛtāḥ śaśvat | antradhāraṇamiṣat kathayaṃs tvaṃ naḥ samābhāsi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -395,6 +871,40 @@
   "chunk": "bhair-p02-v15",
   "verses": "15",
   "sanskrit": "māyāpaṭaḥ sarāgo vyomni pare 'smin sa eṣa nikṣiptaḥ | gajacarma saraktaṃ mūrdhni vahan kathayasīśa",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -423,6 +933,40 @@
   "chunk": "bhair-p02-v16",
   "verses": "16",
   "sanskrit": "antaḥśaktikṛpāṇīm vyanakṣi saṃsṛtivibhedinīm asinā | nijaśaktimahimasvīkṛtasamastaviśvā hi vīravarāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -451,6 +995,40 @@
   "chunk": "bhair-p02-v17",
   "verses": "17",
   "sanskrit": "bhavabhayahantā so 'ham sānāthye 'vasthito 'smi | mā bhaiṣṭa ity āsphoṭitakheṭakadarśanato diśasi naḥ svāmin",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -479,6 +1057,40 @@
   "chunk": "bhair-p02-v18",
   "verses": "18",
   "sanskrit": "nijaśaktipāśavalitaś cidvapuṣā kalyate mayā kālaḥ | pāśadhāraṇavaśāt prathayasi naḥ kālakālas tvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -507,6 +1119,40 @@
   "chunk": "bhair-p02-v19",
   "verses": "19",
   "sanskrit": "bhedamayam akhilam etan nijaśaktyaivākṣipāmi saṃhartum | aṅkuśadhāraṇataḥ sphuṭayati parabhairavo 'smākam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -535,6 +1181,40 @@
   "chunk": "bhair-p02-v20",
   "verses": "20",
   "sanskrit": "kodaṇḍārūdhaśarapradarśanād | brahmaviṣṇurudreśān sasadākhyaśivāñ chaktyā kāraṇahariṇaṃ bhinatsi mṛgavat tvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "115 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.898"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -563,6 +1243,40 @@
   "chunk": "bhair-p03-v21",
   "verses": "21",
   "sanskrit": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -591,6 +1305,40 @@
   "chunk": "bhair-p03-v22",
   "verses": "22",
   "sanskrit": "abhayena ca bhavabhayāni unmūlayatā prakāśyate satatam viśvānugrahakāraṇasvabhāvatā tava karatalena",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -619,6 +1367,40 @@
   "chunk": "bhair-p03-v23",
   "verses": "23",
   "sanskrit": "akhyātirūpam asamaṃ māyāyāḥ śakalitaṃ śiro 'traitat parabodhamayena mayā muṇḍaṃ bibhrat prakāśayasy evam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -647,6 +1429,40 @@
   "chunk": "bhair-p03-v24",
   "verses": "24",
   "sanskrit": "niḥśeṣahṛtasārā mayy eva jagatsthitiś cidekaghane iti khaṭvāṅgakaraṅkodvahanacchalato dadāsy ājñām",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -675,6 +1491,40 @@
   "chunk": "bhair-p03-v25",
   "verses": "25",
   "sanskrit": "vīṇāghaṇtāḍamarūn uḍḍāmara vādayann idaṃ diśasi vṛttitribhedabhinnaṃ nādaṃ śṛṇvan sthito 'smīti",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -703,6 +1553,40 @@
   "chunk": "bhair-p03-v26",
   "verses": "26",
   "sanskrit": "kiṃ ca parādikaśaktitritayārāsundarām mahāśaktim devānukaroṣi bahis triśūladhāraṇamiṣeṇa nityaṃ tvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -731,6 +1615,40 @@
   "chunk": "bhair-p03-v27",
   "verses": "27",
   "sanskrit": "icchādikanijaśaktiprakāśitādhaḥsthagocaratritayām svām eva parāṃ śaktiṃ vajramayīṃ vahasi ṣaḍarāṃ tvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -759,6 +1677,40 @@
   "chunk": "bhair-p03-v28",
   "verses": "28",
   "sanskrit": "jagad akhilaṃ macchaktyā damitaṃ sarvavyāvasthitīr dhatte iti daṇḍadhāraṇavaśād vyanakṣi cidbhairavāsmākam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -787,6 +1739,40 @@
   "chunk": "bhair-p03-v29",
   "verses": "29",
   "sanskrit": "mudgaraparaśū bibhrad baindavanādānukārarūpau tvam bhedavibhedanaśakalanaparatvam īśāna nirdiśasi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -815,6 +1801,40 @@
   "chunk": "bhair-p03-v30",
   "verses": "30",
   "sanskrit": "darśanabhedāt svāminn anyānyām āhṛtiṃ dadhānas tvam bhairavaparabodhamayaṃ prathayasi nijadhāma sarvatra",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "101 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.939"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -843,6 +1863,40 @@
   "chunk": "bhair-p04-v31",
   "verses": "31",
   "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -871,6 +1925,40 @@
   "chunk": "bhair-p04-v32",
   "verses": "32",
   "sanskrit": "abhimānahṛdayabandhānutkhātau tāv imau saśikhau mūrtāv iva muṇdābjau prathayan dhatse mahākālaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -899,6 +1987,40 @@
   "chunk": "bhair-p04-v33",
   "verses": "33",
   "sanskrit": "akhilajagadbījabhuvaṃ prathamasthām anukaroṣi bodhanidhe karatalagabījapūrakadarśanalīlāyitād deva",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -927,6 +2049,40 @@
   "chunk": "bhair-p04-v34",
   "verses": "34",
   "sanskrit": "bhairavarūpo 'py asi yat tatrāpi kare 'kṣamālikāṃ dhatse tat sarvākṣavikāsād viśvaṃ parivartayasy antaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -955,6 +2111,40 @@
   "chunk": "bhair-p04-v35",
   "verses": "35",
   "sanskrit": "asthikaramuṇḍamālābhasmābharaṇo nṛraktaruciḥ viśvaṃ brahmamayatvāc chuddham itīśaḥ samādiśasi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -983,6 +2173,40 @@
   "chunk": "bhair-p04-v36",
   "verses": "36",
   "sanskrit": "svātmārāmamayānāṃ viṣamā api viṣayabudbudhāḥ kim amī smaradahanam alikanayanam prathayan paramāgnirūpam ādiśasi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1011,6 +2235,40 @@
   "chunk": "bhair-p04-v37",
   "verses": "37",
   "sanskrit": "antarnibaddhalakṣyaḥ pravikāsikaraṇo 'pi yat sadā bhavasi tat prathayasi sarvadaśaṃ gatamohakalaṅkam ātmānam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1039,6 +2297,40 @@
   "chunk": "bhair-p04-v38",
   "verses": "38",
   "sanskrit": "deva digambaratā te vadati nirāvaraṇam ātmano rūpam paramabrahmamayārkān māyāvaraṇam kathaṃ vṛṇuyāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1067,6 +2359,40 @@
   "chunk": "bhair-p04-v39",
   "verses": "39",
   "sanskrit": "saṃhartā sarveṣām arkādīnām ahaṃ tamobhūmiḥ nirmalaśāradagaganaprabheṇa vapuṣeti darśayasi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1095,6 +2421,40 @@
   "chunk": "bhair-p04-v40",
   "verses": "40",
   "sanskrit": "paramabrahmamayas tvaṃ deva yadāśrayasi bhairavākāram tat prathayasi tattvajñaḥ saty api bhede vimukta iti",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "106 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.913"
+   ],
+   "L2_CITES": [
+    true,
+    "10 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1123,6 +2483,40 @@
   "chunk": "bhair-p05-v41",
   "verses": "41",
   "sanskrit": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1151,6 +2545,40 @@
   "chunk": "bhair-p05-v42",
   "verses": "42",
   "sanskrit": "tvayy evāmṛtalekhā paraśaktimayī parapramātātaḥ nātha tvam eva jagatām jīvanam iti bhāsi no hṛdaye",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1179,6 +2607,40 @@
   "chunk": "bhair-p05-v43",
   "verses": "43",
   "sanskrit": "tava śabdarāśivapuṣaḥ pratyaṣṭakam eva bāhyaparivāraḥ parasūkṣmādivibhedād bhairava lokeśvarapramukhāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1207,6 +2669,40 @@
   "chunk": "bhair-p05-v44",
   "verses": "44",
   "sanskrit": "mudrayati nikhilam etan niḥśeṣasvasvarūpasaṃkramaṇāt modayati bhaktavargaṃ gatimudaṃ pūrṇatāprathanāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1235,6 +2731,40 @@
   "chunk": "bhair-p05-v45",
   "verses": "45",
   "sanskrit": "mocayati pāśajālaṃ drāvayati vibhedam īśa te mūrtiḥ mudrayati vividhasaṃviddraviṇaṃ mudrā tataḥ kathitā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1263,6 +2793,40 @@
   "chunk": "bhair-p05-v46",
   "verses": "46",
   "sanskrit": "jayati paratattvabhūmipravare nipāyabhūtaiṣa sphuṭam adhivasatu satattvaprathayā hṛdayasya meyamalam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1291,6 +2855,40 @@
   "chunk": "bhair-p05-v47",
   "verses": "47",
   "sanskrit": "pratikalam udeti saṃvid yā kila tatra sphuraty adho viśvam śivaśaktivibhavarūpaṃ jānanti maheśa yāgasthāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -1319,6 +2917,40 @@
   "chunk": "bhair-p05-v48",
   "verses": "48",
   "sanskrit": "itthaṃ sphurasi sadā me cidbhairava sarvabhūtātma tad yāgādijapāntaṃ sampannam ayatnataḥ sarvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "81 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.942"
+   ],
+   "L2_CITES": [
+    true,
+    "8 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

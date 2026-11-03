@@ -1,0 +1,5 @@
+## pary-p03-v15 — C1
+
+**SUMMARY.** Narrowed action-mind gained called bound soul; willed blessed Bhairava measured. Narrow-functioned follows power; stations gained from contracted state. Ownmost creation teeming fancy arisen Śaiva; purified trace holding. Such-fashioned knower stays undistracted at limitation-feast in thought-free self. Child bidden behold nondual known-made world; else dismissed trifling. Unothered way principle; self-way so-called.
+
+*Rasa: vīra of called bound; vīra of followed stations; adbhuta of teeming imagination; śānta of feast-abiding; vātsalya-vīra of bidden beholding; vīra of unothered means — The sthāyibhāva is exultation: narrowed, called, measured. Calling relished. The sthāyibhāva is exultation: narrowed, following, gained. Following relished. The sthāyibhāva is wonder: particular, teeming, holding. Imagining relished. The sthāyibhāva is peace: fashioned, feasted, undistracted. Abiding relished. The sthāyibhāva is tender exultation: child bidden, one shown, else dismissed. Beholding relished. The sthāyibhāva is exultation: way asked, unothered, called. Asking relished.*

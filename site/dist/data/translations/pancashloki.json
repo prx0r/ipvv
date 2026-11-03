@@ -3,6 +3,40 @@
   "chunk": "pan-p01",
   "verses": "1",
   "sanskrit": "yatsatyaṃ tu mayā kṛtaṃ mama vibho kṛtyaṃ tu nātaḥ paraṃ yanmanmānamaiśapādakamale bhaktyā mayaivārpitam | sarvasvamata evametaditarannāsyeva jānāmyatastyaktvā kṣipramanāthanātha karuṇāsindho prasanno bhava",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "34 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -28,6 +62,40 @@
   "chunk": "pan-p02",
   "verses": "2",
   "sanskrit": "maheśa tvaddvāri sphuratu rucirā vāgatitarāṃ mamaiṣā nirdoṣaṃ jaya jaya maheśeti satatam | śivā saiṣā vāṇī bhavatu śivadā mahyamaniśaṃ maheśanāthaṃ māṃ śaraṇada sanāthaṃ kuru vibho",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "28 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -53,6 +121,40 @@
   "chunk": "pan-p03",
   "verses": "3",
   "sanskrit": "brūṣe nottamāṅga paśyasi na māmetādṛśaṃ duḥkhitaṃ vijñaptiṃ bahudhā kṛtāṃ na śṛṇuṣe nāyāsi manmānase | saṃsārārṇavagartamadhyapatitaṃ prāyeṇa nālambase vākcakṣuḥśravaṇāṅghriṇādirahitaṃ tvāmāha satyaṃ śrutiḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "25 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -78,6 +180,40 @@
   "chunk": "pan-p04",
   "verses": "4",
   "sanskrit": "gurorvākyādyukti-pracaya-racana-unmārjana-vaśātsamāśvāsācchāstraṃ prati samucitādapi kathitam | vilīne śaṅkābhre hṛdayagaganodbhāsimahasaḥ prabhoḥ sūryasyeva spṛśatu caraṇān dhvāntajayinaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "18 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [
@@ -103,6 +239,40 @@
   "chunk": "pan-p05",
   "verses": "5",
   "sanskrit": "yātastvatsahavāsato bahutaraḥ kālo vatāsmin kṣaṇe kiṃ kiṃ vā na kṛtaṃ tvayā varagurūpāsānimittena me | vāraṃ vāramahaṃ punarnirupamāṃ divyaṃ bhuvaṃ prāsuvatkāyastvāṃ kila vismarāmi yadataḥ stheyaṃ na bhūyastvayā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "32 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=1.0"
+   ],
+   "L2_CITES": [
+    true,
+    "1 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
   "gate": "PASS",
   "blocking": [],
   "needs": [

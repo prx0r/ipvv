@@ -1,0 +1,5 @@
+## pary-p05-v28 — C1
+
+**SUMMARY.** Mode-measured contemplating Bhairava-am; trust supreme freedom go. Inner-outer timeless self-sequence held independent. Supreme emission-rest-rise pair unioned Śiva-Śakti, other powers between. Bliss-will-lordship-opening-lack; vague-clear flashed differentially. Bliss-junction felt as knowns' life; full Bhairava-body. Known-flashing abiding one-sided goes fivefold by grossness.
+
+*Rasa: vīra of trusted freedom; vīra of held timeless; adbhuta of paired union; adbhuta of vague-clear flashing; adbhuta of felt fullness; vīra of fivefold going — The sthāyibhāva is exultation: measured, contemplated, trusted. Trusting relished. The sthāyibhāva is exultation: inner, outer, timeless, held. Holding relished. The sthāyibhāva is wonder: supreme, paired, between. Pairing relished. The sthāyibhāva is wonder: listed five, flashed two ways. Flashing relished. The sthāyibhāva is wonder: joined, felt, full. Feeling relished. The sthāyibhāva is exultation: flashed, abiding, fivefold. Going relished.*
