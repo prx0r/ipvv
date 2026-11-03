@@ -1,4 +1,4 @@
-# works/svabodhasiddhi — DONE (T1→GATE + L200 + C1)
+# works/svabodhasiddhi — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 

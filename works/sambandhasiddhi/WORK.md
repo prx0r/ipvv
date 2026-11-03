@@ -1,4 +1,4 @@
-# works/sambandhasiddhi — DONE (T1→GATE + L200 + C1)
+# works/sambandhasiddhi — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 

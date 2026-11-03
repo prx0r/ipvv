@@ -1,4 +1,4 @@
-# works/ptvmadhyama — DONE (T1→GATE + L200 + C1)
+# works/ptvmadhyama — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 

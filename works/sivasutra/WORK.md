@@ -1,4 +1,4 @@
-# works/sivasutra — DONE (T1→GATE + L200 + C1)
+# works/sivasutra — STAGED (machine-proposed, needs human review) (T1→GATE + L200 + C1)
 
 ## Sources
 
