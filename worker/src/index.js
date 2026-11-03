@@ -643,11 +643,11 @@ export default {
       let b = {}; try { b = await request.json(); } catch (e) {}
       const work = String(b.work || '').replace(/[^a-z0-9_-]/g, '');
       const vid = String(b.verse || '').replace(/[^a-z0-9_.:-]/g, '');
-      const lang = b.lang === 'en' ? 'en' : 'sa';
+      const lang = ['sa','en','c1'].includes(b.lang) ? b.lang : 'sa';
       const text = String(b.text || '').slice(0, 4000);
-      const ref = lang === 'en'
-        ? '614f8afd83f841048c040b2c6234d2c1'   // Granny British
-        : '4e873c37d4cb439e9bccc4dc1f633290';  // Andlig Sanskrit Rost
+      const ref = lang === 'sa'
+        ? '4e873c37d4cb439e9bccc4dc1f633290'    // Andlig Sanskrit Rost
+        : '614f8afd83f841048c040b2c6234d2c1';   // Granny British (en + commentary)
       if (!work || !vid || !text.trim()) return json({ error: 'work/verse/text required' }, 400, cors);
       const key = `read/${work}/${vid}_${lang}.mp3`;
       const pub = `https://pub-87169194562a44fcb8279a799d626c62.r2.dev/${key}`;
