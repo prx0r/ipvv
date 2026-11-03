@@ -1785,8 +1785,6 @@ def build_arguments():
     src = ROOT / "data/arguments"; src.mkdir(parents=True, exist_ok=True)
     out = DIST / "arguments"; out.mkdir(parents=True, exist_ok=True)
     (DIST / "data" / "arguments").mkdir(parents=True, exist_ok=True)
-    for _af in src.glob("*.json"):
-        shutil.copy(_af, DIST / "data" / "arguments" / _af.name)
     # clear old
     for old in src.glob("*.json"):
         old.unlink()
@@ -1958,6 +1956,9 @@ def build_arguments():
         (out / f"{pid}.html").write_text(TF(TMPL, title=pkt["title"], h1=esc(pkt["title"]),
             kicker="Argument", sub=f'{pkt["strength"]} · {len(pkt["premises"])} premises',
             sidenav=work_sidenav(""), body=body))
+    # Publish the newly built packets, not the previous build's contents.
+    for _af in src.glob("*.json"):
+        shutil.copy(_af, DIST / "data" / "arguments" / _af.name)
     return len(recs)
 
 
