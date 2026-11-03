@@ -1296,6 +1296,52 @@
     }
    ],
    "bytes": 10013
+  },
+  {
+   "file": "ipvv/PARAMARTHASARA-push.md",
+   "work_hint": "paramarthasara",
+   "title": "LOGICVID SESSION — Paramārtha-sāra: can the essence of the real be asked a question? (MACHINE_DRAFT, p01 probe)",
+   "questions": [
+    {
+     "id": "param-p01-q1-unity-manifold",
+     "q": "v1 says Śambhu is one (ekam) yet manifoldly cave-entered (bahudhā guhāsu) — how does the text hold unity without contradiction?",
+     "verdict": "stated+established (sarvālayam glue; partitive-relation premise flagged)",
+     "chain": "ekaṃ + bahudhā in one line → sarvālayaṃ resolves as abode-not-partition",
+     "verses": [
+      "param-p01-v01"
+     ]
+    },
+    {
+     "id": "param-p01-q2-answer-before-question",
+     "q": "The refuge (v1) precedes the student's question (v2): is the answer structurally prior to the question?",
+     "verdict": "rival unresolved — devotional grammar vs editorial frame; B2 hounds p12 against p01",
+     "chain": "prapadye (v1) before the asking scene (v2)",
+     "verses": [
+      "param-p01-v01",
+      "param-p01-v02"
+     ]
+    },
+    {
+     "id": "param-p01-q3-refuge-from-everywhere",
+     "q": "If the ground is all-abode (sarvālayam), who displaces to take refuge (prapadye)?",
+     "verdict": "established within verse vocabulary (prapada = acknowledgment not locomotion; premise flagged)",
+     "chain": "sarvālayaṃ → nowhere outside → resort = recognition",
+     "verses": [
+      "param-p01-v01"
+     ]
+    },
+    {
+     "id": "param-p01-q4-essence-vs-showing",
+     "q": "The work is the sāra (essence) of the paramārtha — can an essence be stated, or only shown?",
+     "verdict": "stated by title, unresolved — B1: does any verse state rather than enact?",
+     "chain": "title claims sāra → p01 opens with act then story",
+     "verses": [
+      "param-p01-v01",
+      "param-p01-v02"
+     ]
+    }
+   ],
+   "bytes": 5359
   }
  ],
  "scope": "pushing sessions + probes (LOGICVID/PUSHING/IPVV/MOTHERS/RASA); research/ agent notes and *-extracted source passages excluded (referenced by sessions, not questions)"
