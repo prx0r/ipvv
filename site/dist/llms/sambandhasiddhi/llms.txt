@@ -1,12 +1,101 @@
 # sambandhasiddhi — LLM Discovery
 
 Work: sambandhasiddhi
-Passages: 3 (0 PASS, 3 BLOCKED)
+Passages: 23 (23 PASS, 0 BLOCKED)
 Data: /data/translations/sambandhasiddhi.json
 Page: /translations/sambandhasiddhi.html
 
 ## Chunks
 
-- samb-p01 (verses 2-9) [BLOCKED]
-- samb-p02 (verses 10-18) [BLOCKED]
-- samb-p03 (verses 19-21) [BLOCKED]
+- samb-p01-v01 (verses 1) [PASS]
+  L1: ## samb-p01-v01 (1)
+with-difference-non-difference-self-relation-by-whom-all-things-proved / world-traffic / work-of-who
+  L2: With relation whose self is difference-and-non-difference — by whom all things are proved, whose work is world-traffic —
+- samb-p01-v02 (verses 2) [PASS]
+  L1: ## samb-p01-v02 (2)
+by-relation-through-being-difference-etc / by-body-dawning / conquers-though-one / world-self / ligh
+  L2: Dawning by a body made of relation through being, difference, and the rest — conquering though one: the world-self, ligh
+- samb-p01-v03 (verses 3) [PASS]
+  L1: ## samb-p01-v03 (3)
+awaiting / dependence / and / not / relation / of-two-inert / from-impossibility-even-on-self-obtain
+  L2: Awaiting and dependence are no relation for the two inert ones: impossible — even where selfhood is won, they are metaph
+- samb-p01-v04 (verses 4) [PASS]
+  L1: ## samb-p01-v04 (4)
+of-non-beings-from-stating-self-obtaining-two-seatedness-thus / and / is-abandoned / form-fusion / a
+  L2: From the teaching that non-beings obtain selfhood, two-seatedness too is abandoned: form-fusion alone thus stands as rel
+- samb-p01-v05 (verses 5) [PASS]
+  L1: ## samb-p01-v05 (5)
+not-uninterruptedness-from-non-relation-if-so-of-iron-bars / hence-of-many / of-form / fusion / one-
+  L2: Not uninterruptedness — for it misses relation: if it were so, it would hold of iron bars. Hence fusion of the many's fo
+- samb-p01-v06 (verses 6) [PASS]
+  L1: ## samb-p01-v06 (6)
+not-of-one-even-in-unity-of-many / exclusion / they-say-as / others / thus-unmixed / in-themselves /
+  L2: No barring of the many in one's very oneness, others say: things unmixed in themselves — thought joins them.
+- samb-p01-v07 (verses 7) [PASS]
+  L1: ## samb-p01-v07 (7)
+since / not / mere-thought / so-far-this-from-unwardedness / from-snake-error-like-through-shining-c
+  L2: Since this is no mere thought — it cannot be dismissed: like the snake-error, it resists remedy by clinging to a shining
+- samb-p01-v08 (verses 8) [PASS]
+  L1: ## samb-p01-v08 (8)
+since-shining-clinging / not-thing-like-shining-ness / what / but-following-after-shining / erred / 
+  L2: Since clinging to a shining is not a thing resembling a shining but a following after shining — error is exactly that: a
+- samb-p01-v09 (verses 9) [PASS]
+  L1: ## samb-p01-v09 (9)
+thus-shining / indeed-in-this-of-many-in-unity-seeing / to-be-stated-justification / that-too-told /
+  L2: Thus even in this shining, the many's unity-seeing has a statable warrant — declared plainly in recognition's path.
+- samb-p02-v10 (verses 10) [PASS]
+  L1: ## samb-p02-v10 (10)
+thus / and / it-being-so / of-beings / of-consciousness-bodied / of-beings / of-Māyā-made-differenc
+  L2: Thus, of beings, of consciousness-bodied beings — even of Māyā-difference-made, unity is not hard to effect.
+- samb-p02-v11 (verses 11) [PASS]
+  L1: ## samb-p02-v11 (11)
+therein-too / what / reflection's-object / for-worldly / that / of-difference-pith-of-non-differenc
+  L2: Therein too, what is reflection's object for the worldly — that same: of the knower whose pith is difference of non-diff
+- samb-p02-v12 (verses 12) [PASS]
+  L1: ## samb-p02-v12 (12)
+activity-by-this / blocked-that / not / another-thought / should-touch / on-touching-another-though
+  L2: Activity blocked by this — it should touch no other thought; for on touching another thought, knower-difference follows.
+- samb-p02-v13 (verses 13) [PASS]
+  L1: ## samb-p02-v13 (13)
+abiding-in-that-one-reflection-by-one-word-superimposition-force-would-go / many-even-to-unity-thin
+  L2: Abiding in that-one-reflection, by one-word-superimposition force — the many too would reach unity — as pot-cloth means.
+- samb-p02-v14 (verses 14) [PASS]
+  L1: ## samb-p02-v14 (14)
+thus-is / so-far-other-and / of-qualifier-qualified / relation / for-helping / that / to-know-serve
+  L2: So there is also another — qualifier-qualified relation, for helping; it serves for knowing.
+- samb-p02-v15 (verses 15) [PASS]
+  L1: ## samb-p02-v15 (15)
+even-in-manyness / would-be-twoness / of-qualifier-qualified / from-double-reflection-born / just-a
+  L2: Even in manyness there'd be twoness — from double-reflection birth — as the king's horses, chariots, men.
+- samb-p02-v16 (verses 16) [PASS]
+  L1: ## samb-p02-v16 (16)
+reflection / of-king / thus-one / facing-own-generality / other / with-master-generality-relation /
+  L2: Reflection 'of king' is one, facing own-generality; the other — 'man,' this, with master-generality-relation.
+- samb-p02-v17 (verses 17) [PASS]
+  L1: ## samb-p02-v17 (17)
+of-king / man / thus-this / after-relation-ranged / to-be-thought-by-this-now / or / two-to-be-thou
+  L2: 'The king's man' — this, after, in relation's range — is to be thought by this; or the former two to be thought — those 
+- samb-p02-v18 (verses 18) [PASS]
+  L1: ## samb-p02-v18 (18)
+genitive-stated / relation / settled / in-qualifier / on-reaching-qualified-oneness / own / and / f
+  L2: Genitive-stated relation, settled in the qualifier — reaching qualified-oneness, yet not abandoning own form.
+- samb-p03-v19 (verses 19) [PASS]
+  L1: ## samb-p03-v19 (19)
+with-one-short / by-chief / by-pure-mutual-fitness / would-be-of-secondary / as / of-king / man / o
+  L2: With one short — by the pure, by the chief — mutual fitness would be of the secondary — as the king's man, and the brahm
+- samb-p03-v20 (verses 20) [PASS]
+  L1: ## samb-p03-v20 (20)
+so-by-other / by-chief / what-unity-other-by-still-other / or / relation-called / of-secondary / wo
+  L2: So by another chief — what other unity, or by still another — relation-called of the secondary would be — as the king's 
+- samb-p03-v21 (verses 21) [PASS]
+  L1: ## samb-p03-v21 (21)
+thus / relation's-course-told / resting-on-Māyā-knowers / intellects / of-varied-thing-views / tran
+  L2: Thus relation's course told: resting-on-Māyā-knowers — intellects of varied-thing-views, transaction-causing.
+- samb-p03-v22 (verses 22) [PASS]
+  L1: ## samb-p03-v22 (22)
+not / but / those-so / erred / all / even / moment-by-moment / self-awareness-called-of-endless-awa
+  L2: Not — but those, though called so erred — all even — moment by moment grounded in endless-awareness reflection called se
+- samb-p03-v23 (verses 23) [PASS]
+  L1: ## samb-p03-v23 (23)
+told / self-awareness-proved-this / unrefuted / useful / relation / in-recognition / full / apparat
+  L2: Told, self-awareness-proved, this: unrefuted, useful — relation in recognition — full apparatus besides.

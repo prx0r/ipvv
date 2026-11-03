@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p03-v27",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p03-v27",
+ "title": "ajadapramatrsiddhi — ajad-p03-v27",
+ "kind": "entailment",
+ "question": "So within difference, shining's shining holds good — hence recognition's word: this world is that-nondual-made.",
+ "issue": "Derived from L2 text (no argmap). So within difference, shining's shining holds good — hence recognition's word: this world is that-nondual-made.",
+ "premises": [
+  {
+   "text": "tato bhede tu bhāsasya ghaṭate bhāsamānatā tenoktam pratyabhijñāyāṃ tadadvayamayaṃ jagat",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p03-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So within difference, shining's shining holds good — hence recognition's word: this world is that-nondual-made.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p03-v27"
+ },
+ "unresolved": "",
+ "argument_text": "So within difference, shining's shining holds good — hence recognition's word: this world is that-nondual-made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p03-v27",
+ "sanskrit": "tato bhede tu bhāsasya ghaṭate bhāsamānatā tenoktam pratyabhijñāyāṃ tadadvayamayaṃ jagat",
+ "license": "CC BY-NC-SA 4.0"
+}

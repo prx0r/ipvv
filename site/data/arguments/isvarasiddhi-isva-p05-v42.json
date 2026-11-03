@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v42",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v42",
+ "title": "isvarasiddhi — isva-p05-v42",
+ "kind": "entailment",
+ "question": "Not from world-sustenance-purpose would it produce seed into sprout; but by nature — such a kit is its cause, of such a kind.",
+ "issue": "Derived from L2 text (no argmap). Not from world-sustenance-purpose would it produce seed into sprout; but by nature — such a kit is its cause, of such a kind.",
+ "premises": [
+  {
+   "text": "na lokayātrābhiprāyāt kiṃ tu svabhāvāt",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v42"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not from world-sustenance-purpose would it produce seed into sprout; but by nature — such a kit is its cause, of such a kind.",
+  "passage_id": "isvarasiddhi:isva-p05-v42"
+ },
+ "unresolved": "",
+ "argument_text": "Not from world-sustenance-purpose would it produce seed into sprout; but by nature — such a kit is its cause, of such a kind.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v42",
+ "sanskrit": "na lokayātrābhiprāyāt kiṃ tu svabhāvāt",
+ "license": "CC BY-NC 4.0"
+}

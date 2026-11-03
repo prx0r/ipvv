@@ -32,3 +32,18 @@ Owner: **ORCID 0009-0008-1635-5355** (https://orcid.org/0009-0008-1635-5355)
    set DataCite trusted party in ORCID so deposits auto-appear in your ORCID works.
 
 Free throughout: ORCID Public API (non-commercial), Zenodo (CERN), our worker/CF free tier.
+
+## Shared session secret (login = submission credential, 2026-11-03)
+
+One credential now works for chat AND the scholar submission service
+(`translation-work/tools/scholar_service.py`): the `svsess` HMAC cookie is verified
+by BOTH. The secret lives in **two places that must be rotated together**:
+
+1. worker: `wrangler secret put SESSION_SECRET`
+2. service: `/root/.scholar/session_secret` (mode 600) — file wins over env
+
+Rotate: generate hex32 → write the file (chmod 600) → pipe the same value to
+`wrangler secret put SESSION_SECRET`. Old cookies die on rotation (by design).
+The service resolves the display name from `GET /api/auth/me` (attribution comes
+from the worker, never the client); its `GET /v1/scholar/whoami` returns the
+unified identity for UIs. Legacy bearer tokens still work.

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p05-v41",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p05-v41",
+ "title": "isvarasiddhi — isva-p05-v41",
+ "kind": "entailment",
+ "question": "Through light-unity the distinct appearances would mix; yet [perceived] by some one undivided from all spirits…",
+ "issue": "Derived from L2 text (no argmap). Through light-unity the distinct appearances would mix; yet [perceived] by some one undivided from all spirits…",
+ "premises": [
+  {
+   "text": "prakāśaikyāt saṃkīryeran ekena kenacit",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p05-v41"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Through light-unity the distinct appearances would mix; yet [perceived] by some one undivided from all spirits…",
+  "passage_id": "isvarasiddhi:isva-p05-v41"
+ },
+ "unresolved": "",
+ "argument_text": "Through light-unity the distinct appearances would mix; yet [perceived] by some one undivided from all spirits…",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p05-v41",
+ "sanskrit": "prakāśaikyāt saṃkīryeran ekena kenacit",
+ "license": "CC BY-NC-SA 4.0"
+}

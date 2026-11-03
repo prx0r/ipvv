@@ -8,7 +8,7 @@
  "issue": "Derived from L2 text (no argmap). In the heart, Kāma wakes to kill.",
  "premises": [
   {
-   "text": "manmathe ca hṛdi hantum udyate",
+   "text": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate",
    "label": "Sanskrit source",
    "passage_id": "ghatakarpara:ghat-p01-v01"
   }
@@ -25,6 +25,6 @@
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "ghatakarpara:ghat-p01-v01",
- "sanskrit": "manmathe ca hṛdi hantum udyate",
+ "sanskrit": "manmathe ca hṛdi hantum udyate proṣitapramadayedam udyate",
  "license": "CC BY-NC-SA 4.0"
 }

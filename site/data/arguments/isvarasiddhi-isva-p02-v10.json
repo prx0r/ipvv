@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p02-v10",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p02-v10",
+ "title": "isvarasiddhi — isva-p02-v10",
+ "kind": "entailment",
+ "question": "As combination-ness is seen merely for another's sake — in the eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+ "issue": "Derived from L2 text (no argmap). As combination-ness is seen merely for another's sake — in the eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+ "premises": [
+  {
+   "text": "yathā pārārthyamātreṇa saṃghātatve'nvitekṣite cakṣurādau tadaucityādātmeṣṭo'saṃhataḥ paraḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p02-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "As combination-ness is seen merely for another's sake — in the eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+  "passage_id": "isvarasiddhi:isva-p02-v10"
+ },
+ "unresolved": "",
+ "argument_text": "As combination-ness is seen merely for another's sake — in the eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p02-v10",
+ "sanskrit": "yathā pārārthyamātreṇa saṃghātatve'nvitekṣite cakṣurādau tadaucityādātmeṣṭo'saṃhataḥ paraḥ",
+ "license": "CC BY-NC 4.0"
+}

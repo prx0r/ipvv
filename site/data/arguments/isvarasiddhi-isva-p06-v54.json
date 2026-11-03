@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v54",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v54",
+ "title": "isvarasiddhi — isva-p06-v54",
+ "kind": "entailment",
+ "question": "This reason, aimed at the Supreme Lord by the self-entrusted self, is not overpowered by reason-faults in the least — nor the rival's either; only this is said.",
+ "issue": "Derived from L2 text (no argmap). This reason, aimed at the Supreme Lord by the self-entrusted self, is not overpowered by reason-faults in the least — nor the rival's either; only this is said.",
+ "premises": [
+  {
+   "text": "sa eṣa hetuḥ parameśvaraṃ prati prayujyamānaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v54"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This reason, aimed at the Supreme Lord by the self-entrusted self, is not overpowered by reason-faults in the least — nor the rival's either; only this is said.",
+  "passage_id": "isvarasiddhi:isva-p06-v54"
+ },
+ "unresolved": "",
+ "argument_text": "This reason, aimed at the Supreme Lord by the self-entrusted self, is not overpowered by reason-faults in the least — nor the rival's either; only this is said.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v54",
+ "sanskrit": "sa eṣa hetuḥ parameśvaraṃ prati prayujyamānaḥ",
+ "license": "CC BY-NC 4.0"
+}

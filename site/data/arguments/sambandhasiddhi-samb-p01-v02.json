@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p01-v02",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p01-v02",
+ "title": "sambandhasiddhi — samb-p01-v02",
+ "kind": "entailment",
+ "question": "Dawning by a body made of relation through being, difference, and the rest — conquering though one: the world-self, light, the supreme Lord.",
+ "issue": "Derived from L2 text (no argmap). Dawning by a body made of relation through being, difference, and the rest — conquering though one: the world-self, light, the supreme Lord.",
+ "premises": [
+  {
+   "text": "bhāvabhedādisaṃbandhamayena vapuṣonmiṣan jayatyeko'pi viśvātmā prakāśaḥ parameśvaraḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p01-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Dawning by a body made of relation through being, difference, and the rest — conquering though one: the world-self, light, the supreme Lord.",
+  "passage_id": "sambandhasiddhi:samb-p01-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Dawning by a body made of relation through being, difference, and the rest — conquering though one: the world-self, light, the supreme Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p01-v02",
+ "sanskrit": "bhāvabhedādisaṃbandhamayena vapuṣonmiṣan jayatyeko'pi viśvātmā prakāśaḥ parameśvaraḥ",
+ "license": "CC BY-NC 4.0"
+}

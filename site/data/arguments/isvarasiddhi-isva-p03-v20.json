@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p03-v20",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p03-v20",
+ "title": "isvarasiddhi — isva-p03-v20",
+ "kind": "entailment",
+ "question": "Through that, person's enjoyment-proving again and again — so change would be nothing hard.",
+ "issue": "Derived from L2 text (no argmap). Through that, person's enjoyment-proving again and again — so change would be nothing hard.",
+ "premises": [
+  {
+   "text": "tenāsya bhogasaṃsiddhiḥ puruṣasya yathā yathā tathā tathā pariṇatiḥ syānna kiṃcana durghaṭam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p03-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Through that, person's enjoyment-proving again and again — so change would be nothing hard.",
+  "passage_id": "isvarasiddhi:isva-p03-v20"
+ },
+ "unresolved": "",
+ "argument_text": "Through that, person's enjoyment-proving again and again — so change would be nothing hard.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p03-v20",
+ "sanskrit": "tenāsya bhogasaṃsiddhiḥ puruṣasya yathā yathā tathā tathā pariṇatiḥ syānna kiṃcana durghaṭam",
+ "license": "CC BY-NC 4.0"
+}

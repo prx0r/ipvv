@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:sambandhasiddhi:samb-p03-v21",
+ "work_id": "sambandhasiddhi",
+ "passage_id": "sambandhasiddhi:samb-p03-v21",
+ "title": "sambandhasiddhi — samb-p03-v21",
+ "kind": "entailment",
+ "question": "Thus relation's course told: resting-on-Māyā-knowers — intellects of varied-thing-views, transaction-causing.",
+ "issue": "Derived from L2 text (no argmap). Thus relation's course told: resting-on-Māyā-knowers — intellects of varied-thing-views, transaction-causing.",
+ "premises": [
+  {
+   "text": "iti saṃbandhagatyuktā māyīyajñātṛniṣṭhitāḥ dhiyo vibhinnārthadṛśo vyavahārapravartikāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "sambandhasiddhi:samb-p03-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus relation's course told: resting-on-Māyā-knowers — intellects of varied-thing-views, transaction-causing.",
+  "passage_id": "sambandhasiddhi:samb-p03-v21"
+ },
+ "unresolved": "",
+ "argument_text": "Thus relation's course told: resting-on-Māyā-knowers — intellects of varied-thing-views, transaction-causing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "sambandhasiddhi:samb-p03-v21",
+ "sanskrit": "iti saṃbandhagatyuktā māyīyajñātṛniṣṭhitāḥ dhiyo vibhinnārthadṛśo vyavahārapravartikāḥ",
+ "license": "CC BY-NC 4.0"
+}

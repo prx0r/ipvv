@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v48",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v48",
+ "title": "isvarasiddhi — isva-p06-v48",
+ "kind": "entailment",
+ "question": "By the freed spirit — done with tasks, need-free — he stands alone; not so: needlessness belongs to no spirit ever, nor to mind.",
+ "issue": "Derived from L2 text (no argmap). By the freed spirit — done with tasks, need-free — he stands alone; not so: needlessness belongs to no spirit ever, nor to mind.",
+ "premises": [
+  {
+   "text": "mukta-puṃsā kṛtārthatvād anarthitvāt sa kevalaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v48"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By the freed spirit — done with tasks, need-free — he stands alone; not so: needlessness belongs to no spirit ever, nor to mind.",
+  "passage_id": "isvarasiddhi:isva-p06-v48"
+ },
+ "unresolved": "",
+ "argument_text": "By the freed spirit — done with tasks, need-free — he stands alone; not so: needlessness belongs to no spirit ever, nor to mind.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v48",
+ "sanskrit": "mukta-puṃsā kṛtārthatvād anarthitvāt sa kevalaḥ",
+ "license": "CC BY-NC 4.0"
+}

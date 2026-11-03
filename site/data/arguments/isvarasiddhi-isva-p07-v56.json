@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p07-v56",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p07-v56",
+ "title": "isvarasiddhi — isva-p07-v56",
+ "kind": "entailment",
+ "question": "One's own self indeed — this — flashes forth: Īśvara within all breathers, maker and knower too; yet recognition of the beyond is to be effected, and the joining is made by us elsewhere. But Īśvara-proved stands even in duality — fitting, and more: fire shines at midnight.",
+ "issue": "Derived from L2 text (no argmap). One's own self indeed — this — flashes forth: Īśvara within all breathers, maker and knower too; yet recognition of the beyond is to be effected, and the joining is made by us elsewhere. But Īśvara-proved stands even in duality — fitting, and more: fire shines at midnight.",
+ "premises": [
+  {
+   "text": "svātmaivāyaṃ sphurati sakalaprāṇināmīśvaro'ntaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p07-v56"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "One's own self indeed — this — flashes forth: Īśvara within all breathers, maker and knower too; yet recognition of the beyond is to be effected, and the joining is made by us elsewhere. But Īśvara-proved stands even in duality — fitting, and more: fire shines at midnight.",
+  "passage_id": "isvarasiddhi:isva-p07-v56"
+ },
+ "unresolved": "",
+ "argument_text": "One's own self indeed — this — flashes forth: Īśvara within all breathers, maker and knower too; yet recognition of the beyond is to be effected, and the joining is made by us elsewhere. But Īśvara-proved stands even in duality — fitting, and more: fire shines at midnight.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p07-v56",
+ "sanskrit": "svātmaivāyaṃ sphurati sakalaprāṇināmīśvaro'ntaḥ",
+ "license": "CC BY-NC 4.0"
+}

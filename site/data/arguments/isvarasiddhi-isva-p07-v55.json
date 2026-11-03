@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p07-v55",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p07-v55",
+ "title": "isvarasiddhi — isva-p07-v55",
+ "kind": "entailment",
+ "question": "Though proved by a thousand blazing reasons, it succeeds not for the deluded-minded; Maheśvara, placed on the palm, yet flees the fate-struck — the true jewel.",
+ "issue": "Derived from L2 text (no argmap). Though proved by a thousand blazing reasons, it succeeds not for the deluded-minded; Maheśvara, placed on the palm, yet flees the fate-struck — the true jewel.",
+ "premises": [
+  {
+   "text": "samujjvalan nyāyasahasrasādhito'pi siddhiṃ na vimūḍhacetasām",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p07-v55"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Though proved by a thousand blazing reasons, it succeeds not for the deluded-minded; Maheśvara, placed on the palm, yet flees the fate-struck — the true jewel.",
+  "passage_id": "isvarasiddhi:isva-p07-v55"
+ },
+ "unresolved": "",
+ "argument_text": "Though proved by a thousand blazing reasons, it succeeds not for the deluded-minded; Maheśvara, placed on the palm, yet flees the fate-struck — the true jewel.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p07-v55",
+ "sanskrit": "samujjvalan nyāyasahasrasādhito'pi siddhiṃ na vimūḍhacetasām",
+ "license": "CC BY-NC 4.0"
+}

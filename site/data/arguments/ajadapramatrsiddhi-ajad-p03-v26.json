@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p03-v26",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p03-v26",
+ "title": "ajadapramatrsiddhi — ajad-p03-v26",
+ "kind": "entailment",
+ "question": "Whatever grounds the ordering of things — pervasion and linking of the I-sharer — fits nothing inert.",
+ "issue": "Derived from L2 text (no argmap). Whatever grounds the ordering of things — pervasion and linking of the I-sharer — fits nothing inert.",
+ "premises": [
+  {
+   "text": "bhāvavyavasthā yan niṣṭhā tasyāhaṃbhāvabhāginaḥ vyāpitvam anusaṃdhānaṃ taj jaḍasya na yujyate",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p03-v26"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whatever grounds the ordering of things — pervasion and linking of the I-sharer — fits nothing inert.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p03-v26"
+ },
+ "unresolved": "",
+ "argument_text": "Whatever grounds the ordering of things — pervasion and linking of the I-sharer — fits nothing inert.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p03-v26",
+ "sanskrit": "bhāvavyavasthā yan niṣṭhā tasyāhaṃbhāvabhāginaḥ vyāpitvam anusaṃdhānaṃ taj jaḍasya na yujyate",
+ "license": "CC BY-NC-SA 4.0"
+}

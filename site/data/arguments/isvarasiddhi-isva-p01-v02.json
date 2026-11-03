@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p01-v02",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p01-v02",
+ "title": "isvarasiddhi — isva-p01-v02",
+ "kind": "entailment",
+ "question": "Bodies and the rest have conscious cause, distinct-arranged — pots … like atoms.",
+ "issue": "Derived from L2 text (no argmap). Bodies and the rest have conscious cause, distinct-arranged — pots … like atoms.",
+ "premises": [
+  {
+   "text": "tanvādi buddhimaddhetu saṃniveśaviśeṣavat ghaṭa..............................................paramāṇuvat",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p01-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bodies and the rest have conscious cause, distinct-arranged — pots … like atoms.",
+  "passage_id": "isvarasiddhi:isva-p01-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Bodies and the rest have conscious cause, distinct-arranged — pots … like atoms.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p01-v02",
+ "sanskrit": "tanvādi buddhimaddhetu saṃniveśaviśeṣavat ghaṭa..............................................paramāṇuvat",
+ "license": "CC BY-NC 4.0"
+}

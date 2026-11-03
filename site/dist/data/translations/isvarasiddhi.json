@@ -1,317 +1,3635 @@
 [
  {
-  "chunk": "isva-p01",
-  "verses": "1-9",
-  "sanskrit": "karoti tamahaṃ devamekaṃ naumi maheśvaram ghaṭa..............................................paramāṇuvat ..............................................ṭato ghaṭo yathā niścito'rtho'sya saṃsthāne tasminnarthakriyācite kartā vijño vicitraitadupayogābhisaṃdhimān saṃniveśaviśeṣo'yamanupādānasaṃbhavī na hi tādṛśavaicitryaviduṣaḥ syādanīśitā yato viruddhatāsya syādasiddhānvayatāpi vā pakṣadharmabalāddhīmānkvacitkaścitpratīyate",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:cc8e61a170c0",
-  "status": "OK",
+  "chunk": "isva-p01-v01",
+  "verses": "1",
+  "sanskrit": "karoti tamahaṃ devamekaṃ naumi maheśvaram",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "74 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.471"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v01 (1)\nmakes / him / I / god / one / praise / Maheśvara-Lord // isva-p01",
+  "l2": "The maker — him, I praise, the one God, Maheśvara the Lord.",
   "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    40,
+    41
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Who makes — him, I praise,\nthe one God, Maheśvara the Lord.",
+  "l4": "Who makes — him, I praise,\nthe one God, Maheśvara the Lord.",
   "source_lines": 41,
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 7,
-  "license": "FREE"
+  "match_words": 3
  },
  {
-  "chunk": "isva-p02",
-  "verses": "10-18",
-  "sanskrit": "cakṣurādau tadaucityādātmeṣṭo'saṃhataḥ paraḥ vahnistatpratipattyaiva khādiratvena siddhyati tathā vaicitryamātreṇa na svalakṣaṇalakṣmaṇā saṃsthānamātra eva............ hetutvaṃ buddhiśālinaḥ tadidaṃ sakalaṃ viśvaṃ yuktamīśvaranirmitam kecitkathaṃcideveyurupādānaiḥ samāgamam citrayanti hi kāryāṇi bhaumodakarasā iva rūpavaicitryayogāya kāryeṣu na tathā kṣamāḥ na tāvataiva sarvatra vyavasthā ghaṭate tathā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:cb41e4ed291b",
-  "status": "OK",
+  "chunk": "isva-p01-v02",
+  "verses": "2",
+  "sanskrit": "tanvādi buddhimaddhetu saṃniveśaviśeṣavat ghaṭa..............................................paramāṇuvat",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "74 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.471"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v02 (2)\nbodies-etc. / with-conscious-cause / having-distinct-arrangement / pot-LACUNA-like-atoms // isva-p01",
+  "l2": "Bodies and the rest have conscious cause, distinct-arranged — pots … like atoms.",
   "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    49,
+    53
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Bodies and the rest have conscious cause,\ndistinct-arrayed — pots … like atoms.",
+  "l4": "Bodies and the rest have conscious cause,\ndistinct-arrayed — pots … like atoms.",
+  "source_lines": 47,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p01-v03",
+  "verses": "3",
+  "sanskrit": "buddhimatprorito vā.......................................... ..............................................ṭato ghaṭo yathā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v03 (3)\nconscious / urged / or / LACUNA / remnant-ṭato / pot / as // isva-p01",
+  "l2": "Conscious-urged — or … […] as pot from [tha]t.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    68,
+    69
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Conscious-urged — or …\n[…] as pot from [tha]t.",
+  "l4": "Conscious-urged — or …\n[…] as pot from [tha]t.",
+  "source_lines": 68,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match": "unique-solo"
+ },
+ {
+  "chunk": "isva-p01-v04",
+  "verses": "4",
+  "sanskrit": ".....................................................ksaṃsthānavarjitaḥ niścito'rtho'sya saṃsthāne tasminnarthakriyācite",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v04 (4)\nLACUNA-without-arrangement / certain / thing / of-it / in-locus / in-that / function / heaped-remnant // isva-p01",
+  "l2": "… devoid of locus-form. Fixed is its meaning in place — in that action-heaped …",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    100,
+    101
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "… devoid of locus-form. Fixed,\nits meaning stands in place — in that action-heaped …",
+  "l4": "… devoid of locus-form. Fixed,\nits meaning stands in place — in that action-heaped …",
+  "source_lines": 100,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p01-v05",
+  "verses": "5",
+  "sanskrit": "vicitre buddhimāneva ghaṭādiṣviva lakṣyate kartā vijño vicitraitadupayogābhisaṃdhimān",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v05 (5)\nin-varied / conscious / indeed / among-pots / as-if / is-marked / maker / wise / having-resolve-for-varied-this-use // isva-p01",
+  "l2": "In the varied, the conscious alone is marked — as among pots. The maker, wise, resolved on varied use.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    105,
+    106
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Amid the varied, mind alone stands clear —\npots prove it: the wise Maker means each form for use.",
+  "l4": "Amid the varied, mind alone stands clear —\npots prove it: the wise Maker means each form for use.",
+  "source_lines": 60,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p01-v06",
+  "verses": "6",
+  "sanskrit": "asti cārthakriyāyoge śarīrabhuvanādiṣu saṃniveśaviśeṣo'yamanupādānasaṃbhavī",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v06 (6)\nis / and / in-function-yoking / in-bodies-worlds-etc. / distinct-arrangement / this / without-material-possible // isva-p01",
+  "l2": "There is, in function-yoking, among bodies and worlds, this distinct array — never from mere matter.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    119,
+    120
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "There is, in function-yoking, among bodies and worlds,\nthis distinct array — never from mere matter.",
+  "l4": "There is, in function-yoking, among bodies and worlds,\nthis distinct array — never from mere matter.",
+  "source_lines": 119,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p01-v07",
+  "verses": "7",
+  "sanskrit": "tadatra buddhimatkartṛsiddhyā siddheśvarakriyā na hi tādṛśavaicitryaviduṣaḥ syādanīśitā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v07 (7)\nthat / here / by-proving-conscious-maker / proved-Lord-action / not / indeed / of-such-variety-knowers / would-be / non-lordliness // isva-p01",
+  "l2": "Here then — conscious makers proved, the Lord's act proved: for such-variety-knowers, lordlessness is impossible.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    133,
+    134
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Here then — conscious makers proved, the Lord's act proved:\nfor knowers of such variety, no lordlessness could be.",
+  "l4": "Here then — conscious makers proved, the Lord's act proved:\nfor knowers of such variety, no lordlessness could be.",
+  "source_lines": 133,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p01-v08",
+  "verses": "8",
+  "sanskrit": "na kulālena neśenāpyanvayo'tra pradarśyate yato viruddhatāsya syādasiddhānvayatāpi vā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v08 (8)\nnot / by-potter / not / by-Lord / too / agreement / here / is-shown / since / opposition / of-it / would-be / unproved-agreement / too / or // isva-p01",
+  "l2": "Neither potter nor Lord shows agreement here — for him, opposition would follow, or agreement unproved.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    188,
+    189
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Neither potter nor Lord shows agreement here —\nsince for him, contradiction would follow — or else unproved accord.",
+  "l4": "Neither potter nor Lord shows agreement here —\nsince for him, contradiction would follow — or else unproved accord.",
+  "source_lines": 188,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p01-v09",
+  "verses": "9",
+  "sanskrit": "kevalaṃ buddhimanmātravyāptisaṃdarśanādapi pakṣadharmabalāddhīmānkvacitkaścitpratīyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "74 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.471"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p01-v09 (9)\nmerely / by-conscious-only-pervasion-showing / too / by-thesis-property-force / wise / somewhere / someone / is-understood // isva-p01",
+  "l2": "Merely showing pervasion with the conscious alone — by thesis-force, somewhere, someone wise is understood.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    190,
+    191
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cc8e61a170c0",
+  "license": "FREE",
+  "l3": "Merely showing pervasion with the conscious alone —\nby thesis-force, somewhere, someone wise is understood.",
+  "l4": "Merely showing pervasion with the conscious alone —\nby thesis-force, somewhere, someone wise is understood.",
+  "source_lines": 178,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p02-v10",
+  "verses": "10",
+  "sanskrit": "yathā pārārthyamātreṇa saṃghātatve'nvitekṣite cakṣurādau tadaucityādātmeṣṭo'saṃhataḥ paraḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v10 (10)\nas / for-another's-sake-only / in-combination / seen / in-eye-etc. / by-that-fitness / self-dear / uncompounded / higher // isva-p02",
+  "l2": "As combination-ness is seen merely for another's sake — in the eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    192,
+    194
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "As combination seen for others' sake alone —\nin eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+  "l4": "As combination seen for others' sake alone —\nin eye and the rest, by that fitness: the self-dear, uncompounded higher.",
+  "source_lines": 146,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p02-v11",
+  "verses": "11",
+  "sanskrit": "yathā vā dūrato dhūmātsiddhiḥ khadirakānane vahnistatpratipattyaiva khādiratvena siddhyati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v11 (11)\nas / or / from-afar / from-smoke / proving / in-khadira-grove / fire / by-knowing-it / even / as-khadira-wood / is-proved // isva-p02",
+  "l2": "As from afar, from smoke, proving in a khadira-grove — fire is proved by just knowing it, as khadira-wood.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    195,
+    196
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "As from afar, from smoke, proof comes in the khadira grove —\nfire stands proved by knowing it: as khadira-wood.",
+  "l4": "As from afar, from smoke, proof comes in the khadira grove —\nfire stands proved by knowing it: as khadira-wood.",
+  "source_lines": 195,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p02-v12",
+  "verses": "12",
+  "sanskrit": "evaṃ ca hetuḥ saṃsthānamātramatra viśeṣitam tathā vaicitryamātreṇa na svalakṣaṇalakṣmaṇā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v12 (12)\nthus / and / cause / locus-form-only / here / distinguished / so / by-variety-merely / not / as-svalakṣaṇa-mark // isva-p02",
+  "l2": "Thus the cause: locus-form alone, here distinguished — not by mere variety as svalakṣaṇa-mark.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    239,
+    240
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "So the cause: bare locus-form, here set apart —\nnot by mere variety, nor as particular's mark.",
+  "l4": "So the cause: bare locus-form, here set apart —\nnot by mere variety, nor as particular's mark.",
+  "source_lines": 239,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p02-v13",
+  "verses": "13",
+  "sanskrit": "paraistairapi hetūnāṃ ghaṭātmapravivecane saṃsthānamātra eva............ hetutvaṃ buddhiśālinaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v13 (13)\nby-others / too / even / of-reasons / in-pot-self-sifting / locus-form-alone / even / LACUNA / causehood / of-conscious-possessor // isva-p02",
+  "l2": "By others too, of reasons, in pot-self-sifting — locus-form alone … even … causehood of the conscious one.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    241,
+    242
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "By others too, sifting reasons in the pot's self-proving —\nbare locus-form … even … causehood of the conscious.",
+  "l4": "By others too, sifting reasons in the pot's self-proving —\nbare locus-form … even … causehood of the conscious.",
+  "source_lines": 241,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 6
+ },
+ {
+  "chunk": "isva-p02-v14",
+  "verses": "14",
+  "sanskrit": "anyonyārthakriyāyogyasaṃniveśaviśeṣitam tadidaṃ sakalaṃ viśvaṃ yuktamīśvaranirmitam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v14 (14)\nmutual-function-fit-locus-formed / that / this / whole / world / rightly / Lord-made // isva-p02",
+  "l2": "Mutual-function-fit-locus-formed — that whole world, this — rightly Lord-made.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    243,
+    244
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "Shaped for mutual use, locus-formed — that whole world, this —\nrightly Lord-made.",
+  "l4": "Shaped for mutual use, locus-formed — that whole world, this —\nrightly Lord-made.",
+  "source_lines": 243,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p02-v15",
+  "verses": "15",
+  "sanskrit": "atrocyate gatiścitrā dṛśyate sahakāriṇām kecitkathaṃcideveyurupādānaiḥ samāgamam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v15 (15)\nhere-it-is-replied / strange-way / is-seen / of-helpers / some / somehow / would-join / with-materials / joining // isva-p02",
+  "l2": "Here is the reply: a strange way of helpers is seen — some would somehow join with materials — a joining.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    278,
+    279
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "Here is the reply: a strange way of helpers is seen —\nsome would join with stuff, somehow — a joining.",
+  "l4": "Here is the reply: a strange way of helpers is seen —\nsome would join with stuff, somehow — a joining.",
+  "source_lines": 278,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 6
+ },
+ {
+  "chunk": "isva-p02-v16",
+  "verses": "16",
+  "sanskrit": "hetumantaḥpraviśyānye prāpyopādānarūpatām citrayanti hi kāryāṇi bhaumodakarasā iva",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v16 (16)\nhelpers / entering / others / reaching / material-form / picture / indeed / effects / earth-water-juices-like / as-if // isva-p02",
+  "l2": "Helpers, entering as others, reaching material-form — picture effects indeed — like earth-water-juices.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    280,
+    281
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "Helpers, entering as others, reaching matter's shape —\npicture effects indeed — like earth-and-water saps.",
+  "l4": "Helpers, entering as others, reaching matter's shape —\npicture effects indeed — like earth-and-water saps.",
+  "source_lines": 280,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p02-v17",
+  "verses": "17",
+  "sanskrit": "anye punarupādāne bahirviparivartinaḥ rūpavaicitryayogāya kāryeṣu na tathā kṣamāḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v17 (17)\nothers / again / in-material / outward-changing / for-form-variety-yoking / in-effects / not / so / capable // isva-p02",
+  "l2": "Others again, in matter, outward-changing — for yoking form-variety in effects, they are not so capable.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    282,
+    283
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "Others again, in matter, outward-bent —\nunequal to yoking varied form in effects.",
+  "l4": "Others again, in matter, outward-bent —\nunequal to yoking varied form in effects.",
+  "source_lines": 282,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p02-v18",
+  "verses": "18",
+  "sanskrit": "tatra buddhimato nāma prasaro yadi kalpyate na tāvataiva sarvatra vyavasthā ghaṭate tathā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "88 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.929"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p02-v18 (18)\nthere / of-conscious / by-name / spread / if / be-imagined / not / by-that-much / alone / everywhere / order / holds-together / thus // isva-p02",
+  "l2": "There, if the conscious one's spread is imagined in name — not by that alone does order hold everywhere. So it stands.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    284,
+    285
+   ]
+  },
+  "immutable_id": "pt:pid:isva:cb41e4ed291b",
+  "license": "FREE",
+  "l3": "There, if the conscious one's spread be fancied in name —\nyet not by that alone does order hold everywhere.",
+  "l4": "There, if the conscious one's spread be fancied in name —\nyet not by that alone does order hold everywhere.",
+  "source_lines": 275,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 7
+ },
+ {
+  "chunk": "isva-p03-v19",
+  "verses": "19",
+  "sanskrit": "asti cāsya pradhānasya prasiddhasyānvayādinā svārthatādiniṣedhena sādhitā puruṣārthatā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v19 (19)\nis / and / of-this / of-pradhāna / of-proved / by-anvaya-etc. / by-self-aim / etc. / by-denial / proved / person-aim-ness // isva-p03",
+  "l2": "And of this proved pradhāna there is, by anvaya and the rest — by denial of self-aims and the like, person-aim-ness is proved.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    386,
+    387
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Pradhāna stands proved there, by presence and the rest —\ndenying self-aims and their kin, person-aim-ness stands proved.",
+  "l4": "Pradhāna stands proved there, by presence and the rest —\ndenying self-aims and their kin, person-aim-ness stands proved.",
+  "source_lines": 386,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p03-v20",
+  "verses": "20",
+  "sanskrit": "tenāsya bhogasaṃsiddhiḥ puruṣasya yathā yathā tathā tathā pariṇatiḥ syānna kiṃcana durghaṭam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v20 (20)\nby-that / of-this / enjoyment-proving / of-person / as / as / so / so / change / would-be / not / anything / hard-to-effect // isva-p03",
+  "l2": "Through that, person's enjoyment-proving again and again — so change would be nothing hard.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    388,
+    389
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Through that, proving spirit's joy again and again —\nno change would be hard at all.",
+  "l4": "Through that, proving spirit's joy again and again —\nno change would be hard at all.",
+  "source_lines": 388,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 6
+ },
+ {
+  "chunk": "isva-p03-v21",
+  "verses": "21",
+  "sanskrit": "ata eva pradhānasya mahattvapariṇāminaḥ nimittakāraṇaṃ nānyatpuruṣārthodyamādṛte",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v21 (21)\nhence / indeed / of-pradhāna / of-great-becoming / nimitta-cause / not / other / than-person-aim-striving / except // isva-p03",
+  "l2": "Hence indeed, for ever-becoming pradhāna, no efficient cause but person-aim-striving.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    390,
+    391
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Hence indeed, for ever-becoming pradhāna, no mover\nbut person-aim-striving.",
+  "l4": "Hence indeed, for ever-becoming pradhāna, no mover\nbut person-aim-striving.",
+  "source_lines": 390,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p03-v22",
+  "verses": "22",
+  "sanskrit": "svabhāva eva caiṣo'sya mūlahetostathekṣaṇāt cittabhūmeradharataḥ śarīrādividhiṃ prati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v22 (22)\nown-nature / indeed / and / this / of-this / from-root-cause / from-then-seeing / below-mind-ground / below / body-etc. / ordaining / toward // isva-p03",
+  "l2": "Own-nature indeed — and this of this — from seeing the root-cause on; below mind-ground, toward body-ordaining.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    395,
+    396
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Own-nature indeed — and this of this — from root-cause-seeing on;\nbelow mind-ground, toward the body's ordaining.",
+  "l4": "Own-nature indeed — and this of this — from root-cause-seeing on;\nbelow mind-ground, toward the body's ordaining.",
   "source_lines": null,
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 11,
-  "license": "FREE"
+  "match_words": 5
  },
  {
-  "chunk": "isva-p03",
-  "verses": "19-27",
-  "sanskrit": "svārthatādiniṣedhena sādhitā puruṣārthatā tathā tathā pariṇatiḥ syānna kiṃcana durghaṭam nimittakāraṇaṃ nānyatpuruṣārthodyamādṛte cittabhūmeradharataḥ śarīrādividhiṃ prati tato'tra kutra vyāpāra īśvarasyopakalpyatām raha(natva)sya mūlaprakṛtāvantaḥ karaṇacāriṇaḥ yadyathā pariṇāmaikasvabhāvaṃ tatra tattataḥ mahadādivikāraughapariṇāmasvabhāvakam puruṣārthasvabhāvatvaṃ samastārthakriyāsu cet",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:538c73f54d88",
-  "status": "OK",
+  "chunk": "isva-p03-v23",
+  "verses": "23",
+  "sanskrit": "nimittakāraṇaṃ karma syādapyādyasvabhāvataḥ tato'tra kutra vyāpāra īśvarasyopakalpyatām",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "86 parsed, 0 failed"
    ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
+   "ALIGNMENT": [
     true,
-    "terms consistent"
+    "min_ratio=0.906"
    ],
-   "CITATION_GROUNDING": [
+   "L2_CITES": [
     true,
-    "all technical terms grounded in source"
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v23 (23)\nnimitta-cause / karma / would-be / even / original-natured / by-own-nature / then / here / where / business / of-Īśvara / let-be-conceived // isva-p03",
+  "l2": "As efficient cause, karma could be original-natured even. Then here — where is Īśvara's business to be conceived?",
   "source_file": "isvarasiddhi.txt",
-  "source_lines": 387,
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    397,
+    398
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "As mover, karma could be primal-natured even.\nThen here — where is Īśvara's work to be conceived?",
+  "l4": "As mover, karma could be primal-natured even.\nThen here — where is Īśvara's work to be conceived?",
+  "source_lines": 391,
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 12,
-  "license": "FREE"
+  "match_words": 5
  },
  {
-  "chunk": "isva-p04",
-  "verses": "28-36",
-  "sanskrit": "tadvinā kumbhakāreṇa ghaṭo'pi na bhavetkatham atha svabhāva eṣo'sya yatkulālādyapekṣaṇam naivopādanahetvantaḥ praveśātsahakāribhiḥ lokayātrānusaṃdhānavatīṃ prajñāṃ vinā nahi sthūlatāmātrameva syānna tu lokopayoginī kulālasahakāritvamātrāccejjāyate ghaṭaḥ ata evārthanīyatvātsaṃniveśo viśiṣyate na ceśvaro'nīśvaro vā prakṛto'trāṇulakṣaṇaḥ na ca pradhānasyecchādisaṃbhavaḥ puruṣārthatā",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:3a47eae83295",
-  "status": "OK",
+  "chunk": "isva-p03-v24",
+  "verses": "24",
+  "sanskrit": "raha(natva)sya mūlaprakṛtāvantaḥ karaṇacāriṇaḥ īśvarasyopakalpyeta pariṇāmanimittatā",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "86 parsed, 0 failed"
    ],
-   "ABSTENTION": [
-    false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
-   ],
-   "TERM_CONSISTENCY": [
+   "ALIGNMENT": [
     true,
-    "terms consistent"
+    "min_ratio=0.906"
    ],
-   "CITATION_GROUNDING": [
+   "L2_CITES": [
     true,
-    "all technical terms grounded in source"
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v24 (24)\nof-secret-nature / in-root-nature / protecting / inner-organ-rangers / of-Īśvara / let-be-conceived / change-nimittahood // isva-p03",
+  "l2": "Protecting the inner-organ-rangers in root-nature, of secret nature — let Īśvara's change-causality be conceived.",
   "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    411,
+    415
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Warding the inner rangers in root-nature, of secret kind —\nlet Īśvara be thought change-trigger.",
+  "l4": "Warding the inner rangers in root-nature, of secret kind —\nlet Īśvara be thought change-trigger.",
+  "source_lines": 411,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p03-v25",
+  "verses": "25",
+  "sanskrit": "yadyathā pariṇāmaikasvabhāvaṃ tatra tattataḥ ananyāpekṣi bījādisāmagrī yadvadaṅkure",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v25 (25)\nif / then / of-uniform-change-nature / there / thence / independent / seed-kitchen / as / in-sprout // isva-p03",
+  "l2": "If of uniform-change-nature — then thence: independent seed-kitchen, as in sprouts.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    434,
+    435
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "If of one-change-nature — then thence:\na beholden-to-none seed-kit, as in sprouts.",
+  "l4": "If of one-change-nature — then thence:\na beholden-to-none seed-kit, as in sprouts.",
+  "source_lines": 421,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 6
+ },
+ {
+  "chunk": "isva-p03-v26",
+  "verses": "26",
+  "sanskrit": "mahadādivikāraughapariṇāmasvabhāvakam triguṇātma pradhānaṃ ca tena sāṃkhyamanīśvaram",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v26 (26)\nmahad-etc.-change-flood-change-natured / three-natured-self / pradhāna / and / thereby / Sāṅkhya / godless // isva-p03",
+  "l2": "The mahad-first-change-torrent-natured, three-natured pradhāna-self — thereby godless Sāṅkhya.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    439,
+    440
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "Mahat-led, torrent-like in change, triple-stranded root self —\nand thereby: godless Sāṅkhya.",
+  "l4": "Mahat-led, torrent-like in change, triple-stranded root self —\nand thereby: godless Sāṅkhya.",
+  "source_lines": 439,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p03-v27",
+  "verses": "27",
+  "sanskrit": "puruṣārthasvabhāvatvaṃ samastārthakriyāsu cet nimittakāraṇatvena pradhānasyopakalpyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "86 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.906"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p03-v27 (27)\nperson-aim-naturehood / in-all-function-acts / if / by-nimitta-causehood / by-pradhāna / is-conceived // isva-p03",
+  "l2": "If puruṣārtha-natured in all function-acts — by pradhāna it is conceived as efficient.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    467,
+    468
+   ]
+  },
+  "immutable_id": "pt:pid:isva:538c73f54d88",
+  "license": "FREE",
+  "l3": "If purposed for spirit in every act it works —\nprimal stuff is deemed its mover.",
+  "l4": "If purposed for spirit in every act it works —\nprimal stuff is deemed its mover.",
+  "source_lines": 467,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p04-v28",
+  "verses": "28",
+  "sanskrit": "tadvinā kumbhakāreṇa ghaṭo'pi na bhavetkatham",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v28 (28)\nwithout-that / without / by-potter / pot / even / not / would-be / how // isva-p04",
+  "l2": "Without that — how could there be even a pot without a potter?",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    469,
+    469
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "Without that — without a potter —\nhow could there even be a pot?",
+  "l4": "Without that — without a potter —\nhow could there even be a pot?",
   "source_lines": 469,
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 6,
-  "license": "FREE"
+  "match_words": 4
  },
  {
-  "chunk": "isva-p05",
-  "verses": "37-45",
-  "sanskrit": "vinā saṃvedyatāṃ puṃsastathātve puruṣārthatā athāpi manaso vṛttirbuddhervaikaikasaṃskṛtā syātikiṃ tu sā pradhānasya sāmānyasyākhilānprati sarveṣāṃ yadi sārvajñyamekaikasya prasajyate athāpi sarvapuruṣābhinnenaikena kenacit na lokayātrābhiprāyājjanayedbījamaṅkuram yajjātaṃ yogyamanyonyaṃ yojayedbuddhimāñjanaḥ iti cettatsamāpte'pi puruṣārthe'pi taṃ prati āho na viramatyetatparaṃ prakṛtisaptake",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:6080ed4ebc53",
-  "status": "OK",
+  "chunk": "isva-p04-v29",
+  "verses": "29",
+  "sanskrit": "pradhānamayamṛtpiṇḍādeva tādṛksvabhāvataḥ atha svabhāva eṣo'sya yatkulālādyapekṣaṇam",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "87 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.855"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v29 (29)\npradhāna-made / from-clay-lump / even / of-such / by-own-nature / now / own-nature / this / of-this / which / potter-etc. / looking-to // isva-p04",
+  "l2": "From the pradhāna-made clay-lump indeed, of such nature — now own-nature, this of this, looking to potter and the rest.",
   "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    470,
+    471
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "From the clay-lump made of pradhāna, such-natured by nature —\nown-nature now, this of this, watching the potter.",
+  "l4": "From the clay-lump made of pradhāna, such-natured by nature —\nown-nature now, this of this, watching the potter.",
+  "source_lines": 470,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p04-v30",
+  "verses": "30",
+  "sanskrit": "naivopādanahetvantaḥ praveśātsahakāribhiḥ saṃniveśaviśeṣo'pi śakyaḥ kartumiti kṣamam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v30 (30)\nnot / indeed / by-entering-upādāna-cause-inside / by-entering / with-helpers / arrangement / too / possible / to-make / thus / capable // isva-p04",
+  "l2": "Not indeed — by entering inside the material cause with helpers — could arrangement be made, says he — capable though they be.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    541,
+    542
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "Never — by entering matter's inside with helpers —\ncould array be wrought — able though they be.",
+  "l4": "Never — by entering matter's inside with helpers —\ncould array be wrought — able though they be.",
+  "source_lines": 541,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p04-v31",
+  "verses": "31",
+  "sanskrit": "lokayātrānusaṃdhānavatīṃ prajñāṃ vinā nahi",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v31 (31)\nworld-traffic-linking-having / wisdom / without / not / indeed // isva-p04",
+  "l2": "World-traffic-linking-having wisdom — without — never indeed.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    543,
+    543
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "World-traffic-linked wisdom —\nwithout — never.",
+  "l4": "World-traffic-linked wisdom —\nwithout — never.",
+  "source_lines": 543,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p04-v32",
+  "verses": "32",
+  "sanskrit": "tathā cikīrṣāṃ ca vinā vicitraracanodbhavaḥ sthūlatāmātrameva syānna tu lokopayoginī",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v32 (32)\nso / desiring-to-make / and / without / of-wondrous-making-arising / grossness-alone / indeed / would-be / not / but / world-useful // isva-p04",
+  "l2": "So without desiring-to-make, no wondrous-making arising — there'd be mere grossness, not world-useful.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    544,
+    545
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "So with no will to make, no wonders made —\nmere grossness would be, never world-good.",
+  "l4": "So with no will to make, no wonders made —\nmere grossness would be, never world-good.",
+  "source_lines": 544,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p04-v33",
+  "verses": "33",
+  "sanskrit": "racanā niyamena syādvicitrā jātirūpiṇī kulālasahakāritvamātrāccejjāyate ghaṭaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v33 (33)\nmaking / by-rule / would-be / wondrous / kind-formed / from-potter-helping-mereness / if / is-born / pot // isva-p04",
+  "l2": "Making by rule would be wondrous, kind-formed — if from potter-helping-mereness a pot is born.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    546,
+    547
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "Ruled making would be marvelous in kind —\nif mere potter-help bore pots.",
+  "l4": "Ruled making would be marvelous in kind —\nif mere potter-help bore pots.",
+  "source_lines": 63,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match": "spaceless"
+ },
+ {
+  "chunk": "isva-p04-v34",
+  "verses": "34",
+  "sanskrit": "na syājjātu śarīrādi dīrghamṛtpiṇḍa eva vā ata evārthanīyatvātsaṃniveśo viśiṣyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v34 (34)\nnot / would-be / ever / body-etc. / long-clay-lump / indeed / or / hence / indeed / by-being-led-to-the-end / arrangement / excels // isva-p04",
+  "l2": "Never body etc. — long clay-lump or else — hence arrangement excels by being led to ends.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    548,
+    549
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "Never bodies and the rest — long clay-lump or … —\nhence array excels, end-led.",
+  "l4": "Never bodies and the rest — long clay-lump or … —\nhence array excels, end-led.",
+  "source_lines": 548,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p04-v35",
+  "verses": "35",
+  "sanskrit": "na ghaṭāditayā siddhaḥ so'rthitāparipūrakaḥ na ceśvaro'nīśvaro vā prakṛto'trāṇulakṣaṇaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v35 (35)\nnot / by-pot-etc.-ness / proved / he / need-fulfiller / not / and / Lord / non-Lord / or / taken / here / atomic-marked // isva-p04",
+  "l2": "Not by pot-etc.-ness proved — the need-fulfiller. Neither Lord nor non-Lord is taken here as atomic-marked.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    553,
+    554
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "He stands proved not by pot-ness but by answered need;\nno Lord, no un-Lord takes the atomic mark indeed.",
+  "l4": "He stands proved not by pot-ness but by answered need;\nno Lord, no un-Lord takes the atomic mark indeed.",
+  "source_lines": 553,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 5
+ },
+ {
+  "chunk": "isva-p04-v36",
+  "verses": "36",
+  "sanskrit": "na ca pradhānasyecchādisaṃbhavaḥ puruṣārthatā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "87 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.855"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p04-v36 (36)\nnot / and / of-pradhāna / desire-etc. / arising / person-aim-ness // isva-p04",
+  "l2": "Nor of pradhāna desire-etc.-arising — person-aim-ness.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    593,
+    593
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3a47eae83295",
+  "license": "FREE",
+  "l3": "No desire-arising of primal stuff —\nperson-aim-ness stands.",
+  "l4": "No desire-arising of primal stuff —\nperson-aim-ness stands.",
+  "source_lines": 593,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p05-v37",
+  "verses": "37",
+  "sanskrit": "vinā saṃvedyatāṃ puṃsas tathātve puruṣārthatā",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v37 (37)\nsince / would-be / of-it / of-buddhi / but / arising / even / unarising / without / perceptibility / of-spirit / in-being-so / person-aim-ness // isva-p05",
+  "l2": "Since intellect's arising, actual or not, stands unperceived by any spirit — puruṣārthatā in such a case [is unspeakable: v38].",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    594,
+    595
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "If mind's arising stands unmarked by any spirit's eye,\nthen 'for the spirit's sake' rings hollow — no purpose holds.",
+  "l4": "If mind's arising stands unmarked by any spirit's eye,\nthen 'for the spirit's sake' rings hollow — no purpose holds.",
   "source_lines": 595,
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 12,
-  "license": "FREE"
+  "match_words": 3
  },
  {
-  "chunk": "isva-p06",
-  "verses": "46-54",
-  "sanskrit": "svabhāvataḥ athāpi sa bhavatyeva kiṃ tu tena na yujyate naitannārthitvamasyāsti jātu puṃso'tha cetasaḥ tadetadapi na nyāyyaṃ jāte dehasthacetasi tatsvabhāvatvameva syānmokṣaḥ karmakṣayāśrayaḥ na rāgāttāni cedevaṃ mokṣo rāgakṣayādbhavet tasmātprasiddhaṃ tanvādi buddhimatkartṛpūrvakam saṃsthānabhedādityetanniravadyaṃ prasādhanam paro'pi vā kevalametaducyate",
-  "gate": "BLOCKED",
-  "blocking": [
-   "ABSTENTION"
-  ],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:3d84a4d88059",
-  "status": "OK",
+  "chunk": "isva-p05-v38",
+  "verses": "38",
+  "sanskrit": "avācyā sā kevalasya tu ekaikasaṃskṛtā",
   "checks": {
-   "SOURCE_BINDING": [
+   "GATE": [
     true,
-    "candidate within 3.5× source length"
+    "PASS"
    ],
-   "COVERAGE": [
+   "L0_PARSED": [
     true,
-    "candidate covers the source"
+    "111 parsed, 0 failed"
    ],
-   "ABSTENTION": [
+   "ALIGNMENT": [
     false,
-    "candidate repeats source (no real translation) — abstain, don't guess"
+    "min_ratio=0.869"
    ],
-   "TERM_CONSISTENCY": [
+   "L2_CITES": [
     true,
-    "terms consistent"
+    "9 cites, 0 failures"
    ],
-   "CITATION_GROUNDING": [
+   "C1_NO_QUOTES": [
     true,
-    "all technical terms grounded in source"
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "source_file": "isvarasiddhi.txt",
-  "source_lines": 624,
-  "source_license": "CC BY-NC 4.0",
-  "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 12,
-  "license": "FREE"
- },
- {
-  "chunk": "isva-p07",
-  "verses": "55-56",
-  "sanskrit": "palāyate daivahatasya sanmaṇiḥ bhāti vahnirniśīthe",
   "gate": "PASS",
   "blocking": [],
-  "model": "manual-muse-spark",
-  "date": "2026-10-30",
-  "work_id": "isvarasiddhi",
-  "ahnika": "isvarasiddhi",
-  "immutable_id": "pt:pid:isva:9676e24c6378",
-  "status": "OK",
-  "checks": {
-   "SOURCE_BINDING": [
-    true,
-    "candidate within 3.5× source length"
-   ],
-   "COVERAGE": [
-    true,
-    "candidate covers the source"
-   ],
-   "ABSTENTION": [
-    true,
-    "no abstention violation"
-   ],
-   "TERM_CONSISTENCY": [
-    true,
-    "terms consistent"
-   ],
-   "CITATION_GROUNDING": [
-    true,
-    "all technical terms grounded in source"
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v38 (38)\nof-spirit / even / would-be / of-pradhāna / unspeakable / it / of-mere / but / now / even / of-mind / activity / of-buddhi / or / one-by-one / formed // isva-p05",
+  "l2": "Even of spirit, even of pradhāna, it would be unspeakable — of the mere; yet mind's function, or intellect's, is individually conditioned.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    596,
+    600
    ]
   },
-  "en_variants": [],
-  "styles": [],
-  "l1": "## isva-p07 (55–56)\nPalāyate daivahatasya sanmaṇiḥ. Bhāti vahnir niśīthe. // 55–56",
-  "l2": "## isva-p07 — close\n**SUMMARY.** Palāyate daivahatasya sanmaṇiḥ — flees, of god-struck, good gem. Bhāti vahnir niśīthe — shines, fire, at night.\n\n**FUNCTION.** Closes with imagery.\n\n**KEY TERMS.** daivahata (god-struck), sanmaṇi (good gem), vahni (fire), niśītha (night).\n\n**LOCAL CONTEXT.** Closes the text; follows p04–p06.\n\n**EXPLANATION.** The passage moves in one step. Close: flees, of god-struck, good gem; shines, fire, at night.\n\n**BOUNDARY / OPEN.** None major. Verses are terse; L2 expands them.\n\n**RELATED.** A21 (prāmāṇya), spans TS1.55–1.56.",
-  "source_file": "isvarasiddhi.txt",
-  "source_lines": 702,
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "Of spirit, of nature — unspeakable, the mere word stays;\nyet mind's own motions come conditioned, each in private ways.",
+  "l4": "Of spirit, of nature — unspeakable, the mere word stays;\nyet mind's own motions come conditioned, each in private ways.",
   "source_license": "CC BY-NC 4.0",
   "source_origin": "Mukhabodha M00023 (KSTS 34)",
-  "match_words": 4,
-  "license": "FREE"
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p05-v39",
+  "verses": "39",
+  "sanskrit": "icchā nāma kathaṃ sarvapuruṣārthopayoginī",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v39 (39)\nwill / namely / how / serving-all-person-aims / would-be / what / but / it / of-pradhāna / of-generality / to-all / toward // isva-p05",
+  "l2": "Will, indeed — how could it serve all spirits' purposes? But [if] it belongs to generic pradhāna, for all…",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    601,
+    602
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "Will — how could it serve the purposes of every soul?\nGive it to nature-in-general, for all, to make it whole?",
+  "l4": "Will — how could it serve the purposes of every soul?\nGive it to nature-in-general, for all, to make it whole?",
+  "source_lines": 601,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match": "unique-solo"
+ },
+ {
+  "chunk": "isva-p05-v40",
+  "verses": "40",
+  "sanskrit": "sārvajñyam ekaikasya prasajyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v40 (40)\nof-spirit / would-be / it / even / unperceived / not / will / perceived / and / of-whom / it / of-all / if / omniscience / of-each / follows // isva-p05",
+  "l2": "Even unperceived by spirit, could it be? Not will — and perceived, by whom would it be? If by all — omniscience of each and every one follows.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    603,
+    604
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "Unfelt by spirit, whose is will — and felt, then known by whom?\nBy all — then every soul is all-knowing: see where that must go.",
+  "l4": "Unfelt by spirit, whose is will — and felt, then known by whom?\nBy all — then every soul is all-knowing: see where that must go.",
+  "source_lines": 604,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p05-v41",
+  "verses": "41",
+  "sanskrit": "prakāśaikyāt saṃkīryeran ekena kenacit",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v41 (41)\nwould-mix / from-light-oneness / split / and / seeming-samenesses / now / even / by-all-spirit-undivided / by-one / by-whomsoever // isva-p05",
+  "l2": "Through light-unity the distinct appearances would mix; yet [perceived] by some one undivided from all spirits…",
+  "source_file": "ipv.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    605,
+    606
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "One light would mix all separate shinings into one,\nunless some One, in all undivided, keeps each apart — the turn begun.",
+  "l4": "One light would mix all separate shinings into one,\nunless some One, in all undivided, keeps each apart — the turn begun.",
+  "source_lines": 1068,
+  "source_license": "CC BY-NC-SA 4.0",
+  "source_origin": "GRETIL (Iyer/Pandey ed.)",
+  "match": "spaceless"
+ },
+ {
+  "chunk": "isva-p05-v42",
+  "verses": "42",
+  "sanskrit": "na lokayātrābhiprāyāt kiṃ tu svabhāvāt",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v42 (42)\nnot / for-world-traffic-purpose / would-produce / seed / sprout / what / but / by-nature / it / of-that / kit / cause / such // isva-p05",
+  "l2": "Not from world-sustenance-purpose would it produce seed into sprout; but by nature — such a kit is its cause, of such a kind.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    660,
+    661
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "No world-plan makes the seed put forth the sprout;\nblind nature — kit and cause — brings green about.",
+  "l4": "No world-plan makes the seed put forth the sprout;\nblind nature — kit and cause — brings green about.",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p05-v43",
+  "verses": "43",
+  "sanskrit": "yojayed buddhimāñ janas tenopacāreṇa puruṣārthatvam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v43 (43)\nwhat / born / fit / mutually / would-join / wise / man / of-him / through / courtesy / person-aim-ness / is-stated // isva-p05",
+  "l2": "What is born, fit — the wise man joins to one another; by this courtesy, puruṣārthatva is spoken of it.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    662,
+    666
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "What comes, well-formed — the wise join part to part;\nwe call it spirit's purpose — but by courtesy's art.",
+  "l4": "What comes, well-formed — the wise join part to part;\nwe call it spirit's purpose — but by courtesy's art.",
+  "source_lines": 662,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 4
+ },
+ {
+  "chunk": "isva-p05-v44",
+  "verses": "44",
+  "sanskrit": "iti cet tatsamāptau api puruṣārthe api taṃ prati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v44 (44)\nthus / if / that / on-completion / even / in-person-aim / even / him / toward // isva-p05",
+  "l2": "If thus — even on completion, even in purpose, toward him [the freed spirit]…",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    667,
+    667
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "Say granted — still, when purpose ends, before the freed soul's face,\nwhat stops the churn? The question hangs, demanding place.",
+  "l4": "Say granted — still, when purpose ends, before the freed soul's face,\nwhat stops the churn? The question hangs, demanding place.",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p05-v45",
+  "verses": "45",
+  "sanskrit": "na viramen mūlakāraṇam āho na viramati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "111 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.869"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p05-v45 (45)\nfrom-own-effect-change / not / would-cease / root-cause / oh / not / ceases / this / beyond / in-seven-of-prakṛti // isva-p05",
+  "l2": "From own-effect-change the root-cause would not cease; oh — it does not cease, this beyond, in the seven of nature.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    668,
+    669
+   ]
+  },
+  "immutable_id": "pt:pid:isva:6080ed4ebc53",
+  "license": "FREE",
+  "l3": "The Root would churn its own effects and never cease;\noh, never — sevenfold nature grants no release!",
+  "l4": "The Root would churn its own effects and never cease;\noh, never — sevenfold nature grants no release!",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p06-v46",
+  "verses": "46",
+  "sanskrit": "pariṇāmāt tad ekaṃ hi sarvān puṃsaḥ pratīṣyate",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v46 (46)\nfrom-change / that / one / indeed / all / spirits / is-desired / yet / of-body-earth-and-rest / change / by-nature // isva-p06",
+  "l2": "From change, that One is longed for, for all spirits — and yet body's and earth's and the rest's change is by nature.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    670,
+    672
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "From change, all spirits long for that changeless One;\nyet body's change, earth's change, runs by nature on.",
+  "l4": "From change, all spirits long for that changeless One;\nyet body's change, earth's change, runs by nature on.",
+  "source_lines": 255,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match": "spaceless"
+ },
+ {
+  "chunk": "isva-p06-v47",
+  "verses": "47",
+  "sanskrit": "pūrvavan na bhavet kasmāt taṃ muktābhimataṃ prati",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v47 (47)\nas-before / not / would-be / whence / him / freed-deemed / toward / now / even / it / occurs / indeed / what / but / thereby / not / is-fit // isva-p06",
+  "l2": "As before — why would it not be, toward the deemed-freed? Yet it does occur — but is not joined by him.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    673,
+    674
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "Why not, as before, for him deemed freed of need?\nIt still occurs — yet joins him not.",
+  "l4": "Why not, as before, for him deemed freed of need?\nIt still occurs — yet joins him not.",
+  "source_lines": 627,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p06-v48",
+  "verses": "48",
+  "sanskrit": "mukta-puṃsā kṛtārthatvād anarthitvāt sa kevalaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v48 (48)\nfreed / by-spirit / from-done-ness / from-needlessness / he / mere / not / that / not / need / of-him / is / ever / of-spirit / now / of-mind // isva-p06",
+  "l2": "By the freed spirit — done with tasks, need-free — he stands alone; not so: needlessness belongs to no spirit ever, nor to mind.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    675,
+    676
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "Done and need-free, the freed soul stands alone, you say;\nyet needlessness fits spirit never — nor mind's sway.",
+  "l4": "Done and need-free, the freed soul stands alone, you say;\nyet needlessness fits spirit never — nor mind's sway.",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p06-v49",
+  "verses": "49",
+  "sanskrit": "arthitvavigamān na syād bhūyaḥ puṃsā samāgamaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v49 (49)\nfrom-need-passing / not / would-be / again / by-spirit / meeting / that / this / even / not / proper / on-birth / embodied / in-mind // isva-p06",
+  "l2": "With need gone, no meeting with spirit again would be; this too is unjust, once body-dwelling mind is born.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    680,
+    681
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "Once need is gone, no meeting with the soul again;\nyet minds are born in bodies still — the claim is vain.",
+  "l4": "Once need is gone, no meeting with the soul again;\nyet minds are born in bodies still — the claim is vain.",
+  "source_lines": 680,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p06-v50",
+  "verses": "50",
+  "sanskrit": "saṃvedyaikasvabhāvatvāt tasya karmakṣayān na cet",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v50 (50)\nperceived / one / by-naturehood / of-it / from-karma-waning / not / if / that / naturehood / indeed / would-be / release / karma-waning-based // isva-p06",
+  "l2": "If from perceptible-only-nature of that, not from karma's waning — mokṣa would be mere nature, resting on karma's waning.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    682,
+    683
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "If mind is sense-bound nature, not freed by karma's cease,\nrelease is nature itself — on karma's lease.",
+  "l4": "If mind is sense-bound nature, not freed by karma's cease,\nrelease is nature itself — on karma's lease.",
+  "source_lines": 682,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p06-v51",
+  "verses": "51",
+  "sanskrit": "syur jñātapuṃvivekānāṃ karmāṇy api kṛpāditaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v51 (51)\nwould-be / known / of-spirit-discerners / karmas / even / from-mercy-etc. / not / from-passion / those / if / thus / release / from-passion-waning / would-be // isva-p06",
+  "l2": "There'd be acts even of spirit-distinction-knowers, from compassion; if not from passion — thus mokṣa from passion's exhaustion.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    684,
+    685
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "The knower acts from mercy still — yet were no passion there,\nrelease is passion's waning: your own view laid bare.",
+  "l4": "The knower acts from mercy still — yet were no passion there,\nrelease is passion's waning: your own view laid bare.",
+  "source_lines": 684,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p06-v52",
+  "verses": "52",
+  "sanskrit": "tasmāt prasiddhaṃ tanvādi buddhimatkartṛpūrvakam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v52 (52)\nso / and / view-leaving / that / not / proper / nature-seer / hence / proved / bodies-etc. / conscious-maker-preceded // isva-p06",
+  "l2": "Thus view-abandoned — that nature-view is unjust; hence body-and-rest, famously, have sentient-maker as prior.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    686,
+    687
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "Drop the nature-view — unjust, unfit to stay;\nbodies bespeak a knowing Maker, proved and plain as day.",
+  "l4": "Drop the nature-view — unjust, unfit to stay;\nbodies bespeak a knowing Maker, proved and plain as day.",
+  "source_lines": 687,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p06-v53",
+  "verses": "53",
+  "sanskrit": "saṃsthānabhedād ity etan niravadyaṃ prasādhanam",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v53 (53)\nby-setup-difference / thus / this / flawless / proof // isva-p06",
+  "l2": "From setup-difference — this flawless proof.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    688,
+    688
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "From patterned difference — this stands, flawless proof;\nno fault of reason touches it: here rests the truth.",
+  "l4": "From patterned difference — this stands, flawless proof;\nno fault of reason touches it: here rests the truth.",
+  "source_lines": 688,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 3
+ },
+ {
+  "chunk": "isva-p06-v54",
+  "verses": "54",
+  "sanskrit": "sa eṣa hetuḥ parameśvaraṃ prati prayujyamānaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "118 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    false,
+    "min_ratio=0.897"
+   ],
+   "L2_CITES": [
+    true,
+    "9 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p06-v54 (54)\nthat / this / cause / toward-supreme-Lord / toward / being-employed / by-self-placed-self / not / by-cause-flaws / is-overcome / slightly / other / even / or / merely / this / is-stated // isva-p06",
+  "l2": "This reason, aimed at the Supreme Lord by the self-entrusted self, is not overpowered by reason-faults in the least — nor the rival's either; only this is said.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    692,
+    698
+   ]
+  },
+  "immutable_id": "pt:pid:isva:3d84a4d88059",
+  "license": "FREE",
+  "l3": "This reason, laid upon the Lord by self-entrusted hand,\nno fault of logic shakes — nor rival's: this shall stand.",
+  "l4": "This reason, laid upon the Lord by self-entrusted hand,\nno fault of logic shakes — nor rival's: this shall stand.",
+  "source_lines": 692,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "match_words": 2
+ },
+ {
+  "chunk": "isva-p07-v55",
+  "verses": "55",
+  "sanskrit": "samujjvalan nyāyasahasrasādhito'pi siddhiṃ na vimūḍhacetasām",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "47 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.902"
+   ],
+   "L2_CITES": [
+    true,
+    "2 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p07-v55 (55)\nblazing / thousand-reason-proved / even / attains / success / not / of-deluded-minds / Maheśvara / palm-placed / even / being / flees / of-fate-struck / true-jewel // isva-p07",
+  "l2": "Though proved by a thousand blazing reasons, it succeeds not for the deluded-minded; Maheśvara, placed on the palm, yet flees the fate-struck — the true jewel.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    699,
+    702
+   ]
+  },
+  "immutable_id": "pt:pid:isva:9676e24c6378",
+  "license": "FREE",
+  "l3": "A thousand blazing reasons prove — yet not for minds astray;\npalm-held Maheśvara flees the fated: Jewel slips away.",
+  "l4": "A thousand blazing reasons prove — yet not for minds astray;\npalm-held Maheśvara flees the fated: Jewel slips away.",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
+ },
+ {
+  "chunk": "isva-p07-v56",
+  "verses": "56",
+  "sanskrit": "svātmaivāyaṃ sphurati sakalaprāṇināmīśvaro'ntaḥ",
+  "checks": {
+   "GATE": [
+    true,
+    "PASS"
+   ],
+   "L0_PARSED": [
+    true,
+    "47 parsed, 0 failed"
+   ],
+   "ALIGNMENT": [
+    true,
+    "min_ratio=0.902"
+   ],
+   "L2_CITES": [
+    true,
+    "2 cites, 0 failures"
+   ],
+   "C1_NO_QUOTES": [
+    true,
+    "0 quotes"
+   ],
+   "C1_NO_SHARED": [
+    true,
+    "0 shared-with-L2"
+   ],
+   "C1_NO_METACOMMENTARY": [
+    true,
+    "0 metacomments"
+   ],
+   "DATA_OBJECTS": [
+    true,
+    "0 errors"
+   ]
+  },
+  "gate": "PASS",
+  "blocking": [],
+  "needs": [
+   "human-review"
+  ],
+  "model": "crystal-v1",
+  "date": "2026-11-01",
+  "l1": "## isva-p07-v56 (56)\nown-self / indeed / this / flashes / all / of-breathers / Īśvara / within / maker / knower / even / and / if / beyond / of-recognition / to-be-proved / it / and / by-us / made-joining / elsewhere / what / but / Īśvara-proven / in-duality / even / is / thus / proper / more / shines / fire / in-night // isva-p07",
+  "l2": "One's own self indeed — this — flashes forth: Īśvara within all breathers, maker and knower too; yet recognition of the beyond is to be effected, and the joining is made by us elsewhere. But Īśvara-proved stands even in duality — fitting, and more: fire shines at midnight.",
+  "source_file": "isvarasiddhi.txt",
+  "links": {
+   "source_file": "passages.jsonl",
+   "edition": "Muktabodha M00023 (Īśvarasiddhi)",
+   "source_lines": [
+    703,
+    710
+   ]
+  },
+  "immutable_id": "pt:pid:isva:9676e24c6378",
+  "license": "FREE",
+  "l3": "Your own Self flashes — Īśvara, in every breather's heart,\nMaker and Knower — yet Recognition stands apart;\nwe wrought its joining elsewhere; in duality too it stands —\nfit, and fuller: midnight fire burns brighter in our hands.",
+  "l4": "Your own Self flashes — Īśvara, in every breather's heart,\nMaker and Knower — yet Recognition stands apart;\nwe wrought its joining elsewhere; in duality too it stands —\nfit, and fuller: midnight fire burns brighter in our hands.",
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00023 (KSTS 34)",
+  "source_lines": null
  }
 ]

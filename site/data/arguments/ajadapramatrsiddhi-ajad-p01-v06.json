@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ajadapramatrsiddhi:ajad-p01-v06",
+ "work_id": "ajadapramatrsiddhi",
+ "passage_id": "ajadapramatrsiddhi:ajad-p01-v06",
+ "title": "ajadapramatrsiddhi — ajad-p01-v06",
+ "kind": "entailment",
+ "question": "But how could they be indistinguishable here, when the existent performs a function (arthakriyā) and the other does not? And yet the thing, in its own self, remains without distinction.",
+ "issue": "Derived from L2 text (no argmap). But how could they be indistinguishable here, when the existent performs a function (arthakriyā) and the other does not? And yet the thing, in its own self, remains without distinction.",
+ "premises": [
+  {
+   "text": "kathaṃ syād aviśeṣo 'tra yāvatārthakriyāṃ hi san kuryān nānyas tathāpy artho nirviśeṣo nijātmani",
+   "label": "Sanskrit source",
+   "passage_id": "ajadapramatrsiddhi:ajad-p01-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "But how could they be indistinguishable here, when the existent performs a function (arthakriyā) and the other does not? And yet the thing, in its own self, remains without distinction.",
+  "passage_id": "ajadapramatrsiddhi:ajad-p01-v06"
+ },
+ "unresolved": "",
+ "argument_text": "But how could they be indistinguishable here, when the existent performs a function (arthakriyā) and the other does not? And yet the thing, in its own self, remains without distinction.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ajadapramatrsiddhi:ajad-p01-v06",
+ "sanskrit": "kathaṃ syād aviśeṣo 'tra yāvatārthakriyāṃ hi san kuryān nānyas tathāpy artho nirviśeṣo nijātmani",
+ "license": "CC BY-NC-SA 4.0"
+}

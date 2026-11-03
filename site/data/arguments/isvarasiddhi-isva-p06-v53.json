@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:isvarasiddhi:isva-p06-v53",
+ "work_id": "isvarasiddhi",
+ "passage_id": "isvarasiddhi:isva-p06-v53",
+ "title": "isvarasiddhi — isva-p06-v53",
+ "kind": "entailment",
+ "question": "From setup-difference — this flawless proof.",
+ "issue": "Derived from L2 text (no argmap). From setup-difference — this flawless proof.",
+ "premises": [
+  {
+   "text": "saṃsthānabhedād ity etan niravadyaṃ prasādhanam",
+   "label": "Sanskrit source",
+   "passage_id": "isvarasiddhi:isva-p06-v53"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From setup-difference — this flawless proof.",
+  "passage_id": "isvarasiddhi:isva-p06-v53"
+ },
+ "unresolved": "",
+ "argument_text": "From setup-difference — this flawless proof.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "isvarasiddhi:isva-p06-v53",
+ "sanskrit": "saṃsthānabhedād ity etan niravadyaṃ prasādhanam",
+ "license": "CC BY-NC 4.0"
+}
