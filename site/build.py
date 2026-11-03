@@ -1466,6 +1466,13 @@ def build_sitedata():
         d.mkdir(parents=True, exist_ok=True)
         _sh.copy(f, d / f.name)
         n += 1
+    # chatsum — authored per-work orientation essays (new datatype; reader chat opener)
+    cs_src = ROOT / "data/chatsum"
+    if cs_src.exists():
+        d3 = DIST / "data/chatsum"; d3.mkdir(parents=True, exist_ok=True)
+        for f in sorted(cs_src.glob("*.json")):
+            _sh.copy(f, d3 / f.name)
+            n += 1
     # C2 approved renders (translation-work/tools/emit_c2.py) — fetchable like layers
     c2src = ROOT / "data/c2"
     if c2src.exists():
