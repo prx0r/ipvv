@@ -13,11 +13,12 @@ async function getPushIndex(env) {
   } catch (e) { return null; }
 }
 
-async function dashscopeChat(env, messages, maxTokens = 512) {
+async function dashscopeChat(env, messages, maxTokens = 512, signal) {
   const apiKey = env.DASHSCOPE_API_KEY;
   if (!apiKey) throw new Error('no dashscope key');
   const resp = await fetch('https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', {
     method: 'POST',
+    ...(signal?{signal}:{}),
     headers: {
       'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
@@ -602,7 +603,8 @@ export default {
       const uid=await sessUid(request);
       if (!uid) return new Response(JSON.stringify({error:'sign in required'}),{status:401,
         headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
-      return handleScholar(request,env,uid,cors,(messages,maxTokens)=>dashscopeChat(env,messages,maxTokens));
+      return handleScholar(request,env,uid,cors,(messages,maxTokens,signal)=>dashscopeChat(
+        {DASHSCOPE_API_KEY:env.SCHOLAR_DASHSCOPE_API_KEY},messages,maxTokens,signal));
     }
 
     // POST /api/auth/access — join or sign in. Legacy email-only profiles need

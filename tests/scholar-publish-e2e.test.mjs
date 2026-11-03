@@ -42,7 +42,8 @@ test('account to signed translation and essay on a real local Git remote',async(
       new Promise((_,reject)=>{const timer=setTimeout(()=>reject(new Error('bridge did not start')),10000);timer.unref();})]);
     await ready;
     db=new DatabaseSync(':memory:');db.exec(await readFile(join(ipvv,'worker/schema.sql'),'utf8'));
-    const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),DASHSCOPE_API_KEY:'mock',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+    const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'mock',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+      SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'5',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'10',
       SCHOLAR_BRIDGE_URL:`http://127.0.0.1:${port}`,SCHOLAR_BRIDGE_SECRET:secret};
     const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
     let response=await call('/api/auth/access','POST',{email:'scholar@example.org',password:'strong-password',name:'A Scholar'});

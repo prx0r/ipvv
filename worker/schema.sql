@@ -74,6 +74,15 @@ BEGIN
   DELETE FROM scholar_document_history WHERE user_id=OLD.user_id AND document_id=OLD.id;
 END;
 
+-- Keep in sync with migrations/0004_scholar_ai_limits.sql.
+CREATE TABLE IF NOT EXISTS scholar_ai_usage (
+  id TEXT PRIMARY KEY, user_id TEXT NOT NULL, day TEXT NOT NULL,
+  started_at TEXT NOT NULL, expires_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS scholar_ai_usage_day ON scholar_ai_usage(day);
+CREATE INDEX IF NOT EXISTS scholar_ai_usage_account_day ON scholar_ai_usage(user_id,day);
+CREATE INDEX IF NOT EXISTS scholar_ai_usage_active ON scholar_ai_usage(expires_at);
+
 CREATE TABLE IF NOT EXISTS chat_sessions (
   id TEXT PRIMARY KEY,
   user_id TEXT,

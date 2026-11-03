@@ -43,16 +43,20 @@ two canonical hash schemes.
 3. On the authorized deployment host, back up the **correct** production D1
    database securely outside the repository. From `ipvv/worker`, apply
    `migrations/0002_scholar_workspace.sql` and then
-   `migrations/0003_scholar_history.sql` to the remote database (for example,
+   `migrations/0003_scholar_history.sql` and `migrations/0004_scholar_ai_limits.sql`
+   to the remote database (for example,
    `wrangler d1 execute ipvv --remote --file migrations/0002_scholar_workspace.sql`,
-   then the corresponding 0003 command). Check results and deploy the Worker;
+   then the corresponding 0003 and 0004 commands). Check results and deploy the Worker;
    deploy svread only after the compatible Worker and projections are available.
 4. Configure the bridge on an HTTPS host with the secret stored outside Git and
    the identical secret configured in the Worker. Confirm the Git remote and its
    permissions with a disposable test submission before exposing submissions.
 5. Leave Qwen text and voice disabled until the operator has a provider-side cap
-   that prevents paid overage, account and concurrency limits, working credentials,
-   and a real provider test. The existing free-tier flag alone is not a spending cap.
+   that prevents paid overage, the dedicated Scholar secret and request limits, and
+   a real provider test. Atomic account/global request and concurrency reservations
+   exist in this branch, but cannot guarantee a provider spending cap. Legacy model
+   endpoints use a separate secret and need their own security and quota review.
+   The free-tier flag alone is not a spending cap.
    Perform browser tests for login, account switching, private save/history, reviewer
    isolation, sign-off, consent, and voice permissions before declaring release.
 

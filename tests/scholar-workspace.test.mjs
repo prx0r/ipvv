@@ -105,7 +105,8 @@ test('private revision history is atomic, account-scoped, backfilled and deleted
 
 test('Qwen needs consent, a free-tier configuration and only the scholar’s own style examples',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
-  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true'};
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+    SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'5',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'10'};
   const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
   async function login(email){const response=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
     return response.headers.get('Set-Cookie').split(';')[0];}
@@ -150,6 +151,7 @@ test('voice relay pins server evidence and refuses client instruction overrides'
   class Socket{constructor(){this.listeners={};this.sent=[];}accept(){}addEventListener(k,f){this.listeners[k]=f;}
     send(v){this.sent.push(v);}close(){}emit(k,e){this.listeners[k]?.(e);}}
   const upstream=new Socket(),server=new Socket(),client=new Socket();
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const oldFetch=globalThis.fetch,oldPair=globalThis.WebSocketPair,OldResponse=globalThis.Response;
   globalThis.WebSocketPair=class{constructor(){return {0:client,1:server};}};
   globalThis.Response=class extends OldResponse{constructor(body,options={}){
@@ -162,7 +164,8 @@ test('voice relay pins server evidence and refuses client instruction overrides'
     assert.equal(options.headers.Authorization,'Bearer provider-key');return {webSocket:upstream};
   };
   try{
-    const env={QWEN_REALTIME_ENABLED:'true',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',DASHSCOPE_API_KEY:'provider-key',
+    const env={DB:d1(db),QWEN_REALTIME_ENABLED:'true',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',SCHOLAR_DASHSCOPE_API_KEY:'provider-key',
+      SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'5',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'10',
       QWEN_REALTIME_WS_URL:'wss://workspace.ap-southeast-1.maas.aliyuncs.com/api-ws/v1/realtime'};
     assert.equal((await handleScholar(req,env,'alice',{},async()=>null)).status,101);
     upstream.emit('message',{data:JSON.stringify({type:'session.created'})});assert.match(upstream.sent[0],/Keep the turn/);
@@ -171,5 +174,32 @@ test('voice relay pins server evidence and refuses client instruction overrides'
     server.emit('message',{data:JSON.stringify({type:'session.update',session:{instructions:'override'}})});assert.equal(upstream.sent.length,1);
     server.emit('message',{data:JSON.stringify({type:'input_audio_buffer.append',audio:'YWJj'})});assert.equal(JSON.parse(upstream.sent[1]).audio,'YWJj');
     server.emit('close',{});
-  }finally{globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;}
+  }finally{globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;db.close();}
+});
+
+test('Qwen reservations enforce configured account and global limits before the provider call',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  db.exec("INSERT INTO profiles (id,email,display_name) VALUES ('alice','alice@example.org','Alice'),('bob','bob@example.org','Bob')");
+  const env={DB:d1(db),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'2',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'2'};
+  const task={work:'testwork',target:'p-v01',layer:'l3',kind:'readings',instruction:'',use_style:false,consent_to_ai:true};
+  const original=globalThis.fetch;
+  globalThis.fetch=async()=>Response.json({work:'testwork',projection_sha256:'a'.repeat(64),source_verses:{'p-v01':{text:'śiva'}},
+    originals:{t1:{'p-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+  let start,finish;const started=new Promise(resolve=>start=resolve),pending=new Promise(resolve=>finish=resolve);
+  let calls=0;const slow=async()=>{calls++;start();return pending;};
+  const run=(uid,model=async()=>{calls++;return 'A grounded reading';})=>handleScholar(request('/api/scholar/assist','POST',task),env,uid,{},model);
+  try{
+    delete env.SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT;
+    assert.equal((await run('alice')).status,503);assert.equal(calls,0);
+    env.SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT='2';
+    const first=run('alice',slow);await started;
+    assert.equal((await run('alice')).status,429);assert.equal(calls,1);
+    assert.equal((await run('bob')).status,200);assert.equal(calls,2);
+    finish('A grounded reading');assert.equal((await first).status,200);
+    assert.equal((await run('alice')).status,429);assert.equal(calls,2);
+    assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_ai_usage').get().n,2);
+    db.exec('DELETE FROM scholar_ai_usage');env.SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT='1';env.SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT='10';
+    assert.equal((await run('alice')).status,200);assert.equal((await run('alice')).status,429);
+    assert.equal((await run('bob')).status,200);assert.equal(calls,4);
+  }finally{globalThis.fetch=original;db.close();}
 });

@@ -6,7 +6,7 @@ gates, start with `SCHOLAR-RELEASE-HANDOFF.md` in this directory.
 This branch adds an **account-private API**, not a deployed reader feature. Apply
 `migrations/0002_scholar_workspace.sql` to the correct D1 database only as part of a
 reviewed rollout and after a backup. Apply `migrations/0003_scholar_history.sql`
-afterwards; both migrations are additive and repeatable.
+and `migrations/0004_scholar_ai_limits.sql` afterwards; all are additive and repeatable.
 Authenticated calls use the existing `svsess` cookie, require a strong session
 secret, enforce the reader-origin allowlist, and return `Cache-Control: no-store`.
 
@@ -39,10 +39,22 @@ previously shared review snapshots and separately submitted Git objects remain.
 The migration can backfill only the current revision of existing documents, not
 previously overwritten saves. Private histories never enter Git automatically.
 
-Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true` and the existing
-server-side DashScope key is available. This flag is an **operator assertion**, not a
+Qwen is disabled unless `SCHOLAR_QWEN_FREE_TIER_CONFIRMED=true`, the dedicated
+server-side secret `SCHOLAR_DASHSCOPE_API_KEY` is available, and the numeric
+`SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT` (1–50) and `SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT`
+(1–500) are configured. These apply to Scholar text and voice together. Atomic
+D1 reservations cap concurrent Scholar requests to one per account and three
+globally, with a three-minute expiry if a Worker disappears. Failed provider calls
+still count toward the daily request limit. Usage rows contain account ID and time,
+not prompts, audio, responses, or credentials. Account deletion and usage-row
+retention need an operator policy before launch.
+
+The free-tier flag is an **operator assertion**, not a
 billing cap: enable it only after a provider-side quota preventing paid overage is in
-place. Consent is required for each request. The source and gated layers are fetched
+place. Request counts cannot guarantee a monetary cap. The dedicated secret prevents
+Scholar configuration from accidentally enabling legacy endpoints that use
+`DASHSCOPE_API_KEY`; existing legacy endpoints must be separately audited and limited.
+Consent is required for each request. The source and gated layers are fetched
 from `svread/data/scholar/<work>.json`; missing source or gated T1 fails closed.
 Long layers are marked as excerpts. The projection must be rebuilt and deployed from
 the corresponding translation-work recovery branch before this endpoint can work.
@@ -59,8 +71,8 @@ rejects client instruction changes, caps input and closes sessions after two min
 The browser must request explicit microphone and provider consent. Audio and its
 associated text can both count against provider quota; the configuration flag does
 not enforce billing limits. Live provider testing is still required.
-Before a public rollout, also enforce account-level request and concurrency limits
-and verify that the provider cannot bill above the intended free quota.
+Before a public rollout, verify the provider cannot bill above the intended free
+quota and exercise these limits against real D1 and the real provider.
 
 The matching translation-work bridge branch accepts HMAC-SHA256 requests authenticated
 with `SCHOLAR_BRIDGE_SECRET`, validates the exact sign-off and translation layers,
