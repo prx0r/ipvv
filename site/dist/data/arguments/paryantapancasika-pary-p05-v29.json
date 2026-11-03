@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p05-v29",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p05-v29",
+ "title": "paryantapancasika — pary-p05-v29",
+ "kind": "entailment",
+ "question": "Inner action, outer action, timeless sequence of self independent held — which You full-of-Lord's-power.",
+ "issue": "Derived from L2 text (no argmap). Inner action, outer action, timeless sequence of self independent held — which You full-of-Lord's-power.",
+ "premises": [
+  {
+   "text": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p05-v29"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Inner action, outer action, timeless sequence of self independent held — which You full-of-Lord's-power.",
+  "passage_id": "paryantapancasika:pary-p05-v29"
+ },
+ "unresolved": "",
+ "argument_text": "Inner action, outer action, timeless sequence of self independent held — which You full-of-Lord's-power.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p05-v29",
+ "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+ "license": "CC BY-NC-SA 4.0"
+}

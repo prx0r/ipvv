@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p06-v38",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p06-v38",
+ "title": "paryantapancasika — pary-p06-v38",
+ "kind": "entailment",
+ "question": "Of will-power of-three-form, three other powers became — emission this — then exceedingly clear became, created from expansion.",
+ "issue": "Derived from L2 text (no argmap). Of will-power of-three-form, three other powers became — emission this — then exceedingly clear became, created from expansion.",
+ "premises": [
+  {
+   "text": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p06-v38"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of will-power of-three-form, three other powers became — emission this — then exceedingly clear became, created from expansion.",
+  "passage_id": "paryantapancasika:pary-p06-v38"
+ },
+ "unresolved": "",
+ "argument_text": "Of will-power of-three-form, three other powers became — emission this — then exceedingly clear became, created from expansion.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p06-v38",
+ "sanskrit": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+ "license": "CC BY-NC-SA 4.0"
+}

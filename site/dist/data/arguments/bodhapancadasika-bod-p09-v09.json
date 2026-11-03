@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p09-v09",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p09-v09",
+ "title": "bodhapancadasika — bod-p09-v09",
+ "kind": "entailment",
+ "question": "So it is with the free one, distinguishing by His own power: makings and unmakings rest in His own self, standing as His very nature.",
+ "issue": "Derived from L2 text (no argmap). So it is with the free one, distinguishing by His own power: makings and unmakings rest in His own self, standing as His very nature.",
+ "premises": [
+  {
+   "text": "evam asya svatantrasya nijaśaktyupabhedinaḥ | svātmagāḥ sṛṣṭisaṃhārāḥ svarūpatvena saṃsthitāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p09-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So it is with the free one, distinguishing by His own power: makings and unmakings rest in His own self, standing as His very nature.",
+  "passage_id": "bodhapancadasika:bod-p09-v09"
+ },
+ "unresolved": "",
+ "argument_text": "So it is with the free one, distinguishing by His own power: makings and unmakings rest in His own self, standing as His very nature.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p09-v09",
+ "sanskrit": "evam asya svatantrasya nijaśaktyupabhedinaḥ | svātmagāḥ sṛṣṭisaṃhārāḥ svarūpatvena saṃsthitāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

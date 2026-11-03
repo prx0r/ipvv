@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p02",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p02",
+ "title": "anuttarastika — anu-p02",
+ "kind": "entailment",
+ "question": "Saṃsāra is not, in truth, for body-holders — of bondage, what news? Bondage never truly is for anyone — so for the free, liberation-rite is false. This error-maker is rope-snake-shadow-ghost-delusion. Abandon nothing; grasp nothing; live healthy, staying as you are.",
+ "issue": "Derived from L2 text (no argmap). Saṃsāra is not, in truth, for body-holders — of bondage, what news? Bondage never truly is for anyone — so for the free, liberation-rite is false. This error-maker is rope-snake-shadow-ghost-delusion. Abandon nothing; grasp nothing; live healthy, staying as you are.",
+ "premises": [
+  {
+   "text": "saṃsāro 'sti na tattvatas tanubhṛtāṃ bandhasya vārtaiva kā bandho yasya na jātu tasya vitathā muktasya muktikriyā | mithyāmohakṛd eṣa rajjubhujagacchāyāpiśācabhramo mā kiṃcit tyaja mā gṛhāṇa vihara svastho yathāvasthitaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Saṃsāra is not, in truth, for body-holders — of bondage, what news? Bondage never truly is for anyone — so for the free, liberation-rite is false. This error-maker is rope-snake-shadow-ghost-delusion. Abandon nothing; grasp nothing; live healthy, staying as you are.",
+  "passage_id": "anuttarastika:anu-p02"
+ },
+ "unresolved": "",
+ "argument_text": "Saṃsāra is not, in truth, for body-holders — of bondage, what news? Bondage never truly is for anyone — so for the free, liberation-rite is false. This error-maker is rope-snake-shadow-ghost-delusion. Abandon nothing; grasp nothing; live healthy, staying as you are.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p02",
+ "sanskrit": "saṃsāro 'sti na tattvatas tanubhṛtāṃ bandhasya vārtaiva kā bandho yasya na jātu tasya vitathā muktasya muktikriyā | mithyāmohakṛd eṣa rajjubhujagacchāyāpiśācabhramo mā kiṃcit tyaja mā gṛhāṇa vihara svastho yathāvasthitaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

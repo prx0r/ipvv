@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p04-v27",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p04-v27",
+ "title": "paryantapancasika — pary-p04-v27",
+ "kind": "entailment",
+ "question": "One I measurer, knowing, measure, measured, having-kinds — pure-knowledge-etc. by-form — Khecarī-etc. fourteen.",
+ "issue": "Derived from L2 text (no argmap). One I measurer, knowing, measure, measured, having-kinds — pure-knowledge-etc. by-form — Khecarī-etc. fourteen.",
+ "premises": [
+  {
+   "text": "saṃhṛtya sarvataś cintām ahaṃ iti anuśīlayan avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p04-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "One I measurer, knowing, measure, measured, having-kinds — pure-knowledge-etc. by-form — Khecarī-etc. fourteen.",
+  "passage_id": "paryantapancasika:pary-p04-v27"
+ },
+ "unresolved": "",
+ "argument_text": "One I measurer, knowing, measure, measured, having-kinds — pure-knowledge-etc. by-form — Khecarī-etc. fourteen.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p04-v27",
+ "sanskrit": "saṃhṛtya sarvataś cintām ahaṃ iti anuśīlayan avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
+ "license": "CC BY-NC-SA 4.0"
+}

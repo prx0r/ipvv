@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s18-v20",
  "title": "sivastotravali — s18-v20",
  "kind": "entailment",
- "question": "Enter plainly, then I shall enter You — always, Lord, for I am Yours: with violent speed may I worship Your body face to face.",
- "issue": "Derived from L2 text (no argmap). Enter plainly, then I shall enter You — always, Lord, for I am Yours: with violent speed may I worship Your body face to face.",
+ "question": "Enter me plainly, then may I enter Thee — always, Lord, for I am Thine: with violent speed may I worship Thy body face to face.",
+ "issue": "Derived from L2 text (no argmap). Enter me plainly, then may I enter Thee — always, Lord, for I am Thine: with violent speed may I worship Thy body face to face.",
  "premises": [
   {
-   "text": "",
+   "text": "sphuṭam aviśa mām athāviśeyaṃ satataṃ nātha bhavantamasmi yasmāt rabhasena vapus tavaiva sākṣāt paramāsattigataḥ samarcayeyam",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s18-v20"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Enter plainly, then I shall enter You — always, Lord, for I am Yours: with violent speed may I worship Your body face to face.",
+  "text": "Enter me plainly, then may I enter Thee — always, Lord, for I am Thine: with violent speed may I worship Thy body face to face.",
   "passage_id": "sivastotravali:s18-v20"
  },
  "unresolved": "",
- "argument_text": "Enter plainly, then I shall enter You — always, Lord, for I am Yours: with violent speed may I worship Your body face to face.",
+ "argument_text": "Enter me plainly, then may I enter Thee — always, Lord, for I am Thine: with violent speed may I worship Thy body face to face.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s18-v20",
- "sanskrit": "",
+ "sanskrit": "sphuṭam aviśa mām athāviśeyaṃ satataṃ nātha bhavantamasmi yasmāt rabhasena vapus tavaiva sākṣāt paramāsattigataḥ samarcayeyam",
  "license": "CC BY-NC-SA 4.0"
 }

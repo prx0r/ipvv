@@ -1,21 +1,429 @@
 # paramarthasara — LLM Discovery
 
 Work: paramarthasara
-Passages: 12 (0 PASS, 12 BLOCKED)
+Passages: 105 (105 PASS, 0 BLOCKED)
 Data: /data/translations/paramarthasara.json
 Page: /translations/paramarthasara.html
 
 ## Chunks
 
-- param-p01 (verses 2-10) [BLOCKED]
-- param-p02 (verses 11-19) [BLOCKED]
-- param-p03 (verses 20-28) [BLOCKED]
-- param-p04 (verses 29-37) [BLOCKED]
-- param-p05 (verses 38-46) [BLOCKED]
-- param-p06 (verses 47-55) [BLOCKED]
-- param-p07 (verses 56-64) [BLOCKED]
-- param-p08 (verses 65-73) [BLOCKED]
-- param-p09 (verses 74-82) [BLOCKED]
-- param-p10 (verses 83-91) [BLOCKED]
-- param-p11 (verses 92-100) [BLOCKED]
-- param-p12 (verses 101-105) [BLOCKED]
+- param-p01-v01 (verses 1) [PASS]
+  L1: ## param-p01-v01 (1)
+supreme / abiding-beyond / from-depth / beginningless / one / entered / manifoldly / in-caves / all
+  L2: I resort to You, Śambhu — supreme, beyond-abiding, beginningless, one, cave-entered manifoldly, abode of all, abiding in
+- param-p01-v02 (verses 2) [PASS]
+  L1: ## param-p01-v02 (2)
+womb-dwelling-first / death-ending / sorrow-wheel / whirled / to-support / to-blessed-Lord / studen
+  L2: Whirled in the sorrow-wheel from womb-dwelling to death-ending, the student asked the blessed Lord, the support: the sup
+- param-p01-v03 (verses 3) [PASS]
+  L1: ## param-p01-v03 (3)
+by-support-verses / him / teacher / addressed / past-marks / its-essence / tells / Abhinavagupta / 
+  L2: By support-verses the teacher addressed its essence to him; Abhinavagupta tells it by Śiva-teaching-view-yoga.
+- param-p01-v04 (verses 4) [PASS]
+  L1: ## param-p01-v04 (4)
+by-own-power-glory-weight / egg-fourfold / this / by-division / power / Māyā / nature / earth / and
+  L2: By own-power-glory-weight, this fourfold egg in division: power, Māyā, nature, earth — thus manifested by the Lord.
+- param-p01-v05 (verses 5) [PASS]
+  L1: ## param-p01-v05 (5)
+there / within / universe / this / varied / body / faculty / world / continuum / enjoyer / and / th
+  L2: Therein within, this universe is a varied body-faculty-world continuum; and therein the enjoyer, embodied, is Śiva indee
+- param-p01-v06 (verses 6) [PASS]
+  L1: ## param-p01-v06 (6)
+various / of-sorts / form / assumes / as / stainless / crystal / god / man / beast / plant / form-n
+  L2: As the stainless crystal assumes the form of various sorts, so the Lord too holds god-man-beast-plant form-ness.
+- param-p01-v07 (verses 7) [PASS]
+  L1: ## param-p01-v07 (7)
+moves / moves / water / as / moon-maker / disc / when-still / stillness / goes / body / faculty / w
+  L2: As water moves and the moon-disc moves, as water stills so stillness goes: so this self, the great Lord, in the body-fac
+- param-p01-v08 (verses 8) [PASS]
+  L1: ## param-p01-v08 (8)
+Rahu / invisible / though / as / moon / disc / abiding / shines / so / all-going / though / this / 
+  L2: As invisible Rahu, abiding on the moon-disc, shines, so the all-going self, by resorting to objects, shines in the mind-
+- param-p01-v09 (verses 9) [PASS]
+  L1: ## param-p01-v09 (9)
+in-mirror / dirt / free / as / face / shines / so / this / by-Śiva / grace / pure / in-mind / princ
+  L2: As a face shines in a dirt-free mirror, so this self shines, light-formed, in the mind-principle purified by Śiva's grac
+- param-p01-v10 (verses 10) [PASS]
+  L1: ## param-p01-v10 (10)
+light / formed / complete / in-own / self / from-resting / great / bliss / by-will / knowing / act
+  L2: Light-formed, complete, great-bliss from resting in own self, filled by will, knowing and acting, endless-power-complete
+- param-p02-v11 (verses 11) [PASS]
+  L1: ## param-p02-v11 (11)
+all / thought-free / free / pure / peaceful / dissolution / rise-free / which / supreme-principle 
+  L2: Free of every thought, pure, at peace, beyond rising and dissolving — in that supreme principle shines the world, thirty
+- param-p02-v12 (verses 12) [PASS]
+  L1: ## param-p02-v12 (12)
+in-mirror / orb / as / city / village / etc / varied / undivided / shines / in-division / indeed /
+  L2: As towns and villages, varied yet undivided in a mirror's orb, shine out in division, each from each and from the mirror
+- param-p02-v13 (verses 13) [PASS]
+  L1: ## param-p02-v13 (13)
+from-purest / supreme / Bhairava / knowing / so / division / void / though / mutually / and / then
+  L2: From the purest knowing of supreme Bhairava: though void of division, the world shines forth divided, each from each and
+- param-p02-v14 (verses 14) [PASS]
+  L1: ## param-p02-v14 (14)
+Śiva / power / Sadāśiva / ness / Īśvara / Vidyā / made / and / principle / state / of-powers / of-
+  L2: Śiva, power, Sadāśiva, then the Īśvara-Vidyā-formed principle-state — the five powers, in divided nature, He lights up.
+- param-p02-v15 (verses 15) [PASS]
+  L1: ## param-p02-v15 (15)
+supreme / which / freedom / difficult / effecting / of-great-Lord / goddess / Māyā / power / own-s
+  L2: Supreme is the freedom that effects the hard thing, the great Lord's own; the goddess, Māyā-power, veils Śiva's self — t
+- param-p02-v16 (verses 16) [PASS]
+  L1: ## param-p02-v16 (16)
+by-Māyā / grasp / power / knowing / stained / person / bound-beast / becomes / by-time / art / lim
+  L2: Grasped by Māyā, knowing turns stained and the person becomes a bound beast, fettered by time, art, limit, passion, igno
+- param-p02-v17 (verses 17) [PASS]
+  L1: ## param-p02-v17 (17)
+right-now / indeed / a-little / indeed / this / indeed / by-whole / self / I-know / Māyā-with / sh
+  L2: Here and now I know but little, with my whole self: six sheaths with Māyā are the atom's inner limbs, so it is said.
+- param-p02-v18 (verses 18) [PASS]
+  L1: ## param-p02-v18 (18)
+husk / as / rice / grain / settled / separate / though / un-separated / attains / that / indeed / 
+  L2: Like husk settled on rice-grain, separate yet undivided, purity comes by turning to Śiva's path with longing.
+- param-p02-v19 (verses 19) [PASS]
+  L1: ## param-p02-v19 (19)
+pleasure / pain / delusion / mere / from-resolve / volition / egotism / and / nature / then / inne
+  L2: Mere pleasure, pain, delusion — from resolve, will, and I-sense; then nature, then the inner organ: intellect, mind, ego
+- param-p03-v20 (verses 20) [PASS]
+  L1: ## param-p03-v20 (20)
+ear / skin / eye / tongue / nose / intellect-organs / in-sound / etc / speech / hand / foot / anus
+  L2: Ear, skin, eye, tongue, nose — organs of knowing in sound and the rest; voice, hand, foot, anus, privates — organs of do
+- param-p03-v21 (verses 21) [PASS]
+  L1: ## param-p03-v21 (21)
+of-these / to-be-grasped / object / subtle / division / free / which / may-be / tanmātra / five / 
+  L2: Their object, to be grasped, is subtle and without divisions: the five tanmātras — sound, touch, form, taste, smell.
+- param-p03-v22 (verses 22) [PASS]
+  L1: ## param-p03-v22 (22)
+by-this / combination / power / gross / object / indeed / element / five-ness / becomes / sky / wi
+  L2: From their mixture the gross object takes on five-element-ness: sky, wind, fire, water, and earth.
+- param-p03-v23 (verses 23) [PASS]
+  L1: ## param-p03-v23 (23)
+husk / as / rice / grain / covers / nature / first / creation / earth / ending / this / consciousn
+  L2: As husk covers the rice-grain, creation beginning with nature covers; down to earth, consciousness wears the body.
+- param-p03-v24 (verses 24) [PASS]
+  L1: ## param-p03-v24 (24)
+supreme / covering / impurity / here / subtle / Māyā / etc / sheath / gross / outer / body / forme
+  L2: The supreme covering! Impurity here: subtle — the Māyā-sheath; gross — the outer body-form; wrapped in three sheaths sta
+- param-p03-v25 (verses 25) [PASS]
+  L1: ## param-p03-v25 (25)
+by-ignorance / darkness / by-yoga / one / though / own / nature / self / by-grasper / grasped / va
+  L2: Joined to darkness-ignorance, the one self, its own nature, perceives itself manifold through grasper-grasped variety.
+- param-p03-v26 (verses 26) [PASS]
+  L1: ## param-p03-v26 (26)
+juice / molasses / sugar / lumps / khaṇḍa / etc / as / sugarcane / juice / indeed / so / states / 
+  L2: As cane-juice in molasses, sugar, lumps: so every divided state of the supreme self, Śambhu.
+- param-p03-v27 (verses 27) [PASS]
+  L1: ## param-p03-v27 (27)
+knowing / inner-ruler / breath / all-body / born / caste / lumps / ending / mere / convention / th
+  L2: Knower, inner ruler, breath, the all, the born — mere convention, in truth not at all.
+- param-p03-v28 (verses 28) [PASS]
+  L1: ## param-p03-v28 (28)
+in-rope / is-not / snake / fear / causes / and / death / ending / of-delusion / great / power / no
+  L2: No snake in the rope, yet fear kills till death: delusion's great power no one can tell apart.
+- param-p04-v29 (verses 29) [PASS]
+  L1: ## param-p04-v29 (29)
+so / dharma / adharma / heaven-hell-birth-death-pleasure-pain / caste-stage-etc / and / in-self / 
+  L2: So dharma and adharma, heaven and hell, birth and death, pleasure and pain — caste, life-stage and the rest — though unr
+- param-p04-v30 (verses 30) [PASS]
+  L1: ## param-p04-v30 (30)
+this / that / darkness / which / in-things / by-shining / self / in-non-surpassing / though / beco
+  L2: This is that darkness: shining in things, the conceit 'I am not the self' arises even where the self is unsurpassed.
+- param-p04-v31 (verses 31) [PASS]
+  L1: ## param-p04-v31 (31)
+than-darkness / though / darkness / this / on-cheek / upon / great / this / burst / which / in-non
+  L2: Darkness upon darkness — a great burst upon the cheek: taking body, breath and the rest, non-selves, for self.
+- param-p04-v32 (verses 32) [PASS]
+  L1: ## param-p04-v32 (32)
+by-body-breath-reflection-mind-knowing-sky-expanse-yoga / self / wraps / wonder / by-net / net-mak
+  L2: By the yoga of body, breath, reflection, mind, knowing, and sky-expanse, the self wraps itself — a wonder — in a net, li
+- param-p04-v33 (verses 33) [PASS]
+  L1: ## param-p04-v33 (33)
+by-own-knowing-glory-shining-yoga / unwraps / own-self / thus / bondage-liberation-wondrous / play
+  L2: By the yoga that shines with one's own knowing glory, unwrapping one's own self: thus supreme Śiva spreads the wondrous 
+- param-p04-v34 (verses 34) [PASS]
+  L1: ## param-p04-v34 (34)
+creation-keeping-loosing / waking-dreaming / deep-sleep / thus / therein / shine / in-fourth / in-
+  L2: Creating, keeping, dissolving; waking, dreaming, deep sleep — they shine in him, in the fourth abode, yet unveiled he sh
+- param-p04-v35 (verses 35) [PASS]
+  L1: ## param-p04-v35 (35)
+waking / universe / by-difference / dreaming / splendor / by-light-glory / knower / sleep-state / 
+  L2: Waking is the universe, through difference; dreaming is splendor, through light's glory; the knower is the sleep state, 
+- param-p04-v36 (verses 36) [PASS]
+  L1: ## param-p04-v36 (36)
+by-cloud-smoke-dust / is-soiled / as / not / sky-surface / so / by-Māyā-changes / untouched / supr
+  L2: As cloud, smoke and dust do not soil the sky's surface, so the supreme person stands untouched by Māyā's deformings.
+- param-p04-v37 (verses 37) [PASS]
+  L1: ## param-p04-v37 (37)
+in-one / jar-sky / by-dust / pervaded / become / not-other / soiled / so / these / souls / pleasur
+  L2: When one jar-sky is pervaded by dust, the others do not get soiled: so these souls, enjoying pleasure-pain differences.
+- param-p05-v38 (verses 38) [PASS]
+  L1: ## param-p05-v38 (38)
+in-calm / calm / as / this / in-glad / glad / is-deluded / fool / in-principles / being / Lord / n
+  L2: In calm, calm; in glad, glad — so the fool is deluded; amid principles, the Lord is truly not so.
+- param-p05-v39 (verses 39) [PASS]
+  L1: ## param-p05-v39 (39)
+which / in-non-self / though / that-form-shining / that / first / having-removed / in-self / non-s
+  L2: First removing the shining of that-form in non-self, the supreme self shatters delusion of the non-self-form in self.
+- param-p05-v40 (verses 40) [PASS]
+  L1: ## param-p05-v40 (40)
+thus / in-delusion-pair-root-cutting / of-goal-gained / duty-other-weighing / not / ever / of-supr
+  L2: Thus, for one whose goal is gained in cutting delusion-pair at the root, no weighing of other duties ever, for the supre
+- param-p05-v41 (verses 41) [PASS]
+  L1: ## param-p05-v41 (41)
+earth / nature / Māyā / triad / this / known-form-fallen / by-nondual-contemplation-power / become
+  L2: Earth, nature, Māyā — this triad, fallen into known-form — by nondual-contemplation power becomes mere-being remainder.
+- param-p05-v42 (verses 42) [PASS]
+  L1: ## param-p05-v42 (42)
+girdle-earring-bracelet / by-difference-leaving / is-seen / as / gold / so / in-difference-leaving
+  L2: As girdle, earring, bracelet are seen as gold by leaving difference, so in leaving difference all shines as mere being.
+- param-p05-v43 (verses 43) [PASS]
+  L1: ## param-p05-v43 (43)
+that / brahman / supreme / pure / peaceful / nondual-natured / even / whole / deathless / true / i
+  L2: That brahman — supreme, pure, peaceful, nondual-natured, even, whole, deathless, true — rests in shining-formed power.
+- param-p05-v44 (verses 44) [PASS]
+  L1: ## param-p05-v44 (44)
+desired / thus / known / thus / done / thus / and / by-shining-formed / untouched / which / though
+  L2: Desired, known, done — by the shining-formed: untouched, yet it takes sky-flower-ness.
+- param-p05-v45 (verses 45) [PASS]
+  L1: ## param-p05-v45 (45)
+by-power-trident-grasp-yoga / whole / though / in-supreme-Lord / in-Śiva-name / in-supreme-truth /
+  L2: By grasp-yoga of power's trident, the whole, in the supreme Lord, in Śiva-name, in supreme truth, is emitted by god of g
+- param-p05-v46 (verses 46) [PASS]
+  L1: ## param-p05-v46 (46)
+again / though / and / by-five-power-spreading-order / outside / though / that / egg-three / varie
+  L2: Again too, by five-power-spreading order, outside, that varied egg-three created by outer-self-gaining.
+- param-p06-v47 (verses 47) [PASS]
+  L1: ## param-p06-v47 (47)
+thus / power-wheel-machine / by-play-discipline / driving / god / I / indeed / pure-formed / power
+  L2: Thus driving, by play-discipline, the power-wheel-machine — god: I indeed, pure-formed, standing in the power-great-whee
+- param-p06-v48 (verses 48) [PASS]
+  L1: ## param-p06-v48 (48)
+in-me / indeed / shines / universe / mirror / as / in-spotless / jar-etc / from-me / spreads / all
+  L2: In me indeed shines the universe, as jars and the like in a spotless mirror; from me spreads all, as dream-variety from 
+- param-p06-v49 (verses 49) [PASS]
+  L1: ## param-p06-v49 (49)
+I / indeed / universe-formed / hand-foot-etc-nature / as / body / in-all / I / indeed / I-shine / 
+  L2: I indeed, universe-formed, hand-foot-and-all-natured as the body; in all I indeed shine, light-natured.
+- param-p06-v50 (verses 50) [PASS]
+  L1: ## param-p06-v50 (50)
+seer / hearer / smeller / body-sense-bereft / though / non-doer-too / system-text-reasoning-parts 
+  L2: Seer, hearer, smeller — bereft of body-senses though, a non-doer too: varied systems, texts, reasonings I indeed compose
+- param-p06-v51 (verses 51) [PASS]
+  L1: ## param-p06-v51 (51)
+thus / duality-thought / dissolved / having-crossed / enchanting / Māyā / in-water / water / in-mi
+  L2: Thus, duality-thought dissolved, crossing enchanting Māyā: as water in water, milk in milk — dissolved in brahman may on
+- param-p06-v52 (verses 52) [PASS]
+  L1: ## param-p06-v52 (52)
+thus / in-principle-host / by-contemplation / Śiva-made-ness / attained / what / sorrow / what / d
+  L2: Thus, in the principle-host, by contemplation attaining Śiva-madeness: what sorrow, what delusion, for the brahman-behol
+- param-p06-v53 (verses 53) [PASS]
+  L1: ## param-p06-v53 (53)
+deed-fruit / good / bad / by-false-knowing / from-contact / indeed / hard / indeed / contact-fault
+  L2: Deed-fruit, good or bad, comes only from contact with false knowing; hard indeed is contact's fault — like a thief's com
+- param-p06-v54 (verses 54) [PASS]
+  L1: ## param-p06-v54 (54)
+of-world-convention-makers / who / here-ignorance / attend / fools / they / go / birth-deaths / du
+  L2: World-convention-makers who tend ignorance here, fools, go to birth and death, bound by duty's locks.
+- param-p06-v55 (verses 55) [PASS]
+  L1: ## param-p06-v55 (55)
+by-ignorance-time-heaped / duty-formed / but / deed-too / long-heaped / as / cotton / perishes / b
+  L2: Yet even duty-formed deeds, heaped in ignorance-time, long-heaped like cotton, perish by knowing-flame-power.
+- param-p07-v56 (verses 56) [PASS]
+  L1: ## param-p07-v56 (56)
+in-knowing-gaining / done / though / not / for-fruit / thence / his / birth / how / gone-birth-bon
+  L2: Done, yet not for fruit — how then birth? yoked to birth-bond gone, the Śiva-sun shines by its own rays.
+- param-p07-v57 (verses 57) [PASS]
+  L1: ## param-p07-v57 (57)
+husk-cover-bran-freed / seed / as-sprout / makes / not-indeed / so-atom-Māyā-deed-freed / birth-sp
+  L2: As husk-cover-bran-freed seed makes no sprout, so the atom-Māyā-deed-freed self makes no birth-sprout.
+- param-p07-v58 (verses 58) [PASS]
+  L1: ## param-p07-v58 (58)
+self-knower / not / whence / fears / all / indeed / his / own-form / not-indeed / and / grieves / 
+  L2: The self-knower fears nowhere — all is his own form — and never grieves, since in truth there is no perishing.
+- param-p07-v59 (verses 59) [PASS]
+  L1: ## param-p07-v59 (59)
+by-supersecret-heart-treasury-sprouted-truth-jewel-heap / I / indeed-thus / in-great-Lord-state / 
+  L2: From the supersecret heart-treasury's sprouted truth-jewel heap: 'I indeed' — in the great-Lord state, what misfortune, 
+- param-p07-v60 (verses 60) [PASS]
+  L1: ## param-p07-v60 (60)
+of-liberation / not-indeed / anything / abode-is / not / and-too / going / elsewhere / by-ignoranc
+  L2: Liberation has no abode at all, nor any going elsewhere: by cutting ignorance's knot, own-power-manifestation is liberat
+- param-p07-v61 (verses 61) [PASS]
+  L1: ## param-p07-v61 (61)
+cut-ignorance-knotted / gone-doubted / cast-off-deluded / wasted-merit-demerited / in-body-yoked /
+  L2: Cut-ignorance-knotted, doubt-gone, delusion-cast-off, merit-demerit-wasted — in body-yoked though, he is freed.
+- param-p07-v62 (verses 62) [PASS]
+  L1: ## param-p07-v62 (62)
+by-fire-inflamed / seed / as / sprout-power-ness / goes / by-knowing-fire-burnt / thus / deed / no
+  L2: As fire-inflamed seed loses sprout-power, so knowing-fire-burnt deed becomes birth-giving no more.
+- param-p07-v63 (verses 63) [PASS]
+  L1: ## param-p07-v63 (63)
+by-limited-mind-ness / indeed / by-deed-fit-state-body-contemplating / contracted / knowing / on-t
+  L2: By limited-mind-ness, contemplating a body fit for its deeds, contracted knowing shines when this body falls.
+- param-p07-v64 (verses 64) [PASS]
+  L1: ## param-p07-v64 (64)
+if / again / stainless / knowing / all-transcended-knower-doer-made / spread / unset-unrisen-light
+  L2: If again stainless knowing — all-transcended-knower-doer-made, spread, light-formed never-setting-rising, true-resolved.
+- param-p08-v65 (verses 65) [PASS]
+  L1: ## param-p08-v65 (65)
+direction-time-touch-free / firm / changeless / Lord / full / many-power-host-dissolution-rise-mak
+  L2: Beyond direction-time-touch, firm, changeless, the full Lord — sole maker of hosts of powers dissolving and rising.
+- param-p08-v66 (verses 66) [PASS]
+  L1: ## param-p08-v66 (66)
+creation-etc-rule-wise-maker / self / Śiva-made / should-awaken / how / as / wanderer / could-be /
+  L2: Awakening to the self as Śiva-made, maker of creation's rules — how could he wander? Spread out, whence, where, what ref
+- param-p08-v67 (verses 67) [PASS]
+  L1: ## param-p08-v67 (67)
+thus / by-reasons / though / proved / which-deed / of-knower / not / fruitful / that / not / not-m
+  L2: Thus proved by reasons: the knower's deed is fruitless. 'Not mine, this — but his': firmly, no fruit in the world.
+- param-p08-v68 (verses 68) [PASS]
+  L1: ## param-p08-v68 (68)
+thus / all-thoughts / awakened / by-contemplation-wind / in-self-flame / blazed / sacrificing / fl
+  L2: Thus awakened by contemplation-wind, sacrificing all thoughts in the blazing self-flame, he becomes flame.
+- param-p08-v69 (verses 69) [PASS]
+  L1: ## param-p08-v69 (69)
+eating / what / or / that / or / covered / by-whatever / by-anything / calmed / where / anywhere /
+  L2: Eating this or that, covered by anything, calmed, dwelling anywhere — the all-beings-self is freed.
+- param-p08-v70 (verses 70) [PASS]
+  L1: ## param-p08-v70 (70)
+horse-rite-hundred-thousands / though / does / brahmin-kill-hundred-thousands / truth-knower / not
+  L2: Though doing horse-rites by hundred-thousands, brahmin-killings by hundred-thousands — the truth-knower, by merits not, 
+- param-p08-v71 (verses 71) [PASS]
+  L1: ## param-p08-v71 (71)
+pride-joy-anger-lust-sorrow-fear-greed-delusion-leaving / no-praise-vaṣaṭ / dull / as / should-mov
+  L2: Leaving pride, joy, anger, lust, sorrow, fear, greed, delusion; no praise, no formula; dull as if — let him move, opinio
+- param-p08-v72 (verses 72) [PASS]
+  L1: ## param-p08-v72 (72)
+pride-joy-etc / this / host / arises / from-difference-delusion / nondual-self-awakening / thereby
+  L2: The pride-joy host arises from difference-delusion: how could the nondual-self-awakened be touched by it?
+- param-p08-v73 (verses 73) [PASS]
+  L1: ## param-p08-v73 (73)
+to-be-praised / or / to-be-offered / is-not / separate / his / anything / and / by-praise-etc / he
+  L2: Nothing to praise or offer, separate from him, at all: pleased by praise, freed — then no bow, no formula.
+- param-p09-v74 (verses 74) [PASS]
+  L1: ## param-p09-v74 (74)
+thirty-six-principle-bearing / body-making-window-eyed-full / own / other / then / body / jar-etc 
+  L2: Bearing thirty-six principles, full-eyed in body-making: own or other's body, jar and the like — his god-house.
+- param-p09-v75 (verses 75) [PASS]
+  L1: ## param-p09-v75 (75)
+there / and / supreme-self-great-Bhairava-Śiva-goddess / own-power-yoked / by-self-grasp-pure-subs
+  L2: There the supreme-self-great-Bhairava-Śiva-goddess, yoked to own power, sits worshipped with self-grasped pure gifts.
+- param-p09-v76 (verses 76) [PASS]
+  L1: ## param-p09-v76 (76)
+outer-inner-fancying-difference-great-seed-heap / of-offering / in-his-blazing-knowing-fire / by-e
+  L2: Offering the great seed-heap of outer-inner-fancied difference in his blazing knowing-fire — effortless the offering.
+- param-p09-v77 (verses 77) [PASS]
+  L1: ## param-p09-v77 (77)
+meditation / unset / again / this / indeed / blessed-Lord / varied-formed / creates / that / indee
+  L2: Meditation never setting: the blessed Lord creates varied forms — that itself is meditation, true-formed as fancy draws.
+- param-p09-v78 (verses 78) [PASS]
+  L1: ## param-p09-v78 (78)
+world-rows / whole / principle-order-fancying / then-sense-host / in-inner-knowing / turns / and /
+  L2: Turning world-rows, principle-order-fancies, sense-hosts in inner knowing — that, they say, is his muttering.
+- param-p09-v79 (verses 79) [PASS]
+  L1: ## param-p09-v79 (79)
+all / by-even / glance / which / sees / which / and / knowing / deems / world-burning-ground-delig
+  L2: Seeing all with an even glance, deeming knowing content, delighting in the world-burning-ground, grasping the body as sk
+- param-p09-v80 (verses 80) [PASS]
+  L1: ## param-p09-v80 (80)
+world-essence-drink-filled / own-hand-held / known-fragment-bowl / tastes / and / which / that / t
+  L2: Tasting the world-essence-drink-filled, own-hand-held, known-fragment bowl — this vow, hard to get and easy to get.
+- param-p09-v81 (verses 81) [PASS]
+  L1: ## param-p09-v81 (81)
+thus / birth-death-free / truth-great-Lord-named / having-got / by-finder-shining / done-done / st
+  L2: Thus birth-death-free, named truth-great-Lord, having got — by the finder's shining, done-done, standing as wished.
+- param-p09-v82 (verses 82) [PASS]
+  L1: ## param-p09-v82 (82)
+pervading / told / thus / all-self / diversity-shaken / peerless-supreme-bliss / who / knows / he 
+  L2: Pervading, so told, all-self, diversity-shaken, peerless bliss supreme: who knows becomes made of that.
+- param-p10-v83 (verses 83) [PASS]
+  L1: ## param-p10-v83 (83)
+in-shrine / in-outcaste-hut / or / lost-memory / though / abandoning / body / knowing-simultaneous
+  L2: In a shrine or an outcaste hut, memory lost though, abandoning the body — freed simultaneous with knowing, going to isol
+- param-p10-v84 (verses 84) [PASS]
+  L1: ## param-p10-v84 (84)
+for-merit / shrine-service / for-hell / outcaste-house-death-going / in-merit-demerit-stain-touch-
+  L2: Shrine-service for merit, outcaste-death for hell — but with no touch of merit-demerit stain, what use?
+- param-p10-v85 (verses 85) [PASS]
+  L1: ## param-p10-v85 (85)
+husk-bran-well-separated-rice-grain-husk-piece-between-throwing / of-rice-grain / makes / not / ag
+  L2: Throwing the well-separated rice-grain between husk-pieces makes not again that-form identity.
+- param-p10-v86 (verses 86) [PASS]
+  L1: ## param-p10-v86 (86)
+so / sheath-curtain-separated / knowing / here / by-impression / standing / though / freed-self / 
+  L2: So the sheath-curtain-separated knowing, here by impression, standing though — freed self, untouched by that touch, beco
+- param-p10-v87 (verses 87) [PASS]
+  L1: ## param-p10-v87 (87)
+by-skilled-artisan-made-flawless-ness / of-casket-condition / stained / though / gem / of-conditio
+  L2: As flawless-made by the best artisan, the casket-bound gem, though stained, on cutting the bound shows clear truth.
+- param-p10-v88 (verses 88) [PASS]
+  L1: ## param-p10-v88 (88)
+thus / true-teacher-teaching-pure-state / feeling / body-condition / freed / though / condition-ot
+  L2: So the true-teacher-taught pure state, feeling the body-bound, freed though void of other bounds, shines as Śiva-formed.
+- param-p10-v89 (verses 89) [PASS]
+  L1: ## param-p10-v89 (89)
+by-scripture-authority / by-unshaken-faith-too / that-made-ness / got / he / indeed / before / hea
+  L2: By scripture's weight, by unshaken faith become that — got before heaven, hell, man-ness.
+- param-p10-v90 (verses 90) [PASS]
+  L1: ## param-p10-v90 (90)
+last / moment / but / therein / merit / demerit / and / or / state / nourishing / of-fools / helpe
+  L2: The last moment, nourishing a merit or demerit state, plays helper — but in going on, no cause.
+- param-p10-v91 (verses 91) [PASS]
+  L1: ## param-p10-v91 (91)
+who / though / that-self-ness / know / beast-bird-creeper-etc / own-going / they / though / by-old
+  L2: Whoever knows that-self-ness — beast, bird, creeper and the rest — goes his own way, by old awakening impressed.
+- param-p11-v92 (verses 92) [PASS]
+  L1: ## param-p11-v92 (92)
+heaven-made / hell-made / then / this / body-between-gone / person / on-that-breaking / by-own-fit
+  L2: Heaven-made, hell-made — this person between bodies; when that breaks, by fitness joining another body.
+- param-p11-v93 (verses 93) [PASS]
+  L1: ## param-p11-v93 (93)
+thus / in-knowing-time / own-self / once / his / as / shone / such / indeed / then-he / not / on-b
+  L2: As in knowing-time the self once shone for him, so then — on body-falling, otherwise it does not become.
+- param-p11-v94 (verses 94) [PASS]
+  L1: ## param-p11-v94 (94)
+faculty-host-theft / memory-loss / breath-choking / cutting / in-vitals / pain-sorts / body-impres
+  L2: Senses stolen, memory lost, breath choked, cut off, vitals pained — enjoyment born of body-impressions.
+- param-p11-v95 (verses 95) [PASS]
+  L1: ## param-p11-v95 (95)
+he / how / in-body-yoked / being / not / could-be / thereby / in-delusion-yoked / though / at-deat
+  L2: How could he, being embodied, not be so? By that, deluded though — at death-time the knower falls not from self-truth.
+- param-p11-v96 (verses 96) [PASS]
+  L1: ## param-p11-v96 (96)
+truth-path / this / quickly / when / from-teacher-mouth / gains / by-keen-grace-fall / then-indeed
+  L2: This truth-path, quickly, when gained from the teacher's mouth — by keenest grace-fall, then indeed, unblocked, Śiva.
+- param-p11-v97 (verses 97) [PASS]
+  L1: ## param-p11-v97 (97)
+all-crossed / form / by-step-stage-order / resorting / on-supreme-truth-rooting-gaining / at-end /
+  L2: All-crossed form, by steps resorted, on gaining root in supreme truth — at the end, Śiva-madeness.
+- param-p11-v98 (verses 98) [PASS]
+  L1: ## param-p11-v98 (98)
+his / but / truth-made / stream / of-ungone / of-middle-resting / that-step-gain-eager-minded / th
+  L2: But his truth-made stream, unreached, middle-rested — though mind yearns for that step, death may sometime come.
+- param-p11-v99 (verses 99) [PASS]
+  L1: ## param-p11-v99 (99)
+yoga-fallen / in-teaching / called / he / wonder-enjoy-world-lord / by-rest-stage-power / having-b
+  L2: Fallen from yoga, the books call him wonder-enjoyment-world-lord; rested by stage-power, become, in next birth Śiva-beco
+- param-p11-v100 (verses 100) [PASS]
+  L1: ## param-p11-v100 (100)
+truth-path / this / indeed / practising-not-gaining / discipline / though / by-name / god-world-
+  L2: Practising this truth-path, missing yoga though, by name — god-world-pleasure-sharer, glad-minded, rejoices long.
+- param-p12-v101 (verses 101) [PASS]
+  L1: ## param-p12-v101 (101)
+in-objects / emperor / by-all-people / is-honored / as / king / in-worlds / by-all-gods / yoga-f
+  L2: As an emperor among things is honored by all people as king, so among worlds the yoga-fallen is honored by all gods.
+- param-p12-v102 (verses 102) [PASS]
+  L1: ## param-p12-v102 (102)
+by-long / by-time / again / human-ness / having-got / discipline / having-practised / gets / div
+  L2: After long time, humanity got, yoga practised — getting the divine deathless whence turning back no more.
+- param-p12-v103 (verses 103) [PASS]
+  L1: ## param-p12-v103 (103)
+therefore / on-true-path / herein / devoted / who / anyone / goes / he / Śiva-ness / thus / havi
+  L2: Therefore whoever, devoted on the true path here, goes — he to Śiva-ness: thinking so, in truth yet strive.
+- param-p12-v104 (verses 104) [PASS]
+  L1: ## param-p12-v104 (104)
+this / Abhinavagupta-uttered-brief / of-meditating / supreme / brahman / soon / indeed / Śiva-ne
+  L2: Meditating this supreme brahman, briefly told by Abhinavagupta — soon indeed Śiva-ness enters own-heart-dwelling.
+- param-p12-v105 (verses 105) [PASS]
+  L1: ## param-p12-v105 (105)
+by-hundred-āryās / then / this / condensed / teaching-essence / recondite / by-Abhinavagupta / b
+  L2: In a hundred āryās this condensed recondite teaching-essence — by Abhinavagupta, by me, kindled by Śiva-feet-memory.

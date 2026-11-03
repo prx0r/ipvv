@@ -4,8 +4,8 @@
  "passage_id": "pancashloki:pan-p03",
  "title": "pancashloki — pan-p03",
  "kind": "entailment",
- "question": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen amid the pit of the ocean of transmigration, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
- "issue": "Derived from L2 text (no argmap). You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen amid the pit of the ocean of transmigration, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
+ "question": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen into the pit amid transmigration's ocean, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
+ "issue": "Derived from L2 text (no argmap). You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen into the pit amid transmigration's ocean, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
  "premises": [
   {
    "text": "brūṣe nottamāṅga paśyasi na māmetādṛśaṃ duḥkhitaṃ vijñaptiṃ bahudhā kṛtāṃ na śṛṇuṣe nāyāsi manmānase | saṃsārārṇavagartamadhyapatitaṃ prāyeṇa nālambase vākcakṣuḥśravaṇāṅghriṇādirahitaṃ tvāmāha satyaṃ śrutiḥ",
@@ -15,16 +15,16 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen amid the pit of the ocean of transmigration, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
+  "text": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen into the pit amid transmigration's ocean, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
   "passage_id": "pancashloki:pan-p03"
  },
  "unresolved": "",
- "argument_text": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen amid the pit of the ocean of transmigration, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
+ "argument_text": "You speak not, O best-limbed one; You look not upon me, wretched as I am. My entreaty, made in many ways, You hear not; You come not into my mind. Fallen into the pit amid transmigration's ocean, I am mostly left unsupported — yet scripture truly declares You devoid of speech, sight, hearing, feet and the like!",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "pancashloki:pan-p03",
  "sanskrit": "brūṣe nottamāṅga paśyasi na māmetādṛśaṃ duḥkhitaṃ vijñaptiṃ bahudhā kṛtāṃ na śṛṇuṣe nāyāsi manmānase | saṃsārārṇavagartamadhyapatitaṃ prāyeṇa nālambase vākcakṣuḥśravaṇāṅghriṇādirahitaṃ tvāmāha satyaṃ śrutiḥ",
- "license": "CC BY-NC-SA 4.0"
+ "license": "SanskritDocuments (Ruma Dewan) - no explicit source licence"
 }

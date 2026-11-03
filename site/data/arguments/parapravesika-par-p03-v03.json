@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:parapravesika:par-p03-v03",
+ "work_id": "parapravesika",
+ "passage_id": "parapravesika:par-p03-v03",
+ "title": "parapravesika — par-p03-v03",
+ "kind": "entailment",
+ "question": "This very awareness is what the scriptures trumpet under many names: consciousness, consciousness-in-its-freedom, the supreme Word risen from its own sap, freedom, the supreme Self's sovereign majesty, doership, pulsing, essence, heart, vibration — and more. In the Śaiva teaching, the scriptures everywhere proclaim one thing: that awareness comes first in the light of consciousness, sung in scripture after scripture in different words. Consciousness — because awareness is the Self's own chief fo",
+ "issue": "Derived from L2 text (no argmap). This very awareness is what the scriptures trumpet under many names: consciousness, consciousness-in-its-freedom, the supreme Word risen from its own sap, freedom, the supreme Self's sovereign majesty, doership, pulsing, essence, heart, vibration — and more. In the Śaiva teaching, the scriptures everywhere proclaim one thing: that awareness comes first in the light of consciousness, sung in scripture after scripture in different words. Consciousness — because awareness is the Self's own chief fo",
+ "premises": [
+  {
+   "text": "eṣa eva ca vimarśaḥ - cit, caitanyaṃ, svarasoditāparāvāk, svātantryaṃ, paramātmano mukhyamaiśvaryaṃ, kartṛtvaṃ, sphurattā, sāro, hṛdayaṃ, spandaḥ ityādiśabdairāgameṣūddhoṣyate",
+   "label": "Sanskrit source",
+   "passage_id": "parapravesika:par-p03-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This very awareness is what the scriptures trumpet under many names: consciousness, consciousness-in-its-freedom, the supreme Word risen from its own sap, freedom, the supreme Self's sovereign majesty, doership, pulsing, essence, heart, vibration — and more. In the Śaiva teaching, the scriptures everywhere proclaim one thing: that awareness comes first in the light of consciousness, sung in scripture after scripture in different words. Consciousness — because awareness is the Self's own chief fo",
+  "passage_id": "parapravesika:par-p03-v03"
+ },
+ "unresolved": "",
+ "argument_text": "This very awareness is what the scriptures trumpet under many names: consciousness, consciousness-in-its-freedom, the supreme Word risen from its own sap, freedom, the supreme Self's sovereign majesty, doership, pulsing, essence, heart, vibration — and more. In the Śaiva teaching, the scriptures everywhere proclaim one thing: that awareness comes first in the light of consciousness, sung in scripture after scripture in different words. Consciousness — because awareness is the Self's own chief form. The supreme Word — because it speaks the world into declaration by grasping it back, supreme as the ground and fullness of all lesser graspings, risen from its own sap because its \"I\" never sets, full-bodied consciousness. Freedom — because it binds the cast-out \"this\" back to the self, looses it again, and lays it low through the stations of the void — differing from the inert by exactly these marks. Sovereignty — needing nothing else when the world begins, unlike Brahmā and his fellow wardens of māyā's womb, who answer to another's will and bend to fate. Doership — raising the whole world, from Śiva down to earth, into \"this\"-ness out of inward shining oneness, the way a yogin makes things — an unsurpassed kind of causing. Pulsing — the relation of flashing, and it is mine: were throbbing nobody's in particular, everything would flash for everyone always, and all would be omniscient, or all blind. Essence — the untrifling form, the Lord's own power of awareness. Heart — where the world comes to rest. Vibration — the still light of consciousness shimmering with motion, the world appearing as something extra where nothing extra is.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "parapravesika:par-p03-v03",
+ "sanskrit": "eṣa eva ca vimarśaḥ - cit, caitanyaṃ, svarasoditāparāvāk, svātantryaṃ, paramātmano mukhyamaiśvaryaṃ, kartṛtvaṃ, sphurattā, sāro, hṛdayaṃ, spandaḥ ityādiśabdairāgameṣūddhoṣyate",
+ "license": "CC BY-NC 4.0"
+}

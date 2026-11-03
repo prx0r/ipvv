@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s05-v09",
  "title": "sivastotravali — s05-v09",
  "kind": "entailment",
- "question": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — melts like wax, flows like...",
- "issue": "Derived from L2 text (no argmap). Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — melts like wax, flows like...",
+ "question": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — may it melt, may it flow.",
+ "issue": "Derived from L2 text (no argmap). Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — may it melt, may it flow.",
  "premises": [
   {
-   "text": "",
+   "text": "prasīda bhagavan yena tvatpade patitaṃ sadā mano me tattadāsvādya kṣīved iva galed iva",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s05-v09"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — melts like wax, flows like...",
+  "text": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — may it melt, may it flow.",
   "passage_id": "sivastotravali:s05-v09"
  },
  "unresolved": "",
- "argument_text": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — melts like wax, flows like...",
+ "argument_text": "Favor me, Lord, so that my mind, fallen ever at Your feet, tasting this and that — may it melt, may it flow.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s05-v09",
- "sanskrit": "",
+ "sanskrit": "prasīda bhagavan yena tvatpade patitaṃ sadā mano me tattadāsvādya kṣīved iva galed iva",
  "license": "CC BY-NC-SA 4.0"
 }

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p04-v22",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p04-v22",
+ "title": "paryantapancasika — pary-p04-v22",
+ "kind": "entailment",
+ "question": "Infinite, such-formed, in acceptance even, one-character — that own-consciousness entered — thoughts not should-imagine.",
+ "issue": "Derived from L2 text (no argmap). Infinite, such-formed, in acceptance even, one-character — that own-consciousness entered — thoughts not should-imagine.",
+ "premises": [
+  {
+   "text": "saṃhṛtya sarvataś cintām ahaṃ iti anuśīlayan avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p04-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Infinite, such-formed, in acceptance even, one-character — that own-consciousness entered — thoughts not should-imagine.",
+  "passage_id": "paryantapancasika:pary-p04-v22"
+ },
+ "unresolved": "",
+ "argument_text": "Infinite, such-formed, in acceptance even, one-character — that own-consciousness entered — thoughts not should-imagine.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p04-v22",
+ "sanskrit": "saṃhṛtya sarvataś cintām ahaṃ iti anuśīlayan avikalpāṃ svasaṃvittiṃ pratyakṣāṃ pratipadyate",
+ "license": "CC BY-NC-SA 4.0"
+}

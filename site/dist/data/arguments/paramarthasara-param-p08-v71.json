@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p08-v71",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p08-v71",
+ "title": "paramarthasara — param-p08-v71",
+ "kind": "entailment",
+ "question": "Leaving pride, joy, anger, lust, sorrow, fear, greed, delusion; no praise, no formula; dull as if — let him move, opinion-free.",
+ "issue": "Derived from L2 text (no argmap). Leaving pride, joy, anger, lust, sorrow, fear, greed, delusion; no praise, no formula; dull as if — let him move, opinion-free.",
+ "premises": [
+  {
+   "text": "dikkālakalanavikalaṃ dhruvam avyayam īśvaraṃ suparipūrṇam | bahutaraśaktivrātapralayodayaviracanaikakartāram sṛṣṭyādividhisuvedhasam ātmānaṃ śivamayaṃ vibudhyeta | katham iva saṃsārī syād vitatasya kutaḥ kva vā saraṇam iti yuktibhir api siddhaṃ yatkarma jñānino na saphalaṃ tat | na mamedam api tu tasyeti dārḍhyato na hi phalaṃ loke itthaṃ sakalavikalpān pratibuddho bhāvanāsamīraṇataḥ | ātmajyotiṣi dīpte juhvaj jyotirmayo bhavati aśnan yad vā tad vā saṃvīto yena kenacic chāntaḥ | yatra kvacana nivāsī vimucyate sarvabhūtātmā hayamedhaśatasahasrāṇy api kurute brahmaghātalakṣāṇi | paramārthavin na puṇyair na ca pāpaiḥ spṛśyate vimalaḥ madaharṣakopamanmathaviṣādabhayalobhamohaparivarjī | niḥstotravaṣaṭkāro jaḍa iva vicared avādamatiḥ madaharṣaprabhṛtir ayaṃ vargaḥ prabhavati vibhedasaṃmohāt | advaitātmavibodhas tena kathaṃ spṛśyatāṃ nāma stutyaṃ vā hotavyaṃ nāsti vyatiriktam asya kiṃcana ca | stotrādinā sa tuṣyen muktas tan nirnamaskṛtivaṣaṭkaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p08-v71"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Leaving pride, joy, anger, lust, sorrow, fear, greed, delusion; no praise, no formula; dull as if — let him move, opinion-free.",
+  "passage_id": "paramarthasara:param-p08-v71"
+ },
+ "unresolved": "",
+ "argument_text": "Leaving pride, joy, anger, lust, sorrow, fear, greed, delusion; no praise, no formula; dull as if — let him move, opinion-free.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p08-v71",
+ "sanskrit": "dikkālakalanavikalaṃ dhruvam avyayam īśvaraṃ suparipūrṇam | bahutaraśaktivrātapralayodayaviracanaikakartāram sṛṣṭyādividhisuvedhasam ātmānaṃ śivamayaṃ vibudhyeta | katham iva saṃsārī syād vitatasya kutaḥ kva vā saraṇam iti yuktibhir api siddhaṃ yatkarma jñānino na saphalaṃ tat | na mamedam api tu tasyeti dārḍhyato na hi phalaṃ loke itthaṃ sakalavikalpān pratibuddho bhāvanāsamīraṇataḥ | ātmajyotiṣi dīpte juhvaj jyotirmayo bhavati aśnan yad vā tad vā saṃvīto yena kenacic chāntaḥ | yatra kvacana nivāsī vimucyate sarvabhūtātmā hayamedhaśatasahasrāṇy api kurute brahmaghātalakṣāṇi | paramārthavin na puṇyair na ca pāpaiḥ spṛśyate vimalaḥ madaharṣakopamanmathaviṣādabhayalobhamohaparivarjī | niḥstotravaṣaṭkāro jaḍa iva vicared avādamatiḥ madaharṣaprabhṛtir ayaṃ vargaḥ prabhavati vibhedasaṃmohāt | advaitātmavibodhas tena kathaṃ spṛśyatāṃ nāma stutyaṃ vā hotavyaṃ nāsti vyatiriktam asya kiṃcana ca | stotrādinā sa tuṣyen muktas tan nirnamaskṛtivaṣaṭkaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

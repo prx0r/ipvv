@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p02-v20",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p02-v20",
+ "title": "bhairavanukarana — bhair-p02-v20",
+ "kind": "entailment",
+ "question": "By bow-mounted-arrow-showing, Brahmā-Viṣṇu-Rudra-lords with Sadākhya-Śivas — by power, cause-deer pierced like a deer — You.",
+ "issue": "Derived from L2 text (no argmap). By bow-mounted-arrow-showing, Brahmā-Viṣṇu-Rudra-lords with Sadākhya-Śivas — by power, cause-deer pierced like a deer — You.",
+ "premises": [
+  {
+   "text": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p02-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By bow-mounted-arrow-showing, Brahmā-Viṣṇu-Rudra-lords with Sadākhya-Śivas — by power, cause-deer pierced like a deer — You.",
+  "passage_id": "bhairavanukarana:bhair-p02-v20"
+ },
+ "unresolved": "",
+ "argument_text": "By bow-mounted-arrow-showing, Brahmā-Viṣṇu-Rudra-lords with Sadākhya-Śivas — by power, cause-deer pierced like a deer — You.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p02-v20",
+ "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

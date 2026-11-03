@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p11-v11",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p11-v11",
+ "title": "kramastotra — kram-p11-v11",
+ "kind": "entailment",
+ "question": "Hence the Lord's power — enjoying varied, unvaried, beyond-difference stations — ever goes, never into division, nohow. So on this unagitated ground — Your step it is — may my heart-ground grow one-pointed, Bhairava Lord.",
+ "issue": "Derived from L2 text (no argmap). Hence the Lord's power — enjoying varied, unvaried, beyond-difference stations — ever goes, never into division, nohow. So on this unagitated ground — Your step it is — may my heart-ground grow one-pointed, Bhairava Lord.",
+ "premises": [
+  {
+   "text": "amuṣmāt saṃpūrnāt vata rasamahollāsasarasān nijāṃ śaktiṃ bhedaṃ gamayasi nijecchāprasarataḥ | anarghaṃ svātantryaṃ tava tadidam atyadbhutamayīṃ bhavacchaktiṃ stunvan vigalitabhayo 'haṃ śivamayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p11-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Hence the Lord's power — enjoying varied, unvaried, beyond-difference stations — ever goes, never into division, nohow. So on this unagitated ground — Your step it is — may my heart-ground grow one-pointed, Bhairava Lord.",
+  "passage_id": "kramastotra:kram-p11-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Hence the Lord's power — enjoying varied, unvaried, beyond-difference stations — ever goes, never into division, nohow. So on this unagitated ground — Your step it is — may my heart-ground grow one-pointed, Bhairava Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p11-v11",
+ "sanskrit": "amuṣmāt saṃpūrnāt vata rasamahollāsasarasān nijāṃ śaktiṃ bhedaṃ gamayasi nijecchāprasarataḥ | anarghaṃ svātantryaṃ tava tadidam atyadbhutamayīṃ bhavacchaktiṃ stunvan vigalitabhayo 'haṃ śivamayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

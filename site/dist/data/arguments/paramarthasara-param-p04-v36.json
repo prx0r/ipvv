@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p04-v36",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p04-v36",
+ "title": "paramarthasara — param-p04-v36",
+ "kind": "entailment",
+ "question": "As cloud, smoke and dust do not soil the sky's surface, so the supreme person stands untouched by Māyā's deformings.",
+ "issue": "Derived from L2 text (no argmap). As cloud, smoke and dust do not soil the sky's surface, so the supreme person stands untouched by Māyā's deformings.",
+ "premises": [
+  {
+   "text": "tadvad dharmādharmasvarnirayotpattimaraṇasukhaduḥkham | varṇāśramādi cātmany asad api vibhramabalād bhavati etat tad andhakāraṃ yad bhāveṣu prakāśamānatayā | ātmānatirikteṣv api bhavaty anātmābhimāno 'yam timirād api timiram idaṃ ga.ṅdasyopari mahān ayaṃ sphoṭaḥ | yad anātmany api dehaprāṇadāv ātmamānitvam dehaprāṇavimarśanadhījñānanabhaḥprapañcayogena | ātmānam veṣṭayate citraṃ jālena jālakāra iva svajñānavibhavabhāsanayogenodveṣṭayen nijātmānam | iti bandhamokṣacitrāṃ krīḍāṃ pratanoti paramaśivaḥ sṛṣṭisthitisaṃhārā jāgratsvapnau suṣuptam iti tasmin | bhānti turīye dhāmani tathāpi tair nāvṛtaṃ bhāti jāgrad viśvaṃ bhedāt svapnas tejaḥ prakāśamāhātmyāt | prājñaḥ suptāvasthā jñānaghanatvāt tataḥ paraṃ turyam jaladharadhūmarajobhir malinīkriyate yathā na gaganatalam | tadvan māyāvikṛtibhir aparāmṛṣṭaḥ paraḥ puruṣaḥ ekasmin ghaṭagagane rajasā vyāpte bhavanti nānyāni | malināni tadvad ete jīvāḥ sukhaduḥkhabhedajuṣaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p04-v36"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "As cloud, smoke and dust do not soil the sky's surface, so the supreme person stands untouched by Māyā's deformings.",
+  "passage_id": "paramarthasara:param-p04-v36"
+ },
+ "unresolved": "",
+ "argument_text": "As cloud, smoke and dust do not soil the sky's surface, so the supreme person stands untouched by Māyā's deformings.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p04-v36",
+ "sanskrit": "tadvad dharmādharmasvarnirayotpattimaraṇasukhaduḥkham | varṇāśramādi cātmany asad api vibhramabalād bhavati etat tad andhakāraṃ yad bhāveṣu prakāśamānatayā | ātmānatirikteṣv api bhavaty anātmābhimāno 'yam timirād api timiram idaṃ ga.ṅdasyopari mahān ayaṃ sphoṭaḥ | yad anātmany api dehaprāṇadāv ātmamānitvam dehaprāṇavimarśanadhījñānanabhaḥprapañcayogena | ātmānam veṣṭayate citraṃ jālena jālakāra iva svajñānavibhavabhāsanayogenodveṣṭayen nijātmānam | iti bandhamokṣacitrāṃ krīḍāṃ pratanoti paramaśivaḥ sṛṣṭisthitisaṃhārā jāgratsvapnau suṣuptam iti tasmin | bhānti turīye dhāmani tathāpi tair nāvṛtaṃ bhāti jāgrad viśvaṃ bhedāt svapnas tejaḥ prakāśamāhātmyāt | prājñaḥ suptāvasthā jñānaghanatvāt tataḥ paraṃ turyam jaladharadhūmarajobhir malinīkriyate yathā na gaganatalam | tadvan māyāvikṛtibhir aparāmṛṣṭaḥ paraḥ puruṣaḥ ekasmin ghaṭagagane rajasā vyāpte bhavanti nānyāni | malināni tadvad ete jīvāḥ sukhaduḥkhabhedajuṣaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

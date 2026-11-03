@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s09-v07",
  "title": "sivastotravali — s09-v07",
  "kind": "entailment",
- "question": "When, Lord, that beloved-ness of Yours by which it would not be fitting for You to flee from me anywhere?",
- "issue": "Derived from L2 text (no argmap). When, Lord, that beloved-ness of Yours by which it would not be fitting for You to flee from me anywhere?",
+ "question": "When, Lord, shall I attain whatever beloved-ness of Yours — that by which it would not befit You to flee from me anywhere?",
+ "issue": "Derived from L2 text (no argmap). When, Lord, shall I attain whatever beloved-ness of Yours — that by which it would not befit You to flee from me anywhere?",
  "premises": [
   {
-   "text": "",
+   "text": "kadā kām api tāṃ nātha tava vallabhatām iyām yayā māṃ prati na kvāpi yuktaṃ te syāt palāyitum",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s09-v07"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "When, Lord, that beloved-ness of Yours by which it would not be fitting for You to flee from me anywhere?",
+  "text": "When, Lord, shall I attain whatever beloved-ness of Yours — that by which it would not befit You to flee from me anywhere?",
   "passage_id": "sivastotravali:s09-v07"
  },
  "unresolved": "",
- "argument_text": "When, Lord, that beloved-ness of Yours by which it would not be fitting for You to flee from me anywhere?",
+ "argument_text": "When, Lord, shall I attain whatever beloved-ness of Yours — that by which it would not befit You to flee from me anywhere?",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s09-v07",
- "sanskrit": "",
+ "sanskrit": "kadā kām api tāṃ nātha tava vallabhatām iyām yayā māṃ prati na kvāpi yuktaṃ te syāt palāyitum",
  "license": "CC BY-NC-SA 4.0"
 }

@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s18-v18",
  "title": "sivastotravali — s18-v18",
  "kind": "entailment",
- "question": "Nothing unmade, no unpleasure made — yet all suffers and divides: bow to the wonder-abode.",
- "issue": "Derived from L2 text (no argmap). Nothing unmade, no unpleasure made — yet all suffers and divides: bow to the wonder-abode.",
+ "question": "Nothing divided was left uncreated, no non-pleasure unmade here — yet all suffers and divides in every way: bow to the wonder-abode.",
+ "issue": "Derived from L2 text (no argmap). Nothing divided was left uncreated, no non-pleasure unmade here — yet all suffers and divides in every way: bow to the wonder-abode.",
  "premises": [
   {
-   "text": "",
+   "text": "na ca vibhinnam asṛjyata kiñcid asty atha sukhetarad atra na nirmitam atha ca duḥkhi ca bhedi ca sarvathāpy asamavismayadhāma namo 'stu te",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s18-v18"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Nothing unmade, no unpleasure made — yet all suffers and divides: bow to the wonder-abode.",
+  "text": "Nothing divided was left uncreated, no non-pleasure unmade here — yet all suffers and divides in every way: bow to the wonder-abode.",
   "passage_id": "sivastotravali:s18-v18"
  },
  "unresolved": "",
- "argument_text": "Nothing unmade, no unpleasure made — yet all suffers and divides: bow to the wonder-abode.",
+ "argument_text": "Nothing divided was left uncreated, no non-pleasure unmade here — yet all suffers and divides in every way: bow to the wonder-abode.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s18-v18",
- "sanskrit": "",
+ "sanskrit": "na ca vibhinnam asṛjyata kiñcid asty atha sukhetarad atra na nirmitam atha ca duḥkhi ca bhedi ca sarvathāpy asamavismayadhāma namo 'stu te",
  "license": "CC BY-NC-SA 4.0"
 }

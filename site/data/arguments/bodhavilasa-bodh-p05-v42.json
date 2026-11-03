@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhavilasa:bodh-p05-v42",
+ "work_id": "bodhavilasa",
+ "passage_id": "bodhavilasa:bodh-p05-v42",
+ "title": "bodhavilasa — bodh-p05-v42",
+ "kind": "entailment",
+ "question": "This bliss-of-awareness-method for attaining Śiva — of great souls, of king Kṣema-named — treatise extremely pure.",
+ "issue": "Derived from L2 text (no argmap). This bliss-of-awareness-method for attaining Śiva — of great souls, of king Kṣema-named — treatise extremely pure.",
+ "premises": [
+  {
+   "text": "etad advayam ity uktaṃ jñānāmṛtam anuttamam yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam iti śrīkṣemarājakṛtaṃ bodhavilāsākhyaṃ yogaśāstram",
+   "label": "Sanskrit source",
+   "passage_id": "bodhavilasa:bodh-p05-v42"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This bliss-of-awareness-method for attaining Śiva — of great souls, of king Kṣema-named — treatise extremely pure.",
+  "passage_id": "bodhavilasa:bodh-p05-v42"
+ },
+ "unresolved": "",
+ "argument_text": "This bliss-of-awareness-method for attaining Śiva — of great souls, of king Kṣema-named — treatise extremely pure.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhavilasa:bodh-p05-v42",
+ "sanskrit": "etad advayam ity uktaṃ jñānāmṛtam anuttamam yaḥ pibec chāmyate tasya saṃsāraviṣamūrchanam bodhollāsavidhāneyaṃ śivaprāpyai mahātmanām rājñaḥ kṣemābhidhānasya śāstram atyantanirmalam iti śrīkṣemarājakṛtaṃ bodhavilāsākhyaṃ yogaśāstram",
+ "license": "CC BY-NC-SA 4.0"
+}

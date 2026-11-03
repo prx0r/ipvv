@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:parapravesika:par-p06-v06",
+ "work_id": "parapravesika",
+ "passage_id": "parapravesika:par-p06-v06",
+ "title": "parapravesika — par-p06-v06",
+ "kind": "entailment",
+ "question": "And so — His essence being the full grasp of I, woven of the mass of sounds — supreme Śiva Himself is the whole display in thirty-six levels. The mass of sounds is the heap of letters from a to ha, pregnant with the entire world — the full I-grasp of the form \"I alone, light-natured, in the shining,\" freedom resting with no other face to look to. And a level of reality is this: the one undivided shine that makes divided families into families — as hill and tree and town all show the form of eart",
+ "issue": "Derived from L2 text (no argmap). And so — His essence being the full grasp of I, woven of the mass of sounds — supreme Śiva Himself is the whole display in thirty-six levels. The mass of sounds is the heap of letters from a to ha, pregnant with the entire world — the full I-grasp of the form \"I alone, light-natured, in the shining,\" freedom resting with no other face to look to. And a level of reality is this: the one undivided shine that makes divided families into families — as hill and tree and town all show the form of eart",
+ "premises": [
+  {
+   "text": "śabdarāśimayapūrṇāhantāparāmarśasāratvāt paramaśiva eva ṣaṭtriṃśattattvātmakaḥ prapañcaḥ | 1 śiva 2 śakti 3 sadāśiva 4 īśvara 5 śuddhavidyā 6 māyā 7 kalā 8 vidyā 9 rāga 10 kāla 11 niyati 12 puruṣa 13 prakṛti 14 buddhi 15 ahaṃkāra 16 manaḥ 17-21 jñānendriyāṇi 22-26 karmendriyāṇi 27-31 tanmātrāṇi 32-36 bhūtāni",
+   "label": "Sanskrit source",
+   "passage_id": "parapravesika:par-p06-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "And so — His essence being the full grasp of I, woven of the mass of sounds — supreme Śiva Himself is the whole display in thirty-six levels. The mass of sounds is the heap of letters from a to ha, pregnant with the entire world — the full I-grasp of the form \"I alone, light-natured, in the shining,\" freedom resting with no other face to look to. And a level of reality is this: the one undivided shine that makes divided families into families — as hill and tree and town all show the form of eart",
+  "passage_id": "parapravesika:par-p06-v06"
+ },
+ "unresolved": "",
+ "argument_text": "And so — His essence being the full grasp of I, woven of the mass of sounds — supreme Śiva Himself is the whole display in thirty-six levels. The mass of sounds is the heap of letters from a to ha, pregnant with the entire world — the full I-grasp of the form \"I alone, light-natured, in the shining,\" freedom resting with no other face to look to. And a level of reality is this: the one undivided shine that makes divided families into families — as hill and tree and town all show the form of earth, and river and lake and sea the form of water. The thirty-six: Śiva, power, eternal Śiva, the Lord, pure knowledge, illusion, art, knowing, passion, time, necessity, the person, nature, intellect, ego, mind, the five senses of knowing, the five senses of doing, the five subtles, the five gross elements.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "parapravesika:par-p06-v06",
+ "sanskrit": "śabdarāśimayapūrṇāhantāparāmarśasāratvāt paramaśiva eva ṣaṭtriṃśattattvātmakaḥ prapañcaḥ | 1 śiva 2 śakti 3 sadāśiva 4 īśvara 5 śuddhavidyā 6 māyā 7 kalā 8 vidyā 9 rāga 10 kāla 11 niyati 12 puruṣa 13 prakṛti 14 buddhi 15 ahaṃkāra 16 manaḥ 17-21 jñānendriyāṇi 22-26 karmendriyāṇi 27-31 tanmātrāṇi 32-36 bhūtāni",
+ "license": "CC BY-NC 4.0"
+}

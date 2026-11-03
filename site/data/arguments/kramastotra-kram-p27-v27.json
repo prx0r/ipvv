@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p27-v27",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p27-v27",
+ "title": "kramastotra — kram-p27-v27",
+ "kind": "entailment",
+ "question": "Then in the goddess in whom supreme-full-standing-enjoying — sequence cut, quickly, standing-minded-taste reflecting — proof, knower, measure, then whole world this standing embraced — may my mind resort to this consciousness.",
+ "issue": "Derived from L2 text (no argmap). Then in the goddess in whom supreme-full-standing-enjoying — sequence cut, quickly, standing-minded-taste reflecting — proof, knower, measure, then whole world this standing embraced — may my mind resort to this consciousness.",
+ "premises": [
+  {
+   "text": "anargalasvātmamaye maheśe tiṣṭhanti yasmin vibhuśaktayas tāḥ | taṃ śaktimantaṃ praṇamāmi devaṃ manthānasaṃjñaṃ jagadekasāram",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p27-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Then in the goddess in whom supreme-full-standing-enjoying — sequence cut, quickly, standing-minded-taste reflecting — proof, knower, measure, then whole world this standing embraced — may my mind resort to this consciousness.",
+  "passage_id": "kramastotra:kram-p27-v27"
+ },
+ "unresolved": "",
+ "argument_text": "Then in the goddess in whom supreme-full-standing-enjoying — sequence cut, quickly, standing-minded-taste reflecting — proof, knower, measure, then whole world this standing embraced — may my mind resort to this consciousness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p27-v27",
+ "sanskrit": "anargalasvātmamaye maheśe tiṣṭhanti yasmin vibhuśaktayas tāḥ | taṃ śaktimantaṃ praṇamāmi devaṃ manthānasaṃjñaṃ jagadekasāram",
+ "license": "CC BY-NC-SA 4.0"
+}

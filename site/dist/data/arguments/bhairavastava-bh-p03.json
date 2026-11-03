@@ -4,8 +4,8 @@
  "passage_id": "bhairavastava:bh-p03",
  "title": "bhairavastava — bh-p03",
  "kind": "entailment",
- "question": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
- "issue": "Derived from L2 text (no argmap). With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
+ "question": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, terror-causing karmas are present.",
+ "issue": "Derived from L2 text (no argmap). With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, terror-causing karmas are present.",
  "premises": [
   {
    "text": "svātmani viśvagaye tvayi nāthe tena na saṃsṛtibhītikathāsti satsv api durdharaduḥkhavimohatrāsavidhāyiṣu karmagaṇeṣu",
@@ -15,11 +15,11 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
+  "text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, terror-causing karmas are present.",
   "passage_id": "bhairavastava:bh-p03"
  },
  "unresolved": "",
- "argument_text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, and terror-causing karmas stand.",
+ "argument_text": "With You as Lord, all-pervading in own self — therefore no talk of transmigration-fear. Even though hard-to-bear suffering, delusion, terror-causing karmas are present.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",

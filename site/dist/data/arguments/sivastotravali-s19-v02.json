@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s19-v02",
  "title": "sivastotravali — s19-v02",
  "kind": "entailment",
- "question": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
- "issue": "Derived from L2 text (no argmap). Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+ "question": "Since from the One container all is got through the self, from You — yet this own self of mine does not join Thee, the Highest — her.",
+ "issue": "Derived from L2 text (no argmap). Since from the One container all is got through the self, from You — yet this own self of mine does not join Thee, the Highest — her.",
  "premises": [
   {
-   "text": "",
+   "text": "sarvavastuni ca yaikanidhānāt svātmanas tvad akhilaṃ kila labhyam asya me punar asau nijā ātmā na tvam eva ghaṭase paramās tām",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s19-v02"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+  "text": "Since from the One container all is got through the self, from You — yet this own self of mine does not join Thee, the Highest — her.",
   "passage_id": "sivastotravali:s19-v02"
  },
  "unresolved": "",
- "argument_text": "Since from the One container all is got through the self, from You — yet my own self does not join You, the highest, Her.",
+ "argument_text": "Since from the One container all is got through the self, from You — yet this own self of mine does not join Thee, the Highest — her.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s19-v02",
- "sanskrit": "",
+ "sanskrit": "sarvavastuni ca yaikanidhānāt svātmanas tvad akhilaṃ kila labhyam asya me punar asau nijā ātmā na tvam eva ghaṭase paramās tām",
  "license": "CC BY-NC-SA 4.0"
 }

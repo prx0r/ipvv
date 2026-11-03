@@ -4,8 +4,8 @@
  "passage_id": "bhairavastava:bh-p04",
  "title": "bhairavastava — bh-p04",
  "kind": "entailment",
- "question": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
- "issue": "Derived from L2 text (no argmap). O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+ "question": "O Ender, turn not toward me this most wrathful-terrible gaze. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+ "issue": "Derived from L2 text (no argmap). O Ender, turn not toward me this most wrathful-terrible gaze. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
  "premises": [
   {
    "text": "antaka māṃ prati mā dṛśam enāṃ krodhakarālatamāṃ vinidhehi śaṅkarasevanacintanadhīro bhīṣaṇabhairavaśaktimayo 'smi",
@@ -15,11 +15,11 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+  "text": "O Ender, turn not toward me this most wrathful-terrible gaze. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
   "passage_id": "bhairavastava:bh-p04"
  },
  "unresolved": "",
- "argument_text": "O Ender, do not direct this most wrathful-terrible gaze toward me. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
+ "argument_text": "O Ender, turn not toward me this most wrathful-terrible gaze. Firm in Śaṅkara-service and contemplation, I am filled with terrifying Bhairava-power.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",

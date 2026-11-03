@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p01-v01",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p01-v01",
+ "title": "bodhapancadasika — bod-p01-v01",
+ "kind": "entailment",
+ "question": "Of unsetting sun-light is His form — of bright powers and of darknesses too. For He is one, within, and powers and darknesses end in Him.",
+ "issue": "Derived from L2 text (no argmap). Of unsetting sun-light is His form — of bright powers and of darknesses too. For He is one, within, and powers and darknesses end in Him.",
+ "premises": [
+  {
+   "text": "# Text  anastamitabhārūpas tejasāṃ tamasām api | ya eko 'ntar yadantaś ca tejāṃsi ca tamāṃsi ca",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of unsetting sun-light is His form — of bright powers and of darknesses too. For He is one, within, and powers and darknesses end in Him.",
+  "passage_id": "bodhapancadasika:bod-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Of unsetting sun-light is His form — of bright powers and of darknesses too. For He is one, within, and powers and darknesses end in Him.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p01-v01",
+ "sanskrit": "# Text  anastamitabhārūpas tejasāṃ tamasām api | ya eko 'ntar yadantaś ca tejāṃsi ca tamāṃsi ca",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p01-v05",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p01-v05",
+ "title": "bhairavanukarana — bhair-p01-v05",
+ "kind": "entailment",
+ "question": "Outline-man, man, letter-script, letter-mass — just as, just so, of varied form, You — shape reveals, supreme self.",
+ "issue": "Derived from L2 text (no argmap). Outline-man, man, letter-script, letter-mass — just as, just so, of varied form, You — shape reveals, supreme self.",
+ "premises": [
+  {
+   "text": "oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p01-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Outline-man, man, letter-script, letter-mass — just as, just so, of varied form, You — shape reveals, supreme self.",
+  "passage_id": "bhairavanukarana:bhair-p01-v05"
+ },
+ "unresolved": "",
+ "argument_text": "Outline-man, man, letter-script, letter-mass — just as, just so, of varied form, You — shape reveals, supreme self.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p01-v05",
+ "sanskrit": "oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

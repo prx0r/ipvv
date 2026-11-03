@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s15-v14",
  "title": "sivastotravali — s15-v14",
  "kind": "entailment",
- "question": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own splendor's unfoldings.",
- "issue": "Derived from L2 text (no argmap). Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own splendor's unfoldings.",
+ "question": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own superhuman wealth-blossomings.",
+ "issue": "Derived from L2 text (no argmap). Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own superhuman wealth-blossomings.",
  "premises": [
   {
-   "text": "",
+   "text": "manasi maline madīyemagnā tvadbhaktimaṇilatā kaṣṭam na nijān api tanute tānapauruṣeyān svasampadullāsān",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s15-v14"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own splendor's unfoldings.",
+  "text": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own superhuman wealth-blossomings.",
   "passage_id": "sivastotravali:s15-v14"
  },
  "unresolved": "",
- "argument_text": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own splendor's unfoldings.",
+ "argument_text": "Sunk in my dirty mind, Your devotion gem-creeper — alas — does not spread its own superhuman wealth-blossomings.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s15-v14",
- "sanskrit": "",
+ "sanskrit": "manasi maline madīyemagnā tvadbhaktimaṇilatā kaṣṭam na nijān api tanute tānapauruṣeyān svasampadullāsān",
  "license": "CC BY-NC-SA 4.0"
 }

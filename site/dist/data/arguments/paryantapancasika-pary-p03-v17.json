@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p03-v17",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p03-v17",
+ "title": "paryantapancasika — pary-p03-v17",
+ "kind": "entailment",
+ "question": "His particular creation — that-and-that various imagination — Śaiva creation arisen — impression of the purified dependent-on-that.",
+ "issue": "Derived from L2 text (no argmap). His particular creation — that-and-that various imagination — Śaiva creation arisen — impression of the purified dependent-on-that.",
+ "premises": [
+  {
+   "text": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p03-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "His particular creation — that-and-that various imagination — Śaiva creation arisen — impression of the purified dependent-on-that.",
+  "passage_id": "paryantapancasika:pary-p03-v17"
+ },
+ "unresolved": "",
+ "argument_text": "His particular creation — that-and-that various imagination — Śaiva creation arisen — impression of the purified dependent-on-that.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p03-v17",
+ "sanskrit": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+ "license": "CC BY-NC-SA 4.0"
+}

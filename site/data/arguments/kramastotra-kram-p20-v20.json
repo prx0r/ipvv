@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p20-v20",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p20-v20",
+ "title": "kramastotra — kram-p20-v20",
+ "kind": "entailment",
+ "question": "So by goddesses at once, in split difference-glory, thought-life-one shines forth — knower-standing, enough. Hence in own heart considered dissolution-share, standing-formed, gracious may she be — my death-dissolution-maker, blessed Lady.",
+ "issue": "Derived from L2 text (no argmap). So by goddesses at once, in split difference-glory, thought-life-one shines forth — knower-standing, enough. Hence in own heart considered dissolution-share, standing-formed, gracious may she be — my death-dissolution-maker, blessed Lady.",
+ "premises": [
+  {
+   "text": "taditthaṃ te tisro nijavibhavavisphāraṇavaśād avāptāḥ ṣaṭcakrakramakṛtapadaṃ śaktaya imāḥ | kramād unmeṣeṇa pravidadhati citrāṃ bhavadaśām imābhyo devībhyaḥ pravaṇahṛdayaḥ syāṃ gatabhayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p20-v20"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So by goddesses at once, in split difference-glory, thought-life-one shines forth — knower-standing, enough. Hence in own heart considered dissolution-share, standing-formed, gracious may she be — my death-dissolution-maker, blessed Lady.",
+  "passage_id": "kramastotra:kram-p20-v20"
+ },
+ "unresolved": "",
+ "argument_text": "So by goddesses at once, in split difference-glory, thought-life-one shines forth — knower-standing, enough. Hence in own heart considered dissolution-share, standing-formed, gracious may she be — my death-dissolution-maker, blessed Lady.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p20-v20",
+ "sanskrit": "taditthaṃ te tisro nijavibhavavisphāraṇavaśād avāptāḥ ṣaṭcakrakramakṛtapadaṃ śaktaya imāḥ | kramād unmeṣeṇa pravidadhati citrāṃ bhavadaśām imābhyo devībhyaḥ pravaṇahṛdayaḥ syāṃ gatabhayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

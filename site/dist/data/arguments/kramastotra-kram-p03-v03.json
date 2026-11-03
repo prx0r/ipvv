@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p03-v03",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p03-v03",
+ "title": "kramastotra — kram-p03-v03",
+ "kind": "entailment",
+ "question": "Unscrutinized, the self never comes to share in thing-knowing; unscrutinized, it is not at all without the grasping course. But Śiva — that self shining, one sap of all things — hence I, heart-devoted to Your hymn, am ever blissful.",
+ "issue": "Derived from L2 text (no argmap). Unscrutinized, the self never comes to share in thing-knowing; unscrutinized, it is not at all without the grasping course. But Śiva — that self shining, one sap of all things — hence I, heart-devoted to Your hymn, am ever blissful.",
+ "premises": [
+  {
+   "text": "vicitrair jātyādibhramaṇaparipāṭīparikarair avāptam sārvajñaṃ hṛdaya yad ayatnena bhavatā | tad antas tvadbodhaprasarasaraṇībhūtamahasi sphuṭam vāci prāpya prakaṭaya vibhoḥ stotram adhunā",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p03-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Unscrutinized, the self never comes to share in thing-knowing; unscrutinized, it is not at all without the grasping course. But Śiva — that self shining, one sap of all things — hence I, heart-devoted to Your hymn, am ever blissful.",
+  "passage_id": "kramastotra:kram-p03-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Unscrutinized, the self never comes to share in thing-knowing; unscrutinized, it is not at all without the grasping course. But Śiva — that self shining, one sap of all things — hence I, heart-devoted to Your hymn, am ever blissful.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p03-v03",
+ "sanskrit": "vicitrair jātyādibhramaṇaparipāṭīparikarair avāptam sārvajñaṃ hṛdaya yad ayatnena bhavatā | tad antas tvadbodhaprasarasaraṇībhūtamahasi sphuṭam vāci prāpya prakaṭaya vibhoḥ stotram adhunā",
+ "license": "CC BY-NC-SA 4.0"
+}

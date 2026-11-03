@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v46",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v46",
+ "title": "paryantapancasika — pary-p07-v46",
+ "kind": "entailment",
+ "question": "Of-those-two having-entered of-states by-sequence quiet of-thoughts — blessed own-consciousness expansion wonderfully perceives.",
+ "issue": "Derived from L2 text (no argmap). Of-those-two having-entered of-states by-sequence quiet of-thoughts — blessed own-consciousness expansion wonderfully perceives.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v46"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of-those-two having-entered of-states by-sequence quiet of-thoughts — blessed own-consciousness expansion wonderfully perceives.",
+  "passage_id": "paryantapancasika:pary-p07-v46"
+ },
+ "unresolved": "",
+ "argument_text": "Of-those-two having-entered of-states by-sequence quiet of-thoughts — blessed own-consciousness expansion wonderfully perceives.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v46",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s02-v23",
  "title": "sivastotravali — s02-v23",
  "kind": "entailment",
- "question": "What enjoys You in pleasure-first knowables — to that terrible host of Your powers — bow.",
- "issue": "Derived from L2 text (no argmap). What enjoys You in pleasure-first knowables — to that terrible host of Your powers — bow.",
+ "question": "Whatever enjoys You through pleasure-first knowables — to that terrible host of Your powers — bow.",
+ "issue": "Derived from L2 text (no argmap). Whatever enjoys You through pleasure-first knowables — to that terrible host of Your powers — bow.",
  "premises": [
   {
-   "text": "",
+   "text": "sukhapradhānasaṃvedyasambhogair bhajate ca yat tvām eva tasmai ghorāya śaktivṛndāya te namaḥ",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s02-v23"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "What enjoys You in pleasure-first knowables — to that terrible host of Your powers — bow.",
+  "text": "Whatever enjoys You through pleasure-first knowables — to that terrible host of Your powers — bow.",
   "passage_id": "sivastotravali:s02-v23"
  },
  "unresolved": "",
- "argument_text": "What enjoys You in pleasure-first knowables — to that terrible host of Your powers — bow.",
+ "argument_text": "Whatever enjoys You through pleasure-first knowables — to that terrible host of Your powers — bow.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s02-v23",
- "sanskrit": "",
+ "sanskrit": "sukhapradhānasaṃvedyasambhogair bhajate ca yat tvām eva tasmai ghorāya śaktivṛndāya te namaḥ",
  "license": "CC BY-NC-SA 4.0"
 }

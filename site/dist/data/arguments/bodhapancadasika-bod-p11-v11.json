@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p11-v11",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p11-v11",
+ "title": "bodhapancadasika — bod-p11-v11",
+ "kind": "entailment",
+ "question": "Not to know this is called His freedom. And that is saṃsāra itself — a terror to the deluded.",
+ "issue": "Derived from L2 text (no argmap). Not to know this is called His freedom. And that is saṃsāra itself — a terror to the deluded.",
+ "premises": [
+  {
+   "text": "yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p11-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Not to know this is called His freedom. And that is saṃsāra itself — a terror to the deluded.",
+  "passage_id": "bodhapancadasika:bod-p11-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Not to know this is called His freedom. And that is saṃsāra itself — a terror to the deluded.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p11-v11",
+ "sanskrit": "yad etasyāparijñānaṃ tatsvātantryaṃ hi varṇitam | sa eva khalu saṃsāro mūḍānāṃ yo vibhīṣakaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p03-v23",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p03-v23",
+ "title": "bhairavanukarana — bhair-p03-v23",
+ "kind": "entailment",
+ "question": "Unfamed-formed, unequal, Māyā's shattered head — there this, by supreme waking, borne by me as skull — thus You show.",
+ "issue": "Derived from L2 text (no argmap). Unfamed-formed, unequal, Māyā's shattered head — there this, by supreme waking, borne by me as skull — thus You show.",
+ "premises": [
+  {
+   "text": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p03-v23"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Unfamed-formed, unequal, Māyā's shattered head — there this, by supreme waking, borne by me as skull — thus You show.",
+  "passage_id": "bhairavanukarana:bhair-p03-v23"
+ },
+ "unresolved": "",
+ "argument_text": "Unfamed-formed, unequal, Māyā's shattered head — there this, by supreme waking, borne by me as skull — thus You show.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p03-v23",
+ "sanskrit": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+ "license": "CC BY-NC-SA 4.0"
+}

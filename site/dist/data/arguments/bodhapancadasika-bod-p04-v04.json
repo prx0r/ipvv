@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p04-v04",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p04-v04",
+ "title": "bodhapancadasika — bod-p04-v04",
+ "kind": "entailment",
+ "question": "He alone is Bhairava, the god whose very mark is bearing the world. In the mirror of His own self-seeing, the whole stands reflected — by power.",
+ "issue": "Derived from L2 text (no argmap). He alone is Bhairava, the god whose very mark is bearing the world. In the mirror of His own self-seeing, the whole stands reflected — by power.",
+ "premises": [
+  {
+   "text": "sa eva bhairavo devo jagadbharaṇalakṣaṇaḥ | svātmādṛṣe samagraṃ hi yacchaktyā pratibimbitam",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p04-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "He alone is Bhairava, the god whose very mark is bearing the world. In the mirror of His own self-seeing, the whole stands reflected — by power.",
+  "passage_id": "bodhapancadasika:bod-p04-v04"
+ },
+ "unresolved": "",
+ "argument_text": "He alone is Bhairava, the god whose very mark is bearing the world. In the mirror of His own self-seeing, the whole stands reflected — by power.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p04-v04",
+ "sanskrit": "sa eva bhairavo devo jagadbharaṇalakṣaṇaḥ | svātmādṛṣe samagraṃ hi yacchaktyā pratibimbitam",
+ "license": "CC BY-NC-SA 4.0"
+}

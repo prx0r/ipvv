@@ -4,8 +4,8 @@
  "passage_id": "bhairavastava:bh-p05",
  "title": "bhairavastava — bh-p05",
  "kind": "entailment",
- "question": "Thus — great darkness already dispelled by rays of awareness: death, Yama, ender, karma-ghosts met with salutation alone, and never do I fear.",
- "issue": "Derived from L2 text (no argmap). Thus — great darkness already dispelled by rays of awareness: death, Yama, ender, karma-ghosts met with salutation alone, and never do I fear.",
+ "question": "Thus — great darkness dispelled by rays of world-awareness: death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear.",
+ "issue": "Derived from L2 text (no argmap). Thus — great darkness dispelled by rays of world-awareness: death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear.",
  "premises": [
   {
    "text": "ittham upoḍhabhavanmayasaṃviddīdhitidāritabhūritamisraḥ mṛtyuyamāntakakarmapiśācaiḥ nātha ! namo'stu na jātu bibhemi",
@@ -15,11 +15,11 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Thus — great darkness already dispelled by rays of awareness: death, Yama, ender, karma-ghosts met with salutation alone, and never do I fear.",
+  "text": "Thus — great darkness dispelled by rays of world-awareness: death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear.",
   "passage_id": "bhairavastava:bh-p05"
  },
  "unresolved": "",
- "argument_text": "Thus — great darkness already dispelled by rays of awareness: death, Yama, ender, karma-ghosts met with salutation alone, and never do I fear.",
+ "argument_text": "Thus — great darkness dispelled by rays of world-awareness: death, Yama, the ender, karma-ghosts — Lord, salutation; never do I fear.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",

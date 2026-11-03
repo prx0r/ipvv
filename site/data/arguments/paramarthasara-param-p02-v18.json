@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p02-v18",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p02-v18",
+ "title": "paramarthasara — param-p02-v18",
+ "kind": "entailment",
+ "question": "Like husk settled on rice-grain, separate yet undivided, purity comes by turning to Śiva's path with longing.",
+ "issue": "Derived from L2 text (no argmap). Like husk settled on rice-grain, separate yet undivided, purity comes by turning to Śiva's path with longing.",
+ "premises": [
+  {
+   "text": "sarvavikalpavihīnaṃ śuddhaṃ śāntaṃ layodayavihīnam | yat paratattvaṃ tasmin vibhāti ṣaṭṭriṃśadātma jagat darpaṇabimbe yadvan nagaragrāmādicitram avibhāgi | bhāti vibhāgenaiva ca parasparaṃ darpaṇād api ca vimalatamaparamabhairavabodhāt tadvad vibhāgaśūnyam api | anyonyaṃ ca tato 'pi ca vibhaktam ābhāti jagad etat śivaśaktisadāśivatām īśvaravidyāmayīṃ ca tattvadaśām | śaktīnāṃ pañcānāṃ vibhaktabhāvena bhāsayati paramaṃ yat svātantryaṃ durghaṭasaṃpādanaṃ maheśasya | devī māyāśaktiḥ svātmāvaraṇaṃ śivasya itat māyāparigrahavaśād bodho malinaḥ pumān paśur bhavati | kālakalāniyatibalād rāgāvidyāvaśena saṃbaddhaḥ adhunaiva kiṃcid evedam eva sarvātmanaiva jānāmi | māyāsahitaṃ kañcukaṣaṭkam aṇor antaraṅgam idam uktam kambukam iva ta.ṅdulakaṇaviniviṣṭaṃ bhinnam apy abhidā | bhajate tat tu viśuddhiṃ śivamārgaunmukhyayogena sukhaduḥkhamohamātraṃ niścayasaṃkalpanābhimānāc ca | prakṛtir athāntaḥkaranaṃ buddhimano'haṃkṛtikramaśaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p02-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Like husk settled on rice-grain, separate yet undivided, purity comes by turning to Śiva's path with longing.",
+  "passage_id": "paramarthasara:param-p02-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Like husk settled on rice-grain, separate yet undivided, purity comes by turning to Śiva's path with longing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p02-v18",
+ "sanskrit": "sarvavikalpavihīnaṃ śuddhaṃ śāntaṃ layodayavihīnam | yat paratattvaṃ tasmin vibhāti ṣaṭṭriṃśadātma jagat darpaṇabimbe yadvan nagaragrāmādicitram avibhāgi | bhāti vibhāgenaiva ca parasparaṃ darpaṇād api ca vimalatamaparamabhairavabodhāt tadvad vibhāgaśūnyam api | anyonyaṃ ca tato 'pi ca vibhaktam ābhāti jagad etat śivaśaktisadāśivatām īśvaravidyāmayīṃ ca tattvadaśām | śaktīnāṃ pañcānāṃ vibhaktabhāvena bhāsayati paramaṃ yat svātantryaṃ durghaṭasaṃpādanaṃ maheśasya | devī māyāśaktiḥ svātmāvaraṇaṃ śivasya itat māyāparigrahavaśād bodho malinaḥ pumān paśur bhavati | kālakalāniyatibalād rāgāvidyāvaśena saṃbaddhaḥ adhunaiva kiṃcid evedam eva sarvātmanaiva jānāmi | māyāsahitaṃ kañcukaṣaṭkam aṇor antaraṅgam idam uktam kambukam iva ta.ṅdulakaṇaviniviṣṭaṃ bhinnam apy abhidā | bhajate tat tu viśuddhiṃ śivamārgaunmukhyayogena sukhaduḥkhamohamātraṃ niścayasaṃkalpanābhimānāc ca | prakṛtir athāntaḥkaranaṃ buddhimano'haṃkṛtikramaśaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

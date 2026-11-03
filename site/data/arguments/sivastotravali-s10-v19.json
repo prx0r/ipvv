@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s10-v19",
  "title": "sivastotravali — s10-v19",
  "kind": "entailment",
- "question": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You stand?",
- "issue": "Derived from L2 text (no argmap). If self-pride in qualities were not — then by what would the world's show of sole-selfness with You stand?",
+ "question": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You be lost?",
+ "issue": "Derived from L2 text (no argmap). If self-pride in qualities were not — then by what would the world's show of sole-selfness with You be lost?",
  "premises": [
   {
-   "text": "",
+   "text": "yadi nātha guṇeṣv ātmābhimāno na bhavet tataḥ kena hīyeta jagatas tvadekātmatayā prathā",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s10-v19"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You stand?",
+  "text": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You be lost?",
   "passage_id": "sivastotravali:s10-v19"
  },
  "unresolved": "",
- "argument_text": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You stand?",
+ "argument_text": "If self-pride in qualities were not — then by what would the world's show of sole-selfness with You be lost?",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s10-v19",
- "sanskrit": "",
+ "sanskrit": "yadi nātha guṇeṣv ātmābhimāno na bhavet tataḥ kena hīyeta jagatas tvadekātmatayā prathā",
  "license": "CC BY-NC-SA 4.0"
 }

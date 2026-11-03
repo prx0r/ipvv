@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p16-v16",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p16-v16",
+ "title": "kramastotra — kram-p16-v16",
+ "kind": "entailment",
+ "question": "In the emitted thing-share, outside, in extreme taste-bliss — when there indeed You resort by rush to redness-made — then, red goddess, Yours in all things — make me, by red-drinking-order-joined conclave, past loathing.",
+ "issue": "Derived from L2 text (no argmap). In the emitted thing-share, outside, in extreme taste-bliss — when there indeed You resort by rush to redness-made — then, red goddess, Yours in all things — make me, by red-drinking-order-joined conclave, past loathing.",
+ "premises": [
+  {
+   "text": "bahir vṛttiṃ hātuṃ citibhuvam udārāṃ nivasituṃ yadā bhāvābhedaṃ prathayasi vinaṣṭormicapalaḥ | sthiter nāśaṃ devī kalayati tadā sā tava vibho sthiteḥ sāṃsārikyāḥ kalayatu vināśaṃ mama sadā",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p16-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the emitted thing-share, outside, in extreme taste-bliss — when there indeed You resort by rush to redness-made — then, red goddess, Yours in all things — make me, by red-drinking-order-joined conclave, past loathing.",
+  "passage_id": "kramastotra:kram-p16-v16"
+ },
+ "unresolved": "",
+ "argument_text": "In the emitted thing-share, outside, in extreme taste-bliss — when there indeed You resort by rush to redness-made — then, red goddess, Yours in all things — make me, by red-drinking-order-joined conclave, past loathing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p16-v16",
+ "sanskrit": "bahir vṛttiṃ hātuṃ citibhuvam udārāṃ nivasituṃ yadā bhāvābhedaṃ prathayasi vinaṣṭormicapalaḥ | sthiter nāśaṃ devī kalayati tadā sā tava vibho sthiteḥ sāṃsārikyāḥ kalayatu vināśaṃ mama sadā",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p14-v14",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p14-v14",
+ "title": "bodhapancadasika — bod-p14-v14",
+ "kind": "entailment",
+ "question": "Bondage and release both come of the Lord's own nature. The two do not split apart; in truth, in the supreme Lord, there is no split.",
+ "issue": "Derived from L2 text (no argmap). Bondage and release both come of the Lord's own nature. The two do not split apart; in truth, in the supreme Lord, there is no split.",
+ "premises": [
+  {
+   "text": "etau bandhavimokṣau ca parameśasvarūpataḥ | na bhidyete na bhedo hi tattvataḥ parameśvare",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p14-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bondage and release both come of the Lord's own nature. The two do not split apart; in truth, in the supreme Lord, there is no split.",
+  "passage_id": "bodhapancadasika:bod-p14-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Bondage and release both come of the Lord's own nature. The two do not split apart; in truth, in the supreme Lord, there is no split.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p14-v14",
+ "sanskrit": "etau bandhavimokṣau ca parameśasvarūpataḥ | na bhidyete na bhedo hi tattvataḥ parameśvare",
+ "license": "CC BY-NC-SA 4.0"
+}

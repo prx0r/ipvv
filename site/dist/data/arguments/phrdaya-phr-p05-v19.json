@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p05-v19",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p05-v19",
+ "title": "phrdaya — phr-p05-v19",
+ "kind": "entailment",
+ "question": "From recalling oneness with knowing — samādhi ever risen.",
+ "issue": "Derived from L2 text (no argmap). From recalling oneness with knowing — samādhi ever risen.",
+ "premises": [
+  {
+   "text": "madhyavikāsāc cidānandalābhaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p05-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From recalling oneness with knowing — samādhi ever risen.",
+  "passage_id": "phrdaya:phr-p05-v19"
+ },
+ "unresolved": "",
+ "argument_text": "From recalling oneness with knowing — samādhi ever risen.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p05-v19",
+ "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

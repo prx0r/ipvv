@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p03-v27",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p03-v27",
+ "title": "bhairavanukarana — bhair-p03-v27",
+ "kind": "entailment",
+ "question": "Will-etc.-own-power-shown-lower-abode-threefold — own indeed supreme power, thunderbolt-made — borne, six-spoked — You.",
+ "issue": "Derived from L2 text (no argmap). Will-etc.-own-power-shown-lower-abode-threefold — own indeed supreme power, thunderbolt-made — borne, six-spoked — You.",
+ "premises": [
+  {
+   "text": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p03-v27"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Will-etc.-own-power-shown-lower-abode-threefold — own indeed supreme power, thunderbolt-made — borne, six-spoked — You.",
+  "passage_id": "bhairavanukarana:bhair-p03-v27"
+ },
+ "unresolved": "",
+ "argument_text": "Will-etc.-own-power-shown-lower-abode-threefold — own indeed supreme power, thunderbolt-made — borne, six-spoked — You.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p03-v27",
+ "sanskrit": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+ "license": "CC BY-NC-SA 4.0"
+}

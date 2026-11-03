@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s13-v01",
  "title": "sivastotravali — s13-v01",
  "kind": "entailment",
- "question": "In brief, Lord, hear my definition of pleasure and pain, as they stand for me: union with You, my husband-Lord, is pleasure; separation from You is pain.",
- "issue": "Derived from L2 text (no argmap). In brief, Lord, hear my definition of pleasure and pain, as they stand for me: union with You, my husband-Lord, is pleasure; separation from You is pain.",
+ "question": "In brief, Lord, hear how pleasure and pain stand for me: meeting You is pleasure; being parted from You, my Lord, is pain.",
+ "issue": "Derived from L2 text (no argmap). In brief, Lord, hear how pleasure and pain stand for me: meeting You is pleasure; being parted from You, my Lord, is pain.",
  "premises": [
   {
-   "text": "",
+   "text": "saṃgrahena sukhaduḥkhalakṣaṇaṃ māṃ prati sthitam idaṃ śṛṇu prabho saukhyam eṣa bhavatā samāgamaḥ svāminā viraha eva duḥkhitā",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s13-v01"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "In brief, Lord, hear my definition of pleasure and pain, as they stand for me: union with You, my husband-Lord, is pleasure; separation from You is pain.",
+  "text": "In brief, Lord, hear how pleasure and pain stand for me: meeting You is pleasure; being parted from You, my Lord, is pain.",
   "passage_id": "sivastotravali:s13-v01"
  },
  "unresolved": "",
- "argument_text": "In brief, Lord, hear my definition of pleasure and pain, as they stand for me: union with You, my husband-Lord, is pleasure; separation from You is pain.",
+ "argument_text": "In brief, Lord, hear how pleasure and pain stand for me: meeting You is pleasure; being parted from You, my Lord, is pain.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s13-v01",
- "sanskrit": "",
+ "sanskrit": "saṃgrahena sukhaduḥkhalakṣaṇaṃ māṃ prati sthitam idaṃ śṛṇu prabho saukhyam eṣa bhavatā samāgamaḥ svāminā viraha eva duḥkhitā",
  "license": "CC BY-NC-SA 4.0"
 }

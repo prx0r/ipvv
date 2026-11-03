@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s06-v11",
  "title": "sivastotravali — s06-v11",
  "kind": "entailment",
- "question": "Appear! We make no other prayers miserable — we languish, seeking only You.",
- "issue": "Derived from L2 text (no argmap). Appear! We make no other prayers miserable — we languish, seeking only You.",
+ "question": "Appear! We, Thine, tormented by no other prayers — fainting, we seek only You.",
+ "issue": "Derived from L2 text (no argmap). Appear! We, Thine, tormented by no other prayers — fainting, we seek only You.",
  "premises": [
   {
-   "text": "",
+   "text": "prakaṭībhava nānyābhiḥ prārthanābhiḥ kadarthanāḥ kurmas te nātha tāmyantas tvām eva mṛgayāmahe",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s06-v11"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Appear! We make no other prayers miserable — we languish, seeking only You.",
+  "text": "Appear! We, Thine, tormented by no other prayers — fainting, we seek only You.",
   "passage_id": "sivastotravali:s06-v11"
  },
  "unresolved": "",
- "argument_text": "Appear! We make no other prayers miserable — we languish, seeking only You.",
+ "argument_text": "Appear! We, Thine, tormented by no other prayers — fainting, we seek only You.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s06-v11",
- "sanskrit": "",
+ "sanskrit": "prakaṭībhava nānyābhiḥ prārthanābhiḥ kadarthanāḥ kurmas te nātha tāmyantas tvām eva mṛgayāmahe",
  "license": "CC BY-NC-SA 4.0"
 }

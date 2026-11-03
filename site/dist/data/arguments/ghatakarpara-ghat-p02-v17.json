@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ghatakarpara:ghat-p02-v17",
+ "work_id": "ghatakarpara",
+ "passage_id": "ghatakarpara:ghat-p02-v17",
+ "title": "ghatakarpara — ghat-p02-v17",
+ "kind": "entailment",
+ "question": "With Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.",
+ "issue": "Derived from L2 text (no argmap). With Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.",
+ "premises": [
+  {
+   "text": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+   "label": "Sanskrit source",
+   "passage_id": "ghatakarpara:ghat-p02-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "With Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.",
+  "passage_id": "ghatakarpara:ghat-p02-v17"
+ },
+ "unresolved": "",
+ "argument_text": "With Indra's weapon, the cloud today resounds, bringing the elephants' ardor, mountain-like.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ghatakarpara:ghat-p02-v17",
+ "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+ "license": "CC BY-NC-SA 4.0"
+}

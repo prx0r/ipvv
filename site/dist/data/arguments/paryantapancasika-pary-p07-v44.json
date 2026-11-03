@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v44",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v44",
+ "title": "paryantapancasika — pary-p07-v44",
+ "kind": "entailment",
+ "question": "Middle with-sequence gross in-inner-organ imagination undivided expressed — prana-function differentiated.",
+ "issue": "Derived from L2 text (no argmap). Middle with-sequence gross in-inner-organ imagination undivided expressed — prana-function differentiated.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v44"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Middle with-sequence gross in-inner-organ imagination undivided expressed — prana-function differentiated.",
+  "passage_id": "paryantapancasika:pary-p07-v44"
+ },
+ "unresolved": "",
+ "argument_text": "Middle with-sequence gross in-inner-organ imagination undivided expressed — prana-function differentiated.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v44",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

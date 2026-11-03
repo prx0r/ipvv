@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s02-v28",
  "title": "sivastotravali — s02-v28",
  "kind": "entailment",
- "question": "Thunderbolt to all doubt, fire to all fortune, world's-end to all inauspiciousness — we bow the Māheśvara path.",
- "issue": "Derived from L2 text (no argmap). Thunderbolt to all doubt, fire to all fortune, world's-end to all inauspiciousness — we bow the Māheśvara path.",
+ "question": "Thunderbolt to all doubt, world-end fire to all misfortune, world's-end to all joylessness — we bow the Māheśvara path.",
+ "issue": "Derived from L2 text (no argmap). Thunderbolt to all doubt, world-end fire to all misfortune, world's-end to all joylessness — we bow the Māheśvara path.",
  "premises": [
   {
-   "text": "",
+   "text": "sarvāśaṅkāsaniṃ sarvālakṣmīkālānalaṃ tathā sarvāmaṅgalyakalpāntaṃ mārgaṃ māheśvaraṃ numaḥ",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s02-v28"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Thunderbolt to all doubt, fire to all fortune, world's-end to all inauspiciousness — we bow the Māheśvara path.",
+  "text": "Thunderbolt to all doubt, world-end fire to all misfortune, world's-end to all joylessness — we bow the Māheśvara path.",
   "passage_id": "sivastotravali:s02-v28"
  },
  "unresolved": "",
- "argument_text": "Thunderbolt to all doubt, fire to all fortune, world's-end to all inauspiciousness — we bow the Māheśvara path.",
+ "argument_text": "Thunderbolt to all doubt, world-end fire to all misfortune, world's-end to all joylessness — we bow the Māheśvara path.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s02-v28",
- "sanskrit": "",
+ "sanskrit": "sarvāśaṅkāsaniṃ sarvālakṣmīkālānalaṃ tathā sarvāmaṅgalyakalpāntaṃ mārgaṃ māheśvaraṃ numaḥ",
  "license": "CC BY-NC-SA 4.0"
 }

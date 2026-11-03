@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p14-v14",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p14-v14",
+ "title": "kramastotra — kram-p14-v14",
+ "kind": "entailment",
+ "question": "Making sequence-swelling on that ground, measuring difference of own powers — O god, You show always in own self. Then, named doing-knowing-willing, maintenance-dissolution-great-emission-powered, three-formed — may I become, for overlying, eager-hearted.",
+ "issue": "Derived from L2 text (no argmap). Making sequence-swelling on that ground, measuring difference of own powers — O god, You show always in own self. Then, named doing-knowing-willing, maintenance-dissolution-great-emission-powered, three-formed — may I become, for overlying, eager-hearted.",
+ "premises": [
+  {
+   "text": "purā sṛṣṭir līnā hutavahamayī yātra vilaset parollāsaunmukhyaṃ vrajati śaśisaṃsparśasubhagā | hutāśendusphārobhayavibhavabhāg bhairavavibho taveyaṃ sṛṣṭyākhyā mama manasi nityaṃ vilasatām",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p14-v14"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Making sequence-swelling on that ground, measuring difference of own powers — O god, You show always in own self. Then, named doing-knowing-willing, maintenance-dissolution-great-emission-powered, three-formed — may I become, for overlying, eager-hearted.",
+  "passage_id": "kramastotra:kram-p14-v14"
+ },
+ "unresolved": "",
+ "argument_text": "Making sequence-swelling on that ground, measuring difference of own powers — O god, You show always in own self. Then, named doing-knowing-willing, maintenance-dissolution-great-emission-powered, three-formed — may I become, for overlying, eager-hearted.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p14-v14",
+ "sanskrit": "purā sṛṣṭir līnā hutavahamayī yātra vilaset parollāsaunmukhyaṃ vrajati śaśisaṃsparśasubhagā | hutāśendusphārobhayavibhavabhāg bhairavavibho taveyaṃ sṛṣṭyākhyā mama manasi nityaṃ vilasatām",
+ "license": "CC BY-NC-SA 4.0"
+}

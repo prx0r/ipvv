@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p03-v03",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p03-v03",
+ "title": "bodhapancadasika — bod-p03-v03",
+ "kind": "entailment",
+ "question": "Power wants no apartness from the power-bearer. The two are eternally one — as fire is one with its burning.",
+ "issue": "Derived from L2 text (no argmap). Power wants no apartness from the power-bearer. The two are eternally one — as fire is one with its burning.",
+ "premises": [
+  {
+   "text": "śaktiś ca śaktimadrūpād vyatirekam na vāñchati | tādātmyam anayor nityaṃ vahnidāhikayor iva",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p03-v03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Power wants no apartness from the power-bearer. The two are eternally one — as fire is one with its burning.",
+  "passage_id": "bodhapancadasika:bod-p03-v03"
+ },
+ "unresolved": "",
+ "argument_text": "Power wants no apartness from the power-bearer. The two are eternally one — as fire is one with its burning.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p03-v03",
+ "sanskrit": "śaktiś ca śaktimadrūpād vyatirekam na vāñchati | tādātmyam anayor nityaṃ vahnidāhikayor iva",
+ "license": "CC BY-NC-SA 4.0"
+}

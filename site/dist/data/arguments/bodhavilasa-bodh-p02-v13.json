@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhavilasa:bodh-p02-v13",
+ "work_id": "bodhavilasa",
+ "passage_id": "bodhavilasa:bodh-p02-v13",
+ "title": "bodhavilasa — bodh-p02-v13",
+ "kind": "entailment",
+ "question": "Bliss-spread self, having assumed vast views-and-powers, shines. From tightening of own power, in wandering, it becomes impure.",
+ "issue": "Derived from L2 text (no argmap). Bliss-spread self, having assumed vast views-and-powers, shines. From tightening of own power, in wandering, it becomes impure.",
+ "premises": [
+  {
+   "text": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+   "label": "Sanskrit source",
+   "passage_id": "bodhavilasa:bodh-p02-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bliss-spread self, having assumed vast views-and-powers, shines. From tightening of own power, in wandering, it becomes impure.",
+  "passage_id": "bodhavilasa:bodh-p02-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Bliss-spread self, having assumed vast views-and-powers, shines. From tightening of own power, in wandering, it becomes impure.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhavilasa:bodh-p02-v13",
+ "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+ "license": "CC BY-NC-SA 4.0"
+}

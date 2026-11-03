@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p04",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p04",
+ "title": "anuttarastika — anu-p04",
+ "kind": "entailment",
+ "question": "Bliss here is not wealth-middle-intoxication, nor like enjoying women, nor lamp-sun-moon-made splendour-multitude — nor is it the light-rise. Joy with gathered-difference-liberation-bliss-ground, like burden-lowering, is the attainment of the forgotten treasure of the all-nonduality state — the light-rise.",
+ "issue": "Derived from L2 text (no argmap). Bliss here is not wealth-middle-intoxication, nor like enjoying women, nor lamp-sun-moon-made splendour-multitude — nor is it the light-rise. Joy with gathered-difference-liberation-bliss-ground, like burden-lowering, is the attainment of the forgotten treasure of the all-nonduality state — the light-rise.",
+ "premises": [
+  {
+   "text": "ānando 'tra na vittamadhyamadavan naivāṅganāsaṅgavat dīpārkendukṛtaprabhāprakaravan naiva prakāśodayaḥ | harṣaḥ saṃbhṛtabhedamuktisukhabhūr bhārāvatāropamaḥ sarvādvaitapadasya vismṛtanidheḥ prāptiḥ prakāśodayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bliss here is not wealth-middle-intoxication, nor like enjoying women, nor lamp-sun-moon-made splendour-multitude — nor is it the light-rise. Joy with gathered-difference-liberation-bliss-ground, like burden-lowering, is the attainment of the forgotten treasure of the all-nonduality state — the light-rise.",
+  "passage_id": "anuttarastika:anu-p04"
+ },
+ "unresolved": "",
+ "argument_text": "Bliss here is not wealth-middle-intoxication, nor like enjoying women, nor lamp-sun-moon-made splendour-multitude — nor is it the light-rise. Joy with gathered-difference-liberation-bliss-ground, like burden-lowering, is the attainment of the forgotten treasure of the all-nonduality state — the light-rise.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p04",
+ "sanskrit": "ānando 'tra na vittamadhyamadavan naivāṅganāsaṅgavat dīpārkendukṛtaprabhāprakaravan naiva prakāśodayaḥ | harṣaḥ saṃbhṛtabhedamuktisukhabhūr bhārāvatāropamaḥ sarvādvaitapadasya vismṛtanidheḥ prāptiḥ prakāśodayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

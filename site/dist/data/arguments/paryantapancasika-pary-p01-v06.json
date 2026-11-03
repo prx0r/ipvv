@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p01-v06",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p01-v06",
+ "title": "paryantapancasika — pary-p01-v06",
+ "kind": "entailment",
+ "question": "From nature of consciousness, that god by own self reflecting — Lord, from unattached to end-of-stages — stages attains.",
+ "issue": "Derived from L2 text (no argmap). From nature of consciousness, that god by own self reflecting — Lord, from unattached to end-of-stages — stages attains.",
+ "premises": [
+  {
+   "text": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p01-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From nature of consciousness, that god by own self reflecting — Lord, from unattached to end-of-stages — stages attains.",
+  "passage_id": "paryantapancasika:pary-p01-v06"
+ },
+ "unresolved": "",
+ "argument_text": "From nature of consciousness, that god by own self reflecting — Lord, from unattached to end-of-stages — stages attains.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p01-v06",
+ "sanskrit": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -4,8 +4,8 @@
  "passage_id": "anubhavanivedana:anu-p04",
  "title": "anubhavanivedana — anu-p04",
  "kind": "entailment",
- "question": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful? *Fidelity: preserved (all 4 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: trispandabhāva read as inhalation/exhalation/juncture (marked); yataḥ read relatively; śāktaṃ dhāma r",
- "issue": "Derived from L2 text (no argmap). That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful? *Fidelity: preserved (all 4 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: trispandabhāva read as inhalation/exhalation/juncture (marked); yataḥ read relatively; śāktaṃ dhāma r",
+ "question": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful?",
+ "issue": "Derived from L2 text (no argmap). That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful?",
  "premises": [
   {
    "text": "mantraḥ sa pratibhāti varṇaracanā yasminna saṃlakṣyate mudrā sā samudeti yatra galitā kṛtsnā kriyā kāyikī | yogaḥ sa prathate yataḥ pravahaṇaṃ prāṇasya saṃkṣīyate tvaddhāmādhigamotsaveṣu sudhiyāṃ kiṃ kiṃ na nāmādbhutaṃ",
@@ -15,11 +15,11 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful? *Fidelity: preserved (all 4 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: trispandabhāva read as inhalation/exhalation/juncture (marked); yataḥ read relatively; śāktaṃ dhāma r",
+  "text": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful?",
   "passage_id": "anubhavanivedana:anu-p04"
  },
  "unresolved": "",
- "argument_text": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful? *Fidelity: preserved (all 4 verses, full pādas from T1). Added: connective phrasing only. Not-resolved: trispandabhāva read as inhalation/exhalation/juncture (marked); yataḥ read relatively; śāktaṃ dhāma read as nominative.*",
+ "argument_text": "That mantra shines forth in which letter-arrangement is not distinguished. That mudrā arises in which entire bodily action is dissolved. That yoga spreads forth from which breath's flowing is exhausted. In the festivals of attaining Your abode, of the wise — what, what is indeed not wonderful?",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",

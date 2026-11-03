@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s06-v05",
  "title": "sivastotravali — s06-v05",
  "kind": "entailment",
- "question": "Seeing thing after thing as consisting of You, by Your possession — may I roam desireless, joy-filled.",
- "issue": "Derived from L2 text (no argmap). Seeing thing after thing as consisting of You, by Your possession — may I roam desireless, joy-filled.",
+ "question": "Possessed by You, seeing thing after thing as consisting of You — may I roam desireless, joy-filled.",
+ "issue": "Derived from L2 text (no argmap). Possessed by You, seeing thing after thing as consisting of You — may I roam desireless, joy-filled.",
  "premises": [
   {
-   "text": "",
+   "text": "bhavadāveśataḥ paśyan bhāvaṃ bhāvaṃ bhavanmayam vicareyaṃ nirākāṅkṣaḥ praharṣaparipūritaḥ",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s06-v05"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Seeing thing after thing as consisting of You, by Your possession — may I roam desireless, joy-filled.",
+  "text": "Possessed by You, seeing thing after thing as consisting of You — may I roam desireless, joy-filled.",
   "passage_id": "sivastotravali:s06-v05"
  },
  "unresolved": "",
- "argument_text": "Seeing thing after thing as consisting of You, by Your possession — may I roam desireless, joy-filled.",
+ "argument_text": "Possessed by You, seeing thing after thing as consisting of You — may I roam desireless, joy-filled.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s06-v05",
- "sanskrit": "",
+ "sanskrit": "bhavadāveśataḥ paśyan bhāvaṃ bhāvaṃ bhavanmayam vicareyaṃ nirākāṅkṣaḥ praharṣaparipūritaḥ",
  "license": "CC BY-NC-SA 4.0"
 }

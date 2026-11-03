@@ -1,3 +1,11 @@
 ## ghat-p01-v06 — argument map
 
-Thinned by cloud-arrival, tormented by hard Kāma.
+**Speaker.** Abhinavagupta (commentator-poet voice)
+
+**Question.** Who thinned, who tormented?
+
+**Premises.**
+- Thinned by cloud-arrival, tormented by hard Kāma.
+
+**Inference.** Cloud thins, Kāma torments.
+

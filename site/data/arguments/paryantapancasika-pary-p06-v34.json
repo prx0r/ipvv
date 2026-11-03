@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p06-v34",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p06-v34",
+ "title": "paryantapancasika — pary-p06-v34",
+ "kind": "entailment",
+ "question": "By subtleness, smell etc. five subtle-elements — then by instrumentality from touch — of senses tenfoldness.",
+ "issue": "Derived from L2 text (no argmap). By subtleness, smell etc. five subtle-elements — then by instrumentality from touch — of senses tenfoldness.",
+ "premises": [
+  {
+   "text": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p06-v34"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By subtleness, smell etc. five subtle-elements — then by instrumentality from touch — of senses tenfoldness.",
+  "passage_id": "paryantapancasika:pary-p06-v34"
+ },
+ "unresolved": "",
+ "argument_text": "By subtleness, smell etc. five subtle-elements — then by instrumentality from touch — of senses tenfoldness.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p06-v34",
+ "sanskrit": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+ "license": "CC BY-NC-SA 4.0"
+}

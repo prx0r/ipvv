@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhavilasa:bodh-p02-v19",
+ "work_id": "bodhavilasa",
+ "passage_id": "bodhavilasa:bodh-p02-v19",
+ "title": "bodhavilasa — bodh-p02-v19",
+ "kind": "entailment",
+ "question": "From dissolution, the withdrawn goddess — in unity-of-consciousness, grace is considered. From manifesting that essence, concealment is called.",
+ "issue": "Derived from L2 text (no argmap). From dissolution, the withdrawn goddess — in unity-of-consciousness, grace is considered. From manifesting that essence, concealment is called.",
+ "premises": [
+  {
+   "text": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+   "label": "Sanskrit source",
+   "passage_id": "bodhavilasa:bodh-p02-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From dissolution, the withdrawn goddess — in unity-of-consciousness, grace is considered. From manifesting that essence, concealment is called.",
+  "passage_id": "bodhavilasa:bodh-p02-v19"
+ },
+ "unresolved": "",
+ "argument_text": "From dissolution, the withdrawn goddess — in unity-of-consciousness, grace is considered. From manifesting that essence, concealment is called.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhavilasa:bodh-p02-v19",
+ "sanskrit": "pramātṛsaptakatvena ṣaṭtriṃśattattvasaṅkhyayā bhāvitaḥ sa maheśāno mokṣalakṣmīḥ pravartate tadbhūmikā darśanādyās sarvā eva na saṃśayaḥ bhūmikāḥ kṛtrimā yadvan naṭo gṛhṇāti svecchayā tadvad eva cidānandasvecchocchalitabṛṃhitaḥ ātmā gṛhṇāti vipulā darśanādyā vibhūtayaḥ cidānandasamullāsollasitātmā virājate cidvatsvaśaktisaṅkocāt saṃsāre malināyate apūrṇo smīti vividhair malaiḥ sa malinīkṛtaḥ māyīyāṇavakārmākhyair vyāpako 'pi jagadvibhuḥ vyāpī yadvan mahādevaḥ kroti pañcakṛtyatām tadvad evāyam ātmāpi kurute śaktimohitaḥ śakto vikāsāc chaktīśo gīyate tattvavādibhiḥ saṅkocanāt saṅkocitaḥ saṃsārīty abhidhīyate māyā rūpaṃ hi yat kiṃcid ālokayitum udyatā sādhyasṛṣṭiṃ vijānīyād anyā śaktiḥ sthitir matā saṃhārāt saṃhṛtā devī cidaikye 'nugraho mataḥ tadekasārāprathanāt tirodhānābhidhīyate itthaṃ sadā saṃnihitaḥ pañcavāhavidhiḥ kramāt jñātaś cintāmaṇir asāv ajñānāt kāṣṭaloṣṭavat",
+ "license": "CC BY-NC-SA 4.0"
+}

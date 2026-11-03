@@ -1,47 +1,69 @@
 # bodhapancadasika — LLM Discovery
 
 Work: bodhapancadasika
-Passages: 15 (7 PASS, 8 BLOCKED)
+Passages: 15 (15 PASS, 0 BLOCKED)
 Data: /data/translations/bodhapancadasika.json
 Page: /translations/bodhapancadasika.html
 
 ## Chunks
 
-- bod-p01 (verses 1) [BLOCKED]
-- bod-p02 (verses 2) [BLOCKED]
-- bod-p03 (verses 3) [PASS]
-  L1: ## bod-p03 (3)
-Power too from power-possessor-form difference does not desire; identity of these two is eternal, as fire
-  L2: 
-- bod-p04 (verses 4) [BLOCKED]
-- bod-p05 (verses 5) [BLOCKED]
-- bod-p06 (verses 6) [PASS]
-  L1: ## bod-p06 (6)
-This god by this goddess always play-joy-eager; varied creation-dissolution he does simultaneously, all-p
-  L2: 
-- bod-p07 (verses 7) [BLOCKED]
-- bod-p08 (verses 8) [PASS]
-  L1: ## bod-p08 (8)
-Limited-light-ness of inert indeed is mark; from inert different is awareness since not measured. // AgBp
-  L2: 
-- bod-p09 (verses 9) [BLOCKED]
-- bod-p10 (verses 10) [PASS]
-  L1: ## bod-p10 (10)
-In them variety extreme up-down across what; worlds, their parts, pleasure-pain-mind what. // AgBpd_10
-  L2: ## bod-p10–p11 — variety and non-knowledge
-In them variety extreme up-down across what; worlds, their parts, pleasure-pa
-- bod-p11 (verses 11) [PASS]
-  L1: ## bod-p11 (11)
-What of it non-knowledge — that its autonomy thus stated; it indeed saṃsāra of fools who is terrifying. 
-  L2: 
-- bod-p12 (verses 12) [PASS]
-  L1: ## bod-p12 (12)
-From that grace-sap or from teacher-scripture or from scripture of supreme Lord from which from which ap
-  L2: ## bod-p12–p14 — attainment, liberation, and non-difference
-From that grace-sap or from teacher-scripture or from script
-- bod-p13 (verses 13) [PASS]
-  L1: ## bod-p13 (13)
-What of reality full-knowledge — that is liberation from supreme Lord. That fullness of awakened, living
-  L2: 
-- bod-p14 (verses 14) [BLOCKED]
-- bod-p15 (verses 15) [BLOCKED]
+- bod-p01-v01 (verses 1) [PASS]
+  L1: ## bod-p01-v01 (1)
+un-set-sun-light-form / of-powers / of-darknesses / too / who / one / within / what-end / powers / da
+  L2: Of unsetting sun-light is His form — of bright powers and of darknesses too. For He is one, within, and powers and darkn
+- bod-p02-v02 (verses 2) [PASS]
+  L1: ## bod-p02-v02 (2)
+He / of-all-beings / own-nature / supreme-Lord / host-of-things / of-him-alone / power / Lordship-mad
+  L2: He alone is the own-nature of all beings, the supreme Lord. And the whole host of things is His alone — power, shaped as
+- bod-p03-v03 (verses 3) [PASS]
+  L1: ## bod-p03-v03 (3)
+Power / from-power-possessor-form / difference / does-not-desire / identity / of-these-two / eternal 
+  L2: Power wants no apartness from the power-bearer. The two are eternally one — as fire is one with its burning.
+- bod-p04-v04 (verses 4) [PASS]
+  L1: ## bod-p04-v04 (4)
+He / Bhairava / god / world-bearing-characterized / in-own-self-vision / whole / by-power / reflected
+  L2: He alone is Bhairava, the god whose very mark is bearing the world. In the mirror of His own self-seeing, the whole stan
+- bod-p05-v05 (verses 5) [PASS]
+  L1: ## bod-p05-v05 (5)
+Of-him-alone / supreme / goddess / own-nature-grasping-eager / fullness / in-all-beings / of-whom / n
+  L2: His alone is the supreme goddess, hungry only to grasp His own nature. She is fullness in all beings — in whom there is 
+- bod-p06-v06 (verses 6) [PASS]
+  L1: ## bod-p06-v06 (6)
+This / god / by-this / goddess / always / play-joy-eager / varied / creation-dissolution / does / sim
+  L2: This god, with this goddess, is forever eager for the joy of play. Varied makings and unmakings He works at once — every
+- bod-p07-v07 (verses 7) [PASS]
+  L1: ## bod-p07-v07 (7)
+Hard-to-accomplish / of-it / unsurpassed / indeed / what / that-itself / autonomy / lordship / awaren
+  L2: What is hardest to do is His, and it is unsurpassed. That itself is His freedom, His lordship, His awareness-form.
+- bod-p08-v08 (verses 8) [PASS]
+  L1: ## bod-p08-v08 (8)
+Limited-light-ness / of-inert / indeed / mark / from-inert / different / awareness / since / not / me
+  L2: To shine only in part — that is the mark of the inert. Awareness is otherwise than the inert, for no measure contains it
+- bod-p09-v09 (verses 9) [PASS]
+  L1: ## bod-p09-v09 (9)
+Thus / of-it / autonomous / by-own-power-distinction / own-self / creation-dissolution / as-nature / 
+  L2: So it is with the free one, distinguishing by His own power: makings and unmakings rest in His own self, standing as His
+- bod-p10-v10 (verses 10) [PASS]
+  L1: ## bod-p10-v10 (10)
+In-them / variety / extreme / up-down / across / what / worlds / their-parts / pleasure-pain-mind / 
+  L2: In them, variety runs to the extreme — upward, downward, across. Worlds and their fragments, pleasure and pain and mind.
+- bod-p11-v11 (verses 11) [PASS]
+  L1: ## bod-p11-v11 (11)
+What / of-it / non-knowledge / that / its-autonomy / thus / it / indeed / saṃsāra / of-fools / who /
+  L2: Not to know this is called His freedom. And that is saṃsāra itself — a terror to the deluded.
+- bod-p12-v12 (verses 12) [PASS]
+  L1: ## bod-p12-v12 (12)
+From-that / grace-sap / or / from-teacher-scripture / or / from-scripture / of-supreme-Lord / from-w
+  L2: From the sap of His grace, or from the teacher's handed word, or from the Lord's own scripture — from whichever, it is r
+- bod-p13-v13 (verses 13) [PASS]
+  L1: ## bod-p13-v13 (13)
+What / of-reality / full-knowledge / that / liberation / from-supreme-Lord / That / fullness / of-aw
+  L2: To know reality through and through — that is release, from the supreme Lord. That is the fullness of the awakened: free
+- bod-p14-v14 (verses 14) [PASS]
+  L1: ## bod-p14-v14 (14)
+These-two / bondage / liberation / from-supreme-Lord-nature / Not / they-differ / no / difference / 
+  L2: Bondage and release both come of the Lord's own nature. The two do not split apart; in truth, in the supreme Lord, there
+- bod-p15-v15 (verses 15) [PASS]
+  L1: ## bod-p15-v15 (15)
+Thus / will-power / art / knowledge / power / trident / lotus / resorted / Bhairava / of-all-things 
+  L2: So it is: resting on the lotus of the trident — will, art, knowledge, power — Bhairava, the own-nature of all things, is

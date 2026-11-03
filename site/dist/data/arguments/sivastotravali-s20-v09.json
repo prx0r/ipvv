@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s20-v09",
  "title": "sivastotravali — s20-v09",
  "kind": "entailment",
- "question": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the husband, bow.",
- "issue": "Derived from L2 text (no argmap). Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the husband, bow.",
+ "question": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the Master, bow.",
+ "issue": "Derived from L2 text (no argmap). Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the Master, bow.",
  "premises": [
   {
-   "text": "",
+   "text": "sadā srṣṭivinodāya sadā sthitisukhāsine sadā tribhuvanāhāratṛptāya svāmine namaḥ",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s20-v09"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the husband, bow.",
+  "text": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the Master, bow.",
   "passage_id": "sivastotravali:s20-v09"
  },
  "unresolved": "",
- "argument_text": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the husband, bow.",
+ "argument_text": "Ever to creation-sport, ever seated in staying-pleasure, ever world-eating-sated — to the Master, bow.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s20-v09",
- "sanskrit": "",
+ "sanskrit": "sadā srṣṭivinodāya sadā sthitisukhāsine sadā tribhuvanāhāratṛptāya svāmine namaḥ",
  "license": "CC BY-NC-SA 4.0"
 }

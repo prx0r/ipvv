@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p01-v01",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p01-v01",
+ "title": "paramarthasara — param-p01-v01",
+ "kind": "entailment",
+ "question": "I resort to You, Śambhu — supreme, beyond-abiding, beginningless, one, cave-entered manifoldly, abode of all, abiding in all moving and unmoving: to refuge.",
+ "issue": "Derived from L2 text (no argmap). I resort to You, Śambhu — supreme, beyond-abiding, beginningless, one, cave-entered manifoldly, abode of all, abiding in all moving and unmoving: to refuge.",
+ "premises": [
+  {
+   "text": "garbhādhivāsapūrvakamaraṇāntakaduḥkhacakravibhrāntaḥ | ādhāram bhagavantaṃ śiṣyaḥ papraccha paramārtham ādhārakārikābhiḥ taṃ gurur abhibhāṣati sma tatsāram | kathayaty abhinavaguptaḥ śivaśāsanadṛṣṭiyogena nijaśaktivaibhavabharād a.ṅdacatuṣṭayam idaṃ vibhāgena | śaktir māyā prakṛtiḥ pṛthvī ceti prabhāvitaṃ prabhuṇā tatrāntar viśvam idaṃ vicitratanukaraṇabhuvanasaṃtānam | bhoktā ca tatra dehī śiva eva gṛhītapaśubhāvaḥ nānāvidhavarṇānāṃ rūpaṃ dhatte yathāmalaḥ sphaṭikaḥ | suramānuṣapaśupādaparūpatvaṃ tadvad īśo 'pi gacchati gacchati jala iva himakarabimbaṃ sthite sthitiṃ yāti | tanukaraṇabhuvanavarge tathāyam ātmā maheśānaḥ rāhur adṛśyo 'pi yathā śaśibimbasthaḥ prakāśate tadvat | sarvagato 'py ayam ātmā viṣayāśrayaṇena dhīmukure ādarśe malarahite yadvad vadanaṃ vibhāti tadvad ayam | śivaśaktipātavimale dhītattve bhāti bhārūpaḥ bhārūpaṃ paripūrṇaṃ svātmani viśrāntito mahānandam | icchasaṃvitkaraṇair nirbharitam anantaśaktiparipūrṇam",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "I resort to You, Śambhu — supreme, beyond-abiding, beginningless, one, cave-entered manifoldly, abode of all, abiding in all moving and unmoving: to refuge.",
+  "passage_id": "paramarthasara:param-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "I resort to You, Śambhu — supreme, beyond-abiding, beginningless, one, cave-entered manifoldly, abode of all, abiding in all moving and unmoving: to refuge.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p01-v01",
+ "sanskrit": "garbhādhivāsapūrvakamaraṇāntakaduḥkhacakravibhrāntaḥ | ādhāram bhagavantaṃ śiṣyaḥ papraccha paramārtham ādhārakārikābhiḥ taṃ gurur abhibhāṣati sma tatsāram | kathayaty abhinavaguptaḥ śivaśāsanadṛṣṭiyogena nijaśaktivaibhavabharād a.ṅdacatuṣṭayam idaṃ vibhāgena | śaktir māyā prakṛtiḥ pṛthvī ceti prabhāvitaṃ prabhuṇā tatrāntar viśvam idaṃ vicitratanukaraṇabhuvanasaṃtānam | bhoktā ca tatra dehī śiva eva gṛhītapaśubhāvaḥ nānāvidhavarṇānāṃ rūpaṃ dhatte yathāmalaḥ sphaṭikaḥ | suramānuṣapaśupādaparūpatvaṃ tadvad īśo 'pi gacchati gacchati jala iva himakarabimbaṃ sthite sthitiṃ yāti | tanukaraṇabhuvanavarge tathāyam ātmā maheśānaḥ rāhur adṛśyo 'pi yathā śaśibimbasthaḥ prakāśate tadvat | sarvagato 'py ayam ātmā viṣayāśrayaṇena dhīmukure ādarśe malarahite yadvad vadanaṃ vibhāti tadvad ayam | śivaśaktipātavimale dhītattve bhāti bhārūpaḥ bhārūpaṃ paripūrṇaṃ svātmani viśrāntito mahānandam | icchasaṃvitkaraṇair nirbharitam anantaśaktiparipūrṇam",
+ "license": "CC BY-NC-SA 4.0"
+}

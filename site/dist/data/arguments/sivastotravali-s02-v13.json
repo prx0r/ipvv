@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s02-v13",
  "title": "sivastotravali — s02-v13",
  "kind": "entailment",
- "question": "To all power — whose play destroys the Brahmā-Viṣṇu-arrayed world — wonder-working — bow.",
- "issue": "Derived from L2 text (no argmap). To all power — whose play destroys the Brahmā-Viṣṇu-arrayed world — wonder-working — bow.",
+ "question": "To all power — whose play destroys the world arrayed by Brahmā, Indra, Viṣṇu — wonder-working — bow.",
+ "issue": "Derived from L2 text (no argmap). To all power — whose play destroys the world arrayed by Brahmā, Indra, Viṣṇu — wonder-working — bow.",
  "premises": [
   {
-   "text": "",
+   "text": "brahmendraviṣṇunirvyūḍhajagatsaṃhārakelaye āścaryakaraṇīyāya namas te sarvaśaktaye",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s02-v13"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "To all power — whose play destroys the Brahmā-Viṣṇu-arrayed world — wonder-working — bow.",
+  "text": "To all power — whose play destroys the world arrayed by Brahmā, Indra, Viṣṇu — wonder-working — bow.",
   "passage_id": "sivastotravali:s02-v13"
  },
  "unresolved": "",
- "argument_text": "To all power — whose play destroys the Brahmā-Viṣṇu-arrayed world — wonder-working — bow.",
+ "argument_text": "To all power — whose play destroys the world arrayed by Brahmā, Indra, Viṣṇu — wonder-working — bow.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s02-v13",
- "sanskrit": "",
+ "sanskrit": "brahmendraviṣṇunirvyūḍhajagatsaṃhārakelaye āścaryakaraṇīyāya namas te sarvaśaktaye",
  "license": "CC BY-NC-SA 4.0"
 }

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p02-v09",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p02-v09",
+ "title": "paryantapancasika — pary-p02-v09",
+ "kind": "entailment",
+ "question": "Of both — there indeed way: pure, impure, self — from difference — purity of externalized objects — in I-ness immersion.",
+ "issue": "Derived from L2 text (no argmap). Of both — there indeed way: pure, impure, self — from difference — purity of externalized objects — in I-ness immersion.",
+ "premises": [
+  {
+   "text": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p02-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of both — there indeed way: pure, impure, self — from difference — purity of externalized objects — in I-ness immersion.",
+  "passage_id": "paryantapancasika:pary-p02-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Of both — there indeed way: pure, impure, self — from difference — purity of externalized objects — in I-ness immersion.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p02-v09",
+ "sanskrit": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

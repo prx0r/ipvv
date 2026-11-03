@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s12-v11",
  "title": "sivastotravali — s12-v11",
  "kind": "entailment",
- "question": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink to fullness: am I what?",
- "issue": "Derived from L2 text (no argmap). Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink to fullness: am I what?",
+ "question": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink my fill: what am I?",
+ "issue": "Derived from L2 text (no argmap). Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink my fill: what am I?",
  "premises": [
   {
-   "text": "",
+   "text": "bhagavann itarān apekṣiṇā nitarām ekarasena cetasā sulabhaṃ sakalopaśāyinaṃ prabhum ātṛpti pibeyam asmi kim",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s12-v11"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink to fullness: am I what?",
+  "text": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink my fill: what am I?",
   "passage_id": "sivastotravali:s12-v11"
  },
  "unresolved": "",
- "argument_text": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink to fullness: am I what?",
+ "argument_text": "Lord, with one-taste mind seeking nothing else — the all-laying Lord, easy — may I drink my fill: what am I?",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s12-v11",
- "sanskrit": "",
+ "sanskrit": "bhagavann itarān apekṣiṇā nitarām ekarasena cetasā sulabhaṃ sakalopaśāyinaṃ prabhum ātṛpti pibeyam asmi kim",
  "license": "CC BY-NC-SA 4.0"
 }

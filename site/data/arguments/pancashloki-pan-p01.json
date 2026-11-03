@@ -4,8 +4,8 @@
  "passage_id": "pancashloki:pan-p01",
  "title": "pancashloki — pan-p01",
  "kind": "entailment",
- "question": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride has been offered by me with devotion on the Lord's lotus feet. This is my all; I know there is nothing other than this. Therefore, having cast all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased!",
- "issue": "Derived from L2 text (no argmap). Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride has been offered by me with devotion on the Lord's lotus feet. This is my all; I know there is nothing other than this. Therefore, having cast all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased!",
+ "question": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride, laid at Your lotus feet with devotion. This is my all; I know there is nothing other. So, casting all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased with me!",
+ "issue": "Derived from L2 text (no argmap). Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride, laid at Your lotus feet with devotion. This is my all; I know there is nothing other. So, casting all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased with me!",
  "premises": [
   {
    "text": "yatsatyaṃ tu mayā kṛtaṃ mama vibho kṛtyaṃ tu nātaḥ paraṃ yanmanmānamaiśapādakamale bhaktyā mayaivārpitam | sarvasvamata evametaditarannāsyeva jānāmyatastyaktvā kṣipramanāthanātha karuṇāsindho prasanno bhava",
@@ -15,16 +15,16 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride has been offered by me with devotion on the Lord's lotus feet. This is my all; I know there is nothing other than this. Therefore, having cast all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased!",
+  "text": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride, laid at Your lotus feet with devotion. This is my all; I know there is nothing other. So, casting all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased with me!",
   "passage_id": "pancashloki:pan-p01"
  },
  "unresolved": "",
- "argument_text": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride has been offered by me with devotion on the Lord's lotus feet. This is my all; I know there is nothing other than this. Therefore, having cast all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased!",
+ "argument_text": "Whatever I have truly done, O Lord — no duty of mine goes beyond this: my pride, laid at Your lotus feet with devotion. This is my all; I know there is nothing other. So, casting all else aside — quickly, O protector of the helpless, O ocean of compassion — be pleased with me!",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "pancashloki:pan-p01",
  "sanskrit": "yatsatyaṃ tu mayā kṛtaṃ mama vibho kṛtyaṃ tu nātaḥ paraṃ yanmanmānamaiśapādakamale bhaktyā mayaivārpitam | sarvasvamata evametaditarannāsyeva jānāmyatastyaktvā kṣipramanāthanātha karuṇāsindho prasanno bhava",
- "license": "CC BY-NC-SA 4.0"
+ "license": "SanskritDocuments (Ruma Dewan) - no explicit source licence"
 }

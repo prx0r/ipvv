@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p01-v01",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p01-v01",
+ "title": "kramastotra — kram-p01-v01",
+ "kind": "entailment",
+ "question": "This is the completion-rite amid sorrow's host — in the spreading taste of great bliss-essence, this foul day: for by mutual doing, in the hymn of the Lord, weighty with scorching uneven flames, the mind constantly reflects back — its fear gone.",
+ "issue": "Derived from L2 text (no argmap). This is the completion-rite amid sorrow's host — in the spreading taste of great bliss-essence, this foul day: for by mutual doing, in the hymn of the Lord, weighty with scorching uneven flames, the mind constantly reflects back — its fear gone.",
+ "premises": [
+  {
+   "text": "ayaṃ duḥkhavrātavrataparigame pāraṇavidhir mahāsaukhyāsāraprasaraṇarase durdinam idam | yad anyanyakkṛtyā viṣamaviśikhaploṣaṇaguror vibhoḥ stotre śaśvat pratiphalati ceto gatabhayam",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This is the completion-rite amid sorrow's host — in the spreading taste of great bliss-essence, this foul day: for by mutual doing, in the hymn of the Lord, weighty with scorching uneven flames, the mind constantly reflects back — its fear gone.",
+  "passage_id": "kramastotra:kram-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "This is the completion-rite amid sorrow's host — in the spreading taste of great bliss-essence, this foul day: for by mutual doing, in the hymn of the Lord, weighty with scorching uneven flames, the mind constantly reflects back — its fear gone.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p01-v01",
+ "sanskrit": "ayaṃ duḥkhavrātavrataparigame pāraṇavidhir mahāsaukhyāsāraprasaraṇarase durdinam idam | yad anyanyakkṛtyā viṣamaviśikhaploṣaṇaguror vibhoḥ stotre śaśvat pratiphalati ceto gatabhayam",
+ "license": "CC BY-NC-SA 4.0"
+}

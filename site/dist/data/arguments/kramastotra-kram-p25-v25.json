@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p25-v25",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p25-v25",
+ "title": "kramastotra — kram-p25-v25",
+ "kind": "entailment",
+ "question": "In proof merged, by Śiva-step-shining-glory-force — body-breath-made, measured-made-knower-standing-formed. When time's cadre reaches Your dissolution-step — then the goddess who shines, mine — she would be Śiva-made.",
+ "issue": "Derived from L2 text (no argmap). In proof merged, by Śiva-step-shining-glory-force — body-breath-made, measured-made-knower-standing-formed. When time's cadre reaches Your dissolution-step — then the goddess who shines, mine — she would be Śiva-made.",
+ "premises": [
+  {
+   "text": "prakāśākhyā saṃvit kramavirahitā śūnyapadato bahirlīnātyantam prasarati samācchādakatayā | tato 'py antaḥsāre galitarabhasād akramatayā mahākālī seyaṃ mama kalayatāṃ kālam akhilam",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p25-v25"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In proof merged, by Śiva-step-shining-glory-force — body-breath-made, measured-made-knower-standing-formed. When time's cadre reaches Your dissolution-step — then the goddess who shines, mine — she would be Śiva-made.",
+  "passage_id": "kramastotra:kram-p25-v25"
+ },
+ "unresolved": "",
+ "argument_text": "In proof merged, by Śiva-step-shining-glory-force — body-breath-made, measured-made-knower-standing-formed. When time's cadre reaches Your dissolution-step — then the goddess who shines, mine — she would be Śiva-made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p25-v25",
+ "sanskrit": "prakāśākhyā saṃvit kramavirahitā śūnyapadato bahirlīnātyantam prasarati samācchādakatayā | tato 'py antaḥsāre galitarabhasād akramatayā mahākālī seyaṃ mama kalayatāṃ kālam akhilam",
+ "license": "CC BY-NC-SA 4.0"
+}

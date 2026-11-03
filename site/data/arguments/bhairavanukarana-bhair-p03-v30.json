@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p03-v30",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p03-v30",
+ "title": "bhairavanukarana — bhair-p03-v30",
+ "kind": "entailment",
+ "question": "By vision-difference, O Lord — various form assuming — Bhairava-supreme-waking-made proclaimed — own abode everywhere.",
+ "issue": "Derived from L2 text (no argmap). By vision-difference, O Lord — various form assuming — Bhairava-supreme-waking-made proclaimed — own abode everywhere.",
+ "premises": [
+  {
+   "text": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p03-v30"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By vision-difference, O Lord — various form assuming — Bhairava-supreme-waking-made proclaimed — own abode everywhere.",
+  "passage_id": "bhairavanukarana:bhair-p03-v30"
+ },
+ "unresolved": "",
+ "argument_text": "By vision-difference, O Lord — various form assuming — Bhairava-supreme-waking-made proclaimed — own abode everywhere.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p03-v30",
+ "sanskrit": "varadena pāṇinā tvaṃ viśvavibhūtipradatvam abhinayasi | na khalu paratattvaniṣṭho vibhavamalaiḥ spṛśyate jātu",
+ "license": "CC BY-NC-SA 4.0"
+}

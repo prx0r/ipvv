@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p02-v16",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p02-v16",
+ "title": "bhairavanukarana — bhair-p02-v16",
+ "kind": "entailment",
+ "question": "Inner-power-dagger bared — saṃsāra-splitting — by sword. All-world-by-own-power-glory-taken indeed — best heroes.",
+ "issue": "Derived from L2 text (no argmap). Inner-power-dagger bared — saṃsāra-splitting — by sword. All-world-by-own-power-glory-taken indeed — best heroes.",
+ "premises": [
+  {
+   "text": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p02-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Inner-power-dagger bared — saṃsāra-splitting — by sword. All-world-by-own-power-glory-taken indeed — best heroes.",
+  "passage_id": "bhairavanukarana:bhair-p02-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Inner-power-dagger bared — saṃsāra-splitting — by sword. All-world-by-own-power-glory-taken indeed — best heroes.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p02-v16",
+ "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p02-v08",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p02-v08",
+ "title": "paryantapancasika — pary-p02-v08",
+ "kind": "entailment",
+ "question": "Sequence which space-time-self, difference-life — of knowings from separation — this of-knower makes-varied-appearance.",
+ "issue": "Derived from L2 text (no argmap). Sequence which space-time-self, difference-life — of knowings from separation — this of-knower makes-varied-appearance.",
+ "premises": [
+  {
+   "text": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p02-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Sequence which space-time-self, difference-life — of knowings from separation — this of-knower makes-varied-appearance.",
+  "passage_id": "paryantapancasika:pary-p02-v08"
+ },
+ "unresolved": "",
+ "argument_text": "Sequence which space-time-self, difference-life — of knowings from separation — this of-knower makes-varied-appearance.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p02-v08",
+ "sanskrit": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s08-v09",
  "title": "sivastotravali — s08-v09",
  "kind": "entailment",
- "question": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
- "issue": "Derived from L2 text (no argmap). If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+ "question": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I be fallen from both?",
+ "issue": "Derived from L2 text (no argmap). If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I be fallen from both?",
  "premises": [
   {
-   "text": "",
+   "text": "api kadācana tāvakasaṅgamāmṛtakaṇācchuraṇena tanīyasā sakalalokasukheṣu parāṅmukho na bhavitāsmy ubhayacyuta eva kim",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s08-v09"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+  "text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I be fallen from both?",
   "passage_id": "sivastotravali:s08-v09"
  },
  "unresolved": "",
- "argument_text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I, fallen from both, be...?",
+ "argument_text": "If ever by the thinnest union-drops — may I turn from all world-pleasures; or shall I be fallen from both?",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s08-v09",
- "sanskrit": "",
+ "sanskrit": "api kadācana tāvakasaṅgamāmṛtakaṇācchuraṇena tanīyasā sakalalokasukheṣu parāṅmukho na bhavitāsmy ubhayacyuta eva kim",
  "license": "CC BY-NC-SA 4.0"
 }

@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s08-v04",
  "title": "sivastotravali — s08-v04",
  "kind": "entailment",
- "question": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — by Yourself be plain to me, Thyself.",
- "issue": "Derived from L2 text (no argmap). In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — by Yourself be plain to me, Thyself.",
+ "question": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — thereby, by Your own self, be plain to me.",
+ "issue": "Derived from L2 text (no argmap). In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — thereby, by Your own self, be plain to me.",
  "premises": [
   {
-   "text": "",
+   "text": "dehabhūmiṣu tathā manasi tvaṃ prāṇavartmani ca bhedam upete saṃvidaḥ pathiṣu teṣu ca tena svātmanā mama bhava sphuṭarūpaḥ",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s08-v04"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — by Yourself be plain to me, Thyself.",
+  "text": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — thereby, by Your own self, be plain to me.",
   "passage_id": "sivastotravali:s08-v04"
  },
  "unresolved": "",
- "argument_text": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — by Yourself be plain to me, Thyself.",
+ "argument_text": "In body-grounds and in mind, Lord, and in breath's course where difference has come — and in those consciousness-paths — thereby, by Your own self, be plain to me.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s08-v04",
- "sanskrit": "",
+ "sanskrit": "dehabhūmiṣu tathā manasi tvaṃ prāṇavartmani ca bhedam upete saṃvidaḥ pathiṣu teṣu ca tena svātmanā mama bhava sphuṭarūpaḥ",
  "license": "CC BY-NC-SA 4.0"
 }

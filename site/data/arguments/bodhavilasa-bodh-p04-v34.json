@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhavilasa:bodh-p04-v34",
+ "work_id": "bodhavilasa",
+ "passage_id": "bodhavilasa:bodh-p04-v34",
+ "title": "bodhavilasa — bodh-p04-v34",
+ "kind": "entailment",
+ "question": "End-beginning-point-rest-bindu-nāda-dwellings, and fear-anger-disgust-graspings.",
+ "issue": "Derived from L2 text (no argmap). End-beginning-point-rest-bindu-nāda-dwellings, and fear-anger-disgust-graspings.",
+ "premises": [
+  {
+   "text": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+   "label": "Sanskrit source",
+   "passage_id": "bodhavilasa:bodh-p04-v34"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "End-beginning-point-rest-bindu-nāda-dwellings, and fear-anger-disgust-graspings.",
+  "passage_id": "bodhavilasa:bodh-p04-v34"
+ },
+ "unresolved": "",
+ "argument_text": "End-beginning-point-rest-bindu-nāda-dwellings, and fear-anger-disgust-graspings.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhavilasa:bodh-p04-v34",
+ "sanskrit": "madhyadhāmavikāse tu upāyo balavatsthitiḥ vikalpakṣayasaṅkocavikāsādyā anekaśaḥ akiñciccintanād eva vikalpānāṃ kṣayo bhavet cidbodhād vilasacchaktī raktāsau bhāvamaṇḍale tatrānuraktā divyaughaṃ paśyate vimalātmakam śaktisaṅkocam etad dhi procyate brahmavādibhiḥ ādyantakoṭiviśrāmabindunādalayās tathā aśaṅkitabhayakrodhabībhatsādiparigrahāḥ ity etat kathitaṃ devi madhyadhāmavikāsakam tatra śakto dinair evaṃ prapnoti parasampadam yo 'ntaḥsamādhisaṃskāraṃ bhramate vimalatviṣām sa visargabalād eva vimṛśya ca punaḥ punaḥ vyutthāne 'pi yatas tasya svarūpaṃ samprakāśate yogino bodhaniṣṭhasya nityānandarasasya ca tat prakāśānandamayī mantravīryopabṛṃhitā pūṛnāhantācid ity antaḥsamullāsābhiyoginaḥ tatrāsau vilasan yogī mantreśvarapade sthitaḥ tatra śakto vibhur yadvat krīḍate śaktibṛṃhitaḥ evaṃ svatantratā tasya vyāpakasya jagadvibhoḥ nānābhedajuṣaś citrapadasthitasyākhaṇḍitā",
+ "license": "CC BY-NC-SA 4.0"
+}

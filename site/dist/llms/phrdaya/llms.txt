@@ -1,13 +1,89 @@
 # phrdaya — LLM Discovery
 
 Work: phrdaya
-Passages: 4 (0 PASS, 4 BLOCKED)
+Passages: 20 (20 PASS, 0 BLOCKED)
 Data: /data/translations/phrdaya.json
 Page: /translations/phrdaya.html
 
 ## Chunks
 
-- phr-p01 (verses 1-5) [BLOCKED]
-- phr-p02 (verses 6-10) [BLOCKED]
-- phr-p03 (verses 11-15) [BLOCKED]
-- phr-p04 (verses 16-20) [BLOCKED]
+- phr-p01-v01 (verses 1) [PASS]
+  L1: ## phr-p01-v01 (1)
+consciousness / independent / cause-of-universe's-proving threefold // phr-p01
+  L2: Consciousness stands free — cause of the world's proving.
+- phr-p01-v02 (verses 2) [PASS]
+  L1: ## phr-p01-v02 (2)
+by-own-will / on-own-screen / universe / unfolds // phr-p01
+  L2: By her own will, on her own ground, she opens the world.
+- phr-p01-v03 (verses 3) [PASS]
+  L1: ## phr-p01-v03 (3)
+that / manifold / from-difference-of-suitable-objects-and-subjects // phr-p01
+  L2: That grows manifold through fit perceivers and perceived dividing.
+- phr-p01-v04 (verses 4) [PASS]
+  L1: ## phr-p01-v04 (4)
+whose-nature-is-contraction-of-consciousness / even-conscious-being / consisting-of-contracted-univer
+  L2: A contraction of knowing, yet a knower even so, clothed in a contracted world.
+- phr-p02-v05 (verses 5) [PASS]
+  L1: ## phr-p02-v05 (5)
+mind // phr-p02
+  L2: Mind.
+- phr-p02-v06 (verses 6) [PASS]
+  L1: ## phr-p02-v06 (6)
+consisting-of-that / māyā-knower // phr-p02
+  L2: Made of that — the māyā-knower.
+- phr-p02-v07 (verses 7) [PASS]
+  L1: ## phr-p02-v07 (7)
+having-nature-of-seven-pentads // phr-p02
+  L2: Seven pentads its nature.
+- phr-p02-v08 (verses 8) [PASS]
+  L1: ## phr-p02-v08 (8)
+stages-based-on-that / positions-of-all-philosophies // phr-p02
+  L2: Stages on that — every philosophy's standing-ground.
+- phr-p03-v09 (verses 9) [PASS]
+  L1: ## phr-p03-v09 (9)
+like-consciousness / that / from-contraction-of-power / covered-by-impurity / transmigrator // phr-p0
+  L2: Like knowing, yet by tightened power impure — stained, it wanders.
+- phr-p03-v10 (verses 10) [PASS]
+  L1: ## phr-p03-v10 (10)
+nevertheless / in-that-way / five-acts / performs // phr-p03
+  L2: Yet even so, likewise, it does the five acts.
+- phr-p03-v11 (verses 11) [PASS]
+  L1: ## phr-p03-v11 (11)
+those // phr-p03
+  L2: Those — the fivefold doing.
+- phr-p03-v12 (verses 12) [PASS]
+  L1: ## phr-p03-v12 (12)
+state-of-transmigration // phr-p03
+  L2: Wanderinghood.
+- phr-p04-v13 (verses 13) [PASS]
+  L1: ## phr-p04-v13 (13)
+by-ascent-to-status-of-consciousness / consciousness // phr-p04
+  L2: By climbing to knowing's seat — knowing.
+- phr-p04-v14 (verses 14) [PASS]
+  L1: ## phr-p04-v14 (14)
+fuel-of-objects / burns // phr-p04
+  L2: It burns knowables for fuel.
+- phr-p04-v15 (verses 15) [PASS]
+  L1: ## phr-p04-v15 (15)
+on-gaining-strength / universe / makes-one's-own // phr-p04
+  L2: Grown strong, it makes the world its own.
+- phr-p04-v16 (verses 16) [PASS]
+  L1: ## phr-p04-v16 (16)
+firmness-of-realization-of-oneness-with-consciousness / liberation-while-living // phr-p04
+  L2: Holding oneness with knowing fast — freedom while living.
+- phr-p05-v17 (verses 17) [PASS]
+  L1: ## phr-p05-v17 (17)
+from-expansion-of-the-middle / attainment-of-consciousness-bliss // phr-p05
+  L2: From the middle's opening — knowing-bliss won.
+- phr-p05-v18 (verses 18) [PASS]
+  L1: ## phr-p05-v18 (18)
+here / means // phr-p05
+  L2: Here — the means.
+- phr-p05-v19 (verses 19) [PASS]
+  L1: ## phr-p05-v19 (19)
+from-recollection-of-oneness-with-consciousness / attainment-of-ever-risen-samādhi // phr-p05
+  L2: From recalling oneness with knowing — samādhi ever risen.
+- phr-p05-v20 (verses 20) [PASS]
+  L1: ## phr-p05-v20 (20)
+becomes-thus / Śiva // phr-p05
+  L2: And so it becomes — Śiva.

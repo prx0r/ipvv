@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s08-v06",
  "title": "sivastotravali — s08-v06",
  "kind": "entailment",
- "question": "Light, soft, white-pure, cool — contemplating by possession-force a body — may I exceed those dealings of the all-thing-road.",
- "issue": "Derived from L2 text (no argmap). Light, soft, white-pure, cool — contemplating by possession-force a body — may I exceed those dealings of the all-thing-road.",
+ "question": "Light, soft, white-pure, cool — possessed by You, contemplating a body — may I exceed those dealings of the all-thing-road.",
+ "issue": "Derived from L2 text (no argmap). Light, soft, white-pure, cool — possessed by You, contemplating a body — may I exceed those dealings of the all-thing-road.",
  "premises": [
   {
-   "text": "",
+   "text": "laghumasṛṇasitācchaśītalaṃ bhavadāveśavaśena bhāvayan vapur akhilapadārthapaddhater vyavahārān ativartayeya tān",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s08-v06"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Light, soft, white-pure, cool — contemplating by possession-force a body — may I exceed those dealings of the all-thing-road.",
+  "text": "Light, soft, white-pure, cool — possessed by You, contemplating a body — may I exceed those dealings of the all-thing-road.",
   "passage_id": "sivastotravali:s08-v06"
  },
  "unresolved": "",
- "argument_text": "Light, soft, white-pure, cool — contemplating by possession-force a body — may I exceed those dealings of the all-thing-road.",
+ "argument_text": "Light, soft, white-pure, cool — possessed by You, contemplating a body — may I exceed those dealings of the all-thing-road.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s08-v06",
- "sanskrit": "",
+ "sanskrit": "laghumasṛṇasitācchaśītalaṃ bhavadāveśavaśena bhāvayan vapur akhilapadārthapaddhater vyavahārān ativartayeya tān",
  "license": "CC BY-NC-SA 4.0"
 }

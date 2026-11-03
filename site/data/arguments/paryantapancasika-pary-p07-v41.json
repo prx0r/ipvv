@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v41",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v41",
+ "title": "paryantapancasika — pary-p07-v41",
+ "kind": "entailment",
+ "question": "Inner-hidden infinite meaning own-self reflection consciousness supreme — one-time from-flow which this mantra-knowing speech pure agency.",
+ "issue": "Derived from L2 text (no argmap). Inner-hidden infinite meaning own-self reflection consciousness supreme — one-time from-flow which this mantra-knowing speech pure agency.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v41"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Inner-hidden infinite meaning own-self reflection consciousness supreme — one-time from-flow which this mantra-knowing speech pure agency.",
+  "passage_id": "paryantapancasika:pary-p07-v41"
+ },
+ "unresolved": "",
+ "argument_text": "Inner-hidden infinite meaning own-self reflection consciousness supreme — one-time from-flow which this mantra-knowing speech pure agency.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v41",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

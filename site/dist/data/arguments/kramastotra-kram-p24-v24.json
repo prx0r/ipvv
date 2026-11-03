@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p24-v24",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p24-v24",
+ "title": "kramastotra — kram-p24-v24",
+ "kind": "entailment",
+ "question": "Whole garland, sequenceless, in self again entered — endless-inner-massed-great-ray-heaped. Supreme, divine-bliss to grasp, noble-eager, gracious to me may she be — heart-path let her adorn.",
+ "issue": "Derived from L2 text (no argmap). Whole garland, sequenceless, in self again entered — endless-inner-massed-great-ray-heaped. Supreme, divine-bliss to grasp, noble-eager, gracious to me may she be — heart-path let her adorn.",
+ "premises": [
+  {
+   "text": "pramāṇe saṃlīne śivapadalasadvaibhavavaśāt śarīraprāṇādir mitakṛtakamātṛsthitimayaḥ | yadā kālopādhiḥ pralayapadam āsādayati te tadā devī yāsau lasati mama sā syāc chivamayī",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p24-v24"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Whole garland, sequenceless, in self again entered — endless-inner-massed-great-ray-heaped. Supreme, divine-bliss to grasp, noble-eager, gracious to me may she be — heart-path let her adorn.",
+  "passage_id": "kramastotra:kram-p24-v24"
+ },
+ "unresolved": "",
+ "argument_text": "Whole garland, sequenceless, in self again entered — endless-inner-massed-great-ray-heaped. Supreme, divine-bliss to grasp, noble-eager, gracious to me may she be — heart-path let her adorn.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p24-v24",
+ "sanskrit": "pramāṇe saṃlīne śivapadalasadvaibhavavaśāt śarīraprāṇādir mitakṛtakamātṛsthitimayaḥ | yadā kālopādhiḥ pralayapadam āsādayati te tadā devī yāsau lasati mama sā syāc chivamayī",
+ "license": "CC BY-NC-SA 4.0"
+}

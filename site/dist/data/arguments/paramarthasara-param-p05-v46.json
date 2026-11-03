@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p05-v46",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p05-v46",
+ "title": "paramarthasara — param-p05-v46",
+ "kind": "entailment",
+ "question": "Again too, by five-power-spreading order, outside, that varied egg-three created by outer-self-gaining.",
+ "issue": "Derived from L2 text (no argmap). Again too, by five-power-spreading order, outside, that varied egg-three created by outer-self-gaining.",
+ "premises": [
+  {
+   "text": "śānte śānta ivāyaṃ hṛṣṭe hṛṣṭo vimohavati mūḍhaḥ | tattvagaṇe sati bhagavān na punaḥ paramārthataḥ sa tathā yad anātmany api tadrūpāvabhāsanaṃ tat purā nirākṛtya | ātmany anātmarūpāṃ bhrāntiṃ vidalayati paramātmā itthaṃ vibhramayugalakasamūlavicchedane kṛtārthasya | kartavyāntarakalanā na jātu parayogino bhavati pṛthivī prakṛtir māyā tritayam idaṃ vedyarūpatāpatitam | advaitabhāvanabalād bhavati hi sanmātrapariśeṣam raśanāku.ṅdalakaṭakaṃ bhedatyāgena dṛśyate yathā hema | tadvad bhedatyāge sanmātraṃ sarvam ābhāti tad brahma paraṃ śuddhaṃ śāntaṃ abhedātmakaṃ samaṃ sakalam | amṛtaṃ satyaṃ śaktau viśrāmyati bhāsvarūpāyām iṣyata iti vedyata iti saṃpādyata iti ca bhāsvarūpeṇa | aparāmṛṣṭaṃ yad api tu nabhaḥprasūnatvam abhyeti śaktitriśūlaparigamayogena samastam api parameśe | śivanāmani paramārthe visṛjyate devadevena punar api ca pañcaśaktiprasaraṇakrameṇa bahir api tat | a.ṅdatrayaṃ vicitraṃ sṛṣṭaṃ bahirātmalābhena",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p05-v46"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Again too, by five-power-spreading order, outside, that varied egg-three created by outer-self-gaining.",
+  "passage_id": "paramarthasara:param-p05-v46"
+ },
+ "unresolved": "",
+ "argument_text": "Again too, by five-power-spreading order, outside, that varied egg-three created by outer-self-gaining.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p05-v46",
+ "sanskrit": "śānte śānta ivāyaṃ hṛṣṭe hṛṣṭo vimohavati mūḍhaḥ | tattvagaṇe sati bhagavān na punaḥ paramārthataḥ sa tathā yad anātmany api tadrūpāvabhāsanaṃ tat purā nirākṛtya | ātmany anātmarūpāṃ bhrāntiṃ vidalayati paramātmā itthaṃ vibhramayugalakasamūlavicchedane kṛtārthasya | kartavyāntarakalanā na jātu parayogino bhavati pṛthivī prakṛtir māyā tritayam idaṃ vedyarūpatāpatitam | advaitabhāvanabalād bhavati hi sanmātrapariśeṣam raśanāku.ṅdalakaṭakaṃ bhedatyāgena dṛśyate yathā hema | tadvad bhedatyāge sanmātraṃ sarvam ābhāti tad brahma paraṃ śuddhaṃ śāntaṃ abhedātmakaṃ samaṃ sakalam | amṛtaṃ satyaṃ śaktau viśrāmyati bhāsvarūpāyām iṣyata iti vedyata iti saṃpādyata iti ca bhāsvarūpeṇa | aparāmṛṣṭaṃ yad api tu nabhaḥprasūnatvam abhyeti śaktitriśūlaparigamayogena samastam api parameśe | śivanāmani paramārthe visṛjyate devadevena punar api ca pañcaśaktiprasaraṇakrameṇa bahir api tat | a.ṅdatrayaṃ vicitraṃ sṛṣṭaṃ bahirātmalābhena",
+ "license": "CC BY-NC-SA 4.0"
+}

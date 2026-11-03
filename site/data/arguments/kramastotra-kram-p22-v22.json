@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p22-v22",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p22-v22",
+ "title": "kramastotra — kram-p22-v22",
+ "kind": "entailment",
+ "question": "This ground she holds — world-fear-splitting-dread-making; this wake-one-pointed-melted-taste-formed — ordained too. So holding, melting, wiping inauspicious stretches, as-pleased conduct resorted — may she sport in my heart.",
+ "issue": "Derived from L2 text (no argmap). This ground she holds — world-fear-splitting-dread-making; this wake-one-pointed-melted-taste-formed — ordained too. So holding, melting, wiping inauspicious stretches, as-pleased conduct resorted — may she sport in my heart.",
+ "premises": [
+  {
+   "text": "kriyābuddhyakṣādeḥ parimitapade mānapadavīm avāptasya sphāraṃ nijanijarucā saṃharati yā | iyaṃ mārta.ṅdasya sthitipadayujaḥ sāram akhilam haṭhād ākarṣantī kṛśatu mama bhedaṃ bhavabhayāt",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p22-v22"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This ground she holds — world-fear-splitting-dread-making; this wake-one-pointed-melted-taste-formed — ordained too. So holding, melting, wiping inauspicious stretches, as-pleased conduct resorted — may she sport in my heart.",
+  "passage_id": "kramastotra:kram-p22-v22"
+ },
+ "unresolved": "",
+ "argument_text": "This ground she holds — world-fear-splitting-dread-making; this wake-one-pointed-melted-taste-formed — ordained too. So holding, melting, wiping inauspicious stretches, as-pleased conduct resorted — may she sport in my heart.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p22-v22",
+ "sanskrit": "kriyābuddhyakṣādeḥ parimitapade mānapadavīm avāptasya sphāraṃ nijanijarucā saṃharati yā | iyaṃ mārta.ṅdasya sthitipadayujaḥ sāram akhilam haṭhād ākarṣantī kṛśatu mama bhedaṃ bhavabhayāt",
+ "license": "CC BY-NC-SA 4.0"
+}

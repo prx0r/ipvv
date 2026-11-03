@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p03-v15",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p03-v15",
+ "title": "paryantapancasika — pary-p03-v15",
+ "kind": "entailment",
+ "question": "Action-intellect limitation obtained — then that bound soul is called. Thus by will He, blessed Bhairava, is measured.",
+ "issue": "Derived from L2 text (no argmap). Action-intellect limitation obtained — then that bound soul is called. Thus by will He, blessed Bhairava, is measured.",
+ "premises": [
+  {
+   "text": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p03-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Action-intellect limitation obtained — then that bound soul is called. Thus by will He, blessed Bhairava, is measured.",
+  "passage_id": "paryantapancasika:pary-p03-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Action-intellect limitation obtained — then that bound soul is called. Thus by will He, blessed Bhairava, is measured.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p03-v15",
+ "sanskrit": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+ "license": "CC BY-NC-SA 4.0"
+}

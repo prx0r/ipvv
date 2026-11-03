@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p05-v46",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p05-v46",
+ "title": "bhairavanukarana — bhair-p05-v46",
+ "kind": "entailment",
+ "question": "Conquers in supreme-principle-ground-excellent — draught-become-this — clearly may it dwell — by true-principle-showing, of heart known-stain.",
+ "issue": "Derived from L2 text (no argmap). Conquers in supreme-principle-ground-excellent — draught-become-this — clearly may it dwell — by true-principle-showing, of heart known-stain.",
+ "premises": [
+  {
+   "text": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p05-v46"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Conquers in supreme-principle-ground-excellent — draught-become-this — clearly may it dwell — by true-principle-showing, of heart known-stain.",
+  "passage_id": "bhairavanukarana:bhair-p05-v46"
+ },
+ "unresolved": "",
+ "argument_text": "Conquers in supreme-principle-ground-excellent — draught-become-this — clearly may it dwell — by true-principle-showing, of heart known-stain.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p05-v46",
+ "sanskrit": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+ "license": "CC BY-NC-SA 4.0"
+}

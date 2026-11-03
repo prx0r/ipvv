@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:parapravesika:par-p01-v01",
+ "work_id": "parapravesika",
+ "passage_id": "parapravesika:par-p01-v01",
+ "title": "parapravesika — par-p01-v01",
+ "kind": "entailment",
+ "question": "Veneration to Śiva, whose very self is all the levels of reality. Here begins the Entering-into-the-Supreme, composed by glorious Kṣemarāja, noblest of the great Māheśvara teachers. We bow to consciousness itself — the heart of the supreme Lord — which has the world for its form and yet goes beyond it, pulsing in the shape of supreme power.",
+ "issue": "Derived from L2 text (no argmap). Veneration to Śiva, whose very self is all the levels of reality. Here begins the Entering-into-the-Supreme, composed by glorious Kṣemarāja, noblest of the great Māheśvara teachers. We bow to consciousness itself — the heart of the supreme Lord — which has the world for its form and yet goes beyond it, pulsing in the shape of supreme power.",
+ "premises": [
+  {
+   "text": "oṃ namaḥ śivāya nikhilatattvātmane | atha parāprāveśikā śrīmanmahāmāheśvarācāryavaryakṣemarājaviracitā | viśvātmikāṃ taduttirṇāṃ hṛdayaṃ parameśituḥ | parādiśaktirūpeṇa sphurantīṃ saṃvidaṃ numaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "parapravesika:par-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Veneration to Śiva, whose very self is all the levels of reality. Here begins the Entering-into-the-Supreme, composed by glorious Kṣemarāja, noblest of the great Māheśvara teachers. We bow to consciousness itself — the heart of the supreme Lord — which has the world for its form and yet goes beyond it, pulsing in the shape of supreme power.",
+  "passage_id": "parapravesika:par-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Veneration to Śiva, whose very self is all the levels of reality. Here begins the Entering-into-the-Supreme, composed by glorious Kṣemarāja, noblest of the great Māheśvara teachers. We bow to consciousness itself — the heart of the supreme Lord — which has the world for its form and yet goes beyond it, pulsing in the shape of supreme power.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "parapravesika:par-p01-v01",
+ "sanskrit": "oṃ namaḥ śivāya nikhilatattvātmane | atha parāprāveśikā śrīmanmahāmāheśvarācāryavaryakṣemarājaviracitā | viśvātmikāṃ taduttirṇāṃ hṛdayaṃ parameśituḥ | parādiśaktirūpeṇa sphurantīṃ saṃvidaṃ numaḥ",
+ "license": "CC BY-NC 4.0"
+}

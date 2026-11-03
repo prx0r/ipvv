@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p05-v45",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p05-v45",
+ "title": "bhairavanukarana — bhair-p05-v45",
+ "kind": "entailment",
+ "question": "Looses noose-net, melts distinction — O Lord, Your form seals much-consciousness-wealth — seal hence called.",
+ "issue": "Derived from L2 text (no argmap). Looses noose-net, melts distinction — O Lord, Your form seals much-consciousness-wealth — seal hence called.",
+ "premises": [
+  {
+   "text": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p05-v45"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Looses noose-net, melts distinction — O Lord, Your form seals much-consciousness-wealth — seal hence called.",
+  "passage_id": "bhairavanukarana:bhair-p05-v45"
+ },
+ "unresolved": "",
+ "argument_text": "Looses noose-net, melts distinction — O Lord, Your form seals much-consciousness-wealth — seal hence called.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p05-v45",
+ "sanskrit": "vividhaśmaśānamālāvetālāvṛtaḥ prakāśayase | saṃvittiviṣayakalanāmadhyaś citibhairavo 'smīti",
+ "license": "CC BY-NC-SA 4.0"
+}

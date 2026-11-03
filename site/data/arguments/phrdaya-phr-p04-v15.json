@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p04-v15",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p04-v15",
+ "title": "phrdaya — phr-p04-v15",
+ "kind": "entailment",
+ "question": "Grown strong, it makes the world its own.",
+ "issue": "Derived from L2 text (no argmap). Grown strong, it makes the world its own.",
+ "premises": [
+  {
+   "text": "cetanapadādhyārohāt citiḥ",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p04-v15"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Grown strong, it makes the world its own.",
+  "passage_id": "phrdaya:phr-p04-v15"
+ },
+ "unresolved": "",
+ "argument_text": "Grown strong, it makes the world its own.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p04-v15",
+ "sanskrit": "cetanapadādhyārohāt citiḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p04-v04",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p04-v04",
+ "title": "kramastotra — kram-p04-v04",
+ "kind": "entailment",
+ "question": "By varied birth-and-wandering gears, omniscience is gained — O heart — effortlessly through You. That within, become light in the teaching's spreading course: clearly obtained in speech — show forth the Lord's hymn now.",
+ "issue": "Derived from L2 text (no argmap). By varied birth-and-wandering gears, omniscience is gained — O heart — effortlessly through You. That within, become light in the teaching's spreading course: clearly obtained in speech — show forth the Lord's hymn now.",
+ "premises": [
+  {
+   "text": "vidhunvāno bandhābhimatabhavamārgasthitim imāṃ rasīkṛtyānantastutihutavahaploṣitabhedām | vicitrasvasphārasphuritamahimārambharabhasāt piban bhāvān etān varada madamatto 'smi sukhitaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p04-v04"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By varied birth-and-wandering gears, omniscience is gained — O heart — effortlessly through You. That within, become light in the teaching's spreading course: clearly obtained in speech — show forth the Lord's hymn now.",
+  "passage_id": "kramastotra:kram-p04-v04"
+ },
+ "unresolved": "",
+ "argument_text": "By varied birth-and-wandering gears, omniscience is gained — O heart — effortlessly through You. That within, become light in the teaching's spreading course: clearly obtained in speech — show forth the Lord's hymn now.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p04-v04",
+ "sanskrit": "vidhunvāno bandhābhimatabhavamārgasthitim imāṃ rasīkṛtyānantastutihutavahaploṣitabhedām | vicitrasvasphārasphuritamahimārambharabhasāt piban bhāvān etān varada madamatto 'smi sukhitaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

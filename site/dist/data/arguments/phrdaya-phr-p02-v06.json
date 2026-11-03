@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p02-v06",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p02-v06",
+ "title": "phrdaya — phr-p02-v06",
+ "kind": "entailment",
+ "question": "Made of that — the māyā-knower.",
+ "issue": "Derived from L2 text (no argmap). Made of that — the māyā-knower.",
+ "premises": [
+  {
+   "text": "cittam",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p02-v06"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Made of that — the māyā-knower.",
+  "passage_id": "phrdaya:phr-p02-v06"
+ },
+ "unresolved": "",
+ "argument_text": "Made of that — the māyā-knower.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p02-v06",
+ "sanskrit": "cittam",
+ "license": "CC BY-NC-SA 4.0"
+}

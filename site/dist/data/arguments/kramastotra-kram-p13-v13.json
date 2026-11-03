@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p13-v13",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p13-v13",
+ "title": "kramastotra — kram-p13-v13",
+ "kind": "entailment",
+ "question": "Thisness-just Your form, O Lord, power-juiced — by sequencelessness itself forcibly melted is time-reckoning. By mind-power, by speech too, then by sense-wheels outside, then by pot and the rest — may I stand that form at once, unceasing.",
+ "issue": "Derived from L2 text (no argmap). Thisness-just Your form, O Lord, power-juiced — by sequencelessness itself forcibly melted is time-reckoning. By mind-power, by speech too, then by sense-wheels outside, then by pot and the rest — may I stand that form at once, unceasing.",
+ "premises": [
+  {
+   "text": "kramollāsaṃ tasyāṃ bhuvi viracayan bhedakalanāṃ svaśaktīnāṃ deva prathayasi sadā svātmani tataḥ | kriyājñānecchākhyāṃ sthitilayamahāsṛṣṭivibhavāṃ trirūpaṃ bhūyāsaṃ samadhiśayituṃ vyagrahṛdayaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p13-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thisness-just Your form, O Lord, power-juiced — by sequencelessness itself forcibly melted is time-reckoning. By mind-power, by speech too, then by sense-wheels outside, then by pot and the rest — may I stand that form at once, unceasing.",
+  "passage_id": "kramastotra:kram-p13-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Thisness-just Your form, O Lord, power-juiced — by sequencelessness itself forcibly melted is time-reckoning. By mind-power, by speech too, then by sense-wheels outside, then by pot and the rest — may I stand that form at once, unceasing.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p13-v13",
+ "sanskrit": "kramollāsaṃ tasyāṃ bhuvi viracayan bhedakalanāṃ svaśaktīnāṃ deva prathayasi sadā svātmani tataḥ | kriyājñānecchākhyāṃ sthitilayamahāsṛṣṭivibhavāṃ trirūpaṃ bhūyāsaṃ samadhiśayituṃ vyagrahṛdayaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

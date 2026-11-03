@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s14-v06",
  "title": "sivastotravali — s14-v06",
  "kind": "entailment",
- "question": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented with jewel-light risen from the Lord's limb-contact.",
- "issue": "Derived from L2 text (no argmap). Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented with jewel-light risen from the Lord's limb-contact.",
+ "question": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented, jewel-beloved, risen from the Lord's limb-contact.",
+ "issue": "Derived from L2 text (no argmap). Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented, jewel-beloved, risen from the Lord's limb-contact.",
  "premises": [
   {
-   "text": "",
+   "text": "jaya kṣīrodaparyastajyotsnācchāyānulepana jayeśvarāṅgasaṅgottharatnakāntāhimaṇḍana",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s14-v06"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented with jewel-light risen from the Lord's limb-contact.",
+  "text": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented, jewel-beloved, risen from the Lord's limb-contact.",
   "passage_id": "sivastotravali:s14-v06"
  },
  "unresolved": "",
- "argument_text": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented with jewel-light risen from the Lord's limb-contact.",
+ "argument_text": "Victory: smeared with milk-ocean-spread moonlight shade; victory: snow-ornamented, jewel-beloved, risen from the Lord's limb-contact.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s14-v06",
- "sanskrit": "",
+ "sanskrit": "jaya kṣīrodaparyastajyotsnācchāyānulepana jayeśvarāṅgasaṅgottharatnakāntāhimaṇḍana",
  "license": "CC BY-NC-SA 4.0"
 }

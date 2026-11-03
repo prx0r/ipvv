@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s17-v26",
  "title": "sivastotravali — s17-v26",
  "kind": "entailment",
- "question": "In all-empty... may this body be nourished as Your worship-thing, always devoted.",
- "issue": "Derived from L2 text (no argmap). In all-empty... may this body be nourished as Your worship-thing, always devoted.",
+ "question": "Nourished within by welling bright devotion-nectar — may this body be for Thy worship's use, always devoted.",
+ "issue": "Derived from L2 text (no argmap). Nourished within by welling bright devotion-nectar — may this body be for Thy worship's use, always devoted.",
  "premises": [
   {
-   "text": "",
+   "text": "antarullasadacchācchabhaktipīyūṣapoṣitam bhavatpūjopayogāya śarīram idam astu me",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s17-v26"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "In all-empty... may this body be nourished as Your worship-thing, always devoted.",
+  "text": "Nourished within by welling bright devotion-nectar — may this body be for Thy worship's use, always devoted.",
   "passage_id": "sivastotravali:s17-v26"
  },
  "unresolved": "",
- "argument_text": "In all-empty... may this body be nourished as Your worship-thing, always devoted.",
+ "argument_text": "Nourished within by welling bright devotion-nectar — may this body be for Thy worship's use, always devoted.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s17-v26",
- "sanskrit": "",
+ "sanskrit": "antarullasadacchācchabhaktipīyūṣapoṣitam bhavatpūjopayogāya śarīram idam astu me",
  "license": "CC BY-NC-SA 4.0"
 }

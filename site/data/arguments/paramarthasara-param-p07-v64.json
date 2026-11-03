@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p07-v64",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p07-v64",
+ "title": "paramarthasara — param-p07-v64",
+ "kind": "entailment",
+ "question": "If again stainless knowing — all-transcended-knower-doer-made, spread, light-formed never-setting-rising, true-resolved...",
+ "issue": "Derived from L2 text (no argmap). If again stainless knowing — all-transcended-knower-doer-made, spread, light-formed never-setting-rising, true-resolved...",
+ "premises": [
+  {
+   "text": "jñānaprāptau kṛtam api na phalāya tato 'sya janma katham | gatajanmabandhayogo bhāti śivārkaḥ svadīdhitibhiḥ tuṣakambukakiṃśārukamuktaṃ bījaṃ yathāṅkuraṃ kurute | naiva tathāṇavamāyākarmavimukto bhavāṅkuraṃ hy ātmā ātmajño na kutaścana bibheti sarvaṃ hi tasya nijarūpam | naiva ca śocati yasmāt paramārthe nāśitā nāsti atigūḍhahṛdayagañjaprarūḍhaparamārtharatnasaṃcayataḥ | aham eveti maheśvarabhāve kā durgatiḥ kasya mokṣasya naiva kiṃcid dhāmāsti na cāpi gamanam anyatra | ajñānagranthibhidā svaśaktyabhivyaktatā mokṣaḥ bhinnājñānagranthir gatasaṃdehaḥ parākṛtabhrāntiḥ | prakṣīṇapuṇyapāpo vigrahayoge 'py asau muktaḥ agnyabhidagdhaṃ bījaṃ yathā prarohāsamarthatām eti | jñānāgnidagdham evaṃ karma na janmapradaṃ bhavati parimitabuddhitvena hi karmocitabhāvidehabhāvanayā | saṅkucitā citir etaddehadhvaṃse tathā bhāti yadi punar amalaṃ bodhaṃ sarvasamuttīrnaboddhṛkartṛmayam | vitatam anastamitoditabhārūpam satyasaṃkalpam",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p07-v64"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "If again stainless knowing — all-transcended-knower-doer-made, spread, light-formed never-setting-rising, true-resolved...",
+  "passage_id": "paramarthasara:param-p07-v64"
+ },
+ "unresolved": "",
+ "argument_text": "If again stainless knowing — all-transcended-knower-doer-made, spread, light-formed never-setting-rising, true-resolved...",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p07-v64",
+ "sanskrit": "jñānaprāptau kṛtam api na phalāya tato 'sya janma katham | gatajanmabandhayogo bhāti śivārkaḥ svadīdhitibhiḥ tuṣakambukakiṃśārukamuktaṃ bījaṃ yathāṅkuraṃ kurute | naiva tathāṇavamāyākarmavimukto bhavāṅkuraṃ hy ātmā ātmajño na kutaścana bibheti sarvaṃ hi tasya nijarūpam | naiva ca śocati yasmāt paramārthe nāśitā nāsti atigūḍhahṛdayagañjaprarūḍhaparamārtharatnasaṃcayataḥ | aham eveti maheśvarabhāve kā durgatiḥ kasya mokṣasya naiva kiṃcid dhāmāsti na cāpi gamanam anyatra | ajñānagranthibhidā svaśaktyabhivyaktatā mokṣaḥ bhinnājñānagranthir gatasaṃdehaḥ parākṛtabhrāntiḥ | prakṣīṇapuṇyapāpo vigrahayoge 'py asau muktaḥ agnyabhidagdhaṃ bījaṃ yathā prarohāsamarthatām eti | jñānāgnidagdham evaṃ karma na janmapradaṃ bhavati parimitabuddhitvena hi karmocitabhāvidehabhāvanayā | saṅkucitā citir etaddehadhvaṃse tathā bhāti yadi punar amalaṃ bodhaṃ sarvasamuttīrnaboddhṛkartṛmayam | vitatam anastamitoditabhārūpam satyasaṃkalpam",
+ "license": "CC BY-NC-SA 4.0"
+}

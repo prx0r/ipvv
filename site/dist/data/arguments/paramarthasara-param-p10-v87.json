@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p10-v87",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p10-v87",
+ "title": "paramarthasara — param-p10-v87",
+ "kind": "entailment",
+ "question": "As flawless-made by the best artisan, the casket-bound gem, though stained, on cutting the bound shows clear truth.",
+ "issue": "Derived from L2 text (no argmap). As flawless-made by the best artisan, the casket-bound gem, though stained, on cutting the bound shows clear truth.",
+ "premises": [
+  {
+   "text": "tīrthe śvapacagṛhe vā naṣṭasmṛtir api parityajan deham | jñānasamakālamuktaḥ kaivalyaṃ yāti hataśokaḥ puṇyāya tīrthasevā nirayāya śvapacasadananidhanagatiḥ | puṇyāpuṇyakalaṅkasparśābhāve tu kiṃ tena tuṣakambukasupṛthakkṛtata.ṅdulakaṇatuṣadalāntarakṣepaḥ | ta.ṅdulakaṇasya kurute na punas tadrūpatādātmyam tadvat kañcukapaṭalīpṛthakkṛtā saṃvid atra saṃskārāt | tiṣṭhanty api muktātmā tatsparśavivarjitā bhavati kuśalatamaśilpikalpitavimalībhāvaḥ samudgakopādheḥ | malino 'pi maṇir upādher vicchede svacchaparamārthaḥ evaṃ sadguruśāsanavimalasthiti vedanaṃ tanūpādheḥ | muktam apy upādhyantaraśūnyam ivābhāti śivarūpam śāstrādiprāmāṇyād avicalitaśraddhayāpi tanmayatām | prāptaḥ sa eva pūrvaṃ svargaṃ narakaṃ manuṣyatvam antyaḥ kṣaṇas tu tasmin puṇyāṃ pāpāṃ ca vā sthitiṃ puṣyan | mūḍhānāṃ sahakārībhāvaṃ gacchati gatau tu na sa hetuḥ ye 'pi tadātmatvena viduḥ paśupakṣisarīsṛpādayaḥ svagatim | te 'pi purātanasaṃbodhasaṃskṛtās tāṃ gatiṃ yānti",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p10-v87"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "As flawless-made by the best artisan, the casket-bound gem, though stained, on cutting the bound shows clear truth.",
+  "passage_id": "paramarthasara:param-p10-v87"
+ },
+ "unresolved": "",
+ "argument_text": "As flawless-made by the best artisan, the casket-bound gem, though stained, on cutting the bound shows clear truth.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p10-v87",
+ "sanskrit": "tīrthe śvapacagṛhe vā naṣṭasmṛtir api parityajan deham | jñānasamakālamuktaḥ kaivalyaṃ yāti hataśokaḥ puṇyāya tīrthasevā nirayāya śvapacasadananidhanagatiḥ | puṇyāpuṇyakalaṅkasparśābhāve tu kiṃ tena tuṣakambukasupṛthakkṛtata.ṅdulakaṇatuṣadalāntarakṣepaḥ | ta.ṅdulakaṇasya kurute na punas tadrūpatādātmyam tadvat kañcukapaṭalīpṛthakkṛtā saṃvid atra saṃskārāt | tiṣṭhanty api muktātmā tatsparśavivarjitā bhavati kuśalatamaśilpikalpitavimalībhāvaḥ samudgakopādheḥ | malino 'pi maṇir upādher vicchede svacchaparamārthaḥ evaṃ sadguruśāsanavimalasthiti vedanaṃ tanūpādheḥ | muktam apy upādhyantaraśūnyam ivābhāti śivarūpam śāstrādiprāmāṇyād avicalitaśraddhayāpi tanmayatām | prāptaḥ sa eva pūrvaṃ svargaṃ narakaṃ manuṣyatvam antyaḥ kṣaṇas tu tasmin puṇyāṃ pāpāṃ ca vā sthitiṃ puṣyan | mūḍhānāṃ sahakārībhāvaṃ gacchati gatau tu na sa hetuḥ ye 'pi tadātmatvena viduḥ paśupakṣisarīsṛpādayaḥ svagatim | te 'pi purātanasaṃbodhasaṃskṛtās tāṃ gatiṃ yānti",
+ "license": "CC BY-NC-SA 4.0"
+}

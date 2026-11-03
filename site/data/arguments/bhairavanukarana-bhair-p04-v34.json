@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p04-v34",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p04-v34",
+ "title": "bhairavanukarana — bhair-p04-v34",
+ "kind": "entailment",
+ "question": "Bhairava-formed though — in hand rosary held — so by all-letter-expansion world turned within.",
+ "issue": "Derived from L2 text (no argmap). Bhairava-formed though — in hand rosary held — so by all-letter-expansion world turned within.",
+ "premises": [
+  {
+   "text": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p04-v34"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bhairava-formed though — in hand rosary held — so by all-letter-expansion world turned within.",
+  "passage_id": "bhairavanukarana:bhair-p04-v34"
+ },
+ "unresolved": "",
+ "argument_text": "Bhairava-formed though — in hand rosary held — so by all-letter-expansion world turned within.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p04-v34",
+ "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

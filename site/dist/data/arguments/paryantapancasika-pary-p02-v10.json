@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p02-v10",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p02-v10",
+ "title": "paryantapancasika — pary-p02-v10",
+ "kind": "entailment",
+ "question": "Impurity too of the immersed — not thus heart-rest — in-between too infinite are states by-degrees.",
+ "issue": "Derived from L2 text (no argmap). Impurity too of the immersed — not thus heart-rest — in-between too infinite are states by-degrees.",
+ "premises": [
+  {
+   "text": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p02-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Impurity too of the immersed — not thus heart-rest — in-between too infinite are states by-degrees.",
+  "passage_id": "paryantapancasika:pary-p02-v10"
+ },
+ "unresolved": "",
+ "argument_text": "Impurity too of the immersed — not thus heart-rest — in-between too infinite are states by-degrees.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p02-v10",
+ "sanskrit": "kramo yo deśakālātmā bhedaprāṇas sa saṃvidām vicchedād eṣa vijñātuḥ vicitrābhāsatākṛtaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

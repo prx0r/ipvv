@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p04-v39",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p04-v39",
+ "title": "bhairavanukarana — bhair-p04-v39",
+ "kind": "entailment",
+ "question": "Destroyer of all, suns and the rest — I, darkness-ground — by spotless-autumn-sky-gleaming body — thus shown.",
+ "issue": "Derived from L2 text (no argmap). Destroyer of all, suns and the rest — I, darkness-ground — by spotless-autumn-sky-gleaming body — thus shown.",
+ "premises": [
+  {
+   "text": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p04-v39"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Destroyer of all, suns and the rest — I, darkness-ground — by spotless-autumn-sky-gleaming body — thus shown.",
+  "passage_id": "bhairavanukarana:bhair-p04-v39"
+ },
+ "unresolved": "",
+ "argument_text": "Destroyer of all, suns and the rest — I, darkness-ground — by spotless-autumn-sky-gleaming body — thus shown.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p04-v39",
+ "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

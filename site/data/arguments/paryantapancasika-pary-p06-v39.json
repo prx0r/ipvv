@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p06-v39",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p06-v39",
+ "title": "paryantapancasika — pary-p06-v39",
+ "kind": "entailment",
+ "question": "This having-created of self-powers mutual from-mixing may-become agitation — inner not from-this emission outside may-become.",
+ "issue": "Derived from L2 text (no argmap). This having-created of self-powers mutual from-mixing may-become agitation — inner not from-this emission outside may-become.",
+ "premises": [
+  {
+   "text": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p06-v39"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "This having-created of self-powers mutual from-mixing may-become agitation — inner not from-this emission outside may-become.",
+  "passage_id": "paryantapancasika:pary-p06-v39"
+ },
+ "unresolved": "",
+ "argument_text": "This having-created of self-powers mutual from-mixing may-become agitation — inner not from-this emission outside may-become.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p06-v39",
+ "sanskrit": "sūkṣmatvena ca gandha ādi pañca tanmātratām tataḥ karaṇatvena saṃsparśād indriyāṇāṃ dvipañcatām",
+ "license": "CC BY-NC-SA 4.0"
+}

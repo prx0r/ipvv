@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s13-v19",
  "title": "sivastotravali — s13-v19",
  "kind": "entailment",
- "question": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink as I will.",
- "issue": "Derived from L2 text (no argmap). Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink as I will.",
+ "question": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink — so it is.",
+ "issue": "Derived from L2 text (no argmap). Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink — so it is.",
  "premises": [
   {
-   "text": "",
+   "text": "īhitaṃ na bata pārameśvaraṃ śakyate gaṇayituṃ tathā ca me dattam apy amṛtanirbharaṃ vapuḥ svaṃ na pātum anumanyate tathā",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s13-v19"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink as I will.",
+  "text": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink — so it is.",
   "passage_id": "sivastotravali:s13-v19"
  },
  "unresolved": "",
- "argument_text": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink as I will.",
+ "argument_text": "Alas, the Supreme's play cannot be counted — and so the nectar-full body He gave me, He does not let me drink — so it is.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s13-v19",
- "sanskrit": "",
+ "sanskrit": "īhitaṃ na bata pārameśvaraṃ śakyate gaṇayituṃ tathā ca me dattam apy amṛtanirbharaṃ vapuḥ svaṃ na pātum anumanyate tathā",
  "license": "CC BY-NC-SA 4.0"
 }

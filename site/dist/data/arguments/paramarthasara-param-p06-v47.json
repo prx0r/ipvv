@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p06-v47",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p06-v47",
+ "title": "paramarthasara — param-p06-v47",
+ "kind": "entailment",
+ "question": "Thus driving, by play-discipline, the power-wheel-machine — god: I indeed, pure-formed, standing in the power-great-wheel-lord-seat.",
+ "issue": "Derived from L2 text (no argmap). Thus driving, by play-discipline, the power-wheel-machine — god: I indeed, pure-formed, standing in the power-great-wheel-lord-seat.",
+ "premises": [
+  {
+   "text": "iti śakticakrayantraṃ krīḍāyogena vāhayan devaḥ | aham eva śuddharūpaḥ śaktimahācakranāyakapadasthaḥ mayy eva bhāti viśvaṃ darpaṇa iva nirmale ghatādīni | mattaḥ prasarati sarvaṃ svapnavicitratvam iva suptāt aham eva viśvarūpaḥ karacaranādisvabhāva iva dehaḥ | sarvasmin aham eva sphurāmi bhāveṣu bhāsvarūpam iva draṣṭā śrotā ghrātā dehendriyavarjito 'py akartāpi | siddhāntāgamatarkāṃś citrān aham eva racayāmi itthaṃ dvaitavikalpe galite pravilaṅghya mohinīṃ māyām | salile salilaṃ kṣīre kṣīram iva brahmaṇi layī syāt itthaṃ tattvasamūhe bhāvanayā śivamayatvam abhiyāte | kaḥ śokaḥ ko mohaḥ sarvaṃ brahmāvalokayataḥ karmaphalaṃ śubham aśubhaṃ mithyājñānena saṃgamād eva | viṣamo hi saṅgadoṣas taskarayogo 'py ataskarasyeva lokavyavahārakṛtāṃ ya ihāvidyām upāsate mūḍhāḥ | te yānti janmamṛtyū dharmādharmārgalābaddhāḥ ajñānakālanicitaṃ dharmādharmātmakaṃ tu karmāpi | cirasaṃcitam iva tūlaṃ naśyati vijñānadīptivaśāt",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p06-v47"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus driving, by play-discipline, the power-wheel-machine — god: I indeed, pure-formed, standing in the power-great-wheel-lord-seat.",
+  "passage_id": "paramarthasara:param-p06-v47"
+ },
+ "unresolved": "",
+ "argument_text": "Thus driving, by play-discipline, the power-wheel-machine — god: I indeed, pure-formed, standing in the power-great-wheel-lord-seat.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p06-v47",
+ "sanskrit": "iti śakticakrayantraṃ krīḍāyogena vāhayan devaḥ | aham eva śuddharūpaḥ śaktimahācakranāyakapadasthaḥ mayy eva bhāti viśvaṃ darpaṇa iva nirmale ghatādīni | mattaḥ prasarati sarvaṃ svapnavicitratvam iva suptāt aham eva viśvarūpaḥ karacaranādisvabhāva iva dehaḥ | sarvasmin aham eva sphurāmi bhāveṣu bhāsvarūpam iva draṣṭā śrotā ghrātā dehendriyavarjito 'py akartāpi | siddhāntāgamatarkāṃś citrān aham eva racayāmi itthaṃ dvaitavikalpe galite pravilaṅghya mohinīṃ māyām | salile salilaṃ kṣīre kṣīram iva brahmaṇi layī syāt itthaṃ tattvasamūhe bhāvanayā śivamayatvam abhiyāte | kaḥ śokaḥ ko mohaḥ sarvaṃ brahmāvalokayataḥ karmaphalaṃ śubham aśubhaṃ mithyājñānena saṃgamād eva | viṣamo hi saṅgadoṣas taskarayogo 'py ataskarasyeva lokavyavahārakṛtāṃ ya ihāvidyām upāsate mūḍhāḥ | te yānti janmamṛtyū dharmādharmārgalābaddhāḥ ajñānakālanicitaṃ dharmādharmātmakaṃ tu karmāpi | cirasaṃcitam iva tūlaṃ naśyati vijñānadīptivaśāt",
+ "license": "CC BY-NC-SA 4.0"
+}

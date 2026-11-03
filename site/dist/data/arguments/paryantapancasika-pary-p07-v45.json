@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v45",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v45",
+ "title": "paryantapancasika — pary-p07-v45",
+ "kind": "entailment",
+ "question": "Own-impression from-such-state of-two-states of-previous also — Māyā of-measure limitedness may-be of-seeing — and sequence indeed subtle.",
+ "issue": "Derived from L2 text (no argmap). Own-impression from-such-state of-two-states of-previous also — Māyā of-measure limitedness may-be of-seeing — and sequence indeed subtle.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v45"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Own-impression from-such-state of-two-states of-previous also — Māyā of-measure limitedness may-be of-seeing — and sequence indeed subtle.",
+  "passage_id": "paryantapancasika:pary-p07-v45"
+ },
+ "unresolved": "",
+ "argument_text": "Own-impression from-such-state of-two-states of-previous also — Māyā of-measure limitedness may-be of-seeing — and sequence indeed subtle.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v45",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

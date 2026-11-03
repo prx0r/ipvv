@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s16-v13",
  "title": "sivastotravali — s16-v13",
  "kind": "entailment",
- "question": "In worship of Your devotion, duality's double-refuge meanness — tasting the clear nectar-body, some dissolve it.",
- "issue": "Derived from L2 text (no argmap). In worship of Your devotion, duality's double-refuge meanness — tasting the clear nectar-body, some dissolve it.",
+ "question": "In worship of Thy devotion, wiping out wretchedness's share that rests on duality — some taste the clear nectar-body.",
+ "issue": "Derived from L2 text (no argmap). In worship of Thy devotion, wiping out wretchedness's share that rests on duality — some taste the clear nectar-body.",
  "premises": [
   {
-   "text": "",
+   "text": "taveśa bhakter arcāyāṃ dainyāṃśaṃ dvayasaṃśrayam vilupyāsvādayanty eke vapur acchaṃ sudhāmayam",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s16-v13"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "In worship of Your devotion, duality's double-refuge meanness — tasting the clear nectar-body, some dissolve it.",
+  "text": "In worship of Thy devotion, wiping out wretchedness's share that rests on duality — some taste the clear nectar-body.",
   "passage_id": "sivastotravali:s16-v13"
  },
  "unresolved": "",
- "argument_text": "In worship of Your devotion, duality's double-refuge meanness — tasting the clear nectar-body, some dissolve it.",
+ "argument_text": "In worship of Thy devotion, wiping out wretchedness's share that rests on duality — some taste the clear nectar-body.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s16-v13",
- "sanskrit": "",
+ "sanskrit": "taveśa bhakter arcāyāṃ dainyāṃśaṃ dvayasaṃśrayam vilupyāsvādayanty eke vapur acchaṃ sudhāmayam",
  "license": "CC BY-NC-SA 4.0"
 }

@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s12-v10",
  "title": "sivastotravali — s12-v10",
  "kind": "entailment",
- "question": "Whose resolve to worship arose even from pretense — his presence is assured, fitting.",
- "issue": "Derived from L2 text (no argmap). Whose resolve to worship arose even from pretense — his presence is assured, fitting.",
+ "question": "Whose resolve to worship You arose even from pretense — to him too, assuredly, has arisen Thy fitting presence.",
+ "issue": "Derived from L2 text (no argmap). Whose resolve to worship You arose even from pretense — to him too, assuredly, has arisen Thy fitting presence.",
  "premises": [
   {
-   "text": "",
+   "text": "yasya dambhād iva bhavatpūjāsaṅkalpa utthitaḥ tasyāpy avaśyam uditaṃ sannidhānaṃ tavocitam",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s12-v10"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Whose resolve to worship arose even from pretense — his presence is assured, fitting.",
+  "text": "Whose resolve to worship You arose even from pretense — to him too, assuredly, has arisen Thy fitting presence.",
   "passage_id": "sivastotravali:s12-v10"
  },
  "unresolved": "",
- "argument_text": "Whose resolve to worship arose even from pretense — his presence is assured, fitting.",
+ "argument_text": "Whose resolve to worship You arose even from pretense — to him too, assuredly, has arisen Thy fitting presence.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s12-v10",
- "sanskrit": "",
+ "sanskrit": "yasya dambhād iva bhavatpūjāsaṅkalpa utthitaḥ tasyāpy avaśyam uditaṃ sannidhānaṃ tavocitam",
  "license": "CC BY-NC-SA 4.0"
 }

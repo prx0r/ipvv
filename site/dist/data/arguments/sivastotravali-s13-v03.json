@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s13-v03",
  "title": "sivastotravali — s13-v03",
  "kind": "entailment",
- "question": "May living, dying, or anything else be mine — abiding, always worshipping You in Your world-full body at the time of undying consciousness-nectar.",
- "issue": "Derived from L2 text (no argmap). May living, dying, or anything else be mine — abiding, always worshipping You in Your world-full body at the time of undying consciousness-nectar.",
+ "question": "Let me live or die or be anything else — if only I abide, always worshipping, in Your world-full body at undying consciousness-nectar time.",
+ "issue": "Derived from L2 text (no argmap). Let me live or die or be anything else — if only I abide, always worshipping, in Your world-full body at undying consciousness-nectar time.",
  "premises": [
   {
-   "text": "",
+   "text": "tāvake vapuṣi viśvanirbhare citsudhārasamaye niratyaye tiṣṭhataḥ satatam arcataḥ prabhuṃ jīvitaṃ mṛtam athānyad astu me",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s13-v03"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "May living, dying, or anything else be mine — abiding, always worshipping You in Your world-full body at the time of undying consciousness-nectar.",
+  "text": "Let me live or die or be anything else — if only I abide, always worshipping, in Your world-full body at undying consciousness-nectar time.",
   "passage_id": "sivastotravali:s13-v03"
  },
  "unresolved": "",
- "argument_text": "May living, dying, or anything else be mine — abiding, always worshipping You in Your world-full body at the time of undying consciousness-nectar.",
+ "argument_text": "Let me live or die or be anything else — if only I abide, always worshipping, in Your world-full body at undying consciousness-nectar time.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s13-v03",
- "sanskrit": "",
+ "sanskrit": "tāvake vapuṣi viśvanirbhare citsudhārasamaye niratyaye tiṣṭhataḥ satatam arcataḥ prabhuṃ jīvitaṃ mṛtam athānyad astu me",
  "license": "CC BY-NC-SA 4.0"
 }

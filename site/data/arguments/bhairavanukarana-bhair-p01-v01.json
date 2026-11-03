@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p01-v01",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p01-v01",
+ "title": "bhairavanukarana — bhair-p01-v01",
+ "kind": "entailment",
+ "question": "Oṃ. Obeisance to Consciousness-Bhairava. You who shelter in consciousness-ground: take consciousness-state, wander not in vain. Proclaiming thus — Śiva, bent on grace, conquers for devotees.",
+ "issue": "Derived from L2 text (no argmap). Oṃ. Obeisance to Consciousness-Bhairava. You who shelter in consciousness-ground: take consciousness-state, wander not in vain. Proclaiming thus — Śiva, bent on grace, conquers for devotees.",
+ "premises": [
+  {
+   "text": "oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Oṃ. Obeisance to Consciousness-Bhairava. You who shelter in consciousness-ground: take consciousness-state, wander not in vain. Proclaiming thus — Śiva, bent on grace, conquers for devotees.",
+  "passage_id": "bhairavanukarana:bhair-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Oṃ. Obeisance to Consciousness-Bhairava. You who shelter in consciousness-ground: take consciousness-state, wander not in vain. Proclaiming thus — Śiva, bent on grace, conquers for devotees.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p01-v01",
+ "sanskrit": "oṃ namaś cidbhairavāya | citibhūmisamāśrayaṇāś citibhūtiṃ śrayata mā mudhā bhramata | prathayann iti bhaktimatāṃ jayati śivo 'nugrahapravaṇaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

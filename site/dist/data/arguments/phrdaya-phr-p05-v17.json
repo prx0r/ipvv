@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p05-v17",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p05-v17",
+ "title": "phrdaya — phr-p05-v17",
+ "kind": "entailment",
+ "question": "From the middle's opening — knowing-bliss won.",
+ "issue": "Derived from L2 text (no argmap). From the middle's opening — knowing-bliss won.",
+ "premises": [
+  {
+   "text": "madhyavikāsāc cidānandalābhaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p05-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From the middle's opening — knowing-bliss won.",
+  "passage_id": "phrdaya:phr-p05-v17"
+ },
+ "unresolved": "",
+ "argument_text": "From the middle's opening — knowing-bliss won.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p05-v17",
+ "sanskrit": "madhyavikāsāc cidānandalābhaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

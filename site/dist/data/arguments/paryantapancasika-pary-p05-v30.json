@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p05-v30",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p05-v30",
+ "title": "paryantapancasika — pary-p05-v30",
+ "kind": "entailment",
+ "question": "Supreme emission, self, rest, rise, pair, union of Śiva-and-Śakti — between them — and other powers.",
+ "issue": "Derived from L2 text (no argmap). Supreme emission, self, rest, rise, pair, union of Śiva-and-Śakti — between them — and other powers.",
+ "premises": [
+  {
+   "text": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p05-v30"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Supreme emission, self, rest, rise, pair, union of Śiva-and-Śakti — between them — and other powers.",
+  "passage_id": "paryantapancasika:pary-p05-v30"
+ },
+ "unresolved": "",
+ "argument_text": "Supreme emission, self, rest, rise, pair, union of Śiva-and-Śakti — between them — and other powers.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p05-v30",
+ "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+ "license": "CC BY-NC-SA 4.0"
+}

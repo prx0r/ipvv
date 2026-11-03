@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:parapravesika:par-p05-v05",
+ "work_id": "parapravesika",
+ "passage_id": "parapravesika:par-p05-v05",
+ "title": "parapravesika — par-p05-v05",
+ "kind": "entailment",
+ "question": "Indicators and causes cannot get a grip on the Lord, proved before all proof — and since even the knower who lays down injunctions exists in His likeness, that knower's standing proved does not hang on any proof. His self-lit-ness is proved by experience. \"What proves that He is?\" — grant that things are. \"What proves one of such a nature?\" — the proof is the questioner's own shape: the self-shining of Maheśvara, proved before all, is proved for everyone by feeling oneself. Consciousness-light i",
+ "issue": "Derived from L2 text (no argmap). Indicators and causes cannot get a grip on the Lord, proved before all proof — and since even the knower who lays down injunctions exists in His likeness, that knower's standing proved does not hang on any proof. His self-lit-ness is proved by experience. \"What proves that He is?\" — grant that things are. \"What proves one of such a nature?\" — the proof is the questioner's own shape: the self-shining of Maheśvara, proved before all, is proved for everyone by feeling oneself. Consciousness-light i",
+ "premises": [
+  {
+   "text": "pūrvasiddhasya maheśvarasya svayaṃprakāśatvaṃ sarvasya svasaṃvedanasiddham | pramāṇānyapi vastūnāṃ jīvitaṃ yāni tanvate | teṣāmapi paro jīvaḥ sa eva parameśvaraḥ",
+   "label": "Sanskrit source",
+   "passage_id": "parapravesika:par-p05-v05"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Indicators and causes cannot get a grip on the Lord, proved before all proof — and since even the knower who lays down injunctions exists in His likeness, that knower's standing proved does not hang on any proof. His self-lit-ness is proved by experience. \"What proves that He is?\" — grant that things are. \"What proves one of such a nature?\" — the proof is the questioner's own shape: the self-shining of Maheśvara, proved before all, is proved for everyone by feeling oneself. Consciousness-light i",
+  "passage_id": "parapravesika:par-p05-v05"
+ },
+ "unresolved": "",
+ "argument_text": "Indicators and causes cannot get a grip on the Lord, proved before all proof — and since even the knower who lays down injunctions exists in His likeness, that knower's standing proved does not hang on any proof. His self-lit-ness is proved by experience. \"What proves that He is?\" — grant that things are. \"What proves one of such a nature?\" — the proof is the questioner's own shape: the self-shining of Maheśvara, proved before all, is proved for everyone by feeling oneself. Consciousness-light itself, the life of everything, appoints proofs for the business of illusion — but for Him no proof is ever used, since everything else, being inert, cannot light even itself without another's light, let alone settle anything beyond itself. Proof itself is proof only by leaning on Him — and for the proving of Him, who is proof's own life, what use is poor proof, whose office is to let some fresh flash come to rest, marked as a finding, inside the knower? The knower, ever-lit, his shining unbroken, already enjoys every finding tucked inward within himself — where would a fresh flash be put to use in him, and where else could its finding come to rest? So proof is for knowables like body and breath, blue and pleasure — not for the Lord, who is proof's life. Hence the saying: the proofs that draw out the very life of things — beyond them all stands a further Life, and He is the supreme Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "parapravesika:par-p05-v05",
+ "sanskrit": "pūrvasiddhasya maheśvarasya svayaṃprakāśatvaṃ sarvasya svasaṃvedanasiddham | pramāṇānyapi vastūnāṃ jīvitaṃ yāni tanvate | teṣāmapi paro jīvaḥ sa eva parameśvaraḥ",
+ "license": "CC BY-NC 4.0"
+}

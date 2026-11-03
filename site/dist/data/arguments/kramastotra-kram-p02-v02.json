@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p02-v02",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p02-v02",
+ "title": "kramastotra — kram-p02-v02",
+ "kind": "entailment",
+ "question": "Having examined own self, examining again the hymned conduct, the worshipper sets it forth in hymn amid difference-held-as-one. The examined self, at every moment of object-knowing: thus in Your hymn I stand here always — effortless.",
+ "issue": "Derived from L2 text (no argmap). Having examined own self, examining again the hymned conduct, the worshipper sets it forth in hymn amid difference-held-as-one. The examined self, at every moment of object-knowing: thus in Your hymn I stand here always — effortless.",
+ "premises": [
+  {
+   "text": "anāmṛṣṭaḥ svātmā na hi bhavati bhāvapramitibhāj anāmṛṣṭaḥ svātmety api hi na vinā 'marśanavidheḥ | śivaś cāsau svātmā sphurad akhilabhāvaikasarasas tato 'ham tvatstotre pravaṇahṛdayo nityasukhitaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p02-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Having examined own self, examining again the hymned conduct, the worshipper sets it forth in hymn amid difference-held-as-one. The examined self, at every moment of object-knowing: thus in Your hymn I stand here always — effortless.",
+  "passage_id": "kramastotra:kram-p02-v02"
+ },
+ "unresolved": "",
+ "argument_text": "Having examined own self, examining again the hymned conduct, the worshipper sets it forth in hymn amid difference-held-as-one. The examined self, at every moment of object-knowing: thus in Your hymn I stand here always — effortless.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p02-v02",
+ "sanskrit": "anāmṛṣṭaḥ svātmā na hi bhavati bhāvapramitibhāj anāmṛṣṭaḥ svātmety api hi na vinā 'marśanavidheḥ | śivaś cāsau svātmā sphurad akhilabhāvaikasarasas tato 'ham tvatstotre pravaṇahṛdayo nityasukhitaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

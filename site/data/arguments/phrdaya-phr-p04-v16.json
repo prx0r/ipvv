@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p04-v16",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p04-v16",
+ "title": "phrdaya — phr-p04-v16",
+ "kind": "entailment",
+ "question": "Holding oneness with knowing fast — freedom while living.",
+ "issue": "Derived from L2 text (no argmap). Holding oneness with knowing fast — freedom while living.",
+ "premises": [
+  {
+   "text": "cetanapadādhyārohāt citiḥ",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p04-v16"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Holding oneness with knowing fast — freedom while living.",
+  "passage_id": "phrdaya:phr-p04-v16"
+ },
+ "unresolved": "",
+ "argument_text": "Holding oneness with knowing fast — freedom while living.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p04-v16",
+ "sanskrit": "cetanapadādhyārohāt citiḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

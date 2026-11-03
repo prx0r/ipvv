@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p05-v32",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p05-v32",
+ "title": "paryantapancasika — pary-p05-v32",
+ "kind": "entailment",
+ "question": "Bliss by supreme-two, and junction — then feeling of knowns, life-principle — thus full that Bhairava body.",
+ "issue": "Derived from L2 text (no argmap). Bliss by supreme-two, and junction — then feeling of knowns, life-principle — thus full that Bhairava body.",
+ "premises": [
+  {
+   "text": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p05-v32"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bliss by supreme-two, and junction — then feeling of knowns, life-principle — thus full that Bhairava body.",
+  "passage_id": "paryantapancasika:pary-p05-v32"
+ },
+ "unresolved": "",
+ "argument_text": "Bliss by supreme-two, and junction — then feeling of knowns, life-principle — thus full that Bhairava body.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p05-v32",
+ "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+ "license": "CC BY-NC-SA 4.0"
+}

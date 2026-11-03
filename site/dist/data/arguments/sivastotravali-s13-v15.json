@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s13-v15",
  "title": "sivastotravali — s13-v15",
  "kind": "entailment",
- "question": "Swelling all by self-shining, You touch the universe touching form; whatever swirls by its own juice — that is the swelling world.",
- "issue": "Derived from L2 text (no argmap). Swelling all by self-shining, You touch the universe touching form; whatever swirls by its own juice — that is the swelling world.",
+ "question": "Swelling all by Thyself, shining — You touch the universe, touching form; whatever whirls by its own juice — that is the swelling world.",
+ "issue": "Derived from L2 text (no argmap). Swelling all by Thyself, shining — You touch the universe, touching form; whatever whirls by its own juice — that is the swelling world.",
  "premises": [
   {
-   "text": "",
+   "text": "sphārayasy akhilam ātmanā sphuran viśvam āmṛśasi rūpam āmṛśan yat svayaṃ nijarasena ghurṇase tat samullasati bhāvamaṇḍalam",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s13-v15"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "Swelling all by self-shining, You touch the universe touching form; whatever swirls by its own juice — that is the swelling world.",
+  "text": "Swelling all by Thyself, shining — You touch the universe, touching form; whatever whirls by its own juice — that is the swelling world.",
   "passage_id": "sivastotravali:s13-v15"
  },
  "unresolved": "",
- "argument_text": "Swelling all by self-shining, You touch the universe touching form; whatever swirls by its own juice — that is the swelling world.",
+ "argument_text": "Swelling all by Thyself, shining — You touch the universe, touching form; whatever whirls by its own juice — that is the swelling world.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s13-v15",
- "sanskrit": "",
+ "sanskrit": "sphārayasy akhilam ātmanā sphuran viśvam āmṛśasi rūpam āmṛśan yat svayaṃ nijarasena ghurṇase tat samullasati bhāvamaṇḍalam",
  "license": "CC BY-NC-SA 4.0"
 }

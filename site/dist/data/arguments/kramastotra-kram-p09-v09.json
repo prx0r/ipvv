@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p09-v09",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p09-v09",
+ "title": "kramastotra — kram-p09-v09",
+ "kind": "entailment",
+ "question": "Thus in such forms, giver, varied indeed Your form shines — in own portion, in this world, difference gone, of the Lord. To praise that same, may heart, and songs of outer speech-instruments, be mine constantly, in unabandoned rush.",
+ "issue": "Derived from L2 text (no argmap). Thus in such forms, giver, varied indeed Your form shines — in own portion, in this world, difference gone, of the Lord. To praise that same, may heart, and songs of outer speech-instruments, be mine constantly, in unabandoned rush.",
+ "premises": [
+  {
+   "text": "tavaivaikasyāntaḥ sphuritamahaso bodhajaladher vicitrormivrātaprasaraṇaraso yaḥ svarasataḥ | ta evāmī sṛṣṭisthitilayamayasphūrjitarucāṃ śaśāṅkārkāgnīnāṃ yugapad udayāpāyavibhavāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p09-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus in such forms, giver, varied indeed Your form shines — in own portion, in this world, difference gone, of the Lord. To praise that same, may heart, and songs of outer speech-instruments, be mine constantly, in unabandoned rush.",
+  "passage_id": "kramastotra:kram-p09-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Thus in such forms, giver, varied indeed Your form shines — in own portion, in this world, difference gone, of the Lord. To praise that same, may heart, and songs of outer speech-instruments, be mine constantly, in unabandoned rush.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p09-v09",
+ "sanskrit": "tavaivaikasyāntaḥ sphuritamahaso bodhajaladher vicitrormivrātaprasaraṇaraso yaḥ svarasataḥ | ta evāmī sṛṣṭisthitilayamayasphūrjitarucāṃ śaśāṅkārkāgnīnāṃ yugapad udayāpāyavibhavāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

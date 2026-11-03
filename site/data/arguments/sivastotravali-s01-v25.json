@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s01-v25",
  "title": "sivastotravali — s01-v25",
  "kind": "entailment",
- "question": "From supernormal powers to liberation — \"fruit\" is named as a mere limb of the ripened creeper of Your devotion, for some.",
- "issue": "Derived from L2 text (no argmap). From supernormal powers to liberation — \"fruit\" is named as a mere limb of the ripened creeper of Your devotion, for some.",
+ "question": "From supernormal powers to liberation — fruit is named as a mere limb of the ripened creeper of Your devotion, for some.",
+ "issue": "Derived from L2 text (no argmap). From supernormal powers to liberation — fruit is named as a mere limb of the ripened creeper of Your devotion, for some.",
  "premises": [
   {
-   "text": "",
+   "text": "aṇimādiṣu mokṣānteṣv aṅgeṣv eva phalābhidhā bhavadbhakter vipakvāyā latāyā iva keṣu cit",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s01-v25"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "From supernormal powers to liberation — \"fruit\" is named as a mere limb of the ripened creeper of Your devotion, for some.",
+  "text": "From supernormal powers to liberation — fruit is named as a mere limb of the ripened creeper of Your devotion, for some.",
   "passage_id": "sivastotravali:s01-v25"
  },
  "unresolved": "",
- "argument_text": "From supernormal powers to liberation — \"fruit\" is named as a mere limb of the ripened creeper of Your devotion, for some.",
+ "argument_text": "From supernormal powers to liberation — fruit is named as a mere limb of the ripened creeper of Your devotion, for some.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s01-v25",
- "sanskrit": "",
+ "sanskrit": "aṇimādiṣu mokṣānteṣv aṅgeṣv eva phalābhidhā bhavadbhakter vipakvāyā latāyā iva keṣu cit",
  "license": "CC BY-NC-SA 4.0"
 }

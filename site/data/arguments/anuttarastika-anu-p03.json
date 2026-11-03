@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:anuttarastika:anu-p03",
+ "work_id": "anuttarastika",
+ "passage_id": "anuttarastika:anu-p03",
+ "title": "anuttarastika — anu-p03",
+ "kind": "entailment",
+ "question": "Worship, worshipper, worshipped — what a difference-course in the unsurpassed? Transition — of whom, by whom effected, and who is the entry-course? This Māyā, not different from consciousness-nonduality, in otherness, though different — alas, stands. All is pure own-experience-nature. Thought in vain — do not do.",
+ "issue": "Derived from L2 text (no argmap). Worship, worshipper, worshipped — what a difference-course in the unsurpassed? Transition — of whom, by whom effected, and who is the entry-course? This Māyā, not different from consciousness-nonduality, in otherness, though different — alas, stands. All is pure own-experience-nature. Thought in vain — do not do.",
+ "premises": [
+  {
+   "text": "pūjapūjakapūjyabhedasaraṇiḥ keyaṃ kathānuttare saṃkrāmaḥ kila kasya kena vidadhe ko vā praveśakramaḥ | māyeyam na cidadvayāt paratayā bhinnāpy aho vartate sarvaṃ svānubhavasvabhāvavimalaṃ cintāṃ vṛthā mā kṛthāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "anuttarastika:anu-p03"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Worship, worshipper, worshipped — what a difference-course in the unsurpassed? Transition — of whom, by whom effected, and who is the entry-course? This Māyā, not different from consciousness-nonduality, in otherness, though different — alas, stands. All is pure own-experience-nature. Thought in vain — do not do.",
+  "passage_id": "anuttarastika:anu-p03"
+ },
+ "unresolved": "",
+ "argument_text": "Worship, worshipper, worshipped — what a difference-course in the unsurpassed? Transition — of whom, by whom effected, and who is the entry-course? This Māyā, not different from consciousness-nonduality, in otherness, though different — alas, stands. All is pure own-experience-nature. Thought in vain — do not do.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "anuttarastika:anu-p03",
+ "sanskrit": "pūjapūjakapūjyabhedasaraṇiḥ keyaṃ kathānuttare saṃkrāmaḥ kila kasya kena vidadhe ko vā praveśakramaḥ | māyeyam na cidadvayāt paratayā bhinnāpy aho vartate sarvaṃ svānubhavasvabhāvavimalaṃ cintāṃ vṛthā mā kṛthāḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

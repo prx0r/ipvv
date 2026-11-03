@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p01-v01",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p01-v01",
+ "title": "paryantapancasika — pary-p01-v01",
+ "kind": "entailment",
+ "question": "Filled with rest of beginning-end-entered endless power — unspeakable — I study speech: the Lord's heart.",
+ "issue": "Derived from L2 text (no argmap). Filled with rest of beginning-end-entered endless power — unspeakable — I study speech: the Lord's heart.",
+ "premises": [
+  {
+   "text": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p01-v01"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Filled with rest of beginning-end-entered endless power — unspeakable — I study speech: the Lord's heart.",
+  "passage_id": "paryantapancasika:pary-p01-v01"
+ },
+ "unresolved": "",
+ "argument_text": "Filled with rest of beginning-end-entered endless power — unspeakable — I study speech: the Lord's heart.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p01-v01",
+ "sanskrit": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

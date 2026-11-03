@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p26-v26",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p26-v26",
+ "title": "kramastotra — kram-p26-v26",
+ "kind": "entailment",
+ "question": "Manifestation-named consciousness, sequenceless, from void-step, outside-merged — spreads utterly as covering. Then too in inner-essence, by melted rush, sequencelessly — great Time-goddess, making all time.",
+ "issue": "Derived from L2 text (no argmap). Manifestation-named consciousness, sequenceless, from void-step, outside-merged — spreads utterly as covering. Then too in inner-essence, by melted rush, sequencelessly — great Time-goddess, making all time.",
+ "premises": [
+  {
+   "text": "tato devyāṃ yasyāṃ paramaparipūrṇasthitijuṣi kramaṃ vicchidyāśu sthitimatirasāt saṃvidadhati | pramāṇaṃ mātāraṃ mitim atha samagraṃ jagad idaṃ sthitāṃ kroḍīkṛtya śrayatu mama cittaṃ citim imām",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p26-v26"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Manifestation-named consciousness, sequenceless, from void-step, outside-merged — spreads utterly as covering. Then too in inner-essence, by melted rush, sequencelessly — great Time-goddess, making all time.",
+  "passage_id": "kramastotra:kram-p26-v26"
+ },
+ "unresolved": "",
+ "argument_text": "Manifestation-named consciousness, sequenceless, from void-step, outside-merged — spreads utterly as covering. Then too in inner-essence, by melted rush, sequencelessly — great Time-goddess, making all time.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p26-v26",
+ "sanskrit": "tato devyāṃ yasyāṃ paramaparipūrṇasthitijuṣi kramaṃ vicchidyāśu sthitimatirasāt saṃvidadhati | pramāṇaṃ mātāraṃ mitim atha samagraṃ jagad idaṃ sthitāṃ kroḍīkṛtya śrayatu mama cittaṃ citim imām",
+ "license": "CC BY-NC-SA 4.0"
+}

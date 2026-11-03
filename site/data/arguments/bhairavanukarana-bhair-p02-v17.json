@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p02-v17",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p02-v17",
+ "title": "bhairavanukarana — bhair-p02-v17",
+ "kind": "entailment",
+ "question": "World-fear-killer — he, I, in lordship established, am — fear not. Thus by shield-clash-showing, You point us, O Lord.",
+ "issue": "Derived from L2 text (no argmap). World-fear-killer — he, I, in lordship established, am — fear not. Thus by shield-clash-showing, You point us, O Lord.",
+ "premises": [
+  {
+   "text": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p02-v17"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "World-fear-killer — he, I, in lordship established, am — fear not. Thus by shield-clash-showing, You point us, O Lord.",
+  "passage_id": "bhairavanukarana:bhair-p02-v17"
+ },
+ "unresolved": "",
+ "argument_text": "World-fear-killer — he, I, in lordship established, am — fear not. Thus by shield-clash-showing, You point us, O Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p02-v17",
+ "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

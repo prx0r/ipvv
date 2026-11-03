@@ -2063,15 +2063,21 @@ def build_layers():
                 "blocking": it.get("blocking", []), "model": it.get("model", ""), "date": it.get("date", ""),
                 "status": it.get("status", ""), "sanskrit": it.get("sanskrit", ""),
                 "l1": it.get("l1", ""), "l2": it.get("l2", ""),
-                "l3": it.get("l3", ""),
+                "l3": it.get("l3", ""), "l4": it.get("l4", ""),
                 "c1": c1p.read_text(encoding="utf-8", errors="replace") if c1p.exists() else None,
                 "argmap": amp.read_text(encoding="utf-8", errors="replace") if amp.exists() else None,
             })
         pushing = sorted(str(p.relative_to(ROOT / "data")).replace("\\", "/")
                          for p in pushfiles if wid.lower() in p.stem.lower())
+        src_ed = ""
+        for it in items:
+            src_ed = (it.get("links") or {}).get("edition") or src_ed
+            if src_ed:
+                break
         (out / f"{wid}.json").write_text(_j.dumps({
             "work": wid, "n": len(chunks),
             "n_pass": sum(1 for c in chunks if c["gate"] == "PASS"),
+            "source_edition": src_ed,
             "pushing": pushing, "chunks": chunks,
         }, ensure_ascii=False))
         n += 1
@@ -2422,7 +2428,10 @@ def build_recite():
     out = DIST / "recite"; out.mkdir(parents=True, exist_ok=True)
     cards = []
     for aj in sorted((ROOT / "data").glob("audio-*.json")):
-        A = _json.loads(aj.read_text()); work = A["work"]
+        A = _json.loads(aj.read_text())
+        if "work" not in A or "verses" not in A:
+            continue  # non-manifest json matching audio-*.json (e.g. index files)
+        work = A["work"]
         trmap = {}
         for cand in [work] + [k for k, v in AUDIO_ALIAS.items() if v == work]:
             tp = ROOT / f"data/translations/{cand}.json"
@@ -2527,7 +2536,6 @@ def main():
     if "essays" in want: done["essays"] = build_essays()
     if "pushinghub" in want: done["pushinghub"] = build_pushing_hub()
     if "corpus" in want: done["corpus"] = build_corpus()
-    if "receipts" in want: done["receipts"] = build_receipts()
     if "workbooks" in want: done["workbooks"] = build_workbooks()
     if "contentions" in want: done["contentions"] = build_contentions()
     if "essay-objects" in want: done["essay-objects"] = build_essay_objects()
@@ -2539,6 +2547,9 @@ def main():
     if "torella-volume" in want: done["torella-volume"] = build_torella_volume()
     if "recognition-framework" in want: done["recognition-framework"] = build_recognition_framework()
     if "arguments" in want: done["arguments"] = build_arguments()
+    # receipts AFTER arguments: receipts are derived from translations+published+arguments,
+    # so they must be built after the argument packets exist (count parity in verify)
+    if "receipts" in want: done["receipts"] = build_receipts()
     if "stylelab" in want: done["stylelab"] = build_stylelab()
     if "screen" in want: done["screen"] = build_screen()
     if "meditate" in want: done["meditate"] = build_meditate()

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v43",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v43",
+ "title": "paryantapancasika — pary-p07-v43",
+ "kind": "entailment",
+ "question": "Divided inner-made undivided state observation higher-lower — agency that indeed seeing — his indeed lord state based.",
+ "issue": "Derived from L2 text (no argmap). Divided inner-made undivided state observation higher-lower — agency that indeed seeing — his indeed lord state based.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v43"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Divided inner-made undivided state observation higher-lower — agency that indeed seeing — his indeed lord state based.",
+  "passage_id": "paryantapancasika:pary-p07-v43"
+ },
+ "unresolved": "",
+ "argument_text": "Divided inner-made undivided state observation higher-lower — agency that indeed seeing — his indeed lord state based.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v43",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

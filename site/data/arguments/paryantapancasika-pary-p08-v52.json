@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p08-v52",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p08-v52",
+ "title": "paryantapancasika — pary-p08-v52",
+ "kind": "entailment",
+ "question": "Of-Shambhu undivided hearts victorious gurus formerly — without-rising absorption obtained end prosperity.",
+ "issue": "Derived from L2 text (no argmap). Of-Shambhu undivided hearts victorious gurus formerly — without-rising absorption obtained end prosperity.",
+ "premises": [
+  {
+   "text": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p08-v52"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of-Shambhu undivided hearts victorious gurus formerly — without-rising absorption obtained end prosperity.",
+  "passage_id": "paryantapancasika:pary-p08-v52"
+ },
+ "unresolved": "",
+ "argument_text": "Of-Shambhu undivided hearts victorious gurus formerly — without-rising absorption obtained end prosperity.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p08-v52",
+ "sanskrit": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+ "license": "CC BY-NC 4.0"
+}

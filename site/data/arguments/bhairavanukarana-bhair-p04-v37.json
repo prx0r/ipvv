@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p04-v37",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p04-v37",
+ "title": "bhairavanukarana — bhair-p04-v37",
+ "kind": "entailment",
+ "question": "Inward-bound-aimed, expanding-facultied — though since always You are — that shown in all states, delusion-stain gone self.",
+ "issue": "Derived from L2 text (no argmap). Inward-bound-aimed, expanding-facultied — though since always You are — that shown in all states, delusion-stain gone self.",
+ "premises": [
+  {
+   "text": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p04-v37"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Inward-bound-aimed, expanding-facultied — though since always You are — that shown in all states, delusion-stain gone self.",
+  "passage_id": "bhairavanukarana:bhair-p04-v37"
+ },
+ "unresolved": "",
+ "argument_text": "Inward-bound-aimed, expanding-facultied — though since always You are — that shown in all states, delusion-stain gone self.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p04-v37",
+ "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

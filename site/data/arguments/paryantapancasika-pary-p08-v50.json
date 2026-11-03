@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p08-v50",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p08-v50",
+ "title": "paryantapancasika — pary-p08-v50",
+ "kind": "entailment",
+ "question": "By-means non-grasping to-be-done to-be-attained Bhairavī-state — which that own-consciousness that indeed all-means should-enter.",
+ "issue": "Derived from L2 text (no argmap). By-means non-grasping to-be-done to-be-attained Bhairavī-state — which that own-consciousness that indeed all-means should-enter.",
+ "premises": [
+  {
+   "text": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p08-v50"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By-means non-grasping to-be-done to-be-attained Bhairavī-state — which that own-consciousness that indeed all-means should-enter.",
+  "passage_id": "paryantapancasika:pary-p08-v50"
+ },
+ "unresolved": "",
+ "argument_text": "By-means non-grasping to-be-done to-be-attained Bhairavī-state — which that own-consciousness that indeed all-means should-enter.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p08-v50",
+ "sanskrit": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+ "license": "CC BY-NC 4.0"
+}

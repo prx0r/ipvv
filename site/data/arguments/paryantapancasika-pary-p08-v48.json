@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p08-v48",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p08-v48",
+ "title": "paryantapancasika — pary-p08-v48",
+ "kind": "entailment",
+ "question": "By-these mutually knowledge transmission self — that worldly usage — then scriptural various contraction narrow.",
+ "issue": "Derived from L2 text (no argmap). By-these mutually knowledge transmission self — that worldly usage — then scriptural various contraction narrow.",
+ "premises": [
+  {
+   "text": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p08-v48"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By-these mutually knowledge transmission self — that worldly usage — then scriptural various contraction narrow.",
+  "passage_id": "paryantapancasika:pary-p08-v48"
+ },
+ "unresolved": "",
+ "argument_text": "By-these mutually knowledge transmission self — that worldly usage — then scriptural various contraction narrow.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p08-v48",
+ "sanskrit": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+ "license": "CC BY-NC 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paramarthasara:param-p03-v24",
+ "work_id": "paramarthasara",
+ "passage_id": "paramarthasara:param-p03-v24",
+ "title": "paramarthasara — param-p03-v24",
+ "kind": "entailment",
+ "question": "The supreme covering! Impurity here: subtle — the Māyā-sheath; gross — the outer body-form; wrapped in three sheaths stands the self.",
+ "issue": "Derived from L2 text (no argmap). The supreme covering! Impurity here: subtle — the Māyā-sheath; gross — the outer body-form; wrapped in three sheaths stands the self.",
+ "premises": [
+  {
+   "text": "śrotraṃ tvagakṣirasanā ghrāṇaṃ buddhīndriyāṇi śabdādau | vākpāṇipādapāyūpasthaṃ karmendriyāṇi punaḥ eṣāṃ grāhyo viṣayaḥ sūkṣmaḥ pravibhāgavarjito yaḥ syāt | tanmātrapañcakaṃ tat śabdaḥ sparśo maho raso gandhaḥ etatsaṃsargavaśāt sthūlo viṣayas tu bhūtapañcakatām | abhyeti nabhaḥ pavanas tejaḥ salilaṃ ca pṛthvī ca tuṣa iva ta.ṅdulakaṇikām āvṛṇute prakṛtipūrvakaḥ sargaḥ | pṛthvīparyanto 'yaṃ caitanyaṃ dehabhāvena param āvaraṇaṃ mala iha sūkṣmaṃ māyādikañcukaṃ sthūlam | bāhyaṃ vigraharūpaṃ kośatrayaveṣṭito hy ātmā ajñānatimirayogād ekam api svaṃ svabhāvam ātmānam | grāhyagrāhakanānāvaicitryeṇāvabudhyeta rasaphāṇitaśarkarikāguḍakha.ṅdādyā yathekṣurasa eva | tadvad avasthā bhedāḥ sarve paramātmanaḥ śambhoḥ vijñānāntaryāmiprāṇavirāḍdehajātipi.ṅdāntāḥ | vyavahāramātram etat paramārthena tu na santy eva rajjvāṃ nāsti bhujaṅgas trāsaṃ kurute ca mṛtyuparyantam | bhrānter mahatī śaktir na vivektuṃ śakyate nāma",
+   "label": "Sanskrit source",
+   "passage_id": "paramarthasara:param-p03-v24"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "The supreme covering! Impurity here: subtle — the Māyā-sheath; gross — the outer body-form; wrapped in three sheaths stands the self.",
+  "passage_id": "paramarthasara:param-p03-v24"
+ },
+ "unresolved": "",
+ "argument_text": "The supreme covering! Impurity here: subtle — the Māyā-sheath; gross — the outer body-form; wrapped in three sheaths stands the self.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paramarthasara:param-p03-v24",
+ "sanskrit": "śrotraṃ tvagakṣirasanā ghrāṇaṃ buddhīndriyāṇi śabdādau | vākpāṇipādapāyūpasthaṃ karmendriyāṇi punaḥ eṣāṃ grāhyo viṣayaḥ sūkṣmaḥ pravibhāgavarjito yaḥ syāt | tanmātrapañcakaṃ tat śabdaḥ sparśo maho raso gandhaḥ etatsaṃsargavaśāt sthūlo viṣayas tu bhūtapañcakatām | abhyeti nabhaḥ pavanas tejaḥ salilaṃ ca pṛthvī ca tuṣa iva ta.ṅdulakaṇikām āvṛṇute prakṛtipūrvakaḥ sargaḥ | pṛthvīparyanto 'yaṃ caitanyaṃ dehabhāvena param āvaraṇaṃ mala iha sūkṣmaṃ māyādikañcukaṃ sthūlam | bāhyaṃ vigraharūpaṃ kośatrayaveṣṭito hy ātmā ajñānatimirayogād ekam api svaṃ svabhāvam ātmānam | grāhyagrāhakanānāvaicitryeṇāvabudhyeta rasaphāṇitaśarkarikāguḍakha.ṅdādyā yathekṣurasa eva | tadvad avasthā bhedāḥ sarve paramātmanaḥ śambhoḥ vijñānāntaryāmiprāṇavirāḍdehajātipi.ṅdāntāḥ | vyavahāramātram etat paramārthena tu na santy eva rajjvāṃ nāsti bhujaṅgas trāsaṃ kurute ca mṛtyuparyantam | bhrānter mahatī śaktir na vivektuṃ śakyate nāma",
+ "license": "CC BY-NC-SA 4.0"
+}

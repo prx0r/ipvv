@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p01-v02",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p01-v02",
+ "title": "paryantapancasika — pary-p01-v02",
+ "kind": "entailment",
+ "question": "He indeed Bhairava god; all gods of-whom-made. That very Bhairavī — being, non-being too — of-whom-made.",
+ "issue": "Derived from L2 text (no argmap). He indeed Bhairava god; all gods of-whom-made. That very Bhairavī — being, non-being too — of-whom-made.",
+ "premises": [
+  {
+   "text": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p01-v02"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "He indeed Bhairava god; all gods of-whom-made. That very Bhairavī — being, non-being too — of-whom-made.",
+  "passage_id": "paryantapancasika:pary-p01-v02"
+ },
+ "unresolved": "",
+ "argument_text": "He indeed Bhairava god; all gods of-whom-made. That very Bhairavī — being, non-being too — of-whom-made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p01-v02",
+ "sanskrit": "ādyantāntargatānantaśaktiviśrāntinirbharām anuccāryām ahaṃ vācam adhīye hṛdayaṃ vibhoḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

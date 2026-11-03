@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p04-v36",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p04-v36",
+ "title": "bhairavanukarana — bhair-p04-v36",
+ "kind": "entailment",
+ "question": "For self-delight-full ones — adverse though sense-bubbles — what these desire-burning brow-eye showing supreme-fire-formed teach.",
+ "issue": "Derived from L2 text (no argmap). For self-delight-full ones — adverse though sense-bubbles — what these desire-burning brow-eye showing supreme-fire-formed teach.",
+ "premises": [
+  {
+   "text": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p04-v36"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "For self-delight-full ones — adverse though sense-bubbles — what these desire-burning brow-eye showing supreme-fire-formed teach.",
+  "passage_id": "bhairavanukarana:bhair-p04-v36"
+ },
+ "unresolved": "",
+ "argument_text": "For self-delight-full ones — adverse though sense-bubbles — what these desire-burning brow-eye showing supreme-fire-formed teach.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p04-v36",
+ "sanskrit": "śāktāṇḍakhaṇḍamadhye viśvarasāḥ sarvam ahaṃ pibāmi sadā | vyañjayasi narakapālagarudhiramiṣād etad iva me 'ntaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

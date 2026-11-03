@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p12-v12",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p12-v12",
+ "title": "kramastotra — kram-p12-v12",
+ "kind": "entailment",
+ "question": "From that complete Whole — oh, juice of great-joy-taste — You lead Your own power into difference, by Your will's spreading. Priceless Your freedom — praising this, Your utterly wonderful becoming-power, fear melted, I am Śiva-made.",
+ "issue": "Derived from L2 text (no argmap). From that complete Whole — oh, juice of great-joy-taste — You lead Your own power into difference, by Your will's spreading. Priceless Your freedom — praising this, Your utterly wonderful becoming-power, fear melted, I am Śiva-made.",
+ "premises": [
+  {
+   "text": "idantāvad rūpaṃ tava bhagavataḥ śaktisarasaṃ kramābhāvād eva prasabhavigalat kālakalanam | manaḥśaktyā vācāpy atha karaṇacakrair bahir atho ghaṭādyais tadrūpaṃ yugapad adhitiṣṭheyam aniśam",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p12-v12"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "From that complete Whole — oh, juice of great-joy-taste — You lead Your own power into difference, by Your will's spreading. Priceless Your freedom — praising this, Your utterly wonderful becoming-power, fear melted, I am Śiva-made.",
+  "passage_id": "kramastotra:kram-p12-v12"
+ },
+ "unresolved": "",
+ "argument_text": "From that complete Whole — oh, juice of great-joy-taste — You lead Your own power into difference, by Your will's spreading. Priceless Your freedom — praising this, Your utterly wonderful becoming-power, fear melted, I am Śiva-made.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p12-v12",
+ "sanskrit": "idantāvad rūpaṃ tava bhagavataḥ śaktisarasaṃ kramābhāvād eva prasabhavigalat kālakalanam | manaḥśaktyā vācāpy atha karaṇacakrair bahir atho ghaṭādyais tadrūpaṃ yugapad adhitiṣṭheyam aniśam",
+ "license": "CC BY-NC-SA 4.0"
+}

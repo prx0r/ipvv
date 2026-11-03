@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p02-v11",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p02-v11",
+ "title": "bhairavanukarana — bhair-p02-v11",
+ "kind": "entailment",
+ "question": "Of supreme-light-bodied, reflection-power, O Lord — supreme goddess. Hers indeed spread — all Brahmī-led goddesses.",
+ "issue": "Derived from L2 text (no argmap). Of supreme-light-bodied, reflection-power, O Lord — supreme goddess. Hers indeed spread — all Brahmī-led goddesses.",
+ "premises": [
+  {
+   "text": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p02-v11"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Of supreme-light-bodied, reflection-power, O Lord — supreme goddess. Hers indeed spread — all Brahmī-led goddesses.",
+  "passage_id": "bhairavanukarana:bhair-p02-v11"
+ },
+ "unresolved": "",
+ "argument_text": "Of supreme-light-bodied, reflection-power, O Lord — supreme goddess. Hers indeed spread — all Brahmī-led goddesses.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p02-v11",
+ "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:phrdaya:phr-p03-v09",
+ "work_id": "phrdaya",
+ "passage_id": "phrdaya:phr-p03-v09",
+ "title": "phrdaya — phr-p03-v09",
+ "kind": "entailment",
+ "question": "Like knowing, yet by tightened power impure — stained, it wanders.",
+ "issue": "Derived from L2 text (no argmap). Like knowing, yet by tightened power impure — stained, it wanders.",
+ "premises": [
+  {
+   "text": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+   "label": "Sanskrit source",
+   "passage_id": "phrdaya:phr-p03-v09"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Like knowing, yet by tightened power impure — stained, it wanders.",
+  "passage_id": "phrdaya:phr-p03-v09"
+ },
+ "unresolved": "",
+ "argument_text": "Like knowing, yet by tightened power impure — stained, it wanders.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "phrdaya:phr-p03-v09",
+ "sanskrit": "cidvat tac chaktisaṃkocāt malāvṛtaḥ saṃsārī",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -117,6 +117,19 @@ def find(text, roots):
     return None
 
 
+# Edition facts for works with NO vendored root (recorded from upstream
+# passages.jsonl source_edition, 2026-11-03). Not SPDX guesses: these are
+# provenance strings. qp has-license (CC BY-NC prefix) honestly FAILS for them.
+WORK_EDITION = {
+    "anubhavanivedana": ("SanskritDocuments (Ruma Dewan) - no explicit source licence",
+                         "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)"),
+    "pancashloki": ("SanskritDocuments (Ruma Dewan) - no explicit source licence",
+                    "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)"),
+    "paramarthacarca": ("SanskritDocuments (Ruma Dewan) - no explicit source licence",
+                        "SanskritDocuments (Ruma Dewan, from Abhinavastotravali)"),
+}
+
+
 def main():
     roots = load_roots()
     print(f"roots: {len(roots)}")
@@ -126,17 +139,48 @@ def main():
         items = json.load(open(f))
         changed = False
         for it in items:
-            if it.get("source_file"):
+            if it.get("source_file") and it.get("source_license"):
                 n_ok += 1
                 continue
+            # shortcut: source_file names a vendored root -> stamp license/origin
+            # from that root's provenance header (no content search needed)
+            fn = it.get("source_file")
+            if fn and fn in roots and not it.get("source_license"):
+                r = roots[fn]
+                if r.get("lic"):
+                    it["source_license"] = r["lic"]
+                    it["source_origin"] = r.get("prov", "")
+                    n_ok += 1
+                    changed = True
+                    continue
             hit = find(it.get("sanskrit", ""), roots)
             if hit:
                 it.update(hit)
                 n_ok += 1
             else:
-                it["source_file"] = None
-                n_miss += 1
-                missing.append(f"{os.path.basename(f)}:{it.get('chunk')}")
+                # work-root fallback: exactly one vendored root names this work
+                wid = os.path.basename(f)[:-5]
+                cand = [fn for fn in roots if wid.lower() in fn.lower()]
+                if len(cand) == 1 and roots[cand[0]].get("lic"):
+                    r = roots[cand[0]]
+                    it["source_file"] = cand[0]
+                    it["source_license"] = r["lic"]
+                    it["source_origin"] = r.get("prov", "")
+                    it.setdefault("source_lines", None)
+                    n_ok += 1
+                elif wid in WORK_EDITION:
+                    lic, origin = WORK_EDITION[wid]
+                    it["source_license"] = lic
+                    it["source_origin"] = origin
+                    it["source_file"] = it.get("source_file") or "passages.jsonl"
+                    n_ok += 1
+                else:
+                    if not it.get("source_file"):
+                        it["source_file"] = None
+                    if not it.get("source_license"):
+                        it["source_license"] = None
+                    n_miss += 1
+                    missing.append(f"{os.path.basename(f)}:{it.get('chunk')}")
             changed = True
         if changed:
             json.dump(items, open(f, "w"), ensure_ascii=False, indent=1)

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p08-v49",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p08-v49",
+ "title": "paryantapancasika — pary-p08-v49",
+ "kind": "entailment",
+ "question": "Thus pervasion-of-speech knowing this group presiding-deities — Maheśvarī headed goddesses in-waking even not enjoy.",
+ "issue": "Derived from L2 text (no argmap). Thus pervasion-of-speech knowing this group presiding-deities — Maheśvarī headed goddesses in-waking even not enjoy.",
+ "premises": [
+  {
+   "text": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p08-v49"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Thus pervasion-of-speech knowing this group presiding-deities — Maheśvarī headed goddesses in-waking even not enjoy.",
+  "passage_id": "paryantapancasika:pary-p08-v49"
+ },
+ "unresolved": "",
+ "argument_text": "Thus pervasion-of-speech knowing this group presiding-deities — Maheśvarī headed goddesses in-waking even not enjoy.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p08-v49",
+ "sanskrit": "sā sthāna karaṇa āghāta puṃ vyāpāra ātmikā satī vaikharī vṛttayaḥ yasya astāḥ imāḥ śrutigocarāḥ",
+ "license": "CC BY-NC 4.0"
+}

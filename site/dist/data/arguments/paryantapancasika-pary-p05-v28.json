@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p05-v28",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p05-v28",
+ "title": "paryantapancasika — pary-p05-v28",
+ "kind": "entailment",
+ "question": "By mode of measured and unmeasured, bondage-liberation contemplating — Bhairava I am — thus by trust supreme freedom should go.",
+ "issue": "Derived from L2 text (no argmap). By mode of measured and unmeasured, bondage-liberation contemplating — Bhairava I am — thus by trust supreme freedom should go.",
+ "premises": [
+  {
+   "text": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p05-v28"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "By mode of measured and unmeasured, bondage-liberation contemplating — Bhairava I am — thus by trust supreme freedom should go.",
+  "passage_id": "paryantapancasika:pary-p05-v28"
+ },
+ "unresolved": "",
+ "argument_text": "By mode of measured and unmeasured, bondage-liberation contemplating — Bhairava I am — thus by trust supreme freedom should go.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p05-v28",
+ "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+ "license": "CC BY-NC-SA 4.0"
+}

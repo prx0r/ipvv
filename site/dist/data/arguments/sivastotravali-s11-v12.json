@@ -4,27 +4,27 @@
  "passage_id": "sivastotravali:s11-v12",
  "title": "sivastotravali — s11-v12",
  "kind": "entailment",
- "question": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be?",
- "issue": "Derived from L2 text (no argmap). What would there be where the Lord does not make? What would the knower Śaṅkara destroys be?",
+ "question": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be? Thus, ever sheltered in Thee, O Lord of unwasted great power — in this saṃsāra, ceaseless in anguish, I suffer alone.",
+ "issue": "Derived from L2 text (no argmap). What would there be where the Lord does not make? What would the knower Śaṅkara destroys be? Thus, ever sheltered in Thee, O Lord of unwasted great power — in this saṃsāra, ceaseless in anguish, I suffer alone.",
  "premises": [
   {
-   "text": "",
+   "text": "tat kiṃ nātha bhaven na yatra bhagavān nirmātṛtām aśnute bhāvaḥ syāt kim u tasya cetanavato nāśāsti yaṃ śaṅkaraḥ itthaṃ te parameśvarākṣatamahāśakteḥ sadā saṃśritaḥ saṃsāre 'tra nirantarādhividhuraḥ kliśyāmy ahaṃ kevalam",
    "label": "Sanskrit source",
    "passage_id": "sivastotravali:s11-v12"
   }
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be?",
+  "text": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be? Thus, ever sheltered in Thee, O Lord of unwasted great power — in this saṃsāra, ceaseless in anguish, I suffer alone.",
   "passage_id": "sivastotravali:s11-v12"
  },
  "unresolved": "",
- "argument_text": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be?",
+ "argument_text": "What would there be where the Lord does not make? What would the knower Śaṅkara destroys be? Thus, ever sheltered in Thee, O Lord of unwasted great power — in this saṃsāra, ceaseless in anguish, I suffer alone.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
  "status": "MACHINE_DRAFT",
  "source_passage": "sivastotravali:s11-v12",
- "sanskrit": "",
+ "sanskrit": "tat kiṃ nātha bhaven na yatra bhagavān nirmātṛtām aśnute bhāvaḥ syāt kim u tasya cetanavato nāśāsti yaṃ śaṅkaraḥ itthaṃ te parameśvarākṣatamahāśakteḥ sadā saṃśritaḥ saṃsāre 'tra nirantarādhividhuraḥ kliśyāmy ahaṃ kevalam",
  "license": "CC BY-NC-SA 4.0"
 }

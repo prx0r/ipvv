@@ -1,7 +1,7 @@
 # anuttarastika — LLM Discovery
 
 Work: anuttarastika
-Passages: 8 (5 PASS, 3 BLOCKED)
+Passages: 8 (8 PASS, 0 BLOCKED)
 Data: /data/translations/anuttarastika.json
 Page: /translations/anuttarastika.html
 
@@ -11,9 +11,18 @@ Page: /translations/anuttarastika.html
   L1: ## anu-p01 (1)
 transition / here / not / contemplation / nor / connection-of-speech / nor / discussion / nor / visualiza
   L2: Transition here is no method at all — not contemplation, not speech-connection, not discussion, not visualization, not s
-- anu-p02 (verses 2) [BLOCKED]
-- anu-p03 (verses 3) [BLOCKED]
-- anu-p04 (verses 4) [BLOCKED]
+- anu-p02 (verses 2) [PASS]
+  L1: ## anu-p02 (2)
+Saṃsāra / not / in-truth / of-embodied-beings / of-bondage / news / what / Bondage / of-whom / never / of
+  L2: Saṃsāra is not, in truth, for body-holders — of bondage, what news? Bondage never truly is for anyone — so for the free,
+- anu-p03 (verses 3) [PASS]
+  L1: ## anu-p03 (3)
+Worship-worshipper-worshipped / difference-course / what / speech / in-unsurpassed / Transition / indeed 
+  L2: Worship, worshipper, worshipped — what a difference-course in the unsurpassed? Transition — of whom, by whom effected, a
+- anu-p04 (verses 4) [PASS]
+  L1: ## anu-p04 (4)
+Bliss / here / not / wealth-middle / like / lamp-sun-moon-made / splendor- multitude-like / not / light-r
+  L2: Bliss here is not wealth-middle-intoxication, nor like enjoying women, nor lamp-sun-moon-made splendour-multitude — nor 
 - anu-p05 (verses 5) [PASS]
   L1: ## anu-p05 (5)
 Passion / aversion / pleasure / displeasure / rise / dissolution / I-ness / misery / and-the-rest / those

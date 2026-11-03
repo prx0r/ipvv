@@ -12,7 +12,7 @@
   "date": "2026-11-01",
   "l1": "## sand-p01-v01 (1)\nHe / is-victorious / Śiva / alone / possessing-spanda / self-established / who / inner-face / makes-taste // sand-p01",
   "l2": "He alone — Śiva, possessing spanda, self-established — who makes the inner face taste.",
-  "source_file": "passages.jsonl",
+  "source_file": "spandasandoha.txt",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "Mukhabodha M00084 (Spandasandoha)",
@@ -22,7 +22,12 @@
    ]
   },
   "immutable_id": "pt:pid:sand:855664071220",
-  "l3": "He alone conquers — Śiva, throbbing, self-established — who savors the inner face."
+  "l3": "He alone conquers — Śiva, throbbing, self-established — who savors the inner face.",
+  "source_lines": 40,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00084",
+  "match_words": 5,
+  "license": "FREE"
  },
  {
   "chunk": "sand-p01-v02",
@@ -37,7 +42,7 @@
   "date": "2026-11-01",
   "l1": "## sand-p01-v02 (2)\nis-victorious / this / hero / lord-of-the-Kula // sand-p01",
   "l2": "This hero, lord of the Kula — victorious.",
-  "source_file": "passages.jsonl",
+  "source_file": "spandasandoha.txt",
   "links": {
    "source_file": "passages.jsonl",
    "edition": "Mukhabodha M00084 (Spandasandoha)",
@@ -47,6 +52,11 @@
    ]
   },
   "immutable_id": "pt:pid:sand:855664071220",
-  "l3": "Victorious is this hero, the Kula’s lord."
+  "l3": "Victorious is this hero, the Kula’s lord.",
+  "source_lines": 40,
+  "source_license": "CC BY-NC 4.0",
+  "source_origin": "Mukhabodha M00084",
+  "match_words": 5,
+  "license": "FREE"
  }
 ]

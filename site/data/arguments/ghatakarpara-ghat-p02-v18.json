@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ghatakarpara:ghat-p02-v18",
+ "work_id": "ghatakarpara",
+ "passage_id": "ghatakarpara:ghat-p02-v18",
+ "title": "ghatakarpara — ghat-p02-v18",
+ "kind": "entailment",
+ "question": "Loud roar — water in caves falls, wonderful-formed beauties.",
+ "issue": "Derived from L2 text (no argmap). Loud roar — water in caves falls, wonderful-formed beauties.",
+ "premises": [
+  {
+   "text": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+   "label": "Sanskrit source",
+   "passage_id": "ghatakarpara:ghat-p02-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Loud roar — water in caves falls, wonderful-formed beauties.",
+  "passage_id": "ghatakarpara:ghat-p02-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Loud roar — water in caves falls, wonderful-formed beauties.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ghatakarpara:ghat-p02-v18",
+ "sanskrit": "madanasya kṛte niketanānāṃ pratibhānty adya vanāni ketanānām tvaṃ mañjarībhiḥ pravaro vanānāṃ netrotsavaś cāsi sayauvanānām kuṭaja kiṃ kusumair avahasyate praṇipatāmi ca duṣprahasya te tava puṣpanirīkṣitāpadehaṃ visṛjeyaṃ sahasaiva nīpa deham madhunaḥ samavekṣya kālatāṃ bhramaraś cumbati yūthikālatām salilair vihataṃ rajaḥ kṣitau ravicandrāv api nopalakṣitau navāmbumattāḥ śikhino nadanti meghāgame kundasamānadanti sendrayudhaś ca jalado 'dya rasann ibhānāṃ saṃrambham āvahati bhūdharasannibhānām paridhīraravaṃ jalaṃ darīṣu prapaty adbhutarūpasundarīṣu",
+ "license": "CC BY-NC-SA 4.0"
+}

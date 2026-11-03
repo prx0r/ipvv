@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bodhapancadasika:bod-p10-v10",
+ "work_id": "bodhapancadasika",
+ "passage_id": "bodhapancadasika:bod-p10-v10",
+ "title": "bodhapancadasika — bod-p10-v10",
+ "kind": "entailment",
+ "question": "In them, variety runs to the extreme — upward, downward, across. Worlds and their fragments, pleasure and pain and mind.",
+ "issue": "Derived from L2 text (no argmap). In them, variety runs to the extreme — upward, downward, across. Worlds and their fragments, pleasure and pain and mind.",
+ "premises": [
+  {
+   "text": "teṣu vaicitryam atyantam ūrdhvādhas tiryag eva yat | bhuvanāni tadaṃśāś ca sukhaduḥkhamatiś ca yā",
+   "label": "Sanskrit source",
+   "passage_id": "bodhapancadasika:bod-p10-v10"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In them, variety runs to the extreme — upward, downward, across. Worlds and their fragments, pleasure and pain and mind.",
+  "passage_id": "bodhapancadasika:bod-p10-v10"
+ },
+ "unresolved": "",
+ "argument_text": "In them, variety runs to the extreme — upward, downward, across. Worlds and their fragments, pleasure and pain and mind.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bodhapancadasika:bod-p10-v10",
+ "sanskrit": "teṣu vaicitryam atyantam ūrdhvādhas tiryag eva yat | bhuvanāni tadaṃśāś ca sukhaduḥkhamatiś ca yā",
+ "license": "CC BY-NC-SA 4.0"
+}

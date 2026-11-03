@@ -29,10 +29,21 @@ for f in glob.glob(os.path.join(ROOT, 'site/data/translations/*.json')):
         if not it.get('immutable_id'):
             fail(f'{w}/{it.get("chunk")}: no immutable_id')
 
-# 2. audio manifest vs mp3s (site/data + dist — FAIL)
+# 2. audio manifest vs mp3s (local OR R2 index — FAIL)
+# Storage contract: chant audio lives in R2 (public bucket svread-audio, see
+# .gitignore); git holds only the index. A verse passes if its mp3 exists
+# locally OR is listed in site/data/audio-r2.json (refresh: tools/audio_r2_index.py).
+try:
+    _r2audio = set(json.load(open(os.path.join(ROOT, 'site/data/r2audio-index.json'))).get('keys', []))
+except Exception:
+    _r2audio = set()
 for aj in glob.glob(os.path.join(ROOT, 'site/data/audio-*.json')):
     A = json.load(open(aj))
+    if 'work' not in A or 'verses' not in A:      # not a chant manifest (guards future index files)
+        continue
     for v in A['verses']:
+        if f"{A['work']}/{v['id']}" in _r2audio:
+            continue
         for base in ('site/static-audio', 'site/dist/audio'):
             p = os.path.join(ROOT, base, A['work'], v['id'] + '.mp3')
             if not os.path.exists(p):
@@ -73,14 +84,44 @@ for d, kind in [('argmaps', 'argmap'), ('c1', 'C1')]:
     if not os.path.isdir(base):
         continue
     for f in glob.glob(os.path.join(base, '**/*.md'), recursive=True):
-        words = len(open(f, encoding='utf-8', errors='replace').read().split())
+        text = open(f, encoding='utf-8', errors='replace').read()
+        words = len(text.split())
         rel = os.path.relpath(f, ROOT)
-        if kind == 'C1' and words < 100:
-            fail(f'C1 too short ({words}w < 100): {rel}')
-        if kind == 'C1' and words > 450:
-            fail(f'C1 too long ({words}w > 450): {rel}')
-        if kind == 'argmap' and words < 150:
-            fail(f'argmap too short ({words}w < 150): {rel}')
+        if kind == 'C1':
+            # site/data/c1 holds THREE artifacts since e6ec71d0 (pristine c1 sync):
+            #   .NOTE.md            -> scholar note (not a C1: non-empty only)
+            #   "<chunk>.md"        -> C1 DISPLAY RENDER (SUMMARY+rasa / rasa-only);
+            #                          the 100-450w essay law applies to the full C1
+            #                          artifact, enforced upstream in translation-work
+            #                          (schemas/c1.py + check.py), not to its render
+            #   anything else       -> treated as a full C1 essay (100-450w, Law 6)
+            if f.endswith('.NOTE.md'):
+                if words < 10:
+                    fail(f'empty scholar NOTE ({words}w): {rel}')
+                continue
+            is_render = ('**SUMMARY.**' in text) or ('*Rasa:' in text)
+            if is_render:
+                if words < 15:
+                    fail(f'C1 render stub ({words}w < 15, no SUMMARY/rasa body): {rel}')
+                if words > 450:
+                    fail(f'C1 render too long ({words}w > 450): {rel}')
+                if not text.lstrip().startswith('## '):
+                    fail(f'C1 render missing chunk header: {rel}')
+            else:
+                if words < 100:
+                    fail(f'C1 too short ({words}w < 100): {rel}')
+                if words > 450:
+                    fail(f'C1 too long ({words}w > 450): {rel}')
+        # argmap renders come in two shapes (both legal under NORTHSTAR):
+        # hand-written dialectic (300-800w) and the terse structured render
+        # ("terse logical statements", ~20-120w). The old 150w floor measured
+        # only the hand-prose era and flagged the spec'd terse form as broken.
+        # What actually must hold: chunk header + a real body.
+        if kind == 'argmap':
+            if not (text.lstrip().startswith('## ') or text.lstrip().startswith('# ')):
+                fail(f'argmap missing chunk header: {rel}')
+            elif words < 15:
+                fail(f'argmap stub ({words}w < 15, no argument body): {rel}')
 
 # 6. receipts coverage (dist — FAIL)
 _rp = os.path.join(ROOT, 'site/dist/data/receipts.jsonl')

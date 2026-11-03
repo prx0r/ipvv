@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p05-v31",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p05-v31",
+ "title": "paryantapancasika — pary-p05-v31",
+ "kind": "entailment",
+ "question": "Bliss, will, lordship, opening, deficiency — and lordship of will indistinct, distinct by difference — manifestation of known of those two of knowers.",
+ "issue": "Derived from L2 text (no argmap). Bliss, will, lordship, opening, deficiency — and lordship of will indistinct, distinct by difference — manifestation of known of those two of knowers.",
+ "premises": [
+  {
+   "text": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p05-v31"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Bliss, will, lordship, opening, deficiency — and lordship of will indistinct, distinct by difference — manifestation of known of those two of knowers.",
+  "passage_id": "paryantapancasika:pary-p05-v31"
+ },
+ "unresolved": "",
+ "argument_text": "Bliss, will, lordship, opening, deficiency — and lordship of will indistinct, distinct by difference — manifestation of known of those two of knowers.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p05-v31",
+ "sanskrit": "medāmedaprakāreṇa bandhamokṣau vibhāvayan bhairavo asmi iti visrambhāt svācchandyaṃ paramaṃ vrajet",
+ "license": "CC BY-NC-SA 4.0"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p07-v40",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p07-v40",
+ "title": "paryantapancasika — pary-p07-v40",
+ "kind": "entailment",
+ "question": "So-much all being will etc. by-door supreme in-Bhairava rested-rested — again from-that indeed emitted.",
+ "issue": "Derived from L2 text (no argmap). So-much all being will etc. by-door supreme in-Bhairava rested-rested — again from-that indeed emitted.",
+ "premises": [
+  {
+   "text": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p07-v40"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So-much all being will etc. by-door supreme in-Bhairava rested-rested — again from-that indeed emitted.",
+  "passage_id": "paryantapancasika:pary-p07-v40"
+ },
+ "unresolved": "",
+ "argument_text": "So-much all being will etc. by-door supreme in-Bhairava rested-rested — again from-that indeed emitted.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p07-v40",
+ "sanskrit": "iyat sarvaṃ sat icchā ādi dvārā anuttara bhairave viśramya viśramya muhuḥ tataḥ eva visṛjyate",
+ "license": "CC BY-NC-SA 4.0"
+}

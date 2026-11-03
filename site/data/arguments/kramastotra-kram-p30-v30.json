@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p30-v30",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p30-v30",
+ "title": "kramastotra — kram-p30-v30",
+ "kind": "entailment",
+ "question": "In the sixty-sixth year, on the ninth dark day, in Mārgaśīrṣa, by me Abhinavagupta, Śiva was praised.",
+ "issue": "Derived from L2 text (no argmap). In the sixty-sixth year, on the ninth dark day, in Mārgaśīrṣa, by me Abhinavagupta, Śiva was praised.",
+ "premises": [
+  {
+   "text": "ṣaṭṣaṣṭinām eke varṣe navamyām asite 'hani | mayā 'bhinavaguptena mārgaśīrṣe stutaḥ śivaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p30-v30"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In the sixty-sixth year, on the ninth dark day, in Mārgaśīrṣa, by me Abhinavagupta, Śiva was praised.",
+  "passage_id": "kramastotra:kram-p30-v30"
+ },
+ "unresolved": "",
+ "argument_text": "In the sixty-sixth year, on the ninth dark day, in Mārgaśīrṣa, by me Abhinavagupta, Śiva was praised.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p30-v30",
+ "sanskrit": "ṣaṭṣaṣṭinām eke varṣe navamyām asite 'hani | mayā 'bhinavaguptena mārgaśīrṣe stutaḥ śivaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

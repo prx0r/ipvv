@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p08-v08",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p08-v08",
+ "title": "kramastotra — kram-p08-v08",
+ "kind": "entailment",
+ "question": "In varied beginningness, in melted rule: what taste — from partitionlessness, supreme fullness unequalled? The self's yoking of lights, all-being-thing-oneness, by unopposed dharma-floods: supreme knowing, priceless-fit-qualified.",
+ "issue": "Derived from L2 text (no argmap). In varied beginningness, in melted rule: what taste — from partitionlessness, supreme fullness unequalled? The self's yoking of lights, all-being-thing-oneness, by unopposed dharma-floods: supreme knowing, priceless-fit-qualified.",
+ "premises": [
+  {
+   "text": "itīdṛkṣair rūpair varada vividhaṃ te kila vapur vibhāti svāṃśe 'smin jagati gatabhedaṃ bhagavataḥ | tad evaitatstotuṃ hṛdayam atha gīrbāhyakaraṇaprabandhāś ca syur me satatam aparityaktarabhasaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p08-v08"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "In varied beginningness, in melted rule: what taste — from partitionlessness, supreme fullness unequalled? The self's yoking of lights, all-being-thing-oneness, by unopposed dharma-floods: supreme knowing, priceless-fit-qualified.",
+  "passage_id": "kramastotra:kram-p08-v08"
+ },
+ "unresolved": "",
+ "argument_text": "In varied beginningness, in melted rule: what taste — from partitionlessness, supreme fullness unequalled? The self's yoking of lights, all-being-thing-oneness, by unopposed dharma-floods: supreme knowing, priceless-fit-qualified.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p08-v08",
+ "sanskrit": "itīdṛkṣair rūpair varada vividhaṃ te kila vapur vibhāti svāṃśe 'smin jagati gatabhedaṃ bhagavataḥ | tad evaitatstotuṃ hṛdayam atha gīrbāhyakaraṇaprabandhāś ca syur me satatam aparityaktarabhasaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

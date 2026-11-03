@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:bhairavanukarana:bhair-p02-v13",
+ "work_id": "bhairavanukarana",
+ "passage_id": "bhairavanukarana:bhair-p02-v13",
+ "title": "bhairavanukarana — bhair-p02-v13",
+ "kind": "entailment",
+ "question": "Knowing-thread-dissolved, sapless knower-host, this — skull-garland-of-faculties-bearing, You show thus, as-if, to us, O Lord.",
+ "issue": "Derived from L2 text (no argmap). Knowing-thread-dissolved, sapless knower-host, this — skull-garland-of-faculties-bearing, You show thus, as-if, to us, O Lord.",
+ "premises": [
+  {
+   "text": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+   "label": "Sanskrit source",
+   "passage_id": "bhairavanukarana:bhair-p02-v13"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Knowing-thread-dissolved, sapless knower-host, this — skull-garland-of-faculties-bearing, You show thus, as-if, to us, O Lord.",
+  "passage_id": "bhairavanukarana:bhair-p02-v13"
+ },
+ "unresolved": "",
+ "argument_text": "Knowing-thread-dissolved, sapless knower-host, this — skull-garland-of-faculties-bearing, You show thus, as-if, to us, O Lord.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "bhairavanukarana:bhair-p02-v13",
+ "sanskrit": "paramaprakāśavapuṣo vimarśaśaktiḥ prabho parā devī | asyā eva prasaraḥ sarvā brāhmyādikā devyaḥ",
+ "license": "CC BY-NC-SA 4.0"
+}

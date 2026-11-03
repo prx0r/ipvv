@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:paryantapancasika:pary-p03-v18",
+ "work_id": "paryantapancasika",
+ "passage_id": "paryantapancasika:pary-p03-v18",
+ "title": "paryantapancasika — pary-p03-v18",
+ "kind": "entailment",
+ "question": "Knower indeed — this of-such-kind — at festival-of-limitation undistracted abides — in own self, without thought, consciousness-self.",
+ "issue": "Derived from L2 text (no argmap). Knower indeed — this of-such-kind — at festival-of-limitation undistracted abides — in own self, without thought, consciousness-self.",
+ "premises": [
+  {
+   "text": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+   "label": "Sanskrit source",
+   "passage_id": "paryantapancasika:pary-p03-v18"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Knower indeed — this of-such-kind — at festival-of-limitation undistracted abides — in own self, without thought, consciousness-self.",
+  "passage_id": "paryantapancasika:pary-p03-v18"
+ },
+ "unresolved": "",
+ "argument_text": "Knower indeed — this of-such-kind — at festival-of-limitation undistracted abides — in own self, without thought, consciousness-self.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "paryantapancasika:pary-p03-v18",
+ "sanskrit": "karmabuddhyakṣatāṃ prāptā tadā asau paśur ucyate iti icchayā sa bhagavān bhairavaḥ parimīyate",
+ "license": "CC BY-NC-SA 4.0"
+}

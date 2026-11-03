@@ -4,8 +4,8 @@
  "passage_id": "bhairavastava:bh-p09",
  "title": "bhairavastava — bh-p09",
  "kind": "entailment",
- "question": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others.",
- "issue": "Derived from L2 text (no argmap). This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others.",
+ "question": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others, samaya-knower.",
+ "issue": "Derived from L2 text (no argmap). This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others, samaya-knower.",
  "premises": [
   {
    "text": "nṛtyati gāyati hṛṣyati gāḍham saṃvit iyam mama bhairavanātha tvāṃ priyam āpya sudarśanamekam durlabhamanyajanaiḥ samayajñam",
@@ -15,11 +15,11 @@
  ],
  "inference": "derived from L2 prose (no argmap reconstruction)",
  "conclusion": {
-  "text": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others.",
+  "text": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others, samaya-knower.",
   "passage_id": "bhairavastava:bh-p09"
  },
  "unresolved": "",
- "argument_text": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others.",
+ "argument_text": "This consciousness of mine dances, sings, deeply rejoices — O Bhairava-Lord. Having obtained You, the dear: the beautiful vision alone, hard to get by others, samaya-knower.",
  "tension_id": null,
  "strength": "MACHINE_DRAFT",
  "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",

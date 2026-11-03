@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:kramastotra:kram-p21-v21",
+ "work_id": "kramastotra",
+ "passage_id": "kramastotra:kram-p21-v21",
+ "title": "kramastotra — kram-p21-v21",
+ "kind": "entailment",
+ "question": "So thus your three, by own-power-expanse-force obtained — six-wheel-course-made-step powers these. By order, by unfolding, they ordain varied world-state; by these goddesses, devoted-hearted may I be, fear-gone.",
+ "issue": "Derived from L2 text (no argmap). So thus your three, by own-power-expanse-force obtained — six-wheel-course-made-step powers these. By order, by unfolding, they ordain varied world-state; by these goddesses, devoted-hearted may I be, fear-gone.",
+ "premises": [
+  {
+   "text": "imāṃ rundhe bhūmiṃ bhavabhayabhidātaṅkakaraṇīm imāṃ bodhaikāntadrutirasamayīm cāpi vidadhe | taditthaṃ saṃrodhaṃ drutim atha vilupyāśubhatatīr yatheṣṭaṃ cācāraṃ bhajati lasatāṃ sā mama hṛdi",
+   "label": "Sanskrit source",
+   "passage_id": "kramastotra:kram-p21-v21"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "So thus your three, by own-power-expanse-force obtained — six-wheel-course-made-step powers these. By order, by unfolding, they ordain varied world-state; by these goddesses, devoted-hearted may I be, fear-gone.",
+  "passage_id": "kramastotra:kram-p21-v21"
+ },
+ "unresolved": "",
+ "argument_text": "So thus your three, by own-power-expanse-force obtained — six-wheel-course-made-step powers these. By order, by unfolding, they ordain varied world-state; by these goddesses, devoted-hearted may I be, fear-gone.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "kramastotra:kram-p21-v21",
+ "sanskrit": "imāṃ rundhe bhūmiṃ bhavabhayabhidātaṅkakaraṇīm imāṃ bodhaikāntadrutirasamayīm cāpi vidadhe | taditthaṃ saṃrodhaṃ drutim atha vilupyāśubhatatīr yatheṣṭaṃ cācāraṃ bhajati lasatāṃ sā mama hṛdi",
+ "license": "CC BY-NC-SA 4.0"
+}

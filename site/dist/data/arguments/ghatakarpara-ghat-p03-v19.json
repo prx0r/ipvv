@@ -1,0 +1,30 @@
+{
+ "id": "pt:argument:ghatakarpara:ghat-p03-v19",
+ "work_id": "ghatakarpara",
+ "passage_id": "ghatakarpara:ghat-p03-v19",
+ "title": "ghatakarpara — ghat-p03-v19",
+ "kind": "entailment",
+ "question": "Clouds thundering make travelers long; sorrow grows in those, endless.",
+ "issue": "Derived from L2 text (no argmap). Clouds thundering make travelers long; sorrow grows in those, endless.",
+ "premises": [
+  {
+   "text": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
+   "label": "Sanskrit source",
+   "passage_id": "ghatakarpara:ghat-p03-v19"
+  }
+ ],
+ "inference": "derived from L2 prose (no argmap reconstruction)",
+ "conclusion": {
+  "text": "Clouds thundering make travelers long; sorrow grows in those, endless.",
+  "passage_id": "ghatakarpara:ghat-p03-v19"
+ },
+ "unresolved": "",
+ "argument_text": "Clouds thundering make travelers long; sorrow grows in those, endless.",
+ "tension_id": null,
+ "strength": "MACHINE_DRAFT",
+ "strength_basis": "derived from L2 prose (no argmap reconstruction); premises = Sanskrit source; no human review",
+ "status": "MACHINE_DRAFT",
+ "source_passage": "ghatakarpara:ghat-p03-v19",
+ "sanskrit": "utkaṇṭhayanti pathikāṇ jaladāḥ svanantaḥ śoko vivardhati ca tadvinatāsv anantaḥ ratyutsavaṃ priyatamaiḥ saha mānayanti meghāgamaṃ priyasakhi śvasamānayanti jīyeya yena kavinā yamakaiḥ pareṇa tasmai vaheyam udakaṃ ghaṭakarpareṇa",
+ "license": "CC BY-NC-SA 4.0"
+}
