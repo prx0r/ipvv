@@ -63,6 +63,10 @@ test('MCP → account Worker → private evidence, review and consented draft', 
     const saved=await tool('save_document',{document_id:'essay:one',document:doc});assert.equal(saved.document.revision,1);
     const decision=await tool('save_decision',{document_id:'essay:one',revision:1,subject:'śiva',before:'lord',after:'Śiva',reason:'Context'});
     const source=await tool('save_source',{work:'testwork',target:'p-v01',note:'Check the source'});
+    const source2=await tool('save_source',{work:'testwork',target:'p-v01',note:'Second reference'});
+    const link=await tool('save_source_link',{from_source_id:source.id,to_source_id:source2.id,relation:'possibly_related',note:'Compare'});
+    assert.equal((await tool('list_source_links',{})).links[0].id,link.id);
+    await tool('delete_source',{source_id:source2.id});assert.deepEqual((await tool('list_source_links',{})).links,[]);
     const review=await tool('request_review',{document_id:'essay:one',reviewer_id:bob.profile.id,revision:1});
     const report=await call('/api/scholar/reviews/'+review.id+'/decision','POST',{decision:'COMMENT',reasoning:'Please check.',ai_consent:true},bob.cookie);assert.equal(report.status,200);
     const comment=await call('/api/scholar/reviews/'+review.id+'/annotations','POST',{start:0,end:4,quote:'Śiva',body:'Clarify'},bob.cookie);assert.equal(comment.status,201);
