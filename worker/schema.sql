@@ -181,6 +181,17 @@ BEGIN
   DELETE FROM scholar_source_links WHERE user_id=OLD.user_id AND (from_source_id=OLD.id OR to_source_id=OLD.id);
 END;
 
+-- Keep in sync with migrations/0012_scholar_essay_permissions.sql.
+-- Explicit author grants for an exact published essay, separated by AI use.
+CREATE TABLE IF NOT EXISTS scholar_essay_permissions (
+  work TEXT NOT NULL, essay_id TEXT NOT NULL, author_id TEXT NOT NULL,
+  allow_answers INTEGER NOT NULL DEFAULT 0 CHECK (allow_answers IN (0,1)),
+  allow_drafts INTEGER NOT NULL DEFAULT 0 CHECK (allow_drafts IN (0,1)),
+  updated_at TEXT NOT NULL, PRIMARY KEY(work,essay_id)
+);
+CREATE INDEX IF NOT EXISTS scholar_essay_permissions_author
+  ON scholar_essay_permissions(author_id,work);
+
 CREATE TABLE IF NOT EXISTS chat_sessions (
   id TEXT PRIMARY KEY,
   user_id TEXT,

@@ -17,3 +17,38 @@ Before committing this branch, the required tool help checks passed. The existin
 `site/dist/data/receipts.jsonl` is missing and kernel verification cannot open it.
 Use the authorized source/build environment to reproduce the full gate before any
 release; do not manufacture receipts.
+
+## Backend contract (migration 0012)
+
+- `GET /api/scholar/published-essays?work=...` lists only verified published
+  essay objects from the hash-checked Scholar projection, with their current
+  scoped grant and an `owned` flag. An essay's content address, self-attested
+  sign-off and signed snapshot are rechecked; this is integrity and account
+  attribution, not independent identity verification.
+- `PUT /api/scholar/essay-permissions` accepts `work`, `essay_id`,
+  `allow_answers`, `allow_drafts` and `confirmed: true`. Only the authenticated
+  account recorded as that published object's author may set or revoke a grant.
+  Permission is bound to the exact essay content address; a later version needs
+  a fresh grant. Existing published works start with neither permission.
+- `POST /api/scholar/assist` accepts up to three `scholar_essays` references
+  (`{work, essay_id}`). `kind: enquiry` needs the answer permission; `essay` and
+  `essay_revision` need the drafting permission. An enquiry may omit a root
+  passage only when it selects a permitted essay or a saved source. Other tasks
+  cannot use these essay grants. Existing explicit per-request Qwen consent and
+  quota checks still apply.
+- The Worker selects bounded, keyword-ranked paragraph excerpts and gives them
+  stable labels such as `E1:p2`. It rejects invented labels and a response that
+  cites none of the selected scholarship. The response records the exact essay
+  ID, paragraph number, excerpt offsets/hash and current projection hash. The
+  excerpts and labels aid checking; they do **not** establish that a claim is
+  supported, that a passage is complete, or that a published work grants any
+  other licence. The user must review the output and its sources.
+- Revocation prevents future requests after the grant change is observed. It
+  cannot recall excerpts already sent to a provider or in-flight requests.
+  There is no private draft or reviewer-report access through this grant path.
+  Account-backed grant history and a production retention policy remain future
+  work; current attribution is self-attested by the account.
+
+Apply `migrations/0012_scholar_essay_permissions.sql` after 0002–0011 only as part
+of the reviewed deployment and after backing up the correct D1 database. See the
+matching svread prototype for user controls and the essay-draft handoff.

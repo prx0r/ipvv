@@ -61,10 +61,10 @@ test('account to signed translation and essay on a real local Git remote',async(
     assert.ok(t1);const originals={t1:{[target]:t1},l0:{[target]:[{id:'token'}]},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}};
     const projection=projectionFixture({work:'paramarthasara',originals,source_verses:{[target]:{text:'śiva'}},
       l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]}});
-    let lastPrompt='';globalThis.fetch=async (url,options)=>{
+    let lastPrompt='',modelText='A distinct grounded rendering.';globalThis.fetch=async (url,options)=>{
       if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projection);
       if(String(url).includes('dashscope')){lastPrompt=JSON.parse(options.body).messages[0].content;
-        return Response.json({choices:[{message:{content:'A distinct grounded rendering.'}}]});}
+        return Response.json({choices:[{message:{content:modelText}}]});}
       return oldFetch(url,options);
     };
     for(let i=0;i<3;i++){
@@ -117,6 +117,17 @@ test('account to signed translation and essay on a real local Git remote',async(
     assert.deepEqual(paper.snapshot.content.citations,citations);assert.equal(paper.source_git_commit,git(repo,'rev-parse','HEAD'));
     assert.doesNotMatch(published,/Private source note/);
     assert.doesNotMatch(published,/Private reviewer recommendation|style:/);
+    // Project the exact Git object, then exercise author permission and a reader's cited enquiry.
+    Object.assign(projection,projectionFixture({...projection,essays:[paper]}));
+    response=await call('/api/scholar/essay-permissions','PUT',{work:'paramarthasara',essay_id:paper.essay_id,allow_answers:true,allow_drafts:false,confirmed:true},cookie);
+    assert.equal(response.status,200);
+    response=await call('/api/scholar/published-essays?work=paramarthasara','GET',undefined,reviewerCookie);
+    const visible=(await response.json()).essays;assert.equal(visible[0].essay_id,paper.essay_id);assert.equal(visible[0].allow_answers,true);
+    modelText='The scholar proposes a reading [E1:p1].';
+    response=await call('/api/scholar/assist','POST',{work:'paramarthasara',target,layer:'l3',kind:'enquiry',instruction:'Why this reading?',
+      consent_to_ai:true,scholar_essays:[{work:'paramarthasara',essay_id:paper.essay_id}]},reviewerCookie);
+    const answer=await response.json();assert.equal(response.status,200,JSON.stringify(answer));
+    assert.equal(answer.document.content.scholar_citations[0].essay_id,paper.essay_id);assert.match(lastPrompt,/A distinct grounded rendering/);
   }finally{
     globalThis.fetch=oldFetch;if(db)db.close();if(server){server.kill();await once(server,'exit').catch(()=>{});}await rm(temp,{recursive:true,force:true});
   }
