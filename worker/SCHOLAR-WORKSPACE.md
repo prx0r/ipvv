@@ -213,3 +213,12 @@ between two sources owned by the authenticated account;
 notebook entry deletes the link. Relationships are private, human-entered
 assertions: they are not verified historical claims, included in Qwen prompts,
 or published automatically.
+
+
+### Permissioned published essay evidence
+
+Apply migration `0012_scholar_essay_permissions.sql` after 0002–0011. See
+`PUSHING-ESSAY-HANDOFF.md` for author-controlled answer/draft scopes,
+version-bound published essay checks, paragraph references, revocation limits
+and the extended citation-preparation endpoint. A permission is not inferred
+from public availability or the essay's rights declaration.

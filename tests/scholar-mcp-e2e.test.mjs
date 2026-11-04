@@ -23,7 +23,7 @@ function d1(db){return {prepare(sql){return {bind(...args){return {
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
 const hash=v=>createHash('sha256').update(canonical(v)).digest('hex');
 function fixture(){const originals={t1:{'p-v01':{}},l0:{},argmap:{},l2:{},l3:{},l4:{},c1:{},c2:{}};
-  const d={work:'testwork',source_verses:{'p-v01':{text:'śiva'}},originals,withheld_songs:[],
+  const d={work:'testwork',source_verses:{'p-v01':{text:'śiva'}},originals,withheld_songs:[],essays:[],
     original_hashes:Object.fromEntries(Object.entries(originals).map(([k,v])=>[k,Object.fromEntries(Object.entries(v).map(([id,x])=>[id,hash(x)]))]))};
   return {...d,projection_sha256:hash(d)};}
 function request(path,method='GET',data,cookie){return new Request('https://worker.example'+path,{method,
@@ -36,10 +36,14 @@ test('MCP → account Worker → private evidence, review and consented draft', 
   const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
   async function login(email){const res=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
     assert.equal(res.status,200);return {cookie:res.headers.get('Set-Cookie').split(';')[0],profile:(await res.json()).profile};}
-  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
-  const original=globalThis.fetch;let prompt='';globalThis.fetch=async(url,options)=>{
-    if(String(url).includes('/data/scholar/testwork.json'))return Response.json(fixture());
-    if(String(url).includes('dashscope')){prompt=JSON.parse(options.body).messages[0].content;return Response.json({choices:[{message:{content:'Grounded agent essay.'}}]});}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org'),projection=fixture();
+  const text='A published interpretation.',title='A scholar essay',snap={kind:'essay',work:'testwork',target:'p-v01',layer:'l3',title,content:{text}};
+  const signoff={id:'signoff:test',snapshot_sha256:hash(snap),rights:'all-rights-reserved',created_at:'2026-11-04'};
+  const essay={format:'scholar-essay/1',work:'testwork',target:'p-v01',title,text,author:'Alice',author_id:alice.profile.id,identity_state:'SELF_ATTESTED',rights:signoff.rights,signoff,snapshot:snap,assisted:false,model:'',validation_scope:'essay structure and declared source links'};
+  essay.essay_id='essay:'+hash(essay);projection.essays=[essay];delete projection.projection_sha256;projection.projection_sha256=hash(projection);
+  const original=globalThis.fetch;let prompt='',modelText='Grounded agent essay.';globalThis.fetch=async(url,options)=>{
+    if(String(url).includes('/data/scholar/testwork.json'))return Response.json(projection);
+    if(String(url).includes('dashscope')){prompt=JSON.parse(options.body).messages[0].content;return Response.json({choices:[{message:{content:modelText}}]});}
     return original(url,options);
   };
   const http=createServer(async(req,res)=>{try{
@@ -75,7 +79,12 @@ test('MCP → account Worker → private evidence, review and consented draft', 
       decision_ids:[decision.id],source_ids:[source.id],consent_to_ai:true});
     assert.equal(draft.document.content.author_kind,'agent');assert.match(prompt,/Check the source/);assert.match(prompt,/Context/);
     assert.doesNotMatch(prompt,/Clarify/);assert.equal(draft.document.content.source_references[0].projection_sha256,source.projection_sha256);
-    const prepared=await tool('prepare_citations',{source_ids:[source.id]});assert.equal(prepared.citations[0].work,'testwork');
+    const published=await tool('list_published_essays',{work:'testwork'});assert.equal(published.essays[0].allow_answers,false);
+    assert.equal((await call('/api/scholar/essay-permissions','PUT',{work:'testwork',essay_id:essay.essay_id,allow_answers:true,allow_drafts:false,confirmed:true},alice.cookie)).status,200);
+    modelText='The author proposes a reading [E1:p1].';
+    const answer=await tool('draft_with_qwen',{work:'testwork',target:'p-v01',layer:'l3',kind:'enquiry',instruction:'Why?',consent_to_ai:true,scholar_essays:[{work:'testwork',essay_id:essay.essay_id}]});
+    assert.equal(answer.document.content.scholar_citations[0].essay_id,essay.essay_id);assert.match(prompt,/A published interpretation/);
+    const prepared=await tool('prepare_citations',{source_ids:[source.id],passages:[{work:'testwork',target:'p-v01'}]});assert.equal(prepared.citations[0].work,'testwork');
     assert.equal('note' in prepared.citations[0],false);
     const cited=await tool('save_document',{document_id:'essay:one',document:{...doc,expected_revision:1,content:{...doc.content,citations:prepared.citations}}});
     assert.equal(cited.document.revision,2);

@@ -27,6 +27,8 @@ test('only an author can grant exact-version answer and draft use; revocation an
   assert.equal((await call('/api/scholar/assist','POST',query,bob.cookie)).status,409);assert.equal(modelCalls,0);
   assert.equal((await call('/api/scholar/essay-permissions','PUT',grant,alice.cookie)).status,200);
   const src=await call('/api/scholar/sources','POST',{work,target,note:'Selected note'},bob.cookie),source=(await src.json()).id;assert.equal(src.status,201);
+  r=await call('/api/scholar/citations/prepare','POST',{source_ids:[source],passages:[{work,target}]},bob.cookie);const cite=(await r.json()).citations;
+  assert.equal(r.status,200);assert.equal(cite.length,1);assert.equal(cite[0].t1_sha256,sha(d.originals.t1[target]));
   r=await call('/api/scholar/assist','POST',{...query,source_ids:[source]},bob.cookie);const answer=await r.json();assert.equal(r.status,200,JSON.stringify(answer));
   assert.equal(answer.document.content.scholar_citations[0].marker,'E1:p1');assert.equal(answer.document.content.scholar_citations[0].essay_id,essay.essay_id);
   assert.match(lastPrompt,/C1 commentary/);assert.match(lastPrompt,/Selected note/);assert.match(lastPrompt,/AUTHOR-PERMITTED SCHOLARSHIP/);assert.doesNotMatch(lastPrompt,new RegExp(alice.profile.id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
@@ -35,6 +37,12 @@ test('only an author can grant exact-version answer and draft use; revocation an
   r=await call('/api/scholar/assist','POST',{...query,kind:'essay'},bob.cookie);assert.equal(r.status,200);
   modelText='An invented marker [E9:p99].';r=await call('/api/scholar/assist','POST',query,bob.cookie);assert.equal(r.status,502);
   modelText='No source marker.';r=await call('/api/scholar/assist','POST',query,bob.cookie);assert.equal(r.status,502);
+  // Permission on one content address must not carry over to a revised essay.
+  const revised=structuredClone(essay);delete revised.essay_id;revised.text='A new version with a different argument.';revised.snapshot.content.text=revised.text;
+  revised.signoff.snapshot_sha256=sha(revised.snapshot);revised.essay_id='essay:'+sha(revised);d.essays.push(revised);delete d.projection_sha256;d.projection_sha256=sha(d);
+  modelText='The existing version still has a reference [E1:p1].';
+  assert.equal((await call('/api/scholar/assist','POST',{...query,scholar_essays:[{work,essay_id:revised.essay_id}]},bob.cookie)).status,409);
+  assert.equal((await call('/api/scholar/assist','POST',query,bob.cookie)).status,200);
   assert.equal((await call('/api/scholar/essay-permissions','PUT',{...grant,allow_answers:false,allow_drafts:false},alice.cookie)).status,200);
   assert.equal((await call('/api/scholar/assist','POST',query,bob.cookie)).status,409);
   // Re-hashing the mutable projection cannot disguise a changed essay under its old content address.

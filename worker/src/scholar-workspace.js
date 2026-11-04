@@ -361,13 +361,19 @@ export async function handleScholar(request,env,uid,cors,callModel){
       return json({deleted:true},200,cors);
     }
     if(path==='/api/scholar/citations/prepare'&&request.method==='POST'){
-      const d=await body(request),ids=d.source_ids;
-      if(!Array.isArray(ids)||ids.length<1||ids.length>10||new Set(ids).size!==ids.length||ids.some(id=>!ID.test(id)))
-        return json({error:'Choose up to ten distinct notebook sources.'},400,cors);
-      const result=await selectedSources(env,uid,ids);
+      const d=await body(request),ids=d.source_ids??[],passages=d.passages??[];
+      if(!Array.isArray(ids)||!Array.isArray(passages)||ids.length+passages.length<1||ids.length+passages.length>10||
+        new Set(ids).size!==ids.length||ids.some(id=>!ID.test(id))||passages.some(x=>!x||typeof x!=='object'||Array.isArray(x)||
+          Object.keys(x).sort().join(',')!=='target,work'||!WORK.test(x.work||'')||!/^[A-Za-z0-9][A-Za-z0-9_.-]{0,159}$/.test(x.target||''))||
+        new Set(passages.map(x=>x.work+'\0'+x.target)).size!==passages.length)
+        return json({error:'Choose up to ten distinct sources or passages.'},400,cors);
+      const cache=new Map(),result=await selectedSources(env,uid,ids,cache);
       if(result.error)return json({error:result.error},409,cors);
       const citations=result.sources.map(x=>({work:x.context.work,target:x.context.target,t1_sha256:x.context.t1_sha256,projection_sha256:x.context.projection_sha256}));
-      if(new Set(citations.map(x=>x.work+'\0'+x.target)).size!==citations.length)return json({error:'Choose each passage only once.'},400,cors);
+      const seen=new Set(citations.map(x=>x.work+'\0'+x.target));
+      if(seen.size!==citations.length)return json({error:'Choose each passage only once.'},400,cors);
+      for(const p of passages){if(seen.has(p.work+'\0'+p.target))continue;const {context}=await evidence(p.work,p.target,cache);
+        citations.push({work:context.work,target:context.target,t1_sha256:context.t1_sha256,projection_sha256:context.projection_sha256});seen.add(p.work+'\0'+p.target);}
       return json({citations,message:'These references will be public if you later sign off and submit the essay.'},200,cors);
     }
     if(path==='/api/scholar/source-links'&&request.method==='GET'){
@@ -682,7 +688,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
       try{text=await callModel([{role:'user',content:prompt}],essayTask?2400:1200,controller.signal);}
       finally{clearTimeout(timeout);await releaseAi(env,reservation.id);}
       if(typeof text!=='string'||!text.trim()||text.length>60000)return json({error:'Qwen returned no usable draft.'},502,cors);
-      const cited=[...new Set([...text.matchAll(/\[(E\d+:p\d+)\]/g)].map(m=>m[1]))],known=new Set(scholarship.items.map(x=>x.marker));
+      const cited=[...new Set([...text.matchAll(/\[(E\d+:[^\]\n]{1,40})\]/g)].map(m=>m[1]))],known=new Set(scholarship.items.map(x=>x.marker));
       if(cited.some(x=>!known.has(x))||(scholarship.items.length&&!cited.length))
         return json({error:'Qwen did not provide valid selected-scholar reference markers; try again.'},502,cors);
       const usedScholarship=scholarship.items.filter(x=>cited.includes(x.marker));

@@ -52,3 +52,16 @@ release; do not manufacture receipts.
 Apply `migrations/0012_scholar_essay_permissions.sql` after 0002–0011 only as part
 of the reviewed deployment and after backing up the correct D1 database. See the
 matching svread prototype for user controls and the essay-draft handoff.
+
+The citation-preparation endpoint also accepts explicitly selected public
+`passages: [{work, target}]` alongside private `source_ids`. It rechecks the
+current projection and T1 hash, de-duplicates a passage also selected from the
+notebook, and returns only the publishable reference fields. A caller should
+compare these references with those used for the draft and recheck them before
+saving. The bridge validates declared T1 links and the pinned source Git tree;
+it does not validate whether each essay claim follows from those sources.
+
+The local integration tests cover a signed essay written to an actual temporary
+Git remote, projection of that exact object, author consent, and a second
+account's cited enquiry. The projection and Qwen provider are mocked; no test
+establishes public deployment, live D1 or a real provider response.

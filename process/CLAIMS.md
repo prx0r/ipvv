@@ -4,7 +4,6 @@ Format: `- [agent/lane] what (paths) — since YYYY-MM-DD`
 
 ## Active
 
-- [pushing-essay-prototype] Exact-version author AI-use grants and grounded Scholar essay retrieval, isolated branch `codex/pushing-essay-permissions` — `worker/`, dedicated tests — since 2026-11-04
 
 - [scholar-recovery] Private revision-bound decision memory and Scholar API on `codex/scholar-workspace-recovery-v2` — `worker/`, Scholar tests — since 2026-11-04
 
@@ -13,6 +12,8 @@ Format: `- [agent/lane] what (paths) — since YYYY-MM-DD`
 - [pipeline] T1→GATE→L200→C1 per-work translations — `works/*/`, `samples/*/` — since 2026-10-30
 
 ## Done (log when lane work completes)
+
+- 2026-11-04: pushing-essay-prototype — implementation and tests checkpointed in draft ipvv #11; full site gate remains blocked by missing generated receipts.
 
 - 2026-10-31: site — 16 masters, 23 scholars, 46 Sanskrit texts, canonical person schema, hero images, live deploy
 - 2026-10-31: pipeline — stotra set T1→GATE→L200→C1 (10 works incl. 450-verse Stotravali)
