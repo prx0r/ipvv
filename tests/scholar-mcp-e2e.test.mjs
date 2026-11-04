@@ -71,6 +71,10 @@ test('MCP → account Worker → private evidence, review and consented draft', 
       decision_ids:[decision.id],source_ids:[source.id],consent_to_ai:true});
     assert.equal(draft.document.content.author_kind,'agent');assert.match(prompt,/Check the source/);assert.match(prompt,/Context/);
     assert.doesNotMatch(prompt,/Clarify/);assert.equal(draft.document.content.source_references[0].projection_sha256,source.projection_sha256);
-    const signoff=await call('/api/scholar/signoffs','POST',{document_id:'essay:one',revision:1,rights:'all-rights-reserved',confirmed:true},alice.cookie);assert.equal(signoff.status,201);
+    const prepared=await tool('prepare_citations',{source_ids:[source.id]});assert.equal(prepared.citations[0].work,'testwork');
+    assert.equal('note' in prepared.citations[0],false);
+    const cited=await tool('save_document',{document_id:'essay:one',document:{...doc,expected_revision:1,content:{...doc.content,citations:prepared.citations}}});
+    assert.equal(cited.document.revision,2);
+    const signoff=await call('/api/scholar/signoffs','POST',{document_id:'essay:one',revision:2,rights:'all-rights-reserved',confirmed:true},alice.cookie);assert.equal(signoff.status,201);
   }finally{if(child){child.stdin.end();child.kill();await once(child,'exit').catch(()=>{});}await new Promise(resolve=>http.close(resolve));globalThis.fetch=original;db.close();}
 });
