@@ -204,7 +204,10 @@ async function voiceSocket(request,env,url,cors,uid){
 export async function handleScholar(request,env,uid,cors,callModel){
   const url=new URL(request.url), path=url.pathname;
   try{
-    if(path==='/api/scholar/voice'&&request.method==='GET')return await voiceSocket(request,env,url,cors,uid);
+    if(path==='/api/scholar/voice'&&request.method==='GET'){
+      if(url.searchParams.get('work')==='ghatakarpara')return json({error:'Ghaṭakarpara evidence is withheld pending source alignment repair.'},409,cors);
+      return await voiceSocket(request,env,url,cors,uid);
+    }
     if(path==='/api/scholar/documents'&&request.method==='GET'){
       const work=url.searchParams.get('work')||'', offset=Number(url.searchParams.get('offset')||0);
       if(!WORK.test(work)||!Number.isSafeInteger(offset)||offset<0)return json({error:'Invalid work or page.'},400,cors);
@@ -387,6 +390,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
     }
     if(path==='/api/scholar/assist'&&request.method==='POST'){
       const d=await body(request);
+      if(d.work==='ghatakarpara')return json({error:'Ghaṭakarpara evidence is withheld pending source alignment repair.'},409,cors);
       if(!['readings','translation','essay','essay_revision'].includes(d.kind)||!['l2','l3','l4'].includes(d.layer)||
           d.consent_to_ai!==true||typeof d.instruction!=='string'||d.instruction.length>4000)
         return json({error:'Choose a task and authorize sending its context to Qwen.'},400,cors);

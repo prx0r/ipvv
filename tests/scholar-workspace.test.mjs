@@ -266,6 +266,8 @@ test('Qwen needs consent, a free-tier configuration and only the scholar’s own
     assert.equal((await call('/api/scholar/assist','POST',{...task,consent_to_ai:false},alice)).status,400);
     env.SCHOLAR_QWEN_FREE_TIER_CONFIRMED='false';assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,503);
     env.SCHOLAR_QWEN_FREE_TIER_CONFIRMED='true';
+    const held=await call('/api/scholar/assist','POST',{...task,work:'ghatakarpara'},alice);
+    assert.notEqual(held.status,200);assert.match((await held.json()).error,/withheld/i);assert.equal(prompt,'');
     const response=await call('/api/scholar/assist','POST',task,alice);assert.equal(response.status,200);
     const draft=(await response.json()).document;assert.equal(draft.content.author_kind,'agent');
     assert.match(prompt,/Keep the turn/);assert.match(prompt,/Alice example 1/);assert.doesNotMatch(prompt,/Bob secret/);
