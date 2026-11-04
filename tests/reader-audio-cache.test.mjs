@@ -1,9 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile} from 'node:fs/promises';
 
-const source=await readFile(new URL('../worker/src/index.js',import.meta.url),'utf8');
-const worker=(await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)).default;
+const worker=(await import(new URL('../worker/src/index.js',import.meta.url))).default;
 
 test('recordings are keyed to exact text and do not reuse the legacy verse-only cache',async()=>{
   const files=new Map([['read/testwork/p01_en.mp3',new Uint8Array([0])]]),heads=[],calls=[];
