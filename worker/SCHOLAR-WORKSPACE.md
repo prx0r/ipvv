@@ -118,3 +118,15 @@ Local validation: `node --test tests/scholar-auth.test.mjs tests/orcid-auth.test
 tests/scholar-workspace.test.mjs`. These use SQLite and a mocked Qwen provider, not a
 live D1, ORCID or DashScope account. Site gate and real browser smoke remain release
 requirements; see `process/SCHOLAR-RECOVERY-2026-11-03.md`.
+
+### Private editorial decisions
+
+Apply migration `0008_scholar_decisions.sql` after 0002–0007. An author may
+record a subject, before/after wording and optional rationale against an owned
+saved translation or essay revision with `POST /api/scholar/decisions`. The
+server derives the work, passage, layer and snapshot hash from that revision.
+`GET` lists only the signed-in account's decisions; `DELETE /<id>` revokes one.
+Deleting the source document also deletes its decisions. Decisions remain private.
+For a model request, provide `decision_ids`, `use_style: true` and explicit
+`consent_to_ai: true`; only selected, still-valid account-owned decisions are
+sent. This is retrieval into the prompt, not model training or scholarly review.

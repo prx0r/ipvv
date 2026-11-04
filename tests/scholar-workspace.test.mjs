@@ -184,6 +184,46 @@ test('authors can explicitly save and revoke private before-and-after style exam
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_style_examples').get().n,0);db.close();
 });
 
+test('private decisions are revision-bound, account-scoped, revocable and sent only when selected',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const migration=await readFile(new URL('../worker/migrations/0008_scholar_decisions.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+    SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'10',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'20'};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const r=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});return r.headers.get('Set-Cookie').split(';')[0];}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
+  const saved={expected_revision:0,kind:'translation',work:'testwork',target:'test-p01-v01',layer:'l3',title:'',content:{text:'My sovereignty'}};
+  assert.equal((await call('/api/scholar/documents/a','PUT',saved,alice)).status,200);
+  const choice={document_id:'a',revision:1,subject:'svātantrya',before:'freedom',after:'sovereignty',reason:'Context of agency'};
+  assert.equal((await call('/api/scholar/decisions','POST',choice,bob)).status,404);
+  const response=await call('/api/scholar/decisions','POST',choice,alice);assert.equal(response.status,201);const decision=await response.json();
+  assert.match(decision.snapshot_sha256,/^[a-f0-9]{64}$/);
+  assert.deepEqual((await (await call('/api/scholar/decisions','GET',undefined,bob)).json()).decisions,[]);
+  assert.equal((await (await call('/api/scholar/decisions?work=testwork','GET',undefined,alice)).json()).decisions[0].subject,'svātantrya');
+  let modelCalls=0,prompt='';const original=globalThis.fetch;
+  globalThis.fetch=async (url,options)=>{
+    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json({work:'testwork',projection_sha256:'a'.repeat(64),
+      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+    if(String(url).includes('dashscope')){modelCalls++;prompt=JSON.parse(options.body).messages[0].content;return Response.json({choices:[{message:{content:'Draft'}}]});}
+    throw new Error('Unexpected request');
+  };
+  const task={work:'testwork',target:'test-p01-v01',layer:'l3',kind:'translation',instruction:'',use_style:true,consent_to_ai:true,decision_ids:[decision.id]};
+  try{
+    assert.equal((await call('/api/scholar/assist','POST',{...task,consent_to_ai:false},alice)).status,400);
+    assert.equal((await call('/api/scholar/assist','POST',{...task,use_style:false},alice)).status,400);
+    assert.equal((await call('/api/scholar/assist','POST',task,bob)).status,409);assert.equal(modelCalls,0);
+    const generated=await call('/api/scholar/assist','POST',task,alice);assert.equal(generated.status,200);
+    assert.match(prompt,/Context of agency/);assert.doesNotMatch(prompt,/My sovereignty/);
+    const generatedDoc=(await generated.json()).document;assert.equal(generatedDoc.content.used_style,true);assert.deepEqual(generatedDoc.content.decision_ids,[decision.id]);
+    assert.equal((await call('/api/scholar/decisions/'+decision.id,'DELETE',{},bob)).status,404);
+    assert.equal((await call('/api/scholar/decisions/'+decision.id,'DELETE',{},alice)).status,200);
+    assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal(modelCalls,1);
+    const again=await call('/api/scholar/decisions','POST',choice,alice);assert.equal(again.status,201);
+    assert.equal((await call('/api/scholar/documents/a','DELETE',{expected_revision:1},alice)).status,200);
+    assert.equal(db.prepare('SELECT COUNT(*) AS n FROM scholar_decisions').get().n,0);
+  }finally{globalThis.fetch=original;db.close();}
+});
+
 test('essay revision uses only selected, permitted feedback and author-owned style edits',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
