@@ -10,6 +10,14 @@ const {handleScholar,voiceInput}=await import(url);
 const source=(await readFile(new URL('../worker/src/index.js',import.meta.url),'utf8')).replace("'./scholar-workspace.js'",JSON.stringify(url));
 const worker=(await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)).default;
 const origin='https://svread.pages.dev';
+const canonicalFixture=value=>Array.isArray(value)?'['+value.map(canonicalFixture).join(',')+']':value&&typeof value==='object'?'{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonicalFixture(value[k])).join(',')+'}':JSON.stringify(value);
+const fixtureDigest=value=>createHash('sha256').update(canonicalFixture(value)).digest('hex');
+function projectionFixture(data){
+  const {projection_sha256,...body}=data;body.withheld_songs=body.withheld_songs||[];
+  body.original_hashes=Object.fromEntries(Object.entries(body.originals).map(([layer,values])=>[layer,Object.fromEntries(Object.entries(values).map(([key,value])=>[key,fixtureDigest(value)]))]));
+  return {...body,projection_sha256:fixtureDigest(body)};
+}
+
 function d1(db){return {prepare(sql){return {bind(...args){return {
   first:async()=>db.prepare(sql).get(...args)||null,
   all:async()=>({results:db.prepare(sql).all(...args)}),
@@ -228,8 +236,8 @@ test('private decisions are revision-bound, account-scoped, revocable and sent o
   assert.equal((await (await call('/api/scholar/decisions?work=testwork','GET',undefined,alice)).json()).decisions[0].subject,'svātantrya');
   let modelCalls=0,prompt='';const original=globalThis.fetch;
   globalThis.fetch=async (url,options)=>{
-    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json({work:'testwork',projection_sha256:'a'.repeat(64),
-      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projectionFixture({work:'testwork',
+      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}}));
     if(String(url).includes('dashscope')){modelCalls++;prompt=JSON.parse(options.body).messages[0].content;return Response.json({choices:[{message:{content:'Draft'}}]});}
     throw new Error('Unexpected request');
   };
@@ -273,8 +281,8 @@ test('essay revision uses only selected, permitted feedback and author-owned sty
   assert.equal((await call(reviewPath+'/messages','POST',{text:'Private discussion never sent automatically.'},bob.cookie)).status,201);
   const original=globalThis.fetch;let prompt='',modelCalls=0;
   globalThis.fetch=async (url,options)=>{
-    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json({work:'testwork',projection_sha256:'a'.repeat(64),
-      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+    if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projectionFixture({work:'testwork',
+      source_verses:{'test-p01-v01':{text:'śiva'}},originals:{t1:{'test-p01-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}}));
     if(String(url).includes('dashscope')){modelCalls++;prompt=JSON.parse(options.body).messages[0].content;
       return Response.json({choices:[{message:{content:'Draft with citation gaps.'}}]});}
     throw new Error('Unexpected request');
@@ -318,8 +326,8 @@ test('Qwen needs consent, a free-tier configuration and only the scholar’s own
   const lexical={expected_revision:0,kind:'translation',work:'testwork',target:'test-p01-v01',layer:'l0',title:'',
     content:{text:JSON.stringify([{id:'l0-token',surface:'cit',chosen_index:1,options:[{gloss:'consciousness'},{gloss:'awareness',grounds:'context'}]}])}};
   assert.equal((await call('/api/scholar/documents/l0-draft','PUT',lexical,alice)).status,200);
-  const projection={work:'testwork',originals,source_verses:{[target]:{text:'śiva'}},
-    l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]},projection_sha256:'a'.repeat(64)};
+  const projection=projectionFixture({work:'testwork',originals,source_verses:{[target]:{text:'śiva'}},
+    l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]}});
   const original=globalThis.fetch;let prompt='';
   globalThis.fetch=async (url,options)=>{
     if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projection);
@@ -342,6 +350,28 @@ test('Qwen needs consent, a free-tier configuration and only the scholar’s own
   }finally{globalThis.fetch=original;db.close();}
 });
 
+test('AI evidence rejects changed projection, mismatched layer hashes and withheld passages',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  db.exec("INSERT INTO profiles (id,email,display_name) VALUES ('alice','alice@example.org','Alice')");
+  const env={DB:d1(db),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'5',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'5'};
+  const task={work:'testwork',target:'p-v01',layer:'l3',kind:'readings',instruction:'',use_style:false,consent_to_ai:true};
+  const good=projectionFixture({work:'testwork',source_verses:{'p-v01':{text:'śiva'}},originals:{t1:{'p-v01':{text:'test'}},l0:{'p-v01':[{id:'one'}]}}});
+  const original=globalThis.fetch;let candidate=good,calls=0;
+  globalThis.fetch=async()=>Response.json(candidate);
+  const run=()=>handleScholar(request('/api/scholar/assist','POST',task),env,'alice',{},async()=>{calls++;return 'Draft';});
+  try{
+    candidate=structuredClone(good);candidate.source_verses['p-v01'].text='changed';
+    assert.equal((await run()).status,400);assert.equal(calls,0);
+    candidate=structuredClone(good);candidate.originals.l0['p-v01'][0].id='changed';
+    const {projection_sha256,...modified}=candidate;candidate.projection_sha256=fixtureDigest(modified);
+    assert.equal((await run()).status,400);assert.equal(calls,0);
+    candidate=structuredClone(good);candidate.withheld_songs=['p'];
+    const {projection_sha256:old,...withheld}=candidate;candidate.projection_sha256=fixtureDigest(withheld);
+    assert.equal((await run()).status,400);assert.equal(calls,0);
+    candidate=good;assert.equal((await run()).status,200);assert.equal(calls,1);
+  }finally{globalThis.fetch=original;db.close();}
+});
+
 test('voice relay pins server evidence and refuses client instruction overrides',async()=>{
   const req=new Request('https://worker.example/api/scholar/voice?work=testwork&target=p-v01',{headers:{Upgrade:'websocket'}});
   assert.equal((await handleScholar(req,{},'alice',{},async()=>null)).status,503);
@@ -356,9 +386,9 @@ test('voice relay pins server evidence and refuses client instruction overrides'
     if(options.status===101){super(null,{status:200});Object.defineProperty(this,'status',{value:101});this.webSocket=options.webSocket;}
     else super(body,options);}};
   globalThis.fetch=async (url,options)=>{
-    if(String(url).startsWith('https://svread.pages.dev/'))return OldResponse.json({work:'testwork',projection_sha256:'a'.repeat(64),
+    if(String(url).startsWith('https://svread.pages.dev/'))return OldResponse.json(projectionFixture({work:'testwork',
       source_verses:{'p-v01':{text:'śiva'}},originals:{t1:{'p-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}},
-      l4_craft:{'p-v01':[{notes:{craft:'Keep the turn'}}]}});
+      l4_craft:{'p-v01':[{notes:{craft:'Keep the turn'}}]}}));
     assert.equal(options.headers.Authorization,'Bearer provider-key');return {webSocket:upstream};
   };
   try{
@@ -381,8 +411,8 @@ test('Qwen reservations enforce configured account and global limits before the 
   const env={DB:d1(db),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'2',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'2'};
   const task={work:'testwork',target:'p-v01',layer:'l3',kind:'readings',instruction:'',use_style:false,consent_to_ai:true};
   const original=globalThis.fetch;
-  globalThis.fetch=async()=>Response.json({work:'testwork',projection_sha256:'a'.repeat(64),source_verses:{'p-v01':{text:'śiva'}},
-    originals:{t1:{'p-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}});
+  globalThis.fetch=async()=>Response.json(projectionFixture({work:'testwork',source_verses:{'p-v01':{text:'śiva'}},
+    originals:{t1:{'p-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}}}));
   let start,finish;const started=new Promise(resolve=>start=resolve),pending=new Promise(resolve=>finish=resolve);
   let calls=0;const slow=async()=>{calls++;start();return pending;};
   const run=(uid,model=async()=>{calls++;return 'A grounded reading';})=>handleScholar(request('/api/scholar/assist','POST',task),env,uid,{},model);

@@ -86,12 +86,21 @@ async function evidence(work,target){
   const response=await fetch(`https://svread.pages.dev/data/scholar/${encodeURIComponent(work)}.json`);
   if(!response.ok)throw new Error('Scholar evidence is not available.');
   const data=await response.json();
-  if(data.work!==work||!/^[a-f0-9]{64}$/.test(data.projection_sha256||'')||!data.source_verses?.[target]||!data.originals?.t1?.[target])
-    throw new Error('This passage has no gated Sanskrit source.');
+  if(!data||typeof data!=='object'||Array.isArray(data))throw new Error('Scholar evidence integrity check failed.');
+  const {projection_sha256:claimed,...projection}=data;
+  if(data.work!==work||!/^[a-f0-9]{64}$/.test(claimed||'')||await sha(projection)!==claimed)
+    throw new Error('Scholar evidence integrity check failed.');
   const song=target.replace(/-v\d+$/,''), layers={};
-  for(const layer of ['t1','l0','argmap','l2','l3','l4'])
-    if(data.originals[layer]?.[target])layers[layer]=data.originals[layer][target];
-  for(const layer of ['c1','c2'])if(data.originals[layer]?.[song])layers[layer]=data.originals[layer][song];
+  if(!Array.isArray(data.withheld_songs)||data.withheld_songs.includes(song)||!data.source_verses?.[target]||!data.originals?.t1?.[target])
+    throw new Error('This passage has no gated Sanskrit source.');
+  for(const layer of ['t1','l0','argmap','l2','l3','l4','c1','c2']){
+    const key=['c1','c2'].includes(layer)?song:target,value=data.originals?.[layer]?.[key];
+    if(value!==undefined){
+      if(!/^[a-f0-9]{64}$/.test(data.original_hashes?.[layer]?.[key]||'')||await sha(value)!==data.original_hashes[layer][key])
+        throw new Error('Scholar evidence integrity check failed.');
+      layers[layer]=value;
+    }
+  }
   // Bound each layer separately; explicitly mark excerpts, preserving later layers.
   const limit=(value,max)=>{const raw=JSON.stringify(value);return raw.length<=max?value:
     {truncated:true,excerpt:raw.slice(0,max),note:'Consult the full source before relying on this excerpt.'};};
@@ -520,7 +529,7 @@ export async function handleScholar(request,env,uid,cors,callModel){
   }catch(error){
     if(error instanceof SyntaxError)return json({error:'Invalid JSON.'},400,cors);
     if(error instanceof Error&&error.message==='Request is too large.')return json({error:error.message},413,cors);
-    if(error instanceof Error&&/Invalid work|evidence is not available|no gated Sanskrit/.test(error.message))return json({error:error.message},400,cors);
+    if(error instanceof Error&&/Invalid work|evidence is not available|no gated Sanskrit|evidence integrity check failed/.test(error.message))return json({error:error.message},400,cors);
     return json({error:'Scholar workspace unavailable; check the database migration.'},503,cors);
   }
 }

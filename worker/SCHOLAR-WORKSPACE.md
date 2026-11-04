@@ -141,3 +141,13 @@ UTF-16 code units and the server verifies the exact quote against the review
 snapshot. `DELETE /api/scholar/review-annotations/<id>` is author-only.
 Annotations are not included in model prompts or public submissions. A new
 revision needs a new review; comments remain attached to the old snapshot.
+
+### Evidence integrity
+
+Before Qwen text or realtime voice receives a passage, the Worker verifies the
+projection content hash, checks `withheld_songs`, and verifies the original
+hashes of the passage layers it uses. A mismatch fails closed. The hash checks
+internal consistency, not source authenticity or philological correctness; a
+mutable upstream can publish a different internally consistent projection.
+Production CPU and response-size limits must be tested on the deployed Worker,
+especially for the largest works.

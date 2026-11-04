@@ -16,6 +16,14 @@ const suiteUrl=`data:text/javascript;base64,${Buffer.from(suite).toString('base6
 const source=(await readFile(join(ipvv,'worker/src/index.js'),'utf8')).replace("'./scholar-workspace.js'",JSON.stringify(suiteUrl));
 const worker=(await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)).default;
 const origin='https://svread.pages.dev';
+function projectionFixture(data){
+  const canonical=value=>Array.isArray(value)?'['+value.map(canonical).join(',')+']':value&&typeof value==='object'?'{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonical(value[k])).join(',')+'}':JSON.stringify(value);
+  const digest=value=>createHash('sha256').update(canonical(value)).digest('hex');
+  const {projection_sha256,...body}=data;body.withheld_songs=body.withheld_songs||[];
+  body.original_hashes=Object.fromEntries(Object.entries(body.originals).map(([layer,values])=>[layer,Object.fromEntries(Object.entries(values).map(([key,value])=>[key,digest(value)]))]));
+  return {...body,projection_sha256:digest(body)};
+}
+
 function d1(db){return {prepare(sql){return {bind(...args){return {first:async()=>db.prepare(sql).get(...args)||null,
   all:async()=>({results:db.prepare(sql).all(...args)}),run:async()=>({meta:{changes:Number(db.prepare(sql).run(...args).changes)}})};}};}};}
 function canonical(v){if(Array.isArray(v))return '['+v.map(canonical).join(',')+']';
@@ -50,8 +58,8 @@ test('account to signed translation and essay on a real local Git remote',async(
     assert.equal(response.status,200);const cookie=response.headers.get('Set-Cookie').split(';')[0];
     const rows=JSON.parse(await readFile(join(repo,'paramarthasara/data/param-p01.l3.json'),'utf8'));
     const target=rows[3].verse_id,originals={t1:{[target]:{}},l0:{[target]:[{id:'token'}]},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}};
-    const projection={work:'paramarthasara',originals,source_verses:{[target]:{text:'śiva'}},
-      l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]},projection_sha256:'a'.repeat(64)};
+    const projection=projectionFixture({work:'paramarthasara',originals,source_verses:{[target]:{text:'śiva'}},
+      l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]}});
     let lastPrompt='';globalThis.fetch=async (url,options)=>{
       if(String(url).startsWith('https://svread.pages.dev/'))return Response.json(projection);
       if(String(url).includes('dashscope')){lastPrompt=JSON.parse(options.body).messages[0].content;
