@@ -289,6 +289,29 @@ export async function handleScholar(request,env,uid,cors,callModel){
       if(new Set(citations.map(x=>x.work+'\0'+x.target)).size!==citations.length)return json({error:'Choose each passage only once.'},400,cors);
       return json({citations,message:'These references will be public if you later sign off and submit the essay.'},200,cors);
     }
+    if(path==='/api/scholar/source-links'&&request.method==='GET'){
+      const {results}=await env.DB.prepare('SELECT id,from_source_id,to_source_id,relation,note,created_at FROM scholar_source_links WHERE user_id=? ORDER BY created_at DESC,id DESC LIMIT 200').bind(uid).all();
+      return json({links:results||[]},200,cors);
+    }
+    if(path==='/api/scholar/source-links'&&request.method==='POST'){
+      const d=await body(request),relations=['comments_on','quotes','parallels','responds_to','possibly_related'];
+      if(!ID.test(d.from_source_id||'')||!ID.test(d.to_source_id||'')||d.from_source_id===d.to_source_id||
+        !relations.includes(d.relation)||typeof d.note!=='string'||d.note.length>1000)
+        return json({error:'Choose two sources and a relationship.'},400,cors);
+      const id='source-link:'+crypto.randomUUID(),stamp=new Date().toISOString();
+      const result=await env.DB.prepare(`INSERT INTO scholar_source_links (id,user_id,from_source_id,to_source_id,relation,note,created_at)
+        SELECT ?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM scholar_source_notebook WHERE id=? AND user_id=?)
+        AND EXISTS (SELECT 1 FROM scholar_source_notebook WHERE id=? AND user_id=?)`)
+        .bind(id,uid,d.from_source_id,d.to_source_id,d.relation,d.note,stamp,d.from_source_id,uid,d.to_source_id,uid).run();
+      if(!result.meta?.changes)return json({error:'Source not found.'},404,cors);
+      return json({id,relation:d.relation},201,cors);
+    }
+    const sourceLink=path.match(/^\/api\/scholar\/source-links\/([A-Za-z0-9_.:-]{1,160})$/);
+    if(sourceLink&&request.method==='DELETE'){
+      const result=await env.DB.prepare('DELETE FROM scholar_source_links WHERE id=? AND user_id=?').bind(sourceLink[1],uid).run();
+      if(!result.meta?.changes)return json({error:'Source link not found.'},404,cors);
+      return json({deleted:true},200,cors);
+    }
     if(path==='/api/scholar/sources'&&request.method==='GET'){
       const {results}=await env.DB.prepare('SELECT id,work,target,projection_sha256,note,created_at FROM scholar_source_notebook WHERE user_id=? ORDER BY created_at DESC,id DESC LIMIT 200').bind(uid).all();
       return json({sources:results||[]},200,cors);

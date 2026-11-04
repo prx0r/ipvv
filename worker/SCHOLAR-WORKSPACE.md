@@ -203,3 +203,13 @@ It uses a temporary Git remote and mocked Qwen/source responses. The cited T1
 record is loaded from the canonical checkout, signed with the essay revision,
 validated by the bridge, and checked in the submitted Git object. Private
 notebook notes do not appear in that object.
+
+### Private links between notebook sources
+
+Apply `0011_scholar_source_links.sql` after 0002–0010.
+`GET/POST /api/scholar/source-links` lists or records a typed relationship
+between two sources owned by the authenticated account;
+`DELETE /api/scholar/source-links/<id>` removes it. Deleting either referenced
+notebook entry deletes the link. Relationships are private, human-entered
+assertions: they are not verified historical claims, included in Qwen prompts,
+or published automatically.

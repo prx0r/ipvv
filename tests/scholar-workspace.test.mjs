@@ -183,7 +183,7 @@ test('ordered migrations preserve earlier review decisions without granting AI p
   const read=async file=>readFile(new URL('../worker/migrations/'+file,import.meta.url),'utf8');
   const names=['0002_scholar_workspace.sql','0003_scholar_history.sql','0004_scholar_ai_limits.sql',
     '0005_scholar_peer_review.sql','0006_scholar_style_examples.sql','0007_scholar_review_versions.sql',
-    '0008_scholar_decisions.sql','0009_scholar_review_annotations.sql','0010_scholar_source_notebook.sql'];
+    '0008_scholar_decisions.sql','0009_scholar_review_annotations.sql','0010_scholar_source_notebook.sql','0011_scholar_source_links.sql'];
   db.exec(await read(names[0]));
   db.exec(`INSERT INTO scholar_reviews (id,owner_id,reviewer_id,work,document_id,revision,snapshot_json,snapshot_sha256,decision,reasoning,created_at,decided_at)
     VALUES ('old-review','alice','bob','testwork','essay',1,'{}','hash','COMMENT','Earlier review','2026-01-01','2026-01-02')`);
@@ -280,6 +280,16 @@ test('essay notebook shares only selected private sources and rejects changed ev
     let r=await call('/api/scholar/sources','POST',{work:'otherwork',target:'p-v01',note:'Private note'},alice);
     assert.equal(r.status,201);const source=(await r.json()).id;
     assert.deepEqual((await (await call('/api/scholar/sources','GET',undefined,bob)).json()).sources,[]);
+    let own=await call('/api/scholar/sources','POST',{work:'testwork',target:'p-v01',note:''},alice);const ownId=(await own.json()).id;
+    let foreign=await call('/api/scholar/sources','POST',{work:'testwork',target:'p-v01',note:''},bob);const foreignId=(await foreign.json()).id;
+    const link={from_source_id:source,to_source_id:ownId,relation:'comments_on',note:'Check relation'};
+    assert.equal((await call('/api/scholar/source-links','POST',{...link,to_source_id:foreignId},alice)).status,404);
+    assert.equal((await call('/api/scholar/source-links','POST',{...link,relation:'guaranteed'},alice)).status,400);
+    let linked=await call('/api/scholar/source-links','POST',link,alice);assert.equal(linked.status,201);const linkId=(await linked.json()).id;
+    assert.deepEqual((await (await call('/api/scholar/source-links','GET',undefined,bob)).json()).links,[]);
+    assert.equal((await call('/api/scholar/source-links/'+linkId,'DELETE',{},bob)).status,404);
+    assert.equal((await (await call('/api/scholar/source-links','GET',undefined,alice)).json()).links[0].relation,'comments_on');
+
     assert.equal((await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},bob)).status,409);
     const citeResult=await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},alice);assert.equal(citeResult.status,200);
     const citations=(await citeResult.json()).citations;assert.equal(citations[0].work,'otherwork');
@@ -302,6 +312,7 @@ test('essay notebook shares only selected private sources and rejects changed ev
     other=make('otherwork','changed source');assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal((await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},alice)).status,409);assert.equal(calls,2);
     assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},bob)).status,404);
     assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},alice)).status,200);
+    assert.deepEqual((await (await call('/api/scholar/source-links','GET',undefined,alice)).json()).links,[]);
   }finally{globalThis.fetch=original;db.close();}
 });
 
