@@ -163,3 +163,19 @@ essay revision may include up to three explicitly selected `source_ids` with
 projection hash. If any changed or is withheld, drafting fails closed. This
 records source references, not an independent verification or archival copy.
 Notes and source contents are sent to the provider only when selected.
+
+### Cross-repository MCP integration test
+
+With the matching svread Scholar branch checked out locally, run:
+
+```sh
+SCHOLAR_MCP_SERVER=/absolute/path/to/svread/mcp/scholar_server.py node --test tests/scholar-mcp-e2e.test.mjs
+```
+
+The test launches a real MCP stdio process and a local HTTP adapter around the
+Worker with SQLite: it authenticates two accounts, reads a real bundled Sanskrit
+passage, saves a private essay, decision and source, requests review, reads an
+anchored reviewer comment, drafts with explicitly selected evidence, and signs
+off. The Qwen provider and Worker source response are mocked. A separate
+`tests/scholar-publish-e2e.test.mjs` runs the publication bridge and validator
+against a real temporary Git remote; neither test establishes production access.

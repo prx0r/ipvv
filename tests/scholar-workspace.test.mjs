@@ -182,7 +182,8 @@ test('ordered migrations preserve earlier review decisions without granting AI p
   const db=new DatabaseSync(':memory:');db.exec("CREATE TABLE profiles (id TEXT PRIMARY KEY); INSERT INTO profiles VALUES ('alice'),('bob');");
   const read=async file=>readFile(new URL('../worker/migrations/'+file,import.meta.url),'utf8');
   const names=['0002_scholar_workspace.sql','0003_scholar_history.sql','0004_scholar_ai_limits.sql',
-    '0005_scholar_peer_review.sql','0006_scholar_style_examples.sql','0007_scholar_review_versions.sql'];
+    '0005_scholar_peer_review.sql','0006_scholar_style_examples.sql','0007_scholar_review_versions.sql',
+    '0008_scholar_decisions.sql','0009_scholar_review_annotations.sql','0010_scholar_source_notebook.sql'];
   db.exec(await read(names[0]));
   db.exec(`INSERT INTO scholar_reviews (id,owner_id,reviewer_id,work,document_id,revision,snapshot_json,snapshot_sha256,decision,reasoning,created_at,decided_at)
     VALUES ('old-review','alice','bob','testwork','essay',1,'{}','hash','COMMENT','Earlier review','2026-01-01','2026-01-02')`);
