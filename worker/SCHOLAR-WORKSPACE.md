@@ -106,6 +106,19 @@ not enforce billing limits. Live provider testing is still required.
 Before a public rollout, verify the provider cannot bill above the intended free
 quota and exercise these limits against real D1 and the real provider.
 
+The voice session can also see the scholar's own essay or translation draft:
+pass `document_id` + `revision` + `consent_to_ai=true` with the upgrade request.
+The Worker loads only the authenticated account's draft, requires the revision to
+match the live one, caps the excerpt (1500 chars), and marks it untrusted evidence
+in the session instructions — never instructions. Without all three parameters the
+session carries passage evidence only. The Scholar page exposes this as an explicit
+checkbox ("Include my selected essay draft") with its own consent confirm.
+
+Research-while-talking needs no new endpoint: while a voice session runs, the page
+can fire an ordinary consented `/api/scholar/assist` enquiry (quota-counted like any
+other); findings land as a private agent draft with a UI toast, and the next voice
+turn can reference the saved draft by excerpt. Keep model sessions short and human-led.
+
 The matching translation-work bridge branch accepts HMAC-SHA256 requests authenticated
 with `SCHOLAR_BRIDGE_SECRET`, validates the exact sign-off and translation layers,
 and creates a separate Git branch. Configure `SCHOLAR_BRIDGE_URL` as the HTTPS origin

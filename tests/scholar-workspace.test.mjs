@@ -467,6 +467,44 @@ test('voice relay pins server evidence and refuses client instruction overrides'
   }finally{globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;db.close();}
 });
 
+test('voice carries the scholar’s own essay draft only with explicit consent',async()=>{
+  class Socket{constructor(){this.listeners={};this.sent=[];}accept(){}addEventListener(k,f){this.listeners[k]=f;}
+    send(v){this.sent.push(v);}close(){}emit(k,e){this.listeners[k]?.(e);}}
+  const upstream=new Socket(),server=new Socket(),client=new Socket();
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  db.exec("INSERT INTO profiles (id,email,display_name) VALUES ('alice','alice@example.org','Alice')");
+  db.prepare(`INSERT INTO scholar_documents (user_id,id,kind,work,target,layer,title,content_json,revision,updated_at)
+    VALUES (?,?,?,?,?,?,?,?,?,?)`).run('alice','essay:e1','essay','testwork','p-v01','l3','My essay',
+    JSON.stringify({text:'My reading: Śiva is the refuge because the verse says so.'}),1,new Date().toISOString());
+  const oldFetch=globalThis.fetch,oldPair=globalThis.WebSocketPair,OldResponse=globalThis.Response;
+  globalThis.WebSocketPair=class{constructor(){return {0:client,1:server};}};
+  globalThis.Response=class extends OldResponse{constructor(body,options={}){
+    if(options.status===101){super(null,{status:200});Object.defineProperty(this,'status',{value:101});this.webSocket=options.webSocket;}
+    else super(body,options);}};
+  globalThis.fetch=async (url,options)=>{
+    if(String(url).startsWith('https://svread.pages.dev/'))return OldResponse.json(projectionFixture({work:'testwork',
+      source_verses:{'p-v01':{text:'śiva'}},originals:{t1:{'p-v01':{}},l0:{},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}},
+      l4_craft:{'p-v01':[{notes:{craft:'Keep the turn'}}]}}));
+    return {webSocket:upstream};
+  };
+  const vreq=(qs,uid='alice')=>new Request('https://worker.example/api/scholar/voice?work=testwork&target=p-v01'+qs,{headers:{Upgrade:'websocket'}});
+  const env={DB:d1(db),QWEN_REALTIME_ENABLED:'true',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',SCHOLAR_DASHSCOPE_API_KEY:'provider-key',
+    SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'5',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'10',
+    QWEN_REALTIME_WS_URL:'wss://workspace.ap-southeast-1.maas.aliyuncs.com/api-ws/v1/realtime'};
+  try{
+    assert.equal((await handleScholar(vreq('&document_id=essay:e1&revision=1'),env,'alice',{},async()=>null)).status,400);
+    assert.equal((await handleScholar(vreq('&document_id=essay:e1&revision=2&consent_to_ai=true'),env,'alice',{},async()=>null)).status,409);
+    assert.equal((await handleScholar(vreq('&document_id=essay:e1&revision=1&consent_to_ai=true'),env,'bob',{},async()=>null)).status,409);
+    assert.equal((await handleScholar(vreq('&document_id=translation:l2:x&revision=1&consent_to_ai=true'),env,'alice',{},async()=>null)).status,409);
+    assert.equal((await handleScholar(vreq('&document_id=essay:e1&revision=1&consent_to_ai=true'),env,'alice',{},async()=>null)).status,101);
+    upstream.emit('message',{data:JSON.stringify({type:'session.created'})});
+    assert.match(upstream.sent[0],/OWN DRAFT/);
+    assert.match(upstream.sent[0],/My reading/);
+    assert.match(upstream.sent[0],/Keep the turn/);
+    server.emit('close',{});
+  }finally{globalThis.fetch=oldFetch;globalThis.WebSocketPair=oldPair;globalThis.Response=OldResponse;db.close();}
+});
+
 test('Qwen reservations enforce configured account and global limits before the provider call',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   db.exec("INSERT INTO profiles (id,email,display_name) VALUES ('alice','alice@example.org','Alice'),('bob','bob@example.org','Bob')");
