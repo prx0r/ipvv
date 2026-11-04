@@ -191,3 +191,15 @@ be updated to its citation-validation checkpoint before this is enabled: it
 checks T1 and proof against an exact committed Git tree. The projection digest
 is client-reported to that bridge and is not an authenticated archive. Neither
 check determines if a cited passage supports the essay's argument.
+
+For the citation-inclusive publication integration test, point
+`SCHOLAR_TRANSLATION_ROOT` at the matching translation-work citation branch:
+
+```sh
+SCHOLAR_TRANSLATION_ROOT=/absolute/path/to/translation-work node --test tests/scholar-publish-e2e.test.mjs
+```
+
+It uses a temporary Git remote and mocked Qwen/source responses. The cited T1
+record is loaded from the canonical checkout, signed with the essay revision,
+validated by the bridge, and checked in the submitted Git object. Private
+notebook notes do not appear in that object.

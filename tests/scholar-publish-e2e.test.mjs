@@ -10,7 +10,7 @@ import {once} from 'node:events';
 import {createHash} from 'node:crypto';
 import {DatabaseSync} from 'node:sqlite';
 
-const here=dirname(fileURLToPath(import.meta.url)),ipvv=dirname(here),translation=join(dirname(ipvv),'translation-work');
+const here=dirname(fileURLToPath(import.meta.url)),ipvv=dirname(here),translation=process.env.SCHOLAR_TRANSLATION_ROOT||join(dirname(ipvv),'translation-work');
 const suite=await readFile(join(ipvv,'worker/src/scholar-workspace.js'),'utf8');
 const suiteUrl=`data:text/javascript;base64,${Buffer.from(suite).toString('base64')}`;
 const source=(await readFile(join(ipvv,'worker/src/index.js'),'utf8')).replace("'./scholar-workspace.js'",JSON.stringify(suiteUrl));
@@ -57,7 +57,8 @@ test('account to signed translation and essay on a real local Git remote',async(
     let response=await call('/api/auth/access','POST',{email:'scholar@example.org',password:'strong-password',name:'A Scholar'});
     assert.equal(response.status,200);const cookie=response.headers.get('Set-Cookie').split(';')[0];
     const rows=JSON.parse(await readFile(join(repo,'paramarthasara/data/param-p01.l3.json'),'utf8'));
-    const target=rows[3].verse_id,originals={t1:{[target]:{}},l0:{[target]:[{id:'token'}]},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}};
+    const target=rows[3].verse_id,t1rows=JSON.parse(await readFile(join(repo,'paramarthasara/data/param-p01.t1.json'),'utf8')),t1=t1rows.find(x=>x.verse_id===target);
+    assert.ok(t1);const originals={t1:{[target]:t1},l0:{[target]:[{id:'token'}]},l2:{},l3:{},l4:{},c1:{},c2:{},argmap:{}};
     const projection=projectionFixture({work:'paramarthasara',originals,source_verses:{[target]:{text:'śiva'}},
       l4_craft:{[target]:[{notes:{craft:'Keep the turn'}}]}});
     let lastPrompt='';globalThis.fetch=async (url,options)=>{
@@ -84,6 +85,10 @@ test('account to signed translation and essay on a real local Git remote',async(
     const version=versions.at(-1);assert.equal(version.author,'A Scholar');assert.match(version.note,/AI-assisted/);
     const reviews=gitshow(submission.branch,'paramarthasara/scholar/reviews.jsonl').trim().split('\n').map(JSON.parse);
     assert.equal(reviews.at(-1).review_target.object_ref,version.version_id);assert.equal(reviews.at(-1).conflict_of_interest,'AUTHOR');
+    response=await call('/api/scholar/sources','POST',{work:'paramarthasara',target,note:'Private source note.'},cookie);
+    assert.equal(response.status,201);const sourceId=(await response.json()).id;
+    response=await call('/api/scholar/citations/prepare','POST',{source_ids:[sourceId]},cookie);
+    assert.equal(response.status,200);const citations=(await response.json()).citations;assert.equal(citations[0].t1_sha256,sha(t1));
     const essay={expected_revision:0,kind:'essay',work:'paramarthasara',target,layer:'l3',title:'My essay',content:{text:'A considered essay.'}};
     assert.equal((await call('/api/scholar/documents/essay-1','PUT',essay,cookie)).status,200);
     assert.equal((await call('/api/scholar/documents/essay-1','PUT',{...essay,expected_revision:1,content:{text:'A carefully revised essay.'}},cookie)).status,200);
@@ -101,7 +106,7 @@ test('account to signed translation and essay on a real local Git remote',async(
     assert.equal(response.status,200);const essayAgent=(await response.json()).document;
     assert.match(lastPrompt,/Private reviewer recommendation/);assert.match(lastPrompt,/A carefully revised essay/);
     assert.equal((await call('/api/scholar/documents/essay-1','PUT',{...essay,expected_revision:2,
-      content:{text:essayAgent.content.text,assisted:true,model:essayAgent.content.model}},cookie)).status,200);
+      content:{text:essayAgent.content.text,assisted:true,model:essayAgent.content.model,citations}},cookie)).status,200);
     response=await call('/api/scholar/signoffs','POST',{document_id:'essay-1',revision:3,rights:'cc-by-4.0',confirmed:true},cookie);
     const essayApproval=await response.json();response=await call('/api/scholar/submit','POST',{signoff_id:essayApproval.id,confirm_submission:true},cookie);
     const essayResult=await response.json();assert.equal(response.status,201,JSON.stringify(essayResult));
@@ -109,6 +114,8 @@ test('account to signed translation and essay on a real local Git remote',async(
     const digest=essayResult.branch.slice('scholar/essay-'.length);
     const published=gitshow(essayResult.branch,`paramarthasara/scholar/essays/${digest}.json`),paper=JSON.parse(published);
     assert.equal(paper.assisted,true);assert.equal(paper.snapshot.content.text,essayAgent.content.text);
+    assert.deepEqual(paper.snapshot.content.citations,citations);assert.equal(paper.source_git_commit,git(repo,'rev-parse','HEAD'));
+    assert.doesNotMatch(published,/Private source note/);
     assert.doesNotMatch(published,/Private reviewer recommendation|style:/);
   }finally{
     globalThis.fetch=oldFetch;if(db)db.close();if(server){server.kill();await once(server,'exit').catch(()=>{});}await rm(temp,{recursive:true,force:true});
