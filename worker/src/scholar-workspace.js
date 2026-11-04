@@ -22,13 +22,18 @@ function valid(d){
   return d && KINDS.has(d.kind) && WORK.test(d.work||'') && typeof d.target==='string' &&
     (!d.target||ID.test(d.target)) && LAYERS.has(d.layer) && typeof d.title==='string' && d.title.length<=300 &&
     c && typeof c==='object' && !Array.isArray(c) &&
-    Object.keys(c).every(k=>['text','base_sha256','parent','assisted','model','agent_source'].includes(k)) &&
+    Object.keys(c).every(k=>['text','base_sha256','parent','assisted','model','agent_source','citations'].includes(k)) &&
     typeof c.text==='string' && c.text.length<=60000 &&
     (c.base_sha256===undefined||c.base_sha256===''||/^[a-f0-9]{64}$/.test(c.base_sha256)) &&
     (c.parent===undefined||c.parent===null||(typeof c.parent==='string'&&c.parent.length<=160)) &&
     (c.assisted===undefined||typeof c.assisted==='boolean') &&
     (c.model===undefined||(typeof c.model==='string'&&c.model.length<=120)) &&
-    (c.agent_source===undefined||(typeof c.agent_source==='string'&&c.agent_source.length<=160));
+    (c.agent_source===undefined||(typeof c.agent_source==='string'&&c.agent_source.length<=160)) &&
+    (c.citations===undefined||(d.kind==='essay'&&Array.isArray(c.citations)&&c.citations.length<=10&&
+      c.citations.every(x=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).sort().join(',')==='projection_sha256,t1_sha256,target,work'&&
+        typeof x.work==='string'&&WORK.test(x.work)&&typeof x.target==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.-]{0,159}$/.test(x.target)&&
+        typeof x.t1_sha256==='string'&&/^[a-f0-9]{64}$/.test(x.t1_sha256)&&typeof x.projection_sha256==='string'&&/^[a-f0-9]{64}$/.test(x.projection_sha256))&&
+      new Set(c.citations.map(x=>x.work+'\0'+x.target)).size===c.citations.length));
 }
 function cleaned(r){return r&&{id:r.id,kind:r.kind,work:r.work,target:r.target,layer:r.layer,
   title:r.title,content:JSON.parse(r.content_json),revision:r.revision,updated_at:r.updated_at};}
@@ -107,7 +112,7 @@ async function evidence(work,target){
     {truncated:true,excerpt:raw.slice(0,max),note:'Consult the full source before relying on this excerpt.'};};
   const bounded=Object.fromEntries(Object.entries(layers).map(([k,v])=>[k,limit(v,k==='l0'?10000:4000)]));
   return {data,context:{work,target,source:limit(data.source_verses[target],6000),
-    l4_craft:limit(data.l4_craft?.[target]||[],10000),layers:bounded,projection_sha256:data.projection_sha256}};
+    l4_craft:limit(data.l4_craft?.[target]||[],10000),layers:bounded,projection_sha256:data.projection_sha256,t1_sha256:data.original_hashes.t1[target]}};
 }
 
 async function styleExamples(env,uid,proj,kind,layer){
@@ -273,6 +278,16 @@ export async function handleScholar(request,env,uid,cors,callModel){
       const result=await env.DB.prepare('DELETE FROM scholar_documents WHERE user_id=? AND id=? AND revision=?').bind(uid,dm[1],d.expected_revision).run();
       if(!result.meta?.changes)return json({error:'Draft not found or changed.'},409,cors);
       return json({deleted:true},200,cors);
+    }
+    if(path==='/api/scholar/citations/prepare'&&request.method==='POST'){
+      const d=await body(request),ids=d.source_ids;
+      if(!Array.isArray(ids)||ids.length<1||ids.length>10||new Set(ids).size!==ids.length||ids.some(id=>!ID.test(id)))
+        return json({error:'Choose up to ten distinct notebook sources.'},400,cors);
+      const result=await selectedSources(env,uid,ids);
+      if(result.error)return json({error:result.error},409,cors);
+      const citations=result.sources.map(x=>({work:x.context.work,target:x.context.target,t1_sha256:x.context.t1_sha256,projection_sha256:x.context.projection_sha256}));
+      if(new Set(citations.map(x=>x.work+'\0'+x.target)).size!==citations.length)return json({error:'Choose each passage only once.'},400,cors);
+      return json({citations,message:'These references will be public if you later sign off and submit the essay.'},200,cors);
     }
     if(path==='/api/scholar/sources'&&request.method==='GET'){
       const {results}=await env.DB.prepare('SELECT id,work,target,projection_sha256,note,created_at FROM scholar_source_notebook WHERE user_id=? ORDER BY created_at DESC,id DESC LIMIT 200').bind(uid).all();

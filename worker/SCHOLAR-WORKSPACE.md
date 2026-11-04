@@ -179,3 +179,15 @@ anchored reviewer comment, drafts with explicitly selected evidence, and signs
 off. The Qwen provider and Worker source response are mocked. A separate
 `tests/scholar-publish-e2e.test.mjs` runs the publication bridge and validator
 against a real temporary Git remote; neither test establishes production access.
+
+### Preparing passage citations for an essay
+
+`POST /api/scholar/citations/prepare` accepts selected private `source_ids`,
+rechecks each projection and returns citation references containing work, passage,
+T1 hash and projection hash. Private notes and notebook IDs are omitted. An essay
+can save these in `content.citations`; the exact references are included in the
+snapshot hash and become public on submission. The translation-work bridge must
+be updated to its citation-validation checkpoint before this is enabled: it
+checks T1 and proof against an exact committed Git tree. The projection digest
+is client-reported to that bridge and is not an authenticated archive. Neither
+check determines if a cited passage supports the essay's argument.

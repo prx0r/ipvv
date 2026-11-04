@@ -280,13 +280,26 @@ test('essay notebook shares only selected private sources and rejects changed ev
     let r=await call('/api/scholar/sources','POST',{work:'otherwork',target:'p-v01',note:'Private note'},alice);
     assert.equal(r.status,201);const source=(await r.json()).id;
     assert.deepEqual((await (await call('/api/scholar/sources','GET',undefined,bob)).json()).sources,[]);
+    assert.equal((await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},bob)).status,409);
+    const citeResult=await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},alice);assert.equal(citeResult.status,200);
+    const citations=(await citeResult.json()).citations;assert.equal(citations[0].work,'otherwork');
+    assert.equal(citations[0].t1_sha256,other.original_hashes.t1['p-v01']);assert.equal('note' in citations[0],false);
+    const essay={expected_revision:0,kind:'essay',work:'testwork',target:'p-v01',layer:'l3',title:'Essay',content:{text:'Essay',citations}};
+    assert.equal((await call('/api/scholar/documents/cited-essay','PUT',essay,alice)).status,200);
+    assert.equal((await call('/api/scholar/documents/invalid','PUT',{...essay,content:{text:'Essay',citations:[citations[0],citations[0]]}},alice)).status,400);
+    assert.equal((await call('/api/scholar/documents/invalid','PUT',{...essay,kind:'translation'},alice)).status,400);
+    let signed=await call('/api/scholar/signoffs','POST',{document_id:'cited-essay',revision:1,rights:'cc0',confirmed:true},alice);assert.equal(signed.status,201);
+    const signedHash=(await signed.json()).snapshot_sha256;
+    const hist=await call('/api/scholar/documents/cited-essay/history','GET',undefined,alice);
+    assert.deepEqual((await hist.json()).revisions[0].content.citations,citations);assert.equal(signedHash.length,64);
+
     const task={work:'testwork',target:'p-v01',layer:'l3',kind:'essay',instruction:'',use_style:false,consent_to_ai:true,source_ids:[source]};
     assert.equal((await call('/api/scholar/assist','POST',task,bob)).status,409);assert.equal(calls,0);
     assert.equal((await call('/api/scholar/assist','POST',{...task,kind:'translation'},alice)).status,400);
     r=await call('/api/scholar/assist','POST',{...task,source_ids:[]},alice);assert.equal(r.status,200);assert.doesNotMatch(prompt,/Private note/);
     r=await call('/api/scholar/assist','POST',task,alice);assert.equal(r.status,200);assert.match(prompt,/Private note/);assert.match(prompt,/śakti/);
     const draft=(await r.json()).document;assert.equal(draft.content.source_references[0].id,source);
-    other=make('otherwork','changed source');assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal(calls,2);
+    other=make('otherwork','changed source');assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal((await call('/api/scholar/citations/prepare','POST',{source_ids:[source]},alice)).status,409);assert.equal(calls,2);
     assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},bob)).status,404);
     assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},alice)).status,200);
   }finally{globalThis.fetch=original;db.close();}
