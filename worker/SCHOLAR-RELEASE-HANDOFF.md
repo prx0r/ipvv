@@ -1,13 +1,13 @@
-# Scholar release handoff — 2026-11-03
+# Scholar release handoff — updated 2026-11-04
 
 The recovered suite is checkpointed in three **draft pull requests**, not yet
 deployed: [translation-work #7](https://github.com/prx0r/translation-work/pull/7),
 [ipvv #9](https://github.com/prx0r/ipvv/pull/9), and
 [svread #3](https://github.com/prx0r/svread/pull/3). Integrate the latest base
 branches without force-pushing over concurrent work. GitHub branches are durable
-checkpoints; they are not a production release. On 2026-11-03 the public Scholar
-Worker endpoint still returned 404, and the reader workspace script URL returned
-the static HTML fallback instead of JavaScript.
+checkpoints; they are not a production release. On 2026-11-04 the public Scholar
+documents endpoint still returned 404 and the live reader showed the older
+Scholar experience. Neither verifies this release.
 
 ## What is present and what is not
 
@@ -15,10 +15,10 @@ the static HTML fallback instead of JavaScript.
 | --- | --- | --- |
 | Bilara, segment-based translation | Layer drafts reference a work and passage ID; published versions can fork from other versions; private saves have history and comparison. | A complete cross-edition segment identity and source-alignment audit is not complete. Each draft is not automatically public Git. |
 | OpenReview, review of a particular revision | An invited reviewer receives a private immutable snapshot, can give a structured report, revise the report with history, and discuss it privately with the author. The author can select permitted feedback for an AI essay revision. | Private reports are not signed or exported to Git; reviewer identity and independence are not independently established. |
-| Hypothesis, private annotations | An account can keep private notes against a passage. | There are no selected-text/range anchors, threaded annotation conversations, or public annotation layer. |
+| Hypothesis, private annotations | Accounts can keep passage notes and source links; authors and reviewers can anchor private comments to selected text in an immutable review snapshot. | Anchors use UTF-16 offsets in that snapshot; there is no threaded annotation conversation or public annotation layer. |
 | Weblate, personal translation memory | The author can select exact before/after private revisions from their own writing as style examples and choose them for a draft. | This is retrieval, not fine-tuning or a complete translation-memory system. Only selected examples go to the provider with consent. |
-| Sefaria, versions and collections | The Scholar reader exposes versions and layer data. | Source sheets and curated learning pathways are not built here. |
-| Ambuda/Vidyut, Sanskrit tooling | Existing L0 analyses can be used as evidence. | Vidyut segmentation/morphology is not integrated or evaluated, and existing L0 entries are not thereby independently verified. |
+| Sefaria, versions and collections | The Scholar reader exposes versions and layers; private notebook references can be selected and attached to an essay as citations. | Public source sheets and curated learning pathways are not built here. |
+| Ambuda/Vidyut, Sanskrit tooling | The optional local MCP tool can produce unreviewed transliteration and, with separately licensed data, metre candidates. Existing L0 analyses can be used as evidence. | Segmentation and morphology are not integrated or evaluated; existing L0 entries are not independently verified by this tool. |
 | 84000, aligned commentary | The reader uses existing passage identifiers. | A root-text/commentary/embedded-quotation alignment model is not implemented. |
 
 Author sign-off is self-attested account approval, not an independent review or
@@ -27,6 +27,28 @@ and may create a public Git branch; merging that branch and releasing the reader
 are separate actions. Review signatures in canonical Git have different legacy and
 v2 semantics documented in `translation-work/SCHOLAR.md`. Do not interchange the
 two canonical hash schemes.
+
+## Review and test checkpoint — 2026-11-04
+
+- `translation-work` passed its canonical check with zero failures and 29 Python
+  unit tests, of which two optional Vidyut tests were skipped. Its historical review warning
+  remains: the legacy signature covers the review ID, not the full statement.
+- The focused Worker/authentication/MCP/publication suite passed 20 tests with
+  local SQLite, a temporary Git remote and a mocked Qwen provider. Real D1,
+  external provider credentials and production hosting have not been exercised.
+- `svread` passed 23 Node tests and two extra real Chromium tests. The latter
+  include a browser → local Worker → SQLite path covering a private decision,
+  source, citation, AI draft and selected-text review; Qwen is mocked. This
+  exposed encoded colon IDs returning 404, fixed on this branch. Production
+  ORCID, D1, microphone permissions and Qwen still need acceptance tests.
+- The reader bundle now verifies 291 assets, 55 works and 22 Scholar projections.
+  The canonical emitter reproduced all the vendored projections. Thirty-seven
+  works have no named source edition in the bundled metadata. The Ghaṭakarpara
+  coverage hold applies to the projection; upstream site payloads must also be
+  repaired or withheld before release.
+- The full site gate failed here: generated `site/dist/data/receipts.jsonl` and
+  the source-library volume for the build are unavailable. These are not proof
+  that production data passed; use the authorized build host to reproduce the gate.
 
 ## Release sequence and gates
 
