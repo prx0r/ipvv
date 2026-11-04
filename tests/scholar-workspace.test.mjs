@@ -40,6 +40,10 @@ test('private drafts, version-specific reviews and signoffs use the signed-in ac
   let response=await call('/api/scholar/documents/draft:1','PUT',data,alice.cookie);
   assert.equal(response.status,200);assert.equal(response.headers.get('Cache-Control'),'no-store');
   assert.equal((await response.json()).document.revision,1);
+  assert.equal((await call('/api/scholar/documents/'+encodeURIComponent('draft:1')+'/history','GET',undefined,alice.cookie)).status,200);
+  assert.equal((await call('/api/scholar/documents/'+encodeURIComponent('draft:1'),'PUT',data,alice.cookie)).status,409);
+  assert.equal((await call('/api/scholar/documents/draft%2Fextra/history','GET',undefined,alice.cookie)).status,400);
+  assert.equal((await call('/api/scholar/documents/draft%ZZ/history','GET',undefined,alice.cookie)).status,400);
   response=await call('/api/scholar/documents?work=testwork','GET',undefined,bob.cookie);
   assert.deepEqual((await response.json()).documents,[]);
   assert.equal((await call('/api/scholar/documents/draft:1','PUT',data,alice.cookie)).status,409);
@@ -163,7 +167,7 @@ test('review annotations bind exact snapshot spans and remain private to partici
   const essay={expected_revision:0,kind:'essay',work:'testwork',target:'p-v01',layer:'l3',title:'',content:{text:'🕉 Śiva is free'}};
   assert.equal((await call('/api/scholar/documents/e','PUT',essay,alice.cookie)).status,200);
   const share=await call('/api/scholar/reviews','POST',{document_id:'e',revision:1,reviewer_id:bob.profile.id},alice.cookie);const review=await share.json();
-  const url='/api/scholar/reviews/'+review.id+'/annotations';
+  const url='/api/scholar/reviews/'+encodeURIComponent(review.id)+'/annotations';
   assert.equal((await call(url,'GET',undefined,eve.cookie)).status,404);
   const note={start:3,end:7,quote:'Śiva',body:'Explain the source.'};
   assert.equal((await call(url,'POST',{...note,start:2},bob.cookie)).status,400);
@@ -173,8 +177,8 @@ test('review annotations bind exact snapshot spans and remain private to partici
   assert.equal((await call('/api/scholar/documents/e','PUT',{...essay,expected_revision:1,content:{text:'Changed essay'}},alice.cookie)).status,200);
   response=await call(url,'GET',undefined,alice.cookie);const rows=(await response.json()).annotations;
   assert.equal(rows[0].quote,'Śiva');assert.equal(rows[0].start_offset,3);assert.equal(rows[0].snapshot_sha256,review.snapshot_sha256);
-  assert.equal((await call('/api/scholar/review-annotations/'+annotation.id,'DELETE',{},alice.cookie)).status,404);
-  assert.equal((await call('/api/scholar/review-annotations/'+annotation.id,'DELETE',{},bob.cookie)).status,200);
+  assert.equal((await call('/api/scholar/review-annotations/'+encodeURIComponent(annotation.id),'DELETE',{},alice.cookie)).status,404);
+  assert.equal((await call('/api/scholar/review-annotations/'+encodeURIComponent(annotation.id),'DELETE',{},bob.cookie)).status,200);
   assert.deepEqual((await (await call(url,'GET',undefined,bob.cookie)).json()).annotations,[]);db.close();
 });
 
@@ -250,8 +254,8 @@ test('private decisions are revision-bound, account-scoped, revocable and sent o
     const generated=await call('/api/scholar/assist','POST',task,alice);assert.equal(generated.status,200);
     assert.match(prompt,/Context of agency/);assert.doesNotMatch(prompt,/My sovereignty/);
     const generatedDoc=(await generated.json()).document;assert.equal(generatedDoc.content.used_style,true);assert.deepEqual(generatedDoc.content.decision_ids,[decision.id]);
-    assert.equal((await call('/api/scholar/decisions/'+decision.id,'DELETE',{},bob)).status,404);
-    assert.equal((await call('/api/scholar/decisions/'+decision.id,'DELETE',{},alice)).status,200);
+    assert.equal((await call('/api/scholar/decisions/'+encodeURIComponent(decision.id),'DELETE',{},bob)).status,404);
+    assert.equal((await call('/api/scholar/decisions/'+encodeURIComponent(decision.id),'DELETE',{},alice)).status,200);
     assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal(modelCalls,1);
     const again=await call('/api/scholar/decisions','POST',choice,alice);assert.equal(again.status,201);
     assert.equal((await call('/api/scholar/documents/a','DELETE',{expected_revision:1},alice)).status,200);

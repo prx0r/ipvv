@@ -242,7 +242,12 @@ async function voiceSocket(request,env,url,cors,uid){
 }
 
 export async function handleScholar(request,env,uid,cors,callModel){
-  const url=new URL(request.url), path=url.pathname;
+  const url=new URL(request.url);let path;
+  try{
+    const segments=url.pathname.split('/').map(segment=>decodeURIComponent(segment));
+    if(segments.some(segment=>/[\/\\\x00-\x1f\x7f]/.test(segment)))return json({error:'Invalid path.'},400,cors);
+    path=segments.join('/');
+  }catch{return json({error:'Invalid path.'},400,cors);}
   try{
     if(path==='/api/scholar/voice'&&request.method==='GET'){
       if(url.searchParams.get('work')==='ghatakarpara')return json({error:'Ghaṭakarpara evidence is withheld pending source alignment repair.'},409,cors);
