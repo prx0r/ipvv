@@ -258,6 +258,39 @@ test('private decisions are revision-bound, account-scoped, revocable and sent o
   }finally{globalThis.fetch=original;db.close();}
 });
 
+test('essay notebook shares only selected private sources and rejects changed evidence',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const migration=await readFile(new URL('../worker/migrations/0010_scholar_source_notebook.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',
+    SCHOLAR_QWEN_DAILY_ACCOUNT_LIMIT:'10',SCHOLAR_QWEN_DAILY_GLOBAL_LIMIT:'20'};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const r=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});return r.headers.get('Set-Cookie').split(';')[0];}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org');
+  const make=(work,text)=>projectionFixture({work,source_verses:{'p-v01':{text}},originals:{t1:{'p-v01':{}},l0:{},argmap:{},l2:{},l3:{},l4:{},c1:{},c2:{}}});
+  const base=make('testwork','śiva');let other=make('otherwork','śakti'),prompt='',calls=0;const original=globalThis.fetch;
+  globalThis.fetch=async(url,options)=>{
+    if(String(url).includes('/data/scholar/testwork.json'))return Response.json(base);
+    if(String(url).includes('/data/scholar/otherwork.json'))return Response.json(other);
+    if(String(url).includes('dashscope')){calls++;prompt=JSON.parse(options.body).messages[0].content;return Response.json({choices:[{message:{content:'Draft'}}]});}
+    throw new Error('Unexpected request');
+  };
+  try{
+    assert.equal((await call('/api/scholar/sources','POST',{work:'ghatakarpara',target:'p-v01',note:''},alice)).status,400);
+    let r=await call('/api/scholar/sources','POST',{work:'otherwork',target:'p-v01',note:'Private note'},alice);
+    assert.equal(r.status,201);const source=(await r.json()).id;
+    assert.deepEqual((await (await call('/api/scholar/sources','GET',undefined,bob)).json()).sources,[]);
+    const task={work:'testwork',target:'p-v01',layer:'l3',kind:'essay',instruction:'',use_style:false,consent_to_ai:true,source_ids:[source]};
+    assert.equal((await call('/api/scholar/assist','POST',task,bob)).status,409);assert.equal(calls,0);
+    assert.equal((await call('/api/scholar/assist','POST',{...task,kind:'translation'},alice)).status,400);
+    r=await call('/api/scholar/assist','POST',{...task,source_ids:[]},alice);assert.equal(r.status,200);assert.doesNotMatch(prompt,/Private note/);
+    r=await call('/api/scholar/assist','POST',task,alice);assert.equal(r.status,200);assert.match(prompt,/Private note/);assert.match(prompt,/śakti/);
+    const draft=(await r.json()).document;assert.equal(draft.content.source_references[0].id,source);
+    other=make('otherwork','changed source');assert.equal((await call('/api/scholar/assist','POST',task,alice)).status,409);assert.equal(calls,2);
+    assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},bob)).status,404);
+    assert.equal((await call('/api/scholar/sources/'+source,'DELETE',{},alice)).status,200);
+  }finally{globalThis.fetch=original;db.close();}
+});
+
 test('essay revision uses only selected, permitted feedback and author-owned style edits',async()=>{
   const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
   const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32),SCHOLAR_DASHSCOPE_API_KEY:'test',SCHOLAR_QWEN_FREE_TIER_CONFIRMED:'true',

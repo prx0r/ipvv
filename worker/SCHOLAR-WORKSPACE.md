@@ -151,3 +151,15 @@ internal consistency, not source authenticity or philological correctness; a
 mutable upstream can publish a different internally consistent projection.
 Production CPU and response-size limits must be tested on the deployed Worker,
 especially for the largest works.
+
+### Private source notebook
+
+Apply migration `0010_scholar_source_notebook.sql` after 0002–0009.
+`GET/POST /api/scholar/sources` lists or saves an owned passage reference with
+an optional private note. The server verifies the source projection and stores
+its hash. `DELETE /api/scholar/sources/<id>` removes a reference. An essay or
+essay revision may include up to three explicitly selected `source_ids` with
+`consent_to_ai: true`; sources are fetched again and compared to the saved
+projection hash. If any changed or is withheld, drafting fails closed. This
+records source references, not an independent verification or archival copy.
+Notes and source contents are sent to the provider only when selected.
