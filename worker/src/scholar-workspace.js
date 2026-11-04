@@ -370,6 +370,32 @@ export async function handleScholar(request,env,uid,cors,callModel){
       if(!result.meta?.changes)return json({error:'Review not found.'},404,cors);
       return json({id:consent[1],ai_consent:d.allow},200,cors);
     }
+    const annotations=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/annotations$/);
+    if(annotations&&['GET','POST'].includes(request.method)){
+      const review=await env.DB.prepare('SELECT * FROM scholar_reviews WHERE id=?').bind(annotations[1]).first();
+      if(!review||(review.owner_id!==uid&&review.reviewer_id!==uid))return json({error:'Review not found.'},404,cors);
+      if(request.method==='GET'){
+        const {results}=await env.DB.prepare('SELECT id,review_id,author_id,snapshot_sha256,start_offset,end_offset,quote,body,created_at FROM scholar_review_annotations WHERE review_id=? ORDER BY created_at,id LIMIT 200').bind(review.id).all();
+        return json({annotations:results||[]},200,cors);
+      }
+      const d=await body(request),snap=JSON.parse(review.snapshot_json),text=snap?.content?.text;
+      if(typeof text!=='string'||!Number.isSafeInteger(d.start)||!Number.isSafeInteger(d.end)||d.start<0||d.end<=d.start||d.end>text.length||
+        typeof d.quote!=='string'||d.quote.length>2000||text.slice(d.start,d.end)!==d.quote||
+        typeof d.body!=='string'||!d.body.trim()||d.body.length>4000)
+        return json({error:'Select exact text from the shared review snapshot and add a comment.'},400,cors);
+      // JS and the browser both count offsets in UTF-16 code units.
+      const id='annotation:'+crypto.randomUUID(),stamp=new Date().toISOString();
+      await env.DB.prepare(`INSERT INTO scholar_review_annotations
+        (id,review_id,author_id,snapshot_sha256,start_offset,end_offset,quote,body,created_at)
+        VALUES (?,?,?,?,?,?,?,?,?)`).bind(id,review.id,uid,review.snapshot_sha256,d.start,d.end,d.quote,d.body,stamp).run();
+      return json({id,review_id:review.id,snapshot_sha256:review.snapshot_sha256,start:d.start,end:d.end},201,cors);
+    }
+    const annotation=path.match(/^\/api\/scholar\/review-annotations\/([A-Za-z0-9_.:-]{1,160})$/);
+    if(annotation&&request.method==='DELETE'){
+      const result=await env.DB.prepare('DELETE FROM scholar_review_annotations WHERE id=? AND author_id=?').bind(annotation[1],uid).run();
+      if(!result.meta?.changes)return json({error:'Annotation not found.'},404,cors);
+      return json({deleted:true},200,cors);
+    }
     const thread=path.match(/^\/api\/scholar\/reviews\/([A-Za-z0-9_.:-]{1,160})\/messages$/);
     if(thread&&['GET','POST'].includes(request.method)){
       const review=await env.DB.prepare('SELECT owner_id,reviewer_id FROM scholar_reviews WHERE id=?').bind(thread[1]).first();

@@ -130,3 +130,14 @@ Deleting the source document also deletes its decisions. Decisions remain privat
 For a model request, provide `decision_ids`, `use_style: true` and explicit
 `consent_to_ai: true`; only selected, still-valid account-owned decisions are
 sent. This is retrieval into the prompt, not model training or scholarly review.
+
+### Revision-bound review annotations
+
+Apply migration `0009_scholar_review_annotations.sql` after 0002–0008. The
+review author and reviewer can select exact text from the immutable shared
+snapshot and create/list private comments through
+`GET/POST /api/scholar/reviews/<id>/annotations`. Offsets count JavaScript
+UTF-16 code units and the server verifies the exact quote against the review
+snapshot. `DELETE /api/scholar/review-annotations/<id>` is author-only.
+Annotations are not included in model prompts or public submissions. A new
+revision needs a new review; comments remain attached to the old snapshot.

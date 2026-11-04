@@ -144,6 +144,32 @@ test('essay peer reviews have a structured report and participant-only discussio
   db.close();
 });
 
+test('review annotations bind exact snapshot spans and remain private to participants',async()=>{
+  const db=new DatabaseSync(':memory:');db.exec(await readFile(new URL('../worker/schema.sql',import.meta.url),'utf8'));
+  const migration=await readFile(new URL('../worker/migrations/0009_scholar_review_annotations.sql',import.meta.url),'utf8');db.exec(migration);db.exec(migration);
+  const env={DB:d1(db),SESSION_SECRET:'s'.repeat(32)};
+  const call=(path,method,data,cookie)=>worker.fetch(request(path,method,data,cookie),env);
+  async function login(email){const r=await call('/api/auth/access','POST',{email,password:'strong-password',name:email.split('@')[0]});
+    return {cookie:r.headers.get('Set-Cookie').split(';')[0],profile:(await r.json()).profile};}
+  const alice=await login('alice@example.org'),bob=await login('bob@example.org'),eve=await login('eve@example.org');
+  const essay={expected_revision:0,kind:'essay',work:'testwork',target:'p-v01',layer:'l3',title:'',content:{text:'🕉 Śiva is free'}};
+  assert.equal((await call('/api/scholar/documents/e','PUT',essay,alice.cookie)).status,200);
+  const share=await call('/api/scholar/reviews','POST',{document_id:'e',revision:1,reviewer_id:bob.profile.id},alice.cookie);const review=await share.json();
+  const url='/api/scholar/reviews/'+review.id+'/annotations';
+  assert.equal((await call(url,'GET',undefined,eve.cookie)).status,404);
+  const note={start:3,end:7,quote:'Śiva',body:'Explain the source.'};
+  assert.equal((await call(url,'POST',{...note,start:2},bob.cookie)).status,400);
+  assert.equal((await call(url,'POST',note,eve.cookie)).status,404);
+  let response=await call(url,'POST',note,bob.cookie);assert.equal(response.status,201);const annotation=await response.json();
+  assert.equal(annotation.snapshot_sha256,review.snapshot_sha256);
+  assert.equal((await call('/api/scholar/documents/e','PUT',{...essay,expected_revision:1,content:{text:'Changed essay'}},alice.cookie)).status,200);
+  response=await call(url,'GET',undefined,alice.cookie);const rows=(await response.json()).annotations;
+  assert.equal(rows[0].quote,'Śiva');assert.equal(rows[0].start_offset,3);assert.equal(rows[0].snapshot_sha256,review.snapshot_sha256);
+  assert.equal((await call('/api/scholar/review-annotations/'+annotation.id,'DELETE',{},alice.cookie)).status,404);
+  assert.equal((await call('/api/scholar/review-annotations/'+annotation.id,'DELETE',{},bob.cookie)).status,200);
+  assert.deepEqual((await (await call(url,'GET',undefined,bob.cookie)).json()).annotations,[]);db.close();
+});
+
 test('ordered migrations preserve earlier review decisions without granting AI permission',async()=>{
   const db=new DatabaseSync(':memory:');db.exec("CREATE TABLE profiles (id TEXT PRIMARY KEY); INSERT INTO profiles VALUES ('alice'),('bob');");
   const read=async file=>readFile(new URL('../worker/migrations/'+file,import.meta.url),'utf8');

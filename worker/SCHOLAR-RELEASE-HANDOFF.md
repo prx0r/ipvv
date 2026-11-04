@@ -43,10 +43,10 @@ two canonical hash schemes.
 3. On the authorized deployment host, back up the **correct** production D1
    database securely outside the repository. From `ipvv/worker`, apply
    `migrations/0002_scholar_workspace.sql` and then
-   `migrations/0003_scholar_history.sql` through `migrations/0008_scholar_decisions.sql`
+   `migrations/0003_scholar_history.sql` through `migrations/0009_scholar_review_annotations.sql`
    to the remote database (for example,
    `wrangler d1 execute ipvv --remote --file migrations/0002_scholar_workspace.sql`,
-   then the corresponding 0003–0008 commands in order). Check results and deploy the Worker;
+   then the corresponding 0003–0009 commands in order). Check results and deploy the Worker;
    deploy svread only after the compatible Worker and projections are available.
 4. Configure the bridge on an HTTPS host with the secret stored outside Git and
    the identical secret configured in the Worker. Confirm the Git remote and its
