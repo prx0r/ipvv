@@ -4,6 +4,8 @@ Format: `- [agent/lane] what (paths) — since YYYY-MM-DD`
 
 ## Active
 
+- [pushing-essay-prototype] Exact-version author AI-use grants and grounded Scholar essay retrieval, isolated branch `codex/pushing-essay-permissions` — `worker/`, dedicated tests — since 2026-11-04
+
 - [scholar-recovery] Private revision-bound decision memory and Scholar API on `codex/scholar-workspace-recovery-v2` — `worker/`, Scholar tests — since 2026-11-04
 
 - [scholar-recovery] Review and harden Scholar auth and account workflow in isolated branch `codex/scholar-recovery` — `worker/`, Scholar tests — since 2026-11-03
