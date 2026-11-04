@@ -718,8 +718,8 @@ export default {
     }
 
     // POST /api/read — verse-by-verse TTS render (fish s2.1-pro-free, $0),
-    // stored in R2 read/<work>/<verse>_<lang>.mp3. Same verse unit as recitation;
-    // first tap renders + stores, later taps hit the cache.
+    // The cache key binds the exact spoken text, voice and model. A revision of
+    // a passage must never reuse a recording of an earlier reading.
     if (path === '/api/read' && request.method === 'POST') {
       let b = {}; try { b = await request.json(); } catch (e) {}
       const work = String(b.work || '').replace(/[^a-z0-9_-]/g, '');
@@ -730,7 +730,11 @@ export default {
         ? '4e873c37d4cb439e9bccc4dc1f633290'    // Andlig Sanskrit Rost
         : '614f8afd83f841048c040b2c6234d2c1';   // Granny British (en + commentary)
       if (!work || !vid || !text.trim()) return json({ error: 'work/verse/text required' }, 400, cors);
-      const key = `read/${work}/${vid}_${lang}.mp3`;
+      const model = 's2.1-pro-free';
+      const identity = JSON.stringify({version:2,text,reference_id:ref,model});
+      const hash = await crypto.subtle.digest('SHA-256',new TextEncoder().encode(identity));
+      const digest = Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join('');
+      const key = `read-v2/${work}/${vid}_${lang}_${digest}.mp3`;
       const pub = `https://pub-87169194562a44fcb8279a799d626c62.r2.dev/${key}`;
       try {
         const cached = await env.AUDIO.head(key);
@@ -742,7 +746,7 @@ export default {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${env.FISH_API_KEY}`,
-            'model': 's2.1-pro-free',            // $0 developer tier — never a paid model here
+            'model': model,                       // free model; operator must monitor provider quota
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ text, reference_id: ref, format: 'mp3' }),
