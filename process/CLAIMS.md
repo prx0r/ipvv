@@ -4,11 +4,16 @@ Format: `- [agent/lane] what (paths) — since YYYY-MM-DD`
 
 ## Active
 
+
+- [scholar-recovery] Private revision-bound decision memory and Scholar API on `codex/scholar-workspace-recovery-v2` — `worker/`, Scholar tests — since 2026-11-04
+
 - [scholar-recovery] Review and harden Scholar auth and account workflow in isolated branch `codex/scholar-recovery` — `worker/`, Scholar tests — since 2026-11-03
 - [site] display shell + masters/scholars + Sanskrit ingestion + schemas/gates — `site/`, `specs/`, `tools/`, `site/data/{authors,scholars.json,works_*.json,sanskrit/}`, `site/dist/`, `process/SESSION-2026-10-30.md` — since 2026-10-30
 - [pipeline] T1→GATE→L200→C1 per-work translations — `works/*/`, `samples/*/` — since 2026-10-30
 
 ## Done (log when lane work completes)
+
+- 2026-11-04: pushing-essay-prototype — implementation and tests checkpointed in draft ipvv #11; full site gate remains blocked by missing generated receipts.
 
 - 2026-10-31: site — 16 masters, 23 scholars, 46 Sanskrit texts, canonical person schema, hero images, live deploy
 - 2026-10-31: pipeline — stotra set T1→GATE→L200→C1 (10 works incl. 450-verse Stotravali)

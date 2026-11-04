@@ -2,7 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const source = await readFile(new URL('../worker/src/index.js', import.meta.url), 'utf8');
+const suite = await readFile(new URL('../worker/src/scholar-workspace.js', import.meta.url), 'utf8');
+const suiteUrl = `data:text/javascript;base64,${Buffer.from(suite).toString('base64')}`;
+const source = (await readFile(new URL('../worker/src/index.js', import.meta.url), 'utf8'))
+  .replace("'./scholar-workspace.js'", JSON.stringify(suiteUrl));
 const worker = (await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)).default;
 const origin = 'https://svread.pages.dev';
 
@@ -62,6 +65,7 @@ test('new account session is cross-site compatible and rejects untrusted origins
   assert.match(cookie, /Secure/);
   assert.match(cookie, /SameSite=None/);
   const me = await worker.fetch(request('/api/auth/me', 'GET', undefined, {Cookie: cookie.split(';')[0]}), env);
+  assert.equal(me.headers.get('Cache-Control'), 'no-store');
   assert.equal((await me.json()).profile.display_name, 'A Scholar');
   const bad = await worker.fetch(request('/api/auth/access', 'POST', {...input, password:'wrong-password'}), env);
   assert.equal(bad.status, 401);

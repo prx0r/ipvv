@@ -38,3 +38,9 @@ The full ipvv build needs the source-library volume and the site gate requires i
 generated receipts. Browser, live provider, Cloudflare deployment, and Git credentials
 must be verified on a host with the corresponding access. The local tests here do
 not establish that a production deployment or the missing suite works.
+
+The later commit on this branch adds a private account API for drafts, snapshot-bound
+reviews, self-attested sign-offs, consented Qwen assistance and a disabled-by-default
+realtime voice relay. A separate translation-work branch supplies the Git submission
+bridge; neither component is deployed. See `worker/SCHOLAR-WORKSPACE.md` for API,
+migration, privacy and rollout details. It has not been deployed.
