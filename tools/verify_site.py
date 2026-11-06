@@ -155,6 +155,16 @@ try:
     _bad = 0
     for _ln in open(_rp, encoding='utf-8'):
         _r = json.loads(_ln)
+        _proto = _r.get("protocol", "acom/0.1")
+        if _proto == "acom/0.2":
+            # Hardened receipt: full digest over body minus envelope.
+            _body2 = {k: v for k, v in _r.items()
+                      if k not in ("id", "signature", "signer", "digest_full")}
+            _dh = sha256_hex(canonical(_body2))
+            _prefix = "receipt:arg:" if str(_r.get("id","")).startswith("receipt:arg:") else "receipt:"
+            if _r.get("digest_full") != _dh or _r.get("id") != _prefix + _dh[:16]:
+                _bad += 1
+            continue
         _body = {k: v for k, v in _r.items() if k not in ("id", "signature", "signer")}
         _prefix = "receipt:arg:" if str(_r.get("id","")).startswith("receipt:arg:") else "receipt:"
         _suffix_len = 16

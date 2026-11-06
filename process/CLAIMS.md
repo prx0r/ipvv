@@ -24,3 +24,9 @@ Format: `- [agent/lane] what (paths) — since YYYY-MM-DD`
 
 ## Requested (needs owning agent or owner)
 
+- [site/formal-trika] Lean formalization of Trika composition rules in /root/trika-x/formal-trika/ (outside ipvv lanes; reads translation-work gold + gochema/awesome-essay drafts as evidence only, writes no ipvv files) — since 2026-11-05
+- [site/vision-arch] VISION-ARCHITECTURE.md in /root/trika-x/ (Lean recognition stack × endgame/pushing/chat/essays integration report; reads all lanes, writes only trika-x) — since 2026-11-05
+
+## Done (log when lane work completes)
+
+- 2026-11-06: owner-ordered qp hardening (peer-review P0) — `tools/qp_acom/receipts.py` protocol acom/0.2 (empty/unknown gates FAIL closed, evidence_root over canonical bytes, per-gate program_hash pins, digest_full + signature over full digest, authorize_receipt authority boundary, settle compares roots + rechecks pins), `test_receipts_hardening.py` 11/11, `tools/verify_site.py` 6b accepts both protocols, receipts regenerated (2288) + SITE GATES PASS. Old 0.1 receipts stay readable under original protocol.
