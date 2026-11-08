@@ -166,3 +166,39 @@ class HardeningTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_two_sources_v1_counts_labels_only(self):
+        # PR #7: v1 counts caller-supplied class strings, not sources.
+        # Locked in as historical behavior; v2 is the gate for new use.
+        from qp_acom import gates as G
+        ev = [{"source": {"class": "a"}}, {"source": {"class": "b"}}]
+        ok, proof = G.REGISTRY["two-sources-v1"]["fn"]({"evidence": ev})
+        self.assertTrue(ok)
+        self.assertIn("labels only", proof)
+
+    def test_two_sources_v2_requires_stable_ids(self):
+        from qp_acom import gates as G
+        fn = G.REGISTRY["two-sources-v2"]["fn"]
+        ok, _ = fn({"evidence": [{"source": {"class": "a"}},
+                                  {"source": {"class": "b"}}]})
+        self.assertFalse(ok, "class labels without stable ids must fail")
+        ok, proof = fn({"evidence": [
+            {"source": {"id": "ms-a", "depends_on": []}},
+            {"source": {"id": "ms-b", "depends_on": []}}]})
+        self.assertTrue(ok, proof)
+
+    def test_two_sources_v2_rejects_declared_dependence(self):
+        from qp_acom import gates as G
+        fn = G.REGISTRY["two-sources-v2"]["fn"]
+        ok, proof = fn({"evidence": [
+            {"source": {"id": "ms-a", "depends_on": []}},
+            {"source": {"id": "ms-b", "depends_on": ["ms-a"]}}]})
+        self.assertFalse(ok)
+        self.assertIn("ms-a", proof)
+
+    def test_two_sources_v2_single_source_fails(self):
+        from qp_acom import gates as G
+        fn = G.REGISTRY["two-sources-v2"]["fn"]
+        ok, _ = fn({"evidence": [{"source": {"id": "ms-a",
+                                             "depends_on": []}}]})
+        self.assertFalse(ok)

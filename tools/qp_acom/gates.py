@@ -53,11 +53,49 @@ def execute(gate_id: str, inputs: dict) -> dict:
 
 @gate("two-sources-v1")
 def _two_sources(inputs: dict):
-    """PASS iff >= 2 distinct accepted sources support the claim."""
+    """PASS iff >= 2 distinct caller-supplied source classes support it.
+
+    HISTORICAL: counts label strings, not accepted independent sources.
+    Invalid for new authorization; use two-sources-v2.
+    """
     srcs = {e.get("source", {}).get("class", "?")
             for e in inputs.get("evidence", [])}
     srcs.discard("?")
-    return len(srcs) >= 2, f"distinct sources: {sorted(srcs)}"
+    return len(srcs) >= 2, f"distinct source classes (labels only): {sorted(srcs)}"
+
+
+@gate("two-sources-v2")
+def _two_sources_v2(inputs: dict):
+    """PASS iff >= 2 distinct stable source IDs with declared pairwise
+    independence support the claim.
+
+    Independence here is DECLARED by the inputs (each source lists what it
+    depends on), not independently verified — the gate checks the
+    declaration is complete and acyclic, it does not establish the truth
+    of it. Support judgments still require signed editorial decisions.
+    """
+    ev = inputs.get("evidence", [])
+    ids, depends = [], {}
+    for e in ev:
+        src = e.get("source", {}) if isinstance(e, dict) else {}
+        sid = src.get("id")
+        if not sid or not isinstance(sid, str):
+            return False, "source without stable id"
+        ids.append(sid)
+        dep = src.get("depends_on", [])
+        if not isinstance(dep, list):
+            return False, f"source {sid}: depends_on not a list"
+        depends[sid] = dep
+    uniq = sorted(set(ids))
+    if len(uniq) < 2:
+        return False, f"only {len(uniq)} distinct source id(s)"
+    for sid in uniq:
+        clash = sorted(set(depends.get(sid, [])) & set(uniq) - {sid})
+        if clash:
+            return False, (f"source {sid} declares dependence on counted "
+                           f"source(s): {clash}")
+    return True, (f"distinct stable sources with declared pairwise "
+                  f"independence: {uniq}")
 
 
 @gate("claim-resolved-v1")
