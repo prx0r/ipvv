@@ -23,7 +23,7 @@ function makeDB() {
         bind(...a) { this._a = a; return this; },
         async first() { return one(sql, this._a); },
         async all() { return { results: many(sql, this._a) }; },
-        async run() { mut(sql, this._a); return { success: true }; },
+        async run() { this._changes = 0; mut(sql, this._a); return { success: true, meta: { changes: this._changes || 0 } }; },
       };
       function one(q, a) {
         if (q.startsWith('SELECT id FROM profiles WHERE auth_uid'))
@@ -70,7 +70,13 @@ function makeDB() {
           return;
         }
         if (q.startsWith('UPDATE gate_sessions SET used')) {
-          const s = R.gate_sessions.find(x => x.id === a[0]); if (s) s.used = 1; return;
+          const s = R.gate_sessions.find(x => x.id === a[0]);
+          if (s && !s.used) { s.used = 1; api._changes = 1; return; }
+          api._changes = 0; return;
+        }
+        if (q.startsWith('UPDATE gate_sessions SET result_json')) {
+          const s = R.gate_sessions.find(x => x.id === a[2]);
+          if (s) { s.result_json = a[0]; s.answers_json = a[1]; } return;
         }
         if (q.startsWith('INSERT INTO learner_attempts')) {
           R.learner_attempts.push({ id: a[0], user_id: a[1], curriculum: a[2], stage: a[3],
@@ -108,6 +114,12 @@ const env = {
   CORS_ORIGIN: 'https://svatantrya.net',
 };
 
+DB.batch = async (stmts) => {
+  const out = [];
+  for (const st of stmts) out.push(await st.run());
+  return out;
+};
+
 async function call(pathname, body, cookie) {
   const req = new Request('http://w' + pathname, {
     method: 'POST',
@@ -140,10 +152,14 @@ test('access creates a session cookie', async () => {
   globalThis.__cookie = r.cookie;
 });
 
-test('start serves 20 shuffled items and never the key', async () => {
+test('start: no repeated item ids; n = pool size for small stages', async () => {
   const r = await call('/api/wheel/gate/start', { curriculum: 'word', stage: 1 }, globalThis.__cookie);
   assert.equal(r.status, 200);
-  assert.equal(r.json.items.length, 20);
+  const ids = r.json.items.map(i => i.item_id);
+  assert.equal(new Set(ids).size, ids.length, 'item ids are unique (no padding)');
+  assert.equal(r.json.items.length, 6, 'word L1 pool is 6 bases');
+  assert.equal(r.json.pass_mark, Math.ceil(0.9 * r.json.items.length), 'pass mark scales with n');
+  assert.ok(r.json.expires_at > Date.now(), 'expiry returned');
   assert.ok(!JSON.stringify(r.json).includes('answer'), 'no answer field in start payload');
   globalThis.__sid = r.json.session_id;
   globalThis.__served = r.json.items;
@@ -155,22 +171,32 @@ test('unknown session is 404', async () => {
   assert.equal(r.status, 404);
 });
 
-test('perfect submit passes 20/20 and unlocks stage 2', async () => {
+test('perfect submit passes and unlocks stage 2 with a receipt id', async () => {
   const answers = globalThis.__served.map(it =>
     ({ item_id: it.item_id, choice: ansMap[it.item_id] }));
   const r = await call('/api/wheel/gate/submit',
     { session_id: globalThis.__sid, answers }, globalThis.__cookie);
   assert.equal(r.status, 200);
-  assert.equal(r.json.score, 20);
+  assert.equal(r.json.score, answers.length);
   assert.equal(r.json.passed, true);
+  assert.ok(r.json.receipt_id, 'receipt id persisted');
   assert.equal(r.json.unlock.next_stage, 2);
+  globalThis.__answers = answers;
 });
 
-test('replay of a used session is 409', async () => {
-  const answers = globalThis.__served.map(it =>
-    ({ item_id: it.item_id, choice: ansMap[it.item_id] }));
+test('identical replay returns the SAME receipt (not a double charge)', async () => {
   const r = await call('/api/wheel/gate/submit',
-    { session_id: globalThis.__sid, answers }, globalThis.__cookie);
+    { session_id: globalThis.__sid, answers: globalThis.__answers }, globalThis.__cookie);
+  assert.equal(r.status, 200);
+  assert.equal(r.json.replayed, true);
+  assert.ok(r.json.receipt_id, 'same receipt id');
+});
+
+test('a DIFFERENT replay of a used session is 409', async () => {
+  const different = globalThis.__served.map(it =>
+    ({ item_id: it.item_id, choice: 'x' }));
+  const r = await call('/api/wheel/gate/submit',
+    { session_id: globalThis.__sid, answers: different }, globalThis.__cookie);
   assert.equal(r.status, 409);
 });
 

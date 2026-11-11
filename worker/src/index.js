@@ -767,29 +767,44 @@ export default {
         if(stage > GATE_MAX[curriculum]) return json({error:'curriculum complete'}, 400, cors);
         const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM learner_attempts WHERE user_id = ? AND curriculum = ? AND created_at > datetime('now','-1 hour')").bind(uid, curriculum).first();
         if(recent && Number(recent.n) >= 3) return json({error:'three scored attempts per hour; practice freely and come back'}, 429, cors);
+        // Sample WITHOUT replacement (external review of ipvv #12): the gate
+        // must not repeat an item id to pad the count — repeated ids are one
+        // question asked twice, and they over-weight a single form.
+        // n = min(GATE_N, unique items in scope); pass = ceil(0.9 * n).
         const cur_items = cur.stages[String(stage)].items;
         const prev_items = [];
         for(const k of Object.keys(cur.stages)){ if(Number(k) < stage) prev_items.push(...cur.stages[k].items); }
-        const shuffledCur = gateShuffle(cur_items), shuffledPrev = gateShuffle(prev_items);
         const picked = [];
+        const usedIds = new Set();
+        const takeFrom = (arr, cap)=>{
+          for(const it of arr){
+            if(picked.length >= cap) return;
+            if(usedIds.has(it.id)) continue;
+            usedIds.add(it.id); picked.push(it);
+          }
+        };
         const wantCur = Math.ceil(GATE_N/2);
-        const poolPrev = shuffledPrev.length ? shuffledPrev : shuffledCur;
-        for(let i=0; picked.length < wantCur && shuffledCur.length; i++) picked.push(shuffledCur[i % shuffledCur.length]);
-        for(let i=0; picked.length < GATE_N; i++) picked.push(poolPrev[i % poolPrev.length]);
-        const items = gateShuffle(picked).slice(0, GATE_N).map((it, idx)=>({
+        takeFrom(gateShuffle(cur_items), wantCur);      // half from this stage
+        takeFrom(gateShuffle(prev_items), GATE_N);      // then earlier stages
+        takeFrom(gateShuffle(cur_items), GATE_N);       // then the rest of this stage
+        const items = gateShuffle(picked).slice(0, GATE_N).map(it=>({
           item_id: it.id, prompt: it.prompt,
           options: gateShuffle(it.options),
         }));
+        const n = items.length;
+        const passMark = Math.max(1, Math.ceil(0.9 * n));
         const key = {};
         for(const it of items){
-          const full = [...cur_items, ...prev_items].find(x=>x.id===it.item_id) || cur_items.find(x=>x.id===it.item_id);
+          const full = [...cur_items, ...prev_items].find(x=>x.id===it.item_id);
           key[it.item_id] = full ? full.answer : null;
         }
         const sid = crypto.randomUUID();
         const now = Date.now();
         await env.DB.prepare('INSERT INTO gate_sessions (id, user_id, curriculum, stage, items_json, key_json, expires_at, created_at) VALUES (?,?,?,?,?,?,?,?)')
           .bind(sid, uid, curriculum, stage, JSON.stringify(items), JSON.stringify(key), now + GATE_TTL_MS, now).run();
-        return json({session_id: sid, curriculum, stage, n: items.length, pass_mark: GATE_PASS, items}, 200, cors);
+        return json({session_id: sid, curriculum, stage, n,
+                     pass_mark: passMark, expires_at: now + GATE_TTL_MS,
+                     pool_revision: pool.revision || null, items}, 200, cors);
       }catch(e){ return json({error:'gate unavailable right now'}, 503, cors); }
     }
 
@@ -801,9 +816,36 @@ export default {
       const sid = String(b.session_id||'');
       const sess = sid ? await env.DB.prepare('SELECT * FROM gate_sessions WHERE id = ?').bind(sid).first() : null;
       if(!sess || sess.user_id !== uid) return json({error:'unknown session'}, 404, cors);
-      if(Number(sess.used)) return json({error:'session already submitted'}, 409, cors);
+      // An identical retry after a lost response returns the SAME receipt
+      // (spec §A); only a *different* replay is refused.
+      const canon = (arr)=>{
+        const m = {};
+        for(const a of (Array.isArray(arr)?arr:[])){
+          if(a && typeof a.item_id==='string') m[a.item_id] = String(a.choice ?? '');
+        }
+        return JSON.stringify(Object.keys(m).sort().map(k=>[k,m[k]]));
+      };
+      const givenCanon = canon(b.answers);
+      if(Number(sess.used)){
+        if(sess.result_json && sess.answers_json === givenCanon){
+          try{ return json({...JSON.parse(sess.result_json), replayed: true}, 200, cors); }
+          catch(e){ /* fall through to 409 */ }
+        }
+        return json({error:'session already submitted with different answers'}, 409, cors);
+      }
       if(Date.now() > Number(sess.expires_at)) return json({error:'session expired; start a fresh gate'}, 410, cors);
-      await env.DB.prepare('UPDATE gate_sessions SET used = 1 WHERE id = ?').bind(sid).run();
+      // Atomic compare-and-set: two simultaneous submits cannot both win.
+      const claim = await env.DB.prepare(
+        'UPDATE gate_sessions SET used = 1 WHERE id = ? AND used = 0').bind(sid).run();
+      const changed = Number((claim && claim.meta && claim.meta.changes) || 0);
+      if(changed !== 1){
+        const again = await env.DB.prepare('SELECT used, result_json FROM gate_sessions WHERE id = ?').bind(sid).first();
+        if(again && again.result_json){
+          try{ return json({...JSON.parse(again.result_json), replayed: true}, 200, cors); }
+          catch(e){ /* fall through */ }
+        }
+        return json({error:'session already submitted'}, 409, cors);
+      }
       const items = JSON.parse(sess.items_json||'[]');
       const key = JSON.parse(sess.key_json||'{}');
       const given = {};
@@ -812,25 +854,35 @@ export default {
       }
       let correct = 0;
       const detail = items.map(it=>{ const ok = given[it.item_id] === key[it.item_id]; if(ok) correct++; return {item_id: it.item_id, ok}; });
-      const passed = correct >= GATE_PASS;
+      const passMark = Math.max(1, Math.ceil(0.9 * items.length));
+      const passed = correct >= passMark;
       const curriculum = sess.curriculum, stage = Number(sess.stage);
-      await env.DB.prepare('INSERT INTO learner_attempts (id, user_id, curriculum, stage, items_json, answers_json, score, passed) VALUES (?,?,?,?,?,?,?,?)')
-        .bind(crypto.randomUUID(), uid, curriculum, stage, sess.items_json, JSON.stringify(given), correct, passed?1:0).run();
+      const receiptId = crypto.randomUUID();
+      const attempt = env.DB.prepare('INSERT INTO learner_attempts (id, user_id, curriculum, stage, items_json, answers_json, score, passed) VALUES (?,?,?,?,?,?,?,?)')
+        .bind(receiptId, uid, curriculum, stage, sess.items_json, JSON.stringify(given), correct, passed?1:0);
       let unlock = null;
+      const prog = passed ? await env.DB.prepare('SELECT stage, passed_json, items_json FROM learner_progress WHERE user_id = ? AND curriculum = ?').bind(uid, curriculum).first() : null;
+      const stmts = [attempt];
       if(passed){
-        const prog = await env.DB.prepare('SELECT stage, passed_json, items_json FROM learner_progress WHERE user_id = ? AND curriculum = ?').bind(uid, curriculum).first();
         const cur = prog ? Number(prog.stage) : 1;
         if(stage >= cur && stage <= GATE_MAX[curriculum]){
-          const passed = prog ? JSON.parse(prog.passed_json||'[]') : [];
-          passed.push({stage, score: correct, at: new Date().toISOString()});
+          const passedList = prog ? JSON.parse(prog.passed_json||'[]') : [];
+          passedList.push({stage, score: correct, at: new Date().toISOString()});
           const agg = prog ? JSON.parse(prog.items_json||'{}') : {};
           for(const d of detail){ const e = agg[d.item_id] || {seen:0, right:0}; e.seen++; if(d.ok) e.right++; agg[d.item_id]=e; }
-          await env.DB.prepare('UPDATE learner_progress SET stage = ?, passed_json = ?, items_json = ?, updated_at = datetime("now") WHERE user_id = ? AND curriculum = ?')
-            .bind(stage+1, JSON.stringify(passed), JSON.stringify(agg), uid, curriculum).run();
+          stmts.push(env.DB.prepare('UPDATE learner_progress SET stage = ?, passed_json = ?, items_json = ?, updated_at = datetime("now") WHERE user_id = ? AND curriculum = ?')
+            .bind(stage+1, JSON.stringify(passedList), JSON.stringify(agg), uid, curriculum));
           unlock = {next_stage: stage+1, done: stage+1 > GATE_MAX[curriculum]};
         }
       }
-      return json({score: correct, total: items.length, passed, pass_mark: GATE_PASS, unlock, detail}, 200, cors);
+      const result = {receipt_id: receiptId, score: correct, total: items.length,
+                      passed, pass_mark: passMark, unlock, detail};
+      // receipt + progress + stored result land together (D1 batch = atomic):
+      // a retry can never be charged twice, and a lost response is recoverable.
+      stmts.push(env.DB.prepare('UPDATE gate_sessions SET result_json = ?, answers_json = ? WHERE id = ?')
+        .bind(JSON.stringify(result), givenCanon, sid));
+      await env.DB.batch(stmts);
+      return json(result, 200, cors);
     }
 
     // GET /api/wheel/progress — own progress (for the site + ChatGPT)
