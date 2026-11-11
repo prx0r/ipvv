@@ -63,9 +63,21 @@ function cosine(a, b) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    // allow-list: configured origin + the two reading front-ends (public data, no credentials)
+    // allow-list: configured origin + the reading front-ends (public data, no credentials)
     const reqOrigin = request.headers.get('Origin') || '';
-    const allowed = new Set([env.CORS_ORIGIN || '', 'https://svread.pages.dev', 'https://ipvv-a8u.pages.dev'].filter(Boolean));
+    const allowed = new Set([env.CORS_ORIGIN || '', 'https://svatantrya.net', 'https://svread.pages.dev', 'https://ipvv-a8u.pages.dev'].filter(Boolean));
+    // Caller origins we will return an OAuth flow to: the allow-list plus
+    // any *.svread.pages.dev branch alias plus local dev servers.
+    const returnableOrigin = (o) => {
+      if (!o || typeof o !== 'string') return '';
+      try {
+        const u = new URL(o);
+        if (allowed.has(u.origin)) return u.origin;
+        if (u.protocol === 'https:' && /\.svread\.pages\.dev$/.test(u.hostname)) return u.origin;
+        if ((u.hostname === 'localhost' || u.hostname === '127.0.0.1')) return u.origin;
+      } catch (e) { /* not a URL */ }
+      return '';
+    };
     const cors = {
       'Access-Control-Allow-Origin': allowed.has(reqOrigin) ? reqOrigin : (env.CORS_ORIGIN || '*'),
       'Access-Control-Allow-Credentials': 'true',
@@ -636,12 +648,198 @@ export default {
         'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`}});
     }
 
+    // POST /api/auth/google — sign in with the shared satsang-auth service.
+    // The client never proves identity itself: we verify its bearer token
+    // against auth.tantrafiles.xyz/v1/me (server-to-server), then mint our own
+    // svsess for the profile keyed by that opaque uid. Pass {link:true} while
+    // already signed in to attach Google to the current account instead.
+    if (path === '/api/auth/google' && request.method === 'POST') {
+      let b = {}; try { b = await request.json(); } catch(e) {}
+      const access = String(b.access||'');
+      if (access.length < 20 || access.length > 4096) return json({error:'google access token required'}, 400, cors);
+      let me = null;
+      try {
+        const r = await fetch('https://auth.tantrafiles.xyz/v1/me', {
+          headers: {authorization: 'Bearer ' + access}, cf: {cacheTtl: 0}});
+        if (r.ok) me = await r.json();
+      } catch(e) { me = null; }
+      if (!me || !/^u_[A-Za-z0-9_-]{8,48}$/.test(String(me.uid||'')))
+        return json({error:'that Google session could not be verified'}, 401, cors);
+      const gid = String(me.uid);
+      const handle = String(me.handle||'').slice(0,40) || 'learner';
+      let row = null;
+      if (b.link) {
+        const cur = await sessUid(request);
+        if (!cur) return json({error:'sign in to this account first, then link Google'}, 401, cors);
+        const other = await env.DB.prepare('SELECT id FROM profiles WHERE auth_uid = ?').bind(gid).first();
+        if (other && other.id !== cur) return json({error:'that Google account is already linked to another profile'}, 409, cors);
+        await env.DB.prepare('UPDATE profiles SET auth_uid = ? WHERE id = ?').bind(gid, cur).run();
+        row = {id: cur};
+      } else {
+        row = await env.DB.prepare('SELECT id FROM profiles WHERE auth_uid = ?').bind(gid).first();
+        if (!row) {
+          const id = crypto.randomUUID();
+          try {
+            await env.DB.prepare('INSERT INTO profiles (id, email, display_name, provider, auth_uid) VALUES (?,?,?,?,?)')
+              .bind(id, null, handle, 'google', gid).run();
+            row = {id};
+          } catch(e) {
+            row = await env.DB.prepare('SELECT id FROM profiles WHERE auth_uid = ?').bind(gid).first();
+          }
+        }
+      }
+      if (!row) return json({error:'could not create the profile'}, 500, cors);
+      const exp = Date.now() + 7*24*3600*1000;
+      const tok = await signTok(row.id, exp);
+      const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(row.id).first();
+      return new Response(JSON.stringify({profile: prof}), {status: 200, headers: {
+        ...cors, 'Content-Type': 'application/json', 'Cache-Control': 'no-store',
+        'Set-Cookie': `svsess=${tok}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`}});
+    }
+
     // GET /api/auth/me
     if (path === '/api/auth/me' && request.method === 'GET') {
       const uid = await sessUid(request);
       if(!uid) return new Response(JSON.stringify({profile:null}),{status:200,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
       const prof = await env.DB.prepare('SELECT id, email, display_name, orcid, provider FROM profiles WHERE id = ?').bind(uid).first();
       return new Response(JSON.stringify({profile:prof||null}),{status:200,headers:{...cors,'Content-Type':'application/json','Cache-Control':'no-store'}});
+    }
+
+    // ---- Wheel gate: server-scored, anti-cheat ----
+    // The pool (data/wheels/gates.json) is public: reading it is studying.
+    // The server samples 20 items (half current stage, half earlier),
+    // shuffles options per item, holds the key, scores, and writes the unlock.
+    // Signed-out users keep local scoring, labelled unverified.
+    const GATE_MAX = {word: 4, sentence: 3};
+    const GATE_N = 20, GATE_PASS = 18, GATE_TTL_MS = 600*1000;
+    let POOL_CACHE = null;
+    async function loadGatePool(env){
+      const now = Date.now();
+      if (POOL_CACHE && now - POOL_CACHE.at < 3600*1000) return POOL_CACHE.data;
+      const url = env.GATE_POOLS_URL || 'https://svatantrya.net/data/wheels/gates.json';
+      const r = await fetch(url, {cf:{cacheTtl:3600}});
+      if(!r.ok) throw new Error('pool unreachable');
+      const doc = await r.json();
+      if(!doc || doc.format !== 'svatantrya.gate-pools/1' || !doc.curricula) throw new Error('bad pool');
+      POOL_CACHE = {data: doc, at: now};
+      return doc;
+    }
+    function gateUid(request){
+      try{
+        const ck = request.headers.get('Cookie')||'';
+        let tok = null;
+        const ckTok = ck.split(';').map(x=>x.trim()).find(x=>x.startsWith(COOKIE));
+        if(ckTok) tok = ckTok.slice(COOKIE.length);
+        else { const ah = request.headers.get('Authorization')||''; const m = /^Bearer\s+(.+)$/.exec(ah); if(m) tok = m[1]; }
+        if(!tok) return Promise.resolve(null);
+        return sessUid(new Request('https://gate.local/', {headers:{Cookie: COOKIE + tok}}));
+      }catch(e){ return Promise.resolve(null); }
+    }
+    function gateRand(n){
+      const b = crypto.getRandomValues(new Uint32Array(1));
+      return Number(BigInt(b[0]) % BigInt(Math.max(1, n)));
+    }
+    function gateShuffle(arr){
+      const a = arr.slice();
+      for(let i=a.length-1;i>0;i--){ const j = gateRand(i+1); const t=a[i]; a[i]=a[j]; a[j]=t; }
+      return a;
+    }
+
+    if (path === '/api/wheel/gate/start' && request.method === 'POST') {
+      let b = {}; try{ b = await request.json(); }catch(e){}
+      const uid = await gateUid(request);
+      if(!uid) return json({error:'sign in to take a scored gate; local practice still works on the site'}, 401, cors);
+      if(reqOrigin && !allowed.has(reqOrigin)) return json({error:'origin not allowed'}, 403, cors);
+      const curriculum = String(b.curriculum||'');
+      const stage = Number(b.stage);
+      if(!['word','sentence'].includes(curriculum)) return json({error:'curriculum must be word|sentence'}, 400, cors);
+      try{
+        const pool = await loadGatePool(env);
+        const cur = pool.curricula[curriculum];
+        if(!cur || !cur.stages[String(stage)]) return json({error:'unknown stage'}, 400, cors);
+        let prog = await env.DB.prepare('SELECT stage FROM learner_progress WHERE user_id = ? AND curriculum = ?').bind(uid, curriculum).first();
+        if(!prog){ await env.DB.prepare('INSERT INTO learner_progress (user_id, curriculum, stage) VALUES (?,?,1)').bind(uid, curriculum).run(); prog = {stage: 1}; }
+        if(curriculum === 'sentence'){
+          const wp = await env.DB.prepare('SELECT stage FROM learner_progress WHERE user_id = ? AND curriculum = ?').bind(uid, 'word').first();
+          if(!wp || Number(wp.stage) <= GATE_MAX.word) return json({error:'finish the word circle first'}, 403, cors);
+        }
+        if(stage > Number(prog.stage)) return json({error:'that layer is still locked; pass the current one first', stage: prog.stage}, 403, cors);
+        if(stage > GATE_MAX[curriculum]) return json({error:'curriculum complete'}, 400, cors);
+        const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM learner_attempts WHERE user_id = ? AND curriculum = ? AND created_at > datetime('now','-1 hour')").bind(uid, curriculum).first();
+        if(recent && Number(recent.n) >= 3) return json({error:'three scored attempts per hour; practice freely and come back'}, 429, cors);
+        const cur_items = cur.stages[String(stage)].items;
+        const prev_items = [];
+        for(const k of Object.keys(cur.stages)){ if(Number(k) < stage) prev_items.push(...cur.stages[k].items); }
+        const shuffledCur = gateShuffle(cur_items), shuffledPrev = gateShuffle(prev_items);
+        const picked = [];
+        const wantCur = Math.ceil(GATE_N/2);
+        const poolPrev = shuffledPrev.length ? shuffledPrev : shuffledCur;
+        for(let i=0; picked.length < wantCur && shuffledCur.length; i++) picked.push(shuffledCur[i % shuffledCur.length]);
+        for(let i=0; picked.length < GATE_N; i++) picked.push(poolPrev[i % poolPrev.length]);
+        const items = gateShuffle(picked).slice(0, GATE_N).map((it, idx)=>({
+          item_id: it.id, prompt: it.prompt,
+          options: gateShuffle(it.options),
+        }));
+        const key = {};
+        for(const it of items){
+          const full = [...cur_items, ...prev_items].find(x=>x.id===it.item_id) || cur_items.find(x=>x.id===it.item_id);
+          key[it.item_id] = full ? full.answer : null;
+        }
+        const sid = crypto.randomUUID();
+        const now = Date.now();
+        await env.DB.prepare('INSERT INTO gate_sessions (id, user_id, curriculum, stage, items_json, key_json, expires_at, created_at) VALUES (?,?,?,?,?,?,?,?)')
+          .bind(sid, uid, curriculum, stage, JSON.stringify(items), JSON.stringify(key), now + GATE_TTL_MS, now).run();
+        return json({session_id: sid, curriculum, stage, n: items.length, pass_mark: GATE_PASS, items}, 200, cors);
+      }catch(e){ return json({error:'gate unavailable right now'}, 503, cors); }
+    }
+
+    if (path === '/api/wheel/gate/submit' && request.method === 'POST') {
+      let b = {}; try{ b = await request.json(); }catch(e){}
+      const uid = await gateUid(request);
+      if(!uid) return json({error:'sign in to take a scored gate'}, 401, cors);
+      if(reqOrigin && !allowed.has(reqOrigin)) return json({error:'origin not allowed'}, 403, cors);
+      const sid = String(b.session_id||'');
+      const sess = sid ? await env.DB.prepare('SELECT * FROM gate_sessions WHERE id = ?').bind(sid).first() : null;
+      if(!sess || sess.user_id !== uid) return json({error:'unknown session'}, 404, cors);
+      if(Number(sess.used)) return json({error:'session already submitted'}, 409, cors);
+      if(Date.now() > Number(sess.expires_at)) return json({error:'session expired; start a fresh gate'}, 410, cors);
+      await env.DB.prepare('UPDATE gate_sessions SET used = 1 WHERE id = ?').bind(sid).run();
+      const items = JSON.parse(sess.items_json||'[]');
+      const key = JSON.parse(sess.key_json||'{}');
+      const given = {};
+      for(const a of (Array.isArray(b.answers)?b.answers:[])){
+        if(a && typeof a.item_id==='string' && typeof a.choice==='string') given[a.item_id] = a.choice;
+      }
+      let correct = 0;
+      const detail = items.map(it=>{ const ok = given[it.item_id] === key[it.item_id]; if(ok) correct++; return {item_id: it.item_id, ok}; });
+      const passed = correct >= GATE_PASS;
+      const curriculum = sess.curriculum, stage = Number(sess.stage);
+      await env.DB.prepare('INSERT INTO learner_attempts (id, user_id, curriculum, stage, items_json, answers_json, score, passed) VALUES (?,?,?,?,?,?,?,?)')
+        .bind(crypto.randomUUID(), uid, curriculum, stage, sess.items_json, JSON.stringify(given), correct, passed?1:0).run();
+      let unlock = null;
+      if(passed){
+        const prog = await env.DB.prepare('SELECT stage, passed_json, items_json FROM learner_progress WHERE user_id = ? AND curriculum = ?').bind(uid, curriculum).first();
+        const cur = prog ? Number(prog.stage) : 1;
+        if(stage >= cur && stage <= GATE_MAX[curriculum]){
+          const passed = prog ? JSON.parse(prog.passed_json||'[]') : [];
+          passed.push({stage, score: correct, at: new Date().toISOString()});
+          const agg = prog ? JSON.parse(prog.items_json||'{}') : {};
+          for(const d of detail){ const e = agg[d.item_id] || {seen:0, right:0}; e.seen++; if(d.ok) e.right++; agg[d.item_id]=e; }
+          await env.DB.prepare('UPDATE learner_progress SET stage = ?, passed_json = ?, items_json = ?, updated_at = datetime("now") WHERE user_id = ? AND curriculum = ?')
+            .bind(stage+1, JSON.stringify(passed), JSON.stringify(agg), uid, curriculum).run();
+          unlock = {next_stage: stage+1, done: stage+1 > GATE_MAX[curriculum]};
+        }
+      }
+      return json({score: correct, total: items.length, passed, pass_mark: GATE_PASS, unlock, detail}, 200, cors);
+    }
+
+    // GET /api/wheel/progress — own progress (for the site + ChatGPT)
+    if (path === '/api/wheel/progress' && request.method === 'GET') {
+      const uid = await gateUid(request);
+      if(!uid) return json({error:'sign in to read progress'}, 401, cors);
+      if(reqOrigin && !allowed.has(reqOrigin)) return json({error:'origin not allowed'}, 403, cors);
+      const rows = await env.DB.prepare('SELECT curriculum, stage, passed_json FROM learner_progress WHERE user_id = ?').bind(uid).all();
+      return json({progress: (rows.results||[]).map(r=>({curriculum:r.curriculum, stage:r.stage, passed:JSON.parse(r.passed_json||'[]')}) )}, 200, cors);
     }
 
     // POST /api/auth/logout
@@ -665,9 +863,12 @@ export default {
       // backslash forms which URL parsers can interpret as external origins.
       if (back.length > 512 || !back.startsWith('/') || back.startsWith('//') || /[\\\x00-\x1f\x7f]/.test(back))
         return json({error:'invalid redirect'}, 400, cors);
+      // Remember where the reader lives so the callback can return there
+      // instead of a hardcoded host (svatantrya.net vs branch aliases).
+      const caller = returnableOrigin(request.headers.get('Referer') || '');
       const st = await (async()=>{
         const nonce = b64u(crypto.getRandomValues(new Uint8Array(32)));
-        const body = btoa(JSON.stringify({b: back, n: nonce, e: Date.now() + 10*60*1000}));
+        const body = btoa(JSON.stringify({b: back, o: caller, n: nonce, e: Date.now() + 10*60*1000}));
         const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['sign']);
         const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(body));
         return body + '.' + btoa(String.fromCharCode(...new Uint8Array(mac))).replace(/=+$/,'').replace(/\+/g,'-').replace(/\//g,'_');
@@ -699,6 +900,9 @@ export default {
         const back = JSON.parse(atob(body)).b || '/';
         if (typeof back !== 'string' || !back.startsWith('/') || back.startsWith('//') || /[\\\x00-\x1f\x7f]/.test(back))
           return json({error:'bad or expired state'}, 400, cors);
+        // Return to the reader host the flow started on (apex, branch alias,
+        // or local dev); fall back to the canonical host, never an open URL.
+        const retBase = returnableOrigin(JSON.parse(atob(body)).o) || 'https://svatantrya.net';
         const tok = await fetch('https://orcid.org/oauth/token', {method:'POST',
           headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
           body: new URLSearchParams({grant_type:'authorization_code', code,
@@ -721,7 +925,7 @@ export default {
         const sb = btoa(JSON.stringify({u: row.id, e: exp}));
         const skey = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.SESSION_SECRET||''), {name:'HMAC', hash:'SHA-256'}, false, ['sign']);
         const mac = b64u(await crypto.subtle.sign('HMAC', skey, new TextEncoder().encode(sb)));
-        const headers = new Headers({...cors, 'Location':new URL(back,'https://svread.pages.dev').toString(),
+        const headers = new Headers({...cors, 'Location':new URL(back, retBase).toString(),
           'Cache-Control':'no-store'});
         headers.append('Set-Cookie',`svsess=${sb}.${mac}; HttpOnly; Secure; SameSite=None; Path=/; Max-Age=${7*24*3600}`);
         headers.append('Set-Cookie','svorcid=; HttpOnly; Secure; SameSite=Lax; Path=/api/auth/orcid/callback; Max-Age=0');

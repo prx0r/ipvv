@@ -14,3 +14,7 @@ __pycache__/
 # 20k-file cap and 20-min build timeout.
 site/static-audio/**/*.mp3
 site/dist/audio/**/*.mp3
+
+# wrangler local state + local secrets (never committed)
+worker/.dev.vars
+worker/.wrangler/
