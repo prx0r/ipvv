@@ -40,14 +40,23 @@ async function dashscopeChat(env, messages, maxTokens = 512, signal) {
 
 async function getVectors(env) {
   if (cachedVectors) return cachedVectors;
-  try {
-    const resp = await fetch('https://ipvv-a8u.pages.dev/data/vectors.json?v=' + Date.now());
-    if (!resp.ok) return null;
-    cachedVectors = await resp.json();
-    return cachedVectors;
-  } catch (e) {
-    return null;
+  // R2 first (2026-11-16): the refreshed vector set (all svread PASS works) is
+  // 34 MB — over Cloudflare Pages' 25 MB per-file limit. R2 has no such limit
+  // and is served from the same public dev domain as audio. Pages stays as a
+  // fallback for older deployments.
+  const urls = [
+    env.VECTORS_URL || 'https://pub-87169194562a44fcb8279a799d626c62.r2.dev/data/vectors.json',
+    'https://ipvv-a8u.pages.dev/data/vectors.json',
+  ];
+  for (const u of urls) {
+    try {
+      const resp = await fetch(u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now());
+      if (!resp.ok) continue;
+      cachedVectors = await resp.json();
+      if (Array.isArray(cachedVectors) && cachedVectors.length) return cachedVectors;
+    } catch (e) { /* try next source */ }
   }
+  return null;
 }
 
 function cosine(a, b) {
@@ -175,12 +184,20 @@ export default {
           .sort((a, b) => b.score - a.score)
           .slice(0, 20);
 
-        // Template match: best pushing probe (chain context for Qwen)
+        // Template match: best pushing probe (chain context for Qwen).
+        // SCOPED to the requested work (2026-11-16): an unscoped best-match
+        // pulled, e.g., a Bodhapañcādikā enquiry into a Paramārthasāra chat.
+        // If no probe names this work, add NO probe context — the retriever
+        // will say honestly that the passages do not cover the question.
         let chainCtx = '';
         try {
-          const probes = vecs.filter(v => v.kind === 'probe');
+          const touchesWork = (v) => {
+            const hay = ((v.work || '') + ' ' + (v.ref || '') + ' ' + (v.id || '')).toLowerCase();
+            return works.some(w => hay.includes(String(w).toLowerCase()));
+          };
+          const scoped = vecs.filter(v => v.kind === 'probe').filter(touchesWork);
           let best = null;
-          for (const p of probes) {
+          for (const p of scoped) {
             const s = cosine(qVec, p.vec);
             if (!best || s > best.score) best = { ...p, score: s };
           }
@@ -200,9 +217,13 @@ export default {
             const flat = [];
             for (const r of pidx.records) for (const q of (r.questions || [])) flat.push({ r, q });
             for (const { r, q } of flat) {
+              // Same work-scoping rule as the probe context (2026-11-16): a
+              // hound verdict from a different text must never answer this one.
+              const touches = r.file && works.some(w => String(w) && r.file.toLowerCase().includes(String(w).toLowerCase()));
+              if (!touches) continue;
               const qt2 = new Set(fold2(q.q || '').split(/[^a-z]+/).filter(w => w.length >= 5 && !stop2.has(w)));
               let n = 0; for (const t of qt) if (qt2.has(t)) n++;
-              if (r.file && works.some(w => r.file.toLowerCase().includes(String(w).toLowerCase()))) n += 3;
+              n += 3;
               if (n >= 4 && (!bestV || n > bestV.n)) bestV = { n, r, q };
             }
             if (bestV) {
