@@ -38,6 +38,38 @@ async function dashscopeChat(env, messages, maxTokens = 512, signal) {
   return data.choices?.[0]?.message?.content || '';
 }
 
+// OpenCode Go assembler: muse-spark-1.3 primary, mimo-v2.6-flash fallback only.
+async function goChat(env, prompt, maxTokens = 6000) {
+  const key = env.OPENCODE_GO_API_KEY;
+  if (!key) throw new Error('no opencode go key');
+  const base = (env.OPENCODE_GO_BASE_URL || 'https://opencode.ai/zen/go/v1').replace(/\/$/, '');
+  const sess = 'essay-' + crypto.randomUUID();
+  const hdr = {'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json',
+    'x-opencode-session': sess, 'User-Agent': 'curl/8.5.0'};
+  const textOf = d => (d.output || []).filter(x => x.type === 'message')
+    .flatMap(x => x.content || []).filter(c => c.type === 'output_text' || c.type === 'text')
+    .map(c => c.text || '').join('\n').trim();
+  try {
+    const r = await fetch(base + '/responses', {method: 'POST', headers: hdr,
+      body: JSON.stringify({model: 'muse-spark-1.3-contributor',
+        input: [{role: 'user', content: [{type: 'input_text', text: prompt}]}],
+        max_output_tokens: maxTokens, temperature: 0.6})});
+    if (r.ok) {
+      const d = await r.json();
+      const t = textOf(d);
+      if (t) return {text: t, model: 'muse-spark-1.3-contributor', fallback: false};
+    }
+  } catch (e) { /* fall through */ }
+  const r2 = await fetch(base + '/chat/completions', {method: 'POST', headers: hdr,
+    body: JSON.stringify({model: 'mimo-v2.6-flash',
+      messages: [{role: 'user', content: prompt}], max_tokens: maxTokens, temperature: 0.6})});
+  if (!r2.ok) throw new Error(`go fallback ${r2.status}: ${(await r2.text()).slice(0, 200)}`);
+  const d2 = await r2.json();
+  const t2 = (d2.choices?.[0]?.message?.content || '').trim();
+  if (!t2) throw new Error('go fallback returned no text');
+  return {text: t2, model: 'mimo-v2.6-flash', fallback: true};
+}
+
 async function getVectors(env) {
   if (cachedVectors) return cachedVectors;
   try {
@@ -594,6 +626,38 @@ export default {
         if(p.e < Date.now()) return null;
         return p.u;
       }catch(e){ return null; }
+    }
+
+    // POST /api/essay/assemble — grounded assemblage for the Essay Workshop.
+    // The client sends frozen slots (plan, ground, literature, enquiry); the
+    // model writes the prose around them. Nothing is signed or published.
+    if (path === '/api/essay/assemble' && request.method === 'POST') {
+      if (reqOrigin && !allowed.has(reqOrigin)) return json({error: 'origin not allowed'}, 403, cors);
+      if (typeof env.SESSION_SECRET !== 'string' || env.SESSION_SECRET.length < 32)
+        return json({error: 'authentication temporarily unavailable'}, 503, cors);
+      const uid = await sessUid(request);
+      if (!uid) return json({error: 'sign in required'}, 401, cors);
+      let b = {}; try { b = await request.json(); } catch (e) { return json({error: 'invalid JSON'}, 400, cors); }
+      const str = (v, n) => (typeof v === 'string' ? v.slice(0, n) : '');
+      const ground = str(b.ground, 40000), literature = str(b.literature, 4000),
+        enquiry = str(b.enquiry, 8000), title = str(b.title, 300);
+      const mode = b.mode === 'comparative' ? 'comparative' : 'single';
+      const plan = Array.isArray(b.plan) ? b.plan.slice(0, 20).map(s => ({title: str(s && s.title, 120), target_words: Number(s && s.target_words) || 0})) : [];
+      if (b.consent_to_ai !== true || !ground.trim() || !plan.length)
+        return json({error: 'Send a plan, ground and explicit consent.'}, 400, cors);
+      const axes = mode === 'comparative' ? `\nFOUR AXES\n1. What is primary: being (esse) or consciousness/agency (cit, kartr)?\n2. Mediating order: angels as created immaterial substances vs tattvas/saktis/deities as levels or powers.\n3. Causation: creation ex nihilo and secondary causes vs abhasa/manifestation and svatantrya.\n4. Knowledge and naming: analogy of being vs recognition (pratyabhijna) and vimarsa.\nMANDATORY DISANALOGY: name at least three places the comparison breaks.\n` : '';
+      const prompt = `You assemble a scholarly essay from frozen slots. You do not invent evidence. Write transitions, objections, replies and consequences around the supplied ground. Never invent Sanskrit, verses, citations or quotations.\n\nTITLE\n${title || 'Untitled essay'}\n\nSHAPE (${Number(b.words) || 3000} words)\n${plan.map(s => `- ${s.title}: ~${s.target_words} words`).join('\n')}\n${axes}\nGROUND — ABHINAVAGUPTA\n${ground}\n\nLITERATURE (metadata; do not quote text not supplied)\n${literature || '(none)'}\n\nAUTHOR'S ENQUIRY — the argument that must be answered\n${enquiry || '(none yet)'}\n\nRULES\n- Quote Sanskrit ONLY from a "sanskrit:" field above, verbatim.\n- Cite Abhinavagupta as [verse-id]. Cite Aquinas as [ST I, q.N, a.M] only if supplied.\n- Give the rival the strongest objection, then reply, then consequence.\n- Earn the thesis; name it in the Conclusion. Keep supplied uncertainties open.`;
+      const max = Math.min(16000, Math.max(2000, Number(b.words) || 3000));
+      let out;
+      try {
+        out = env.OPENCODE_GO_API_KEY ? await goChat(env, prompt, max)
+          : {text: await dashscopeChat({DASHSCOPE_API_KEY: env.SCHOLAR_DASHSCOPE_API_KEY}, [{role: 'user', content: prompt}], max), model: 'qwen3.8-omni-flash', fallback: true};
+      } catch (e) {
+        return json({error: 'assembler unavailable: ' + String(e.message || e).slice(0, 160)}, 503, cors);
+      }
+      if (!out.text || !out.text.trim()) return json({error: 'assembler returned no text'}, 502, cors);
+      return json({text: out.text.slice(0, 60000), model: out.model, fallback: !!out.fallback,
+        status: 'MACHINE-ASSEMBLED', ground_sha256: str(b.ground_sha256, 64)}, 200, cors);
     }
 
     if (path.startsWith('/api/scholar/')) {
